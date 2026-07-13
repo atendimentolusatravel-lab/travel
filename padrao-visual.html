@@ -1,0 +1,883 @@
+<title>Padrão de Apresentações — Lusa Travel</title>
+<style>
+/* ── TOKENS ─────────────────────────────────────────────── */
+:root {
+  --g: #f4efe9;
+  --s: #ece5da;
+  --s2: #e1d8cc;
+  --bd: #cec4b5;
+  --t: #1a1614;
+  --t2: #5c5249;
+  --t3: #9a8d81;
+  --gold: #da8d00;
+  --gold-hi: #f0a010;
+  --italia: #730505;
+  --peru: #73805c;
+  --africa: #404525;
+  --r: 4px;
+  --ff-serif: Georgia, 'Palatino Linotype', Palatino, serif;
+  --ff-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ff-mono: 'Courier New', Courier, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --g: #141109;
+    --s: #1e1a13;
+    --s2: #28231b;
+    --bd: #3c342a;
+    --t: #f0e8de;
+    --t2: #a89880;
+    --t3: #6a5c4f;
+    --gold: #e8a210;
+    --gold-hi: #ffc030;
+  }
+}
+:root[data-theme="dark"] {
+  --g: #141109; --s: #1e1a13; --s2: #28231b; --bd: #3c342a;
+  --t: #f0e8de; --t2: #a89880; --t3: #6a5c4f;
+  --gold: #e8a210; --gold-hi: #ffc030;
+}
+:root[data-theme="light"] {
+  --g: #f4efe9; --s: #ece5da; --s2: #e1d8cc; --bd: #cec4b5;
+  --t: #1a1614; --t2: #5c5249; --t3: #9a8d81;
+  --gold: #da8d00; --gold-hi: #f0a010;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--g);
+  color: var(--t);
+  font-family: var(--ff-sans);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* ── MASTHEAD ────────────────────────────────────────────── */
+.masthead {
+  background: var(--t);
+  padding: 52px 52px 44px;
+  position: relative;
+}
+.masthead::after {
+  content: '';
+  display: block;
+  height: 3px;
+  background: var(--gold);
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+}
+.mh-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.mh-title {
+  font-family: var(--ff-serif);
+  font-size: clamp(26px, 4.5vw, 42px);
+  font-weight: 400;
+  line-height: 1.08;
+  color: #f0e8de;
+  letter-spacing: -0.01em;
+}
+.mh-title strong {
+  font-weight: 700;
+  color: #fff;
+}
+.mh-sub {
+  margin-top: 14px;
+  font-size: 14px;
+  color: rgba(240, 232, 222, 0.5);
+  max-width: 540px;
+  line-height: 1.5;
+}
+.mh-chips {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.mh-chip {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(240,232,222,0.2);
+  color: rgba(240,232,222,0.55);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+/* ── LAYOUT ──────────────────────────────────────────────── */
+.wrap {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 40px 100px;
+}
+
+.gs { /* guide section */
+  padding: 56px 0;
+  border-bottom: 1px solid var(--bd);
+}
+.gs:last-child { border-bottom: none; }
+
+.gs-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.gs-aside {
+  padding-top: 3px;
+  position: sticky;
+  top: 24px;
+}
+.gs-tag {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+}
+.gs-aside-title {
+  font-family: var(--ff-serif);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--t);
+  margin-top: 8px;
+  line-height: 1.2;
+}
+.gs-aside-desc {
+  font-size: 12.5px;
+  color: var(--t2);
+  margin-top: 8px;
+  line-height: 1.55;
+}
+
+/* ── COLOR SWATCHES ─────────────────────────────────────── */
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.sw {
+  flex: 0 0 116px;
+}
+.sw-chip {
+  height: 68px;
+  border-radius: var(--r) var(--r) 0 0;
+  border: 1px solid rgba(0,0,0,0.07);
+  position: relative;
+}
+.sw-chip-tag {
+  position: absolute;
+  bottom: 7px;
+  right: 8px;
+  font-size: 8.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  font-weight: 600;
+}
+.sw-body {
+  background: var(--s);
+  border: 1px solid var(--bd);
+  border-top: none;
+  border-radius: 0 0 var(--r) var(--r);
+  padding: 9px 11px 10px;
+}
+.sw-name { font-size: 11.5px; font-weight: 700; color: var(--t); }
+.sw-hex  { font-size: 11px; font-family: var(--ff-mono); color: var(--t3); margin-top: 1px; }
+.sw-use  { font-size: 10px; color: var(--t3); margin-top: 4px; line-height: 1.35; }
+
+.callout {
+  background: var(--s);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--r) var(--r) 0;
+  padding: 14px 18px;
+  font-size: 13px;
+  color: var(--t2);
+  line-height: 1.6;
+}
+.callout strong { color: var(--gold); }
+.callout code {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  background: var(--s2);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.dest-group-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--t3);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* ── TYPOGRAPHY TABLE ────────────────────────────────────── */
+.type-table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--bd);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+.type-row {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 20px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--bd);
+  align-items: center;
+  background: var(--g);
+}
+.type-row:nth-child(even) { background: var(--s); }
+.type-row:last-child { border-bottom: none; }
+.type-specimen {
+  color: var(--t);
+  line-height: 1.2;
+}
+.type-meta { text-align: right; }
+.type-role {
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+}
+.type-face { font-size: 12px; font-weight: 600; color: var(--t); margin-top: 3px; }
+.type-spec { font-size: 11px; font-family: var(--ff-mono); color: var(--t3); margin-top: 1px; }
+
+/* ── FORMAT ──────────────────────────────────────────────── */
+.format-cards {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.page-mock {
+  width: 128px;
+  background: #fff;
+  border: 1px solid var(--bd);
+  border-radius: 2px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pm-head {
+  background: #1a1614;
+  padding: 10px 10px 0;
+}
+.pm-head-bar {
+  background: #f4efe9;
+  height: 20px;
+  border-radius: 2px 2px 0 0;
+  opacity: 0.1;
+}
+.pm-gold { height: 3px; background: #da8d00; }
+.pm-body {
+  padding: 12px 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.pm-line {
+  height: 4px;
+  background: var(--bd);
+  border-radius: 2px;
+}
+.pm-line.dark { background: #1a1614; opacity: 0.7; }
+.pm-line.gold { background: #da8d00; width: 50%; }
+.pm-foot {
+  border-top: 1px solid var(--bd);
+  padding: 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pm-foot-dot {
+  width: 24px; height: 6px;
+  background: var(--bd);
+  border-radius: 3px;
+}
+
+.format-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.spec-item {
+  background: var(--s);
+  border-radius: var(--r);
+  padding: 13px 16px;
+}
+.spec-label { font-size: 11px; font-weight: 700; color: var(--t); margin-bottom: 3px; }
+.spec-val { font-size: 13px; color: var(--t2); }
+
+/* ── STRUCTURE LIST ──────────────────────────────────────── */
+.struct-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sl-item {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--s);
+  border-radius: var(--r);
+  border-left: 3px solid transparent;
+  transition: border-color 0.15s, background 0.15s;
+  cursor: default;
+}
+.sl-item:hover {
+  border-left-color: var(--gold);
+  background: var(--s2);
+}
+.sl-num {
+  font-size: 11px;
+  font-family: var(--ff-mono);
+  color: var(--t3);
+  padding-top: 3px;
+}
+.sl-title { font-size: 13.5px; font-weight: 700; color: var(--t); }
+.sl-desc  { font-size: 12px; color: var(--t3); margin-top: 3px; line-height: 1.5; }
+
+/* ── DESTINATION TABLE ───────────────────────────────────── */
+.dt {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+.dt thead th {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--t3);
+  font-weight: 700;
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--bd);
+}
+.dt tbody td {
+  padding: 14px 14px;
+  border-bottom: 1px solid var(--bd);
+  vertical-align: middle;
+  color: var(--t2);
+}
+.dt tbody tr:last-child td { border-bottom: none; }
+.dt tbody tr:hover td { background: var(--s); }
+.dt .dn { font-weight: 700; color: var(--t); }
+.cc {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.cc-dot {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.cc-hex { font-family: var(--ff-mono); font-size: 12px; color: var(--t3); }
+.mono { font-family: var(--ff-mono); font-size: 12px; }
+.tn { font-variant-numeric: tabular-nums; }
+
+/* ── SIGNATURE ───────────────────────────────────────────── */
+.sig-block {
+  background: var(--t);
+  border-radius: var(--r);
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 32px;
+}
+.sig-item {}
+.sig-lbl {
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.sig-val { font-size: 14px; color: rgba(240,232,222,0.85); line-height: 1.45; }
+
+/* ── TONE CARDS ──────────────────────────────────────────── */
+.tone-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.tc {
+  background: var(--s);
+  border-radius: var(--r);
+  padding: 16px 18px;
+}
+.tc-label {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+.tc-body { font-size: 13px; color: var(--t2); line-height: 1.6; }
+.tc-body strong { color: var(--t); }
+.tc-body em { color: var(--t); font-style: normal; font-weight: 500; }
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .masthead { padding: 36px 22px 32px; }
+  .wrap { padding: 0 20px 60px; }
+  .gs-grid { grid-template-columns: 1fr; gap: 18px; }
+  .gs-aside { position: static; }
+  .type-row { grid-template-columns: 1fr; }
+  .type-meta { text-align: left; margin-top: 8px; }
+  .format-cards { grid-template-columns: 1fr; }
+  .page-mock { width: 100px; }
+  .sig-block { grid-template-columns: 1fr; }
+  .sw { flex: 0 0 calc(50% - 5px); }
+  .dt thead th:nth-child(3),
+  .dt tbody td:nth-child(3) { display: none; }
+}
+</style>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<header class="masthead">
+  <div class="mh-eyebrow">Lusa Travel · Curitiba, PR</div>
+  <h1 class="mh-title">Guia de Padrão Visual<br><strong>de Apresentações</strong></h1>
+  <p class="mh-sub">Mapeamento de paleta de cores, tipografia, estrutura de seções, padrão visual e assinatura da agência — baseado na análise de 4 propostas de viagem.</p>
+  <div class="mh-chips">
+    <span class="mh-chip">4 apresentações analisadas</span>
+    <span class="mh-chip">Itália · Peru · África</span>
+    <span class="mh-chip">Atualizado julho 2026</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ── 01 CORES ── -->
+  <section class="gs">
+    <div class="gs-grid">
+      <aside class="gs-aside">
+        <div class="gs-tag">01</div>
+        <div class="gs-aside-title">Paleta de Cores</div>
+        <p class="gs-aside-desc">O ouro é a cor-identidade constante da marca. O destaque de bloco muda por destino.</p>
+      </aside>
+      <div>
+
+        <div class="dest-group-label">Cores fixas da marca — presentes em todas as apresentações</div>
+        <div class="swatches" style="margin-bottom: 24px;">
+          <div class="sw">
+            <div class="sw-chip" style="background:#da8d00;"></div>
+            <div class="sw-body">
+              <div class="sw-name">Ouro</div>
+              <div class="sw-hex">#da8d00</div>
+              <div class="sw-use">Accent primário · datas · ícones · destaques em texto</div>
+            </div>
+          </div>
+          <div class="sw">
+            <div class="sw-chip" style="background:#333131;"></div>
+            <div class="sw-body">
+              <div class="sw-name">Carvão</div>
+              <div class="sw-hex">#333131</div>
+              <div class="sw-use">Texto corrido · elementos secundários</div>
+            </div>
+          </div>
+          <div class="sw">
+            <div class="sw-chip" style="background:#1a1614;"></div>
+            <div class="sw-body">
+              <div class="sw-name">Preto-âmbar</div>
+              <div class="sw-hex">#1a1614</div>
+              <div class="sw-use">Títulos · nomes de clientes · cabeçalho</div>
+            </div>
+          </div>
+          <div class="sw">
+            <div class="sw-chip" style="background:#ffffff; border:1px solid #ddd;"></div>
+            <div class="sw-body">
+              <div class="sw-name">Branco</div>
+              <div class="sw-hex">#ffffff</div>
+              <div class="sw-use">Fundo geral · texto sobre fundos escuros</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-bottom: 24px;">
+          <strong>Lógica do sistema:</strong> O ouro <code>#da8d00</code> aparece como accent de texto em <em>todas</em> as apresentações e funciona como cor-identidade da Lusa Travel. A cor de bloco (faixas, cabeçalhos, elementos de área) <strong>muda a cada destino</strong>, criando identidade visual específica por viagem sem quebrar a coerência da marca.
+        </div>
+
+        <div class="dest-group-label" style="margin-top: 8px;">Cores variáveis por destino</div>
+        <div class="swatches">
+          <div class="sw" style="flex: 0 0 138px;">
+            <div class="sw-chip" style="background:#730505;">
+              <div class="sw-chip-tag">ITÁLIA</div>
+            </div>
+            <div class="sw-body">
+              <div class="sw-name">Borgonha</div>
+              <div class="sw-hex">#730505</div>
+              <div class="sw-use">Andrea &amp; Lincoln · Maria Cecília — 2 apresentações</div>
+            </div>
+          </div>
+          <div class="sw" style="flex: 0 0 138px;">
+            <div class="sw-chip" style="background:#73805c;">
+              <div class="sw-chip-tag">PERU</div>
+            </div>
+            <div class="sw-body">
+              <div class="sw-name">Verde Andino</div>
+              <div class="sw-hex">#73805c</div>
+              <div class="sw-use">Julia Kio e Família — cobre e itens peruanos</div>
+            </div>
+          </div>
+          <div class="sw" style="flex: 0 0 138px;">
+            <div class="sw-chip" style="background:#404525;">
+              <div class="sw-chip-tag">ÁFRICA</div>
+            </div>
+            <div class="sw-body">
+              <div class="sw-name">Verde Savana</div>
+              <div class="sw-hex">#404525</div>
+              <div class="sw-use">Isabel Belloube — África do Sul e Namíbia</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 02 TIPOGRAFIA ── -->
+  <section class="gs">
+    <div class="gs-grid">
+      <aside class="gs-aside">
+        <div class="gs-tag">02</div>
+        <div class="gs-aside-title">Sistema Tipográfico</div>
+        <p class="gs-aside-desc">Poppins como família primária; Montserrat e Arimo como complementares para dados e labels.</p>
+      </aside>
+      <div>
+        <div class="type-table">
+          <div class="type-row">
+            <div class="type-specimen" style="font-size:30px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase;">ANDREA E LINCOLN</div>
+            <div class="type-meta">
+              <div class="type-role">Nome do cliente · Capa</div>
+              <div class="type-face">Poppins Bold</div>
+              <div class="type-spec">27–32px · uppercase</div>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-specimen" style="font-size:18px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;">COTAÇÃO PARA SUA VIAGEM</div>
+            <div class="type-meta">
+              <div class="type-role">Títulos de seção · Capa</div>
+              <div class="type-face">Poppins Bold</div>
+              <div class="type-spec">18–22px · spaced</div>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-specimen" style="font-size:14px; font-weight:400;">Florença é um destino imperdível para quem ama arte, história e cultura. Considerada o berço do Renascimento…</div>
+            <div class="type-meta">
+              <div class="type-role">Descrições de destino</div>
+              <div class="type-face">Poppins Regular</div>
+              <div class="type-spec">10–12px · weight 400</div>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-specimen" style="font-size:13px; font-weight:300; color: var(--t2);">Acomodação: Hotel Quirinale · Via Nazionale, 7 · 4 Noites</div>
+            <div class="type-meta">
+              <div class="type-role">Detalhes de hotel</div>
+              <div class="type-face">Poppins Light</div>
+              <div class="type-spec">9–11px · weight 300</div>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-specimen" style="font-size:13px; font-weight:500; letter-spacing:0.02em;">atendimentolusatravel@gmail.com · +55 41 99189-6076</div>
+            <div class="type-meta">
+              <div class="type-role">Contato · Assinatura</div>
+              <div class="type-face">Montserrat Regular / Medium</div>
+              <div class="type-spec">9–12px</div>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-specimen" style="font-size:12.5px; font-weight:700; letter-spacing:0.03em;">Categoria ★★★★ · Café da manhã incluído</div>
+            <div class="type-meta">
+              <div class="type-role">Labels de cartão de hotel</div>
+              <div class="type-face">Arimo Bold</div>
+              <div class="type-spec">11–12px · labels</div>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-specimen" style="font-size:13px; font-weight:400;">DIA 03 | ROMA | 31/05 · Café da manhã no hotel e traslado ao Vaticano.</div>
+            <div class="type-meta">
+              <div class="type-role">Roteiro dia a dia</div>
+              <div class="type-face">Open Sans Regular</div>
+              <div class="type-spec">11–13px</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 03 FORMATO ── -->
+  <section class="gs">
+    <div class="gs-grid">
+      <aside class="gs-aside">
+        <div class="gs-tag">03</div>
+        <div class="gs-aside-title">Formato e Diagramação</div>
+        <p class="gs-aside-desc">Todas as propostas usam o mesmo tamanho de página e organização de zonas visuais.</p>
+      </aside>
+      <div>
+        <div class="format-cards">
+          <div>
+            <div class="page-mock">
+              <div class="pm-head">
+                <div class="pm-head-bar"></div>
+              </div>
+              <div class="pm-gold"></div>
+              <div class="pm-body">
+                <div class="pm-line dark" style="width:65%;"></div>
+                <div class="pm-line" style="width:90%; margin-top:2px;"></div>
+                <div class="pm-line" style="width:80%;"></div>
+                <div class="pm-line" style="width:75%;"></div>
+                <div style="height: 10px;"></div>
+                <div class="pm-line" style="width:55%;"></div>
+                <div class="pm-line" style="width:70%;"></div>
+                <div class="pm-line" style="width:60%;"></div>
+                <div style="height: 10px;"></div>
+                <div class="pm-line gold"></div>
+              </div>
+              <div class="pm-foot">
+                <div class="pm-foot-dot"></div>
+                <div class="pm-foot-dot" style="width:36px;"></div>
+              </div>
+            </div>
+            <div style="text-align:center; margin-top:12px;">
+              <div style="font-size:13px; font-weight:700; color:var(--t);">A3 Portrait</div>
+              <div style="font-size:11px; font-family:var(--ff-mono); color:var(--t3);">297 × 420 mm</div>
+              <div style="font-size:11px; font-family:var(--ff-mono); color:var(--t3);">842 × 1190 pts</div>
+            </div>
+          </div>
+          <div class="format-specs">
+            <div class="spec-item">
+              <div class="spec-label">Orientação</div>
+              <div class="spec-val">Retrato (portrait) — consistente em todas as 4 apresentações</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-label">Cabeçalho</div>
+              <div class="spec-val">Faixa escura com logo + barra dourada de separação. Cor de destaque aplicada como bloco ou faixa lateral.</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-label">Rodapé / Assinatura</div>
+              <div class="spec-val">Linha separadora + e-mail e telefone da agência ao pé de cada página. Logotipo posicionado na capa.</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-label">Cor de destino</div>
+              <div class="spec-val">Aplicada em blocos de fundo, faixas, ícones de número de noites e elementos de timeline. O ouro permanece constante em todos os contextos.</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-label">Imagens</div>
+              <div class="spec-val">Fotografia de destino ocupa área grande na capa e nas páginas de destino. Tratamento fotorrealista, sem filtros artificiais.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 04 ESTRUTURA ── -->
+  <section class="gs">
+    <div class="gs-grid">
+      <aside class="gs-aside">
+        <div class="gs-tag">04</div>
+        <div class="gs-aside-title">Estrutura da Apresentação</div>
+        <p class="gs-aside-desc">Sequência consistente de seções, do panorama ao detalhe financeiro.</p>
+      </aside>
+      <div>
+        <div class="struct-list">
+          <div class="sl-item">
+            <div class="sl-num">01</div>
+            <div>
+              <div class="sl-title">Capa — Glossário e Resumo</div>
+              <div class="sl-desc">Nome do cliente em destaque · destino e período · data da cotação · contagem de destinos, acomodações, seguro, noites e transportes · contato completo da agência</div>
+            </div>
+          </div>
+          <div class="sl-item">
+            <div class="sl-num">02</div>
+            <div>
+              <div class="sl-title">Itinerário Visual</div>
+              <div class="sl-desc">Timeline gráfica com cidades, bandeiras, datas de chegada/saída e número de noites. Conexões entre destinos representadas visualmente.</div>
+            </div>
+          </div>
+          <div class="sl-item">
+            <div class="sl-num">03</div>
+            <div>
+              <div class="sl-title">Roteiro Dia a Dia <span style="font-size:11px; color:var(--t3); font-weight:400;">(quando incluído)</span></div>
+              <div class="sl-desc">Formato: <strong style="color:var(--t);">DIA XX | CIDADE | DATA</strong>. Atividades, visitas guiadas, transfers e passeios com horários quando relevante. Tom editorial.</div>
+            </div>
+          </div>
+          <div class="sl-item">
+            <div class="sl-num">04</div>
+            <div>
+              <div class="sl-title">Páginas de Destino e Hotéis</div>
+              <div class="sl-desc">Uma página por cidade. Texto inspiracional do destino + cartão de hotel com: nome, categoria (estrelas), endereço, tipo de quarto, plano de refeições, datas e número de noites.</div>
+            </div>
+          </div>
+          <div class="sl-item">
+            <div class="sl-num">05</div>
+            <div>
+              <div class="sl-title">Serviços Adicionais</div>
+              <div class="sl-desc">Seguro de viagem (GTA Global Travel Assistance · 84.000 USD DMH), aluguel de carro se aplicável, safáris e passeios opcionais com condições e duração.</div>
+            </div>
+          </div>
+          <div class="sl-item">
+            <div class="sl-num">06</div>
+            <div>
+              <div class="sl-title">Valores e Tabela de Preços</div>
+              <div class="sl-desc">Tabela em BRL ou USD por adulto. Câmbio da data da cotação. Detalhamento por serviço (aéreo, hotelaria, seguro, terrestre). Nota: *nada reservado, apenas cotado.</div>
+            </div>
+          </div>
+          <div class="sl-item">
+            <div class="sl-num">07</div>
+            <div>
+              <div class="sl-title">Condições de Pagamento e Observações</div>
+              <div class="sl-desc">Parcelamento por categoria de serviço · câmbio de referência · exclusões (vistos, city taxes, despesas pessoais) · lembrete sobre taxas locais de estadia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 05 APRESENTAÇÕES ── -->
+  <section class="gs">
+    <div class="gs-grid">
+      <aside class="gs-aside">
+        <div class="gs-tag">05</div>
+        <div class="gs-aside-title">Apresentações Analisadas</div>
+        <p class="gs-aside-desc">Referência das 4 propostas que formam a base deste guia.</p>
+      </aside>
+      <div style="overflow-x: auto;">
+        <table class="dt">
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Destino</th>
+              <th>Período</th>
+              <th>Cor de Destaque</th>
+              <th>Pax</th>
+              <th>Noites</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="dn">Andrea e Lincoln Demario</span></td>
+              <td>Itália (9 destinos)</td>
+              <td class="mono">abr–mai 2025</td>
+              <td><div class="cc"><div class="cc-dot" style="background:#730505;"></div><span class="cc-hex">#730505</span></div></td>
+              <td class="tn">2 ADT</td>
+              <td class="tn">21</td>
+            </tr>
+            <tr>
+              <td><span class="dn">Maria Cecília e Família</span></td>
+              <td>Itália (4 destinos)</td>
+              <td class="mono">mai–jun 2026</td>
+              <td><div class="cc"><div class="cc-dot" style="background:#730505;"></div><span class="cc-hex">#730505</span></div></td>
+              <td class="tn">3 ADT</td>
+              <td class="tn">14</td>
+            </tr>
+            <tr>
+              <td><span class="dn">Julia Kio e Família</span></td>
+              <td>Peru (Lima, Cusco, Aguas Calientes)</td>
+              <td class="mono">out 2025</td>
+              <td><div class="cc"><div class="cc-dot" style="background:#73805c;"></div><span class="cc-hex">#73805c</span></div></td>
+              <td class="tn">3 ADT</td>
+              <td class="tn">6</td>
+            </tr>
+            <tr>
+              <td><span class="dn">Isabel Belloube e Família</span></td>
+              <td>África do Sul · Namíbia (6 dest.)</td>
+              <td class="mono">jul 2025</td>
+              <td><div class="cc"><div class="cc-dot" style="background:#404525;"></div><span class="cc-hex">#404525</span></div></td>
+              <td class="tn">4 ADT</td>
+              <td class="tn">14</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 06 ASSINATURA ── -->
+  <section class="gs">
+    <div class="gs-grid">
+      <aside class="gs-aside">
+        <div class="gs-tag">06</div>
+        <div class="gs-aside-title">Assinatura e Contato</div>
+        <p class="gs-aside-desc">Elementos fixos presentes na capa e no rodapé de todas as páginas.</p>
+      </aside>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div class="sig-block">
+          <div class="sig-item">
+            <div class="sig-lbl">E-mail</div>
+            <div class="sig-val">atendimentolusatravel@gmail.com</div>
+          </div>
+          <div class="sig-item">
+            <div class="sig-lbl">Telefone / WhatsApp</div>
+            <div class="sig-val">+55 41 99189-6076</div>
+          </div>
+          <div class="sig-item">
+            <div class="sig-lbl">Endereço</div>
+            <div class="sig-val">Alameda Princesa Izabel, 1700<br>Bigorrilho · Curitiba – PR</div>
+          </div>
+          <div class="sig-item">
+            <div class="sig-lbl">Nome da Agência</div>
+            <div class="sig-val">Lusa Travel</div>
+          </div>
+        </div>
+        <div class="callout">
+          <strong>Posicionamento:</strong> E-mail e telefone são os dois elementos essenciais e aparecem em <em>todas</em> as capas. O endereço físico aparece nas propostas mais completas. O logo da empresa está posicionado como imagem de destaque na capa, sempre acompanhado da barra dourada de separação.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 07 TOM ── -->
+  <section class="gs">
+    <div class="gs-grid">
+      <aside class="gs-aside">
+        <div class="gs-tag">07</div>
+        <div class="gs-aside-title">Tom Editorial</div>
+        <p class="gs-aside-desc">Padrão de linguagem nas descrições, roteiros e informações técnicas.</p>
+      </aside>
+      <div>
+        <div class="tone-cards">
+          <div class="tc">
+            <div class="tc-label">Descrições de destino</div>
+            <div class="tc-body">Linguagem evocativa e positiva, com foco em experiências sensoriais, história e gastronomia. Tom inspiracional — nunca técnico. Exemplo: <em>"Verona é uma cidade encantadora, rica em história, cultura e romance. Famosa por ser o cenário de Romeu e Julieta…"</em></div>
+          </div>
+          <div class="tc">
+            <div class="tc-label">Roteiro dia a dia</div>
+            <div class="tc-body">Formato rígido: <strong>DIA XX | CIDADE | DATA</strong>. Texto em segunda ou terceira pessoa, descrevendo atividades com horários quando relevante. Inclui contexto histórico nas visitas guiadas.</div>
+          </div>
+          <div class="tc">
+            <div class="tc-label">Valores e câmbio</div>
+            <div class="tc-body">Sempre com asterisco e nota explícita: <em>*nada reservado, apenas cotado</em> e <em>**valores finais de acordo com a cotação na data de fechamento</em>. Câmbio referenciado com data (ex: <strong>Cotação 29/01 · Dólar = 5,89</strong>).</div>
+          </div>
+          <div class="tc">
+            <div class="tc-label">Parcelamento</div>
+            <div class="tc-body">Descrito por categoria: <strong>Hotelaria</strong> (até 10x), <strong>Serviços</strong> (até 8–10x), <strong>Aéreo internacional</strong> (até 4–6x). Desconto via PIX referenciado quando aplicável (5–13%).</div>
+          </div>
+          <div class="tc">
+            <div class="tc-label">Nome-padrão da apresentação</div>
+            <div class="tc-body">Formato: <strong>NOME DO CLIENTE | DESTINO</strong>. Tudo em maiúsculas, sem acentos adicionais. Exemplos: <em>JULIA KIO E FAMÍLIA | PERU</em> · <em>ISABEL BELLOUBE | ÁFRICA</em>.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
