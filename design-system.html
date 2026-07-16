@@ -1,0 +1,679 @@
+<title>Design System — Lusa Travel</title>
+<style>
+:root {
+  --gold:#da8d00; --gold-lo:rgba(218,141,0,.13); --gold-hi:#f0a010;
+  --italia:#730505; --peru:#73805c; --africa:#404525;
+  --bg:#f5f0ea; --sf:#ede7de; --sf2:#e3dbd0; --bd:#cec4b4;
+  --t:#1a1510; --t2:#5c5249; --t3:#9a8d80;
+  --sb:#0f0d0b; --sb-bd:#252018; --sb-t:#7a6e64; --sb-hi:#f0e8de;
+  --sans:system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'Courier New',monospace;
+  --r:5px; --sbw:232px;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#141108; --sf:#1e1a12; --sf2:#27211a; --bd:#38301f;
+  --t:#f0e8de; --t2:#a89880; --t3:#6a5c4f;
+  --gold:#e8a210; --gold-lo:rgba(232,162,16,.12); --gold-hi:#ffb830;
+}}
+:root[data-theme=dark]{--bg:#141108;--sf:#1e1a12;--sf2:#27211a;--bd:#38301f;--t:#f0e8de;--t2:#a89880;--t3:#6a5c4f;--gold:#e8a210;--gold-lo:rgba(232,162,16,.12);--gold-hi:#ffb830;}
+:root[data-theme=light]{--bg:#f5f0ea;--sf:#ede7de;--sf2:#e3dbd0;--bd:#cec4b4;--t:#1a1510;--t2:#5c5249;--t3:#9a8d80;--gold:#da8d00;--gold-lo:rgba(218,141,0,.13);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font-family:var(--sans);font-size:15px;line-height:1.65;display:flex;min-height:100vh}
+
+/* ── SIDEBAR ── */
+.sb{position:fixed;top:0;left:0;bottom:0;width:var(--sbw);background:var(--sb);border-right:1px solid var(--sb-bd);display:flex;flex-direction:column;z-index:100;overflow-y:auto}
+.sb-brand{padding:26px 22px 22px;border-bottom:1px solid var(--sb-bd);display:flex;align-items:center;gap:12px}
+.sb-mark{width:34px;height:34px;border:2px solid var(--gold);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.05em;flex-shrink:0}
+.sb-n{font-size:13px;font-weight:700;color:var(--sb-hi);line-height:1.2}
+.sb-d{font-size:10px;color:var(--sb-t);margin-top:2px}
+.sb-sep{height:2px;background:linear-gradient(90deg,var(--gold) 0%,transparent 100%);margin:14px 22px 4px}
+.sb-lbl{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700;padding:12px 22px 8px}
+.sb-nav{display:flex;flex-direction:column;padding:0 10px;gap:2px}
+.sb-a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:var(--r);text-decoration:none;color:var(--sb-t);font-size:12.5px;font-weight:500;transition:background .12s,color .12s}
+.sb-a:hover{background:rgba(255,255,255,.05);color:var(--sb-hi)}
+.sb-a.on{background:rgba(218,141,0,.13);color:var(--gold)}
+.sb-num{font-size:10px;font-family:var(--mono);opacity:.4;width:16px;flex-shrink:0}
+.sb-a.on .sb-num{opacity:.7}
+.sb-foot{margin-top:auto;padding:14px 22px 18px;border-top:1px solid var(--sb-bd);font-size:10.5px;color:var(--sb-t)}
+
+/* ── MAIN ── */
+.main{margin-left:var(--sbw);flex:1;min-width:0}
+.sec{padding:68px 56px;border-bottom:1px solid var(--bd)}
+.sec:last-child{border-bottom:none}
+.eyebrow{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
+.sec-title{font-size:clamp(22px,3.5vw,34px);font-weight:700;letter-spacing:-.025em;line-height:1.1;margin-bottom:12px}
+.sec-intro{font-size:14.5px;color:var(--t2);max-width:580px;line-height:1.65;padding-bottom:40px;border-bottom:1px solid var(--bd);margin-bottom:44px}
+
+/* ── BLOCKS ── */
+.blk{margin-bottom:44px}
+.blk:last-child{margin-bottom:0}
+.blk-h{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--t3);font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.blk-h::after{content:'';flex:1;height:1px;background:var(--bd)}
+.blk-d{font-size:13.5px;color:var(--t2);margin-bottom:18px;line-height:1.6}
+
+/* ── SWATCHES ── */
+.sw-row{display:flex;flex-wrap:wrap;gap:10px}
+.sw{width:124px}
+.sw-chip{height:76px;border-radius:var(--r) var(--r) 0 0;border:1px solid rgba(0,0,0,.06);position:relative}
+.sw-tag{position:absolute;bottom:7px;right:7px;font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);background:rgba(0,0,0,.2);padding:2px 5px;border-radius:3px}
+.sw-info{background:var(--sf);border:1px solid var(--bd);border-top:none;border-radius:0 0 var(--r) var(--r);padding:9px 11px 10px}
+.sw-name{font-size:11.5px;font-weight:700;color:var(--t)}
+.sw-hex{font-size:11px;font-family:var(--mono);color:var(--t3);margin-top:1px}
+.sw-role{font-size:10px;color:var(--t3);margin-top:4px;line-height:1.35}
+
+/* ── CALLOUT ── */
+.callout{border-radius:var(--r);padding:14px 18px;font-size:13px;color:var(--t2);line-height:1.65;margin:20px 0}
+.callout.gold{background:var(--gold-lo);border-left:3px solid var(--gold)}
+.callout strong{color:var(--gold)}
+code{font-family:var(--mono);font-size:11.5px;background:var(--sf2);padding:1px 5px;border-radius:3px}
+
+/* ── DEST GUIDE ── */
+.dg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.dg-card{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden}
+.dg-top{height:8px}
+.dg-body{padding:13px 15px}
+.dg-reg{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--t3);font-weight:700;margin-bottom:3px}
+.dg-name{font-size:13px;font-weight:700;color:var(--t);margin-bottom:3px}
+.dg-hex{font-size:11px;font-family:var(--mono);color:var(--t3)}
+.dg-desc{font-size:11px;color:var(--t2);margin-top:6px;line-height:1.4}
+
+/* ── PAGE MOCKUPS ── */
+.mocks{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start}
+.mock-w{text-align:center}
+.mock-label{font-size:11px;font-weight:700;color:var(--t2);margin-top:9px}
+.mock-sub{font-size:10px;color:var(--t3);margin-top:1px}
+.pm{width:98px;height:138px;background:#fff;border:1px solid var(--bd);border-radius:2px;box-shadow:0 2px 10px rgba(0,0,0,.1);overflow:hidden;display:flex;flex-direction:column;margin:0 auto}
+.pm-hd{background:#1a1510;flex-shrink:0;display:flex;align-items:center;padding:0 6px}
+.pm-bar{height:2px;background:#da8d00;flex-shrink:0}
+.pm-ft{background:#f0ebe3;border-top:1px solid #d8d0c8;flex-shrink:0;height:10px}
+
+/* ── TYPE TABLE ── */
+.tt{display:flex;flex-direction:column;border:1px solid var(--bd);border-radius:var(--r);overflow:hidden}
+.tr{display:grid;grid-template-columns:1fr 190px;gap:14px;padding:15px 18px;border-bottom:1px solid var(--bd);align-items:center}
+.tr:last-child{border-bottom:none}
+.tr:nth-child(even){background:var(--sf)}
+.tr-r{text-align:right}
+.tr-role{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.tr-face{font-size:12px;font-weight:700;color:var(--t);margin-top:3px}
+.tr-spec{font-size:10.5px;font-family:var(--mono);color:var(--t3);margin-top:1px}
+
+/* ── SPEC ROW ── */
+.spec-table{display:flex;flex-direction:column;gap:6px}
+.spec-r{background:var(--sf);border-radius:var(--r);padding:11px 14px;display:flex;justify-content:space-between;align-items:center}
+.spec-k{font-size:12px;font-weight:700;color:var(--t)}
+.spec-v{font-size:12px;font-family:var(--mono);color:var(--t3)}
+
+/* ── FLOW ── */
+.flow{display:flex;flex-direction:column;gap:6px}
+.fl{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:13px 16px;background:var(--sf);border-radius:var(--r);border-left:3px solid transparent;transition:border-color .15s}
+.fl:hover{border-left-color:var(--gold)}
+.fl-n{font-size:11px;font-family:var(--mono);color:var(--t3);padding-top:3px}
+.fl-title{font-size:13px;font-weight:700;color:var(--t)}
+.fl-d{font-size:11.5px;color:var(--t3);margin-top:3px;line-height:1.5}
+
+/* ── ANATOMY ── */
+.anat{display:grid;grid-template-columns:148px 1fr;gap:28px;align-items:start}
+.ap{width:148px;height:209px;background:#fff;border:1px solid var(--bd);border-radius:2px;box-shadow:0 3px 14px rgba(0,0,0,.12);overflow:hidden;position:relative;flex-shrink:0}
+.ap-bg{position:absolute;inset:0;background:linear-gradient(160deg,#8a7060 0%,#3a2820 100%)}
+.ap-ov{position:absolute;inset:0;background:rgba(0,0,0,.42)}
+.ap-top{position:absolute;top:0;left:0;right:0;background:rgba(10,8,6,.85);padding:9px 11px;display:flex;align-items:center;justify-content:space-between;z-index:2}
+.ap-goldbar{position:absolute;top:30px;left:0;right:0;height:2px;background:#da8d00;z-index:2}
+.ap-cnt{position:absolute;bottom:0;left:0;right:0;padding:9px 11px 11px;z-index:2}
+.ann-list{display:flex;flex-direction:column;gap:8px}
+.ann{display:flex;align-items:flex-start;gap:9px;font-size:12px}
+.ann-dot{width:18px;height:18px;border-radius:50%;background:var(--gold);color:#fff;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.ann-lbl{font-weight:700;color:var(--t)}
+.ann-d{font-size:11px;color:var(--t3);margin-top:1px}
+
+/* ── VISUAL ELEMENTS GRID ── */
+.vg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ve{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:16px}
+.ve-lbl{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
+.ve-prev{margin-bottom:10px}
+.ve-desc{font-size:11.5px;color:var(--t3);line-height:1.5}
+
+/* ── SIG ── */
+.sig{background:#1a1510;border-radius:var(--r);padding:26px 28px}
+.sig-g{display:grid;grid-template-columns:1fr 1fr;gap:18px 28px}
+.sig-lbl{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:4px}
+.sig-val{font-size:14px;color:rgba(240,232,222,.85);line-height:1.4}
+.rules{display:flex;flex-direction:column;gap:7px;margin-top:14px}
+.rule{background:var(--sf);border-radius:var(--r);padding:12px 16px;font-size:12.5px;color:var(--t2);display:flex;gap:9px;line-height:1.5}
+.rule::before{content:'→';color:var(--gold);font-weight:700;flex-shrink:0}
+
+/* ── FORMATS GRID ── */
+.fmts{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.fmt{background:var(--sf);border-radius:var(--r);padding:13px 15px}
+.fmt-lbl{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px}
+.fmt-val{font-size:12.5px;font-weight:700;color:var(--t);margin-bottom:3px}
+.fmt-d{font-size:11px;color:var(--t3);line-height:1.4}
+
+/* ── MOBILE ── */
+.mob-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;background:var(--sb);border:1px solid var(--sb-bd);color:var(--sb-hi);padding:7px 11px;border-radius:var(--r);cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:820px){
+  :root{--sbw:0px}
+  .main{margin-left:0}
+  .sb{transform:translateX(-100%);transition:transform .25s;width:248px}
+  .sb.open{transform:translateX(0)}
+  .mob-btn{display:block}
+  .sec{padding:44px 22px}
+  .anat{grid-template-columns:1fr}
+  .vg{grid-template-columns:1fr 1fr}
+  .dg{grid-template-columns:1fr 1fr}
+  .tr{grid-template-columns:1fr}
+  .tr-r{text-align:left}
+  .fmts{grid-template-columns:1fr}
+  .sig-g{grid-template-columns:1fr}
+}
+@media(max-width:480px){.vg,.dg{grid-template-columns:1fr}.sw{width:calc(50% - 5px)}}
+</style>
+
+<button class="mob-btn" id="btn">☰</button>
+
+<nav class="sb" id="sb">
+  <div class="sb-brand">
+    <div class="sb-mark">LT</div>
+    <div><div class="sb-n">Lusa Travel</div><div class="sb-d">Design System v1.0</div></div>
+  </div>
+  <div class="sb-sep"></div>
+  <div class="sb-lbl">Seções</div>
+  <nav class="sb-nav">
+    <a href="#cores"    class="sb-a on"><span class="sb-num">01</span>Paleta de Cores</a>
+    <a href="#diagrama" class="sb-a"><span class="sb-num">02</span>Diagramação</a>
+    <a href="#tipograf" class="sb-a"><span class="sb-num">03</span>Tipografia</a>
+    <a href="#info"     class="sb-a"><span class="sb-num">04</span>Informações</a>
+    <a href="#visual"   class="sb-a"><span class="sb-num">05</span>Padrão Visual</a>
+    <a href="#assinat"  class="sb-a"><span class="sb-num">06</span>Assinatura &amp; Logo</a>
+  </nav>
+  <div class="sb-foot">Julho 2026 · 4 apresentações analisadas</div>
+</nav>
+
+<main class="main">
+
+<!-- ══ 01 CORES ══ -->
+<section id="cores" class="sec">
+  <div class="eyebrow">01 — Paleta de Cores</div>
+  <h2 class="sec-title">Sistema de Cores</h2>
+  <p class="sec-intro">Sistema bipartido: <strong>cores fixas</strong> que persistem em todas as apresentações e uma <strong>cor variável de destino</strong> que muda por viagem. O ouro é sempre a âncora da identidade.</p>
+
+  <div class="blk">
+    <div class="blk-h">Cores Fixas da Marca</div>
+    <p class="blk-d">Presentes em <em>todas</em> as apresentações. Nunca substituídas, independente do destino.</p>
+    <div class="sw-row">
+      <div class="sw"><div class="sw-chip" style="background:#da8d00"></div><div class="sw-info"><div class="sw-name">Ouro</div><div class="sw-hex">#da8d00</div><div class="sw-role">Accent principal · datas · badges · barra separadora · destaques de texto</div></div></div>
+      <div class="sw"><div class="sw-chip" style="background:#333131"></div><div class="sw-info"><div class="sw-name">Carvão</div><div class="sw-hex">#333131</div><div class="sw-role">Texto corrido · descrições de destino · informações técnicas</div></div></div>
+      <div class="sw"><div class="sw-chip" style="background:#1a1510"></div><div class="sw-info"><div class="sw-name">Preto Quente</div><div class="sw-hex">#1a1510</div><div class="sw-role">Cabeçalho · nomes de cliente · títulos · rodapé de assinatura</div></div></div>
+      <div class="sw"><div class="sw-chip" style="background:#fff;border:1px solid #ddd"></div><div class="sw-info"><div class="sw-name">Branco</div><div class="sw-hex">#ffffff</div><div class="sw-role">Fundo geral de página · texto sobre fundos escuros</div></div></div>
+    </div>
+  </div>
+
+  <div class="callout gold">
+    <strong>Regra do Ouro:</strong> <code>#da8d00</code> é o único accent constante. Aparece como cor de texto em destaques, numeração, datas, ícones e na barra horizontal de 2–3 px que separa cabeçalho de conteúdo em <em>todas</em> as páginas. Nunca substitua por variações aproximadas.
+  </div>
+
+  <div class="blk">
+    <div class="blk-h">Cores Variáveis por Destino</div>
+    <p class="blk-d">Aplicadas como fundo de blocos, faixas e cabeçalhos de seção. Evocam o caráter visual de cada região.</p>
+    <div class="sw-row">
+      <div class="sw" style="width:140px"><div class="sw-chip" style="background:#730505"><div class="sw-tag">Itália</div></div><div class="sw-info"><div class="sw-name">Borgonha</div><div class="sw-hex">#730505</div><div class="sw-role">Andrea &amp; Lincoln · Maria Cecília e Família</div></div></div>
+      <div class="sw" style="width:140px"><div class="sw-chip" style="background:#73805c"><div class="sw-tag">Peru</div></div><div class="sw-info"><div class="sw-name">Verde Andino</div><div class="sw-hex">#73805c</div><div class="sw-role">Julia Kio e Família</div></div></div>
+      <div class="sw" style="width:140px"><div class="sw-chip" style="background:#404525"><div class="sw-tag">África</div></div><div class="sw-info"><div class="sw-name">Verde Savana</div><div class="sw-hex">#404525</div><div class="sw-role">Isabel Belloube e Família</div></div></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <div class="blk-h">Guia para Novos Destinos</div>
+    <p class="blk-d">Ao criar uma nova apresentação, escolha uma cor que reflita a identidade geográfica da região. Mantenha luminosidade baixa (L&lt;35%) para garantir contraste com texto branco.</p>
+    <div class="dg">
+      <div class="dg-card"><div class="dg-top" style="background:#5c1a08"></div><div class="dg-body"><div class="dg-reg">Europa Mediterrânea</div><div class="dg-name">Terras e Vinos</div><div class="dg-hex">Borgonhas, terracottas</div><div class="dg-desc">Portugal, Espanha, Grécia — pedras antigas, vinhos regionais</div></div></div>
+      <div class="dg-card"><div class="dg-top" style="background:#1a3a5c"></div><div class="dg-body"><div class="dg-reg">Europa do Norte</div><div class="dg-name">Azuis Nórdicos</div><div class="dg-hex">Azuis profundos, ardósia</div><div class="dg-desc">França, Holanda, Escandinávia — elegância arquitetônica</div></div></div>
+      <div class="dg-card"><div class="dg-top" style="background:#2d5e3a"></div><div class="dg-body"><div class="dg-reg">América Latina</div><div class="dg-name">Verdes Tropicais</div><div class="dg-hex">Verdes médios, esmeraldas</div><div class="dg-desc">Brasil, Argentina, Chile — floresta, exuberância natural</div></div></div>
+      <div class="dg-card"><div class="dg-top" style="background:#5a2d0a"></div><div class="dg-body"><div class="dg-reg">Oriente Médio / Ásia</div><div class="dg-name">Ocres e Especiarias</div><div class="dg-hex">Marrons, âmbares escuros</div><div class="dg-desc">Dubai, Marrocos, Japão — riqueza, tradição</div></div></div>
+      <div class="dg-card"><div class="dg-top" style="background:#1a4f55"></div><div class="dg-body"><div class="dg-reg">Oceania / Caribe</div><div class="dg-name">Teais Oceânicos</div><div class="dg-hex">Teais, azuis petróleo</div><div class="dg-desc">Austrália, Maldivas, Caribe — oceano, liberdade</div></div></div>
+      <div class="dg-card"><div class="dg-top" style="background:var(--bd)"></div><div class="dg-body"><div class="dg-reg">Regra Geral</div><div class="dg-name">Contraste mínimo</div><div class="dg-hex">Luminosidade L &lt; 35%</div><div class="dg-desc">Texto branco deve ter contraste ≥ 4.5:1 sobre a cor escolhida</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 02 DIAGRAMAÇÃO ══ -->
+<section id="diagrama" class="sec">
+  <div class="eyebrow">02 — Diagramação</div>
+  <h2 class="sec-title">Layouts de Página</h2>
+  <p class="sec-intro">Todas as apresentações usam <strong>A3 Portrait</strong> com zonas de layout consistentes: cabeçalho escuro, barra dourada, área de conteúdo e rodapé de assinatura.</p>
+
+  <div class="blk">
+    <div class="blk-h">Especificações</div>
+    <div style="display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start">
+      <div class="spec-table" style="flex:1;min-width:200px">
+        <div class="spec-r"><span class="spec-k">Formato</span><span class="spec-v">A3 Portrait</span></div>
+        <div class="spec-r"><span class="spec-k">Dimensões</span><span class="spec-v">297 × 420 mm</span></div>
+        <div class="spec-r"><span class="spec-k">Em pontos</span><span class="spec-v">842 × 1190 pts</span></div>
+        <div class="spec-r"><span class="spec-k">Orientação</span><span class="spec-v">Portrait (retrato)</span></div>
+        <div class="spec-r"><span class="spec-k">Resolução</span><span class="spec-v">300 DPI</span></div>
+      </div>
+      <!-- Zone diagram -->
+      <div style="flex-shrink:0">
+        <div style="width:90px;height:127px;background:#fff;border:1px solid var(--bd);border-radius:2px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow:hidden;display:flex;flex-direction:column;font-size:4.5px">
+          <div style="background:#1a1510;height:15px;display:flex;align-items:center;padding:0 5px;color:rgba(255,255,255,.45);letter-spacing:.1em;flex-shrink:0">CABEÇALHO</div>
+          <div style="height:2px;background:#da8d00;flex-shrink:0"></div>
+          <div style="flex:1;background:#e8e3dc;display:flex;align-items:center;justify-content:center;color:#9a8d80;letter-spacing:.08em">CONTEÚDO</div>
+          <div style="height:11px;background:#f0ebe3;border-top:1px solid #d8d0c8;display:flex;align-items:center;padding:0 5px;color:#9a8d80;letter-spacing:.08em;flex-shrink:0">RODAPÉ</div>
+        </div>
+        <div style="text-align:center;font-size:10px;color:var(--t3);margin-top:8px">Zonas fixas</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <div class="blk-h">Tipos de Página</div>
+    <div class="mocks">
+
+      <!-- CAPA -->
+      <div class="mock-w">
+        <div class="pm">
+          <div class="pm-hd" style="height:21px;justify-content:space-between;padding:0 6px">
+            <span style="font-size:5px;font-weight:800;color:rgba(218,141,0,.85)">LT</span>
+            <span style="font-size:4px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3)">GLOSSÁRIO</span>
+          </div>
+          <div class="pm-bar"></div>
+          <div style="flex:1;background:linear-gradient(160deg,#8a7060,#3a2820);position:relative">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 45%,rgba(0,0,0,.72))"></div>
+            <div style="position:absolute;bottom:7px;left:6px;right:6px">
+              <div style="font-size:4px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:2px">SUA VIAGEM PARA:</div>
+              <div style="font-size:6.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#fff;line-height:1.15">ANDREA E LINCOLN<br>DEMARIO</div>
+              <div style="font-size:5px;font-weight:600;color:rgba(218,141,0,.9);margin-top:2px">ITÁLIA</div>
+              <div style="display:flex;gap:5px;margin-top:6px">
+                <div style="display:flex;flex-direction:column;align-items:center">
+                  <span style="font-size:7px;font-weight:800;color:rgba(218,141,0,.9)">9</span>
+                  <span style="font-size:3.5px;color:rgba(255,255,255,.45)">Dest.</span>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:center">
+                  <span style="font-size:7px;font-weight:800;color:rgba(218,141,0,.9)">21</span>
+                  <span style="font-size:3.5px;color:rgba(255,255,255,.45)">Noites</span>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:center">
+                  <span style="font-size:7px;font-weight:800;color:rgba(218,141,0,.9)">8</span>
+                  <span style="font-size:3.5px;color:rgba(255,255,255,.45)">Hot.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="height:13px;background:#1a1510;display:flex;align-items:center;padding:0 6px;flex-shrink:0">
+            <span style="font-size:3.5px;color:rgba(255,255,255,.35);letter-spacing:.04em">atendimentolusatravel@gmail.com · +55 41 99189-6076</span>
+          </div>
+        </div>
+        <div class="mock-label">Capa</div>
+        <div class="mock-sub">Glossário + Stats + Contato</div>
+      </div>
+
+      <!-- ITINERÁRIO -->
+      <div class="mock-w">
+        <div class="pm">
+          <div class="pm-hd" style="height:21px;padding:0 6px"><span style="font-size:5.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)">Itinerário</span></div>
+          <div class="pm-bar"></div>
+          <div style="flex:1;background:#fff;padding:9px 6px;display:flex;flex-direction:column;gap:5px">
+            <div style="display:flex;align-items:center;gap:5px">
+              <div style="width:13px;height:13px;border-radius:50%;background:#730505;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-size:5px;color:#fff;font-weight:800">1</span></div>
+              <div><div style="font-size:5.5px;font-weight:700;color:#1a1510">MILÃO</div><div style="font-size:4px;color:#9a8d80">14 abr · 3 noites</div></div>
+            </div>
+            <div style="width:1px;height:8px;background:#d0c8bc;margin-left:6px"></div>
+            <div style="display:flex;align-items:center;gap:5px">
+              <div style="width:13px;height:13px;border-radius:50%;background:#730505;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-size:5px;color:#fff;font-weight:800">2</span></div>
+              <div><div style="font-size:5.5px;font-weight:700;color:#1a1510">LAGO COMO</div><div style="font-size:4px;color:#9a8d80">18 abr · 2 noites</div></div>
+            </div>
+            <div style="width:1px;height:8px;background:#d0c8bc;margin-left:6px"></div>
+            <div style="display:flex;align-items:center;gap:5px">
+              <div style="width:13px;height:13px;border-radius:50%;background:#730505;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-size:5px;color:#fff;font-weight:800">3</span></div>
+              <div><div style="font-size:5.5px;font-weight:700;color:#1a1510">VERONA</div><div style="font-size:4px;color:#9a8d80">20 abr · 2 noites</div></div>
+            </div>
+            <div style="font-size:4px;color:#da8d00;margin-top:2px;letter-spacing:.06em">+ 6 destinos →</div>
+          </div>
+          <div class="pm-ft"></div>
+        </div>
+        <div class="mock-label">Itinerário</div>
+        <div class="mock-sub">Timeline de cidades</div>
+      </div>
+
+      <!-- HOTEL -->
+      <div class="mock-w">
+        <div class="pm">
+          <div class="pm-hd" style="height:21px;justify-content:space-between;padding:0 6px;background:#730505">
+            <span style="font-size:4.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);font-weight:700">ROMA · ITÁLIA</span>
+            <div style="width:14px;height:14px;border-radius:50%;border:1.5px solid rgba(218,141,0,.8);display:flex;align-items:center;justify-content:center"><span style="font-size:5.5px;font-weight:800;color:rgba(218,141,0,.9)">5</span></div>
+          </div>
+          <div class="pm-bar"></div>
+          <div style="height:42px;background:linear-gradient(160deg,#9a8a7a,#4a3a2a);flex-shrink:0;position:relative"><div style="position:absolute;bottom:4px;left:6px;font-size:5.5px;font-weight:700;color:#fff;letter-spacing:.04em;text-transform:uppercase">Hotel Quirinale</div></div>
+          <div style="flex:1;background:#fff;padding:7px 6px;display:flex;flex-direction:column;gap:4px">
+            <div style="font-size:5px;color:#da8d00;font-weight:700">★★★★ Superior Double Room</div>
+            <div style="height:1px;background:#f0ebe3"></div>
+            <div style="font-size:4px;color:#9a8d80">Check-in: 30 mai · Check-out: 02 jun</div>
+            <div style="font-size:4px;color:#9a8d80">Plano: Café da manhã incluído</div>
+            <div style="font-size:4px;color:#9a8d80">Via Nazionale, 7 · Roma RM, Itália</div>
+            <div style="flex:1"></div>
+            <div style="font-size:3.5px;color:#c8c0b8;border-top:1px solid #f0ebe3;padding-top:3px">"Visitar Roma é como caminhar por um museu a céu aberto…"</div>
+          </div>
+          <div class="pm-ft"></div>
+        </div>
+        <div class="mock-label">Destino + Hotel</div>
+        <div class="mock-sub">Foto · texto · cartão</div>
+      </div>
+
+      <!-- DIA A DIA -->
+      <div class="mock-w">
+        <div class="pm">
+          <div class="pm-hd" style="height:21px;padding:0 6px"><span style="font-size:5.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)">Roteiro</span></div>
+          <div class="pm-bar"></div>
+          <div style="flex:1;background:#fff;padding:7px 6px;display:flex;flex-direction:column;gap:6px">
+            <div><div style="font-size:5px;font-weight:800;color:#da8d00;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px">DIA 01 | ROMA | 30/05</div><div style="font-size:3.5px;color:#5c5249;line-height:1.6">Chegada ao aeroporto de Roma. Desembarque, trâmites migratórios e traslado para o hotel. Saída com guia local para visita da Roma Barroca…</div></div>
+            <div><div style="font-size:5px;font-weight:800;color:#da8d00;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px">DIA 02 | ROMA | 31/05</div><div style="font-size:3.5px;color:#5c5249;line-height:1.6">Café da manhã no hotel e traslado ao Vaticano. Visita guiada aos Museus do Vaticano e Capela Sistina…</div></div>
+            <div><div style="font-size:5px;font-weight:800;color:#da8d00;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px">DIA 04 | FLORENÇA | 02/06</div><div style="font-size:3.5px;color:#5c5249;line-height:1.6">Transfer para estação. Trem para Florença. Visita ao Palazzo Vecchio e Piazza della Signoria…</div></div>
+          </div>
+          <div class="pm-ft"></div>
+        </div>
+        <div class="mock-label">Roteiro Dia a Dia</div>
+        <div class="mock-sub">DIA XX | CIDADE | DATA</div>
+      </div>
+
+      <!-- VALORES -->
+      <div class="mock-w">
+        <div class="pm">
+          <div class="pm-hd" style="height:21px;padding:0 6px"><span style="font-size:5.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)">Valores</span></div>
+          <div class="pm-bar"></div>
+          <div style="flex:1;background:#fff;padding:7px 6px;display:flex;flex-direction:column;gap:0">
+            <div style="font-size:3.5px;color:#9a8d80;padding-bottom:3px;border-bottom:1px solid #ece8e0">*Valores em BRL para 2 ADT</div>
+            <div style="display:flex;justify-content:space-between;padding:3.5px 0;border-bottom:1px solid #f5f0ea"><span style="font-size:4px;color:#5c5249">Hotelaria</span><span style="font-size:4px;font-family:monospace;font-weight:700;color:#1a1510">BRL ···</span></div>
+            <div style="display:flex;justify-content:space-between;padding:3.5px 0;border-bottom:1px solid #f5f0ea"><span style="font-size:4px;color:#5c5249">Aéreo Internacional</span><span style="font-size:4px;font-family:monospace;font-weight:700;color:#1a1510">BRL ···</span></div>
+            <div style="display:flex;justify-content:space-between;padding:3.5px 0;border-bottom:1px solid #f5f0ea"><span style="font-size:4px;color:#5c5249">Seguro de Viagem</span><span style="font-size:4px;font-family:monospace;font-weight:700;color:#1a1510">BRL ···</span></div>
+            <div style="display:flex;justify-content:space-between;padding:3.5px 0;border-bottom:1px solid #f5f0ea"><span style="font-size:4px;color:#5c5249">Serviços / Guias</span><span style="font-size:4px;font-family:monospace;font-weight:700;color:#1a1510">BRL ···</span></div>
+            <div style="display:flex;justify-content:space-between;padding:4px 5px;background:#1a1510;border-radius:2px;margin-top:4px"><span style="font-size:4px;color:rgba(255,255,255,.65);font-weight:700">TOTAL / PESSOA</span><span style="font-size:4px;font-family:monospace;font-weight:800;color:#da8d00">BRL ···</span></div>
+            <div style="font-size:3.5px;color:#9a8d80;margin-top:5px">Cotação 29/01 · Dólar = 5,89<br>*Nada reservado, apenas cotado</div>
+          </div>
+          <div class="pm-ft"></div>
+        </div>
+        <div class="mock-label">Valores</div>
+        <div class="mock-sub">Tabela + câmbio</div>
+      </div>
+
+      <!-- CONDIÇÕES -->
+      <div class="mock-w">
+        <div class="pm">
+          <div class="pm-hd" style="height:21px;padding:0 6px"><span style="font-size:5.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)">Condições</span></div>
+          <div class="pm-bar"></div>
+          <div style="flex:1;background:#fff;padding:7px 6px;display:flex;flex-direction:column;gap:5px">
+            <div><div style="font-size:4.5px;font-weight:800;color:#da8d00;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px">Parcelamento</div><div style="font-size:3.5px;color:#5c5249;line-height:1.7">Hotelaria: até 10x sem acréscimos<br>Aéreo: até 6x sem acréscimos<br>PIX: desconto de 5–13%</div></div>
+            <div><div style="font-size:4.5px;font-weight:800;color:#da8d00;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px">Não Inclui</div><div style="font-size:3.5px;color:#5c5249;line-height:1.7">· Vistos e taxas de vacina<br>· City taxes (pago no hotel)<br>· Despesas pessoais</div></div>
+            <div><div style="font-size:4.5px;font-weight:800;color:#da8d00;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px">Lembre-se</div><div style="font-size:3.5px;color:#5c5249;line-height:1.7">Taxa de estadia pode ser cobrada localmente pelo hotel…</div></div>
+          </div>
+          <div class="pm-ft"></div>
+        </div>
+        <div class="mock-label">Condições</div>
+        <div class="mock-sub">Parcelamento + exclusões</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ 03 TIPOGRAFIA ══ -->
+<section id="tipograf" class="sec">
+  <div class="eyebrow">03 — Tipografia</div>
+  <h2 class="sec-title">Hierarquia Tipográfica</h2>
+  <p class="sec-intro"><strong>Poppins</strong> é a família primária. Montserrat e Arimo complementam em roles específicos. Nunca use outra família sem necessidade editorial clara.</p>
+
+  <div class="blk">
+    <div class="blk-h">Escala de Tipos</div>
+    <div class="tt">
+      <div class="tr">
+        <div style="font-size:28px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;line-height:1.1">ANDREA E LINCOLN DEMARIO</div>
+        <div class="tr-r"><div class="tr-role">Nome do cliente · Capa</div><div class="tr-face">Poppins Bold</div><div class="tr-spec">27–32px · uppercase</div></div>
+      </div>
+      <div class="tr">
+        <div style="font-size:17px;font-weight:700;letter-spacing:.15em;text-transform:uppercase">COTAÇÃO PARA SUA VIAGEM</div>
+        <div class="tr-r"><div class="tr-role">Títulos de seção · Capa</div><div class="tr-face">Poppins Bold</div><div class="tr-spec">18–22px · spaced</div></div>
+      </div>
+      <div class="tr">
+        <div style="font-size:14.5px;font-weight:400;color:var(--t2)">Florença é um destino imperdível para quem ama arte, história e cultura. Considerada o berço do Renascimento, a cidade abriga as mais importantes obras de arte do mundo.</div>
+        <div class="tr-r"><div class="tr-role">Descrições de destino</div><div class="tr-face">Poppins Regular</div><div class="tr-spec">10–12px · weight 400</div></div>
+      </div>
+      <div class="tr">
+        <div style="font-size:13px;font-weight:300;color:var(--t2)">Acomodação: Hotel Quirinale · Via Nazionale, 7 · 2 Noite(s) · Café da manhã</div>
+        <div class="tr-r"><div class="tr-role">Detalhes de hotel</div><div class="tr-face">Poppins Light</div><div class="tr-spec">9–11px · weight 300</div></div>
+      </div>
+      <div class="tr">
+        <div style="font-size:13px;font-weight:500;letter-spacing:.02em">atendimentolusatravel@gmail.com · +55 41 99189-6076</div>
+        <div class="tr-r"><div class="tr-role">Contato / Assinatura</div><div class="tr-face">Montserrat Medium</div><div class="tr-spec">9–12px</div></div>
+      </div>
+      <div class="tr">
+        <div style="font-size:13px;font-weight:700;letter-spacing:.02em">Categoria ★★★★ · Superior Double Room · Café da manhã</div>
+        <div class="tr-r"><div class="tr-role">Labels de cartão de hotel</div><div class="tr-face">Arimo Bold</div><div class="tr-spec">11–12px</div></div>
+      </div>
+      <div class="tr">
+        <div style="font-size:13px;font-weight:400;color:var(--t2)">DIA 01 | ROMA | 30/05 — Chegada ao aeroporto. Desembarque, trâmites migratórios e traslado para o hotel.</div>
+        <div class="tr-r"><div class="tr-role">Roteiro dia a dia</div><div class="tr-face">Open Sans Regular</div><div class="tr-spec">11–13px</div></div>
+      </div>
+      <div class="tr">
+        <div style="font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.06em;text-transform:uppercase">29 JAN. 2025 · PROPOSTA PARA: OUT/2025</div>
+        <div class="tr-r"><div class="tr-role">Datas e referências</div><div class="tr-face">Poppins Bold · ouro</div><div class="tr-spec">9px · uppercase · #da8d00</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout gold">
+    <strong>Hierarquia:</strong> Poppins Bold para impacto (nomes, títulos). Poppins Regular para fluidez (descrições). Poppins Light para discreção (detalhes). Montserrat para contato. Arimo para labels técnicos. <code>TANAEGEAN</code> aparece apenas como display alternativo em capas especiais.
+  </div>
+</section>
+
+<!-- ══ 04 INFORMAÇÕES ══ -->
+<section id="info" class="sec">
+  <div class="eyebrow">04 — Informações Relevantes</div>
+  <h2 class="sec-title">Estrutura de Conteúdo</h2>
+  <p class="sec-intro">Cada apresentação segue uma sequência de <strong>7 seções</strong> consistentes. O conteúdo de cada seção obedece a formatos e textos padrão reutilizáveis.</p>
+
+  <div class="blk">
+    <div class="blk-h">Sequência das 7 Seções</div>
+    <div class="flow">
+      <div class="fl"><div class="fl-n">01</div><div><div class="fl-title">Capa — Glossário e Resumo</div><div class="fl-d">Nome do cliente (CAPS) · destino · período · data da cotação · stats (destinos, acomodações, seguro, noites, transportes) · contato</div></div></div>
+      <div class="fl"><div class="fl-n">02</div><div><div class="fl-title">Itinerário Visual</div><div class="fl-d">Timeline gráfica com cidades, países, datas de chegada/saída, noites por etapa. Nós na cor do destino.</div></div></div>
+      <div class="fl"><div class="fl-n">03</div><div><div class="fl-title">Roteiro Dia a Dia <span style="font-size:10.5px;color:var(--t3);font-weight:400">(opcional)</span></div><div class="fl-d">Formato: <strong style="color:var(--t)">DIA XX | CIDADE | DATA</strong>. Atividades, traslados e visitas com horários quando relevante. Tom editorial.</div></div></div>
+      <div class="fl"><div class="fl-n">04</div><div><div class="fl-title">Páginas de Destino e Hotéis</div><div class="fl-d">Uma página por cidade: foto + texto inspiracional (150–200 palavras) + cartão de hotel com nome, ★★★★, endereço, datas, quarto e refeições.</div></div></div>
+      <div class="fl"><div class="fl-n">05</div><div><div class="fl-title">Serviços Adicionais</div><div class="fl-d">Seguro GTA (84.000 USD DMH) · aluguel de carro com especificação, datas e caução · safáris e passeios com duração e condições.</div></div></div>
+      <div class="fl"><div class="fl-n">06</div><div><div class="fl-title">Tabela de Valores</div><div class="fl-d">BRL ou USD por adulto · câmbio com data (ex: Cotação 29/01 · Dólar = 5,89) · asterisco obrigatório: *nada reservado, apenas cotado</div></div></div>
+      <div class="fl"><div class="fl-n">07</div><div><div class="fl-title">Condições e Observações</div><div class="fl-d">Parcelamento por categoria · o que não inclui (vistos, city taxes, despesas pessoais) · texto padrão sobre taxas locais · desconto PIX se aplicável</div></div></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <div class="blk-h">Anatomia da Capa</div>
+    <div class="anat">
+      <div>
+        <div class="ap">
+          <div class="ap-bg"></div><div class="ap-ov"></div>
+          <div class="ap-top">
+            <span style="font-size:6px;font-weight:800;letter-spacing:.04em;color:rgba(218,141,0,.85)">LUSA TRAVEL</span>
+            <span style="font-size:4px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35)">GLOSSÁRIO</span>
+          </div>
+          <div class="ap-goldbar"></div>
+          <div class="ap-cnt">
+            <div style="font-size:4px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:3px">COTAÇÃO PARA SUA VIAGEM</div>
+            <div style="font-size:5px;color:rgba(255,255,255,.35);margin-bottom:8px">Baseado em 2 adultos · 14 abr–11 mai 2025</div>
+            <div style="font-size:4px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:2px">SUA VIAGEM PARA:</div>
+            <div style="font-size:8.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#fff;line-height:1.15">ANDREA E LINCOLN<br>DEMARIO</div>
+            <div style="font-size:6px;font-weight:600;color:rgba(218,141,0,.9);margin-top:3px">ITÁLIA</div>
+            <div style="display:flex;gap:7px;margin-top:8px">
+              <div style="text-align:center"><div style="font-size:8px;font-weight:800;color:rgba(218,141,0,.9)">9</div><div style="font-size:3.5px;color:rgba(255,255,255,.4)">Destinos</div></div>
+              <div style="text-align:center"><div style="font-size:8px;font-weight:800;color:rgba(218,141,0,.9)">21</div><div style="font-size:3.5px;color:rgba(255,255,255,.4)">Noites</div></div>
+              <div style="text-align:center"><div style="font-size:8px;font-weight:800;color:rgba(218,141,0,.9)">8</div><div style="font-size:3.5px;color:rgba(255,255,255,.4)">Hotéis</div></div>
+              <div style="text-align:center"><div style="font-size:8px;font-weight:800;color:rgba(218,141,0,.9)">1</div><div style="font-size:3.5px;color:rgba(255,255,255,.4)">Seguro</div></div>
+            </div>
+            <div style="margin-top:10px;font-size:4px;color:rgba(255,255,255,.35);line-height:1.7">atendimentolusatravel@gmail.com<br>+55 41 99189-6076</div>
+          </div>
+        </div>
+      </div>
+      <div class="ann-list">
+        <div class="ann"><div class="ann-dot">A</div><div><div class="ann-lbl">Logo + Glossário</div><div class="ann-d">Cabeçalho escuro #1a1510 com nome/logo da agência à esquerda e tag "GLOSSÁRIO" à direita.</div></div></div>
+        <div class="ann"><div class="ann-dot">B</div><div><div class="ann-lbl">Barra Dourada</div><div class="ann-d">Linha 2–3px em #da8d00 separando cabeçalho de conteúdo. Presente em <em>todas</em> as páginas.</div></div></div>
+        <div class="ann"><div class="ann-dot">C</div><div><div class="ann-lbl">Foto de Destino</div><div class="ann-d">Ocupa 50–60% da altura da capa. Overlay escuro gradiente no rodapé para legibilidade.</div></div></div>
+        <div class="ann"><div class="ann-dot">D</div><div><div class="ann-lbl">Nome do Cliente</div><div class="ann-d">Poppins Bold · CAIXA ALTA · 27–32px · nome completo como fornecido pelo cliente.</div></div></div>
+        <div class="ann"><div class="ann-dot">E</div><div><div class="ann-lbl">Stats da Viagem</div><div class="ann-d">Contadores em ouro: Destinos · Acomodações · Noites · Transportes · Seguro.</div></div></div>
+        <div class="ann"><div class="ann-dot">F</div><div><div class="ann-lbl">Bloco de Contato</div><div class="ann-d">Rodapé escuro com e-mail e telefone. Montserrat · cor rgba(255,255,255,0.35–0.45).</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <div class="blk-h">Formatos Padrão</div>
+    <div class="fmts">
+      <div class="fmt"><div class="fmt-lbl">Nome da Apresentação</div><div class="fmt-val">CLIENTE | DESTINO</div><div class="fmt-d">Maiúsculas · sem acentos no nome do arquivo. Ex: <em>JULIA KIO E FAMÍLIA | PERU</em></div></div>
+      <div class="fmt"><div class="fmt-lbl">Formato de Data</div><div class="fmt-val">DD MMM. AAAA</div><div class="fmt-d">Abreviação com ponto. Ex: <em>14 abr. 2025 · 11 mai. 2025</em></div></div>
+      <div class="fmt"><div class="fmt-lbl">Câmbio de Referência</div><div class="fmt-val">Cotação DD/MM · Moeda = X,XX</div><div class="fmt-d">Sempre com data específica. Ex: <em>Cotação 29/01 · Dólar = 5,89</em></div></div>
+      <div class="fmt"><div class="fmt-lbl">Nota Obrigatória</div><div class="fmt-val">*Nada reservado, apenas cotado</div><div class="fmt-d">Asterisco antes do texto em todas as tabelas de valor.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 05 PADRÃO VISUAL ══ -->
+<section id="visual" class="sec">
+  <div class="eyebrow">05 — Padrão Visual</div>
+  <h2 class="sec-title">Elementos Visuais</h2>
+  <p class="sec-intro">Elementos recorrentes que criam consistência entre apresentações: a barra dourada, badges numéricos, cabeçalhos de página, estrelas e tratamento fotográfico.</p>
+
+  <div class="blk">
+    <div class="blk-h">Componentes Recorrentes</div>
+    <div class="vg">
+      <div class="ve">
+        <div class="ve-lbl">Barra Dourada</div>
+        <div class="ve-prev"><div style="height:3px;background:#da8d00;border-radius:2px"></div><div style="height:1px;background:var(--bd);margin-top:8px"></div></div>
+        <div class="ve-desc">2–3px em <code>#da8d00</code>. Separa cabeçalho de conteúdo em <em>todas</em> as páginas. Nunca substituída pela cor do destino.</div>
+      </div>
+      <div class="ve">
+        <div class="ve-lbl">Badges Numéricos</div>
+        <div class="ve-prev" style="display:flex;gap:8px;align-items:center">
+          <div style="width:28px;height:28px;border-radius:50%;background:#730505;display:flex;align-items:center;justify-content:center"><span style="font-size:12px;font-weight:800;color:#fff">3</span></div>
+          <div style="width:28px;height:28px;border-radius:50%;background:#73805c;display:flex;align-items:center;justify-content:center"><span style="font-size:12px;font-weight:800;color:#fff">7</span></div>
+          <span style="font-size:11px;color:var(--t2)">Noites /<br>Etapas</span>
+        </div>
+        <div class="ve-desc">Círculos na <strong>cor do destino</strong>. Texto: branco bold. Usados em badges de noites, etapas do itinerário e contadores da capa.</div>
+      </div>
+      <div class="ve">
+        <div class="ve-lbl">Cabeçalho de Página Interna</div>
+        <div class="ve-prev">
+          <div style="background:#730505;padding:7px 10px;border-radius:3px 3px 0 0;display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:9px;color:rgba(255,255,255,.7);letter-spacing:.1em;text-transform:uppercase;font-weight:700">VENEZA · ITÁLIA</span>
+            <div style="width:17px;height:17px;border-radius:50%;border:1.5px solid rgba(218,141,0,.8);display:flex;align-items:center;justify-content:center"><span style="font-size:8px;font-weight:800;color:rgba(218,141,0,.9)">4</span></div>
+          </div>
+          <div style="height:2px;background:#da8d00"></div>
+        </div>
+        <div class="ve-desc">Fundo na <strong>cor do destino</strong> + nome da cidade + número do destino em badge dourado. Sempre seguido da barra dourada.</div>
+      </div>
+      <div class="ve">
+        <div class="ve-lbl">Estrelas de Categoria</div>
+        <div class="ve-prev"><span style="font-size:20px;color:#da8d00;letter-spacing:2px">★★★★</span></div>
+        <div class="ve-desc">Estrelas Unicode <code>★</code> sempre em <code>#da8d00</code>. Logo abaixo do nome do hotel em cada cartão de acomodação.</div>
+      </div>
+      <div class="ve">
+        <div class="ve-lbl">Fotografia</div>
+        <div class="ve-prev">
+          <div style="height:48px;background:linear-gradient(135deg,#9a8a7a,#4a3a2a);border-radius:3px;position:relative;overflow:hidden">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6),transparent)"></div>
+            <div style="position:absolute;bottom:5px;left:8px;font-size:7px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#fff">COLISEU · ROMA</div>
+          </div>
+        </div>
+        <div class="ve-desc">Fotografia editorial sem filtros artificiais. Overlay escuro gradiente no rodapé para legibilidade. Full-bleed na capa e páginas de destino.</div>
+      </div>
+      <div class="ve">
+        <div class="ve-lbl">Separadores</div>
+        <div class="ve-prev" style="display:flex;flex-direction:column;gap:6px">
+          <div style="height:1px;background:var(--bd)"></div>
+          <div style="height:2px;background:#da8d00;width:45%;border-radius:1px"></div>
+        </div>
+        <div class="ve-desc">Linha fina cinza para separadores internos de seção. Barra dourada para destaques e encerramentos de bloco de conteúdo.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <div class="blk-h">Tom de Escrita</div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="background:var(--sf);border-radius:var(--r);padding:14px 16px">
+        <div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px">Descrições de Destino</div>
+        <div style="font-size:13px;color:var(--t2);line-height:1.65;margin-bottom:8px">Linguagem evocativa e positiva. Foco em experiências sensoriais, história e gastronomia. Tom inspiracional — nunca técnico ou enciclopédico.</div>
+        <div style="background:var(--sf2);border-left:2px solid var(--gold);padding:8px 12px;border-radius:0 3px 3px 0;font-size:12.5px;color:var(--t);font-style:italic">"Verona é uma cidade encantadora, rica em história, cultura e romance. Famosa por ser o cenário de Romeu e Julieta, ela oferece aos visitantes a oportunidade de caminhar pelas ruas medievais…"</div>
+      </div>
+      <div style="background:var(--sf);border-radius:var(--r);padding:14px 16px">
+        <div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px">Informações Técnicas</div>
+        <div style="font-size:13px;color:var(--t2);line-height:1.65">Valores sempre com asterisco e nota explícita. Câmbio referenciado com data. Parcelamento por categoria de serviço com condições claras.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 06 ASSINATURA ══ -->
+<section id="assinat" class="sec">
+  <div class="eyebrow">06 — Assinatura &amp; Logo</div>
+  <h2 class="sec-title">Identidade e Contato</h2>
+  <p class="sec-intro">Elementos de identidade que aparecem de forma consistente em todas as apresentações — obrigatórios na capa, presentes nos rodapés.</p>
+
+  <div class="blk">
+    <div class="blk-h">Bloco Completo de Contato</div>
+    <div class="sig">
+      <div class="sig-g">
+        <div><div class="sig-lbl">E-mail</div><div class="sig-val">atendimentolusatravel@gmail.com</div></div>
+        <div><div class="sig-lbl">Telefone / WhatsApp</div><div class="sig-val">+55 41 99189-6076</div></div>
+        <div><div class="sig-lbl">Endereço</div><div class="sig-val" style="font-size:13px">Alameda Princesa Izabel, 1700<br>Bigorrilho · Curitiba – PR</div></div>
+        <div><div class="sig-lbl">Marca</div><div class="sig-val" style="font-size:18px;font-weight:800;letter-spacing:.05em">LUSA TRAVEL</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <div class="blk-h">Variações de Assinatura</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div style="background:var(--sf);border-radius:var(--r);padding:15px">
+        <div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px">Mínima — Rodapé</div>
+        <div style="background:#1a1510;border-radius:3px;padding:10px 13px"><span style="font-size:11px;color:rgba(255,255,255,.4)">atendimentolusatravel@gmail.com · +55 41 99189-6076</span></div>
+        <div style="font-size:11px;color:var(--t3);margin-top:8px">Rodapé de todas as páginas internas.</div>
+      </div>
+      <div style="background:var(--sf);border-radius:var(--r);padding:15px">
+        <div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px">Completa — Capa</div>
+        <div style="background:#1a1510;border-radius:3px;padding:10px 13px"><div style="font-size:11px;color:rgba(255,255,255,.4);line-height:1.7">atendimentolusatravel@gmail.com<br>+55 41 99189-6076<br><span style="font-size:10px;opacity:.7">Lusatravel, Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span></div></div>
+        <div style="font-size:11px;color:var(--t3);margin-top:8px">Propostas formais e completas.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <div class="blk-h">Regras de Uso</div>
+    <div class="rules">
+      <div class="rule">E-mail e telefone são os dois elementos <strong>obrigatórios</strong> em qualquer variação de assinatura. O endereço físico é opcional.</div>
+      <div class="rule">O logo aparece sempre no cabeçalho da capa, posicionado à esquerda sobre fundo escuro.</div>
+      <div class="rule">A barra dourada <code>#da8d00</code> de 2–3px acompanha o cabeçalho escuro em todas as páginas — é elemento estrutural da identidade, não decoração.</div>
+      <div class="rule">O nome "LUSA TRAVEL" em CAPS pode substituir o logo visual quando o arquivo de imagem não estiver disponível.</div>
+      <div class="rule">Em PDFs digitais, os campos de contato devem ser clicáveis: <code>mailto:</code> para o e-mail e <code>https://wa.me/</code> para o WhatsApp.</div>
+      <div class="rule">Nunca altere o número de telefone ou e-mail entre versões de uma mesma proposta — a assinatura é um dado de negócio, não um elemento gráfico.</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+const secs = document.querySelectorAll('.sec');
+const links = document.querySelectorAll('.sb-a');
+const obs = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if (e.isIntersecting) {
+      const id = e.target.id;
+      links.forEach(l => l.classList.toggle('on', l.getAttribute('href') === '#' + id));
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px' });
+secs.forEach(s => obs.observe(s));
+
+const btn = document.getElementById('btn');
+const sb  = document.getElementById('sb');
+btn.addEventListener('click', () => sb.classList.toggle('open'));
+links.forEach(l => l.addEventListener('click', () => {
+  if (window.innerWidth <= 820) sb.classList.remove('open');
+}));
+</script>
