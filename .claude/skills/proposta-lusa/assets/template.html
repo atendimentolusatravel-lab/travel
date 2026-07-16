@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>{{CLIENTE}} | {{DESTINO}} — Lusa Travel</title>
+<style>
+/* ══════════════════════════════════════════════════════════════
+   LUSA TRAVEL — TEMPLATE DE PROPOSTA (A3 Portrait, print-ready)
+   Preencha os {{placeholders}}. Duplique <section class="page"> por cidade.
+   Troque --dest pela cor do destino (ver SKILL.md).
+   ══════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+  --gold:#da8d00;        /* FIXO — nunca muda */
+  --dest:#730505;        /* COR DE DESTINO — troque por viagem (Itália=#730505) */
+  --ink:#1a1510;         /* preto quente */
+  --char:#333131;        /* carvão / texto */
+  --mut:#9a8d80;         /* texto discreto */
+  --line:#e4ddd2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); }
+
+.page{
+  width:297mm; height:420mm; position:relative; overflow:hidden;
+  background:#fff; page-break-after:always; display:flex; flex-direction:column;
+}
+.page:last-child{ page-break-after:auto; }
+
+/* ── Cabeçalho padrão (todas as páginas internas) ── */
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center;
+     justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; } /* BARRA DOURADA — obrigatória */
+
+/* ── Rodapé de assinatura (todas as páginas internas) ── */
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center;
+     justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.2); }
+
+.body{ padding:16mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:4mm 0 8mm; }
+
+/* ══ CAPA ══ */
+.cover{ position:relative; }
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink);
+  display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0;
+  background:linear-gradient(160deg,#8a7060,#3a2820); /* SUBSTITUA por url('foto.jpg') center/cover */ }
+.cover-scrim{ position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, transparent 30%, rgba(0,0,0,.78) 78%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3;
+  font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+
+/* ══ ITINERÁRIO ══ */
+.tl{ display:flex; flex-direction:column; }
+.tl-item{ display:flex; align-items:flex-start; gap:6mm; }
+.tl-badge{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff;
+  font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tl-line{ width:2px; height:9mm; background:var(--line); margin-left:5.4mm; }
+.tl-city{ font-size:14pt; font-weight:700; color:var(--ink); }
+.tl-meta{ font-size:10pt; color:var(--mut); margin-top:1mm; }
+
+/* ══ DESTINO + HOTEL ══ */
+.dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center;
+  justify-content:space-between; flex-shrink:0; }
+.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); }
+.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9);
+  color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.dest-photo{ height:120mm; background:linear-gradient(160deg,#9a8a7a,#4a3a2a); position:relative; flex-shrink:0; }
+.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800;
+  letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+.dest-text{ font-size:12pt; font-weight:400; line-height:1.7; color:var(--char); }
+.hotel-card{ margin-top:10mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.hotel-card .top{ background:#faf7f2; padding:6mm 8mm; border-bottom:1px solid var(--line); }
+.hotel-card .name{ font-size:15pt; font-weight:700; color:var(--ink); }
+.hotel-card .stars{ font-size:14pt; color:var(--gold); letter-spacing:2px; margin-top:1mm; }
+.hotel-card .rows{ padding:6mm 8mm; display:grid; grid-template-columns:1fr 1fr; gap:4mm 10mm; }
+.hotel-card .k{ font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.hotel-card .v{ font-size:11pt; font-weight:300; color:var(--char); margin-top:1mm; } /* Poppins Light */
+
+/* ══ ROTEIRO DIA A DIA ══ */
+.day{ margin-bottom:8mm; }
+.day-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); }
+.day-t{ font-size:11pt; line-height:1.7; color:var(--char); margin-top:2mm; }
+
+/* ══ VALORES ══ */
+.val-note{ font-size:9pt; color:var(--mut); margin-bottom:5mm; }
+.val-row{ display:flex; justify-content:space-between; padding:4mm 0; border-bottom:1px solid var(--line); }
+.val-row .lbl{ font-size:12pt; color:var(--char); }
+.val-row .amt{ font-size:12pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; }
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink);
+  border-radius:5px; padding:6mm 8mm; margin-top:6mm; }
+.val-total .lbl{ font-size:11pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.val-total .amt{ font-size:16pt; font-weight:800; color:var(--gold); }
+.val-fx{ font-size:9pt; color:var(--mut); margin-top:5mm; line-height:1.6; }
+
+/* ══ CONDIÇÕES ══ */
+.cond{ margin-bottom:7mm; }
+.cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
+.cond-t{ font-size:11pt; line-height:1.8; color:var(--char); }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 01 · CAPA ══════════ -->
+<section class="page cover">
+  <div class="cover-hd">
+    <div class="logo">LUSA TRAVEL</div>
+    <div class="tag">Glossário</div>
+  </div>
+  <div class="cover-bar"></div>
+  <div class="cover-photo"></div><!-- background:url('capa.jpg') center/cover -->
+  <div class="cover-scrim"></div>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em {{PAX}} · {{PERIODO}}</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">{{CLIENTE}}</div>
+    <div class="cover-dest">{{DESTINO}}</div>
+    <div class="stats">
+      <div class="stat"><b>{{N_DEST}}</b><span>Destinos</span></div>
+      <div class="stat"><b>{{N_NOITES}}</b><span>Noites</span></div>
+      <div class="stat"><b>{{N_HOTEIS}}</b><span>Hotéis</span></div>
+      <div class="stat"><b>{{N_SEGURO}}</b><span>Seguro</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com" style="color:inherit;text-decoration:none">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076" style="color:inherit;text-decoration:none">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ══════════ 02 · ITINERÁRIO ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSA TRAVEL</div><div class="tag">Itinerário</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Sua rota</div>
+    <h2 class="h2">Itinerário</h2>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-badge">1</div><div><div class="tl-city">{{CIDADE_1}}</div><div class="tl-meta">{{DATA_1}} · {{NOITES_1}} noites</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge">2</div><div><div class="tl-city">{{CIDADE_2}}</div><div class="tl-meta">{{DATA_2}} · {{NOITES_2}} noites</div></div></div>
+      <!-- duplique os pares .tl-item / .tl-line conforme o roteiro -->
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 03 · DESTINO + HOTEL (duplique por cidade) ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">{{CIDADE}} · {{PAIS}}</div><div class="no">1</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo"><div class="cap">{{CIDADE}}</div></div><!-- background:url('cidade.jpg') -->
+  <div class="body">
+    <p class="dest-text">{{TEXTO_INSPIRACIONAL_150_200_PALAVRAS}}</p>
+    <div class="hotel-card">
+      <div class="top">
+        <div class="name">{{HOTEL_NOME}}</div>
+        <div class="stars">★★★★</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">{{QUARTO}}</div></div>
+        <div><div class="k">Plano</div><div class="v">{{REFEICAO}}</div></div>
+        <div><div class="k">Endereço</div><div class="v">{{ENDERECO}}</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">{{CHECKIN}} → {{CHECKOUT}}</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 04 · ROTEIRO DIA A DIA (opcional) ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSA TRAVEL</div><div class="tag">Roteiro</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Dia a dia</div>
+    <h2 class="h2">Roteiro</h2>
+    <div class="day"><div class="day-h">DIA 01 | {{CIDADE}} | {{DATA}}</div><div class="day-t">{{DESCRICAO_DIA}}</div></div>
+    <div class="day"><div class="day-h">DIA 02 | {{CIDADE}} | {{DATA}}</div><div class="day-t">{{DESCRICAO_DIA}}</div></div>
+    <!-- duplique .day conforme os dias -->
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 05 · VALORES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSA TRAVEL</div><div class="tag">Valores</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Investimento</div>
+    <h2 class="h2">Valores</h2>
+    <div class="val-note">*Valores em {{MOEDA}} para {{PAX}}</div>
+    <div class="val-row"><span class="lbl">Hotelaria</span><span class="amt">{{MOEDA}} {{V_HOTEL}}</span></div>
+    <div class="val-row"><span class="lbl">Aéreo Internacional</span><span class="amt">{{MOEDA}} {{V_AEREO}}</span></div>
+    <div class="val-row"><span class="lbl">Seguro de Viagem</span><span class="amt">{{MOEDA}} {{V_SEGURO}}</span></div>
+    <div class="val-row"><span class="lbl">Serviços / Guias</span><span class="amt">{{MOEDA}} {{V_SERVICOS}}</span></div>
+    <div class="val-total"><span class="lbl">TOTAL / PESSOA</span><span class="amt">{{MOEDA}} {{V_TOTAL}}</span></div>
+    <div class="val-fx">Cotação {{DATA_CAMBIO}} · {{MOEDA_REF}} = {{TAXA}}<br>*Nada reservado, apenas cotado</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 06 · CONDIÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSA TRAVEL</div><div class="tag">Condições</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Importante</div>
+    <h2 class="h2">Condições e Observações</h2>
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Hotelaria: até 10x sem acréscimos · Aéreo: até 6x sem acréscimos · PIX: desconto de 5–13%</div></div>
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Vistos e taxas de vacina<br>· City taxes (pagas no hotel)<br>· Despesas pessoais</div></div>
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">A taxa de estadia (city tax) pode ser cobrada localmente pelo hotel. Valores sujeitos a confirmação e disponibilidade no momento da reserva.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
