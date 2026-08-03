@@ -1,0 +1,66 @@
+<title>Proposta de Viagem · Paula Mocellin Slaviero — LUSATRAVEL</title>
+<style>
+__STYLE__
+</style>
+
+<header class="brand">
+  <div class="mark">LUSATRAVEL</div>
+  <div class="kind">Proposta de Viagem</div>
+</header>
+<div class="brand-rule"></div>
+
+<main>
+  <div class="wrap">
+    <div class="eyebrow">Cotação para sua viagem</div>
+    <h1>Sra. Paula Mocellin Slaviero</h1>
+    <p class="place">Lisboa, Portugal</p>
+    <p class="line">Curitiba ⇄ Lisboa · 26 Dez – 02/03 Jan · 3 opções em classe econômica,
+      todas com bagagem despachada de 23&nbsp;kg</p>
+    <div class="actions">
+      <a class="act pdf" id="pdfLink" href="#">Baixar em PDF</a>
+      <a class="act wa" href="https://wa.me/5541991896076">Falar com a agência</a>
+    </div>
+  </div>
+
+  <div class="sheets">
+__PAGES__
+  </div>
+</main>
+
+<footer class="foot">
+  <div><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a></div>
+  <div><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+  <div class="addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+</footer>
+
+<script id="pdfData" type="application/octet-stream">__PDF64__</script>
+<script>
+(function(){
+  /* ── folhas A3 ajustadas à largura disponível ── */
+  var PAGE_PX = 297 / 25.4 * 96;
+  function fit(){
+    var host = document.querySelector('.sheets');
+    if(!host) return;
+    document.documentElement.style.setProperty('--fit', Math.min(1, host.clientWidth / PAGE_PX));
+  }
+  fit();
+  window.addEventListener('resize', fit);
+  window.addEventListener('orientationchange', fit);
+
+  /* ── PDF servido como blob: um href data: é bloqueado pelo navegador ── */
+  var link = document.getElementById('pdfLink');
+  try{
+    var b64 = document.getElementById('pdfData').textContent.trim();
+    var bin = atob(b64);
+    var bytes = new Uint8Array(bin.length);
+    for(var i=0;i<bin.length;i++){ bytes[i] = bin.charCodeAt(i); }
+    var url = URL.createObjectURL(new Blob([bytes], {type:'application/pdf'}));
+    link.href = url;
+    link.download = 'Proposta-Paula-Mocellin-Slaviero-Lisboa.pdf';
+    link.target = '_blank';
+    link.rel = 'noopener';
+  }catch(e){
+    link.remove();
+  }
+})();
+</script>

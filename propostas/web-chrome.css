@@ -1,36 +1,30 @@
 /* ══════════════════════════════════════════════════════════
    Moldura web — tokens da LUSATRAVEL. As folhas A3 permanecem
-   brancas em ambos os temas: são documento impresso.
+   com a paleta impressa: são o documento que vai para a cliente.
    ══════════════════════════════════════════════════════════ */
 :root{
   --gold:#da8d00;
   --dest:#1a3a5c;
-  --ground:#f5f0ea;      /* creme da marca */
-  --surface:#ffffff;
+  --ground:#f5f0ea;
   --edge:#e0d7c9;
   --txt:#2e2a26;
   --txt-mut:#7d746b;
   --shadow:rgba(15,36,56,.16);
+  --btn-txt:#ffffff;
 }
 @media (prefers-color-scheme:dark){
   :root{
-    --gold:#e8a210;
-    --dest:#25506f;
-    --ground:#0e1822;
-    --surface:#16242f;
-    --edge:#2a3d4d;
-    --txt:#e8e2d9;
-    --txt-mut:#93a3b0;
-    --shadow:rgba(0,0,0,.5);
+    --gold:#e8a210; --dest:#25506f; --ground:#0e1822; --edge:#2a3d4d;
+    --txt:#e8e2d9; --txt-mut:#93a3b0; --shadow:rgba(0,0,0,.5); --btn-txt:#12202b;
   }
 }
 :root[data-theme="dark"]{
-  --gold:#e8a210; --dest:#25506f; --ground:#0e1822; --surface:#16242f;
-  --edge:#2a3d4d; --txt:#e8e2d9; --txt-mut:#93a3b0; --shadow:rgba(0,0,0,.5);
+  --gold:#e8a210; --dest:#25506f; --ground:#0e1822; --edge:#2a3d4d;
+  --txt:#e8e2d9; --txt-mut:#93a3b0; --shadow:rgba(0,0,0,.5); --btn-txt:#12202b;
 }
 :root[data-theme="light"]{
-  --gold:#da8d00; --dest:#1a3a5c; --ground:#f5f0ea; --surface:#ffffff;
-  --edge:#e0d7c9; --txt:#2e2a26; --txt-mut:#7d746b; --shadow:rgba(15,36,56,.16);
+  --gold:#da8d00; --dest:#1a3a5c; --ground:#f5f0ea; --edge:#e0d7c9;
+  --txt:#2e2a26; --txt-mut:#7d746b; --shadow:rgba(15,36,56,.16); --btn-txt:#ffffff;
 }
 
 body{
@@ -51,69 +45,41 @@ body{
   color:rgba(255,255,255,.6); text-align:right; }
 .brand-rule{ height:4px; background:var(--gold); }
 
-/* ── carta de abertura ── */
-.wrap{ max-width:820px; margin:0 auto; padding:clamp(28px,6vw,56px) clamp(16px,4vw,32px); }
-.letter{
-  background:var(--surface); border:1px solid var(--edge); border-radius:10px;
-  padding:clamp(26px,5vw,44px); box-shadow:0 2px 20px var(--shadow);
-  display:flex; flex-direction:column; gap:22px;
+/* ── abertura ── */
+.wrap{
+  max-width:760px; margin:0 auto;
+  padding:clamp(30px,6vw,52px) clamp(20px,4vw,32px) clamp(26px,5vw,44px);
+  display:flex; flex-direction:column; gap:14px;
 }
-.letter .eyebrow{ font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+.wrap .eyebrow{ font-size:11px; letter-spacing:.2em; text-transform:uppercase;
   color:var(--gold); font-weight:700; }
-.letter h1{ font-size:clamp(23px,5vw,33px); font-weight:800; color:var(--dest);
-  line-height:1.15; letter-spacing:-.01em; text-wrap:balance; margin-top:-12px; }
-.letter .place{ font-size:clamp(15px,3vw,18px); font-weight:600; color:var(--gold); margin-top:-16px; }
-.facts{
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(118px,1fr)); gap:18px;
-  border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); padding:20px 0;
-}
-.facts dt{ font-size:10px; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--txt-mut); font-weight:700; }
-.facts dd{ font-size:15px; font-weight:700; color:var(--dest); margin-top:4px;
-  font-variant-numeric:tabular-nums; }
-:root[data-theme="dark"] .facts dd,
-:root[data-theme="dark"] .letter h1{ color:var(--txt); }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]) .facts dd,
-  :root:not([data-theme="light"]) .letter h1{ color:var(--txt); }
-}
-.letter p{ font-size:15.5px; line-height:1.7; color:var(--txt); max-width:62ch; }
-.actions{ display:flex; flex-wrap:wrap; gap:12px; }
+.wrap h1{ font-size:clamp(24px,5vw,34px); font-weight:800; color:var(--txt);
+  line-height:1.15; letter-spacing:-.01em; text-wrap:balance; }
+.wrap .place{ font-size:clamp(16px,3vw,19px); font-weight:600; color:var(--gold); margin-top:-10px; }
+.wrap .line{ font-size:15px; line-height:1.65; color:var(--txt-mut); max-width:56ch; }
+.actions{ display:flex; flex-wrap:wrap; gap:12px; margin-top:8px; }
 .act{
   flex:1 1 200px; text-align:center; text-decoration:none; padding:15px 22px;
-  border-radius:7px; font-size:15px; font-weight:700; border:2px solid transparent;
-  transition:opacity .15s, transform .15s;
+  border-radius:7px; font-size:15px; font-weight:700;
+  border:2px solid transparent; transition:opacity .15s;
 }
 .act:hover{ opacity:.88; }
 .act:focus-visible{ outline:3px solid var(--gold); outline-offset:3px; }
 .act.pdf{ background:var(--dest); color:#fff; }
-:root[data-theme="dark"] .act.pdf{ background:var(--gold); color:#12202b; }
+:root[data-theme="dark"] .act.pdf{ background:var(--gold); color:var(--btn-txt); }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]) .act.pdf{ background:var(--gold); color:#12202b; }
 }
-.act.wa{ background:transparent; color:var(--dest); border-color:var(--gold); }
-:root[data-theme="dark"] .act.wa{ color:var(--txt); }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]) .act.wa{ color:var(--txt); }
-}
-.fineprint{ font-size:12.5px; color:var(--txt-mut); line-height:1.6; margin-top:-6px; }
+.act.wa{ background:transparent; color:var(--txt); border-color:var(--gold); }
 
 /* ── folhas da proposta ── */
-.sheets-lbl{
-  max-width:820px; margin:0 auto; padding:0 clamp(16px,4vw,32px) 14px;
-  font-size:11px; letter-spacing:.2em; text-transform:uppercase;
-  color:var(--txt-mut); font-weight:700;
-}
-.sheets{ display:flex; flex-direction:column; align-items:center; gap:clamp(14px,3vw,34px);
-  padding:0 0 clamp(34px,6vw,60px); }
-/* As folhas guardam a paleta impressa da marca em qualquer tema —
-   é o documento que vai para a cliente, não deve seguir o tema do leitor. */
+.sheets{ display:flex; flex-direction:column; align-items:center;
+  gap:clamp(14px,3vw,32px); padding:0 0 clamp(34px,6vw,60px); }
+/* paleta impressa fixa: o documento não segue o tema do leitor */
 .sheets .page{
   --gold:#da8d00; --dest:#1a3a5c; --dest-dk:#0f2438; --ink:#1a1510;
   --char:#333131; --mut:#9a8d80; --line:#e4ddd2; --cream:#f5f0ea;
   color:#333131;
-}
-.sheets .page{
   zoom:var(--fit,1);
   box-shadow:0 3px 26px var(--shadow);
   flex-shrink:0;
