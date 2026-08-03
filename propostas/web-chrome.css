@@ -4,27 +4,27 @@
    ══════════════════════════════════════════════════════════ */
 :root{
   --gold:#da8d00;
-  --dest:#1a3a5c;
+  --dest:#404525;
   --ground:#f5f0ea;
   --edge:#e0d7c9;
   --txt:#2e2a26;
   --txt-mut:#7d746b;
-  --shadow:rgba(15,36,56,.16);
+  --shadow:rgba(34,38,15,.18);
   --btn-txt:#ffffff;
 }
 @media (prefers-color-scheme:dark){
   :root{
-    --gold:#e8a210; --dest:#25506f; --ground:#0e1822; --edge:#2a3d4d;
-    --txt:#e8e2d9; --txt-mut:#93a3b0; --shadow:rgba(0,0,0,.5); --btn-txt:#12202b;
+    --gold:#e8a210; --dest:#55603a; --ground:#12150c; --edge:#39402a;
+    --txt:#e8e2d9; --txt-mut:#a5a894; --shadow:rgba(0,0,0,.5); --btn-txt:#1b1f10;
   }
 }
 :root[data-theme="dark"]{
-  --gold:#e8a210; --dest:#25506f; --ground:#0e1822; --edge:#2a3d4d;
-  --txt:#e8e2d9; --txt-mut:#93a3b0; --shadow:rgba(0,0,0,.5); --btn-txt:#12202b;
+  --gold:#e8a210; --dest:#55603a; --ground:#12150c; --edge:#39402a;
+  --txt:#e8e2d9; --txt-mut:#a5a894; --shadow:rgba(0,0,0,.5); --btn-txt:#1b1f10;
 }
 :root[data-theme="light"]{
-  --gold:#da8d00; --dest:#1a3a5c; --ground:#f5f0ea; --edge:#e0d7c9;
-  --txt:#2e2a26; --txt-mut:#7d746b; --shadow:rgba(15,36,56,.16); --btn-txt:#ffffff;
+  --gold:#da8d00; --dest:#404525; --ground:#f5f0ea; --edge:#e0d7c9;
+  --txt:#2e2a26; --txt-mut:#7d746b; --shadow:rgba(34,38,15,.18); --btn-txt:#ffffff;
 }
 
 body{
@@ -68,7 +68,7 @@ body{
 .act.pdf{ background:var(--dest); color:#fff; }
 :root[data-theme="dark"] .act.pdf{ background:var(--gold); color:var(--btn-txt); }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]) .act.pdf{ background:var(--gold); color:#12202b; }
+  :root:not([data-theme="light"]) .act.pdf{ background:var(--gold); color:#1b1f10; }
 }
 .act.wa{ background:transparent; color:var(--txt); border-color:var(--gold); }
 
@@ -77,7 +77,7 @@ body{
   gap:clamp(14px,3vw,32px); padding:0 0 clamp(34px,6vw,60px); }
 /* paleta impressa fixa: o documento não segue o tema do leitor */
 .sheets .page{
-  --gold:#da8d00; --dest:#1a3a5c; --dest-dk:#0f2438; --ink:#1a1510;
+  --gold:#da8d00; --dest:#404525; --dest-dk:#22260f; --ink:#1a1510;
   --char:#333131; --mut:#9a8d80; --line:#e4ddd2; --cream:#f5f0ea;
   color:#333131;
   zoom:var(--fit,1);

@@ -9,8 +9,8 @@
 
 :root{
   --gold:#da8d00;        /* FIXO */
-  --dest:#1a3a5c;         /* Azul Atlântico — Portugal/Europa */
-  --dest-dk:#0f2438;
+  --dest:#404525;         /* Verde Savana — verde escuro padrão Lusatravel */
+  --dest-dk:#22260f;
   --ink:#1a1510;
   --char:#333131;
   --mut:#9a8d80;
@@ -54,15 +54,15 @@ html,body{ font-family:var(--sans); color:var(--char); }
 .cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
 .cover-photo{ position:absolute; inset:0;
   background:
-    linear-gradient(160deg, rgba(37,80,122,.55), rgba(15,36,56,.75)),
-    linear-gradient(135deg,#3a5a78 0%,#1a3a5c 45%,#0f2438 100%); }
+    linear-gradient(160deg, rgba(95,103,66,.5), rgba(34,38,15,.78)),
+    linear-gradient(135deg,#6b7449 0%,#404525 45%,#22260f 100%); }
 .cover-photo::before{ content:""; position:absolute; inset:0; opacity:.12;
   background-image: radial-gradient(circle at 20% 30%, #fff 0, transparent 2px),
                      radial-gradient(circle at 60% 70%, #fff 0, transparent 2px),
                      radial-gradient(circle at 80% 20%, #fff 0, transparent 2px);
   background-size: 140px 140px; }
 .cover-scrim{ position:absolute; inset:0;
-  background:linear-gradient(to bottom, rgba(15,36,56,.3) 0%, transparent 30%, rgba(9,20,32,.82) 78%); z-index:2; }
+  background:linear-gradient(to bottom, rgba(34,38,15,.3) 0%, transparent 30%, rgba(18,20,8,.84) 78%); z-index:2; }
 .cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
 .cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.6); }
 .cover-basis{ font-size:10pt; color:rgba(255,255,255,.65); margin:2mm 0 9mm; }
@@ -111,36 +111,29 @@ td.dur{ font-variant-numeric:tabular-nums; }
 td.eq{ color:var(--mut); font-size:9pt; }
 tr.sum td{ font-size:8.5pt; font-style:italic; color:var(--mut); padding-top:0; padding-bottom:3mm; }
 
-/* ══ QUADRO COMPARATIVO ══ */
-.cmp-table{ width:100%; border-collapse:collapse; }
-.cmp-table th{ background:var(--dest); color:#fff; text-align:left; font-size:8pt; letter-spacing:.06em;
-  text-transform:uppercase; font-weight:700; padding:3.5mm 3.5mm; }
-.cmp-table th:first-child{ border-radius:5px 0 0 0; }
-.cmp-table th:last-child{ border-radius:0 5px 0 0; }
-.cmp-table td{ font-size:10pt; color:var(--char); padding:5.5mm 3.5mm; border-bottom:1px solid var(--line);
-  vertical-align:top; }
-.cmp-table tr:nth-child(even) td{ background:#faf7f2; }
-.cmp-table td.opt-cell{ font-weight:800; color:var(--dest); }
-.cmp-table td.opt-cell .tag{ display:block; font-size:7.5pt; font-weight:600; color:var(--gold); margin-top:.8mm; }
-.cmp-table td small{ display:block; color:var(--mut); font-size:8pt; margin-top:.6mm; }
-.cmp-table td.price-cell{ font-weight:800; color:var(--gold); font-size:10.5pt; white-space:nowrap;
-  font-variant-numeric:tabular-nums; }
-.cmp-legend{ display:flex; flex-wrap:wrap; gap:3mm 8mm; margin-top:5mm; }
-.cmp-legend .dot{ display:inline-block; width:2.2mm; height:2.2mm; border-radius:50%; background:var(--gold); margin-right:2mm; }
-.cmp-legend span{ font-size:8.5pt; color:var(--mut); }
-
 /* ══ CONDIÇÕES ══ */
-.divider{ height:1px; background:var(--line); margin:15mm 0 12mm; }
 .conds{ display:grid; grid-template-columns:1fr 1fr; gap:11mm 14mm; }
 .cond-h{ font-size:10pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
   color:var(--gold); margin-bottom:1.5mm; }
 .cond-t{ font-size:10.5pt; line-height:1.7; color:var(--char); }
 
+.next{ margin-top:16mm; border-top:1px solid var(--line); padding-top:11mm; }
+.next-h{ font-size:10pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:7mm; }
+.steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:9mm; }
+.step{ display:flex; gap:4mm; align-items:flex-start; }
+.step b{ width:8mm; height:8mm; border-radius:50%; background:var(--dest); color:#fff;
+  font-size:9.5pt; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.step span{ font-size:10pt; line-height:1.6; color:var(--char); }
+.next-cta{ margin-top:10mm; background:#faf7f2; border:1px solid var(--line); border-radius:6px;
+  padding:6mm 8mm; font-size:10.5pt; color:var(--char); }
+.next-cta a{ color:var(--dest); font-weight:700; text-decoration:none; }
+
 /* ══ VISUALIZAÇÃO EM TELA (não afeta o PDF) ══ */
 @media screen{
   body{ background:var(--cream); display:flex; flex-direction:column; align-items:center;
         padding:4vw 0; gap:4vw; }
-  .page{ box-shadow:0 4px 28px rgba(15,36,56,.18); flex-shrink:0; zoom:var(--fit,1); }
+  .page{ box-shadow:0 4px 28px rgba(34,38,15,.18); flex-shrink:0; zoom:var(--fit,1); }
 }
 </style>
 <script>
@@ -302,56 +295,12 @@ document.addEventListener('DOMContentLoaded',function(){
   </div>
 </section>
 
-<!-- ══════════ 03 · COMPARATIVO + CONDIÇÕES ══════════ -->
+
+<!-- ══════════ 03 · CONDIÇÕES ══════════ -->
 <section class="page">
-  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Comparativo</div></div>
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Condições</div></div>
   <div class="goldbar"></div>
   <div class="body">
-    <div class="eyebrow">Resumo final</div>
-    <h2 class="h2">Quadro Comparativo</h2>
-    <p class="lede">As três opções lado a lado. A diferença entre a mais cara e a mais econômica
-      é de R$ 20.776,12.</p>
-    <table class="cmp-table">
-      <tr>
-        <th>Opção</th><th>Ida — 26 Dez</th><th>Volta</th>
-        <th>Duração<br>ida + volta</th><th>Conexões</th><th>Valor (R$)</th><th>Valor (USD)</th>
-      </tr>
-      <tr>
-        <td class="opt-cell">1 · LATAM<span class="tag">NDC</span></td>
-        <td>11:30 CWB → 06:20+1 LIS<small>via GRU · conexão 04h55</small></td>
-        <td>03 Jan · 08:50 LIS → 21:45 CWB<small>via GRU · conexão 04h40</small></td>
-        <td>15h50 + 15h55</td>
-        <td>1 em cada trecho<small>via GRU</small></td>
-        <td class="price-cell">R$ 66.937,10</td>
-        <td class="price-cell">USD 13.183,60</td>
-      </tr>
-      <tr>
-        <td class="opt-cell">2 · LATAM</td>
-        <td>15:10 CWB → 06:20+1 LIS<small>via GRU · conexão 01h15</small></td>
-        <td>03 Jan · 08:50 LIS → 19:00 CWB<small>via GRU · conexão 01h55</small></td>
-        <td>12h10 + 13h10</td>
-        <td>1 em cada trecho<small>via GRU</small></td>
-        <td class="price-cell">R$ 65.606,10</td>
-        <td class="price-cell">USD 12.921,45</td>
-      </tr>
-      <tr>
-        <td class="opt-cell">3 · TAP<span class="tag">Mais econômica</span></td>
-        <td>20:10 CWB → 11:45+1 LIS<small>TP 67</small></td>
-        <td>02 Jan · 10:45 LIS → 18:40 CWB<small>TP 67 · voo direto</small></td>
-        <td>12h35 + 10h55</td>
-        <td>1 na ida · 0 na volta</td>
-        <td class="price-cell">R$ 46.160,98</td>
-        <td class="price-cell">USD 9.091,64</td>
-      </tr>
-    </table>
-    <div class="cmp-legend">
-      <span><span class="dot"></span>Valores por passageiro, classe econômica</span>
-      <span><span class="dot"></span>Bagagem de 23 kg inclusa em todas</span>
-      <span><span class="dot"></span>Cotação 03/08 · USD = R$ 5,08</span>
-    </div>
-
-    <div class="divider"></div>
-
     <div class="eyebrow">Importante</div>
     <h2 class="h2">Condições</h2>
     <div class="conds">
@@ -385,6 +334,17 @@ document.addEventListener('DOMContentLoaded',function(){
         <div class="cond-t">*Nada reservado, apenas cotado. Documentação é de responsabilidade
           do passageiro. Valores confirmados na emissão do bilhete.</div>
       </div>
+    </div>
+
+    <div class="next">
+      <div class="next-h">Próximos passos</div>
+      <div class="steps">
+        <div class="step"><b>1</b><span>Escolha a opção que melhor se encaixa na sua viagem</span></div>
+        <div class="step"><b>2</b><span>Confirmamos disponibilidade e o valor vigente na hora</span></div>
+        <div class="step"><b>3</b><span>Emitimos os bilhetes e você recebe tudo por e-mail</span></div>
+      </div>
+      <div class="next-cta">Ficou com alguma dúvida? Fale com a gente —
+        <a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
     </div>
   </div>
   <div class="ft">
