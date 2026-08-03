@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Paula Mocellin Slaviero | Lisboa — LUSATRAVEL</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+  --gold:#da8d00;        /* FIXO */
+  --dest:#1a3a5c;         /* Azul Atlântico — Portugal/Europa */
+  --dest-dk:#0f2438;      /* variante escura da cor de destino, substitui o preto puro */
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#9a8d80;
+  --line:#e4ddd2;
+  --cream:#f5f0ea;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); }
+
+.page{
+  width:297mm; height:420mm; position:relative; overflow:hidden;
+  background:#fff; page-break-after:always; display:flex; flex-direction:column;
+}
+.page:last-child{ page-break-after:auto; }
+
+.hd{ background:var(--dest); height:26mm; display:flex; align-items:center;
+     justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+.ft{ margin-top:auto; background:var(--dest); height:14mm; display:flex; align-items:center;
+     justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.6); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.3); }
+
+.body{ padding:16mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--dest); letter-spacing:-.01em; margin:4mm 0 8mm; }
+
+/* ══ CAPA ══ */
+.cover{ position:relative; }
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--dest);
+  display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0;
+  background:
+    linear-gradient(160deg, rgba(37,80,122,.55), rgba(15,36,56,.75)),
+    linear-gradient(135deg,#3a5a78 0%,#1a3a5c 45%,#0f2438 100%); }
+.cover-photo::before{ content:""; position:absolute; inset:0; opacity:.12;
+  background-image: radial-gradient(circle at 20% 30%, #fff 0, transparent 2px),
+                     radial-gradient(circle at 60% 70%, #fff 0, transparent 2px),
+                     radial-gradient(circle at 80% 20%, #fff 0, transparent 2px);
+  background-size: 140px 140px; }
+.cover-scrim{ position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(15,36,56,.3) 0%, transparent 30%, rgba(9,20,32,.82) 78%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.6); }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.65); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-name{ font-size:32pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.65); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3;
+  font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.65); line-height:1.7; }
+
+/* ══ ROTA / RESUMO ══ */
+.route-box{ border:1px solid var(--line); border-radius:6px; padding:8mm 10mm; margin-bottom:8mm; background:#faf7f2; }
+.route-line{ display:flex; align-items:center; gap:5mm; font-size:14pt; font-weight:700; color:var(--dest); }
+.route-line .arrow{ color:var(--gold); font-weight:400; }
+.route-sub{ font-size:10.5pt; color:var(--mut); margin-top:2mm; }
+.opt-list{ display:flex; flex-direction:column; gap:5mm; margin-top:6mm; }
+.opt-row{ display:flex; align-items:center; gap:8mm; border:1px solid var(--line); border-radius:6px; padding:6mm 8mm; }
+.opt-row .no{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff;
+  font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.opt-row .cia{ font-size:12.5pt; font-weight:700; color:var(--dest); width:52mm; flex-shrink:0; }
+.opt-row .info{ font-size:10.5pt; color:var(--char); flex:1; }
+.opt-row .price{ font-size:12.5pt; font-weight:800; color:var(--gold); text-align:right; flex-shrink:0; }
+
+/* ══ PÁGINA DE OPÇÃO DE VOO ══ */
+.opt-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center;
+  justify-content:space-between; flex-shrink:0; }
+.opt-hd .name{ font-size:13pt; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:#fff; }
+.opt-hd .name span{ font-weight:400; opacity:.85; font-size:10pt; margin-left:4mm; text-transform:none; letter-spacing:0; }
+.opt-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9);
+  color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,.1); }
+
+.leg-label{ font-size:9pt; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin:8mm 0 3mm; }
+.leg-label:first-child{ margin-top:0; }
+.seg-table{ width:100%; border-collapse:collapse; }
+.seg-table th{ text-align:left; font-size:7.5pt; letter-spacing:.08em; text-transform:uppercase; color:var(--mut);
+  font-weight:700; padding:3mm 3mm; border-bottom:1.5px solid var(--dest); }
+.seg-table td{ font-size:10.5pt; color:var(--char); padding:4mm 3mm; border-bottom:1px solid var(--line); vertical-align:middle; }
+.seg-table td.strong{ font-weight:700; color:var(--dest); }
+.seg-table td.mut{ color:var(--mut); font-size:9.5pt; }
+.badge-class{ display:inline-block; border:1px solid var(--dest); color:var(--dest); font-weight:700;
+  font-size:8.5pt; padding:.5mm 2.5mm; border-radius:3px; white-space:nowrap; }
+.badge-ndc{ display:inline-block; background:var(--gold); color:#fff; font-weight:800; font-size:7.5pt;
+  letter-spacing:.08em; padding:1mm 3mm; border-radius:3px; margin-left:3mm; }
+.badge-bag{ display:inline-block; background:rgba(218,141,0,.12); color:var(--dest); font-weight:700; font-size:7.5pt;
+  letter-spacing:.04em; padding:1mm 3mm; border-radius:3px; margin-left:3mm; border:1px solid rgba(218,141,0,.5); }
+.conn-note{ font-size:9pt; color:var(--mut); font-style:italic; padding:2mm 3mm 0; }
+
+.price-box{ display:flex; justify-content:space-between; align-items:center; background:var(--dest);
+  border-radius:5px; padding:7mm 9mm; margin-top:9mm; }
+.price-box .lbl{ font-size:10.5pt; font-weight:700; letter-spacing:.06em; color:rgba(255,255,255,.8); text-transform:uppercase; }
+.price-box .amts{ text-align:right; }
+.price-box .amt-main{ font-size:19pt; font-weight:800; color:var(--gold); line-height:1.2; }
+.price-box .amt-sub{ font-size:10.5pt; font-weight:500; color:rgba(255,255,255,.65); margin-top:1mm; }
+.opt-note{ font-size:9pt; color:var(--mut); margin-top:4mm; line-height:1.6; }
+.baggage-note{ display:flex; align-items:center; gap:3mm; font-size:10pt; color:var(--dest); margin-top:5mm;
+  background:rgba(218,141,0,.08); border:1px solid rgba(218,141,0,.35); border-radius:5px; padding:4mm 6mm; }
+.baggage-note b{ color:var(--gold); }
+
+/* ══ QUADRO COMPARATIVO ══ */
+.cmp-table{ width:100%; border-collapse:collapse; }
+.cmp-table th{ background:var(--dest); color:#fff; text-align:left; font-size:8pt; letter-spacing:.06em;
+  text-transform:uppercase; font-weight:700; padding:4mm 3.5mm; }
+.cmp-table th:first-child{ border-radius:5px 0 0 0; }
+.cmp-table th:last-child{ border-radius:0 5px 0 0; }
+.cmp-table td{ font-size:10pt; color:var(--char); padding:4.5mm 3.5mm; border-bottom:1px solid var(--line); vertical-align:top; }
+.cmp-table tr:nth-child(even) td{ background:#faf7f2; }
+.cmp-table td.opt-cell{ font-weight:800; color:var(--dest); }
+.cmp-table td.opt-cell .tag{ display:block; font-size:8pt; font-weight:600; color:var(--gold); margin-top:1mm; }
+.cmp-table td.price-cell{ font-weight:800; color:var(--gold); font-size:11pt; white-space:nowrap; }
+.cmp-table td.price-cell .usd{ display:block; font-size:8.5pt; font-weight:600; color:var(--mut); }
+.cmp-legend{ display:flex; gap:8mm; margin-top:6mm; }
+.cmp-legend .dot{ display:inline-block; width:2.4mm; height:2.4mm; border-radius:50%; background:var(--gold); margin-right:2mm; }
+.cmp-legend span{ font-size:9pt; color:var(--mut); }
+.best-row td{ position:relative; }
+.pill{ display:inline-block; font-size:7pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+  background:var(--gold); color:#fff; padding:.6mm 2.5mm; border-radius:3px; margin-left:2mm; vertical-align:middle; }
+
+/* ══ CONDIÇÕES ══ */
+.cond{ margin-bottom:7mm; }
+.cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
+.cond-t{ font-size:11pt; line-height:1.8; color:var(--char); }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 01 · CAPA ══════════ -->
+<section class="page cover">
+  <div class="cover-hd">
+    <div class="logo">LUSATRAVEL</div>
+    <div class="tag">Glossário</div>
+  </div>
+  <div class="cover-bar"></div>
+  <div class="cover-photo"></div>
+  <div class="cover-scrim"></div>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em 1 adulto · Ida 26 Dez · Volta 02/03 Jan</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">Paula Mocellin Slaviero</div>
+    <div class="cover-dest">Lisboa, Portugal</div>
+    <div class="stats">
+      <div class="stat"><b>3</b><span>Opções de voo</span></div>
+      <div class="stat"><b>2</b><span>Cias aéreas</span></div>
+      <div class="stat"><b>CWB</b><span>Origem</span></div>
+      <div class="stat"><b>Econ.</b><span>Classe</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com" style="color:inherit;text-decoration:none">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076" style="color:inherit;text-decoration:none">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ══════════ 02 · ROTA / RESUMO DAS OPÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Cotação aérea</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Sua rota</div>
+    <h2 class="h2">Curitiba → Lisboa</h2>
+    <div class="route-box">
+      <div class="route-line">CWB · Curitiba <span class="arrow">✈ ⇄</span> LIS · Lisboa <span class="arrow">·</span> via GRU · São Paulo</div>
+      <div class="route-sub">Classe Econômica · 1 passageiro adulto · 3 alternativas de voo cotadas abaixo · bagagem despachada de 23kg inclusa em todas as opções</div>
+    </div>
+
+    <div class="eyebrow" style="margin-top:10mm">Resumo das opções</div>
+    <h2 class="h2" style="margin-bottom:4mm">Panorama geral</h2>
+    <div class="opt-list">
+      <div class="opt-row">
+        <div class="no">1</div>
+        <div class="cia">LATAM · Econômica <span style="display:block;font-size:8pt;font-weight:400;color:var(--mut)">Emissão NDC</span></div>
+        <div class="info">Ida 26 Dez (CWB→GRU→LIS) · Volta 03 Jan (LIS→GRU→CWB) · Voo mais rápido, conexões enxutas</div>
+        <div class="price">R$ 66.937,10<br><span style="font-size:9pt;font-weight:600;color:var(--mut)">USD 13.183,60</span></div>
+      </div>
+      <div class="opt-row">
+        <div class="no">2</div>
+        <div class="cia">LATAM · Econômica</div>
+        <div class="info">Ida 26 Dez (CWB→GRU→LIS) · Volta 03 Jan (LIS→GRU→CWB) · Mesmos voos, tarifa mais econômica</div>
+        <div class="price">R$ 65.606,10<br><span style="font-size:9pt;font-weight:600;color:var(--mut)">USD 12.921,45</span></div>
+      </div>
+      <div class="opt-row">
+        <div class="no">3</div>
+        <div class="cia">TAP Air Portugal · Econômica</div>
+        <div class="info">Ida 26 Dez (CWB→LIS, 1 conexão) · Volta 02 Jan (LIS→CWB) · Tarifa mais econômica, retorno 1 dia antes</div>
+        <div class="price">R$ 46.160,98<br><span style="font-size:9pt;font-weight:600;color:var(--mut)">USD 9.091,64</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 03 · OPÇÃO 1 — LATAM (NDC) ══════════ -->
+<section class="page">
+  <div class="opt-hd">
+    <div class="name">LATAM Airlines <span>Econômica</span></div>
+    <div class="no">1</div>
+  </div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Opção 1</div>
+    <h2 class="h2">LATAM Airlines <span class="badge-ndc">EMISSÃO NDC</span></h2>
+
+    <div class="leg-label">Ida — 26 Dezembro</div>
+    <table class="seg-table">
+      <tr><th>Voo</th><th>Data</th><th>Origem</th><th>Destino</th><th>Partida</th><th>Chegada</th><th>Duração</th><th>Aeronave</th><th>Classe</th></tr>
+      <tr>
+        <td class="strong">LA 3283</td><td>26 Dez</td><td>CWB · Curitiba</td><td>GRU · São Paulo</td>
+        <td class="strong">11:30</td><td class="strong">12:45</td><td>01:15</td><td class="mut">A321</td>
+        <td><span class="badge-class">Econômica</span></td>
+      </tr>
+      <tr>
+        <td class="strong">LA 8146</td><td>26 Dez</td><td>GRU · São Paulo</td><td>LIS · Lisboa</td>
+        <td class="strong">17:40</td><td class="strong">27 Dez · 06:20</td><td>09:40</td><td class="mut">B773</td>
+        <td><span class="badge-class">Econômica</span></td>
+      </tr>
+    </table>
+    <div class="conn-note">Conexão em GRU: 04h55 · Duração total da ida: 15h50 · 0 escalas em cada trecho</div>
+
+    <div class="leg-label">Volta — 03 Janeiro</div>
+    <table class="seg-table">
+      <tr><th>Voo</th><th>Data</th><th>Origem</th><th>Destino</th><th>Partida</th><th>Chegada</th><th>Duração</th><th>Aeronave</th><th>Classe</th></tr>
+      <tr>
+        <td class="strong">LA 8147</td><td>03 Jan</td><td>LIS · Lisboa</td><td>GRU · São Paulo</td>
+        <td class="strong">08:50</td><td class="strong">16:00</td><td>10:10</td><td class="mut">B773</td>
+        <td><span class="badge-class">Econômica</span></td>
+      </tr>
+      <tr>
+        <td class="strong">LA 4551</td><td>03 Jan</td><td>GRU · São Paulo</td><td>CWB · Curitiba</td>
+        <td class="strong">20:40</td><td class="strong">21:45</td><td>01:05</td><td class="mut">A321</td>
+        <td><span class="badge-class">Econômica</span></td>
+      </tr>
+    </table>
+    <div class="conn-note">Conexão em GRU: 04h40 · Duração total da volta: 15h55 · 0 escalas em cada trecho</div>
+
+    <div class="price-box">
+      <div class="lbl">Valor por passageiro</div>
+      <div class="amts">
+        <div class="amt-main">R$ 66.937,10</div>
+        <div class="amt-sub">ou USD 13.183,60</div>
+      </div>
+    </div>
+    <div class="baggage-note"><b>✓ Bagagem despachada:</b> 1 peça de até 23kg por passageiro inclusa na tarifa.</div>
+    <div class="opt-note">*Nada reservado, apenas cotado. Tarifa sujeita a disponibilidade e reemissão via NDC.</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 04 · OPÇÃO 2 — LATAM ══════════ -->
+<section class="page">
+  <div class="opt-hd">
+    <div class="name">LATAM Airlines <span>Econômica</span></div>
+    <div class="no">2</div>
+  </div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Opção 2</div>
+    <h2 class="h2">LATAM Airlines</h2>
+
+    <div class="leg-label">Ida — 26 Dezembro</div>
+    <table class="seg-table">
+      <tr><th>Voo</th><th>Data</th><th>Origem</th><th>Destino</th><th>Partida</th><th>Chegada</th><th>Duração</th><th>Aeronave</th><th>Classe</th></tr>
+      <tr>
+        <td class="strong">LA 3287</td><td>26 Dez</td><td>CWB · Curitiba</td><td>GRU · São Paulo</td>
+        <td class="strong">15:10</td><td class="strong">16:25</td><td>01:15</td><td class="mut">A319</td>
+        <td><span class="badge-class">Econômica</span></td>
+      </tr>
+      <tr>
+        <td class="strong">LA 8146</td><td>26 Dez</td><td>GRU · São Paulo</td><td>LIS · Lisboa</td>
+        <td class="strong">17:40</td><td class="strong">27 Dez · 06:20</td><td>09:40</td><td class="mut">B773</td>
+        <td><span class="badge-class">Econômica</span></td>
+      </tr>
+    </table>
+    <div class="conn-note">Conexão em GRU: 01h15 · Duração total da ida: 12h10 · 0 escalas em cada trecho</div>
+
+    <div class="leg-label">Volta — 03 Janeiro</div>
+    <table class="seg-table">
+      <tr><th>Voo</th><th>Data</th><th>Origem</th><th>Destino</th><th>Partida</th><th>Chegada</th><th>Duração</th><th>Aeronave</th><th>Classe</th></tr>
+      <tr>
+        <td class="strong">LA 8147</td><td>03 Jan</td><td>LIS · Lisboa</td><td>GRU · São Paulo</td>
+        <td class="strong">08:50</td><td class="strong">16:00</td><td>10:10</td><td class="mut">B773</td>
+        <td><span class="badge-class">Econômica</span></td>
+      </tr>
+      <tr>
+        <td class="strong">LA 4550</td><td>03 Jan</td><td>GRU · São Paulo</td><td>CWB · Curitiba</td>
+        <td class="strong">17:55</td><td class="strong">19:00</td><td>01:05</td><td class="mut">A320</td>
+        <td><span class="badge-class">Econômica</span></td>
+      </tr>
+    </table>
+    <div class="conn-note">Conexão em GRU: 01h55 · Duração total da volta: 13h10 · 0 escalas em cada trecho</div>
+
+    <div class="price-box">
+      <div class="lbl">Valor por passageiro</div>
+      <div class="amts">
+        <div class="amt-main">R$ 65.606,10</div>
+        <div class="amt-sub">ou USD 12.921,45</div>
+      </div>
+    </div>
+    <div class="baggage-note"><b>✓ Bagagem despachada:</b> 1 peça de até 23kg por passageiro inclusa na tarifa.</div>
+    <div class="opt-note">*Nada reservado, apenas cotado. Mesmos voos da Opção 1, com tarifa mais econômica e conexões mais curtas em GRU.</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 05 · OPÇÃO 3 — TAP AIR PORTUGAL ══════════ -->
+<section class="page">
+  <div class="opt-hd">
+    <div class="name">TAP Air Portugal <span>Econômica</span></div>
+    <div class="no">3</div>
+  </div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Opção 3</div>
+    <h2 class="h2">TAP Air Portugal</h2>
+
+    <div class="leg-label">Ida — 26 Dezembro</div>
+    <table class="seg-table">
+      <tr><th>Voo</th><th>Data</th><th>Origem</th><th>Destino</th><th>Partida</th><th>Chegada</th><th>Duração</th><th>Aeronave</th><th>Classe</th></tr>
+      <tr>
+        <td class="strong">TP 67</td><td>26 Dez</td><td>CWB · Curitiba</td><td>LIS · Lisboa</td>
+        <td class="strong">20:10</td><td class="strong">27 Dez · 11:45</td><td>12:35</td><td class="mut">A332</td>
+        <td><span class="badge-class">Econômica</span></td>
+      </tr>
+    </table>
+    <div class="conn-note">1 escala · Duração total: 12h35</div>
+
+    <div class="leg-label">Volta — 02 Janeiro</div>
+    <table class="seg-table">
+      <tr><th>Voo</th><th>Data</th><th>Origem</th><th>Destino</th><th>Partida</th><th>Chegada</th><th>Duração</th><th>Aeronave</th><th>Classe</th></tr>
+      <tr>
+        <td class="strong">TP 67</td><td>02 Jan</td><td>LIS · Lisboa</td><td>CWB · Curitiba</td>
+        <td class="strong">10:45</td><td class="strong">18:40</td><td>10:55</td><td class="mut">A332</td>
+        <td><span class="badge-class">Econômica</span></td>
+      </tr>
+    </table>
+    <div class="conn-note">0 escalas · Duração total: 10h55</div>
+
+    <div class="price-box">
+      <div class="lbl">Valor por passageiro</div>
+      <div class="amts">
+        <div class="amt-main">R$ 46.160,98</div>
+        <div class="amt-sub">ou USD 9.091,64</div>
+      </div>
+    </div>
+    <div class="baggage-note"><b>✓ Bagagem despachada:</b> 1 peça de até 23kg por passageiro inclusa na tarifa.</div>
+    <div class="opt-note">*Nada reservado, apenas cotado. Atenção: nesta opção o retorno é em 02 de Janeiro (um dia antes das opções LATAM).</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 06 · QUADRO COMPARATIVO ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Comparativo</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Resumo final</div>
+    <h2 class="h2">Quadro Comparativo</h2>
+    <table class="cmp-table">
+      <tr>
+        <th>Opção</th>
+        <th>Ida — 26 Dez</th>
+        <th>Volta</th>
+        <th>Duração total (ida+volta)</th>
+        <th>Conexões</th>
+        <th>Valor (R$)</th>
+        <th>Valor (USD)</th>
+      </tr>
+      <tr>
+        <td class="opt-cell">1 · LATAM<span class="tag">Econômica · NDC</span></td>
+        <td>11:30 CWB → 06:20+1 LIS<br><span style="color:var(--mut);font-size:8.5pt">via GRU · conexão 04h55</span></td>
+        <td>03 Jan · 08:50 LIS → 21:45 CWB<br><span style="color:var(--mut);font-size:8.5pt">via GRU · conexão 04h40</span></td>
+        <td>15h50 + 15h55</td>
+        <td>1 em cada trecho (GRU)</td>
+        <td class="price-cell">R$ 66.937,10</td>
+        <td class="price-cell">USD 13.183,60</td>
+      </tr>
+      <tr>
+        <td class="opt-cell">2 · LATAM<span class="tag">Econômica</span></td>
+        <td>15:10 CWB → 06:20+1 LIS<br><span style="color:var(--mut);font-size:8.5pt">via GRU · conexão 01h15</span></td>
+        <td>03 Jan · 08:50 LIS → 19:00 CWB<br><span style="color:var(--mut);font-size:8.5pt">via GRU · conexão 01h55</span></td>
+        <td>12h10 + 13h10</td>
+        <td>1 em cada trecho (GRU)</td>
+        <td class="price-cell">R$ 65.606,10</td>
+        <td class="price-cell">USD 12.921,45</td>
+      </tr>
+      <tr class="best-row">
+        <td class="opt-cell">3 · TAP Air Portugal<span class="tag">Econômica</span></td>
+        <td>20:10 CWB → 11:45+1 LIS<br><span style="color:var(--mut);font-size:8.5pt">voo direto TP 67</span></td>
+        <td>02 Jan · 10:45 LIS → 18:40 CWB<br><span style="color:var(--mut);font-size:8.5pt">voo direto TP 67</span></td>
+        <td>12h35 + 10h55</td>
+        <td>1 na ida · 0 na volta</td>
+        <td class="price-cell">R$ 46.160,98</td>
+        <td class="price-cell">USD 9.091,64</td>
+      </tr>
+    </table>
+    <div class="cmp-legend">
+      <span><span class="dot"></span>Preços por passageiro, tarifa econômica</span>
+      <span><span class="dot"></span>Cotação 03/08 · USD = R$ 5,08</span>
+      <span><span class="dot"></span>Bagagem despachada de 23kg inclusa em todas as opções</span>
+    </div>
+    <div class="opt-note" style="margin-top:6mm">Observação: a Opção 3 (TAP) tem retorno em 02 de Janeiro, um dia antes das Opções 1 e 2 (LATAM), que retornam em 03 de Janeiro — considerar essa diferença de itinerário na escolha. *Nada reservado, apenas cotado.</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 07 · CONDIÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Condições</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Importante</div>
+    <h2 class="h2">Condições e Observações</h2>
+    <div class="cond"><div class="cond-h">Bagagem</div><div class="cond-t">Todas as opções incluem 1 peça de bagagem despachada de até 23kg por passageiro, além do item de mão conforme franquia padrão da cia aérea.</div></div>
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Aéreo: até 6x sem acréscimos no cartão de crédito · PIX ou transferência: consulte condições especiais de desconto</div></div>
+    <div class="cond"><div class="cond-h">Validade da cotação</div><div class="cond-t">Tarifas aéreas sujeitas a disponibilidade e reajuste sem aviso prévio até o momento da emissão. Câmbio de referência: USD = R$ 5,08 (03/08).</div></div>
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Seguro viagem<br>· Taxas de bagagem excedente (acima de 23kg)<br>· Despesas pessoais e serviços em solo</div></div>
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Nada está reservado até a confirmação e pagamento. Documentação (passaporte, vistos, se exigidos) é de responsabilidade do passageiro. Valores sujeitos a confirmação no momento da emissão do bilhete.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
