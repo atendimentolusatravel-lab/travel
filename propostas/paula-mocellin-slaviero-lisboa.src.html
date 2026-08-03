@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Paula Mocellin Slaviero | Lisboa — LUSATRAVEL</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
@@ -144,7 +145,32 @@ html,body{ font-family:var(--sans); color:var(--char); }
 .cond{ margin-bottom:7mm; }
 .cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
 .cond-t{ font-size:11pt; line-height:1.8; color:var(--char); }
+
+/* ══ VISUALIZAÇÃO EM TELA (não afeta o PDF) ══ */
+@media screen{
+  body{ background:var(--cream); display:flex; flex-direction:column; align-items:center;
+        padding:4vw 0; gap:4vw; }
+  .page{ box-shadow:0 4px 28px rgba(15,36,56,.18); border-radius:2px;
+         transform-origin:top center; flex-shrink:0; }
+  @media (max-width:1180px){
+    body{ padding:0; gap:0; }
+    .page{ box-shadow:none; border-radius:0;
+           zoom:var(--fit,1); }
+  }
+}
 </style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  function fit(){
+    var pageW = document.querySelector('.page').offsetWidth;
+    if(!pageW) return;
+    var scale = Math.min(1, window.innerWidth / pageW);
+    document.documentElement.style.setProperty('--fit', scale);
+  }
+  fit();
+  window.addEventListener('resize', fit);
+});
+</script>
 </head>
 <body>
 
