@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Argentina · Buenos Aires &amp; Mendoza — LUSATRAVEL</title>
+<style>
+/* ══════════════════════════════════════════════════════════════
+   LUSATRAVEL — PROPOSTA ARGENTINA · VERSÃO CLARA SIMPLIFICADA
+   A3 Portrait · 6 páginas · fundo claro, verdes leves, ouro nos detalhes
+   ══════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+  --gold:#da8d00;        /* FIXO — nunca muda */
+  --gold-lo:#f0deb4;     /* ouro claro para filetes e fundos suaves */
+  --green:#4a5438;       /* verde principal — títulos e logo */
+  --green-md:#73805c;    /* Verde Andino — badges e destaques */
+  --green-lo:#eef1e6;    /* verde muito claro — painéis */
+  --green-lo2:#f6f8f1;   /* verde quase branco — cartões */
+  --char:#525c44;        /* texto corrido */
+  --mut:#96a181;         /* texto discreto */
+  --line:#e2e7d8;
+  --bg:#fcfdfa;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); }
+
+.page{
+  width:297mm; height:420mm; position:relative; overflow:hidden;
+  background:var(--bg); page-break-after:always; display:flex; flex-direction:column;
+}
+.page:last-child{ page-break-after:auto; }
+
+/* ── Cabeçalho leve ── */
+.hd{ padding:15mm 22mm 6mm; display:flex; align-items:baseline;
+     justify-content:space-between; flex-shrink:0; }
+.hd .logo{ font-size:14pt; font-weight:800; letter-spacing:.1em; color:var(--green); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:var(--mut); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+.goldbar.thin{ height:1mm; margin:0 22mm; background:var(--gold); }
+
+/* ── Rodapé leve ── */
+.ft{ margin-top:auto; padding:5mm 22mm 12mm; display:flex; align-items:center;
+     justify-content:center; gap:12px; flex-shrink:0; border-top:1px solid var(--line);
+     margin-left:22mm; margin-right:22mm; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:var(--mut); text-decoration:none; }
+.ft .sep{ color:var(--gold); }
+
+.body{ padding:10mm 22mm 0; flex:1; }
+.eyebrow{ font-size:9pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:30pt; font-weight:700; color:var(--green); letter-spacing:-.01em; margin:3mm 0 7mm; }
+.lead{ font-size:14pt; line-height:1.75; color:var(--char); margin-bottom:12mm; max-width:225mm; }
+
+/* ══ CAPA ══ */
+.cover{ background:var(--bg); }
+.cover-hd{ padding:18mm 22mm 7mm; display:flex; align-items:baseline; justify-content:space-between; flex-shrink:0; }
+.cover-hd .logo{ font-size:17pt; font-weight:800; letter-spacing:.1em; color:var(--green); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:var(--mut); }
+/* SUBSTITUA por: background:url('capa-mendoza.jpg') center/cover; */
+.cover-photo{ height:226mm; margin:0 22mm; position:relative; flex-shrink:0; border-radius:3px;
+  background:
+    radial-gradient(100% 70% at 80% 15%, rgba(218,141,0,.22) 0%, transparent 60%),
+    linear-gradient(158deg,#e7ebdc 0%,#cfd8bd 40%,#aebb92 74%,#8e9b6f 100%); }
+.cover-photo .cap{ position:absolute; bottom:8mm; left:9mm; font-size:11pt; font-weight:700;
+  letter-spacing:.22em; text-transform:uppercase; color:#fff; }
+.cover-cnt{ padding:13mm 22mm 0; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.cover-basis{ font-size:10pt; color:var(--mut); margin:2mm 0 8mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:var(--mut); }
+.cover-name{ font-size:32pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase;
+  line-height:1.1; margin-top:1mm; color:var(--green); }
+.cover-dest{ font-size:17pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:16mm; margin-top:9mm; }
+.stat b{ display:block; font-size:24pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; }
+.cover-sig{ margin-top:auto; padding:6mm 22mm 14mm; flex-shrink:0; font-family:var(--con);
+  font-size:9pt; color:var(--mut); line-height:1.75; border-top:1px solid var(--line);
+  margin-left:22mm; margin-right:22mm; }
+.cover-sig a{ color:var(--char); text-decoration:none; }
+
+/* ══ ITINERÁRIO ══ */
+.tl-item{ display:flex; align-items:flex-start; gap:8mm; margin-bottom:11mm; }
+.tl-badge{ width:14mm; height:14mm; border-radius:50%; background:var(--green-lo);
+  border:1.5px solid var(--green-md); color:var(--green); font-weight:800; font-size:15pt;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tl-city{ font-size:17pt; font-weight:700; color:var(--green); }
+.tl-meta{ font-size:11pt; letter-spacing:.06em; color:var(--gold); font-weight:600; margin-top:.8mm; }
+.tl-note{ font-size:12.5pt; color:var(--char); margin-top:2mm; line-height:1.65; }
+
+/* ══ CAIXA CLARA ══ */
+.box{ background:var(--green-lo); border-radius:4px; padding:9mm 11mm; margin-top:10mm; }
+.box-h{ font-size:10pt; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.box-t{ font-size:12.5pt; line-height:1.7; color:var(--char); margin-top:2.5mm; }
+.box-t b{ font-weight:600; color:var(--green); }
+
+/* ══ ROTEIRO COMPACTO ══ */
+.d{ display:grid; grid-template-columns:40mm 1fr; gap:8mm; padding:5.6mm 0;
+    border-bottom:1px solid var(--line); align-items:baseline; }
+.d:last-child{ border-bottom:0; }
+.d-n{ font-size:10.5pt; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); }
+.d-n span{ display:block; font-size:9.5pt; font-weight:600; letter-spacing:.08em; color:var(--mut); margin-top:.6mm; }
+.d-t{ font-size:12.5pt; line-height:1.65; color:var(--char); }
+.d-t b{ font-weight:600; color:var(--green); }
+
+/* ══ HOTÉIS EM DUAS COLUNAS ══ */
+.cols{ display:grid; grid-template-columns:1fr 1fr; gap:14mm; }
+.col-h{ font-size:16pt; font-weight:700; color:var(--green); padding-bottom:2.5mm;
+  border-bottom:1.5px solid var(--gold); margin-bottom:5mm; }
+.col-h span{ display:block; font-size:9.5pt; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--mut); margin-top:1.5mm; }
+.h-item{ background:var(--green-lo2); border-radius:4px; padding:6.5mm 8mm; margin-bottom:5.5mm; }
+.h-item.pick{ background:var(--green-lo); }
+.h-top{ display:flex; align-items:baseline; justify-content:space-between; gap:4mm; }
+.h-name{ font-size:13.5pt; font-weight:700; color:var(--green); }
+.h-stars{ font-size:11.5pt; color:var(--gold); letter-spacing:1.5px; white-space:nowrap; }
+.h-meta{ font-size:9.5pt; letter-spacing:.1em; text-transform:uppercase; color:var(--mut);
+  font-weight:600; margin-top:1.5mm; }
+.h-txt{ font-size:11.5pt; font-weight:300; line-height:1.55; color:var(--char); margin-top:2mm; }
+.h-tag{ display:inline-block; font-size:8.5pt; font-weight:700; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--gold); border:1px solid var(--gold-lo);
+  border-radius:20px; padding:.8mm 2.6mm; margin-bottom:2mm; }
+
+/* ══ VINÍCOLAS ══ */
+.zone{ margin-bottom:10mm; }
+.zone-h{ font-size:16pt; font-weight:700; color:var(--green); }
+.zone-m{ font-size:9.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--gold);
+  font-weight:700; margin-top:1mm; }
+.zone-t{ font-size:12.5pt; line-height:1.65; color:var(--char); margin-top:2.5mm; }
+.pill{ display:inline-block; background:var(--green-lo); color:var(--green); font-size:10.5pt;
+  font-weight:600; padding:1.8mm 4.5mm; border-radius:20px; margin:2.5mm 2mm 0 0; }
+.pill.star{ background:var(--gold); color:#fff; }
+
+/* ══ LISTA DE SERVIÇOS ══ */
+.svc{ display:grid; grid-template-columns:1fr 1fr; gap:5mm 14mm; }
+.svc div{ font-size:12pt; line-height:1.6; color:var(--char); padding-left:6mm; position:relative; }
+.svc div::before{ content:''; position:absolute; left:0; top:2.2mm; width:2.4mm; height:2.4mm;
+  border-radius:50%; background:var(--gold); }
+
+/* ══ VALORES ══ */
+.val-note{ font-size:10pt; color:var(--mut); margin-bottom:4mm; }
+.val-row{ display:flex; justify-content:space-between; align-items:baseline;
+  padding:4.3mm 0; border-bottom:1px solid var(--line); }
+.val-row .lbl{ font-size:13pt; color:var(--char); }
+.val-row .lbl small{ display:block; font-size:10pt; color:var(--mut); margin-top:.7mm; }
+.val-row .amt{ font-size:13.5pt; font-weight:700; color:var(--green); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--green-lo);
+  border:1px solid var(--gold-lo); border-radius:4px; padding:6mm 9mm; margin-top:5mm; }
+.val-total .lbl{ font-size:12pt; font-weight:700; letter-spacing:.1em; color:var(--green); }
+.val-total .amt{ font-size:19pt; font-weight:800; color:var(--gold); }
+.val-fx{ font-size:10pt; color:var(--mut); margin-top:4mm; line-height:1.6; }
+
+/* ══ CONDIÇÕES ══ */
+.cond{ margin-bottom:5.5mm; }
+.cond-h{ font-size:10pt; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:1.5mm; }
+.cond-t{ font-size:11.5pt; line-height:1.7; color:var(--char); }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 01 · CAPA ══════════ -->
+<section class="page cover">
+  <div class="cover-hd">
+    <div class="logo">LUSATRAVEL</div>
+    <div class="tag">Glossário</div>
+  </div>
+  <div class="goldbar thin"></div>
+  <div class="cover-photo" style="margin-top:7mm"><div class="cap">Argentina</div></div>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em 2 adultos · 10 dias / 9 noites</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">Nome do Cliente</div>
+    <div class="cover-dest">Argentina · Buenos Aires &amp; Mendoza</div>
+    <div class="stats">
+      <div class="stat"><b>2</b><span>Destinos</span></div>
+      <div class="stat"><b>9</b><span>Noites</span></div>
+      <div class="stat"><b>4</b><span>Hotéis</span></div>
+      <div class="stat"><b>6</b><span>Bodegas</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a> ·
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
+    Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR
+  </div>
+</section>
+
+<!-- ══════════ 02 · ITINERÁRIO ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Itinerário</div></div>
+  <div class="goldbar thin"></div>
+  <div class="body">
+    <div class="eyebrow">Sua rota</div>
+    <h2 class="h2">Itinerário</h2>
+    <p class="lead">Dez dias entre a capital mais elegante da América do Sul e o coração do vinho argentino,
+      aos pés dos Andes. Ritmo confortável, bairros seguros e caminháveis, transporte privativo nos dias
+      de vinícola.</p>
+
+    <div class="tl-item">
+      <div class="tl-badge">1</div>
+      <div>
+        <div class="tl-city">Buenos Aires</div>
+        <div class="tl-meta">Dias 01 a 05 · 4 noites</div>
+        <div class="tl-note">Recoleta e Palermo, Teatro Colón, tango, e um dia inteiro à escolha entre
+          o Delta do Tigre, uma estância pampeana ou Colonia del Sacramento, no Uruguai.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-badge">2</div>
+      <div>
+        <div class="tl-city">Mendoza</div>
+        <div class="tl-meta">Dias 05 a 09 · 4 noites</div>
+        <div class="tl-note">Dois dias completos de vinícolas — Luján de Cuyo e Valle de Uco — com almoços
+          harmonizados, mais um dia de Alta Montanha ou de spa entre os vinhedos.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-badge">3</div>
+      <div>
+        <div class="tl-city">Buenos Aires</div>
+        <div class="tl-meta">Dias 09 a 10 · 1 noite</div>
+        <div class="tl-note">Noite de conexão antes do voo internacional, com tarde livre para as últimas
+          compras e um jantar de encerramento.</div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-h">Por que a última noite em Buenos Aires</div>
+      <div class="box-t">Os voos domésticos operam em <b>Aeroparque</b> e os internacionais em <b>Ezeiza</b>,
+        separados por cerca de 50 minutos de trânsito. Dormir a última noite na capital elimina qualquer
+        risco de perder a conexão de volta — e ainda rende uma tarde inteira de compras.</div>
+    </div>
+
+    <div class="box" style="background:var(--green-lo2)">
+      <div class="box-h">Melhor época para viajar</div>
+      <div class="box-t">De outubro a abril. <b>Março</b> traz a vindima, com a colheita ativa nos vinhedos;
+        <b>abril</b> traz a folhagem dourada dos parreirais, a paisagem mais bonita do ano. No inverno as
+        videiras estão desfolhadas e a estrada para o Aconcágua pode fechar por neve.</div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 03 · ROTEIRO DIA A DIA ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Roteiro</div></div>
+  <div class="goldbar thin"></div>
+  <div class="body">
+    <div class="eyebrow">Dia a dia</div>
+    <h2 class="h2">Roteiro</h2>
+
+    <div class="d"><div class="d-n">Dia 01<span>Buenos Aires</span></div>
+      <div class="d-t">Chegada e traslado privativo de Ezeiza. Caminhada leve pela Recoleta e
+        <b>chá da tarde no Alvear Palace</b>. Jantar próximo ao hotel.</div></div>
+
+    <div class="d"><div class="d-n">Dia 02<span>Buenos Aires</span></div>
+      <div class="d-t"><b>City tour privativo</b> — Plaza de Mayo, Casa Rosada, 9 de Julio, Puerto Madero,
+        San Telmo e Caminito. À tarde, Cemitério da Recoleta e a livraria El Ateneo.
+        À noite, <b>jantar-show de tango</b>.</div></div>
+
+    <div class="d"><div class="d-n">Dia 03<span>Buenos Aires</span></div>
+      <div class="d-t">Visita guiada ao <b>Teatro Colón</b>. À tarde, MALBA, Jardim Japonês e o Rosedal,
+        com compras em Palermo Soho. Jantar na parrilla <b>Don Julio</b>.</div></div>
+
+    <div class="d"><div class="d-n">Dia 04<span>Buenos Aires</span></div>
+      <div class="d-t">Dia inteiro à escolha: <b>Delta do Tigre</b> com navegação; <b>estância pampeana</b>
+        com asado e show de gaúchos; ou <b>Colonia del Sacramento</b>, no Uruguai.</div></div>
+
+    <div class="d"><div class="d-n">Dia 05<span>BA → Mendoza</span></div>
+      <div class="d-t">Manhã livre em San Telmo e voo para Mendoza (1h50). Fim de tarde na Plaza
+        Independencia e jantar na rua <b>Arístides Villanueva</b>.</div></div>
+
+    <div class="d"><div class="d-n">Dia 06<span>Luján de Cuyo</span></div>
+      <div class="d-t"><b>Bodega Catena Zapata</b>, a mais premiada da Argentina, e almoço harmonizado no
+        <b>Osadía de Crear</b>, da enóloga Susana Balbo. À tarde, a histórica Bodega Lagarde.</div></div>
+
+    <div class="d"><div class="d-n">Dia 07<span>Valle de Uco</span></div>
+      <div class="d-t"><b>Zuccardi Valle de Uco</b>, eleita <i>World's Best Vineyard</i>, com almoço no
+        Piedra Infinita Cocina ou na <b>Bodega Salentein</b>. À tarde, Andeluna ou The Vines.</div></div>
+
+    <div class="d"><div class="d-n">Dia 08<span>Mendoza</span></div>
+      <div class="d-t"><b>Alta Montaña</b> até o mirante do Aconcágua, com as termas de Cacheuta — ou dia de
+        <b>spa e vinoterapia</b>. Jantar no 1884 Francis Mallmann.</div></div>
+
+    <div class="d"><div class="d-n">Dia 09<span>Mendoza → BA</span></div>
+      <div class="d-t">Cerro de la Gloria pela manhã e voo de volta. Tarde de compras na Calle Arenales
+        e jantar de encerramento.</div></div>
+
+    <div class="d"><div class="d-n">Dia 10<span>Regresso</span></div>
+      <div class="d-t">Café da manhã, check-out e traslado privativo a Ezeiza.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 04 · HOTÉIS ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Hospedagem</div></div>
+  <div class="goldbar thin"></div>
+  <div class="body">
+    <div class="eyebrow">Bem localizados</div>
+    <h2 class="h2">Hotéis</h2>
+
+    <div class="cols">
+      <div>
+        <div class="col-h">Buenos Aires<span>4 noites · Recoleta</span></div>
+
+        <div class="h-item pick">
+          <div class="h-tag">Sugestão</div>
+          <div class="h-top"><div class="h-name">Alvear Palace Hotel</div><div class="h-stars">★★★★★</div></div>
+          <div class="h-meta">Av. Alvear · Recoleta</div>
+          <div class="h-txt">O mais tradicional da cidade, de 1932, na avenida mais elegante de Buenos Aires.
+            Serviço impecável e o célebre chá da tarde no L'Orangerie.</div>
+        </div>
+
+        <div class="h-item">
+          <div class="h-top"><div class="h-name">Park Hyatt · Palacio Duhau</div><div class="h-stars">★★★★★</div></div>
+          <div class="h-meta">Av. Alvear · Recoleta</div>
+          <div class="h-txt">Palacete de 1934 unido a uma torre moderna por jardins internos em terraços.
+            Spa e adega de queijos.</div>
+        </div>
+
+        <div class="h-item">
+          <div class="h-top"><div class="h-name">Four Seasons Buenos Aires</div><div class="h-stars">★★★★★</div></div>
+          <div class="h-meta">Recoleta / Retiro</div>
+          <div class="h-txt">Suítes na mansão belle époque La Mansión, piscina externa aquecida e o
+            restaurante Elena.</div>
+        </div>
+
+        <div class="h-item">
+          <div class="h-top"><div class="h-name">Meliá Recoleta Plaza</div><div class="h-stars">★★★★</div></div>
+          <div class="h-meta">Plaza Francia · Recoleta</div>
+          <div class="h-txt">Melhor custo-benefício: localização idêntica à dos cinco estrelas, com
+            investimento bem menor.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-h">Mendoza<span>2 noites cidade + 2 vinhedos</span></div>
+
+        <div class="h-item pick">
+          <div class="h-tag">Sugestão · cidade</div>
+          <div class="h-top"><div class="h-name">Park Hyatt Mendoza</div><div class="h-stars">★★★★★</div></div>
+          <div class="h-meta">Plaza Independencia</div>
+          <div class="h-txt">Fachada colonial histórica de frente para a praça central — a melhor
+            localização da cidade, com tudo a pé.</div>
+        </div>
+
+        <div class="h-item pick">
+          <div class="h-tag">Sugestão · vinhedos</div>
+          <div class="h-top"><div class="h-name">Cavas Wine Lodge</div><div class="h-stars">★★★★★</div></div>
+          <div class="h-meta">Luján de Cuyo</div>
+          <div class="h-txt">Relais &amp; Châteaux entre parreirais. Villas independentes com piscina
+            privativa e terraço no telhado para ver as estrelas.</div>
+        </div>
+
+        <div class="h-item">
+          <div class="h-top"><div class="h-name">Entre Cielos Wine Hotel</div><div class="h-stars">★★★★★</div></div>
+          <div class="h-meta">Luján de Cuyo</div>
+          <div class="h-txt">Hammam de seis etapas e vinoterapia. Suíte suspensa sobre o parreiral.</div>
+        </div>
+
+        <div class="h-item">
+          <div class="h-top"><div class="h-name">Casa de Uco Wine Resort</div><div class="h-stars">★★★★★</div></div>
+          <div class="h-meta">Valle de Uco</div>
+          <div class="h-txt">Arquitetura premiada, lago e vista frontal dos Andes. Base ideal para as
+            bodegas do Uco.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box" style="background:var(--green-lo2)">
+      <div class="box-h">Também consideramos</div>
+      <div class="box-t"><b>Buenos Aires:</b> Casa Lucía (Retiro) e Hub Porteño, boutique de 11 quartos ·
+        <b>Mendoza:</b> Diplomatic MGallery, no centro, e a Susana Balbo Winemaker's House, em
+        Chacras de Coria, com apenas seis quartos.</div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 05 · VINÍCOLAS E EXPERIÊNCIAS ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Vinícolas</div></div>
+  <div class="goldbar thin"></div>
+  <div class="body">
+    <div class="eyebrow">Renomadas bodegas</div>
+    <h2 class="h2">Vinícolas &amp; experiências</h2>
+
+    <div class="zone">
+      <div class="zone-h">Luján de Cuyo</div>
+      <div class="zone-m">30–40 min · a Primeira Zona do Malbec</div>
+      <div class="zone-t">Onde o Malbec argentino nasceu. Bodegas históricas e de culto, com os vinhedos
+        mais antigos do país e uma cena gastronômica excepcional.</div>
+      <div><span class="pill star">Catena Zapata</span><span class="pill">Susana Balbo</span><span class="pill">Lagarde</span><span class="pill">Achaval-Ferrer</span><span class="pill">Viña Cobos</span></div>
+    </div>
+
+    <div class="zone">
+      <div class="zone-h">Valle de Uco</div>
+      <div class="zone-m">1h–1h30 · altitude e arquitetura contemporânea</div>
+      <div class="zone-t">Vinhedos entre 1.100 e 1.500 metros, encostados na cordilheira. A região de maior
+        prestígio internacional hoje, com as paisagens mais fotografadas da Argentina.</div>
+      <div><span class="pill star">Zuccardi Valle de Uco</span><span class="pill">Salentein</span><span class="pill">Andeluna</span><span class="pill">Casa de Uco</span><span class="pill">The Vines</span></div>
+    </div>
+
+    <div class="zone">
+      <div class="zone-h">Maipú</div>
+      <div class="zone-m">20–30 min · tradição, azeites e vermutes</div>
+      <div class="zone-t">A mais antiga e mais próxima da cidade, de bodegas centenárias em edifícios
+        históricos. Ideal para meia manhã, com uma degustação de azeites de oliva.</div>
+      <div><span class="pill">Trapiche</span><span class="pill">Trivento</span><span class="pill">Familia Zuccardi</span><span class="pill">López</span></div>
+    </div>
+
+    <div class="box">
+      <div class="box-h">Como aproveitamos melhor</div>
+      <div class="box-t"><b>Toda visita é com reserva prévia</b> — os restaurantes das bodegas devem ser
+        reservados com 4 a 6 semanas · <b>Duas a três bodegas por dia, no máximo</b> · <b>Sempre com
+        motorista privativo</b> · Começar pelos brancos e tintos jovens, terminar nos rótulos ícone.</div>
+    </div>
+
+    <div style="margin-top:8mm">
+      <div class="eyebrow">Serviços incluídos</div>
+      <div class="svc" style="margin-top:4mm">
+        <div>Traslados privativos em Buenos Aires e Mendoza</div>
+        <div>Aéreo Buenos Aires ⇄ Mendoza</div>
+        <div>City tour privativo com guia em português</div>
+        <div>Dois dias completos de vinícolas com guia enóloga</div>
+        <div>Visita guiada ao Teatro Colón</div>
+        <div>Degustações e almoços harmonizados nas bodegas</div>
+        <div>Jantar-show de tango com traslados</div>
+        <div>Alta Montanha com guia ou day spa</div>
+        <div>Dia inteiro à escolha, com almoço</div>
+        <div>Seguro-viagem e assistência 24h</div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 06 · VALORES E CONDIÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Valores</div></div>
+  <div class="goldbar thin"></div>
+  <div class="body">
+    <div class="eyebrow">Investimento</div>
+    <h2 class="h2">Valores &amp; condições</h2>
+    <div class="val-note">*Valores em USD por pessoa, base de acomodação em apartamento duplo · 2 adultos</div>
+
+    <div class="val-row"><span class="lbl">Hotelaria<small>9 noites · café da manhã incluído</small></span><span class="amt">USD 0.000</span></div>
+    <div class="val-row"><span class="lbl">Aéreo internacional<small>Brasil ⇄ Buenos Aires</small></span><span class="amt">USD 0.000</span></div>
+    <div class="val-row"><span class="lbl">Aéreo doméstico<small>Buenos Aires ⇄ Mendoza</small></span><span class="amt">USD 0.000</span></div>
+    <div class="val-row"><span class="lbl">Serviços e passeios<small>Traslados, guias, city tour, tango e dia inteiro</small></span><span class="amt">USD 0.000</span></div>
+    <div class="val-row"><span class="lbl">Vinícolas<small>2 dias completos com motorista, guia enóloga e almoços</small></span><span class="amt">USD 0.000</span></div>
+    <div class="val-row"><span class="lbl">Seguro de viagem<small>Cobertura internacional · 10 dias</small></span><span class="amt">USD 000</span></div>
+
+    <div class="val-total"><span class="lbl">TOTAL / PESSOA</span><span class="amt">USD 0.000</span></div>
+    <div class="val-fx">Cotação 00/00 · USD = R$ 0,00<br>*Nada reservado, apenas cotado · Valores sujeitos a confirmação e disponibilidade no momento da reserva; tarifas aéreas variam até a emissão.</div>
+
+    <div style="margin-top:7mm">
+      <div class="cond">
+        <div class="cond-h">Parcelamento</div>
+        <div class="cond-t">Hotelaria em até 10x sem acréscimos · Aéreo e serviços em até 6x sem
+          acréscimos · PIX com desconto de 5 a 13%</div>
+      </div>
+      <div class="cond">
+        <div class="cond-h">Não inclui</div>
+        <div class="cond-t">Refeições não mencionadas e bebidas fora dos almoços harmonizados · City taxes
+          cobradas localmente pelo hotel · Gorjetas · Despesas pessoais e compras</div>
+      </div>
+      <div class="cond">
+        <div class="cond-h">Documentação</div>
+        <div class="cond-t">Para a Argentina, RG dentro da validade (Mercosul) ou passaporte. Se o roteiro
+          incluir Colonia del Sacramento, no Uruguai, o passaporte é obrigatório.</div>
+      </div>
+      <div class="cond">
+        <div class="cond-h">Reservas nas bodegas</div>
+        <div class="cond-t">As visitas e os almoços dependem de disponibilidade e são confirmados após o
+          fechamento da viagem. Recomendamos fechar com 60 dias de antecedência.</div>
+      </div>
+      <div class="cond">
+        <div class="cond-h">Levando vinhos de volta</div>
+        <div class="cond-t">Garrafas só retornam em bagagem despachada. As bodegas embalam e despacham as
+          caixas para o hotel — confirme a franquia da companhia aérea antes de comprar.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
