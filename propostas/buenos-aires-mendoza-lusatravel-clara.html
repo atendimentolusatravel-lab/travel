@@ -157,6 +157,24 @@ html,body{ font-family:var(--sans); color:var(--char); }
 .cond-h{ font-size:10pt; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
   color:var(--gold); margin-bottom:1.5mm; }
 .cond-t{ font-size:11.5pt; line-height:1.7; color:var(--char); }
+
+/* ══ VINÍCOLAS SELECIONADAS ══ */
+.wine{ display:grid; grid-template-columns:16mm 1fr; gap:8mm; padding:4.5mm 0;
+  border-bottom:1px solid var(--line); align-items:start; }
+.wine:last-child{ border-bottom:0; }
+.wine-n{ width:16mm; height:16mm; border-radius:50%; background:var(--gold); color:#fff;
+  font-size:15pt; font-weight:800; display:flex; align-items:center; justify-content:center; }
+.wine-h{ font-size:16pt; font-weight:700; color:var(--green); }
+.wine-m{ font-size:9.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--gold);
+  font-weight:700; margin-top:1.2mm; }
+.wine-t{ font-size:12pt; line-height:1.65; color:var(--char); margin-top:2.5mm; }
+
+/* ══ DESTAQUE DE REGIÃO ══ */
+.pickbox{ background:var(--green-lo); border-left:3px solid var(--gold);
+  border-radius:0 4px 4px 0; padding:6mm 8mm; margin-bottom:6mm; }
+.pickbox-h{ font-size:9.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.pickbox-n{ font-size:15pt; font-weight:700; color:var(--green); margin-top:1.5mm; }
+.pickbox-t{ font-size:11.5pt; line-height:1.6; color:var(--char); margin-top:2.5mm; }
 </style>
 </head>
 <body>
@@ -171,15 +189,15 @@ html,body{ font-family:var(--sans); color:var(--char); }
   <div class="cover-photo" style="margin-top:7mm"><div class="cap">Argentina</div></div>
   <div class="cover-cnt">
     <div class="cover-kicker">Cotação para sua viagem</div>
-    <div class="cover-basis">Baseado em 2 adultos · 10 dias / 9 noites</div>
+    <div class="cover-basis">Baseado em 2 adultos · 14 a 23 de outubro de 2026 · 10 dias / 9 noites</div>
     <div class="cover-to">Sua viagem para:</div>
     <div class="cover-name">Nome do Cliente</div>
-    <div class="cover-dest">Argentina · Buenos Aires &amp; Mendoza</div>
+    <div class="cover-dest">Argentina · Mendoza &amp; Buenos Aires</div>
     <div class="stats">
       <div class="stat"><b>2</b><span>Destinos</span></div>
       <div class="stat"><b>9</b><span>Noites</span></div>
-      <div class="stat"><b>4</b><span>Hotéis</span></div>
-      <div class="stat"><b>6</b><span>Bodegas</span></div>
+      <div class="stat"><b>4</b><span>Vinícolas</span></div>
+      <div class="stat"><b>2</b><span>Hotéis</span></div>
     </div>
   </div>
   <div class="cover-sig">
@@ -194,52 +212,52 @@ html,body{ font-family:var(--sans); color:var(--char); }
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Itinerário</div></div>
   <div class="goldbar thin"></div>
   <div class="body">
-    <div class="eyebrow">Sua rota</div>
+    <div class="eyebrow">Sua rota · 14 a 23 de outubro de 2026</div>
     <h2 class="h2">Itinerário</h2>
-    <p class="lead">Dez dias entre a capital mais elegante da América do Sul e o coração do vinho argentino,
-      aos pés dos Andes. Ritmo confortável, bairros seguros e caminháveis, transporte privativo nos dias
-      de vinícola.</p>
+    <p class="lead">A viagem começa pelo vinho e termina na cidade. Três noites em Mendoza, aos pés dos
+      Andes, com dois dias inteiros de vinícolas — e seis noites em Buenos Aires, tempo suficiente para
+      conhecer a capital sem pressa e ainda atravessar o Rio da Prata.</p>
 
     <div class="tl-item">
       <div class="tl-badge">1</div>
       <div>
-        <div class="tl-city">Buenos Aires</div>
-        <div class="tl-meta">Dias 01 a 05 · 4 noites</div>
-        <div class="tl-note">Recoleta e Palermo, Teatro Colón, tango, e um dia inteiro à escolha entre
-          o Delta do Tigre, uma estância pampeana ou Colonia del Sacramento, no Uruguai.</div>
+        <div class="tl-city">Mendoza</div>
+        <div class="tl-meta">14 a 17 de outubro · 3 noites</div>
+        <div class="tl-note">Dois dias completos de vinícolas com motorista privativo e guia enóloga:
+          Luján de Cuyo, o berço do Malbec, e o Valle de Uco, encostado na cordilheira.</div>
       </div>
     </div>
     <div class="tl-item">
       <div class="tl-badge">2</div>
       <div>
-        <div class="tl-city">Mendoza</div>
-        <div class="tl-meta">Dias 05 a 09 · 4 noites</div>
-        <div class="tl-note">Dois dias completos de vinícolas — Luján de Cuyo e Valle de Uco — com almoços
-          harmonizados, mais um dia de Alta Montanha ou de spa entre os vinhedos.</div>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-badge">3</div>
-      <div>
         <div class="tl-city">Buenos Aires</div>
-        <div class="tl-meta">Dias 09 a 10 · 1 noite</div>
-        <div class="tl-note">Noite de conexão antes do voo internacional, com tarde livre para as últimas
-          compras e um jantar de encerramento.</div>
+        <div class="tl-meta">17 a 23 de outubro · 6 noites</div>
+        <div class="tl-note">Recoleta, Palermo, San Telmo e o Teatro Colón; tango, um dia de campo no
+          Delta do Tigre ou em estância, e um bate-volta a Colonia del Sacramento, no Uruguai.</div>
       </div>
     </div>
 
     <div class="box">
-      <div class="box-h">Por que a última noite em Buenos Aires</div>
-      <div class="box-t">Os voos domésticos operam em <b>Aeroparque</b> e os internacionais em <b>Ezeiza</b>,
-        separados por cerca de 50 minutos de trânsito. Dormir a última noite na capital elimina qualquer
-        risco de perder a conexão de volta — e ainda rende uma tarde inteira de compras.</div>
+      <div class="box-h">Como chegar a Mendoza</div>
+      <div class="box-t">Não há voo direto do Brasil. Duas rotas funcionam bem: <b>via Buenos Aires</b>,
+        com desembarque em Ezeiza e conexão em Aeroparque — prevendo no mínimo 4 horas entre os voos,
+        já que a troca de aeroporto leva cerca de 50 minutos; ou <b>via Santiago do Chile</b>, com uma
+        conexão curta e um voo de apenas 50 minutos cruzando os Andes, a rota mais confortável.</div>
     </div>
 
     <div class="box" style="background:var(--green-lo2)">
-      <div class="box-h">Melhor época para viajar</div>
-      <div class="box-t">De outubro a abril. <b>Março</b> traz a vindima, com a colheita ativa nos vinhedos;
-        <b>abril</b> traz a folhagem dourada dos parreirais, a paisagem mais bonita do ano. No inverno as
-        videiras estão desfolhadas e a estrada para o Aconcágua pode fechar por neve.</div>
+      <div class="box-h">Outubro é uma ótima escolha</div>
+      <div class="box-t">Em Mendoza é plena primavera: as videiras estão brotando, os parreirais ficam
+        verde-claros e os picos dos Andes ainda guardam neve — o melhor contraste do ano para fotos.
+        Em Buenos Aires, temperaturas entre 14 °C e 25 °C e os primeiros <b>jacarandás</b> começando a
+        florir pela cidade.</div>
+    </div>
+
+    <div class="box" style="background:var(--green-lo2)">
+      <div class="box-h">O calendário trabalhou a favor</div>
+      <div class="box-t"><b>18 de outubro cai num domingo</b> — o único dia da <b>Feira de San Telmo</b>,
+        por isso ela ficou nesse dia. O <b>MALBA fecha às terças</b>, então Palermo e os museus ficaram na
+        segunda e o city tour clássico na terça. Nada de porta fechada.</div>
     </div>
   </div>
   <div class="ft">
@@ -257,45 +275,53 @@ html,body{ font-family:var(--sans); color:var(--char); }
     <div class="eyebrow">Dia a dia</div>
     <h2 class="h2">Roteiro</h2>
 
-    <div class="d"><div class="d-n">Dia 01<span>Buenos Aires</span></div>
-      <div class="d-t">Chegada e traslado privativo de Ezeiza. Caminhada leve pela Recoleta e
-        <b>chá da tarde no Alvear Palace</b>. Jantar próximo ao hotel.</div></div>
+    <div class="d"><div class="d-n">Dia 01 · 14/10<span>Qua · Mendoza</span></div>
+      <div class="d-t">Chegada a Mendoza e traslado privativo ao hotel. Tarde de aclimatação entre os
+        vinhedos e jantar em <b>Chacras de Coria</b> ou na rua Arístides Villanueva.</div></div>
 
-    <div class="d"><div class="d-n">Dia 02<span>Buenos Aires</span></div>
-      <div class="d-t"><b>City tour privativo</b> — Plaza de Mayo, Casa Rosada, 9 de Julio, Puerto Madero,
-        San Telmo e Caminito. À tarde, Cemitério da Recoleta e a livraria El Ateneo.
-        À noite, <b>jantar-show de tango</b>.</div></div>
+    <div class="d"><div class="d-n">Dia 02 · 15/10<span>Qui · Luján de Cuyo</span></div>
+      <div class="d-t">Dia completo de vinícolas na Primeira Zona do Malbec: <b>Catena Zapata</b> pela
+        manhã e almoço harmonizado no <b>Osadía de Crear</b>, da enóloga Susana Balbo. Fim de tarde
+        pelas ruas arborizadas de Chacras de Coria.</div></div>
 
-    <div class="d"><div class="d-n">Dia 03<span>Buenos Aires</span></div>
-      <div class="d-t">Visita guiada ao <b>Teatro Colón</b>. À tarde, MALBA, Jardim Japonês e o Rosedal,
-        com compras em Palermo Soho. Jantar na parrilla <b>Don Julio</b>.</div></div>
+    <div class="d"><div class="d-n">Dia 03 · 16/10<span>Sex · Valle de Uco</span></div>
+      <div class="d-t">Rumo à cordilheira: <b>Zuccardi Valle de Uco</b> com almoço no Piedra Infinita
+        Cocina e, à tarde, a <b>Bodega Salentein</b>, com sua sala de barricas em cruz e a galeria de
+        arte Killka. Jantar de despedida no 1884 Francis Mallmann.</div></div>
 
-    <div class="d"><div class="d-n">Dia 04<span>Buenos Aires</span></div>
-      <div class="d-t">Dia inteiro à escolha: <b>Delta do Tigre</b> com navegação; <b>estância pampeana</b>
-        com asado e show de gaúchos; ou <b>Colonia del Sacramento</b>, no Uruguai.</div></div>
+    <div class="d"><div class="d-n">Dia 04 · 17/10<span>Sáb · Mendoza → Buenos Aires</span></div>
+      <div class="d-t">Manhã no Parque General San Martín e no <b>Cerro de la Gloria</b>, ou compras de
+        vinhos e azeites. Voo à tarde (1h50), check-in em Recoleta e <b>chá da tarde no Alvear
+        Palace</b>.</div></div>
 
-    <div class="d"><div class="d-n">Dia 05<span>BA → Mendoza</span></div>
-      <div class="d-t">Manhã livre em San Telmo e voo para Mendoza (1h50). Fim de tarde na Plaza
-        Independencia e jantar na rua <b>Arístides Villanueva</b>.</div></div>
+    <div class="d"><div class="d-n">Dia 05 · 18/10<span>Dom · Buenos Aires</span></div>
+      <div class="d-t"><b>Feira de San Telmo</b>, que só acontece aos domingos, com o Mercado de San
+        Telmo e a rua Defensa tomada por antiquários. À tarde, Caminito e La Boca com guia. À noite,
+        <b>jantar-show de tango</b>.</div></div>
 
-    <div class="d"><div class="d-n">Dia 06<span>Luján de Cuyo</span></div>
-      <div class="d-t"><b>Bodega Catena Zapata</b>, a mais premiada da Argentina, e almoço harmonizado no
-        <b>Osadía de Crear</b>, da enóloga Susana Balbo. À tarde, a histórica Bodega Lagarde.</div></div>
+    <div class="d"><div class="d-n">Dia 06 · 19/10<span>Seg · Buenos Aires</span></div>
+      <div class="d-t">Palermo: o <b>MALBA</b>, com a maior coleção de arte latino-americana do
+        continente, o Jardim Japonês, o Rosedal e os Bosques. Compras em Palermo Soho e jantar na
+        parrilla <b>Don Julio</b>.</div></div>
 
-    <div class="d"><div class="d-n">Dia 07<span>Valle de Uco</span></div>
-      <div class="d-t"><b>Zuccardi Valle de Uco</b>, eleita <i>World's Best Vineyard</i>, com almoço no
-        Piedra Infinita Cocina ou na <b>Bodega Salentein</b>. À tarde, Andeluna ou The Vines.</div></div>
+    <div class="d"><div class="d-n">Dia 07 · 20/10<span>Ter · Buenos Aires</span></div>
+      <div class="d-t"><b>City tour privativo</b> — Plaza de Mayo, Casa Rosada, Av. 9 de Julio e Puerto
+        Madero. Visita guiada ao <b>Teatro Colón</b> e ao Cemitério da Recoleta, com café na livraria
+        El Ateneo Grand Splendid.</div></div>
 
-    <div class="d"><div class="d-n">Dia 08<span>Mendoza</span></div>
-      <div class="d-t"><b>Alta Montaña</b> até o mirante do Aconcágua, com as termas de Cacheuta — ou dia de
-        <b>spa e vinoterapia</b>. Jantar no 1884 Francis Mallmann.</div></div>
+    <div class="d"><div class="d-n">Dia 08 · 21/10<span>Qua · Dia de campo</span></div>
+      <div class="d-t">Dia inteiro à escolha: <b>Delta do Tigre</b>, com navegação pelos canais e o
+        Puerto de Frutos; ou <b>estância pampeana</b> em San Antonio de Areco, com asado completo,
+        show de gaúchos e passeio de charrete.</div></div>
 
-    <div class="d"><div class="d-n">Dia 09<span>Mendoza → BA</span></div>
-      <div class="d-t">Cerro de la Gloria pela manhã e voo de volta. Tarde de compras na Calle Arenales
-        e jantar de encerramento.</div></div>
+    <div class="d"><div class="d-n">Dia 09 · 22/10<span>Qui · Colonia · Uruguai</span></div>
+      <div class="d-t">Catamarã até <b>Colonia del Sacramento</b>, centro histórico Patrimônio da
+        Humanidade, ruas de pedra e almoço diante do Rio da Prata. Retorno no fim da tarde e jantar de
+        encerramento. <i>Passaporte obrigatório.</i></div></div>
 
-    <div class="d"><div class="d-n">Dia 10<span>Regresso</span></div>
-      <div class="d-t">Café da manhã, check-out e traslado privativo a Ezeiza.</div></div>
+    <div class="d"><div class="d-n">Dia 10 · 23/10<span>Sex · Regresso</span></div>
+      <div class="d-t">Manhã livre para as últimas compras — couro e cashmere na Calle Arenales.
+        Check-out e traslado privativo a Ezeiza.</div></div>
   </div>
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
@@ -312,23 +338,68 @@ html,body{ font-family:var(--sans); color:var(--char); }
     <div class="eyebrow">Bem localizados</div>
     <h2 class="h2">Hotéis</h2>
 
+    <div class="pickbox">
+      <div class="pickbox-h">Melhor região para ficar em Mendoza</div>
+      <div class="pickbox-n">Luján de Cuyo · Chacras de Coria</div>
+      <div class="pickbox-t">Com apenas três noites e dois dias de vinícolas, esta é a base mais
+        inteligente. Fica <b>no meio do caminho</b>: 20 minutos do centro de Mendoza, dentro da própria
+        região de Luján de Cuyo e 50 minutos mais perto do Valle de Uco do que a cidade. Chacras de Coria
+        é um vilarejo arborizado, tranquilo e seguro, com bons restaurantes e os melhores wine lodges da
+        província. <b>Alternativa:</b> o centro de Mendoza, se preferirem sair a pé para jantar — mas
+        custa cerca de 40 minutos a mais de estrada por dia. O <b>Valle de Uco</b>, apesar de lindo, fica
+        a 1h15 de tudo e só compensa em estadias mais longas.</div>
+    </div>
+
     <div class="cols">
       <div>
-        <div class="col-h">Buenos Aires<span>4 noites · Recoleta</span></div>
+        <div class="col-h">Mendoza<span>3 noites · Luján de Cuyo</span></div>
+
+        <div class="h-item pick">
+          <div class="h-tag">Sugestão</div>
+          <div class="h-top"><div class="h-name">Cavas Wine Lodge</div><div class="h-stars">★★★★★</div></div>
+          <div class="h-meta">Alto Agrelo · Luján de Cuyo</div>
+          <div class="h-txt">Relais &amp; Châteaux entre parreirais. Villas independentes com lareira,
+            piscina privativa e terraço no telhado para ver as estrelas.</div>
+        </div>
+
+        <div class="h-item">
+          <div class="h-top"><div class="h-name">Entre Cielos Wine Hotel</div><div class="h-stars">★★★★★</div></div>
+          <div class="h-meta">Vistalba · Luján de Cuyo</div>
+          <div class="h-txt">Hammam de seis etapas e vinoterapia. Suíte suspensa sobre o parreiral e o
+            excelente restaurante Katharina.</div>
+        </div>
+
+        <div class="h-item">
+          <div class="h-top"><div class="h-name">Susana Balbo Winemaker's House</div><div class="h-stars">★★★★★</div></div>
+          <div class="h-meta">Chacras de Coria</div>
+          <div class="h-txt">A casa de hóspedes da enóloga, com apenas seis quartos e atendimento
+            personalíssimo. A opção mais intimista.</div>
+        </div>
+
+        <div class="h-item">
+          <div class="h-top"><div class="h-name">Park Hyatt Mendoza</div><div class="h-stars">★★★★★</div></div>
+          <div class="h-meta">Centro · Plaza Independencia</div>
+          <div class="h-txt">Alternativa urbana: fachada colonial histórica de frente para a praça
+            central, com restaurantes e lojas a pé.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-h">Buenos Aires<span>6 noites · Recoleta</span></div>
 
         <div class="h-item pick">
           <div class="h-tag">Sugestão</div>
           <div class="h-top"><div class="h-name">Alvear Palace Hotel</div><div class="h-stars">★★★★★</div></div>
           <div class="h-meta">Av. Alvear · Recoleta</div>
-          <div class="h-txt">O mais tradicional da cidade, de 1932, na avenida mais elegante de Buenos Aires.
-            Serviço impecável e o célebre chá da tarde no L'Orangerie.</div>
+          <div class="h-txt">O mais tradicional da cidade, de 1932, na avenida mais elegante de Buenos
+            Aires. Serviço impecável e o célebre chá da tarde no L'Orangerie.</div>
         </div>
 
         <div class="h-item">
           <div class="h-top"><div class="h-name">Park Hyatt · Palacio Duhau</div><div class="h-stars">★★★★★</div></div>
           <div class="h-meta">Av. Alvear · Recoleta</div>
-          <div class="h-txt">Palacete de 1934 unido a uma torre moderna por jardins internos em terraços.
-            Spa e adega de queijos.</div>
+          <div class="h-txt">Palacete de 1934 unido a uma torre moderna por jardins internos em
+            terraços. Spa e adega de queijos.</div>
         </div>
 
         <div class="h-item">
@@ -345,46 +416,6 @@ html,body{ font-family:var(--sans); color:var(--char); }
             investimento bem menor.</div>
         </div>
       </div>
-
-      <div>
-        <div class="col-h">Mendoza<span>2 noites cidade + 2 vinhedos</span></div>
-
-        <div class="h-item pick">
-          <div class="h-tag">Sugestão · cidade</div>
-          <div class="h-top"><div class="h-name">Park Hyatt Mendoza</div><div class="h-stars">★★★★★</div></div>
-          <div class="h-meta">Plaza Independencia</div>
-          <div class="h-txt">Fachada colonial histórica de frente para a praça central — a melhor
-            localização da cidade, com tudo a pé.</div>
-        </div>
-
-        <div class="h-item pick">
-          <div class="h-tag">Sugestão · vinhedos</div>
-          <div class="h-top"><div class="h-name">Cavas Wine Lodge</div><div class="h-stars">★★★★★</div></div>
-          <div class="h-meta">Luján de Cuyo</div>
-          <div class="h-txt">Relais &amp; Châteaux entre parreirais. Villas independentes com piscina
-            privativa e terraço no telhado para ver as estrelas.</div>
-        </div>
-
-        <div class="h-item">
-          <div class="h-top"><div class="h-name">Entre Cielos Wine Hotel</div><div class="h-stars">★★★★★</div></div>
-          <div class="h-meta">Luján de Cuyo</div>
-          <div class="h-txt">Hammam de seis etapas e vinoterapia. Suíte suspensa sobre o parreiral.</div>
-        </div>
-
-        <div class="h-item">
-          <div class="h-top"><div class="h-name">Casa de Uco Wine Resort</div><div class="h-stars">★★★★★</div></div>
-          <div class="h-meta">Valle de Uco</div>
-          <div class="h-txt">Arquitetura premiada, lago e vista frontal dos Andes. Base ideal para as
-            bodegas do Uco.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="box" style="background:var(--green-lo2)">
-      <div class="box-h">Também consideramos</div>
-      <div class="box-t"><b>Buenos Aires:</b> Casa Lucía (Retiro) e Hub Porteño, boutique de 11 quartos ·
-        <b>Mendoza:</b> Diplomatic MGallery, no centro, e a Susana Balbo Winemaker's House, em
-        Chacras de Coria, com apenas seis quartos.</div>
     </div>
   </div>
   <div class="ft">
@@ -394,57 +425,80 @@ html,body{ font-family:var(--sans); color:var(--char); }
   </div>
 </section>
 
-<!-- ══════════ 05 · VINÍCOLAS E EXPERIÊNCIAS ══════════ -->
+<!-- ══════════ 05 · AS 4 VINÍCOLAS ══════════ -->
 <section class="page">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Vinícolas</div></div>
   <div class="goldbar thin"></div>
   <div class="body">
-    <div class="eyebrow">Renomadas bodegas</div>
-    <h2 class="h2">Vinícolas &amp; experiências</h2>
+    <div class="eyebrow">A seleção</div>
+    <h2 class="h2">As 4 melhores vinícolas</h2>
+    <p class="lead" style="margin-bottom:4mm">Duas por dia, duas regiões distintas — uma bodega ícone
+      pela manhã e uma segunda à tarde, com almoço harmonizado no meio.</p>
 
-    <div class="zone">
-      <div class="zone-h">Luján de Cuyo</div>
-      <div class="zone-m">30–40 min · a Primeira Zona do Malbec</div>
-      <div class="zone-t">Onde o Malbec argentino nasceu. Bodegas históricas e de culto, com os vinhedos
-        mais antigos do país e uma cena gastronômica excepcional.</div>
-      <div><span class="pill star">Catena Zapata</span><span class="pill">Susana Balbo</span><span class="pill">Lagarde</span><span class="pill">Achaval-Ferrer</span><span class="pill">Viña Cobos</span></div>
+    <div class="wine">
+      <div class="wine-n">1</div>
+      <div>
+        <div class="wine-h">Bodega Catena Zapata</div>
+        <div class="wine-m">Luján de Cuyo · dia 02, manhã</div>
+        <div class="wine-t">A mais premiada da Argentina e a bodega que reposicionou o Malbec no mundo.
+          O edifício em forma de pirâmide maia é o cartão-postal do vinho argentino, e a degustação
+          percorre os vinhedos de altitude que deram origem ao estilo moderno do país.</div>
+      </div>
     </div>
 
-    <div class="zone">
-      <div class="zone-h">Valle de Uco</div>
-      <div class="zone-m">1h–1h30 · altitude e arquitetura contemporânea</div>
-      <div class="zone-t">Vinhedos entre 1.100 e 1.500 metros, encostados na cordilheira. A região de maior
-        prestígio internacional hoje, com as paisagens mais fotografadas da Argentina.</div>
-      <div><span class="pill star">Zuccardi Valle de Uco</span><span class="pill">Salentein</span><span class="pill">Andeluna</span><span class="pill">Casa de Uco</span><span class="pill">The Vines</span></div>
+    <div class="wine">
+      <div class="wine-n">2</div>
+      <div>
+        <div class="wine-h">Susana Balbo Wines</div>
+        <div class="wine-m">Luján de Cuyo · dia 02, almoço</div>
+        <div class="wine-t">A primeira mulher enóloga da Argentina, hoje uma das vozes mais respeitadas
+          do país. O almoço harmonizado de cinco tempos no restaurante <b>Osadía de Crear</b> é um dos
+          melhores de Mendoza — sofisticado, sem formalidade excessiva.</div>
+      </div>
     </div>
 
-    <div class="zone">
-      <div class="zone-h">Maipú</div>
-      <div class="zone-m">20–30 min · tradição, azeites e vermutes</div>
-      <div class="zone-t">A mais antiga e mais próxima da cidade, de bodegas centenárias em edifícios
-        históricos. Ideal para meia manhã, com uma degustação de azeites de oliva.</div>
-      <div><span class="pill">Trapiche</span><span class="pill">Trivento</span><span class="pill">Familia Zuccardi</span><span class="pill">López</span></div>
+    <div class="wine">
+      <div class="wine-n">3</div>
+      <div>
+        <div class="wine-h">Zuccardi Valle de Uco</div>
+        <div class="wine-m">Valle de Uco · dia 03, manhã</div>
+        <div class="wine-t">Eleita <b>World's Best Vineyard</b> por três anos consecutivos. Construída em
+          pedra retirada do próprio terreno, com os Andes à frente e uma das experiências de degustação
+          mais bem desenhadas do mundo. O almoço no Piedra Infinita Cocina está no Guia Michelin.</div>
+      </div>
     </div>
 
-    <div class="box">
+    <div class="wine">
+      <div class="wine-n">4</div>
+      <div>
+        <div class="wine-h">Bodega Salentein</div>
+        <div class="wine-m">Valle de Uco · dia 03, tarde</div>
+        <div class="wine-t">A mais cênica do vale: a sala de barricas em forma de cruz, com acústica de
+          catedral, e o Espaço Killka, com galeria de arte e vista frontal da cordilheira. Encerra o dia
+          com grandeza, sem repetir o registro das anteriores.</div>
+      </div>
+    </div>
+
+    <div class="box" style="margin-top:6mm">
       <div class="box-h">Como aproveitamos melhor</div>
       <div class="box-t"><b>Toda visita é com reserva prévia</b> — os restaurantes das bodegas devem ser
-        reservados com 4 a 6 semanas · <b>Duas a três bodegas por dia, no máximo</b> · <b>Sempre com
-        motorista privativo</b> · Começar pelos brancos e tintos jovens, terminar nos rótulos ícone.</div>
+        reservados com 4 a 6 semanas · <b>Duas bodegas por dia</b>, para não saturar o paladar ·
+        <b>Sempre com motorista privativo</b> e guia enóloga · Começar pelos brancos e tintos jovens,
+        terminar nos rótulos ícone.</div>
     </div>
 
-    <div style="margin-top:8mm">
+    <div style="margin-top:5mm">
       <div class="eyebrow">Serviços incluídos</div>
-      <div class="svc" style="margin-top:4mm">
-        <div>Traslados privativos em Buenos Aires e Mendoza</div>
-        <div>Aéreo Buenos Aires ⇄ Mendoza</div>
-        <div>City tour privativo com guia em português</div>
+      <div class="svc" style="margin-top:4mm;gap:4mm 14mm">
+        <div>Traslados privativos em Mendoza e Buenos Aires</div>
+        <div>Aéreo Mendoza ⇄ Buenos Aires</div>
         <div>Dois dias completos de vinícolas com guia enóloga</div>
-        <div>Visita guiada ao Teatro Colón</div>
+        <div>City tour privativo com guia em português</div>
         <div>Degustações e almoços harmonizados nas bodegas</div>
+        <div>Visita guiada ao Teatro Colón</div>
         <div>Jantar-show de tango com traslados</div>
-        <div>Alta Montanha com guia ou day spa</div>
-        <div>Dia inteiro à escolha, com almoço</div>
+        <div>Dia de campo no Tigre ou em estância</div>
+        <div>Bate-volta a Colonia del Sacramento</div>
         <div>Seguro-viagem e assistência 24h</div>
       </div>
     </div>
@@ -463,13 +517,13 @@ html,body{ font-family:var(--sans); color:var(--char); }
   <div class="body">
     <div class="eyebrow">Investimento</div>
     <h2 class="h2">Valores &amp; condições</h2>
-    <div class="val-note">*Valores em USD por pessoa, base de acomodação em apartamento duplo · 2 adultos</div>
+    <div class="val-note">*Valores em USD por pessoa, base de acomodação em apartamento duplo · 2 adultos · 14 a 23/10/2026</div>
 
-    <div class="val-row"><span class="lbl">Hotelaria<small>9 noites · café da manhã incluído</small></span><span class="amt">USD 0.000</span></div>
-    <div class="val-row"><span class="lbl">Aéreo internacional<small>Brasil ⇄ Buenos Aires</small></span><span class="amt">USD 0.000</span></div>
-    <div class="val-row"><span class="lbl">Aéreo doméstico<small>Buenos Aires ⇄ Mendoza</small></span><span class="amt">USD 0.000</span></div>
-    <div class="val-row"><span class="lbl">Serviços e passeios<small>Traslados, guias, city tour, tango e dia inteiro</small></span><span class="amt">USD 0.000</span></div>
-    <div class="val-row"><span class="lbl">Vinícolas<small>2 dias completos com motorista, guia enóloga e almoços</small></span><span class="amt">USD 0.000</span></div>
+    <div class="val-row"><span class="lbl">Hotelaria<small>9 noites · 3 em Mendoza e 6 em Buenos Aires · café da manhã incluído</small></span><span class="amt">USD 0.000</span></div>
+    <div class="val-row"><span class="lbl">Aéreo internacional<small>Brasil ⇄ Argentina, com conexão para Mendoza</small></span><span class="amt">USD 0.000</span></div>
+    <div class="val-row"><span class="lbl">Aéreo doméstico<small>Mendoza ⇄ Buenos Aires</small></span><span class="amt">USD 0.000</span></div>
+    <div class="val-row"><span class="lbl">Vinícolas<small>2 dias completos com motorista, guia enóloga, degustações e almoços</small></span><span class="amt">USD 0.000</span></div>
+    <div class="val-row"><span class="lbl">Serviços e passeios<small>Traslados, city tour, Teatro Colón, tango, dia de campo e Colonia</small></span><span class="amt">USD 0.000</span></div>
     <div class="val-row"><span class="lbl">Seguro de viagem<small>Cobertura internacional · 10 dias</small></span><span class="amt">USD 000</span></div>
 
     <div class="val-total"><span class="lbl">TOTAL / PESSOA</span><span class="amt">USD 0.000</span></div>
@@ -488,13 +542,14 @@ html,body{ font-family:var(--sans); color:var(--char); }
       </div>
       <div class="cond">
         <div class="cond-h">Documentação</div>
-        <div class="cond-t">Para a Argentina, RG dentro da validade (Mercosul) ou passaporte. Se o roteiro
-          incluir Colonia del Sacramento, no Uruguai, o passaporte é obrigatório.</div>
+        <div class="cond-t">Para a Argentina, RG dentro da validade (Mercosul) ou passaporte.
+          <b>O passeio a Colonia del Sacramento, no Uruguai, exige passaporte.</b></div>
       </div>
       <div class="cond">
         <div class="cond-h">Reservas nas bodegas</div>
         <div class="cond-t">As visitas e os almoços dependem de disponibilidade e são confirmados após o
-          fechamento da viagem. Recomendamos fechar com 60 dias de antecedência.</div>
+          fechamento da viagem. Para outubro, recomendamos fechar até o fim de agosto — Catena Zapata e
+          Zuccardi esgotam com semanas de antecedência.</div>
       </div>
       <div class="cond">
         <div class="cond-h">Levando vinhos de volta</div>
