@@ -138,8 +138,8 @@
   --gold-l:#f0b23c;
   --dest:#2d5e3a;        /* Verde Tropical — Caribe */
   --dest-d:#1b3d26;
-  --ink:#1a1510;
-  --char:#333131;
+  --ink:#12301f;         /* verde escuro — substitui o preto */
+  --char:#2e3831;
   --mut:#9a8d80;
   --line:#e4ddd2;
   --cream:#faf7f2;
@@ -219,13 +219,8 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.9); }
 .dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9);
   color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
-.dest-photo{ height:118mm; position:relative; flex-shrink:0; overflow:hidden; }
-.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800;
-  letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.6); z-index:2; }
-.dest-photo .capscrim{ position:absolute; left:0; right:0; bottom:0; height:40mm; z-index:1;
-  background:linear-gradient(to bottom, transparent, rgba(0,0,0,.5)); }
-.dest-text{ font-size:11.5pt; font-weight:400; line-height:1.72; color:var(--char); }
-.dest-text + .dest-text{ margin-top:4mm; }
+.dest-text{ font-size:12.5pt; font-weight:400; line-height:1.78; color:var(--char); }
+.dest-text + .dest-text{ margin-top:5mm; }
 
 /* ══ CARTÃO (navio / porto) ══ */
 .card{ margin-top:9mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
@@ -241,17 +236,17 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .inc{ margin-top:7mm; background:var(--cream); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:6mm 8mm; }
 .inc-h{ font-size:9pt; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--dest); margin-bottom:3.5mm; }
 .inc-list{ display:grid; grid-template-columns:1fr 1fr; gap:3mm 8mm; }
-.inc-list div{ font-size:10.5pt; line-height:1.45; color:var(--char); padding-left:6mm; position:relative; }
+.inc-list div{ font-size:11pt; line-height:1.5; color:var(--char); padding-left:6mm; position:relative; }
 .inc-list div::before{ content:"◆"; position:absolute; left:0; top:0; color:var(--gold); font-size:8pt; }
 
 /* ══ PORTOS ══ */
-.port{ display:flex; gap:7mm; padding:8.5mm 0; border-bottom:1px solid var(--line); }
+.port{ display:flex; gap:8mm; padding:10mm 0; border-bottom:1px solid var(--line); }
 .port:last-child{ border-bottom:none; }
-.port .no{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff; flex-shrink:0;
-  font-weight:800; font-size:11.5pt; display:flex; align-items:center; justify-content:center; }
-.port .nm{ font-size:13pt; font-weight:700; color:var(--ink); }
-.port .ct{ font-size:8.5pt; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:1mm; }
-.port .tx{ font-size:10.5pt; line-height:1.62; color:var(--char); margin-top:2mm; }
+.port .no{ width:12mm; height:12mm; border-radius:50%; background:var(--dest); color:#fff; flex-shrink:0;
+  font-weight:800; font-size:12.5pt; display:flex; align-items:center; justify-content:center; }
+.port .nm{ font-size:15pt; font-weight:700; color:var(--ink); }
+.port .ct{ font-size:8.5pt; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:1.5mm; }
+.port .tx{ font-size:12pt; line-height:1.82; color:var(--char); margin-top:2.5mm; }
 
 /* ══ ROTEIRO ══ */
 .day{ margin-bottom:6.5mm; }
@@ -292,7 +287,9 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink);
   border-radius:5px; padding:7mm 8mm; margin-top:7mm; }
 .val-total .lbl{ font-size:11pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
-.val-total .amt{ font-size:18pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; }
+.val-total .amt{ font-size:18pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; text-align:right; }
+.val-total .sub{ display:block; font-size:8.5pt; font-weight:500; letter-spacing:.04em;
+  color:rgba(255,255,255,.55); margin-top:1.5mm; }
 .val-pp{ display:flex; justify-content:space-between; align-items:center; border:1px solid var(--line);
   border-radius:5px; padding:5mm 8mm; margin-top:3mm; }
 .val-pp .lbl{ font-size:10.5pt; font-weight:600; letter-spacing:.06em; color:var(--mut); }
@@ -550,88 +547,6 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 <section class="page">
   <div class="dest-hd"><div class="city">MSC World Europa · O Navio</div><div class="no">1</div></div>
   <div class="goldbar"></div>
-  <div class="dest-photo">
-    <div class="scene">
-      <svg viewBox="0 0 1200 470" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <linearGradient id="s-sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#0e2b26"/><stop offset="55%" stop-color="#26614a"/>
-            <stop offset="88%" stop-color="#79924c"/><stop offset="100%" stop-color="#d5a247"/>
-          </linearGradient>
-          <linearGradient id="s-sea" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#2a6a56"/><stop offset="60%" stop-color="#103830"/><stop offset="100%" stop-color="#071c18"/>
-          </linearGradient>
-          <radialGradient id="s-glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#f2bd63" stop-opacity=".5"/><stop offset="100%" stop-color="#f2bd63" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <rect width="1200" height="300" fill="url(#s-sky)"/>
-        <circle cx="1000" cy="300" r="200" fill="url(#s-glow)"/>
-        <g fill="#ffffff" opacity=".1">
-          <ellipse cx="260" cy="120" rx="200" ry="10"/><ellipse cx="880" cy="170" rx="230" ry="9"/>
-          <ellipse cx="520" cy="220" rx="280" ry="8"/>
-        </g>
-        <rect y="300" width="1200" height="170" fill="url(#s-sea)"/>
-
-        <!-- navio grande -->
-        <g transform="translate(120,300)">
-          <path d="M0 -10 L900 -10 L846 56 L58 56 Z" fill="#132f28"/>
-          <path d="M0 -10 L900 -10 L890 6 L8 6 Z" fill="#0d241f"/>
-          <path d="M46 -10 L862 -10 L862 -56 L46 -56 Z" fill="#f3efe6"/>
-          <path d="M92 -56 L818 -56 L818 -100 L92 -100 Z" fill="#ece7dc"/>
-          <path d="M150 -100 L760 -100 L760 -140 L150 -140 Z" fill="#e3ddd0"/>
-          <path d="M240 -140 L670 -140 L670 -174 L240 -174 Z" fill="#d9d2c4"/>
-          <path d="M360 -174 L560 -174 L560 -200 L360 -200 Z" fill="#cfc7b8"/>
-          <path d="M420 -200 L520 -200 L508 -232 L432 -232 Z" fill="#1a4a3c"/>
-          <rect x="640" y="-206" width="66" height="66" rx="8" fill="#1a4a3c"/>
-          <rect x="654" y="-232" width="14" height="30" fill="#1a4a3c"/>
-          <!-- janelas -->
-          <g fill="#2d5e3a" opacity=".55">
-            <rect x="70"  y="-46" width="14" height="10" rx="2"/><rect x="104" y="-46" width="14" height="10" rx="2"/>
-            <rect x="138" y="-46" width="14" height="10" rx="2"/><rect x="172" y="-46" width="14" height="10" rx="2"/>
-            <rect x="206" y="-46" width="14" height="10" rx="2"/><rect x="240" y="-46" width="14" height="10" rx="2"/>
-            <rect x="274" y="-46" width="14" height="10" rx="2"/><rect x="308" y="-46" width="14" height="10" rx="2"/>
-            <rect x="342" y="-46" width="14" height="10" rx="2"/><rect x="376" y="-46" width="14" height="10" rx="2"/>
-            <rect x="410" y="-46" width="14" height="10" rx="2"/><rect x="444" y="-46" width="14" height="10" rx="2"/>
-            <rect x="478" y="-46" width="14" height="10" rx="2"/><rect x="512" y="-46" width="14" height="10" rx="2"/>
-            <rect x="546" y="-46" width="14" height="10" rx="2"/><rect x="580" y="-46" width="14" height="10" rx="2"/>
-            <rect x="614" y="-46" width="14" height="10" rx="2"/><rect x="648" y="-46" width="14" height="10" rx="2"/>
-            <rect x="682" y="-46" width="14" height="10" rx="2"/><rect x="716" y="-46" width="14" height="10" rx="2"/>
-            <rect x="750" y="-46" width="14" height="10" rx="2"/><rect x="784" y="-46" width="14" height="10" rx="2"/>
-            <rect x="818" y="-46" width="14" height="10" rx="2"/>
-          </g>
-          <g fill="#2d5e3a" opacity=".45">
-            <rect x="118" y="-90" width="16" height="12" rx="2"/><rect x="158" y="-90" width="16" height="12" rx="2"/>
-            <rect x="198" y="-90" width="16" height="12" rx="2"/><rect x="238" y="-90" width="16" height="12" rx="2"/>
-            <rect x="278" y="-90" width="16" height="12" rx="2"/><rect x="318" y="-90" width="16" height="12" rx="2"/>
-            <rect x="358" y="-90" width="16" height="12" rx="2"/><rect x="398" y="-90" width="16" height="12" rx="2"/>
-            <rect x="438" y="-90" width="16" height="12" rx="2"/><rect x="478" y="-90" width="16" height="12" rx="2"/>
-            <rect x="518" y="-90" width="16" height="12" rx="2"/><rect x="558" y="-90" width="16" height="12" rx="2"/>
-            <rect x="598" y="-90" width="16" height="12" rx="2"/><rect x="638" y="-90" width="16" height="12" rx="2"/>
-            <rect x="678" y="-90" width="16" height="12" rx="2"/><rect x="718" y="-90" width="16" height="12" rx="2"/>
-            <rect x="758" y="-90" width="16" height="12" rx="2"/>
-            <rect x="176" y="-132" width="18" height="12" rx="2"/><rect x="224" y="-132" width="18" height="12" rx="2"/>
-            <rect x="272" y="-132" width="18" height="12" rx="2"/><rect x="320" y="-132" width="18" height="12" rx="2"/>
-            <rect x="368" y="-132" width="18" height="12" rx="2"/><rect x="416" y="-132" width="18" height="12" rx="2"/>
-            <rect x="464" y="-132" width="18" height="12" rx="2"/><rect x="512" y="-132" width="18" height="12" rx="2"/>
-            <rect x="560" y="-132" width="18" height="12" rx="2"/><rect x="608" y="-132" width="18" height="12" rx="2"/>
-            <rect x="656" y="-132" width="18" height="12" rx="2"/><rect x="704" y="-132" width="18" height="12" rx="2"/>
-          </g>
-          <!-- faixa dourada -->
-          <rect x="46" y="-14" width="816" height="5" fill="#da8d00"/>
-          <ellipse cx="450" cy="60" rx="470" ry="12" fill="#f3c069" opacity=".14"/>
-        </g>
-
-        <g stroke="#a8c9b6" stroke-width="2" fill="none" opacity=".14">
-          <path d="M40 400 q40 -9 80 0 t80 0"/><path d="M900 380 q40 -9 80 0 t80 0"/>
-          <path d="M300 440 q46 -10 92 0 t92 0"/>
-        </g>
-      </svg>
-    </div>
-    <div class="capscrim"></div>
-    <div class="cap">MSC World Europa</div>
-  </div>
-
   <div class="body">
     <p class="dest-text">
       O <b>MSC World Europa</b> é a nave capitânia da nova geração da MSC — um dos maiores e mais modernos
@@ -647,6 +562,13 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       o casal circula pelos bares do navio sem se preocupar com a conta — do café da manhã ao brinde no
       convés durante a saída de cada ilha. É o tipo de conforto que transforma o navio em destino: sete
       noites em que a bagagem é desfeita uma única vez e o Caribe passa pela janela.
+    </p>
+
+    <p class="dest-text">
+      Vale dizer o óbvio que costuma ser esquecido: em um cruzeiro, o deslocamento acontece enquanto
+      se dorme. Vocês jantam em Barbados e acordam em São Vicente, sem aeroporto, sem transfer, sem
+      arrumar mala de novo. Seis ilhas em sete noites é um ritmo que, feito por terra e ar, exigiria
+      o dobro de dias e várias vezes o orçamento. O navio faz o trabalho pesado; o casal fica com a vista.
     </p>
 
     <div class="card">
@@ -686,59 +608,6 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 <section class="page">
   <div class="dest-hd"><div class="city">Fort-de-France · Martinica</div><div class="no">2</div></div>
   <div class="goldbar"></div>
-  <div class="dest-photo">
-    <div class="scene">
-      <svg viewBox="0 0 1200 470" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <linearGradient id="m-sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#123a33"/><stop offset="50%" stop-color="#2b6b52"/>
-            <stop offset="86%" stop-color="#8e9a45"/><stop offset="100%" stop-color="#e0ab4c"/>
-          </linearGradient>
-          <linearGradient id="m-sea" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#3d8a6b"/><stop offset="55%" stop-color="#15453a"/><stop offset="100%" stop-color="#0a231d"/>
-          </linearGradient>
-          <linearGradient id="m-h1" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#1f4f36"/><stop offset="100%" stop-color="#12331f"/>
-          </linearGradient>
-          <linearGradient id="m-h2" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#2d5e3a"/><stop offset="100%" stop-color="#1b3d26"/>
-          </linearGradient>
-          <g id="leaf2"><path d="M0 0 C52 -20 108 -50 172 -100 C142 -36 94 -6 46 14 C98 22 150 12 200 -16 C146 54 64 50 0 14 Z"/></g>
-        </defs>
-        <rect width="1200" height="320" fill="url(#m-sky)"/>
-        <circle cx="240" cy="150" r="46" fill="#f6d089" opacity=".85"/>
-        <g fill="#ffffff" opacity=".1"><ellipse cx="760" cy="120" rx="240" ry="10"/><ellipse cx="420" cy="200" rx="200" ry="8"/></g>
-        <!-- montanhas (Pitons du Carbet) -->
-        <path d="M560 320 L700 118 L790 210 L880 90 L1010 240 L1200 150 L1200 320 Z" fill="url(#m-h1)"/>
-        <path d="M760 320 L900 176 L1010 262 L1120 190 L1200 250 L1200 320 Z" fill="url(#m-h2)" opacity=".9"/>
-        <path d="M0 320 L90 240 L200 300 L280 262 L360 320 Z" fill="url(#m-h1)" opacity=".85"/>
-        <rect y="320" width="1200" height="150" fill="url(#m-sea)"/>
-        <!-- cidade na baía -->
-        <g fill="#0f2c22" opacity=".9">
-          <rect x="600" y="300" width="26" height="20"/><rect x="634" y="292" width="20" height="28"/>
-          <rect x="662" y="304" width="30" height="16"/><rect x="700" y="296" width="18" height="24"/>
-          <rect x="726" y="306" width="26" height="14"/><rect x="760" y="298" width="22" height="22"/>
-          <rect x="790" y="308" width="30" height="12"/>
-        </g>
-        <!-- veleiros -->
-        <g fill="#f4efe4" opacity=".9">
-          <path d="M300 352 L300 306 L336 352 Z"/><rect x="286" y="352" width="62" height="7" rx="3"/>
-          <path d="M470 372 L470 336 L498 372 Z"/><rect x="458" y="372" width="50" height="6" rx="3"/>
-        </g>
-        <g stroke="#bcdcc9" stroke-width="2" fill="none" opacity=".16">
-          <path d="M60 400 q40 -9 80 0 t80 0"/><path d="M880 420 q46 -10 92 0 t92 0"/><path d="M340 440 q40 -9 80 0 t80 0"/>
-        </g>
-        <g fill="#071612" opacity=".92">
-          <use href="#leaf2" transform="translate(-10,60) rotate(30) scale(1.1)"/>
-          <use href="#leaf2" transform="translate(-10,60) rotate(64) scale(.95)"/>
-          <use href="#leaf2" transform="translate(-10,60) rotate(-2) scale(.9)"/>
-        </g>
-      </svg>
-    </div>
-    <div class="capscrim"></div>
-    <div class="cap">Fort-de-France · Martinica</div>
-  </div>
-
   <div class="body">
     <p class="dest-text">
       Martinica é a França no meio do Caribe — e a mistura é deliciosa. Em <b>Fort-de-France</b>, a padaria da
@@ -752,6 +621,13 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       alimentam as destilarias de <i>rhum agricole</i> — o único do mundo com denominação de origem controlada.
       Ao sul, as areias claras das Anses d'Arlet e o azul impossível de Sainte-Anne. É deste porto que a viagem
       começa e termina: um bom motivo para chegar com folga e sentir a ilha antes do embarque.
+    </p>
+
+    <p class="dest-text">
+      Na prática, Fort-de-France é uma cidade de caminhar: do terminal de cruzeiros ao centro histórico
+      são poucos minutos a pé, e as distâncias internas se resolvem em uma tarde. Se houver tempo antes
+      de embarcar, a combinação clássica é mercado pela manhã, almoço de frutos do mar com um <i>ti'punch</i>
+      e uma parada em alguma destilaria no caminho de volta — a Martinica inteira em meio dia.
     </p>
 
     <div class="card">
@@ -799,58 +675,6 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 <section class="page">
   <div class="dest-hd"><div class="city">Portos de Escala · Antilhas</div><div class="no">3</div></div>
   <div class="goldbar"></div>
-  <div class="dest-photo" style="height:148mm">
-    <div class="scene">
-      <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <linearGradient id="p-sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#0d3029"/><stop offset="42%" stop-color="#25604a"/>
-            <stop offset="76%" stop-color="#7d8f45"/><stop offset="100%" stop-color="#d8a44a"/>
-          </linearGradient>
-          <linearGradient id="p-sea" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#43937a"/><stop offset="45%" stop-color="#14453b"/><stop offset="100%" stop-color="#08201b"/>
-          </linearGradient>
-          <linearGradient id="p-pit" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#2d5e3a"/><stop offset="100%" stop-color="#122d1c"/>
-          </linearGradient>
-          <radialGradient id="p-glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#f2bd63" stop-opacity=".45"/><stop offset="100%" stop-color="#f2bd63" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <rect width="1200" height="360" fill="url(#p-sky)"/>
-        <circle cx="965" cy="330" r="190" fill="url(#p-glow)"/>
-        <circle cx="965" cy="300" r="46" fill="#f7d391" opacity=".92"/>
-        <g fill="#ffffff" opacity=".11">
-          <ellipse cx="360" cy="110" rx="250" ry="10"/><ellipse cx="820" cy="168" rx="200" ry="8"/>
-          <ellipse cx="520" cy="232" rx="290" ry="8"/>
-        </g>
-        <!-- Pitons de Santa Lúcia -->
-        <path d="M150 360 C230 128 320 122 400 360 Z" fill="url(#p-pit)"/>
-        <path d="M370 360 C470 60 580 54 660 360 Z" fill="url(#p-pit)"/>
-        <path d="M0 360 L80 268 L190 360 Z" fill="#122d1c" opacity=".85"/>
-        <path d="M1020 360 L1110 276 L1200 360 Z" fill="#122d1c" opacity=".7"/>
-        <rect y="360" width="1200" height="240" fill="url(#p-sea)"/>
-        <!-- reflexo -->
-        <g fill="#f3c069">
-          <rect x="920" y="372" width="92" height="6" opacity=".38" rx="3"/>
-          <rect x="900" y="396" width="130" height="5" opacity=".26" rx="3"/>
-          <rect x="930" y="422" width="72"  height="5" opacity=".18" rx="3"/>
-        </g>
-        <!-- veleiros -->
-        <g fill="#f4efe4" opacity=".9">
-          <path d="M700 432 L700 380 L740 432 Z"/><rect x="686" y="432" width="70" height="8" rx="4"/>
-          <path d="M280 486 L280 448 L310 486 Z"/><rect x="268" y="486" width="56" height="7" rx="3"/>
-        </g>
-        <g stroke="#bcdcc9" stroke-width="2" fill="none" opacity=".16">
-          <path d="M120 470 q40 -9 80 0 t80 0"/><path d="M860 500 q46 -10 92 0 t92 0"/>
-          <path d="M420 546 q46 -10 92 0 t92 0"/>
-        </g>
-      </svg>
-    </div>
-    <div class="capscrim"></div>
-    <div class="cap">Guadalupe · Santa Lúcia · Barbados</div>
-  </div>
-
   <div class="body">
     <div class="port">
       <div class="no">2</div>
@@ -896,6 +720,18 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         </div>
       </div>
     </div>
+
+    <div class="inc" style="margin-top:10mm">
+      <div class="inc-h">Sugestões de passeio nestes portos</div>
+      <div class="inc-list">
+        <div><b>Guadalupe:</b> Chutes du Carbet e Plage de la Caravelle</div>
+        <div><b>Guadalupe:</b> Mémorial ACTe e mercado de especiarias</div>
+        <div><b>Santa Lúcia:</b> Pitons, Soufrière e banho de lama vulcânica</div>
+        <div><b>Santa Lúcia:</b> Diamond Falls e plantação de cacau</div>
+        <div><b>Barbados:</b> mergulho com tartarugas na costa oeste</div>
+        <div><b>Barbados:</b> destilaria Mount Gay e a costa de Bathsheba</div>
+      </div>
+    </div>
   </div>
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
@@ -908,67 +744,6 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 <section class="page">
   <div class="dest-hd"><div class="city">Portos de Escala · Granadinas</div><div class="no">4</div></div>
   <div class="goldbar"></div>
-  <div class="dest-photo" style="height:148mm">
-    <div class="scene">
-      <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <linearGradient id="q-sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#0c2e2a"/><stop offset="45%" stop-color="#2a6a52"/>
-            <stop offset="80%" stop-color="#8b9548"/><stop offset="100%" stop-color="#dca94e"/>
-          </linearGradient>
-          <linearGradient id="q-sea" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#4a9c80"/><stop offset="55%" stop-color="#16544a"/><stop offset="100%" stop-color="#0d3c39"/>
-          </linearGradient>
-          <linearGradient id="q-isl" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#2d5e3a"/><stop offset="100%" stop-color="#14311f"/>
-          </linearGradient>
-          <g id="leaf3"><path d="M0 0 C52 -20 108 -50 172 -100 C142 -36 94 -6 46 14 C98 22 150 12 200 -16 C146 54 64 50 0 14 Z"/></g>
-        </defs>
-        <rect width="1200" height="330" fill="url(#q-sky)"/>
-        <circle cx="290" cy="278" r="50" fill="#f7d391" opacity=".9"/>
-        <g fill="#ffffff" opacity=".11">
-          <ellipse cx="720" cy="112" rx="260" ry="10"/><ellipse cx="960" cy="176" rx="180" ry="8"/>
-          <ellipse cx="480" cy="226" rx="240" ry="8"/>
-        </g>
-        <!-- ilhotas das Granadinas -->
-        <path d="M520 330 C568 236 628 232 676 330 Z" fill="url(#q-isl)"/>
-        <path d="M700 330 C744 264 792 262 830 330 Z" fill="url(#q-isl)" opacity=".9"/>
-        <path d="M868 330 C898 286 934 286 962 330 Z" fill="url(#q-isl)" opacity=".78"/>
-        <path d="M40 330 C100 214 180 210 244 330 Z" fill="url(#q-isl)"/>
-        <rect y="330" width="1200" height="170" fill="url(#q-sea)"/>
-        <g stroke="#bcdcc9" stroke-width="2" fill="none" opacity=".18">
-          <path d="M180 386 q40 -9 80 0 t80 0"/><path d="M760 368 q46 -10 92 0 t92 0"/>
-          <path d="M420 434 q46 -10 92 0 t92 0"/><path d="M900 452 q40 -9 80 0 t80 0"/>
-        </g>
-        <!-- espuma e praia em primeiro plano -->
-        <path d="M0 600 L0 500 C200 480 420 492 640 476 C880 458 1040 486 1200 470 L1200 600 Z" fill="#e6d9bd"/>
-        <path d="M0 500 C200 480 420 492 640 476 C880 458 1040 486 1200 470 L1200 486 C1040 502 880 474 640 492 C420 508 200 496 0 516 Z" fill="#f8f2e1" opacity=".85"/>
-        <!-- palmeira -->
-        <g>
-          <path d="M1002 560 C990 480 974 424 940 372 L964 364 C1000 424 1016 490 1026 560 Z" fill="#33241a"/>
-          <g fill="#0f3220" transform="translate(950,364)">
-            <use href="#leaf3" transform="rotate(196) scale(.62)"/>
-            <use href="#leaf3" transform="rotate(238) scale(.68)"/>
-            <use href="#leaf3" transform="rotate(300) scale(.58)"/>
-            <use href="#leaf3" transform="rotate(-18) scale(.66)"/>
-            <use href="#leaf3" transform="rotate(26) scale(.6)"/>
-          </g>
-        </g>
-        <g>
-          <path d="M186 578 C178 524 168 486 146 448 L164 442 C190 486 200 530 208 578 Z" fill="#33241a"/>
-          <g fill="#0f3220" transform="translate(154,442)">
-            <use href="#leaf3" transform="rotate(200) scale(.48)"/>
-            <use href="#leaf3" transform="rotate(246) scale(.52)"/>
-            <use href="#leaf3" transform="rotate(-14) scale(.5)"/>
-            <use href="#leaf3" transform="rotate(30) scale(.44)"/>
-          </g>
-        </g>
-      </svg>
-    </div>
-    <div class="capscrim"></div>
-    <div class="cap">São Vicente · Granada · Alto-mar</div>
-  </div>
-
   <div class="body">
     <div class="port">
       <div class="no">5</div>
@@ -1013,6 +788,31 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         </div>
       </div>
     </div>
+
+    <div class="port">
+      <div class="no">8</div>
+      <div>
+        <div class="ct">Sáb · 16 Jan '27 · Chegada às 07:00</div>
+        <div class="nm">Fort-de-France, Martinica · Desembarque</div>
+        <div class="tx">
+          O navio atraca de volta em Fort-de-France no início da manhã. O desembarque acontece por grupos,
+          conforme o horário do voo de cada passageiro, e as malas são recolhidas na noite anterior —
+          uma despedida sem pressa, com o último café da manhã a bordo.
+        </div>
+      </div>
+    </div>
+
+    <div class="inc" style="margin-top:10mm">
+      <div class="inc-h">Como funcionam os dias de escala</div>
+      <div class="inc-list">
+        <div>Descer e subir a bordo é livre dentro do horário do porto</div>
+        <div>Os horários de retorno ao navio são rigorosos, sem tolerância</div>
+        <div>Passeios contratados com a MSC garantem o retorno a tempo</div>
+        <div>Documento de identificação sempre junto ao desembarcar</div>
+        <div>Refeições e bebidas seguem disponíveis a bordo o dia todo</div>
+        <div>As moedas variam por ilha; o dólar é aceito na maioria</div>
+      </div>
+    </div>
   </div>
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
@@ -1029,14 +829,14 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <div class="eyebrow">Dia a dia</div>
     <h2 class="h2">Roteiro</h2>
 
-    <div class="day"><div class="day-h">DIA 01 | São Paulo → Lima | 09 Jan '27 · Sáb</div>
-      <div class="day-t">Apresentação no Aeroporto de Guarulhos com antecedência mínima de 3 horas. Embarque no voo LATAM 2944 às 16:25, com chegada a Lima às 19:30. Conexão no aeroporto Jorge Chávez.</div></div>
+    <div class="day"><div class="day-h">DIA 01 | Brasil → Miami | 07 ou 08 Jan '27</div>
+      <div class="day-t">Saída do Brasil no voo internacional da opção escolhida (Florianópolis em 07 Jan ou São Paulo em 08 Jan), com conexão em Santiago do Chile. Apresentação no aeroporto com antecedência mínima de 3 horas para voos internacionais.</div></div>
 
-    <div class="day"><div class="day-h">DIA 02 | Lima → Miami | 10 Jan '27 · Dom</div>
-      <div class="day-t">Saída de Lima às 00:15 no voo LATAM 2480, chegada a Miami às 06:10. Traslado e conexão para o Caribe conforme trecho complementar a confirmar.</div></div>
+    <div class="day"><div class="day-h">DIA 02 | Miami → Martinica | 08 ou 09 Jan '27</div>
+      <div class="day-t">Chegada a Miami e seguimento para Fort-de-France (trecho a cotar). Sugerimos pernoite em Miami ou na Martinica antes do embarque, para viajar sem correria.</div></div>
 
-    <div class="day"><div class="day-h">DIA 03 | Fort-de-France, Martinica | Embarque</div>
-      <div class="day-t">Chegada a Fort-de-France e embarque no MSC World Europa. Reconhecimento do navio, exercício obrigatório de segurança e jantar a bordo. O navio zarpa às 23:00 rumo a Guadalupe.</div></div>
+    <div class="day"><div class="day-h">DIA 03 | Fort-de-France, Martinica | 09 Jan '27 · Sáb — Embarque</div>
+      <div class="day-t">Embarque no MSC World Europa. Reconhecimento do navio, exercício obrigatório de segurança e primeiro jantar a bordo. O navio zarpa às 23:00 rumo a Guadalupe.</div></div>
 
     <div class="day"><div class="day-h">DIA 04 | Pointe-à-Pitre, Guadalupe | 10 Jan '27 · Dom</div>
       <div class="day-t">Atracação às 08:00. Dia livre para o mercado de especiarias, o Mémorial ACTe ou as praias da Grande-Terre. Retorno a bordo até as 19:00.</div></div>
@@ -1056,11 +856,12 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <div class="day"><div class="day-h">DIA 09 | Em navegação | 15 Jan '27 · Sex</div>
       <div class="day-t">Dia inteiro no mar, com toda a programação de bordo à disposição: piscinas, spa, teatro, restaurantes e bares — bebidas incluídas.</div></div>
 
-    <div class="day"><div class="day-h">DIA 10 | Fort-de-France → Miami → Lima | 16 Jan '27 · Sáb</div>
-      <div class="day-t">Desembarque a partir das 07:00 em Fort-de-France. Retorno a Miami e embarque no voo LATAM 2699 às 23:10 com destino a Lima.</div></div>
+    <div class="day"><div class="day-h">DIA 10 | Fort-de-France → Miami | 16 Jan '27 · Sáb</div>
+      <div class="day-t">Desembarque a partir das 07:00 em Fort-de-France e retorno a Miami. À noite, embarque no voo internacional de volta: 20:30 na Opção 1 (via Santiago) ou 23:10 na Opção 2 (via Lima).</div></div>
 
-    <div class="day"><div class="day-h">DIA 11 | Lima → São Paulo | 17 Jan '27 · Dom</div>
-      <div class="day-t">Chegada a Lima às 05:00. Voo LATAM 8099 às 13:05, com chegada a Guarulhos às 20:05. Fim dos nossos serviços.</div></div>
+    <div class="day"><div class="day-h">DIA 11 | Chegada ao Brasil | 17 Jan '27 · Dom</div>
+      <div class="day-t">Chegada a Florianópolis às 13:20 (Opção 1) ou a São Paulo/Guarulhos às 20:05 (Opção 2). Fim dos nossos serviços.</div></div>
+
   </div>
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
@@ -1069,37 +870,125 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   </div>
 </section>
 
-<!-- ══════════ 08 · AÉREO ══════════ -->
+<!-- ══════════ 08 · AÉREO — OPÇÃO 1 ══════════ -->
 <section class="page">
-  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Aéreo</div></div>
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Aéreo · Opção 1</div></div>
   <div class="goldbar"></div>
   <div class="body">
-    <div class="eyebrow">Passagem aérea</div>
-    <h2 class="h2">Voos LATAM · Classe Econômica</h2>
+    <div class="eyebrow">Passagem aérea · Opção 1</div>
+    <h2 class="h2">LATAM · Saindo de Florianópolis</h2>
     <p class="lead">
-      Bilhetes em <b>classe econômica</b> pela <b>LATAM Airlines</b>, saindo de São Paulo (Guarulhos)
-      com conexão em Lima. Tarifa cotada para <b>2 passageiros</b>.
+      Bilhetes em <b>classe econômica</b> pela <b>LATAM Airlines</b>, saindo de <b>Florianópolis (FLN)</b>
+      com conexão em Santiago do Chile. Tarifa cotada para <b>2 passageiros</b>.
     </p>
 
     <div class="fl">
-      <div class="fl-h"><div class="t">Ida</div><div class="s">09 → 10 Jan '27</div></div>
+      <div class="fl-h"><div class="t">Ida</div><div class="s">07 → 08 Jan '27</div></div>
       <table>
         <tr><th>Voo</th><th>Origem</th><th>Destino</th><th>Saída</th><th>Chegada</th><th>Duração</th></tr>
         <tr>
-          <td><div class="rt">LATAM 2944</div><div class="fno">Boeing 763 · Econ.</div></td>
-          <td><div class="rt">GRU</div><div class="ap">São Paulo, BR</div></td>
-          <td><div class="rt">LIM</div><div class="ap">Lima, PE</div></td>
-          <td><div class="hr">09 Jan · 16:25</div></td>
-          <td><div class="hr">09 Jan · 19:30</div></td>
-          <td><div class="hr">05h05</div></td>
+          <td><div class="rt">LATAM 723</div><div class="fno">Airbus 320 · Econ.</div></td>
+          <td><div class="rt">FLN</div><div class="ap">Florianópolis, BR</div></td>
+          <td><div class="rt">SCL</div><div class="ap">Santiago, CL</div></td>
+          <td><div class="hr">07 Jan · 17:55</div></td>
+          <td><div class="hr">07 Jan · 21:35</div></td>
+          <td><div class="hr">03h40</div></td>
         </tr>
         <tr>
-          <td><div class="rt">LATAM 2480</div><div class="fno">Boeing 763 · Econ.</div></td>
-          <td><div class="rt">LIM</div><div class="ap">Lima, PE</div></td>
+          <td><div class="rt">LATAM 592</div><div class="fno">Boeing 789 · Econ.</div></td>
+          <td><div class="rt">SCL</div><div class="ap">Santiago, CL</div></td>
           <td><div class="rt">MIA</div><div class="ap">Miami, US</div></td>
-          <td><div class="hr">10 Jan · 00:15</div></td>
-          <td><div class="hr">10 Jan · 06:10</div></td>
-          <td><div class="hr">05h55</div></td>
+          <td><div class="hr">08 Jan · 08:35</div></td>
+          <td><div class="hr">08 Jan · 18:45</div></td>
+          <td><div class="hr">12h10</div></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="fl">
+      <div class="fl-h"><div class="t">Volta</div><div class="s">16 → 17 Jan '27</div></div>
+      <table>
+        <tr><th>Voo</th><th>Origem</th><th>Destino</th><th>Saída</th><th>Chegada</th><th>Duração</th></tr>
+        <tr>
+          <td><div class="rt">LATAM 501</div><div class="fno">Boeing 789 · Econ.</div></td>
+          <td><div class="rt">MIA</div><div class="ap">Miami, US</div></td>
+          <td><div class="rt">SCL</div><div class="ap">Santiago, CL</div></td>
+          <td><div class="hr">16 Jan · 20:30</div></td>
+          <td><div class="hr">17 Jan · 06:55 <span class="nd">+1</span></div></td>
+          <td><div class="hr">08h25</div></td>
+        </tr>
+        <tr>
+          <td><div class="rt">LATAM 728</div><div class="fno">Airbus 321 · Econ.</div></td>
+          <td><div class="rt">SCL</div><div class="ap">Santiago, CL</div></td>
+          <td><div class="rt">FLN</div><div class="ap">Florianópolis, BR</div></td>
+          <td><div class="hr">17 Jan · 10:00</div></td>
+          <td><div class="hr">17 Jan · 13:20</div></td>
+          <td><div class="hr">03h20</div></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="inc">
+      <div class="inc-h">Resumo da opção 1</div>
+      <div class="inc-list">
+        <div><b>Companhia:</b> LATAM Airlines · classe econômica</div>
+        <div><b>Rota:</b> Florianópolis (FLN) ⇄ Miami (MIA)</div>
+        <div><b>Conexão:</b> Santiago do Chile (SCL)</div>
+        <div><b>Espera em Santiago:</b> 11h00 na ida · 03h05 na volta</div>
+        <div><b>Duração total:</b> 26h50 na ida · 14h50 na volta</div>
+        <div><b>Saída do Brasil:</b> 07 Jan '27, às 17:55</div>
+        <div><b>Chegada em Miami:</b> 08 Jan '27, às 18:45</div>
+        <div><b>Valor para 2 passageiros:</b> R$ 14.150,00</div>
+      </div>
+    </div>
+
+    <div class="note">
+      <b>Por que considerar esta opção</b>
+      <p>
+        Chega a Miami em <b>08 de janeiro</b> — um dia inteiro de folga antes do embarque no navio,
+        que zarpa de Fort-de-France em 09 de janeiro às 23:00. É a alternativa mais segura contra
+        atrasos e a que permite pernoitar com calma antes de seguir para a Martinica.
+      </p>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 09 · AÉREO — OPÇÃO 2 ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Aéreo · Opção 2</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Passagem aérea · Opção 2</div>
+    <h2 class="h2">LATAM · Saindo de São Paulo</h2>
+    <p class="lead">
+      Bilhetes em <b>classe econômica</b> pela <b>LATAM Airlines</b>, saindo de <b>São Paulo (GRU)</b>,
+      com ida via Santiago do Chile e volta via Lima. Tarifa cotada para <b>2 passageiros</b>.
+    </p>
+
+    <div class="fl">
+      <div class="fl-h"><div class="t">Ida</div><div class="s">08 → 09 Jan '27</div></div>
+      <table>
+        <tr><th>Voo</th><th>Origem</th><th>Destino</th><th>Saída</th><th>Chegada</th><th>Duração</th></tr>
+        <tr>
+          <td><div class="rt">LATAM 755</div><div class="fno">Airbus 321 · Econ.</div></td>
+          <td><div class="rt">GRU</div><div class="ap">São Paulo, BR</div></td>
+          <td><div class="rt">SCL</div><div class="ap">Santiago, CL</div></td>
+          <td><div class="hr">08 Jan · 16:30</div></td>
+          <td><div class="hr">08 Jan · 20:40</div></td>
+          <td><div class="hr">04h10</div></td>
+        </tr>
+        <tr>
+          <td><div class="rt">LATAM 592</div><div class="fno">Boeing 789 · Econ.</div></td>
+          <td><div class="rt">SCL</div><div class="ap">Santiago, CL</div></td>
+          <td><div class="rt">MIA</div><div class="ap">Miami, US</div></td>
+          <td><div class="hr">09 Jan · 08:35</div></td>
+          <td><div class="hr">09 Jan · 18:45</div></td>
+          <td><div class="hr">12h10</div></td>
         </tr>
       </table>
     </div>
@@ -1127,38 +1016,27 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       </table>
     </div>
 
-    <div class="note">
-      <b>Observações do aéreo</b>
-      <p>
-        · Conexões em Lima: 04h45 na ida e 08h05 na volta.<br>
-        · Tarifa e classe sujeitas a confirmação e disponibilidade no momento da emissão.<br>
-        · Franquia de bagagem conforme regra tarifária LATAM — a confirmar na reserva.<br>
-        · <b>O trecho Miami ⇄ Fort-de-France (Martinica) não está incluído nesta cotação</b> e pode ser
-        acrescentado sob consulta, assim como a hospedagem pré e pós-cruzeiro.<br>
-        · Conexão nos Estados Unidos exige <b>visto americano válido</b> (mesmo em trânsito).
-      </p>
-    </div>
-
-    <div class="inc" style="margin-top:9mm">
-      <div class="inc-h">Resumo do aéreo</div>
+    <div class="inc">
+      <div class="inc-h">Resumo da opção 2</div>
       <div class="inc-list">
-        <div><b>Companhia:</b> LATAM Airlines</div>
-        <div><b>Classe:</b> Econômica</div>
-        <div><b>Origem / destino:</b> São Paulo (GRU) ⇄ Miami (MIA)</div>
-        <div><b>Conexão:</b> Lima (LIM), nos dois sentidos</div>
-        <div><b>Ida:</b> 09 Jan '27 · 16:25 de Guarulhos</div>
-        <div><b>Volta:</b> 17 Jan '27 · 20:05 em Guarulhos</div>
-        <div><b>Passageiros:</b> 2 adultos</div>
-        <div><b>Valor total do aéreo:</b> R$ 12.905,00</div>
+        <div><b>Companhia:</b> LATAM Airlines · classe econômica</div>
+        <div><b>Rota:</b> São Paulo (GRU) ⇄ Miami (MIA)</div>
+        <div><b>Conexões:</b> Santiago (ida) e Lima (volta)</div>
+        <div><b>Espera:</b> 11h55 em Santiago · 08h05 em Lima</div>
+        <div><b>Duração total:</b> 28h15 na ida · 18h55 na volta</div>
+        <div><b>Saída do Brasil:</b> 08 Jan '27, às 16:30</div>
+        <div><b>Chegada em Miami:</b> 09 Jan '27, às 18:45</div>
+        <div><b>Valor para 2 passageiros:</b> R$ 12.905,00</div>
       </div>
     </div>
 
-    <div class="note" style="margin-top:7mm">
-      <b>Antes de emitir</b>
+    <div class="note">
+      <b>Atenção ao prazo desta opção</b>
       <p>
-        Confirmaremos com vocês a grafia exata dos nomes conforme o passaporte, a data de nascimento e
-        eventuais programas de milhagem. Após a emissão, alterações de nome não são permitidas pela
-        companhia e remarcações seguem as multas da tarifa contratada.
+        A chegada a Miami acontece em <b>09 de janeiro às 18:45</b> — mesmo dia em que o navio zarpa
+        de Fort-de-France, às 23:00. <b>Não há tempo hábil</b> para o trecho Miami–Martinica no mesmo dia.
+        Esta opção é indicada apenas se o casal aceitar <b>antecipar a viagem por conta própria</b> ou se
+        ajustarmos as datas do aéreo. Recomendamos a Opção 1, que chega um dia antes.
       </p>
     </div>
   </div>
@@ -1169,26 +1047,92 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   </div>
 </section>
 
-<!-- ══════════ 09 · VALORES ══════════ -->
+<!-- ══════════ 10 · OBSERVAÇÕES DO AÉREO ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Aéreo</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Comparativo</div>
+    <h2 class="h2">As duas opções lado a lado</h2>
+
+    <div class="fl">
+      <div class="fl-h"><div class="t">Comparativo</div><div class="s">2 passageiros · classe econômica</div></div>
+      <table>
+        <tr><th>Opção</th><th>Origem</th><th>Conexões</th><th>Saída do Brasil</th><th>Chegada a Miami</th><th>Valor</th></tr>
+        <tr>
+          <td><div class="rt">Opção 1</div><div class="fno">Recomendada</div></td>
+          <td><div class="rt">FLN</div><div class="ap">Florianópolis</div></td>
+          <td><div class="rt">SCL</div><div class="ap">Santiago (ida e volta)</div></td>
+          <td><div class="hr">07 Jan · 17:55</div></td>
+          <td><div class="hr">08 Jan · 18:45</div></td>
+          <td><div class="hr">R$ 14.150,00</div></td>
+        </tr>
+        <tr>
+          <td><div class="rt">Opção 2</div><div class="fno">Menor valor</div></td>
+          <td><div class="rt">GRU</div><div class="ap">São Paulo</div></td>
+          <td><div class="rt">SCL / LIM</div><div class="ap">Santiago e Lima</div></td>
+          <td><div class="hr">08 Jan · 16:30</div></td>
+          <td><div class="hr">09 Jan · 18:45</div></td>
+          <td><div class="hr">R$ 12.905,00</div></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="note">
+      <b>Observações válidas para as duas opções</b>
+      <p>
+        · Tarifas e classes sujeitas a confirmação e disponibilidade no momento da emissão.<br>
+        · Franquia de bagagem conforme regra tarifária LATAM — a confirmar na reserva.<br>
+        · <b>O trecho Miami ⇄ Fort-de-France (Martinica) não está incluído</b> em nenhuma das opções
+        e pode ser acrescentado sob consulta, assim como a hospedagem pré e pós-cruzeiro.<br>
+        · Conexão nos Estados Unidos exige <b>visto americano válido</b> (mesmo em trânsito).<br>
+        · O navio desembarca em Fort-de-France em 16 Jan às 07:00; o voo de retorno a partir de Miami
+        parte no mesmo dia, à noite, nas duas opções.
+      </p>
+    </div>
+
+    <div class="inc" style="margin-top:9mm">
+      <div class="inc-h">Antes de emitir os bilhetes</div>
+      <div class="inc-list">
+        <div>Confirmação da grafia dos nomes conforme o passaporte</div>
+        <div>Data de nascimento e número do documento de cada passageiro</div>
+        <div>Programas de milhagem, se houver</div>
+        <div>Escolha de assentos e bagagem despachada</div>
+        <div>Após a emissão, alterações de nome não são permitidas</div>
+        <div>Remarcações seguem as multas da tarifa contratada</div>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:9mm">
+      <b>Nossa recomendação</b>
+      <p>
+        A <b>Opção 1</b> custa R$ 1.245,00 a mais, mas entrega um dia inteiro de margem antes do embarque —
+        o que, em um cruzeiro, é a diferença entre embarcar tranquilo e correr o risco de perder o navio,
+        já que a companhia marítima não aguarda passageiros atrasados nem reembolsa a viagem nesse caso.
+      </p>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 11 · VALORES ══════════ -->
 <section class="page">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Valores</div></div>
   <div class="goldbar"></div>
   <div class="body">
     <div class="eyebrow">Investimento</div>
     <h2 class="h2">Valores</h2>
-    <div class="val-note">*Valores em Reais (R$) para 2 passageiros · Sr. Luiz e esposa</div>
+    <div class="val-note">*Valores em Reais (R$) para 2 passageiros · Sr. Luiz e esposa · o cruzeiro é o mesmo nas duas opções; muda apenas o aéreo</div>
 
     <div class="val-row">
       <span class="lbl">Cruzeiro MSC World Europa — cabine dupla
         <span class="dsc">7 noites · pensão completa · <b>pacote de bebidas e seguro já incluídos</b></span>
       </span>
       <span class="amt">R$ 11.264,00</span>
-    </div>
-    <div class="val-row">
-      <span class="lbl">Passagem aérea LATAM — classe econômica
-        <span class="dsc">GRU / LIM / MIA e MIA / LIM / GRU · 2 passageiros</span>
-      </span>
-      <span class="amt">R$ 12.905,00</span>
     </div>
     <div class="val-row">
       <span class="lbl">Seguro viagem
@@ -1202,35 +1146,35 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       </span>
       <span class="amt">Incluído</span>
     </div>
+    <div class="val-row">
+      <span class="lbl">Passagem aérea LATAM — <b>Opção 1</b>
+        <span class="dsc">FLN / SCL / MIA e MIA / SCL / FLN · classe econômica · 2 passageiros</span>
+      </span>
+      <span class="amt">R$ 14.150,00</span>
+    </div>
+    <div class="val-row">
+      <span class="lbl">Passagem aérea LATAM — <b>Opção 2</b>
+        <span class="dsc">GRU / SCL / MIA e MIA / LIM / GRU · classe econômica · 2 passageiros</span>
+      </span>
+      <span class="amt">R$ 12.905,00</span>
+    </div>
 
     <div class="val-total">
-      <span class="lbl">TOTAL DO CASAL</span>
-      <span class="amt">R$ 24.169,00</span>
+      <span class="lbl">TOTAL DO CASAL · COM A OPÇÃO 1<span class="sub">Aéreo saindo de Florianópolis</span></span>
+      <span class="amt">R$ 25.414,00<span class="sub">R$ 12.707,00 por pessoa</span></span>
     </div>
-    <div class="val-pp">
-      <span class="lbl">Equivalente por pessoa</span>
-      <span class="amt">R$ 12.084,50</span>
+
+    <div class="val-total" style="margin-top:5mm">
+      <span class="lbl">TOTAL DO CASAL · COM A OPÇÃO 2<span class="sub">Aéreo saindo de São Paulo</span></span>
+      <span class="amt">R$ 24.169,00<span class="sub">R$ 12.084,50 por pessoa</span></span>
     </div>
 
     <div class="val-fx">
-      Cotação 07/08 · USD = R$ 5,10 <span style="opacity:.8">(referência do tarifário aéreo: USD 2.529,00)</span><br>
+      Cotação 07/08 · USD = R$ 5,10 <span style="opacity:.8">(referência dos tarifários aéreos: Opção 1 — USD 2.772,92 · Opção 2 — USD 2.529,00)</span><br>
       Valores sujeitos a alteração por variação cambial, disponibilidade e reajuste tarifário até a emissão.<br>
       <b>*Nada reservado, apenas cotado</b>
     </div>
 
-    <div class="inc" style="margin-top:11mm">
-      <div class="inc-h">O que está incluído</div>
-      <div class="inc-list">
-        <div>Cruzeiro de 7 noites pelo Caribe em cabine dupla</div>
-        <div>Pensão completa a bordo (café, almoço e jantar)</div>
-        <div><b>Pacote de bebidas</b> a bordo</div>
-        <div><b>Seguro viagem</b></div>
-        <div>Entretenimento, teatro, piscinas e lazer do navio</div>
-        <div>Passagem aérea LATAM ida e volta em classe econômica</div>
-        <div>Taxas de embarque aéreas</div>
-        <div>Assessoria LUSATRAVEL antes, durante e depois da viagem</div>
-      </div>
-    </div>
 
     <div class="note" style="margin-top:9mm">
       <b>Validade e condições da cotação</b>
@@ -1250,13 +1194,27 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   </div>
 </section>
 
-<!-- ══════════ 10 · CONDIÇÕES ══════════ -->
+<!-- ══════════ 12 · CONDIÇÕES ══════════ -->
 <section class="page">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Condições</div></div>
   <div class="goldbar"></div>
   <div class="body">
     <div class="eyebrow">Importante</div>
     <h2 class="h2">Condições e Observações</h2>
+
+    <div class="inc" style="margin-top:0;margin-bottom:8mm">
+      <div class="inc-h">O que está incluído</div>
+      <div class="inc-list">
+        <div>Cruzeiro de 7 noites pelo Caribe em cabine dupla</div>
+        <div>Pensão completa a bordo (café, almoço e jantar)</div>
+        <div><b>Pacote de bebidas</b> a bordo</div>
+        <div><b>Seguro viagem</b></div>
+        <div>Entretenimento, teatro, piscinas e lazer do navio</div>
+        <div>Passagem aérea LATAM ida e volta em classe econômica (opção escolhida)</div>
+        <div>Taxas de embarque aéreas</div>
+        <div>Assessoria LUSATRAVEL antes, durante e depois da viagem</div>
+      </div>
+    </div>
 
     <div class="cond">
       <div class="cond-h">Formas de pagamento</div>
