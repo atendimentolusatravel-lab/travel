@@ -216,6 +216,17 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .inc-list div{ font-size:11pt; line-height:1.5; color:var(--char); padding-left:6mm; position:relative; }
 .inc-list div::before{ content:"◆"; position:absolute; left:0; top:0; color:var(--gold); font-size:8pt; }
 
+/* ══ MAPA DA ROTA ══ */
+.map{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-bottom:10mm; }
+.map svg{ width:100%; height:auto; display:block; }
+.map-legend{ display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line);
+  background:var(--cream); }
+.map-legend div{ padding:4.5mm 6mm; border-left:1px solid var(--line); }
+.map-legend div:first-child{ border-left:none; }
+.map-legend span{ display:block; font-family:var(--con); font-size:7.5pt; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--mut); font-weight:600; }
+.map-legend b{ display:block; font-size:11pt; font-weight:600; color:var(--ink); margin-top:1.2mm; }
+
 /* ══ ITINERÁRIO ══ */
 .tl-item{ display:flex; align-items:center; gap:6mm; }
 .tl-badge{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff;
@@ -522,10 +533,112 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   <div class="body">
     <div class="eyebrow">Sua rota</div>
     <h2 class="h2">Itinerário do Cruzeiro</h2>
-    <p class="lead">
-      <b>Caribe e Antilhas</b> — ida e volta de <b>Miami, Estados Unidos</b>. Seis noites entre as Bahamas
-      e as Turcas e Caicos, com três portos de escala e dois dias de navegação para aproveitar o navio.
-    </p>
+    <div class="map">
+      <svg viewBox="0 0 1000 520" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="m-sea" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e4f1f4"/><stop offset="100%" stop-color="#d3e7ee"/>
+          </linearGradient>
+          <g id="arw"><path d="M-10 -6.5 L10 0 L-10 6.5 Z"/></g>
+        </defs>
+
+        <rect width="1000" height="520" fill="url(#m-sea)"/>
+
+        <!-- Flórida / EUA -->
+        <path d="M141 0 L135 53 L153 106 L188 147 L218 189 L241 215 L285 200 L276 141 L262 71 L241 0 Z"
+              fill="#eee4cf" stroke="#dccfb2" stroke-width="1.5"/>
+        <g fill="#eee4cf" stroke="#dccfb2" stroke-width="1">
+          <ellipse cx="228" cy="221" rx="8" ry="4" transform="rotate(-20 228 221)"/>
+          <ellipse cx="212" cy="232" rx="8" ry="4" transform="rotate(-25 212 232)"/>
+          <ellipse cx="196" cy="243" rx="7" ry="4" transform="rotate(-30 196 243)"/>
+          <ellipse cx="184" cy="252" rx="6" ry="3.5" transform="rotate(-30 184 252)"/>
+        </g>
+
+        <!-- Cuba -->
+        <path d="M0 350 C 80 342 160 336 240 340 C 320 356 400 392 480 432
+                 C 540 462 600 486 648 504 L 648 520
+                 C 600 506 540 486 480 464 C 400 432 330 404 240 388
+                 C 160 382 80 382 0 386 Z"
+              fill="#eee4cf" stroke="#dccfb2" stroke-width="1.5"/>
+        <ellipse cx="120" cy="424" rx="17" ry="9" fill="#eee4cf" stroke="#dccfb2" stroke-width="1"/>
+
+        <!-- Bahamas / Turcas e Caicos -->
+        <g fill="#eee4cf" stroke="#dccfb2" stroke-width="1.2">
+          <ellipse cx="382" cy="130" rx="44" ry="9"  transform="rotate(-8 382 130)"/>
+          <ellipse cx="462" cy="132" rx="34" ry="8"  transform="rotate(38 462 132)"/>
+          <ellipse cx="338" cy="182" rx="5"  ry="13"/>
+          <ellipse cx="417" cy="248" rx="17" ry="35"/>
+          <ellipse cx="450" cy="220" rx="13" ry="6"/>
+          <ellipse cx="518" cy="212" rx="5"  ry="25" transform="rotate(18 518 212)"/>
+          <ellipse cx="559" cy="262" rx="5"  ry="19" transform="rotate(14 559 262)"/>
+          <ellipse cx="530" cy="307" rx="4"  ry="27" transform="rotate(36 530 307)"/>
+          <ellipse cx="583" cy="330" rx="4"  ry="21" transform="rotate(18 583 330)"/>
+          <ellipse cx="618" cy="280" rx="8"  ry="10"/>
+          <ellipse cx="636" cy="371" rx="11" ry="13"/>
+          <ellipse cx="706" cy="377" rx="11" ry="5"/>
+          <ellipse cx="688" cy="454" rx="15" ry="10"/>
+          <ellipse cx="765" cy="413" rx="17" ry="8"/>
+          <ellipse cx="815" cy="432" rx="6"  ry="9"/>
+        </g>
+
+        <!-- Rota -->
+        <g fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity=".85">
+          <path d="M283 179 C 500 100 770 220 815 432"/>
+          <path d="M815 432 C 690 350 520 258 339 199"/>
+          <path d="M339 199 C 375 225 415 232 450 220"/>
+          <path d="M450 220 C 400 196 340 180 283 179"/>
+        </g>
+        <g fill="none" stroke="#12301f" stroke-width="2.6" stroke-linecap="round">
+          <path d="M283 179 C 500 100 770 220 815 432"/>
+          <path d="M815 432 C 690 350 520 258 339 199"/>
+          <path d="M339 199 C 375 225 415 232 450 220"/>
+          <path d="M450 220 C 400 196 340 180 283 179"/>
+        </g>
+        <g fill="#12301f">
+          <use href="#arw" transform="translate(613,196) rotate(25)"/>
+          <use href="#arw" transform="translate(598,307) rotate(207)"/>
+          <use href="#arw" transform="translate(395,224) rotate(11)"/>
+          <use href="#arw" transform="translate(369,191) rotate(194)"/>
+        </g>
+
+        <!-- Linha-guia do Ocean Cay -->
+        <path d="M339 199 L 300 268" stroke="#12301f" stroke-width="1.4" fill="none" opacity=".55"/>
+
+        <!-- Portos -->
+        <g>
+          <circle cx="283" cy="179" r="9" fill="#ffffff"/><circle cx="283" cy="179" r="6" fill="#da8d00"/>
+          <circle cx="339" cy="199" r="8" fill="#ffffff"/><circle cx="339" cy="199" r="5" fill="#2d5e3a"/>
+          <circle cx="450" cy="220" r="8" fill="#ffffff"/><circle cx="450" cy="220" r="5" fill="#2d5e3a"/>
+          <circle cx="815" cy="432" r="8" fill="#ffffff"/><circle cx="815" cy="432" r="5" fill="#2d5e3a"/>
+        </g>
+
+        <!-- Rótulos -->
+        <g font-family="Poppins, sans-serif" fill="#12301f">
+          <text x="196" y="62" font-size="18" font-weight="700" letter-spacing="1" text-anchor="middle">USA</text>
+          <text x="272" y="166" font-size="16" font-weight="700" text-anchor="end">MIAMI</text>
+          <text x="272" y="184" font-size="13" font-weight="400" text-anchor="end" fill="#5c6b60">(Flórida)</text>
+
+          <text x="296" y="288" font-size="13.5" font-weight="700" text-anchor="middle">OCEAN CAY</text>
+          <text x="296" y="304" font-size="12" font-weight="400" text-anchor="middle" fill="#5c6b60">MSC MARINE RESERVE</text>
+
+          <text x="466" y="216" font-size="16" font-weight="700">NASSAU</text>
+          <text x="466" y="234" font-size="13" font-weight="400" fill="#5c6b60">Bahamas</text>
+
+          <text x="796" y="452" font-size="16" font-weight="700" text-anchor="end">GRAND TURK ISLAND</text>
+          <text x="796" y="470" font-size="13" font-weight="400" text-anchor="end" fill="#5c6b60">Turcas e Caicos</text>
+
+          <text x="690" y="66" font-size="16" font-style="italic" fill="#6d8894">Oceano Atlântico</text>
+          <text x="180" y="371" font-size="14" font-weight="600" fill="#a8b3a9" letter-spacing="1">CUBA</text>
+        </g>
+      </svg>
+
+      <div class="map-legend">
+        <div><span>Ida e volta de</span><b>Miami, Estados Unidos</b></div>
+        <div><span>Navio</span><b>MSC Meraviglia</b></div>
+        <div><span>Portos de escala</span><b>3 + porto base</b></div>
+        <div><span>Dias de navegação</span><b>2</b></div>
+      </div>
+    </div>
 
     <div>
       <div class="tl-item">
@@ -571,19 +684,8 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       </div>
     </div>
 
-    <div class="inc" style="margin-top:12mm">
-      <div class="inc-h">Resumo</div>
-      <div class="inc-list">
-        <div><b>Navio:</b> MSC Meraviglia</div>
-        <div><b>Roteiro:</b> Caribe e Antilhas</div>
-        <div><b>Embarque / desembarque:</b> Miami</div>
-        <div><b>Duração:</b> 7 dias / 6 noites</div>
-        <div><b>Portos de escala:</b> 3 + porto base</div>
-        <div><b>Dias de navegação:</b> 2</div>
-      </div>
-    </div>
 
-    <div class="note" style="margin-top:8mm">
+    <div class="note" style="margin-top:10mm">
       <b>Observação</b>
       <p>
         Informações de itinerário sujeitas a alteração pela companhia marítima em função da disponibilidade
