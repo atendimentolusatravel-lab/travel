@@ -168,9 +168,10 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .ft .sep{ color:rgba(255,255,255,.22); }
 
 .body{ padding:16mm 22mm; flex:1; }
+.body.tight{ padding:14mm 22mm 7mm; }
 .eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
 .h2{ font-size:23pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:4mm 0 8mm; }
-.lead{ font-size:12pt; line-height:1.72; color:var(--char); margin-bottom:9mm; }
+.lead{ font-size:12pt; line-height:1.72; color:var(--char); margin-bottom:6mm; }
 .txt{ font-size:12pt; line-height:1.78; color:var(--char); }
 .txt + .txt{ margin-top:5mm; }
 
@@ -250,16 +251,16 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .port .tx{ font-size:11.5pt; line-height:1.75; color:var(--char); margin-top:2.5mm; }
 
 /* ══ AÉREO ══ */
-.fl{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-bottom:9mm; }
-.fl-h{ background:var(--dest); color:#fff; padding:5mm 8mm; display:flex; justify-content:space-between; align-items:center; }
+.fl{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-bottom:7mm; }
+.fl-h{ background:var(--dest); color:#fff; padding:4mm 8mm; display:flex; justify-content:space-between; align-items:center; }
 .fl-h .t{ font-size:11.5pt; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
 .fl-h .t small{ display:block; font-size:8.5pt; font-weight:500; letter-spacing:.04em;
   text-transform:none; color:rgba(255,255,255,.72); margin-top:1.5mm; }
 .fl-h .p{ font-size:15pt; font-weight:800; color:var(--gold-l); font-variant-numeric:tabular-nums; }
 .fl table{ width:100%; border-collapse:collapse; }
 .fl th{ font-family:var(--con); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut);
-  text-align:left; padding:4mm 4mm 2.5mm; border-bottom:1px solid var(--line); font-weight:600; }
-.fl td{ font-size:11pt; padding:4mm; border-bottom:1px solid var(--line); color:var(--char); }
+  text-align:left; padding:3mm 4mm 2mm; border-bottom:1px solid var(--line); font-weight:600; }
+.fl td{ font-size:11pt; padding:2.9mm 4mm; border-bottom:1px solid var(--line); color:var(--char); }
 .fl tr:last-child td{ border-bottom:none; }
 .fl td:first-child, .fl th:first-child{ padding-left:8mm; }
 .fl td:last-child, .fl th:last-child{ padding-right:8mm; text-align:right; }
@@ -269,7 +270,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .fl .nd{ color:var(--gold); font-size:8pt; font-weight:700; }
 
 .note{ background:#fff8ec; border:1px solid #f0dcb4; border-left:3px solid var(--gold); border-radius:0 6px 6px 0;
-  padding:6mm 8mm; margin-top:2mm; }
+  padding:5mm 8mm; margin-top:2mm; }
 .note > b{ display:block; font-size:8.5pt; letter-spacing:.14em; text-transform:uppercase; color:#a06a00; margin-bottom:2.5mm; }
 .note p{ font-size:10.5pt; line-height:1.68; color:var(--char); }
 .note p b{ color:var(--ink); font-weight:700; }
@@ -785,23 +786,25 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 <section class="page">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Aéreo</div></div>
   <div class="goldbar"></div>
-  <div class="body">
+  <div class="body tight">
     <div class="eyebrow">Passagem aérea</div>
     <h2 class="h2">Duas opções de voo</h2>
     <p class="lead">
       Bilhetes em <b>classe econômica</b> pela <b>LATAM Airlines</b>, para <b>2 passageiros</b>.
-      As duas opções chegam a Miami antes do embarque e retornam no mesmo dia do desembarque, à noite.
+      As duas compartilham o voo de chegada e desembarcam em Miami no <b>dia 10 às 06:10</b> —
+      no próprio dia do embarque, que acontece às 16:00.
     </p>
 
     <div class="fl">
       <div class="fl-h">
-        <div class="t">Opção 1 · Florianópolis<small>Chega a Miami 2 dias antes do embarque</small></div>
-        <div class="p">R$ 14.150,00</div>
+        <div class="t">Opção 1 · Florianópolis<small>3 trechos na ida, via Santiago e Lima · 17h45 de viagem</small></div>
+        <div class="p">R$ 14.675,00</div>
       </div>
       <table>
         <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th></tr>
-        <tr><td><div class="rt">LATAM 723</div></td><td><div class="rt">FLN → SCL</div><div class="ap">Florianópolis → Santiago</div></td><td><div class="hr">07 Jan · 17:55</div></td><td><div class="hr">07 Jan · 21:35</div></td></tr>
-        <tr><td><div class="rt">LATAM 592</div></td><td><div class="rt">SCL → MIA</div><div class="ap">Santiago → Miami</div></td><td><div class="hr">08 Jan · 08:35</div></td><td><div class="hr">08 Jan · 18:45</div></td></tr>
+        <tr><td><div class="rt">LATAM 729</div></td><td><div class="rt">FLN → SCL</div><div class="ap">Florianópolis → Santiago</div></td><td><div class="hr">09 Jan · 14:25</div></td><td><div class="hr">09 Jan · 18:05</div></td></tr>
+        <tr><td><div class="rt">LATAM 508</div></td><td><div class="rt">SCL → LIM</div><div class="ap">Santiago → Lima</div></td><td><div class="hr">09 Jan · 20:25</div></td><td><div class="hr">09 Jan · 22:10</div></td></tr>
+        <tr><td><div class="rt">LATAM 2480</div></td><td><div class="rt">LIM → MIA</div><div class="ap">Lima → Miami</div></td><td><div class="hr">10 Jan · 00:15</div></td><td><div class="hr">10 Jan · 06:10</div></td></tr>
         <tr><td><div class="rt">LATAM 501</div></td><td><div class="rt">MIA → SCL</div><div class="ap">Miami → Santiago</div></td><td><div class="hr">16 Jan · 20:30</div></td><td><div class="hr">17 Jan · 06:55 <span class="nd">+1</span></div></td></tr>
         <tr><td><div class="rt">LATAM 728</div></td><td><div class="rt">SCL → FLN</div><div class="ap">Santiago → Florianópolis</div></td><td><div class="hr">17 Jan · 10:00</div></td><td><div class="hr">17 Jan · 13:20</div></td></tr>
       </table>
@@ -809,26 +812,36 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
     <div class="fl">
       <div class="fl-h">
-        <div class="t">Opção 2 · São Paulo<small>Menor valor · chega a Miami 1 dia antes</small></div>
+        <div class="t">Opção 2 · São Paulo<small>Menor valor · 2 trechos na ida, via Lima · 15h45 de viagem</small></div>
         <div class="p">R$ 12.905,00</div>
       </div>
       <table>
         <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th></tr>
-        <tr><td><div class="rt">LATAM 755</div></td><td><div class="rt">GRU → SCL</div><div class="ap">São Paulo → Santiago</div></td><td><div class="hr">08 Jan · 16:30</div></td><td><div class="hr">08 Jan · 20:40</div></td></tr>
-        <tr><td><div class="rt">LATAM 592</div></td><td><div class="rt">SCL → MIA</div><div class="ap">Santiago → Miami</div></td><td><div class="hr">09 Jan · 08:35</div></td><td><div class="hr">09 Jan · 18:45</div></td></tr>
+        <tr><td><div class="rt">LATAM 2944</div></td><td><div class="rt">GRU → LIM</div><div class="ap">São Paulo → Lima</div></td><td><div class="hr">09 Jan · 16:25</div></td><td><div class="hr">09 Jan · 19:30</div></td></tr>
+        <tr><td><div class="rt">LATAM 2480</div></td><td><div class="rt">LIM → MIA</div><div class="ap">Lima → Miami</div></td><td><div class="hr">10 Jan · 00:15</div></td><td><div class="hr">10 Jan · 06:10</div></td></tr>
         <tr><td><div class="rt">LATAM 2699</div></td><td><div class="rt">MIA → LIM</div><div class="ap">Miami → Lima</div></td><td><div class="hr">16 Jan · 23:10</div></td><td><div class="hr">17 Jan · 05:00 <span class="nd">+1</span></div></td></tr>
         <tr><td><div class="rt">LATAM 8099</div></td><td><div class="rt">LIM → GRU</div><div class="ap">Lima → São Paulo</div></td><td><div class="hr">17 Jan · 13:05</div></td><td><div class="hr">17 Jan · 20:05</div></td></tr>
       </table>
     </div>
 
     <div class="note">
+      <b>Importante · chegada no dia do embarque</b>
+      <p>
+        Nas duas opções, o pouso em Miami acontece às <b>06:10 do dia 10</b> e o navio zarpa às <b>16:00
+        do mesmo dia</b> — cerca de 9 horas de margem. É viável, mas qualquer atraso relevante em Santiago,
+        Lima ou Miami pode custar o cruzeiro: a companhia marítima não aguarda passageiros atrasados nem
+        reembolsa a viagem nesse caso. <b>Recomendamos antecipar a ida em um dia</b>; podemos recotar o
+        aéreo com essa data e incluir a hospedagem em Miami.
+      </p>
+    </div>
+
+    <div class="note" style="margin-top:6mm">
       <b>Observações do aéreo</b>
       <p>
-        · Tarifas e classes sujeitas a confirmação e disponibilidade no momento da emissão.<br>
+        · Conexões — Opção 1: 02h20 em Santiago e 02h05 em Lima na ida, 03h05 em Santiago na volta.
+        Opção 2: 04h45 em Lima na ida e 08h05 em Lima na volta.<br>
         · Franquia de bagagem conforme regra tarifária LATAM — a confirmar na reserva.<br>
-        · Hospedagem em Miami e traslados aeroporto–hotel–porto não estão incluídos; podemos cotar.<br>
-        · O embarque acontece em solo americano: <b>visto americano válido é obrigatório</b>.<br>
-        · Após a emissão, alterações de nome não são permitidas pela companhia.
+        · O embarque acontece em solo americano: <b>visto americano válido é obrigatório</b>.
       </p>
     </div>
   </div>
@@ -856,20 +869,20 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     </div>
     <div class="val-row">
       <span class="lbl">Passagem aérea LATAM — <b>Opção 1</b>
-        <span class="dsc">Florianópolis · FLN / SCL / MIA e volta · classe econômica</span>
+        <span class="dsc">Florianópolis · FLN / SCL / LIM / MIA e MIA / SCL / FLN · classe econômica</span>
       </span>
-      <span class="amt">R$ 14.150,00</span>
+      <span class="amt">R$ 14.675,00</span>
     </div>
     <div class="val-row">
       <span class="lbl">Passagem aérea LATAM — <b>Opção 2</b>
-        <span class="dsc">São Paulo · GRU / SCL / MIA e MIA / LIM / GRU · classe econômica</span>
+        <span class="dsc">São Paulo · GRU / LIM / MIA e MIA / LIM / GRU · classe econômica</span>
       </span>
       <span class="amt">R$ 12.905,00</span>
     </div>
 
     <div class="val-total">
       <span class="lbl">TOTAL DO CASAL · COM A OPÇÃO 1<span class="sub">Aéreo saindo de Florianópolis</span></span>
-      <span class="amt">R$ 25.414,00<span class="sub">R$ 12.707,00 por pessoa</span></span>
+      <span class="amt">R$ 25.939,00<span class="sub">R$ 12.969,50 por pessoa</span></span>
     </div>
 
     <div class="val-total" style="margin-top:5mm">
@@ -878,7 +891,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     </div>
 
     <div class="val-fx">
-      Cotação 07/08 · USD = R$ 5,10 <span style="opacity:.8">(referência dos tarifários aéreos: Opção 1 — USD 2.772,92 · Opção 2 — USD 2.529,00)</span><br>
+      Cotação 07/08 · USD = R$ 5,10 <span style="opacity:.8">(referência dos tarifários aéreos: Opção 1 — USD 2.875,64 · Opção 2 — USD 2.529,00)</span><br>
       Valores sujeitos a alteração por variação cambial, disponibilidade e reajuste tarifário até a emissão.<br>
       <b>*Nada reservado, apenas cotado</b>
     </div>
