@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amanda Calheiros | Portugal &amp; Itália — Lusa Travel</title>
+<meta name="description" content="Cotação Lusa Travel — Lisboa, Roma, Florença, Veneza, Lago di Como e Milão · 22 de outubro a 05 de novembro de 2026">
+<link rel="stylesheet" href="fonts.css">
+<style>
+:root{
+  --gold:#da8d00;
+  --gold-lt:#ffc030;
+  --gold-dk:#e8a210;
+  --dest:#730505;
+  --ink:#1a1614;
+  --char:#333131;
+  --mut:#8d8073;
+  --cream:#f4efe9;
+  --cream-2:#f0e8de;
+  --line:#e1d8cc;
+  --line-2:#ece5da;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--char);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+
+/* ── Topo ── */
+.topbar{background:var(--ink);position:sticky;top:0;z-index:50}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-size:15px;font-weight:800;letter-spacing:.09em;color:var(--gold)}
+.navlinks{display:flex;gap:22px}
+.navlinks a{font-family:var(--con);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
+.navlinks a:hover{color:var(--gold-lt)}
+.goldbar{height:3px;background:var(--gold);position:sticky;top:64px;z-index:49}
+
+/* ── Capa ── */
+.hero{position:relative;background:
+    radial-gradient(ellipse at 18% 12%, rgba(218,141,0,.30), transparent 55%),
+    radial-gradient(ellipse at 88% 45%, rgba(115,5,5,.62), transparent 62%),
+    linear-gradient(158deg,#8a7060,#2a1c16);
+  color:#fff;padding:96px 0 76px}
+.hero .kicker{font-family:var(--con);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.hero h1{font-size:clamp(34px,6vw,60px);font-weight:800;letter-spacing:.02em;text-transform:uppercase;line-height:1.06;margin:10px 0 6px}
+.hero .dest{font-size:clamp(18px,2.6vw,26px);font-weight:600;color:var(--gold-lt);letter-spacing:.03em}
+.hero .basis{font-size:15px;color:rgba(255,255,255,.72);margin-top:16px}
+.stats{display:flex;flex-wrap:wrap;gap:38px;margin-top:44px}
+.stat b{display:block;font-size:34px;font-weight:800;color:var(--gold-lt);line-height:1}
+.stat span{font-family:var(--con);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+
+/* ── Seções ── */
+section{padding:72px 0;border-bottom:1px solid var(--line-2)}
+section:last-of-type{border-bottom:none}
+.alt{background:var(--cream)}
+.eyebrow{font-family:var(--con);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h2{font-size:clamp(24px,3.4vw,34px);font-weight:700;color:var(--ink);letter-spacing:-.01em;margin:8px 0 8px}
+.lede{font-size:16px;color:var(--mut);max-width:62ch;margin-bottom:36px}
+
+/* ── Voos ── */
+.flights{display:grid;gap:14px}
+.flight{display:grid;grid-template-columns:76px 1fr auto;gap:20px;align-items:center;
+  background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 22px}
+.flight .no{font-family:var(--con);font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--gold);
+  background:var(--cream-2);border-radius:6px;padding:8px 0;text-align:center}
+.flight .route{font-size:16px;font-weight:600;color:var(--ink)}
+.flight .when{font-size:13.5px;color:var(--mut);margin-top:3px}
+.flight .cab{font-family:var(--con);font-size:11px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--dest);font-weight:600;white-space:nowrap}
+.locbox{margin-top:18px;background:var(--cream-2);border-left:3px solid var(--gold);border-radius:4px;
+  padding:16px 20px;font-size:14px;color:var(--char)}
+
+/* ── Roteiro ── */
+.days{display:grid;gap:0}
+.day{display:grid;grid-template-columns:132px 1fr;gap:26px;padding:22px 0;border-bottom:1px solid var(--line-2)}
+.day:last-child{border-bottom:none}
+.day .dt{font-family:var(--con);font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--gold);padding-top:3px}
+.day .dt small{display:block;font-size:11px;color:var(--mut);letter-spacing:.06em;margin-top:2px}
+.day h3{font-size:17px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.day p{font-size:15px;color:var(--char)}
+
+/* ── Hotéis ── */
+.city{margin-bottom:44px}
+.city-hd{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  border-bottom:2px solid var(--dest);padding-bottom:9px;margin-bottom:20px}
+.city-hd h3{font-size:21px;font-weight:700;color:var(--ink)}
+.city-hd .meta{font-family:var(--con);font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--mut)}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.opt{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;display:flex;flex-direction:column}
+.opt.pick{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+.opt .tag{font-family:var(--con);font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--mut);margin-bottom:8px}
+.opt.pick .tag{color:var(--gold)}
+.opt h4{font-size:17px;font-weight:600;color:var(--ink);line-height:1.35}
+.opt .room{font-size:14px;font-weight:300;color:var(--char);margin-top:10px;flex:1}
+.opt .price{font-size:22px;font-weight:700;color:var(--ink);margin-top:18px;font-variant-numeric:tabular-nums}
+.opt .price small{display:block;font-family:var(--con);font-size:10.5px;font-weight:500;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--mut)}
+.warn{display:inline-block;font-family:var(--con);font-size:10.5px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:#8a2a2a;background:#f7e9e9;border-radius:4px;padding:4px 9px;margin-top:10px}
+
+/* ── Tabelas ── */
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th{font-family:var(--con);font-size:11px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--mut);text-align:left;padding:0 16px 11px;border-bottom:2px solid var(--line)}
+th.r,td.r{text-align:right}
+td{padding:15px 16px;border-bottom:1px solid var(--line-2);font-size:14.5px;vertical-align:top}
+td.it{font-weight:500;color:var(--ink)}
+td .sub{display:block;font-size:12.5px;color:var(--mut);margin-top:3px;font-weight:400}
+td.r{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.sum td{border-bottom:none;padding-top:16px;font-family:var(--con);font-size:12px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+tr.sum td.r{font-family:var(--sans);font-size:16px;letter-spacing:0;text-transform:none;color:var(--ink)}
+.grp{font-family:var(--con);font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--dest);background:var(--cream-2)!important;padding:11px 16px!important}
+
+/* ── Cenários ── */
+.scen{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px;margin-top:8px}
+.card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.card.hi{border-color:var(--gold)}
+.card .top{padding:22px 26px;background:var(--cream-2);border-bottom:1px solid var(--line)}
+.card.hi .top{background:var(--ink)}
+.card .top .lbl{font-family:var(--con);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.card.hi .top .lbl{color:var(--gold)}
+.card .top h3{font-size:19px;font-weight:700;color:var(--ink);margin-top:4px}
+.card.hi .top h3{color:#fff}
+.card .rows{padding:8px 26px 20px}
+.row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line-2);font-size:14.5px}
+.row:last-of-type{border-bottom:none}
+.row span:last-child{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.card .tot{display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:18px 26px;background:var(--ink);color:#fff}
+.card .tot .l{font-family:var(--con);font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.card .tot .v{font-size:23px;font-weight:800;color:var(--gold-lt);font-variant-numeric:tabular-nums}
+.card .per{display:flex;justify-content:space-between;gap:16px;padding:14px 26px;font-size:14px;color:var(--mut);
+  border-top:1px solid rgba(255,255,255,.08);background:#241e1a}
+.card .per b{color:#fff;font-weight:600}
+
+/* ── Condições ── */
+.conds{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.cond h4{font-family:var(--con);font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:9px}
+.cond p,.cond li{font-size:14.5px;color:var(--char)}
+.cond ul{list-style:none}
+.cond li{padding-left:16px;position:relative;margin-bottom:5px}
+.cond li:before{content:"·";position:absolute;left:4px;color:var(--gold);font-weight:700}
+.note{margin-top:34px;padding:18px 22px;background:#fff;border-left:3px solid var(--dest);border-radius:4px;
+  font-size:14px;color:var(--char)}
+
+/* ── Rodapé ── */
+footer{background:var(--ink);color:rgba(255,255,255,.55);padding:52px 0}
+footer .sig{font-family:var(--con);font-size:14px;line-height:1.9}
+footer a{color:var(--gold-lt);text-decoration:none}
+footer .mark{font-size:15px;font-weight:800;letter-spacing:.09em;color:var(--gold);margin-bottom:14px}
+footer .fine{margin-top:26px;font-size:12px;color:rgba(255,255,255,.32)}
+
+@media(max-width:700px){
+  .navlinks{display:none}
+  .goldbar{top:64px}
+  .flight{grid-template-columns:1fr;gap:10px}
+  .flight .no{width:76px}
+  .day{grid-template-columns:1fr;gap:6px}
+  section{padding:52px 0}
+}
+@media print{
+  .topbar,.navlinks{position:static}
+  section{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <div class="brand">LUSA TRAVEL</div>
+  <nav class="navlinks">
+    <a href="#voos">Voos</a>
+    <a href="#roteiro">Roteiro</a>
+    <a href="#hoteis">Hotéis</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#valores">Valores</a>
+  </nav>
+</div></div>
+<div class="goldbar"></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">Cotação para sua viagem</div>
+  <h1>Amanda Calheiros</h1>
+  <div class="dest">Portugal &amp; Itália</div>
+  <div class="basis">4 adultos + 1 criança de colo · 2 quartos · 22 de outubro a 05 de novembro de 2026</div>
+  <div class="stats">
+    <div class="stat"><b>6</b><span>Destinos</span></div>
+    <div class="stat"><b>13</b><span>Noites</span></div>
+    <div class="stat"><b>15</b><span>Dias</span></div>
+    <div class="stat"><b>9</b><span>Experiências</span></div>
+    <div class="stat"><b>Sim</b><span>Seguro</span></div>
+  </div>
+</div></header>
+
+<!-- ══ VOOS ══ -->
+<section id="voos"><div class="wrap">
+  <div class="eyebrow">Confirmado</div>
+  <h2>Voos</h2>
+  <p class="lede">Todos os trechos em classe executiva pela TAP Air Portugal, com entrada na Europa pelo Porto e saída da Itália por Milão.</p>
+
+  <div class="flights">
+    <div class="flight">
+      <div class="no">TP 94</div>
+      <div><div class="route">São Paulo Guarulhos → Porto</div>
+           <div class="when">22 out · 20:55 → 23 out · 11:05 · Terminal 3</div></div>
+      <div class="cab">Executiva</div>
+    </div>
+    <div class="flight">
+      <div class="no">TP 1929</div>
+      <div><div class="route">Porto → Lisboa</div>
+           <div class="when">23 out · 16:00 → 17:00 · Terminal 1</div></div>
+      <div class="cab">Executiva</div>
+    </div>
+    <div class="flight">
+      <div class="no">TP 838</div>
+      <div><div class="route">Lisboa → Roma Fiumicino</div>
+           <div class="when">26 out · 20:00 → 27 out · 00:05</div></div>
+      <div class="cab">Executiva</div>
+    </div>
+    <div class="flight">
+      <div class="no">TP 829</div>
+      <div><div class="route">Milão Malpensa → Lisboa</div>
+           <div class="when">05 nov · 06:15 → 08:20</div></div>
+      <div class="cab">Executiva</div>
+    </div>
+    <div class="flight">
+      <div class="no">TP 83</div>
+      <div><div class="route">Lisboa → São Paulo Guarulhos</div>
+           <div class="when">05 nov · 16:30 → 23:55 · Terminal 3</div></div>
+      <div class="cab">Executiva</div>
+    </div>
+  </div>
+
+  <div class="locbox">
+    <b>Localizador B5KYGV.</b> A conexão no Porto tem 5 horas — tempo confortável para um almoço na Ribeira ou descanso na sala VIP. Na volta, a conexão em Lisboa tem 8 horas.
+    A chegada a Roma acontece à 00:05, por isso a primeira diária em Roma é reservada já no dia <b>26 de outubro</b>: sem ela não há quarto disponível na madrugada.
+  </div>
+</div></section>
+
+<!-- ══ ROTEIRO ══ -->
+<section id="roteiro" class="alt"><div class="wrap">
+  <div class="eyebrow">Dia a dia</div>
+  <h2>Roteiro</h2>
+  <p class="lede">Quinze dias no sentido sul–norte da Itália, sem trechos repetidos, com ritmo espaçado e tardes livres em todas as cidades.</p>
+
+  <div class="days">
+    <div class="day"><div class="dt">Dia 01<small>22 out · qui</small></div>
+      <div><h3>Brasil</h3><p>Apresentação em Guarulhos e embarque às 20:55 com destino ao Porto. Noite a bordo em classe executiva.</p></div></div>
+
+    <div class="day"><div class="dt">Dia 02<small>23 out · sex</small></div>
+      <div><h3>Porto → Lisboa</h3><p>Chegada ao Porto às 11:05 e conexão até as 16:00. Desembarque em Lisboa às 17:00, transfer ao hotel e jantar leve no bairro.</p></div></div>
+
+    <div class="day"><div class="dt">Dia 03<small>24 out · sáb</small></div>
+      <div><h3>Lisboa</h3><p>Dia livre para a Baixa, o Chiado, a Alfama e os miradouros, terminando em Belém com os Jerónimos e os pastéis.</p></div></div>
+
+    <div class="day"><div class="dt">Dia 04<small>25 out · dom</small></div>
+      <div><h3>Lisboa</h3><p>Dia livre. Sugestão: Sintra com o Palácio da Pena, seguindo pela costa até o Cabo da Roca e Cascais.</p></div></div>
+
+    <div class="day"><div class="dt">Dia 05<small>26 out · seg</small></div>
+      <div><h3>Lisboa → Roma</h3><p>Manhã e tarde livres com as malas guardadas no hotel. Transfer ao aeroporto e voo das 20:00 para Roma.</p></div></div>
+
+    <div class="day"><div class="dt">Dia 06<small>27 out · ter</small></div>
+      <div><h3>Roma</h3><p>Chegada à 00:05 e transfer privativo ao hotel. Manhã de descanso e, na sequência, os Museus Vaticanos, a Capela Sistina e a Basílica de São Pedro com guia em português e ingressos sem fila.</p></div></div>
+
+    <div class="day"><div class="dt">Dia 07<small>28 out · qua</small></div>
+      <div><h3>Roma</h3><p>Coliseu em visita privativa com guia em português e ingressos sem fila. À tarde, quatro horas a pé pelo centro histórico: Fontana di Trevi, Panteão, Piazza Navona e Piazza di Spagna.</p></div></div>
+
+    <div class="day"><div class="dt">Dia 08<small>29 out · qui</small></div>
+      <div><h3>Roma → Florença</h3><p>Frecciarossa das 09:55, chegando às 11:31. Transfer ao hotel e tarde livre para o primeiro contato com a cidade e o pôr do sol sobre o Arno.</p></div></div>
+
+    <div class="day"><div class="dt">Dia 09<small>30 out · sex</small></div>
+      <div><h3>Florença</h3><p>Três horas com guia em português pelo Duomo, Batistério e Museu dell'Opera del Duomo, incluindo a subida à cúpula de Brunelleschi.</p></div></div>
+
+    <div class="day"><div class="dt">Dia 10<small>31 out · sáb</small></div>
+      <div><h3>Florença</h3><p>Tour de três horas pelas igrejas florentinas: Basílica de São Lourenço, Santa Croce e Santa Maria Novella. Tarde livre.</p></div></div>
+
+    <div class="day"><div class="dt">Dia 11<small>01 nov · dom</small></div>
+      <div><h3>Florença → Veneza</h3><p>Frecciarossa das 10:20, chegando às 12:34. Transfer ao hotel e, no fim da tarde, passeio de gôndola pelos canais internos.</p></div></div>
+
+    <div class="day"><div class="dt">Dia 12<small>02 nov · seg</small></div>
+      <div><h3>Veneza</h3><p>Três horas a pé com guia em português pela Piazza San Marco, Ponte di Rialto e Ponte dei Sospiri, com ingresso para o altar da Basílica de San Marco. Tarde livre.</p></div></div>
+
+    <div class="day"><div class="dt">Dia 13<small>03 nov · ter</small></div>
+      <div><h3>Veneza → Lago di Como</h3><p>Trem das 10:48, chegando às 14:23. À tarde, passeio de barco de duas horas por Cernobbio, Moltrasio, Carate Urio e Laglio, e jantar à beira do lago.</p></div></div>
+
+    <div class="day"><div class="dt">Dia 14<small>04 nov · qua</small></div>
+      <div><h3>Lago di Como → Milão</h3><p>Trem das 11:36, chegando às 12:17. Tarde livre em Milão — o Duomo e a Galleria ficam a poucos minutos do centro.</p></div></div>
+
+    <div class="day"><div class="dt">Dia 15<small>05 nov · qui</small></div>
+      <div><h3>Retorno</h3><p>Transfer de madrugada a Malpensa, voo das 06:15 para Lisboa e conexão às 16:30 para Guarulhos, com chegada às 23:55.</p></div></div>
+  </div>
+</div></section>
+
+<!-- ══ HOTÉIS ══ -->
+<section id="hoteis"><div class="wrap">
+  <div class="eyebrow">Hospedagem</div>
+  <h2>Hotéis</h2>
+  <p class="lede">Duas opções por cidade, sempre em dois quartos. Os valores são o total do período para a família. A opção destacada em ouro é a de melhor custo-benefício.</p>
+
+  <div class="city">
+    <div class="city-hd"><h3>Lisboa</h3><span class="meta">23 a 26 out · 3 noites</span></div>
+    <div class="opts">
+      <div class="opt pick"><div class="tag">Opção 1 · recomendada</div>
+        <h4>Avani Avenida Liberdade Lisbon Hotel</h4>
+        <div class="room">Avani Premier com cama extra + Avani Room · café da manhã incluso</div>
+        <div class="price">R$ 8.460,00<small>Total · 2 quartos · 3 noites</small></div></div>
+      <div class="opt"><div class="tag">Opção 2</div>
+        <h4>NH Collection Lisboa Liberdade</h4>
+        <div class="room">Suíte com cama extra ou berço + Super Room · café da manhã incluso</div>
+        <div class="price">R$ 12.300,00<small>Total · 2 quartos · 3 noites</small></div></div>
+    </div>
+  </div>
+
+  <div class="city">
+    <div class="city-hd"><h3>Roma</h3><span class="meta">26 a 29 out · 3 noites</span></div>
+    <div class="opts">
+      <div class="opt pick"><div class="tag">Opção 1 · recomendada</div>
+        <h4>The Style</h4>
+        <div class="room">2 quartos Superior Double · café da manhã incluso</div>
+        <div class="price">R$ 10.680,00<small>Total · 2 quartos · 3 noites</small></div></div>
+      <div class="opt"><div class="tag">Opção 2</div>
+        <h4>Hotel Imperiale by OMNIA Hotels</h4>
+        <div class="room">2 quartos Classic Double · café da manhã incluso</div>
+        <div class="price">R$ 12.060,00<small>Total · 2 quartos · 3 noites</small></div></div>
+    </div>
+  </div>
+
+  <div class="city">
+    <div class="city-hd"><h3>Florença</h3><span class="meta">29 out a 01 nov · 3 noites</span></div>
+    <div class="opts">
+      <div class="opt pick"><div class="tag">Opção 1 · recomendada</div>
+        <h4>Grand Hotel Cavour</h4>
+        <div class="room">2 quartos Superior Double · café da manhã incluso</div>
+        <div class="price">R$ 11.270,00<small>Total · 2 quartos · 3 noites</small></div></div>
+      <div class="opt"><div class="tag">Opção 2</div>
+        <h4>Anglo American Hotel Florence · Curio Collection by Hilton</h4>
+        <div class="room">King Deluxe + Classic Double · café da manhã incluso</div>
+        <div class="price">R$ 14.185,00<small>Total · 2 quartos · 3 noites</small></div></div>
+    </div>
+  </div>
+
+  <div class="city">
+    <div class="city-hd"><h3>Veneza</h3><span class="meta">01 a 03 nov · 2 noites</span></div>
+    <div class="opts">
+      <div class="opt pick"><div class="tag">Opção 1 · recomendada</div>
+        <h4>Ai Cavalieri</h4>
+        <div class="room">2 quartos Classic Double</div>
+        <div class="price">R$ 9.130,00<small>Total · 2 quartos · 2 noites</small></div>
+        <span class="warn">Café da manhã a confirmar</span></div>
+      <div class="opt"><div class="tag">Opção 2</div>
+        <h4>Rosa Salva Hotel</h4>
+        <div class="room">2 quartos Comfort Room · sem café da manhã</div>
+        <div class="price">R$ 9.400,00<small>Total · 2 quartos · 2 noites</small></div>
+        <span class="warn">Sem café da manhã</span></div>
+    </div>
+  </div>
+
+  <div class="city">
+    <div class="city-hd"><h3>Lago di Como</h3><span class="meta">03 a 04 nov · 1 noite</span></div>
+    <div class="opts">
+      <div class="opt pick"><div class="tag">Opção 1 · recomendada</div>
+        <h4>La Locanda del Cantiere</h4>
+        <div class="room">2 Junior Suites com vista para o lago · café da manhã incluso</div>
+        <div class="price">R$ 3.520,00<small>Total · 2 quartos · 1 noite</small></div></div>
+      <div class="opt"><div class="tag">Opção 2</div>
+        <h4>Hotel Villa Flori</h4>
+        <div class="room">Superior com varanda e vista para o lago + Classic com vista para o lago · café da manhã incluso</div>
+        <div class="price">R$ 6.460,00<small>Total · 2 quartos · 1 noite</small></div></div>
+    </div>
+  </div>
+
+  <div class="city">
+    <div class="city-hd"><h3>Milão</h3><span class="meta">04 a 05 nov · 1 noite</span></div>
+    <div class="opts">
+      <div class="opt pick"><div class="tag">Opção 1 · recomendada</div>
+        <h4>Hotel Dei Cavalieri Milano Duomo</h4>
+        <div class="room">2 quartos Classic Double · café da manhã incluso</div>
+        <div class="price">R$ 4.720,00<small>Total · 2 quartos · 1 noite</small></div></div>
+      <div class="opt"><div class="tag">Opção 2</div>
+        <h4>Tivoli President Milano Hotel</h4>
+        <div class="room">Premium Room + Junior Suite com cama extra · café da manhã incluso</div>
+        <div class="price">R$ 6.159,00<small>Total · 2 quartos · 1 noite</small></div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ══ SERVIÇOS ══ -->
+<section id="servicos" class="alt"><div class="wrap">
+  <div class="eyebrow">Em destino</div>
+  <h2>Trens, transfers e experiências</h2>
+  <p class="lede">Todos os passeios com guia local falante de português e ingressos antecipados. Todos os transfers privativos. Valores totais para a família.</p>
+
+  <div class="tblwrap"><table>
+    <thead><tr><th>Serviço</th><th>Data</th><th class="r">Valor</th></tr></thead>
+    <tbody>
+      <tr><td class="grp" colspan="3">Trens</td></tr>
+      <tr><td class="it">Roma Termini → Firenze Santa Maria Novella<span class="sub">09:55 → 11:31 · direto · Frecciarossa · Prima Business</span></td><td>29 out</td><td class="r">R$ 1.105,00</td></tr>
+      <tr><td class="it">Firenze Santa Maria Novella → Venezia Santa Lucia<span class="sub">10:20 → 12:34 · direto · Frecciarossa · Premium</span></td><td>01 nov</td><td class="r">R$ 1.105,00</td></tr>
+      <tr><td class="it">Venezia Santa Lucia → Como San Giovanni<span class="sub">10:48 → 14:23 · 1 troca · Frecciarossa · Premium</span></td><td>03 nov</td><td class="r">R$ 1.110,00</td></tr>
+      <tr><td class="it">Como San Giovanni → Milano Centrale<span class="sub">11:36 → 12:17 · direto · Regionale · 2ª classe</span></td><td>04 nov</td><td class="r">R$ 210,00</td></tr>
+      <tr class="sum"><td colspan="2">Subtotal trens</td><td class="r">R$ 3.530,00</td></tr>
+
+      <tr><td class="grp" colspan="3">Roma</td></tr>
+      <tr><td class="it">Transfer aeroporto → hotel<span class="sub">Privativo · chegada 00:05</span></td><td>26 out</td><td class="r">R$ 1.780,00</td></tr>
+      <tr><td class="it">Museus Vaticanos, Capela Sistina e Basílica de São Pedro<span class="sub">3h · guia local em português · ingressos sem fila e acesso prioritário</span></td><td>27 out</td><td class="r">R$ 7.200,00</td></tr>
+      <tr><td class="it">Coliseu · visita privativa<span class="sub">Guia local em português · ingressos sem fila</span></td><td>28 out</td><td class="r">R$ 6.350,00</td></tr>
+      <tr><td class="it">Centro histórico: Trevi, Panteão, Navona e Piazza di Spagna<span class="sub">4h · privativo · a pé · guia em português</span></td><td>28 out</td><td class="r">R$ 3.745,00</td></tr>
+      <tr><td class="it">Transfer hotel → estação<span class="sub">Privativo</span></td><td>29 out</td><td class="r">R$ 1.136,00</td></tr>
+      <tr class="sum"><td colspan="2">Subtotal Roma</td><td class="r">R$ 20.211,00</td></tr>
+
+      <tr><td class="grp" colspan="3">Florença</td></tr>
+      <tr><td class="it">Transfers estação ↔ hotel<span class="sub">Privativos · chegada e saída</span></td><td>29 out e 01 nov</td><td class="r">R$ 2.725,00</td></tr>
+      <tr><td class="it">Duomo, Batistério e Museu dell'Opera del Duomo<span class="sub">3h · guia em português · com subida à cúpula</span></td><td>30 out</td><td class="r">R$ 2.880,00</td></tr>
+      <tr><td class="it">Igrejas de Florença: São Lourenço, Santa Croce e Santa Maria Novella<span class="sub">3h · guia em português</span></td><td>31 out</td><td class="r">R$ 1.960,00</td></tr>
+      <tr class="sum"><td colspan="2">Subtotal Florença</td><td class="r">R$ 7.565,00</td></tr>
+
+      <tr><td class="grp" colspan="3">Veneza</td></tr>
+      <tr><td class="it">Transfers estação ↔ hotel<span class="sub">Privativos · chegada e saída</span></td><td>01 e 03 nov</td><td class="r">R$ 10.825,00</td></tr>
+      <tr><td class="it">Passeio de gôndola<span class="sub">30 min · entre 09h30 e 18h30</span></td><td>01 nov</td><td class="r">R$ 1.930,00</td></tr>
+      <tr><td class="it">Veneza a pé + Basílica de San Marco<span class="sub">3h · guia em português · Praça São Marcos, Ponte di Rialto e Ponte dei Sospiri · ingresso com altar</span></td><td>02 nov</td><td class="r">R$ 2.720,00</td></tr>
+      <tr class="sum"><td colspan="2">Subtotal Veneza</td><td class="r">R$ 15.475,00</td></tr>
+
+      <tr><td class="grp" colspan="3">Lago di Como</td></tr>
+      <tr><td class="it">Transfers estação ↔ hotel<span class="sub">Privativos · chegada e saída</span></td><td>03 e 04 nov</td><td class="r">R$ 3.330,00</td></tr>
+      <tr><td class="it">Passeio de barco pelo lago<span class="sub">2h · Como, Cernobbio, Moltrasio, Carate Urio e Laglio</span></td><td>03 nov</td><td class="r">R$ 4.870,00</td></tr>
+      <tr class="sum"><td colspan="2">Subtotal Lago di Como</td><td class="r">R$ 8.200,00</td></tr>
+
+      <tr><td class="grp" colspan="3">Milão</td></tr>
+      <tr><td class="it">Transfer estação → hotel<span class="sub">Privativo</span></td><td>04 nov</td><td class="r">R$ 1.664,00</td></tr>
+      <tr><td class="it">Transfer hotel → aeroporto de Malpensa<span class="sub">Privativo · saída de madrugada</span></td><td>05 nov</td><td class="r">R$ 1.780,00</td></tr>
+      <tr class="sum"><td colspan="2">Subtotal Milão</td><td class="r">R$ 3.444,00</td></tr>
+
+      <tr><td class="grp" colspan="3">Seguro</td></tr>
+      <tr><td class="it">Seguro de viagem · Affinity Seguros<span class="sub">90 Essential · USD 90.000 DMH · 22 motivos · 4 adultos + 1 criança</span></td><td>22 out a 05 nov</td><td class="r">R$ 1.400,00</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<!-- ══ VALORES ══ -->
+<section id="valores"><div class="wrap">
+  <div class="eyebrow">Investimento</div>
+  <h2>Valores</h2>
+  <p class="lede">Dois cenários, conforme a escolha dos hotéis. Trens, transfers, experiências e seguro são idênticos nos dois.</p>
+
+  <div class="scen">
+    <div class="card hi">
+      <div class="top"><div class="lbl">Cenário 1 · recomendado</div><h3>Hotéis opção 1</h3></div>
+      <div class="rows">
+        <div class="row"><span>Hotelaria · 13 noites</span><span>R$ 47.780,00</span></div>
+        <div class="row"><span>Trens</span><span>R$ 3.530,00</span></div>
+        <div class="row"><span>Transfers e experiências</span><span>R$ 54.895,00</span></div>
+        <div class="row"><span>Seguro de viagem</span><span>R$ 1.400,00</span></div>
+      </div>
+      <div class="tot"><span class="l">Total terrestre</span><span class="v">R$ 107.605,00</span></div>
+      <div class="per"><span>Por adulto · 4 pagantes</span><b>R$ 26.901,25</b></div>
+    </div>
+
+    <div class="card">
+      <div class="top"><div class="lbl">Cenário 2</div><h3>Hotéis opção 2</h3></div>
+      <div class="rows">
+        <div class="row"><span>Hotelaria · 13 noites</span><span>R$ 60.564,00</span></div>
+        <div class="row"><span>Trens</span><span>R$ 3.530,00</span></div>
+        <div class="row"><span>Transfers e experiências</span><span>R$ 54.895,00</span></div>
+        <div class="row"><span>Seguro de viagem</span><span>R$ 1.400,00</span></div>
+      </div>
+      <div class="tot"><span class="l">Total terrestre</span><span class="v">R$ 120.389,00</span></div>
+      <div class="per"><span>Por adulto · 4 pagantes</span><b>R$ 30.097,25</b></div>
+    </div>
+  </div>
+
+  <div class="note">
+    Os valores acima são <b>exclusivamente terrestres</b> e não incluem as passagens aéreas, já emitidas em classe executiva sob o localizador B5KYGV. O valor do aéreo será somado a estes totais.
+    A criança de colo está inclusa em todos os serviços e no seguro, e não altera o valor por adulto.
+    <br><br><b>*Nada reservado, apenas cotado.</b>
+  </div>
+</div></section>
+
+
+<!-- ══ CONDIÇÕES ══ -->
+<section class="alt"><div class="wrap">
+  <div class="eyebrow">Importante</div>
+  <h2>Condições</h2>
+  <div class="conds">
+    <div class="cond"><h4>Parcelamento</h4>
+      <p>Hotelaria e serviços em até 10x sem acréscimos. Aéreo em até 6x sem acréscimos. Pagamento via PIX com desconto de 5% a 13%, conforme o fornecedor.</p></div>
+    <div class="cond"><h4>Não inclui</h4>
+      <ul>
+        <li>Refeições não mencionadas</li>
+        <li>City tax, paga diretamente nos hotéis</li>
+        <li>Vistos, taxas consulares e ETIAS</li>
+        <li>Ingressos e passeios não listados</li>
+        <li>Gorjetas e despesas pessoais</li>
+      </ul></div>
+    <div class="cond"><h4>Documentação</h4>
+      <p>Passaporte com validade mínima de seis meses a partir de 05 de novembro de 2026, para todos os passageiros, inclusive a criança. Menores viajando com ambos os pais não necessitam de autorização. O seguro de viagem é exigência do Tratado de Schengen.</p></div>
+    <div class="cond"><h4>Lembre-se</h4>
+      <p>A taxa de estadia é cobrada localmente por cada hotel, entre € 3 e € 7 por pessoa/noite na Itália, com isenção para crianças pequenas na maior parte das cidades. Valores e disponibilidade sujeitos a confirmação no momento da reserva.</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="mark">LUSA TRAVEL</div>
+  <div class="sig">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
+    Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR
+  </div>
+  <div class="fine">Cotação Amanda Calheiros · Portugal &amp; Itália · 22 de outubro a 05 de novembro de 2026 · Nada reservado, apenas cotado.</div>
+</div></footer>
+
+</body>
+</html>
