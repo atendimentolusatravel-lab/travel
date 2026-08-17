@@ -7,8 +7,9 @@
 **Cartografia Silenciosa** trata a superfície como um instrumento de medição, não como
 um cartaz. Parte da convicção de que uma ideia humana — o desejo de partir, de pertencer
 a um time, de atravessar o mundo — pode ser registrada com o mesmo rigor com que se
-registra uma rota náutica. O plano é escuro como uma carta impressa em papel envelhecido
-à noite; sobre ele, uma única linha de ouro descreve um arco de círculo máximo. Nada mais
+registra uma rota náutica. O plano é um papel creme, quente e levemente envelhecido, como
+uma folha de atlas guardada há décadas; sobre ele, uma única linha de ouro descreve um arco
+de círculo máximo, e uma placa de verde profundo ancora a afirmação central. Nada mais
 acontece. Essa contenção é deliberada e cara: cada milímetro de vazio foi calculado com
 paciência de artesão, e é no vazio que a peça respira.
 
@@ -24,13 +25,14 @@ nada, nada transborda, nada é acidental.
 
 ## Cor e matéria
 
-A paleta é reduzida a três estados: preto quente (`#1a1510`), ouro (`#da8d00`) e um creme
-lavado que serve de tinta. O ouro nunca é usado como enfeite — ele indica, mede, separa.
-Aparece em filetes de dois pixels, em numerais minúsculos, em uma única palavra que carrega
-o peso do anúncio. O creme trabalha em três opacidades que criam profundidade sem
-introduzir nenhuma cor nova. Essa calibração cromática é trabalho de quem passou horas
-comparando tons até que a hierarquia se resolvesse sozinha, sem contorno, sem sombra,
-sem truque.
+A paleta é reduzida a três estados: papel creme (`#f7f2ea`), verde savana (`#404525`) e
+ouro (`#da8d00`). O verde é a tinta — títulos, rótulos, numerais, a placa que carrega o
+claim — e desce a `#2f3319` quando precisa de peso. O ouro nunca é usado como enfeite:
+ele indica, mede, separa. Aparece no filete de dois pixels sob a marca, no arco pontilhado,
+nas cruzes de registro dos cantos e nas palavras que ficam sobre o verde, onde a densidade
+do fundo lhe devolve a legibilidade que o creme lhe tira. Nenhuma dessas duas cores tem
+variante inventada: o mesmo verde, o mesmo ouro, apenas em opacidades calibradas até que a
+hierarquia se resolvesse sozinha — sem contorno, sem sombra, sem truque.
 
 ## Escala e ritmo
 

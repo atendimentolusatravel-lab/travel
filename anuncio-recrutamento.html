@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <title>Lusa Travel — Estamos Recrutando</title>
 <!--
-  LUSA TRAVEL — ANÚNCIO DE RECRUTAMENTO
+  LUSA TRAVEL — ANÚNCIO DE RECRUTAMENTO (fundo claro · verde escuro + ouro)
   Canvas 1080 × 1350 px (feed Instagram 4:5). Impressão: A4 retrato via @page.
-  Design System: ouro #da8d00 · preto quente #1a1510 · Poppins + Montserrat.
+  Paleta: creme #f7f2ea · verde savana #404525 · ouro #da8d00 · carvão #333131.
   Render PNG:  chromium --headless --screenshot --window-size=1080,1350 --hide-scrollbars
   Render PDF:  chromium --headless --print-to-pdf --no-pdf-header-footer
 -->
@@ -22,39 +22,42 @@
 
 :root{
   --gold:#da8d00;
-  --ink:#1a1510;
-  --cream:#f2ece3;
-  --c70:rgba(242,236,227,.70);
-  --c45:rgba(242,236,227,.45);
-  --c22:rgba(242,236,227,.22);
+  --green:#404525;        /* Verde Savana — design system */
+  --green-deep:#2f3319;   /* sombra do verde, para títulos */
+  --paper:#f7f2ea;
+  --char:#333131;
+  --g62:rgba(64,69,37,.62);
+  --g38:rgba(64,69,37,.42);
+  --g16:rgba(64,69,37,.16);
+  --g09:rgba(64,69,37,.09);
   --sans:'Poppins',system-ui,sans-serif;
   --meta:'Montserrat',system-ui,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-html,body{background:#0d0a06;}
+html,body{background:#e7e0d4;}
 body{display:flex;align-items:center;justify-content:center;}
 
 .canvas{
   position:relative;width:1080px;height:1350px;overflow:hidden;
   background:
-    radial-gradient(120% 78% at 50% 12%, #241d15 0%, #1a1510 46%, #120e09 100%);
-  color:var(--cream);font-family:var(--sans);
+    radial-gradient(122% 80% at 50% 8%, #fdfaf5 0%, #f7f2ea 44%, #efe7da 100%);
+  color:var(--char);font-family:var(--sans);
 }
 
 /* ---------- malha de medição ---------- */
-.grid,.marks,.arc{position:absolute;inset:0;}
+.grid,.arc{position:absolute;inset:0;}
 .grid{
   background-image:
-    linear-gradient(to right, rgba(218,141,0,.055) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(218,141,0,.055) 1px, transparent 1px);
-  background-size:45px 45px;background-position:0 0;
+    linear-gradient(to right, rgba(64,69,37,.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(64,69,37,.055) 1px, transparent 1px);
+  background-size:45px 45px;
 }
 .vig{position:absolute;inset:0;
-  background:radial-gradient(72% 55% at 50% 44%, rgba(0,0,0,0) 38%, rgba(0,0,0,.55) 100%);}
+  background:radial-gradient(76% 58% at 50% 42%, rgba(255,255,255,0) 40%, rgba(96,88,64,.10) 100%);}
 
 /* ---------- moldura ---------- */
 .frame{position:absolute;left:56px;right:56px;top:56px;bottom:56px;
-  border:1px solid rgba(242,236,227,.10);pointer-events:none;}
+  border:1px solid rgba(64,69,37,.14);pointer-events:none;}
 .corner{position:absolute;width:13px;height:13px;}
 .corner::before,.corner::after{content:'';position:absolute;background:var(--gold);}
 .corner::before{left:0;top:6px;width:13px;height:1px;}
@@ -67,58 +70,63 @@ body{display:flex;align-items:center;justify-content:center;}
   display:flex;flex-direction:column;}
 
 .head{display:flex;align-items:baseline;justify-content:space-between;}
-.wordmark{font-weight:600;font-size:19px;letter-spacing:.34em;color:var(--gold);}
-.origin{font-family:var(--meta);font-weight:500;font-size:9.5px;letter-spacing:.30em;color:var(--c45);}
+.wordmark{font-weight:600;font-size:19px;letter-spacing:.34em;color:var(--green);}
+.origin{font-family:var(--meta);font-weight:500;font-size:9.5px;letter-spacing:.30em;color:var(--g62);}
 .rule{height:2px;background:var(--gold);margin-top:16px;}
-.rule.thin{height:1px;background:rgba(218,141,0,.34);}
+.rule.thin{height:1px;background:rgba(218,141,0,.55);}
 
 .kicker{display:flex;align-items:center;gap:16px;margin-top:26px;}
-.kicker span{font-family:var(--meta);font-weight:500;font-size:9.5px;letter-spacing:.30em;color:var(--c45);}
-.kicker .dash{flex:0 0 34px;height:1px;background:rgba(242,236,227,.22);}
+.kicker span{font-family:var(--meta);font-weight:500;font-size:9.5px;letter-spacing:.30em;color:var(--g62);}
+.kicker .dash{flex:0 0 34px;height:1px;background:var(--g38);}
 
 .display{margin-top:52px;}
-.display h1{font-weight:300;font-size:74px;line-height:1.03;letter-spacing:-.020em;color:var(--cream);}
-.display h1 em{font-style:normal;font-weight:300;color:var(--c70);}
-.claim{margin-top:26px;display:flex;align-items:center;gap:20px;}
-.claim b{font-weight:600;font-size:31px;letter-spacing:.14em;color:var(--gold);white-space:nowrap;}
-.claim .tail{flex:1;height:1px;background:linear-gradient(to right,rgba(218,141,0,.55),rgba(218,141,0,0));}
+.display h1{font-weight:300;font-size:74px;line-height:1.03;letter-spacing:-.020em;color:var(--green-deep);}
+.display h1 em{font-style:normal;font-weight:400;color:var(--green);}
 
-.intro{margin-top:34px;max-width:660px;font-weight:300;font-size:20px;line-height:1.62;color:var(--c70);}
-.intro b{font-weight:400;color:var(--cream);}
+/* placa verde com o claim em ouro */
+.claim{margin-top:30px;display:flex;align-items:stretch;gap:0;}
+.claim .plate{background:var(--green);padding:15px 30px 16px;display:flex;align-items:center;gap:16px;}
+.claim .plate b{font-weight:600;font-size:29px;letter-spacing:.14em;color:var(--gold);white-space:nowrap;}
+.claim .plate i{width:6px;height:6px;background:var(--gold);border-radius:50%;font-style:normal;flex:0 0 6px;}
+.claim .tail{flex:1;align-self:center;height:1px;
+  background:linear-gradient(to right,rgba(64,69,37,.34),rgba(64,69,37,0));}
+
+.intro{margin-top:34px;max-width:672px;font-weight:300;font-size:20px;line-height:1.62;color:var(--char);}
+.intro b{font-weight:500;color:var(--green-deep);}
 
 .cols{display:flex;gap:64px;margin-top:auto;padding-top:20px;}
 .col{flex:1;}
-.col.split{border-left:1px solid rgba(242,236,227,.12);padding-left:64px;}
+.col.split{border-left:1px solid var(--g16);padding-left:64px;}
 .col h2{font-family:var(--meta);font-weight:600;font-size:10px;letter-spacing:.28em;
-  color:var(--gold);margin-bottom:26px;}
-.item{display:flex;gap:16px;padding:13px 0;border-bottom:1px solid rgba(242,236,227,.07);}
+  color:var(--green);margin-bottom:26px;}
+.item{display:flex;gap:16px;padding:13px 0;border-bottom:1px solid var(--g09);}
 .item:last-child{border-bottom:0;}
-.item .n{font-family:var(--meta);font-weight:500;font-size:9.5px;letter-spacing:.14em;
-  color:rgba(218,141,0,.85);padding-top:5px;min-width:20px;}
-.item .t{font-weight:300;font-size:19.5px;line-height:1.34;color:var(--cream);}
+.item .n{font-family:var(--meta);font-weight:600;font-size:9.5px;letter-spacing:.14em;
+  color:var(--g62);padding-top:5px;min-width:20px;}
+.item .t{font-weight:400;font-size:19.5px;line-height:1.34;color:var(--green-deep);}
 
 .foot{margin-top:46px;}
-.badge{display:inline-flex;align-items:center;gap:11px;border:1px solid rgba(218,141,0,.55);
-  padding:9px 20px;border-radius:2px;}
+.badge{display:inline-flex;align-items:center;gap:11px;background:var(--green);
+  padding:10px 21px;border-radius:2px;}
 .badge i{width:5px;height:5px;background:var(--gold);border-radius:50%;font-style:normal;}
-.badge span{font-family:var(--meta);font-weight:600;font-size:10px;letter-spacing:.26em;color:var(--gold);}
+.badge span{font-family:var(--meta);font-weight:600;font-size:10px;letter-spacing:.26em;color:#f7f2ea;}
 
 .cta{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-top:34px;}
-.cta .lead{font-weight:300;font-size:22px;line-height:1.4;color:var(--c70);}
-.cta .lead b{font-weight:500;color:var(--cream);}
+.cta .lead{font-weight:300;font-size:22px;line-height:1.4;color:var(--char);}
+.cta .lead b{font-weight:500;color:var(--green-deep);}
 .contact{text-align:right;font-family:var(--meta);}
-.contact .l{font-weight:500;font-size:9px;letter-spacing:.28em;color:var(--c45);margin-bottom:9px;}
-.contact .v{font-weight:500;font-size:15.5px;letter-spacing:.01em;color:var(--cream);line-height:1.62;}
+.contact .l{font-weight:600;font-size:9px;letter-spacing:.28em;color:var(--g62);margin-bottom:9px;}
+.contact .v{font-weight:500;font-size:15.5px;letter-spacing:.01em;color:var(--green-deep);line-height:1.62;}
 .contact .v a{color:inherit;text-decoration:none;}
 
 .sign{display:flex;justify-content:space-between;align-items:center;margin-top:26px;
-  padding-top:15px;border-top:1px solid rgba(242,236,227,.12);}
-.sign p{font-family:var(--meta);font-weight:400;font-size:9px;letter-spacing:.22em;color:rgba(242,236,227,.34);}
+  padding-top:15px;border-top:1px solid var(--g16);}
+.sign p{font-family:var(--meta);font-weight:500;font-size:9px;letter-spacing:.22em;color:rgba(64,69,37,.52);}
 
 /* ---------- impressão A4 ---------- */
 @page{size:A4 portrait;margin:0;}
 @media print{
-  html,body{background:#0d0a06;width:210mm;height:297mm;overflow:hidden;
+  html,body{background:#e7e0d4;width:210mm;height:297mm;overflow:hidden;
     -webkit-print-color-adjust:exact;print-color-adjust:exact;}
   body{display:block;}
   /* 1080px × 0.7349 = 210mm de largura; sobra centralizada em cima/embaixo */
@@ -135,24 +143,24 @@ body{display:flex;align-items:center;justify-content:center;}
     <defs>
       <linearGradient id="g" x1="0" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
         <stop offset="0" stop-color="#da8d00" stop-opacity="0"/>
-        <stop offset=".34" stop-color="#da8d00" stop-opacity=".62"/>
-        <stop offset=".72" stop-color="#da8d00" stop-opacity=".30"/>
+        <stop offset=".34" stop-color="#da8d00" stop-opacity=".85"/>
+        <stop offset=".72" stop-color="#da8d00" stop-opacity=".50"/>
         <stop offset="1" stop-color="#da8d00" stop-opacity="0"/>
       </linearGradient>
       <linearGradient id="g2" x1="0" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#f2ece3" stop-opacity="0"/>
-        <stop offset=".5" stop-color="#f2ece3" stop-opacity=".10"/>
-        <stop offset="1" stop-color="#f2ece3" stop-opacity="0"/>
+        <stop offset="0" stop-color="#404525" stop-opacity="0"/>
+        <stop offset=".5" stop-color="#404525" stop-opacity=".20"/>
+        <stop offset="1" stop-color="#404525" stop-opacity="0"/>
       </linearGradient>
     </defs>
     <path d="M-40 728 C 224 656, 664 628, 1120 692" stroke="url(#g)" stroke-width="1.5"
           stroke-dasharray="7 9" stroke-linecap="round"/>
     <path d="M-40 752 C 240 688, 676 662, 1120 718" stroke="url(#g2)" stroke-width="1"/>
-    <circle cx="238" cy="672" r="4"    stroke="#da8d00" stroke-width="1.3" opacity=".85"/>
-    <circle cx="238" cy="672" r="10.5" stroke="#da8d00" stroke-width=".8" opacity=".30"/>
-    <circle cx="592" cy="642" r="3"    fill="#da8d00" opacity=".70"/>
-    <circle cx="902" cy="670" r="4"    stroke="#da8d00" stroke-width="1.3" opacity=".50"/>
-    <g stroke="rgba(242,236,227,.15)" stroke-width="1">
+    <circle cx="238" cy="672" r="4"    stroke="#da8d00" stroke-width="1.4"/>
+    <circle cx="238" cy="672" r="10.5" stroke="#da8d00" stroke-width=".8" opacity=".40"/>
+    <circle cx="592" cy="642" r="3"    fill="#404525" opacity=".55"/>
+    <circle cx="902" cy="670" r="4"    stroke="#da8d00" stroke-width="1.4" opacity=".60"/>
+    <g stroke="rgba(64,69,37,.22)" stroke-width="1">
       <path d="M156 1214h11M161.5 1208.5v11"/>
       <path d="M540 196h11M545.5 190.5v11"/>
       <path d="M924 1214h11M929.5 1208.5v11"/>
@@ -183,7 +191,10 @@ body{display:flex;align-items:center;justify-content:center;}
 
     <div class="display">
       <h1>Nosso time<br><em>está crescendo.</em></h1>
-      <div class="claim"><b>ESTAMOS RECRUTANDO</b><i class="tail"></i></div>
+      <div class="claim">
+        <div class="plate"><i></i><b>ESTAMOS RECRUTANDO</b></div>
+        <i class="tail"></i>
+      </div>
       <p class="intro">Agência de viagens sob medida, em Curitiba. Abrimos uma posição
         para quem quer <b>crescer junto com a operação</b> — do primeiro contato ao embarque.</p>
     </div>
