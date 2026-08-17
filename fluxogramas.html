@@ -1,0 +1,747 @@
+<title>Fluxogramas Lusa Travel</title>
+<style>
+:root{
+  --gold:#da8d00; --gold-lo:rgba(218,141,0,.13); --gold-hi:#f0a010;
+  --bg:#f5f0ea; --sf:#ede7de; --sf2:#e3dbd0; --bd:#cec4b4;
+  --t:#1a1510; --t2:#5c5249; --t3:#9a8d80;
+  --sb:#0f0d0b; --sb-bd:#252018; --sb-t:#7a6e64; --sb-hi:#f0e8de;
+  --note:#f2e3b0; --note-bd:#d9c37a; --note-t:#4a3d18;
+  --on-ac:#fff;
+  --c-jornada:#3d4a6b; --c-atend:#b07400; --c-cotacao:#730505;
+  --c-fin:#5d6a48; --c-claude:#8c4a1f; --c-iddas:#404525;
+  --c-msg:#6b3a55; --c-crono:#4a3d6b;
+  --sans:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --mono:'Courier New',ui-monospace,monospace;
+  --r:5px; --sbw:236px;
+}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme=light]){
+    --bg:#141108; --sf:#1e1a12; --sf2:#27211a; --bd:#38301f;
+    --t:#f0e8de; --t2:#a89880; --t3:#6a5c4f;
+    --gold:#e8a210; --gold-lo:rgba(232,162,16,.12); --gold-hi:#ffb830;
+    --note:#3a3016; --note-bd:#5e4d1f; --note-t:#e8d69a;
+    --on-ac:#141108;
+    --c-jornada:#8fa3cc; --c-atend:#e0a63a; --c-cotacao:#c97a7a;
+    --c-fin:#a3b088; --c-claude:#cd8b5e; --c-iddas:#9aa373;
+    --c-msg:#c08fa8; --c-crono:#9a8fc4;
+  }
+}
+:root[data-theme=dark]{
+  --bg:#141108; --sf:#1e1a12; --sf2:#27211a; --bd:#38301f;
+  --t:#f0e8de; --t2:#a89880; --t3:#6a5c4f;
+  --gold:#e8a210; --gold-lo:rgba(232,162,16,.12); --gold-hi:#ffb830;
+  --note:#3a3016; --note-bd:#5e4d1f; --note-t:#e8d69a;
+  --on-ac:#141108;
+  --c-jornada:#8fa3cc; --c-atend:#e0a63a; --c-cotacao:#c97a7a;
+  --c-fin:#a3b088; --c-claude:#cd8b5e; --c-iddas:#9aa373;
+  --c-msg:#c08fa8; --c-crono:#9a8fc4;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font-family:var(--sans);font-size:15px;line-height:1.6;display:flex;min-height:100vh}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:3px}
+
+/* ── SIDEBAR ── */
+.sb{position:fixed;top:0;left:0;bottom:0;width:var(--sbw);background:var(--sb);border-right:1px solid var(--sb-bd);display:flex;flex-direction:column;z-index:100;overflow-y:auto}
+.sb-brand{padding:24px 20px 20px;border-bottom:1px solid var(--sb-bd);display:flex;align-items:center;gap:11px}
+.sb-mark{width:34px;height:34px;border:2px solid var(--gold);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.04em;flex-shrink:0}
+.sb-n{font-size:13px;font-weight:700;color:var(--sb-hi);line-height:1.2}
+.sb-d{font-size:10px;color:var(--sb-t);margin-top:2px}
+.sb-lbl{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;padding:16px 20px 7px}
+.sb-nav{display:flex;flex-direction:column;padding:0 9px;gap:1px}
+.sb-a{display:flex;align-items:center;gap:9px;padding:8px 11px;border-radius:var(--r);text-decoration:none;color:var(--sb-t);font-size:12.5px;font-weight:500;transition:background .12s,color .12s}
+.sb-a:hover{background:rgba(255,255,255,.05);color:var(--sb-hi)}
+.sb-a.on{background:rgba(218,141,0,.13);color:var(--gold)}
+.sb-dot{width:7px;height:7px;border-radius:2px;flex-shrink:0;background:var(--dc,var(--sb-t))}
+.sb-foot{margin-top:auto;padding:14px 20px 18px;border-top:1px solid var(--sb-bd);font-size:10.5px;color:var(--sb-t);line-height:1.5}
+
+/* ── MAIN ── */
+.main{margin-left:var(--sbw);flex:1;min-width:0}
+.sec{padding:60px 52px;border-bottom:1px solid var(--bd)}
+.sec:last-of-type{border-bottom:none}
+.wrap{max-width:1080px}
+.eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ac,var(--gold));font-weight:700;margin-bottom:9px}
+.sec-title{font-size:clamp(23px,3.4vw,34px);font-weight:800;letter-spacing:-.028em;line-height:1.08;text-wrap:balance}
+.sec-rule{height:3px;width:82px;background:var(--ac,var(--gold));border-radius:2px;margin:14px 0 16px}
+.sec-intro{font-size:14.5px;color:var(--t2);max-width:64ch;line-height:1.65;margin-bottom:36px}
+.sec-intro b{color:var(--t);font-weight:700}
+
+/* ── HERO ── */
+.hero{padding:76px 52px 60px;background:linear-gradient(170deg,var(--sf) 0%,var(--bg) 62%);border-bottom:1px solid var(--bd)}
+.hero-t{font-size:clamp(30px,5.2vw,52px);font-weight:800;letter-spacing:-.035em;line-height:1.02;text-wrap:balance;margin-bottom:16px}
+.hero-t em{font-style:normal;color:var(--gold)}
+.hero-d{font-size:15.5px;color:var(--t2);max-width:62ch;line-height:1.65}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hm{background:var(--sf2);border:1px solid var(--bd);border-radius:99px;padding:5px 13px;font-size:11px;color:var(--t2);font-weight:600}
+.hm b{color:var(--t);font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ── MAPA GERAL ── */
+.map-lbl{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);font-weight:700;margin-bottom:11px;display:flex;align-items:center;gap:9px}
+.map-lbl::after{content:'';flex:1;height:1px;background:var(--bd)}
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;margin-bottom:30px}
+.ch{flex:1 1 132px;min-width:132px;background:var(--sf);border:1px solid var(--bd);border-top:3px solid var(--gold);border-radius:var(--r);padding:12px 13px 13px;position:relative}
+.ch+.ch{margin-left:20px}
+.ch+.ch::before{content:'';position:absolute;left:-16px;top:50%;width:12px;height:1.5px;background:var(--bd)}
+.ch+.ch::after{content:'';position:absolute;left:-7px;top:50%;transform:translateY(-50%);border:4px solid transparent;border-left-color:var(--bd)}
+.ch-k{font-size:9px;font-family:var(--mono);color:var(--t3);letter-spacing:.1em;margin-bottom:5px}
+.ch-t{font-size:13px;font-weight:700;letter-spacing:-.01em;line-height:1.25}
+.ch-d{font-size:11px;color:var(--t3);margin-top:5px;line-height:1.45}
+.base{display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));gap:10px}
+.bs{background:var(--sf);border:1px solid var(--bd);border-left:3px solid var(--ac);border-radius:var(--r);padding:12px 14px}
+.bs-t{font-size:12.5px;font-weight:700;color:var(--ac)}
+.bs-d{font-size:11.5px;color:var(--t2);margin-top:4px;line-height:1.5}
+
+/* ── FLUXO / TRILHO ── */
+.flow{position:relative;padding-left:46px}
+.flow::before{content:'';position:absolute;left:14px;top:10px;bottom:20px;width:2px;background:var(--ac);opacity:.28;border-radius:2px}
+.step{position:relative;margin-bottom:12px}
+.step:last-child{margin-bottom:0}
+.step-n{position:absolute;left:-46px;top:0;width:31px;height:31px;border-radius:50%;background:var(--bg);border:2px solid var(--ac);color:var(--ac);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.card{background:var(--sf);border:1px solid var(--bd);border-left:3px solid var(--ac);border-radius:var(--r);padding:13px 17px 15px}
+.card-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:4px}
+.card-t{font-size:14px;font-weight:700;letter-spacing:-.012em}
+.chip{font-size:9.5px;font-family:var(--mono);font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--gold-lo);color:var(--gold);border:1px solid rgba(218,141,0,.3);padding:2px 7px;border-radius:99px;white-space:nowrap}
+.card-d{font-size:12.5px;color:var(--t2);line-height:1.55}
+.card-d b{color:var(--t)}
+
+/* listas */
+ul.li{list-style:none;display:flex;flex-direction:column;gap:3px;margin-top:8px}
+ul.li li{font-size:12.5px;color:var(--t2);line-height:1.5;padding-left:15px;position:relative}
+ul.li li::before{content:'';position:absolute;left:2px;top:8px;width:5px;height:1.5px;background:var(--ac);opacity:.6}
+ul.li li b{color:var(--t);font-weight:700}
+ul.li ul{list-style:none;margin-top:3px;display:flex;flex-direction:column;gap:2px}
+ul.li ul li{font-size:12px;color:var(--t3);padding-left:14px}
+ul.li ul li::before{width:3px;height:3px;border-radius:50%;left:3px;top:7.5px}
+
+/* regra obrigatória (★ do papel) */
+.rule{margin-top:9px;background:var(--gold-lo);border-left:3px solid var(--gold);border-radius:0 var(--r) var(--r) 0;padding:8px 13px;font-size:12.5px;color:var(--t2);line-height:1.5}
+.rule b{color:var(--gold);font-weight:700}
+
+/* bifurcação */
+.fork{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:10px}
+.fk{background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:11px 13px}
+.fk-t{font-size:11px;font-family:var(--mono);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ac);margin-bottom:5px}
+.fk-d{font-size:12px;color:var(--t2);line-height:1.5}
+
+/* post-its */
+.note{background:var(--note);border:1px solid var(--note-bd);border-radius:3px;padding:11px 14px;margin-top:10px;transform:rotate(-.45deg);box-shadow:0 2px 8px rgba(0,0,0,.09)}
+.note-k{font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--note-t);opacity:.75;margin-bottom:4px}
+.note-b{font-size:12.5px;color:var(--note-t);line-height:1.5;font-weight:600}
+.note.q{transform:rotate(.4deg)}
+
+/* grades de regras (não-sequenciais) */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:11px;align-items:start}
+.rc{background:var(--sf);border:1px solid var(--bd);border-top:3px solid var(--ac);border-radius:var(--r);padding:14px 16px 16px}
+.rc-t{font-size:13px;font-weight:700;letter-spacing:-.01em;margin-bottom:3px}
+.rc-s{font-size:10px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--t3)}
+
+/* prazos / SLA */
+.sla{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:9px}
+.sl{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:12px 14px;border-top:3px solid var(--ac)}
+.sl-v{font-size:22px;font-weight:800;font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ac);letter-spacing:-.03em;line-height:1}
+.sl-k{font-size:11.5px;font-weight:700;margin-top:6px}
+.sl-d{font-size:11px;color:var(--t3);margin-top:3px;line-height:1.4}
+
+/* checklist observações */
+.chk{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:8px;align-items:start}
+.ck{display:grid;grid-template-columns:24px 1fr;gap:10px;background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:11px 14px;align-items:start}
+.ck-n{font-size:11px;font-family:var(--mono);font-weight:800;color:var(--ac);padding-top:1px}
+.ck-t{font-size:12.5px;color:var(--t2);line-height:1.5}
+
+/* agenda semanal */
+.week{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:11px;align-items:start}
+.wd{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden}
+.wd-h{background:var(--ac);color:var(--on-ac);padding:8px 15px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.wd-b{padding:12px 15px 14px}
+
+/* pendências */
+.pend{display:grid;grid-template-columns:repeat(auto-fit,minmax(292px,1fr));gap:11px;align-items:start}
+.pd{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:14px 16px;display:flex;flex-direction:column;gap:7px}
+.pd-top{display:flex;align-items:center;gap:8px}
+.pd-tag{font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;padding:3px 8px;border-radius:99px}
+.pd-tag.dec{background:var(--gold-lo);color:var(--gold);border:1px solid rgba(218,141,0,.3)}
+.pd-tag.ask{background:rgba(139,20,20,.12);color:var(--c-cotacao);border:1px solid rgba(139,20,20,.28)}
+.pd-tag.idea{background:rgba(61,74,107,.12);color:var(--c-jornada);border:1px solid rgba(61,74,107,.3)}
+.pd-src{font-size:10px;font-family:var(--mono);color:var(--t3);margin-left:auto}
+.pd-b{font-size:13px;font-weight:600;line-height:1.5}
+.pd-d{font-size:11.5px;color:var(--t3);line-height:1.5}
+
+.foot{padding:26px 52px 34px;font-size:11.5px;color:var(--t3);line-height:1.6}
+.gap{height:30px}
+
+@media(max-width:900px){
+  body{display:block}
+  .sb{position:static;width:auto;flex-direction:row;flex-wrap:wrap;align-items:center;padding-bottom:8px;border-right:none;border-bottom:1px solid var(--sb-bd)}
+  .sb-brand{border-bottom:none;padding:16px 18px;width:100%}
+  .sb-lbl{display:none}
+  .sb-nav{flex-direction:row;flex-wrap:wrap;padding:0 12px 4px;gap:3px}
+  .sb-foot{display:none}
+  .main{margin-left:0}
+  .sec,.hero,.foot{padding-left:22px;padding-right:22px}
+  .chain{flex-direction:column}
+  .ch+.ch{margin-left:0;margin-top:18px}
+  .ch+.ch::before{left:50%;top:-14px;width:1.5px;height:10px}
+  .ch+.ch::after{left:50%;top:-6px;transform:translateX(-50%);border-left-color:transparent;border-top-color:var(--bd)}
+}
+@media print{
+  .sb{display:none}
+  .main{margin-left:0}
+  .sec{padding:26px 0;break-inside:avoid}
+  .note{box-shadow:none;transform:none}
+}
+</style>
+
+<nav class="sb">
+  <div class="sb-brand">
+    <div class="sb-mark">LT</div>
+    <div><div class="sb-n">Lusa Travel</div><div class="sb-d">Manual de Processos</div></div>
+  </div>
+  <div class="sb-lbl">Visão</div>
+  <div class="sb-nav">
+    <a class="sb-a" href="#geral"><span class="sb-dot" style="--dc:var(--gold)"></span>Mapa geral</a>
+  </div>
+  <div class="sb-lbl">Fluxos do cliente</div>
+  <div class="sb-nav">
+    <a class="sb-a" href="#jornada"><span class="sb-dot" style="--dc:var(--c-jornada)"></span>Jornada do Cliente</a>
+    <a class="sb-a" href="#atendimento"><span class="sb-dot" style="--dc:var(--c-atend)"></span>Fluxo de Atendimento</a>
+    <a class="sb-a" href="#mensagens"><span class="sb-dot" style="--dc:var(--c-msg)"></span>Mapa de Mensagens</a>
+  </div>
+  <div class="sb-lbl">Fluxos de produção</div>
+  <div class="sb-nav">
+    <a class="sb-a" href="#cotacao"><span class="sb-dot" style="--dc:var(--c-cotacao)"></span>Fluxo da Cotação</a>
+    <a class="sb-a" href="#financeiro"><span class="sb-dot" style="--dc:var(--c-fin)"></span>Fluxo Financeiro</a>
+  </div>
+  <div class="sb-lbl">Sistemas &amp; rotina</div>
+  <div class="sb-nav">
+    <a class="sb-a" href="#iddas"><span class="sb-dot" style="--dc:var(--c-iddas)"></span>Processos IDDAS</a>
+    <a class="sb-a" href="#claude"><span class="sb-dot" style="--dc:var(--c-claude)"></span>Processos Claude</a>
+    <a class="sb-a" href="#crono"><span class="sb-dot" style="--dc:var(--c-crono)"></span>Crono Semanal</a>
+    <a class="sb-a" href="#pendencias"><span class="sb-dot" style="--dc:var(--gold)"></span>Pendências</a>
+  </div>
+  <div class="sb-foot">Digitalizado das 3 folhas de processo da agência. Post-its preservados como notas e pendências.</div>
+</nav>
+
+<main class="main">
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Manual operacional</div>
+    <h1 class="hero-t">Oito fluxos que sustentam <em>uma viagem</em>.</h1>
+    <p class="hero-d">Do primeiro “olá” no WhatsApp até o chocolate entregue no pós-viagem. Este é o desenho das folhas de processo da agência, transcrito na íntegra — com os prazos, as regras marcadas com ★ e cada post-it que ficou colado no papel.</p>
+    <div class="hero-meta">
+      <span class="hm"><b>8</b> fluxos</span>
+      <span class="hm"><b>11</b> etapas na jornada do cliente</span>
+      <span class="hm"><b>5</b> dias úteis até a 1ª cotação</span>
+      <span class="hm"><b>11</b> pendências em aberto</span>
+    </div>
+  </div>
+</header>
+
+<!-- ══ MAPA GERAL ══ -->
+<section class="sec" id="geral">
+  <div class="wrap">
+    <div class="eyebrow">Visão geral</div>
+    <h2 class="sec-title">Como os fluxos se encaixam</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-intro">A <b>Jornada do Cliente</b> é a espinha: é o que o cliente vive, do contato ao pós-viagem. Os outros fluxos rodam por baixo dela — cotação e financeiro produzem, IDDAS e Claude registram, e o crono semanal garante que nada fica parado.</p>
+
+    <div class="map-lbl">O que o cliente vive</div>
+    <div class="chain">
+      <div class="ch"><div class="ch-k">01–02</div><div class="ch-t">Contato &amp; triagem</div><div class="ch-d">WPP, IDDAS ou Instagram. Taxa de consultoria de R$ 600,00.</div></div>
+      <div class="ch"><div class="ch-k">03</div><div class="ch-t">Briefing</div><div class="ch-d">Videochamada gravada, com analista presente.</div></div>
+      <div class="ch"><div class="ch-k">04–06</div><div class="ch-t">Cotação &amp; revisões</div><div class="ch-d">5 dias úteis na 1ª, 3 dias úteis nas demais.</div></div>
+      <div class="ch"><div class="ch-k">07</div><div class="ch-t">Fechamento</div><div class="ch-d">Pagamento e caderno de vouchers.</div></div>
+      <div class="ch"><div class="ch-k">08–09</div><div class="ch-t">Pré-embarque</div><div class="ch-d">Passenger relations e entrega do kit.</div></div>
+      <div class="ch"><div class="ch-k">10–11</div><div class="ch-t">Viagem &amp; pós</div><div class="ch-d">Plantão 24 h e mimo de retorno.</div></div>
+    </div>
+
+    <div class="map-lbl">O que roda por baixo</div>
+    <div class="base">
+      <div class="bs" style="--ac:var(--c-cotacao)"><div class="bs-t">Fluxo da Cotação</div><div class="bs-d">Produção: estrutura da viagem, fornecedores, montagem e conferência.</div></div>
+      <div class="bs" style="--ac:var(--c-fin)"><div class="bs-t">Fluxo Financeiro</div><div class="bs-d">Consultoria, emissões, baixas, extras, fechamento e despesas.</div></div>
+      <div class="bs" style="--ac:var(--c-iddas)"><div class="bs-t">Processos IDDAS</div><div class="bs-d">Sistema de registro. Toda conversa, pagamento e tarefa mora aqui.</div></div>
+      <div class="bs" style="--ac:var(--c-claude)"><div class="bs-t">Processos Claude</div><div class="bs-d">Banco de dados de fornecedores e geração de cotações e vouchers.</div></div>
+      <div class="bs" style="--ac:var(--c-msg)"><div class="bs-t">Mapa de Mensagens</div><div class="bs-d">Textos padrão de contato, triagem, taxa e prazos.</div></div>
+      <div class="bs" style="--ac:var(--c-crono)"><div class="bs-t">Crono Semanal</div><div class="bs-d">Segunda abre, sexta fecha. Financeiro 1× por semana.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ JORNADA DO CLIENTE ══ -->
+<section class="sec" id="jornada" style="--ac:var(--c-jornada)">
+  <div class="wrap">
+    <div class="eyebrow">Fluxo do cliente</div>
+    <h2 class="sec-title">Jornada do Cliente</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-intro">As 11 etapas que o cliente percorre. É a única sequência que vai ponta a ponta — todos os outros fluxos existem para alimentar alguma etapa daqui.</p>
+
+    <div class="flow">
+      <div class="step"><div class="step-n">1</div><div class="card">
+        <div class="card-h"><div class="card-t">1º contato</div></div>
+        <ul class="li"><li>WPP — agência, Claudia ou Victoria</li><li>IDDAS</li><li>Instagram</li></ul>
+      </div></div>
+
+      <div class="step"><div class="step-n">2</div><div class="card">
+        <div class="card-h"><div class="card-t">Aquecimento pré-venda</div><span class="chip">R$ 600,00</span></div>
+        <div class="card-d">Perguntas sobre a solicitação:</div>
+        <ul class="li"><li>Qual destino</li><li>Quantos dias</li><li>Quantas pessoas</li><li>Budget aproximado</li></ul>
+        <div class="rule"><b>Triagem →</b> consultoria paga. R$ 600,00 — agendar a call mediante pagamento.</div>
+      </div></div>
+
+      <div class="step"><div class="step-n">3</div><div class="card">
+        <div class="card-h"><div class="card-t">Briefing</div></div>
+        <ul class="li"><li>Videochamada</li><li>WPP agência</li><li>Formulário Docs</li></ul>
+        <div class="rule"><b>★</b> Aqui é importante que algum analista participe. <b>★</b> Gravar a reunião.</div>
+      </div></div>
+
+      <div class="step"><div class="step-n">4</div><div class="card">
+        <div class="card-h"><div class="card-t">1ª revisão da cotação</div><span class="chip">5 dias úteis</span></div>
+        <div class="card-d">5 dias úteis para desenvolver a primeira cotação.</div>
+        <ul class="li"><li>Link Vercel ou PDF Canva</li><li>Áudios explicativos</li></ul>
+      </div></div>
+
+      <div class="step"><div class="step-n">5</div><div class="card">
+        <div class="card-h"><div class="card-t">Recebimento do feedback</div></div>
+        <div class="rule"><b>★</b> Formalizar todas as solicitações de alteração no IDDAS.</div>
+      </div></div>
+
+      <div class="step"><div class="step-n">6</div><div class="card">
+        <div class="card-h"><div class="card-t">2ª revisão (ou demais)</div><span class="chip">3 dias úteis</span></div>
+        <ul class="li"><li>Link Vercel ou PDF Canva</li><li>Áudio explicativo</li></ul>
+      </div></div>
+
+      <div class="step"><div class="step-n">7</div><div class="card">
+        <div class="card-h"><div class="card-t">Fechamento</div></div>
+        <ul class="li"><li>Pagamento — PIX + cartões</li><li>Caderno de vouchers — link Vercel ou PDF</li></ul>
+      </div></div>
+
+      <div class="step"><div class="step-n">8</div><div class="card">
+        <div class="card-h"><div class="card-t">Passenger relations</div></div>
+        <ul class="li"><li>Marcação de assentos</li><li>Bagagens</li><li>Envio de milhas</li><li>Reservas de bares e experiências</li><li>Vistos, vacinas e documentos</li></ul>
+      </div></div>
+
+      <div class="step"><div class="step-n">9</div><div class="card">
+        <div class="card-h"><div class="card-t">Entrega</div></div>
+        <ul class="li"><li>Física — kit</li><li>Digital — link / WPP / PDF</li></ul>
+      </div></div>
+
+      <div class="step"><div class="step-n">10</div><div class="card">
+        <div class="card-h"><div class="card-t">On travel</div><span class="chip">24 h</span></div>
+        <div class="card-d">Atendimento 24 horas durante toda a viagem.</div>
+      </div></div>
+
+      <div class="step"><div class="step-n">11</div><div class="card">
+        <div class="card-h"><div class="card-t">Pós-travel</div></div>
+        <ul class="li"><li>Mensagem de retorno</li><li>Entrega física — envelope + chocolate + cartão</li></ul>
+        <div class="note q"><div class="note-k">Pendência do post-it</div><div class="note-b">Definir o que mandar de boas-vindas.</div></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FLUXO DE ATENDIMENTO ══ -->
+<section class="sec" id="atendimento" style="--ac:var(--c-atend)">
+  <div class="wrap">
+    <div class="eyebrow">Fluxo do cliente</div>
+    <h2 class="sec-title">Fluxo de Atendimento</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-intro">A versão curta da jornada, escrita do ponto de vista do prazo. É o mesmo caminho, mas aqui o que importa é o relógio: quantos dias cada etapa tem e quando é hora de correr atrás.</p>
+
+    <div class="sla">
+      <div class="sl"><div class="sl-v">5</div><div class="sl-k">dias — cotação</div><div class="sl-d">Em 3 dias, se ainda não tiver nada, mandar um alô.</div></div>
+      <div class="sl"><div class="sl-v">3</div><div class="sl-k">dias — cada revisão</div><div class="sl-d">Vale para a 2ª e todas as seguintes.</div></div>
+      <div class="sl"><div class="sl-v">1</div><div class="sl-k">dia — fornecedores</div><div class="sl-d">Máximo 1 dia após receber a solicitação.</div></div>
+      <div class="sl"><div class="sl-v">2</div><div class="sl-k">dias — sem retorno</div><div class="sl-d">Não recebeu a Rev.1 do fornecedor? Ligar.</div></div>
+    </div>
+
+    <div class="gap"></div>
+
+    <div class="flow">
+      <div class="step"><div class="step-n">1</div><div class="card">
+        <div class="card-h"><div class="card-t">1º contato</div></div>
+        <div class="card-d">Apresentação no WhatsApp, ou chamada do IDDAS, ou Instagram direcionando para o WhatsApp.</div>
+      </div></div>
+      <div class="step"><div class="step-n">2</div><div class="card">
+        <div class="card-h"><div class="card-t">Briefing</div></div>
+        <div class="card-d">Videochamada ou formulário.</div>
+      </div></div>
+      <div class="step"><div class="step-n">3</div><div class="card">
+        <div class="card-h"><div class="card-t">Cotação</div><span class="chip">5 dias</span></div>
+        <div class="card-d">Em 3 dias, se ainda não tiver nada pronto, mandar um alô para o cliente.</div>
+      </div></div>
+      <div class="step"><div class="step-n">4</div><div class="card">
+        <div class="card-h"><div class="card-t">Revisão</div><span class="chip">3 dias cada</span></div>
+      </div></div>
+      <div class="step"><div class="step-n">5</div><div class="card">
+        <div class="card-h"><div class="card-t">Fechamento</div></div>
+        <div class="card-d">Dados a solicitar:</div>
+        <ul class="li"><li>Foto do passaporte</li><li>Nome completo, CPF, endereço com CEP, e-mail e telefone</li></ul>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MAPA DE MENSAGENS ══ -->
+<section class="sec" id="mensagens" style="--ac:var(--c-msg)">
+  <div class="wrap">
+    <div class="eyebrow">Fluxo do cliente</div>
+    <h2 class="sec-title">Mapa de Mensagens</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-intro">A ordem dos textos padrão no primeiro atendimento. A folha marca quatro blocos — o de abertura já está escrito, os outros três ainda precisam ser redigidos.</p>
+
+    <div class="flow">
+      <div class="step"><div class="step-n">1</div><div class="card">
+        <div class="card-h"><div class="card-t">1º contato</div><span class="chip">pronto</span></div>
+        <div class="card-d">“Olá …, aqui é … da Lusa Travel. Será um prazer atendê-lo.”</div>
+      </div></div>
+      <div class="step"><div class="step-n">2</div><div class="card">
+        <div class="card-h"><div class="card-t">Triagem</div><span class="chip">a escrever</span></div>
+        <div class="card-d">Perguntas: nº de pessoas, dias, destinos e budget.</div>
+      </div></div>
+      <div class="step"><div class="step-n">3</div><div class="card">
+        <div class="card-h"><div class="card-t">Taxa de consultoria</div><span class="chip">a escrever</span></div>
+        <div class="card-d">Mensagem que apresenta a taxa de R$ 600,00.</div>
+      </div></div>
+      <div class="step"><div class="step-n">4</div><div class="card">
+        <div class="card-h"><div class="card-t">Prazos</div><span class="chip">a escrever</span></div>
+        <div class="card-d">Mensagem que comunica os prazos de cotação e revisão.</div>
+      </div></div>
+    </div>
+
+    <div class="note"><div class="note-k">Nota do post-it</div><div class="note-b">Vale tanto para mensagens internas quanto externas.</div></div>
+  </div>
+</section>
+
+<!-- ══ FLUXO DA COTAÇÃO ══ -->
+<section class="sec" id="cotacao" style="--ac:var(--c-cotacao)">
+  <div class="wrap">
+    <div class="eyebrow">Fluxo de produção</div>
+    <h2 class="sec-title">Fluxo da Cotação</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-intro">Da solicitação até a proposta enviada. Começa sempre pelo aéreo, porque é ele que costuma definir todo o resto da viagem.</p>
+
+    <div class="flow">
+      <div class="step"><div class="step-n">1</div><div class="card">
+        <div class="card-h"><div class="card-t">Recebimento da solicitação</div></div>
+        <ul class="li"><li>Anotar no histórico do IDDAS</li><li>Desenhar a estrutura da viagem — <b>ver checklist no fim desta seção</b></li><li>Discutir internamente</li></ul>
+      </div></div>
+
+      <div class="step"><div class="step-n">2</div><div class="card">
+        <div class="card-h"><div class="card-t">Preparar a base</div></div>
+        <ul class="li"><li>Criar pasta do cliente</li><li>Criar planilha do cliente</li><li>Responder a ficha antes da cotação</li></ul>
+      </div></div>
+
+      <div class="step"><div class="step-n">3</div><div class="card">
+        <div class="card-h"><div class="card-t">Aéreo</div><span class="chip">começa aqui</span></div>
+        <div class="card-d">Começar pelo aéreo, pois muitas vezes é ele quem define tudo.</div>
+      </div></div>
+
+      <div class="step"><div class="step-n">4</div><div class="card">
+        <div class="card-h"><div class="card-t">Solicitação aos fornecedores</div><span class="chip">máx. 1 dia</span></div>
+        <div class="card-d">No máximo 1 dia após receber a solicitação.</div>
+        <ul class="li"><li>Anotar no histórico do IDDAS tudo que foi pedido e para quem</li><li>Pedir previsão de recebimento</li></ul>
+        <div class="rule"><b>★</b> Sempre copiar o atendimento!!!</div>
+      </div></div>
+
+      <div class="step"><div class="step-n">5</div><div class="card">
+        <div class="card-h"><div class="card-t">Cotação</div></div>
+        <div class="card-d">Cotar:</div>
+        <ul class="li"><li>Hotéis — 2 por cidade</li><li>Aéreos internos</li><li>Carro</li><li>Tours e passeios</li><li>Transfers</li><li>Seguro viagem</li></ul>
+      </div></div>
+
+      <div class="step"><div class="step-n">6</div><div class="card">
+        <div class="card-h"><div class="card-t">Recebimento da cotação</div></div>
+        <ul class="li"><li>Validar e pedir qualquer alteração no mesmo dia</li></ul>
+        <div class="rule"><b>★</b> Se não receber a Rev.1 em 2 dias, ligar!!!</div>
+      </div></div>
+
+      <div class="step"><div class="step-n">7</div><div class="card">
+        <div class="card-h"><div class="card-t">Montar a cotação</div></div>
+        <ul class="li">
+          <li>Montar no Claude</li>
+          <li>Enviar tabela de valores, com:
+            <ul><li>Aéreos</li><li>Roteiro, se tiver</li><li>Condições de pagamento</li><li>Cotação do dia</li><li>Nome dos clientes</li><li>Fotos dos hotéis</li></ul>
+          </li>
+          <li>Pedir para gerar o link do Vercel</li>
+        </ul>
+      </div></div>
+
+      <div class="step"><div class="step-n">8</div><div class="card">
+        <div class="card-h"><div class="card-t">Conferir e enviar</div></div>
+        <div class="fork">
+          <div class="fk"><div class="fk-t">Rev 01</div><div class="fk-d">05 dias úteis</div></div>
+          <div class="fk"><div class="fk-t">Rev 02 e demais</div><div class="fk-d">03 dias úteis</div></div>
+        </div>
+        <ul class="li"><li>Mandar áudio explicando</li><li>Registrar no IDDAS</li></ul>
+        <div class="rule"><b>★</b> Sempre conferir!!!</div>
+      </div></div>
+    </div>
+
+    <div class="gap"></div>
+    <div class="map-lbl">Observações — estrutura da viagem</div>
+    <p class="sec-intro" style="margin-bottom:14px">As sete perguntas que precisam estar respondidas antes de desenhar qualquer roteiro.</p>
+    <div class="chk">
+      <div class="ck"><div class="ck-n">01</div><div class="ck-t">De que cidade sai?</div></div>
+      <div class="ck"><div class="ck-n">02</div><div class="ck-t">Qual o aeroporto de entrada?</div></div>
+      <div class="ck"><div class="ck-n">03</div><div class="ck-t">Quais são as cidades?</div></div>
+      <div class="ck"><div class="ck-n">04</div><div class="ck-t">Número de noites em cada uma?</div></div>
+      <div class="ck"><div class="ck-n">05</div><div class="ck-t">Como se desloca de uma cidade para outra?</div></div>
+      <div class="ck"><div class="ck-n">06</div><div class="ck-t">Algum evento ou experiência especial que precisamos ir atrás de um fornecedor novo ou específico?</div></div>
+      <div class="ck"><div class="ck-n">07</div><div class="ck-t">Algum problema ou ponto de atenção?</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FLUXO FINANCEIRO ══ -->
+<section class="sec" id="financeiro" style="--ac:var(--c-fin)">
+  <div class="wrap">
+    <div class="eyebrow">Fluxo de produção</div>
+    <h2 class="sec-title">Fluxo Financeiro</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-intro">Seis etapas, do recebimento da taxa de consultoria até o fechamento da conta do cliente. A regra que atravessa tudo: nada acontece sem estar lançado no IDDAS.</p>
+
+    <div class="flow">
+      <div class="step"><div class="step-n">1</div><div class="card">
+        <div class="card-h"><div class="card-t">Recebimento da taxa de consultoria</div></div>
+        <ul class="li"><li>Enviar comprovante para a Claudia</li><li>Lançar no IDDAS</li></ul>
+      </div></div>
+
+      <div class="step"><div class="step-n">2</div><div class="card">
+        <div class="card-h"><div class="card-t">Emissões — lançar na planilha</div></div>
+        <div class="fork">
+          <div class="fk"><div class="fk-t">Pagamento em PIX</div><div class="fk-d">Enviar comprovante para a Claudia lançar no IDDAS.</div></div>
+          <div class="fk"><div class="fk-t">Pagamento em cartão</div><div class="fk-d">Lançar na planilha. A Claudia lança no IDDAS.</div></div>
+        </div>
+        <div class="rule"><b>★ Sempre especificar:</b></div>
+        <ul class="li">
+          <li>Se foi ValePay — valor líquido</li>
+          <li>Nº de parcelas</li>
+          <li>Código do voucher e cliente</li>
+          <li>Fornecedor</li>
+          <li>Do que se trata</li>
+          <li>Valores — total / net / RAV</li>
+          <li>Data</li>
+        </ul>
+        <div class="note"><div class="note-k">Nota do post-it</div><div class="note-b">Sempre confirmar a RAV dos bilhetes aéreos — se foi cobrada.</div></div>
+      </div></div>
+
+      <div class="step"><div class="step-n">3</div><div class="card">
+        <div class="card-h"><div class="card-t">Baixa de recebimentos</div></div>
+        <div class="card-d">Claudia confere se a RAV foi paga e/ou se o PIX entrou.</div>
+      </div></div>
+
+      <div class="step"><div class="step-n">4</div><div class="card">
+        <div class="card-h"><div class="card-t">Extras</div><span class="chip">planilha</span></div>
+        <div class="card-d">Tudo que entra na planilha de extras:</div>
+        <ul class="li"><li>Multas</li><li>Perdas e despesas</li><li>Bagagem e assentos</li><li>Passeios e reservas</li></ul>
+        <div class="rule"><b>★</b> Sempre lançar no IDDAS <b>e</b> enviar no Discord com:</div>
+        <ul class="li"><li>Foto / print</li><li>Data</li><li>Do que se trata</li><li>Fornecedor</li><li>Código do voucher ou nº da transação</li><li>Valores — total / net / RAV, se tiver</li></ul>
+        <div class="note q"><div class="note-k">Pendência do post-it</div><div class="note-b">Perguntar para a Claudia a forma certa de lançar no IDDAS.</div></div>
+      </div></div>
+
+      <div class="step"><div class="step-n">5</div><div class="card">
+        <div class="card-h"><div class="card-t">Fechamento</div></div>
+        <div class="card-d">Fechar a conta do cliente no IDDAS e ver qual foi o resultado.</div>
+        <div class="rule"><b>★</b> Importante para as estatísticas do mês, semestre e ano.</div>
+      </div></div>
+
+      <div class="step"><div class="step-n">6</div><div class="card">
+        <div class="card-h"><div class="card-t">Despesas da agência</div></div>
+        <ul class="li"><li>Lançar no IDDAS</li><li>Dar baixa ao pagar</li><li>Anotar na planilha quando sair da PP — para repor</li></ul>
+        <div class="note q"><div class="note-k">Pendência do post-it</div><div class="note-b">Tem como ver o histórico das atividades no IDDAS?</div></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROCESSOS IDDAS ══ -->
+<section class="sec" id="iddas" style="--ac:var(--c-iddas)">
+  <div class="wrap">
+    <div class="eyebrow">Sistema</div>
+    <h2 class="sec-title">Processos IDDAS</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-intro">Não é uma sequência — são as regras de uso do sistema. O princípio único: se aconteceu, está registrado no IDDAS.</p>
+
+    <div class="grid">
+      <div class="rc"><div class="rc-t">Movimentação do card</div><div class="rc-s">Regra permanente</div>
+        <ul class="li"><li>Sempre mover o card conforme o status.</li></ul>
+      </div>
+
+      <div class="rc"><div class="rc-t">Histórico</div><div class="rc-s">Obrigatório</div>
+        <ul class="li">
+          <li>Cada conversa trocada com o cliente deve ser anotada no histórico.</li>
+          <li>Cada cotação solicitada offline deve ser anotada no histórico.</li>
+          <li>Pagamentos em PIX devem ser anotados no histórico com referência e valor.</li>
+        </ul>
+      </div>
+
+      <div class="rc"><div class="rc-t">Lançamentos</div><div class="rc-s">Responsável — Claudia</div>
+        <ul class="li"><li>Claudia deve lançar todos os pagamentos no IDDAS, tanto de clientes quanto despesas do escritório.</li></ul>
+      </div>
+
+      <div class="rc"><div class="rc-t">Após a emissão</div><div class="rc-s">Checklist</div>
+        <ul class="li"><li>Lançar na aba “Orçamentos”</li><li>Colocar o ticket no calendário</li><li>Anexar os vouchers</li></ul>
+      </div>
+
+      <div class="rc"><div class="rc-t">Tarefas a cadastrar</div><div class="rc-s">Automatizar no sistema</div>
+        <ul class="li">
+          <li>Solicitação de milhas</li>
+          <li>Marcação de assentos</li>
+          <li>Finalização e entrega — <b>1 mês antes</b>, junto com o seguro</li>
+          <li>Follow-up de retorno — pedido de avaliação</li>
+        </ul>
+      </div>
+
+      <div class="rc"><div class="rc-t">Cadastro de leads</div><div class="rc-s">Métricas de venda</div>
+        <ul class="li"><li>Todo novo lead deve ser cadastrado, para gerar as métricas de venda.</li></ul>
+      </div>
+    </div>
+
+    <div class="note q"><div class="note-k">Pendência anotada na folha</div><div class="note-b">Arrumar a mensagem de aniversário.</div></div>
+  </div>
+</section>
+
+<!-- ══ PROCESSOS CLAUDE ══ -->
+<section class="sec" id="claude" style="--ac:var(--c-claude)">
+  <div class="wrap">
+    <div class="eyebrow">Sistema</div>
+    <h2 class="sec-title">Processos Claude</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-intro">O que precisa ser construído: o banco de dados de fornecedores e os modelos prontos de cotação e voucher. Esta folha é mais um backlog do que um fluxo — quase tudo aqui ainda está por fazer.</p>
+
+    <div class="grid">
+      <div class="rc"><div class="rc-t">Banco de dados</div><div class="rc-s">Estrutura</div>
+        <ul class="li">
+          <li>Separar por países, depois por cidades</li>
+          <li>Em cada cidade, colocar:
+            <ul><li>Hotéis</li><li>DMC</li><li>Passeios sugeridos</li><li>Receptivos</li><li>Documentações necessárias — vacinas e vistos</li></ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="rc"><div class="rc-t">Dados de cada fornecedor</div><div class="rc-s">Campos fixos</div>
+        <ul class="li"><li>Nome</li><li>Telefone</li><li>Cidade</li><li>Com quem falamos lá</li><li>E-mail</li><li>WhatsApp</li></ul>
+      </div>
+
+      <div class="rc"><div class="rc-t">Modelo de cotação</div><div class="rc-s">A construir</div>
+        <ul class="li"><li>Construir o modelo na nuvem</li><li>Deixar configurado para apenas montar</li></ul>
+      </div>
+
+      <div class="rc"><div class="rc-t">Modelo de voucher</div><div class="rc-s">A construir</div>
+        <ul class="li"><li>Construir o modelo de vouchers</li><li>Arrumar e deixar mais visual</li></ul>
+        <div class="rule"><b>Importante:</b> colocar a observação para o Claude pegar o QR code quando houver, ou então o número da reserva.</div>
+      </div>
+
+      <div class="rc"><div class="rc-t">Entrega final ao cliente</div><div class="rc-s">Formato definido</div>
+        <ul class="li"><li>Itinerário + vouchers em um link Vercel</li><li>Voucher personalizado gerado via Claude / Vercel</li></ul>
+      </div>
+
+      <div class="rc"><div class="rc-t">Organização das pastas</div><div class="rc-s">Em definição</div>
+        <ul class="li"><li>Repositório separado por tipo — cotações, vouchers</li><li>Ou tudo na mesma conversa?</li></ul>
+      </div>
+    </div>
+
+    <div class="note q"><div class="note-k">Pendência do post-it</div><div class="note-b">App para os clientes acessarem os vouchers? Ver alguma forma de fazer isso no Vercel, com abas.</div></div>
+  </div>
+</section>
+
+<!-- ══ CRONO SEMANAL ══ -->
+<section class="sec" id="crono" style="--ac:var(--c-crono)">
+  <div class="wrap">
+    <div class="eyebrow">Rotina</div>
+    <h2 class="sec-title">Crono Semanal</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-intro">A semana abre na segunda e fecha na sexta. Não é um fluxo com começo e fim — é a cadência que garante que nada dos outros fluxos fica parado.</p>
+
+    <div class="week">
+      <div class="wd"><div class="wd-h">Toda segunda</div><div class="wd-b">
+        <ul class="li"><li>Verificação dos embarques</li><li>Verificação do WhatsApp</li></ul>
+        <div class="note"><div class="note-k">Nota do post-it</div><div class="note-b">Val — toda segunda, ver os embarques da semana.</div></div>
+      </div></div>
+
+      <div class="wd"><div class="wd-h">Toda sexta</div><div class="wd-b">
+        <ul class="li"><li>Fechamento da semana</li><li>Negociações não finalizadas</li><li>Feedbacks da semana</li></ul>
+      </div></div>
+
+      <div class="wd"><div class="wd-h">1× por semana</div><div class="wd-b">
+        <div class="card-d"><b>Victoria + Claudia</b></div>
+        <ul class="li"><li>Fechamento financeiro</li><li>Previsão de gastos</li></ul>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PENDÊNCIAS ══ -->
+<section class="sec" id="pendencias">
+  <div class="wrap">
+    <div class="eyebrow">O que ficou em aberto</div>
+    <h2 class="sec-title">Pendências e decisões</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-intro">Todo post-it e toda anotação em aberto das três folhas, reunidos aqui. Três tipos: perguntas a fazer, decisões a tomar e ideias a avaliar.</p>
+
+    <div class="pend">
+      <div class="pd"><div class="pd-top"><span class="pd-tag ask">Perguntar</span><span class="pd-src">Financeiro · 4</span></div>
+        <div class="pd-b">Qual é a forma certa de lançar os extras no IDDAS?</div><div class="pd-d">Perguntar para a Claudia.</div></div>
+
+      <div class="pd"><div class="pd-top"><span class="pd-tag ask">Perguntar</span><span class="pd-src">Financeiro · 6</span></div>
+        <div class="pd-b">Tem como ver o histórico das atividades no IDDAS?</div><div class="pd-d">Define se dá para auditar lançamentos e despesas.</div></div>
+
+      <div class="pd"><div class="pd-top"><span class="pd-tag dec">Decidir</span><span class="pd-src">Jornada · 11</span></div>
+        <div class="pd-b">O que mandar de boas-vindas no pós-viagem?</div><div class="pd-d">O envelope com chocolate e cartão já está definido; falta o conteúdo da mensagem.</div></div>
+
+      <div class="pd"><div class="pd-top"><span class="pd-tag dec">Decidir</span><span class="pd-src">Claude</span></div>
+        <div class="pd-b">Repositório separado por tipo, ou tudo na mesma conversa?</div><div class="pd-d">Vale para cotações e vouchers.</div></div>
+
+      <div class="pd"><div class="pd-top"><span class="pd-tag idea">Ideia</span><span class="pd-src">Claude</span></div>
+        <div class="pd-b">App para o cliente acessar os vouchers.</div><div class="pd-d">Avaliar se dá para fazer no Vercel, com abas.</div></div>
+
+      <div class="pd"><div class="pd-top"><span class="pd-tag idea">Ideia</span><span class="pd-src">Claude</span></div>
+        <div class="pd-b">Voucher personalizado gerado via Claude / Vercel.</div><div class="pd-d">Entrega final = itinerário + vouchers num único link.</div></div>
+
+      <div class="pd"><div class="pd-top"><span class="pd-tag dec">Decidir</span><span class="pd-src">Claude</span></div>
+        <div class="pd-b">Arrumar o modelo de voucher e deixar mais visual.</div><div class="pd-d">Incluir QR code quando houver, ou o número da reserva.</div></div>
+
+      <div class="pd"><div class="pd-top"><span class="pd-tag dec">Decidir</span><span class="pd-src">IDDAS</span></div>
+        <div class="pd-b">Arrumar a mensagem de aniversário.</div></div>
+
+      <div class="pd"><div class="pd-top"><span class="pd-tag dec">Decidir</span><span class="pd-src">Mensagens · 2–4</span></div>
+        <div class="pd-b">Escrever os textos de triagem, taxa de consultoria e prazos.</div><div class="pd-d">Só o texto de 1º contato está pronto. Vale para uso interno e externo.</div></div>
+
+      <div class="pd"><div class="pd-top"><span class="pd-tag dec">Decidir</span><span class="pd-src">Financeiro · 2</span></div>
+        <div class="pd-b">Confirmar sempre a RAV dos bilhetes aéreos.</div><div class="pd-d">Verificar se foi cobrada, antes de lançar.</div></div>
+
+      <div class="pd"><div class="pd-top"><span class="pd-tag dec">Decidir</span><span class="pd-src">IDDAS</span></div>
+        <div class="pd-b">Cadastrar todo novo lead no sistema.</div><div class="pd-d">É o que permite gerar as métricas de venda.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="foot">Transcrição das três folhas de processo da Lusa Travel. Prazos, regras marcadas com ★ e post-its preservados como estavam no papel.</div>
+
+</main>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.sb-a'));
+  var map={},secs=[];
+  links.forEach(function(a){
+    var s=document.querySelector(a.getAttribute('href'));
+    if(s){map[s.id]=a;secs.push(s);}
+  });
+  function sync(){
+    var best=null,bt=Infinity;
+    secs.forEach(function(s){
+      var t=s.getBoundingClientRect().top;
+      if(t<=140&&Math.abs(t)<bt){bt=Math.abs(t);best=s;}
+    });
+    links.forEach(function(a){a.classList.remove('on');});
+    if(best&&map[best.id])map[best.id].classList.add('on');
+  }
+  var tick=false;
+  addEventListener('scroll',function(){
+    if(!tick){tick=true;requestAnimationFrame(function(){sync();tick=false;});}
+  },{passive:true});
+  sync();
+})();
+</script>
