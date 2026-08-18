@@ -1,0 +1,67 @@
+{
+  "cliente": "JULIA KIO E FAMÍLIA",
+  "destino": "ITÁLIA",
+  "pax": "2 adultos",
+  "perfil": "casal",
+  "ritmo": "equilibrado",
+  "cor_destino": "#730505",
+  "moeda": "EUR",
+  "inicio": "2026-05-10",
+  "observacoes": [
+    "Cliente pediu evitar voos domésticos — malha toda em trem.",
+    "Aniversário de casamento no dia 14/05."
+  ],
+  "etapas": [
+    {
+      "cidade": "Roma",
+      "pais": "Itália",
+      "checkin": "2026-05-10",
+      "noites": 4,
+      "hotel": {
+        "nome": "Hotel Artemide",
+        "categoria": 4,
+        "quarto": "Deluxe Double",
+        "refeicao": "Café da manhã",
+        "endereco": "Via Nazionale, 22 · Roma"
+      },
+      "traslado_seguinte": {
+        "modo": "trem",
+        "descricao": "Alta velocidade Roma Termini → Firenze S.M.N.",
+        "duracao": "1h35",
+        "confirmar": true
+      }
+    },
+    {
+      "cidade": "Florença",
+      "pais": "Itália",
+      "checkin": "2026-05-14",
+      "noites": 3,
+      "hotel": {
+        "nome": "Hotel Calimala",
+        "categoria": 4,
+        "quarto": "Superior Double",
+        "refeicao": "Café da manhã",
+        "endereco": "Via Calimala, 2 · Florença"
+      },
+      "traslado_seguinte": {
+        "modo": "trem",
+        "descricao": "Alta velocidade Firenze S.M.N. → Venezia S. Lucia",
+        "duracao": "2h05",
+        "confirmar": true
+      }
+    },
+    {
+      "cidade": "Veneza",
+      "pais": "Itália",
+      "checkin": "2026-05-17",
+      "noites": 3,
+      "hotel": {
+        "nome": "Hotel Ai Reali",
+        "categoria": 4,
+        "quarto": "Classic Double",
+        "refeicao": "Café da manhã",
+        "endereco": "Campo della Fava, 5527 · Veneza"
+      }
+    }
+  ]
+}

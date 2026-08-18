@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Roteiro Lusa Travel",
+  "type": "object",
+  "required": ["cliente", "destino", "pax", "inicio", "etapas"],
+  "properties": {
+    "cliente": { "type": "string", "description": "Nome do cliente em CAIXA ALTA, como aparecerá na capa da proposta." },
+    "destino": { "type": "string", "description": "País ou região, em CAIXA ALTA. Ex: ITÁLIA, PERU, ÁFRICA DO SUL." },
+    "pax": { "type": "string", "description": "Descrição dos passageiros. Ex: '2 adultos', '2 adultos e 1 criança (8 anos)'." },
+    "perfil": { "type": "string", "description": "Casal, família, lua de mel, grupo, sênior. Orienta o ritmo." },
+    "ritmo": { "type": "string", "enum": ["tranquilo", "equilibrado", "intenso"] },
+    "cor_destino": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$", "description": "Cor de bloco do destino. Ouro #da8d00 é fixo e não entra aqui." },
+    "moeda": { "type": "string", "description": "Moeda de cotação. Ex: EUR, USD." },
+    "inicio": { "type": "string", "format": "date", "description": "Primeiro dia em destino (check-in da primeira etapa), AAAA-MM-DD." },
+    "observacoes": { "type": "array", "items": { "type": "string" }, "description": "Notas internas: restrições, pedidos do cliente, pontos a confirmar." },
+    "etapas": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Cidades na ordem da viagem. checkout é derivado de checkin + noites.",
+      "items": {
+        "type": "object",
+        "required": ["cidade", "checkin", "noites"],
+        "properties": {
+          "cidade": { "type": "string" },
+          "pais": { "type": "string" },
+          "checkin": { "type": "string", "format": "date" },
+          "noites": { "type": "integer", "minimum": 1 },
+          "passagem": { "type": "boolean", "description": "true = cidade de passagem/pernoite técnico. Libera a regra de mínimo 2 noites." },
+          "hotel": {
+            "type": "object",
+            "required": ["nome"],
+            "properties": {
+              "nome": { "type": "string" },
+              "categoria": { "type": "integer", "minimum": 1, "maximum": 5, "description": "Estrelas — renderizadas em ouro no cartão de hotel." },
+              "quarto": { "type": "string" },
+              "refeicao": { "type": "string", "description": "Ex: 'Café da manhã', 'Meia pensão', 'Pensão completa'." },
+              "endereco": { "type": "string" }
+            }
+          },
+          "traslado_seguinte": {
+            "type": "object",
+            "description": "Como o cliente sai desta cidade para a próxima. Omitir na última etapa.",
+            "required": ["modo"],
+            "properties": {
+              "modo": { "type": "string", "enum": ["trem", "voo", "carro", "van", "onibus", "barco", "a pe"] },
+              "descricao": { "type": "string" },
+              "duracao": { "type": "string", "description": "Formato livre legível: '1h35', '3h20', '45min'." },
+              "confirmar": { "type": "boolean", "description": "true quando horário/duração ainda não foi conferido com o fornecedor." }
+            }
+          }
+        }
+      }
+    },
+    "dias": {
+      "type": "array",
+      "description": "Um objeto por data, de 'inicio' até o checkout da última etapa, inclusive.",
+      "items": {
+        "type": "object",
+        "required": ["data", "cidade"],
+        "properties": {
+          "data": { "type": "string", "format": "date" },
+          "cidade": { "type": "string", "description": "Cidade do dia. Em dia de traslado, use 'Roma → Florença'." },
+          "texto": { "type": "string", "description": "40 a 80 palavras, tom editorial, 2ª ou 3ª pessoa." }
+        }
+      }
+    }
+  }
+}
