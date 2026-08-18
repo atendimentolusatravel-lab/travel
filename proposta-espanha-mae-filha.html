@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>MÃE &amp; FILHA | Espanha — Lusa Travel</title>
+<style>
+/* ══════════════════════════════════════════════════════════════
+   LUSA TRAVEL — PROPOSTA ESPANHA · MÃE & FILHA (A3 Portrait)
+   Cor de destino: Borgonha #730505 (Europa Mediterrânea)
+   ══════════════════════════════════════════════════════════════ */
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;src:url('fonts/montserrat-400.woff2') format('woff2');}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;src:url('fonts/montserrat-500.woff2') format('woff2');}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;src:url('fonts/montserrat-600.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:300;src:url('fonts/poppins-300.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:400;src:url('fonts/poppins-400.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:500;src:url('fonts/poppins-500.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;src:url('fonts/poppins-600.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:700;src:url('fonts/poppins-700.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:800;src:url('fonts/poppins-800.woff2') format('woff2');}
+
+:root{
+  --gold:#da8d00;
+  --dest:#730505;
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#9a8d80;
+  --line:#e4ddd2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); }
+
+.page{
+  width:297mm; height:420mm; position:relative; overflow:hidden;
+  background:#fff; page-break-after:always; display:flex; flex-direction:column;
+}
+.page:last-child{ page-break-after:auto; }
+
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center;
+     justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center;
+     justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.2); }
+
+.body{ padding:16mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:4mm 0 8mm; }
+
+/* ══ CAPA ══ */
+.cover{ position:relative; }
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink);
+  display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 90% 55% at 25% 22%, rgba(218,141,0,.35), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 80% 75%, rgba(115,5,5,.55), transparent 65%),
+    linear-gradient(160deg,#b5713a 0%, #8a4a28 34%, #5c2415 62%, #2e130c 100%); }
+.cover-scrim{ position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, transparent 30%, rgba(0,0,0,.78) 78%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3;
+  font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+
+/* ══ ITINERÁRIO ══ */
+.tl{ display:flex; flex-direction:column; }
+.tl-item{ display:flex; align-items:flex-start; gap:6mm; }
+.tl-badge{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff;
+  font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tl-line{ width:2px; height:9mm; background:var(--line); margin-left:5.4mm; }
+.tl-city{ font-size:14pt; font-weight:700; color:var(--ink); }
+.tl-meta{ font-size:10pt; color:var(--mut); margin-top:1mm; }
+.tl-trans{ font-size:9pt; color:var(--mut); margin-left:5.4mm; padding-left:8mm; border-left:2px solid var(--line); padding-top:2mm; padding-bottom:2mm; }
+.tl-trans b{ color:var(--gold); font-weight:700; letter-spacing:.06em; }
+
+/* ══ DESTINO + HOTEL ══ */
+.dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center;
+  justify-content:space-between; flex-shrink:0; }
+.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); }
+.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9);
+  color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.dest-photo{ height:88mm; position:relative; flex-shrink:0; }
+.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800;
+  letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+.dest-text{ font-size:11pt; font-weight:400; line-height:1.65; color:var(--char); }
+.hotel-note{ font-size:8.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; margin:8mm 0 3mm; }
+.hotel-card{ margin-top:4mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.hotel-card .top{ background:#faf7f2; padding:5mm 8mm; border-bottom:1px solid var(--line);
+  display:flex; align-items:center; justify-content:space-between; }
+.hotel-card .name{ font-size:14pt; font-weight:700; color:var(--ink); }
+.hotel-card .opt{ font-size:8pt; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#fff;
+  background:var(--dest); border-radius:3px; padding:1.5mm 3mm; }
+.hotel-card .stars{ font-size:12pt; color:var(--gold); letter-spacing:2px; margin-top:1mm; }
+.hotel-card .rows{ padding:5mm 8mm; display:grid; grid-template-columns:1fr 1fr; gap:3mm 10mm; }
+.hotel-card .k{ font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.hotel-card .v{ font-size:10.5pt; font-weight:300; color:var(--char); margin-top:1mm; }
+
+/* ══ ROTEIRO DIA A DIA ══ */
+.day{ margin-bottom:6.5mm; }
+.day-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); }
+.day-t{ font-size:10.5pt; line-height:1.6; color:var(--char); margin-top:1.5mm; }
+.day-t b{ color:var(--ink); font-weight:600; }
+
+/* ══ SERVIÇOS ══ */
+.svc{ border:1px solid var(--line); border-radius:6px; padding:6mm 8mm; margin-bottom:5mm; }
+.svc-h{ display:flex; justify-content:space-between; align-items:baseline; }
+.svc-name{ font-size:12.5pt; font-weight:700; color:var(--ink); }
+.svc-date{ font-size:10pt; font-weight:700; color:var(--gold); }
+.svc-t{ font-size:10.5pt; line-height:1.6; color:var(--char); margin-top:2mm; font-weight:300; }
+
+/* ══ VALORES ══ */
+.val-note{ font-size:9pt; color:var(--mut); margin-bottom:5mm; }
+.val-sec{ font-size:8.5pt; letter-spacing:.16em; text-transform:uppercase; color:var(--dest); font-weight:700; margin:4mm 0 .5mm; }
+.val-row{ display:flex; justify-content:space-between; padding:1.6mm 0; border-bottom:1px solid var(--line); }
+.val-row .lbl{ font-size:10pt; color:var(--char); }
+.val-row .amt{ font-size:10pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; }
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink);
+  border-radius:5px; padding:5mm 8mm; margin-top:5mm; }
+.val-total .lbl{ font-size:11pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.val-total .amt{ font-size:16pt; font-weight:800; color:var(--gold); }
+.val-budget{ display:flex; justify-content:space-between; align-items:center; background:#faf7f2;
+  border:1px solid var(--line); border-radius:5px; padding:4mm 8mm; margin-top:3mm; }
+.val-budget .lbl{ font-size:10.5pt; font-weight:600; color:var(--char); }
+.val-budget .amt{ font-size:12pt; font-weight:800; color:var(--dest); }
+.val-fx{ font-size:8.5pt; color:var(--mut); margin-top:3.5mm; line-height:1.55; }
+
+/* ══ CONDIÇÕES ══ */
+.cond{ margin-bottom:7mm; }
+.cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
+.cond-t{ font-size:11pt; line-height:1.8; color:var(--char); }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 01 · CAPA ══════════ -->
+<section class="page cover">
+  <div class="cover-hd">
+    <div class="logo">LUSA TRAVEL</div>
+    <div class="tag">Glossário</div>
+  </div>
+  <div class="cover-bar"></div>
+  <div class="cover-photo"></div>
+  <div class="cover-scrim"></div>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em 2 passageiras (mãe &amp; filha) · 03/01 – 18/01</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">Mãe &amp; Filha</div>
+    <div class="cover-dest">Espanha — Barcelona · Valência · Sevilha · Málaga · Granada</div>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>Destinos</span></div>
+      <div class="stat"><b>15</b><span>Noites</span></div>
+      <div class="stat"><b>5</b><span>Hotéis</span></div>
+      <div class="stat"><b>16</b><span>Dias de viagem</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com" style="color:inherit;text-decoration:none">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076" style="color:inherit;text-decoration:none">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ══════════ 02 · ITINERÁRIO ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSA TRAVEL</div><div class="tag">Itinerário</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Sua rota</div>
+    <h2 class="h2">Itinerário</h2>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-badge">1</div><div><div class="tl-city">Barcelona</div><div class="tl-meta">03/01 – 07/01 · 4 noites</div></div></div>
+      <div class="tl-trans"><b>CARRO</b> · Citroën C3 automático · retirada em Barcelona 06/01 às 09h (bate-volta a Tarragona) · estrada para Valência em 07/01</div>
+      <div class="tl-item"><div class="tl-badge">2</div><div><div class="tl-city">Valência</div><div class="tl-meta">07/01 – 10/01 · 3 noites</div></div></div>
+      <div class="tl-trans"><b>TREM</b> · 10/01 · 10h57 Valencia-Joaquín Sorolla → 16h50 Sevilla-Santa Justa · 1 parada</div>
+      <div class="tl-item"><div class="tl-badge">3</div><div><div class="tl-city">Sevilha</div><div class="tl-meta">10/01 – 13/01 · 3 noites</div></div></div>
+      <div class="tl-trans"><b>CARRO</b> · Toyota Yaris automático · retirada em Sevilha 10/01 às 17h30 · rota por Ronda até Málaga</div>
+      <div class="tl-item"><div class="tl-badge">4</div><div><div class="tl-city">Málaga</div><div class="tl-meta">13/01 – 15/01 · 2 noites</div></div></div>
+      <div class="tl-trans"><b>CARRO</b> · rota panorâmica por Nerja e Frigiliana até Granada · devolução em Granada 18/01 às 08h</div>
+      <div class="tl-item"><div class="tl-badge">5</div><div><div class="tl-city">Granada</div><div class="tl-meta">15/01 – 18/01 · 3 noites</div></div></div>
+      <div class="tl-trans"><b>AÉREO</b> · 18/01 · 09h05 GRX Granada → 10h30 BCN Barcelona · direto · econômica</div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 03 · ROTEIRO DIA A DIA (parte 1) ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSA TRAVEL</div><div class="tag">Roteiro</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Dia a dia · Barcelona &amp; Valência</div>
+    <h2 class="h2">Roteiro — Parte 1</h2>
+
+    <div class="day"><div class="day-h">DIA 01 | Barcelona | Sáb 03/01</div>
+      <div class="day-t">Chegada e check-in no hotel. Para o primeiro contato com a cidade, um passeio leve a pé: <b>Passeig de Gràcia</b> com as fachadas de Gaudí, <b>Las Ramblas</b> e o mercado <b>La Boqueria</b> para um lanche colorido. Jantar cedo perto do hotel para vencer o fuso com calma.</div></div>
+
+    <div class="day"><div class="day-h">DIA 02 | Barcelona | Dom 04/01</div>
+      <div class="day-t">Manhã na <b>Sagrada Família</b> com acesso à torre — a vista lá de cima é inesquecível na primeira visita. À tarde, tour guiado a pé pelo <b>Bairro Gótico</b>: Catedral, Plaça Reial e as vielas medievais. Fim de tarde no bairro <b>El Born</b> com tapas e churros com chocolate.</div></div>
+
+    <div class="day"><div class="day-h">DIA 03 | Barcelona | Seg 05/01</div>
+      <div class="day-t">Manhã no <b>Park Güell</b> (reservar o primeiro horário, com luz linda para fotos). Depois, visita à <b>Casa Batlló</b> com experiência imersiva. À tarde, <b>teleférico de Montjuïc</b> com vista panorâmica da cidade e do mar. À noite, um espetáculo à parte: a <b>Cavalgada dos Reis Magos</b>, o desfile mais mágico do ano nas ruas de Barcelona.</div></div>
+
+    <div class="day"><div class="day-h">DIA 04 | Bate-volta a Tarragona | Ter 06/01</div>
+      <div class="day-t">Retirada do carro às 09h e estrada até <b>Tarragona</b> (1h). Dia entre ruínas romanas à beira-mar: <b>anfiteatro</b>, muralhas, a Part Alta medieval e o <b>Balcó del Mediterrani</b>. É o feriado de Reis — a cidade estará tranquila e festiva, perfeita para caminhar sem pressa. Retorno a Barcelona ao entardecer.</div></div>
+
+    <div class="day"><div class="day-h">DIA 05 | Barcelona → Valência | Qua 07/01</div>
+      <div class="day-t">Check-out e estrada pela costa mediterrânea (AP-7, ±4h), com parada sugerida em <b>Peñíscola</b>, vila murada sobre o mar (cenário de Game of Thrones). Chegada a Valência, check-in e primeira volta noturna pela <b>Ciutat Vella</b> iluminada.</div></div>
+
+    <div class="day"><div class="day-h">DIA 06 | Valência | Qui 08/01</div>
+      <div class="day-t">Devolução do carro às 11h. Dia dedicado ao centro histórico: <b>Catedral</b> (que guarda o Santo Cálice), <b>Lonja de la Seda</b> (Patrimônio UNESCO), <b>Mercado Central</b> e a tradicional <b>horchata com fartons</b>. Fim de tarde no bairro <b>El Carmen</b>, entre arte urbana e lojinhas.</div></div>
+
+    <div class="day"><div class="day-h">DIA 07 | Valência | Sex 09/01</div>
+      <div class="day-t">Manhã com <b>aula de paella</b> para as duas — experiência mãe &amp; filha que começa com compras no mercado e termina com almoço feito por vocês. À tarde, <b>passeio de bicicleta pelos Jardins do Turia</b> até a <b>Cidade das Artes e das Ciências</b>, com visita ao <b>Oceanogràfic</b>, o maior aquário da Europa.</div></div>
+
+    <div class="day"><div class="day-h">DIA 08 | Valência → Sevilha | Sáb 10/01</div>
+      <div class="day-t">Trem às 10h57 (Joaquín Sorolla) com chegada a Sevilha às 16h50. Retirada do carro às 17h30 e check-in. À noite, primeiro passeio pelo <b>Bairro de Santa Cruz</b> iluminado — as vielas mais charmosas da cidade.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 04 · ROTEIRO DIA A DIA (parte 2) ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSA TRAVEL</div><div class="tag">Roteiro</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Dia a dia · Andaluzia</div>
+    <h2 class="h2">Roteiro — Parte 2</h2>
+
+    <div class="day"><div class="day-h">DIA 09 | Sevilha | Dom 11/01</div>
+      <div class="day-t">Manhã no <b>Real Alcázar</b> (reservar o primeiro horário) — palácio de contos de fadas com jardins de laranjeiras. Na sequência, <b>Catedral de Sevilha</b> com subida à <b>Giralda</b>. À noite, <b>show de flamenco</b> em tablao tradicional: arrepia até quem nunca viu.</div></div>
+
+    <div class="day"><div class="day-h">DIA 10 | Sevilha | Seg 12/01</div>
+      <div class="day-t">Manhã na <b>Plaza de España</b> e no Parque María Luisa — cenário perfeito para fotos das duas. À tarde, o bairro de <b>Triana</b>, berço do flamenco e da cerâmica sevilhana, seguido de <b>cruzeiro pelo rio Guadalquivir</b> ao pôr do sol. À noite, vista panorâmica do alto das <b>Setas de Sevilla</b>.</div></div>
+
+    <div class="day"><div class="day-h">DIA 11 | Sevilha → Ronda → Málaga | Ter 13/01</div>
+      <div class="day-t">Check-out e estrada com parada em <b>Ronda</b> (±1h45), a cidade sobre o desfiladeiro: <b>Puente Nuevo</b>, a Praça de Touros histórica e mirantes de tirar o fôlego. Seguimos para Málaga (±1h20), check-in e noite na <b>Calle Larios</b> e no centro histórico.</div></div>
+
+    <div class="day"><div class="day-h">DIA 12 | Málaga | Qua 14/01</div>
+      <div class="day-t">Manhã cultural: <b>Alcazaba</b>, mirante do <b>Gibralfaro</b> e <b>Museu Picasso</b> — a cidade natal do artista. À tarde, o <b>passeio a cavalo no Parque Natural dos Montes de Málaga</b> (1h, já cotado) — momento só das duas em meio à natureza. À noite, espetos de sardinha à beira-mar em <b>Pedregalejo</b>.</div></div>
+
+    <div class="day"><div class="day-h">DIA 13 | Málaga → Nerja → Granada | Qui 15/01</div>
+      <div class="day-t">Check-out e rota panorâmica pela costa: <b>Cavernas de Nerja</b>, com salões de estalactites gigantes, e a vila branca de <b>Frigiliana</b>, eleita uma das mais bonitas da Espanha. Chegada a Granada no fim da tarde e primeira volta pelo centro.</div></div>
+
+    <div class="day"><div class="day-h">DIA 14 | Granada | Sex 16/01</div>
+      <div class="day-t">O grande dia: visita guiada à <b>Alhambra e Generalife</b>, com os Palácios Nazaríes — o monumento mais visitado da Espanha merece manhã inteira e guia. À tarde, bairro do <b>Realejo</b> e descanso. À noite, a tradição granadina: a cada bebida pedida, uma <b>tapa de cortesia</b>.</div></div>
+
+    <div class="day"><div class="day-h">DIA 15 | Granada | Sáb 17/01</div>
+      <div class="day-t">Manhã guiada pelo <b>Albaicín</b>, o bairro mouro de ruelas brancas, até o <b>Mirador de San Nicolás</b> — a vista clássica da Alhambra com a Sierra Nevada ao fundo. À tarde, relaxamento no <b>Hammam Al Ándalus</b> (banhos árabes + massagem para as duas). À noite, despedida com <b>flamenco nas cuevas do Sacromonte</b>.</div></div>
+
+    <div class="day"><div class="day-h">DIA 16 | Granada → Barcelona | Dom 18/01</div>
+      <div class="day-t">Devolução do carro às 08h no aeroporto de Granada e voo das <b>09h05 com chegada a Barcelona às 10h30</b>, para a conexão de retorno. Fim de uma viagem para lembrar para sempre.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 05 · BARCELONA ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Barcelona · Espanha</div><div class="no">1</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo" style="background:
+    radial-gradient(ellipse 80% 60% at 70% 30%, rgba(218,141,0,.4), transparent 60%),
+    linear-gradient(160deg,#c08a4a 0%, #8a5a30 45%, #4a2a18 100%);">
+    <div class="cap">Barcelona · 03/01 – 07/01 · 4 noites</div>
+  </div>
+  <div class="body">
+    <p class="dest-text">Barcelona é a porta de entrada perfeita para uma primeira viagem à Espanha. A cidade de Gaudí mistura praia e montanha, vielas góticas e avenidas modernistas, e recebe mãe e filha com uma energia que contagia desde o primeiro passeio pelas Ramblas. Entre as torres da Sagrada Família, o mosaico colorido do Park Güell e o pôr do sol visto de Montjuïc, cada dia rende fotos e memórias diferentes — e no início de janeiro a cidade ainda guarda o clima de festa, coroado pela mágica Cavalgada dos Reis. Hospedadas junto à Plaça de Catalunya, vocês estarão no coração de tudo, com metrô, cafés e as principais atrações a poucos minutos a pé.</p>
+    <div class="hotel-note">Escolha uma das duas opções de hotel</div>
+    <div class="hotel-card">
+      <div class="top">
+        <div>
+          <div class="name">Hotel Indigo Barcelona — Plaza Catalunya by IHG</div>
+          <div class="stars">★★★★</div>
+        </div>
+        <div class="opt">Opção A</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Standard Room</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã</div></div>
+        <div><div class="k">Localização</div><div class="v">Junto à Plaça de Catalunya · centro</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">03/01 → 07/01</div></div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="top">
+        <div>
+          <div class="name">Eurostars Barcelona Central</div>
+          <div class="stars">★★★★</div>
+        </div>
+        <div class="opt">Opção B</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Double Superior</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã</div></div>
+        <div><div class="k">Localização</div><div class="v">Eixample · centro</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">03/01 → 07/01</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 06 · VALÊNCIA ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Valência · Espanha</div><div class="no">2</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo" style="background:
+    radial-gradient(ellipse 80% 60% at 30% 35%, rgba(218,141,0,.35), transparent 60%),
+    linear-gradient(160deg,#3a7a8a 0%, #2a5a6a 45%, #16303c 100%);">
+    <div class="cap">Valência · 07/01 – 10/01 · 3 noites</div>
+  </div>
+  <div class="body">
+    <p class="dest-text">Valência é a Espanha em escala mais tranquila — e talvez a surpresa favorita da viagem. Terra natal da paella, a cidade combina um centro histórico dourado, com a Lonja de la Seda e um dos mercados mais bonitos da Europa, ao futurismo branco da Cidade das Artes e das Ciências. O antigo leito do rio Turia virou um jardim de nove quilômetros que atravessa a cidade e pede um passeio de bicicleta sem pressa. Entre uma horchata no centro e os tubarões do Oceanogràfic, mãe e filha vão entender por que os valencianos vivem com tanto orgulho da sua cidade — e ainda voltam para casa sabendo preparar uma paella de verdade.</p>
+    <div class="hotel-note">Escolha uma das duas opções de hotel</div>
+    <div class="hotel-card">
+      <div class="top">
+        <div>
+          <div class="name">NH Valencia Center</div>
+          <div class="stars">★★★★</div>
+        </div>
+        <div class="opt">Opção A</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Standard Room</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã</div></div>
+        <div><div class="k">Localização</div><div class="v">Centro de Valência</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">07/01 → 10/01</div></div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="top">
+        <div>
+          <div class="name">Novotel Valencia Lavant</div>
+          <div class="stars">★★★★</div>
+        </div>
+        <div class="opt">Opção B</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Standard Room</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã</div></div>
+        <div><div class="k">Localização</div><div class="v">Próximo à Cidade das Artes</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">07/01 → 10/01</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 07 · SEVILHA ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Sevilha · Espanha</div><div class="no">3</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo" style="background:
+    radial-gradient(ellipse 80% 60% at 65% 30%, rgba(218,141,0,.45), transparent 60%),
+    linear-gradient(160deg,#b06a2a 0%, #7a4218 45%, #3c2010 100%);">
+    <div class="cap">Sevilha · 10/01 – 13/01 · 3 noites</div>
+  </div>
+  <div class="body">
+    <p class="dest-text">Sevilha é pura emoção andaluza: laranjeiras nas calçadas, o toque das castanholas ecoando nas vielas e um pôr do sol que pinta o rio Guadalquivir de ouro. O Real Alcázar, palácio onde reis mouros e cristãos deixaram sua marca, parece saído de um conto; a Giralda convida a subir rampas centenárias para ver a cidade do alto; e a Plaza de España é, sem exagero, um dos cenários mais fotogênicos da Europa. À noite, o flamenco — nascido aqui — mostra sua força em tablaos íntimos que emocionam até quem nunca o viu. Para uma primeira vez na Andaluzia, Sevilha é o coração da viagem.</p>
+    <div class="hotel-note">Escolha uma das duas opções de hotel</div>
+    <div class="hotel-card">
+      <div class="top">
+        <div>
+          <div class="name">NH Sevilla Plaza de Armas</div>
+          <div class="stars">★★★★</div>
+        </div>
+        <div class="opt">Opção A</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Standard Room</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã</div></div>
+        <div><div class="k">Localização</div><div class="v">Plaza de Armas · junto ao rio</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">10/01 → 13/01</div></div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="top">
+        <div>
+          <div class="name">Becquer Hotel, Historic City Center</div>
+          <div class="stars">★★★★</div>
+        </div>
+        <div class="opt">Opção B</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Standard Room</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã</div></div>
+        <div><div class="k">Localização</div><div class="v">Centro histórico · próx. à Ponte de Triana</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">10/01 → 13/01</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 08 · MÁLAGA ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Málaga · Espanha</div><div class="no">4</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo" style="background:
+    radial-gradient(ellipse 80% 60% at 30% 30%, rgba(218,141,0,.4), transparent 60%),
+    linear-gradient(160deg,#2a6a8a 0%, #7a5a2a 55%, #38240f 100%);">
+    <div class="cap">Málaga · 13/01 – 15/01 · 2 noites</div>
+  </div>
+  <div class="body">
+    <p class="dest-text">Na Costa del Sol, Málaga é sol, mar e arte na medida certa para dois dias de pausa entre as grandes capitais andaluzas. Cidade natal de Picasso, ela guarda uma fortaleza moura — a Alcazaba — trepada sobre o casario, e um centro vibrante onde a Calle Larios concentra o passeio do fim de tarde. Aqui a viagem ganha um capítulo só de vocês: o passeio a cavalo pelo Parque Natural dos Montes de Málaga, entre pinheiros e mirantes com o Mediterrâneo ao fundo. E nenhuma visita está completa sem os espetos de sardinha assados na brasa à beira-mar, tradição malagueña que vira memória afetiva instantânea.</p>
+    <div class="hotel-note">Escolha uma das duas opções de hotel</div>
+    <div class="hotel-card">
+      <div class="top">
+        <div>
+          <div class="name">MS Maestranza Málaga Centro</div>
+          <div class="stars">★★★★</div>
+        </div>
+        <div class="opt">Opção A</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Double Room with Twin Bed</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã</div></div>
+        <div><div class="k">Localização</div><div class="v">Centro · próx. ao porto e La Malagueta</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">13/01 → 15/01</div></div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="top">
+        <div>
+          <div class="name">Room Mate Collection Valeria, Málaga</div>
+          <div class="stars">★★★★</div>
+        </div>
+        <div class="opt">Opção B</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Double Room</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã</div></div>
+        <div><div class="k">Localização</div><div class="v">Soho · centro histórico</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">13/01 → 15/01</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 09 · GRANADA ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Granada · Espanha</div><div class="no">5</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo" style="background:
+    radial-gradient(ellipse 80% 60% at 70% 25%, rgba(218,141,0,.4), transparent 60%),
+    linear-gradient(160deg,#8a3a2a 0%, #5c2418 45%, #26100c 100%);">
+    <div class="cap">Granada · 15/01 – 18/01 · 3 noites</div>
+  </div>
+  <div class="body">
+    <p class="dest-text">Granada é o gran finale que toda primeira viagem à Espanha merece. Aos pés da Sierra Nevada — nevada em janeiro, formando um cenário de cartão-postal —, a cidade guarda a Alhambra, o palácio mouro mais bonito do mundo, onde cada pátio esconde jardins, fontes e rendas de gesso que parecem impossíveis. Do Mirador de San Nicolás, no alto do Albaicín, a vista do conjunto ao entardecer arranca suspiros. Granada também é a cidade das tapas de cortesia, dos banhos árabes à luz de velas e do flamenco visceral das cuevas do Sacromonte. Despedida melhor da Espanha não há.</p>
+    <div class="hotel-note">Escolha uma das duas opções de hotel</div>
+    <div class="hotel-card">
+      <div class="top">
+        <div>
+          <div class="name">Áurea Catedral by Eurostars Hotel Company</div>
+          <div class="stars">★★★★</div>
+        </div>
+        <div class="opt">Opção A</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Double Room</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã</div></div>
+        <div><div class="k">Localização</div><div class="v">Junto à Catedral · centro</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">15/01 → 18/01</div></div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="top">
+        <div>
+          <div class="name">Eurostars Gran Vía Hotel</div>
+          <div class="stars">★★★★</div>
+        </div>
+        <div class="opt">Opção B</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Double Room</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã</div></div>
+        <div><div class="k">Localização</div><div class="v">Gran Vía de Colón · centro</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">15/01 → 18/01</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 10 · SERVIÇOS JÁ COTADOS ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSA TRAVEL</div><div class="tag">Serviços</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Transporte &amp; experiências</div>
+    <h2 class="h2">Serviços já cotados</h2>
+
+    <div class="svc">
+      <div class="svc-h"><div class="svc-name">Aluguel de carro — Barcelona → Valência</div><div class="svc-date">06/01 – 08/01</div></div>
+      <div class="svc-t">Citroën C3 automático · Retirada em Barcelona 06/01 às 09h00 · Devolução em Valência 08/01 às 11h00 · EUR 165,01 incluindo one way fee · Taxa de depósito EUR 526,03 (bloqueio no cartão, devolvido após a entrega).</div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-h"><div class="svc-name">Trem — Valência → Sevilha</div><div class="svc-date">10/01</div></div>
+      <div class="svc-t">Saída 10h57 da estação Valencia-Joaquín Sorolla · Chegada 16h50 em Sevilla-Santa Justa · 1 parada.</div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-h"><div class="svc-name">Aluguel de carro — Sevilha → Granada</div><div class="svc-date">10/01 – 18/01</div></div>
+      <div class="svc-t">Toyota Yaris automático · Retirada em Sevilha 10/01 às 17h30 · Devolução em Granada 18/01 às 08h00 · One way fee EUR 0,01 · Taxa de depósito EUR 200 (bloqueio no cartão, devolvido após a entrega).</div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-h"><div class="svc-name">Passeio a cavalo — Montes de Málaga</div><div class="svc-date">14/01</div></div>
+      <div class="svc-t">Passeio a cavalo no Parque Natural dos Montes de Málaga · Duração de 1h · Experiência guiada em meio à natureza, com vista para o Mediterrâneo.</div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-h"><div class="svc-name">Bate-volta a Tarragona</div><div class="svc-date">06/01</div></div>
+      <div class="svc-t">Dia inteiro na Tarragona romana com o carro alugado: anfiteatro à beira-mar, muralhas, Part Alta medieval e Balcó del Mediterrani.</div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-h"><div class="svc-name">Aéreo — Granada → Barcelona</div><div class="svc-date">18/01</div></div>
+      <div class="svc-t">Voo direto · 09h05 GRX (Granada) → 10h30 BCN (Barcelona) · Classe econômica.</div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 11 · VALORES (ATIVIDADES SUGERIDAS) ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSA TRAVEL</div><div class="tag">Valores</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Investimento em experiências</div>
+    <h2 class="h2">Atividades sugeridas</h2>
+    <div class="val-note">*Valores estimados em EUR, por pessoa · Total calculado para 2 passageiras</div>
+
+    <div class="val-sec">Barcelona &amp; Tarragona</div>
+    <div class="val-row"><span class="lbl">Sagrada Família com acesso à torre</span><span class="amt">EUR 40,00</span></div>
+    <div class="val-row"><span class="lbl">Casa Batlló (experiência imersiva)</span><span class="amt">EUR 35,00</span></div>
+    <div class="val-row"><span class="lbl">Park Güell</span><span class="amt">EUR 13,00</span></div>
+    <div class="val-row"><span class="lbl">Teleférico de Montjuïc (ida e volta)</span><span class="amt">EUR 16,00</span></div>
+    <div class="val-row"><span class="lbl">Tour guiado a pé — Bairro Gótico</span><span class="amt">EUR 20,00</span></div>
+    <div class="val-row"><span class="lbl">Tarragona: anfiteatro romano + monumentos</span><span class="amt">EUR 15,00</span></div>
+
+    <div class="val-sec">Valência</div>
+    <div class="val-row"><span class="lbl">Oceanogràfic + Hemisfèric (Cidade das Artes)</span><span class="amt">EUR 41,00</span></div>
+    <div class="val-row"><span class="lbl">Passeio de bicicleta — Jardins do Turia</span><span class="amt">EUR 25,00</span></div>
+    <div class="val-row"><span class="lbl">Aula de paella com visita ao mercado</span><span class="amt">EUR 65,00</span></div>
+
+    <div class="val-sec">Sevilha</div>
+    <div class="val-row"><span class="lbl">Real Alcázar (entrada + audioguia)</span><span class="amt">EUR 20,00</span></div>
+    <div class="val-row"><span class="lbl">Catedral de Sevilha + Giralda</span><span class="amt">EUR 14,00</span></div>
+    <div class="val-row"><span class="lbl">Show de flamenco em tablao</span><span class="amt">EUR 35,00</span></div>
+    <div class="val-row"><span class="lbl">Cruzeiro pelo rio Guadalquivir</span><span class="amt">EUR 18,00</span></div>
+    <div class="val-row"><span class="lbl">Setas de Sevilla (mirante)</span><span class="amt">EUR 15,00</span></div>
+
+    <div class="val-sec">Rota Andaluza &amp; Málaga</div>
+    <div class="val-row"><span class="lbl">Ronda: Praça de Touros + museu</span><span class="amt">EUR 12,00</span></div>
+    <div class="val-row"><span class="lbl">Museu Picasso Málaga</span><span class="amt">EUR 12,00</span></div>
+    <div class="val-row"><span class="lbl">Alcazaba + Castelo de Gibralfaro</span><span class="amt">EUR 6,00</span></div>
+    <div class="val-row"><span class="lbl">Cavernas de Nerja</span><span class="amt">EUR 18,00</span></div>
+
+    <div class="val-sec">Granada</div>
+    <div class="val-row"><span class="lbl">Alhambra + Generalife com guia</span><span class="amt">EUR 55,00</span></div>
+    <div class="val-row"><span class="lbl">Tour guiado Albaicín + San Nicolás</span><span class="amt">EUR 18,00</span></div>
+    <div class="val-row"><span class="lbl">Hammam Al Ándalus (banho árabe + massagem)</span><span class="amt">EUR 75,00</span></div>
+    <div class="val-row"><span class="lbl">Flamenco nas cuevas do Sacromonte</span><span class="amt">EUR 35,00</span></div>
+
+    <div class="val-total"><span class="lbl">TOTAL ATIVIDADES · 2 PASSAGEIRAS</span><span class="amt">EUR 1.206,00 ≈ R$ 7.658</span></div>
+    <div class="val-budget"><span class="lbl">Orçamento disponível para atividades: R$ 25.000</span><span class="amt">Margem: ≈ R$ 17.342</span></div>
+
+    <div class="val-fx">Cotação 18/08 · EUR 1 = R$ 6,35<br>
+    A margem restante cobre com folga a gastronomia dos passeios, compras e upgrades opcionais — sugestões: tour Camp Nou (EUR 28), Caminito del Rey com guia saindo de Málaga (EUR 45), visita noturna aos Palácios Nazaríes (EUR 12).<br>
+    O passeio a cavalo nos Montes de Málaga e o bate-volta a Tarragona já constam dos serviços cotados.<br>
+    *Nada reservado, apenas cotado</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 12 · CONDIÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSA TRAVEL</div><div class="tag">Condições</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Importante</div>
+    <h2 class="h2">Condições e Observações</h2>
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Hotelaria: até 10x sem acréscimos · Aéreo: até 6x sem acréscimos · PIX: desconto de 5–13%</div></div>
+    <div class="cond"><div class="cond-h">Reservas antecipadas</div><div class="cond-t">Alhambra, Sagrada Família, Park Güell e Real Alcázar esgotam com semanas de antecedência na alta procura — recomendamos reservar os ingressos assim que os hotéis forem confirmados. Aula de paella e passeio a cavalo também pedem reserva prévia.</div></div>
+    <div class="cond"><div class="cond-h">Documentação</div><div class="cond-t">Passaportes com validade mínima de 6 meses · Menor de idade viajando com um dos pais: recomendável portar certidão de nascimento e, conforme o caso, autorização de viagem · Seguro viagem com cobertura mínima de EUR 30.000 é obrigatório no Espaço Schengen (cotamos à parte).</div></div>
+    <div class="cond"><div class="cond-h">Carro alugado</div><div class="cond-t">Condutora com CNH válida (recomendável PID) e cartão de crédito físico no nome para o depósito-caução · Depósitos: EUR 526,03 (Barcelona–Valência) e EUR 200,00 (Sevilha–Granada), devolvidos após a entrega do veículo.</div></div>
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Vistos e taxas de vacina<br>· City taxes (pagas no hotel — na Catalunha há taxa turística local)<br>· Combustível, pedágios e estacionamentos<br>· Despesas pessoais</div></div>
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Valores de atividades são estimativas de bilheteria/operadores locais e podem variar na data da compra. A taxa de estadia (city tax) pode ser cobrada localmente pelo hotel. Valores sujeitos a confirmação e disponibilidade no momento da reserva.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
