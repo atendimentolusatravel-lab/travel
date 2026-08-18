@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Padrão de Roteirização — Travel Guide Lusa Travel</title>
+<style>
+:root{
+  --areia:#997749; --taupe:#7a6351; --cacau:#423633; --marfim:#e4e7ec;
+  --bg:#f6f1ea; --sf:#efe8de; --sf2:#e5dccf; --bd:#d3c6b3;
+  --t:#2b241e; --t2:#5f5347; --t3:#9a8b7a;
+  --sb:#2b241e; --sb-bd:#3d332a; --sb-tx:#a89482; --sb-hi:#f3ece2;
+  --sans:system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'Courier New',monospace;
+  --r:5px; --sbw:236px;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --bg:#17120e; --sf:#201a15; --sf2:#2a221b; --bd:#3b3025;
+  --t:#f3ece2; --t2:#b0a08e; --t3:#7a6b5b;
+}}
+:root[data-theme=dark]{--bg:#17120e;--sf:#201a15;--sf2:#2a221b;--bd:#3b3025;--t:#f3ece2;--t2:#b0a08e;--t3:#7a6b5b;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font-family:var(--sans);font-size:15px;line-height:1.65;display:flex;min-height:100vh}
+
+.sb{position:fixed;top:0;left:0;bottom:0;width:var(--sbw);background:var(--sb);border-right:1px solid var(--sb-bd);display:flex;flex-direction:column;z-index:100;overflow-y:auto}
+.sb-brand{padding:24px 20px 20px;border-bottom:1px solid var(--sb-bd)}
+.sb-n{font-size:13px;font-weight:700;color:var(--sb-hi)}
+.sb-d{font-size:10.5px;color:var(--sb-tx);margin-top:3px}
+.sb-lbl{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--areia);font-weight:700;padding:16px 20px 8px}
+.sb-nav{display:flex;flex-direction:column;padding:0 10px;gap:2px}
+.sb-a{display:flex;gap:10px;padding:8px 12px;border-radius:var(--r);text-decoration:none;color:var(--sb-tx);font-size:12.5px}
+.sb-a:hover{background:rgba(255,255,255,.06);color:var(--sb-hi)}
+.sb-num{font-family:var(--mono);font-size:10px;opacity:.5;width:16px}
+.sb-foot{margin-top:auto;padding:14px 20px 18px;border-top:1px solid var(--sb-bd);font-size:10.5px;color:var(--sb-tx)}
+
+.main{margin-left:var(--sbw);flex:1;min-width:0}
+.sec{padding:60px 52px;border-bottom:1px solid var(--bd)}
+.eyebrow{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--areia);font-weight:700;margin-bottom:10px}
+h1{font-size:clamp(24px,4vw,38px);letter-spacing:-.025em;line-height:1.1;margin-bottom:14px}
+h2.sec-title{font-size:clamp(20px,3vw,30px);letter-spacing:-.02em;line-height:1.15;margin-bottom:12px}
+.intro{font-size:14.5px;color:var(--t2);max-width:640px;padding-bottom:34px;border-bottom:1px solid var(--bd);margin-bottom:36px}
+.blk{margin-bottom:40px}
+.blk-h{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--t3);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.blk-h::after{content:'';flex:1;height:1px;background:var(--bd)}
+p.d{font-size:13.5px;color:var(--t2);margin-bottom:14px;max-width:700px}
+ul.d{font-size:13.5px;color:var(--t2);margin:0 0 14px 18px;max-width:700px}
+ul.d li{margin-bottom:6px}
+code{font-family:var(--mono);font-size:12px;background:var(--sf2);padding:1px 5px;border-radius:3px;color:var(--t)}
+pre{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:14px 16px;overflow-x:auto;font-family:var(--mono);font-size:12px;line-height:1.6;margin-bottom:14px}
+
+.sw-row{display:flex;flex-wrap:wrap;gap:10px}
+.sw{width:132px}
+.sw-chip{height:74px;border-radius:var(--r) var(--r) 0 0;border:1px solid rgba(0,0,0,.08)}
+.sw-info{background:var(--sf);border:1px solid var(--bd);border-top:none;border-radius:0 0 var(--r) var(--r);padding:9px 11px}
+.sw-name{font-size:11.5px;font-weight:700}
+.sw-hex{font-family:var(--mono);font-size:10.5px;color:var(--t3);margin:2px 0 4px}
+.sw-use{font-size:10.5px;color:var(--t2);line-height:1.45}
+
+table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:16px}
+th{text-align:left;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--t3);padding:0 12px 8px 0;border-bottom:2px solid var(--bd)}
+td{padding:9px 12px 9px 0;border-bottom:1px solid var(--bd);color:var(--t2);vertical-align:top}
+td b{color:var(--t)}
+
+.mocks{display:flex;flex-wrap:wrap;gap:18px}
+.mock{width:132px}
+.mk{width:132px;height:187px;border-radius:3px;overflow:hidden;position:relative;border:1px solid var(--bd);background:var(--areia)}
+.mock-lb{font-size:10.5px;color:var(--t2);margin-top:7px;line-height:1.35}
+.mock-lb b{display:block;color:var(--t);font-size:11.5px}
+.mk .ph{position:absolute;inset:0;background:linear-gradient(150deg,#a98a63,#4a3a2a)}
+.mk .vl{position:absolute;inset:0;background:var(--taupe);opacity:.55}
+.mk .tx{position:absolute;color:#fff;font-family:Georgia,serif}
+.mk .bar{position:absolute;background:rgba(255,255,255,.85);height:1px}
+.mk .cir{position:absolute;border-radius:50%;background:rgba(255,255,255,.32);border:1.5px solid rgba(255,255,255,.5)}
+.mk .arc{position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:54px;height:120px;border-radius:27px 27px 0 0;background:linear-gradient(150deg,#b09070,#5a4632)}
+.mk .ln{position:absolute;height:2px;background:rgba(255,255,255,.5);border-radius:1px}
+
+.callout{background:var(--sf);border-left:3px solid var(--areia);border-radius:0 var(--r) var(--r) 0;padding:14px 18px;font-size:13.5px;color:var(--t2);margin-bottom:16px;max-width:760px}
+.callout b{color:var(--t)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:16px 18px}
+.card-h{font-size:11.5px;font-weight:700;margin-bottom:6px}
+.card-b{font-size:12.5px;color:var(--t2);line-height:1.55}
+.tag{display:inline-block;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:2px 7px;border-radius:20px;margin-right:6px}
+.tag.novo{background:rgba(153,119,73,.18);color:var(--areia)}
+.tag.mant{background:rgba(0,0,0,.07);color:var(--t3)}
+@media(max-width:820px){ .sb{display:none} .main{margin-left:0} .sec{padding:40px 22px} }
+</style>
+</head>
+<body>
+
+<nav class="sb">
+  <div class="sb-brand">
+    <div class="sb-n">Padrão de Roteirização</div>
+    <div class="sb-d">Travel Guide · Lusa Travel</div>
+  </div>
+  <div class="sb-lbl">Seções</div>
+  <div class="sb-nav">
+    <a class="sb-a" href="#s1"><span class="sb-num">01</span>O serviço</a>
+    <a class="sb-a" href="#s2"><span class="sb-num">02</span>Formato e paleta</a>
+    <a class="sb-a" href="#s3"><span class="sb-num">03</span>Tipografia</a>
+    <a class="sb-a" href="#s4"><span class="sb-num">04</span>Anatomia das páginas</a>
+    <a class="sb-a" href="#s5"><span class="sb-num">05</span>Regras de conteúdo</a>
+    <a class="sb-a" href="#s6"><span class="sb-num">06</span>Tom editorial</a>
+    <a class="sb-a" href="#s7"><span class="sb-num">07</span>O que mudou</a>
+    <a class="sb-a" href="#s8"><span class="sb-num">08</span>Produção</a>
+  </div>
+  <div class="sb-foot">
+    Extraído de quatro guias entregues.<br>Executável em
+    <code style="font-size:10px">.claude/skills/roteirizacao</code>
+  </div>
+</nav>
+
+<main class="main">
+
+<!-- 01 -->
+<section class="sec" id="s1">
+  <div class="eyebrow">01 · Definição</div>
+  <h1>Travel Guide</h1>
+  <p class="intro">
+    O entregável do serviço de <b>roteirização</b>: sugestão de roteiro, passeios,
+    restaurantes e informações práticas do destino. É um produto de consultoria —
+    a Lusa Travel <b>não reserva, não compra e não intermedia</b> nada do que está
+    no guia. Isso o separa por completo da proposta comercial, que tem hotelaria,
+    valores e condições de pagamento.
+  </p>
+
+  <div class="blk">
+    <div class="blk-h">O que entra</div>
+    <div class="grid2">
+      <div class="card"><div class="card-h">Roteiro day by day</div>
+        <div class="card-b">Um bloco por dia da viagem, com a cidade, a data e a sugestão
+        de programa. Mistura o que já está contratado (voo, traslado) com o que é sugestão.</div></div>
+      <div class="card"><div class="card-h">Must Visit</div>
+        <div class="card-b">O que ver em cada cidade, em ordem de prioridade, com a nota
+        prática que só quem conhece daria.</div></div>
+      <div class="card"><div class="card-h">Must Try</div>
+        <div class="card-b">Onde comer e beber, com o comentário pessoal da casa. É a
+        seção mais usada pelo cliente durante a viagem.</div></div>
+      <div class="card"><div class="card-h">Diretrizes gerais</div>
+        <div class="card-b">Uma página por país: transporte, moeda, tomada, gorjeta,
+        costume local, saúde e emergência.</div></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <div class="blk-h">O que nunca entra</div>
+    <ul class="d">
+      <li>Valores, câmbio, parcelamento ou qualquer tabela de preço.</li>
+      <li>Hotel apresentado como reservado — se o hotel já está contratado por fora,
+        ele aparece no texto do dia, não como cartão de hotelaria.</li>
+      <li>Promessa de disponibilidade: ingresso, mesa e passeio são sugestão até que
+        o viajante contrate.</li>
+      <li>Jargão de operação. O guia é lido na rua, não no escritório.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="sec" id="s2">
+  <div class="eyebrow">02 · Base</div>
+  <h2 class="sec-title">Formato e paleta</h2>
+  <p class="intro">
+    A5 retrato — 148 × 210 mm. Formato de leitura no celular, com página inteira
+    visível sem zoom. A paleta é fixa em todas as edições: quem muda de um guia
+    para outro são as fotos, não as cores.
+  </p>
+
+  <div class="blk">
+    <div class="blk-h">Cores</div>
+    <div class="sw-row">
+      <div class="sw"><div class="sw-chip" style="background:#997749"></div>
+        <div class="sw-info"><div class="sw-name">Areia</div><div class="sw-hex">#997749</div>
+        <div class="sw-use">Fundo padrão das páginas sem foto e das aberturas de seção</div></div></div>
+      <div class="sw"><div class="sw-chip" style="background:#7a6351"></div>
+        <div class="sw-info"><div class="sw-name">Taupe</div><div class="sw-hex">#7a6351</div>
+        <div class="sw-use">Véu sobre foto, em multiply, para o texto respirar</div></div></div>
+      <div class="sw"><div class="sw-chip" style="background:#423633"></div>
+        <div class="sw-info"><div class="sw-name">Cacau</div><div class="sw-hex">#423633</div>
+        <div class="sw-use">Texto e título sobre fundo claro; ilustrações de mapa</div></div></div>
+      <div class="sw"><div class="sw-chip" style="background:#e4e7ec"></div>
+        <div class="sw-info"><div class="sw-name">Marfim</div><div class="sw-hex">#e4e7ec</div>
+        <div class="sw-use">Texto sobre fundo escuro — nunca branco puro em bloco de texto</div></div></div>
+      <div class="sw"><div class="sw-chip" style="background:#ffffff"></div>
+        <div class="sw-info"><div class="sw-name">Branco</div><div class="sw-hex">#ffffff</div>
+        <div class="sw-use">Destaques curtos: nome do cliente, cidade no divisor, fios</div></div></div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <b>O ouro #da8d00 da proposta não aparece aqui.</b> São dois produtos com identidades
+    próprias: o ouro identifica a proposta comercial, o areia identifica o guia de viagem.
+    O que costura os dois é o logotipo e a tipografia serifada.
+  </div>
+
+  <div class="blk">
+    <div class="blk-h">Fotografia</div>
+    <ul class="d">
+      <li><b>Full-bleed sempre.</b> Foto sangra nos quatro lados; nunca com moldura branca.</li>
+      <li><b>Véu obrigatório</b> em qualquer página com texto sobre foto — taupe em multiply,
+        opacidade 45% a 85% conforme o brilho da imagem.</li>
+      <li><b>Círculo</b> para item de Must Visit e Must Try: recorte quadrado, anel claro
+        de 1,2 mm, sombra suave.</li>
+      <li><b>Arco</b> (topo arredondado, base rente ao pé da página) na abertura de seção.</li>
+      <li>Nunca use imagem com marca d'água de banco. Foi encontrada em guia entregue.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="sec" id="s3">
+  <div class="eyebrow">03 · Tipografia</div>
+  <h2 class="sec-title">Quatro famílias, papéis fixos</h2>
+  <p class="intro">
+    O padrão nasceu no Canva. Duas das quatro fontes são proprietárias; o template
+    HTML usa substitutas de licença aberta, embarcadas no repositório, e passa a usar
+    as originais automaticamente se os arquivos forem colocados em
+    <code>assets/fonts/</code>.
+  </p>
+  <table>
+    <thead><tr><th>Papel</th><th>Fonte original</th><th>Substituta embarcada</th><th>Tamanho</th></tr></thead>
+    <tbody>
+      <tr><td><b>Display</b><br>TRAVEL GUIDE, nome de cidade, MUST VISIT, BOA VIAGEM</td>
+          <td>TAN Twinkle</td><td>Italiana</td><td>20–37 pt</td></tr>
+      <tr><td><b>Serifada</b><br>edição, itens de lista, diretrizes, "Desenvolvido para"</td>
+          <td>Cormorant Garamond<br>Bold e Bold Italic</td><td>a mesma</td><td>10–17 pt</td></tr>
+      <tr><td><b>Sem serifa</b><br>roteiro dia a dia, texto corrido, contatos</td>
+          <td>Glacial Indifference</td><td>Jost</td><td>8–9,5 pt</td></tr>
+      <tr><td><b>Arredondada</b><br>legendas, selo de emissão, notas de rodapé</td>
+          <td>Nunito</td><td>a mesma</td><td>6,5–7,5 pt</td></tr>
+    </tbody>
+  </table>
+  <ul class="d">
+    <li>Display sempre com entreletra aberta — de <code>.06em</code> a <code>.22em</code>.
+      É o que dá o ar de revista.</li>
+    <li>Serifada quase sempre em <b>itálico</b> nas listas. É a assinatura das páginas
+      de Must Visit, Must Try e Diretrizes.</li>
+    <li>Sem serifa nunca em itálico e nunca em caixa alta em bloco de texto.</li>
+  </ul>
+</section>
+
+<!-- 04 -->
+<section class="sec" id="s4">
+  <div class="eyebrow">04 · Estrutura</div>
+  <h2 class="sec-title">Anatomia das páginas</h2>
+  <p class="intro">
+    Sete tipos de página. A ordem é fixa e o índice numera as seções 01 a 04 — o
+    índice tem de bater com o miolo.
+  </p>
+  <div class="mocks">
+
+    <div class="mock">
+      <div class="mk">
+        <div class="ph"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.45),rgba(0,0,0,.05) 34%,rgba(0,0,0,.8))"></div>
+        <div class="tx" style="top:14px;left:0;right:0;text-align:center;font-size:6px;letter-spacing:.18em">TRAVEL GUIDE</div>
+        <div class="tx" style="top:24px;left:0;right:0;text-align:center;font-size:4.5px;font-style:italic">Italy Edition</div>
+        <div class="tx" style="bottom:22px;left:9px;font-size:4px">Desenvolvido para:</div>
+        <div class="tx" style="bottom:14px;left:9px;font-size:6px;font-weight:700">Ana e Rafael</div>
+        <div class="tx" style="bottom:7px;left:9px;font-size:3px;opacity:.7">EMITIDO EM 02/03/2026 · V1</div>
+      </div>
+      <div class="mock-lb"><b>Capa</b>Foto do destino, símbolo, edição, nome do cliente e o selo de emissão</div>
+    </div>
+
+    <div class="mock">
+      <div class="mk">
+        <div class="ph"></div><div class="vl"></div>
+        <div class="tx" style="bottom:64px;left:8px;font-size:8px">01.</div><div class="bar" style="bottom:70px;left:24px;right:0"></div>
+        <div class="tx" style="bottom:48px;left:16px;font-size:8px">02.</div><div class="bar" style="bottom:54px;left:32px;right:0"></div>
+        <div class="tx" style="bottom:32px;left:24px;font-size:8px">03.</div><div class="bar" style="bottom:38px;left:40px;right:0"></div>
+        <div class="tx" style="bottom:16px;left:32px;font-size:8px">04.</div><div class="bar" style="bottom:22px;left:48px;right:0"></div>
+      </div>
+      <div class="mock-lb"><b>Índice</b>Escada numerada no rodapé, fio até a borda direita</div>
+    </div>
+
+    <div class="mock">
+      <div class="mk">
+        <div class="tx" style="top:44px;left:0;right:0;text-align:center;font-size:5px;letter-spacing:.06em">DIA 1: MILÃO | 09/05</div>
+        <div class="ln" style="top:56px;left:16px;right:16px;opacity:.35"></div>
+        <div class="ln" style="top:61px;left:22px;right:22px;opacity:.35"></div>
+        <div class="tx" style="top:82px;left:0;right:0;text-align:center;font-size:5px;letter-spacing:.06em">DIA 2: MILÃO | 10/05</div>
+        <div class="ln" style="top:94px;left:16px;right:16px;opacity:.35"></div>
+        <div class="ln" style="top:99px;left:26px;right:26px;opacity:.35"></div>
+        <div class="tx" style="top:120px;left:0;right:0;text-align:center;font-size:5px;letter-spacing:.06em">DIA 3: ROMA | 11/05</div>
+        <div class="ln" style="top:132px;left:16px;right:16px;opacity:.35"></div>
+      </div>
+      <div class="mock-lb"><b>Roteiro day by day</b>Fundo areia, tudo centralizado, até 5 dias por página</div>
+    </div>
+
+    <div class="mock">
+      <div class="mk">
+        <div class="ph"></div><div class="vl" style="opacity:.35"></div>
+        <div style="position:absolute;inset:7px;border:1px solid rgba(255,255,255,.85)"></div>
+        <div class="tx" style="top:50%;left:0;right:0;text-align:center;font-size:9px;letter-spacing:.2em;transform:translateY(-50%)">ROMA</div>
+      </div>
+      <div class="mock-lb"><b>Divisor de cidade</b>Moldura de fio branco e o nome da cidade em display</div>
+    </div>
+
+    <div class="mock">
+      <div class="mk">
+        <div class="arc"></div>
+        <div class="tx" style="top:6px;left:0;right:0;text-align:center;font-size:8px;letter-spacing:.02em">MUST VISIT</div>
+        <div class="tx" style="top:26px;left:0;right:0;text-align:center;font-size:8px">MUST VISIT</div>
+        <div class="tx" style="top:46px;left:0;right:0;text-align:center;font-size:8px">MUST VISIT</div>
+        <div class="tx" style="top:66px;left:0;right:0;text-align:center;font-size:8px;opacity:.9">MUST VISIT</div>
+        <div class="tx" style="top:86px;left:0;right:0;text-align:center;font-size:8px;opacity:.9">MUST VISIT</div>
+      </div>
+      <div class="mock-lb"><b>Abertura de seção</b>Título repetido nove vezes + foto em arco por cima</div>
+    </div>
+
+    <div class="mock">
+      <div class="mk">
+        <div class="ph"></div><div class="vl"></div>
+        <div class="cir" style="width:30px;height:30px;top:26px;left:16px"></div>
+        <div class="cir" style="width:30px;height:30px;top:26px;right:16px"></div>
+        <div class="tx" style="top:58px;left:8px;width:46px;text-align:center;font-size:4px;font-style:italic">Duomo</div>
+        <div class="tx" style="top:58px;right:8px;width:46px;text-align:center;font-size:4px;font-style:italic">Galleria</div>
+        <div class="cir" style="width:30px;height:30px;top:76px;left:16px"></div>
+        <div class="cir" style="width:30px;height:30px;top:76px;right:16px"></div>
+        <div class="cir" style="width:30px;height:30px;top:126px;left:51px"></div>
+      </div>
+      <div class="mock-lb"><b>Grade de círculos</b>Cinco itens por página — dois, dois e um centralizado</div>
+    </div>
+
+    <div class="mock">
+      <div class="mk">
+        <div class="ph"></div><div class="vl" style="opacity:.8"></div>
+        <div class="tx" style="top:22px;left:0;right:0;text-align:center;font-size:4.5px;letter-spacing:.2em">DIRETRIZES GERAIS</div>
+        <div class="tx" style="top:32px;left:0;right:0;text-align:center;font-size:7px;letter-spacing:.12em">ITÁLIA</div>
+        <div class="cir" style="width:5px;height:5px;top:52px;left:10px;border-radius:50% 50% 50% 0;transform:rotate(-45deg)"></div>
+        <div class="ln" style="top:53px;left:22px;right:12px;opacity:.45"></div>
+        <div class="ln" style="top:58px;left:22px;right:30px;opacity:.45"></div>
+        <div class="cir" style="width:5px;height:5px;top:74px;left:10px;border-radius:50% 50% 50% 0;transform:rotate(-45deg)"></div>
+        <div class="ln" style="top:75px;left:22px;right:12px;opacity:.45"></div>
+        <div class="ln" style="top:80px;left:22px;right:40px;opacity:.45"></div>
+        <div class="cir" style="width:5px;height:5px;top:96px;left:10px;border-radius:50% 50% 50% 0;transform:rotate(-45deg)"></div>
+        <div class="ln" style="top:97px;left:22px;right:12px;opacity:.45"></div>
+      </div>
+      <div class="mock-lb"><b>Diretrizes gerais</b>Uma página por país, itens com marcador de alfinete</div>
+    </div>
+
+    <div class="mock">
+      <div class="mk">
+        <div style="position:absolute;top:0;left:0;right:0;height:34px;display:flex">
+          <div style="flex:1;background:linear-gradient(150deg,#b09070,#5a4632)"></div>
+          <div style="flex:1;background:linear-gradient(150deg,#a08060,#4a3a2a)"></div>
+          <div style="flex:1;background:linear-gradient(150deg,#c0a080,#6a5642)"></div>
+        </div>
+        <div class="tx" style="top:52px;left:0;right:0;text-align:center;font-size:8px;letter-spacing:.06em">BOA VIAGEM!</div>
+        <div class="tx" style="top:70px;left:0;right:0;text-align:center;font-size:4.5px;font-style:italic">Para emergências:</div>
+        <div class="tx" style="top:84px;left:0;right:0;text-align:center;font-size:4px">+55 41 99189-6076</div>
+        <div class="tx" style="bottom:16px;left:0;right:0;text-align:center;font-size:6px;letter-spacing:.1em">LUSATRAVEL</div>
+      </div>
+      <div class="mock-lb"><b>Contracapa</b>Tira de três fotos, contatos com DDI e o logotipo completo</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="sec" id="s5">
+  <div class="eyebrow">05 · Conteúdo</div>
+  <h2 class="sec-title">Regras por seção</h2>
+  <p class="intro">
+    O que separa um guia bom de uma lista de lugares é a nota entre parênteses: a
+    informação que o cliente não acharia sozinho.
+  </p>
+
+  <div class="blk">
+    <div class="blk-h">Roteiro day by day</div>
+    <ul class="d">
+      <li>Cabeçalho rígido: <code>DIA 1: MILÃO | 09/05</code>. Dia de traslado leva as duas
+        cidades: <code>DIA 4: MILÃO - ROMA | 11/05</code>.</li>
+      <li>Numeração sequencial a partir de 1. Uma data por dia, sem buraco e sem repetição.</li>
+      <li>40 a 80 palavras. Segunda pessoa, verbo convidativo.</li>
+      <li>Separe o contratado do sugerido. O cliente precisa saber o que está garantido.</li>
+      <li>Dia de chegada é dia leve; dia de saída é traslado, não programa.</li>
+    </ul>
+  </div>
+
+  <div class="blk">
+    <div class="blk-h">Must Visit e Must Try</div>
+    <ul class="d">
+      <li>4 a 10 itens por cidade em cada seção. Acima de 12 ninguém consulta.</li>
+      <li>Nome próprio + nota curta entre parênteses: <i>(fecha às segundas)</i>,
+        <i>(ir ao anoitecer)</i>, <i>(reserve com semanas de antecedência)</i>.</li>
+      <li>Ordem é prioridade. Se o cliente só fizer três, que sejam os três primeiros.</li>
+      <li>Entusiasmo é assinatura da casa e pode ficar — <i>(TEM QUE IR!!!!)</i>. Com
+        parcimônia: se tudo é imperdível, nada é.</li>
+      <li>Uma foto quadrada por item, que vira o círculo da grade.</li>
+    </ul>
+  </div>
+
+  <div class="blk">
+    <div class="blk-h">Diretrizes gerais</div>
+    <p class="d">Uma página por <b>país</b>, com sete assuntos obrigatórios:</p>
+    <ul class="d">
+      <li>transporte e apps · moeda e forma de pagamento · tomada e voltagem · gorjeta ·
+        costume local · saúde e segurança · número de emergência</li>
+    </ul>
+    <p class="d">Detalhamento e itens opcionais em
+      <code>.claude/skills/roteirizacao/references/diretrizes-por-pais.md</code>.</p>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="sec" id="s6">
+  <div class="eyebrow">06 · Linguagem</div>
+  <h2 class="sec-title">Tom editorial</h2>
+  <div class="grid2">
+    <div class="card"><div class="card-h">Roteiro dia a dia</div>
+      <div class="card-b">Segunda pessoa, convidativo e concreto. <i>"Comece o dia no Ben
+      Thanh Market, um dos mercados mais tradicionais da cidade, repleto de artesanato,
+      especiarias e comidas típicas."</i></div></div>
+    <div class="card"><div class="card-h">Nota de Must Visit / Must Try</div>
+      <div class="card-b">Curta, prática, com opinião. <i>"(lugar LINDO, 1 estrela michelin)"</i>,
+      <i>"(lugar de rua, caranguejo é o carro-chefe)"</i>, <i>"(clássico local, sem reserva)"</i>.</div></div>
+    <div class="card"><div class="card-h">Diretrizes</div>
+      <div class="card-b">Direto e numérico. <i>"Gorjeta é obrigatória culturalmente: 18–20%
+      em restaurantes, sempre verificar se já está inclusa na conta."</i></div></div>
+    <div class="card"><div class="card-h">O que não fazer</div>
+      <div class="card-b">Bloco inteiro em caixa alta, jargão de operação, promessa de
+      disponibilidade e texto genérico que serviria para qualquer destino.</div></div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="sec" id="s7">
+  <div class="eyebrow">07 · Evolução</div>
+  <h2 class="sec-title">O que mudou neste padrão</h2>
+  <p class="intro">
+    O padrão foi extraído de quatro guias já entregues. O que aparecia nos três mais
+    recentes virou regra; o que era falha pontual virou verificação automática.
+  </p>
+  <table>
+    <thead><tr><th style="width:34%">Ponto</th><th>Antes</th><th>Agora</th></tr></thead>
+    <tbody>
+      <tr><td><b>Organização</b> <span class="tag novo">novo</span></td>
+        <td>Um guia agrupava Must Visit de todas as cidades numa página; outros já
+          separavam por cidade.</td>
+        <td>Sempre por cidade: divisor, Must Visit, Must Try. É como o cliente consulta
+          durante a viagem.</td></tr>
+      <tr><td><b>Escopo do serviço</b> <span class="tag novo">novo</span></td>
+        <td>Não era dito em lugar nenhum que nada estava reservado.</td>
+        <td>Página fixa "Como usar este guia" logo após o índice.</td></tr>
+      <tr><td><b>Data e versão</b> <span class="tag novo">novo</span></td>
+        <td>Sem data. O cliente não sabia qual arquivo era o mais recente.</td>
+        <td>Selo de emissão e versão no rodapé da capa.</td></tr>
+      <tr><td><b>Telefones</b> <span class="tag novo">novo</span></td>
+        <td><code>(41) 99189-6076</code> — não completa chamada do exterior.</td>
+        <td>DDI obrigatório: <code>+55 41 99189-6076</code>, mais o número de emergência
+          local de cada país.</td></tr>
+      <tr><td><b>Numeração dos dias</b></td>
+        <td>Um guia repetiu o mesmo dia em duas páginas.</td>
+        <td>Validador reprova data repetida, data faltando e numeração fora de ordem.</td></tr>
+      <tr><td><b>Grafia</b></td>
+        <td><i>Gili Trawagan</i> e <i>Gili Trawangan</i> no mesmo documento.</td>
+        <td>Validador aponta grafias divergentes da mesma cidade.</td></tr>
+      <tr><td><b>Formatação</b></td>
+        <td>Um dia inteiro em caixa alta.</td>
+        <td>Validador reprova bloco de texto em caixa alta.</td></tr>
+      <tr><td><b>Fotos</b></td>
+        <td>Imagem com marca d'água de banco de imagens em página entregue.</td>
+        <td>Item de checklist antes da entrega; foto ausente vira aviso na validação.</td></tr>
+      <tr><td><b>Identidade</b></td>
+        <td>Um guia saiu em vermelho e creme, com outra tipografia.</td>
+        <td>Paleta e tipografia fixas. Muda a foto, não o sistema.</td></tr>
+      <tr><td><b>Formato A5</b> <span class="tag mant">mantido</span></td>
+        <td colspan="2">148 × 210 mm, leitura no celular. Era comum aos quatro guias e continua.</td></tr>
+      <tr><td><b>Índice 01–04</b> <span class="tag mant">mantido</span></td>
+        <td colspan="2">Escada numerada sobre foto, com fio até a borda. Assinatura do produto.</td></tr>
+      <tr><td><b>Tom das notas</b> <span class="tag mant">mantido</span></td>
+        <td colspan="2">O comentário pessoal entre parênteses é o que o cliente mais usa. Fica.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 08 -->
+<section class="sec" id="s8">
+  <div class="eyebrow">08 · Produção</div>
+  <h2 class="sec-title">Como o guia é gerado</h2>
+  <p class="intro">
+    O conteúdo mora num <code>guia.json</code>; o layout é aplicado pelo template.
+    Assim dá para revisar o texto sem mexer no desenho e refazer o PDF em segundos
+    depois de qualquer ajuste do cliente.
+  </p>
+  <pre>python3 .claude/skills/roteirizacao/scripts/guia.py validar guia.json
+python3 .claude/skills/roteirizacao/scripts/guia.py resumo  guia.json
+python3 .claude/skills/roteirizacao/scripts/guia.py pdf     guia.json -o guia.pdf</pre>
+  <p class="d">
+    A validação é obrigatória antes de qualquer entrega. Ela confere datas, numeração,
+    cobertura de cidades, grafia, caixa alta, cobertura dos sete assuntos das diretrizes,
+    DDI nos telefones e existência das fotos.
+  </p>
+  <div class="callout">
+    <b>Canva continua valendo.</b> Este documento é a especificação do padrão — vale para
+    quem montar o guia à mão no Canva e para quem gerar pelo template. O que não muda em
+    nenhum dos dois caminhos são as regras de estrutura, conteúdo e tom.
+  </div>
+</section>
+
+</main>
+</body>
+</html>

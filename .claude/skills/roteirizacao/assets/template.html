@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Travel Guide · {{CLIENTE}} — {{EDICAO}}</title>
+<!-- ══════════════════════════════════════════════════════════════════════
+     TRAVEL GUIDE — template manual (A5 retrato, 148 × 210 mm)
+
+     Use este arquivo só para montar um guia à mão ou para consultar a marcação
+     de cada tipo de página. O caminho normal é escrever o guia.json e rodar
+     `python3 ../scripts/guia.py pdf guia.json` — o gerador monta tudo isto
+     sozinho, embute as fotos e as fontes, e o PDF sai autossuficiente.
+
+     Aqui as fotos entram por caminho relativo e o CSS por <link>, então este
+     arquivo precisa ficar ao lado de guia.css e da pasta fonts/.
+     ══════════════════════════════════════════════════════════════════════ -->
+<link rel="stylesheet" href="guia.css">
+</head>
+<body>
+
+<!-- ══════ CAPA ══════ -->
+<section class="pg capa">
+  <div class="bg" style="background-image:url('fotos/capa.jpg')"></div>
+  <div class="escurece"></div>
+  <div class="cnt">
+    <img class="marca" src="lusatravel-mark.png" alt="Lusa Travel">
+    <div class="titulo">TRAVEL GUIDE</div>
+    <div class="edicao">{{EDICAO}}</div>
+    <div class="para">Desenvolvido para:<b>{{CLIENTE}}</b></div>
+    <div class="selo">ROTEIRO EMITIDO EM {{DATA}} · VERSÃO {{VERSAO}}</div>
+  </div>
+</section>
+
+<!-- ══════ ÍNDICE ══════ -->
+<section class="pg indice">
+  <div class="bg" style="background-image:url('fotos/indice.jpg')"></div>
+  <div class="veu leve"></div><div class="escurece"></div>
+  <div class="cnt">
+    <div class="ix"><div class="n">01.</div><div class="l"><span>Roteiro day by day</span></div></div>
+    <div class="ix"><div class="n">02.</div><div class="l"><span>Must Visit</span></div></div>
+    <div class="ix"><div class="n">03.</div><div class="l"><span>Must Try</span></div></div>
+    <div class="ix"><div class="n">04.</div><div class="l"><span>Diretrizes gerais</span></div></div>
+  </div>
+</section>
+
+<!-- ══════ ESCOPO DO SERVIÇO (obrigatória) ══════ -->
+<section class="pg texto">
+  <div class="cnt">
+    <h2>Como usar este guia</h2>
+    <p>Este guia é um serviço de roteirização: sugestão de roteiro, passeios e endereços.
+       Nada aqui está reservado, comprado ou garantido pela Lusa Travel. Ingressos,
+       restaurantes, transportes e passeios são de contratação direta do viajante, e
+       horários e valores podem mudar sem aviso.</p>
+    <div class="fino">Guardamos este guia com você durante toda a viagem. Qualquer dúvida,
+       os contatos da equipe estão na última página.</div>
+  </div>
+</section>
+
+<!-- ══════ ROTEIRO DAY BY DAY — até 5 blocos por página ══════ -->
+<section class="pg dias">
+  <div class="cnt">
+    <div class="dia">
+      <div class="h">DIA 1: {{CIDADE}} | {{DD/MM}}</div>
+      <div class="t">{{TEXTO_40_A_80_PALAVRAS}}</div>
+    </div>
+    <div class="dia">
+      <div class="h">DIA 2: {{CIDADE_A}} - {{CIDADE_B}} | {{DD/MM}}</div>
+      <div class="t">{{TEXTO_40_A_80_PALAVRAS}}</div>
+    </div>
+    <!-- duplique .dia; abra nova .pg a cada 5 dias -->
+  </div>
+</section>
+
+<!-- ══════ DIVISOR DE CIDADE ══════ -->
+<section class="pg cidade">
+  <div class="bg" style="background-image:url('fotos/cidade.jpg')"></div>
+  <div class="veu leve"></div><div class="escurece"></div>
+  <div class="cnt">
+    <div class="moldura"></div>
+    <div class="nome">{{CIDADE}}</div>
+  </div>
+</section>
+
+<!-- ══════ ABERTURA DE SEÇÃO — MUST VISIT ou MUST TRY ══════ -->
+<section class="pg secao">
+  <div class="cnt">
+    <div class="pilha">
+      <span>MUST VISIT</span><span>MUST VISIT</span><span>MUST VISIT</span>
+      <span>MUST VISIT</span><span>MUST VISIT</span><span>MUST VISIT</span>
+      <span>MUST VISIT</span><span>MUST VISIT</span><span>MUST VISIT</span>
+    </div>
+    <div class="arco" style="background-image:url('fotos/cidade.jpg')"></div>
+  </div>
+</section>
+
+<!-- ══════ GRADE DE CÍRCULOS — 5 itens por página ══════ -->
+<!-- a classe 'impar' centraliza o último item quando a contagem é ímpar -->
+<section class="pg grade impar">
+  <div class="bg" style="background-image:url('fotos/cidade.jpg')"></div>
+  <div class="veu"></div>
+  <div class="cnt">
+    <div class="item">
+      <div class="foto" style="background-image:url('fotos/item1.jpg')"></div>
+      <div class="nome">{{NOME_DO_LUGAR}}</div>
+      <div class="nota">({{NOTA_CURTA}})</div>
+    </div>
+    <div class="item">
+      <div class="foto" style="background-image:url('fotos/item2.jpg')"></div>
+      <div class="nome">{{NOME_DO_LUGAR}}</div>
+    </div>
+    <!-- … até 5 .item -->
+    <div class="rodape">{{NOTA_DE_RODAPE_OPCIONAL}}</div>
+  </div>
+</section>
+
+<!-- ══════ DIRETRIZES GERAIS — uma página por país ══════ -->
+<section class="pg diretrizes">
+  <div class="bg" style="background-image:url('fotos/pais.jpg')"></div>
+  <div class="veu forte"></div><div class="escurece"></div>
+  <div class="cnt">
+    <div class="kicker">DIRETRIZES GERAIS</div>
+    <div class="pais">{{PAIS}}</div>
+    <ul>
+      <li>Transporte: {{…}}</li>
+      <li>Moeda: {{…}}</li>
+      <li>Tomada tipo {{…}}. Voltagem de {{…}}V.</li>
+      <li>Gorjeta: {{…}}</li>
+      <li>{{COSTUME_LOCAL}}</li>
+      <li>{{SAUDE_E_SEGURANCA}}</li>
+      <li>Número de emergência: {{…}}</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════ CONTRACAPA ══════ -->
+<section class="pg fim">
+  <div class="tira">
+    <div style="background-image:url('fotos/fim1.jpg')"></div>
+    <div style="background-image:url('fotos/fim2.jpg')"></div>
+    <div style="background-image:url('fotos/fim3.jpg')"></div>
+  </div>
+  <div class="miolo">
+    <h2>BOA VIAGEM!</h2>
+    <div class="sub">Para emergências:</div>
+    <div class="ct"><b>Maria Victoria Zattar</b><br>+55 41 99912-1919</div>
+    <div class="ct"><b>Claudia Zattar</b><br>+55 41 99275-0065</div>
+    <div class="ct"><b>Atendimento Geral</b><br>+55 41 99189-6076</div>
+    <div class="locais">Emergência local: {{PAIS}} {{NUMERO}}</div>
+    <img class="lockup" src="lusatravel-lockup.png" alt="Lusa Travel">
+  </div>
+</section>
+
+</body>
+</html>

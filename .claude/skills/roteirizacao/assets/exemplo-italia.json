@@ -1,67 +1,205 @@
 {
-  "cliente": "JULIA KIO E FAMÍLIA",
-  "destino": "ITÁLIA",
-  "pax": "2 adultos",
-  "perfil": "casal",
-  "ritmo": "equilibrado",
-  "cor_destino": "#730505",
-  "moeda": "EUR",
-  "inicio": "2026-05-10",
-  "observacoes": [
-    "Cliente pediu evitar voos domésticos — malha toda em trem.",
-    "Aniversário de casamento no dia 14/05."
-  ],
-  "etapas": [
+  "cliente": "Ana e Rafael",
+  "edicao": "Italy Edition",
+  "emissao": "2026-03-02",
+  "versao": "1",
+  "origem": "CURITIBA",
+  "capa": {
+    "foto": "fotos/capa.jpg"
+  },
+  "indice": {
+    "foto": "fotos/indice.jpg"
+  },
+  "nota_extra": "As sugestões estão em ordem de prioridade: se o dia render pouco, comece pelas primeiras de cada lista.",
+  "roteiro": [
     {
-      "cidade": "Roma",
-      "pais": "Itália",
-      "checkin": "2026-05-10",
-      "noites": 4,
-      "hotel": {
-        "nome": "Hotel Artemide",
-        "categoria": 4,
-        "quarto": "Deluxe Double",
-        "refeicao": "Café da manhã",
-        "endereco": "Via Nazionale, 22 · Roma"
-      },
-      "traslado_seguinte": {
-        "modo": "trem",
-        "descricao": "Alta velocidade Roma Termini → Firenze S.M.N.",
-        "duracao": "1h35",
-        "confirmar": true
-      }
+      "dia": 1,
+      "data": "2026-05-08",
+      "titulo": "CURITIBA - MILÃO",
+      "texto": "Embarque em Curitiba com conexão em Guarulhos. O voo cruza o Atlântico durante a noite — vale ajustar o relógio para o horário de Milão logo no embarque e tentar dormir depois do jantar de bordo."
     },
     {
-      "cidade": "Florença",
-      "pais": "Itália",
-      "checkin": "2026-05-14",
-      "noites": 3,
-      "hotel": {
-        "nome": "Hotel Calimala",
-        "categoria": 4,
-        "quarto": "Superior Double",
-        "refeicao": "Café da manhã",
-        "endereco": "Via Calimala, 2 · Florença"
-      },
-      "traslado_seguinte": {
-        "modo": "trem",
-        "descricao": "Alta velocidade Firenze S.M.N. → Venezia S. Lucia",
-        "duracao": "2h05",
-        "confirmar": true
-      }
+      "dia": 2,
+      "data": "2026-05-09",
+      "titulo": "MILÃO",
+      "texto": "Chegada pela manhã e traslado ao hotel. Dia leve para se ambientar: caminhe até o Duomo, suba ao terraço no fim da tarde e feche o dia com um aperitivo no bairro de Brera. Deixe as visitas com hora marcada para os próximos dias."
     },
     {
-      "cidade": "Veneza",
-      "pais": "Itália",
-      "checkin": "2026-05-17",
-      "noites": 3,
-      "hotel": {
-        "nome": "Hotel Ai Reali",
-        "categoria": 4,
-        "quarto": "Classic Double",
-        "refeicao": "Café da manhã",
-        "endereco": "Campo della Fava, 5527 · Veneza"
-      }
+      "dia": 3,
+      "data": "2026-05-10",
+      "titulo": "MILÃO",
+      "texto": "Manhã na Galleria Vittorio Emanuele II e no Quadrilatero della Moda. À tarde, sugerimos a Pinacoteca di Brera e, no fim do dia, o bairro de Navigli para jantar à beira do canal. A Última Ceia exige ingresso comprado com semanas de antecedência."
+    },
+    {
+      "dia": 4,
+      "data": "2026-05-11",
+      "titulo": "MILÃO - ROMA",
+      "texto": "Manhã livre e traslado à estação Milano Centrale. O trem de alta velocidade leva cerca de três horas até Roma Termini. Chegue com 20 a 30 minutos de antecedência. Tarde livre em Roma e primeira caminhada até a Fontana di Trevi ao anoitecer, quando o movimento diminui."
+    },
+    {
+      "dia": 5,
+      "data": "2026-05-12",
+      "titulo": "ROMA",
+      "texto": "Dia da Roma antiga: Coliseu, Monte Palatino e Fórum Romano em um único ingresso combinado. Comece cedo para escapar do calor e das filas. À tarde, Piazza Navona e Pantheon, terminando com um gelato na Giolitti."
+    },
+    {
+      "dia": 6,
+      "data": "2026-05-13",
+      "titulo": "ROMA",
+      "texto": "Manhã no Vaticano — Museus, Capela Sistina e Basílica de São Pedro. Ombros e joelhos cobertos são exigidos na entrada. À tarde, tempo livre na Via del Corso e na Escada Espanhola. Para o jantar, o bairro de Testaccio é a Roma que os romanos frequentam."
+    },
+    {
+      "dia": 7,
+      "data": "2026-05-14",
+      "titulo": "ROMA - CURITIBA",
+      "texto": "Manhã livre conforme o horário do voo e traslado ao aeroporto de Fiumicino. Chegue com três horas de antecedência para voos internacionais e reserve tempo para o reembolso de impostos, se tiver compras a declarar."
     }
-  ]
+  ],
+  "cidades": [
+    {
+      "nome": "MILÃO",
+      "foto": "fotos/milao.jpg",
+      "must_visit": [
+        {
+          "nome": "Duomo di Milano",
+          "nota": "suba ao terraço, ingresso à parte",
+          "foto": "fotos/duomo.jpg"
+        },
+        {
+          "nome": "Galleria Vittorio Emanuele II",
+          "foto": "fotos/galleria.jpg"
+        },
+        {
+          "nome": "Pinacoteca di Brera",
+          "nota": "fecha às segundas",
+          "foto": "fotos/brera.jpg"
+        },
+        {
+          "nome": "Quadrilatero della Moda",
+          "foto": "fotos/moda.jpg"
+        },
+        {
+          "nome": "Bairro de Navigli",
+          "nota": "aperitivo no fim da tarde",
+          "foto": "fotos/navigli.jpg"
+        }
+      ],
+      "nota_visit": "A Última Ceia (Santa Maria delle Grazie) só entra com ingresso comprado com antecedência.",
+      "must_try": [
+        {
+          "nome": "Gloria Osteria",
+          "nota": "massa fresca, reserve",
+          "foto": "fotos/gloria.jpg"
+        },
+        {
+          "nome": "Luini Panzerotti",
+          "nota": "clássico de balcão, fila rápida",
+          "foto": "fotos/luini.jpg"
+        },
+        {
+          "nome": "Camparino in Galleria",
+          "nota": "aperitivo histórico",
+          "foto": "fotos/camparino.jpg"
+        }
+      ]
+    },
+    {
+      "nome": "ROMA",
+      "foto": "fotos/roma.jpg",
+      "must_visit": [
+        {
+          "nome": "Coliseu",
+          "nota": "ingresso combinado com o Fórum",
+          "foto": "fotos/coliseu.jpg"
+        },
+        {
+          "nome": "Vaticano",
+          "nota": "basílica de São Pedro e Capela Sistina",
+          "foto": "fotos/vaticano.jpg"
+        },
+        {
+          "nome": "Fontana di Trevi",
+          "nota": "ir ao anoitecer",
+          "foto": "fotos/trevi.jpg"
+        },
+        {
+          "nome": "Pantheon",
+          "foto": "fotos/pantheon.jpg"
+        },
+        {
+          "nome": "Piazza Navona",
+          "foto": "fotos/navona.jpg"
+        },
+        {
+          "nome": "Galeria Doria Pamphilj",
+          "nota": "acervo particular, quase sem fila",
+          "foto": "fotos/doria.jpg"
+        }
+      ],
+      "must_try": [
+        {
+          "nome": "Roscioli Salumeria con Cucina",
+          "nota": "reserve com semanas de antecedência",
+          "foto": "fotos/roscioli.jpg"
+        },
+        {
+          "nome": "Nannarella",
+          "nota": "trattoria de bairro, sem reserva",
+          "foto": "fotos/nannarella.jpg"
+        },
+        {
+          "nome": "Giolitti",
+          "nota": "sorvete desde 1900",
+          "foto": "fotos/giolitti.jpg"
+        },
+        {
+          "nome": "Aroma",
+          "nota": "rooftop com vista para o Coliseu",
+          "foto": "fotos/aroma.jpg"
+        }
+      ]
+    }
+  ],
+  "diretrizes": [
+    {
+      "pais": "ITÁLIA",
+      "foto": "fotos/diretrizes-italia.jpg",
+      "itens": [
+        "Transporte: trens de alta velocidade conectam as principais cidades. Chegue à estação 20 a 30 minutos antes e valide o bilhete quando for exigido. Nas cidades, metrô e caminhada resolvem quase tudo.",
+        "Moeda: Euro (€). Cartões de crédito são aceitos na maioria dos lugares, mas tenha dinheiro em espécie para cafés, mercados e táxis. Cartão de débito internacional costuma dar o melhor câmbio.",
+        "Tomada tipo F e L (dois e três pinos redondos). Voltagem de 230V. Leve adaptador universal.",
+        "Gorjeta não é obrigatória. Entre 5% e 10% é bem recebido; confira se o coperto já está na conta.",
+        "Use roupas discretas em igrejas e locais religiosos — ombros e joelhos cobertos, inclusive no Vaticano.",
+        "A água da torneira é potável na maioria das cidades e as fontes públicas de Roma são seguras. Leve garrafa reutilizável.",
+        "Número de emergência: 112 (europeu, atende em inglês)."
+      ]
+    }
+  ],
+  "contatos": [
+    {
+      "nome": "Maria Victoria Zattar",
+      "telefone": "+55 41 99912-1919"
+    },
+    {
+      "nome": "Claudia Zattar",
+      "telefone": "+55 41 99275-0065"
+    },
+    {
+      "nome": "Atendimento Geral",
+      "telefone": "+55 41 99189-6076"
+    }
+  ],
+  "emergencias_locais": [
+    {
+      "pais": "Itália",
+      "numero": "112"
+    }
+  ],
+  "fim": {
+    "fotos": [
+      "fotos/fim1.jpg",
+      "fotos/fim2.jpg",
+      "fotos/fim3.jpg"
+    ]
+  }
 }

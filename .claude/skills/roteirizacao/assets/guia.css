@@ -1,0 +1,168 @@
+/* ══════════════════════════════════════════════════════════════════════
+   LUSA TRAVEL · TRAVEL GUIDE — sistema visual da roteirização
+   A5 retrato (148 × 210 mm). Referência: padrao-roteirizacao.html
+   ══════════════════════════════════════════════════════════════════════ */
+/* Fontes embarcadas (Open Font License) — o PDF não depende de rede.
+   Se a agência tiver os arquivos originais da marca (TAN Twinkle e Glacial
+   Indifference, do Canva), basta colocá-los em assets/fonts/ com estes nomes
+   que eles passam a ter prioridade sobre os substitutos. */
+@font-face{ font-family:'TAN Twinkle'; src:url('fonts/TANTWINKLE.ttf') format('truetype'); font-display:block; }
+@font-face{ font-family:'Glacial Indifference'; src:url('fonts/GlacialIndifference-Regular.ttf') format('truetype'); font-display:block; }
+
+@font-face{ font-family:'Italiana'; src:url('fonts/Italiana-400.woff2') format('woff2'); font-weight:400; font-display:block; }
+@font-face{ font-family:'Cormorant Garamond'; src:url('fonts/CormorantGaramond-600.woff2') format('woff2'); font-weight:600; font-style:normal; font-display:block; }
+@font-face{ font-family:'Cormorant Garamond'; src:url('fonts/CormorantGaramond-700.woff2') format('woff2'); font-weight:700; font-style:normal; font-display:block; }
+@font-face{ font-family:'Cormorant Garamond'; src:url('fonts/CormorantGaramond-600i.woff2') format('woff2'); font-weight:600; font-style:italic; font-display:block; }
+@font-face{ font-family:'Cormorant Garamond'; src:url('fonts/CormorantGaramond-700i.woff2') format('woff2'); font-weight:700; font-style:italic; font-display:block; }
+@font-face{ font-family:'Jost'; src:url('fonts/Jost-300.woff2') format('woff2'); font-weight:300; font-display:block; }
+@font-face{ font-family:'Jost'; src:url('fonts/Jost-400.woff2') format('woff2'); font-weight:400; font-display:block; }
+@font-face{ font-family:'Jost'; src:url('fonts/Jost-500.woff2') format('woff2'); font-weight:500; font-display:block; }
+@font-face{ font-family:'Nunito'; src:url('fonts/Nunito-400.woff2') format('woff2'); font-weight:400; font-display:block; }
+@font-face{ font-family:'Nunito'; src:url('fonts/Nunito-700.woff2') format('woff2'); font-weight:700; font-display:block; }
+
+:root{
+  /* Paleta — fixa em todas as edições, independente do destino */
+  --areia:  #997749;   /* fundo padrão */
+  --taupe:  #7a6351;   /* véu sobre foto */
+  --cacau:  #423633;   /* texto sobre fundo claro, cartões */
+  --marfim: #e4e7ec;   /* texto sobre fundo escuro */
+  --branco: #ffffff;
+
+  --display:'TAN Twinkle','Italiana',serif;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Glacial Indifference','Jost','Poppins',system-ui,sans-serif;
+  --round:'Nunito',var(--sans);
+
+  --mg: 12mm;          /* margem interna padrão */
+}
+
+@page{ size:148mm 210mm; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0;
+   -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--marfim); background:#2b241e; }
+
+.pg{
+  width:148mm; height:210mm; position:relative; overflow:hidden;
+  background:var(--areia); page-break-after:always;
+  display:flex; flex-direction:column;
+}
+.pg:last-child{ page-break-after:auto; }
+
+/* Foto de fundo + véu ------------------------------------------------- */
+.bg{ position:absolute; inset:0; background-size:cover; background-position:center; }
+.veu{ position:absolute; inset:0; background:var(--taupe); mix-blend-mode:multiply; opacity:.72; }
+.veu.leve{ opacity:.45; }
+.veu.forte{ opacity:.85; }
+.escurece{ position:absolute; inset:0;
+  background:linear-gradient(to bottom,rgba(0,0,0,.46) 0%,rgba(0,0,0,.10) 34%,
+                                       rgba(0,0,0,.18) 58%,rgba(0,0,0,.80) 100%); }
+.cnt{ position:relative; z-index:2; flex:1; width:100%; display:flex; flex-direction:column;
+      justify-content:inherit; align-items:inherit; }
+
+/* ══ CAPA ══ */
+.capa .marca{ width:17mm; margin:16mm auto 0; display:block; }
+.capa .titulo{ font-family:var(--display); font-size:31pt; letter-spacing:.20em;
+  text-align:center; color:var(--marfim); margin:6mm 0 0; text-indent:.20em; line-height:1; }
+.capa .edicao{ font-family:var(--serif); font-style:italic; font-weight:700;
+  font-size:16pt; text-align:center; color:var(--marfim); margin-top:3mm; }
+.capa .para{ margin-top:auto; padding:0 var(--mg) 0; font-family:var(--serif);
+  font-weight:700; font-size:14pt; color:var(--branco); }
+.capa .para b{ display:block; font-size:17pt; font-weight:700; margin-top:1mm; }
+.capa .selo{ padding:4mm var(--mg) 10mm; font-family:var(--round); font-size:6.5pt;
+  letter-spacing:.10em; text-transform:uppercase; color:rgba(255,255,255,.72); }
+
+/* ══ ÍNDICE ══ */
+.indice{ justify-content:flex-end; padding:0 0 24mm var(--mg); }
+.indice .cnt{ justify-content:flex-end }
+.ix{ display:flex; align-items:baseline; gap:3mm; margin-bottom:7mm; }
+.ix .n{ font-family:var(--serif); font-weight:700; font-size:30pt; color:var(--marfim); line-height:.9; }
+.ix .l{ flex:1; border-top:.5pt solid rgba(255,255,255,.85); position:relative; }
+.ix .l span{ position:absolute; bottom:1.5mm; left:2mm; font-family:var(--serif);
+  font-style:italic; font-weight:600; font-size:11pt; color:var(--marfim); white-space:nowrap; }
+.ix:nth-child(1){ margin-left:0 }
+.ix:nth-child(2){ margin-left:9mm }
+.ix:nth-child(3){ margin-left:18mm }
+.ix:nth-child(4){ margin-left:27mm }
+.ix:nth-child(5){ margin-left:36mm }
+
+/* ══ PÁGINA DE TEXTO SOBRE AREIA (escopo, sobre o destino) ══ */
+.texto{ padding:20mm var(--mg); justify-content:center; }
+.texto h2{ font-family:var(--display); font-size:22pt; letter-spacing:.10em;
+  color:var(--marfim); text-align:center; margin-bottom:8mm; }
+.texto p{ font-family:var(--sans); font-size:9.5pt; line-height:1.75;
+  color:var(--branco); text-align:center; margin-bottom:4mm; }
+.texto .fino{ font-family:var(--round); font-size:7.5pt; line-height:1.7;
+  color:rgba(255,255,255,.78); text-align:center; margin-top:8mm; }
+
+/* ══ ROTEIRO DIA A DIA ══ */
+.dias{ padding:14mm var(--mg); justify-content:center; }
+.dia{ text-align:center; margin-bottom:7mm; }
+.dia:last-child{ margin-bottom:0 }
+.dia .h{ font-family:var(--sans); font-size:8.5pt; font-weight:500; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--branco); margin-bottom:2.5mm; }
+.dia .t{ font-family:var(--sans); font-size:8pt; line-height:1.55; color:var(--branco); }
+
+/* ══ DIVISOR DE CIDADE ══ */
+.cidade{ justify-content:center; }
+.cidade .cnt{ align-items:center; justify-content:center }
+.cidade .moldura{ position:absolute; inset:8mm; border:.6pt solid rgba(255,255,255,.85); z-index:2; }
+.cidade .nome{ position:relative; z-index:3; margin:auto; font-family:var(--display);
+  font-size:30pt; letter-spacing:.22em; color:var(--branco); text-align:center;
+  text-indent:.22em; text-shadow:0 1px 12px rgba(0,0,0,.35); }
+
+/* ══ ABERTURA DE SEÇÃO (MUST VISIT / MUST TRY) ══ */
+.secao{ background:var(--areia); padding:0; }
+.secao .pilha{ position:absolute; inset:0; display:flex; flex-direction:column;
+  justify-content:space-between; padding:3mm 0; z-index:1; }
+.secao .pilha span{ font-family:var(--display); font-size:37pt; letter-spacing:.01em;
+  color:var(--marfim); text-align:center; line-height:1; white-space:nowrap; }
+.secao .arco{ position:absolute; left:50%; transform:translateX(-50%); bottom:0;
+  width:62mm; height:150mm; border-radius:31mm 31mm 0 0; overflow:hidden; z-index:2;
+  background-size:cover; background-position:center; }
+
+/* ══ GRADE DE CÍRCULOS (must visit / must try) ══ */
+.grade{ padding:12mm 8mm; }
+.grade .cnt{ flex-direction:row; flex-wrap:wrap; align-content:center;
+  justify-content:center; gap:6mm 4mm; }
+.item{ width:calc(50% - 2mm); display:flex; flex-direction:column; align-items:center; }
+.grade.impar .item:last-child:nth-child(odd){ width:100% }
+.item .foto{ width:38mm; height:38mm; border-radius:50%; background-size:cover;
+  background-position:center; border:1.2mm solid rgba(255,255,255,.28);
+  box-shadow:0 2px 10px rgba(0,0,0,.28); }
+.item .nome{ font-family:var(--serif); font-weight:700; font-style:italic; font-size:12pt;
+  color:var(--marfim); text-align:center; margin-top:3mm; line-height:1.15;
+  text-shadow:0 1px 6px rgba(0,0,0,.45); }
+.item .nota{ font-family:var(--serif); font-weight:600; font-style:italic; font-size:10pt;
+  color:var(--marfim); text-align:center; line-height:1.2; opacity:.92;
+  text-shadow:0 1px 6px rgba(0,0,0,.45); }
+.grade .rodape{ width:100%; font-family:var(--round); font-size:7pt; line-height:1.6;
+  color:var(--marfim); text-align:center; margin-top:2mm; }
+
+/* ══ DIRETRIZES GERAIS ══ */
+.diretrizes{ padding:14mm 10mm; justify-content:center; }
+.diretrizes .kicker{ font-family:var(--serif); font-weight:700; font-size:13pt;
+  letter-spacing:.22em; text-transform:uppercase; color:var(--branco); text-align:center; }
+.diretrizes .pais{ font-family:var(--display); font-size:20pt; letter-spacing:.14em;
+  color:var(--marfim); text-align:center; margin:2mm 0 8mm; text-indent:.14em; }
+.diretrizes ul{ list-style:none }
+.diretrizes li{ position:relative; padding-left:9mm; margin-bottom:4.5mm;
+  font-family:var(--serif); font-weight:700; font-style:italic; font-size:10.5pt;
+  line-height:1.45; color:var(--marfim); text-shadow:0 1px 6px rgba(0,0,0,.35); }
+.diretrizes li::before{ content:''; position:absolute; left:1.5mm; top:1.2mm;
+  width:4mm; height:4mm; border-radius:50% 50% 50% 0; transform:rotate(-45deg);
+  border:.6pt solid var(--marfim); }
+
+/* ══ CONTRACAPA ══ */
+.fim{ background:var(--areia) }
+.fim .tira{ display:flex; height:38mm; flex-shrink:0 }
+.fim .tira div{ flex:1; background-size:cover; background-position:center }
+.fim .miolo{ flex:1; display:flex; flex-direction:column; align-items:center;
+  padding:12mm var(--mg) 8mm; text-align:center }
+.fim h2{ font-family:var(--display); font-size:26pt; letter-spacing:.08em; color:var(--marfim) }
+.fim .sub{ font-family:var(--serif); font-style:italic; font-weight:700; font-size:12pt;
+  letter-spacing:.08em; color:var(--marfim); margin:5mm 0 5mm }
+.fim .ct{ font-family:var(--sans); font-size:8.5pt; line-height:1.5; color:var(--branco); margin-bottom:3.5mm }
+.fim .ct b{ font-weight:500 }
+.fim .locais{ font-family:var(--round); font-size:7pt; line-height:1.6;
+  color:rgba(255,255,255,.8); margin-top:2mm }
+.fim .lockup{ width:44mm; margin-top:auto }

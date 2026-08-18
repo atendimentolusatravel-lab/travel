@@ -1,8 +1,9 @@
 # Ritmo, traslados e circuitos de referência
 
-Consulta de apoio da skill `roteirizacao`. Nada aqui substitui a conferência de
-horários e operação com o fornecedor — trate os tempos como estimativa de
-planejamento e marque `"confirmar": true` no traslado enquanto não checou.
+Consulta de apoio para desenhar a malha do Travel Guide: quantas noites em cada
+cidade, em que ordem e como o cliente se desloca. Como a roteirização não reserva
+nada, estes números são recomendação ao viajante — confira horário e operação atuais
+antes de citar qualquer conexão específica no guia.
 
 ## Ritmo por perfil
 
@@ -29,7 +30,8 @@ ou mais. Roteiro sem respiro é o motivo nº 1 de reclamação no pós-viagem.
 - **Dias intermediários.** Alterne dia denso (museu + centro histórico) com dia leve
   (bairro, mercado, bate-volta curto).
 - **Dia de traslado.** Conta como meio dia de programa. Saída depois do café,
-  chegada com tarde livre.
+  chegada com tarde livre. No guia, esse dia leva as duas cidades no cabeçalho:
+  `DIA 4: MILÃO - ROMA | 11/05`.
 - **Último dia.** Traslado ao aeroporto. Se o voo é noturno, cabe um programa leve
   com bagagem guardada — diga isso no texto.
 
@@ -40,7 +42,7 @@ ou mais. Roteiro sem respiro é o motivo nº 1 de reclamação no pós-viagem.
 | até 1h30 | qualquer modo; cabe programa no mesmo dia |
 | 1h30 – 3h30 | ok por estrada; reserve a manhã |
 | 3h30 – 5h | prefira trem ou voo; o dia vira dia de traslado |
-| acima de 5h | voo, ou quebre com pernoite intermediário (`"passagem": true`) |
+| acima de 5h | voo, ou quebre com pernoite intermediário |
 
 Some sempre ao tempo de trecho: 2h de antecedência em voo doméstico, 3h em
 internacional, 30min em trem, e o traslado até o terminal nos dois lados.
@@ -89,3 +91,5 @@ de dois trechos longos.
 5. Museu marcado no dia de fechamento (muitos fecham segunda; alguns, terça).
 6. Ignorar o horário real do voo de volta e prometer programa no último dia.
 7. Traslado terrestre de 5h vendido como "transfer panorâmico".
+8. Sugerir atração fechada no dia em que o cliente estará na cidade — confira o dia
+   da semana de cada indicação do Must Visit.
