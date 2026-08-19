@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>SR. LUIZ | Cotação Aérea Miami — Lusa Travel</title>
+<style>
+/* ══════════════════════════════════════════════════════════════
+   LUSA TRAVEL — COTAÇÃO AÉREA (A3 Portrait, print-ready)
+   Cliente: Sr. Luiz Oliveira de Alencastro · Miami · Jan/2027
+   Paleta: Verde #2d5e3a + Ouro #da8d00
+   ══════════════════════════════════════════════════════════════ */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/montserrat-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/montserrat-500.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/montserrat-600.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/poppins-300.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/poppins-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/poppins-500.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/poppins-600.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/poppins-700.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('fonts/poppins-800.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root{
+  --gold:#da8d00;        /* FIXO — nunca muda */
+  --dest:#2d5e3a;        /* Verde */
+  --dest-dark:#1e4228;
+  --ink:#1a1510;         /* preto quente */
+  --char:#333131;        /* carvão / texto */
+  --mut:#9a8d80;         /* texto discreto */
+  --line:#e4ddd2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); }
+
+.page{
+  width:297mm; height:420mm; position:relative; overflow:hidden;
+  background:#fff; page-break-after:always; display:flex; flex-direction:column;
+}
+.page:last-child{ page-break-after:auto; }
+
+/* ── Cabeçalho padrão ── */
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center;
+     justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; } /* BARRA DOURADA — obrigatória */
+
+/* ── Rodapé de assinatura ── */
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center;
+     justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.2); }
+
+.body{ padding:14mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:4mm 0 8mm; }
+
+/* ══ CAPA ══ */
+.cover{ position:relative; }
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink);
+  display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse at 75% 18%, rgba(218,141,0,.30), transparent 55%),
+    radial-gradient(ellipse at 15% 80%, rgba(30,66,40,.9), transparent 65%),
+    linear-gradient(160deg,#4a7d58 0%, #2d5e3a 45%, #16301e 100%); }
+.cover-route{ position:absolute; top:34%; left:22mm; right:22mm; z-index:2; display:flex;
+  align-items:center; gap:8mm; color:rgba(255,255,255,.75); }
+.cover-route .apt{ font-size:20pt; font-weight:800; letter-spacing:.1em; }
+.cover-route .ln{ flex:1; height:0; border-top:2px dashed rgba(218,141,0,.65); position:relative; }
+.cover-route .plane{ font-size:16pt; color:var(--gold); }
+.cover-scrim{ position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, transparent 30%, rgba(0,0,0,.78) 78%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.cover-name{ font-size:32pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3;
+  font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+
+/* ══ OPÇÃO DE VOO ══ */
+.dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center;
+  justify-content:space-between; flex-shrink:0; }
+.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.9); }
+.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9);
+  color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+
+.leg-title{ display:flex; align-items:center; gap:5mm; margin:8mm 0 5mm; }
+.leg-title .lbl{ font-size:11pt; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--dest); }
+.leg-title .date{ font-size:10pt; font-weight:600; color:var(--gold); }
+.leg-title .rule{ flex:1; height:1px; background:var(--line); }
+
+.seg{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-bottom:4mm; }
+.seg .strip{ background:#f4f7f4; padding:3mm 8mm; display:flex; justify-content:space-between; align-items:center;
+  border-bottom:1px solid var(--line); }
+.seg .flt{ font-family:var(--con); font-size:9pt; font-weight:600; letter-spacing:.1em; color:var(--dest); }
+.seg .cls{ font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); }
+.seg .row{ display:flex; align-items:center; padding:5mm 8mm; gap:6mm; }
+.seg .pt{ width:58mm; }
+.seg .pt .t{ font-size:16pt; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; }
+.seg .pt .c{ font-size:9.5pt; font-weight:500; color:var(--char); margin-top:.5mm; }
+.seg .pt .d{ font-size:8.5pt; color:var(--mut); }
+.seg .arr{ flex:1; display:flex; align-items:center; gap:3mm; color:var(--mut); }
+.seg .arr .ln{ flex:1; height:0; border-top:1.6px dashed rgba(45,94,58,.45); }
+.seg .arr .pl{ color:var(--gold); font-size:12pt; }
+.seg .pt.right{ text-align:right; }
+
+.cnx{ display:flex; align-items:center; gap:4mm; margin:0 0 4mm 8mm; }
+.cnx .dot{ width:2.6mm; height:2.6mm; border-radius:50%; background:var(--gold); }
+.cnx .txt{ font-size:9pt; color:var(--mut); }
+.cnx .txt b{ color:var(--dest); font-weight:700; }
+
+.opt-info{ margin-top:7mm; border:1px solid var(--line); border-radius:6px; padding:6mm 8mm;
+  display:grid; grid-template-columns:1fr 1fr 1fr; gap:4mm 10mm; background:#faf7f2; }
+.opt-info .k{ font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.opt-info .v{ font-size:10.5pt; font-weight:300; color:var(--char); margin-top:1mm; }
+
+/* ══ VALORES ══ */
+.val-note{ font-size:9.5pt; color:var(--mut); margin-bottom:6mm; }
+.val-opt{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-bottom:7mm; }
+.val-opt .top{ background:var(--dest); padding:4mm 8mm; display:flex; justify-content:space-between; align-items:center; }
+.val-opt .top .t{ font-size:11pt; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#fff; }
+.val-opt .top .r{ font-size:9pt; color:rgba(255,255,255,.7); }
+.val-opt .rows{ padding:2mm 8mm; }
+.val-row{ display:flex; justify-content:space-between; padding:3.5mm 0; border-bottom:1px solid var(--line); }
+.val-row:last-child{ border-bottom:none; }
+.val-row .lbl{ font-size:11pt; color:var(--char); }
+.val-row .amt{ font-size:11pt; font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums; }
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink);
+  padding:5mm 8mm; }
+.val-total .lbl{ font-size:10.5pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.val-total .amt{ font-size:16pt; font-weight:800; color:var(--gold); }
+.val-fx{ font-size:9.5pt; color:var(--mut); margin-top:4mm; line-height:1.7; }
+
+.cond{ margin-top:9mm; }
+.cond-h{ font-size:10.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
+.cond-t{ font-size:10pt; line-height:1.8; color:var(--char); }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 01 · CAPA ══════════ -->
+<section class="page cover">
+  <div class="cover-hd">
+    <div class="logo">LUSA TRAVEL</div>
+    <div class="tag">Glossário</div>
+  </div>
+  <div class="cover-bar"></div>
+  <div class="cover-photo"></div>
+  <div class="cover-route">
+    <div class="apt">BRASIL</div>
+    <div class="ln"></div>
+    <div class="plane">✈</div>
+    <div class="ln"></div>
+    <div class="apt">MIAMI</div>
+  </div>
+  <div class="cover-scrim"></div>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação Aérea para sua viagem</div>
+    <div class="cover-basis">Baseado em 2 adultos · Janeiro de 2027</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">SR. LUIZ OLIVEIRA DE ALENCASTRO</div>
+    <div class="cover-dest">MIAMI · ESTADOS UNIDOS</div>
+    <div class="stats">
+      <div class="stat"><b>2</b><span>Opções de voo</span></div>
+      <div class="stat"><b>2</b><span>Passageiros</span></div>
+      <div class="stat"><b>23kg</b><span>Bagagem despachada</span></div>
+      <div class="stat"><b>JAN</b><span>2027</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com" style="color:inherit;text-decoration:none">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076" style="color:inherit;text-decoration:none">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ══════════ 02 · OPÇÃO 1 — LATAM ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Opção 1 · Voos LATAM</div><div class="no">1</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+
+    <div class="leg-title"><span class="lbl">Ida</span><span class="date">03 – 04 de Janeiro de 2027</span><span class="rule"></span></div>
+
+    <div class="seg">
+      <div class="strip"><span class="flt">LATAM · VOO LA 8184</span><span class="cls">Econômica · Boeing 787</span></div>
+      <div class="row">
+        <div class="pt"><div class="t">15:55</div><div class="c">São Paulo · GRU</div><div class="d">03 Jan 2027 · Guarulhos</div></div>
+        <div class="arr"><span class="ln"></span><span class="pl">✈</span><span class="ln"></span></div>
+        <div class="pt right"><div class="t">20:25</div><div class="c">Bogotá · BOG</div><div class="d">03 Jan 2027</div></div>
+      </div>
+    </div>
+    <div class="cnx"><span class="dot"></span><span class="txt">Conexão em Bogotá · <b>12h10</b> (pernoite)</span></div>
+
+    <div class="seg">
+      <div class="strip"><span class="flt">LATAM · VOO LA 4400</span><span class="cls">Econômica · Airbus A320</span></div>
+      <div class="row">
+        <div class="pt"><div class="t">08:35</div><div class="c">Bogotá · BOG</div><div class="d">04 Jan 2027</div></div>
+        <div class="arr"><span class="ln"></span><span class="pl">✈</span><span class="ln"></span></div>
+        <div class="pt right"><div class="t">12:30</div><div class="c">Miami · MIA</div><div class="d">04 Jan 2027</div></div>
+      </div>
+    </div>
+
+    <div class="leg-title"><span class="lbl">Volta</span><span class="date">16 – 17 de Janeiro de 2027</span><span class="rule"></span></div>
+
+    <div class="seg">
+      <div class="strip"><span class="flt">LATAM · VOO LA 501</span><span class="cls">Econômica · Boeing 787</span></div>
+      <div class="row">
+        <div class="pt"><div class="t">20:35</div><div class="c">Miami · MIA</div><div class="d">16 Jan 2027</div></div>
+        <div class="arr"><span class="ln"></span><span class="pl">✈</span><span class="ln"></span></div>
+        <div class="pt right"><div class="t">07:00</div><div class="c">Santiago · SCL</div><div class="d">17 Jan 2027</div></div>
+      </div>
+    </div>
+    <div class="cnx"><span class="dot"></span><span class="txt">Conexão em Santiago · <b>6h35</b></span></div>
+
+    <div class="seg">
+      <div class="strip"><span class="flt">LATAM · VOO LA 722</span><span class="cls">Econômica · Airbus A320</span></div>
+      <div class="row">
+        <div class="pt"><div class="t">13:35</div><div class="c">Santiago · SCL</div><div class="d">17 Jan 2027</div></div>
+        <div class="arr"><span class="ln"></span><span class="pl">✈</span><span class="ln"></span></div>
+        <div class="pt right"><div class="t">16:55</div><div class="c">Florianópolis · FLN</div><div class="d">17 Jan 2027</div></div>
+      </div>
+    </div>
+
+    <div class="opt-info">
+      <div><div class="k">Passageiros</div><div class="v">Sr. Luiz Oliveira de Alencastro<br>Sra. Jessica Frota Farias de Franca</div></div>
+      <div><div class="k">Bagagem</div><div class="v">1 peça de 23kg despachada<br>+ bagagem de mão · por pessoa</div></div>
+      <div><div class="k">Tarifa</div><div class="v">Econômica Standard</div></div>
+    </div>
+
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 03 · OPÇÃO 2 — SKY ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Opção 2 · Voo SKY Airline</div><div class="no">2</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+
+    <div class="leg-title"><span class="lbl">Ida</span><span class="date">04 – 05 de Janeiro de 2027</span><span class="rule"></span></div>
+
+    <div class="seg">
+      <div class="strip"><span class="flt">SKY · VOO H2 0633</span><span class="cls">Econômica · Airbus A320neo</span></div>
+      <div class="row">
+        <div class="pt"><div class="t">12:00</div><div class="c">Florianópolis · FLN</div><div class="d">04 Jan 2027</div></div>
+        <div class="arr"><span class="ln"></span><span class="pl">✈</span><span class="ln"></span></div>
+        <div class="pt right"><div class="t">15:45</div><div class="c">Santiago · SCL</div><div class="d">04 Jan 2027</div></div>
+      </div>
+    </div>
+    <div class="cnx"><span class="dot"></span><span class="txt">Conexão em Santiago · <b>4h50</b></span></div>
+
+    <div class="seg">
+      <div class="strip"><span class="flt">SKY · VOO H2 0808</span><span class="cls">Econômica · Airbus A320neo</span></div>
+      <div class="row">
+        <div class="pt"><div class="t">20:35</div><div class="c">Santiago · SCL</div><div class="d">04 Jan 2027</div></div>
+        <div class="arr"><span class="ln"></span><span class="pl">✈</span><span class="ln"></span></div>
+        <div class="pt right"><div class="t">22:25</div><div class="c">Lima · LIM</div><div class="d">04 Jan 2027</div></div>
+      </div>
+    </div>
+    <div class="cnx"><span class="dot"></span><span class="txt">Conexão em Lima · <b>2h35</b></span></div>
+
+    <div class="seg">
+      <div class="strip"><span class="flt">SKY · VOO H2 5594</span><span class="cls">Econômica · Airbus A320neo</span></div>
+      <div class="row">
+        <div class="pt"><div class="t">01:00</div><div class="c">Lima · LIM</div><div class="d">05 Jan 2027</div></div>
+        <div class="arr"><span class="ln"></span><span class="pl">✈</span><span class="ln"></span></div>
+        <div class="pt right"><div class="t">07:10</div><div class="c">Miami · MIA</div><div class="d">05 Jan 2027</div></div>
+      </div>
+    </div>
+
+    <div class="leg-title"><span class="lbl">Volta</span><span class="date">17 – 18 de Janeiro de 2027</span><span class="rule"></span></div>
+
+    <div class="seg">
+      <div class="strip"><span class="flt">SKY · VOO H2 5595</span><span class="cls">Econômica · Airbus A320neo</span></div>
+      <div class="row">
+        <div class="pt"><div class="t">09:50</div><div class="c">Miami · MIA</div><div class="d">17 Jan 2027</div></div>
+        <div class="arr"><span class="ln"></span><span class="pl">✈</span><span class="ln"></span></div>
+        <div class="pt right"><div class="t">15:40</div><div class="c">Lima · LIM</div><div class="d">17 Jan 2027</div></div>
+      </div>
+    </div>
+    <div class="cnx"><span class="dot"></span><span class="txt">Conexão em Lima · <b>8h10</b></span></div>
+
+    <div class="seg">
+      <div class="strip"><span class="flt">SKY · VOO H2 0809</span><span class="cls">Econômica · Airbus A320neo</span></div>
+      <div class="row">
+        <div class="pt"><div class="t">23:50</div><div class="c">Lima · LIM</div><div class="d">17 Jan 2027</div></div>
+        <div class="arr"><span class="ln"></span><span class="pl">✈</span><span class="ln"></span></div>
+        <div class="pt right"><div class="t">05:25</div><div class="c">Santiago · SCL</div><div class="d">18 Jan 2027</div></div>
+      </div>
+    </div>
+    <div class="cnx"><span class="dot"></span><span class="txt">Conexão em Santiago · <b>2h20</b></span></div>
+
+    <div class="seg">
+      <div class="strip"><span class="flt">SKY · VOO H2 1930</span><span class="cls">Econômica · Airbus A320neo</span></div>
+      <div class="row">
+        <div class="pt"><div class="t">07:45</div><div class="c">Santiago · SCL</div><div class="d">18 Jan 2027</div></div>
+        <div class="arr"><span class="ln"></span><span class="pl">✈</span><span class="ln"></span></div>
+        <div class="pt right"><div class="t">11:00</div><div class="c">Florianópolis · FLN</div><div class="d">18 Jan 2027</div></div>
+      </div>
+    </div>
+
+    <div class="opt-info">
+      <div><div class="k">Passageiros</div><div class="v">Sr. Luiz Oliveira de Alencastro<br>Sra. Jessica Frota Farias de Franca</div></div>
+      <div><div class="k">Bagagem</div><div class="v">1 peça de 23kg despachada<br>+ bagagem de mão · por pessoa</div></div>
+      <div><div class="k">Tarifa</div><div class="v">Econômica Standard</div></div>
+    </div>
+
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 04 · VALORES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSA TRAVEL</div><div class="tag">Valores</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Investimento</div>
+    <h2 class="h2">Valores</h2>
+    <div class="val-note">Valores totais em Reais (BRL) para 2 adultos, incluindo tarifa, taxas de embarque e taxas de serviço.</div>
+
+    <div class="val-opt">
+      <div class="top"><span class="t">Opção 1 · Voos LATAM</span><span class="r">São Paulo ✈ Miami ✈ Florianópolis · 03 a 17 Jan 2027</span></div>
+      <div class="rows">
+        <div class="val-row"><span class="lbl">Valor por adulto</span><span class="amt">R$ 8.082,98</span></div>
+      </div>
+      <div class="val-total"><span class="lbl">TOTAL · 2 ADULTOS</span><span class="amt">R$ 16.165,96</span></div>
+    </div>
+
+    <div class="val-opt">
+      <div class="top"><span class="t">Opção 2 · Voo SKY</span><span class="r">Florianópolis ✈ Miami ✈ Florianópolis · 04 a 18 Jan 2027</span></div>
+      <div class="rows">
+        <div class="val-row"><span class="lbl">Valor por adulto</span><span class="amt">R$ 7.430,72</span></div>
+      </div>
+      <div class="val-total"><span class="lbl">TOTAL · 2 ADULTOS</span><span class="amt">R$ 14.861,44</span></div>
+    </div>
+
+    <div class="val-fx">Cotação 19/08 · USD = 5,2043<br>*Nada reservado, apenas cotado</div>
+
+    <div class="cond">
+      <div class="cond-h">Condições e Observações</div>
+      <div class="cond-t">
+        · Tarifas e disponibilidade sujeitas a alteração sem prévio aviso — somente a emissão do bilhete garante a tarifa.<br>
+        · Apresente-se ao check-in com 3 horas de antecedência (voo internacional), portando passaporte válido.<br>
+        · Confirme nomes, datas e trechos antes da emissão; após a emissão, alterações podem gerar custos.<br>
+        · Verifique a necessidade de vistos e a validade mínima do passaporte para todos os países envolvidos na viagem.
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
