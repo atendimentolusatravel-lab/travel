@@ -4,6 +4,10 @@ Registro de interrupções: sempre que alguém parar o trabalho para outra deman
 
 Fuso horário: America/Sao_Paulo (UTC-3)
 
+## Atividade principal atual
+
+**Vouchers da Mariana Maske** — iniciada em 20/08/2026 às 09:33
+
 ## Tabela de Interrupções
 
 | # | Data | Início | Fim | Duração | Quem interrompeu | Demanda |
