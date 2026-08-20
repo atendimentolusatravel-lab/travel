@@ -6,7 +6,13 @@ Fuso horário: America/Sao_Paulo (UTC-3)
 
 ## Atividade principal atual
 
-**Vouchers da Mariana Maske** — iniciada em 20/08/2026 às 09:33
+**Cotação Antonia – Ano Novo em Tulum** — iniciada em 20/08/2026 às 11:26
+
+## Histórico de atividades principais
+
+| # | Data | Início | Fim | Duração | Atividade | Observações |
+|---|------|--------|-----|---------|-----------|-------------|
+| 1 | 20/08/2026 | 09:33 | 11:26 | 1h53min | Vouchers da Mariana Maske | Concluído até onde havia vouchers; ainda faltam alguns |
 
 ## Tabela de Interrupções
 
