@@ -8,6 +8,7 @@ Fuso horário: America/Sao_Paulo (UTC-3)
 
 | # | Data | Início | Fim | Duração | Quem interrompeu | Demanda |
 |---|------|--------|-----|---------|------------------|---------|
+| 1 | 20/08/2026 | 09:31 | _em andamento_ | – | – | Vouchers da Mariana Maske |
 
 ## Resumo
 
