@@ -6,13 +6,14 @@ Fuso horário: America/Sao_Paulo (UTC-3)
 
 ## Atividade principal atual
 
-**Cotação Antonia – Ano Novo em Tulum** — iniciada em 20/08/2026 às 11:26
+**Revisão da cotação da Simone Maximiliano** — iniciada em 21/08/2026 às 09:39
 
 ## Histórico de atividades principais
 
 | # | Data | Início | Fim | Duração | Atividade | Observações |
 |---|------|--------|-----|---------|-----------|-------------|
 | 1 | 20/08/2026 | 09:33 | 11:26 | 1h53min | Vouchers da Mariana Maske | Concluído até onde havia vouchers; ainda faltam alguns |
+| 2 | 20/08/2026 | 11:26 | ? | ? | Cotação Antonia – Ano Novo em Tulum | Fim não registrado (dia 20 encerrou sem aviso) |
 
 ## Tabela de Interrupções
 
