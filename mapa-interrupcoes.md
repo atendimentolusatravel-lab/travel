@@ -6,7 +6,7 @@ Fuso horário: America/Sao_Paulo (UTC-3)
 
 ## Atividade principal atual
 
-_Nenhuma em andamento — aguardando próxima atividade._
+**Fernanda – Xcaret** — iniciada em 21/08/2026 às 10:57
 
 ## Histórico de atividades principais
 
