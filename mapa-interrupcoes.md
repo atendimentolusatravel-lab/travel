@@ -6,7 +6,7 @@ Fuso horário: America/Sao_Paulo (UTC-3)
 
 ## Atividade principal atual
 
-**Revisão da cotação da Simone Maximiliano** — iniciada em 21/08/2026 às 09:39
+_Nenhuma em andamento — aguardando próxima atividade._
 
 ## Histórico de atividades principais
 
@@ -14,6 +14,7 @@ Fuso horário: America/Sao_Paulo (UTC-3)
 |---|------|--------|-----|---------|-----------|-------------|
 | 1 | 20/08/2026 | 09:33 | 11:26 | 1h53min | Vouchers da Mariana Maske | Concluído até onde havia vouchers; ainda faltam alguns |
 | 2 | 20/08/2026 | 11:26 | ? | ? | Cotação Antonia – Ano Novo em Tulum | Fim não registrado (dia 20 encerrou sem aviso) |
+| 3 | 21/08/2026 | 09:39 | 10:55 | 1h16min | Revisão da cotação da Simone Maximiliano | Concluída |
 
 ## Tabela de Interrupções
 
