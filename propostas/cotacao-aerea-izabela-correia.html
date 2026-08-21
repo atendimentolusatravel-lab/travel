@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Izabela Correia | Itália — Cotação Aérea | Lusa Travel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&family=Arimo:wght@400;700&display=swap');
+
+:root{
+  --gold:#da8d00;
+  --dest:#730505;
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#9a8d80;
+  --line:#e4ddd2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); }
+
+.page{
+  width:297mm; height:420mm; position:relative; overflow:hidden;
+  background:#fff; page-break-after:always; display:flex; flex-direction:column;
+}
+.page:last-child{ page-break-after:auto; }
+
+/* ── Cabeçalho / rodapé padrão ── */
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center;
+     justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center;
+     justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.2); }
+
+.body{ padding:18mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:4mm 0 7mm; }
+.lead{ font-size:11.5pt; line-height:1.7; color:var(--char); margin-bottom:9mm; max-width:215mm; }
+
+/* ══ CAPA ══ */
+.cover{ position:relative; }
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink);
+  display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 70% 45% at 22% 18%, rgba(218,141,0,.28), transparent 62%),
+    radial-gradient(ellipse 60% 40% at 82% 8%,  rgba(180,90,40,.30), transparent 60%),
+    linear-gradient(158deg,#8a6a4e 0%,#6d3f2c 34%,#4a1f16 62%,#2a1410 100%); }
+.cover-scrim{ position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, transparent 30%, rgba(0,0,0,.80) 76%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:48mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3;
+  font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+
+/* ══ CABEÇALHO DE OPÇÃO ══ */
+.opt-hd{ background:var(--dest); padding:6mm 22mm; display:flex; align-items:center;
+  justify-content:space-between; flex-shrink:0; }
+.opt-hd .ttl{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.88); }
+.opt-hd .sub{ font-size:9pt; font-weight:300; letter-spacing:.06em; color:rgba(255,255,255,.55); margin-top:1.5mm; }
+.opt-hd .no{ width:14mm; height:14mm; border-radius:50%; border:2px solid rgba(218,141,0,.9);
+  color:var(--gold); font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+
+/* ══ ROTA RESUMIDA ══ */
+.route{ display:flex; align-items:center; gap:5mm; flex-wrap:wrap; margin-bottom:8mm; }
+.route .ap{ font-size:13pt; font-weight:700; color:var(--ink); letter-spacing:.04em; }
+.route .ap i{ display:block; font-style:normal; font-size:8pt; font-weight:400; color:var(--mut);
+  letter-spacing:.1em; text-transform:uppercase; margin-top:.6mm; }
+.route .arw{ color:var(--gold); font-size:12pt; font-weight:700; }
+
+/* ══ TABELA DE VOOS ══ */
+.leg-h{ display:flex; align-items:baseline; gap:4mm; margin:0 0 3mm; }
+.leg-h b{ font-family:var(--lbl); font-size:10pt; font-weight:700; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--dest); }
+.leg-h span{ font-size:9pt; color:var(--mut); letter-spacing:.04em; }
+.leg-h .tot{ margin-left:auto; font-size:9pt; color:var(--char); }
+.leg-h .tot b{ color:var(--ink); font-family:var(--sans); letter-spacing:0; font-size:10pt; }
+
+table.fl{ width:100%; border-collapse:collapse; margin-bottom:8mm; }
+table.fl th{ font-family:var(--lbl); font-size:7.5pt; font-weight:700; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--mut); text-align:left; padding:0 3mm 2.5mm 0;
+  border-bottom:1.5px solid var(--gold); }
+table.fl th.r{ text-align:right; padding-right:0; }
+table.fl td{ font-size:10.5pt; font-weight:300; color:var(--char); padding:4.6mm 3mm 4.6mm 0;
+  border-bottom:1px solid var(--line); vertical-align:middle; }
+table.fl td.r{ text-align:right; padding-right:0; font-variant-numeric:tabular-nums; }
+table.fl td .co{ font-family:var(--lbl); font-size:8pt; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--dest); display:block; }
+table.fl td .fn{ font-size:11pt; font-weight:600; color:var(--ink); }
+table.fl td .tm{ font-size:11.5pt; font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums; }
+table.fl td .dt{ display:block; font-size:8pt; color:var(--mut); letter-spacing:.06em; margin-top:.6mm; }
+table.fl td .ap{ font-size:11pt; font-weight:600; color:var(--ink); }
+table.fl td .ct{ display:block; font-size:8.5pt; font-weight:300; color:var(--mut); margin-top:.6mm; }
+tr.cnx td{ border-bottom:1px solid var(--line); padding:2.8mm 0; }
+tr.cnx .pill{ display:inline-block; font-family:var(--lbl); font-size:7.5pt; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--gold);
+  background:rgba(218,141,0,.10); border-radius:3px; padding:1.2mm 3mm; }
+
+/* ══ PREÇO ══ */
+.price{ display:flex; justify-content:space-between; align-items:center; background:var(--ink);
+  border-radius:5px; padding:7mm 9mm; margin-top:2mm; }
+.price .lbl{ font-size:10pt; font-weight:700; letter-spacing:.10em; color:rgba(255,255,255,.65); text-transform:uppercase; }
+.price .lbl i{ display:block; font-style:normal; font-size:8pt; font-weight:400; letter-spacing:.04em;
+  color:rgba(255,255,255,.35); text-transform:none; margin-top:1.5mm; }
+.price .amt{ text-align:right; }
+.price .amt b{ display:block; font-size:22pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; line-height:1; }
+.price .amt span{ display:block; font-size:10pt; font-weight:300; color:rgba(255,255,255,.5);
+  margin-top:2mm; font-variant-numeric:tabular-nums; }
+.note{ font-size:9pt; color:var(--mut); margin-top:4mm; line-height:1.6; }
+
+/* ══ AVISO / DESTAQUE ══ */
+.flag{ border-left:3px solid var(--gold); background:#faf7f2; padding:4.5mm 6mm; margin:7mm 0 0;
+  font-size:10pt; font-weight:300; line-height:1.65; color:var(--char); }
+.flag b{ font-weight:600; color:var(--ink); }
+.flag.warn{ border-left-color:var(--dest); }
+
+/* ══ COMPARATIVO ══ */
+table.cmp{ width:100%; border-collapse:collapse; }
+table.cmp th{ font-family:var(--lbl); font-size:7.5pt; font-weight:700; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--mut); text-align:left; padding:0 3mm 2.5mm 0;
+  border-bottom:1.5px solid var(--gold); }
+table.cmp th.r{ text-align:right; padding-right:0; }
+table.cmp td{ padding:6.5mm 3mm 6.5mm 0; border-bottom:1px solid var(--line); vertical-align:top; font-size:10pt; font-weight:300; }
+table.cmp td.r{ text-align:right; padding-right:0; font-variant-numeric:tabular-nums; }
+table.cmp .num{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff;
+  font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+table.cmp .co{ font-family:var(--lbl); font-size:9.5pt; font-weight:700; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--ink); }
+table.cmp .rt{ display:block; font-size:9pt; color:var(--mut); margin-top:1.4mm; line-height:1.5; }
+table.cmp .brl{ font-size:13pt; font-weight:700; color:var(--ink); }
+table.cmp .usd{ display:block; font-size:9pt; font-weight:300; color:var(--mut); margin-top:1.2mm; }
+table.cmp tr.best td{ background:rgba(218,141,0,.07); }
+.tagbest{ display:inline-block; font-family:var(--lbl); font-size:7pt; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase; color:#fff; background:var(--gold);
+  border-radius:3px; padding:1mm 2.6mm; margin-top:2mm; }
+
+/* ══ GRADE DE DADOS ══ */
+.facts{ display:grid; grid-template-columns:repeat(4,1fr); gap:6mm 8mm; margin-top:11mm;
+  border-top:1px solid var(--line); padding-top:7mm; }
+.facts .k{ font-family:var(--lbl); font-size:7.5pt; font-weight:700; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--mut); }
+.facts .v{ font-size:11pt; font-weight:300; color:var(--char); margin-top:1.8mm; line-height:1.45; }
+.facts .v b{ font-weight:600; color:var(--ink); }
+.facts.three{ grid-template-columns:repeat(3,1fr); }
+
+/* ══ CONDIÇÕES ══ */
+.cond{ margin-bottom:7mm; }
+.cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2.5mm; }
+.cond-t{ font-size:11pt; font-weight:300; line-height:1.8; color:var(--char); }
+.cond-t b{ font-weight:600; color:var(--ink); }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 01 · CAPA ══════════ -->
+<section class="page cover">
+  <div class="cover-hd">
+    <div class="logo">LUSA TRAVEL</div>
+    <div class="tag">Glossário</div>
+  </div>
+  <div class="cover-bar"></div>
+  <div class="cover-photo"></div>
+  <div class="cover-scrim"></div>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em 1 adulto · 07 a 14 de setembro de 2026</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">Izabela Correia</div>
+    <div class="cover-dest">Itália · Cotação Aérea</div>
+    <div class="stats">
+      <div class="stat"><b>4</b><span>Opções aéreas</span></div>
+      <div class="stat"><b>7</b><span>Noites</span></div>
+      <div class="stat"><b>1</b><span>Passageiro</span></div>
+      <div class="stat"><b>CWB</b><span>Origem</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com" style="color:inherit;text-decoration:none">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076" style="color:inherit;text-decoration:none">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ══════════ 02 · COMPARATIVO ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSA TRAVEL</div><div class="tag">Comparativo</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Visão geral</div>
+    <h2 class="h2">As quatro opções</h2>
+    <p class="lead">Prezada Sra. Izabela, segue o comparativo das alternativas aéreas pesquisadas para o período de
+      <b>07 a 14 de setembro de 2026</b>, com saída e retorno em <b>Curitiba (CWB)</b>, classe econômica,
+      para <b>1 passageiro</b>. Os detalhes de cada itinerário estão nas páginas seguintes.</p>
+
+    <table class="cmp">
+      <thead>
+        <tr>
+          <th style="width:14mm">Op.</th>
+          <th>Companhias / Rota</th>
+          <th class="r" style="width:38mm">Duração ida</th>
+          <th class="r" style="width:38mm">Duração volta</th>
+          <th class="r" style="width:48mm">Valor total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="best">
+          <td><div class="num">3</div></td>
+          <td>
+            <span class="co">Air France · KLM</span>
+            <span class="rt">Curitiba → Rio de Janeiro → <b>Paris (CDG)</b><br>
+              Retorno: <b>Milão (LIN)</b> → Amsterdã → São Paulo → Curitiba</span>
+            <span class="tagbest">Menor valor</span>
+          </td>
+          <td class="r">16h15</td>
+          <td class="r">21h10</td>
+          <td class="r"><span class="brl">R$ 7.617,93</span><span class="usd">USD 1.473,09</span></td>
+        </tr>
+        <tr>
+          <td><div class="num">2</div></td>
+          <td>
+            <span class="co">Air France · KLM</span>
+            <span class="rt">Curitiba → Rio de Janeiro → Paris (CDG) → <b>Milão (MXP)</b><br>
+              Retorno: <b>Milão (LIN)</b> → Amsterdã → São Paulo → Curitiba</span>
+          </td>
+          <td class="r">28h20</td>
+          <td class="r">21h10</td>
+          <td class="r"><span class="brl">R$ 8.158,42</span><span class="usd">USD 1.577,60</span></td>
+        </tr>
+        <tr>
+          <td><div class="num">4</div></td>
+          <td>
+            <span class="co">Air France · KLM</span>
+            <span class="rt">Curitiba → Rio de Janeiro → <b>Paris (CDG)</b><br>
+              Retorno: <b>Veneza (VCE)</b> → Amsterdã → São Paulo → Curitiba</span>
+          </td>
+          <td class="r">15h15</td>
+          <td class="r">22h50</td>
+          <td class="r"><span class="brl">R$ 8.385,86</span><span class="usd">USD 1.621,59</span></td>
+        </tr>
+        <tr>
+          <td><div class="num">1</div></td>
+          <td>
+            <span class="co">GOL · ITA Airways</span>
+            <span class="rt">Curitiba → São Paulo → Roma → <b>Veneza (VCE)</b><br>
+              Retorno: <b>Veneza (VCE)</b> → Roma → São Paulo → Curitiba</span>
+          </td>
+          <td class="r">18h50</td>
+          <td class="r">20h00</td>
+          <td class="r"><span class="brl">R$ 8.845,04</span><span class="usd">USD 1.710,38</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="flag"><b>Como ler o comparativo.</b> As opções <b>1</b> e <b>2</b> entregam a passageira já no destino
+      final na Itália. As opções <b>3</b> e <b>4</b> chegam em <b>Paris</b> e retornam da Itália — o deslocamento
+      Paris → Itália não está incluído nestes valores e pode ser feito de trem ou por voo doméstico europeu,
+      que cotamos separadamente se for do seu interesse.</div>
+
+    <div class="facts three">
+      <div><div class="k">Bagagem</div><div class="v">Franquia conforme a tarifa de cada
+        companhia — confirmada na emissão.</div></div>
+      <div><div class="k">Validade</div><div class="v">Tarifas dinâmicas, <b>sujeitas a alteração</b>
+        até a emissão do bilhete.</div></div>
+      <div><div class="k">Próximo passo</div><div class="v">Escolhida a opção, confirmamos
+        disponibilidade e tarifa no ato.</div></div>
+    </div>
+
+    <div class="note">Cotação 21/08 · USD 1,00 = R$ 5,1714<br>*Nada reservado, apenas cotado</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 03 · OPÇÃO 1 ══════════ -->
+<section class="page">
+  <div class="opt-hd">
+    <div><div class="ttl">Opção 1 · GOL + ITA Airways</div>
+      <div class="sub">Curitiba → Veneza · via São Paulo e Roma</div></div>
+    <div class="no">1</div>
+  </div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="route">
+      <span class="ap">CWB<i>Curitiba</i></span><span class="arw">→</span>
+      <span class="ap">GRU<i>São Paulo</i></span><span class="arw">→</span>
+      <span class="ap">FCO<i>Roma</i></span><span class="arw">→</span>
+      <span class="ap">VCE<i>Veneza</i></span>
+    </div>
+
+    <div class="leg-h"><b>Ida</b><span>07 · 08 de setembro</span>
+      <span class="tot">Tempo total de viagem &nbsp;<b>18h50</b></span></div>
+    <table class="fl">
+      <thead><tr>
+        <th style="width:30mm">Voo</th><th style="width:26mm">Partida</th><th style="width:26mm">Chegada</th>
+        <th>Trecho</th><th class="r" style="width:24mm">Duração</th><th class="r" style="width:26mm">Aeronave</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="co">GOL</span><span class="fn">G3 1171</span></td>
+          <td><span class="tm">15:40</span><span class="dt">07 Set</span></td>
+          <td><span class="tm">16:50</span><span class="dt">07 Set</span></td>
+          <td><span class="ap">CWB → GRU</span><span class="ct">Curitiba → São Paulo/Guarulhos</span></td>
+          <td class="r">01h10</td><td class="r">B737-800</td>
+        </tr>
+        <tr class="cnx"><td colspan="6"><span class="pill">Conexão em São Paulo · 02h05</span></td></tr>
+        <tr>
+          <td><span class="co">ITA Airways</span><span class="fn">AZ 679</span></td>
+          <td><span class="tm">18:55</span><span class="dt">07 Set</span></td>
+          <td><span class="tm">11:30</span><span class="dt">08 Set</span></td>
+          <td><span class="ap">GRU → FCO</span><span class="ct">São Paulo → Roma/Fiumicino</span></td>
+          <td class="r">12h35</td><td class="r">A330-900</td>
+        </tr>
+        <tr class="cnx"><td colspan="6"><span class="pill">Conexão em Roma · 01h50</span></td></tr>
+        <tr>
+          <td><span class="co">ITA Airways</span><span class="fn">AZ 1475</span></td>
+          <td><span class="tm">13:20</span><span class="dt">08 Set</span></td>
+          <td><span class="tm">14:30</span><span class="dt">08 Set</span></td>
+          <td><span class="ap">FCO → VCE</span><span class="ct">Roma → Veneza</span></td>
+          <td class="r">01h10</td><td class="r">A320</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="leg-h"><b>Volta</b><span>14 de setembro</span>
+      <span class="tot">Tempo total de viagem &nbsp;<b>20h00</b></span></div>
+    <table class="fl">
+      <thead><tr>
+        <th style="width:30mm">Voo</th><th style="width:26mm">Partida</th><th style="width:26mm">Chegada</th>
+        <th>Trecho</th><th class="r" style="width:24mm">Duração</th><th class="r" style="width:26mm">Aeronave</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="co">ITA Airways</span><span class="fn">AZ 1460</span></td>
+          <td><span class="tm">06:15</span><span class="dt">14 Set</span></td>
+          <td><span class="tm">07:25</span><span class="dt">14 Set</span></td>
+          <td><span class="ap">VCE → FCO</span><span class="ct">Veneza → Roma/Fiumicino</span></td>
+          <td class="r">01h10</td><td class="r">A220</td>
+        </tr>
+        <tr class="cnx"><td colspan="6"><span class="pill">Conexão em Roma · 02h10</span></td></tr>
+        <tr>
+          <td><span class="co">ITA Airways</span><span class="fn">AZ 678</span></td>
+          <td><span class="tm">09:35</span><span class="dt">14 Set</span></td>
+          <td><span class="tm">16:55</span><span class="dt">14 Set</span></td>
+          <td><span class="ap">FCO → GRU</span><span class="ct">Roma → São Paulo/Guarulhos</span></td>
+          <td class="r">11h20</td><td class="r">A330-900</td>
+        </tr>
+        <tr class="cnx"><td colspan="6"><span class="pill">Conexão em São Paulo · 04h15</span></td></tr>
+        <tr>
+          <td><span class="co">GOL</span><span class="fn">G3 6502</span></td>
+          <td><span class="tm">21:10</span><span class="dt">14 Set</span></td>
+          <td><span class="tm">22:15</span><span class="dt">14 Set</span></td>
+          <td><span class="ap">GRU → CWB</span><span class="ct">São Paulo → Curitiba</span></td>
+          <td class="r">01h05</td><td class="r">B737-800</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="price">
+      <div class="lbl">Total por passageiro<i>Classe econômica · 1 adulto · impostos e taxas incluídos</i></div>
+      <div class="amt"><b>R$ 8.845,04</b><span>USD 1.710,38</span></div>
+    </div>
+    <div class="facts">
+      <div><div class="k">Companhias</div><div class="v">GOL + ITA Airways</div></div>
+      <div><div class="k">Conexões</div><div class="v">2 na ida · 2 na volta</div></div>
+      <div><div class="k">Chegada na Europa</div><div class="v"><b>Veneza (VCE)</b></div></div>
+      <div><div class="k">Retorno partindo de</div><div class="v"><b>Veneza (VCE)</b></div></div>
+    </div>
+
+
+    <div class="flag"><b>Vantagem desta opção.</b> Único itinerário que leva e traz a passageira diretamente de
+      <b>Veneza</b>, sem necessidade de deslocamento terrestre adicional na Europa. Todas as conexões
+      internacionais são operadas pela ITA Airways, com bagagem despachada até o destino final.</div>
+
+    <div class="note">Cotação 21/08 · USD 1,00 = R$ 5,1714<br>*Nada reservado, apenas cotado</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 04 · OPÇÃO 2 ══════════ -->
+<section class="page">
+  <div class="opt-hd">
+    <div><div class="ttl">Opção 2 · Air France + KLM</div>
+      <div class="sub">Curitiba → Milão · via Rio de Janeiro e Paris</div></div>
+    <div class="no">2</div>
+  </div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="route">
+      <span class="ap">CWB<i>Curitiba</i></span><span class="arw">→</span>
+      <span class="ap">GIG<i>Rio de Janeiro</i></span><span class="arw">→</span>
+      <span class="ap">CDG<i>Paris</i></span><span class="arw">→</span>
+      <span class="ap">MXP<i>Milão</i></span>
+    </div>
+
+    <div class="leg-h"><b>Ida</b><span>07 · 08 de setembro</span>
+      <span class="tot">Tempo total de viagem &nbsp;<b>28h20</b></span></div>
+    <table class="fl">
+      <thead><tr>
+        <th style="width:30mm">Voo</th><th style="width:26mm">Partida</th><th style="width:26mm">Chegada</th>
+        <th>Trecho</th><th class="r" style="width:24mm">Duração</th><th class="r" style="width:26mm">Aeronave</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="co">Air France</span><span class="fn">AF 2019</span></td>
+          <td><span class="tm">14:40</span><span class="dt">07 Set</span></td>
+          <td><span class="tm">16:05</span><span class="dt">07 Set</span></td>
+          <td><span class="ap">CWB → GIG</span><span class="ct">Curitiba → Rio de Janeiro/Galeão</span></td>
+          <td class="r">01h25</td><td class="r">B737-800</td>
+        </tr>
+        <tr class="cnx"><td colspan="6"><span class="pill">Conexão no Rio de Janeiro · 05h55</span></td></tr>
+        <tr>
+          <td><span class="co">Air France</span><span class="fn">AF 443</span></td>
+          <td><span class="tm">22:00</span><span class="dt">07 Set</span></td>
+          <td><span class="tm">14:15</span><span class="dt">08 Set</span></td>
+          <td><span class="ap">GIG → CDG</span><span class="ct">Rio de Janeiro → Paris/Charles de Gaulle</span></td>
+          <td class="r">12h15</td><td class="r">B777-300ER</td>
+        </tr>
+        <tr class="cnx"><td colspan="6"><span class="pill">Conexão em Paris · 07h15</span></td></tr>
+        <tr>
+          <td><span class="co">Air France</span><span class="fn">AF · nº a confirmar</span></td>
+          <td><span class="tm">21:30</span><span class="dt">08 Set</span></td>
+          <td><span class="tm">23:00</span><span class="dt">08 Set</span></td>
+          <td><span class="ap">CDG → MXP</span><span class="ct">Paris → Milão/Malpensa</span></td>
+          <td class="r">01h30</td><td class="r">A320</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="leg-h"><b>Volta</b><span>14 de setembro</span>
+      <span class="tot">Tempo total de viagem &nbsp;<b>21h10</b></span></div>
+    <table class="fl">
+      <thead><tr>
+        <th style="width:30mm">Voo</th><th style="width:26mm">Partida</th><th style="width:26mm">Chegada</th>
+        <th>Trecho</th><th class="r" style="width:24mm">Duração</th><th class="r" style="width:26mm">Aeronave</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 1612</span></td>
+          <td><span class="tm">06:40</span><span class="dt">14 Set</span></td>
+          <td><span class="tm">08:30</span><span class="dt">14 Set</span></td>
+          <td><span class="ap">LIN → AMS</span><span class="ct">Milão/Linate → Amsterdã</span></td>
+          <td class="r">01h50</td><td class="r">B737-800</td>
+        </tr>
+        <tr class="cnx"><td colspan="6"><span class="pill">Conexão em Amsterdã · 04h30</span></td></tr>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 791</span></td>
+          <td><span class="tm">13:00</span><span class="dt">14 Set</span></td>
+          <td><span class="tm">19:50</span><span class="dt">14 Set</span></td>
+          <td><span class="ap">AMS → GRU</span><span class="ct">Amsterdã → São Paulo/Guarulhos</span></td>
+          <td class="r">10h50</td><td class="r">B777-300ER</td>
+        </tr>
+        <tr class="cnx"><td colspan="6"><span class="pill">Conexão em São Paulo · 02h55</span></td></tr>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 9310</span></td>
+          <td><span class="tm">22:45</span><span class="dt">14 Set</span></td>
+          <td><span class="tm">23:50</span><span class="dt">14 Set</span></td>
+          <td><span class="ap">GRU → CWB</span><span class="ct">São Paulo → Curitiba</span></td>
+          <td class="r">01h05</td><td class="r">B737-800</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="price">
+      <div class="lbl">Total por passageiro<i>Classe econômica · 1 adulto · impostos e taxas incluídos</i></div>
+      <div class="amt"><b>R$ 8.158,42</b><span>USD 1.577,60</span></div>
+    </div>
+    <div class="facts">
+      <div><div class="k">Companhias</div><div class="v">Air France + KLM</div></div>
+      <div><div class="k">Conexões</div><div class="v">2 na ida · 2 na volta</div></div>
+      <div><div class="k">Chegada na Europa</div><div class="v"><b>Milão / Malpensa (MXP)</b></div></div>
+      <div><div class="k">Retorno partindo de</div><div class="v"><b>Milão / Linate (LIN)</b></div></div>
+    </div>
+
+
+    <div class="flag warn"><b>Atenção — aeroportos distintos em Milão.</b> A chegada é em
+      <b>Malpensa (MXP)</b> e o retorno parte de <b>Linate (LIN)</b>. São dois aeroportos diferentes,
+      a cerca de 50 km um do outro. A ida também tem espera longa em Paris (07h15) e chegada a Milão
+      às 23h00, o que exige hospedagem já reservada para a noite de 08 de setembro.</div>
+
+    <div class="note">Cotação 21/08 · USD 1,00 = R$ 5,1714<br>*Nada reservado, apenas cotado</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 05 · OPÇÃO 3 ══════════ -->
+<section class="page">
+  <div class="opt-hd">
+    <div><div class="ttl">Opção 3 · Air France + KLM</div>
+      <div class="sub">Curitiba → Paris · retorno de Milão</div></div>
+    <div class="no">3</div>
+  </div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="route">
+      <span class="ap">CWB<i>Curitiba</i></span><span class="arw">→</span>
+      <span class="ap">GIG<i>Rio de Janeiro</i></span><span class="arw">→</span>
+      <span class="ap">CDG<i>Paris</i></span>
+      <span class="arw" style="margin:0 3mm">|</span>
+      <span class="ap">LIN<i>Milão</i></span><span class="arw">→</span>
+      <span class="ap">CWB<i>Curitiba</i></span>
+    </div>
+
+    <div class="leg-h"><b>Ida</b><span>07 · 08 de setembro</span>
+      <span class="tot">Tempo total de viagem &nbsp;<b>16h15</b></span></div>
+    <table class="fl">
+      <thead><tr>
+        <th style="width:30mm">Voo</th><th style="width:26mm">Partida</th><th style="width:26mm">Chegada</th>
+        <th>Trecho</th><th class="r" style="width:24mm">Duração</th><th class="r" style="width:26mm">Aeronave</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="co">Air France</span><span class="fn">AF 2019</span></td>
+          <td><span class="tm">14:40</span><span class="dt">07 Set</span></td>
+          <td><span class="tm">16:05</span><span class="dt">07 Set</span></td>
+          <td><span class="ap">CWB → GIG</span><span class="ct">Curitiba → Rio de Janeiro/Galeão</span></td>
+          <td class="r">01h25</td><td class="r">B737-800</td>
+        </tr>
+        <tr class="cnx"><td colspan="6"><span class="pill">Conexão no Rio de Janeiro · 02h50</span></td></tr>
+        <tr>
+          <td><span class="co">Air France</span><span class="fn">AF 511</span></td>
+          <td><span class="tm">18:55</span><span class="dt">07 Set</span></td>
+          <td><span class="tm">10:55</span><span class="dt">08 Set</span></td>
+          <td><span class="ap">GIG → CDG</span><span class="ct">Rio de Janeiro → Paris/Charles de Gaulle</span></td>
+          <td class="r">12h00</td><td class="r">A350-900</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="leg-h"><b>Volta</b><span>14 de setembro</span>
+      <span class="tot">Tempo total de viagem &nbsp;<b>21h10</b></span></div>
+    <table class="fl">
+      <thead><tr>
+        <th style="width:30mm">Voo</th><th style="width:26mm">Partida</th><th style="width:26mm">Chegada</th>
+        <th>Trecho</th><th class="r" style="width:24mm">Duração</th><th class="r" style="width:26mm">Aeronave</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 1612</span></td>
+          <td><span class="tm">06:40</span><span class="dt">14 Set</span></td>
+          <td><span class="tm">08:30</span><span class="dt">14 Set</span></td>
+          <td><span class="ap">LIN → AMS</span><span class="ct">Milão/Linate → Amsterdã</span></td>
+          <td class="r">01h50</td><td class="r">B737-800</td>
+        </tr>
+        <tr class="cnx"><td colspan="6"><span class="pill">Conexão em Amsterdã · 04h30</span></td></tr>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 791</span></td>
+          <td><span class="tm">13:00</span><span class="dt">14 Set</span></td>
+          <td><span class="tm">19:50</span><span class="dt">14 Set</span></td>
+          <td><span class="ap">AMS → GRU</span><span class="ct">Amsterdã → São Paulo/Guarulhos</span></td>
+          <td class="r">10h50</td><td class="r">B777-300ER</td>
+        </tr>
+        <tr class="cnx"><td colspan="6"><span class="pill">Conexão em São Paulo · 02h55</span></td></tr>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 9310</span></td>
+          <td><span class="tm">22:45</span><span class="dt">14 Set</span></td>
+          <td><span class="tm">23:50</span><span class="dt">14 Set</span></td>
+          <td><span class="ap">GRU → CWB</span><span class="ct">São Paulo → Curitiba</span></td>
+          <td class="r">01h05</td><td class="r">B737-800</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="price">
+      <div class="lbl">Total por passageiro<i>Classe econômica · 1 adulto · impostos e taxas incluídos</i></div>
+      <div class="amt"><b>R$ 7.617,93</b><span>USD 1.473,09</span></div>
+    </div>
+    <div class="facts">
+      <div><div class="k">Companhias</div><div class="v">Air France + KLM</div></div>
+      <div><div class="k">Conexões</div><div class="v">1 na ida · 2 na volta</div></div>
+      <div><div class="k">Chegada na Europa</div><div class="v"><b>Paris (CDG)</b></div></div>
+      <div><div class="k">Retorno partindo de</div><div class="v"><b>Milão / Linate (LIN)</b></div></div>
+    </div>
+
+
+    <div class="flag"><b>Menor valor e ida mais curta.</b> A ida tem apenas uma conexão e é a mais rápida das
+      quatro opções (16h15), com chegada a Paris às 10h55. Por ser um itinerário aberto — chega em
+      <b>Paris</b> e retorna de <b>Milão</b> —, o trecho <b>Paris → Itália</b> não está incluído. Podemos
+      cotar à parte o trem de alta velocidade ou um voo doméstico europeu, além do deslocamento interno
+      até Milão antes do retorno.</div>
+
+    <div class="note">Cotação 21/08 · USD 1,00 = R$ 5,1714<br>*Nada reservado, apenas cotado</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 06 · OPÇÃO 4 ══════════ -->
+<section class="page">
+  <div class="opt-hd">
+    <div><div class="ttl">Opção 4 · Air France + KLM</div>
+      <div class="sub">Curitiba → Paris · retorno de Veneza</div></div>
+    <div class="no">4</div>
+  </div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="route">
+      <span class="ap">CWB<i>Curitiba</i></span><span class="arw">→</span>
+      <span class="ap">GIG<i>Rio de Janeiro</i></span><span class="arw">→</span>
+      <span class="ap">CDG<i>Paris</i></span>
+      <span class="arw" style="margin:0 3mm">|</span>
+      <span class="ap">VCE<i>Veneza</i></span><span class="arw">→</span>
+      <span class="ap">CWB<i>Curitiba</i></span>
+    </div>
+
+    <div class="leg-h"><b>Ida</b><span>07 · 08 de setembro</span>
+      <span class="tot">Tempo total de viagem &nbsp;<b>15h15</b></span></div>
+    <table class="fl">
+      <thead><tr>
+        <th style="width:30mm">Voo</th><th style="width:26mm">Partida</th><th style="width:26mm">Chegada</th>
+        <th>Trecho</th><th class="r" style="width:24mm">Duração</th><th class="r" style="width:26mm">Aeronave</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="co">Air France</span><span class="fn">AF 2019</span></td>
+          <td><span class="tm">14:40</span><span class="dt">07 Set</span></td>
+          <td><span class="tm">16:05</span><span class="dt">07 Set</span></td>
+          <td><span class="ap">CWB → GIG</span><span class="ct">Curitiba → Rio de Janeiro/Galeão</span></td>
+          <td class="r">01h25</td><td class="r">B737-800</td>
+        </tr>
+        <tr class="cnx"><td colspan="6"><span class="pill">Conexão no Rio de Janeiro · 02h50</span></td></tr>
+        <tr>
+          <td><span class="co">Air France</span><span class="fn">AF 511</span></td>
+          <td><span class="tm">18:55</span><span class="dt">07 Set</span></td>
+          <td><span class="tm">10:55</span><span class="dt">08 Set</span></td>
+          <td><span class="ap">GIG → CDG</span><span class="ct">Rio de Janeiro → Paris/Charles de Gaulle</span></td>
+          <td class="r">11h00</td><td class="r">A350-900</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="leg-h"><b>Volta</b><span>14 de setembro</span>
+      <span class="tot">Tempo total de viagem &nbsp;<b>22h50</b></span></div>
+    <table class="fl">
+      <thead><tr>
+        <th style="width:30mm">Voo</th><th style="width:26mm">Partida</th><th style="width:26mm">Chegada</th>
+        <th>Trecho</th><th class="r" style="width:24mm">Duração</th><th class="r" style="width:26mm">Aeronave</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 1628</span></td>
+          <td><span class="tm">06:00</span><span class="dt">14 Set</span></td>
+          <td><span class="tm">07:50</span><span class="dt">14 Set</span></td>
+          <td><span class="ap">VCE → AMS</span><span class="ct">Veneza → Amsterdã</span></td>
+          <td class="r">01h50</td><td class="r">B737-900</td>
+        </tr>
+        <tr class="cnx"><td colspan="6"><span class="pill">Conexão em Amsterdã · 05h10</span></td></tr>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 791</span></td>
+          <td><span class="tm">13:00</span><span class="dt">14 Set</span></td>
+          <td><span class="tm">19:50</span><span class="dt">14 Set</span></td>
+          <td><span class="ap">AMS → GRU</span><span class="ct">Amsterdã → São Paulo/Guarulhos</span></td>
+          <td class="r">11h50</td><td class="r">B777-300ER</td>
+        </tr>
+        <tr class="cnx"><td colspan="6"><span class="pill">Conexão em São Paulo · 02h55</span></td></tr>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 9310</span></td>
+          <td><span class="tm">22:45</span><span class="dt">14 Set</span></td>
+          <td><span class="tm">23:50</span><span class="dt">14 Set</span></td>
+          <td><span class="ap">GRU → CWB</span><span class="ct">São Paulo → Curitiba</span></td>
+          <td class="r">01h05</td><td class="r">B737-800</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="price">
+      <div class="lbl">Total por passageiro<i>Classe econômica · 1 adulto · impostos e taxas incluídos</i></div>
+      <div class="amt"><b>R$ 8.385,86</b><span>USD 1.621,59</span></div>
+    </div>
+    <div class="facts">
+      <div><div class="k">Companhias</div><div class="v">Air France + KLM</div></div>
+      <div><div class="k">Conexões</div><div class="v">1 na ida · 2 na volta</div></div>
+      <div><div class="k">Chegada na Europa</div><div class="v"><b>Paris (CDG)</b></div></div>
+      <div><div class="k">Retorno partindo de</div><div class="v"><b>Veneza (VCE)</b></div></div>
+    </div>
+
+
+    <div class="flag"><b>Roteiro aberto Paris → Veneza.</b> Ideal para quem deseja iniciar a viagem em
+      <b>Paris</b> e encerrá-la em <b>Veneza</b>, sem repetir cidade. A ida é a mais curta das quatro
+      opções (15h15). O deslocamento entre Paris e a Itália não está incluído neste valor —
+      cotamos separadamente trem ou voo doméstico europeu.</div>
+
+    <div class="note">Cotação 21/08 · USD 1,00 = R$ 5,1714<br>*Nada reservado, apenas cotado</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 07 · CONDIÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSA TRAVEL</div><div class="tag">Condições</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Importante</div>
+    <h2 class="h2">Condições e Observações</h2>
+
+    <div class="cond"><div class="cond-h">Valores e câmbio</div><div class="cond-t">
+      Valores <b>por passageiro</b>, em classe econômica, para <b>1 adulto</b>, já com impostos e taxas
+      de embarque.<br>
+      Cotação 21/08 · <b>USD 1,00 = R$ 5,1714</b>. O valor em reais acompanha a variação cambial até a emissão.
+    </div></div>
+
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">
+      Aéreo: até <b>6x sem acréscimos</b> no cartão de crédito · <b>PIX</b>: desconto de 5% a 13%,
+      conforme a tarifa da companhia.
+    </div></div>
+
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">
+      · Hospedagem, traslados e passeios<br>
+      · Seguro viagem (obrigatório para o Espaço Schengen — cotamos à parte)<br>
+      · Deslocamento <b>Paris → Itália</b> nas opções 3 e 4, e o traslado interno até o aeroporto de retorno<br>
+      · Deslocamento entre <b>Malpensa (MXP)</b> e <b>Linate (LIN)</b> na opção 2<br>
+      · Bagagem adicional além da franquia da tarifa · Despesas pessoais
+    </div></div>
+
+    <div class="cond"><div class="cond-h">Bagagem e tarifas</div><div class="cond-t">
+      A franquia de bagagem, as regras de remarcação e o cancelamento seguem a tarifa de cada companhia
+      e são confirmados no momento da emissão. Recomendamos conferir a franquia antes de fechar,
+      especialmente nos trechos domésticos brasileiros e europeus.
+    </div></div>
+
+    <div class="cond"><div class="cond-h">Documentação</div><div class="cond-t">
+      Passaporte brasileiro com validade mínima de <b>6 meses</b> a partir da data de retorno.
+      Para o Espaço Schengen, é exigido comprovante de hospedagem, passagem de retorno e seguro viagem
+      com cobertura mínima de <b>EUR 30.000</b>. A partir de 2026, poderá ser exigida a autorização
+      prévia <b>ETIAS</b> — orientamos sobre o processo assim que confirmado.
+    </div></div>
+
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">
+      Tarifas aéreas são dinâmicas e mudam sem aviso prévio. Valores e horários estão
+      <b>sujeitos a confirmação e disponibilidade</b> no momento da reserva.<br>
+      <b>*Nada reservado, apenas cotado.</b>
+    </div></div>
+
+    <div class="flag" style="margin-top:12mm"><b>Vamos seguir?</b> Escolhida a opção, confirmamos a
+      disponibilidade e a tarifa na hora e seguimos com a emissão. Se preferir, montamos também a
+      hospedagem, o seguro viagem e os traslados no mesmo pacote.<br><br>
+      <span style="font-family:'Montserrat',sans-serif;font-size:9.5pt;color:#9a8d80">
+        Lusa Travel · atendimentolusatravel@gmail.com · +55 41 99189-6076</span></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
