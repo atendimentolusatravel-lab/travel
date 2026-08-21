@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Izabela Correia | Opção KLM 06 Set — LUSATRAVEL</title>
+<style>
+/* ══════════════════════════════════════════════════════════════
+   LUSATRAVEL — COTAÇÃO AÉREA · A3 Portrait, print-ready
+   Paleta: verde profundo + ouro. Layout claro e clean.
+   ══════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&family=Arimo:wght@400;700&display=swap');
+
+:root{
+  --gold:#da8d00;         /* FIXO — nunca muda */
+  --gold-soft:#fdf6e8;
+  --green:#2f4a36;        /* verde profundo — bandas e blocos */
+  --green-mid:#4c7355;    /* verde de apoio — rótulos e acentos */
+  --green-sage:#73805c;   /* verde do Design System */
+  --green-soft:#f1f5f0;   /* fundo suave */
+  --ink:#1a1510;          /* preto quente — títulos */
+  --char:#3b3b36;         /* texto corrido */
+  --mut:#8d938a;          /* texto discreto */
+  --line:#e2e7de;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); }
+
+.page{
+  width:297mm; height:420mm; position:relative; overflow:hidden;
+  background:#fff; page-break-after:always; display:flex; flex-direction:column;
+}
+.page:last-child{ page-break-after:auto; }
+
+/* ── Cabeçalho e rodapé ── */
+.hd{ background:var(--green); height:24mm; display:flex; align-items:center;
+     justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.10em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }   /* BARRA DOURADA — obrigatória */
+
+.ft{ margin-top:auto; background:var(--green); height:13mm; display:flex; align-items:center;
+     justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.62); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.28); }
+
+.body{ padding:19mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:23pt; font-weight:700; color:var(--green); letter-spacing:-.01em; margin:4mm 0 8mm; }
+.lead{ font-size:11.5pt; font-weight:300; line-height:1.75; color:var(--char); margin-bottom:10mm; max-width:215mm; }
+.lead b{ font-weight:600; color:var(--ink); }
+
+/* ══ CAPA — clara ══ */
+.cover-hd{ background:var(--green); height:24mm; display:flex; align-items:center;
+  justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.10em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-art{ height:232mm; flex-shrink:0; position:relative;
+  background:
+    radial-gradient(ellipse 52% 55% at 76% 20%, rgba(218,141,0,.22), transparent 64%),
+    radial-gradient(ellipse 72% 68% at 16% 92%, rgba(47,74,54,.34), transparent 66%),
+    linear-gradient(158deg,#eff4ec 0%,#d2e0ce 44%,#a9c0a6 100%); }
+.cover-art .rule{ position:absolute; left:22mm; bottom:0; width:64mm; height:1.4mm; background:var(--gold); }
+.cover-cnt{ padding:16mm 22mm 0; flex:1; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.cover-basis{ font-size:10.5pt; font-weight:300; color:var(--mut); margin:2.5mm 0 12mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:var(--green-mid); font-weight:600; }
+.cover-name{ font-size:36pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase;
+  line-height:1.08; color:var(--green); margin-top:2mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:3mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:16mm; margin-top:14mm; border-top:1px solid var(--line); padding-top:9mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ display:block; font-size:8.5pt; font-weight:300; color:var(--mut); letter-spacing:.06em; margin-top:2mm; }
+.cover-sig{ padding:0 22mm 14mm; font-family:var(--con); font-size:9.5pt;
+  color:var(--green-mid); line-height:1.8; }
+.cover-sig .addr{ color:var(--mut); }
+
+/* ══ CABEÇALHO DE OPÇÃO ══ */
+.opt-hd{ background:var(--green); padding:6mm 22mm; display:flex; align-items:center;
+  justify-content:space-between; flex-shrink:0; }
+.opt-hd .ttl{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#fff; }
+.opt-hd .sub{ font-size:9pt; font-weight:300; letter-spacing:.06em; color:rgba(255,255,255,.62); margin-top:1.8mm; }
+.opt-hd .no{ width:14mm; height:14mm; border-radius:50%; border:2px solid var(--gold);
+  color:var(--gold); font-weight:800; font-size:13pt; display:flex; align-items:center;
+  justify-content:center; flex-shrink:0; }
+
+/* ══ ROTA RESUMIDA ══ */
+.route{ display:flex; align-items:center; gap:5mm; flex-wrap:wrap; margin-bottom:10mm; }
+.route .ap{ font-size:13pt; font-weight:700; color:var(--green); letter-spacing:.04em; }
+.route .ap i{ display:block; font-style:normal; font-size:8pt; font-weight:400; color:var(--mut);
+  letter-spacing:.1em; text-transform:uppercase; margin-top:.8mm; }
+.route .arw{ color:var(--gold); font-size:12pt; font-weight:700; }
+
+/* ══ TABELA DE VOOS ══ */
+.leg-h{ display:flex; align-items:baseline; gap:4mm; margin:0 0 3.5mm; }
+.leg-h b{ font-family:var(--lbl); font-size:10pt; font-weight:700; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--green-mid); }
+.leg-h span{ font-size:9pt; font-weight:300; color:var(--mut); letter-spacing:.04em; }
+.leg-h .tot{ margin-left:auto; font-size:9pt; font-weight:300; color:var(--mut); }
+.leg-h .tot b{ color:var(--green); font-family:var(--sans); letter-spacing:0; font-size:10pt; }
+
+table.fl{ width:100%; border-collapse:collapse; margin-bottom:8mm; }
+table.fl th{ font-family:var(--lbl); font-size:7.5pt; font-weight:700; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--mut); text-align:left; padding:0 3mm 3mm 0;
+  border-bottom:1.5px solid var(--gold); }
+table.fl th.r{ text-align:right; padding-right:0; }
+table.fl td{ font-size:10.5pt; font-weight:300; color:var(--char); padding:4.2mm 3mm 4.2mm 0;
+  border-bottom:1px solid var(--line); vertical-align:middle; }
+table.fl td.r{ text-align:right; padding-right:0; font-variant-numeric:tabular-nums; }
+table.fl td .co{ font-family:var(--lbl); font-size:8pt; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--green-mid); display:block; }
+table.fl td .fn{ font-size:11pt; font-weight:600; color:var(--ink); }
+table.fl td .tm{ font-size:11.5pt; font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums; }
+table.fl td .dt{ display:block; font-size:8pt; color:var(--mut); letter-spacing:.06em; margin-top:.7mm; }
+table.fl td .ap{ font-size:11pt; font-weight:600; color:var(--green); }
+table.fl td .ct{ display:block; font-size:8.5pt; font-weight:300; color:var(--mut); margin-top:.7mm; }
+tr.cnx td{ border-bottom:1px solid var(--line); padding:2.8mm 0; }
+tr.cnx .pill{ display:inline-block; font-family:var(--lbl); font-size:7.5pt; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--green-mid);
+  background:var(--green-soft); border-radius:3px; padding:1.4mm 3.2mm; }
+
+/* ══ PREÇO ══ */
+.price{ display:flex; justify-content:space-between; align-items:center; background:var(--green);
+  border-radius:5px; padding:6.5mm 9mm; margin-top:2mm; }
+.price .lbl{ font-size:10pt; font-weight:700; letter-spacing:.10em; color:rgba(255,255,255,.78); text-transform:uppercase; }
+.price .lbl i{ display:block; font-style:normal; font-size:8pt; font-weight:300; letter-spacing:.04em;
+  color:rgba(255,255,255,.48); text-transform:none; margin-top:1.8mm; }
+.price .amt{ text-align:right; }
+.price .amt b{ display:block; font-size:23pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; line-height:1; }
+.price .amt span{ display:block; font-size:10pt; font-weight:300; color:rgba(255,255,255,.6);
+  margin-top:2.2mm; font-variant-numeric:tabular-nums; }
+.note{ font-size:9pt; font-weight:300; color:var(--mut); margin-top:4mm; line-height:1.65; }
+
+/* ══ AVISO / DESTAQUE ══ */
+.flag{ border-left:3px solid var(--gold); background:var(--green-soft); padding:4.5mm 6.5mm; margin:6mm 0 0;
+  font-size:10pt; font-weight:300; line-height:1.7; color:var(--char); }
+.flag b{ font-weight:600; color:var(--green); }
+.flag.warn{ border-left-color:var(--green-sage); background:var(--gold-soft); }
+
+/* ══ COMPARATIVO ══ */
+table.cmp{ width:100%; border-collapse:collapse; }
+table.cmp th{ font-family:var(--lbl); font-size:7.5pt; font-weight:700; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--mut); text-align:left; padding:0 3mm 3mm 0;
+  border-bottom:1.5px solid var(--gold); }
+table.cmp th.r{ text-align:right; padding-right:0; }
+table.cmp td{ padding:7mm 3mm 7mm 0; border-bottom:1px solid var(--line); vertical-align:top;
+  font-size:10pt; font-weight:300; }
+table.cmp td.r{ text-align:right; padding-right:0; font-variant-numeric:tabular-nums; }
+table.cmp .num{ width:11mm; height:11mm; border-radius:50%; background:var(--green); color:var(--gold);
+  font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+table.cmp .co{ font-family:var(--lbl); font-size:9.5pt; font-weight:700; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--green); }
+table.cmp .rt{ display:block; font-size:9pt; color:var(--mut); margin-top:1.8mm; line-height:1.6; }
+table.cmp .rt b{ font-weight:600; color:var(--char); }
+table.cmp .brl{ font-size:13pt; font-weight:700; color:var(--green); }
+table.cmp .usd{ display:block; font-size:9pt; font-weight:300; color:var(--mut); margin-top:1.4mm; }
+table.cmp tr.best td{ background:var(--green-soft); }
+.tagbest{ display:inline-block; font-family:var(--lbl); font-size:7pt; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase; color:#fff; background:var(--gold);
+  border-radius:3px; padding:1.2mm 2.8mm; margin-top:2.5mm; }
+
+/* ══ GRADE DE DADOS ══ */
+.facts{ display:grid; grid-template-columns:repeat(4,1fr); gap:6mm 8mm; margin-top:9mm;
+  border-top:1px solid var(--line); padding-top:6.5mm; }
+.facts .k{ font-family:var(--lbl); font-size:7.5pt; font-weight:700; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--mut); }
+.facts .v{ font-size:11pt; font-weight:300; color:var(--char); margin-top:2mm; line-height:1.5; }
+.facts .v b{ font-weight:600; color:var(--green); }
+.facts.three{ grid-template-columns:repeat(3,1fr); margin-bottom:4mm; }
+
+/* ══ CONDIÇÕES ══ */
+.cond{ margin-bottom:8mm; }
+.cond-h{ font-size:10.5pt; font-weight:700; letter-spacing:.10em; text-transform:uppercase;
+  color:var(--green-mid); margin-bottom:3mm; }
+.cond-t{ font-size:11pt; font-weight:300; line-height:1.85; color:var(--char); }
+.cond-t b{ font-weight:600; color:var(--green); }
+</style>
+<style>
+/* ── ajustes específicos da página avulsa ── */
+.opt-hd .loc{ font-family:var(--lbl); font-size:11pt; font-weight:700; letter-spacing:.14em;
+  color:var(--gold); border:2px solid var(--gold); border-radius:4px; padding:2.6mm 5mm; flex-shrink:0; }
+.opt-hd .loc i{ display:block; font-style:normal; font-size:6.5pt; font-weight:400; letter-spacing:.16em;
+  color:rgba(255,255,255,.5); text-transform:uppercase; margin-bottom:1mm; }
+.route .div{ color:var(--line); font-size:15pt; margin:0 2mm; }
+.price .brk{ text-align:left; padding-left:10mm; border-left:1px solid rgba(255,255,255,.16); }
+.price .brk div{ font-size:8.5pt; font-weight:300; color:rgba(255,255,255,.58);
+  font-variant-numeric:tabular-nums; line-height:1.85; }
+.price .brk b{ font-weight:500; color:rgba(255,255,255,.85); }
+.route{ margin-bottom:7mm; }
+.flag{ margin-top:5mm; }
+</style>
+</head>
+<body>
+
+<section class="page">
+  <div class="opt-hd">
+    <div>
+      <div class="ttl">Opção Aérea · KLM</div>
+      <div class="sub">Curitiba → Munique · retorno de Veneza · 06 a 16 de setembro de 2026</div>
+    </div>
+    <div class="loc"><i>Saída</i>06 SET</div>
+  </div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="route">
+      <span class="ap">CWB<i>Curitiba</i></span><span class="arw">&#8594;</span>
+      <span class="ap">MUC<i>Munique</i></span>
+      <span class="div">|</span>
+      <span class="ap">VCE<i>Veneza</i></span><span class="arw">&#8594;</span>
+      <span class="ap">CWB<i>Curitiba</i></span>
+    </div>
+
+    <div class="leg-h"><b>Ida</b><span>06 · 07 de setembro</span>
+      <span class="tot">Tempo total de viagem &nbsp;<b>26h05</b></span></div>
+    <table class="fl">
+      <thead><tr>
+        <th style="width:30mm">Voo</th><th style="width:26mm">Partida</th><th style="width:26mm">Chegada</th>
+        <th>Trecho</th><th class="r" style="width:20mm">Classe</th>
+        <th class="r" style="width:22mm">Duração</th><th class="r" style="width:26mm">Aeronave</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 9297</span></td>
+          <td><span class="tm">15:20</span><span class="dt">06 Set</span></td>
+          <td><span class="tm">16:30</span><span class="dt">06 Set</span></td>
+          <td><span class="ap">CWB &#8594; GRU</span><span class="ct">Curitiba &#8594; São Paulo/Guarulhos · operado pela GOL</span></td>
+          <td class="r">Econ. H</td><td class="r">01h10</td><td class="r">B737-800</td>
+        </tr>
+        <tr class="cnx"><td colspan="7"><span class="pill">Conexão em São Paulo · 05h15</span></td></tr>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 0792</span></td>
+          <td><span class="tm">21:45</span><span class="dt">06 Set</span></td>
+          <td><span class="tm">14:20</span><span class="dt">07 Set</span></td>
+          <td><span class="ap">GRU &#8594; AMS</span><span class="ct">São Paulo/Guarulhos &#8594; Amsterdã</span></td>
+          <td class="r">Econ. H</td><td class="r">11h35</td><td class="r">B777-300ER</td>
+        </tr>
+        <tr class="cnx"><td colspan="7"><span class="pill">Conexão em Amsterdã · 06h40</span></td></tr>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 1859</span></td>
+          <td><span class="tm">21:00</span><span class="dt">07 Set</span></td>
+          <td><span class="tm">22:25</span><span class="dt">07 Set</span></td>
+          <td><span class="ap">AMS &#8594; MUC</span><span class="ct">Amsterdã &#8594; Munique</span></td>
+          <td class="r">Econ. K</td><td class="r">01h25</td><td class="r">B737-800</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="leg-h"><b>Volta</b><span>15 · 16 de setembro</span>
+      <span class="tot">Tempo total de viagem &nbsp;<b>23h05</b></span></div>
+    <table class="fl">
+      <thead><tr>
+        <th style="width:30mm">Voo</th><th style="width:26mm">Partida</th><th style="width:26mm">Chegada</th>
+        <th>Trecho</th><th class="r" style="width:20mm">Classe</th>
+        <th class="r" style="width:22mm">Duração</th><th class="r" style="width:26mm">Aeronave</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 1628</span></td>
+          <td><span class="tm">06:00</span><span class="dt">15 Set</span></td>
+          <td><span class="tm">07:50</span><span class="dt">15 Set</span></td>
+          <td><span class="ap">VCE &#8594; AMS</span><span class="ct">Veneza &#8594; Amsterdã</span></td>
+          <td class="r">Econ. L</td><td class="r">01h50</td><td class="r">B737-900</td>
+        </tr>
+        <tr class="cnx"><td colspan="7"><span class="pill">Conexão em Amsterdã · 05h00</span></td></tr>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 0705</span></td>
+          <td><span class="tm">12:50</span><span class="dt">15 Set</span></td>
+          <td><span class="tm">19:45</span><span class="dt">15 Set</span></td>
+          <td><span class="ap">AMS &#8594; GIG</span><span class="ct">Amsterdã &#8594; Rio de Janeiro/Galeão</span></td>
+          <td class="r">Econ. R</td><td class="r">11h55</td><td class="r">B787-9</td>
+        </tr>
+        <tr class="cnx"><td colspan="7"><span class="pill">Conexão no Rio de Janeiro · 02h35</span></td></tr>
+        <tr>
+          <td><span class="co">KLM</span><span class="fn">KL 9278</span></td>
+          <td><span class="tm">22:20</span><span class="dt">15 Set</span></td>
+          <td><span class="tm">00:05</span><span class="dt">16 Set</span></td>
+          <td><span class="ap">GIG &#8594; CWB</span><span class="ct">Rio de Janeiro/Galeão &#8594; Curitiba · operado pela GOL</span></td>
+          <td class="r">Econ. T</td><td class="r">01h45</td><td class="r">B737-800</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="price">
+      <div class="lbl">Total por passageiro<i>Classe econômica · 1 adulto · impostos e taxas incluídos</i></div>
+      <div class="amt"><b>R$ 9.217,03</b><span>USD 1.777,22</span></div>
+    </div>
+
+    <div class="facts">
+      <div><div class="k">Passageira</div><div class="v"><b>Izabela Correia</b></div></div>
+      <div><div class="k">Chegada na Europa</div><div class="v"><b>Munique (MUC)</b> · 07 Set, 22h25</div></div>
+      <div><div class="k">Retorno partindo de</div><div class="v"><b>Veneza (VCE)</b> · 15 Set, 06h00</div></div>
+      <div><div class="k">Bagagem</div><div class="v">Conforme a tarifa — confirmar na emissão</div></div>
+    </div>
+
+    <div class="flag"><b>Ida longa: 26h05 no total.</b> São <b>05h15</b> de espera em São Paulo e
+      <b>06h40</b> em Amsterdã, com chegada a Munique às 22h25 — vale reservar a hospedagem da noite de
+      07 de setembro com antecedência. O roteiro é aberto: chega em <b>Munique (MUC)</b> e retorna de
+      <b>Veneza (VCE)</b>, sem o deslocamento entre as cidades. Os trechos <b>CWB–GRU</b> e
+      <b>GIG–CWB</b> têm número KLM, mas são operados pela <b>GOL</b>.</div>
+
+    <div class="note">Cotação 21/08 · USD 1,00 = R$ 5,1862<br>*Nada reservado, apenas cotado</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
