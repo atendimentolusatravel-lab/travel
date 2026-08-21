@@ -13,7 +13,7 @@ _Nenhuma em andamento — aguardando próxima atividade._
 | # | Data | Início | Fim | Duração | Atividade | Observações |
 |---|------|--------|-----|---------|-----------|-------------|
 | 1 | 20/08/2026 | 09:33 | 11:26 | 1h53min | Vouchers da Mariana Maske | Concluído até onde havia vouchers; ainda faltam alguns |
-| 2 | 20/08/2026 | 11:26 | ? | ? | Cotação Antonia – Ano Novo em Tulum | Fim não registrado (dia 20 encerrou sem aviso) |
+| 2 | 20/08/2026 | 11:26 | 16:58 | 5h32min | Cotação Antonia – Ano Novo em Tulum | Concluída |
 | 3 | 21/08/2026 | 09:39 | 10:55 | 1h16min | Revisão da cotação da Simone Maximiliano | Concluída |
 
 ## Tabela de Interrupções
