@@ -49,10 +49,16 @@ Dependências: `segno`, `playwright`, `opencv-python-headless`, `zxing-cpp`,
 
 ## Tipografia e marca
 
-O nome **LUSATRAVEL** vai em Cormorant Garamond **700 (negrito)** em todas as
-peças — no wordmark vertical do banner, na faixa do backdrop, nas células da
-malha e no `@LUSATRAVEL` do QR. Na assinatura do banner só o nome é negrito; o
-"VIAGENS E TURISMO" fica em regular, senão o contraste some.
+No **backdrop** o nome segue a arte oficial: Cormorant Garamond **300 (light)**,
+com "travel agency" em Montserrat 300 minúsculo e entreletras larga. Vale para o
+lockup grande e para as células da malha.
+
+> Isso reverte o negrito pedido antes. A arte que a agência mandou tem o
+> wordmark fino, e a instrução foi reproduzi-la exatamente — se o negrito era
+> proposital, é trocar `font-weight` em `.w-lock` e `.w-cell`.
+
+No **banner** a assinatura da base mantém o nome em 700 contra o "VIAGENS E
+TURISMO" em regular; ali o contraste é que sustenta a linha.
 
 `parts.marca()` desenha o símbolo oficial em vetor. Ele **não é desenhado à
 mão**: sai todo de um círculo de raio `R` centrado em C, e por isso fecha num
@@ -150,29 +156,41 @@ ser refeita em formato largo, com a marca repetida (*step-and-repeat*).
 
 # Backdrop fotográfico — 3,00 × 2,20 m
 
-Peça para premiação, com as pessoas em pé na frente. É um step-and-repeat: a
-malha alterna QOYA e SURYAA com as linhas deslocadas meia célula, para que as
-marcas apareçam em volta de quem estiver na frente, em qualquer posição. As
-linhas inteiras são centralizadas na altura útil (`LINHAS`/`TOPO`) para não
-cortar logo no rodapé.
+Peça para premiação, com as pessoas em pé na frente. Dois elementos:
 
-> **A Lusa Travel não aparece na peça.** A pedido, saíram o lockup do topo (com
-> a faixa superior inteira) e as células da agência na malha. A agência fica
-> apenas no `@LUSATRAVEL` do cartão do QR, no canto inferior direito.
+**1. O lockup grande**, centralizado na parte superior — símbolo empilhado
+sobre o nome, com "travel agency" embaixo, exatamente como na arte oficial.
+`LOCK_W`, `LOCK_H` e `LOCK_TOPO` definem tamanho e posição.
 
-Os logos dos hotéis vão em creme — versão reversa, para fundo escuro.
+**2. Step-and-repeat** em volta: a malha alterna Lusa Travel, QOYA, Lusa
+Travel, SURYAA, com as linhas deslocadas meia célula, para que as marcas
+apareçam em volta de quem estiver na frente, em qualquer posição. Metade das
+células é Lusa Travel; cada hotel ocupa um quarto. As linhas inteiras são
+centralizadas na altura útil (`LINHAS`/`TOPO`) para não cortar logo no rodapé.
+
+`ZONAS` lista os retângulos reservados — o lockup e o cartão do QR — e
+`colide()` remove as células que os invadiriam. Sem isso a malha passa por
+baixo dos dois e o resultado parece colagem.
+
+Os logos dos hotéis vão em creme (versão reversa, para fundo escuro) e os da
+agência em verde-menta — a diferença de tom separa a agência dos parceiros.
 
 ## Alturas, medindo do chão
 
 | Elemento | Altura |
 |---|---|
 | topo | 2,20 m |
+| símbolo do lockup | 2,14 m → 1,81 m |
+| "LUSATRAVEL" do lockup | 1,77 m → 1,52 m |
+| "travel agency" | 1,49 m → 1,43 m |
 | malha step-and-repeat | 0,08 m → 2,12 m |
 | cartão do QR (canto inferior direito) | 0,09 m → 0,48 m |
 
-Sem a faixa superior, **nada na peça é imune a ser coberto**: em pé, as pessoas
-tapam a malha até cerca de 1,70 m, e o que sai na foto é a faixa de logos acima
-da cabeça delas.
+Em pé, as pessoas cobrem a peça até cerca de 1,70 m. **O símbolo e a parte de
+cima do nome ficam acima disso; o resto do nome e o "travel agency" ficam na
+faixa que as cabeças alcançam.** Subir `LOCK_TOPO` não resolve (já está a 6 cm
+do topo) — o que resolve é reduzir o lockup, trocando presença por garantia de
+foto.
 
 O QR tem 27 cm de lado. **Na altura em que está, entre 9 e 48 cm do chão, ele
 fica atrás de quem posar do lado direito e é desconfortável de escanear** — foi

@@ -18,13 +18,17 @@ import segno, math
 # a construcao por arcos de raio R e o que da a forma certa.
 PERFIS_BICO = {
     # nome:  (control1 dx/dy, control2 x/y, ponto mais a esquerda)
+    # "anexo" foi medido sobre a arte em alta resolucao que a agencia mandou:
+    # o topo afina POUCO em relacao ao meio circulo -- fica entre o canto reto
+    # e o bico curto, mais perto do bico. A metade de baixo bate com o circulo.
+    "anexo":  ((75, 11), (13, 95),  0, 180),
     "suave":  ((58, 18), (22, 92),  2, 200),
     "medio":  ((28, 35), (22, 108), 2, 208),
     "longo":  ((35, 52), (20, 118), 2, 215),
 }
 
 
-def marca(cls="marca", R=180, bico="medio", estrela_r=44, estrela_dx=158, gordura=(0.19, 0.40),
+def marca(cls="marca", R=180, bico="anexo", estrela_r=44, estrela_dx=158, gordura=(0.19, 0.40),
           vao=6):
     """SVG da marca. viewBox 0 0 {2R+estrela_dx+estrela_r-R} x {2R}.
 
@@ -48,10 +52,13 @@ def marca(cls="marca", R=180, bico="medio", estrela_r=44, estrela_dx=158, gordur
         grande = f"M {cx} 0 A {R} {R} 0 0 0 {cx} {D} Z"
     else:
         c1, c2, lx, ly = PERFIS_BICO[bico]
+        # de baixo do ponto mais a esquerda ate a base a forma segue o circulo:
+        # 0.5523*R e o offset classico do Bezier que aproxima um quarto de arco
+        q = 0.5523 * R
         grande = (f"M {cx} 0 "
                   f"C {cx-c1[0]*k:.1f} {c1[1]*k:.1f} {c2[0]*k:.1f} {c2[1]*k:.1f} "
                   f"{lx*k:.1f} {ly*k:.1f} "
-                  f"C {-4*k:.1f} {300*k:.1f} {80*k:.1f} {D} {cx} {D} Z")
+                  f"C {lx*k:.1f} {ly*k+q:.1f} {cx-q:.1f} {D} {cx} {D} Z")
 
     # vesicas: de C ate o canto, por dois arcos de raio R
     px = cx + vao
