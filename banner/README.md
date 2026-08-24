@@ -21,6 +21,7 @@ Duas peças, para dois usos diferentes:
 | `render.py` | renderiza PNG e PDF a partir do HTML |
 | `verify.py` | confere que o QR continua decodificando |
 | `fonts.css` | Cormorant Garamond + Montserrat embutidas (base64) |
+| `fonts.py` | regera o `fonts.css` a partir do Google Fonts |
 
 ## Como regerar
 
@@ -43,7 +44,21 @@ python3 render.py --pdf banner-lusatravel-1.40x1.98m-sangria.pdf --mm 1400
 gerar em qualquer tamanho sem perder qualidade — `--mm 2000` sairia com 2 m
 de largura no mesmo arquivo.
 
-Dependências: `segno`, `playwright`, `opencv-python-headless`, `zxing-cpp`.
+Dependências: `segno`, `playwright`, `opencv-python-headless`, `zxing-cpp`,
+`pypdf`.
+
+## Tipografia e marca
+
+O nome **LUSATRAVEL** vai em Cormorant Garamond **700 (negrito)** em todas as
+peças — no wordmark vertical do banner, na faixa do backdrop, nas células da
+malha e no `@LUSATRAVEL` do QR. Na assinatura do banner só o nome é negrito; o
+"VIAGENS E TURISMO" fica em regular, senão o contraste some.
+
+A marca também é a versão pesada: `parts.marca()` recebe `petala_r` (quanto
+**menor** o raio, mais gorda a pétala — a corda é fixa e o arco é que abre) e
+`gordura`, que controla os pontos de controle da estrela. As peças usam
+`petala_r=148, gordura=(0.20, 0.44)`. Passar de ~0.24/0.50 na estrela faz ela
+virar um losango e perder o brilho.
 
 ## QR code
 

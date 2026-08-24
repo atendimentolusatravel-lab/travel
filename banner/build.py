@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Monta o banner de divulgacao da Lusa Travel (A3 retrato, 1414x2000 px)."""
 import os
-from parts import qr_svg, sunburst
+from parts import qr_svg, sunburst, marca
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -10,16 +10,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 B = int(os.environ.get("BLEED", "0"))
 FONTS = open(os.path.join(HERE, "fonts.css"), encoding="utf-8").read()
 
-# ---------------- marca (borboleta / folhas) ----------------
-MARCA = '''<svg class="marca" viewBox="0 0 392 348" xmlns="http://www.w3.org/2000/svg">
-  <g fill="currentColor">
-    <path d="M168 22 A 170 156 0 0 0 168 328 Z"/>
-    <path d="M177 167 A 186 186 0 0 1 320 40 A 186 186 0 0 1 177 167 Z"/>
-    <path d="M177 183 A 186 186 0 0 0 320 310 A 186 186 0 0 0 177 183 Z"/>
-    <path d="M342 129 C 349 160 357 168 388 175 C 357 182 349 190 342 221
-             C 335 190 327 182 296 175 C 327 168 335 160 342 129 Z"/>
-  </g>
-</svg>'''
+# marca em versao negrito: petalas mais gordas e estrela mais cheia
+MARCA = marca(petala_r=148, gordura=(0.20, 0.44))
 
 QR = qr_svg()
 SUN = sunburst(126)
@@ -58,7 +50,7 @@ body{{background:#0f0f0d;color:var(--ink);font-family:var(--sans);
 /* ---- wordmark vertical ---- */
 #band{{display:flex;align-items:center;justify-content:center;padding-right:{B}px}}
 .vert{{writing-mode:vertical-rl;transform:rotate(180deg);
-  font-family:var(--serif);font-weight:300;font-size:222px;line-height:1;
+  font-family:var(--serif);font-weight:700;font-size:222px;line-height:1;
   letter-spacing:.012em;color:var(--mint);white-space:nowrap}}
 
 /* ---- painel de parceiros ---- */
@@ -92,9 +84,10 @@ body{{background:#0f0f0d;color:var(--ink);font-family:var(--sans);
   display:flex;flex-direction:column;align-items:center;gap:10px;
   border:2px solid rgba(0,0,0,.10)}}
 .qr-card svg{{display:block;color:#111;width:238px;height:238px}}
-.qr-tag{{font-family:var(--sans);font-weight:500;font-size:27px;
+.qr-tag{{font-family:var(--sans);font-weight:700;font-size:27px;
   letter-spacing:.045em;color:#111}}
-.assin{{font-family:var(--serif);font-weight:500;font-size:27px;
+.assin b{{font-weight:700}}
+.assin{{font-family:var(--serif);font-weight:400;font-size:26px;
   letter-spacing:.085em;color:var(--red);text-align:center;white-space:nowrap}}
 </style>
 
@@ -132,7 +125,7 @@ body{{background:#0f0f0d;color:var(--ink);font-family:var(--sans);
       {QR}
       <div class="qr-tag">@LUSATRAVEL</div>
     </div>
-    <div class="assin">LUSATRAVEL, VIAGENS E TURISMO</div>
+    <div class="assin"><b>LUSATRAVEL</b>, VIAGENS E TURISMO</div>
   </div>
 
   <div class="blk" id="band"><div class="vert">LUSATRAVEL</div></div>

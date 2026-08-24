@@ -1,6 +1,35 @@
 # -*- coding: utf-8 -*-
-"""Gera os componentes SVG do banner: QR code, sunburst SURYAA."""
+"""Componentes SVG das pecas: marca da agencia, QR code e sunburst SURYAA."""
 import segno, math
+
+
+# ---------- MARCA DA AGENCIA ----------
+def marca(cls="marca", petala_r=145, lente=(168, 154), estrela_r=46,
+          estrela_c=(342, 175), gordura=(0.28, 0.58)):
+    """Folha/borboleta da Lusa Travel.
+
+    petala_r  raio dos arcos das duas petalas da direita — QUANTO MENOR,
+              MAIS GORDA a petala (a corda e fixa, o arco e que abre)
+    lente     (rx, ry) do meio-disco da esquerda; ry perto da meia-corda
+              (153) joga o bojo para fora e engrossa a forma
+    gordura   fatores dos pontos de controle da estrela de 4 pontas
+    """
+    rx, ry = lente
+    cx, cy = estrela_c
+    R = estrela_r
+    a, b = gordura[0] * R, gordura[1] * R
+    estrela = (f"M {cx} {cy-R} "
+               f"C {cx+a:.1f} {cy-b:.1f} {cx+b:.1f} {cy-a:.1f} {cx+R} {cy} "
+               f"C {cx+b:.1f} {cy+a:.1f} {cx+a:.1f} {cy+b:.1f} {cx} {cy+R} "
+               f"C {cx-a:.1f} {cy+b:.1f} {cx-b:.1f} {cy+a:.1f} {cx-R} {cy} "
+               f"C {cx-b:.1f} {cy-a:.1f} {cx-a:.1f} {cy-b:.1f} {cx} {cy-R} Z")
+    P = petala_r
+    return (f'<svg class="{cls}" viewBox="0 0 392 348" '
+            'xmlns="http://www.w3.org/2000/svg"><g fill="currentColor">'
+            f'<path d="M168 22 A {rx} {ry} 0 0 0 168 328 Z"/>'
+            f'<path d="M177 167 A {P} {P} 0 0 1 320 40 A {P} {P} 0 0 1 177 167 Z"/>'
+            f'<path d="M177 183 A {P} {P} 0 0 0 320 310 A {P} {P} 0 0 0 177 183 Z"/>'
+            f'<path d="{estrela}"/></g></svg>')
 
 # ---------- QR CODE (@lusatravel) ----------
 def qr_svg(url="https://www.instagram.com/lusatravel/", size=240):

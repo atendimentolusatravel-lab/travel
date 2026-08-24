@@ -12,7 +12,7 @@ Peca para as pessoas posarem NA FRENTE. Duas regras mandam no desenho:
 1 unidade da arte = 1 mm.
 """
 import os
-from parts import qr_svg, sunburst
+from parts import qr_svg, sunburst, marca
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FONTS = open(os.path.join(HERE, "fonts.css"), encoding="utf-8").read()
@@ -22,15 +22,7 @@ FAIXA = 520                  # altura da faixa superior (fica acima das cabecas)
 B = int(os.environ.get("BLEED", "0"))
 CELL_W, CELL_H = 520, 340
 
-MARCA = '''<svg class="{cls}" viewBox="0 0 392 348" xmlns="http://www.w3.org/2000/svg">
-  <g fill="currentColor">
-    <path d="M168 22 A 170 156 0 0 0 168 328 Z"/>
-    <path d="M177 167 A 186 186 0 0 1 320 40 A 186 186 0 0 1 177 167 Z"/>
-    <path d="M177 183 A 186 186 0 0 0 320 310 A 186 186 0 0 0 177 183 Z"/>
-    <path d="M342 129 C 349 160 357 168 388 175 C 357 182 349 190 342 221
-             C 335 190 327 182 296 175 C 327 168 335 160 342 129 Z"/>
-  </g>
-</svg>'''
+MARCA = marca(cls="{cls}", petala_r=148, gordura=(0.20, 0.44))
 
 def lockup_lusa():
     return (f'<div class="cell-lusa">{MARCA.format(cls="m-cell")}'
@@ -90,7 +82,7 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
   display:flex;align-items:center;justify-content:space-between}}
 .lock{{display:flex;align-items:center;gap:58px}}
 .m-faixa{{width:206px;height:183px;color:var(--mint);flex:0 0 auto}}
-.w-faixa{{font-family:var(--serif);font-weight:300;font-size:265px;
+.w-faixa{{font-family:var(--serif);font-weight:700;font-size:245px;
   line-height:.96;letter-spacing:.02em;color:var(--mint);white-space:nowrap}}
 .tag{{font-family:var(--sans);font-weight:400;font-size:33px;
   letter-spacing:.36em;color:var(--mint);opacity:.72;margin-top:14px}}
@@ -101,7 +93,7 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
 .qr-card{{background:var(--cream);border-radius:34px;padding:34px 34px 22px;
   display:flex;flex-direction:column;align-items:center;gap:12px;flex:0 0 auto}}
 .qr-card svg{{display:block;color:#141414;width:268px;height:268px}}
-.qr-tag{{font-family:var(--sans);font-weight:500;font-size:33px;
+.qr-tag{{font-family:var(--sans);font-weight:700;font-size:33px;
   letter-spacing:.05em;color:#141414}}
 
 /* ── malha repetida ── */
@@ -110,7 +102,7 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
 .cell-lusa{{display:flex;flex-direction:column;align-items:center;gap:20px;
   color:var(--mint)}}
 .m-cell{{width:114px;height:101px}}
-.w-cell{{font-family:var(--serif);font-weight:300;font-size:52px;
+.w-cell{{font-family:var(--serif);font-weight:700;font-size:50px;
   letter-spacing:.09em;text-indent:.09em;white-space:nowrap}}
 .cell-hotel{{display:flex;flex-direction:column;align-items:center;gap:11px;
   color:var(--cream);opacity:.95}}
