@@ -9,7 +9,8 @@ import os
 import segno
 
 OUT = os.path.join(os.path.dirname(__file__), "..", "assets")
-GREEN = "#454E2B"
+GREEN = "#444C2A"
+SAGE = "#A6C9AE"
 SUN = "#C89A4F"
 INK = "#1A1A18"
 
@@ -22,21 +23,23 @@ def write(name, svg):
 
 
 # ── marca Lusa Travel (simbolo) ──────────────────────────────────────────────
-LEAF = "M0 0 C40 -34 42 -110 0 -150 C-42 -110 -40 -34 0 0 Z"
-SPARK = ("M0 -40 C4 -12 12 -4 40 0 C12 4 4 12 0 40 "
-         "C-4 12 -12 4 -40 0 C-12 -4 -4 -12 0 -40 Z")
+# Redesenho vetorial da marca: folha esquerda + duas petalas a direita (o "K")
+# e o brilho de quatro pontas encaixado na abertura. Coordenadas com o eixo
+# central em x=0; o grupo e depois deslocado para dentro do viewBox.
+LEFT = "M-6 2 C-68 20 -160 88 -160 165 C-160 242 -68 310 -6 328 Z"
+TOP = ("M6 2 C74 12 118 34 128 62 C132 74 128 82 116 88 "
+       "C82 104 42 132 6 158 Z")
+BOTTOM = ("M6 328 C74 318 118 296 128 268 C132 256 128 248 116 242 "
+          "C82 226 42 198 6 172 Z")
+SPARK = ("M100 123 C103 152 110 161 148 165 C110 169 103 178 100 207 "
+         "C97 178 90 169 52 165 C90 161 97 152 100 123 Z")
 
 
 def symbol(color):
-    """Duas folhas em espelho (borboleta) + brilho de quatro pontas."""
-    return (
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190" fill="%s">'
-        '<g transform="translate(112,174)">'
-        '<path transform="translate(-8,0) rotate(-27)" d="%s"/>'
-        '<path transform="translate(8,0) rotate(27)" d="%s"/>'
-        '</g>'
-        '<path transform="translate(258,86)" d="%s"/>'
-        '</svg>' % (color, LEAF, LEAF, SPARK))
+    return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 330" fill="%s">'
+            '<g transform="translate(163,0)">'
+            '<path d="%s"/><path d="%s"/><path d="%s"/><path d="%s"/>'
+            '</g></svg>' % (color, LEFT, TOP, BOTTOM, SPARK))
 
 
 # ── mandala solar do lockup Suryaa ───────────────────────────────────────────
@@ -73,6 +76,7 @@ def qrcode(url="https://www.instagram.com/lusatravel"):
 
 if __name__ == "__main__":
     write("lusatravel-symbol.svg", symbol(GREEN))
-    write("lusatravel-symbol-gold.svg", symbol("#C8A24A"))
+    write("lusatravel-symbol-sage.svg", symbol(SAGE))
     write("suryaa-sun.svg", sunburst())
+    write("suryaa-sun-creme.svg", sunburst("#F2F0E7"))
     write("qrcode-instagram.svg", qrcode())

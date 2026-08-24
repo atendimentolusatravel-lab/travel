@@ -5,145 +5,118 @@
 <style>
 /* ── Formato: 3000 x 2400 mm (3,0 m x 2,4 m). 1px = 1mm ───────────────── */
 :root{
-  --bg:#0d0d0b;
-  --gold:#c8a24a;
-  --gold-hi:#e8d3a0;
-  --gold-dim:#8a6f30;
-  --cream:#f4efe7;
-  --sun:#c89a4f;
+  --verde:#444c2a;        /* fundo institucional Lusa Travel */
+  --sage:#a6c9ae;         /* verde claro da marca sobre fundo escuro */
+  --creme:#f2f0e7;        /* logotipos dos parceiros */
+  --linha:rgba(242,240,231,.38);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:#2a2a2a}
-.banner{
-  position:relative;width:3000px;height:2400px;overflow:hidden;
-  background:
-    radial-gradient(120% 85% at 50% 0%, #1c1b16 0%, #0d0d0b 58%, #070706 100%);
-  font-family:'Jost',sans-serif;color:var(--cream);
-}
-/* moldura interior */
-.frame{position:absolute;inset:70px;border:2px solid rgba(200,162,74,.28);pointer-events:none}
-.frame::after{content:"";position:absolute;inset:16px;border:1px solid rgba(200,162,74,.14)}
+.banner{position:relative;width:3000px;height:2400px;overflow:hidden;
+  background:var(--verde);font-family:'Jost',sans-serif;color:var(--creme)}
 
-/* ── padrao step-and-repeat (zona onde ficam as pessoas) ──────────────── */
-.pattern{position:absolute;top:880px;left:250px;right:250px;bottom:660px;
-  display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
-.prow{display:flex;justify-content:space-between;align-items:center}
-.prow.odd{padding:0 140px}
-.pmark{display:flex;flex-direction:column;align-items:center;gap:18px;opacity:.5}
-.pmark img{height:82px;display:block}
-.pmark span{font-weight:200;font-size:32px;letter-spacing:.24em;color:var(--gold);
-  white-space:nowrap;text-indent:.24em}
+/* ── faixa superior: lockup principal ─────────────────────────────────── */
+.topo{position:absolute;top:0;left:0;right:0;height:740px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  border-bottom:2px solid var(--linha)}
+.topo .sym{height:230px;display:block}
+.topo .word{font-family:'Julius Sans One',sans-serif;font-size:180px;line-height:1;
+  letter-spacing:.045em;text-indent:.045em;color:var(--sage);margin-top:44px}
+.topo .tag{font-weight:300;font-size:48px;letter-spacing:.42em;text-indent:.42em;
+  color:var(--sage);opacity:.9;margin-top:26px}
 
-/* ── lockup principal ─────────────────────────────────────────────────── */
-.hero{position:absolute;top:150px;left:0;right:0;display:flex;flex-direction:column;
-  align-items:center;text-align:center}
-.hero .sym{height:190px;display:block;margin-top:44px}
-.hero .word{font-weight:200;font-size:195px;line-height:.96;letter-spacing:.055em;
-  text-indent:.055em;color:var(--cream);margin-top:44px}
-.hero .tag{font-weight:300;font-size:56px;letter-spacing:.46em;text-indent:.46em;
-  color:var(--gold);margin-top:22px}
-.event{display:flex;align-items:center;gap:40px}
-.event i{display:block;width:300px;height:1px;background:
-  linear-gradient(90deg,transparent,var(--gold))}
-.event i+i{background:linear-gradient(90deg,var(--gold),transparent)}
-.event span{font-family:'Poppins',sans-serif;font-weight:300;font-size:52px;
-  letter-spacing:.36em;text-indent:.36em;color:var(--cream);white-space:nowrap}
+/* ── padrao step-and-repeat ───────────────────────────────────────────── */
+.pattern{position:absolute;top:740px;left:0;right:0;bottom:0;overflow:hidden}
+.prow{display:flex;align-items:center;justify-content:flex-start;gap:190px;
+  height:332px;margin-left:-180px}
+.prow.odd{margin-left:-420px}
+.cell{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;width:410px}
 
-/* ── faixa inferior ───────────────────────────────────────────────────── */
-.foot{position:absolute;left:70px;right:70px;bottom:70px;height:520px;
-  display:flex;align-items:center;gap:110px;padding:0 90px;
-  background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
-  border-top:1px solid rgba(200,162,74,.35)}
-.foot .label{font-family:'Poppins',sans-serif;font-weight:400;font-size:26px;
-  letter-spacing:.3em;color:var(--gold);writing-mode:vertical-rl;transform:rotate(180deg);
-  white-space:nowrap}
-.partners{display:flex;align-items:center;gap:130px;flex:1}
-.vsep{width:1px;height:250px;background:linear-gradient(180deg,transparent,
-  rgba(200,162,74,.45),transparent)}
+/* marca Lusa Travel repetida */
+.lusa{gap:22px}
+.lusa img{height:104px;display:block}
+.lusa span{font-family:'Julius Sans One',sans-serif;font-size:52px;letter-spacing:.07em;
+  text-indent:.07em;color:var(--sage);white-space:nowrap}
 
 /* lockup Qoya */
-.qoya{display:flex;align-items:center;gap:48px}
-.qoya .name{font-family:'Playfair Display',serif;font-weight:500;font-size:120px;
-  line-height:.9;letter-spacing:.02em;color:var(--cream)}
-.qoya .sub{font-family:'Poppins',sans-serif;font-weight:300;font-size:26px;
-  letter-spacing:.5em;text-indent:.5em;color:var(--cream);text-align:center;margin-top:16px}
+.qoya .name{font-family:'Playfair Display',serif;font-weight:500;font-size:76px;
+  line-height:.95;letter-spacing:.02em;color:var(--creme)}
+.qoya .sub{font-family:'Poppins',sans-serif;font-weight:300;font-size:17px;
+  letter-spacing:.5em;text-indent:.5em;color:var(--creme);margin-top:12px}
+.qoya .bar{width:100%;height:2px;background:var(--creme);margin:16px 0 14px}
 /* lockup Suryaa */
-.suryaa{display:flex;flex-direction:column;align-items:center;gap:18px}
-.suryaa img{height:150px;display:block}
-.suryaa .name{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:92px;
-  line-height:1;letter-spacing:.1em;text-indent:.1em;color:var(--sun)}
-.suryaa .bar{width:100%;height:2px;background:rgba(244,239,231,.75);margin:6px 0 2px}
+.suryaa img{height:92px;display:block;margin-bottom:14px}
+.suryaa .name{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:70px;
+  line-height:1;letter-spacing:.1em;text-indent:.1em;color:var(--creme)}
+.suryaa .bar{width:100%;height:2px;background:var(--creme);margin:12px 0 14px}
 /* bloco Curio Collection by Hilton */
-.curio{font-family:'Poppins',sans-serif;font-weight:500;font-size:34px;
-  letter-spacing:.17em;line-height:1.32;color:var(--cream);text-align:center}
-.curio .hilton{font-family:'Playfair Display',serif;font-weight:400;font-size:44px;
+.curio{font-family:'Poppins',sans-serif;font-weight:500;font-size:23px;
+  letter-spacing:.16em;line-height:1.3;color:var(--creme);text-align:center}
+.curio .hilton{font-family:'Playfair Display',serif;font-weight:400;font-size:30px;
   letter-spacing:.01em;margin-top:8px}
-.curio .hilton sup{font-size:.42em;vertical-align:super}
-.qoya .curio{text-align:left}
+.curio .hilton sup{font-size:.4em;vertical-align:super}
 
-/* QR */
-.qr{display:flex;align-items:center;gap:44px}
-.qr .card{width:300px;height:300px;background:#fff;border-radius:34px;padding:26px;
-  display:flex;align-items:center;justify-content:center}
-.qr .card img{width:100%;height:100%;display:block}
-.qr .cap{font-family:'Poppins',sans-serif}
-.qr .cap b{display:block;font-weight:500;font-size:46px;letter-spacing:.09em;color:var(--cream)}
-.qr .cap span{display:block;font-weight:300;font-size:28px;letter-spacing:.16em;
-  color:var(--gold);margin-top:14px}
+/* ── cartao QR ────────────────────────────────────────────────────────── */
+.qr{position:absolute;right:130px;bottom:130px;width:360px;
+  background:#fff;border-radius:44px;padding:34px 34px 26px;
+  display:flex;flex-direction:column;align-items:center;gap:20px}
+.qr .code{position:relative;width:292px;height:292px}
+.qr .code img{width:100%;height:100%;display:block}
+.qr .ig{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:78px;height:78px;background:#fff;border-radius:14px;padding:7px}
+.qr b{font-family:'Poppins',sans-serif;font-weight:600;font-size:40px;
+  letter-spacing:.05em;color:var(--verde)}
 </style>
 
 <div class="banner">
-  <div class="pattern" id="pattern"></div>
-  <div class="frame"></div>
-
-  <div class="hero">
-    <div class="event"><i></i><span>ENTREGA DE PRÉMIO</span><i></i></div>
-    <img class="sym" src="assets/lusatravel-symbol-gold.svg" alt="">
+  <div class="topo">
+    <img class="sym" src="assets/lusatravel-symbol-sage.svg" alt="">
     <div class="word">LUSATRAVEL</div>
     <div class="tag">travel agency</div>
   </div>
 
-  <div class="foot">
-    <div class="label">PARCEIROS OFICIAIS</div>
-    <div class="partners">
-      <div class="qoya">
-        <div>
-          <div class="name">QOYA</div>
-          <div class="sub">H—OTELS</div>
-        </div>
-        <div class="vsep" style="height:190px"></div>
-        <div class="curio">CURIO<br>COLLECTION
-          <div class="hilton">by Hilton<sup>™</sup></div>
-        </div>
-      </div>
-      <div class="vsep"></div>
-      <div class="suryaa">
-        <img src="assets/suryaa-sun.svg" alt="">
-        <div class="name">SURYAA</div>
-        <div class="bar"></div>
-        <div class="curio">CURIO COLLECTION
-          <div class="hilton">by Hilton<sup>™</sup></div>
-        </div>
-      </div>
+  <div class="pattern" id="pattern"></div>
+
+  <div class="qr">
+    <div class="code">
+      <img src="assets/qrcode-instagram.svg" alt="QR Instagram Lusa Travel">
+      <svg class="ig" viewBox="0 0 100 100" fill="none" stroke="#1a1a18" stroke-width="9">
+        <rect x="9" y="9" width="82" height="82" rx="26"/>
+        <circle cx="50" cy="50" r="20"/>
+        <circle cx="73.5" cy="26.5" r="3" fill="#1a1a18" stroke-width="6"/>
+      </svg>
     </div>
-    <div class="qr">
-      <div class="cap">
-        <b>@LUSATRAVEL</b>
-        <span>SIGA-NOS NO INSTAGRAM</span>
-      </div>
-      <div class="card"><img src="assets/qrcode-instagram.svg" alt="QR Instagram Lusa Travel"></div>
-    </div>
+    <b>@LUSATRAVEL</b>
   </div>
 </div>
 
 <script>
-// grelha step-and-repeat: 4 linhas alternadas de marcas Lusa Travel
-const rows = 3, perRow = 5;
-const cell = () =>
-  '<div class="pmark"><img src="assets/lusatravel-symbol-gold.svg" alt="">' +
-  '<span>LUSATRAVEL</span></div>';
+const lusa = `<div class="cell lusa">
+    <img src="assets/lusatravel-symbol-sage.svg" alt="">
+    <span>LUSATRAVEL</span>
+  </div>`;
+const qoya = `<div class="cell qoya">
+    <div class="name">QOYA</div>
+    <div class="sub">H—OTELS</div>
+    <div class="bar"></div>
+    <div class="curio">CURIO COLLECTION
+      <div class="hilton">by Hilton<sup>&trade;</sup></div>
+    </div>
+  </div>`;
+const suryaa = `<div class="cell suryaa">
+    <img src="assets/suryaa-sun-creme.svg" alt="">
+    <div class="name">SURYAA</div>
+    <div class="bar"></div>
+    <div class="curio">CURIO COLLECTION
+      <div class="hilton">by Hilton<sup>&trade;</sup></div>
+    </div>
+  </div>`;
+const seq = [qoya, lusa, suryaa, lusa];          // parceiro / marca / parceiro / marca
+const rows = 5, perRow = 6;
 document.getElementById('pattern').innerHTML =
   Array.from({length: rows}, (_, r) =>
     '<div class="prow' + (r % 2 ? ' odd' : '') + '">' +
-    cell().repeat(perRow - (r % 2)) + '</div>').join('');
+    Array.from({length: perRow}, (_, i) => seq[(i + r * 2) % seq.length]).join('') +
+    '</div>').join('');
 </script>

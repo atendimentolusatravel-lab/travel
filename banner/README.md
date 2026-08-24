@@ -1,9 +1,10 @@
 # Banner Photocall — Lusa Travel
 
-Backdrop (photocall) para a entrega de prémio, no formato *step-and-repeat* do
-exemplo de referência: fundo preto, logótipo principal em destaque no topo,
-padrão repetido da marca ao centro e faixa inferior com os parceiros e o QR code
-do Instagram à direita.
+Backdrop (photocall) para a entrega de prémio, no formato *step-and-repeat* da
+referência enviada: fundo verde institucional, lockup principal da Lusa Travel
+na faixa de topo, padrão repetido a alternar a marca com os hotéis parceiros
+(QOYA e SURYAA) e cartão branco com o QR code do Instagram no canto inferior
+direito.
 
 ## Ficheiros
 
@@ -21,11 +22,13 @@ do Instagram à direita.
 
 - **Formato:** 3,00 m (largura) × 2,40 m (altura) — proporção 5:4. No HTML, 1 px = 1 mm.
 - **Margem de segurança:** 70 mm em toda a volta (moldura dourada interior).
-- **Zona de rostos:** entre ~0,6 m e ~1,8 m do chão fica apenas o padrão repetido,
-  para que as pessoas nas fotografias nunca tapem o logótipo principal nem os parceiros.
+- **Zona de rostos:** o lockup principal fica na faixa de topo (acima de ~1,7 m do
+  chão); a partir daí é só padrão repetido, por isso as pessoas nunca tapam o
+  logótipo principal — e a marca aparece sempre atrás delas em qualquer enquadramento.
 - **Suporte sugerido:** lona mate (sem brilho, evita reflexos do flash) com estrutura
   tipo *pop-up* ou tubular, ou PVC com ilhoses.
-- **Cores:** preto `#0D0D0B`, dourado `#C8A24A`, creme `#F4EFE7`, dourado Suryaa `#C89A4F`.
+- **Cores:** verde institucional `#444C2A` (fundo), verde claro da marca `#A6C9AE`
+  (Lusa Travel), creme `#F2F0E7` (logótipos dos parceiros), branco no cartão do QR.
   Enviar o PDF em RGB e pedir à gráfica a conversão para o perfil CMYK da máquina.
 
 ## QR code
@@ -35,14 +38,16 @@ Para mudar o destino, editar o `url` em `tools/make_assets.py` e voltar a gerar.
 
 ## Antes de imprimir — logótipos dos parceiros
 
-Os lockups **QOYA Hotels** e **SURYAA** (Curio Collection by Hilton) desta versão são
-recriações tipográficas feitas a partir das imagens de referência, porque os ficheiros
-oficiais não estavam disponíveis. Para produção, pedir aos hotéis os originais em
+O símbolo da **Lusa Travel** e os lockups **QOYA Hotels** e **SURYAA** (Curio
+Collection by Hilton) desta versão são redesenhos feitos a partir das imagens de
+referência, porque os ficheiros vetoriais oficiais não estavam disponíveis nesta
+sessão (o site lusatravel.com.br está bloqueado pela política de rede). Para produção, pedir aos hotéis os originais em
 vetor (EPS/AI/SVG, versão em negativo/branco) e substituí-los no `banner.html`:
 o bloco `.qoya` e o bloco `.suryaa` podem ser trocados por um simples
 `<img src="assets/qoya.svg">` / `<img src="assets/suryaa.svg">`.
-O mesmo se aplica ao símbolo da Lusa Travel — se existir o SVG oficial, basta
-substituir `assets/lusatravel-symbol-gold.svg` (versão dourada para fundo escuro).
+Para a Lusa Travel basta substituir `assets/lusatravel-symbol-sage.svg` pelo
+símbolo oficial (versão em verde claro `#A6C9AE` para fundo escuro) — o desenho
+fica igual, sem mexer no resto do banner.
 
 ## Como voltar a gerar
 
