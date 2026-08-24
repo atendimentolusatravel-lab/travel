@@ -54,11 +54,16 @@ peças — no wordmark vertical do banner, na faixa do backdrop, nas células da
 malha e no `@LUSATRAVEL` do QR. Na assinatura do banner só o nome é negrito; o
 "VIAGENS E TURISMO" fica em regular, senão o contraste some.
 
-A marca também é a versão pesada: `parts.marca()` recebe `petala_r` (quanto
-**menor** o raio, mais gorda a pétala — a corda é fixa e o arco é que abre) e
-`gordura`, que controla os pontos de controle da estrela. As peças usam
-`petala_r=148, gordura=(0.20, 0.44)`. Passar de ~0.24/0.50 na estrela faz ela
-virar um losango e perder o brilho.
+`parts.marca()` desenha o símbolo oficial em vetor (viewBox 415 × 372): a
+pétala grande da esquerda com a aresta direita reta, as duas pétalas da direita
+e a estrela de 4 pontas encaixada no vão. Parâmetros: `petala_r` (quanto
+**menor** o raio, mais gorda a pétala — a corda é fixa e é o arco que abre),
+`estrela_r`, `gordura` (acima de ~0.24/0.50 a estrela vira losango e perde o
+brilho) e `vao` (folga entre a aresta reta e as pétalas da direita).
+
+> O símbolo é um **redesenho a partir da imagem** que a agência enviou — o
+> arquivo original não chegou. Está fiel, mas se aparecer o vetor oficial vale
+> substituir e conferir as duas peças.
 
 ## QR code
 
@@ -151,13 +156,16 @@ agência em verde-menta — a diferença de tom separa a agência dos parceiros.
 | Elemento | Altura |
 |---|---|
 | topo | 2,20 m |
-| cartão do QR | 1,75 m → 2,13 m |
 | "LUSATRAVEL" da faixa | 1,80 m → 2,05 m |
 | faixa superior (base) | 1,68 m |
 | malha step-and-repeat | 0 → 1,68 m |
+| cartão do QR (canto inferior direito) | 0,09 m → 0,48 m |
 
-O QR tem 27 cm de lado: dá para ler de uns 2,5 m de distância, e a essa altura
-não fica atrás de ninguém.
+O QR tem 27 cm de lado. **Na altura em que está, entre 9 e 48 cm do chão, ele
+fica atrás de quem posar do lado direito e é desconfortável de escanear** — foi
+posicionado ali a pedido. `QR_DIR` e `QR_BASE` no `build_backdrop.py` movem o
+cartão; a malha abre espaço sozinha, porque `colide()` remove as células que
+invadem a zona dele.
 
 ## Impressão
 

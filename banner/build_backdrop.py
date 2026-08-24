@@ -22,7 +22,23 @@ FAIXA = 520                  # altura da faixa superior (fica acima das cabecas)
 B = int(os.environ.get("BLEED", "0"))
 CELL_W, CELL_H = 520, 340
 
-MARCA = marca(cls="{cls}", petala_r=148, gordura=(0.20, 0.44))
+# Cartao do QR, ancorado no canto inferior direito. A malha abre espaco para
+# ele: sem isso o cartao cai em cima de uma celula e parece colagem.
+QR_LADO = 268
+QR_DIR, QR_BASE = 90, 90                       # recuo em relacao as bordas
+QR_W, QR_H = QR_LADO + 68, QR_LADO + 122       # cartao com o padding e o @
+FOLGA = 60                                     # respiro em volta do cartao
+ZONA = (W - QR_DIR - QR_W - FOLGA, H - QR_BASE - QR_H - FOLGA,
+        W - QR_DIR + FOLGA, H - QR_BASE + FOLGA)
+
+
+def colide(cx, cy, meia_l=175, meia_a=100):
+    """O conteudo da celula centrado em (cx, cy) invade a zona do QR?"""
+    z0, z1, z2, z3 = ZONA
+    return (cx + meia_l > z0 and cx - meia_l < z2
+            and cy + meia_a > z1 and cy - meia_a < z3)
+
+MARCA = marca(cls="{cls}")
 
 def lockup_lusa():
     return (f'<div class="cell-lusa">{MARCA.format(cls="m-cell")}'
@@ -54,7 +70,8 @@ while y < H + B:
     col = 0
     while x < W + B:
         item = CICLO[(linha + col) % len(CICLO)]
-        celulas.append(f'<div class="cell" style="left:{x}px;top:{y}px">{item()}</div>')
+        if not colide(x + CELL_W / 2, y + CELL_H / 2):
+            celulas.append(f'<div class="cell" style="left:{x}px;top:{y}px">{item()}</div>')
         x += CELL_W
         col += 1
     y += CELL_H
@@ -78,10 +95,10 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
 
 /* ── faixa superior: o unico trecho que sempre aparece na foto ── */
 .faixa{{position:absolute;left:{-B}px;top:{-B}px;width:{W+2*B}px;
-  height:{FAIXA+B}px;padding:{B}px 130px 0 {130+B}px;
-  display:flex;align-items:center;justify-content:space-between}}
+  height:{FAIXA+B}px;padding:{B}px {130+B}px 0 {130+B}px;
+  display:flex;align-items:center;justify-content:center}}
 .lock{{display:flex;align-items:center;gap:58px}}
-.m-faixa{{width:206px;height:183px;color:var(--mint);flex:0 0 auto}}
+.m-faixa{{width:208px;height:186px;color:var(--mint);flex:0 0 auto}}
 .w-faixa{{font-family:var(--serif);font-weight:700;font-size:245px;
   line-height:.96;letter-spacing:.02em;color:var(--mint);white-space:nowrap}}
 .tag{{font-family:var(--sans);font-weight:400;font-size:33px;
@@ -89,10 +106,11 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
 .rule{{position:absolute;left:{-B}px;top:{FAIXA}px;width:{W+2*B}px;height:3px;
   background:var(--mint);opacity:.32}}
 
-/* ── cartao do QR: centro a ~1,95 m do chao, nunca fica atras de ninguem ── */
-.qr-card{{background:var(--cream);border-radius:34px;padding:34px 34px 22px;
-  display:flex;flex-direction:column;align-items:center;gap:12px;flex:0 0 auto}}
-.qr-card svg{{display:block;color:#141414;width:268px;height:268px}}
+/* ── cartao do QR: canto inferior direito, a pedido ── */
+.qr-card{{position:absolute;right:{QR_DIR}px;bottom:{QR_BASE}px;z-index:2;
+  background:var(--cream);border-radius:34px;padding:34px 34px 22px;
+  display:flex;flex-direction:column;align-items:center;gap:12px}}
+.qr-card svg{{display:block;color:#141414;width:{QR_LADO}px;height:{QR_LADO}px}}
 .qr-tag{{font-family:var(--sans);font-weight:700;font-size:33px;
   letter-spacing:.05em;color:#141414}}
 
@@ -101,7 +119,7 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
   display:flex;align-items:center;justify-content:center}}
 .cell-lusa{{display:flex;flex-direction:column;align-items:center;gap:20px;
   color:var(--mint)}}
-.m-cell{{width:114px;height:101px}}
+.m-cell{{width:116px;height:104px}}
 .w-cell{{font-family:var(--serif);font-weight:700;font-size:50px;
   letter-spacing:.09em;text-indent:.09em;white-space:nowrap}}
 .cell-hotel{{display:flex;flex-direction:column;align-items:center;gap:11px;
@@ -131,10 +149,10 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
         <div class="tag">VIAGENS E TURISMO</div>
       </div>
     </div>
-    <div class="qr-card">
-      {qr_svg(size=268)}
-      <div class="qr-tag">@LUSATRAVEL</div>
-    </div>
+  </div>
+  <div class="qr-card">
+    {qr_svg(size=QR_LADO)}
+    <div class="qr-tag">@LUSATRAVEL</div>
   </div>
 </div></div>
 '''

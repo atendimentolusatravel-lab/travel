@@ -4,17 +4,22 @@ import segno, math
 
 
 # ---------- MARCA DA AGENCIA ----------
-def marca(cls="marca", petala_r=145, lente=(168, 154), estrela_r=46,
-          estrela_c=(342, 175), gordura=(0.28, 0.58)):
-    """Folha/borboleta da Lusa Travel.
+# Redesenho vetorial do simbolo oficial. Tres formas + a estrela:
+#   - petala grande da esquerda: aresta direita RETA na vertical, ponta afiada
+#     em cima e base arredondada, com o bojo saindo para a esquerda
+#   - duas petalas da direita: lentes apontadas nas duas pontas, saindo do
+#     centro para o canto superior e inferior direito
+#   - estrela de 4 pontas encaixada no vao entre as duas petalas da direita
+def marca(cls="marca", petala_r=178, estrela_r=47, estrela_c=(362, 182),
+          gordura=(0.22, 0.46), vao=7):
+    """SVG da marca. viewBox 0 0 415 372.
 
-    petala_r  raio dos arcos das duas petalas da direita — QUANTO MENOR,
-              MAIS GORDA a petala (a corda e fixa, o arco e que abre)
-    lente     (rx, ry) do meio-disco da esquerda; ry perto da meia-corda
-              (153) joga o bojo para fora e engrossa a forma
-    gordura   fatores dos pontos de controle da estrela de 4 pontas
+    petala_r  raio dos arcos das petalas da direita (menor = mais gorda)
+    gordura   pontos de controle da estrela; acima de ~0.24/0.50 vira losango
+    vao       folga entre a aresta reta da petala grande e as da direita
     """
-    rx, ry = lente
+    borda = 200                     # x da aresta reta da petala da esquerda
+    ix = borda + vao                # x das pontas internas das petalas
     cx, cy = estrela_c
     R = estrela_r
     a, b = gordura[0] * R, gordura[1] * R
@@ -24,11 +29,14 @@ def marca(cls="marca", petala_r=145, lente=(168, 154), estrela_r=46,
                f"C {cx-a:.1f} {cy+b:.1f} {cx-b:.1f} {cy+a:.1f} {cx-R} {cy} "
                f"C {cx-b:.1f} {cy-a:.1f} {cx-a:.1f} {cy-b:.1f} {cx} {cy-R} Z")
     P = petala_r
-    return (f'<svg class="{cls}" viewBox="0 0 392 348" '
+    grande = (f"M {borda} 6 "
+              f"C 152 46 32 94 14 174 "
+              f"C 6 266 84 364 {borda} 364 Z")
+    cima  = f"M {ix} 178 A {P} {P} 0 0 1 375 6 A {P} {P} 0 0 1 {ix} 178 Z"
+    baixo = f"M {ix} 194 A {P} {P} 0 0 0 372 366 A {P} {P} 0 0 0 {ix} 194 Z"
+    return (f'<svg class="{cls}" viewBox="0 0 415 372" '
             'xmlns="http://www.w3.org/2000/svg"><g fill="currentColor">'
-            f'<path d="M168 22 A {rx} {ry} 0 0 0 168 328 Z"/>'
-            f'<path d="M177 167 A {P} {P} 0 0 1 320 40 A {P} {P} 0 0 1 177 167 Z"/>'
-            f'<path d="M177 183 A {P} {P} 0 0 0 320 310 A {P} {P} 0 0 0 177 183 Z"/>'
+            f'<path d="{grande}"/><path d="{cima}"/><path d="{baixo}"/>'
             f'<path d="{estrela}"/></g></svg>')
 
 # ---------- QR CODE (@lusatravel) ----------

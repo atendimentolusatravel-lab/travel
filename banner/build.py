@@ -10,8 +10,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 B = int(os.environ.get("BLEED", "0"))
 FONTS = open(os.path.join(HERE, "fonts.css"), encoding="utf-8").read()
 
-# marca em versao negrito: petalas mais gordas e estrela mais cheia
-MARCA = marca(petala_r=148, gordura=(0.20, 0.44))
+# simbolo oficial redesenhado em vetor (parts.marca)
+MARCA = marca()
 
 QR = qr_svg()
 SUN = sunburst(126)
@@ -79,7 +79,7 @@ body{{background:#0f0f0d;color:var(--ink);font-family:var(--sans);
 /* ---- bloco ocre ---- */
 #b4{{display:flex;flex-direction:column;align-items:center;
   justify-content:space-between;padding:62px 44px {60+B}px}}
-.marca{{width:242px;height:215px;color:var(--red);display:block}}
+.marca{{width:246px;height:220px;color:var(--red);display:block}}
 .qr-card{{background:#fff;border-radius:26px;padding:32px 32px 20px;
   display:flex;flex-direction:column;align-items:center;gap:10px;
   border:2px solid rgba(0,0,0,.10)}}
