@@ -10,9 +10,9 @@ direito.
 
 | Ficheiro | Para que serve |
 | --- | --- |
-| `build/banner-lusatravel.pdf` | **Ficheiro para a gráfica** — vetorial, 3000 × 2400 mm à escala 1:1 |
-| `build/banner-lusatravel.png` | 6000 × 4800 px (≈ 50 dpi no tamanho final), para pré-visualização ou impressão digital |
-| `build/preview.png` | 1500 × 1200 px, para enviar por WhatsApp / e-mail |
+| `build/banner-lusatravel.pdf` | **Ficheiro para a gráfica** — 1600 × 2000 mm à escala 1:1 |
+| `build/banner-lusatravel.png` | 6400 × 8000 px (≈ 100 dpi no tamanho final), para impressão digital |
+| `build/preview.png` | 1200 × 1500 px, para enviar por WhatsApp / e-mail |
 | `banner.html` | O desenho em si (HTML + CSS) — é aqui que se editam textos e medidas |
 | `assets/` | Símbolo Lusa Travel, mandala Suryaa, QR code e tipografias embutidas |
 | `tools/make_assets.py` | Recolore os logótipos oficiais e gera a mandala Suryaa e o QR code |
@@ -21,11 +21,13 @@ direito.
 
 ## Especificações de impressão
 
-- **Formato:** 3,00 m (largura) × 2,40 m (altura) — proporção 5:4. No HTML, 1 px = 1 mm.
-- **Margem de segurança:** 70 mm em toda a volta (moldura dourada interior).
-- **Zona de rostos:** o lockup principal fica na faixa de topo (acima de ~1,7 m do
-  chão); a partir daí é só padrão repetido, por isso as pessoas nunca tapam o
-  logótipo principal — e a marca aparece sempre atrás delas em qualquer enquadramento.
+- **Formato:** 1,60 m (largura) × 2,00 m (altura) — retrato, proporção 4:5. No HTML, 1 px = 1 mm.
+- **Margem de segurança:** prever 50 mm em toda a volta para bainha/estrutura — o
+  padrão sangra de propósito nos lados, por isso um corte de 2–3 cm não estraga nada.
+- **Zona de rostos:** o lockup principal ocupa os primeiros 45 cm do banner (acima
+  de ~1,55 m do chão, se a base assentar no chão); daí para baixo é só padrão
+  repetido, para a marca aparecer sempre atrás das pessoas. Se as fotografias
+  forem com pessoas altas, vale a pena montar a estrutura 10–15 cm acima do chão.
 - **Suporte sugerido:** lona mate (sem brilho, evita reflexos do flash) com estrutura
   tipo *pop-up* ou tubular, ou PVC com ilhoses.
 - **Cores:** verde institucional `#444C2A` (fundo), verde claro da marca `#A6C9AE`
@@ -64,4 +66,5 @@ python3 banner/tools/render.py        # PDF + PNG para banner/build/
 ```
 
 Para mudar o tamanho do banner: alterar `width/height` em `.banner` (banner.html)
-e `W, H` em `tools/render.py`, mantendo a proporção 5:4 ou ajustando o padrão.
+e `W, H` em `tools/render.py` — depois é preciso reajustar a altura da faixa de
+topo, o número de linhas/colunas do padrão e o tamanho dos lockups.
