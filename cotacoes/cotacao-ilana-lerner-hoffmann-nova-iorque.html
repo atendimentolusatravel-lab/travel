@@ -164,10 +164,13 @@
   --gold:#da8d00;
   --dest:#404525;        /* Verde Savana — verde escuro padrão Lusa Travel */
   --dest2:#73805c;       /* Verde Andino — verde secundário padrão Lusa Travel */
+  --gmut:#5c6647;        /* Verde Andino escurecido — texto secundário sobre creme */
   --ink:#1a1510;
   --char:#333131;
   --mut:#9a8d80;
-  --line:#e4ddd2;
+  --line:#e2e0d0;
+  --cream:#faf8f0;      /* superfície clara base */
+  --sand:#f3eeda;       /* creme quente para faixas */
   --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
   --con:'Montserrat',var(--sans);
   --lab:'Arimo',var(--sans);
@@ -180,57 +183,54 @@ html,body{ font-family:var(--sans); color:var(--char); }
   background:#fff; page-break-after:always; display:flex; flex-direction:column; }
 .page:last-child{ page-break-after:auto; }
 
-.hd{ background:var(--ink); height:26mm; display:flex; align-items:center;
-     justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd{ background:var(--dest); height:26mm; display:flex; align-items:center;
+     justify-content:space-between; padding:0 24mm; flex-shrink:0; }
 .hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
-.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.62); }
 .goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
 
-.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center;
-     justify-content:center; gap:14px; flex-shrink:0; }
-.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
-.ft .sep{ color:rgba(255,255,255,.2); }
+.ft{ margin-top:auto; background:var(--cream); border-top:1.2mm solid var(--gold); height:14mm;
+     display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:var(--dest); text-decoration:none; font-weight:500; }
+.ft .sep{ color:var(--gmut); }
 
 .body{ padding:16mm 24mm 12mm; flex:1; display:flex; flex-direction:column; }
 .eyebrow{ font-size:9pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.h2{ font-size:27pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:5mm 0 9mm; }
+.h2{ font-size:27pt; font-weight:700; color:var(--dest); letter-spacing:-.01em; margin:5mm 0 9mm; }
 
-/* ══ CAPA ══ */
-.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink);
-  display:flex; align-items:center; justify-content:space-between; padding:0 24mm; z-index:4; }
-.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
-.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
-.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:4; }
-.cover-photo{ position:absolute; inset:0;
-  background:linear-gradient(178deg,#0d1620 0%,#1c2c3d 30%,#3b4c5c 52%,#7a6a56 66%,#b98d4f 100%); }
+/* ══ CAPA (clara) ══ */
+.cover{ background:var(--cream); }
+.cover-hd{ height:26mm; background:var(--cream); display:flex; align-items:center;
+  justify-content:space-between; padding:0 24mm; flex-shrink:0; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--dest); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:var(--gmut); }
+.cover-bar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+.cover-art{ flex:1; position:relative; overflow:hidden;
+  border-bottom:1.1mm solid var(--gold); }
 .sky{ position:absolute; inset:0; background:
-   radial-gradient(ellipse 78% 20% at 50% 69%, rgba(255,206,110,.55) 0%, rgba(218,141,0,.22) 45%, transparent 72%),
-   linear-gradient(180deg,
-     #0e1408 0%, #18240d 13%, #263315 26%, #35431c 38%, #4d5a26 48%,
-     #6a7a44 55%, #73805c 58.5%, #96903c 62%, #bf8e18 65.5%, #da8d00 68.5%,
-     #efb851 71%, #a8792a 74%, #33291a 77%, #1a1510 100%); }
-.skyline{ position:absolute; left:0; right:0; bottom:0; height:280mm; z-index:2; }
-.skyline .b{ position:absolute; bottom:0; background:#161a12; }
-.skyline .b.f{ background:#0c0f09; }
-.skyline .b::after{ content:''; position:absolute; inset:6mm 3mm auto 3mm; height:60%;
-  background-image:radial-gradient(circle,rgba(255,196,92,.85) .55mm,transparent .68mm);
-  background-size:4.6mm 6.4mm; opacity:.34; }
-.cover-scrim{ position:absolute; inset:0; z-index:1;
-  background:linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,.12) 14%, transparent 22%); }
-.cover-ground{ position:absolute; left:0; right:0; bottom:0; height:40%; z-index:3;
-  background:linear-gradient(to top, rgba(9,9,5,.985) 0%, rgba(9,9,5,.95) 34%, rgba(9,9,5,.72) 58%,
-             rgba(9,9,5,.34) 78%, transparent 100%); }
-.cover-cnt{ position:absolute; left:24mm; right:24mm; bottom:46mm; z-index:5; color:#fff; }
-.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
-.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
-.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
-.cover-name{ font-size:36pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
-.cover-dest{ font-size:20pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
-.stats{ display:flex; gap:13mm; margin-top:11mm; }
+   radial-gradient(ellipse 88% 40% at 50% 99%, rgba(218,141,0,.17) 0%, rgba(218,141,0,.06) 50%, transparent 78%),
+   linear-gradient(180deg, #fdfcf6 0%, #fbf6e6 26%, #f8efd6 48%, #f5e8c4 68%, #f2e0b0 86%, #efd9a0 100%); }
+.skyline{ position:absolute; left:0; right:0; bottom:0; height:132mm; }
+.skyline .b{ position:absolute; bottom:0; background:var(--dest2); }
+.skyline .b.f{ background:var(--dest); }
+.skyline .b::after{ content:''; position:absolute; inset:5mm 2.4mm auto 2.4mm; height:62%;
+  background-image:radial-gradient(circle,rgba(250,240,215,.9) .5mm,transparent .62mm);
+  background-size:4.4mm 6.2mm; opacity:.5; }
+
+.cover-cnt{ padding:15mm 24mm 0; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.cover-basis{ font-size:10.5pt; color:var(--gmut); margin:2.5mm 0 10mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:var(--gmut); }
+.cover-name{ font-size:36pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase;
+  line-height:1.1; margin-top:2mm; color:var(--dest); }
+.cover-dest{ font-size:20pt; font-weight:600; color:var(--gold); margin-top:3mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:13mm; margin-top:12mm; padding-top:9mm; border-top:1px solid var(--line); }
 .stat b{ display:block; font-size:27pt; font-weight:800; color:var(--gold); line-height:1; }
-.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
-.cover-sig{ position:absolute; left:24mm; right:24mm; bottom:18mm; z-index:5;
-  font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+.stat span{ font-size:8.5pt; color:var(--gmut); letter-spacing:.06em; }
+.cover-sig{ padding:11mm 24mm 16mm;
+  font-family:var(--con); font-size:9pt; color:var(--gmut); line-height:1.8; }
+.cover-sig a{ color:var(--dest); text-decoration:none; font-weight:500; }
 
 /* ══ RESUMO ══ */
 .lead{ font-size:14.5pt; line-height:1.85; color:var(--char); }
@@ -247,19 +247,19 @@ html,body{ font-family:var(--sans); color:var(--char); }
 .tl-badge{ width:14mm; height:14mm; border-radius:50%; background:var(--dest); color:#fff;
   font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 .tl-line{ width:2px; height:14mm; background:var(--line); margin-left:6.9mm; }
-.tl-city{ font-size:16.5pt; font-weight:700; color:var(--ink); }
+.tl-city{ font-size:16.5pt; font-weight:700; color:var(--dest); }
 .tl-meta{ font-size:11.5pt; color:var(--mut); margin-top:1.8mm; }
 
 /* ══ PÁGINA DE OPÇÃO ══ */
 .opt-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center;
   justify-content:space-between; flex-shrink:0; }
-.opt-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); }
+.opt-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.92); }
 .opt-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9);
   color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
 
 .opt-top{ display:flex; justify-content:space-between; align-items:flex-end; gap:10mm;
   padding-bottom:5mm; border-bottom:1px solid var(--line); }
-.opt-air{ font-size:28pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; line-height:1.1; }
+.opt-air{ font-size:28pt; font-weight:700; color:var(--dest); letter-spacing:-.01em; line-height:1.1; }
 .opt-sub{ font-size:11.5pt; font-weight:300; color:var(--mut); margin-top:2mm; letter-spacing:.04em; }
 .opt-price{ text-align:right; flex-shrink:0; }
 .opt-price .brl{ font-size:27pt; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; line-height:1; }
@@ -317,20 +317,21 @@ table.cmp td{ padding:5.1mm 3.5mm; border-bottom:1px solid var(--line); text-ali
   font-size:12.5pt; font-variant-numeric:tabular-nums; color:var(--char); }
 table.cmp td:first-child{ text-align:left; padding-left:6mm; }
 table.cmp tr.best td{ background:#fdf7ea; }
-.cmp-air{ font-size:13.5pt; font-weight:700; color:var(--ink); }
+.cmp-air{ font-size:13.5pt; font-weight:700; color:var(--dest); }
 .cmp-air small{ display:block; font-size:9.5pt; font-weight:300; color:var(--mut); margin-top:.8mm; letter-spacing:.03em; }
 .cmp-brl{ font-weight:800; color:var(--ink); }
 .tagbest{ display:inline-block; font-family:var(--lab); font-size:7.6pt; font-weight:700;
   letter-spacing:.12em; text-transform:uppercase; color:#fff; background:var(--gold);
   padding:1mm 2.6mm; border-radius:2px; margin-left:2mm; vertical-align:middle; }
 .tagbest.tagalt{ background:var(--dest); }
-.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink);
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--sand);
+  border:1px solid var(--gold); border-left:3mm solid var(--gold);
   border-radius:5px; padding:7mm 9mm; margin-top:8mm; }
-.val-total .lbl{ font-size:12.5pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.val-total .lbl{ font-size:12.5pt; font-weight:700; letter-spacing:.08em; color:var(--dest); }
 .val-total .lbl small{ display:block; font-weight:400; letter-spacing:0; font-size:10.5pt;
-  color:rgba(255,255,255,.42); margin-top:1.5mm; }
-.val-total .amt{ font-size:19pt; font-weight:800; color:var(--gold); text-align:right; }
-.val-total .amt small{ display:block; font-size:11pt; font-weight:500; color:rgba(255,255,255,.5); margin-top:1.5mm; }
+  color:var(--gmut); margin-top:1.5mm; }
+.val-total .amt{ font-size:19pt; font-weight:800; color:var(--dest); text-align:right; }
+.val-total .amt small{ display:block; font-size:11pt; font-weight:500; color:var(--gmut); margin-top:1.5mm; }
 .val-fx{ font-size:10pt; color:var(--mut); margin-top:5mm; line-height:1.7; }
 
 .barwrap{ display:grid; grid-template-columns:1fr 1fr; gap:14mm; margin-top:11mm; }
@@ -368,35 +369,35 @@ table.cmp tr.best td{ background:#fdf7ea; }
     <div class="tag">Glossário</div>
   </div>
   <div class="cover-bar"></div>
-  <div class="sky"></div>
-  <div class="skyline">
-    <div class="b" style="left:-2%; width:7.5%; height:58%"></div>
-    <div class="b f" style="left:5%; width:3.2%; height:74%"></div>
-    <div class="b" style="left:8.6%; width:6.8%; height:46%"></div>
-    <div class="b f" style="left:15.6%; width:3.6%; height:63%"></div>
-    <div class="b" style="left:19.4%; width:8.5%; height:79%"></div>
-    <div class="b f" style="left:28.2%; width:3%; height:50%"></div>
-    <div class="b" style="left:31.5%; width:5.4%; height:66%"></div>
-    <div class="b f" style="left:37.2%; width:9%; height:87%"></div>
-    <div class="b" style="left:46.4%; width:3.4%; height:53%"></div>
-    <div class="b f" style="left:50.2%; width:6.2%; height:72%"></div>
-    <div class="b" style="left:56.6%; width:2.8%; height:88%"></div>
-    <div class="b f" style="left:59.7%; width:7.6%; height:59%"></div>
-    <div class="b" style="left:67.6%; width:3.8%; height:80%"></div>
-    <div class="b f" style="left:71.7%; width:5.8%; height:45%"></div>
-    <div class="b" style="left:77.8%; width:3.2%; height:69%"></div>
-    <div class="b f" style="left:81.3%; width:8.2%; height:85%"></div>
-    <div class="b" style="left:89.8%; width:3%; height:52%"></div>
-    <div class="b f" style="left:93.1%; width:6.4%; height:76%"></div>
+  <div class="cover-art">
+    <div class="sky"></div>
+    <div class="skyline">
+      <div class="b" style="left:-2%; width:7.5%; height:44%"></div>
+      <div class="b f" style="left:5%; width:3.2%; height:66%"></div>
+      <div class="b" style="left:8.6%; width:6.8%; height:32%"></div>
+      <div class="b f" style="left:15.6%; width:3.6%; height:54%"></div>
+      <div class="b" style="left:19.4%; width:8.5%; height:74%"></div>
+      <div class="b f" style="left:28.2%; width:3%; height:38%"></div>
+      <div class="b" style="left:31.5%; width:5.4%; height:58%"></div>
+      <div class="b f" style="left:37.2%; width:9%; height:88%"></div>
+      <div class="b" style="left:46.4%; width:3.4%; height:41%"></div>
+      <div class="b f" style="left:50.2%; width:6.2%; height:68%"></div>
+      <div class="b" style="left:56.6%; width:2.8%; height:84%"></div>
+      <div class="b f" style="left:59.7%; width:7.6%; height:49%"></div>
+      <div class="b" style="left:67.6%; width:3.8%; height:76%"></div>
+      <div class="b f" style="left:71.7%; width:5.8%; height:34%"></div>
+      <div class="b" style="left:77.8%; width:3.2%; height:62%"></div>
+      <div class="b f" style="left:81.3%; width:8.2%; height:81%"></div>
+      <div class="b" style="left:89.8%; width:3%; height:40%"></div>
+      <div class="b f" style="left:93.1%; width:6.4%; height:71%"></div>
+    </div>
   </div>
-  <div class="cover-scrim"></div>
-  <div class="cover-ground"></div>
   <div class="cover-cnt">
     <div class="cover-kicker">Cotação para sua viagem</div>
-    <div class="cover-basis">Baseado em 1 adulto · 17 a 28 de setembro de 2026</div>
+    <div class="cover-basis">Baseado em 1 adulto &middot; 17 a 28 de setembro de 2026</div>
     <div class="cover-to">Sua viagem para:</div>
     <div class="cover-name">Ilana Lerner Hoffmann</div>
-    <div class="cover-dest">Nova Iorque · Estados Unidos</div>
+    <div class="cover-dest">Nova Iorque &middot; Estados Unidos</div>
     <div class="stats">
       <div class="stat"><b>4</b><span>Opções aéreas</span></div>
       <div class="stat"><b>9</b><span>Noites</span></div>
@@ -405,9 +406,9 @@ table.cmp tr.best td{ background:#fdf7ea; }
     </div>
   </div>
   <div class="cover-sig">
-    <a href="mailto:atendimentolusatravel@gmail.com" style="color:inherit;text-decoration:none">atendimentolusatravel@gmail.com</a><br>
-    <a href="https://wa.me/5541991896076" style="color:inherit;text-decoration:none">+55 41 99189-6076</a><br>
-    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
+    <span style="opacity:.85">Alameda Princesa Izabel, 1700 &middot; Bigorrilho &middot; Curitiba – PR</span>
   </div>
 </section>
 
