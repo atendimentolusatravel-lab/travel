@@ -15,7 +15,8 @@ direito.
 | `build/preview.png` | 1500 × 1200 px, para enviar por WhatsApp / e-mail |
 | `banner.html` | O desenho em si (HTML + CSS) — é aqui que se editam textos e medidas |
 | `assets/` | Símbolo Lusa Travel, mandala Suryaa, QR code e tipografias embutidas |
-| `tools/make_assets.py` | Gera os SVG de `assets/` (símbolo, mandala e QR code) |
+| `tools/make_assets.py` | Recolore os logótipos oficiais e gera a mandala Suryaa e o QR code |
+| `assets/original/` | Logótipos oficiais da Lusa Travel (PNG transparente, versão a branco) |
 | `tools/render.py` | Exporta `banner.html` para PDF e PNG |
 
 ## Especificações de impressão
@@ -38,16 +39,21 @@ Para mudar o destino, editar o `url` em `tools/make_assets.py` e voltar a gerar.
 
 ## Antes de imprimir — logótipos dos parceiros
 
-O símbolo da **Lusa Travel** e os lockups **QOYA Hotels** e **SURYAA** (Curio
-Collection by Hilton) desta versão são redesenhos feitos a partir das imagens de
-referência, porque os ficheiros vetoriais oficiais não estavam disponíveis nesta
-sessão (o site lusatravel.com.br está bloqueado pela política de rede). Para produção, pedir aos hotéis os originais em
+O logótipo da **Lusa Travel** é o ficheiro oficial, tirado do Drive da empresa
+(pasta "Arquivos Logo"): os originais em branco com transparência estão em
+`assets/original/` e só são recoloridos para o verde claro `#A6C9AE` — as formas
+nunca são tocadas. `lusatravel-vertical-*` é o lockup com a assinatura
+"travel agency" (faixa de topo) e `lusatravel-horizontal-*` é o lockup em linha
+(padrão repetido).
+
+Já os lockups **QOYA Hotels** e **SURYAA** (Curio Collection by Hilton) continuam
+a ser recriações tipográficas a partir das imagens de referência. Para produção, pedir aos hotéis os originais em
 vetor (EPS/AI/SVG, versão em negativo/branco) e substituí-los no `banner.html`:
 o bloco `.qoya` e o bloco `.suryaa` podem ser trocados por um simples
 `<img src="assets/qoya.svg">` / `<img src="assets/suryaa.svg">`.
-Para a Lusa Travel basta substituir `assets/lusatravel-symbol-sage.svg` pelo
-símbolo oficial (versão em verde claro `#A6C9AE` para fundo escuro) — o desenho
-fica igual, sem mexer no resto do banner.
+Se houver versões vetoriais (SVG/AI/EPS) da Lusa Travel, basta colocá-las em
+`assets/original/` e apontar o `banner.html` para elas — fica ainda mais nítido
+em grande formato do que o PNG.
 
 ## Como voltar a gerar
 

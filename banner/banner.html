@@ -19,25 +19,18 @@ html,body{background:#2a2a2a}
 .topo{position:absolute;top:0;left:0;right:0;height:740px;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   border-bottom:2px solid var(--linha)}
-.topo .sym{height:230px;display:block}
-.topo .word{font-family:'Julius Sans One',sans-serif;font-size:180px;line-height:1;
-  letter-spacing:.045em;text-indent:.045em;color:var(--sage);margin-top:44px}
-.topo .tag{font-weight:300;font-size:48px;letter-spacing:.42em;text-indent:.42em;
-  color:var(--sage);opacity:.9;margin-top:26px}
+.topo .lockup{height:500px;display:block}
 
 /* ── padrao step-and-repeat ───────────────────────────────────────────── */
 .pattern{position:absolute;top:740px;left:0;right:0;bottom:0;overflow:hidden}
-.prow{display:flex;align-items:center;justify-content:flex-start;gap:190px;
+.prow{display:flex;align-items:center;justify-content:flex-start;gap:150px;
   height:332px;margin-left:-180px}
 .prow.odd{margin-left:-420px}
 .cell{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;width:410px}
+  justify-content:center;width:470px}
 
-/* marca Lusa Travel repetida */
-.lusa{gap:22px}
-.lusa img{height:104px;display:block}
-.lusa span{font-family:'Julius Sans One',sans-serif;font-size:52px;letter-spacing:.07em;
-  text-indent:.07em;color:var(--sage);white-space:nowrap}
+/* marca Lusa Travel repetida (lockup horizontal oficial) */
+.lusa img{width:470px;display:block}
 
 /* lockup Qoya */
 .qoya .name{font-family:'Playfair Display',serif;font-weight:500;font-size:76px;
@@ -71,9 +64,8 @@ html,body{background:#2a2a2a}
 
 <div class="banner">
   <div class="topo">
-    <img class="sym" src="assets/lusatravel-symbol-sage.svg" alt="">
-    <div class="word">LUSATRAVEL</div>
-    <div class="tag">travel agency</div>
+    <img class="lockup" src="assets/lusatravel-vertical-sage.png"
+         alt="Lusa Travel — travel agency">
   </div>
 
   <div class="pattern" id="pattern"></div>
@@ -93,8 +85,7 @@ html,body{background:#2a2a2a}
 
 <script>
 const lusa = `<div class="cell lusa">
-    <img src="assets/lusatravel-symbol-sage.svg" alt="">
-    <span>LUSATRAVEL</span>
+    <img src="assets/lusatravel-horizontal-sage.png" alt="Lusa Travel">
   </div>`;
 const qoya = `<div class="cell qoya">
     <div class="name">QOYA</div>
