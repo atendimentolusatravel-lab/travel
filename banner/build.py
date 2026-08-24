@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Monta o banner de divulgacao da Lusa Travel (A3 retrato, 1414x2000 px)."""
 import os
-from parts import qr_svg, sunburst, marca
+from parts import qr_svg, sunburst
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -9,9 +9,6 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # 1,40 m, 1 un = 0,99 mm. B = 51 un ~ 5 cm de sangria em cada borda.
 B = int(os.environ.get("BLEED", "0"))
 FONTS = open(os.path.join(HERE, "fonts.css"), encoding="utf-8").read()
-
-# simbolo oficial redesenhado em vetor (parts.marca)
-MARCA = marca()
 
 QR = qr_svg()
 SUN = sunburst(126)
@@ -77,9 +74,10 @@ body{{background:#0f0f0d;color:var(--ink);font-family:var(--sans);
 .rule-hard{{width:300px;height:3px;background:var(--ink)}}
 
 /* ---- bloco ocre ---- */
+/* sem o simbolo, o QR centraliza no bloco e a assinatura fica ancorada na
+   base -- o padding inferior reserva a faixa dela para o centro nao descer */
 #b4{{display:flex;flex-direction:column;align-items:center;
-  justify-content:space-between;padding:62px 44px {60+B}px}}
-.marca{{width:246px;height:232px;color:var(--red);display:block}}
+  justify-content:center;padding:62px 44px {150+B}px}}
 .qr-card{{background:#fff;border-radius:26px;padding:32px 32px 20px;
   display:flex;flex-direction:column;align-items:center;gap:10px;
   border:2px solid rgba(0,0,0,.10)}}
@@ -87,7 +85,8 @@ body{{background:#0f0f0d;color:var(--ink);font-family:var(--sans);
 .qr-tag{{font-family:var(--sans);font-weight:700;font-size:27px;
   letter-spacing:.045em;color:#111}}
 .assin b{{font-weight:700}}
-.assin{{font-family:var(--serif);font-weight:400;font-size:26px;
+.assin{{position:absolute;left:44px;right:44px;bottom:{58+B}px;
+  font-family:var(--serif);font-weight:400;font-size:26px;
   letter-spacing:.085em;color:var(--red);text-align:center;white-space:nowrap}}
 </style>
 
@@ -120,7 +119,6 @@ body{{background:#0f0f0d;color:var(--ink);font-family:var(--sans);
   </div>
 
   <div class="blk" id="b4">
-    {MARCA}
     <div class="qr-card">
       {QR}
       <div class="qr-tag">@LUSATRAVEL</div>
