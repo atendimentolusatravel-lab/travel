@@ -150,30 +150,29 @@ ser refeita em formato largo, com a marca repetida (*step-and-repeat*).
 
 # Backdrop fotográfico — 3,00 × 2,20 m
 
-Peça para premiação, com as pessoas em pé na frente. Duas decisões mandam no
-desenho:
+Peça para premiação, com as pessoas em pé na frente. É um step-and-repeat: a
+malha alterna QOYA e SURYAA com as linhas deslocadas meia célula, para que as
+marcas apareçam em volta de quem estiver na frente, em qualquer posição. As
+linhas inteiras são centralizadas na altura útil (`LINHAS`/`TOPO`) para não
+cortar logo no rodapé.
 
-**1. Tudo que precisa sair na foto está acima de 1,68 m.** A faixa superior
-concentra a marca grande, o "VIAGENS E TURISMO" e o QR. É a única parte que
-nenhuma pessoa cobre.
+> **A Lusa Travel não aparece na peça.** A pedido, saíram o lockup do topo (com
+> a faixa superior inteira) e as células da agência na malha. A agência fica
+> apenas no `@LUSATRAVEL` do cartão do QR, no canto inferior direito.
 
-**2. O resto é step-and-repeat.** A malha alternada (Lusa Travel, QOYA,
-Lusa Travel, SURYAA, com as linhas deslocadas meia célula) garante que a marca
-apareça em volta de quem estiver na frente, em qualquer posição. Metade das
-células é Lusa Travel; cada hotel ocupa um quarto.
-
-Os logos dos hotéis vão em creme (versão reversa, para fundo escuro) e os da
-agência em verde-menta — a diferença de tom separa a agência dos parceiros.
+Os logos dos hotéis vão em creme — versão reversa, para fundo escuro.
 
 ## Alturas, medindo do chão
 
 | Elemento | Altura |
 |---|---|
 | topo | 2,20 m |
-| "LUSATRAVEL" da faixa | 1,80 m → 2,05 m |
-| faixa superior (base) | 1,68 m |
-| malha step-and-repeat | 0 → 1,68 m |
+| malha step-and-repeat | 0,08 m → 2,12 m |
 | cartão do QR (canto inferior direito) | 0,09 m → 0,48 m |
+
+Sem a faixa superior, **nada na peça é imune a ser coberto**: em pé, as pessoas
+tapam a malha até cerca de 1,70 m, e o que sai na foto é a faixa de logos acima
+da cabeça delas.
 
 O QR tem 27 cm de lado. **Na altura em que está, entre 9 e 48 cm do chão, ele
 fica atrás de quem posar do lado direito e é desconfortável de escanear** — foi
@@ -190,7 +189,7 @@ zero no flash, sem vinco, dobra e cabe numa mala. Alternativa mais barata: lona
 transporte e reflete mais.
 
 **Estrutura:** tubular de 3 m (tipo *banner stand* ou box truss). A base costuma
-levantar a peça uns 10 cm, o que só ajuda — sobe a faixa superior para 2,30 m.
+levantar a peça uns 10 cm, o que só ajuda — sobe a malha toda para 2,30 m.
 
 **Sangria:** o arquivo `-sangria.pdf` traz 10 cm por borda, que é o que o
 tecido consome ao ser esticado na estrutura.

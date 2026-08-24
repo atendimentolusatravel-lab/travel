@@ -1,27 +1,23 @@
 # -*- coding: utf-8 -*-
 """Backdrop fotografico da Lusa Travel — 3,00 x 2,20 m, step-and-repeat.
 
-Peca para as pessoas posarem NA FRENTE. Duas regras mandam no desenho:
+Peca para as pessoas posarem NA FRENTE. O padrao repetido garante que as
+marcas aparecam em volta de quem estiver na frente, seja qual for a posicao —
+e por isso que backdrop de premiacao usa step-and-repeat.
 
-1. Tudo que precisa aparecer na foto fica ACIMA de 1,75 m do chao (a faixa
-   superior), porque o resto some atras das pessoas.
-2. O padrao repetido garante que a marca apareca em volta de quem estiver na
-   frente, seja qual for a posicao — e por isso que backdrop de premiacao usa
-   step-and-repeat.
+A pedido, a Lusa Travel nao aparece na peca: a malha traz so os dois hoteis
+parceiros, e a agencia fica apenas no @LUSATRAVEL do cartao do QR.
 
 1 unidade da arte = 1 mm.
 """
 import os
-from parts import qr_svg, sunburst, marca
+from parts import qr_svg, sunburst
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FONTS = open(os.path.join(HERE, "fonts.css"), encoding="utf-8").read()
 
 W, H = 3000, 2200            # area util, em mm
-FAIXA = 520                  # altura da faixa superior (fica acima das cabecas)
 B = int(os.environ.get("BLEED", "0"))
-MARCA = marca(cls="{cls}")
-
 CELL_W, CELL_H = 520, 340
 
 # Cartao do QR, ancorado no canto inferior direito. A malha abre espaco para
@@ -40,10 +36,6 @@ def colide(cx, cy, meia_l=205, meia_a=100):
     return (cx + meia_l > z0 and cx - meia_l < z2
             and cy + meia_a > z1 and cy - meia_a < z3)
 
-def lockup_lusa():
-    return (f'<div class="cell-lusa">{MARCA.format(cls="m-cell")}'
-            f'<div class="w-cell">LUSATRAVEL</div></div>')
-
 def lockup_qoya():
     return ('<div class="cell-hotel">'
             '<div class="q-word">QOYA</div>'
@@ -61,10 +53,15 @@ def lockup_suryaa():
             '<div class="h-by">by Hilton<sup>&#8482;</sup></div></div>')
 
 # ---- malha step-and-repeat: linhas alternadas deslocadas meia celula ----
-CICLO = [lockup_lusa, lockup_qoya, lockup_lusa, lockup_suryaa]
+CICLO = [lockup_qoya, lockup_suryaa]
+# sem a faixa superior, a malha ocupa a peca toda: centraliza as linhas
+# inteiras na altura util para nao cortar logo no rodape
+LINHAS = H // CELL_H
+TOPO = (H - LINHAS * CELL_H) // 2
+
 celulas = []
-y, linha = FAIXA + 6, 0
-while y < H + B:
+y, linha = TOPO, 0
+while linha < LINHAS:
     desloc = (linha % 2) * (CELL_W // 2)
     x = -CELL_W + desloc
     col = 0
@@ -93,20 +90,6 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
   background:var(--olive);flex:0 0 auto}}
 .inner{{position:absolute;left:{B}px;top:{B}px;width:{W}px;height:{H}px}}
 
-/* ── faixa superior: o unico trecho que sempre aparece na foto ── */
-.faixa{{position:absolute;left:{-B}px;top:{-B}px;width:{W+2*B}px;
-  height:{FAIXA+B}px;padding:{B}px {130+B}px 0 {130+B}px;
-  display:flex;align-items:center;justify-content:center}}
-/* lockup completo: simbolo antes do nome, tag alinhada pela esquerda do nome */
-.lock{{display:flex;align-items:center;gap:58px}}
-.m-faixa{{width:208px;height:196px;color:var(--mint);flex:0 0 auto}}
-.w-faixa{{font-family:var(--serif);font-weight:700;font-size:245px;
-  line-height:.96;letter-spacing:.02em;color:var(--mint);white-space:nowrap}}
-.tag{{font-family:var(--sans);font-weight:400;font-size:33px;
-  letter-spacing:.36em;color:var(--mint);opacity:.72;margin-top:14px}}
-.rule{{position:absolute;left:{-B}px;top:{FAIXA}px;width:{W+2*B}px;height:3px;
-  background:var(--mint);opacity:.32}}
-
 /* ── cartao do QR: canto inferior direito, a pedido ── */
 .qr-card{{position:absolute;right:{QR_DIR}px;bottom:{QR_BASE}px;z-index:2;
   background:var(--cream);border-radius:34px;padding:34px 34px 22px;
@@ -118,10 +101,6 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
 /* ── malha repetida ── */
 .cell{{position:absolute;width:{CELL_W}px;height:{CELL_H}px;
   display:flex;align-items:center;justify-content:center}}
-.cell-lusa{{display:flex;align-items:center;gap:18px;color:var(--mint)}}
-.m-cell{{width:58px;height:55px;flex:0 0 auto}}
-.w-cell{{font-family:var(--serif);font-weight:700;font-size:50px;
-  letter-spacing:.09em;text-indent:.09em;white-space:nowrap}}
 .cell-hotel{{display:flex;flex-direction:column;align-items:center;gap:11px;
   color:var(--cream);opacity:.95}}
 .cell-hotel svg{{display:block}}
@@ -140,16 +119,6 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
 
 <div class="stage"><div class="inner">
   {"".join(celulas)}
-  <div class="rule"></div>
-  <div class="faixa">
-    <div class="lock">
-      {MARCA.format(cls="m-faixa")}
-      <div>
-        <div class="w-faixa">LUSATRAVEL</div>
-        <div class="tag">VIAGENS E TURISMO</div>
-      </div>
-    </div>
-  </div>
   <div class="qr-card">
     {qr_svg(size=QR_LADO)}
     <div class="qr-tag">@LUSATRAVEL</div>
