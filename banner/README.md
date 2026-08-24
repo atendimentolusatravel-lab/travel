@@ -73,9 +73,10 @@ Ajustes finos: `estrela_r` e `estrela_dx` (tamanho e afastamento da estrela),
 `gordura` (pontos de controle da estrela — acima de ~0.24/0.50 ela vira losango
 e perde o brilho) e `vao` (folga entre a aresta reta e as pétalas da direita).
 
-> O símbolo é um **redesenho a partir da imagem** que a agência enviou — o
-> arquivo original não chegou. Está fiel, mas se aparecer o vetor oficial vale
-> substituir e conferir as duas peças.
+> `parts.marca()` é um **redesenho a partir da imagem** que a agência enviou —
+> o arquivo original nunca chegou, e o acabamento superior da pétala ficou em
+> aberto (ver `opcoes-topo.png`). Como nenhuma peça usa o símbolo hoje, isso
+> não afeta nada impresso; se ele voltar, vale substituir pelo vetor oficial.
 
 ## QR code
 
