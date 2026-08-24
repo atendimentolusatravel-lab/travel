@@ -79,7 +79,7 @@ body{{background:#0f0f0d;color:var(--ink);font-family:var(--sans);
 /* ---- bloco ocre ---- */
 #b4{{display:flex;flex-direction:column;align-items:center;
   justify-content:space-between;padding:62px 44px {60+B}px}}
-.marca{{width:246px;height:230px;color:var(--red);display:block}}
+.marca{{width:246px;height:232px;color:var(--red);display:block}}
 .qr-card{{background:#fff;border-radius:26px;padding:32px 32px 20px;
   display:flex;flex-direction:column;align-items:center;gap:10px;
   border:2px solid rgba(0,0,0,.10)}}

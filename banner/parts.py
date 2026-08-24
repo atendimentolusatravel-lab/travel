@@ -4,40 +4,48 @@ import segno, math
 
 
 # ---------- MARCA DA AGENCIA ----------
-# Redesenho vetorial do simbolo oficial, medido sobre a arte enviada.
-# Geometria (viewBox 389 x 364):
-#   - petala da esquerda: MEIA ELIPSE de aresta reta na vertical (x=187),
-#     bojo cheio para a esquerda, encontrando a reta em ~90 graus em cima e
-#     embaixo. Nao e gota: nao tem ponta no topo.
-#   - petalas da direita: lentes apontadas nas duas pontas, saindo do centro
-#     ate a altura do topo e da base da petala grande (ficam niveladas com ela)
-#   - estrela de 4 pontas a direita, na altura do meio
-def marca(cls="marca", petala_r=158, estrela_r=44, estrela_c=(345, 182),
-          gordura=(0.22, 0.46), vao=5):
-    """SVG da marca. viewBox 0 0 389 364.
+# O simbolo e construido sobre UM circulo de raio R centrado em C -- por isso
+# o desenho fecha num quadrado perfeito de 2R x 2R:
+#   - petala da esquerda .... metade esquerda do circulo (aresta reta = o
+#                             diametro vertical que passa por C)
+#   - petala superior ....... vesica entre C e o canto superior direito,
+#                             formada por dois arcos de raio R centrados no
+#                             topo do circulo e na sua extremidade direita
+#   - petala inferior ....... a mesma coisa espelhada para baixo
+#   - estrela ............... 4 pontas, a direita, na altura de C
+# Tentar desenhar as petalas "a mao" (gota, lente solta) desfigura a marca;
+# a construcao por arcos de raio R e o que da a forma certa.
+def marca(cls="marca", R=180, estrela_r=44, estrela_dx=158, gordura=(0.19, 0.40),
+          vao=6):
+    """SVG da marca. viewBox 0 0 {2R+estrela_dx+estrela_r-R} x {2R}.
 
-    petala_r  raio dos arcos das petalas da direita (menor = mais gorda)
-    gordura   pontos de controle da estrela; acima de ~0.24/0.50 vira losango
-    vao       folga entre a aresta reta da petala grande e as da direita
+    R          raio do circulo base; governa a marca inteira
+    estrela_dx deslocamento horizontal da estrela em relacao a C
+    gordura    pontos de controle da estrela; acima de ~0.24/0.50 vira losango
+    vao        folga entre a aresta reta da petala grande e as da direita
     """
-    borda, topo, base = 187, 4, 360        # aresta reta e extremos verticais
-    meio = (topo + base) / 2
-    ix = borda + vao                       # x das pontas internas da direita
-    cx, cy = estrela_c
-    R = estrela_r
-    a, b = gordura[0] * R, gordura[1] * R
-    estrela = (f"M {cx} {cy-R} "
-               f"C {cx+a:.1f} {cy-b:.1f} {cx+b:.1f} {cy-a:.1f} {cx+R} {cy} "
-               f"C {cx+b:.1f} {cy+a:.1f} {cx+a:.1f} {cy+b:.1f} {cx} {cy+R} "
-               f"C {cx-a:.1f} {cy+b:.1f} {cx-b:.1f} {cy+a:.1f} {cx-R} {cy} "
-               f"C {cx-b:.1f} {cy-a:.1f} {cx-a:.1f} {cy-b:.1f} {cx} {cy-R} Z")
-    P = petala_r
-    grande = f"M {borda} {topo} A {borda} {(base-topo)/2:.0f} 0 0 0 {borda} {base} Z"
-    cima   = (f"M {ix} {meio-8:.0f} A {P} {P} 0 0 1 357 {topo+3} "
-              f"A {P} {P} 0 0 1 {ix} {meio-8:.0f} Z")
-    baixo  = (f"M {ix} {meio+8:.0f} A {P} {P} 0 0 0 354 {base-3} "
-              f"A {P} {P} 0 0 0 {ix} {meio+8:.0f} Z")
-    return (f'<svg class="{cls}" viewBox="0 0 389 364" '
+    cx = cy = R                                  # centro do circulo
+    D = 2 * R
+    larg = cx + estrela_dx + estrela_r           # a estrela e o ponto mais a direita
+
+    # metade esquerda do circulo
+    grande = f"M {cx} 0 A {R} {R} 0 0 0 {cx} {D} Z"
+
+    # vesicas: de C ate o canto, por dois arcos de raio R
+    px = cx + vao
+    cima  = f"M {px} {cy-vao} A {R} {R} 0 0 1 {D} 0 A {R} {R} 0 0 1 {px} {cy-vao} Z"
+    baixo = f"M {px} {cy+vao} A {R} {R} 0 0 0 {D} {D} A {R} {R} 0 0 0 {px} {cy+vao} Z"
+
+    ex, ey = cx + estrela_dx, cy
+    r = estrela_r
+    a, b = gordura[0] * r, gordura[1] * r
+    estrela = (f"M {ex} {ey-r} "
+               f"C {ex+a:.1f} {ey-b:.1f} {ex+b:.1f} {ey-a:.1f} {ex+r} {ey} "
+               f"C {ex+b:.1f} {ey+a:.1f} {ex+a:.1f} {ey+b:.1f} {ex} {ey+r} "
+               f"C {ex-a:.1f} {ey+b:.1f} {ex-b:.1f} {ey+a:.1f} {ex-r} {ey} "
+               f"C {ex-b:.1f} {ey-a:.1f} {ex-a:.1f} {ey-b:.1f} {ex} {ey-r} Z")
+
+    return (f'<svg class="{cls}" viewBox="0 0 {larg} {D}" '
             'xmlns="http://www.w3.org/2000/svg"><g fill="currentColor">'
             f'<path d="{grande}"/><path d="{cima}"/><path d="{baixo}"/>'
             f'<path d="{estrela}"/></g></svg>')
