@@ -54,12 +54,19 @@ peças — no wordmark vertical do banner, na faixa do backdrop, nas células da
 malha e no `@LUSATRAVEL` do QR. Na assinatura do banner só o nome é negrito; o
 "VIAGENS E TURISMO" fica em regular, senão o contraste some.
 
-`parts.marca()` desenha o símbolo oficial em vetor (viewBox 415 × 372): a
-pétala grande da esquerda com a aresta direita reta, as duas pétalas da direita
-e a estrela de 4 pontas encaixada no vão. Parâmetros: `petala_r` (quanto
-**menor** o raio, mais gorda a pétala — a corda é fixa e é o arco que abre),
-`estrela_r`, `gordura` (acima de ~0.24/0.50 a estrela vira losango e perde o
-brilho) e `vao` (folga entre a aresta reta e as pétalas da direita).
+`parts.marca()` desenha o símbolo oficial em vetor (viewBox 389 × 364):
+
+- **pétala da esquerda: meia elipse** de aresta reta na vertical (x = 187),
+  bojo cheio para a esquerda, encontrando a reta em ~90° em cima e embaixo.
+  Não é gota — não tem ponta no topo. Errar isso é o que mais desfigura a marca.
+- **duas pétalas da direita:** lentes apontadas nas duas pontas, com os bicos
+  externos **nivelados** com o topo e a base da pétala grande.
+- **estrela de 4 pontas** na abertura entre as duas, na altura do meio.
+
+Parâmetros: `petala_r` (quanto **menor** o raio, mais gorda a pétala — a corda
+é fixa e é o arco que abre), `estrela_r`, `gordura` (acima de ~0.24/0.50 a
+estrela vira losango e perde o brilho) e `vao` (folga entre a aresta reta e as
+pétalas da direita).
 
 > O símbolo é um **redesenho a partir da imagem** que a agência enviou — o
 > arquivo original não chegou. Está fiel, mas se aparecer o vetor oficial vale

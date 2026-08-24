@@ -4,22 +4,25 @@ import segno, math
 
 
 # ---------- MARCA DA AGENCIA ----------
-# Redesenho vetorial do simbolo oficial. Tres formas + a estrela:
-#   - petala grande da esquerda: aresta direita RETA na vertical, ponta afiada
-#     em cima e base arredondada, com o bojo saindo para a esquerda
-#   - duas petalas da direita: lentes apontadas nas duas pontas, saindo do
-#     centro para o canto superior e inferior direito
-#   - estrela de 4 pontas encaixada no vao entre as duas petalas da direita
-def marca(cls="marca", petala_r=178, estrela_r=47, estrela_c=(362, 182),
-          gordura=(0.22, 0.46), vao=7):
-    """SVG da marca. viewBox 0 0 415 372.
+# Redesenho vetorial do simbolo oficial, medido sobre a arte enviada.
+# Geometria (viewBox 389 x 364):
+#   - petala da esquerda: MEIA ELIPSE de aresta reta na vertical (x=187),
+#     bojo cheio para a esquerda, encontrando a reta em ~90 graus em cima e
+#     embaixo. Nao e gota: nao tem ponta no topo.
+#   - petalas da direita: lentes apontadas nas duas pontas, saindo do centro
+#     ate a altura do topo e da base da petala grande (ficam niveladas com ela)
+#   - estrela de 4 pontas a direita, na altura do meio
+def marca(cls="marca", petala_r=158, estrela_r=44, estrela_c=(345, 182),
+          gordura=(0.22, 0.46), vao=5):
+    """SVG da marca. viewBox 0 0 389 364.
 
     petala_r  raio dos arcos das petalas da direita (menor = mais gorda)
     gordura   pontos de controle da estrela; acima de ~0.24/0.50 vira losango
     vao       folga entre a aresta reta da petala grande e as da direita
     """
-    borda = 200                     # x da aresta reta da petala da esquerda
-    ix = borda + vao                # x das pontas internas das petalas
+    borda, topo, base = 187, 4, 360        # aresta reta e extremos verticais
+    meio = (topo + base) / 2
+    ix = borda + vao                       # x das pontas internas da direita
     cx, cy = estrela_c
     R = estrela_r
     a, b = gordura[0] * R, gordura[1] * R
@@ -29,12 +32,12 @@ def marca(cls="marca", petala_r=178, estrela_r=47, estrela_c=(362, 182),
                f"C {cx-a:.1f} {cy+b:.1f} {cx-b:.1f} {cy+a:.1f} {cx-R} {cy} "
                f"C {cx-b:.1f} {cy-a:.1f} {cx-a:.1f} {cy-b:.1f} {cx} {cy-R} Z")
     P = petala_r
-    grande = (f"M {borda} 6 "
-              f"C 152 46 32 94 14 174 "
-              f"C 6 266 84 364 {borda} 364 Z")
-    cima  = f"M {ix} 178 A {P} {P} 0 0 1 375 6 A {P} {P} 0 0 1 {ix} 178 Z"
-    baixo = f"M {ix} 194 A {P} {P} 0 0 0 372 366 A {P} {P} 0 0 0 {ix} 194 Z"
-    return (f'<svg class="{cls}" viewBox="0 0 415 372" '
+    grande = f"M {borda} {topo} A {borda} {(base-topo)/2:.0f} 0 0 0 {borda} {base} Z"
+    cima   = (f"M {ix} {meio-8:.0f} A {P} {P} 0 0 1 357 {topo+3} "
+              f"A {P} {P} 0 0 1 {ix} {meio-8:.0f} Z")
+    baixo  = (f"M {ix} {meio+8:.0f} A {P} {P} 0 0 0 354 {base-3} "
+              f"A {P} {P} 0 0 0 {ix} {meio+8:.0f} Z")
+    return (f'<svg class="{cls}" viewBox="0 0 389 364" '
             'xmlns="http://www.w3.org/2000/svg"><g fill="currentColor">'
             f'<path d="{grande}"/><path d="{cima}"/><path d="{baixo}"/>'
             f'<path d="{estrela}"/></g></svg>')

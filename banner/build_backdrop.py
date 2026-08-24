@@ -98,7 +98,7 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
   height:{FAIXA+B}px;padding:{B}px {130+B}px 0 {130+B}px;
   display:flex;align-items:center;justify-content:center}}
 .lock{{display:flex;align-items:center;gap:58px}}
-.m-faixa{{width:208px;height:186px;color:var(--mint);flex:0 0 auto}}
+.m-faixa{{width:208px;height:195px;color:var(--mint);flex:0 0 auto}}
 .w-faixa{{font-family:var(--serif);font-weight:700;font-size:245px;
   line-height:.96;letter-spacing:.02em;color:var(--mint);white-space:nowrap}}
 .tag{{font-family:var(--sans);font-weight:400;font-size:33px;
@@ -119,7 +119,7 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
   display:flex;align-items:center;justify-content:center}}
 .cell-lusa{{display:flex;flex-direction:column;align-items:center;gap:20px;
   color:var(--mint)}}
-.m-cell{{width:116px;height:104px}}
+.m-cell{{width:116px;height:109px}}
 .w-cell{{font-family:var(--serif);font-weight:700;font-size:50px;
   letter-spacing:.09em;text-indent:.09em;white-space:nowrap}}
 .cell-hotel{{display:flex;flex-direction:column;align-items:center;gap:11px;
