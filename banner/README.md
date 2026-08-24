@@ -60,7 +60,7 @@ quadrado perfeito de 2R × 2R.
 
 | Parte | Construção |
 |---|---|
-| pétala da esquerda | metade esquerda do círculo (a aresta reta é o diâmetro vertical) |
+| pétala da esquerda | aresta reta no diâmetro vertical; o **acabamento superior é em bico**, não em canto reto — meio círculo fecha o topo em ângulo de 90° e descaracteriza a marca. Perfis em `PERFIS_BICO` (`suave`/`medio`/`longo`), ou `bico="reto"` para o meio círculo |
 | pétala superior | vesica entre C e o canto superior direito, por dois arcos de raio R centrados no topo do círculo e na sua extremidade direita |
 | pétala inferior | a mesma coisa espelhada |
 | estrela | 4 pontas, à direita, na altura de C |

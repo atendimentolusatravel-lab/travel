@@ -6,8 +6,9 @@ import segno, math
 # ---------- MARCA DA AGENCIA ----------
 # O simbolo e construido sobre UM circulo de raio R centrado em C -- por isso
 # o desenho fecha num quadrado perfeito de 2R x 2R:
-#   - petala da esquerda .... metade esquerda do circulo (aresta reta = o
-#                             diametro vertical que passa por C)
+#   - petala da esquerda .... aresta reta no diametro vertical que passa por C,
+#                             PONTA AFIADA no topo e base cheia (nao e meio
+#                             circulo: o meio circulo fecha o topo em canto reto)
 #   - petala superior ....... vesica entre C e o canto superior direito,
 #                             formada por dois arcos de raio R centrados no
 #                             topo do circulo e na sua extremidade direita
@@ -15,7 +16,15 @@ import segno, math
 #   - estrela ............... 4 pontas, a direita, na altura de C
 # Tentar desenhar as petalas "a mao" (gota, lente solta) desfigura a marca;
 # a construcao por arcos de raio R e o que da a forma certa.
-def marca(cls="marca", R=180, estrela_r=44, estrela_dx=158, gordura=(0.19, 0.40),
+PERFIS_BICO = {
+    # nome:  (control1 dx/dy, control2 x/y, ponto mais a esquerda)
+    "suave":  ((58, 18), (22, 92),  2, 200),
+    "medio":  ((28, 35), (22, 108), 2, 208),
+    "longo":  ((35, 52), (20, 118), 2, 215),
+}
+
+
+def marca(cls="marca", R=180, bico="medio", estrela_r=44, estrela_dx=158, gordura=(0.19, 0.40),
           vao=6):
     """SVG da marca. viewBox 0 0 {2R+estrela_dx+estrela_r-R} x {2R}.
 
@@ -28,8 +37,21 @@ def marca(cls="marca", R=180, estrela_r=44, estrela_dx=158, gordura=(0.19, 0.40)
     D = 2 * R
     larg = cx + estrela_dx + estrela_r           # a estrela e o ponto mais a direita
 
-    # metade esquerda do circulo
-    grande = f"M {cx} 0 A {R} {R} 0 0 0 {cx} {D} Z"
+    # Petala da esquerda: aresta direita reta, PONTA AFIADA no topo e base
+    # cheia e redonda. Nao e meia-circunferencia: o meio-circulo fecha o topo
+    # em canto reto, e o acabamento superior da marca e em bico.
+    # Petala da esquerda: aresta direita reta. O ACABAMENTO SUPERIOR e o que
+    # muda entre os perfis abaixo -- de canto reto (meio circulo) a bico longo.
+    # Curvas medidas em R=180 e escaladas por k.
+    k = R / 180.0
+    if bico == "reto":
+        grande = f"M {cx} 0 A {R} {R} 0 0 0 {cx} {D} Z"
+    else:
+        c1, c2, lx, ly = PERFIS_BICO[bico]
+        grande = (f"M {cx} 0 "
+                  f"C {cx-c1[0]*k:.1f} {c1[1]*k:.1f} {c2[0]*k:.1f} {c2[1]*k:.1f} "
+                  f"{lx*k:.1f} {ly*k:.1f} "
+                  f"C {-4*k:.1f} {300*k:.1f} {80*k:.1f} {D} {cx} {D} Z")
 
     # vesicas: de C ate o canto, por dois arcos de raio R
     px = cx + vao
