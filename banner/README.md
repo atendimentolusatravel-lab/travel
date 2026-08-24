@@ -74,9 +74,10 @@ Ajustes finos: `estrela_r` e `estrela_dx` (tamanho e afastamento da estrela),
 e perde o brilho) e `vao` (folga entre a aresta reta e as pétalas da direita).
 
 > `parts.marca()` é um **redesenho a partir da imagem** que a agência enviou —
-> o arquivo original nunca chegou, e o acabamento superior da pétala ficou em
-> aberto (ver `opcoes-topo.png`). Como nenhuma peça usa o símbolo hoje, isso
-> não afeta nada impresso; se ele voltar, vale substituir pelo vetor oficial.
+> o arquivo vetorial original nunca chegou. O acabamento superior da pétala
+> segue **em aberto**: `opcoes-topo.png` compara os quatro perfis e o backdrop
+> está saindo com o `medio`. Como o símbolo voltou para a peça impressa, vale
+> fechar essa escolha (ou substituir tudo pelo vetor oficial).
 
 ## QR code
 

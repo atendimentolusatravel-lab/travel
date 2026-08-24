@@ -12,7 +12,7 @@ Peca para as pessoas posarem NA FRENTE. Duas regras mandam no desenho:
 1 unidade da arte = 1 mm.
 """
 import os
-from parts import qr_svg, sunburst
+from parts import qr_svg, sunburst, marca
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FONTS = open(os.path.join(HERE, "fonts.css"), encoding="utf-8").read()
@@ -20,6 +20,8 @@ FONTS = open(os.path.join(HERE, "fonts.css"), encoding="utf-8").read()
 W, H = 3000, 2200            # area util, em mm
 FAIXA = 520                  # altura da faixa superior (fica acima das cabecas)
 B = int(os.environ.get("BLEED", "0"))
+MARCA = marca(cls="{cls}")
+
 CELL_W, CELL_H = 520, 340
 
 # Cartao do QR, ancorado no canto inferior direito. A malha abre espaco para
@@ -32,14 +34,15 @@ ZONA = (W - QR_DIR - QR_W - FOLGA, H - QR_BASE - QR_H - FOLGA,
         W - QR_DIR + FOLGA, H - QR_BASE + FOLGA)
 
 
-def colide(cx, cy, meia_l=175, meia_a=100):
+def colide(cx, cy, meia_l=205, meia_a=100):
     """O conteudo da celula centrado em (cx, cy) invade a zona do QR?"""
     z0, z1, z2, z3 = ZONA
     return (cx + meia_l > z0 and cx - meia_l < z2
             and cy + meia_a > z1 and cy - meia_a < z3)
 
 def lockup_lusa():
-    return '<div class="cell-lusa"><div class="w-cell">LUSATRAVEL</div></div>' 
+    return (f'<div class="cell-lusa">{MARCA.format(cls="m-cell")}'
+            f'<div class="w-cell">LUSATRAVEL</div></div>')
 
 def lockup_qoya():
     return ('<div class="cell-hotel">'
@@ -94,13 +97,13 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
 .faixa{{position:absolute;left:{-B}px;top:{-B}px;width:{W+2*B}px;
   height:{FAIXA+B}px;padding:{B}px {130+B}px 0 {130+B}px;
   display:flex;align-items:center;justify-content:center}}
-/* so a escrita: sem o simbolo, a tag centraliza sob o nome */
-.lock{{text-align:center}}
+/* lockup completo: simbolo antes do nome, tag alinhada pela esquerda do nome */
+.lock{{display:flex;align-items:center;gap:58px}}
+.m-faixa{{width:208px;height:196px;color:var(--mint);flex:0 0 auto}}
 .w-faixa{{font-family:var(--serif);font-weight:700;font-size:245px;
   line-height:.96;letter-spacing:.02em;color:var(--mint);white-space:nowrap}}
 .tag{{font-family:var(--sans);font-weight:400;font-size:33px;
-  letter-spacing:.36em;text-indent:.36em;color:var(--mint);opacity:.72;
-  margin-top:14px}}
+  letter-spacing:.36em;color:var(--mint);opacity:.72;margin-top:14px}}
 .rule{{position:absolute;left:{-B}px;top:{FAIXA}px;width:{W+2*B}px;height:3px;
   background:var(--mint);opacity:.32}}
 
@@ -115,7 +118,8 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
 /* ── malha repetida ── */
 .cell{{position:absolute;width:{CELL_W}px;height:{CELL_H}px;
   display:flex;align-items:center;justify-content:center}}
-.cell-lusa{{color:var(--mint)}}
+.cell-lusa{{display:flex;align-items:center;gap:18px;color:var(--mint)}}
+.m-cell{{width:58px;height:55px;flex:0 0 auto}}
 .w-cell{{font-family:var(--serif);font-weight:700;font-size:50px;
   letter-spacing:.09em;text-indent:.09em;white-space:nowrap}}
 .cell-hotel{{display:flex;flex-direction:column;align-items:center;gap:11px;
@@ -139,8 +143,11 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
   <div class="rule"></div>
   <div class="faixa">
     <div class="lock">
-      <div class="w-faixa">LUSATRAVEL</div>
-      <div class="tag">VIAGENS E TURISMO</div>
+      {MARCA.format(cls="m-faixa")}
+      <div>
+        <div class="w-faixa">LUSATRAVEL</div>
+        <div class="tag">VIAGENS E TURISMO</div>
+      </div>
     </div>
   </div>
   <div class="qr-card">
