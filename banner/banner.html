@@ -1,0 +1,149 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Banner Photocall — Lusa Travel</title>
+<link rel="stylesheet" href="assets/fonts.css">
+<style>
+/* ── Formato: 3000 x 2400 mm (3,0 m x 2,4 m). 1px = 1mm ───────────────── */
+:root{
+  --bg:#0d0d0b;
+  --gold:#c8a24a;
+  --gold-hi:#e8d3a0;
+  --gold-dim:#8a6f30;
+  --cream:#f4efe7;
+  --sun:#c89a4f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#2a2a2a}
+.banner{
+  position:relative;width:3000px;height:2400px;overflow:hidden;
+  background:
+    radial-gradient(120% 85% at 50% 0%, #1c1b16 0%, #0d0d0b 58%, #070706 100%);
+  font-family:'Jost',sans-serif;color:var(--cream);
+}
+/* moldura interior */
+.frame{position:absolute;inset:70px;border:2px solid rgba(200,162,74,.28);pointer-events:none}
+.frame::after{content:"";position:absolute;inset:16px;border:1px solid rgba(200,162,74,.14)}
+
+/* ── padrao step-and-repeat (zona onde ficam as pessoas) ──────────────── */
+.pattern{position:absolute;top:880px;left:250px;right:250px;bottom:660px;
+  display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.prow{display:flex;justify-content:space-between;align-items:center}
+.prow.odd{padding:0 140px}
+.pmark{display:flex;flex-direction:column;align-items:center;gap:18px;opacity:.5}
+.pmark img{height:82px;display:block}
+.pmark span{font-weight:200;font-size:32px;letter-spacing:.24em;color:var(--gold);
+  white-space:nowrap;text-indent:.24em}
+
+/* ── lockup principal ─────────────────────────────────────────────────── */
+.hero{position:absolute;top:150px;left:0;right:0;display:flex;flex-direction:column;
+  align-items:center;text-align:center}
+.hero .sym{height:190px;display:block;margin-top:44px}
+.hero .word{font-weight:200;font-size:195px;line-height:.96;letter-spacing:.055em;
+  text-indent:.055em;color:var(--cream);margin-top:44px}
+.hero .tag{font-weight:300;font-size:56px;letter-spacing:.46em;text-indent:.46em;
+  color:var(--gold);margin-top:22px}
+.event{display:flex;align-items:center;gap:40px}
+.event i{display:block;width:300px;height:1px;background:
+  linear-gradient(90deg,transparent,var(--gold))}
+.event i+i{background:linear-gradient(90deg,var(--gold),transparent)}
+.event span{font-family:'Poppins',sans-serif;font-weight:300;font-size:52px;
+  letter-spacing:.36em;text-indent:.36em;color:var(--cream);white-space:nowrap}
+
+/* ── faixa inferior ───────────────────────────────────────────────────── */
+.foot{position:absolute;left:70px;right:70px;bottom:70px;height:520px;
+  display:flex;align-items:center;gap:110px;padding:0 90px;
+  background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+  border-top:1px solid rgba(200,162,74,.35)}
+.foot .label{font-family:'Poppins',sans-serif;font-weight:400;font-size:26px;
+  letter-spacing:.3em;color:var(--gold);writing-mode:vertical-rl;transform:rotate(180deg);
+  white-space:nowrap}
+.partners{display:flex;align-items:center;gap:130px;flex:1}
+.vsep{width:1px;height:250px;background:linear-gradient(180deg,transparent,
+  rgba(200,162,74,.45),transparent)}
+
+/* lockup Qoya */
+.qoya{display:flex;align-items:center;gap:48px}
+.qoya .name{font-family:'Playfair Display',serif;font-weight:500;font-size:120px;
+  line-height:.9;letter-spacing:.02em;color:var(--cream)}
+.qoya .sub{font-family:'Poppins',sans-serif;font-weight:300;font-size:26px;
+  letter-spacing:.5em;text-indent:.5em;color:var(--cream);text-align:center;margin-top:16px}
+/* lockup Suryaa */
+.suryaa{display:flex;flex-direction:column;align-items:center;gap:18px}
+.suryaa img{height:150px;display:block}
+.suryaa .name{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:92px;
+  line-height:1;letter-spacing:.1em;text-indent:.1em;color:var(--sun)}
+.suryaa .bar{width:100%;height:2px;background:rgba(244,239,231,.75);margin:6px 0 2px}
+/* bloco Curio Collection by Hilton */
+.curio{font-family:'Poppins',sans-serif;font-weight:500;font-size:34px;
+  letter-spacing:.17em;line-height:1.32;color:var(--cream);text-align:center}
+.curio .hilton{font-family:'Playfair Display',serif;font-weight:400;font-size:44px;
+  letter-spacing:.01em;margin-top:8px}
+.curio .hilton sup{font-size:.42em;vertical-align:super}
+.qoya .curio{text-align:left}
+
+/* QR */
+.qr{display:flex;align-items:center;gap:44px}
+.qr .card{width:300px;height:300px;background:#fff;border-radius:34px;padding:26px;
+  display:flex;align-items:center;justify-content:center}
+.qr .card img{width:100%;height:100%;display:block}
+.qr .cap{font-family:'Poppins',sans-serif}
+.qr .cap b{display:block;font-weight:500;font-size:46px;letter-spacing:.09em;color:var(--cream)}
+.qr .cap span{display:block;font-weight:300;font-size:28px;letter-spacing:.16em;
+  color:var(--gold);margin-top:14px}
+</style>
+
+<div class="banner">
+  <div class="pattern" id="pattern"></div>
+  <div class="frame"></div>
+
+  <div class="hero">
+    <div class="event"><i></i><span>ENTREGA DE PRÉMIO</span><i></i></div>
+    <img class="sym" src="assets/lusatravel-symbol-gold.svg" alt="">
+    <div class="word">LUSATRAVEL</div>
+    <div class="tag">travel agency</div>
+  </div>
+
+  <div class="foot">
+    <div class="label">PARCEIROS OFICIAIS</div>
+    <div class="partners">
+      <div class="qoya">
+        <div>
+          <div class="name">QOYA</div>
+          <div class="sub">H—OTELS</div>
+        </div>
+        <div class="vsep" style="height:190px"></div>
+        <div class="curio">CURIO<br>COLLECTION
+          <div class="hilton">by Hilton<sup>™</sup></div>
+        </div>
+      </div>
+      <div class="vsep"></div>
+      <div class="suryaa">
+        <img src="assets/suryaa-sun.svg" alt="">
+        <div class="name">SURYAA</div>
+        <div class="bar"></div>
+        <div class="curio">CURIO COLLECTION
+          <div class="hilton">by Hilton<sup>™</sup></div>
+        </div>
+      </div>
+    </div>
+    <div class="qr">
+      <div class="cap">
+        <b>@LUSATRAVEL</b>
+        <span>SIGA-NOS NO INSTAGRAM</span>
+      </div>
+      <div class="card"><img src="assets/qrcode-instagram.svg" alt="QR Instagram Lusa Travel"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// grelha step-and-repeat: 4 linhas alternadas de marcas Lusa Travel
+const rows = 3, perRow = 5;
+const cell = () =>
+  '<div class="pmark"><img src="assets/lusatravel-symbol-gold.svg" alt="">' +
+  '<span>LUSATRAVEL</span></div>';
+document.getElementById('pattern').innerHTML =
+  Array.from({length: rows}, (_, r) =>
+    '<div class="prow' + (r % 2 ? ' odd' : '') + '">' +
+    cell().repeat(perRow - (r % 2)) + '</div>').join('');
+</script>
