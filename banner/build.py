@@ -44,12 +44,6 @@ body{{background:#0f0f0d;color:var(--ink);font-family:var(--sans);
 .red-arc{{position:absolute;left:-390px;top:{310+B}px;width:780px;height:780px;
   border-radius:50%;background:var(--red)}}
 
-/* ---- wordmark vertical ---- */
-#band{{display:flex;align-items:center;justify-content:center;padding-right:{B}px}}
-.vert{{writing-mode:vertical-rl;transform:rotate(180deg);
-  font-family:var(--serif);font-weight:700;font-size:222px;line-height:1;
-  letter-spacing:.012em;color:var(--mint);white-space:nowrap}}
-
 /* ---- painel de parceiros ---- */
 #b3{{display:flex;flex-direction:column;align-items:center;
   padding:58px 46px {54+B}px {46+B}px;gap:26px}}
@@ -126,7 +120,7 @@ body{{background:#0f0f0d;color:var(--ink);font-family:var(--sans);
     <div class="assin"><b>LUSATRAVEL</b>, VIAGENS E TURISMO</div>
   </div>
 
-  <div class="blk" id="band"><div class="vert">LUSATRAVEL</div></div>
+  <div class="blk" id="band"></div>
 </div></div>
 '''
 
