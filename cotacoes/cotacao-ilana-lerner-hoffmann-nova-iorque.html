@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>Ilana Lerner Hoffman | Nova Iorque — Lusa Travel</title>
+<title>Ilana Lerner Hoffmann | Nova Iorque — Lusa Travel</title>
 <style>
 /* Poppins · Montserrat · Arimo — embutidas (documento autocontido, sem dependencia de rede) */
 @font-face {
@@ -162,7 +162,8 @@
 
 :root{
   --gold:#da8d00;
-  --dest:#22303f;        /* Azul Manhattan — destino: Nova Iorque */
+  --dest:#404525;        /* Verde Savana — verde escuro padrão Lusa Travel */
+  --dest2:#73805c;       /* Verde Andino — verde secundário padrão Lusa Travel */
   --ink:#1a1510;
   --char:#333131;
   --mut:#9a8d80;
@@ -203,18 +204,22 @@ html,body{ font-family:var(--sans); color:var(--char); }
 .cover-photo{ position:absolute; inset:0;
   background:linear-gradient(178deg,#0d1620 0%,#1c2c3d 30%,#3b4c5c 52%,#7a6a56 66%,#b98d4f 100%); }
 .sky{ position:absolute; inset:0; background:
-   linear-gradient(180deg,#070d15 0%,#102037 20%,#24405f 36%,#4a5f6d 48%,#96795a 56%,#d29a4c 63%,#eab868 68%,#8a6a3e 72%,#241d17 74%,#1a1510 100%); }
+   radial-gradient(ellipse 78% 20% at 50% 69%, rgba(255,206,110,.55) 0%, rgba(218,141,0,.22) 45%, transparent 72%),
+   linear-gradient(180deg,
+     #0e1408 0%, #18240d 13%, #263315 26%, #35431c 38%, #4d5a26 48%,
+     #6a7a44 55%, #73805c 58.5%, #96903c 62%, #bf8e18 65.5%, #da8d00 68.5%,
+     #efb851 71%, #a8792a 74%, #33291a 77%, #1a1510 100%); }
 .skyline{ position:absolute; left:0; right:0; bottom:0; height:280mm; z-index:2; }
-.skyline .b{ position:absolute; bottom:0; background:#171b1f; }
-.skyline .b.f{ background:#0d1013; }
+.skyline .b{ position:absolute; bottom:0; background:#161a12; }
+.skyline .b.f{ background:#0c0f09; }
 .skyline .b::after{ content:''; position:absolute; inset:6mm 3mm auto 3mm; height:60%;
   background-image:radial-gradient(circle,rgba(255,196,92,.85) .55mm,transparent .68mm);
   background-size:4.6mm 6.4mm; opacity:.34; }
 .cover-scrim{ position:absolute; inset:0; z-index:1;
   background:linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,.12) 14%, transparent 22%); }
 .cover-ground{ position:absolute; left:0; right:0; bottom:0; height:40%; z-index:3;
-  background:linear-gradient(to top, rgba(9,7,5,.985) 0%, rgba(9,7,5,.95) 34%, rgba(9,7,5,.72) 58%,
-             rgba(9,7,5,.34) 78%, transparent 100%); }
+  background:linear-gradient(to top, rgba(9,9,5,.985) 0%, rgba(9,9,5,.95) 34%, rgba(9,9,5,.72) 58%,
+             rgba(9,9,5,.34) 78%, transparent 100%); }
 .cover-cnt{ position:absolute; left:24mm; right:24mm; bottom:46mm; z-index:5; color:#fff; }
 .cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
 .cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
@@ -231,7 +236,7 @@ html,body{ font-family:var(--sans); color:var(--char); }
 .lead{ font-size:14.5pt; line-height:1.85; color:var(--char); }
 .lead b{ font-weight:600; color:var(--ink); }
 .factgrid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:6mm; margin:14mm 0 0; }
-.fact{ border:1px solid var(--line); border-radius:6px; padding:8mm 9mm; background:#faf7f2; }
+.fact{ border:1px solid var(--line); border-radius:6px; padding:8mm 9mm; background:#f8f8f0; }
 .fact .k{ font-family:var(--lab); font-size:8.5pt; font-weight:700; letter-spacing:.14em;
   text-transform:uppercase; color:var(--mut); }
 .fact .v{ font-size:15pt; font-weight:600; color:var(--ink); margin-top:1.5mm; line-height:1.35; }
@@ -263,7 +268,7 @@ html,body{ font-family:var(--sans); color:var(--char); }
   text-transform:uppercase; color:var(--mut); margin-top:2mm; }
 
 .chips{ display:flex; gap:4mm; margin:7mm 0 10mm; flex-wrap:nowrap; }
-.chip{ border:1px solid var(--line); border-radius:20mm; padding:3mm 6mm; background:#faf7f2; white-space:nowrap; }
+.chip{ border:1px solid var(--line); border-radius:20mm; padding:3mm 6mm; background:#f8f8f0; white-space:nowrap; }
 .chip .k{ font-family:var(--lab); font-size:8pt; font-weight:700; letter-spacing:.13em;
   text-transform:uppercase; color:var(--mut); }
 .chip .v{ font-size:12pt; font-weight:600; color:var(--ink); margin-top:.5mm; }
@@ -290,7 +295,7 @@ tr.conx td{ padding:2.2mm 0; border-bottom:1px dashed var(--line); }
 .conx-t{ font-size:11pt; font-weight:300; color:var(--mut); letter-spacing:.03em; }
 .conx-t b{ font-weight:600; color:var(--char); }
 .leg-tot{ display:flex; justify-content:space-between; align-items:center;
-  background:#faf7f2; border-left:3px solid var(--gold); padding:4.2mm 7mm; margin-bottom:9mm; }
+  background:#f8f8f0; border-left:3px solid var(--gold); padding:4.2mm 7mm; margin-bottom:9mm; }
 .leg-tot .l{ font-family:var(--lab); font-size:9pt; font-weight:700; letter-spacing:.14em;
   text-transform:uppercase; color:var(--mut); }
 .leg-tot .v{ font-size:14.5pt; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; }
@@ -336,8 +341,8 @@ table.cmp tr.best td{ background:#fdf7ea; }
 .barwrap .bar-row{ margin-bottom:4.2mm; }
 .bar-row{ display:flex; align-items:center; gap:5mm; margin-bottom:5mm; }
 .bar-lb{ width:60mm; font-size:11pt; font-weight:600; color:var(--char); flex-shrink:0; }
-.bar-tk{ flex:1; height:8mm; background:#f2ede5; border-radius:1mm; overflow:hidden; }
-.bar-fl{ height:100%; background:var(--dest); }
+.bar-tk{ flex:1; height:8mm; background:#edeee3; border-radius:1mm; overflow:hidden; }
+.bar-fl{ height:100%; background:var(--dest2); }
 .bar-fl.g{ background:var(--gold); }
 .bar-vl{ width:27mm; text-align:right; font-size:11pt; font-weight:700; color:var(--ink);
   font-variant-numeric:tabular-nums; flex-shrink:0; }
@@ -347,7 +352,7 @@ table.cmp tr.best td{ background:#fdf7ea; }
 .cond-h{ font-size:12pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
 .cond-t{ font-size:12pt; line-height:1.75; color:var(--char); }
 .reco{ border:1px solid var(--line); border-left:3px solid var(--gold); border-radius:5px;
-  background:#faf7f2; padding:8mm 9mm; margin-bottom:9mm; }
+  background:#f8f8f0; padding:8mm 9mm; margin-bottom:9mm; }
 .reco .k{ font-family:var(--lab); font-size:9pt; font-weight:700; letter-spacing:.14em;
   text-transform:uppercase; color:var(--gold); }
 .reco .t{ font-size:12.5pt; line-height:1.8; color:var(--char); margin-top:2.5mm; }
@@ -390,7 +395,7 @@ table.cmp tr.best td{ background:#fdf7ea; }
     <div class="cover-kicker">Cotação para sua viagem</div>
     <div class="cover-basis">Baseado em 1 adulto · 17 a 28 de setembro de 2026</div>
     <div class="cover-to">Sua viagem para:</div>
-    <div class="cover-name">Ilana Lerner Hoffman</div>
+    <div class="cover-name">Ilana Lerner Hoffmann</div>
     <div class="cover-dest">Nova Iorque · Estados Unidos</div>
     <div class="stats">
       <div class="stat"><b>4</b><span>Opções aéreas</span></div>
@@ -425,7 +430,7 @@ table.cmp tr.best td{ background:#fdf7ea; }
     </p>
 
     <div class="factgrid">
-      <div class="fact"><div class="k">Passageiro</div><div class="v">Sra. Ilana Lerner Hoffman</div><div class="s">1 adulto</div></div>
+      <div class="fact"><div class="k">Passageiro</div><div class="v">Sra. Ilana Lerner Hoffmann</div><div class="s">1 adulto</div></div>
       <div class="fact"><div class="k">Período</div><div class="v">17 &rarr; 28 Set 2026</div><div class="s">11 dias · 9 noites em Nova Iorque</div></div>
       <div class="fact"><div class="k">Classe</div><div class="v">Econômica</div><div class="s">Ida e volta · todos os trechos</div></div>
       <div class="fact"><div class="k">Origem</div><div class="v">Curitiba · CWB</div><div class="s">Afonso Pena</div></div>
