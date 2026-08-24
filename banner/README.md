@@ -1,7 +1,11 @@
-# Banner de divulgação — Lusa Travel
+# Peças de divulgação — Lusa Travel
 
-Peça em A3 retrato (297 × 420 mm) para divulgação da agência com os dois
-hotéis parceiros e o QR code do Instagram.
+Duas peças, para dois usos diferentes:
+
+1. **Banner vertical** (`banner-lusatravel*`) — A3 ou 1,40 × 1,98 m. As pessoas
+   posam **ao lado**.
+2. **Backdrop fotográfico** (`backdrop-lusatravel*`) — 3,00 × 2,20 m,
+   *step-and-repeat*. As pessoas posam **na frente**.
 
 ## Arquivos
 
@@ -108,3 +112,60 @@ Ou seja: **quem ficar em pé na frente do banner cobre o QR e os logos dos
 hotéis.** A peça foi desenhada para as pessoas posarem *ao lado*. Para um
 backdrop de verdade — em que as pessoas ficam na frente — a composição precisa
 ser refeita em formato largo, com a marca repetida (*step-and-repeat*).
+
+
+# Backdrop fotográfico — 3,00 × 2,20 m
+
+Peça para premiação, com as pessoas em pé na frente. Duas decisões mandam no
+desenho:
+
+**1. Tudo que precisa sair na foto está acima de 1,68 m.** A faixa superior
+concentra a marca grande, o "VIAGENS E TURISMO" e o QR. É a única parte que
+nenhuma pessoa cobre.
+
+**2. O resto é step-and-repeat.** A malha alternada (Lusa Travel, QOYA,
+Lusa Travel, SURYAA, com as linhas deslocadas meia célula) garante que a marca
+apareça em volta de quem estiver na frente, em qualquer posição. Metade das
+células é Lusa Travel; cada hotel ocupa um quarto.
+
+Os logos dos hotéis vão em creme (versão reversa, para fundo escuro) e os da
+agência em verde-menta — a diferença de tom separa a agência dos parceiros.
+
+## Alturas, medindo do chão
+
+| Elemento | Altura |
+|---|---|
+| topo | 2,20 m |
+| cartão do QR | 1,75 m → 2,13 m |
+| "LUSATRAVEL" da faixa | 1,80 m → 2,05 m |
+| faixa superior (base) | 1,68 m |
+| malha step-and-repeat | 0 → 1,68 m |
+
+O QR tem 27 cm de lado: dá para ler de uns 2,5 m de distância, e a essa altura
+não fica atrás de ninguém.
+
+## Impressão
+
+**Material:** tecido poliéster com impressão por sublimação (*tension fabric*),
+esticado em estrutura tubular. Para backdrop de premiação é o certo — reflexo
+zero no flash, sem vinco, dobra e cabe numa mala. Alternativa mais barata: lona
+440 g/m² **fosca** com ilhoses e estrutura tubular; funciona, mas vinca no
+transporte e reflete mais.
+
+**Estrutura:** tubular de 3 m (tipo *banner stand* ou box truss). A base costuma
+levantar a peça uns 10 cm, o que só ajuda — sobe a faixa superior para 2,30 m.
+
+**Sangria:** o arquivo `-sangria.pdf` traz 10 cm por borda, que é o que o
+tecido consome ao ser esticado na estrutura.
+
+```bash
+cd banner
+python3 build_backdrop.py
+python3 render.py --src ../backdrop-lusatravel.html --util 3000 \
+                  --png backdrop-lusatravel.png --escala 1.6 \
+                  --pdf backdrop-lusatravel-3.00x2.20m.pdf --mm 3000
+python3 verify.py backdrop-lusatravel.png
+BLEED=100 python3 build_backdrop.py
+python3 render.py --src ../backdrop-lusatravel.html --util 3000 \
+                  --pdf backdrop-lusatravel-3.00x2.20m-sangria.pdf --mm 3000
+```

@@ -12,21 +12,23 @@ import argparse
 from playwright.sync_api import sync_playwright
 
 CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
-SRC = "file:///home/user/travel/banner-lusatravel.html"
-UTIL_UN = 1414.0          # largura da area util, em unidades da arte
+UTIL_PADRAO = 1414.0      # largura da area util do banner A3, em unidades da arte
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--png"); ap.add_argument("--pdf")
 ap.add_argument("--escala", type=float, default=1.0)
 ap.add_argument("--mm", type=float, default=None)
+ap.add_argument("--src", default="/home/user/travel/banner-lusatravel.html")
+ap.add_argument("--util", type=float, default=UTIL_PADRAO,
+                help="largura da area util em unidades da arte")
 a = ap.parse_args()
 
 with sync_playwright() as p:
     b = p.chromium.launch(executable_path=CHROME,
                           args=["--no-sandbox", "--font-render-hinting=none"])
-    pg = b.new_page(viewport={"width": 1600, "height": 2200},
+    pg = b.new_page(viewport={"width": 3200, "height": 2400},
                     device_scale_factor=a.escala)
-    pg.goto(SRC, wait_until="networkidle")
+    pg.goto("file://" + a.src, wait_until="networkidle")
     pg.wait_for_timeout(400)
     w, h = pg.evaluate("()=>{const s=document.querySelector('.stage');"
                        "return [s.offsetWidth, s.offsetHeight]}")
@@ -37,8 +39,8 @@ with sync_playwright() as p:
         print(f"PNG  {a.png}  {int(w*a.escala)} x {int(h*a.escala)} px")
 
     if a.pdf:
-        mm = a.mm or 374.0                       # sem --mm, sai no tamanho nativo
-        un_por_mm = UTIL_UN / mm
+        mm = a.mm or a.util * 25.4 / 96          # sem --mm, sai no tamanho nativo
+        un_por_mm = a.util / mm
         pw, ph = w / un_por_mm, h / un_por_mm    # pagina, ja com sangria
         k = (pw / 25.4 * 96) / w                 # escala CSS (96 px = 1 pol)
         pg.add_style_tag(content=(
@@ -50,6 +52,5 @@ with sync_playwright() as p:
                margin={"top": "0", "bottom": "0", "left": "0", "right": "0"})
         sang = (pw - mm) / 2
         print(f"PDF  {a.pdf}  pagina {pw:.0f} x {ph:.0f} mm  "
-              f"| area util {mm:.0f} x {mm*h/w if False else UTIL_UN and mm*2000/UTIL_UN:.0f} mm "
               f"| sangria {sang:.0f} mm/borda")
     b.close()
