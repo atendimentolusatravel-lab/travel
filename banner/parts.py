@@ -1,6 +1,40 @@
 # -*- coding: utf-8 -*-
 """Componentes SVG das pecas: marca da agencia, QR code e sunburst SURYAA."""
-import segno, math
+import os, re, segno, math
+
+PASTA = os.path.dirname(os.path.abspath(__file__))
+
+
+# ---------- ARTE OFICIAL (preferida) ----------
+def arte_oficial(nome, cls="", recolorir=True):
+    """Le banner/<nome>.svg e devolve pronto para embutir, ou None se nao existir.
+
+    Este e o caminho CERTO para a marca: enquanto o arquivo nao estiver aqui,
+    as pecas caem no desenho aproximado de marca(). Basta colocar o SVG oficial
+    nesta pasta que ele passa a ser usado, sem mais nada.
+
+    recolorir troca as cores fixas do arquivo por currentColor, para a arte
+    assumir a cor da peca (menta sobre o verde escuro, por exemplo).
+    """
+    caminho = os.path.join(PASTA, nome + ".svg")
+    if not os.path.exists(caminho):
+        return None
+    svg = open(caminho, encoding="utf-8").read()
+    svg = re.sub(r"<\?xml.*?\?>", "", svg, flags=re.S)
+    svg = re.sub(r"<!DOCTYPE.*?>", "", svg, flags=re.S)
+    svg = re.sub(r"<!--.*?-->", "", svg, flags=re.S)
+    abre = re.search(r"<svg\b[^>]*>", svg, flags=re.S)
+    if not abre:
+        return None
+    tag = abre.group(0)
+    # largura/altura ficam com o CSS; o viewBox e que manda na proporcao
+    limpa = re.sub(r'\s(width|height)="[^"]*"', "", tag)
+    limpa = limpa.replace("<svg", f'<svg class="{cls}"', 1)
+    svg = svg.replace(tag, limpa, 1)
+    if recolorir:
+        svg = re.sub(r'fill="(?!none)[^"]*"', 'fill="currentColor"', svg)
+        svg = re.sub(r"fill:\s*(?!none)[^;\"']+", "fill:currentColor", svg)
+    return svg.strip()
 
 
 # ---------- MARCA DA AGENCIA ----------

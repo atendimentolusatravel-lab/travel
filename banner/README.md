@@ -60,41 +60,49 @@ lockup grande e para as células da malha.
 No **banner** a assinatura da base mantém o nome em 700 contra o "VIAGENS E
 TURISMO" em regular; ali o contraste é que sustenta a linha.
 
-`parts.marca()` desenha o símbolo oficial em vetor. Ele **não é desenhado à
-mão**: sai todo de um círculo de raio `R` centrado em C, e por isso fecha num
-quadrado perfeito de 2R × 2R.
+## O símbolo — LEIA ANTES DE MEXER
+
+**O jeito certo é usar o arquivo oficial da agência.** Coloque um destes na
+pasta `banner/` e ele passa a ser usado automaticamente, sem mais nenhuma
+alteração de código:
+
+| Arquivo | O que substitui |
+|---|---|
+| `banner/logo-lusatravel.svg` | o lockup inteiro — símbolo, nome e "travel agency". Melhor opção: usa também a tipografia real do logotipo |
+| `banner/simbolo-lusatravel.svg` | só o símbolo; o nome continua sendo composto aqui |
+
+`parts.arte_oficial()` lê o arquivo, tira `width`/`height` (quem manda é o
+`viewBox`) e troca as cores fixas por `currentColor`, para a arte assumir a cor
+da peça — menta sobre o verde escuro. Funciona com cor em atributo `fill` ou em
+bloco `<style>`, que é como Illustrator e Figma costumam exportar.
+
+Ao rodar `build_backdrop.py` a primeira linha diz o que está em uso:
+
+```
+marca: logo-lusatravel.svg (lockup completo oficial)
+marca: simbolo-lusatravel.svg (simbolo oficial + tipografia daqui)
+marca: ATENCAO — sem arquivo oficial, usando o desenho aproximado ...
+```
+
+### O desenho aproximado (fallback)
+
+Enquanto não houver arquivo, as peças caem em `parts.marca()`, que **redesenha**
+o símbolo a partir das imagens que a agência mandou pelo chat. Ele sai todo de
+um círculo de raio `R` centrado em C, e por isso fecha num quadrado de 2R × 2R:
 
 | Parte | Construção |
 |---|---|
-| pétala da esquerda | aresta reta no diâmetro vertical; o **acabamento superior é em bico**, não em canto reto — meio círculo fecha o topo em ângulo de 90° e descaracteriza a marca. Perfis em `PERFIS_BICO` (`suave`/`medio`/`longo`), ou `bico="reto"` para o meio círculo |
+| pétala da esquerda | aresta reta no diâmetro vertical. O topo afina de leve (perfil `anexo`, medido sobre a arte em alta resolução) e a metade de baixo fecha como círculo |
 | pétala superior | vesica entre C e o canto superior direito, por dois arcos de raio R centrados no topo do círculo e na sua extremidade direita |
 | pétala inferior | a mesma coisa espelhada |
 | estrela | 4 pontas, à direita, na altura de C |
 
-Tentar aproximar as pétalas como gota ou como lente solta desfigura a marca —
-foi o que aconteceu nas duas primeiras versões. A construção por arcos de raio
-R é o que dá a forma certa; `R` governa a marca inteira.
+Parâmetros: `bico` (perfis em `PERFIS_BICO`), `petala_r`, `estrela_r`,
+`estrela_dx`, `gordura` e `vao`.
 
-Ajustes finos: `estrela_r` e `estrela_dx` (tamanho e afastamento da estrela),
-`gordura` (pontos de controle da estrela — acima de ~0.24/0.50 ela vira losango
-e perde o brilho) e `vao` (folga entre a aresta reta e as pétalas da direita).
-
-> `parts.marca()` é um **redesenho a partir da imagem** que a agência enviou —
-> o arquivo vetorial original nunca chegou. O acabamento superior da pétala
-> segue **em aberto**: `opcoes-topo.png` compara os quatro perfis e o backdrop
-> está saindo com o `medio`. Como o símbolo voltou para a peça impressa, vale
-> fechar essa escolha (ou substituir tudo pelo vetor oficial).
-
-## QR code
-
-Aponta para `https://www.instagram.com/lusatravel/`, nível de correção **H**
-(30%), o que permite o glifo do Instagram no centro. `verify.py` confirma a
-leitura até reduzir a peça a ~790 px de largura.
-
-> Os pontos arredondados são decorativos, mas os *localizadores* (os três
-> quadrados dos cantos) só podem ter cantos levemente arredondados — acima
-> disso vários leitores param de reconhecer o código. O raio atual (0,8
-> módulo) foi o limite testado.
+> Isto é uma **aproximação**, não a marca. Levou várias rodadas e ainda pode ter
+> diferença de acabamento. Não use em peça impressa se o arquivo oficial estiver
+> disponível — coloque o SVG na pasta e o fallback deixa de ser chamado.
 
 ## Logotipos dos hotéis — SUBSTITUIR
 

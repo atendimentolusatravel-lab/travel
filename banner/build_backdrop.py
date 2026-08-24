@@ -11,7 +11,7 @@ superior, e intercalada na malha com os dois hoteis parceiros.
 1 unidade da arte = 1 mm.
 """
 import os
-from parts import qr_svg, sunburst, marca
+from parts import qr_svg, sunburst, marca, arte_oficial
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FONTS = open(os.path.join(HERE, "fonts.css"), encoding="utf-8").read()
@@ -49,11 +49,32 @@ def colide(cx, cy, meia_l=205, meia_a=110):
                and cy + meia_a > z1 and cy - meia_a < z3
                for z0, z1, z2, z3 in ZONAS)
 
-MARCA = marca(cls="{cls}")
+# A ARTE OFICIAL TEM PRIORIDADE. Basta colocar um destes arquivos nesta pasta:
+#   banner/logo-lusatravel.svg     -> lockup completo (simbolo + nome + tag)
+#   banner/simbolo-lusatravel.svg  -> so o simbolo
+# Enquanto nenhum existir, cai no desenho aproximado de parts.marca().
+def simbolo(cls):
+    return arte_oficial("simbolo-lusatravel", cls=cls) or marca(cls=cls)
+
+
+LOGO_LOCK = arte_oficial("logo-lusatravel", cls="art-lock")
+LOGO_CELL = arte_oficial("logo-lusatravel", cls="art-cell")
+SIM_LOCK, SIM_CELL = simbolo("m-lock"), simbolo("m-cell")
+OFICIAL = arte_oficial("simbolo-lusatravel") is not None
+
+if LOGO_LOCK:
+    print("marca: logo-lusatravel.svg (lockup completo oficial)")
+elif OFICIAL:
+    print("marca: simbolo-lusatravel.svg (simbolo oficial + tipografia daqui)")
+else:
+    print("marca: ATENCAO — sem arquivo oficial, usando o desenho aproximado "
+          "de parts.marca(). Ver README.")
 
 
 def lockup_lusa():
-    return (f'<div class="cell-lusa">{MARCA.format(cls="m-cell")}'
+    if LOGO_CELL:                       # arte oficial inteira, sem tipografia daqui
+        return f'<div class="cell-lusa">{LOGO_CELL}</div>'
+    return (f'<div class="cell-lusa">{SIM_CELL}'
             f'<div class="w-cell">LUSATRAVEL</div>'
             f'<div class="t-cell">travel agency</div></div>')
 
@@ -80,6 +101,10 @@ CICLO = [lockup_lusa, lockup_qoya, lockup_lusa, lockup_suryaa]
 # inteiras na altura util para nao cortar logo no rodape
 LINHAS = H // CELL_H
 TOPO = (H - LINHAS * CELL_H) // 2
+
+LOCKUP = LOGO_LOCK or (
+    f'{SIM_LOCK}<div class="w-lock">LUSATRAVEL</div>'
+    f'<div class="t-lock">travel agency</div>')
 
 celulas = []
 y, linha = TOPO, 0
@@ -124,6 +149,7 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
 .lock{{position:absolute;left:0;right:0;top:{LOCK_TOPO}px;z-index:2;
   display:flex;flex-direction:column;align-items:center;color:var(--mint)}}
 .m-lock{{width:350px;height:330px}}
+.art-lock{{width:1700px;height:auto}}
 .w-lock{{font-family:var(--serif);font-weight:300;font-size:270px;
   line-height:.95;letter-spacing:.01em;margin-top:44px}}
 .t-lock{{font-family:var(--sans);font-weight:300;font-size:66px;
@@ -135,6 +161,7 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
 .cell-lusa{{display:flex;flex-direction:column;align-items:center;
   color:var(--mint)}}
 .m-cell{{width:124px;height:117px}}
+.art-cell{{width:430px;height:auto}}
 .w-cell{{font-family:var(--serif);font-weight:300;font-size:64px;
   letter-spacing:.02em;margin-top:16px}}
 .t-cell{{font-family:var(--sans);font-weight:300;font-size:17px;
@@ -157,11 +184,7 @@ body{{background:#0f0f0d;font-family:var(--sans);display:flex;
 
 <div class="stage"><div class="inner">
   {"".join(celulas)}
-  <div class="lock">
-    {MARCA.format(cls="m-lock")}
-    <div class="w-lock">LUSATRAVEL</div>
-    <div class="t-lock">travel agency</div>
-  </div>
+  <div class="lock">{LOCKUP}</div>
   <div class="qr-card">
     {qr_svg(size=QR_LADO)}
     <div class="qr-tag">@LUSATRAVEL</div>
