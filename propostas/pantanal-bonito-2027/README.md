@@ -1,7 +1,19 @@
 # Pantanal & Bonito · Semana Santa 2027 — Sr. Ralph
 
-Duas propostas geradas com a skill `proposta-lusa` (Design System Lusa Travel,
-A3 Portrait, ouro `#da8d00` + Verde Tropical `#2d5e3a`).
+Duas propostas geradas com a skill `proposta-lusa` (Design System Lusa Travel, A3 Portrait).
+
+## Paleta — versão clara (verde e dourado)
+
+| Token | Hex | Uso |
+|---|---|---|
+| `--gold` | `#da8d00` | barra dourada obrigatória, eyebrows, estrelas, valor do total |
+| `--green` | `#1c4433` | logo, títulos, nome na capa, stats, bloco TOTAL |
+| `--dest` | `#2d5e3a` | faixa das páginas de destino, badges do itinerário |
+| `--cream` | `#f8f4ec` | cabeçalho e rodapé (no lugar do preto `#1a1510`) |
+
+**Desvios conscientes do DS**, a pedido do cliente: cabeçalho e rodapé passaram de
+preto quente `#1a1510` para creme, e a capa usa véu creme em vez de overlay escuro.
+O ouro `#da8d00` foi preservado sem aproximação, e a barra dourada segue em todas as páginas.
 
 | Arquivo | Versão | Período | Noites |
 |---|---|---|---|

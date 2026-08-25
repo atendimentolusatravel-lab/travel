@@ -15,7 +15,8 @@ def t(x):  # normaliza whitespace do texto editorial
 
 CSS = """
 %(fonts)s
-:root{ --gold:%(gold)s; --dest:%(dest)s; --ink:#1a1510; --char:#333131; --mut:#9a8d80; --line:#e4ddd2;
+:root{ --gold:%(gold)s; --dest:%(dest)s; --green:#1c4433; --cream:#f8f4ec; --ink:#1a1510;
+       --char:#3a3a36; --mut:#776e63; --line:#e8e2d7;
        --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif; --con:'Montserrat',var(--sans); }
 @page{ size:A3 portrait; margin:0; }
 *{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
@@ -23,41 +24,42 @@ html,body{ font-family:var(--sans); color:var(--char); }
 .page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff;
        page-break-after:always; display:flex; flex-direction:column; }
 .page:last-child{ page-break-after:auto; }
-.hd{ background:var(--ink); height:26mm; display:flex; align-items:center; justify-content:space-between;
+.hd{ background:var(--cream); height:26mm; display:flex; align-items:center; justify-content:space-between;
      padding:0 22mm; flex-shrink:0; }
-.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
-.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--green); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:var(--mut); }
 .goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
-.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center;
+.ft{ margin-top:auto; background:var(--cream); border-top:1px solid rgba(28,68,51,.12); height:14mm; display:flex; align-items:center;
      justify-content:center; gap:14px; flex-shrink:0; }
-.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
-.ft .sep{ color:rgba(255,255,255,.2); }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:var(--green); opacity:.72; text-decoration:none; }
+.ft .sep{ color:rgba(28,68,51,.28); }
 .body{ padding:16mm 22mm; flex:1; }
 .eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:4mm 0 8mm; }
+.h2{ font-size:22pt; font-weight:700; color:var(--green); letter-spacing:-.01em; margin:4mm 0 8mm; }
 .lead{ font-size:11pt; font-weight:300; line-height:1.7; color:var(--mut); margin:-4mm 0 9mm; max-width:200mm; }
 
 /* CAPA */
-.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink);
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--cream);
   display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
-.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
-.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--green); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:var(--mut); }
 .cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
 .cover-photo{ position:absolute; inset:0; background:url('%(capa)s') center/cover no-repeat; }
-.cover-scrim{ position:absolute; inset:0;
-  background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%%, transparent 30%%, rgba(0,0,0,.78) 78%%); z-index:2; }
-.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
-.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
-.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
-.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
-.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-scrim{ position:absolute; inset:0; z-index:2; background:linear-gradient(to bottom,
+    rgba(248,244,236,0) 48%%, rgba(248,244,236,.50) 56%%, rgba(248,244,236,.94) 64%%, var(--cream) 69%%); }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:45mm; z-index:3; color:var(--char); }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.cover-basis{ font-size:10pt; color:var(--mut); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:var(--mut); }
+.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase;
+  line-height:1.1; margin-top:1mm; color:var(--green); }
 .cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
-.cover-tagline{ font-size:10.5pt; font-weight:300; color:rgba(255,255,255,.72); margin-top:4mm; max-width:180mm; line-height:1.6; }
-.stats{ display:flex; gap:14mm; margin-top:11mm; }
-.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
-.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
+.cover-tagline{ font-size:10.5pt; font-weight:300; color:var(--char); margin-top:4mm; max-width:180mm; line-height:1.6; }
+.stats{ display:flex; gap:14mm; margin-top:9mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--green); line-height:1; }
+.stat span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; }
 .cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3;
-  font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+  font-family:var(--con); font-size:9pt; color:var(--mut); line-height:1.7; }
 
 /* ITINERÁRIO */
 .tl{ display:flex; flex-direction:column; }
@@ -65,7 +67,7 @@ html,body{ font-family:var(--sans); color:var(--char); }
 .tl-badge{ width:11mm; height:11mm; border-radius:50%%; background:var(--dest); color:#fff;
   font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 .tl-line{ width:2px; height:14mm; background:var(--line); margin-left:5.4mm; }
-.tl-city{ font-size:14pt; font-weight:700; color:var(--ink); }
+.tl-city{ font-size:14pt; font-weight:700; color:var(--green); }
 .tl-meta{ font-size:10pt; color:var(--mut); margin-top:1mm; }
 .tl-note{ font-size:10pt; font-weight:300; color:var(--char); margin-top:2mm; max-width:170mm; line-height:1.6; }
 
@@ -88,12 +90,13 @@ html,body{ font-family:var(--sans); color:var(--char); }
 .dest-hd .no{ width:12mm; height:12mm; border-radius:50%%; border:2px solid rgba(218,141,0,.9);
   color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
 .dest-photo{ height:120mm; background:#33402e center/cover no-repeat; position:relative; flex-shrink:0; }
-.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800;
-  letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:12pt; font-weight:800;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--green);
+  background:rgba(248,244,236,.88); padding:2.4mm 5mm; border-radius:3px; }
 .dest-text{ font-size:12pt; font-weight:400; line-height:1.7; color:var(--char); }
 .hotel-card{ margin-top:10mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
 .hotel-card .top{ background:#faf7f2; padding:6mm 8mm; border-bottom:1px solid var(--line); }
-.hotel-card .name{ font-size:15pt; font-weight:700; color:var(--ink); }
+.hotel-card .name{ font-size:15pt; font-weight:700; color:var(--green); }
 .hotel-card .stars{ font-size:14pt; color:var(--gold); letter-spacing:2px; margin-top:1mm; }
 .hotel-card .rows{ padding:6mm 8mm; display:grid; grid-template-columns:1fr 1fr; gap:4mm 10mm; }
 .hotel-card .k{ font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
@@ -117,9 +120,9 @@ html,body{ font-family:var(--sans); color:var(--char); }
 .val-note{ font-size:9pt; color:var(--mut); margin-bottom:5mm; }
 .val-row{ display:flex; justify-content:space-between; padding:4mm 0; border-bottom:1px solid var(--line); }
 .val-row .lbl{ font-size:12pt; color:var(--char); }
-.val-row .amt{ font-size:12pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; }
+.val-row .amt{ font-size:12pt; font-weight:700; color:var(--green); font-variant-numeric:tabular-nums; }
 .val-row .amt.tbd{ font-weight:300; color:var(--mut); font-style:italic; }
-.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink);
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--green);
   border-radius:5px; padding:6mm 8mm; margin-top:6mm; }
 .val-total .lbl{ font-size:11pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
 .val-total .amt{ font-size:16pt; font-weight:800; color:var(--gold); }
