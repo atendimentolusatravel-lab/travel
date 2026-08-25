@@ -34,7 +34,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 /* ── Cabeçalho ── */
 .hd{ background:var(--ink); height:18mm; display:flex; align-items:center;
      justify-content:space-between; padding:0 16mm; flex-shrink:0; }
-.hd .logo{ font-size:13pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .logo{ font-size:11pt; font-weight:800; letter-spacing:.06em; color:var(--gold); }
 .hd .tag{ font-size:7pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.45); }
 .goldbar{ height:2.4mm; background:var(--gold); flex-shrink:0; }
 
@@ -82,6 +82,8 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .fields{ margin-top:6mm; display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:8mm; }
 .fld .k{ font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:700; }
 .fld .rule{ margin-top:5mm; border-bottom:1px solid var(--ink); }
+.fld .name{ margin-top:2mm; font-size:12pt; font-weight:700; color:var(--ink);
+  padding-bottom:1.5mm; border-bottom:1px solid var(--ink); }
 
 /* ── Condições ── */
 .cond{ margin-top:6mm; background:#faf7f2; border-left:3px solid var(--gold); padding:4mm 6mm; }
@@ -109,7 +111,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 <section class="page">
 
   <div class="hd">
-    <div class="logo">LUSA TRAVEL</div>
+    <div class="logo">LUSATRAVEL VIAGENS E TURISMO</div>
     <div class="tag">Voucher de Premiação</div>
   </div>
   <div class="goldbar"></div>
@@ -128,11 +130,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   <div class="body">
 
     <div class="eyebrow">Graciosa Country Club · Torneio de Tranca</div>
-    <h1 class="title">Fim de semana em Gramado<br>com todas as despesas pagas</h1>
+    <h1 class="title">Viagem para Gramado<br>com todas as despesas pagas</h1>
     <p class="subtitle">
-      Prêmio destinado à dupla campeã — <strong>vencedor(a) e um acompanhante</strong>.
-      Uma viagem completa à Serra Gaúcha, organizada e acompanhada pela Lusa Travel do
-      primeiro contato ao retorno.
+      Prêmio destinado ao <strong>campeão do torneio</strong>, para o vencedor e um acompanhante.
+      Uma viagem completa à Serra Gaúcha, organizada e acompanhada pela LUSATRAVEL VIAGENS E
+      TURISMO do primeiro contato ao retorno.
     </p>
 
     <div class="incl">
@@ -140,21 +142,21 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         <div class="no">1</div>
         <div>
           <div class="k">Aéreo</div>
-          <div class="v">Passagens aéreas ida e volta para 2 pessoas, saindo de Curitiba</div>
+          <div class="v">Passagens aéreas ida e volta para 2 pessoas, Curitiba ⇄ Porto Alegre</div>
         </div>
       </div>
       <div class="inc">
         <div class="no">2</div>
         <div>
           <div class="k">Transfer</div>
-          <div class="v">Transfer privativo aeroporto ⇄ Gramado, na chegada e no retorno</div>
+          <div class="v">Transfer IN/OUT do aeroporto de Porto Alegre para Gramado</div>
         </div>
       </div>
       <div class="inc">
         <div class="no">3</div>
         <div>
           <div class="k">Hospedagem</div>
-          <div class="v">Final de semana no Hotel Saint Andrews, com café da manhã incluído</div>
+          <div class="v">3 diárias no Hotel Castelo St Andrews, com café da manhã incluído</div>
         </div>
       </div>
       <div class="inc">
@@ -168,13 +170,13 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
     <div class="hotel-card">
       <div class="top">
-        <div class="name">Hotel Saint Andrews · Gramado</div>
+        <div class="name">Hotel Castelo St Andrews · Gramado</div>
         <div class="stars">★★★★★</div>
       </div>
       <div class="rows">
         <div>
           <div class="k">Acomodação</div>
-          <div class="v">Suíte para 2 pessoas</div>
+          <div class="v">Diária para 2 pessoas</div>
         </div>
         <div>
           <div class="k">Plano</div>
@@ -182,15 +184,15 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         </div>
         <div>
           <div class="k">Período</div>
-          <div class="v">Final de semana (2 noites)</div>
+          <div class="v">3 diárias</div>
         </div>
       </div>
     </div>
 
     <div class="fields">
       <div class="fld">
-        <div class="k">Ganhador(a)</div>
-        <div class="rule"></div>
+        <div class="k">Ganhador</div>
+        <div class="name">Sr. Ronaldo Martinez Silva</div>
       </div>
       <div class="fld">
         <div class="k">Data do torneio</div>
@@ -210,7 +212,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         <li>Não válido para feriados prolongados, Natal, Ano-Novo e o período do Natal Luz, salvo confirmação prévia.</li>
         <li>Prêmio pessoal e intransferível, não conversível em dinheiro nem trocável por outro destino.</li>
         <li>Não inclui refeições além do café da manhã, passeios, despesas pessoais e consumo no hotel.</li>
-        <li>Agendamento e emissão diretamente com a Lusa Travel, mediante apresentação deste voucher.</li>
+        <li>Agendamento e emissão diretamente com a LUSATRAVEL VIAGENS E TURISMO, mediante apresentação deste voucher.</li>
       </ul>
     </div>
 
@@ -223,7 +225,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       </div>
       <div class="sig">
         <div class="rule">
-          <div class="who">Lusa Travel</div>
+          <div class="who">LUSATRAVEL VIAGENS E TURISMO</div>
           <div class="role">Operadora responsável</div>
         </div>
       </div>
