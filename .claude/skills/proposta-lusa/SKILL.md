@@ -87,7 +87,7 @@ O template já inclui um exemplo de cada tipo de página. Duplique/remova confor
 
 - E-mail: `atendimentolusatravel@gmail.com`
 - Telefone/WhatsApp: `+55 41 99189-6076` (link: `https://wa.me/5541991896076`)
-- Endereço: Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR
+- Endereço: Rua Grã Nicco, 113 · sala 102 · bloco 2 · Curitiba – PR · 81200-200
 - Marca: **LUSA TRAVEL**
 
 ## Exportar PDF

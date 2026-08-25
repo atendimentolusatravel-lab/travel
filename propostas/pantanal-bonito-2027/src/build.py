@@ -8,7 +8,7 @@ FONTS = io.open("fonts.css", encoding="utf-8").read()
 GOLD, DEST = "#da8d00", "#2d5e3a"          # ouro fixo · Verde Tropical (América Latina tropical)
 MAIL = "atendimentolusatravel@gmail.com"
 WA_T, WA_L = "+55 41 99189-6076", "https://wa.me/5541991896076"
-ADDR = "Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR"
+ADDR = "Rua Grã Nicco, 113 · sala 102 · bloco 2<br>Curitiba – PR · 81200-200"
 
 def t(x):  # normaliza whitespace do texto editorial
     return re.sub(r"\s+", " ", x).strip()
@@ -266,6 +266,9 @@ window.addEventListener('load',function(){
    var over=p.scrollHeight-p.clientHeight, b=p.querySelector('.body'), bo=b?b.scrollHeight-b.clientHeight:0;
    r.push('P'+(i+1)+':page='+over+',body='+bo+(over>1||bo>1?' <<OVERFLOW>>':''));
  });
+ var cc=document.querySelector('.cover-cnt'), cs=document.querySelector('.cover-sig');
+ if(cc&&cs){var gap=cs.getBoundingClientRect().top-cc.getBoundingClientRect().bottom;
+   r.push('COVERGAP='+gap.toFixed(1)+'px'+(gap<15?' <<COLISAO CAPA>>':''));}
  var d=document.createElement('div'); d.id='__diag'; d.textContent='PAGES='+ps.length+' | '+r.join(' | ');
  document.body.appendChild(d);
 });</script>"""
