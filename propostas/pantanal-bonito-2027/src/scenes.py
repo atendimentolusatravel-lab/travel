@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Cenas vetoriais (SVG) — paleta clara (alta-luz), verde e dourado Lusa Travel.
+"""Cenas vetoriais (SVG) — paleta clara (alta-luz), verde e dourado Lusatravel.
 Não há banco de fotos no repositório; ilustração editorial deliberadamente não-fotográfica."""
 import base64, math
 

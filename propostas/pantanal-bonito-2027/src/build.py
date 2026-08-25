@@ -26,7 +26,9 @@ html,body{ font-family:var(--sans); color:var(--char); }
 .page:last-child{ page-break-after:auto; }
 .hd{ background:var(--cream); height:26mm; display:flex; align-items:center; justify-content:space-between;
      padding:0 22mm; flex-shrink:0; }
-.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--green); }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--green); white-space:nowrap; }
+.hd .logo span{ font-size:8pt; font-weight:500; letter-spacing:.2em; text-transform:uppercase;
+  opacity:.6; margin-left:3.4mm; }
 .hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:var(--mut); }
 .goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
 .ft{ margin-top:auto; background:var(--cream); border-top:1px solid rgba(28,68,51,.12); height:14mm; display:flex; align-items:center;
@@ -41,7 +43,9 @@ html,body{ font-family:var(--sans); color:var(--char); }
 /* CAPA */
 .cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--cream);
   display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
-.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--green); }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--green); white-space:nowrap; }
+.cover-hd .logo span{ font-size:8.5pt; font-weight:500; letter-spacing:.2em; text-transform:uppercase;
+  opacity:.6; margin-left:3.6mm; }
 .cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:var(--mut); }
 .cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
 .cover-photo{ position:absolute; inset:0; background:url('%(capa)s') center/cover no-repeat; }
@@ -138,12 +142,13 @@ FT = ('<div class="ft"><a href="mailto:%s">%s</a><span class="sep">·</span>'
       '<a href="%s">%s</a></div>' % (MAIL, MAIL, WA_L, WA_T))
 
 def hd(tag):
-    return ('<div class="hd"><div class="logo">LUSA TRAVEL</div><div class="tag">%s</div></div>'
+    return ('<div class="hd"><div class="logo">LUSATRAVEL<span>Viagens e Turismo</span></div>'
+            '<div class="tag">%s</div></div>'
             '<div class="goldbar"></div>' % tag)
 
 def page_capa(v):
     return f"""<section class="page cover">
-  <div class="cover-hd"><div class="logo">LUSA TRAVEL</div><div class="tag">Glossário</div></div>
+  <div class="cover-hd"><div class="logo">LUSATRAVEL<span>Viagens e Turismo</span></div><div class="tag">Glossário</div></div>
   <div class="cover-bar"></div><div class="cover-photo"></div><div class="cover-scrim"></div>
   <div class="cover-cnt">
     <div class="cover-kicker">Cotação para sua viagem</div>
@@ -269,6 +274,11 @@ window.addEventListener('load',function(){
  var cc=document.querySelector('.cover-cnt'), cs=document.querySelector('.cover-sig');
  if(cc&&cs){var gap=cs.getBoundingClientRect().top-cc.getBoundingClientRect().bottom;
    r.push('COVERGAP='+gap.toFixed(1)+'px'+(gap<15?' <<COLISAO CAPA>>':''));}
+ var mn=1e9;
+ document.querySelectorAll('.hd,.cover-hd').forEach(function(hh){
+   var lg=hh.querySelector('.logo'), tg=hh.querySelector('.tag');
+   if(lg&&tg) mn=Math.min(mn, tg.getBoundingClientRect().left-lg.getBoundingClientRect().right);});
+ if(mn<1e9) r.push('HDGAP='+mn.toFixed(1)+'px'+(mn<20?' <<CABECALHO APERTADO>>':''));
  var d=document.createElement('div'); d.id='__diag'; d.textContent='PAGES='+ps.length+' | '+r.join(' | ');
  document.body.appendChild(d);
 });</script>"""
@@ -289,7 +299,7 @@ def doc(v, diag=False):
     sheet = ("<style>@media screen{body{display:flex;flex-wrap:wrap;gap:8px;background:#6b6b6b;padding:8px}"
              ".page{zoom:.30;box-shadow:0 0 0 3px #111}}</style>") if diag == "sheet" else ""
     return (f'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">'
-            f'<title>{C.CLIENTE_LABEL[:-1]} {C.CLIENTE.title()} | Pantanal e Bonito — Lusa Travel</title>'
+            f'<title>{C.CLIENTE_LABEL[:-1]} {C.CLIENTE.title()} | Pantanal e Bonito — Lusatravel Viagens e Turismo</title>'
             f'<style>{CSS}</style>{sheet}</head><body>' + "".join(pages)
             + (DIAG if diag == "diag" else "") + "</body></html>")
 
@@ -325,8 +335,8 @@ INFO_COMPACTA = [
 ]
 CLOSE_COMPLETA = 'A ordem dos passeios pode ser ajustada no destino conforme o nível dos rios e a previsão de chuva. Em março, convém manter um dia de folga entre a flutuação e o retorno para permitir remarcação — este roteiro já foi montado assim.'
 CLOSE_COMPACTA = 'A ordem dos passeios pode ser ajustada no destino conforme o nível dos rios. Esta versão não tem folga entre a flutuação e o retorno: em caso de chuva forte no sábado, a flutuação no Rio da Prata é remanejada para a manhã de segunda, trocando de lugar com as cachoeiras.'
-CONTEMPLA_COMPLETA = ['6 noites de hospedagem nos hotéis indicados, com os planos de refeição descritos', 'Todas as atividades guiadas do Refúgio Ecológico Caiman, em regime all-inclusive', 'Traslados privativos entre aeroporto, Pantanal e Bonito', 'Vouchers dos passeios de Bonito listados na página de Serviços Adicionais', 'Seguro de viagem para os quatro passageiros', 'Acompanhamento da Lusa Travel antes e durante a viagem']
-CONTEMPLA_COMPACTA = ['4 noites de hospedagem nos hotéis indicados, com os planos de refeição descritos', 'Todas as atividades guiadas do Refúgio Ecológico Caiman, em regime all-inclusive', 'Traslados privativos entre aeroporto, Pantanal e Bonito', 'Vouchers dos passeios de Bonito listados na página de Serviços Adicionais', 'Seguro de viagem para os quatro passageiros', 'Acompanhamento da Lusa Travel antes e durante a viagem']
+CONTEMPLA_COMPLETA = ['6 noites de hospedagem nos hotéis indicados, com os planos de refeição descritos', 'Todas as atividades guiadas do Refúgio Ecológico Caiman, em regime all-inclusive', 'Traslados privativos entre aeroporto, Pantanal e Bonito', 'Vouchers dos passeios de Bonito listados na página de Serviços Adicionais', 'Seguro de viagem para os quatro passageiros', 'Acompanhamento da Lusatravel Viagens e Turismo antes e durante a viagem']
+CONTEMPLA_COMPACTA = ['4 noites de hospedagem nos hotéis indicados, com os planos de refeição descritos', 'Todas as atividades guiadas do Refúgio Ecológico Caiman, em regime all-inclusive', 'Traslados privativos entre aeroporto, Pantanal e Bonito', 'Vouchers dos passeios de Bonito listados na página de Serviços Adicionais', 'Seguro de viagem para os quatro passageiros', 'Acompanhamento da Lusatravel Viagens e Turismo antes e durante a viagem']
 
 VERSOES = {
  "completa": dict(

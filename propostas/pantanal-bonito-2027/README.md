@@ -1,6 +1,6 @@
 # Pantanal & Bonito · Semana Santa 2027 — Sr. Ralph
 
-Duas propostas geradas com a skill `proposta-lusa` (Design System Lusa Travel, A3 Portrait).
+Duas propostas geradas com a skill `proposta-lusa` (Design System Lusatravel Viagens e Turismo, A3 Portrait).
 
 ## Paleta — versão clara (verde e dourado)
 
