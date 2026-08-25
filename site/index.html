@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voucher Castelo Saint Andrews</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<style>
+  :root{
+    --ground:#e7e6df;
+    --ground-t:#5f6355;
+    --sage:#c9d7b6;
+    --sage-lo:#dde5d1;
+    --sage-bd:#b7c8a2;
+    --ink:#1f2a18;
+    --ink2:#41503a;
+    --ink3:#7d8a74;
+    --line:#dcdcd4;
+    --foot:#3f4a37;
+    --paper:#ffffff;
+    --sans:'Poppins','Segoe UI',system-ui,-apple-system,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){ --ground:#1b1e18; --ground-t:#9aa392; }
+  }
+  :root[data-theme="dark"]{ --ground:#1b1e18; --ground-t:#9aa392; }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);color:var(--ground-t);
+    font-family:var(--sans);margin:0;padding:28px 16px 56px;
+    display:flex;flex-direction:column;align-items:center;gap:18px;
+  }
+
+  .meta{
+    width:100%;max-width:210mm;display:flex;flex-wrap:wrap;
+    align-items:baseline;justify-content:space-between;gap:6px 18px;
+    font-size:11px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;
+  }
+  .meta strong{font-weight:600;color:var(--ground-t)}
+  .meta span{font-size:10.5px;letter-spacing:.1em;opacity:.7;text-transform:none}
+
+  /* ---------- folha A4 ---------- */
+  .sheet{
+    width:100%;max-width:210mm;aspect-ratio:210/297;
+    background:var(--paper);color:var(--ink);
+    display:flex;flex-direction:column;overflow:hidden;position:relative;
+    box-shadow:0 1px 2px rgba(20,26,16,.14),0 18px 44px -14px rgba(20,26,16,.32);
+    container-type:inline-size;
+  }
+  .sheet *{box-sizing:border-box;margin:0;padding:0}
+  .inner{flex:1;padding:6.6cqw 6.6cqw 0;position:relative;z-index:1}
+
+  .wm{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%);
+      z-index:0;opacity:.04;pointer-events:none;text-align:center;user-select:none}
+  .wm svg{width:21cqw;height:auto;display:block;margin:0 auto;color:#5c6b52}
+  .wm-t{font-size:3.4cqw;font-weight:600;letter-spacing:.30em;color:#5c6b52;margin-top:.8cqw}
+
+  .head{display:flex;justify-content:space-between;align-items:flex-start;gap:5cqw}
+  .logo{display:flex;flex-direction:column;align-items:flex-start;gap:.6cqw}
+  .logo svg{width:5cqw;height:auto;color:#7f9070}
+  .logo-w{font-size:2.15cqw;font-weight:500;letter-spacing:.13em;color:#4a5742;line-height:1}
+  .logo-s{font-size:1cqw;font-weight:300;letter-spacing:.22em;color:#93a189}
+  .contact{text-align:right;font-size:1.08cqw;font-weight:300;line-height:1.85;color:var(--ink2)}
+  .contact b{display:block;font-size:1.2cqw;font-weight:600;letter-spacing:.10em;color:var(--ink);margin-bottom:.25cqw}
+  .rule{height:1px;background:var(--line);margin:4.3cqw 0 3.3cqw}
+
+  .title{background:var(--sage);color:#26331d;text-align:center;
+    font-size:1.5cqw;font-weight:600;letter-spacing:.26em;text-transform:uppercase;
+    padding:1.1cqw 1.2cqw;border-radius:2px}
+
+  .sec{margin-top:3.3cqw}
+  .sec-h{background:var(--sage-lo);color:#3a4a30;border-left:3px solid var(--sage-bd);
+    font-size:1.2cqw;font-weight:600;letter-spacing:.20em;text-transform:uppercase;
+    padding:.75cqw 1.2cqw;border-radius:2px}
+  .grid,.grid-3{display:grid;gap:2.4cqw 3.8cqw;padding:2.4cqw 1.9cqw 0}
+  .grid{grid-template-columns:1fr 1fr}
+  .grid-3{grid-template-columns:1fr 1fr 1fr}
+  .f-lbl{font-size:.95cqw;font-weight:500;letter-spacing:.17em;text-transform:uppercase;color:var(--ink3);margin-bottom:.4cqw}
+  .f-val{font-size:1.38cqw;font-weight:400;line-height:1.5;color:var(--ink2)}
+  .f-val.strong{font-size:1.58cqw;font-weight:600;color:var(--ink)}
+  .f-val.name{font-weight:500;color:var(--ink);line-height:1.7}
+  .f-val.mark{font-weight:600;color:var(--ink)}
+  .f-val.code{font-size:1.58cqw;font-weight:600;letter-spacing:.10em;color:var(--ink)}
+  .span2{grid-column:span 2}
+
+  .note{margin:3.3cqw 1.9cqw 0;padding:1cqw 1.35cqw;border-left:3px solid var(--sage-bd);
+    background:#f5f8f1;border-radius:2px;font-size:1.12cqw;font-weight:300;line-height:1.7;color:var(--ink2)}
+
+  .foot{background:var(--foot);color:#fff;margin-top:auto;
+    display:flex;align-items:center;justify-content:space-between;gap:4.5cqw;
+    padding:4.2cqw 6.6cqw;position:relative;z-index:1}
+  .foot-logo{display:flex;flex-direction:column;gap:.4cqw;opacity:.55}
+  .foot-logo svg{width:4cqw;height:auto;color:#fff}
+  .foot-logo .logo-w{font-size:1.5cqw;color:#fff;letter-spacing:.14em}
+  .foot-logo .logo-s{font-size:.78cqw;color:rgba(255,255,255,.6)}
+  .foot-c{text-align:center;font-size:1cqw;font-weight:300;line-height:1.9;color:rgba(255,255,255,.75)}
+  .foot-c b{font-weight:600;color:#fff;letter-spacing:.06em}
+  .foot-r{text-align:right;font-size:1cqw;font-weight:300;line-height:1.9;color:rgba(255,255,255,.75)}
+  .foot-r b{display:block;font-weight:600;color:#fff}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="mark" viewBox="0 0 100 120">
+  <path d="M50 4C34 24 26 44 30 64c3 16 12 27 20 34 8-7 17-18 20-34 4-20-4-40-20-60z" fill="currentColor"></path>
+  <path d="M50 34c-13 12-19 26-17 40 1 9 5 17 9 23V34z" fill="#fff" opacity=".28"></path>
+  <rect x="47" y="60" width="6" height="56" rx="3" fill="currentColor"></rect>
+</symbol></svg>
+
+<div class="meta">
+  <strong>Voucher de hospedagem · Ronaldo Martinez Silva</strong>
+  <span>Emitido em 25 de agosto de 2026 · Curitiba</span>
+</div>
+
+<article class="sheet">
+
+  <div class="wm">
+    <svg viewBox="0 0 100 120"><use href="#mark"></use></svg>
+    <div class="wm-t">LUSATRAVEL</div>
+  </div>
+
+  <div class="inner">
+
+    <div class="head">
+      <div class="logo">
+        <svg viewBox="0 0 100 120"><use href="#mark"></use></svg>
+        <div class="logo-w">LUSATRAVEL</div>
+        <div class="logo-s">travel agency</div>
+      </div>
+      <div class="contact">
+        <b>LUSATRAVEL</b>
+        Rua Grã Nicco, 113 — Bloco 2, cj 102 — Curitiba/PR<br>
+        atendimentolusatravel@gmail.com<br>
+        +55 41 3154-1117 · Emergência +55 41 99912-1919
+      </div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="title">Voucher de Hospedagem</div>
+
+    <div class="sec">
+      <div class="sec-h">Fornecedor</div>
+      <div class="grid">
+        <div>
+          <div class="f-lbl">Hotel</div>
+          <div class="f-val strong">CASTELO SAINT ANDREWS</div>
+        </div>
+        <div>
+          <div class="f-lbl">Cidade / País</div>
+          <div class="f-val">Gramado — Brasil</div>
+        </div>
+        <div class="span2">
+          <div class="f-lbl">Endereço</div>
+          <div class="f-val">Condomínio Residencial Vale do Bosque — R. das Flôres, 171 — Bairro Belvedere, Gramado – RS, CEP 95670-242</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-h">Hóspedes</div>
+      <div class="grid">
+        <div>
+          <div class="f-lbl">Nomes</div>
+          <div class="f-val name">Sr. RONALDO MARTINEZ SILVA</div>
+        </div>
+        <div>
+          <div class="f-lbl">Ocupação</div>
+          <div class="f-val">2 adultos · 1 quarto</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-h">Detalhes da Reserva</div>
+      <div class="grid-3">
+        <div>
+          <div class="f-lbl">Check-in</div>
+          <div class="f-val strong">A definir</div>
+        </div>
+        <div>
+          <div class="f-lbl">Check-out</div>
+          <div class="f-val strong">A definir</div>
+        </div>
+        <div>
+          <div class="f-lbl">Noites</div>
+          <div class="f-val strong">3</div>
+        </div>
+        <div>
+          <div class="f-lbl">Acomodação</div>
+          <div class="f-val">Quarto para 2 adultos</div>
+        </div>
+        <div>
+          <div class="f-lbl">Regime de refeições</div>
+          <div class="f-val mark">Café da manhã incluso</div>
+        </div>
+        <div>
+          <div class="f-lbl">Localizador da reserva</div>
+          <div class="f-val code">A confirmar</div>
+        </div>
+      </div>
+
+      <div class="note">
+        Datas de check-in e check-out a definir com o titular da reserva. O voucher será
+        reemitido com as datas confirmadas e o localizador definitivo assim que a reserva
+        for fechada junto ao hotel.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="foot">
+    <div class="foot-logo">
+      <svg viewBox="0 0 100 120"><use href="#mark"></use></svg>
+      <div class="logo-w">LUSATRAVEL</div>
+      <div class="logo-s">travel agency</div>
+    </div>
+    <div class="foot-c">
+      Reserva e pagamento através da <b>LUSATRAVEL</b><br>
+      +55 41 3154-1117 · Emergência 24h +55 41 99912-1919
+    </div>
+    <div class="foot-r">
+      Curitiba,<br>
+      <b>25 de agosto de 2026</b>
+    </div>
+  </div>
+
+</article>
+</body>
+</html>
