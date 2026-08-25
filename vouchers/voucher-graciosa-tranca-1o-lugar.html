@@ -12,8 +12,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
 
 :root{
-  --gold:#da8d00;        /* FIXO — nunca muda */
-  --dest:#2d5e3a;        /* Verde Serra — Gramado / Serra Gaúcha */
+  --gold:#da8d00;        /* FIXO — ouro da marca */
+  --green:#2d5e3a;       /* verde LUSATRAVEL — badges, acentos */
+  --green-deep:#14331f;  /* verde escuro — cabeçalho, rodapé, faixa */
+  --dest:var(--green);
   --ink:#1a1510;         /* preto quente */
   --char:#333131;        /* carvão / texto */
   --mut:#9a8d80;         /* texto discreto */
@@ -32,7 +34,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .page:last-child{ page-break-after:auto; }
 
 /* ── Cabeçalho ── */
-.hd{ background:var(--ink); height:18mm; display:flex; align-items:center;
+.hd{ background:var(--green-deep); height:18mm; display:flex; align-items:center;
      justify-content:space-between; padding:0 16mm; flex-shrink:0; }
 .hd .logo{ font-size:11pt; font-weight:800; letter-spacing:.06em; color:var(--gold); }
 .hd .tag{ font-size:7pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.45); }
@@ -40,7 +42,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
 /* ── Faixa de destino ── */
 .hero{ height:40mm; position:relative; flex-shrink:0;
-  background:linear-gradient(150deg,#4b7a53 0%, var(--dest) 45%, #14301f 100%); }
+  background:linear-gradient(150deg,#3f7a4f 0%, var(--green) 45%, var(--green-deep) 100%); }
 .hero::after{ content:''; position:absolute; inset:0;
   background:linear-gradient(to bottom, rgba(0,0,0,.15) 0%, transparent 45%, rgba(0,0,0,.55) 100%); }
 .hero .cap{ position:absolute; left:16mm; bottom:6mm; z-index:2; color:#fff; }
@@ -50,14 +52,14 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .hero .seal{ position:absolute; right:16mm; top:50%; transform:translateY(-50%); z-index:2;
   width:22mm; height:22mm; border-radius:50%; border:2px solid var(--gold);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  background:rgba(26,21,16,.55); }
+  background:rgba(20,51,31,.6); }
 .hero .seal b{ font-size:14pt; font-weight:800; color:var(--gold); line-height:1; }
 .hero .seal span{ font-size:6pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.7); margin-top:1mm; }
 
 /* ── Corpo ── */
 .body{ padding:7mm 16mm 0; flex:1; display:flex; flex-direction:column; }
 .eyebrow{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.title{ font-size:20pt; font-weight:800; color:var(--ink); letter-spacing:-.01em; line-height:1.12; margin:2.5mm 0 2mm; }
+.title{ font-size:20pt; font-weight:800; color:var(--green-deep); letter-spacing:-.01em; line-height:1.12; margin:2.5mm 0 2mm; }
 .subtitle{ font-size:9.5pt; font-weight:300; line-height:1.55; color:var(--char); max-width:150mm; }
 
 /* ── Inclusões ── */
@@ -70,9 +72,9 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
 /* ── Cartão do hotel ── */
 .hotel-card{ margin-top:6mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
-.hotel-card .top{ background:#faf7f2; padding:3.5mm 6mm; border-bottom:1px solid var(--line);
+.hotel-card .top{ background:#f2f6f1; padding:3.5mm 6mm; border-bottom:1px solid var(--line);
   display:flex; align-items:center; justify-content:space-between; }
-.hotel-card .name{ font-size:12pt; font-weight:700; color:var(--ink); }
+.hotel-card .name{ font-size:12pt; font-weight:700; color:var(--green-deep); }
 .hotel-card .stars{ font-size:12pt; color:var(--gold); letter-spacing:2px; }
 .hotel-card .rows{ padding:4mm 6mm; display:grid; grid-template-columns:1fr 1fr 1fr; gap:4mm 8mm; }
 .hotel-card .k{ font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
@@ -82,11 +84,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .fields{ margin-top:6mm; display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:8mm; }
 .fld .k{ font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:700; }
 .fld .rule{ margin-top:5mm; border-bottom:1px solid var(--ink); }
-.fld .name{ margin-top:2mm; font-size:12pt; font-weight:700; color:var(--ink);
+.fld .name{ margin-top:2mm; font-size:12pt; font-weight:700; color:var(--green-deep);
   padding-bottom:1.5mm; border-bottom:1px solid var(--ink); }
 
 /* ── Condições ── */
-.cond{ margin-top:6mm; background:#faf7f2; border-left:3px solid var(--gold); padding:4mm 6mm; }
+.cond{ margin-top:6mm; background:#f2f6f1; border-left:3px solid var(--gold); padding:4mm 6mm; }
 .cond-h{ font-size:8pt; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:2.5mm; }
 .cond ul{ list-style:none; }
 .cond li{ font-size:7.6pt; line-height:1.5; color:var(--char); padding-left:4mm; position:relative; }
@@ -95,12 +97,12 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 /* ── Assinaturas ── */
 .sigs{ margin-top:auto; padding:6mm 0 5mm; display:grid; grid-template-columns:1fr 1fr; gap:14mm; }
 .sig{ text-align:center; }
-.sig .rule{ border-top:1px solid var(--ink); padding-top:2mm; }
-.sig .who{ font-size:9pt; font-weight:600; color:var(--ink); }
+.sig .rule{ border-top:1px solid var(--green-deep); padding-top:2mm; }
+.sig .who{ font-size:9pt; font-weight:600; color:var(--green-deep); }
 .sig .role{ font-size:7.5pt; letter-spacing:.1em; text-transform:uppercase; color:var(--mut); margin-top:.6mm; }
 
 /* ── Rodapé ── */
-.ft{ background:var(--ink); height:12mm; display:flex; align-items:center;
+.ft{ background:var(--green-deep); height:12mm; display:flex; align-items:center;
      justify-content:center; gap:10px; flex-shrink:0; }
 .ft a, .ft span{ font-family:var(--con); font-size:8pt; color:rgba(255,255,255,.5); text-decoration:none; }
 .ft .sep{ color:rgba(255,255,255,.22); }
@@ -156,7 +158,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         <div class="no">3</div>
         <div>
           <div class="k">Hospedagem</div>
-          <div class="v">3 diárias no Hotel Castelo St Andrews, com café da manhã incluído</div>
+          <div class="v">Final de semana, 3 noites no Hotel Castelo St Andrews, com café da manhã</div>
         </div>
       </div>
       <div class="inc">
@@ -184,7 +186,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         </div>
         <div>
           <div class="k">Período</div>
-          <div class="v">3 diárias</div>
+          <div class="v">Final de semana · 3 noites</div>
         </div>
       </div>
     </div>
@@ -196,11 +198,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       </div>
       <div class="fld">
         <div class="k">Data do torneio</div>
-        <div class="rule"></div>
+        <div class="name">2025-2026</div>
       </div>
       <div class="fld">
         <div class="k">Código do voucher</div>
-        <div class="rule"></div>
+        <div class="name">LT-200126</div>
       </div>
     </div>
 
