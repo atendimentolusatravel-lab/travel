@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """Conteúdo editorial das duas propostas — Família Ralph · Semana Santa 2027."""
 
-CLIENTE = "FAMÍLIA RALPH"
+CLIENTE_LABEL = "Roteiro para:"      # rótulo da capa (o DS aplica caixa alta via CSS)
+CLIENTE       = "SR. RALPH"
 DESTINO = "Pantanal &amp; Bonito · Mato Grosso do Sul"
 PAX     = "2 adultos + 2 crianças (9 e 10 anos)"
 

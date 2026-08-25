@@ -145,7 +145,7 @@ def page_capa(v):
   <div class="cover-cnt">
     <div class="cover-kicker">Cotação para sua viagem</div>
     <div class="cover-basis">Baseado em {C.PAX} · {v['periodo']}</div>
-    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-to">{C.CLIENTE_LABEL}</div>
     <div class="cover-name">{C.CLIENTE}</div>
     <div class="cover-dest">{C.DESTINO}</div>
     <div class="cover-tagline">{v['tagline']}</div>
@@ -283,7 +283,7 @@ def doc(v, diag=False):
     sheet = ("<style>@media screen{body{display:flex;flex-wrap:wrap;gap:8px;background:#6b6b6b;padding:8px}"
              ".page{zoom:.30;box-shadow:0 0 0 3px #111}}</style>") if diag == "sheet" else ""
     return (f'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">'
-            f'<title>{C.CLIENTE} | Pantanal e Bonito — Lusa Travel</title>'
+            f'<title>{C.CLIENTE_LABEL[:-1]} {C.CLIENTE.title()} | Pantanal e Bonito — Lusa Travel</title>'
             f'<style>{CSS}</style>{sheet}</head><body>' + "".join(pages)
             + (DIAG if diag == "diag" else "") + "</body></html>")
 

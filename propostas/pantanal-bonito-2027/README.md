@@ -1,4 +1,4 @@
-# Pantanal & Bonito · Semana Santa 2027 — Família Ralph
+# Pantanal & Bonito · Semana Santa 2027 — Sr. Ralph
 
 Duas propostas geradas com a skill `proposta-lusa` (Design System Lusa Travel,
 A3 Portrait, ouro `#da8d00` + Verde Tropical `#2d5e3a`).
