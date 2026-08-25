@@ -34,27 +34,27 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .page:last-child{ page-break-after:auto; }
 
 /* ── Cabeçalho ── */
-.hd{ background:var(--green-deep); height:18mm; display:flex; align-items:center;
+.hd{ background:#fbfaf6; height:18mm; display:flex; align-items:center;
      justify-content:space-between; padding:0 16mm; flex-shrink:0; }
-.hd .logo{ font-size:11pt; font-weight:800; letter-spacing:.06em; color:var(--gold); }
-.hd .tag{ font-size:7pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.45); }
+.hd .logo{ font-size:11pt; font-weight:800; letter-spacing:.06em; color:var(--green-deep); }
+.hd .tag{ font-size:7pt; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); font-weight:600; }
 .goldbar{ height:2.4mm; background:var(--gold); flex-shrink:0; }
 
 /* ── Faixa de destino ── */
 .hero{ height:40mm; position:relative; flex-shrink:0;
-  background:linear-gradient(150deg,#3f7a4f 0%, var(--green) 45%, var(--green-deep) 100%); }
+  background:linear-gradient(150deg,#f1f6ee 0%, #dcebd8 55%, #c6dcc3 100%); }
 .hero::after{ content:''; position:absolute; inset:0;
-  background:linear-gradient(to bottom, rgba(0,0,0,.15) 0%, transparent 45%, rgba(0,0,0,.55) 100%); }
-.hero .cap{ position:absolute; left:16mm; bottom:6mm; z-index:2; color:#fff; }
-.hero .cap .kick{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.65); }
+  background:linear-gradient(to bottom, rgba(255,255,255,.35) 0%, transparent 60%, rgba(20,51,31,.06) 100%); }
+.hero .cap{ position:absolute; left:16mm; bottom:6mm; z-index:2; color:var(--green-deep); }
+.hero .cap .kick{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:#5f7a63; font-weight:600; }
 .hero .cap .city{ font-size:18pt; font-weight:800; letter-spacing:.06em; text-transform:uppercase; line-height:1.1; margin-top:1mm;
-  text-shadow:0 1px 8px rgba(0,0,0,.5); }
+  color:var(--green-deep); }
 .hero .seal{ position:absolute; right:16mm; top:50%; transform:translateY(-50%); z-index:2;
   width:22mm; height:22mm; border-radius:50%; border:2px solid var(--gold);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  background:rgba(20,51,31,.6); }
-.hero .seal b{ font-size:14pt; font-weight:800; color:var(--gold); line-height:1; }
-.hero .seal span{ font-size:6pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.7); margin-top:1mm; }
+  background:rgba(255,255,255,.72); }
+.hero .seal b{ font-size:14pt; font-weight:800; color:#a86b00; line-height:1; }
+.hero .seal span{ font-size:6pt; letter-spacing:.18em; text-transform:uppercase; color:var(--green-deep); font-weight:600; margin-top:1mm; }
 
 /* ── Corpo ── */
 .body{ padding:7mm 16mm 0; flex:1; display:flex; flex-direction:column; }
