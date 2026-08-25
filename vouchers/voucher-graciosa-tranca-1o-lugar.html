@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Voucher de Premiação | Torneio de Tranca — Graciosa Country Club</title>
+<style>
+/* ══════════════════════════════════════════════════════════════
+   LUSA TRAVEL — VOUCHER DE PREMIAÇÃO (A4 Portrait, print-ready)
+   Torneio de Tranca · Graciosa Country Club · 1º Lugar
+   Tokens conforme design-system.html (ouro #da8d00 fixo).
+   ══════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+  --gold:#da8d00;        /* FIXO — nunca muda */
+  --dest:#2d5e3a;        /* Verde Serra — Gramado / Serra Gaúcha */
+  --ink:#1a1510;         /* preto quente */
+  --char:#333131;        /* carvão / texto */
+  --mut:#9a8d80;         /* texto discreto */
+  --line:#e4ddd2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A4 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page{
+  width:210mm; height:297mm; position:relative; overflow:hidden;
+  background:#fff; page-break-after:always; display:flex; flex-direction:column;
+}
+.page:last-child{ page-break-after:auto; }
+
+/* ── Cabeçalho ── */
+.hd{ background:var(--ink); height:18mm; display:flex; align-items:center;
+     justify-content:space-between; padding:0 16mm; flex-shrink:0; }
+.hd .logo{ font-size:13pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:7pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.45); }
+.goldbar{ height:2.4mm; background:var(--gold); flex-shrink:0; }
+
+/* ── Faixa de destino ── */
+.hero{ height:40mm; position:relative; flex-shrink:0;
+  background:linear-gradient(150deg,#4b7a53 0%, var(--dest) 45%, #14301f 100%); }
+.hero::after{ content:''; position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,.15) 0%, transparent 45%, rgba(0,0,0,.55) 100%); }
+.hero .cap{ position:absolute; left:16mm; bottom:6mm; z-index:2; color:#fff; }
+.hero .cap .kick{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.65); }
+.hero .cap .city{ font-size:18pt; font-weight:800; letter-spacing:.06em; text-transform:uppercase; line-height:1.1; margin-top:1mm;
+  text-shadow:0 1px 8px rgba(0,0,0,.5); }
+.hero .seal{ position:absolute; right:16mm; top:50%; transform:translateY(-50%); z-index:2;
+  width:22mm; height:22mm; border-radius:50%; border:2px solid var(--gold);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  background:rgba(26,21,16,.55); }
+.hero .seal b{ font-size:14pt; font-weight:800; color:var(--gold); line-height:1; }
+.hero .seal span{ font-size:6pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.7); margin-top:1mm; }
+
+/* ── Corpo ── */
+.body{ padding:7mm 16mm 0; flex:1; display:flex; flex-direction:column; }
+.eyebrow{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.title{ font-size:20pt; font-weight:800; color:var(--ink); letter-spacing:-.01em; line-height:1.12; margin:2.5mm 0 2mm; }
+.subtitle{ font-size:9.5pt; font-weight:300; line-height:1.55; color:var(--char); max-width:150mm; }
+
+/* ── Inclusões ── */
+.incl{ margin-top:6mm; display:grid; grid-template-columns:1fr 1fr; gap:4mm 7mm; }
+.inc{ display:flex; gap:4mm; align-items:flex-start; }
+.inc .no{ width:7mm; height:7mm; border-radius:50%; background:var(--dest); color:#fff;
+  font-size:9pt; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.inc .k{ font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.inc .v{ font-size:9.5pt; font-weight:400; color:var(--char); line-height:1.5; margin-top:.8mm; }
+
+/* ── Cartão do hotel ── */
+.hotel-card{ margin-top:6mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.hotel-card .top{ background:#faf7f2; padding:3.5mm 6mm; border-bottom:1px solid var(--line);
+  display:flex; align-items:center; justify-content:space-between; }
+.hotel-card .name{ font-size:12pt; font-weight:700; color:var(--ink); }
+.hotel-card .stars{ font-size:12pt; color:var(--gold); letter-spacing:2px; }
+.hotel-card .rows{ padding:4mm 6mm; display:grid; grid-template-columns:1fr 1fr 1fr; gap:4mm 8mm; }
+.hotel-card .k{ font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.hotel-card .v{ font-size:9.5pt; font-weight:300; color:var(--char); margin-top:1mm; }
+
+/* ── Campos do ganhador ── */
+.fields{ margin-top:6mm; display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:8mm; }
+.fld .k{ font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.fld .rule{ margin-top:5mm; border-bottom:1px solid var(--ink); }
+
+/* ── Condições ── */
+.cond{ margin-top:6mm; background:#faf7f2; border-left:3px solid var(--gold); padding:4mm 6mm; }
+.cond-h{ font-size:8pt; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:2.5mm; }
+.cond ul{ list-style:none; }
+.cond li{ font-size:7.6pt; line-height:1.5; color:var(--char); padding-left:4mm; position:relative; }
+.cond li::before{ content:'—'; position:absolute; left:0; color:var(--mut); }
+
+/* ── Assinaturas ── */
+.sigs{ margin-top:auto; padding:6mm 0 5mm; display:grid; grid-template-columns:1fr 1fr; gap:14mm; }
+.sig{ text-align:center; }
+.sig .rule{ border-top:1px solid var(--ink); padding-top:2mm; }
+.sig .who{ font-size:9pt; font-weight:600; color:var(--ink); }
+.sig .role{ font-size:7.5pt; letter-spacing:.1em; text-transform:uppercase; color:var(--mut); margin-top:.6mm; }
+
+/* ── Rodapé ── */
+.ft{ background:var(--ink); height:12mm; display:flex; align-items:center;
+     justify-content:center; gap:10px; flex-shrink:0; }
+.ft a, .ft span{ font-family:var(--con); font-size:8pt; color:rgba(255,255,255,.5); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.22); }
+</style>
+</head>
+<body>
+
+<section class="page">
+
+  <div class="hd">
+    <div class="logo">LUSA TRAVEL</div>
+    <div class="tag">Voucher de Premiação</div>
+  </div>
+  <div class="goldbar"></div>
+
+  <div class="hero">
+    <div class="cap">
+      <div class="kick">Serra Gaúcha · Rio Grande do Sul</div>
+      <div class="city">Gramado</div>
+    </div>
+    <div class="seal">
+      <b>1º</b>
+      <span>Lugar</span>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <div class="eyebrow">Graciosa Country Club · Torneio de Tranca</div>
+    <h1 class="title">Fim de semana em Gramado<br>com todas as despesas pagas</h1>
+    <p class="subtitle">
+      Prêmio destinado à dupla campeã — <strong>vencedor(a) e um acompanhante</strong>.
+      Uma viagem completa à Serra Gaúcha, organizada e acompanhada pela Lusa Travel do
+      primeiro contato ao retorno.
+    </p>
+
+    <div class="incl">
+      <div class="inc">
+        <div class="no">1</div>
+        <div>
+          <div class="k">Aéreo</div>
+          <div class="v">Passagens aéreas ida e volta para 2 pessoas, saindo de Curitiba</div>
+        </div>
+      </div>
+      <div class="inc">
+        <div class="no">2</div>
+        <div>
+          <div class="k">Transfer</div>
+          <div class="v">Transfer privativo aeroporto ⇄ Gramado, na chegada e no retorno</div>
+        </div>
+      </div>
+      <div class="inc">
+        <div class="no">3</div>
+        <div>
+          <div class="k">Hospedagem</div>
+          <div class="v">Final de semana no Hotel Saint Andrews, com café da manhã incluído</div>
+        </div>
+      </div>
+      <div class="inc">
+        <div class="no">4</div>
+        <div>
+          <div class="k">Seguro</div>
+          <div class="v">Seguro viagem para os dois viajantes durante todo o período</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <div class="top">
+        <div class="name">Hotel Saint Andrews · Gramado</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="rows">
+        <div>
+          <div class="k">Acomodação</div>
+          <div class="v">Suíte para 2 pessoas</div>
+        </div>
+        <div>
+          <div class="k">Plano</div>
+          <div class="v">Café da manhã incluído</div>
+        </div>
+        <div>
+          <div class="k">Período</div>
+          <div class="v">Final de semana (2 noites)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fields">
+      <div class="fld">
+        <div class="k">Ganhador(a)</div>
+        <div class="rule"></div>
+      </div>
+      <div class="fld">
+        <div class="k">Data do torneio</div>
+        <div class="rule"></div>
+      </div>
+      <div class="fld">
+        <div class="k">Código do voucher</div>
+        <div class="rule"></div>
+      </div>
+    </div>
+
+    <div class="cond">
+      <div class="cond-h">Condições de uso</div>
+      <ul>
+        <li>Válido por 12 meses a contar da data de emissão, para 1 (uma) viagem de 2 (duas) pessoas.</li>
+        <li>Datas sujeitas a disponibilidade aérea e de hospedagem; solicitar com no mínimo 30 dias de antecedência.</li>
+        <li>Não válido para feriados prolongados, Natal, Ano-Novo e o período do Natal Luz, salvo confirmação prévia.</li>
+        <li>Prêmio pessoal e intransferível, não conversível em dinheiro nem trocável por outro destino.</li>
+        <li>Não inclui refeições além do café da manhã, passeios, despesas pessoais e consumo no hotel.</li>
+        <li>Agendamento e emissão diretamente com a Lusa Travel, mediante apresentação deste voucher.</li>
+      </ul>
+    </div>
+
+    <div class="sigs">
+      <div class="sig">
+        <div class="rule">
+          <div class="who">Graciosa Country Club</div>
+          <div class="role">Comissão do Torneio</div>
+        </div>
+      </div>
+      <div class="sig">
+        <div class="rule">
+          <div class="who">Lusa Travel</div>
+          <div class="role">Operadora responsável</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    <span class="sep">·</span>
+    <span>Alameda Princesa Izabel, 1700 · Curitiba – PR</span>
+  </div>
+
+</section>
+
+</body>
+</html>
