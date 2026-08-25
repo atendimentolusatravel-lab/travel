@@ -13,8 +13,12 @@
 
 :root{
   --gold:#da8d00;        /* FIXO — ouro da marca */
-  --green:#2d5e3a;       /* verde LUSATRAVEL — badges, acentos */
-  --green-deep:#14331f;  /* verde escuro — cabeçalho, rodapé, faixa */
+  --moss:#73805c;        /* VERDE MUSGO — base da paleta */
+  --green:#66714f;       /* musgo médio — badges e acentos */
+  --green-deep:#4a533a;  /* musgo escuro — títulos e textos */
+  --moss-soft:#e9ece0;   /* musgo claro — barra superior */
+  --moss-tint:#f4f5ec;   /* musgo tênue — cartões e condições */
+  --moss-foot:#57624a;   /* musgo — barra inferior */
   --dest:var(--green);
   --ink:#1a1510;         /* preto quente */
   --char:#333131;        /* carvão / texto */
@@ -34,7 +38,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .page:last-child{ page-break-after:auto; }
 
 /* ── Cabeçalho ── */
-.hd{ background:#fbfaf6; height:18mm; display:flex; align-items:center;
+.hd{ background:var(--moss-soft); height:18mm; display:flex; align-items:center;
      justify-content:space-between; padding:0 16mm; flex-shrink:0; }
 .hd .logo{ font-size:11pt; font-weight:800; letter-spacing:.06em; color:var(--green-deep); }
 .hd .tag{ font-size:7pt; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); font-weight:600; }
@@ -42,11 +46,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
 /* ── Faixa de destino ── */
 .hero{ height:40mm; position:relative; flex-shrink:0;
-  background:linear-gradient(150deg,#f1f6ee 0%, #dcebd8 55%, #c6dcc3 100%); }
+  background:linear-gradient(150deg,#f5f7ee 0%, #e2e7d3 55%, #cdd4b8 100%); }
 .hero::after{ content:''; position:absolute; inset:0;
-  background:linear-gradient(to bottom, rgba(255,255,255,.35) 0%, transparent 60%, rgba(20,51,31,.06) 100%); }
+  background:linear-gradient(to bottom, rgba(255,255,255,.35) 0%, transparent 60%, rgba(74,83,58,.07) 100%); }
 .hero .cap{ position:absolute; left:16mm; bottom:6mm; z-index:2; color:var(--green-deep); }
-.hero .cap .kick{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:#5f7a63; font-weight:600; }
+.hero .cap .kick{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:var(--moss); font-weight:600; }
 .hero .cap .city{ font-size:18pt; font-weight:800; letter-spacing:.06em; text-transform:uppercase; line-height:1.1; margin-top:1mm;
   color:var(--green-deep); }
 .hero .seal{ position:absolute; right:16mm; top:50%; transform:translateY(-50%); z-index:2;
@@ -72,7 +76,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
 /* ── Cartão do hotel ── */
 .hotel-card{ margin-top:6mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
-.hotel-card .top{ background:#f2f6f1; padding:3.5mm 6mm; border-bottom:1px solid var(--line);
+.hotel-card .top{ background:var(--moss-tint); padding:3.5mm 6mm; border-bottom:1px solid var(--line);
   display:flex; align-items:center; justify-content:space-between; }
 .hotel-card .name{ font-size:12pt; font-weight:700; color:var(--green-deep); }
 .hotel-card .stars{ font-size:12pt; color:var(--gold); letter-spacing:2px; }
@@ -88,7 +92,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   padding-bottom:1.5mm; border-bottom:1px solid var(--ink); }
 
 /* ── Condições ── */
-.cond{ margin-top:6mm; background:#f2f6f1; border-left:3px solid var(--gold); padding:4mm 6mm; }
+.cond{ margin-top:6mm; background:var(--moss-tint); border-left:3px solid var(--gold); padding:4mm 6mm; }
 .cond-h{ font-size:8pt; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:2.5mm; }
 .cond ul{ list-style:none; }
 .cond li{ font-size:7.6pt; line-height:1.5; color:var(--char); padding-left:4mm; position:relative; }
@@ -102,10 +106,10 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .sig .role{ font-size:7.5pt; letter-spacing:.1em; text-transform:uppercase; color:var(--mut); margin-top:.6mm; }
 
 /* ── Rodapé ── */
-.ft{ background:var(--green-deep); height:12mm; display:flex; align-items:center;
+.ft{ background:var(--moss-foot); height:12mm; display:flex; align-items:center;
      justify-content:center; gap:10px; flex-shrink:0; }
-.ft a, .ft span{ font-family:var(--con); font-size:8pt; color:rgba(255,255,255,.5); text-decoration:none; }
-.ft .sep{ color:rgba(255,255,255,.22); }
+.ft a, .ft span{ font-family:var(--con); font-size:8pt; color:rgba(255,255,255,.82); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.45); }
 </style>
 </head>
 <body>
