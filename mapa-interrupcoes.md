@@ -7,7 +7,7 @@ Horário de trabalho: 09:00 – 18:00
 
 ## Atividade principal atual
 
-_Nenhuma em andamento — aguardando próxima atividade._
+**Assento da Camila Barrozo para Londres** — iniciada em 26/08/2026 às 15:35
 
 ## Histórico de atividades principais
 
