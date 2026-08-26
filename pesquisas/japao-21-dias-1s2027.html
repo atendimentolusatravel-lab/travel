@@ -1,0 +1,783 @@
+<title>Curitiba–Tóquio em 21 Dias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --ground:#F5F7FA;
+  --surface:#FFFFFF;
+  --surface-2:#EDF1F7;
+  --ink:#141A24;
+  --ink-soft:#576174;
+  --ink-faint:#8590A3;
+  --line:#DCE2EC;
+  --line-strong:#C3CDDC;
+  --indigo:#2A3F6B;
+  --indigo-deep:#1B2A4A;
+  --indigo-wash:#E4EAF4;
+  --moegi:#3F6F45;
+  --moegi-wash:#E0EDE1;
+  --kaki:#A94D2B;
+  --kaki-wash:#F6E5DE;
+  --sakura:#B45E78;
+  --sakura-wash:#F5E4E9;
+
+  --f-display:"Shippori Mincho B1",Georgia,"Times New Roman",serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+
+  --max:74rem;
+  --step:clamp(2.5rem,5vw,4.25rem);
+}
+
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#10131A;
+    --surface:#191D27;
+    --surface-2:#212734;
+    --ink:#E6EAF2;
+    --ink-soft:#9BA5B8;
+    --ink-faint:#6E7A8E;
+    --line:#2A303D;
+    --line-strong:#3A4354;
+    --indigo:#8AA4DC;
+    --indigo-deep:#B3C6EC;
+    --indigo-wash:#1E2739;
+    --moegi:#82B788;
+    --moegi-wash:#1B2A1E;
+    --kaki:#DE8B62;
+    --kaki-wash:#2E1F17;
+    --sakura:#DF9CB0;
+    --sakura-wash:#2C1D23;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#10131A;
+  --surface:#191D27;
+  --surface-2:#212734;
+  --ink:#E6EAF2;
+  --ink-soft:#9BA5B8;
+  --ink-faint:#6E7A8E;
+  --line:#2A303D;
+  --line-strong:#3A4354;
+  --indigo:#8AA4DC;
+  --indigo-deep:#B3C6EC;
+  --indigo-wash:#1E2739;
+  --moegi:#82B788;
+  --moegi-wash:#1B2A1E;
+  --kaki:#DE8B62;
+  --kaki-wash:#2E1F17;
+  --sakura:#DF9CB0;
+  --sakura-wash:#2C1D23;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:var(--f-body);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(1.1rem,4vw,2.5rem)}
+
+h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0;line-height:1.25}
+p{margin:0}
+a{color:var(--indigo);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--indigo);outline-offset:3px;border-radius:2px}
+
+.eyebrow{
+  font-family:var(--f-mono);font-size:.72rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);
+}
+
+/* ---------- masthead ---------- */
+.masthead{
+  border-bottom:1px solid var(--line);
+  background:var(--surface);
+}
+.masthead .wrap{
+  display:flex;flex-wrap:wrap;gap:1rem 2rem;
+  align-items:baseline;justify-content:space-between;
+  padding-top:1.1rem;padding-bottom:1.1rem;
+}
+.brand{font-family:var(--f-display);font-weight:700;letter-spacing:.02em;font-size:1rem}
+.brand span{color:var(--indigo)}
+
+.hero{padding:var(--step) 0 calc(var(--step) * .7)}
+.hero h1{font-size:clamp(2.4rem,6.2vw,4.1rem);letter-spacing:-.015em}
+.hero .route{
+  font-family:var(--f-mono);font-size:clamp(.8rem,2vw,.95rem);
+  letter-spacing:.1em;color:var(--indigo);margin-top:1.1rem;font-weight:500;
+}
+.hero .lede{
+  margin-top:1.5rem;max-width:34em;font-size:1.075rem;color:var(--ink-soft);
+}
+
+/* ---------- verdict ---------- */
+.verdict{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-top:3px solid var(--moegi);
+  border-radius:3px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
+}
+.verdict > div{padding:1.6rem 1.7rem;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:.45rem}
+.verdict > div:last-child{border-right:0}
+.verdict dt{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-faint)}
+.verdict dd{margin:0;font-family:var(--f-display);font-size:1.28rem;font-weight:700;line-height:1.3}
+.verdict .note{font-size:.875rem;color:var(--ink-soft);line-height:1.55}
+.verdict .hi{color:var(--moegi)}
+
+/* ---------- sections ---------- */
+section{padding:var(--step) 0}
+.sec-head{display:flex;flex-direction:column;gap:.6rem;margin-bottom:2.2rem;max-width:46em}
+.sec-head h2{font-size:clamp(1.65rem,3.4vw,2.3rem);letter-spacing:-.01em}
+.sec-head p{color:var(--ink-soft)}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ---------- calendar band ---------- */
+.band{
+  background:var(--surface);border:1px solid var(--line);border-radius:3px;
+  padding:1.7rem clamp(1rem,3vw,1.9rem) 1.4rem;
+}
+.band-scroll{overflow-x:auto}
+.band-inner{min-width:44rem}
+.months{
+  display:grid;
+  grid-template-columns:31fr 28fr 31fr 30fr 31fr 30fr;
+  border-bottom:1px solid var(--line-strong);
+}
+.months div{
+  font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-faint);padding:0 0 .5rem .5rem;border-left:1px solid var(--line);
+}
+.months div:first-child{border-left:0;padding-left:0}
+
+.lane{position:relative;height:2.45rem;margin-top:.75rem}
+.lane-label{
+  font-family:var(--f-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-faint);margin-top:1.35rem;
+}
+.gridlines{position:absolute;inset:0;display:grid;grid-template-columns:31fr 28fr 31fr 30fr 31fr 30fr;pointer-events:none}
+.gridlines span{border-left:1px solid var(--line)}
+.gridlines span:first-child{border-left:0}
+
+.win{
+  position:absolute;top:0;height:100%;
+  display:flex;align-items:center;padding:0 .6rem;
+  border-radius:2px;font-size:.78rem;font-weight:500;
+  white-space:nowrap;overflow:hidden;
+}
+.win b{font-weight:700}
+.win.rec{background:var(--moegi-wash);color:var(--moegi);border:1px solid var(--moegi);box-shadow:0 0 0 3px var(--moegi-wash)}
+.win.sak{background:var(--sakura-wash);color:var(--sakura);border:1px solid var(--sakura)}
+.win.eco{background:var(--indigo-wash);color:var(--indigo);border:1px solid var(--line-strong)}
+.win.bad{background:var(--kaki-wash);color:var(--kaki);border:1px solid var(--kaki)}
+.win.bad::before{
+  content:"";position:absolute;inset:0;opacity:.28;
+  background:repeating-linear-gradient(45deg,transparent 0 5px,currentColor 5px 6px);
+}
+
+/* ---------- ranked periods ---------- */
+.cards{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(19rem,1fr))}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:3px;
+  padding:1.5rem 1.6rem;display:flex;flex-direction:column;gap:.85rem;
+}
+.card.pick{border-color:var(--moegi);box-shadow:inset 0 0 0 1px var(--moegi)}
+.card .rank{display:flex;align-items:baseline;gap:.7rem}
+.card .rank .n{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.13em;color:var(--ink-faint)}
+.card .dates{font-family:var(--f-display);font-size:1.35rem;font-weight:700;line-height:1.25}
+.card.pick .dates{color:var(--moegi)}
+.card ul{margin:0;padding-left:1.05rem;display:flex;flex-direction:column;gap:.5rem;font-size:.925rem;color:var(--ink-soft)}
+.card li::marker{color:var(--ink-faint)}
+.tag{
+  align-self:flex-start;font-family:var(--f-mono);font-size:.65rem;letter-spacing:.14em;
+  text-transform:uppercase;padding:.2rem .5rem;border-radius:2px;
+  background:var(--surface-2);color:var(--ink-soft);
+}
+.tag.rec{background:var(--moegi-wash);color:var(--moegi)}
+.tag.sak{background:var(--sakura-wash);color:var(--sakura)}
+
+.avoid{
+  margin-top:1.6rem;background:var(--kaki-wash);border-left:3px solid var(--kaki);
+  border-radius:0 3px 3px 0;padding:1.25rem 1.5rem;display:flex;flex-direction:column;gap:.7rem;
+}
+.avoid h3{font-size:1.05rem;color:var(--kaki)}
+.avoid ul{margin:0;padding-left:1.05rem;display:flex;flex-direction:column;gap:.4rem;font-size:.925rem}
+.avoid strong{font-family:var(--f-mono);font-size:.88rem;font-weight:600}
+
+/* ---------- tables ---------- */
+.t-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:40rem;font-size:.9rem}
+caption{
+  text-align:left;padding:1rem 1.2rem;font-family:var(--f-mono);font-size:.68rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);border-bottom:1px solid var(--line);
+}
+th,td{padding:.78rem 1.2rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{
+  font-family:var(--f-mono);font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--ink-faint);font-weight:500;background:var(--surface-2);
+}
+tbody tr:last-child td{border-bottom:0}
+.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.code{font-family:var(--f-mono);font-size:.85rem;letter-spacing:.02em}
+.hub{color:var(--indigo);font-weight:600}
+tr.best td{background:var(--moegi-wash)}
+tr.best td:first-child{box-shadow:inset 3px 0 0 var(--moegi)}
+tr.out td{color:var(--ink-faint)}
+.flag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;color:var(--kaki);font-weight:600}
+.ok{color:var(--moegi);font-weight:600;font-size:.85rem}
+
+.caveat{
+  margin-top:1.2rem;border:1px dashed var(--line-strong);border-radius:3px;
+  padding:1.2rem 1.4rem;display:flex;flex-direction:column;gap:.6rem;background:var(--surface);
+}
+.caveat h3{font-family:var(--f-body);font-size:.95rem;font-weight:700}
+.caveat p{font-size:.9rem;color:var(--ink-soft)}
+
+/* ---------- stopover finalists ---------- */
+.duel{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(20rem,1fr));margin-top:1.4rem}
+.duel article{
+  background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:1.6rem 1.7rem;
+  display:flex;flex-direction:column;gap:.9rem;
+}
+.duel article.win-pick{border-color:var(--moegi);box-shadow:inset 0 0 0 1px var(--moegi)}
+.duel h3{font-size:1.5rem}
+.duel .sub{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.duel dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.5rem 1rem;font-size:.9rem}
+.duel dt{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);padding-top:.22rem}
+.duel dd{margin:0;color:var(--ink-soft)}
+.temp{font-family:var(--f-mono);font-variant-numeric:tabular-nums;font-weight:600}
+.temp.cool{color:var(--moegi)}
+.temp.hot{color:var(--kaki)}
+
+.verdict-line{
+  margin-top:1.4rem;padding:1.15rem 1.4rem;background:var(--indigo-wash);
+  border-radius:3px;font-size:.95rem;
+}
+.verdict-line strong{color:var(--indigo-deep)}
+
+/* ---------- itinerary ---------- */
+.itin{background:var(--surface);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.itin-row{
+  display:grid;grid-template-columns:4.5rem 7rem 1fr;gap:1rem;align-items:baseline;
+  padding:.85rem 1.4rem;border-bottom:1px solid var(--line);
+}
+.itin-row:last-child{border-bottom:0}
+.itin-row.jp{background:var(--surface-2)}
+.itin-row.stop{background:var(--indigo-wash)}
+.itin .d{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;color:var(--ink-faint)}
+.itin .dt{font-family:var(--f-mono);font-size:.86rem;font-variant-numeric:tabular-nums;color:var(--ink-soft)}
+.itin .ev{font-size:.94rem}
+.itin .ev b{font-weight:700}
+@media(max-width:34rem){
+  .itin-row{grid-template-columns:3.5rem 1fr;gap:.4rem .8rem}
+  .itin .ev{grid-column:1 / -1}
+}
+
+.split{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));margin-top:1.2rem}
+.mini{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:1.3rem 1.5rem}
+.mini h3{font-family:var(--f-body);font-size:.82rem;font-weight:700;letter-spacing:.02em;color:var(--ink-faint);text-transform:uppercase;margin-bottom:.7rem}
+.mini ul{margin:0;padding-left:1.05rem;display:flex;flex-direction:column;gap:.35rem;font-size:.9rem;color:var(--ink-soft)}
+
+/* ---------- notes ---------- */
+.notes{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.note-item{
+  display:grid;grid-template-columns:2.6rem 1fr;gap:1.2rem;
+  padding:1.25rem .2rem;border-bottom:1px solid var(--line);
+}
+.note-item .k{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;color:var(--ink-faint);padding-top:.22rem}
+.note-item h3{font-family:var(--f-body);font-size:1rem;font-weight:700;margin-bottom:.3rem}
+.note-item p{font-size:.925rem;color:var(--ink-soft)}
+
+footer{border-top:1px solid var(--line);padding:2.4rem 0 3.2rem;background:var(--surface)}
+footer p{font-size:.85rem;color:var(--ink-faint);max-width:46em}
+footer .srcs{margin-top:1rem;display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;font-size:.82rem}
+footer .srcs a{color:var(--ink-soft)}
+
+@media (prefers-reduced-motion:no-preference){
+  .win{transition:transform .18s ease}
+  .win:hover{transform:translateY(-1px)}
+}
+</style>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="brand">Lusa <span>Travel</span></div>
+    <div class="eyebrow">Pesquisa de destino · 26 ago 2026</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <p class="eyebrow">Japão · 1º semestre de 2027 · 21 dias</p>
+    <h1>Quando ir ao Japão, e por onde passar no caminho</h1>
+    <p class="route"><span class="code">CWB</span> → <span class="code">GRU</span> → <span class="code">IST</span> <span style="color:var(--ink-faint)">·  2 noites  ·</span> <span class="code">HND</span></p>
+    <p class="lede">Comparativo das cinco janelas possíveis entre janeiro e junho, das rotas que saem de Curitiba e das opções de stopover de duas noites na ida.</p>
+  </div>
+
+  <dl class="verdict">
+    <div>
+      <dt>Período recomendado</dt>
+      <dd class="hi">10 a 30 de maio</dd>
+      <p class="note">Depois da Golden Week, antes da tsuyu. A melhor janela climática do semestre.</p>
+    </div>
+    <div>
+      <dt>Rota</dt>
+      <dd>Turkish Airlines</dd>
+      <p class="note"><span class="code">CWB–GRU–IST–HND</span>, duas conexões. Não existe voo direto de Curitiba para o Japão.</p>
+    </div>
+    <div>
+      <dt>Stopover de 2 noites</dt>
+      <dd>Istambul</dd>
+      <p class="note">Hotel gratuito pelo programa <i>Stopover in Istanbul</i>. Em maio, 20 °C — contra 40 °C em Doha.</p>
+    </div>
+    <div>
+      <dt>Econômica</dt>
+      <dd class="num">US$ 1.700–1.950</dd>
+      <p class="note">≈ R$ 8.800 a R$ 10.000 por pessoa, ida e volta com taxas.</p>
+    </div>
+    <div>
+      <dt>Executiva</dt>
+      <dd class="num">US$ 6.200–7.000</dd>
+      <p class="note">≈ R$ 32.000 a R$ 36.000. Melhor opção: <b>Qatar Airways</b> — a mais barata <i>e</i> o melhor produto.</p>
+    </div>
+  </dl>
+
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">O semestre inteiro, em escala</p>
+      <h2>Cinco janelas, dois bloqueios</h2>
+      <p>As barras estão posicionadas em escala de dias reais. A Golden Week de 2027 cai num calendário especialmente ruim: só a sexta 30/04 é dia útil dentro do bloco, então o japonês tira um dia de férias e emenda sete.</p>
+    </div>
+
+    <div class="band">
+      <div class="band-scroll">
+        <div class="band-inner">
+          <div class="months">
+            <div>Jan</div><div>Fev</div><div>Mar</div><div>Abr</div><div>Mai</div><div>Jun</div>
+          </div>
+
+          <p class="lane-label">Janelas de viagem</p>
+          <div class="lane">
+            <div class="gridlines"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="win eco" style="left:7.8%;width:11.1%"><b>15/01–04/02</b>&nbsp;· baixa</div>
+            <div class="win sak" style="left:43.3%;width:11.1%"><b>20/03–09/04</b>&nbsp;· sakura</div>
+            <div class="win rec" style="left:71.7%;width:11.1%"><b>10/05–30/05</b>&nbsp;· recomendado</div>
+          </div>
+
+          <p class="lane-label">Evitar</p>
+          <div class="lane">
+            <div class="gridlines"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="win bad" style="left:65.6%;width:3.3%"></div>
+            <div class="win bad" style="left:88.9%;width:11.1%"><b>Tsuyu</b>&nbsp;· chuvas</div>
+          </div>
+          <p style="font-size:.8rem;color:var(--ink-faint);margin-top:.6rem">A barra estreita em abril é a <b style="color:var(--kaki)">Golden Week, 29/04 a 05/05</b> — pico de preço e lotação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">Ranking</p>
+      <h2>As três janelas viáveis</h2>
+    </div>
+
+    <div class="cards">
+      <div class="card pick">
+        <div class="rank"><span class="n">1º</span><span class="tag rec">Recomendado</span></div>
+        <p class="dates">10 a 30 de maio</p>
+        <ul>
+          <li><b>18–25 °C, seco.</b> A melhor janela climática do ano junto com outubro.</li>
+          <li>Sair em 10/05 coloca a viagem inteira <b>depois da Golden Week</b>, com o país já normalizado.</li>
+          <li>A tsuyu só chega a Tóquio e Osaka em meados de junho — a volta em 30/05 escapa da chuva.</li>
+          <li><i>Shinryoku</i>, o verde novo: azaleias, glicínias tardias, arrozais alagados, primeira colheita de chá em Uji.</li>
+          <li>Chegando dia 14, o cliente pega o <b>Aoi Matsuri em Kyoto (15/05, data fixa)</b> e o Sanja Matsuri em Asakusa.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="rank"><span class="n">2º</span><span class="tag sak">Sakura</span></div>
+        <p class="dates">20 de março a 9 de abril</p>
+        <ul>
+          <li>Pelas médias do JMA (1991–2020): plena floração em <b>Tóquio ~31/03</b> e <b>Kyoto ~04/04</b>. A janela cobre as duas.</li>
+          <li><b>Risco real:</b> a floração varia ±1 semana ano a ano. A previsão confiável só sai em janeiro ou fevereiro.</li>
+          <li>Aérea 30–40% acima de maio; hotelaria em Kyoto e Tóquio pode dobrar.</li>
+          <li>Hotel precisa ser reservado com <b>8 a 10 meses</b> de antecedência.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="rank"><span class="n">3º</span><span class="tag">Econômico</span></div>
+        <p class="dates">15 de janeiro a 4 de fevereiro</p>
+        <ul>
+          <li>Baixa temporada real — aérea e hotel no piso do ano.</li>
+          <li>Tóquio 2–10 °C, dias curtos: escurece por volta das 17h.</li>
+          <li>Ganha em Monte Fuji visível com muito mais frequência, onsen na neve, esqui em Hakuba e Niseko, templos vazios.</li>
+          <li>Perde em fotografia e em horas úteis de passeio por dia.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="avoid">
+      <h3>Não vender nestas datas</h3>
+      <ul>
+        <li><strong>26/04 – 08/05</strong> — Golden Week. Trem-bala esgotado, hotéis lotados, tarifa no pico.</li>
+        <li><strong>a partir de ~10/06</strong> — tsuyu. Chuva frequente e umidade alta em Tóquio, Kyoto e Osaka.</li>
+        <li><strong>28/12 – 05/01</strong> — Oshōgatsu, o ano-novo japonês. Comércio e boa parte das atrações fechados.</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">Rotas</p>
+      <h2>Saindo de Curitiba, sempre com duas conexões</h2>
+      <p>Não existe voo direto de Curitiba para o Japão — nem para Narita, nem para Haneda. Toda opção tem um doméstico até GRU, GIG ou CGH e depois um hub internacional. São 18.600 km e de 31 a 40 horas de porta a porta.</p>
+    </div>
+
+    <div class="t-scroll">
+      <table>
+        <caption>Tarifas apuradas · econômica · ida e volta · por pessoa · 26/08/2026</caption>
+        <thead>
+          <tr><th>Companhia</th><th>Rota</th><th>Duração ida</th><th>Tarifa</th><th>Bagagem</th></tr>
+        </thead>
+        <tbody>
+          <tr class="best">
+            <td>LATAM + <b>Qatar Airways</b></td>
+            <td class="code">CWB–CGH–<span class="hub">DOH</span>–HND</td>
+            <td class="num">51h 05m</td>
+            <td class="num">US$ 1.663,26</td>
+            <td class="ok">2 despachadas</td>
+          </tr>
+          <tr>
+            <td>LATAM <span style="color:var(--ink-faint)">(codeshare QR)</span></td>
+            <td class="code">CWB–CGH–<span class="hub">DOH</span>–NRT</td>
+            <td class="num">34h 15m</td>
+            <td class="num">US$ 1.744,12</td>
+            <td class="flag">nenhuma</td>
+          </tr>
+          <tr class="out">
+            <td>United + Azul/GOL</td>
+            <td class="code">CWB–GRU–<span class="hub">ORD</span>/<span class="hub">EWR</span>–NRT</td>
+            <td class="num">31h 10m</td>
+            <td class="num">US$ 1.769,06</td>
+            <td>2 despachadas</td>
+          </tr>
+          <tr class="out">
+            <td>United + ANA</td>
+            <td class="code">CWB–GIG–<span class="hub">IAH</span>–HND</td>
+            <td class="num">32h 30m</td>
+            <td class="num">US$ 1.768,16</td>
+            <td>2 despachadas</td>
+          </tr>
+          <tr class="out">
+            <td>Air Canada + GOL</td>
+            <td class="code">CWB–GIG–<span class="hub">YYZ</span>–NRT</td>
+            <td class="num">34h 30m</td>
+            <td class="num">US$ 1.759,39</td>
+            <td>1 despachada</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="caveat">
+      <h3>Leia estes números como ordem de grandeza, não como comparação entre estações</h3>
+      <p>O motor de busca só faz previsão de preço até cerca de 180 dias à frente — ou seja, até fevereiro de 2027. As companhias, por sua vez, só carregam o inventário completo de 330 a 360 dias antes.</p>
+      <p>O sinal está nos próprios dados: novembro/2026 devolveu US$&nbsp;1.768,16, março/2027 US$&nbsp;1.769,06 e maio/2027 US$&nbsp;1.769,06 — praticamente idênticos. Em mercado real, sakura e Golden Week destoam com força. A comparação entre estações abaixo vem da sazonalidade histórica da rota Brasil–Japão.</p>
+    </div>
+
+    <div class="t-scroll" style="margin-top:1.2rem">
+      <table>
+        <caption>Faixas estimadas por período · econômica · ida e volta · por pessoa · câmbio R$ 5,15</caption>
+        <thead>
+          <tr><th>Período</th><th>Dólares</th><th>Reais</th><th>Índice</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>15/01 – 04/02 <span style="color:var(--ink-faint)">· baixa</span></td><td class="num">1.550 – 1.750</td><td class="num">8.000 – 9.000</td><td class="num">100</td></tr>
+          <tr class="best"><td><b>10/05 – 30/05</b> <span style="color:var(--ink-faint)">· recomendado</span></td><td class="num">1.700 – 1.950</td><td class="num">8.800 – 10.000</td><td class="num">110</td></tr>
+          <tr><td>20/03 – 09/04 <span style="color:var(--ink-faint)">· sakura</span></td><td class="num">1.900 – 2.600</td><td class="num">9.800 – 13.400</td><td class="num">135</td></tr>
+          <tr><td>26/04 – 08/05 <span style="color:var(--ink-faint)">· Golden Week</span></td><td class="num">2.400 – 3.200+</td><td class="num">12.400 – 16.500+</td><td class="num">175</td></tr>
+          <tr><td>Junho <span style="color:var(--ink-faint)">· tsuyu</span></td><td class="num">1.550 – 1.750</td><td class="num">8.000 – 9.000</td><td class="num">100</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">Executiva</p>
+      <h2>Em executiva, a resposta inverte</h2>
+      <p>Cotações reais para 05/02 a 26/02/2027 — dentro da janela de 180 dias em que o motor trabalha com preço confiável. Executiva, ida e volta, por pessoa, taxas incluídas.</p>
+    </div>
+
+    <div class="t-scroll">
+      <table>
+        <caption>Bilhete completo saindo de Curitiba</caption>
+        <thead>
+          <tr><th>Companhia</th><th>Rota</th><th>Total</th><th>Tarifa</th><th>Taxas</th><th>Duração ida</th></tr>
+        </thead>
+        <tbody>
+          <tr class="best">
+            <td><b>Qatar Airways</b></td><td class="code">CWB–GRU–<span class="hub">DOH</span>–HND</td>
+            <td class="num"><b>US$ 5.966,57</b></td><td class="num">4.711,00</td><td class="num">1.440,10</td><td class="num">47h 20m</td>
+          </tr>
+          <tr>
+            <td>ITA Airways</td><td class="code">CWB–GRU–<span class="hub">FCO</span>–HND</td>
+            <td class="num">US$ 7.538,74</td><td class="num">7.633,00</td><td class="num">138,90</td><td class="num">32h 15m</td>
+          </tr>
+          <tr>
+            <td>Turkish Airlines</td><td class="code">CWB–GRU–<span class="hub">IST</span>–HND</td>
+            <td class="num">US$ 8.095,91</td><td class="num">6.333,00</td><td class="num">2.013,30</td><td class="num">44h 10m</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="t-scroll" style="margin-top:1.2rem">
+      <table>
+        <caption>Saindo de São Paulo, com o doméstico emitido à parte</caption>
+        <thead>
+          <tr><th>Companhia</th><th>Rota</th><th>Total</th><th>Tarifa</th><th>Taxas</th><th>Duração ida</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Iberia / <b>British Airways</b></td><td class="code">GRU–<span class="hub">LHR</span>–HND</td>
+            <td class="num">US$ 6.213,80</td><td class="num">6.078,00</td><td class="num">135,80</td><td class="num"><b>27h 25m</b> · 1 escala</td>
+          </tr>
+          <tr>
+            <td><b>Emirates</b></td><td class="code">GRU–<span class="hub">DXB</span>–HND</td>
+            <td class="num">US$ 7.087,10</td><td class="num">4.585,00</td><td class="num">2.502,10</td><td class="num">33h 00m · 1 escala</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="verdict-line"><strong>Em executiva, a Qatar é ao mesmo tempo a mais barata e a que entrega o melhor produto.</strong> São US$ 2.129 abaixo da Turkish e US$ 1.572 abaixo da ITA — para um casal, cerca de R$ 21.900 de diferença — com a Qsuite, a melhor executiva que sai do Brasil. E o stopover já vem embutido: a conexão em Doha na ida é de <b>15h 45m</b>, dentro da faixa de 12 a 96 horas do programa. Basta estender para duas noites e contratar o hotel 5★ no Discover Qatar por US$ 20 a 30 por pessoa/noite — cerca de <b>US$ 60 para o casal</b>.</p>
+
+    <div class="split">
+      <div class="mini">
+        <h3>Três armadilhas dessa venda</h3>
+        <ul>
+          <li><b>O trecho CWB–GRU não é executiva em nenhuma opção.</b> É econômica na Qatar, na ITA e na Turkish — e a volta GRU–CWB da Qatar sai em premium economy. Deixe explícito na proposta.</li>
+          <li><b>Emirates:</b> a menor tarifa base de todas (US$ 4.585) carrega US$ 2.502 de taxas e termina em US$ 7.087. Compare sempre pelo total.</li>
+          <li><b>Reembolso:</b> Turkish e Emirates são reembolsáveis — a Emirates com multa de US$ 450. Qatar e ITA, não.</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h3>Se o cliente quiser Istambul mesmo assim</h3>
+        <ul>
+          <li>O prêmio da Turkish é de <b>US$ 2.129 por pessoa</b>.</li>
+          <li>Compensado em parte por <b>2 noites grátis em hotel 5★ ou boutique</b> — o benefício da executiva no <i>Stopover in Istanbul</i>, contra 4★ na econômica. Valor de mercado ~US$ 500.</li>
+          <li>Prêmio líquido: cerca de <b>US$ 1.600 por pessoa</b>.</li>
+          <li>A Turkish também é reembolsável, o que pesa a favor em compra muito antecipada.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="t-scroll" style="margin-top:1.2rem">
+      <table>
+        <caption>Estimativa para maio de 2027 · índice sazonal 110 sobre os valores de fevereiro</caption>
+        <thead><tr><th>Companhia</th><th>Fevereiro apurado</th><th>Maio estimado</th><th>Em reais</th></tr></thead>
+        <tbody>
+          <tr class="best"><td><b>Qatar Airways</b></td><td class="num">US$ 5.966</td><td class="num"><b>US$ 6.200 – 7.000</b></td><td class="num">R$ 32.000 – 36.000</td></tr>
+          <tr><td>Iberia / British Airways</td><td class="num">US$ 6.214</td><td class="num">US$ 6.400 – 7.300</td><td class="num">R$ 33.000 – 37.600</td></tr>
+          <tr><td>Emirates</td><td class="num">US$ 7.087</td><td class="num">US$ 7.300 – 8.300</td><td class="num">R$ 37.600 – 42.700</td></tr>
+          <tr><td>ITA Airways</td><td class="num">US$ 7.539</td><td class="num">US$ 7.800 – 8.800</td><td class="num">R$ 40.200 – 45.300</td></tr>
+          <tr><td>Turkish Airlines</td><td class="num">US$ 8.096</td><td class="num">US$ 8.400 – 9.500</td><td class="num">R$ 43.300 – 48.900</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.85rem;color:var(--ink-faint);margin-top:.8rem">Múltiplo da executiva sobre a econômica na mesma rota Qatar e nas mesmas datas: <b>3,6×</b>.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">Stopover</p>
+      <h2>Duas noites na ida: onde parar</h2>
+      <p>Critérios: desvio de rota, visto para brasileiro, existência de programa de stopover da companhia, custo da hospedagem e o que dá para fazer em dois dias.</p>
+    </div>
+
+    <div class="t-scroll">
+      <table>
+        <thead>
+          <tr><th>Destino</th><th>Companhia</th><th>Visto p/ brasileiro</th><th>Programa</th><th>Custo 2 noites</th><th>Desvio</th></tr>
+        </thead>
+        <tbody>
+          <tr class="best">
+            <td><b>Istambul</b></td><td>Turkish Airlines</td><td class="ok">Isento até 90 dias</td>
+            <td><i>Stopover in Istanbul</i></td><td class="num"><b>R$ 0</b></td><td>Pequeno</td>
+          </tr>
+          <tr>
+            <td><b>Doha</b></td><td>Qatar Airways</td><td class="ok">Isento</td>
+            <td><i>Qatar Stopover</i> · Discover Qatar</td><td class="num">4★ de US$ 14/noite</td><td>Zero</td>
+          </tr>
+          <tr>
+            <td>Dubai</td><td>Emirates</td><td class="ok">Isento</td>
+            <td>Pacotes Emirates · Dubai Connect</td><td>Hotel de mercado</td><td>Zero</td>
+          </tr>
+          <tr>
+            <td>Paris / Amsterdã</td><td>Air France · KLM</td><td>Isento <span style="color:var(--ink-faint)">(confirmar ETIAS)</span></td>
+            <td>Sem programa dedicado</td><td>Hotel de mercado, caro</td><td>Grande, ao norte</td>
+          </tr>
+          <tr class="out">
+            <td>Chicago · Houston · NY</td><td>United</td><td class="flag">Exige visto americano</td>
+            <td>—</td><td>—</td><td>Médio</td>
+          </tr>
+          <tr class="out">
+            <td>Toronto</td><td>Air Canada</td><td class="flag">Exige visto ou eTA</td>
+            <td>—</td><td>—</td><td>Médio</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size:.92rem;color:var(--ink-soft);margin-top:1.1rem;max-width:48em">United e Air Canada saem da disputa para stopover: obrigam o cliente a ter visto americano ou canadense. E não é só no stopover — mesmo em conexão curta o passageiro precisa passar pela imigração dos Estados Unidos, o que exige o visto de qualquer forma. Confirme isso com o cliente antes de cotar qualquer rota via América do Norte.</p>
+
+    <div class="duel">
+      <article class="win-pick">
+        <p class="sub">Finalista · escolhido para maio</p>
+        <h3>Istambul</h3>
+        <dl>
+          <dt>Hotel</dt><dd>Gratuito. Econômica → 4★. Executiva → 2 noites em 5★ ou boutique.</dd>
+          <dt>Regras</dt><dd>Voo internacional operado pela Turkish via IST, conexão mínima de <b>20 horas</b>, ida e volta em <b>PNR único</b>, país de saída e chegada iguais, solicitação com <b>72h+</b> de antecedência.</dd>
+          <dt>2 dias</dt><dd>Santa Sofia, Mesquita Azul, Topkapı, Cisterna da Basílica, Grande Bazar e um cruzeiro pelo Bósforo. A cidade mais densa em atrações entre as opções.</dd>
+          <dt>Maio</dt><dd><span class="temp cool">20–22 °C</span> — clima perfeito para caminhar.</dd>
+        </dl>
+      </article>
+
+      <article>
+        <p class="sub">Finalista · melhor para jan–mar</p>
+        <h3>Doha</h3>
+        <dl>
+          <dt>Hotel</dt><dd>Tarifas subsidiadas pelo Qatar Tourism: <b>4★ a partir de US$ 14</b> por pessoa/noite, 5★ de US$ 20 a 30. Os mesmos hotéis custam US$ 180–250 fora do programa.</dd>
+          <dt>Regras</dt><dd>Bilhete Qatar Airways, codeshare ou oneworld, trânsito em Doha entre <b>12 e 96 horas</b>, até 4 noites por sentido. Contratado no portal Discover Qatar depois de emitido.</dd>
+          <dt>Rota</dt><dd>Doha fica quase no meio geográfico do trajeto Brasil–Japão: desvio zero. Voos <span class="code">QR780</span> GRU–DOH e <span class="code">QR812</span> DOH–HND.</dd>
+          <dt>Maio</dt><dd><span class="temp hot">38–42 °C</span> — passeio a pé inviável fora de museus e shoppings.</dd>
+        </dl>
+      </article>
+    </div>
+
+    <p class="verdict-line">Em <strong>econômica, viajando em maio</strong>, Istambul ganha nos dois critérios que importam: hotel gratuito e 20 °C, enquanto Doha ferve a 40. <strong>Se a viagem migrar para janeiro, fevereiro ou março, a resposta inverte</strong> — aí Doha oferece 25 °C, hotel 5★ por US$ 20 a 30 e desvio zero. <strong>E em executiva Doha ganha em qualquer mês</strong>, porque a Qatar sai US$ 2.129 mais barata que a Turkish — a seção seguinte abre essa conta.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">Roteiro macro</p>
+      <h2>21 dias, dos quais 15 noites no Japão</h2>
+      <p>Turkish Airlines, 10 a 30 de maio de 2027. Sem o stopover, a mesma janela renderia 17 a 18 noites no Japão.</p>
+    </div>
+
+    <div class="itin">
+      <div class="itin-row"><span class="d">D1</span><span class="dt">seg 10/05</span><span class="ev"><b>CWB → GRU</b> · GRU → IST, voo noturno</span></div>
+      <div class="itin-row stop"><span class="d">D2</span><span class="dt">ter 11/05</span><span class="ev">Chegada em <b>Istambul</b> · 1ª noite</span></div>
+      <div class="itin-row stop"><span class="d">D3</span><span class="dt">qua 12/05</span><span class="ev">Istambul, dia inteiro · 2ª noite</span></div>
+      <div class="itin-row"><span class="d">D4</span><span class="dt">qui 13/05</span><span class="ev">IST → HND</span></div>
+      <div class="itin-row jp"><span class="d">D5</span><span class="dt">sex 14/05</span><span class="ev"><b>Chegada em Tóquio</b></span></div>
+      <div class="itin-row jp"><span class="d">D6</span><span class="dt">sáb 15/05</span><span class="ev"><b>Aoi Matsuri</b>, Kyoto — data fixa, um dos três grandes festivais da cidade</span></div>
+      <div class="itin-row jp"><span class="d">D5–19</span><span class="dt">14–28/05</span><span class="ev">15 noites no Japão</span></div>
+      <div class="itin-row"><span class="d">D20</span><span class="dt">sáb 29/05</span><span class="ev">HND → IST → GRU</span></div>
+      <div class="itin-row"><span class="d">D21</span><span class="dt">dom 30/05</span><span class="ev"><b>Chegada em Curitiba</b></span></div>
+    </div>
+
+    <div class="split">
+      <div class="mini">
+        <h3>Divisão sugerida das 15 noites</h3>
+        <ul>
+          <li>Tóquio — 5 noites</li>
+          <li>Hakone / Fuji — 1</li>
+          <li>Kyoto — 4</li>
+          <li>Osaka e Nara — 2</li>
+          <li>Hiroshima e Miyajima — 2</li>
+          <li>Kanazawa ou Takayama — 1</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h3>O que maio entrega de paisagem</h3>
+        <ul>
+          <li>Verde novo <i>(shinryoku)</i> em todo o país</li>
+          <li>Azaleias e glicínias tardias</li>
+          <li>Arrozais alagados refletindo as montanhas</li>
+          <li>Primeira colheita de chá em Uji</li>
+          <li>Templos e trem-bala sem a lotação de abril</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">Operacional</p>
+      <h2>Sete pontos antes de cotar</h2>
+    </div>
+
+    <div class="notes">
+      <div class="note-item"><span class="k">01</span><div>
+        <h3>A janela de compra é agora</h3>
+        <p>O inventário de 2027 já abriu, e as tarifas promocionais costumam sair de 8 a 10 meses antes. Para maio de 2027, o melhor momento de emissão é entre setembro e novembro de 2026.</p>
+      </div></div>
+      <div class="note-item"><span class="k">02</span><div>
+        <h3>O stopover da Turkish exige PNR único</h3>
+        <p>Ida e volta no mesmo bilhete. Não funciona com bilhetes separados — e o doméstico CWB–GRU precisa entrar no mesmo bilhete como conexão, não emitido à parte.</p>
+      </div></div>
+      <div class="note-item"><span class="k">03</span><div>
+        <h3>Solicitar o stopover com 72h+ de antecedência</h3>
+        <p>No site da Turkish, depois de emitido o bilhete. Fora do prazo, o benefício se perde.</p>
+      </div></div>
+      <div class="note-item"><span class="k">04</span><div>
+        <h3>Brasileiro precisa de visto para o Japão</h3>
+        <p>Não há isenção. Solicitar no consulado com antecedência. Turquia, Catar e Emirados, ao contrário, são isentos.</p>
+      </div></div>
+      <div class="note-item"><span class="k">05</span><div>
+        <h3>Cheque o visto americano antes de cotar via EUA</h3>
+        <p>Se o cliente não tiver, elimine United e Air Canada da proposta — inclusive nas opções de conexão curta.</p>
+      </div></div>
+      <div class="note-item"><span class="k">06</span><div>
+        <h3>JR Pass: fazer a conta, não recomendar por hábito</h3>
+        <p>Depois do reajuste, só compensa em roteiro com muito deslocamento de longa distância. Para a divisão sugerida acima, comparar bilhete a bilhete antes de incluir.</p>
+      </div></div>
+      <div class="note-item"><span class="k">07</span><div>
+        <h3>Cotar sempre com bagagem inclusa</h3>
+        <p>Várias tarifas apuradas são <i>basic</i> — sem bagagem despachada e, em alguns casos, sem bagagem de mão. Para 21 dias, a família tarifária com bagagem costuma sair mais barata que a taxa avulsa.</p>
+      </div></div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Pesquisa elaborada em 26 de agosto de 2026. O pedido original citava o 1º semestre de 2026, que já passou — toda a análise foi refeita para o <b>1º semestre de 2027</b>, mantendo a mesma lógica sazonal. Tarifas e itinerários apurados via Expedia; câmbio de referência US$ 1,00 = R$ 5,15. Valores sujeitos a alteração até a emissão.</p>
+    <div class="srcs">
+      <a href="https://publicholidays.jp/golden-week/">Golden Week 2027</a>
+      <a href="https://www.nippon.com/en/japan-data/h02794/">Feriados nacionais 2027</a>
+      <a href="https://www.japan-guide.com/e/e2011_when.html">Floração das cerejeiras</a>
+      <a href="https://www.japan-guide.com/e/e2273.html">Clima por estação</a>
+      <a href="https://www.qatarairways.com/en-us/offers/qatar-stopover.html">Qatar Stopover</a>
+      <a href="https://blog.wego.com/turkish-airlines-stopover-program/">Stopover in Istanbul</a>
+      <a href="https://www.gov.br/mre/pt-br/embaixada-ancara/outras-informacoes-de-interesse/brasileiros-que-desejam-ingressar-na-turquia-como-turistas-e-como-nao-turistas">MRE · entrada na Turquia</a>
+      <a href="https://www.grupodicas.com/passagem-aerea-para-o-japao-quando-comprar/">Quando comprar a passagem</a>
+    </div>
+  </div>
+</footer>

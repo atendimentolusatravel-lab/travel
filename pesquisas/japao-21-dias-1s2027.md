@@ -17,7 +17,9 @@ Elaborado em 26/08/2026 · Câmbio de referência: US$ 1,00 = R$ 5,15
 | **Por quê** | Depois da Golden Week, antes da tsuyu. Clima ideal, país vazio, tarifa intermediária. |
 | **Melhor rota** | Turkish Airlines — CWB → GRU → IST → HND/NRT |
 | **Melhor stopover (2 noites)** | **Istambul**, com hotel gratuito pelo programa *Stopover in Istanbul* |
-| **Faixa de tarifa estimada** | US$ 1.700 – 1.950 por pessoa (≈ R$ 8.800 – 10.000), econômica, ida e volta |
+| **Tarifa — econômica** | US$ 1.700 – 1.950 por pessoa (≈ R$ 8.800 – 10.000), ida e volta |
+| **Tarifa — executiva** | US$ 6.200 – 7.000 por pessoa (≈ R$ 32.000 – 36.000), ida e volta |
+| **Melhor executiva** | **Qatar Airways, US$ 5.966,57** — a mais barata *e* o melhor produto (Qsuite) |
 | **Alternativa sakura** | 20/03 a 09/04/2027 — mais bonito, ~35% mais caro, exige reserva com 8–10 meses |
 | **Alternativa econômica** | 15/01 a 04/02/2027 — mais barato, porém frio e dias curtos |
 
@@ -124,7 +126,7 @@ Brasil–Japão, não do motor de busca.
 | 26/04 – 08/05 (Golden Week) | 2.400 – 3.200+ | 12.400 – 16.500+ | 175 |
 | Junho (tsuyu) | 1.550 – 1.750 | 8.000 – 9.000 | 100 |
 
-Executiva na mesma rota: multiplicar por 3,5 a 4,5.
+Executiva na mesma rota: ver a seção 5, com valores apurados.
 
 ---
 
@@ -181,10 +183,90 @@ Estados Unidos.
 |---|---|
 | **Maio (cenário recomendado)** | **Istambul** — hotel grátis e clima de 20 °C, enquanto Doha ferve a 40 °C |
 | Janeiro / fevereiro / março | **Doha** — clima ótimo (~25 °C), hotel 5★ por US$ 20–30 e desvio zero |
+| **Qualquer mês, em executiva** | **Doha** — a Qatar é US$ 2.129 mais barata que a Turkish e já traz 15h45 de conexão em Doha. Ver seção 5. |
 
 ---
 
-## 5. Roteiro macro da opção recomendada
+## 5. Classe executiva — valores apurados
+
+Cotações reais para **05/02 a 26/02/2027**, dentro da janela de ~180 dias em que
+o motor de busca trabalha com preço confiável. Executiva, ida e volta, por
+pessoa, taxas incluídas.
+
+### Bilhete completo saindo de Curitiba
+
+| # | Companhia | Rota | Total | Tarifa | Taxas | Duração ida |
+|---|---|---|---|---|---|---|
+| 1 | **Qatar Airways** | CWB–GRU–**DOH**–HND | **US$ 5.966,57** | 4.711,00 | 1.440,10 | 47h 20m |
+| 2 | ITA Airways | CWB–GRU–**FCO**–HND | US$ 7.538,74 | 7.633,00 | 138,90 | 32h 15m |
+| 3 | Turkish Airlines | CWB–GRU–**IST**–HND | US$ 8.095,91 | 6.333,00 | 2.013,30 | 44h 10m |
+
+### Saindo de São Paulo, com o doméstico emitido à parte
+
+| # | Companhia | Rota | Total | Tarifa | Taxas | Duração ida |
+|---|---|---|---|---|---|---|
+| 4 | Iberia / **British Airways** | GRU–**LHR**–HND | US$ 6.213,80 | 6.078,00 | 135,80 | **27h 25m — 1 escala** |
+| 5 | **Emirates** | GRU–**DXB**–HND | US$ 7.087,10 | 4.585,00 | 2.502,10 | 33h 00m — 1 escala |
+
+### Recomendação: Qatar Airways
+
+**Em executiva a resposta inverte em relação à econômica.** A Qatar é
+simultaneamente a **mais barata** e a que entrega o **melhor produto** da rota:
+
+- **US$ 5.966,57**, ou seja **US$ 2.129 abaixo da Turkish** e US$ 1.572 abaixo
+  da ITA. Para um casal, US$ 4.258 de diferença — cerca de R$ 21.900.
+- **Qsuite**: suíte com porta, a melhor executiva disponível saindo do Brasil.
+  Em configuração de casal, vira cabine dupla fechada.
+- Voos **QR780** GRU–DOH e **QR812** DOH–HND na ida; **QR813** e **QR773** na volta.
+- **O stopover já vem embutido:** a conexão em Doha na ida é de **15h 45m**, ou
+  seja, já está dentro da faixa de 12 a 96 horas do *Qatar Stopover*. Basta
+  estender para 2 noites e contratar o hotel no Discover Qatar — 5★ por US$ 20 a
+  30 por pessoa/noite. Custo do stopover completo: cerca de **US$ 60 para o casal**.
+
+**Múltiplo sobre a econômica: 3,6×** (US$ 5.966 contra US$ 1.663 na mesma rota
+Qatar e nas mesmas datas).
+
+### Pontos de atenção da executiva
+
+1. **O trecho CWB–GRU não é executiva em nenhuma das opções.** É econômica na
+   Qatar, na ITA e na Turkish (na Qatar, a volta GRU–CWB sai em premium
+   economy). Deixe isso explícito na proposta — é a reclamação nº 1 nesse tipo
+   de venda.
+2. **Emirates: a armadilha das taxas.** É a menor tarifa base de todas
+   (US$ 4.585), mas carrega **US$ 2.502 de taxas** e termina em US$ 7.087.
+   Sempre comparar pelo total, nunca pela tarifa base.
+3. **ITA Airways tem as menores taxas** (US$ 138,90). Se o câmbio ou a política
+   de reembolso pesar na negociação, é um argumento concreto.
+4. **Iberia/British Airways é a mais rápida:** 27h 25m com **uma única escala**,
+   em Londres. Somando um doméstico CWB–GRU (US$ 100 a 150 ida e volta), fica em
+   torno de US$ 6.350 — muito perto da Qatar, com 20 horas a menos de viagem.
+   Contrapartidas: o produto (Club World Suite) fica abaixo da Qsuite, e desde
+   2025 o brasileiro precisa de **ETA para o Reino Unido**, mesmo em conexão.
+5. **Turkish e Emirates são reembolsáveis** (a Emirates com multa de US$ 450 no
+   cancelamento e US$ 300 na alteração). Qatar e ITA, não. Para cliente que
+   compra com muita antecedência, isso vale dinheiro.
+6. **Se o cliente insistir em Istambul:** o prêmio da Turkish é de US$ 2.129 por
+   pessoa, parcialmente compensado por **2 noites grátis em hotel 5★ ou boutique**
+   (o benefício da executiva no *Stopover in Istanbul*, contra 4★ na econômica),
+   valor de mercado em torno de US$ 500. Prêmio líquido: cerca de **US$ 1.600
+   por pessoa**.
+
+### Estimativa para maio de 2027
+
+Aplicando o índice sazonal 110 sobre os valores de fevereiro:
+
+| Companhia | Fevereiro apurado | Maio estimado |
+|---|---|---|
+| **Qatar Airways** | US$ 5.966 | **US$ 6.200 – 7.000** (≈ R$ 32.000 – 36.000) |
+| Iberia / British Airways | US$ 6.214 | US$ 6.400 – 7.300 |
+| Emirates | US$ 7.087 | US$ 7.300 – 8.300 |
+| ITA Airways | US$ 7.539 | US$ 7.800 – 8.800 |
+| Turkish Airlines | US$ 8.096 | US$ 8.400 – 9.500 |
+
+
+---
+
+## 6. Roteiro macro da opção recomendada
 
 **Turkish Airlines · 10 a 30 de maio de 2027 · 21 dias**
 
@@ -206,7 +288,7 @@ Osaka/Nara 2 · Hiroshima/Miyajima 2 · Kanazawa ou Takayama 1.
 
 ---
 
-## 6. Pontos de atenção comerciais
+## 7. Pontos de atenção comerciais
 
 1. **Emissão.** Inventário completo de 2027 só abre entre **junho e julho de
    2026** (já aberto) e as tarifas promocionais costumam sair de **8 a 10 meses
