@@ -7,7 +7,7 @@ Horário de trabalho: 09:00 – 18:00
 
 ## Atividade principal atual
 
-_Nenhuma em andamento — aguardando próxima atividade._
+**Amanda Rocco – NYC e Canadá** — iniciada em 26/08/2026 às 15:58
 
 ## Histórico de atividades principais
 
