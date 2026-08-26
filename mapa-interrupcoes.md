@@ -7,7 +7,7 @@ Horário de trabalho: 09:00 – 18:00
 
 ## Atividade principal atual
 
-**Cotação do Aéreo da Antonia – Tulum fim do ano** — iniciada em 26/08/2026 às 15:13
+_Nenhuma em andamento — aguardando próxima atividade._
 
 ## Histórico de atividades principais
 
@@ -19,6 +19,7 @@ Horário de trabalho: 09:00 – 18:00
 | 4 | 21/08/2026 | 10:57 | 11:58 | 1h01min | Fernanda – Xcaret | Concluída |
 | 5 | 21/08/2026 | 11:59 | 14:58 | 2h59min | Revisão 01 da Cotação Antonia – Tulum | Concluída |
 | 6 | 25–26/08/2026 | 25/08 15:54 | 26/08 15:06 | 8h12min | Revisão 02 Fernanda – Japão | Concluída; 2h06min no dia 25 + 6h06min no dia 26, dentro do expediente 09h–18h |
+| 7 | 26/08/2026 | 15:13 | 15:35 | 22min | Cotação do Aéreo da Antonia – Tulum fim do ano | Concluída |
 
 ## Tabela de Interrupções
 
