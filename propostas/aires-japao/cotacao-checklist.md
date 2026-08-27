@@ -220,6 +220,61 @@ de folga sobre a data de uso.
 
 ---
 
+## 9b. Fornecedores no Japão
+
+Nenhum deles é conhecido meu de operação. São nomes de mercado e do registro
+oficial da JNTO. Vet obrigatório antes de confiar um réveillon a qualquer um.
+
+### Especialista de Nagano, o mais importante da lista
+
+**Snow Monkey Resorts**, operado pela Machinovate Japan Ltd. É agência de viagem
+registrada **e** operadora de charter credenciada, sediada em Nagano, com frota
+própria e motoristas licenciados, segurados e treinados. Fazem tour privativo,
+transfer de ida ou ida e volta, com embarque em Tóquio ou Nagoya, e operam o ano
+inteiro na região.
+
+É exatamente a perna de 02 a 05/01: os transfers estação de Nagano e Kanbayashi,
+a diária com espera do dia do ski, e o conhecimento da Rota 292 no inverno.
+Também vendem hospedagem, então podem ter acesso ao Senjukaku.
+`snowmonkeyresorts.com`
+
+### DMC geral, para o resto da viagem
+
+| Fornecedor | Perfil |
+|---|---|
+| **Explera** | Registrado na JNTO, opera **só B2B**, com net rate, trem, guias e suporte 24h para agências |
+| **The Real Japan** | DMC de luxo, trabalha com agências do mundo todo, desenha e opera viagem privativa de alto padrão |
+| **TJT** | Full service em Tóquio, mais de 40 mil visitantes por ano, atende FIT e grupo |
+| **Travezee Tourism Japan** | B2B, cobre hotel, transporte, guia, intérprete e reserva de atração |
+
+**A fonte autoritativa é o diretório de parceiros da JNTO**, o órgão oficial de
+turismo japonês, que lista as operadoras receptivas registradas. É gratuito e é
+onde se confere se a empresa existe de verdade: `members.jnto.go.jp/partners`
+
+### Experiências culturais e culinárias
+
+**Wabunka**, um grupo por vez, com intérprete especializado na área de cada
+experiência. Cerimônia do chá, oficina com artesão, culinária. Serve para o
+programa da Giovana e para o pedido de experiências para o Felipe.
+`wabunka-lux.jp`
+
+### O que não precisa de DMC
+
+- **Aéreo:** consolidador, o canal que a Lusa já usa
+- **Bvlgari e Marriott Associa:** direto ou pelo canal de rede e consórcio, que costuma render melhor que receptivo
+- **Hotelaria em geral:** o canal de agência que vocês já operam pode bater o receptivo
+- **Ghibli Park:** lote limitado com reserva antecipada. Receptivo nem sempre consegue, vale tentar os dois caminhos
+- **Kiya, Ninben, Kappabashi:** são lojas. Basta o guia levar
+
+### Como abordar
+
+- Peça **net rate B2B**, nunca tarifa pública
+- Mande o roteiro fechado e peça cotação **por bloco**, para poder comparar peça a peça e misturar fornecedores
+- Pergunte se têm guia de **língua portuguesa**, e se não, aceite inglês
+- Na semana do réveillon, **quem responde primeiro é quem você fecha**. Dispare para todos no mesmo dia
+
+---
+
 ## 10. Seguro viagem
 
 3 passageiros, 15 dias.
