@@ -28,7 +28,7 @@ Pedir em toda cotação: assentos dos três juntos, franquia de bagagem, refeiç
 |---|---|---|
 | 27/12, 1 noite | Bvlgari Hotel Tokyo | Suíte para 3, café da manhã |
 | 28 a 31/12, 3 noites | Nagoya Marriott Associa | Family Triple 54 m², café da manhã, andar alto voltado para a plataforma |
-| 31/12 a 02/01, 2 noites | Kozantei Ubuya | **Deluxe de andar superior com onsen privativo**, meia-pensão, plano de réveillon |
+| 31/12 a 02/01, 2 noites | Kozantei Ubuya | **Um dos 20 quartos com banho privativo**, meia-pensão, plano de réveillon |
 | 02 a 05/01, 3 noites | Hotel Grand Phenix Okushiga | Suíte para até 4, café da manhã |
 | 05 a 09/01, 4 noites | Bvlgari Hotel Tokyo | Suíte, café da manhã |
 
@@ -123,6 +123,23 @@ O **Ghibli Park é o mais urgente**: reserva antecipada com lote limitado, e tem
 - Aluguel para os pais, se forem esquiar
 - Lift pass para os três
 - Entrada da área de neve, trenó e tube
+
+---
+
+## 8b. Jantares a reservar
+
+Não são cotação, são reserva, e no feriado esgotam antes do resto.
+
+| Data | Cidade | Jantar |
+|---|---|---|
+| 28/12 | Nagoya | Atsuta Horaiken, hitsumabushi |
+| 29/12 | Nagoya | Nagoya meshi |
+| **30/12** | Nagoya | **Hida-gyu**, teppanyaki ou sukiyaki |
+| 31/12 | Kawaguchiko | Kaiseki de réveillon, já na diária do ryokan |
+| 05 a 07/01 | Tóquio | A definir com o guia |
+| 08/01 | Tóquio | Il Ristorante Niko Romito, no Bvlgari |
+
+Em todos, avisar na reserva: **sem peixe cru**.
 
 ---
 
