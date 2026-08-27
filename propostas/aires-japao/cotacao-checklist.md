@@ -80,6 +80,7 @@ Todos com veículo para 3 pessoas mais bagagem. Confirmar cadeirinha para o Feli
 | 30/12 | Ghibli Park em Nagakute, castelo e Osu, dia inteiro |
 | 01/01 | Chureito, Oishi e Kachi Kachi, dia inteiro |
 | 03/01 | Okushiga para Jigokudani, ida e volta |
+| 06/01 | Toyosu de madrugada, Tsukiji, Kappabashi e Nihonbashi |
 
 ---
 
@@ -123,6 +124,28 @@ O **Ghibli Park é o mais urgente**: reserva antecipada com lote limitado, e tem
 - Aluguel para os pais, se forem esquiar
 - Lift pass para os três
 - Entrada da área de neve, trenó e tube
+
+---
+
+## 7b. Programa de culinária da Giovana
+
+Concentrado em Tóquio, de 5 a 8 de janeiro, porque o país já reabriu e nada corre risco de recesso.
+
+| Item | Onde | Precisa de |
+|---|---|---|
+| **Kiya**, cutelaria desde 1792 | Coredo Muromachi 1, Nihonbashi | Nada, é loja. Reservar a gravação do nome |
+| **Ninben**, katsuobushi desde 1699, com balcão de dashi | Coredo Muromachi 2, Nihonbashi | Nada |
+| **Kappabashi**, faca artesanal com nome gravado | Kappabashi | Confirmar prazo de gravação no mesmo dia |
+| **Toyosu** e **Tsukiji Outer** | Toyosu e Tsukiji | Horário do leilão de atum, se quiserem ver |
+| **Aula de wagashi**, doces japoneses | Tóquio | Cotar. Funciona com Giovana e Felipe juntos |
+
+**Fornecedor a cotar:** [Wabunka](https://wabunka-lux.jp/), plataforma de experiência cultural privativa, um grupo por vez, com intérprete especializado. Tem catálogo de culinária com artesão. Serve também para o pedido de "experiências para criar memórias para o filho".
+
+### Deixado de fora, e por quê
+
+**Kakukyu**, fábrica de hatchō missô em Okazaki, ativa desde 1645, onde se entra nos armazéns e se vê as tinas de cedro com as pirâmides de pedra de rio. Paga exatamente a história que está escrita no roteiro. Ficou fora porque briga com três coisas: fecha no recesso de ano-novo, fica a 40 min de Nagoya num dia de chegada com jet lag, e os dias de Nagoya já são do Felipe. Telefone 0564-21-1355. Fica como opção de bolso para 28/12, decidida na hora.
+
+**Noritake Garden**, oficina de pintura em porcelana de 90 min para adulto e criança, com a peça queimada e enviada para casa um mês depois, a 15 min a pé da estação de Nagoya. Fora por calendário: fecha às segundas, e 28/12/2026 é segunda. Dias 29 e 30 dependem do recesso.
 
 ---
 
