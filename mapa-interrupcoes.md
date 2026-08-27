@@ -7,8 +7,7 @@ Horário de trabalho: 09:00 – 18:00
 
 ## Atividade principal atual
 
-**Amanda Rocco – NYC e Canadá** — iniciada em 26/08/2026 às 15:58
-▶️ Retomada em 27/08/2026 às 11:29 (interrupções até agora: 1h41min)
+_Nenhuma em andamento — aguardando próxima atividade._
 
 ## Histórico de atividades principais
 
@@ -22,6 +21,7 @@ Horário de trabalho: 09:00 – 18:00
 | 6 | 25–26/08/2026 | 25/08 15:54 | 26/08 15:06 | 8h12min | Revisão 02 Fernanda – Japão | Concluída; 2h06min no dia 25 + 6h06min no dia 26, dentro do expediente 09h–18h |
 | 7 | 26/08/2026 | 15:13 | 15:35 | 22min | Cotação do Aéreo da Antonia – Tulum fim do ano | Concluída |
 | 8 | 26/08/2026 | 15:35 | 15:58 | 23min | Assento da Camila Barrozo para Londres | Concluída |
+| 9 | 26–27/08/2026 | 26/08 15:58 | 27/08 16:57 | 8h18min | Amanda Rocco – NYC e Canadá | Concluída; 2h02min no dia 26 + 7h57min no dia 27, descontadas 5 interrupções (1h41min) |
 
 ## Tabela de Interrupções
 
