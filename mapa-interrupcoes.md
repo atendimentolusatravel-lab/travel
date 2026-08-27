@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00
 ## Atividade principal atual
 
 **Amanda Rocco – NYC e Canadá** — iniciada em 26/08/2026 às 15:58
-⏸️ Pausada em 27/08/2026 às 09:04 por interrupção (trecho do trem do Japão – Fernanda)
+▶️ Retomada em 27/08/2026 às 09:08 (interrupção de 4min: trecho do trem do Japão – Fernanda)
 
 ## Histórico de atividades principais
 
@@ -27,13 +27,13 @@ Horário de trabalho: 09:00 – 18:00
 
 | # | Data | Início | Fim | Duração | Quem interrompeu | Demanda |
 |---|------|--------|-----|---------|------------------|---------|
-| 1 | 27/08/2026 | 09:04 | ⏳ em andamento | – | – | Trecho do trem do Japão – Fernanda |
+| 1 | 27/08/2026 | 09:04 | 09:08 | 4min | – | Trecho do trem do Japão – Fernanda |
 | 1 | 20/08/2026 | 09:31 | _em andamento_ | – | – | Vouchers da Mariana Maske |
 
 ## Resumo
 
 | Métrica | Valor |
 |---------|-------|
-| Total de interrupções | 0 |
-| Tempo total interrompido | 0min |
-| Duração média | – |
+| Total de interrupções | 1 |
+| Tempo total interrompido | 4min |
+| Duração média | 4min |
