@@ -4,6 +4,11 @@
 Roteiro de 13 noites, 27/12/2026 a 09/01/2027.
 Documento de trabalho, não vai ao cliente.
 
+> **Atenção:** a proposta e o roteiro ainda descrevem o Kozantei Ubuya e o Grand
+> Phenix Okushiga, que caíram por indisponibilidade. **O material do cliente
+> precisa ser reescrito** antes de sair. Cai junto a frase do Sakasa-Fuji, o
+> reflexo na nota de mil ienes, que deixa de ser verdade fora da margem do lago.
+
 ---
 
 ## 1. Aéreo internacional
@@ -11,11 +16,13 @@ Documento de trabalho, não vai ao cliente.
 **Ida** Orlando (MCO) para Tóquio (HND), 26/12, executiva ou primeira.
 **Volta** Haneda (HND) para Guarulhos (GRU), 09/01, chegando **domingo 10/01**.
 
-Cotar as duas rotas e deixar o Fabio escolher:
+A LATAM saiu da oneworld em 2020 e hoje não tem aliança. A JAL é parceira
+bilateral direta dela: voos JAL acumulam LATAM Pass e reconhecem o status.
+A American deixou de ser parceira junto com a saída da oneworld.
 
 | Rota | Acúmulo LATAM Pass | Observação |
 |---|---|---|
-| Delta ponta a ponta (MCO, ATL ou DTW, HND) | Integral, a Delta é sócia da LATAM | Mais simples, uma companhia só |
+| Delta ponta a ponta (MCO, ATL ou DTW, HND) | Integral, a Delta é sócia da LATAM | Uma companhia só, mais simples |
 | American até o hub + JAL para Haneda | Só no trecho JAL | Melhor cabine. Cotar JAL First e JAL Business separadamente |
 
 Pedir em toda cotação: assentos dos três juntos, franquia de bagagem, refeição infantil e política de remarcação.
@@ -24,19 +31,29 @@ Pedir em toda cotação: assentos dos três juntos, franquia de bagagem, refeiç
 
 ## 2. Hotelaria
 
-| Datas | Hotel | Categoria a pedir |
-|---|---|---|
-| 27/12, 1 noite | Bvlgari Hotel Tokyo | Suíte para 3, café da manhã |
-| 28 a 31/12, 3 noites | Nagoya Marriott Associa | Family Triple 54 m², café da manhã, andar alto voltado para a plataforma |
-| 31/12 a 02/01, 2 noites | Kozantei Ubuya | **Um dos 20 quartos com banho privativo**, meia-pensão, plano de réveillon |
-| 02 a 05/01, 3 noites | Hotel Grand Phenix Okushiga | Suíte para até 4, café da manhã |
-| 05 a 09/01, 4 noites | Bvlgari Hotel Tokyo | Suíte, café da manhã |
+| Datas | Hotel | Categoria a pedir | Status |
+|---|---|---|---|
+| 27/12, 1 noite | **Bvlgari Hotel Tokyo** | Suíte para 3, café da manhã | A cotar |
+| 28 a 31/12, 3 noites | **Nagoya Marriott Associa** | Family Triple 54 m², café da manhã, andar alto voltado para a plataforma | A cotar |
+| 31/12 a 02/01, 2 noites | **Fuji View & Spa Resort TSUMUGI** | Villa de uso exclusivo, 2 quartos, onsen externo e sauna na unidade, **meia-pensão** | Único disponível nas datas |
+| 02 a 05/01, 3 noites | **Kanbayashi Hotel Senjukaku** | Quarto japonês-ocidental com cama, **meia-pensão com kaiseki**, banho privativo | Confirmar disponibilidade |
+| 05 a 09/01, 4 noites | **Bvlgari Hotel Tokyo** | Suíte, café da manhã | A cotar |
 
 Pedidos especiais junto com a cotação:
 
-- Bvlgari: amarrar as duas estadas como jornada única, com **guarda de bagagem** durante os 8 dias fora.
-- Ubuya: **substituição das etapas de sashimi** do kaiseki, na reserva e não no check-in.
-- Perguntar taxa de banho termal em Kawaguchiko e em Nagano, e city tax de Tóquio, que são pagas localmente e não entram na diária.
+- **Bvlgari:** amarrar as duas estadas como jornada única, com **guarda de bagagem** durante os 8 dias fora.
+- **TSUMUGI:** confirmar que a **meia-pensão roda no dia 31**, e se existe plano específico de réveillon. O jantar é carne Koshu em sukiyaki ou shabu-shabu, servido dentro da villa, já que não há restaurante no local.
+- **Senjukaku:** **substituição das etapas de sashimi** do kaiseki, na reserva e não no check-in.
+- Perguntar taxa de banho termal em Kawaguchiko e em Yamanouchi, e city tax de Tóquio, que são pagas localmente e não entram na diária.
+
+### Lista de espera
+
+Vale pedir espera nos que esgotaram. Setembro e outubro têm onda de cancelamento,
+e o canal público raramente carrega o inventário inteiro. Mande e-mail direto, não
+confie no motor de busca.
+
+- Para 31/12: Kozantei Ubuya, Shuhokaku Kogetsu, Mizno, Kumonoue
+- Para 02 a 05/01: Bessho SASA, Hotel Kaneyamaen principal, Grand Phenix Okushiga
 
 ---
 
@@ -62,13 +79,14 @@ Todos com veículo para 3 pessoas mais bagagem. Confirmar cadeirinha para o Feli
 | Data | Trecho | Duração |
 |---|---|---|
 | 27/12 | Haneda para o Bvlgari | 40 min |
-| 31/12 | Estação de Mishima para o Ubuya | 1h30 |
-| 02/01 | Ubuya para a Estação de Tóquio | 2h |
-| 02/01 | Estação de Nagano para o Grand Phenix | 1h30 |
-| 05/01 | Grand Phenix para a Estação de Nagano | 1h30 |
+| 31/12 | Estação de Mishima para o TSUMUGI | 1h30 |
+| 02/01 | TSUMUGI para a Estação de Tóquio | 2h |
+| 02/01 | Estação de Nagano para o Senjukaku, em Kanbayashi | **~50 min** |
+| 05/01 | Senjukaku para a Estação de Nagano | **~50 min** |
 | 09/01 | Bvlgari para Haneda | 40 min |
 
-**Atenção nos dois trechos de Nagano:** estrada de montanha em janeiro. Exigir pneu de neve ou corrente na cotação.
+Os dois trechos de Nagano encurtaram cerca de 40 minutos cada com a mudança de
+Okushiga para Kanbayashi.
 
 ---
 
@@ -79,8 +97,18 @@ Todos com veículo para 3 pessoas mais bagagem. Confirmar cadeirinha para o Feli
 | 29/12 | Nagoya, bairro de Kinjofuto |
 | 30/12 | Ghibli Park em Nagakute, castelo e Osu, dia inteiro |
 | 01/01 | Chureito, Oishi e Kachi Kachi, dia inteiro |
-| 03/01 | Okushiga para Jigokudani, ida e volta |
+| **04/01** | **Kanbayashi para Shiga Kogen, diária com espera** |
 | 06/01 | Toyosu de madrugada, Tsukiji, Kappabashi e Nihonbashi |
+
+**O dia 03/01 não precisa mais de carro.** Ficando em Kanbayashi, a trilha dos
+macacos começa a 5 ou 10 minutos a pé do hotel. Some uma diária de motorista.
+
+**O dia 04/01 é novo.** Peça **diária com espera**, não dois trechos avulsos: o
+motorista sobe, aguarda a aula e desce. Com criança, roupa molhada e horário de
+aula que estica, trecho avulso vira armadilha.
+
+**Pneu de neve ou corrente é obrigatório** no dia 04/01. A Rota 292 congela, e
+existe posto de instalação de correntes na base, em Kanbayashi. Ponha por escrito.
 
 ---
 
@@ -117,16 +145,6 @@ O **Ghibli Park é o mais urgente**: reserva antecipada com lote limitado, e tem
 
 ---
 
-## 8. Ski, 04/01
-
-- Aula particular de cerca de 3h com instrutor de língua inglesa, Shiga International Ski School
-- Aluguel infantil completo: esqui, botas, capacete e roupa de neve
-- Aluguel para os pais, se forem esquiar
-- Lift pass para os três
-- Entrada da área de neve, trenó e tube
-
----
-
 ## 7b. Programa de culinária da Giovana
 
 Concentrado em Tóquio, de 5 a 8 de janeiro, porque o país já reabriu e nada corre risco de recesso.
@@ -136,16 +154,38 @@ Concentrado em Tóquio, de 5 a 8 de janeiro, porque o país já reabriu e nada c
 | **Kiya**, cutelaria desde 1792 | Coredo Muromachi 1, Nihonbashi | Nada, é loja. Reservar a gravação do nome |
 | **Ninben**, katsuobushi desde 1699, com balcão de dashi | Coredo Muromachi 2, Nihonbashi | Nada |
 | **Kappabashi**, faca artesanal com nome gravado | Kappabashi | Confirmar prazo de gravação no mesmo dia |
-| **Toyosu** e **Tsukiji Outer** | Toyosu e Tsukiji | Horário do leilão de atum, se quiserem ver |
+| **Toyosu** e **Tsukiji Outer** | Toyosu e Tsukiji | Calendário do mercado, ver seção final |
 | **Aula de wagashi**, doces japoneses | Tóquio | Cotar. Funciona com Giovana e Felipe juntos |
 
-**Fornecedor a cotar:** [Wabunka](https://wabunka-lux.jp/), plataforma de experiência cultural privativa, um grupo por vez, com intérprete especializado. Tem catálogo de culinária com artesão. Serve também para o pedido de "experiências para criar memórias para o filho".
+**Fornecedor a cotar:** [Wabunka](https://wabunka-lux.jp/), plataforma de experiência cultural
+privativa, um grupo por vez, com intérprete especializado. Tem catálogo de culinária com artesão.
+Serve também para o pedido de "experiências para criar memórias para o filho".
 
 ### Deixado de fora, e por quê
 
-**Kakukyu**, fábrica de hatchō missô em Okazaki, ativa desde 1645, onde se entra nos armazéns e se vê as tinas de cedro com as pirâmides de pedra de rio. Paga exatamente a história que está escrita no roteiro. Ficou fora porque briga com três coisas: fecha no recesso de ano-novo, fica a 40 min de Nagoya num dia de chegada com jet lag, e os dias de Nagoya já são do Felipe. Telefone 0564-21-1355. Fica como opção de bolso para 28/12, decidida na hora.
+**Kakukyu**, fábrica de hatchō missô em Okazaki, ativa desde 1645, onde se entra nos armazéns e se
+vê as tinas de cedro com as pirâmides de pedra de rio. Paga exatamente a história que está escrita
+no roteiro. Ficou fora porque briga com três coisas: fecha no recesso de ano-novo, fica a 40 min de
+Nagoya num dia de chegada com jet lag, e os dias de Nagoya já são do Felipe. Telefone 0564-21-1355.
+Fica como opção de bolso para 28/12, decidida na hora.
 
-**Noritake Garden**, oficina de pintura em porcelana de 90 min para adulto e criança, com a peça queimada e enviada para casa um mês depois, a 15 min a pé da estação de Nagoya. Fora por calendário: fecha às segundas, e 28/12/2026 é segunda. Dias 29 e 30 dependem do recesso.
+**Noritake Garden**, oficina de pintura em porcelana de 90 min para adulto e criança, com a peça
+queimada e enviada para casa um mês depois, a 15 min a pé da estação de Nagoya. Fora por calendário:
+fecha às segundas, e 28/12/2026 é segunda. Dias 29 e 30 dependem do recesso.
+
+---
+
+## 8. Ski, 04/01
+
+- Aula particular de cerca de 3h com instrutor de língua inglesa, **Shiga International Ski School**, na Center House de Okushiga Kogen
+- Aluguel infantil completo: esqui, botas, capacete e roupa de neve
+- Aluguel para os pais, se forem esquiar
+- Lift pass para os três
+- Entrada da área de neve, trenó e tube
+
+**Perguntar à escola se o instrutor pode encontrá-los num setor mais próximo**, tipo
+Ichinose ou Sun Valley. De Kanbayashi, o centro de Shiga Kogen fica a 20 ou 25 minutos
+e Okushiga a 30 ou 60. Se puder, corta metade da estrada sem perder a qualidade da aula.
 
 ---
 
@@ -158,7 +198,8 @@ Não são cotação, são reserva, e no feriado esgotam antes do resto.
 | 28/12 | Nagoya | Atsuta Horaiken, hitsumabushi |
 | 29/12 | Nagoya | Nagoya meshi |
 | **30/12** | Nagoya | **Hida-gyu**, teppanyaki ou sukiyaki |
-| 31/12 | Kawaguchiko | Kaiseki de réveillon, já na diária do ryokan |
+| 31/12 | Kawaguchiko | Carne Koshu na villa, dentro da meia-pensão do TSUMUGI |
+| 02 a 04/01 | Kanbayashi | Kaiseki, dentro da meia-pensão do Senjukaku |
 | 05 a 07/01 | Tóquio | A definir com o guia |
 | 08/01 | Tóquio | Il Ristorante Niko Romito, no Bvlgari |
 
@@ -170,10 +211,12 @@ Em todos, avisar na reserva: **sem peixe cru**.
 
 | Data | Trecho | Volumes |
 |---|---|---|
-| 29/12 | Nagoya para o Grand Phenix Okushiga | 2 a 3 |
-| 04/01 | Okushiga para o Bvlgari Tokyo | 2 a 3 |
+| 29/12 | Nagoya para o **Senjukaku**, em Kanbayashi | 2 a 3 |
+| 04/01 | **Senjukaku** para o Bvlgari Tokyo | 2 a 3 |
 
 Confirmar antes com os dois hotéis que aceitam receber com antecedência e guardar.
+A mala de neve sai em 29/12 de propósito, antes do pico do feriado, com três dias
+de folga sobre a data de uso.
 
 ---
 
@@ -196,10 +239,11 @@ Cobertura médica ampla, bagagem e cancelamento.
 
 ## Confirmar, não cotar
 
-- **Calendário do Toyosu e do Tsukiji Outer.** Os dois têm dias próprios de fechamento, incluindo
-  domingos, feriados e algumas quartas. **06/01/2027 é uma quarta.** Conferir no calendário oficial
-  do mercado antes de fechar o dia, senão eles acordam às 4h para encontrar tudo fechado.
+- **TSUMUGI.** A meia-pensão roda no dia 31? Existe plano de réveillon? A villa comporta os três, e qual a política para criança de 6 anos?
+- **Senjukaku.** Disponibilidade para 02 a 05/01, política de criança, e se o jantar é servido no quarto ou em salão.
+- **Calendário do Toyosu e do Tsukiji Outer.** Os dois têm dias próprios de fechamento, incluindo domingos, feriados e algumas quartas, e **06/01/2027 é uma quarta**. O calendário de 2027 só sai por volta de outubro ou novembro. Se fechar, a saída é barata: **inverter o dia 06 com o dia 07**, porque Nihonbashi, Kappabashi, Ginza e teamLab não dependem de calendário de mercado.
 - **Panda em Ueno.** Confirmar com o zoológico antes de qualquer promessa ao Felipe.
 - **Idade mínima da aula particular de ski** e duração exata.
-- **Endereços completos** do Ubuya e do Grand Phenix, para fechar a proposta.
+- **Endereços completos** do TSUMUGI e do Senjukaku, para fechar a proposta.
+- **Data de aniversário do Felipe.** O briefing diz 6 anos, sem data. Se ele fizer 7 antes de dezembro, muda faixa de tarifa aérea, tarifa de criança em ryokan e idade mínima de aula de ski.
 - **Qual Monte Fuji eles queriam:** o Pagode Chureito, que está no roteiro, ou subir até a Quinta Estação, que em janeiro normalmente só abre até a 1ª ou 4ª estação.
