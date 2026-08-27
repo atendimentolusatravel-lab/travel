@@ -196,6 +196,9 @@ Cobertura médica ampla, bagagem e cancelamento.
 
 ## Confirmar, não cotar
 
+- **Calendário do Toyosu e do Tsukiji Outer.** Os dois têm dias próprios de fechamento, incluindo
+  domingos, feriados e algumas quartas. **06/01/2027 é uma quarta.** Conferir no calendário oficial
+  do mercado antes de fechar o dia, senão eles acordam às 4h para encontrar tudo fechado.
 - **Panda em Ueno.** Confirmar com o zoológico antes de qualquer promessa ao Felipe.
 - **Idade mínima da aula particular de ski** e duração exata.
 - **Endereços completos** do Ubuya e do Grand Phenix, para fechar a proposta.
