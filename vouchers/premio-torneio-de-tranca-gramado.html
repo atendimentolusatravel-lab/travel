@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Lusa Travel — Prêmio Torneio de Tranca — Gramado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Gelasio:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ------------------------------------------------------------------
+   Lusa Travel — Prêmio Torneio de Tranca (Graciosa Country Club)
+   Capa + vouchers: aéreo, hospedagem, transfer
+   Formato A4 retrato (794 × 1123 px @96dpi). Medidas de tipografia em pt.
+   ------------------------------------------------------------------ */
+
+:root{
+  --verde:        #404626;  /* verde escuro institucional */
+  --verde-claro:  #5a6337;  /* subtítulo da capa            */
+  --carvao:       #23261a;  /* texto corrido                */
+  --cinza:        #6b7060;  /* rótulos e texto secundário   */
+  --faixa:        #d9ead3;  /* faixa do título / régua      */
+  --banda:        #eef4ea;  /* banda de seção               */
+  --cond-bg:      #faf9f5;  /* caixa de condições           */
+  --cond-bd:      #d7dbcd;
+  --rodape-txt:   #dfe4d3;
+
+  --margem: 53px;           /* margem lateral da página     */
+  --coluna2: 330.85px;      /* largura de coluna (2 colunas)*/
+  --coluna3: 211.8px;       /* largura de coluna (3 colunas)*/
+  --gap: 26.3px;
+}
+
+@page{ size: A4 portrait; margin: 0; }
+
+*{ box-sizing: border-box; }
+
+html,body{ margin:0; padding:0; background:#f2f2f0; }
+
+body{
+  font-family:"Segoe UI", Asap, system-ui, -apple-system, sans-serif;
+  color: var(--carvao);
+  -webkit-font-smoothing: antialiased;
+}
+
+.pagina{
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  margin: 0 auto;
+  padding: 0 var(--margem);
+  background: #fff;
+  isolation: isolate;
+  overflow: hidden;
+  page-break-after: always;
+  break-after: page;
+}
+.pagina:last-child{ page-break-after: auto; break-after: auto; }
+
+/* marca d'água centralizada ---------------------------------------- */
+.pagina::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 449.3px;
+  width: 491px;
+  height: 221px;
+  transform: translateX(-50%);
+  background: url("assets/lusatravel-logo.png") no-repeat center / contain;
+  opacity: .06;
+  z-index: -1;
+}
+
+/* ------------------------------------------------------------------
+   RODAPÉ (comum a todas as páginas)
+   ------------------------------------------------------------------ */
+.rodape{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 68px;
+  padding: 0 var(--margem);
+  background: var(--verde);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 7.2pt;
+  line-height: 15px;
+  color: var(--rodape-txt);
+}
+.rodape img{ width: 93px; height: 42.2px; }
+.rodape strong{ color:#fff; font-weight:600; }
+.rodape .direita{ text-align: right; }
+
+/* ------------------------------------------------------------------
+   CAPA
+   ------------------------------------------------------------------ */
+.capa{ text-align: center; }
+
+.capa .logo{
+  display: block;
+  width: 336px;
+  height: 151px;
+  margin: 140px auto 0;
+}
+
+.capa .chamada{
+  margin: 54px 0 0;
+  font-size: 9.5pt;
+  letter-spacing: .34em;
+  color: var(--cinza);
+  text-indent: .34em;
+}
+
+.capa h1{
+  margin: 19.9px 0 0;
+  font-family: Georgia, Gelasio, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 34pt;
+  line-height: 52px;
+  color: var(--verde);
+}
+
+.capa .subtitulo{
+  margin: 13.8px 0 0;
+  font-family: Georgia, Gelasio, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 17pt;
+  line-height: 30px;
+  color: var(--verde-claro);
+}
+
+.capa .regua{
+  width: 151px;
+  height: 2px;
+  margin: 28.8px auto 0;
+  background: var(--faixa);
+}
+
+.capa .resumo{
+  width: 500px;
+  margin: 46.5px auto 0;
+  font-size: 10pt;
+  line-height: 22px;
+  color: var(--cinza);
+}
+
+/* itens do prêmio --------------------------------------------------- */
+.itens{
+  display: grid;
+  grid-template-columns: 305px 218px;
+  margin: 40.6px 0 0 56.6px;
+  row-gap: 23px;
+  text-align: left;
+}
+.item{
+  display: grid;
+  grid-template-columns: 52.9px 218px;
+}
+.item .numero{
+  font-family: Georgia, Gelasio, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 24pt;
+  line-height: 30px;
+  color: var(--faixa);
+}
+.item h3{
+  margin: 5.3px 0 0;
+  font-size: 8.4pt;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--verde);
+}
+.item p{
+  margin: 8.8px 0 0;
+  font-size: 9.4pt;
+  line-height: 18px;
+  color: var(--carvao);
+}
+
+/* ------------------------------------------------------------------
+   VOUCHER — cabeçalho
+   ------------------------------------------------------------------ */
+.topo{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 46px;
+  height: 124px;
+}
+.topo .logo{ width: 174.2px; height: 78px; }
+.topo .contato{
+  text-align: right;
+  font-size: 8.2pt;
+  line-height: 16.5px;
+  color: var(--cinza);
+}
+.topo .contato .marca{
+  margin: 0 0 1px;
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: .07em;
+  color: var(--verde);
+}
+.topo .contato p{ margin: 0; }
+
+.regua-topo{
+  height: 2px;
+  margin-top: 20px;
+  background: var(--faixa);
+}
+
+/* título do voucher -------------------------------------------------- */
+.titulo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  margin: 18px 0 0;
+  background: var(--faixa);
+  font-size: 11.5pt;
+  font-weight: 600;
+  letter-spacing: .114em;
+  text-indent: .114em;
+  color: var(--verde);
+}
+
+/* banda de seção ----------------------------------------------------- */
+.secao{
+  display: flex;
+  align-items: center;
+  height: 33px;
+  margin: 11.4px 0 0;
+  padding-left: 18.8px;
+  background: var(--banda);
+  font-size: 9.2pt;
+  font-weight: 600;
+  letter-spacing: .153em;
+  color: var(--verde);
+}
+
+/* campos ------------------------------------------------------------- */
+.campos{
+  display: grid;
+  column-gap: var(--gap);
+  margin-top: 11.4px;
+}
+.campos.c2{ grid-template-columns: var(--coluna2) var(--coluna2); }
+.campos.c3{ grid-template-columns: var(--coluna3) var(--coluna3) var(--coluna3); }
+
+.coluna .campo + .campo{ margin-top: 7.8px; }
+
+.campo .rotulo{
+  display: block;
+  font-size: 7.6pt;
+  font-weight: 600;
+  letter-spacing: .1em;
+  line-height: 14px;
+  color: var(--cinza);
+}
+.campo .valor{
+  display: block;
+  margin-top: 1.1px;
+  font-size: 9.8pt;
+  line-height: 20px;
+  color: var(--carvao);
+}
+.campo .valor.destaque{
+  font-size: 11pt;
+  font-weight: 600;
+  line-height: 21px;
+  color: var(--verde);
+}
+.campo .valor.definir{
+  font-size: 11pt;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 21px;
+  color: var(--verde);
+}
+
+/* condições de uso --------------------------------------------------- */
+.condicoes{
+  margin: 11px 0 0;
+  padding: 11.5px 20px 8.5px 28px;
+  border: 1px solid var(--cond-bd);
+  background: var(--cond-bg);
+  list-style: disc;
+}
+.condicoes li{
+  margin-bottom: 2.5px;
+  padding-left: 6px;
+  font-size: 9.8pt;
+  line-height: 18px;
+  color: var(--carvao);
+}
+.condicoes li:last-child{ margin-bottom: 0; }
+.condicoes strong{ font-weight: 700; }
+.nb{ white-space: nowrap; }
+
+@media print{
+  html,body{ background:#fff; }
+  .pagina{ margin:0; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================ CAPA -->
+<section class="pagina capa">
+    <img class="logo" src="assets/lusatravel-logo.png" alt="Lusatravel — travel agency">
+
+  <p class="chamada">GRACIOSA COUNTRY CLUB · TORNEIO DE TRANCA</p>
+
+  <h1>Fim de semana<br>em Gramado</h1>
+  <p class="subtitulo">com todas as despesas pagas</p>
+
+  <div class="regua"></div>
+
+  <p class="resumo">Prêmio destinado ao(a) vencedor(a) e um acompanhante. Uma viagem completa à
+  Serra Gaúcha, organizada e acompanhada pela Lusatravel do primeiro contato ao retorno.</p>
+
+  <div class="itens">
+    <div class="item">
+      <span class="numero">1</span>
+      <div>
+        <h3>AÉREO</h3>
+        <p>Passagens aéreas de ida e volta para 2 pessoas, saindo de Curitiba.</p>
+      </div>
+    </div>
+    <div class="item">
+      <span class="numero">2</span>
+      <div>
+        <h3>TRANSFER</h3>
+        <p>Transfer privativo aeroporto &#8644; Gramado, na chegada e no retorno.</p>
+      </div>
+    </div>
+    <div class="item">
+      <span class="numero">3</span>
+      <div>
+        <h3>HOSPEDAGEM</h3>
+        <p>Final de semana no Hotel Saint Andrews, com café da manhã incluído.</p>
+      </div>
+    </div>
+    <div class="item">
+      <span class="numero">4</span>
+      <div>
+        <h3>SEGURO</h3>
+        <p>Seguro viagem para os dois viajantes durante todo o período.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="rodape">
+    <img src="assets/lusatravel-logo-branco.png" alt="">
+    <div>
+      <p style="margin:0">Rua Grã Nicco, 113 — Bloco 2, cj 102 — Curitiba/PR — CEP 81200-200</p>
+      <p style="margin:0">atendimentolusatravel@gmail.com · +55 41 3154-1117</p>
+    </div>
+    <div class="direita">
+      <p style="margin:0"><strong>Agendamento</strong></p>
+      <p style="margin:0">(41) 99189-6076</p>
+    </div>
+  </footer>
+</section>
+
+<!-- =================================================== VOUCHER AÉREO -->
+<section class="pagina">
+  
+  <header class="topo">
+    <img class="logo" src="assets/lusatravel-logo.png" alt="Lusatravel — travel agency">
+    <div class="contato">
+      <p class="marca">LUSATRAVEL</p>
+      <p>Rua Grã Nicco, 113 — Bloco 2, cj 102 — Curitiba/PR</p>
+      <p>atendimentolusatravel@gmail.com</p>
+      <p>+55 41 3154-1117 · Emergência +55 41 99912-1919</p>
+    </div>
+  </header>
+  <div class="regua-topo"></div>
+
+  <h1 class="titulo">VOUCHER DE PASSAGEM AÉREA</h1>
+
+  <h2 class="secao">FORNECEDOR</h2>
+  <div class="campos c2">
+    <div class="coluna">
+      <div class="campo">
+        <span class="rotulo">COMPANHIA AÉREA</span>
+        <span class="valor destaque">LATAM · GOL · AZUL</span>
+      </div>
+      <div class="campo">
+        <span class="rotulo">ROTEIRO DE VOO</span>
+        <span class="valor">Curitiba (CWB) &#8644; Porto Alegre (POA) — aeroporto
+        de acesso à Serra Gaúcha</span>
+      </div>
+    </div>
+    <div class="coluna">
+      <div class="campo">
+        <span class="rotulo">DESTINO</span>
+        <span class="valor">Gramado, Rio Grande do Sul — Brasil</span>
+      </div>
+      <div class="campo">
+        <span class="rotulo">EMISSÃO</span>
+        <span class="valor">Bilhetes emitidos pela Lusatravel conforme a melhor
+        disponibilidade na data solicitada</span>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="secao">PASSAGEIROS</h2>
+  <div class="campos c2">
+    <div class="campo">
+      <span class="rotulo">NOME DO TITULAR DA RESERVA</span>
+      <span class="valor destaque">Sr. RONALDO MARTINEZ SILVA</span>
+    </div>
+    <div class="campo">
+      <span class="rotulo">OCUPAÇÃO</span>
+      <span class="valor">2 adultos · 2 bilhetes</span>
+    </div>
+  </div>
+
+  <h2 class="secao">DETALHES DA RESERVA</h2>
+  <div class="campos c3">
+    <div class="campo">
+      <span class="rotulo">IDA</span>
+      <span class="valor definir">A definir</span>
+    </div>
+    <div class="campo">
+      <span class="rotulo">VOLTA</span>
+      <span class="valor definir">A definir</span>
+    </div>
+    <div class="campo">
+      <span class="rotulo">TRECHOS</span>
+      <span class="valor destaque">2</span>
+    </div>
+  </div>
+  <div class="campos c2">
+    <div class="campo">
+      <span class="rotulo">CLASSE</span>
+      <span class="valor">Econômica</span>
+    </div>
+    <div class="campo">
+      <span class="rotulo">BAGAGEM</span>
+      <span class="valor destaque">Conforme franquia da tarifa emitida</span>
+    </div>
+  </div>
+
+  <h2 class="secao">CONDIÇÕES DE USO</h2>
+  <ul class="condicoes">
+    <li>Válido por <strong>12 meses</strong> a contar da data de emissão, para <strong>1 (uma) viagem de 2 (duas) pessoas</strong>.</li>
+    <li>Datas sujeitas a disponibilidade aérea e de hospedagem; solicitar com no mínimo <strong>30 dias de antecedência</strong>.</li>
+    <li>Não válido para feriados prolongados, Natal, Ano-Novo e o período do Natal Luz, Carnaval 2027 e Semana Santa.</li>
+    <li>Prêmio <strong>pessoal e intransferível</strong>, não conversível em dinheiro nem trocável por outro destino.</li>
+    <li>Não inclui bagagem despachada além da franquia da tarifa, marcação de assento, upgrades e despesas pessoais.</li>
+    <li>Agendamento e emissão diretamente com a <strong>Lusatravel</strong>, mediante apresentação deste voucher — <strong>(41)&nbsp;<span class="nb">99189-6076</span></strong>.</li>
+  </ul>
+
+  <footer class="rodape">
+    <img src="assets/lusatravel-logo-branco.png" alt="">
+    <div>
+      <p style="margin:0">Reserva e pagamento através de <strong>LUSATRAVEL</strong></p>
+      <p style="margin:0">+55 41 3154-1117 · Emergência 24h +55 41 99912-1919</p>
+    </div>
+    <div class="direita">
+      <p style="margin:0">Curitiba,</p>
+      <p style="margin:0"><strong>25 de agosto de 2026</strong></p>
+    </div>
+  </footer>
+</section>
+
+<!-- ============================================== VOUCHER HOSPEDAGEM -->
+<section class="pagina">
+  
+  <header class="topo">
+    <img class="logo" src="assets/lusatravel-logo.png" alt="Lusatravel — travel agency">
+    <div class="contato">
+      <p class="marca">LUSATRAVEL</p>
+      <p>Rua Grã Nicco, 113 — Bloco 2, cj 102 — Curitiba/PR</p>
+      <p>atendimentolusatravel@gmail.com</p>
+      <p>+55 41 3154-1117 · Emergência +55 41 99912-1919</p>
+    </div>
+  </header>
+  <div class="regua-topo"></div>
+
+  <h1 class="titulo">VOUCHER DE HOSPEDAGEM</h1>
+
+  <h2 class="secao">FORNECEDOR</h2>
+  <div class="campos c2">
+    <div class="coluna">
+      <div class="campo">
+        <span class="rotulo">HOTEL</span>
+        <span class="valor destaque">CASTELO SAINT ANDREWS</span>
+      </div>
+      <div class="campo">
+        <span class="rotulo">ENDEREÇO</span>
+        <span class="valor">Condomínio Residencial Vale do Bosque — R. das Flôres,
+        171 — Bairro Belverede, Gramado/RS — CEP 95670-242</span>
+      </div>
+    </div>
+    <div class="coluna">
+      <div class="campo">
+        <span class="rotulo">CIDADE / PAÍS</span>
+        <span class="valor">Gramado, Rio Grande do Sul — Brasil</span>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="secao">HÓSPEDES</h2>
+  <div class="campos c2">
+    <div class="campo">
+      <span class="rotulo">NOME DO TITULAR DA RESERVA</span>
+      <span class="valor destaque">Sr. RONALDO MARTINEZ SILVA</span>
+    </div>
+    <div class="campo">
+      <span class="rotulo">OCUPAÇÃO</span>
+      <span class="valor">2 adultos · 1 quarto</span>
+    </div>
+  </div>
+
+  <h2 class="secao">DETALHES DA RESERVA</h2>
+  <div class="campos c3">
+    <div class="campo">
+      <span class="rotulo">CHECK-IN</span>
+      <span class="valor definir">A definir</span>
+    </div>
+    <div class="campo">
+      <span class="rotulo">CHECK-OUT</span>
+      <span class="valor definir">A definir</span>
+    </div>
+    <div class="campo">
+      <span class="rotulo">NOITES</span>
+      <span class="valor destaque">3</span>
+    </div>
+  </div>
+  <div class="campos c2">
+    <div class="campo">
+      <span class="rotulo">ACOMODAÇÃO</span>
+      <span class="valor">Quarto para 2 adultos</span>
+    </div>
+    <div class="campo">
+      <span class="rotulo">REGIME DE REFEIÇÕES</span>
+      <span class="valor destaque">Café da manhã incluso</span>
+    </div>
+  </div>
+
+  <h2 class="secao">CONDIÇÕES DE USO</h2>
+  <ul class="condicoes">
+    <li>Válido por <strong>12 meses</strong> a contar da data de emissão, para <strong>1 (uma) viagem de 2 (duas) pessoas</strong>.</li>
+    <li>Datas sujeitas a disponibilidade aérea e de hospedagem; solicitar com no mínimo <strong>30 dias de antecedência</strong>.</li>
+    <li>Não válido para feriados prolongados, Natal, Ano-Novo e o período do Natal Luz, Carnaval 2027 e Semana Santa.</li>
+    <li>Prêmio <strong>pessoal e intransferível</strong>, não conversível em dinheiro nem trocável por outro destino.</li>
+    <li>Não inclui refeições além do café da manhã, passeios, despesas pessoais e consumo no hotel.</li>
+    <li>Agendamento e emissão diretamente com a <strong>Lusatravel</strong>, mediante apresentação deste voucher — <strong>(41)&nbsp;<span class="nb">99189-6076</span></strong>.</li>
+  </ul>
+
+  <footer class="rodape">
+    <img src="assets/lusatravel-logo-branco.png" alt="">
+    <div>
+      <p style="margin:0">Reserva e pagamento através de <strong>LUSATRAVEL</strong></p>
+      <p style="margin:0">+55 41 3154-1117 · Emergência 24h +55 41 99912-1919</p>
+    </div>
+    <div class="direita">
+      <p style="margin:0">Curitiba,</p>
+      <p style="margin:0"><strong>25 de agosto de 2026</strong></p>
+    </div>
+  </footer>
+</section>
+
+<!-- ================================================ VOUCHER TRANSFER -->
+<section class="pagina">
+  
+  <header class="topo">
+    <img class="logo" src="assets/lusatravel-logo.png" alt="Lusatravel — travel agency">
+    <div class="contato">
+      <p class="marca">LUSATRAVEL</p>
+      <p>Rua Grã Nicco, 113 — Bloco 2, cj 102 — Curitiba/PR</p>
+      <p>atendimentolusatravel@gmail.com</p>
+      <p>+55 41 3154-1117 · Emergência +55 41 99912-1919</p>
+    </div>
+  </header>
+  <div class="regua-topo"></div>
+
+  <h1 class="titulo">VOUCHER DE TRANSFER</h1>
+
+  <h2 class="secao">FORNECEDOR</h2>
+  <div class="campos c2">
+    <div class="coluna">
+      <div class="campo">
+        <span class="rotulo">SERVIÇO</span>
+        <span class="valor destaque">TRANSFER PRIVATIVO</span>
+      </div>
+      <div class="campo">
+        <span class="rotulo">PERCURSO</span>
+        <span class="valor">Aeroporto Salgado Filho (POA) &#8644; Gramado/RS —
+        aprox. 130 km · 2h de percurso</span>
+      </div>
+    </div>
+    <div class="coluna">
+      <div class="campo">
+        <span class="rotulo">CIDADE / PAÍS</span>
+        <span class="valor">Gramado, Rio Grande do Sul — Brasil</span>
+      </div>
+      <div class="campo">
+        <span class="rotulo">OPERAÇÃO</span>
+        <span class="valor">Empresa credenciada pela Lusatravel, com motorista e
+        veículo executivo</span>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="secao">PASSAGEIROS</h2>
+  <div class="campos c2">
+    <div class="campo">
+      <span class="rotulo">NOME DO TITULAR DA RESERVA</span>
+      <span class="valor destaque">Sr. RONALDO MARTINEZ SILVA</span>
+    </div>
+    <div class="campo">
+      <span class="rotulo">OCUPAÇÃO</span>
+      <span class="valor">2 adultos · 1 veículo privativo</span>
+    </div>
+  </div>
+
+  <h2 class="secao">DETALHES DO SERVIÇO</h2>
+  <div class="campos c3">
+    <div class="campo">
+      <span class="rotulo">CHEGADA</span>
+      <span class="valor definir">A definir</span>
+    </div>
+    <div class="campo">
+      <span class="rotulo">RETORNO</span>
+      <span class="valor definir">A definir</span>
+    </div>
+    <div class="campo">
+      <span class="rotulo">TRECHOS</span>
+      <span class="valor destaque">2</span>
+    </div>
+  </div>
+  <div class="campos c2">
+    <div class="campo">
+      <span class="rotulo">VEÍCULO</span>
+      <span class="valor">Carro executivo privativo</span>
+    </div>
+    <div class="campo">
+      <span class="rotulo">RECEPÇÃO</span>
+      <span class="valor destaque">Motorista no desembarque</span>
+    </div>
+  </div>
+
+  <h2 class="secao">CONDIÇÕES DE USO</h2>
+  <ul class="condicoes">
+    <li>Válido por <strong>12 meses</strong> a contar da data de emissão, para <strong>1 (uma) viagem de 2 (duas) pessoas</strong>.</li>
+    <li>Horários definidos conforme os voos confirmados; informar os dados dos voos com no mínimo <strong>15 dias de antecedência</strong>.</li>
+    <li>Não válido para feriados prolongados, Natal, Ano-Novo e o período do Natal Luz, Carnaval 2027 e Semana Santa.</li>
+    <li>Prêmio <strong>pessoal e intransferível</strong>, não conversível em dinheiro nem trocável por outro destino.</li>
+    <li>Não inclui paradas adicionais, passeios, traslados internos em Gramado e despesas pessoais.</li>
+    <li>Agendamento e emissão diretamente com a <strong>Lusatravel</strong>, mediante apresentação deste voucher — <strong>(41)&nbsp;<span class="nb">99189-6076</span></strong>.</li>
+  </ul>
+
+  <footer class="rodape">
+    <img src="assets/lusatravel-logo-branco.png" alt="">
+    <div>
+      <p style="margin:0">Reserva e pagamento através de <strong>LUSATRAVEL</strong></p>
+      <p style="margin:0">+55 41 3154-1117 · Emergência 24h +55 41 99912-1919</p>
+    </div>
+    <div class="direita">
+      <p style="margin:0">Curitiba,</p>
+      <p style="margin:0"><strong>25 de agosto de 2026</strong></p>
+    </div>
+  </footer>
+</section>
+
+</body>
+</html>
