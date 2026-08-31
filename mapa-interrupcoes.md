@@ -7,7 +7,7 @@ Horário de trabalho: 09:00 – 18:00
 
 ## Atividade principal atual
 
-_Nenhuma em andamento — aguardando próxima atividade._
+**Antonio Chavel – Natal/Ano Novo** — iniciada em 31/08/2026 às 14:30
 
 ## Histórico de atividades principais
 
