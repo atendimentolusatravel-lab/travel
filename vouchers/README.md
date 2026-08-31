@@ -47,7 +47,16 @@ O documento original foi composto em **Segoe UI** (texto) e **Georgia** (título
 A pilha de fontes mantém as duas em primeiro lugar e usa **Asap** e **Gelasio** como
 substitutas equivalentes (métricas praticamente idênticas) em máquinas que não as tenham.
 
-## Dados a confirmar antes da emissão
+## Reservas refletidas no documento
 
-Companhia aérea, datas de ida/volta, horários e operador do transfer permanecem como
-`A definir` — o prêmio é agendado com a Lusa Travel pelo (41) 99189-6076.
+| Serviço | Localizador | Dados |
+|---|---|---|
+| Aéreo | `OI4HJV` (Azul) | AD 2976 CWB→POA 04/10/2026 11:40–12:55 · AD 2984 POA→CWB 07/10/2026 17:25–18:35 · bilhetes 577-0009730000/1 |
+| Hospedagem | `UX87ZV` (hotel `RES014230-4372`) | Castelo Saint Andrews, suíte Silver Mountain, 04 a 07/10/2026, 3 noites, café da manhã |
+| Transfer | `LZPKDV-1` | POA → Castelo Saint Andrews, 04/10/2026 13:30, sedan privativo, meet & greet |
+
+Passageiros: Sr. Ronaldo Martinez Silva e Sra. Simone da Rocha Lima Tanus.
+
+**Pendência:** o voucher do fornecedor cobre apenas o transfer de chegada. O trecho de
+retorno (Gramado → Porto Alegre, 07/10, compatível com o voo das 17:25) consta como
+*a confirmar* e deve ser atualizado quando o fornecedor emitir o voucher correspondente.

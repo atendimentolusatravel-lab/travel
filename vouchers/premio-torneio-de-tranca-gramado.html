@@ -245,6 +245,7 @@ body{
   column-gap: var(--gap);
   margin-top: 11.4px;
 }
+.campos.c1{ grid-template-columns: 1fr; }
 .campos.c2{ grid-template-columns: var(--coluna2) var(--coluna2); }
 .campos.c3{ grid-template-columns: var(--coluna3) var(--coluna3) var(--coluna3); }
 
@@ -325,21 +326,21 @@ body{
       <span class="numero">1</span>
       <div>
         <h3>AÉREO</h3>
-        <p>Passagens aéreas de ida e volta para 2 pessoas, saindo de Curitiba.</p>
+        <p>Curitiba ⇄ Porto Alegre pela Azul, de 4 a 7 de outubro de 2026.</p>
       </div>
     </div>
     <div class="item">
       <span class="numero">2</span>
       <div>
         <h3>TRANSFER</h3>
-        <p>Transfer privativo aeroporto &#8644; Gramado, na chegada e no retorno.</p>
+        <p>Transfer privativo do aeroporto de Porto Alegre até o hotel em Gramado.</p>
       </div>
     </div>
     <div class="item">
       <span class="numero">3</span>
       <div>
         <h3>HOSPEDAGEM</h3>
-        <p>Final de semana no Hotel Saint Andrews, com café da manhã incluído.</p>
+        <p>Três noites no Castelo Saint Andrews, com café da manhã incluído.</p>
       </div>
     </div>
     <div class="item">
@@ -366,7 +367,7 @@ body{
 
 <!-- =================================================== VOUCHER AÉREO -->
 <section class="pagina">
-  
+
   <header class="topo">
     <img class="logo" src="assets/lusatravel-logo.png" alt="Lusatravel — travel agency">
     <div class="contato">
@@ -385,73 +386,96 @@ body{
     <div class="coluna">
       <div class="campo">
         <span class="rotulo">COMPANHIA AÉREA</span>
-        <span class="valor destaque">LATAM · GOL · AZUL</span>
+        <span class="valor destaque">AZUL LINHAS AÉREAS</span>
       </div>
       <div class="campo">
-        <span class="rotulo">ROTEIRO DE VOO</span>
-        <span class="valor">Curitiba (CWB) &#8644; Porto Alegre (POA) — aeroporto
-        de acesso à Serra Gaúcha</span>
+        <span class="rotulo">BILHETES EMITIDOS</span>
+        <span class="valor">577-0009730000 · 577-0009730001 — emitidos em 29/08/2026</span>
       </div>
     </div>
     <div class="coluna">
       <div class="campo">
-        <span class="rotulo">DESTINO</span>
-        <span class="valor">Gramado, Rio Grande do Sul — Brasil</span>
+        <span class="rotulo">LOCALIZADOR</span>
+        <span class="valor destaque">OI4HJV</span>
       </div>
       <div class="campo">
-        <span class="rotulo">EMISSÃO</span>
-        <span class="valor">Bilhetes emitidos pela Lusatravel conforme a melhor
-        disponibilidade na data solicitada</span>
+        <span class="rotulo">SITUAÇÃO</span>
+        <span class="valor">Emitido · voos diretos, sem escalas</span>
       </div>
     </div>
   </div>
 
   <h2 class="secao">PASSAGEIROS</h2>
   <div class="campos c2">
-    <div class="campo">
-      <span class="rotulo">NOME DO TITULAR DA RESERVA</span>
-      <span class="valor destaque">Sr. RONALDO MARTINEZ SILVA</span>
+    <div class="coluna">
+      <div class="campo">
+        <span class="rotulo">NOME DO TITULAR DA RESERVA</span>
+        <span class="valor destaque">Sr. RONALDO MARTINEZ SILVA</span>
+      </div>
     </div>
-    <div class="campo">
-      <span class="rotulo">OCUPAÇÃO</span>
-      <span class="valor">2 adultos · 2 bilhetes</span>
+    <div class="coluna">
+      <div class="campo">
+        <span class="rotulo">ACOMPANHANTE</span>
+        <span class="valor destaque">Sra. SIMONE DA ROCHA LIMA TANUS</span>
+      </div>
     </div>
   </div>
 
-  <h2 class="secao">DETALHES DA RESERVA</h2>
+  <h2 class="secao">VOOS</h2>
   <div class="campos c3">
     <div class="campo">
-      <span class="rotulo">IDA</span>
-      <span class="valor definir">A definir</span>
+      <span class="rotulo">IDA · 04 OUT 2026</span>
+      <span class="valor destaque">AD 2976</span>
+      <span class="valor">Econômica · Mais Azul</span>
     </div>
     <div class="campo">
-      <span class="rotulo">VOLTA</span>
-      <span class="valor definir">A definir</span>
+      <span class="rotulo">CURITIBA (CWB)</span>
+      <span class="valor destaque">11:40</span>
+      <span class="valor">Afonso Pena</span>
     </div>
     <div class="campo">
-      <span class="rotulo">TRECHOS</span>
-      <span class="valor destaque">2</span>
+      <span class="rotulo">PORTO ALEGRE (POA)</span>
+      <span class="valor destaque">12:55</span>
+      <span class="valor">Salgado Filho</span>
+    </div>
+  </div>
+  <div class="campos c3">
+    <div class="campo">
+      <span class="rotulo">VOLTA · 07 OUT 2026</span>
+      <span class="valor destaque">AD 2984</span>
+      <span class="valor">Econômica · Mais Azul</span>
+    </div>
+    <div class="campo">
+      <span class="rotulo">PORTO ALEGRE (POA)</span>
+      <span class="valor destaque">17:25</span>
+      <span class="valor">Salgado Filho</span>
+    </div>
+    <div class="campo">
+      <span class="rotulo">CURITIBA (CWB)</span>
+      <span class="valor destaque">18:35</span>
+      <span class="valor">Afonso Pena</span>
     </div>
   </div>
   <div class="campos c2">
     <div class="campo">
-      <span class="rotulo">CLASSE</span>
-      <span class="valor">Econômica</span>
+      <span class="rotulo">BAGAGEM</span>
+      <span class="valor destaque">1 despachada de 23 kg por passageiro</span>
+      <span class="valor">Mais 1 bagagem de mão e 1 item pessoal</span>
     </div>
     <div class="campo">
-      <span class="rotulo">BAGAGEM</span>
-      <span class="valor destaque">Conforme franquia da tarifa emitida</span>
+      <span class="rotulo">ASSENTOS</span>
+      <span class="valor">Ida: 6C e 6D · Volta: 6A e 6B</span>
     </div>
   </div>
 
   <h2 class="secao">CONDIÇÕES DE USO</h2>
   <ul class="condicoes">
-    <li>Válido por <strong>12 meses</strong> a contar da data de emissão, para <strong>1 (uma) viagem de 2 (duas) pessoas</strong>.</li>
-    <li>Datas sujeitas a disponibilidade aérea e de hospedagem; solicitar com no mínimo <strong>30 dias de antecedência</strong>.</li>
-    <li>Não válido para feriados prolongados, Natal, Ano-Novo e o período do Natal Luz, Carnaval 2027 e Semana Santa.</li>
-    <li>Prêmio <strong>pessoal e intransferível</strong>, não conversível em dinheiro nem trocável por outro destino.</li>
-    <li>Não inclui bagagem despachada além da franquia da tarifa, marcação de assento, upgrades e despesas pessoais.</li>
-    <li>Agendamento e emissão diretamente com a <strong>Lusatravel</strong>, mediante apresentação deste voucher — <strong>(41)&nbsp;<span class="nb">99189-6076</span></strong>.</li>
+    <li>Apresentar-se no check-in com <strong>2 horas de antecedência</strong>, com documento de identidade original.</li>
+    <li>O não comparecimento ao embarque (<em>no-show</em>) em qualquer voo cancela automaticamente os voos subsequentes.</li>
+    <li>Tarifa Mais Azul, classe U — alterações e reembolsos sujeitos às regras tarifárias e à cobrança de diferença.</li>
+    <li>Confira nomes, datas e trechos: após a emissão, alterações podem não ser possíveis ou ter custo.</li>
+    <li>Prêmio do Torneio de Tranca do Graciosa Country Club — <strong>pessoal e intransferível</strong>, não conversível em dinheiro.</li>
+    <li>Emissão e atendimento pela <strong>Lusatravel</strong> — <strong>(41)&nbsp;<span class="nb">99189-6076</span></strong>, emergência 24h <strong>(41)&nbsp;<span class="nb">99912-1919</span></strong>.</li>
   </ul>
 
   <footer class="rodape">
@@ -462,14 +486,14 @@ body{
     </div>
     <div class="direita">
       <p style="margin:0">Curitiba,</p>
-      <p style="margin:0"><strong>25 de agosto de 2026</strong></p>
+      <p style="margin:0"><strong>31 de agosto de 2026</strong></p>
     </div>
   </footer>
 </section>
 
 <!-- ============================================== VOUCHER HOSPEDAGEM -->
 <section class="pagina">
-  
+
   <header class="topo">
     <img class="logo" src="assets/lusatravel-logo.png" alt="Lusatravel — travel agency">
     <div class="contato">
@@ -501,18 +525,27 @@ body{
         <span class="rotulo">CIDADE / PAÍS</span>
         <span class="valor">Gramado, Rio Grande do Sul — Brasil</span>
       </div>
+      <div class="campo">
+        <span class="rotulo">LOCALIZADOR</span>
+        <span class="valor destaque">UX87ZV</span>
+        <span class="valor">Confirmação do hotel: RES014230-4372 · reservado em 29/08/2026</span>
+      </div>
     </div>
   </div>
 
   <h2 class="secao">HÓSPEDES</h2>
   <div class="campos c2">
-    <div class="campo">
-      <span class="rotulo">NOME DO TITULAR DA RESERVA</span>
-      <span class="valor destaque">Sr. RONALDO MARTINEZ SILVA</span>
+    <div class="coluna">
+      <div class="campo">
+        <span class="rotulo">NOME DO TITULAR DA RESERVA</span>
+        <span class="valor destaque">Sr. RONALDO MARTINEZ SILVA</span>
+      </div>
     </div>
-    <div class="campo">
-      <span class="rotulo">OCUPAÇÃO</span>
-      <span class="valor">2 adultos · 1 quarto</span>
+    <div class="coluna">
+      <div class="campo">
+        <span class="rotulo">ACOMPANHANTE</span>
+        <span class="valor destaque">Sra. SIMONE DA ROCHA LIMA TANUS</span>
+      </div>
     </div>
   </div>
 
@@ -520,36 +553,50 @@ body{
   <div class="campos c3">
     <div class="campo">
       <span class="rotulo">CHECK-IN</span>
-      <span class="valor definir">A definir</span>
+      <span class="valor destaque">04 Out 2026</span>
+      <span class="valor">A partir das 14h</span>
     </div>
     <div class="campo">
       <span class="rotulo">CHECK-OUT</span>
-      <span class="valor definir">A definir</span>
+      <span class="valor destaque">07 Out 2026</span>
+      <span class="valor">Até as 12h</span>
     </div>
     <div class="campo">
       <span class="rotulo">NOITES</span>
       <span class="valor destaque">3</span>
+      <span class="valor">2 adultos · 1 quarto</span>
     </div>
   </div>
   <div class="campos c2">
     <div class="campo">
       <span class="rotulo">ACOMODAÇÃO</span>
-      <span class="valor">Quarto para 2 adultos</span>
+      <span class="valor">Suíte Silver Mountain — cama king size (conversível em duas de solteiro)</span>
     </div>
     <div class="campo">
       <span class="rotulo">REGIME DE REFEIÇÕES</span>
       <span class="valor destaque">Café da manhã incluso</span>
+      <span class="valor">Menu degustação, servido a qualquer hora</span>
+    </div>
+  </div>
+
+  <h2 class="secao">INCLUSO NA DIÁRIA</h2>
+  <div class="campos c1">
+    <div class="campo">
+      <span class="valor">Welcome drink · serviço de mordomo das 7h às 23h · concierge 24 horas · kit de amenidades ·
+      visita agendada ao Museu Cristais de Gramado, com transfer e ingressos · visitas agendadas às
+      principais vinícolas da região.</span>
     </div>
   </div>
 
   <h2 class="secao">CONDIÇÕES DE USO</h2>
   <ul class="condicoes">
-    <li>Válido por <strong>12 meses</strong> a contar da data de emissão, para <strong>1 (uma) viagem de 2 (duas) pessoas</strong>.</li>
-    <li>Datas sujeitas a disponibilidade aérea e de hospedagem; solicitar com no mínimo <strong>30 dias de antecedência</strong>.</li>
-    <li>Não válido para feriados prolongados, Natal, Ano-Novo e o período do Natal Luz, Carnaval 2027 e Semana Santa.</li>
-    <li>Prêmio <strong>pessoal e intransferível</strong>, não conversível em dinheiro nem trocável por outro destino.</li>
+    <li>Check-in a partir das <strong>14h</strong>; check-out até as <strong>12h</strong>.</li>
+    <li>Tarifa <em>Advance Purchase</em>, pré-paga e não reembolsável; em caso de <em>no-show</em> ou saída antecipada é cobrado 100% do valor da reserva.</li>
+    <li>Cancelamentos ou transferências de data solicitados com menos de <strong>7 dias</strong> da chegada não são aceitos.</li>
+    <li>Remarcação permitida até 2 vezes, observando o mesmo período da reserva original.</li>
     <li>Não inclui refeições além do café da manhã, passeios, despesas pessoais e consumo no hotel.</li>
-    <li>Agendamento e emissão diretamente com a <strong>Lusatravel</strong>, mediante apresentação deste voucher — <strong>(41)&nbsp;<span class="nb">99189-6076</span></strong>.</li>
+    <li>Prêmio do Torneio de Tranca do Graciosa Country Club — <strong>pessoal e intransferível</strong>, não conversível em dinheiro.</li>
+    <li>Reserva e pagamento através da <strong>Lusatravel</strong> — <strong>(41)&nbsp;<span class="nb">99189-6076</span></strong>.</li>
   </ul>
 
   <footer class="rodape">
@@ -560,14 +607,14 @@ body{
     </div>
     <div class="direita">
       <p style="margin:0">Curitiba,</p>
-      <p style="margin:0"><strong>25 de agosto de 2026</strong></p>
+      <p style="margin:0"><strong>31 de agosto de 2026</strong></p>
     </div>
   </footer>
 </section>
 
 <!-- ================================================ VOUCHER TRANSFER -->
 <section class="pagina">
-  
+
   <header class="topo">
     <img class="logo" src="assets/lusatravel-logo.png" alt="Lusatravel — travel agency">
     <div class="contato">
@@ -590,69 +637,86 @@ body{
       </div>
       <div class="campo">
         <span class="rotulo">PERCURSO</span>
-        <span class="valor">Aeroporto Salgado Filho (POA) &#8644; Gramado/RS —
-        aprox. 130 km · 2h de percurso</span>
+        <span class="valor">Aeroporto Salgado Filho (POA) &#8594; Castelo Saint Andrews —
+        R. das Flôres, 171, Vale do Bosque, Gramado/RS</span>
       </div>
     </div>
     <div class="coluna">
       <div class="campo">
-        <span class="rotulo">CIDADE / PAÍS</span>
-        <span class="valor">Gramado, Rio Grande do Sul — Brasil</span>
+        <span class="rotulo">LOCALIZADOR</span>
+        <span class="valor destaque">LZPKDV-1</span>
       </div>
       <div class="campo">
-        <span class="rotulo">OPERAÇÃO</span>
-        <span class="valor">Empresa credenciada pela Lusatravel, com motorista e
-        veículo executivo</span>
+        <span class="rotulo">VEÍCULO</span>
+        <span class="valor">Sedan ou similar · até 3 passageiros e 3 bagagens · 1 veículo</span>
       </div>
     </div>
   </div>
 
   <h2 class="secao">PASSAGEIROS</h2>
   <div class="campos c2">
-    <div class="campo">
-      <span class="rotulo">NOME DO TITULAR DA RESERVA</span>
-      <span class="valor destaque">Sr. RONALDO MARTINEZ SILVA</span>
+    <div class="coluna">
+      <div class="campo">
+        <span class="rotulo">NOME DO TITULAR DA RESERVA</span>
+        <span class="valor destaque">Sr. RONALDO MARTINEZ SILVA</span>
+      </div>
+      <div class="campo">
+        <span class="rotulo">CONTATO EM VIAGEM</span>
+        <span class="valor">+55 41 99972-2898</span>
+      </div>
     </div>
-    <div class="campo">
-      <span class="rotulo">OCUPAÇÃO</span>
-      <span class="valor">2 adultos · 1 veículo privativo</span>
+    <div class="coluna">
+      <div class="campo">
+        <span class="rotulo">ACOMPANHANTE</span>
+        <span class="valor destaque">Sra. SIMONE DA ROCHA LIMA TANUS</span>
+      </div>
+      <div class="campo">
+        <span class="rotulo">OCUPAÇÃO</span>
+        <span class="valor">2 adultos · 1 veículo privativo</span>
+      </div>
     </div>
   </div>
 
   <h2 class="secao">DETALHES DO SERVIÇO</h2>
   <div class="campos c3">
     <div class="campo">
-      <span class="rotulo">CHEGADA</span>
-      <span class="valor definir">A definir</span>
+      <span class="rotulo">EMBARQUE · 04 OUT 2026</span>
+      <span class="valor destaque">13:30</span>
+      <span class="valor">No desembarque do POA</span>
     </div>
     <div class="campo">
-      <span class="rotulo">RETORNO</span>
-      <span class="valor definir">A definir</span>
+      <span class="rotulo">VOO DE CHEGADA</span>
+      <span class="valor destaque">AD 2976</span>
+      <span class="valor">Pouso previsto às 12:55</span>
     </div>
     <div class="campo">
-      <span class="rotulo">TRECHOS</span>
-      <span class="valor destaque">2</span>
+      <span class="rotulo">TEMPO DE ESPERA</span>
+      <span class="valor destaque">45 minutos</span>
+      <span class="valor">Contados após o pouso</span>
     </div>
   </div>
   <div class="campos c2">
     <div class="campo">
-      <span class="rotulo">VEÍCULO</span>
-      <span class="valor">Carro executivo privativo</span>
+      <span class="rotulo">RECEPÇÃO</span>
+      <span class="valor destaque">Meet &amp; greet incluso</span>
+      <span class="valor">Motorista aguarda no desembarque com placa de identificação</span>
     </div>
     <div class="campo">
-      <span class="rotulo">RECEPÇÃO</span>
-      <span class="valor destaque">Motorista no desembarque</span>
+      <span class="rotulo">RETORNO A PORTO ALEGRE</span>
+      <span class="valor definir">07 Out 2026 — a confirmar</span>
+      <span class="valor">Compatível com o voo AD 2984, às 17:25</span>
     </div>
   </div>
 
   <h2 class="secao">CONDIÇÕES DE USO</h2>
   <ul class="condicoes">
-    <li>Válido por <strong>12 meses</strong> a contar da data de emissão, para <strong>1 (uma) viagem de 2 (duas) pessoas</strong>.</li>
-    <li>Horários definidos conforme os voos confirmados; informar os dados dos voos com no mínimo <strong>15 dias de antecedência</strong>.</li>
-    <li>Não válido para feriados prolongados, Natal, Ano-Novo e o período do Natal Luz, Carnaval 2027 e Semana Santa.</li>
-    <li>Prêmio <strong>pessoal e intransferível</strong>, não conversível em dinheiro nem trocável por outro destino.</li>
-    <li>Não inclui paradas adicionais, passeios, traslados internos em Gramado e despesas pessoais.</li>
-    <li>Agendamento e emissão diretamente com a <strong>Lusatravel</strong>, mediante apresentação deste voucher — <strong>(41)&nbsp;<span class="nb">99189-6076</span></strong>.</li>
+    <li>Os dados do motorista são enviados por SMS, e-mail ou WhatsApp cerca de <strong>2 horas antes</strong> do embarque.</li>
+    <li>O motorista acompanha o horário do pouso e aguarda <strong>45 minutos</strong>; após esse prazo o serviço é considerado <em>no-show</em>.</li>
+    <li>Não deixe o aeroporto sem localizar o motorista — acione o despachante <strong>+36&nbsp;<span class="nb">70 425 8320</span></strong> ou a Lusatravel.</li>
+    <li>Atrasos de voo superiores a 3 horas sujeitam o transfer à disponibilidade de veículo.</li>
+    <li>Veículo para até 3 passageiros e 3 bagagens; volume excedente pode ser recusado pelo motorista.</li>
+    <li>Prêmio do Torneio de Tranca do Graciosa Country Club — <strong>pessoal e intransferível</strong>, não conversível em dinheiro.</li>
+    <li>Reserva e atendimento através da <strong>Lusatravel</strong> — <strong>(41)&nbsp;<span class="nb">99189-6076</span></strong>, emergência 24h <strong>(41)&nbsp;<span class="nb">99912-1919</span></strong>.</li>
   </ul>
 
   <footer class="rodape">
@@ -663,7 +727,7 @@ body{
     </div>
     <div class="direita">
       <p style="margin:0">Curitiba,</p>
-      <p style="margin:0"><strong>25 de agosto de 2026</strong></p>
+      <p style="margin:0"><strong>31 de agosto de 2026</strong></p>
     </div>
   </footer>
 </section>
