@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00
 ## Atividade principal atual
 
 **Antonio Chavel – Natal/Ano Novo** — iniciada em 31/08/2026 às 14:30
-▶️ Retomada em 31/08/2026 às 15:09 (interrupções nesta atividade: 5min)
+⏸️ Pausada em 31/08/2026 às 15:22 por interrupção (email ski Amanda Rocco, retorno)
 
 ## Histórico de atividades principais
 
@@ -35,6 +35,7 @@ Horário de trabalho: 09:00 – 18:00
 | 4 | 27/08/2026 | 10:23 | 11:14 | 51min | – | Marcação de assentos do Rodrigo Barrozo – Londres (retorno) |
 | 5 | 27/08/2026 | 11:15 | 11:29 | 14min | – | Adicionar bagagem extra do Irineu e da Rosário (retorno) |
 | 6 | 31/08/2026 | 15:04 | 15:09 | 5min | – | Responder email sobre o ski – Amanda Rocco |
+| 7 | 31/08/2026 | 15:22 | ⏳ em andamento | – | – | Responder email sobre o ski – Amanda Rocco (retorno) |
 | 1 | 20/08/2026 | 09:31 | _em andamento_ | – | – | Vouchers da Mariana Maske |
 
 ## Resumo
