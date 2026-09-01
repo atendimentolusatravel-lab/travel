@@ -1,0 +1,949 @@
+<title>Cristofer e Família | Japão</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;600&family=Montserrat:wght@400;500;600&display=swap">
+<style>
+/* ══════════════════════════════════════════════════════════
+   LUSA TRAVEL · Roteiro Japão — Cristofer e Família
+   Design System Lusa (ouro #da8d00 fixo) + cor de destino
+   Índigo Japonês #1f3a5f. Versão web responsiva.
+   ══════════════════════════════════════════════════════════ */
+
+:root{
+  --gold:#da8d00;
+  --gold-txt:#9c6600;
+  --dest:#1f3a5f;
+  --dest-soft:#2c5480;
+  --bg:#fbf9f5;
+  --surface:#ffffff;
+  --surface-2:#f5f1ea;
+  --fg:#333131;
+  --fg-strong:#1a1510;
+  --fg-mut:#8a7f74;
+  --line:#e4ddd2;
+  --band:#1a1510;
+  --band-fg:#ffffff;
+  --band-mut:rgba(255,255,255,.5);
+  --shadow:0 1px 2px rgba(26,21,16,.04),0 8px 28px rgba(26,21,16,.06);
+
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --read:'Open Sans',system-ui,sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --gold:#e6a01f;
+    --gold-txt:#e6a01f;
+    --dest:#7ea6d2;
+    --dest-soft:#5d87b5;
+    --bg:#14110e;
+    --surface:#1c1815;
+    --surface-2:#231e1a;
+    --fg:#d6cec4;
+    --fg-strong:#f6f1e9;
+    --fg-mut:#968b7f;
+    --line:#332c25;
+    --band:#0d0b09;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 28px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --gold:#e6a01f; --gold-txt:#e6a01f; --dest:#7ea6d2; --dest-soft:#5d87b5;
+  --bg:#14110e; --surface:#1c1815; --surface-2:#231e1a;
+  --fg:#d6cec4; --fg-strong:#f6f1e9; --fg-mut:#968b7f; --line:#332c25;
+  --band:#0d0b09;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 28px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:var(--sans); font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+:focus-visible{outline:2px solid var(--gold); outline-offset:3px; border-radius:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.wrap{width:min(1080px,92vw); margin-inline:auto}
+.narrow{width:min(760px,92vw); margin-inline:auto}
+
+/* ── Barra de navegação ───────────────────────────────── */
+.topbar{position:sticky; top:0; z-index:50; background:var(--band); border-bottom:3px solid var(--gold)}
+.topbar-in{display:flex; align-items:center; justify-content:space-between; gap:16px; height:58px}
+.brand{font-weight:800; letter-spacing:.09em; color:var(--gold); font-size:15px}
+.nav{display:flex; gap:22px; overflow-x:auto; scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{
+  font-family:var(--con); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:rgba(255,255,255,.55); text-decoration:none; white-space:nowrap; padding:4px 0;
+  border-bottom:2px solid transparent; transition:color .15s,border-color .15s;
+}
+.nav a:hover{color:#fff; border-bottom-color:var(--gold)}
+@media(max-width:760px){.nav{display:none}}
+
+/* ── Capa ─────────────────────────────────────────────── */
+.cover{position:relative; background:var(--band); color:#fff; overflow:hidden}
+.cover-art{position:absolute; inset:0; opacity:.9}
+.cover-art::before{
+  content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(120% 90% at 78% 8%, rgba(218,141,0,.30) 0%, transparent 55%),
+    radial-gradient(100% 80% at 12% 92%, rgba(31,58,95,.85) 0%, transparent 60%),
+    linear-gradient(158deg,#22314a 0%,#1a2338 42%,#1a1510 100%);
+}
+.cover-art::after{
+  content:""; position:absolute; inset:0; opacity:.14;
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0 1px,transparent 1px 84px);
+}
+.cover-sun{
+  position:absolute; right:-60px; top:40px; width:340px; height:340px; border-radius:50%;
+  background:radial-gradient(circle at 42% 38%, rgba(218,141,0,.55), rgba(218,141,0,.06) 62%, transparent 70%);
+  filter:blur(2px);
+}
+.cover-in{position:relative; z-index:2; padding:76px 0 64px}
+.kicker{font-family:var(--con); font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55)}
+.cover-basis{font-size:14px; color:rgba(255,255,255,.62); margin:6px 0 46px}
+.cover-to{font-family:var(--con); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.45)}
+.cover-name{
+  font-size:clamp(34px,6.6vw,60px); font-weight:800; text-transform:uppercase;
+  letter-spacing:.015em; line-height:1.06; margin:6px 0 0; text-wrap:balance;
+}
+.cover-dest{font-size:clamp(19px,2.8vw,27px); font-weight:600; color:var(--gold); letter-spacing:.05em; margin-top:8px}
+.stats{display:flex; flex-wrap:wrap; gap:34px 48px; margin-top:46px}
+.stat b{display:block; font-size:38px; font-weight:800; color:var(--gold); line-height:1; font-variant-numeric:tabular-nums}
+.stat span{font-family:var(--con); font-size:11px; letter-spacing:.13em; text-transform:uppercase; color:rgba(255,255,255,.58)}
+.cover-sig{
+  margin-top:52px; padding-top:22px; border-top:1px solid rgba(255,255,255,.14);
+  font-family:var(--con); font-size:13px; line-height:1.9; color:rgba(255,255,255,.6);
+}
+.cover-sig a{color:inherit; text-decoration:none; border-bottom:1px solid rgba(218,141,0,.45)}
+.cover-sig a:hover{color:#fff}
+
+/* ── Seções ───────────────────────────────────────────── */
+section{scroll-margin-top:62px}
+.sec{padding:74px 0}
+.sec + .sec{border-top:1px solid var(--line)}
+.eyebrow{font-family:var(--con); font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold-txt); font-weight:600}
+h2{
+  font-size:clamp(25px,3.6vw,36px); font-weight:700; color:var(--fg-strong);
+  letter-spacing:-.015em; margin:10px 0 0; text-wrap:balance;
+}
+.lede{font-size:17px; line-height:1.75; color:var(--fg); margin-top:18px; max-width:65ch}
+.lede strong{color:var(--fg-strong); font-weight:600}
+
+/* ── Lógica do roteiro ────────────────────────────────── */
+.why{display:grid; grid-template-columns:repeat(auto-fit,minmax(285px,1fr)); gap:30px 38px; margin-top:44px}
+.why h3{
+  font-size:15px; font-weight:700; color:var(--fg-strong); margin:0 0 7px;
+  padding-top:14px; border-top:2px solid var(--gold);
+}
+.why p{margin:0; font-size:14.5px; line-height:1.7; color:var(--fg)}
+
+/* ── Timeline do itinerário ───────────────────────────── */
+.tl{margin-top:44px; display:flex; flex-direction:column}
+.tl-item{display:grid; grid-template-columns:46px 1fr; gap:20px; align-items:start}
+.tl-mark{display:flex; flex-direction:column; align-items:center; align-self:stretch}
+.tl-badge{
+  width:46px; height:46px; border-radius:50%; background:var(--dest); color:#fff;
+  font-weight:700; font-size:17px; display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; font-variant-numeric:tabular-nums;
+}
+:root[data-theme="dark"] .tl-badge,
+:root:not([data-theme="light"]) .tl-badge{color:#0d0b09}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .tl-badge{color:#fff}}
+.tl-rail{width:2px; flex:1; background:var(--line); min-height:26px}
+.tl-body{padding-bottom:26px}
+.tl-city{font-size:19px; font-weight:700; color:var(--fg-strong); line-height:1.3}
+.tl-meta{
+  font-family:var(--con); font-size:12.5px; color:var(--fg-mut); margin-top:4px;
+  display:flex; flex-wrap:wrap; gap:6px 14px;
+}
+.tl-note{font-size:14.5px; line-height:1.65; color:var(--fg); margin-top:8px; max-width:62ch}
+.tl-item:last-child .tl-rail{display:none}
+.pill{
+  display:inline-block; font-family:var(--con); font-size:10.5px; font-weight:600;
+  letter-spacing:.1em; text-transform:uppercase; padding:3px 9px; border-radius:2px;
+  background:var(--surface-2); color:var(--fg-mut); border:1px solid var(--line);
+}
+.pill-gold{background:transparent; color:var(--gold-txt); border-color:var(--gold)}
+
+/* ── Roteiro dia a dia ────────────────────────────────── */
+.leg{margin-top:40px; border:1px solid var(--line); border-radius:4px; overflow:hidden; background:var(--surface); box-shadow:var(--shadow)}
+.leg-hd{
+  background:var(--dest); color:#fff; padding:16px 24px;
+  display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px 20px;
+}
+:root[data-theme="dark"] .leg-hd,
+:root:not([data-theme="light"]) .leg-hd{background:#16283f; color:#eef3f9}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .leg-hd{background:var(--dest); color:#fff}}
+.leg-city{font-size:15px; font-weight:700; letter-spacing:.14em; text-transform:uppercase}
+.leg-data{font-family:var(--con); font-size:11.5px; letter-spacing:.06em; color:rgba(255,255,255,.72); display:flex; flex-wrap:wrap; gap:4px 16px}
+.leg-bar{height:3px; background:var(--gold)}
+.days{padding:6px 24px 22px}
+.day{padding:20px 0; border-bottom:1px solid var(--line)}
+.day:last-child{border-bottom:0}
+.day-h{
+  font-family:var(--con); font-size:12px; font-weight:600; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--gold-txt);
+}
+.day-t{font-family:var(--read); font-size:15.5px; line-height:1.75; color:var(--fg); margin:7px 0 0}
+.day-t b{color:var(--fg-strong); font-weight:600}
+.flag{
+  display:inline-block; margin-top:9px; font-family:var(--con); font-size:11.5px;
+  letter-spacing:.03em; color:var(--fg-strong); background:var(--surface-2);
+  border-left:3px solid var(--gold); padding:7px 12px; border-radius:0 2px 2px 0; line-height:1.55;
+}
+
+/* ── Destinos ─────────────────────────────────────────── */
+.dest-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; margin-top:44px}
+.dcard{background:var(--surface); border:1px solid var(--line); border-radius:4px; overflow:hidden; display:flex; flex-direction:column}
+.dcard-top{padding:20px 24px 0}
+.dcard-city{font-size:21px; font-weight:700; color:var(--fg-strong); letter-spacing:-.01em}
+.dcard-sub{font-family:var(--con); font-size:11.5px; letter-spacing:.11em; text-transform:uppercase; color:var(--gold-txt); margin-top:4px}
+.dcard p{font-size:14.5px; line-height:1.72; color:var(--fg); padding:0 24px; margin:14px 0 0}
+.dcard-for{
+  margin:18px 24px 22px 24px; padding-top:14px; border-top:1px solid var(--line);
+  display:flex; flex-wrap:wrap; gap:7px;
+}
+.who{font-family:var(--con); font-size:11px; letter-spacing:.05em; padding:4px 10px; border-radius:2px; background:var(--surface-2); color:var(--fg-mut); border:1px solid var(--line)}
+
+/* ── Hospedagem ───────────────────────────────────────── */
+.tablewrap{overflow-x:auto; margin-top:34px; border:1px solid var(--line); border-radius:4px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; min-width:620px}
+th,td{text-align:left; padding:13px 20px; border-bottom:1px solid var(--line); font-size:14.5px}
+th{
+  font-family:var(--con); font-size:10.5px; letter-spacing:.13em; text-transform:uppercase;
+  color:var(--fg-mut); font-weight:600; background:var(--surface-2);
+}
+td:first-child{font-weight:600; color:var(--fg-strong); white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+.num{font-variant-numeric:tabular-nums; white-space:nowrap}
+
+/* ── Condições ────────────────────────────────────────── */
+.cond{margin-top:34px; display:grid; gap:24px}
+.cond h3{
+  font-family:var(--con); font-size:12px; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--gold-txt); margin:0 0 8px;
+}
+.cond p{margin:0; font-size:15px; line-height:1.75; color:var(--fg); max-width:68ch}
+.notice{
+  margin-top:38px; padding:20px 24px; background:var(--surface-2);
+  border-left:3px solid var(--gold); border-radius:0 3px 3px 0;
+}
+.notice p{margin:0; font-size:14.5px; line-height:1.7; color:var(--fg-strong)}
+
+/* ── Rodapé ───────────────────────────────────────────── */
+.foot{background:var(--band); color:rgba(255,255,255,.62); padding:52px 0 46px; border-top:3px solid var(--gold)}
+.foot-brand{font-weight:800; letter-spacing:.09em; color:var(--gold); font-size:16px}
+.foot-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:26px 36px; margin-top:26px}
+.foot-k{font-family:var(--con); font-size:10.5px; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.38)}
+.foot-v{font-family:var(--con); font-size:14px; margin-top:5px; line-height:1.7}
+.foot-v a{color:#fff; text-decoration:none; border-bottom:1px solid rgba(218,141,0,.5)}
+.foot-note{margin-top:36px; padding-top:20px; border-top:1px solid rgba(255,255,255,.12); font-family:var(--con); font-size:12px; color:rgba(255,255,255,.4)}
+</style>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand">LUSA TRAVEL</div>
+    <nav class="nav" aria-label="Seções da proposta">
+      <a href="#logica">A lógica</a>
+      <a href="#itinerario">Itinerário</a>
+      <a href="#roteiro">Dia a dia</a>
+      <a href="#destinos">Destinos</a>
+      <a href="#hospedagem">Hospedagem</a>
+      <a href="#condicoes">Observações</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══════════ CAPA ══════════ -->
+<div class="cover">
+  <div class="cover-art"></div>
+  <div class="cover-sun"></div>
+  <div class="wrap cover-in">
+    <div class="kicker">Roteiro para sua viagem</div>
+    <div class="cover-basis">Baseado em 5 passageiros · 2 adultos e 3 adolescentes · Julho de 2027</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <h1 class="cover-name">Cristofer e Família</h1>
+    <div class="cover-dest">JAPÃO · 日本</div>
+    <div class="stats">
+      <div class="stat"><b>8</b><span>Destinos</span></div>
+      <div class="stat"><b>24</b><span>Noites</span></div>
+      <div class="stat"><b>28</b><span>Dias</span></div>
+      <div class="stat"><b>5</b><span>Passageiros</span></div>
+      <div class="stat"><b>1</b><span>Voo doméstico</span></div>
+    </div>
+    <div class="cover-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
+      <span style="opacity:.72">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ A LÓGICA ══════════ -->
+<section class="sec" id="logica">
+  <div class="wrap">
+    <div class="eyebrow">Por que este roteiro</div>
+    <h2>Oito cidades, uma linha reta e um respiro no meio</h2>
+    <p class="lede">
+      Julho é o mês mais quente e úmido do Japão. Um roteiro de 24 noites com cinco pessoas
+      não se resolve só escolhendo cidades bonitas — se resolve <strong>alternando ritmo,
+      altitude e temperatura</strong>, para que o vigésimo dia seja tão bom quanto o terceiro.
+      Cada cidade aqui foi escolhida por uma razão específica, e a ordem entre elas é parte
+      da escolha.
+    </p>
+    <div class="why">
+      <div>
+        <h3>Uma linha, sem repetir trecho</h3>
+        <p>A rota corre de leste a oeste, sempre de trem, com um único voo doméstico no fim.
+        Nada de ida e volta ao mesmo lugar — cada deslocamento avança a viagem.</p>
+      </div>
+      <div>
+        <h3>Altitude como ar-condicionado</h3>
+        <p>Nikko e Takayama estão acima dos 570 m, e o Okunikko chega a 1.270 m. São os dias
+        em que a família sai dos 33 °C e respira, no meio da parte mais intensa do roteiro.</p>
+      </div>
+      <div>
+        <h3>Dois festivais que caem sozinhos</h3>
+        <p>Tanabata em Tóquio no dia 7, e o Gion Matsuri em Kyoto exatamente nos dias 16 e 17 —
+        a véspera iluminada e o grande desfile. Não é sorte: o roteiro foi ancorado nessas datas.</p>
+      </div>
+      <div>
+        <h3>História que o Cristofer procura</h3>
+        <p>Nikko é o mausoléu de Tokugawa Ieyasu, fundador do xogunato. Kanazawa preserva o
+        bairro samurai. Kyoto tem o Castelo Nijo, residência dos Tokugawa. É a linha do tempo inteira.</p>
+      </div>
+      <div>
+        <h3>Design e moda para a Sofia</h3>
+        <p>Os brechós de Shimokitazawa, o artesanato de Kanazawa, a arquitetura de Tadao Ando
+        em Naoshima e a cerâmica Ryukyu em Yomitan. Quatro cidades, quatro linguagens visuais.</p>
+      </div>
+      <div>
+        <h3>Okinawa é a pausa, não a praia</h3>
+        <p>Quatro noites de descanso depois de vinte dias de maratona urbana. É o que permite
+        que a viagem termine bem — e a base fica na costa de Onna, servida por ônibus direto do aeroporto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ITINERÁRIO ══════════ -->
+<section class="sec" id="itinerario">
+  <div class="wrap">
+    <div class="eyebrow">Sua rota</div>
+    <h2>Itinerário</h2>
+    <p class="lede">Datas de referência para <strong>julho de 2027</strong>, ancoradas no
+    aniversário do Cristofer (06/07) e no Gion Matsuri de Kyoto (16 e 17/07).</p>
+
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">1</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Tóquio</div>
+          <div class="tl-meta"><span>04 – 10 JUL</span><span>6 noites</span><span>40 m · máx. 31 °C</span></div>
+          <div class="tl-note">Os dois parques da Disney, o mercado de Toyosu, os bairros de moda e o aniversário do Cristofer.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">2</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Nikko</div>
+          <div class="tl-meta"><span>10 – 12 JUL</span><span>2 noites</span><span>600 m · máx. 28 °C</span><span class="pill pill-gold">Okunikko 1.270 m · 22 °C</span></div>
+          <div class="tl-note">O mausoléu do primeiro xogum Tokugawa, o parque temático do período Edo e um dia inteiro de montanha e cachoeira.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">3</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Kanazawa</div>
+          <div class="tl-meta"><span>12 – 14 JUL</span><span>2 noites</span><span>30 m · máx. 31 °C</span></div>
+          <div class="tl-note">Bairro samurai e distrito de gueixas preservados, o jardim Kenrokuen e o mercado de peixe Omicho.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">4</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Takayama</div>
+          <div class="tl-meta"><span>14 – 16 JUL</span><span>2 noites</span><span>570 m · máx. 30 °C</span><span class="pill">via Shirakawa-go</span></div>
+          <div class="tl-note">O Japão raiz: cidade velha de madeira intacta, mercado matinal, cervejarias de saquê e carne hida.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">5</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Kyoto</div>
+          <div class="tl-meta"><span>16 – 19 JUL</span><span>3 noites</span><span>50 m · máx. 33 °C</span><span class="pill pill-gold">Gion Matsuri</span></div>
+          <div class="tl-note">Chegada na noite do Yoiyama e o grande desfile na manhã seguinte. O Castelo Nijo e o mercado Nishiki.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">6</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Naoshima</div>
+          <div class="tl-meta"><span>19 – 21 JUL</span><span>2 noites</span><span>nível do mar · máx. 32 °C</span></div>
+          <div class="tl-note">A ilha-museu de Tadao Ando e Yayoi Kusama, no Mar Interior de Seto.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">7</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Osaka</div>
+          <div class="tl-meta"><span>21 – 23 JUL</span><span>2 noites</span><span>20 m · máx. 33 °C</span><span class="pill">+ 1 noite no retorno</span></div>
+          <div class="tl-note">A capital gastronômica do Japão: mercado Kuromon, Dotonbori e as izakayas.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">8</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Okinawa · Costa de Onna</div>
+          <div class="tl-meta"><span>23 – 27 JUL</span><span>4 noites</span><span>mar a 28 °C</span></div>
+          <div class="tl-note">Praia, Gruta Azul, o aquário de Churaumi e a cultura Ryukyu. A pausa antes da volta.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ROTEIRO DIA A DIA ══════════ -->
+<section class="sec" id="roteiro">
+  <div class="wrap">
+    <div class="eyebrow">Programação</div>
+    <h2>Roteiro dia a dia</h2>
+    <p class="lede">Um roteiro-guia, não um script. As manhãs estão ancoradas nas atividades
+    que dependem de horário; as tardes deixam margem para a família andar sozinha, que foi
+    exatamente o que o Cristofer pediu.</p>
+
+    <!-- SAÍDA -->
+    <div class="leg">
+      <div class="leg-hd">
+        <div class="leg-city">Brasil → Japão</div>
+        <div class="leg-data"><span>02 – 04 JUL</span><span>Em trânsito</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="days">
+        <div class="day">
+          <div class="day-h">Dia 01 | São Paulo | 02/07 · sexta</div>
+          <p class="day-t">Embarque em Guarulhos com destino a Tóquio. Roteamento pela aliança
+          oneworld para aproveitar a fidelidade Latam do Cristofer, com uma conexão.</p>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 02 | Em voo | 03/07 · sábado</div>
+          <p class="day-t">Dia em trânsito, com a travessia da linha internacional de data.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TÓQUIO -->
+    <div class="leg">
+      <div class="leg-hd">
+        <div class="leg-city">Tóquio</div>
+        <div class="leg-data"><span>04 – 10 JUL</span><span>6 noites</span><span>Máx. média 31 °C</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="days">
+        <div class="day">
+          <div class="day-h">Dia 03 | Tóquio | 04/07 · domingo</div>
+          <p class="day-t">Chegada em Haneda e traslado ao hotel. Primeiro dia deliberadamente leve
+          para vencer o fuso: o cruzamento de Shibuya no fim da tarde e um jantar de izakaya
+          em Ebisu. <b>Nada de compromisso de horário.</b></p>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 04 | Tóquio | 05/07 · segunda</div>
+          <p class="day-t">Dia inteiro no <b>Tokyo DisneySea</b>. É o parque que não existe em nenhum
+          outro lugar do mundo — e a razão pela qual conhecer a Disney americana não substitui
+          esta visita. Segunda-feira é o melhor dia da semana para enfrentar as filas.</p>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 05 | Tóquio | 06/07 · terça</div>
+          <p class="day-t">Manhã cedo no <b>mercado de Toyosu</b>, o maior entreposto de pescado do
+          mundo, com café da manhã de sushi no balcão. À tarde, Ginza e o Museu Nezu.
+          À noite, o jantar de aniversário do Cristofer.</p>
+          <div class="flag">06/07 · Aniversário do Cristofer — sugestão de jantar comemorativo a definir com a família.</div>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 06 | Tóquio | 07/07 · quarta</div>
+          <p class="day-t">Dia inteiro na <b>Tokyo Disneyland</b>. Coincide com o Tanabata, o festival
+          das estrelas: a cidade inteira amanhece decorada com ramos de bambu e tiras de papel
+          com pedidos, e o parque monta a própria versão da festa.</p>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 07 | Tóquio | 08/07 · quinta</div>
+          <p class="day-t">O dia da Sofia e da Mariana. Harajuku e Omotesando pela manhã — a avenida
+          de arquitetura contemporânea mais densa do Japão. À tarde, <b>Shimokitazawa</b>: o bairro
+          dos brechós de verdade, onde os jovens de Tóquio realmente compram. Fim de tarde em
+          Daikanyama e Nakameguro.</p>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 08 | Tóquio | 09/07 · sexta</div>
+          <p class="day-t">Asakusa e o templo Senso-ji pela manhã, com o mercado da Nakamise.
+          À tarde, teamLab para as meninas e Akihabara para o Rafael. À noite, o Omoide Yokocho —
+          o beco de izakayas de dois lugares que sobreviveu ao pós-guerra em Shinjuku.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NIKKO -->
+    <div class="leg">
+      <div class="leg-hd">
+        <div class="leg-city">Nikko</div>
+        <div class="leg-data"><span>10 – 12 JUL</span><span>2 noites</span><span>600 m · Okunikko 1.270 m</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="days">
+        <div class="day">
+          <div class="day-h">Dia 09 | Nikko | 10/07 · sábado</div>
+          <p class="day-t">Trem para Nikko pela manhã (cerca de 2 h). À tarde, o <b>Edo Wonderland</b>:
+          um parque temático do período Edo com atores em personagem, samurais, ninjas e trajes
+          de época para vestir. Para uma família que ama Disney e um pai apaixonado por xogunato,
+          é o idioma deles aplicado ao interesse dele.</p>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 10 | Nikko | 11/07 · domingo</div>
+          <p class="day-t">Manhã cedo no <b>Toshogu</b> — o mausoléu de Tokugawa Ieyasu, fundador do
+          xogunato, dourado e coberto de entalhes, incluindo os três macacos originais. Depois, o
+          Kanmangafuchi: um desfiladeiro de lava com cerca de setenta budas de pedra enfileirados
+          à beira do rio. À tarde, a subida das 48 curvas até o <b>Okunikko</b>: a cachoeira Kegon,
+          de 97 m, e o lago Chuzenji a 1.270 m de altitude.</p>
+          <div class="flag">O dia mais fresco do roteiro fora de Okinawa — cerca de 22 °C no lago, contra 33 °C em Kyoto.</div>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 11 | Nikko → Kanazawa | 12/07 · segunda</div>
+          <p class="day-t">Manhã livre em Nikko e a ponte Shinkyo. Após o almoço, viagem para
+          Kanazawa via Tóquio, pelo Shinkansen da linha Hokuriku. Chegada no fim da tarde e
+          primeiro jantar na cidade.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- KANAZAWA -->
+    <div class="leg">
+      <div class="leg-hd">
+        <div class="leg-city">Kanazawa</div>
+        <div class="leg-data"><span>12 – 14 JUL</span><span>2 noites</span><span>Máx. média 31 °C</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="days">
+        <div class="day">
+          <div class="day-h">Dia 12 | Kanazawa | 13/07 · terça</div>
+          <p class="day-t">Kenrokuen logo na abertura, um dos três grandes jardins do Japão, antes
+          do calor e dos ônibus de excursão. Em seguida o castelo e <b>Nagamachi</b>, o bairro de
+          residências de samurais com muros de barro preservados. Almoço no <b>mercado Omicho</b>,
+          onde se come no balcão o que acabou de chegar do Mar do Japão — a parada favorita do
+          Cristofer na cidade. À tarde, o Museu do Século 21 e o distrito de gueixas Higashi Chaya
+          no fim do dia, quando as lanternas acendem.</p>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 13 | Kanazawa → Shirakawa-go → Takayama | 14/07 · quarta</div>
+          <p class="day-t">Ônibus da manhã para <b>Shirakawa-go</b>, o vilarejo Patrimônio da
+          Humanidade das casas <i>gassho-zukuri</i>, de telhados de palha inclinados como mãos em
+          prece. Almoço no vilarejo e seguimos para Takayama, chegando no meio da tarde.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAKAYAMA -->
+    <div class="leg">
+      <div class="leg-hd">
+        <div class="leg-city">Takayama</div>
+        <div class="leg-data"><span>14 – 16 JUL</span><span>2 noites</span><span>570 m · máx. 30 °C</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="days">
+        <div class="day">
+          <div class="day-h">Dia 14 | Takayama | 15/07 · quinta</div>
+          <p class="day-t">Manhã no <b>mercado matinal à beira do rio Miyagawa</b> e na cidade velha
+          de Sanmachi: ruas inteiras de casas de madeira escura do período Edo, com cervejarias de
+          saquê abertas à visitação — reconhecíveis pela bola de cedro pendurada na porta.
+          Almoço de carne hida. À tarde, o Hida no Sato, museu a céu aberto de casas rurais
+          transplantadas dos vales da região.</p>
+          <div class="flag">Opcional: trocar a tarde por um bate-volta a Kamikochi, vale glacial a 1.500 m nos Alpes Japoneses.</div>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 15 | Takayama → Kyoto | 16/07 · sexta</div>
+          <p class="day-t">Trem panorâmico pelo vale do rio Hida até Nagoya e Shinkansen para Kyoto,
+          chegando no início da tarde. À noite, o <b>Yoiyama</b>: a grande véspera do Gion Matsuri,
+          com as ruas do centro fechadas ao trânsito, os carros alegóricos iluminados por lanternas
+          e barracas de comida por toda parte. É a noite mais animada do ano em Kyoto.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- KYOTO -->
+    <div class="leg">
+      <div class="leg-hd">
+        <div class="leg-city">Kyoto</div>
+        <div class="leg-data"><span>16 – 19 JUL</span><span>3 noites</span><span>Máx. média 33 °C</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="days">
+        <div class="day">
+          <div class="day-h">Dia 16 | Kyoto | 17/07 · sábado</div>
+          <p class="day-t">Manhã do <b>Yamahoko Junko</b>, o desfile principal do Gion Matsuri:
+          trinta e quatro carros alegóricos de até 25 toneladas e 12 metros de altura, puxados à
+          corda por dezenas de homens e girados nas esquinas sobre talas de bambu molhado. É o
+          maior festival do Japão, e acontece nesta data há mais de mil anos. À tarde, descanso
+          no hotel e Fushimi Inari no fim do dia, quando os mil torii vermelhos esvaziam.</p>
+          <div class="flag">Data fixa, 17 de julho, independente do dia da semana. Todo o roteiro foi ancorado nela.</div>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 17 | Kyoto | 18/07 · domingo</div>
+          <p class="day-t">O dia histórico do Cristofer: o <b>Castelo Nijo</b>, residência dos xoguns
+          Tokugawa em Kyoto, com seus corredores de assoalho rouxinol que denunciam qualquer passo —
+          e onde, em 1867, o último xogum devolveu o poder ao imperador. Depois, o Pavilhão Dourado
+          e o jardim de pedras do Ryoan-ji. À tarde, o mercado Nishiki e uma aula de culinária
+          kaiseki com a família.</p>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 18 | Kyoto → Naoshima | 19/07 · segunda</div>
+          <p class="day-t">Shinkansen até Okayama, trem local até o porto de Uno e balsa para
+          <b>Naoshima</b>. Chegada no início da tarde. Tarde de bicicleta pela ilha, praia e a
+          abóbora amarela de Yayoi Kusama na ponta do píer.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAOSHIMA -->
+    <div class="leg">
+      <div class="leg-hd">
+        <div class="leg-city">Naoshima</div>
+        <div class="leg-data"><span>19 – 21 JUL</span><span>2 noites</span><span>Mar Interior de Seto</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="days">
+        <div class="day">
+          <div class="day-h">Dia 19 | Naoshima | 20/07 · terça</div>
+          <p class="day-t">Dia inteiro de arte. O <b>Chichu Art Museum</b>, enterrado na encosta por
+          Tadao Ando, onde cinco telas de nenúfares de Monet são vistas apenas sob luz natural —
+          e mudam conforme a hora e a nuvem. Depois, o Lee Ufan Museum e o <b>Art House Project</b>
+          em Honmura: casas centenárias do vilarejo entregues a artistas para virarem obras
+          por dentro, com os moradores ainda vivendo ao lado.</p>
+          <div class="flag">Os museus da ilha fecham às segundas — por isso a chegada foi posicionada na segunda e o dia cheio na terça.</div>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 20 | Naoshima → Osaka | 21/07 · quarta</div>
+          <p class="day-t">Manhã livre na ilha e balsa de volta. Chegada em Osaka no início da tarde.
+          À noite, <b>Dotonbori</b>: os letreiros, o caranguejo mecânico e o corredor de barracas
+          onde Osaka come em pé.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- OSAKA -->
+    <div class="leg">
+      <div class="leg-hd">
+        <div class="leg-city">Osaka</div>
+        <div class="leg-data"><span>21 – 23 JUL</span><span>2 noites</span><span>Máx. média 33 °C</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="days">
+        <div class="day">
+          <div class="day-h">Dia 21 | Osaka | 22/07 · quinta</div>
+          <p class="day-t">Manhã no <b>mercado Kuromon</b>, o "cozinha de Osaka": ostras, atum e
+          wagyu grelhados na hora, no balcão. Em seguida, uma aula de takoyaki e okonomiyaki —
+          o programa que o Cristofer vai querer repetir em casa. À tarde, o Castelo de Osaka e
+          o bairro retrô de Shinsekai.</p>
+          <div class="flag">Opcional: trocar a tarde por um bate-volta a Nara (45 min) — os cervos soltos e o Grande Buda do Todai-ji.</div>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 22 | Osaka → Okinawa | 23/07 · sexta</div>
+          <p class="day-t">Voo doméstico para Naha, de cerca de 2 h — o único voo interno de toda a
+          viagem. Ônibus direto do aeroporto até o resort na <b>costa de Onna</b>. Tarde de praia
+          e piscina.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- OKINAWA -->
+    <div class="leg">
+      <div class="leg-hd">
+        <div class="leg-city">Okinawa · Costa de Onna</div>
+        <div class="leg-data"><span>23 – 27 JUL</span><span>4 noites</span><span>Mar a 28 °C</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="days">
+        <div class="day">
+          <div class="day-h">Dia 23 | Okinawa | 24/07 · sábado</div>
+          <p class="day-t">Manhã na <b>Gruta Azul do Cabo Maeda</b>, com barco saindo do próprio hotel:
+          uma caverna marinha onde a refração faz a água inteira brilhar em azul elétrico. Cristofer
+          e Rafael no snorkel; Mariana e as meninas no barco de fundo de vidro. Tarde livre na praia.</p>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 24 | Okinawa | 25/07 · domingo</div>
+          <p class="day-t">Dia no norte da ilha: o <b>Aquário Churaumi</b>, um dos maiores do mundo,
+          com tubarões-baleia e raias-manta num tanque de 7.500 m³ visto por um painel de acrílico
+          de 60 cm de espessura. Na volta, a ponte da ilha de Kouri e a alameda de árvores fukugi
+          do vilarejo de Bise.</p>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 25 | Okinawa | 26/07 · segunda</div>
+          <p class="day-t">Manhã em <b>Yomitan</b>: a vila de ceramistas de Yachimun no Sato, com
+          ateliês abertos e os fornos comunitários em escada — a cerâmica Ryukyu, de esmaltes
+          grossos e desenhos de peixe, é diferente de tudo que eles verão no continente. Ao lado,
+          as ruínas do <b>Castelo Zakimi</b>, Patrimônio da Humanidade, com muralhas curvas do
+          século XV. Tarde de praia e jantar de cozinha Ryukyu com awamori.</p>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 26 | Okinawa → Osaka | 27/07 · terça</div>
+          <p class="day-t">Manhã livre. A caminho do aeroporto, o <b>mercado Makishi</b>, em Naha:
+          peixes tropicais de cores improváveis que você escolhe embaixo e come preparados no andar
+          de cima. É o mercado mais exótico da viagem. Voo para Osaka no fim da tarde.</p>
+          <div class="flag">A noite em Osaka é uma folga técnica: julho tem risco de tufão em Okinawa, e essa margem protege o voo internacional.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VOLTA -->
+    <div class="leg">
+      <div class="leg-hd">
+        <div class="leg-city">Japão → Brasil</div>
+        <div class="leg-data"><span>28 – 29 JUL</span><span>Em trânsito</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="days">
+        <div class="day">
+          <div class="day-h">Dia 27 | Osaka | 28/07 · quarta</div>
+          <p class="day-t">Manhã livre para as últimas compras e voo internacional de volta,
+          partindo de Kansai. A saída por Osaka em vez de Tóquio economiza um dia inteiro
+          de retorno.</p>
+        </div>
+        <div class="day">
+          <div class="day-h">Dia 28 | São Paulo | 29/07 · quinta</div>
+          <p class="day-t">Chegada em Guarulhos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ DESTINOS ══════════ -->
+<section class="sec" id="destinos">
+  <div class="wrap">
+    <div class="eyebrow">As cidades</div>
+    <h2>Por que cada uma está aqui</h2>
+    <p class="lede">Os textos abaixo servem de base para os vídeos de justificativa que
+    o Cristofer pediu para analisar em família.</p>
+
+    <div class="dest-grid">
+      <article class="dcard">
+        <div class="dcard-top">
+          <div class="dcard-city">Tóquio</div>
+          <div class="dcard-sub">6 noites · a cidade-base</div>
+        </div>
+        <p>Nenhuma cidade do mundo muda tanto de personalidade a cada quinze minutos de metrô.
+        Em Toyosu, o maior mercado de peixe do planeta funciona antes do amanhecer. Em
+        Shimokitazawa, três gerações de brechós ocupam ruas onde não passa carro. Em Shibuya,
+        três mil pessoas atravessam a mesma faixa a cada sinal. E em Urayasu, o DisneySea faz
+        o que nenhum outro parque da marca fez: constrói um mundo que só existe ali. Seis noites
+        é o mínimo para caber os dois parques e ainda sobrar cidade.</p>
+        <div class="dcard-for"><span class="who">Mariana · Disney</span><span class="who">Sofia · moda</span><span class="who">Rafael</span><span class="who">Cristofer · mercados</span></div>
+      </article>
+
+      <article class="dcard">
+        <div class="dcard-top">
+          <div class="dcard-city">Nikko</div>
+          <div class="dcard-sub">2 noites · o xogunato e a montanha</div>
+        </div>
+        <p>Toshogu não é mais um templo japonês — é o oposto de tudo que se vê em Kyoto.
+        Dourado, laqueado, coberto de mais de cinco mil entalhes coloridos, foi erguido para
+        abrigar o túmulo de Tokugawa Ieyasu, o homem que fundou o xogunato e governou o Japão
+        por dois séculos e meio a partir dele. Quarenta minutos acima, uma estrada de 48 curvas
+        leva ao Okunikko: um lago vulcânico a 1.270 metros, uma cachoeira de 97 metros e ar de
+        22 °C. História e respiro no mesmo lugar.</p>
+        <div class="dcard-for"><span class="who">Cristofer · xogunato</span><span class="who">Rafael · trilha</span><span class="who">Todos · clima</span></div>
+      </article>
+
+      <article class="dcard">
+        <div class="dcard-top">
+          <div class="dcard-city">Kanazawa</div>
+          <div class="dcard-sub">2 noites · a cidade que escapou</div>
+        </div>
+        <p>Kanazawa atravessou a Segunda Guerra sem ser bombardeada, e por isso guarda o que
+        quase nenhuma outra cidade japonesa guarda: um bairro inteiro de casas de samurai com
+        muros de barro e um distrito de gueixas com as fachadas de treliça originais. Some a isso
+        o Kenrokuen — um dos três grandes jardins do país — o mercado Omicho, onde se come de pé
+        o peixe recém-desembarcado, e uma tradição de folha de ouro tão antiga que a cidade
+        ainda produz 99% de todo o ouro laminado do Japão.</p>
+        <div class="dcard-for"><span class="who">Cristofer · história</span><span class="who">Sofia · artesanato</span><span class="who">Gastronomia</span></div>
+      </article>
+
+      <article class="dcard">
+        <div class="dcard-top">
+          <div class="dcard-city">Takayama</div>
+          <div class="dcard-sub">2 noites · o Japão raiz</div>
+        </div>
+        <p>Cercada pelos Alpes Japoneses e isolada por séculos, Takayama desenvolveu uma cultura
+        própria — e a manteve. As ruas de Sanmachi são um quarteirão contínuo de casas de madeira
+        escura do período Edo, com cervejarias de saquê que ainda penduram uma bola de cedro na
+        porta para anunciar a safra nova. O mercado matinal à beira do rio existe há mais de
+        seiscentos anos. E no caminho fica Shirakawa-go, o vilarejo de telhados de palha que
+        parece uma fotografia de outro século.</p>
+        <div class="dcard-for"><span class="who">Experiência local</span><span class="who">Cristofer · saquê</span><span class="who">Todos</span></div>
+      </article>
+
+      <article class="dcard">
+        <div class="dcard-top">
+          <div class="dcard-city">Kyoto</div>
+          <div class="dcard-sub">3 noites · com o Gion Matsuri</div>
+        </div>
+        <p>Mil e cem anos de capital imperial deixaram Kyoto com mais patrimônio por metro
+        quadrado do que qualquer cidade do Japão. Mas a data importa mais do que a lista:
+        chegando em 16 de julho, a família cai dentro do Gion Matsuri — ruas fechadas, carros
+        alegóricos de doze metros iluminados por lanternas na véspera, e no dia seguinte o
+        desfile em que trinta e quatro deles são puxados à corda e girados nas esquinas sobre
+        bambu molhado. É o maior festival do país, e acontece nessa mesma data há mais de mil anos.</p>
+        <div class="dcard-for"><span class="who">Cristofer · Castelo Nijo</span><span class="who">Festival</span><span class="who">Culinária</span></div>
+      </article>
+
+      <article class="dcard">
+        <div class="dcard-top">
+          <div class="dcard-city">Naoshima</div>
+          <div class="dcard-sub">2 noites · a ilha-museu</div>
+        </div>
+        <p>Uma ilha de pescadores em decadência no Mar Interior de Seto foi transformada, ao longo
+        de trinta anos, no projeto de arte contemporânea mais radical do Japão. Tadao Ando enterrou
+        museus inteiros dentro da encosta para não interferir na paisagem. Casas centenárias do
+        vilarejo foram entregues a artistas e viraram obras por dentro, com os moradores ainda
+        morando ao lado. E na ponta do píer está a abóbora de bolinhas de Yayoi Kusama, olhando
+        para o mar. É o contraponto mais autoral de toda a viagem.</p>
+        <div class="dcard-for"><span class="who">Sofia · design</span><span class="who">Arquitetura</span><span class="who">Mariana</span></div>
+      </article>
+
+      <article class="dcard">
+        <div class="dcard-top">
+          <div class="dcard-city">Osaka</div>
+          <div class="dcard-sub">2 + 1 noites · a cozinha do Japão</div>
+        </div>
+        <p>Os japoneses têm uma palavra para o jeito de Osaka gastar dinheiro com comida:
+        <i>kuidaore</i>, comer até falir. É a cidade mais informal, mais barulhenta e mais
+        saborosa do país — onde o mercado Kuromon grelha wagyu no balcão, onde o takoyaki se come
+        em pé na calçada e onde Dotonbori acende à noite como um letreiro só. Para um cliente que
+        gosta de cozinhar, de mercado de peixe e de izakaya, Osaka é o ponto alto gastronômico
+        de todo o roteiro.</p>
+        <div class="dcard-for"><span class="who">Cristofer · gastronomia</span><span class="who">Rafael</span><span class="who">Vida noturna</span></div>
+      </article>
+
+      <article class="dcard">
+        <div class="dcard-top">
+          <div class="dcard-city">Okinawa</div>
+          <div class="dcard-sub">4 noites · a pausa</div>
+        </div>
+        <p>Okinawa não é uma província japonesa comum: foi o reino independente de Ryukyu até o
+        século XIX, e ainda tem língua, cerâmica, música e cozinha próprias. A costa de Onna
+        entrega mar a 28 graus, a Gruta Azul do Cabo Maeda, o aquário de Churaumi com seus
+        tubarões-baleia e as ruínas de castelos de muralhas curvas que não se parecem com nada
+        no continente. Mas o papel dessas quatro noites no roteiro é outro: são o descanso que
+        faz os vinte dias anteriores valerem a pena.</p>
+        <div class="dcard-for"><span class="who">Todos · descanso</span><span class="who">Rafael · mergulho</span><span class="who">Sofia · cerâmica</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ HOSPEDAGEM ══════════ -->
+<section class="sec" id="hospedagem">
+  <div class="wrap">
+    <div class="eyebrow">Padrão de acomodação</div>
+    <h2>Cinco pessoas, e o que isso exige</h2>
+    <p class="lede">Este é o ponto mais crítico da viagem, e o que mais pesa na cotação.
+    <strong>O quarto padrão japonês não acomoda esta família.</strong> Em cada cidade foi definido
+    previamente o tipo de acomodação que funciona, para que a busca de tarifas parta do
+    formato certo.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Cidade</th><th class="num">Noites</th><th>Formato de acomodação</th><th>Observação</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Tóquio</td><td class="num">6</td><td>Apart-hotel ou 2 quartos conectados</td><td>Base longa — cozinha própria reduz custo de alimentação</td></tr>
+          <tr><td>Nikko</td><td class="num">2</td><td>Hotel de montanha, quarto família</td><td>Oferta limitada; reserva antecipada obrigatória</td></tr>
+          <tr><td>Kanazawa</td><td class="num">2</td><td>2 quartos twin</td><td>Boa oferta de rede internacional</td></tr>
+          <tr><td>Takayama</td><td class="num">2</td><td>Ryokan, quarto de tatame</td><td>Cinco futons cabem sem aperto — inclui jantar e café</td></tr>
+          <tr><td>Kyoto</td><td class="num">3</td><td>Machiya (casa tradicional inteira)</td><td>Resolve espaço e privacidade; alta demanda no Gion Matsuri</td></tr>
+          <tr><td>Naoshima</td><td class="num">2</td><td>Pousada ou anexo do Benesse</td><td>Ilha pequena — inventário escasso, reservar cedo</td></tr>
+          <tr><td>Osaka</td><td class="num">2 + 1</td><td>Apart-hotel</td><td>A noite avulsa do retorno pode ser em hotel de aeroporto</td></tr>
+          <tr><td>Okinawa</td><td class="num">4</td><td>Resort com quarto família na costa de Onna</td><td>Escolher hotel servido pelo ônibus do aeroporto</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="notice">
+      <p><strong>Locomoção:</strong> brasileiros não podem dirigir no Japão — o Brasil é signatário
+      da Convenção de Viena e o Japão da Convenção de Genebra de 1949, e a Permissão Internacional
+      brasileira não é aceita. Todo o roteiro foi montado sobre trem, ônibus regular e transfers,
+      sem depender de carro alugado em nenhum momento. As malas seguem entre as cidades pelo
+      serviço de <i>takkyubin</i>, para que a família viaje leve nos dias de deslocamento.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ OBSERVAÇÕES ══════════ -->
+<section class="sec" id="condicoes">
+  <div class="wrap">
+    <div class="eyebrow">Observações</div>
+    <h2>O que ainda precisa ser decidido</h2>
+
+    <div class="cond">
+      <div>
+        <h3>Este documento</h3>
+        <p>É o <strong>roteiro-guia</strong>, conforme combinado: define cidades, sequência, número
+        de noites e a lógica das escolhas. Nenhum serviço foi reservado e nenhum valor foi cotado.
+        A cotação minuciosa, com hotéis nomeados, tarifas aéreas e valores por categoria, será
+        apresentada em documento separado após o aceite deste roteiro.</p>
+      </div>
+      <div>
+        <h3>Aéreo internacional</h3>
+        <p>Roteamento pela aliança oneworld para preservar a fidelidade Latam do Cristofer, com
+        entrada por Tóquio e saída por Osaka. Essa configuração elimina um dia inteiro de retorno
+        ao ponto de chegada e, em geral, não encarece a tarifa.</p>
+      </div>
+      <div>
+        <h3>Julho de 2027</h3>
+        <p>É alta temporada doméstica japonesa: as férias escolares começam por volta de 20 de
+        julho e o Gion Matsuri lota Kyoto. Hotelaria em Kyoto e Okinawa deve ser bloqueada com
+        antecedência bem maior que o usual.</p>
+      </div>
+      <div>
+        <h3>Margem para tufão</h3>
+        <p>Julho abre a temporada de tufões em Okinawa. A noite extra em Osaka, no dia 27, é uma
+        folga técnica deliberada: se o aeroporto de Naha fechar por um dia, a família perde um
+        passeio, não o voo internacional.</p>
+      </div>
+      <div>
+        <h3>Ajustes possíveis</h3>
+        <p>Este roteiro tem 24 noites e 8 destinos. Caso a família prefira encurtar a viagem,
+        os dois ajustes mais eficientes — e que menos comprometem a experiência — são reduzir
+        Okinawa para 3 noites ou Tóquio para 5. Ambos serão apresentados como alternativa na
+        cotação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-brand">LUSA TRAVEL</div>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-k">E-mail</div>
+        <div class="foot-v"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a></div>
+      </div>
+      <div>
+        <div class="foot-k">Telefone · WhatsApp</div>
+        <div class="foot-v"><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+      </div>
+      <div>
+        <div class="foot-k">Endereço</div>
+        <div class="foot-v">Alameda Princesa Izabel, 1700<br>Bigorrilho · Curitiba – PR</div>
+      </div>
+      <div>
+        <div class="foot-k">Proposta</div>
+        <div class="foot-v">CRISTOFER E FAMÍLIA | JAPÃO<br>Julho de 2027 · 5 passageiros</div>
+      </div>
+    </div>
+    <div class="foot-note">Roteiro-guia · Nada reservado, apenas planejado. Valores serão apresentados em cotação separada.</div>
+  </div>
+</footer>
