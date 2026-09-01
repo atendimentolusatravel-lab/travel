@@ -84,23 +84,31 @@ html{scroll-behavior:smooth}
 @media(max-width:760px){.nav{display:none}}
 
 /* ── Capa ─────────────────────────────────────────────── */
-.cover{position:relative; background:var(--band); color:#fff; overflow:hidden}
-.cover-art{position:absolute; inset:0; opacity:.9}
-.cover-art::before{
-  content:""; position:absolute; inset:0;
+.cover{
+  position:relative; color:#fff; overflow:hidden;
+  /* Fundo de reserva: aparece se a foto de capa não for encontrada */
   background:
     radial-gradient(120% 90% at 78% 8%, rgba(218,141,0,.30) 0%, transparent 55%),
     radial-gradient(100% 80% at 12% 92%, rgba(31,58,95,.85) 0%, transparent 60%),
     linear-gradient(158deg,#22314a 0%,#1a2338 42%,#1a1510 100%);
 }
-.cover-art::after{
-  content:""; position:absolute; inset:0; opacity:.14;
-  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0 1px,transparent 1px 84px);
+/* ┌─ FOTO DE CAPA ────────────────────────────────────────┐
+   │ Troque apenas o caminho abaixo. A foto entra por cima  │
+   │ do fundo de reserva; se o arquivo faltar, o degradê    │
+   │ continua valendo e a capa não quebra.                  │
+   └────────────────────────────────────────────────────────┘ */
+.cover-art{
+  position:absolute; inset:0;
+  background-image:url('assets/capa-wagasa.jpg');
+  background-size:cover; background-position:center 45%;
 }
-.cover-sun{
-  position:absolute; right:-60px; top:40px; width:340px; height:340px; border-radius:50%;
-  background:radial-gradient(circle at 42% 38%, rgba(218,141,0,.55), rgba(218,141,0,.06) 62%, transparent 70%);
-  filter:blur(2px);
+/* Véu de leitura — foto colorida e detalhada exige contraste alto
+   para o texto branco e o ouro se sustentarem por cima. */
+.cover-scrim{
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to bottom, rgba(12,10,8,.62) 0%, rgba(12,10,8,.30) 26%, rgba(12,10,8,.72) 62%, rgba(12,10,8,.93) 100%),
+    linear-gradient(105deg, rgba(31,58,95,.55) 0%, rgba(31,58,95,.10) 55%, transparent 100%);
 }
 .cover-in{position:relative; z-index:2; padding:76px 0 64px}
 .kicker{font-family:var(--con); font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55)}
@@ -260,8 +268,8 @@ tbody tr:last-child td{border-bottom:0}
 
 <!-- ══════════ CAPA ══════════ -->
 <div class="cover">
-  <div class="cover-art"></div>
-  <div class="cover-sun"></div>
+  <div class="cover-art" role="img" aria-label="Guarda-sóis japoneses de papel oleado (wagasa) pintados à mão"></div>
+  <div class="cover-scrim"></div>
   <div class="wrap cover-in">
     <div class="kicker">Roteiro para sua viagem</div>
     <div class="cover-basis">Baseado em 5 passageiros · 2 adultos e 3 adolescentes · Julho de 2027</div>
