@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="LusaTravel — dois roteiros dia a dia de 14 noites na Europa para um casal viajando com dois bebes.">
+<title>Europa em Família</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
+<style>
+/* ─── LUSATRAVEL · DESIGN SYSTEM TOKENS ─────────────────── */
+:root{
+  --gold:#da8d00; --gold-hi:#f0a010;
+  --ink:#1a1510; --char:#333131; --mut:#9a8d80;
+  --line:#e4ddd2; --paper:#faf7f2; --surf:#fff; --surf2:#f2ece3;
+  --onink:#f0e8de;
+  --dest:#730505;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+  --mx:1080px;
+}
+.opt-pt{ --dest:#1b3a63; }
+.opt-it{ --dest:#730505; }
+
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+    --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+    --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+  }
+  :root:not([data-theme="light"]) .opt-pt{ --dest:#3d78b8; }
+  :root:not([data-theme="light"]) .opt-it{ --dest:#c23434; }
+}
+:root[data-theme="dark"]{
+  --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+  --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+  --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+}
+:root[data-theme="dark"] .opt-pt{ --dest:#3d78b8; }
+:root[data-theme="dark"] .opt-it{ --dest:#c23434; }
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  background:var(--paper); color:var(--char);
+  font-family:var(--sans); font-weight:400;
+  font-size:15px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+@media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } }
+
+.wrap{ max-width:var(--mx); margin:0 auto; padding:0 28px; }
+
+/* ─── MASTHEAD / CAPA ────────────────────────────────────── */
+.mh{ background:var(--ink); padding:56px 0 44px; position:relative; }
+.mh::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.mh-logo{
+  font-family:var(--con); font-weight:600; font-size:13px;
+  letter-spacing:.34em; text-transform:uppercase; color:var(--gold);
+}
+.mh-kick{
+  margin-top:26px; font-size:10px; font-weight:600; letter-spacing:.24em;
+  text-transform:uppercase; color:rgba(240,232,222,.5);
+}
+.mh-name{
+  margin-top:10px; font-weight:700; font-size:clamp(28px,5.2vw,46px);
+  line-height:1.06; letter-spacing:.01em; color:#fff; text-transform:uppercase;
+  text-wrap:balance;
+}
+.mh-dest{
+  margin-top:8px; font-weight:600; font-size:clamp(17px,2.4vw,22px);
+  color:var(--gold); letter-spacing:.02em;
+}
+.mh-sub strong{ font-weight:600; color:var(--gold); }
+.mh-sub{ margin-top:16px; max-width:56ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.62); }
+.mh-stats{ margin-top:34px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid rgba(240,232,222,.14); }
+.mh-stat{ padding:18px 34px 4px 0; margin-right:34px; border-right:1px solid rgba(240,232,222,.12); }
+.mh-stat:last-child{ border-right:0; }
+.mh-stat .v{ font-weight:700; font-size:24px; color:#fff; line-height:1; font-variant-numeric:tabular-nums; }
+.mh-stat .k{ margin-top:7px; font-size:9.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.45); }
+
+/* ─── SEÇÕES ─────────────────────────────────────────────── */
+.sec{ padding:56px 0; }
+.sec + .sec{ border-top:1px solid var(--line); }
+.eyebrow{
+  font-size:10px; font-weight:600; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--gold); margin-bottom:12px;
+}
+.h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; letter-spacing:-.01em; text-wrap:balance; }
+.lead{ margin-top:12px; max-width:66ch; font-weight:300; font-size:15.5px; color:var(--char); }
+.goldbar{ width:52px; height:3px; background:var(--gold); margin-top:18px; }
+
+/* ─── SWITCHER ───────────────────────────────────────────── */
+.tabs{ display:flex; flex-wrap:wrap; gap:10px; margin-top:30px; }
+.tab{
+  font-family:var(--sans); font-size:13px; font-weight:600; letter-spacing:.03em;
+  padding:13px 22px; border:1px solid var(--line); background:var(--surf);
+  color:var(--char); cursor:pointer; transition:background .15s,color .15s,border-color .15s;
+  display:flex; align-items:center; gap:11px;
+}
+.tab:hover{ border-color:var(--mut); }
+.tab .dot{ width:11px; height:11px; flex:none; }
+.tab[aria-selected="true"]{ background:var(--ink); color:#fff; border-color:var(--ink); }
+.tab-pt .dot{ background:#1b3a63; }
+.tab-it .dot{ background:#730505; }
+
+/* ─── PAINEL DE ROTEIRO ──────────────────────────────────── */
+.opt-hd{ background:var(--dest); padding:34px 0; position:relative; }
+.opt-hd::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.opt-tag{ font-size:9.5px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.66); }
+.opt-title{ margin-top:9px; font-weight:700; font-size:clamp(22px,3.4vw,32px); color:#fff; line-height:1.14; text-wrap:balance; }
+
+/* ─── TIMELINE ───────────────────────────────────────────── */
+.tl{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; }
+.tl-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--dest); padding:18px 18px 16px; }
+.tl-badge{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:30px; height:30px; padding:0 9px; background:var(--dest); color:#fff;
+  font-weight:700; font-size:12.5px; font-variant-numeric:tabular-nums;
+}
+.tl-city{ margin-top:13px; font-weight:600; font-size:17px; color:var(--ink); }
+.tl-meta{ margin-top:5px; font-size:12.5px; font-weight:300; color:var(--mut); }
+.tl-move{ margin-top:11px; padding-top:11px; border-top:1px solid var(--line); font-size:11.5px; font-weight:400; color:var(--char); }
+
+/* ─── DIA A DIA ──────────────────────────────────────────── */
+.days{ margin-top:26px; border-top:1px solid var(--line); }
+.day{ display:grid; grid-template-columns:132px 1fr; gap:22px; padding:19px 0; border-bottom:1px solid var(--line); }
+.day-h{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--dest); line-height:1.5; font-variant-numeric:tabular-nums; }
+.day-h .cty{ display:block; color:var(--mut); font-size:10.5px; letter-spacing:.14em; margin-top:3px; }
+.day-t{ font-size:14.5px; font-weight:300; color:var(--char); }
+.day-t b{ font-weight:600; color:var(--ink); }
+.day-t .fair{ color:var(--gold); font-weight:600; }
+.day.travel{ background:var(--surf2); margin:0 -14px; padding:15px 14px; }
+.day.travel .day-t{ font-size:13.5px; }
+
+/* ─── RODAPÉ / ASSINATURA ────────────────────────────────── */
+.ft{ background:var(--ink); padding:44px 0 40px; position:relative; margin-top:0; }
+.ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
+.ft-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.ft-sig{ margin-top:18px; display:flex; flex-wrap:wrap; gap:10px 34px; font-family:var(--con); font-size:13px; color:rgba(240,232,222,.72); }
+.ft-sig a{ color:rgba(240,232,222,.72); text-decoration:none; border-bottom:1px solid rgba(218,141,0,.5); }
+.ft-sig a:hover{ color:var(--gold); }
+.ft-addr{ margin-top:16px; font-family:var(--con); font-size:11.5px; color:rgba(240,232,222,.38); }
+
+@media (max-width:640px){
+  .day{ grid-template-columns:1fr; gap:7px; }
+  .mh-stat{ padding-right:20px; margin-right:20px; }
+}
+</style>
+
+</head>
+<body>
+<header class="mh">
+  <div class="wrap">
+    <div class="mh-logo">LusaTravel</div>
+    <div class="mh-kick">Cotação para sua viagem</div>
+    <h1 class="mh-name">Lucas</h1>
+    <div class="mh-dest">Europa · Duas propostas de roteiro</div>
+    <p class="mh-sub">Dois roteiros de 14 noites desenhados para viajar com dois bebês: poucas trocas de hotel, uma atração principal por dia e tarde livre para o descanso. Dentro da janela de novembro a fevereiro, sugerimos <strong>fevereiro</strong>.</p>
+    <div class="mh-stats">
+      <div class="mh-stat"><div class="v">2</div><div class="k">Propostas</div></div>
+      <div class="mh-stat"><div class="v">14</div><div class="k">Noites</div></div>
+      <div class="mh-stat"><div class="v">2+2</div><div class="k">Adultos e bebês</div></div>
+      <div class="mh-stat"><div class="v">Fevereiro</div><div class="k">Mês sugerido</div></div>
+    </div>
+  </div>
+</header>
+
+
+<section class="sec" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="eyebrow">Escolha a proposta</div>
+    <h2 class="h2">Duas rotas possíveis</h2>
+    <div class="tabs" role="tablist" aria-label="Propostas de roteiro">
+      <button class="tab tab-pt" role="tab" id="tab-pt" aria-controls="panel-pt" aria-selected="true"><span class="dot"></span>Portugal e Espanha</button>
+      <button class="tab tab-it" role="tab" id="tab-it" aria-controls="panel-it" aria-selected="false"><span class="dot"></span>Itália</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PROPOSTA A ══════ -->
+<div class="opt-pt" id="panel-pt" role="tabpanel" aria-labelledby="tab-pt">
+  <div class="opt-hd">
+    <div class="wrap">
+      <div class="opt-tag">Proposta A</div>
+      <h2 class="opt-title">Portugal e Espanha</h2>
+    </div>
+  </div>
+  <section class="sec">
+    <div class="wrap">
+      <div class="eyebrow">Itinerário</div>
+      <h2 class="h2">Quatro cidades, 14 noites</h2>
+      <div class="tl">
+        <div class="tl-item"><span class="tl-badge">4</span><div class="tl-city">Lisboa</div><div class="tl-meta">Dias 2 a 5 · 4 noites</div><div class="tl-move">Voo direto de São Paulo</div></div>
+        <div class="tl-item"><span class="tl-badge">3</span><div class="tl-city">Porto</div><div class="tl-meta">Dias 6 a 8 · 3 noites</div><div class="tl-move">Trem Alfa Pendular · 2h50</div></div>
+        <div class="tl-item"><span class="tl-badge">4</span><div class="tl-city">Madri</div><div class="tl-meta">Dias 9 a 12 · 4 noites</div><div class="tl-move">Voo Porto–Madri · 1h45</div></div>
+        <div class="tl-item"><span class="tl-badge">3</span><div class="tl-city">Sevilha</div><div class="tl-meta">Dias 13 a 15 · 3 noites</div><div class="tl-move">Trem AVE · 2h30</div></div>
+      </div>
+
+      <div class="eyebrow" style="margin-top:44px">Roteiro dia a dia</div>
+      <h2 class="h2">O que fazer em cada dia</h2>
+      <p class="lead">A Feira da Ladra e o El Rastro só acontecem em dias fixos da semana. O roteiro já está ordenado para alcançar as duas.</p>
+      <div class="days">
+        <div class="day travel"><div class="day-h">Dia 01<span class="cty">Embarque</span></div><div class="day-t">Voo noturno direto de São Paulo para Lisboa.</div></div>
+        <div class="day"><div class="day-h">Dia 02<span class="cty">Lisboa</span></div><div class="day-t">Chegada pela manhã e descanso. Fim de tarde leve pelo <b>Chiado</b>: Livraria Bertrand, a mais antiga do mundo em funcionamento desde 1732, e a loja A Vida Portuguesa. Jantar no Bairro do Avillez.</div></div>
+        <div class="day"><div class="day-h">Dia 03<span class="cty">Lisboa</span></div><div class="day-t"><b>Belém</b>: Mosteiro dos Jerónimos e o <b>MAAT</b>, museu de arquitetura contemporânea à beira do Tejo. Pastéis de Belém. Tarde livre e jantar de marisco na Cervejaria Ramiro, informal e receptiva a crianças.</div></div>
+        <div class="day"><div class="day-h">Dia 04<span class="cty">Lisboa</span></div><div class="day-t"><span class="fair">Feira da Ladra</span> pela manhã, no Campo de Santa Clara, com o Panteão Nacional ao lado. À tarde, a <b>Rua de São Bento</b> — a rua dos antiquários de Lisboa. Jantar no Prado.</div></div>
+        <div class="day"><div class="day-h">Dia 05<span class="cty">Sintra</span></div><div class="day-t">Dia em <b>Sintra</b> com motorista privativo: Palácio de Monserrate, calmo e acessível com carrinho, e Palácio da Pena. Volta pela Boca do Inferno e Cascais.</div></div>
+        <div class="day travel"><div class="day-h">Dia 06<span class="cty">Porto</span></div><div class="day-t">Trem pela manhã. Tarde na <b>Estação de São Bento</b> e seus azulejos, Livraria Lello, Torre dos Clérigos e Ribeira. Jantar no Cantinho do Avillez.</div></div>
+        <div class="day"><div class="day-h">Dia 07<span class="cty">Porto</span></div><div class="day-t"><b>Palácio da Bolsa</b> com visita guiada e Igreja de São Francisco, de talha dourada. À tarde, prova nas caves de vinho do Porto em Gaia. Jantar na <b>Casa de Chá da Boa Nova</b>, restaurante de Siza Vieira sobre as pedras do mar.</div></div>
+        <div class="day"><div class="day-h">Dia 08<span class="cty">Porto</span></div><div class="day-t"><b>Serralves</b>: museu de arte contemporânea, Casa Art Déco e parque de 18 hectares — o dia mais fácil da viagem com carrinho. À tarde, Casa da Música, de Rem Koolhaas, e compras na Rua de Santa Catarina.</div></div>
+        <div class="day travel"><div class="day-h">Dia 09<span class="cty">Madri</span></div><div class="day-t">Voo pela manhã. Tarde leve: Plaza Mayor, Mercado de San Miguel e churros no San Ginés. Jantar no <b>Sobrino de Botín</b>, o restaurante mais antigo do mundo em operação contínua, de 1725.</div></div>
+        <div class="day"><div class="day-h">Dia 10<span class="cty">Madri</span></div><div class="day-t"><b>Museu do Prado</b> pela manhã, em visita de até três horas. Almoço e tarde no <b>Parque del Retiro</b>, com o Palacio de Cristal. À noite, tapas na Cava Baja.</div></div>
+        <div class="day"><div class="day-h">Dia 11<span class="cty">Toledo</span></div><div class="day-t">Bate-volta a <b>Toledo</b>, a 33 minutos de trem AVE: catedral, Sinagoga do Tránsito e El Greco na cidade das três culturas. Alternativa igualmente boa: Segóvia e seu aqueduto romano.</div></div>
+        <div class="day"><div class="day-h">Dia 12<span class="cty">Madri</span></div><div class="day-t"><span class="fair">El Rastro</span> pela manhã, em La Latina, seguido das <b>Galerías Piquer</b>, galeria fechada de antiquários muito superior à feira de rua. À tarde, Reina Sofía para ver o Guernica ou compras na Calle Serrano.</div></div>
+        <div class="day travel"><div class="day-h">Dia 13<span class="cty">Sevilha</span></div><div class="day-t">Trem AVE pela manhã. Tarde no <b>Real Alcázar</b>, com reserva antecipada, e no Bairro de Santa Cruz. Jantar no El Rinconcillo, taberna de 1670.</div></div>
+        <div class="day"><div class="day-h">Dia 14<span class="cty">Sevilha</span></div><div class="day-t"><b>Catedral e Giralda</b> — a subida é em rampas, possível com o bebê no colo. Tarde na <b>Plaza de España</b> e no Parque María Luisa. À noite, flamenco na Casa de la Memoria, em formato curto de uma hora.</div></div>
+        <div class="day"><div class="day-h">Dia 15<span class="cty">Sevilha</span></div><div class="day-t"><b>Triana</b>: mercado, Centro Cerámica Triana e ateliês de azulejo, com compras de cerâmica. Fim de tarde nas Setas de Sevilla, a maior estrutura de madeira do mundo.</div></div>
+        <div class="day travel"><div class="day-h">Dia 16<span class="cty">Retorno</span></div><div class="day-t">Voo de volta ao Brasil.</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════ PROPOSTA B ══════ -->
+<div class="opt-it" id="panel-it" role="tabpanel" aria-labelledby="tab-it" hidden>
+  <div class="opt-hd">
+    <div class="wrap">
+      <div class="opt-tag">Proposta B</div>
+      <h2 class="opt-title">Itália</h2>
+    </div>
+  </div>
+  <section class="sec">
+    <div class="wrap">
+      <div class="eyebrow">Itinerário</div>
+      <h2 class="h2">Três cidades, 14 noites</h2>
+      <div class="tl">
+        <div class="tl-item"><span class="tl-badge">5</span><div class="tl-city">Roma</div><div class="tl-meta">Dias 2 a 6 · 5 noites</div><div class="tl-move">Voo direto de São Paulo</div></div>
+        <div class="tl-item"><span class="tl-badge">5</span><div class="tl-city">Florença</div><div class="tl-meta">Dias 7 a 11 · 5 noites</div><div class="tl-move">Frecciarossa · 1h35</div></div>
+        <div class="tl-item"><span class="tl-badge">4</span><div class="tl-city">Bolonha</div><div class="tl-meta">Dias 12 a 15 · 4 noites</div><div class="tl-move">Frecciarossa · 37 min</div></div>
+      </div>
+
+      <div class="eyebrow" style="margin-top:44px">Roteiro dia a dia</div>
+      <h2 class="h2">O que fazer em cada dia</h2>
+      <p class="lead">A Fiera Antiquaria de Arezzo acontece no primeiro domingo do mês e no sábado anterior. As cinco noites em Florença são posicionadas para alcançar esse fim de semana.</p>
+      <div class="days">
+        <div class="day travel"><div class="day-h">Dia 01<span class="cty">Embarque</span></div><div class="day-t">Voo noturno direto de São Paulo para Roma.</div></div>
+        <div class="day"><div class="day-h">Dia 02<span class="cty">Roma</span></div><div class="day-t">Chegada e descanso. Fim de tarde a pé pelo <b>Panteão</b>, Piazza Navona e Fontana di Trevi. Jantar no Roscioli.</div></div>
+        <div class="day"><div class="day-h">Dia 03<span class="cty">Roma</span></div><div class="day-t"><b>Coliseu, Fórum Romano e Palatino</b> com guia privativo e entrada sem fila, pela manhã. Tarde de descanso. Jantar no Ghetto Judaico, com os carciofi alla giudia.</div></div>
+        <div class="day"><div class="day-h">Dia 04<span class="cty">Vaticano</span></div><div class="day-t"><b>Museus do Vaticano, Capela Sistina e Basílica de São Pedro</b> em entrada antecipada com guia. É o dia mais puxado da viagem — a tarde fica integralmente reservada ao hotel.</div></div>
+        <div class="day"><div class="day-h">Dia 05<span class="cty">Roma</span></div><div class="day-t"><span class="fair">Via dei Coronari</span>, a rua dos antiquários de Roma. À tarde, <b>Galleria Borghese</b> em visita de duas horas com hora marcada, e passeio pelo Parco di Villa Borghese. Caindo num domingo, troque a manhã pelo mercado de Porta Portese.</div></div>
+        <div class="day"><div class="day-h">Dia 06<span class="cty">Roma</span></div><div class="day-t"><b>Basílica de San Clemente</b>, com três camadas de história empilhadas do século XII até um templo romano do século I. Depois Trastevere a pé, almoço no Da Enzo al 29 e tarde livre na Via dei Condotti.</div></div>
+        <div class="day travel"><div class="day-h">Dia 07<span class="cty">Florença</span></div><div class="day-t">Trem pela manhã. Tarde no <b>Duomo</b>, Batistério com as Portas do Paraíso e Piazza della Signoria. Jantar na Trattoria Sostanza.</div></div>
+        <div class="day"><div class="day-h">Dia 08<span class="cty">Florença</span></div><div class="day-t"><b>Galleria degli Uffizi</b> pela manhã, com reserva. Almoço no Mercato Centrale. Fim de tarde no Piazzale Michelangelo ou em San Miniato al Monte para o pôr do sol.</div></div>
+        <div class="day"><div class="day-h">Dia 09<span class="cty">Florença</span></div><div class="day-t"><span class="fair">Oltrarno e Via Maggio</span>: antiquários e os ateliês de artesãos do bairro — douradores, restauradores e marceneiros. À tarde, Palazzo Pitti e Jardim de Boboli.</div></div>
+        <div class="day"><div class="day-h">Dia 10<span class="cty">Arezzo</span></div><div class="day-t"><span class="fair">Fiera Antiquaria de Arezzo</span>, a uma hora de trem: centenas de expositores tomam a cidade inteira. A maior feira de antiguidades da Itália e o dia mais aguardado do roteiro.</div></div>
+        <div class="day"><div class="day-h">Dia 11<span class="cty">Chianti</span></div><div class="day-t">Dia no <b>Chianti</b> com motorista privativo: almoço e degustação em vinícola, em ritmo lento. Alternativa mais fácil com carrinho: Lucca, cidade plana com muralhas renascentistas percorríveis a pé.</div></div>
+        <div class="day travel"><div class="day-h">Dia 12<span class="cty">Bolonha</span></div><div class="day-t">Trem de 37 minutos. Piazza Maggiore, Basílica de San Petronio e o <b>Archiginnasio</b>, com seu Teatro Anatômico do século XVII. Jantar na Osteria dell'Orsa.</div></div>
+        <div class="day"><div class="day-h">Dia 13<span class="cty">Modena</span></div><div class="day-t"><b>Modena</b>, a 35 minutos: visita a uma acetaia de aceto balsâmico tradicional com degustação, Duomo românico e Mercato Albinelli. Opcional: Museu Ferrari em Maranello.</div></div>
+        <div class="day"><div class="day-h">Dia 14<span class="cty">Parma</span></div><div class="day-t"><b>Parma</b>, a uma hora: visita a um caseificio de Parmigiano Reggiano logo cedo e a um produtor de prosciutto di Parma. Almoço na cidade.</div></div>
+        <div class="day"><div class="day-h">Dia 15<span class="cty">Ravenna</span></div><div class="day-t"><b>Ravenna</b> e os mosaicos bizantinos de San Vitale e do Mausoléu de Galla Placidia. Tudo plano, coberto e em ambientes pequenos — o passeio cultural mais confortável possível com bebês.</div></div>
+        <div class="day travel"><div class="day-h">Dia 16<span class="cty">Retorno</span></div><div class="day-t">Voo de volta ao Brasil, com conexão a partir de Bolonha.</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-logo">LusaTravel</div>
+    <div class="ft-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <div class="ft-addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs = [document.getElementById('tab-pt'), document.getElementById('tab-it')];
+  var panels = [document.getElementById('panel-pt'), document.getElementById('panel-it')];
+  function select(i){
+    tabs.forEach(function(t,n){ t.setAttribute('aria-selected', n===i ? 'true':'false'); });
+    panels.forEach(function(p,n){ p.hidden = (n!==i); });
+  }
+  tabs.forEach(function(t,i){ t.addEventListener('click', function(){ select(i); }); });
+})();
+</script>
+</body>
+</html>
