@@ -3,7 +3,7 @@
 Registro de interrupções: sempre que alguém parar o trabalho para outra demanda, anotar início, fim, duração e o que foi a demanda.
 
 Fuso horário: America/Sao_Paulo (UTC-3)
-Horário de trabalho: 09:00 – 18:00
+Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das durações)
 
 ## Atividade principal atual
 
@@ -14,14 +14,14 @@ Horário de trabalho: 09:00 – 18:00
 | # | Data | Início | Fim | Duração | Atividade | Observações |
 |---|------|--------|-----|---------|-----------|-------------|
 | 1 | 20/08/2026 | 09:33 | 11:26 | 1h53min | Vouchers da Mariana Maske | Concluído até onde havia vouchers; ainda faltam alguns |
-| 2 | 20/08/2026 | 11:26 | 16:58 | 5h32min | Cotação Antonia – Ano Novo em Tulum | Concluída |
+| 2 | 20/08/2026 | 11:26 | 16:58 | 4h32min | Cotação Antonia – Ano Novo em Tulum | Concluída; descontado almoço (1h) |
 | 3 | 21/08/2026 | 09:39 | 10:55 | 1h16min | Revisão da cotação da Simone Maximiliano | Concluída |
 | 4 | 21/08/2026 | 10:57 | 11:58 | 1h01min | Fernanda – Xcaret | Concluída |
-| 5 | 21/08/2026 | 11:59 | 14:58 | 2h59min | Revisão 01 da Cotação Antonia – Tulum | Concluída |
-| 6 | 25–26/08/2026 | 25/08 15:54 | 26/08 15:06 | 8h12min | Revisão 02 Fernanda – Japão | Concluída; 2h06min no dia 25 + 6h06min no dia 26, dentro do expediente 09h–18h |
+| 5 | 21/08/2026 | 11:59 | 14:58 | 1h59min | Revisão 01 da Cotação Antonia – Tulum | Concluída; descontado almoço (1h) |
+| 6 | 25–26/08/2026 | 25/08 15:54 | 26/08 15:06 | 7h12min | Revisão 02 Fernanda – Japão | Concluída; 2h06min no dia 25 + 5h06min no dia 26 (descontado almoço) |
 | 7 | 26/08/2026 | 15:13 | 15:35 | 22min | Cotação do Aéreo da Antonia – Tulum fim do ano | Concluída |
 | 8 | 26/08/2026 | 15:35 | 15:58 | 23min | Assento da Camila Barrozo para Londres | Concluída |
-| 9 | 26–27/08/2026 | 26/08 15:58 | 27/08 16:57 | 8h18min | Amanda Rocco – NYC e Canadá | Concluída; 2h02min no dia 26 + 7h57min no dia 27, descontadas 5 interrupções (1h41min) |
+| 9 | 26–27/08/2026 | 26/08 15:58 | 27/08 16:57 | 7h18min | Amanda Rocco – NYC e Canadá | Concluída; 2h02min no dia 26 + 5h16min no dia 27 (descontados almoço e 5 interrupções de 1h41min) |
 | 10 | 27/08/2026 | 16:57 | 17:58 | 1h01min | Vouchers do Irineu e da Rosário – Marrocos | Concluída |
 | 11 | 31/08–01/09/2026 | 31/08 14:30 | 01/09 11:00 | 4h51min | Antonio Chavel – Natal/Ano Novo | Concluída; 2h51min no dia 31 (descontadas 3 interrupções de 39min) + 2h no dia 01, expediente 09h–18h |
 
@@ -38,6 +38,23 @@ Horário de trabalho: 09:00 – 18:00
 | 7 | 31/08/2026 | 15:22 | 15:25 | 3min | – | Responder email sobre o ski – Amanda Rocco (retorno) |
 | 8 | 31/08/2026 | 15:45 | 16:16 | 31min | – | Responder email sobre o ski – Amanda Rocco (3ª vez) |
 | 1 | 20/08/2026 | 09:31 | _em andamento_ | – | – | Vouchers da Mariana Maske |
+
+## Visão consolidada: atividades × interrupções
+
+| # | Atividade | Período | Tempo líquido | Nº de interrupções | Tempo interrompido |
+|---|-----------|---------|---------------|--------------------|--------------------|
+| 1 | Vouchers da Mariana Maske | 20/08 | 1h53min | 0 | – |
+| 2 | Cotação Antonia – Ano Novo em Tulum | 20/08 | 4h32min | 0 | – |
+| 3 | Revisão cotação Simone Maximiliano | 21/08 | 1h16min | 0 | – |
+| 4 | Fernanda – Xcaret | 21/08 | 1h01min | 0 | – |
+| 5 | Revisão 01 Cotação Antonia – Tulum | 21/08 | 1h59min | 0 | – |
+| 6 | Revisão 02 Fernanda – Japão | 25–26/08 | 7h12min | 0 | – |
+| 7 | Cotação Aéreo Antonia – Tulum fim do ano | 26/08 | 22min | 0 | – |
+| 8 | Assento Camila Barrozo – Londres | 26/08 | 23min | 0 | – |
+| 9 | Amanda Rocco – NYC e Canadá | 26–27/08 | 7h18min | 5 | 1h41min |
+| 10 | Vouchers Irineu e Rosário – Marrocos | 27/08 | 1h01min | 0 | – |
+| 11 | Antonio Chavel – Natal/Ano Novo | 31/08–01/09 | 4h51min | 3 | 39min |
+| 12 | Cristofer – Japão | 02/09 | ⏳ em andamento | 0 (até agora) | – |
 
 ## Resumo
 
