@@ -7,7 +7,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 ## Atividade principal atual
 
-_Nenhuma em andamento — aguardando próxima atividade._
+**Lucas – Sem destino definido** — iniciada em 02/09/2026 às 15:09
 
 ## Histórico de atividades principais
 
