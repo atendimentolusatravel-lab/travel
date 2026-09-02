@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cristofer – Japão** — iniciada em 02/09/2026 às 09:10
-⏸️ Pausada em 02/09/2026 às 10:26 por interrupção (transfer Amanda Rocco)
+▶️ Retomada em 02/09/2026 às 10:38 (interrupções nesta atividade: 12min)
 
 ## Histórico de atividades principais
 
@@ -38,7 +38,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 6 | 31/08/2026 | 15:04 | 15:09 | 5min | – | Responder email sobre o ski – Amanda Rocco |
 | 7 | 31/08/2026 | 15:22 | 15:25 | 3min | – | Responder email sobre o ski – Amanda Rocco (retorno) |
 | 8 | 31/08/2026 | 15:45 | 16:16 | 31min | – | Responder email sobre o ski – Amanda Rocco (3ª vez) |
-| 9 | 02/09/2026 | 10:26 | ⏳ em andamento | – | – | Transfer Amanda Rocco |
+| 9 | 02/09/2026 | 10:26 | 10:38 | 12min | – | Transfer Amanda Rocco |
 | 1 | 20/08/2026 | 09:31 | _em andamento_ | – | – | Vouchers da Mariana Maske |
 
 ## Visão consolidada: atividades × interrupções
@@ -56,12 +56,12 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 9 | Amanda Rocco – NYC e Canadá | 26–27/08 | 7h18min | 5 | 1h41min |
 | 10 | Vouchers Irineu e Rosário – Marrocos | 27/08 | 1h01min | 0 | – |
 | 11 | Antonio Chavel – Natal/Ano Novo | 31/08–01/09 | 4h51min | 3 | 39min |
-| 12 | Cristofer – Japão | 02/09 | ⏳ em andamento | 0 (até agora) | – |
+| 12 | Cristofer – Japão | 02/09 | ⏳ em andamento | 1 (até agora) | 12min |
 
 ## Resumo
 
 | Métrica | Valor |
 |---------|-------|
-| Total de interrupções | 8 |
-| Tempo total interrompido | 2h20min |
-| Duração média | 17min30s |
+| Total de interrupções | 9 |
+| Tempo total interrompido | 2h32min |
+| Duração média | 16min53s |
