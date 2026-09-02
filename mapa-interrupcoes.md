@@ -7,8 +7,7 @@ Horário de trabalho: 09:00 – 18:00
 
 ## Atividade principal atual
 
-**Antonio Chavel – Natal/Ano Novo** — iniciada em 31/08/2026 às 14:30
-▶️ Retomada em 31/08/2026 às 16:16 (interrupções nesta atividade: 39min)
+**Cristofer – Japão** — iniciada em 02/09/2026 às 09:10
 
 ## Histórico de atividades principais
 
@@ -24,6 +23,7 @@ Horário de trabalho: 09:00 – 18:00
 | 8 | 26/08/2026 | 15:35 | 15:58 | 23min | Assento da Camila Barrozo para Londres | Concluída |
 | 9 | 26–27/08/2026 | 26/08 15:58 | 27/08 16:57 | 8h18min | Amanda Rocco – NYC e Canadá | Concluída; 2h02min no dia 26 + 7h57min no dia 27, descontadas 5 interrupções (1h41min) |
 | 10 | 27/08/2026 | 16:57 | 17:58 | 1h01min | Vouchers do Irineu e da Rosário – Marrocos | Concluída |
+| 11 | 31/08/2026 | 14:30 | ? | ? | Antonio Chavel – Natal/Ano Novo | Fim não registrado; teve 3 interrupções (39min) no dia 31 |
 
 ## Tabela de Interrupções
 
