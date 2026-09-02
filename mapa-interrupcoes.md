@@ -7,8 +7,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 ## Atividade principal atual
 
-**Cristofer – Japão** — iniciada em 02/09/2026 às 09:10
-▶️ Retomada em 02/09/2026 às 11:04 (interrupções nesta atividade: 22min)
+_Nenhuma em andamento — aguardando próxima atividade._
 
 ## Histórico de atividades principais
 
@@ -25,6 +24,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 9 | 26–27/08/2026 | 26/08 15:58 | 27/08 16:57 | 7h18min | Amanda Rocco – NYC e Canadá | Concluída; 2h02min no dia 26 + 5h16min no dia 27 (descontados almoço e 5 interrupções de 1h41min) |
 | 10 | 27/08/2026 | 16:57 | 17:58 | 1h01min | Vouchers do Irineu e da Rosário – Marrocos | Concluída |
 | 11 | 31/08–01/09/2026 | 31/08 14:30 | 01/09 11:00 | 4h51min | Antonio Chavel – Natal/Ano Novo | Concluída; 2h51min no dia 31 (descontadas 3 interrupções de 39min) + 2h no dia 01, expediente 09h–18h |
+| 12 | 02/09/2026 | 09:10 | 14:22 | 3h50min | Cristofer – Japão | Concluída; descontados almoço (1h) e 2 interrupções (22min) |
 
 ## Tabela de Interrupções
 
@@ -57,7 +57,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 9 | Amanda Rocco – NYC e Canadá | 26–27/08 | 7h18min | 5 | 1h41min |
 | 10 | Vouchers Irineu e Rosário – Marrocos | 27/08 | 1h01min | 0 | – |
 | 11 | Antonio Chavel – Natal/Ano Novo | 31/08–01/09 | 4h51min | 3 | 39min |
-| 12 | Cristofer – Japão | 02/09 | ⏳ em andamento | 2 (até agora) | 22min |
+| 12 | Cristofer – Japão | 02/09 | 3h50min | 2 | 22min |
 
 ## Resumo
 
