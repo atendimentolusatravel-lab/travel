@@ -23,7 +23,7 @@ Horário de trabalho: 09:00 – 18:00
 | 8 | 26/08/2026 | 15:35 | 15:58 | 23min | Assento da Camila Barrozo para Londres | Concluída |
 | 9 | 26–27/08/2026 | 26/08 15:58 | 27/08 16:57 | 8h18min | Amanda Rocco – NYC e Canadá | Concluída; 2h02min no dia 26 + 7h57min no dia 27, descontadas 5 interrupções (1h41min) |
 | 10 | 27/08/2026 | 16:57 | 17:58 | 1h01min | Vouchers do Irineu e da Rosário – Marrocos | Concluída |
-| 11 | 31/08/2026 | 14:30 | ? | ? | Antonio Chavel – Natal/Ano Novo | Fim não registrado; teve 3 interrupções (39min) no dia 31 |
+| 11 | 31/08–01/09/2026 | 31/08 14:30 | 01/09 11:00 | 4h51min | Antonio Chavel – Natal/Ano Novo | Concluída; 2h51min no dia 31 (descontadas 3 interrupções de 39min) + 2h no dia 01, expediente 09h–18h |
 
 ## Tabela de Interrupções
 
