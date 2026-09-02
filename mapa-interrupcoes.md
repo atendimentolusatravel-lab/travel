@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Lucas – Sem destino definido** — iniciada em 02/09/2026 às 15:09
-⏸️ Pausada em 02/09/2026 às 16:33 por interrupção (Amanda Rocco – Seguro)
+▶️ Retomada em 02/09/2026 às 17:30 (interrupções nesta atividade: 1h08min)
 
 ## Histórico de atividades principais
 
@@ -42,7 +42,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 9 | 02/09/2026 | 10:26 | 10:38 | 12min | – | Transfer Amanda Rocco |
 | 10 | 02/09/2026 | 10:54 | 11:04 | 10min | – | Transfer Amanda Rocco (retorno) |
 | 11 | 02/09/2026 | 15:16 | 15:27 | 11min | – | Alteração voo Mariana Dalcanale |
-| 12 | 02/09/2026 | 16:33 | ⏳ em andamento | – | – | Amanda Rocco – Seguro |
+| 12 | 02/09/2026 | 16:33 | 17:30 | 57min | – | Amanda Rocco – Seguro |
 | 1 | 20/08/2026 | 09:31 | _em andamento_ | – | – | Vouchers da Mariana Maske |
 
 ## Visão consolidada: atividades × interrupções
@@ -61,12 +61,12 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 10 | Vouchers Irineu e Rosário – Marrocos | 27/08 | 1h01min | 0 | – |
 | 11 | Antonio Chavel – Natal/Ano Novo | 31/08–01/09 | 4h51min | 3 | 39min |
 | 12 | Cristofer – Japão | 02/09 | 3h50min | 2 | 22min |
-| 13 | Lucas – Sem destino definido | 02/09 | ⏳ em andamento | 1 (até agora) | 11min |
+| 13 | Lucas – Sem destino definido | 02/09 | ⏳ em andamento | 2 (até agora) | 1h08min |
 
 ## Resumo
 
 | Métrica | Valor |
 |---------|-------|
-| Total de interrupções | 11 |
-| Tempo total interrompido | 2h53min |
-| Duração média | 15min44s |
+| Total de interrupções | 12 |
+| Tempo total interrompido | 3h50min |
+| Duração média | 19min10s |
