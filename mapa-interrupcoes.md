@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cristofer – Japão** — iniciada em 02/09/2026 às 09:10
-▶️ Retomada em 02/09/2026 às 10:38 (interrupções nesta atividade: 12min)
+⏸️ Pausada em 02/09/2026 às 10:54 por interrupção (transfer Amanda Rocco, retorno)
 
 ## Histórico de atividades principais
 
@@ -39,6 +39,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 7 | 31/08/2026 | 15:22 | 15:25 | 3min | – | Responder email sobre o ski – Amanda Rocco (retorno) |
 | 8 | 31/08/2026 | 15:45 | 16:16 | 31min | – | Responder email sobre o ski – Amanda Rocco (3ª vez) |
 | 9 | 02/09/2026 | 10:26 | 10:38 | 12min | – | Transfer Amanda Rocco |
+| 10 | 02/09/2026 | 10:54 | ⏳ em andamento | – | – | Transfer Amanda Rocco (retorno) |
 | 1 | 20/08/2026 | 09:31 | _em andamento_ | – | – | Vouchers da Mariana Maske |
 
 ## Visão consolidada: atividades × interrupções
