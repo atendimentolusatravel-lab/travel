@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="Lusa Travel — duas propostas de roteiro de 14 noites na Europa para um casal viajando com dois bebes.">
+<meta name="description" content="Lusa Travel — dois roteiros dia a dia de 14 noites na Europa para um casal viajando com dois bebes.">
 <title>Europa em Família</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,6 +74,7 @@ body{
   margin-top:8px; font-weight:600; font-size:clamp(17px,2.4vw,22px);
   color:var(--gold); letter-spacing:.02em;
 }
+.mh-sub strong{ font-weight:600; color:var(--gold); }
 .mh-sub{ margin-top:16px; max-width:56ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.62); }
 .mh-stats{ margin-top:34px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid rgba(240,232,222,.14); }
 .mh-stat{ padding:18px 34px 4px 0; margin-right:34px; border-right:1px solid rgba(240,232,222,.12); }
@@ -91,12 +92,6 @@ body{
 .h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; letter-spacing:-.01em; text-wrap:balance; }
 .lead{ margin-top:12px; max-width:66ch; font-weight:300; font-size:15.5px; color:var(--char); }
 .goldbar{ width:52px; height:3px; background:var(--gold); margin-top:18px; }
-
-/* ─── PERFIL ─────────────────────────────────────────────── */
-.brief{ margin-top:30px; display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); }
-.brief div{ background:var(--surf); padding:20px 22px; }
-.brief dt{ font-family:var(--lbl); font-weight:700; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--mut); }
-.brief dd{ margin-top:8px; font-size:14.5px; font-weight:400; color:var(--ink); line-height:1.5; }
 
 /* ─── SWITCHER ───────────────────────────────────────────── */
 .tabs{ display:flex; flex-wrap:wrap; gap:10px; margin-top:30px; }
@@ -142,31 +137,6 @@ body{
 .day.travel{ background:var(--surf2); margin:0 -14px; padding:15px 14px; }
 .day.travel .day-t{ font-size:13.5px; }
 
-/* ─── CIDADES ────────────────────────────────────────────── */
-.cities{ margin-top:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:18px; }
-.city{ background:var(--surf); border:1px solid var(--line); padding:24px; display:flex; flex-direction:column; }
-.city-n{ font-weight:700; font-size:19px; color:var(--ink); }
-.city-s{ margin-top:4px; font-family:var(--lbl); font-weight:700; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--dest); }
-.city-p{ margin-top:13px; font-size:14px; font-weight:300; color:var(--char); flex:1; }
-.hl{ margin-top:16px; padding-top:14px; border-top:1px solid var(--line); display:flex; flex-direction:column; gap:7px; }
-.hl div{ font-size:12.5px; font-weight:400; color:var(--char); padding-left:15px; position:relative; }
-.hl div::before{ content:''; position:absolute; left:0; top:8px; width:6px; height:6px; background:var(--gold); }
-.hotel{ margin-top:16px; padding:15px 16px; background:var(--surf2); border-left:3px solid var(--gold); }
-.hotel .lbl{ font-family:var(--lbl); font-weight:700; font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--mut); }
-.hotel .nm{ margin-top:6px; font-weight:600; font-size:14px; color:var(--ink); }
-.stars{ color:var(--gold); font-size:12px; letter-spacing:.12em; margin-top:3px; }
-.hotel .alt{ margin-top:6px; font-size:12px; font-weight:300; color:var(--mut); }
-
-/* ─── VALORES ────────────────────────────────────────────── */
-.val{ margin-top:26px; border:1px solid var(--line); background:var(--surf); }
-.val-row{ display:flex; justify-content:space-between; align-items:baseline; gap:18px; padding:15px 22px; border-bottom:1px solid var(--line); }
-.val-row .k{ font-size:14px; font-weight:400; color:var(--char); }
-.val-row .v{ font-size:14.5px; font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
-.val-total{ display:flex; justify-content:space-between; align-items:baseline; gap:18px; padding:19px 22px; background:var(--ink); }
-.val-total .k{ font-family:var(--lbl); font-weight:700; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.6); }
-.val-total .v{ font-weight:700; font-size:21px; color:var(--gold); font-variant-numeric:tabular-nums; white-space:nowrap; }
-.val-note{ padding:13px 22px; font-size:11.5px; font-weight:400; color:var(--mut); font-style:italic; }
-
 /* ─── COMPARATIVO ────────────────────────────────────────── */
 .tblwrap{ margin-top:26px; overflow-x:auto; border:1px solid var(--line); }
 table{ border-collapse:collapse; width:100%; min-width:560px; background:var(--surf); }
@@ -205,12 +175,12 @@ tbody tr:last-child th, tbody tr:last-child td{ border-bottom:0; }
     <div class="mh-kick">Cotação para sua viagem</div>
     <h1 class="mh-name">Lucas</h1>
     <div class="mh-dest">Europa · Duas propostas de roteiro</div>
-    <p class="mh-sub">Dois roteiros de 14 noites desenhados para viajar com dois bebês: poucas trocas de hotel, uma atração principal por dia e tarde livre para o descanso.</p>
+    <p class="mh-sub">Dois roteiros de 14 noites desenhados para viajar com dois bebês: poucas trocas de hotel, uma atração principal por dia e tarde livre para o descanso. Dentro da janela de novembro a fevereiro, sugerimos <strong>fevereiro</strong>.</p>
     <div class="mh-stats">
       <div class="mh-stat"><div class="v">2</div><div class="k">Propostas</div></div>
       <div class="mh-stat"><div class="v">14</div><div class="k">Noites</div></div>
       <div class="mh-stat"><div class="v">2+2</div><div class="k">Adultos e bebês</div></div>
-      <div class="mh-stat"><div class="v">Fev</div><div class="k">Período sugerido</div></div>
+      <div class="mh-stat"><div class="v">Fevereiro</div><div class="k">Mês sugerido</div></div>
     </div>
   </div>
 </header>
@@ -249,7 +219,7 @@ tbody tr:last-child th, tbody tr:last-child td{ border-bottom:0; }
 
       <div class="eyebrow" style="margin-top:44px">Roteiro dia a dia</div>
       <h2 class="h2">O que fazer em cada dia</h2>
-      <p class="lead">Programe a saída do Brasil numa quarta-feira: o Dia 4 cai no sábado da Feira da Ladra e o Dia 12 no domingo do El Rastro.</p>
+      <p class="lead">A Feira da Ladra e o El Rastro só acontecem em dias fixos da semana. O roteiro já está ordenado para alcançar as duas.</p>
       <div class="days">
         <div class="day travel"><div class="day-h">Dia 01<span class="cty">Embarque</span></div><div class="day-t">Voo noturno direto de São Paulo para Lisboa.</div></div>
         <div class="day"><div class="day-h">Dia 02<span class="cty">Lisboa</span></div><div class="day-t">Chegada pela manhã e descanso. Fim de tarde leve pelo <b>Chiado</b>: Livraria Bertrand, a mais antiga do mundo em funcionamento desde 1732, e a loja A Vida Portuguesa. Jantar no Bairro do Avillez.</div></div>
@@ -267,45 +237,6 @@ tbody tr:last-child th, tbody tr:last-child td{ border-bottom:0; }
         <div class="day"><div class="day-h">Dia 14<span class="cty">Sevilha</span></div><div class="day-t"><b>Catedral e Giralda</b> — a subida é em rampas, possível com o bebê no colo. Tarde na <b>Plaza de España</b> e no Parque María Luisa. À noite, flamenco na Casa de la Memoria, em formato curto de uma hora.</div></div>
         <div class="day"><div class="day-h">Dia 15<span class="cty">Sevilha</span></div><div class="day-t"><b>Triana</b>: mercado, Centro Cerámica Triana e ateliês de azulejo, com compras de cerâmica. Fim de tarde nas Setas de Sevilla, a maior estrutura de madeira do mundo.</div></div>
         <div class="day travel"><div class="day-h">Dia 16<span class="cty">Retorno</span></div><div class="day-t">Voo de volta ao Brasil.</div></div>
-      </div>
-
-      <div class="eyebrow" style="margin-top:44px">Destinos e hospedagem</div>
-      <h2 class="h2">As quatro bases</h2>
-      <div class="cities">
-        <div class="city">
-          <div class="city-n">Lisboa</div><div class="city-s">4 noites</div>
-          <p class="city-p">A cidade que resolve o maior problema da viagem: com dois bebês, qualquer imprevisto — uma farmácia, um pediatra, um cardápio — se resolve em português. Luz baixa de inverno sobre os azulejos, ladeiras que pedem calma e uma cena gastronômica que amadureceu sem perder a informalidade.</p>
-          <div class="hl"><div>Feira da Ladra e Rua de São Bento</div><div>Belém e o MAAT</div><div>Sintra com motorista privativo</div><div>Museu Gulbenkian, tranquilo com carrinho</div></div>
-          <div class="hotel"><div class="lbl">Hospedagem sugerida</div><div class="nm">Four Seasons Ritz Lisbon</div><div class="stars">★★★★★</div><div class="alt">Quartos amplos e Parque Eduardo VII em frente. Alternativa: Bairro Alto Hotel</div></div>
-        </div>
-        <div class="city">
-          <div class="city-n">Porto</div><div class="city-s">3 noites</div>
-          <p class="city-p">Menor e mais concentrada que Lisboa, o Porto entrega em três dias o que outras cidades pedem uma semana. O granito escuro, o rio e as caves do outro lado da ponte compõem um cenário que funciona mesmo sob chuva — e é justamente no inverno que a cidade fica mais dela mesma.</p>
-          <div class="hl"><div>Palácio da Bolsa e São Francisco</div><div>Caves de vinho do Porto em Gaia</div><div>Serralves: museu, casa e parque</div><div>Casa da Música, de Rem Koolhaas</div></div>
-          <div class="hotel"><div class="lbl">Hospedagem sugerida</div><div class="nm">The Yeatman</div><div class="stars">★★★★★</div><div class="alt">Vista integral da cidade e spa. Alternativa: Torel Avantgarde</div></div>
-        </div>
-        <div class="city">
-          <div class="city-n">Madri</div><div class="city-s">4 noites</div>
-          <p class="city-p">A capital que guarda o Triângulo da Arte e come tarde. Fevereiro esvazia os museus e devolve o Prado ao ritmo em que ele deveria ser visto. Plana, bem servida de metrô e com o Retiro no meio — é a cidade mais fácil do roteiro para andar com carrinho.</p>
-          <div class="hl"><div>Museu do Prado e Reina Sofía</div><div>El Rastro e Galerías Piquer</div><div>Toledo a 33 minutos de AVE</div><div>Compras no bairro de Salamanca</div></div>
-          <div class="hotel"><div class="lbl">Hospedagem sugerida</div><div class="nm">Rosewood Villa Magna</div><div class="stars">★★★★★</div><div class="alt">No bairro Salamanca, ao lado das compras. Alternativa: Mandarin Oriental Ritz</div></div>
-        </div>
-        <div class="city">
-          <div class="city-n">Sevilha</div><div class="city-s">3 noites</div>
-          <p class="city-p">O fecho mais ameno da viagem: em fevereiro a Andaluzia já passa dos 18 °C ao meio-dia e as laranjeiras tomam as ruas. O Alcázar e a Giralda concentram a carga histórica, e Triana entrega a parte artesanal — a cerâmica que volta na mala.</p>
-          <div class="hl"><div>Real Alcázar e Bairro de Santa Cruz</div><div>Plaza de España e Parque María Luisa</div><div>Flamenco em formato curto</div><div>Cerâmica e azulejos em Triana</div></div>
-          <div class="hotel"><div class="lbl">Hospedagem sugerida</div><div class="nm">Hotel Alfonso XIII</div><div class="stars">★★★★★</div><div class="alt">O clássico da cidade, com pátio mudéjar. Alternativa: Mercer Sevilla</div></div>
-        </div>
-      </div>
-
-      <div class="eyebrow" style="margin-top:44px">Investimento</div>
-      <h2 class="h2">Faixa estimada</h2>
-      <div class="val">
-        <div class="val-row"><span class="k">Aéreo internacional em classe executiva</span><span class="v">R$ 18.000 a 25.000</span></div>
-        <div class="val-row"><span class="k">Hotelaria 5 estrelas · 14 noites</span><span class="v">R$ 9.000 a 14.000</span></div>
-        <div class="val-row"><span class="k">Traslados, trens, passeios e refeições</span><span class="v">R$ 12.000 a 15.000</span></div>
-        <div class="val-total"><span class="k">Total estimado por adulto</span><span class="v">R$ 40.000 a 50.000</span></div>
-        <div class="val-note">*Nada reservado, apenas cotado. Valores em faixa preliminar, sem cotação de câmbio fechada e sujeitos a disponibilidade na data da consulta. Bebês de colo são tarifados à parte, a 10% da tarifa da classe executiva.</div>
       </div>
     </div>
   </section>
@@ -332,7 +263,7 @@ tbody tr:last-child th, tbody tr:last-child td{ border-bottom:0; }
 
       <div class="eyebrow" style="margin-top:44px">Roteiro dia a dia</div>
       <h2 class="h2">O que fazer em cada dia</h2>
-      <p class="lead">A Fiera Antiquaria de Arezzo acontece no primeiro domingo do mês e no sábado anterior. Ajuste a saída para que esse fim de semana caia durante a estadia em Florença.</p>
+      <p class="lead">A Fiera Antiquaria de Arezzo acontece no primeiro domingo do mês e no sábado anterior. As cinco noites em Florença são posicionadas para alcançar esse fim de semana.</p>
       <div class="days">
         <div class="day travel"><div class="day-h">Dia 01<span class="cty">Embarque</span></div><div class="day-t">Voo noturno direto de São Paulo para Roma.</div></div>
         <div class="day"><div class="day-h">Dia 02<span class="cty">Roma</span></div><div class="day-t">Chegada e descanso. Fim de tarde a pé pelo <b>Panteão</b>, Piazza Navona e Fontana di Trevi. Jantar no Roscioli.</div></div>
@@ -350,39 +281,6 @@ tbody tr:last-child th, tbody tr:last-child td{ border-bottom:0; }
         <div class="day"><div class="day-h">Dia 14<span class="cty">Parma</span></div><div class="day-t"><b>Parma</b>, a uma hora: visita a um caseificio de Parmigiano Reggiano logo cedo e a um produtor de prosciutto di Parma. Almoço na cidade.</div></div>
         <div class="day"><div class="day-h">Dia 15<span class="cty">Ravenna</span></div><div class="day-t"><b>Ravenna</b> e os mosaicos bizantinos de San Vitale e do Mausoléu de Galla Placidia. Tudo plano, coberto e em ambientes pequenos — o passeio cultural mais confortável possível com bebês.</div></div>
         <div class="day travel"><div class="day-h">Dia 16<span class="cty">Retorno</span></div><div class="day-t">Voo de volta ao Brasil, com conexão a partir de Bolonha.</div></div>
-      </div>
-
-      <div class="eyebrow" style="margin-top:44px">Destinos e hospedagem</div>
-      <h2 class="h2">As três bases</h2>
-      <div class="cities">
-        <div class="city">
-          <div class="city-n">Roma</div><div class="city-s">5 noites</div>
-          <p class="city-p">Cinco noites permitem fazer Roma sem correr: um monumento pela manhã, o resto do dia devolvido à cidade. Fevereiro é o melhor mês possível — as filas do Coliseu e do Vaticano encolhem, e a luz baixa favorece as fachadas ocre do centro histórico.</p>
-          <div class="hl"><div>Coliseu e Fórum com guia privativo</div><div>Museus do Vaticano e Capela Sistina</div><div>Galleria Borghese e Villa Borghese</div><div>Via dei Coronari, rua dos antiquários</div></div>
-          <div class="hotel"><div class="lbl">Hospedagem sugerida</div><div class="nm">Hotel de la Ville</div><div class="stars">★★★★★</div><div class="alt">No topo da Escadaria Espanhola. Alternativa com jardim e piscina: Villa Agrippina Gran Meliá</div></div>
-        </div>
-        <div class="city">
-          <div class="city-n">Florença</div><div class="city-s">5 noites</div>
-          <p class="city-p">Base ideal para o casal: a cidade cabe a pé e serve de porta para Arezzo, Chianti e Lucca. O Oltrarno guarda o que mais interessa aqui — as oficinas de douradores e restauradores que sustentam o comércio de antiguidades da Toscana há séculos.</p>
-          <div class="hl"><div>Uffizi, Duomo e Batistério</div><div>Oltrarno, Via Maggio e ateliês</div><div>Fiera Antiquaria de Arezzo</div><div>Chianti com motorista privativo</div></div>
-          <div class="hotel"><div class="lbl">Hospedagem sugerida</div><div class="nm">Four Seasons Firenze</div><div class="stars">★★★★★</div><div class="alt">Tem o maior jardim privado da cidade, 4,5 hectares — com dois bebês, isso muda a viagem</div></div>
-        </div>
-        <div class="city">
-          <div class="city-n">Bolonha</div><div class="city-s">4 noites</div>
-          <p class="city-p">A base gastronômica e a mais subestimada da Itália. Os 40 km de pórticos, Patrimônio da Unesco, são arcadas cobertas que fazem dela a cidade italiana mais fácil de percorrer com carrinho, chova ou não. De Bolonha, Modena, Parma e Ravenna ficam a menos de uma hora.</p>
-          <div class="hl"><div>Archiginnasio e Teatro Anatômico</div><div>Acetaia de balsâmico em Modena</div><div>Caseificio de Parmigiano em Parma</div><div>Mosaicos bizantinos de Ravenna</div></div>
-          <div class="hotel"><div class="lbl">Hospedagem sugerida</div><div class="nm">Grand Hotel Majestic già Baglioni</div><div class="stars">★★★★★</div><div class="alt">O endereço histórico da cidade, a passos da Piazza Maggiore</div></div>
-        </div>
-      </div>
-
-      <div class="eyebrow" style="margin-top:44px">Investimento</div>
-      <h2 class="h2">Faixa estimada</h2>
-      <div class="val">
-        <div class="val-row"><span class="k">Aéreo internacional em classe executiva</span><span class="v">R$ 22.000 a 30.000</span></div>
-        <div class="val-row"><span class="k">Hotelaria 5 estrelas · 14 noites</span><span class="v">R$ 11.000 a 16.000</span></div>
-        <div class="val-row"><span class="k">Traslados, trens, passeios e refeições</span><span class="v">R$ 12.000 a 16.000</span></div>
-        <div class="val-total"><span class="k">Total estimado por adulto</span><span class="v">R$ 45.000 a 58.000</span></div>
-        <div class="val-note">*Nada reservado, apenas cotado. Valores em faixa preliminar, sem cotação de câmbio fechada e sujeitos a disponibilidade na data da consulta. Bebês de colo são tarifados à parte, a 10% da tarifa da classe executiva.</div>
       </div>
     </div>
   </section>
@@ -403,7 +301,6 @@ tbody tr:last-child th, tbody tr:last-child td{ border-bottom:0; }
           <tr><th scope="row">Gastronomia</th><td>Muito boa</td><td>Excepcional na Emilia-Romagna</td></tr>
           <tr><th scope="row">Facilidade com carrinho</th><td>Boa — Madri e Sevilha planas</td><td>Média — calçamento pesado em Roma e Florença</td></tr>
           <tr><th scope="row">Temperatura em fevereiro</th><td>8 °C a 18 °C</td><td>4 °C a 15 °C</td></tr>
-          <tr><th scope="row">Estimativa por adulto</th><td>R$ 40.000 a 50.000</td><td>R$ 45.000 a 58.000</td></tr>
         </tbody>
       </table>
     </div>
