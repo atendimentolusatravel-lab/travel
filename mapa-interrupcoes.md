@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Lucas – Sem destino definido** — iniciada em 02/09/2026 às 15:09
-▶️ Retomada em 02/09/2026 às 15:27 (interrupções nesta atividade: 11min)
+⏸️ Pausada em 02/09/2026 às 16:33 por interrupção (Amanda Rocco – Seguro)
 
 ## Histórico de atividades principais
 
@@ -42,6 +42,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 9 | 02/09/2026 | 10:26 | 10:38 | 12min | – | Transfer Amanda Rocco |
 | 10 | 02/09/2026 | 10:54 | 11:04 | 10min | – | Transfer Amanda Rocco (retorno) |
 | 11 | 02/09/2026 | 15:16 | 15:27 | 11min | – | Alteração voo Mariana Dalcanale |
+| 12 | 02/09/2026 | 16:33 | ⏳ em andamento | – | – | Amanda Rocco – Seguro |
 | 1 | 20/08/2026 | 09:31 | _em andamento_ | – | – | Vouchers da Mariana Maske |
 
 ## Visão consolidada: atividades × interrupções
