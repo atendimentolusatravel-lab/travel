@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cotação Milena Naves – Euro Summer** — iniciada em 03/09/2026 às 15:30
-⏸️ Pausada desde 03/09/2026 às 15:36 — 3 interrupções emendadas (Amanda transfer, Maria Neuzi Foz, Amanda transfer de novo às 16:09)
+▶️ Retomada em 03/09/2026 às 16:15 (interrupções nesta atividade: 3, total 39min)
 
 ## Histórico de atividades principais
 
@@ -46,7 +46,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 12 | 02/09/2026 | 16:33 | 17:30 | 57min | – | Amanda Rocco – Seguro |
 | 13 | 03/09/2026 | 15:36 | 15:41 | 5min | – | Amanda Rocco – Transfer (3ª vez) |
 | 14 | 03/09/2026 | 15:41 | 16:09 | 28min | – | Maria Neuzi – Aéreo Foz do Iguaçu |
-| 15 | 03/09/2026 | 16:09 | ⏳ em andamento | – | – | Amanda Rocco – Transfer (4ª vez) |
+| 15 | 03/09/2026 | 16:09 | 16:15 | 6min | – | Amanda Rocco – Transfer (4ª vez) |
 | 1 | 20/08/2026 | 09:31 | _em andamento_ | – | – | Vouchers da Mariana Maske |
 
 ## Visão consolidada: atividades × interrupções
@@ -66,12 +66,12 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 11 | Antonio Chavel – Natal/Ano Novo | 31/08–01/09 | 4h51min | 3 | 39min |
 | 12 | Cristofer – Japão | 02/09 | 3h50min | 2 | 22min |
 | 13 | Lucas – Sem destino definido | 02/09 | 1h43min | 2 | 1h08min |
-| 14 | Cotação Milena Naves – Euro Summer | 03/09 | ⏳ em andamento | 1 (até agora) | 5min |
+| 14 | Cotação Milena Naves – Euro Summer | 03/09 | ⏳ em andamento | 3 (até agora) | 39min |
 
 ## Resumo
 
 | Métrica | Valor |
 |---------|-------|
-| Total de interrupções | 14 (+1 em andamento) |
-| Tempo total interrompido | 4h23min |
-| Duração média | 18min47s |
+| Total de interrupções | 15 |
+| Tempo total interrompido | 4h29min |
+| Duração média | 17min56s |
