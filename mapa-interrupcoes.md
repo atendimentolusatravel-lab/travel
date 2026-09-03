@@ -7,8 +7,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 ## Atividade principal atual
 
-**Lucas – Sem destino definido** — iniciada em 02/09/2026 às 15:09
-▶️ Retomada em 02/09/2026 às 17:30 (interrupções nesta atividade: 1h08min)
+_Nenhuma em andamento — aguardando próxima atividade._
 
 ## Histórico de atividades principais
 
@@ -26,6 +25,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 10 | 27/08/2026 | 16:57 | 17:58 | 1h01min | Vouchers do Irineu e da Rosário – Marrocos | Concluída |
 | 11 | 31/08–01/09/2026 | 31/08 14:30 | 01/09 11:00 | 4h51min | Antonio Chavel – Natal/Ano Novo | Concluída; 2h51min no dia 31 (descontadas 3 interrupções de 39min) + 2h no dia 01, expediente 09h–18h |
 | 12 | 02/09/2026 | 09:10 | 14:22 | 3h50min | Cristofer – Japão | Concluída; descontados almoço (1h) e 2 interrupções (22min) |
+| 13 | 02/09/2026 | 15:09 | 18:00 | 1h43min | Lucas – Sem destino definido | Concluída; descontadas 2 interrupções (1h08min) |
 
 ## Tabela de Interrupções
 
@@ -61,7 +61,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 10 | Vouchers Irineu e Rosário – Marrocos | 27/08 | 1h01min | 0 | – |
 | 11 | Antonio Chavel – Natal/Ano Novo | 31/08–01/09 | 4h51min | 3 | 39min |
 | 12 | Cristofer – Japão | 02/09 | 3h50min | 2 | 22min |
-| 13 | Lucas – Sem destino definido | 02/09 | ⏳ em andamento | 2 (até agora) | 1h08min |
+| 13 | Lucas – Sem destino definido | 02/09 | 1h43min | 2 | 1h08min |
 
 ## Resumo
 
