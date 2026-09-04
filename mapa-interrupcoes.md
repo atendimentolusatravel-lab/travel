@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cotação Milena Naves – Euro Summer** — iniciada em 03/09/2026 às 15:30
-⏸️ Pausada em 04/09/2026 às 10:29 por interrupção (Gabriel Tacla – Impressão dos vouchers), 3ª emendada da manhã
+▶️ Retomada em 04/09/2026 às 10:46 (interrupções nesta atividade: 7, total 2h02min)
 
 ## Histórico de atividades principais
 
@@ -50,7 +50,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 16 | 03/09/2026 | 16:24 | 16:33 | 9min | – | Gabiel Tacla – Gifts |
 | 17 | 04/09/2026 | 09:31 | 10:27 | 56min | – | Simone Maximiliano – Voucher Carro |
 | 18 | 04/09/2026 | 10:27 | 10:28 | 1min | – | Maria Neuzi – Aéreo Foz do Iguaçu (2ª vez) |
-| 19 | 04/09/2026 | 10:29 | ⏳ em andamento | – | – | Gabriel Tacla – Impressão dos vouchers |
+| 19 | 04/09/2026 | 10:29 | 10:46 | 17min | – | Gabriel Tacla – Impressão dos vouchers |
 
 ## Visão consolidada: atividades × interrupções
 
@@ -69,12 +69,12 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 11 | Antonio Chavel – Natal/Ano Novo | 31/08–01/09 | 4h51min | 3 | 39min |
 | 12 | Cristofer – Japão | 02/09 | 3h50min | 2 | 22min |
 | 13 | Lucas – Sem destino definido | 02/09 | 1h43min | 2 | 1h08min |
-| 14 | Cotação Milena Naves – Euro Summer | 03–04/09 | ⏳ em andamento | 6 (até agora) | 1h45min |
+| 14 | Cotação Milena Naves – Euro Summer | 03–04/09 | ⏳ em andamento | 7 (até agora) | 2h02min |
 
 ## Resumo
 
 | Métrica | Valor |
 |---------|-------|
-| Total de interrupções | 18 (+1 em andamento) |
-| Tempo total interrompido | 5h35min |
-| Duração média | 18min37s |
+| Total de interrupções | 19 |
+| Tempo total interrompido | 5h52min |
+| Duração média | 18min32s |
