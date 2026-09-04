@@ -7,8 +7,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 ## Atividade principal atual
 
-**Cotação Milena Naves – Euro Summer** — iniciada em 03/09/2026 às 15:30
-▶️ Retomada em 04/09/2026 às 10:46 (interrupções nesta atividade: 7, total 2h02min)
+_Nenhuma em andamento — aguardando próxima atividade._
 
 ## Histórico de atividades principais
 
@@ -27,6 +26,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 11 | 31/08–01/09/2026 | 31/08 14:30 | 01/09 11:00 | 4h51min | Antonio Chavel – Natal/Ano Novo | Concluída; 2h51min no dia 31 (descontadas 3 interrupções de 39min) + 2h no dia 01, expediente 09h–18h |
 | 12 | 02/09/2026 | 09:10 | 14:22 | 3h50min | Cristofer – Japão | Concluída; descontados almoço (1h) e 2 interrupções (22min) |
 | 13 | 02/09/2026 | 15:09 | 18:00 | 1h43min | Lucas – Sem destino definido | Concluída; descontadas 2 interrupções (1h08min) |
+| 14 | 03–04/09/2026 | 03/09 15:30 | 04/09 12:55 | 3h58min | Cotação Milena Naves – Euro Summer | Concluída; 1h42min no dia 03 + 2h16min no dia 04, descontadas 7 interrupções (2h02min); fim dentro do almoço, contado até 12:30 |
 
 ## Tabela de Interrupções
 
@@ -69,7 +69,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 11 | Antonio Chavel – Natal/Ano Novo | 31/08–01/09 | 4h51min | 3 | 39min |
 | 12 | Cristofer – Japão | 02/09 | 3h50min | 2 | 22min |
 | 13 | Lucas – Sem destino definido | 02/09 | 1h43min | 2 | 1h08min |
-| 14 | Cotação Milena Naves – Euro Summer | 03–04/09 | ⏳ em andamento | 7 (até agora) | 2h02min |
+| 14 | Cotação Milena Naves – Euro Summer | 03–04/09 | 3h58min | 7 | 2h02min |
 
 ## Resumo
 
