@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cotação Milena Naves – Euro Summer** — iniciada em 03/09/2026 às 15:30
-▶️ Retomada em 03/09/2026 às 16:33 (interrupções nesta atividade: 4, total 48min)
+⏸️ Pausada em 04/09/2026 às 09:31 por interrupção (Simone Maximiliano – Voucher Carro)
 
 ## Histórico de atividades principais
 
@@ -48,6 +48,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 14 | 03/09/2026 | 15:41 | 16:09 | 28min | – | Maria Neuzi – Aéreo Foz do Iguaçu |
 | 15 | 03/09/2026 | 16:09 | 16:15 | 6min | – | Amanda Rocco – Transfer (4ª vez) |
 | 16 | 03/09/2026 | 16:24 | 16:33 | 9min | – | Gabiel Tacla – Gifts |
+| 17 | 04/09/2026 | 09:31 | ⏳ em andamento | – | – | Simone Maximiliano – Voucher Carro |
 | 1 | 20/08/2026 | 09:31 | _em andamento_ | – | – | Vouchers da Mariana Maske |
 
 ## Visão consolidada: atividades × interrupções
