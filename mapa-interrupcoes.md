@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cotação Luiz Maués – Pedido de casamento** — iniciada em 09/09/2026 às 13:54
-⏸️ Pausada em 10/09/2026 às 09:22 por interrupção (Antonia e família – Tulum)
+▶️ Retomada em 10/09/2026 às 10:59 (interrupções nesta atividade: 1h37min)
 
 ## Histórico de atividades principais
 
@@ -52,7 +52,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 17 | 04/09/2026 | 09:31 | 10:27 | 56min | – | Simone Maximiliano – Voucher Carro |
 | 18 | 04/09/2026 | 10:27 | 10:28 | 1min | – | Maria Neuzi – Aéreo Foz do Iguaçu (2ª vez) |
 | 19 | 04/09/2026 | 10:29 | 10:46 | 17min | – | Gabriel Tacla – Impressão dos vouchers |
-| 20 | 10/09/2026 | 09:22 | ⏳ em andamento | – | – | Antonia e família – Tulum |
+| 20 | 10/09/2026 | 09:22 | 10:59 | 1h37min | – | Antonia e família – Tulum |
 
 ## Visão consolidada: atividades × interrupções
 
@@ -72,11 +72,12 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 12 | Cristofer – Japão | 02/09 | 3h50min | 2 | 22min |
 | 13 | Lucas – Sem destino definido | 02/09 | 1h43min | 2 | 1h08min |
 | 14 | Cotação Milena Naves – Euro Summer | 03–04/09 | 3h58min | 7 | 2h02min |
+| 15 | Cotação Luiz Maués – Pedido de casamento | 09–10/09 | ⏳ em andamento | 1 (até agora) | 1h37min |
 
 ## Resumo
 
 | Métrica | Valor |
 |---------|-------|
-| Total de interrupções | 19 |
-| Tempo total interrompido | 5h52min |
-| Duração média | 18min32s |
+| Total de interrupções | 20 |
+| Tempo total interrompido | 7h29min |
+| Duração média | 22min27s |
