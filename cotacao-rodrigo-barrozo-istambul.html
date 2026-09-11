@@ -7,7 +7,8 @@
 @import url('fonts/fonts.css');
 :root{
   --gold:#da8d00;
-  --dest:#5a2d0a;        /* Oriente Médio / Ásia — Ocre/Âmbar */
+  --dest:#2d5e3a;        /* Verde Tropical — padrão LusaTravel (verde + ouro) */
+  --dest-deep:#1c3d26;   /* verde profundo para fundos escuros */
   --ink:#1a1510; --char:#333131; --mut:#9a8d80; --line:#e4ddd2; --cream:#faf7f2;
   --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
   --con:'Montserrat',var(--sans);
@@ -30,14 +31,14 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:4mm 0 8mm; }
 
 /* ══ CAPA ══ */
-.cover{ background:var(--ink); }
+.cover{ background:linear-gradient(180deg, var(--ink) 0%, var(--dest-deep) 40%, var(--dest-deep) 100%); }
 .cover-hd{ height:26mm; background:var(--ink); display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
 .cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
 .cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
 .cover-photo{ position:relative; height:47mm; flex-shrink:0; overflow:hidden;
   background:url('img/cotacao-istambul/istambul-banner.jpg') center/cover no-repeat; }
 .cover-photo::after{ content:""; position:absolute; inset:0;
-  background:linear-gradient(to bottom, rgba(26,21,16,0) 55%, rgba(26,21,16,.85) 100%); }
+  background:linear-gradient(to bottom, rgba(28,61,38,0) 55%, rgba(28,61,38,.85) 100%); }
 .cover-cnt{ padding:0 22mm; color:#fff; margin-top:auto; margin-bottom:auto; }
 .cover-strip{ padding:0 22mm; display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:62mm; gap:3mm; margin-bottom:14mm; }
 .cover-strip figure{ position:relative; height:62mm; overflow:hidden; border-radius:3px; }
@@ -53,7 +54,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .stats{ display:flex; gap:16mm; margin-top:12mm; }
 .stat b{ display:block; font-size:28pt; font-weight:800; color:var(--gold); line-height:1; }
 .stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
-.cover-info{ display:grid; grid-template-columns:repeat(4,1fr); gap:6mm; margin-top:14mm; padding-top:8mm; border-top:1px solid rgba(255,255,255,.12); }
+.cover-info{ display:grid; grid-template-columns:repeat(4,1fr); gap:6mm; margin-top:14mm; padding-top:8mm; border-top:1px solid rgba(218,141,0,.35); }
 .cover-info .k{ font-family:var(--lab); font-size:7pt; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:700; }
 .cover-info .v{ font-size:11pt; font-weight:500; color:#fff; margin-top:1.5mm; }
 .cover-info .v small{ display:block; font-size:8pt; font-weight:300; color:rgba(255,255,255,.55); margin-top:.5mm; }
@@ -105,10 +106,10 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .hl b{ display:block; font-size:9pt; font-weight:700; color:var(--ink); }
 .hl span{ font-size:8.5pt; font-weight:300; color:var(--char); line-height:1.4; }
 .near{ margin-top:6mm; display:flex; gap:4mm; flex-wrap:wrap; }
-.near span{ font-size:8.5pt; font-weight:500; color:var(--dest); background:rgba(90,45,10,.07); border-radius:20px; padding:1.5mm 4mm; }
-.hotel-price{ display:flex; justify-content:space-between; align-items:center; background:var(--ink); border-radius:5px; padding:5mm 8mm; margin-top:6mm; }
-.hotel-price .lbl{ font-size:9.5pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); line-height:1.4; }
-.hotel-price .lbl small{ display:block; font-size:7.5pt; font-weight:400; letter-spacing:.06em; color:rgba(255,255,255,.45); }
+.near span{ font-size:8.5pt; font-weight:500; color:var(--dest); background:rgba(45,94,58,.09); border-radius:20px; padding:1.5mm 4mm; }
+.hotel-price{ display:flex; justify-content:space-between; align-items:center; background:var(--dest); border-radius:5px; padding:5mm 8mm; margin-top:6mm; }
+.hotel-price .lbl{ font-size:9.5pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.85); line-height:1.4; }
+.hotel-price .lbl small{ display:block; font-size:7.5pt; font-weight:400; letter-spacing:.06em; color:rgba(255,255,255,.6); }
 .hotel-price .amt{ font-size:16pt; font-weight:800; color:var(--gold); }
 .hotel-price.alt{ margin-top:3mm; }
 .pol{ font-size:8.5pt; color:var(--mut); margin-top:2.5mm; }
@@ -126,7 +127,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .vt td.pp{ font-weight:300; color:var(--char); font-variant-numeric:tabular-nums; white-space:nowrap; }
 .vt .no{ width:10mm; height:10mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:11pt; display:flex; align-items:center; justify-content:center; }
 .val-fx{ font-size:9pt; color:var(--mut); margin-top:6mm; line-height:1.7; }
-.callout{ margin-top:10mm; background:var(--cream); border-left:3px solid var(--gold); padding:5mm 7mm; font-size:10pt; line-height:1.7; color:var(--char); }
+.callout{ margin-top:10mm; background:rgba(45,94,58,.06); border-left:3px solid var(--gold); padding:5mm 7mm; font-size:10pt; line-height:1.7; color:var(--char); }
 .callout b{ color:var(--ink); }
 
 /* ══ CONDIÇÕES ══ */
