@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>RODRIGO BARROZO | Istambul — LusaTravel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+:root{
+  --gold:#da8d00;
+  --dest:#5a2d0a;        /* Oriente Médio / Ásia — Ocre/Âmbar */
+  --ink:#1a1510; --char:#333131; --mut:#9a8d80; --line:#e4ddd2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); }
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; page-break-after:always; display:flex; flex-direction:column; }
+.page:last-child{ page-break-after:auto; }
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.2); }
+.body{ padding:16mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:4mm 0 8mm; }
+/* capa */
+.cover{ position:relative; }
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink); display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0; background:linear-gradient(160deg,#8a6a4a,#2a1a10); }
+.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, transparent 30%, rgba(0,0,0,.78) 78%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+/* destino + hotel */
+.dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
+.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); }
+.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9); color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.dest-photo{ height:120mm; background:linear-gradient(160deg,#9a7a5a,#3a2a1a) center/cover; position:relative; flex-shrink:0; }
+.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+.dest-text{ font-size:12pt; font-weight:400; line-height:1.7; color:var(--char); }
+.hotel-card{ margin-top:10mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.hotel-card .top{ background:#faf7f2; padding:6mm 8mm; border-bottom:1px solid var(--line); }
+.hotel-card .name{ font-size:15pt; font-weight:700; color:var(--ink); }
+.hotel-card .stars{ font-size:14pt; color:var(--gold); letter-spacing:2px; margin-top:1mm; }
+.hotel-card .rows{ padding:6mm 8mm; display:grid; grid-template-columns:1fr 1fr; gap:4mm 10mm; }
+.hotel-card .k{ font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.hotel-card .v{ font-size:11pt; font-weight:300; color:var(--char); margin-top:1mm; }
+.hotel-desc{ font-size:11pt; font-weight:300; line-height:1.7; color:var(--char); margin-top:6mm; }
+.hotel-price{ display:flex; justify-content:space-between; align-items:center; background:var(--ink); border-radius:5px; padding:5mm 8mm; margin-top:6mm; }
+.hotel-price .lbl{ font-size:10pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.hotel-price .amt{ font-size:15pt; font-weight:800; color:var(--gold); }
+/* valores */
+.val-note{ font-size:9pt; color:var(--mut); margin-bottom:5mm; }
+.val-row{ display:flex; justify-content:space-between; padding:4mm 0; border-bottom:1px solid var(--line); }
+.val-row .lbl{ font-size:12pt; color:var(--char); }
+.val-row .amt{ font-size:12pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; }
+.val-fx{ font-size:9pt; color:var(--mut); margin-top:5mm; line-height:1.6; }
+/* condições */
+.cond{ margin-bottom:7mm; }
+.cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
+.cond-t{ font-size:11pt; line-height:1.8; color:var(--char); }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 01 · CAPA ══════════ -->
+<section class="page cover">
+  <div class="cover-hd"><div class="logo">LUSATRAVEL</div><div class="tag">Glossário</div></div>
+  <div class="cover-bar"></div>
+  <div class="cover-photo"></div><!-- TODO: background:url('istambul-capa.jpg') center/cover -->
+  <div class="cover-scrim"></div>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em 2 adultos · 11/05/2027 a 14/05/2027 · café da manhã incluído</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">Rodrigo Barrozo</div>
+    <div class="cover-dest">ISTAMBUL · TURQUIA</div>
+    <div class="stats">
+      <div class="stat"><b>1</b><span>Destino</span></div>
+      <div class="stat"><b>3</b><span>Noites</span></div>
+      <div class="stat"><b>{{N_HOTEIS}}</b><span>Opções de hotel</span></div>
+      <div class="stat"><b>2</b><span>Hóspedes</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com" style="color:inherit;text-decoration:none">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076" style="color:inherit;text-decoration:none">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ══════════ 02 · DESTINO ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Istambul · Turquia</div><div class="no">1</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo"><div class="cap">Istambul</div></div><!-- TODO: background:url('istambul.jpg') -->
+  <div class="body">
+    <div class="eyebrow">11 a 14 de maio de 2027 · 3 noites</div>
+    <h2 class="h2">Onde dois continentes se encontram</h2>
+    <p class="dest-text">Istambul é a única cidade do mundo que amanhece na Europa e anoitece na Ásia. Entre as duas margens do Bósforo, minaretes e cúpulas desenham um horizonte que atravessa dois mil anos de história: a Basílica de Santa Sofia, a Mesquita Azul com seus azulejos de Iznik, o Palácio de Topkapi e as cisternas subterrâneas de Constantinopla convivem com cafés à beira-d'água, galerias contemporâneas e o burburinho do Grande Bazar, onde o aroma de especiarias, chá de maçã e couro se mistura ao som dos vendedores. Em maio, a primavera cobre os jardins de tulipas e as temperaturas amenas convidam a caminhar por Sultanahmet, cruzar a Ponte de Gálata ao entardecer e navegar pelo estreito enquanto o sol se põe atrás das mansões otomanas. É uma cidade que se descobre com o paladar, com os olhos e com tempo. Três noites são o ponto de partida perfeito para senti-la de perto.</p>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 03 · OPÇÕES DE HOTEL (uma página por hotel — duplicar) ══════════ -->
+<!-- HOTEL_OPCAO_INICIO -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Istambul · Opção {{N}}</div><div class="no">{{N}}</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo" style="background-image:url('{{HOTEL_FOTO}}')"><div class="cap">{{HOTEL_NOME}}</div></div>
+  <div class="body">
+    <div class="hotel-card" style="margin-top:0">
+      <div class="top">
+        <div class="name">{{HOTEL_NOME}}</div>
+        <div class="stars">{{ESTRELAS}}</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">{{QUARTO}}</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã incluído</div></div>
+        <div><div class="k">Endereço</div><div class="v">{{ENDERECO}}</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">11/05/2027 → 14/05/2027</div></div>
+        <div><div class="k">Hóspedes</div><div class="v">2 adultos</div></div>
+        <div><div class="k">Política</div><div class="v">{{POLITICA_CANCELAMENTO}}</div></div>
+      </div>
+    </div>
+    <p class="hotel-desc">{{DESCRICAO_HOTEL}}</p>
+    <div class="hotel-price"><span class="lbl">TOTAL · 3 NOITES · 2 ADULTOS</span><span class="amt">R$ {{VALOR_TOTAL}}</span></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+<!-- HOTEL_OPCAO_FIM -->
+
+<!-- ══════════ 04 · VALORES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Valores</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Investimento</div>
+    <h2 class="h2">Resumo das opções</h2>
+    <div class="val-note">*Valores em BRL · total da hospedagem para 2 adultos · 3 noites · café da manhã incluído</div>
+    <!-- uma linha por hotel -->
+    <div class="val-row"><span class="lbl">Opção {{N}} · {{HOTEL_NOME}}</span><span class="amt">R$ {{VALOR_TOTAL}}</span></div>
+    <div class="val-fx">Cotação {{DATA_CAMBIO}} · {{MOEDA_REF}} = {{TAXA}}<br>*Nada reservado, apenas cotado</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 05 · CONDIÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Condições</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Importante</div>
+    <h2 class="h2">Condições e Observações</h2>
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Hotelaria: até 10x sem acréscimos · PIX: desconto de 5–13%</div></div>
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Aéreo e transfers<br>· City tax (paga diretamente no hotel)<br>· Despesas pessoais e refeições não mencionadas</div></div>
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Valores sujeitos a confirmação e disponibilidade no momento da reserva. Tarifas em moeda estrangeira acompanham a variação cambial até a emissão.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
