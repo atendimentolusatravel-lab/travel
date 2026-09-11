@@ -4,17 +4,18 @@
 <meta charset="utf-8">
 <title>RODRIGO BARROZO | Istambul — LusaTravel</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+@import url('fonts/fonts.css');
 :root{
   --gold:#da8d00;
   --dest:#5a2d0a;        /* Oriente Médio / Ásia — Ocre/Âmbar */
-  --ink:#1a1510; --char:#333131; --mut:#9a8d80; --line:#e4ddd2;
+  --ink:#1a1510; --char:#333131; --mut:#9a8d80; --line:#e4ddd2; --cream:#faf7f2;
   --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
   --con:'Montserrat',var(--sans);
+  --lab:'Arimo',var(--sans);
 }
 @page{ size:A3 portrait; margin:0; }
 *{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-html,body{ font-family:var(--sans); color:var(--char); }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; page-break-after:always; display:flex; flex-direction:column; }
 .page:last-child{ page-break-after:auto; }
 .hd{ background:var(--ink); height:26mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
@@ -24,55 +25,117 @@ html,body{ font-family:var(--sans); color:var(--char); }
 .ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
 .ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
 .ft .sep{ color:rgba(255,255,255,.2); }
-.body{ padding:16mm 22mm; flex:1; }
+.body{ padding:14mm 22mm; flex:1; }
 .eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
 .h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:4mm 0 8mm; }
-/* capa */
-.cover{ position:relative; }
-.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink); display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+
+/* ══ CAPA ══ */
+.cover{ background:var(--ink); }
+.cover-hd{ height:26mm; background:var(--ink); display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
 .cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
 .cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
-.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
-.cover-photo{ position:absolute; inset:0; background:linear-gradient(160deg,#8a6a4a,#2a1a10); }
-.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, transparent 30%, rgba(0,0,0,.78) 78%); z-index:2; }
-.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
+.cover-photo{ position:relative; height:47mm; flex-shrink:0; overflow:hidden;
+  background:url('img/cotacao-istambul/istambul-banner.jpg') center/cover no-repeat; }
+.cover-photo::after{ content:""; position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(26,21,16,0) 55%, rgba(26,21,16,.85) 100%); }
+.cover-cnt{ padding:0 22mm; color:#fff; margin-top:auto; margin-bottom:auto; }
+.cover-strip{ padding:0 22mm; display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:62mm; gap:3mm; margin-bottom:14mm; }
+.cover-strip figure{ position:relative; height:62mm; overflow:hidden; border-radius:3px; }
+.cover-strip img{ width:100%; height:100%; object-fit:cover; display:block; }
+.cover-strip figcaption{ position:absolute; left:0; right:0; bottom:0; padding:9mm 4mm 3mm; font-size:8pt; font-weight:500; color:#fff; line-height:1.3;
+  background:linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8)); }
+.cover-strip figcaption b{ display:block; color:var(--gold); font-size:7pt; font-weight:700; letter-spacing:.16em; text-transform:uppercase; margin-bottom:1mm; }
 .cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
-.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
+.cover-basis{ font-size:10.5pt; color:rgba(255,255,255,.6); margin:2mm 0 10mm; }
 .cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
-.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-name{ font-size:36pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
 .cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
-.stats{ display:flex; gap:14mm; margin-top:11mm; }
-.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stats{ display:flex; gap:16mm; margin-top:12mm; }
+.stat b{ display:block; font-size:28pt; font-weight:800; color:var(--gold); line-height:1; }
 .stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
-.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
-/* destino + hotel */
+.cover-info{ display:grid; grid-template-columns:repeat(4,1fr); gap:6mm; margin-top:14mm; padding-top:8mm; border-top:1px solid rgba(255,255,255,.12); }
+.cover-info .k{ font-family:var(--lab); font-size:7pt; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.cover-info .v{ font-size:11pt; font-weight:500; color:#fff; margin-top:1.5mm; }
+.cover-info .v small{ display:block; font-size:8pt; font-weight:300; color:rgba(255,255,255,.55); margin-top:.5mm; }
+.cover-sig{ padding:0 22mm 16mm; font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+.cover-sig a{ color:inherit; text-decoration:none; }
+
+/* ══ DESTINO ══ */
 .dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
 .dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); }
 .dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9); color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
-.dest-photo{ height:120mm; background:linear-gradient(160deg,#9a7a5a,#3a2a1a) center/cover; position:relative; flex-shrink:0; }
-.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.6); }
-.dest-text{ font-size:12pt; font-weight:400; line-height:1.7; color:var(--char); }
-.hotel-card{ margin-top:10mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
-.hotel-card .top{ background:#faf7f2; padding:6mm 8mm; border-bottom:1px solid var(--line); }
-.hotel-card .name{ font-size:15pt; font-weight:700; color:var(--ink); }
-.hotel-card .stars{ font-size:14pt; color:var(--gold); letter-spacing:2px; margin-top:1mm; }
-.hotel-card .rows{ padding:6mm 8mm; display:grid; grid-template-columns:1fr 1fr; gap:4mm 10mm; }
-.hotel-card .k{ font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
-.hotel-card .v{ font-size:11pt; font-weight:300; color:var(--char); margin-top:1mm; }
-.hotel-desc{ font-size:11pt; font-weight:300; line-height:1.7; color:var(--char); margin-top:6mm; }
+.dest-photo{ height:47mm; background:url('img/cotacao-istambul/istambul-banner.jpg') center/cover no-repeat; position:relative; flex-shrink:0; }
+.dest-photo .cap{ position:absolute; bottom:5mm; left:22mm; font-size:13pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.7); }
+.dest-text{ font-size:12pt; font-weight:400; line-height:1.75; color:var(--char); }
+.dest-text + .dest-text{ margin-top:5mm; }
+.opts{ margin-top:12mm; display:grid; grid-template-columns:1fr 1fr 1fr; gap:6mm; }
+.opt{ border:1px solid var(--line); border-radius:6px; overflow:hidden; background:#fff; }
+.opt img{ display:block; width:100%; height:46mm; object-fit:cover; }
+.opt .in{ padding:5mm 6mm 6mm; }
+.opt .n{ font-size:8pt; font-weight:700; letter-spacing:.14em; color:var(--gold); text-transform:uppercase; }
+.opt .nm{ font-size:11.5pt; font-weight:700; color:var(--ink); line-height:1.25; margin-top:1.5mm; min-height:12mm; }
+.opt .st{ color:var(--gold); font-size:10.5pt; letter-spacing:1.5px; margin-top:1mm; }
+.opt .pr{ font-size:13pt; font-weight:800; color:var(--ink); margin-top:3mm; }
+.opt .pr small{ display:block; font-size:7.5pt; font-weight:400; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; margin-top:.5mm; }
+.tips{ margin-top:12mm; display:grid; grid-template-columns:1fr 1fr; gap:5mm 10mm; }
+.tip{ border-left:2.5px solid var(--gold); padding-left:5mm; }
+.tip b{ display:block; font-size:9.5pt; font-weight:700; color:var(--ink); }
+.tip span{ font-size:10pt; font-weight:300; color:var(--char); line-height:1.55; }
+
+/* ══ HOTEL ══ */
+.gal{ display:grid; grid-template-columns:2fr 1fr; grid-template-rows:36mm 36mm; gap:2mm; height:74mm; flex-shrink:0; }
+.gal img{ width:100%; height:100%; object-fit:cover; display:block; }
+.gal .hero{ grid-row:1 / span 2; }
+.gal2{ display:grid; grid-template-columns:1fr 1fr; grid-template-rows:34mm; gap:2mm; height:34mm; overflow:hidden; margin-top:2mm; flex-shrink:0; }
+.gal2 img{ width:100%; height:100%; object-fit:cover; display:block; }
+.hotel-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:10mm; }
+.hotel-name{ font-size:19pt; font-weight:700; color:var(--ink); line-height:1.2; }
+.hotel-stars{ font-size:13pt; color:var(--gold); letter-spacing:2px; margin-top:1.5mm; }
+.hotel-addr{ font-size:9.5pt; font-weight:300; color:var(--mut); margin-top:1.5mm; }
+.score{ text-align:right; flex-shrink:0; }
+.score b{ display:block; font-size:22pt; font-weight:800; color:var(--dest); line-height:1; }
+.score span{ font-size:8pt; letter-spacing:.1em; text-transform:uppercase; color:var(--mut); }
+.hotel-card{ margin-top:7mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.hotel-card .rows{ padding:5mm 8mm; display:grid; grid-template-columns:1fr 1fr 1fr; gap:4mm 8mm; background:var(--cream); }
+.hotel-card .k{ font-family:var(--lab); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.hotel-card .v{ font-size:10.5pt; font-weight:300; color:var(--char); margin-top:1mm; line-height:1.4; }
+.hotel-desc{ font-size:10.5pt; font-weight:300; line-height:1.7; color:var(--char); margin-top:6mm; }
+.hl{ margin-top:6mm; display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:4mm; }
+.hl div{ border-top:2px solid var(--gold); padding-top:2.5mm; }
+.hl b{ display:block; font-size:9pt; font-weight:700; color:var(--ink); }
+.hl span{ font-size:8.5pt; font-weight:300; color:var(--char); line-height:1.4; }
+.near{ margin-top:6mm; display:flex; gap:4mm; flex-wrap:wrap; }
+.near span{ font-size:8.5pt; font-weight:500; color:var(--dest); background:rgba(90,45,10,.07); border-radius:20px; padding:1.5mm 4mm; }
 .hotel-price{ display:flex; justify-content:space-between; align-items:center; background:var(--ink); border-radius:5px; padding:5mm 8mm; margin-top:6mm; }
-.hotel-price .lbl{ font-size:10pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
-.hotel-price .amt{ font-size:15pt; font-weight:800; color:var(--gold); }
-/* valores */
+.hotel-price .lbl{ font-size:9.5pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); line-height:1.4; }
+.hotel-price .lbl small{ display:block; font-size:7.5pt; font-weight:400; letter-spacing:.06em; color:rgba(255,255,255,.45); }
+.hotel-price .amt{ font-size:16pt; font-weight:800; color:var(--gold); }
+.hotel-price.alt{ margin-top:3mm; }
+.pol{ font-size:8.5pt; color:var(--mut); margin-top:2.5mm; }
+.pol b{ color:var(--dest); font-weight:600; }
+
+/* ══ VALORES ══ */
 .val-note{ font-size:9pt; color:var(--mut); margin-bottom:5mm; }
-.val-row{ display:flex; justify-content:space-between; padding:4mm 0; border-bottom:1px solid var(--line); }
-.val-row .lbl{ font-size:12pt; color:var(--char); }
-.val-row .amt{ font-size:12pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; }
-.val-fx{ font-size:9pt; color:var(--mut); margin-top:5mm; line-height:1.6; }
-/* condições */
+.vt{ width:100%; border-collapse:collapse; }
+.vt th{ font-family:var(--lab); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); text-align:left; padding:0 0 3mm; border-bottom:2px solid var(--gold); }
+.vt th.r, .vt td.r{ text-align:right; }
+.vt td{ padding:4.5mm 0; border-bottom:1px solid var(--line); vertical-align:top; font-size:11pt; }
+.vt td .h{ font-weight:700; color:var(--ink); }
+.vt td .s{ display:block; font-size:9pt; font-weight:300; color:var(--mut); margin-top:1mm; }
+.vt td.amt{ font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.vt td.pp{ font-weight:300; color:var(--char); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.vt .no{ width:10mm; height:10mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:11pt; display:flex; align-items:center; justify-content:center; }
+.val-fx{ font-size:9pt; color:var(--mut); margin-top:6mm; line-height:1.7; }
+.callout{ margin-top:10mm; background:var(--cream); border-left:3px solid var(--gold); padding:5mm 7mm; font-size:10pt; line-height:1.7; color:var(--char); }
+.callout b{ color:var(--ink); }
+
+/* ══ CONDIÇÕES ══ */
 .cond{ margin-bottom:7mm; }
 .cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
 .cond-t{ font-size:11pt; line-height:1.8; color:var(--char); }
+.sig{ margin-top:14mm; border-top:1px solid var(--line); padding-top:6mm; font-family:var(--con); font-size:10pt; color:var(--char); line-height:1.8; }
+.sig b{ font-family:var(--sans); font-weight:800; letter-spacing:.08em; color:var(--ink); }
+.sig a{ color:var(--char); text-decoration:none; }
 </style>
 </head>
 <body>
@@ -80,25 +143,35 @@ html,body{ font-family:var(--sans); color:var(--char); }
 <!-- ══════════ 01 · CAPA ══════════ -->
 <section class="page cover">
   <div class="cover-hd"><div class="logo">LUSATRAVEL</div><div class="tag">Glossário</div></div>
-  <div class="cover-bar"></div>
-  <div class="cover-photo"></div><!-- TODO: background:url('istambul-capa.jpg') center/cover -->
-  <div class="cover-scrim"></div>
+  <div class="goldbar"></div>
+  <div class="cover-photo"></div>
   <div class="cover-cnt">
     <div class="cover-kicker">Cotação para sua viagem</div>
-    <div class="cover-basis">Baseado em 2 adultos · 11/05/2027 a 14/05/2027 · café da manhã incluído</div>
+    <div class="cover-basis">Baseado em 2 adultos · 11 a 14 de maio de 2027 · café da manhã incluído</div>
     <div class="cover-to">Sua viagem para:</div>
     <div class="cover-name">Rodrigo Barrozo</div>
     <div class="cover-dest">ISTAMBUL · TURQUIA</div>
     <div class="stats">
       <div class="stat"><b>1</b><span>Destino</span></div>
       <div class="stat"><b>3</b><span>Noites</span></div>
-      <div class="stat"><b>{{N_HOTEIS}}</b><span>Opções de hotel</span></div>
+      <div class="stat"><b>3</b><span>Hotéis</span></div>
       <div class="stat"><b>2</b><span>Hóspedes</span></div>
     </div>
+    <div class="cover-info">
+      <div><div class="k">Check-in</div><div class="v">11/05/2027<small>terça-feira · a partir das 15h</small></div></div>
+      <div><div class="k">Check-out</div><div class="v">14/05/2027<small>sexta-feira · até 12h</small></div></div>
+      <div><div class="k">Acomodação</div><div class="v">1 quarto duplo<small>2 adultos</small></div></div>
+      <div><div class="k">Plano</div><div class="v">Café da manhã<small>incluído em todas as opções</small></div></div>
+    </div>
+  </div>
+  <div class="cover-strip">
+    <figure><img src="img/cotacao-istambul/sultanahmet-palace-1.jpg" alt=""><figcaption><b>Opção 1 · ★★★★</b>Sultanahmet Palace Hotel – Special Class</figcaption></figure>
+    <figure><img src="img/cotacao-istambul/ajwa-1.jpg" alt=""><figcaption><b>Opção 2 · ★★★★★</b>AJWA Sultanahmet</figcaption></figure>
+    <figure><img src="img/cotacao-istambul/hagia-sofia-mansions-1.jpg" alt=""><figcaption><b>Opção 3 · ★★★★★</b>Hagia Sofia Mansions, Curio Collection by Hilton</figcaption></figure>
   </div>
   <div class="cover-sig">
-    <a href="mailto:atendimentolusatravel@gmail.com" style="color:inherit;text-decoration:none">atendimentolusatravel@gmail.com</a><br>
-    <a href="https://wa.me/5541991896076" style="color:inherit;text-decoration:none">+55 41 99189-6076</a><br>
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
     <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
   </div>
 </section>
@@ -107,74 +180,218 @@ html,body{ font-family:var(--sans); color:var(--char); }
 <section class="page">
   <div class="dest-hd"><div class="city">Istambul · Turquia</div><div class="no">1</div></div>
   <div class="goldbar"></div>
-  <div class="dest-photo"><div class="cap">Istambul</div></div><!-- TODO: background:url('istambul.jpg') -->
+  <div class="dest-photo"><div class="cap">Istambul</div></div>
   <div class="body">
-    <div class="eyebrow">11 a 14 de maio de 2027 · 3 noites</div>
+    <div class="eyebrow">11 a 14 de maio de 2027 · 3 noites · Sultanahmet</div>
     <h2 class="h2">Onde dois continentes se encontram</h2>
-    <p class="dest-text">Istambul é a única cidade do mundo que amanhece na Europa e anoitece na Ásia. Entre as duas margens do Bósforo, minaretes e cúpulas desenham um horizonte que atravessa dois mil anos de história: a Basílica de Santa Sofia, a Mesquita Azul com seus azulejos de Iznik, o Palácio de Topkapi e as cisternas subterrâneas de Constantinopla convivem com cafés à beira-d'água, galerias contemporâneas e o burburinho do Grande Bazar, onde o aroma de especiarias, chá de maçã e couro se mistura ao som dos vendedores. Em maio, a primavera cobre os jardins de tulipas e as temperaturas amenas convidam a caminhar por Sultanahmet, cruzar a Ponte de Gálata ao entardecer e navegar pelo estreito enquanto o sol se põe atrás das mansões otomanas. É uma cidade que se descobre com o paladar, com os olhos e com tempo. Três noites são o ponto de partida perfeito para senti-la de perto.</p>
+    <p class="dest-text">Istambul é a única cidade do mundo que amanhece na Europa e anoitece na Ásia. Entre as duas margens do Bósforo, minaretes e cúpulas desenham um horizonte que atravessa dois mil anos de história: a Basílica de Santa Sofia, a Mesquita Azul com seus azulejos de Iznik, o Palácio de Topkapi e as cisternas subterrâneas de Constantinopla convivem com cafés à beira-d'água, galerias contemporâneas e o burburinho do Grande Bazar, onde o aroma de especiarias, chá de maçã e couro se mistura ao som dos vendedores.</p>
+    <p class="dest-text">Em maio, a primavera cobre os jardins de tulipas e as temperaturas amenas convidam a caminhar por Sultanahmet, cruzar a Ponte de Gálata ao entardecer e navegar pelo estreito enquanto o sol se põe atrás das mansões otomanas. As três opções selecionadas ficam no coração histórico da cidade, a poucos minutos a pé dos principais monumentos, todas com café da manhã incluído.</p>
+
+    <div class="opts">
+      <div class="opt"><img src="img/cotacao-istambul/sultanahmet-palace-1.jpg" alt=""><div class="in"><div class="n">Opção 1</div><div class="nm">Sultanahmet Palace Hotel – Special Class</div><div class="st">★★★★</div><div class="pr">R$ 4.159,30<small>3 noites · quarto duplo</small></div></div></div>
+      <div class="opt"><img src="img/cotacao-istambul/ajwa-1.jpg" alt=""><div class="in"><div class="n">Opção 2</div><div class="nm">AJWA Sultanahmet</div><div class="st">★★★★★</div><div class="pr">a partir de R$ 6.691,49<small>3 noites · quarto duplo</small></div></div></div>
+      <div class="opt"><img src="img/cotacao-istambul/hagia-sofia-mansions-1.jpg" alt=""><div class="in"><div class="n">Opção 3</div><div class="nm">Hagia Sofia Mansions Istanbul, Curio Collection by Hilton</div><div class="st">★★★★★</div><div class="pr">R$ 8.153,70<small>3 noites · quarto duplo</small></div></div></div>
+    </div>
+
+    <div class="tips">
+      <div class="tip"><b>Clima em maio</b><span>Primavera plena: entre 14 °C e 22 °C, dias longos e pouca chuva. Ideal para caminhar e para passeios de barco no Bósforo.</span></div>
+      <div class="tip"><b>Chegando ao hotel</b><span>O Aeroporto de Istambul (IST) fica a cerca de 45 km de Sultanahmet, 50 a 60 minutos de carro. Transfer privativo pode ser cotado à parte.</span></div>
+      <div class="tip"><b>Imperdível</b><span>Santa Sofia, Mesquita Azul, Palácio de Topkapi, Cisterna da Basílica e Grande Bazar ficam a menos de 1 km dos três hotéis.</span></div>
+      <div class="tip"><b>Moeda e pagamentos</b><span>Lira turca (TRY). Cartões são amplamente aceitos; leve um pouco de dinheiro para bazares e cafés menores.</span></div>
+    </div>
   </div>
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
   </div>
 </section>
 
-<!-- ══════════ 03 · OPÇÕES DE HOTEL (uma página por hotel — duplicar) ══════════ -->
-<!-- HOTEL_OPCAO_INICIO -->
+<!-- ══════════ 03 · OPÇÃO 1 — SULTANAHMET PALACE ══════════ -->
 <section class="page">
-  <div class="dest-hd"><div class="city">Istambul · Opção {{N}}</div><div class="no">{{N}}</div></div>
+  <div class="dest-hd"><div class="city">Istambul · Opção 1 de 3</div><div class="no">1</div></div>
   <div class="goldbar"></div>
-  <div class="dest-photo" style="background-image:url('{{HOTEL_FOTO}}')"><div class="cap">{{HOTEL_NOME}}</div></div>
+  <div class="gal">
+    <img class="hero" src="img/cotacao-istambul/sultanahmet-palace-1.jpg" alt="Quarto Deluxe com vista para o mar">
+    <img src="img/cotacao-istambul/sultanahmet-palace-2.jpg" alt="Fachada e jardim">
+    <img src="img/cotacao-istambul/sultanahmet-palace-3.jpg" alt="Restaurante no terraço">
+  </div>
+  <div class="gal2">
+    <img src="img/cotacao-istambul/sultanahmet-palace-4.jpg" alt="Banheiro em mármore com vista">
+    <img src="img/cotacao-istambul/sultanahmet-palace-5.jpg" alt="Lobby">
+  </div>
   <div class="body">
-    <div class="hotel-card" style="margin-top:0">
-      <div class="top">
-        <div class="name">{{HOTEL_NOME}}</div>
-        <div class="stars">{{ESTRELAS}}</div>
+    <div class="hotel-top">
+      <div>
+        <div class="hotel-name">Sultanahmet Palace Hotel – Special Class</div>
+        <div class="hotel-stars">★★★★</div>
+        <div class="hotel-addr">Sultanahmet Mah. Torun Sokak, No:19 · Fatih, Istambul</div>
       </div>
+      <div class="score"><b>91<span style="font-size:11pt;color:var(--mut)">/100</span></b><span>Excelente · 1.827 avaliações</span></div>
+    </div>
+    <div class="hotel-card">
       <div class="rows">
-        <div><div class="k">Quarto</div><div class="v">{{QUARTO}}</div></div>
-        <div><div class="k">Plano</div><div class="v">Café da manhã incluído</div></div>
-        <div><div class="k">Endereço</div><div class="v">{{ENDERECO}}</div></div>
-        <div><div class="k">Check-in / out</div><div class="v">11/05/2027 → 14/05/2027</div></div>
-        <div><div class="k">Hóspedes</div><div class="v">2 adultos</div></div>
-        <div><div class="k">Política</div><div class="v">{{POLITICA_CANCELAMENTO}}</div></div>
+        <div><div class="k">Quarto</div><div class="v">Deluxe Room with Sea View · 1 cama de casal</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã incluído (buffet)</div></div>
+        <div><div class="k">Hóspedes</div><div class="v">2 adultos · 1 quarto</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">11/05/2027 → 14/05/2027 · 3 noites</div></div>
+        <div><div class="k">Cancelamento</div><div class="v">Grátis até 07/05/2027</div></div>
+        <div><div class="k">Localização</div><div class="v">Próximo ao Mar de Mármara, no centro histórico</div></div>
       </div>
     </div>
-    <p class="hotel-desc">{{DESCRICAO_HOTEL}}</p>
-    <div class="hotel-price"><span class="lbl">TOTAL · 3 NOITES · 2 ADULTOS</span><span class="amt">R$ {{VALOR_TOTAL}}</span></div>
+    <p class="hotel-desc">Um hotel-boutique de estilo otomano encravado no coração da cidade velha, a poucos passos da Mesquita Azul. São apenas 45 quartos, com roupa de cama de alta qualidade, banheiros em mármore e varandas voltadas para o mar ou para o jardim. O restaurante no terraço serve café da manhã com vista panorâmica sobre os telhados de Sultanahmet, e o pequeno spa oferece hammam tradicional e massagens. É a opção com o melhor custo-benefício da seleção: charme de mansão histórica, atendimento próximo e a localização mais central de todas.</p>
+    <div class="hl">
+      <div><b>45 quartos</b><span>Escala íntima, atendimento personalizado</span></div>
+      <div><b>Terraço panorâmico</b><span>Restaurante com vista para o mar e Santa Sofia</span></div>
+      <div><b>Spa &amp; hammam</b><span>Tratamentos, hidroterapia e sala de yoga</span></div>
+      <div><b>Wi-Fi grátis</b><span>Concierge, lavanderia e guarda-volumes</span></div>
+    </div>
+    <div class="near"><span>Mesquita Azul · 200 m</span><span>Palácio de Topkapi · 300 m</span><span>Santa Sofia · a pé</span><span>Grande Bazar · 1 km</span><span>Aeroporto IST · 45 km</span></div>
+    <div class="hotel-price"><span class="lbl">TOTAL · 3 NOITES · 2 ADULTOS<small>Deluxe Room with Sea View · café da manhã incluído</small></span><span class="amt">R$ 4.159,30</span></div>
+    <div class="pol"><b>Cancelamento gratuito até 07/05/2027.</b> Após essa data, aplicam-se as penalidades do hotel.</div>
   </div>
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
   </div>
 </section>
-<!-- HOTEL_OPCAO_FIM -->
 
-<!-- ══════════ 04 · VALORES ══════════ -->
+<!-- ══════════ 04 · OPÇÃO 2 — AJWA SULTANAHMET ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Istambul · Opção 2 de 3</div><div class="no">2</div></div>
+  <div class="goldbar"></div>
+  <div class="gal">
+    <img class="hero" src="img/cotacao-istambul/ajwa-1.jpg" alt="Quarto Deluxe com cama de dossel">
+    <img src="img/cotacao-istambul/ajwa-2.jpg" alt="Quarto Deluxe">
+    <img src="img/cotacao-istambul/ajwa-3.jpg" alt="Banheiro com azulejos turquesa">
+  </div>
+  <div class="gal2">
+    <img src="img/cotacao-istambul/ajwa-4.jpg" alt="Quarto com vista para o jardim">
+    <img src="img/cotacao-istambul/ajwa-5.jpg" alt="Quarto com sala de estar">
+  </div>
+  <div class="body">
+    <div class="hotel-top">
+      <div>
+        <div class="hotel-name">AJWA Sultanahmet</div>
+        <div class="hotel-stars">★★★★★</div>
+        <div class="hotel-addr">Emin Sinan Mah. Piyerloti Cad. No:30 · Sultanahmet, Istambul</div>
+      </div>
+      <div class="score"><b>96<span style="font-size:11pt;color:var(--mut)">/100</span></b><span>Excelente · 1.965 avaliações</span></div>
+    </div>
+    <div class="hotel-card">
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Deluxe French · 32 m² · 1 cama de casal<br>vista rua <em>ou</em> vista mar</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã incluído</div></div>
+        <div><div class="k">Hóspedes</div><div class="v">2 adultos · 1 quarto</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">11/05/2027 → 14/05/2027 · 3 noites</div></div>
+        <div><div class="k">Cancelamento</div><div class="v">Vista rua: não reembolsável<br>Vista mar: grátis até 08/05/2027</div></div>
+        <div><div class="k">Localização</div><div class="v">Ótimo para passeios e próximo a áreas de compras</div></div>
+      </div>
+    </div>
+    <p class="hotel-desc">Premiado por unir o luxo otomano clássico a práticas sustentáveis, o AJWA é uma joia arquitetônica no centro histórico. Cada um dos 61 quartos tem teto pintado à mão, tapetes de seda, cama king com enxoval premium e banheiro em mármore com amenidades de grife. O restaurante Zeferan serve cozinha azerbaijana com vista para o Mar de Mármara, e a pâtisserie da casa produz chocolates e doces artesanais. O spa completo inclui hammam, sauna, piscina coberta e tratamentos inspirados em rituais antigos. Duas categorias de quarto foram cotadas: a Deluxe French com vista para a rua, em tarifa promocional não reembolsável, e a Deluxe French com vista para o mar, com cancelamento gratuito.</p>
+    <div class="hl">
+      <div><b>61 quartos</b><span>Tetos pintados à mão e tapetes de seda</span></div>
+      <div><b>Restaurante Zeferan</b><span>Cozinha azerbaijana com vista para o mar</span></div>
+      <div><b>Spa &amp; piscina coberta</b><span>Hammam, sauna, sala de vapor e fitness</span></div>
+      <div><b>Estacionamento grátis</b><span>Valet, transfer de aeroporto sob consulta</span></div>
+    </div>
+    <div class="near"><span>Grande Bazar · 800 m</span><span>Palácio de Topkapi · 1 km</span><span>Santa Sofia · a pé</span><span>Estação Sirkeci · 5 km</span><span>Aeroporto IST · 20 km</span></div>
+    <div class="hotel-price"><span class="lbl">OPÇÃO 2A · DELUXE FRENCH STREET VIEW<small>3 noites · 2 adultos · café da manhã · tarifa não reembolsável</small></span><span class="amt">R$ 6.691,49</span></div>
+    <div class="hotel-price alt"><span class="lbl">OPÇÃO 2B · DELUXE FRENCH SEA VIEW<small>3 noites · 2 adultos · café da manhã · cancelamento grátis até 08/05/2027</small></span><span class="amt">R$ 8.871,92</span></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 05 · OPÇÃO 3 — HAGIA SOFIA MANSIONS ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Istambul · Opção 3 de 3</div><div class="no">3</div></div>
+  <div class="goldbar"></div>
+  <div class="gal">
+    <img class="hero" src="img/cotacao-istambul/hagia-sofia-mansions-1.jpg" alt="King Guest Room">
+    <img src="img/cotacao-istambul/hagia-sofia-mansions-2.jpg" alt="Piscina na cisterna histórica">
+    <img src="img/cotacao-istambul/hagia-sofia-mansions-3.jpg" alt="Jardim e terraço ao anoitecer">
+  </div>
+  <div class="gal2">
+    <img src="img/cotacao-istambul/hagia-sofia-mansions-4.jpg" alt="Café da manhã">
+    <img src="img/cotacao-istambul/hagia-sofia-mansions-5.jpg" alt="Sala de estar da suíte">
+  </div>
+  <div class="body">
+    <div class="hotel-top">
+      <div>
+        <div class="hotel-name">Hagia Sofia Mansions Istanbul, Curio Collection by Hilton</div>
+        <div class="hotel-stars">★★★★★</div>
+        <div class="hotel-addr">Sultanahmet, Kabasakal Cd. No:5 · 34122 Fatih, Istambul</div>
+      </div>
+      <div class="score"><b>97<span style="font-size:11pt;color:var(--mut)">/100</span></b><span>Excelente · 1.409 avaliações</span></div>
+    </div>
+    <div class="hotel-card">
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">King Guest Room · 29 m² · cama super-king</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã incluído</div></div>
+        <div><div class="k">Hóspedes</div><div class="v">2 adultos · 1 quarto</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">11/05/2027 → 14/05/2027 · 3 noites</div></div>
+        <div><div class="k">Cancelamento</div><div class="v">Grátis até 08/05/2027</div></div>
+        <div><div class="k">Localização</div><div class="v">Ao lado de Santa Sofia, no coração de Sultanahmet</div></div>
+      </div>
+    </div>
+    <p class="hotel-desc">Um conjunto de mansões otomanas restauradas a 300 metros de Santa Sofia, transformado em hotel de coleção da Hilton. Os 65 quartos combinam azulejos azuis, madeira entalhada e mármore com o conforto contemporâneo de uma cama super-king e amenidades ecológicas. O ponto alto é o spa instalado em uma cisterna bizantina, com piscina coberta sob arcos de tijolo iluminados, sauna e sala de vapor. O restaurante no terraço serve cozinha local e internacional, o café da manhã pode ser servido no quarto, e o jardim arborizado é um refúgio silencioso no meio da cidade velha. A pontuação mais alta da seleção e a assinatura de uma grande rede internacional.</p>
+    <div class="hl">
+      <div><b>65 quartos</b><span>Mansões históricas restauradas</span></div>
+      <div><b>Spa na cisterna</b><span>Piscina coberta, sauna, hammam e jacuzzi</span></div>
+      <div><b>Terraço &amp; jardim</b><span>Restaurante com vista, galeria de arte local</span></div>
+      <div><b>Hilton Honors</b><span>Padrão de rede, check-in privativo, pet-friendly</span></div>
+    </div>
+    <div class="near"><span>Santa Sofia · 300 m</span><span>Mesquita Azul · 500 m</span><span>Palácio de Topkapi · 600 m</span><span>Cisterna da Basílica · a pé</span><span>Aeroporto IST · 45 km</span></div>
+    <div class="hotel-price"><span class="lbl">TOTAL · 3 NOITES · 2 ADULTOS<small>King Guest Room · café da manhã incluído</small></span><span class="amt">R$ 8.153,70</span></div>
+    <div class="pol"><b>Cancelamento gratuito até 08/05/2027.</b> Após essa data, aplicam-se as penalidades do hotel.</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 06 · VALORES ══════════ -->
 <section class="page">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Valores</div></div>
   <div class="goldbar"></div>
   <div class="body">
     <div class="eyebrow">Investimento</div>
     <h2 class="h2">Resumo das opções</h2>
-    <div class="val-note">*Valores em BRL · total da hospedagem para 2 adultos · 3 noites · café da manhã incluído</div>
-    <!-- uma linha por hotel -->
-    <div class="val-row"><span class="lbl">Opção {{N}} · {{HOTEL_NOME}}</span><span class="amt">R$ {{VALOR_TOTAL}}</span></div>
-    <div class="val-fx">Cotação {{DATA_CAMBIO}} · {{MOEDA_REF}} = {{TAXA}}<br>*Nada reservado, apenas cotado</div>
+    <div class="val-note">*Valores em reais (BRL) · hospedagem para 2 adultos em 1 quarto · 3 noites (11 a 14/05/2027) · café da manhã incluído</div>
+    <table class="vt">
+      <thead><tr><th style="width:14mm"></th><th>Hotel · quarto</th><th class="r">Por pessoa</th><th class="r">Total do quarto</th></tr></thead>
+      <tbody>
+        <tr><td><div class="no">1</div></td><td><span class="h">Sultanahmet Palace Hotel – Special Class ★★★★</span><span class="s">Deluxe Room with Sea View · cancelamento grátis até 07/05/2027</span></td><td class="r pp">R$ 2.079,65</td><td class="r amt">R$ 4.159,30</td></tr>
+        <tr><td><div class="no">2A</div></td><td><span class="h">AJWA Sultanahmet ★★★★★</span><span class="s">Deluxe French Street View · 32 m² · tarifa não reembolsável</span></td><td class="r pp">R$ 3.345,75</td><td class="r amt">R$ 6.691,49</td></tr>
+        <tr><td><div class="no">2B</div></td><td><span class="h">AJWA Sultanahmet ★★★★★</span><span class="s">Deluxe French Sea View · 32 m² · cancelamento grátis até 08/05/2027</span></td><td class="r pp">R$ 4.435,96</td><td class="r amt">R$ 8.871,92</td></tr>
+        <tr><td><div class="no">3</div></td><td><span class="h">Hagia Sofia Mansions Istanbul, Curio Collection by Hilton ★★★★★</span><span class="s">King Guest Room · 29 m² · cancelamento grátis até 08/05/2027</span></td><td class="r pp">R$ 4.076,85</td><td class="r amt">R$ 8.153,70</td></tr>
+      </tbody>
+    </table>
+    <div class="val-fx">Cotação 11/09/2026 · valores convertidos para BRL pelo fornecedor na data da cotação e sujeitos à variação cambial até a confirmação<br>*Nada reservado, apenas cotado</div>
+
+    <div class="callout"><b>Como escolher:</b> a Opção 1 é a mais acessível e a mais próxima da Mesquita Azul, com charme de mansão histórica. A Opção 2 é a experiência otomana mais imersiva, com spa e piscina coberta; a tarifa 2A é promocional e não permite cancelamento. A Opção 3 tem a melhor avaliação dos hóspedes, spa em cisterna bizantina e o padrão Hilton, a 300 m de Santa Sofia.</div>
   </div>
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
   </div>
 </section>
 
-<!-- ══════════ 05 · CONDIÇÕES ══════════ -->
+<!-- ══════════ 07 · CONDIÇÕES ══════════ -->
 <section class="page">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Condições</div></div>
   <div class="goldbar"></div>
   <div class="body">
     <div class="eyebrow">Importante</div>
     <h2 class="h2">Condições e Observações</h2>
-    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Hotelaria: até 10x sem acréscimos · PIX: desconto de 5–13%</div></div>
-    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Aéreo e transfers<br>· City tax (paga diretamente no hotel)<br>· Despesas pessoais e refeições não mencionadas</div></div>
-    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Valores sujeitos a confirmação e disponibilidade no momento da reserva. Tarifas em moeda estrangeira acompanham a variação cambial até a emissão.</div></div>
+    <div class="cond"><div class="cond-h">Inclui</div><div class="cond-t">· 3 diárias em quarto duplo na opção escolhida, de 11 a 14 de maio de 2027<br>· Café da manhã diário para 2 adultos<br>· Impostos hoteleiros incluídos na tarifa</div></div>
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Passagens aéreas e transfers (podem ser cotados à parte)<br>· City tax e taxas locais, quando cobradas diretamente pelo hotel<br>· Refeições não mencionadas, despesas pessoais e gorjetas<br>· Seguro viagem (recomendado; cotamos sob solicitação)</div></div>
+    <div class="cond"><div class="cond-h">Pagamento</div><div class="cond-t">Hotelaria: até 10x sem acréscimos no cartão de crédito · PIX: desconto de 5–13%</div></div>
+    <div class="cond"><div class="cond-h">Cancelamento</div><div class="cond-t">Opção 1: gratuito até 07/05/2027 · Opção 2B e Opção 3: gratuito até 08/05/2027 · Opção 2A: tarifa não reembolsável após a confirmação. Após os prazos, aplicam-se as penalidades de cada hotel, podendo chegar a 100% do valor.</div></div>
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Tarifas e disponibilidade não são garantidas até a criação da reserva e podem sofrer alteração a qualquer momento. Os hotéis solicitam documento de identidade com foto e cartão de crédito para garantia de extras no check-in. Check-in a partir das 15h.</div></div>
+    <div class="sig">
+      <b>LUSATRAVEL</b><br>
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a> · <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
+      Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR
+    </div>
   </div>
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
