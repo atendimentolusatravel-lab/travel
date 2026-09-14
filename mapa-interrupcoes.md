@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Recotação do Mikael** — iniciada em 14/09/2026 às 14:30
-▶️ Retomada em 14/09/2026 às 16:07 (interrupções nesta atividade: 4min)
+⏸️ Pausada em 14/09/2026 às 16:38 por interrupção (fechar aéreo Antonia, retorno)
 
 ## Histórico de atividades principais
 
@@ -55,6 +55,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 19 | 04/09/2026 | 10:29 | 10:46 | 17min | – | Gabriel Tacla – Impressão dos vouchers |
 | 20 | 10/09/2026 | 09:22 | 10:59 | 1h37min | – | Antonia e família – Tulum |
 | 21 | 14/09/2026 | 16:03 | 16:07 | 4min | – | Fechar aéreo Antonia e família – Tulum |
+| 22 | 14/09/2026 | 16:38 | ⏳ em andamento | – | – | Fechar aéreo Antonia e família – Tulum (retorno) |
 
 ## Visão consolidada: atividades × interrupções
 
