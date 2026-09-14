@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Recotação do Mikael** — iniciada em 14/09/2026 às 14:30
-⏸️ Pausada em 14/09/2026 às 16:03 por interrupção (fechar aéreo Antonia e família – Tulum)
+▶️ Retomada em 14/09/2026 às 16:07 (interrupções nesta atividade: 4min)
 
 ## Histórico de atividades principais
 
@@ -54,7 +54,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 18 | 04/09/2026 | 10:27 | 10:28 | 1min | – | Maria Neuzi – Aéreo Foz do Iguaçu (2ª vez) |
 | 19 | 04/09/2026 | 10:29 | 10:46 | 17min | – | Gabriel Tacla – Impressão dos vouchers |
 | 20 | 10/09/2026 | 09:22 | 10:59 | 1h37min | – | Antonia e família – Tulum |
-| 21 | 14/09/2026 | 16:03 | ⏳ em andamento | – | – | Fechar aéreo Antonia e família – Tulum |
+| 21 | 14/09/2026 | 16:03 | 16:07 | 4min | – | Fechar aéreo Antonia e família – Tulum |
 
 ## Visão consolidada: atividades × interrupções
 
@@ -75,11 +75,12 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 13 | Lucas – Sem destino definido | 02/09 | 1h43min | 2 | 1h08min |
 | 14 | Cotação Milena Naves – Euro Summer | 03–04/09 | 3h58min | 7 | 2h02min |
 | 15 | Cotação Luiz Maués – Pedido de casamento | 09–10/09 | 7h15min | 1 | 1h37min |
+| 16 | Recotação do Mikael | 14/09 | ⏳ em andamento | 1 (até agora) | 4min |
 
 ## Resumo
 
 | Métrica | Valor |
 |---------|-------|
-| Total de interrupções | 20 |
-| Tempo total interrompido | 7h29min |
-| Duração média | 22min27s |
+| Total de interrupções | 21 |
+| Tempo total interrompido | 7h33min |
+| Duração média | 21min34s |
