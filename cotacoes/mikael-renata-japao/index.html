@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mikael e Renata | Japão</title>
+<meta name="description" content="Cotação LusaTravel · Japão · Mikael e Renata · 27 de dezembro de 2026 a 14 de janeiro de 2027">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;600&family=Montserrat:wght@400;500;600&display=swap">
+<style>
+/* ══════════════════════════════════════════════════════════
+   LUSATRAVEL · Cotação Japão — Mikael e Renata
+   Design System LusaTravel (ouro #da8d00 fixo) + cor de destino
+   Índigo Japonês #1f3a5f. Versão web responsiva.
+   ══════════════════════════════════════════════════════════ */
+:root{
+  --gold:#da8d00; --gold-txt:#9c6600;
+  --dest:#1f3a5f; --dest-soft:#2c5480;
+  --bg:#fbf9f5; --surface:#ffffff; --surface-2:#f5f1ea;
+  --fg:#333131; --fg-strong:#1a1510; --fg-mut:#8a7f74; --line:#e4ddd2;
+  --band:#1a1510; --band-fg:#ffffff;
+  --shadow:0 1px 2px rgba(26,21,16,.04),0 8px 28px rgba(26,21,16,.06);
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --read:'Open Sans',system-ui,sans-serif;
+  --con:'Montserrat',var(--sans);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --gold:#e6a01f; --gold-txt:#e6a01f; --dest:#7ea6d2; --dest-soft:#5d87b5;
+    --bg:#14110e; --surface:#1c1815; --surface-2:#231e1a;
+    --fg:#d6cec4; --fg-strong:#f6f1e9; --fg-mut:#968b7f; --line:#332c25; --band:#0d0b09;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 28px rgba(0,0,0,.35);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --gold:#e6a01f; --gold-txt:#e6a01f; --dest:#7ea6d2; --dest-soft:#5d87b5;
+  --bg:#14110e; --surface:#1c1815; --surface-2:#231e1a;
+  --fg:#d6cec4; --fg-strong:#f6f1e9; --fg-mut:#968b7f; --line:#332c25; --band:#0d0b09;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 28px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+.wrap{width:min(1080px,92vw);margin-inline:auto}
+
+/* ── Barra ── */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--band);border-bottom:3px solid var(--gold)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:58px}
+.brand{font-weight:800;letter-spacing:.09em;color:var(--gold);font-size:15px}
+.nav{display:flex;gap:22px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-family:var(--con);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;white-space:nowrap;padding:4px 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.nav a:hover{color:#fff;border-bottom-color:var(--gold)}
+@media(max-width:760px){.nav{display:none}}
+
+/* ── Capa ── */
+.cover{position:relative;color:#fff;overflow:hidden;background:
+  radial-gradient(120% 90% at 78% 8%,rgba(218,141,0,.30) 0%,transparent 55%),
+  radial-gradient(100% 80% at 12% 92%,rgba(31,58,95,.85) 0%,transparent 60%),
+  linear-gradient(158deg,#22314a 0%,#1a2338 42%,#1a1510 100%)}
+.cover-art{position:absolute;inset:0;background-image:url('img/capa.jpg');background-size:cover;background-position:center 45%}
+.cover-scrim{position:absolute;inset:0;background:
+  linear-gradient(to bottom,rgba(12,10,8,.62) 0%,rgba(12,10,8,.30) 26%,rgba(12,10,8,.72) 62%,rgba(12,10,8,.93) 100%),
+  linear-gradient(105deg,rgba(31,58,95,.55) 0%,rgba(31,58,95,.10) 55%,transparent 100%)}
+.cover-in{position:relative;z-index:2;padding:76px 0 64px}
+.kicker{font-family:var(--con);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.cover-basis{font-size:14px;color:rgba(255,255,255,.62);margin:6px 0 46px}
+.cover-to{font-family:var(--con);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.cover-name{font-size:clamp(34px,6.6vw,60px);font-weight:800;text-transform:uppercase;letter-spacing:.015em;line-height:1.06;margin:6px 0 0;text-wrap:balance}
+.cover-dest{font-size:clamp(19px,2.8vw,27px);font-weight:600;color:var(--gold);letter-spacing:.05em;margin-top:8px}
+.stats{display:flex;flex-wrap:wrap;gap:34px 48px;margin-top:46px}
+.stat b{display:block;font-size:38px;font-weight:800;color:var(--gold);line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-family:var(--con);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.58)}
+.cover-sig{margin-top:52px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-family:var(--con);font-size:13px;line-height:1.9;color:rgba(255,255,255,.6)}
+.cover-sig a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(218,141,0,.45)}
+.cover-sig a:hover{color:#fff}
+
+/* ── Seções ── */
+section{scroll-margin-top:62px}
+.sec{padding:74px 0}
+.sec + .sec{border-top:1px solid var(--line)}
+.eyebrow{font-family:var(--con);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-txt);font-weight:600}
+h2{font-size:clamp(25px,3.6vw,36px);font-weight:700;color:var(--fg-strong);letter-spacing:-.015em;margin:10px 0 0;text-wrap:balance}
+.lede{font-size:17px;line-height:1.75;color:var(--fg);margin-top:18px;max-width:65ch}
+.lede strong{color:var(--fg-strong);font-weight:600}
+
+/* ── Timeline ── */
+.tl{margin-top:44px;display:flex;flex-direction:column}
+.tl-item{display:grid;grid-template-columns:46px 1fr;gap:20px;align-items:start}
+.tl-mark{display:flex;flex-direction:column;align-items:center;align-self:stretch}
+.tl-badge{width:46px;height:46px;border-radius:50%;background:var(--dest);color:#fff;font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-variant-numeric:tabular-nums}
+:root[data-theme="dark"] .tl-badge,:root:not([data-theme="light"]) .tl-badge{color:#0d0b09}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .tl-badge{color:#fff}}
+.tl-rail{width:2px;flex:1;background:var(--line);min-height:26px}
+.tl-body{padding-bottom:26px}
+.tl-city{font-size:19px;font-weight:700;color:var(--fg-strong);line-height:1.3}
+.tl-meta{font-family:var(--con);font-size:12.5px;color:var(--fg-mut);margin-top:4px;display:flex;flex-wrap:wrap;gap:6px 14px}
+.tl-note{font-size:14.5px;line-height:1.65;color:var(--fg);margin-top:8px;max-width:62ch}
+.tl-item:last-child .tl-rail{display:none}
+.tl-body a{color:var(--gold-txt);text-decoration:none;border-bottom:1px solid rgba(218,141,0,.45)}
+
+/* ── Etapas de hospedagem ── */
+.leg{margin-top:40px;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+.leg-hd{background:var(--dest);color:#fff;padding:16px 24px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px}
+:root[data-theme="dark"] .leg-hd,:root:not([data-theme="light"]) .leg-hd{background:#16283f;color:#eef3f9}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .leg-hd{background:var(--dest);color:#fff}}
+.leg-city{font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.leg-city small{font-weight:500;letter-spacing:.08em;opacity:.75;margin-left:10px}
+.leg-data{font-family:var(--con);font-size:11.5px;letter-spacing:.06em;color:rgba(255,255,255,.72);display:flex;flex-wrap:wrap;gap:4px 16px}
+.leg-bar{height:3px;background:var(--gold)}
+.leg-note{padding:16px 24px 0;font-family:var(--read);font-size:14.5px;color:var(--fg-mut)}
+.hotels{padding:8px 24px 24px;display:grid;gap:22px}
+
+/* ── Card de hotel ── */
+.hotel{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--surface)}
+.hotel-top{padding:18px 20px 14px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;align-items:flex-start}
+.opt{font-family:var(--con);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-txt);border:1px solid var(--gold);border-radius:2px;padding:2px 8px;display:inline-block}
+.badge{font-family:var(--con);font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-mut);border:1px solid var(--line);border-radius:2px;padding:2px 8px;display:inline-block;margin-left:6px;background:var(--surface-2)}
+.hotel-name{font-size:21px;font-weight:700;color:var(--fg-strong);line-height:1.25;margin-top:8px}
+.hotel-stars{color:var(--gold);letter-spacing:2px;font-size:13px;margin-top:2px}
+.hotel-city{font-family:var(--con);font-size:12.5px;color:var(--fg-mut);margin-top:3px}
+.hotel-price{text-align:right;flex-shrink:0}
+.hotel-price b{display:block;font-size:24px;font-weight:800;color:var(--dest);line-height:1.1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.hotel-price span{font-family:var(--con);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-mut);display:block;margin-top:4px}
+.hotel-room{padding:0 20px 14px;font-family:var(--read);font-size:14.5px;color:var(--fg)}
+.hotel-room b{color:var(--fg-strong);font-weight:600}
+.hotel-room span{color:var(--fg-mut)}
+
+/* galeria de 6 fotos */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:0 4px}
+.gal figure{margin:0;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;border-radius:2px;position:relative}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.gal figure.missing img{display:none}
+.gal figure.missing::after{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;font-family:var(--con);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-mut);border:1px dashed var(--line);border-radius:2px}
+@media(max-width:560px){.gal{grid-template-columns:repeat(2,1fr)} .hotel-price{text-align:left}}
+.hotel-blurb{padding:16px 20px 20px;font-family:var(--read);font-size:15px;line-height:1.7;color:var(--fg)}
+
+/* ── Dia a dia ── */
+.days{margin-top:36px;border:1px solid var(--line);border-radius:4px;background:var(--surface);box-shadow:var(--shadow);padding:6px 24px 10px}
+.day{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.day:last-child{border-bottom:0}
+.day-d{font-family:var(--con);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-txt);padding-top:3px}
+.day-h{font-weight:600;color:var(--fg-strong)}
+.day-t{font-family:var(--read);font-size:15px;line-height:1.7;margin:3px 0 0}
+@media(max-width:560px){.day{grid-template-columns:1fr;gap:4px}}
+
+/* ── Tabelas ── */
+.tbl-wrap{margin-top:36px;overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--surface);box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:640px}
+th{font-family:var(--con);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-mut);text-align:left;padding:14px 18px;border-bottom:2px solid var(--line);background:var(--surface-2)}
+td{padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top;font-family:var(--read)}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-family:var(--sans);font-weight:600;color:var(--fg-strong)}
+td .sub{display:block;font-size:13px;color:var(--fg-mut);margin-top:2px}
+td.d{font-family:var(--con);font-size:12.5px;color:var(--fg-mut);white-space:nowrap}
+tr.total td{background:var(--surface-2);font-weight:700;color:var(--fg-strong);font-family:var(--sans)}
+tr.total td.num{color:var(--dest);font-size:17px}
+.optlbl{font-family:var(--con);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-txt);display:block;margin-bottom:2px}
+
+/* ── Totais ── */
+.totals{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:28px}
+.tot{border:1px solid var(--line);border-radius:4px;background:var(--surface);box-shadow:var(--shadow);padding:22px 24px;border-top:3px solid var(--gold)}
+.tot .k{font-family:var(--con);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-mut)}
+.tot .v{font-size:30px;font-weight:800;color:var(--dest);margin-top:8px;line-height:1.1;font-variant-numeric:tabular-nums}
+.tot .s{font-family:var(--read);font-size:13.5px;color:var(--fg-mut);margin-top:8px;line-height:1.6}
+
+/* ── Condições ── */
+.cond{margin-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.cond div{border-left:3px solid var(--gold);background:var(--surface);padding:16px 20px;border-radius:0 3px 3px 0;box-shadow:var(--shadow)}
+.cond b{display:block;color:var(--fg-strong);font-weight:600;margin-bottom:4px}
+.cond p{margin:0;font-family:var(--read);font-size:14.5px;line-height:1.65}
+.fine{margin-top:26px;font-family:var(--con);font-size:12.5px;color:var(--fg-mut);line-height:1.7;max-width:80ch}
+
+/* ── Rodapé ── */
+.foot{background:var(--band);color:rgba(255,255,255,.62);padding:52px 0 46px;border-top:3px solid var(--gold);margin-top:40px}
+.foot-brand{font-weight:800;letter-spacing:.09em;color:var(--gold);font-size:16px}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px 36px;margin-top:26px}
+.foot-k{font-family:var(--con);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.38)}
+.foot-v{font-family:var(--con);font-size:14px;margin-top:5px;line-height:1.7}
+.foot-v a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(218,141,0,.5)}
+.foot-note{margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-family:var(--con);font-size:12px;color:rgba(255,255,255,.4)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand">LUSATRAVEL</div>
+    <nav class="nav" aria-label="Seções da cotação">
+      <a href="#itinerario">Itinerário</a>
+      <a href="#hospedagem">Hospedagem</a>
+      <a href="#roteiro">Dia a dia</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#valores">Valores</a>
+      <a href="#condicoes">Condições</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══════════ CAPA ══════════ -->
+<div class="cover">
+  <div class="cover-art" role="img" aria-label="Japão no inverno"></div>
+  <div class="cover-scrim"></div>
+  <div class="wrap cover-in">
+    <div class="kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em 2 adultos · 27 de dezembro de 2026 a 14 de janeiro de 2027</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <h1 class="cover-name">Mikael e Renata</h1>
+    <div class="cover-dest">JAPÃO · 日本</div>
+    <div class="stats">
+      <div class="stat"><b>7</b><span>Destinos</span></div>
+      <div class="stat"><b>18</b><span>Noites</span></div>
+      <div class="stat"><b>19</b><span>Dias</span></div>
+      <div class="stat"><b>6</b><span>Dias guiados</span></div>
+    </div>
+    <div class="cover-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
+      <span style="opacity:.72">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ ITINERÁRIO ══════════ -->
+<section class="sec" id="itinerario">
+  <div class="wrap">
+    <div class="eyebrow">Sua rota</div>
+    <h2>Itinerário</h2>
+    <p class="lede">Dezoito noites em ritmo de <strong>slow travel</strong>: poucas trocas de hotel, réveillon em Tóquio, neve em Hakuba e a Nagasaki católica no domingo. Em cada cidade, duas opções de hospedagem para vocês escolherem.</p>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">1</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Tóquio</div>
+          <div class="tl-meta"><span>5 noites</span><span>27/12 → 01/01</span></div>
+          <div class="tl-note">Réveillon em Tóquio, com dois dias guiados e um dia no Tokyo DisneySea.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">2</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Hakone</div>
+          <div class="tl-meta"><span>1 noite</span><span>01/01 → 02/01</span></div>
+          <div class="tl-note">Águas termais e um dia inteiro com carro e motorista privativo.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">3</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Hakuba</div>
+          <div class="tl-meta"><span>4 noites</span><span>02/01 → 06/01</span></div>
+          <div class="tl-note">Neve nos Alpes Japoneses, com lift pass de dois dias e aluguel de equipamento no local.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">4</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Kyoto</div>
+          <div class="tl-meta"><span>2 noites</span><span>06/01 → 08/01</span></div>
+          <div class="tl-note">Dois dias guiados na antiga capital.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">5</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Osaka</div>
+          <div class="tl-meta"><span>1 noite</span><span>08/01 → 09/01</span></div>
+          <div class="tl-note">Um dia guiado na capital gastronômica do Japão.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">6</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Nagasaki</div>
+          <div class="tl-meta"><span>2 noites</span><span>09/01 → 11/01</span></div>
+          <div class="tl-note">Ida e volta de avião a partir de Osaka. Dia guiado no domingo, 10 de janeiro.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">7</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Naoshima</div>
+          <div class="tl-meta"><span>1 noite</span><span>11/01 → 12/01</span></div>
+          <div class="tl-note">Uma noite dentro do museu, na ilha da arte contemporânea.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"><div class="tl-badge">8</div><div class="tl-rail"></div></div>
+        <div class="tl-body">
+          <div class="tl-city">Tóquio</div>
+          <div class="tl-meta"><span>2 noites</span><span>12/01 → 14/01</span></div>
+          <div class="tl-note">Últimos dias para compras e a experiência JMD à noite.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ HOSPEDAGEM ══════════ -->
+<section class="sec" id="hospedagem">
+  <div class="wrap">
+    <div class="eyebrow">Onde vocês ficam</div>
+    <h2>Hospedagem</h2>
+    <p class="lede">Valores em reais para o casal, pelo período completo de cada etapa, com o regime de alimentação indicado. Todos os hotéis foram escolhidos por localização, serviço de concierge e conforto do quarto.</p>
+
+    <div class="leg" id="etapa-1">
+      <div class="leg-hd">
+        <div class="leg-city">Tóquio<small>Etapa 1</small></div>
+        <div class="leg-data"><span>5 noites</span><span>27 de dezembro a 1º de janeiro</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="leg-note">Réveillon em Tóquio, com dois dias guiados e um dia no Tokyo DisneySea.</div>
+      <div class="hotels">
+        <article class="hotel">
+          <div class="hotel-top">
+            <div>
+              <span class="opt">Opção 1</span>
+              <div class="hotel-name">AC Hotel by Marriott Tokyo Ginza</div>
+              <div class="hotel-stars" aria-label="4 estrelas">★★★★</div>
+              <div class="hotel-city">Tóquio · Ginza</div>
+            </div>
+            <div class="hotel-price"><b>R$ 26.000</b><span>5 noites · 2 adultos</span></div>
+          </div>
+          <div class="hotel-room"><b>Standard Room · cama king</b> <span>· Café da manhã</span></div>
+          <div class="gal" aria-label="Fotos do AC Hotel by Marriott Tokyo Ginza">
+            <figure data-label="AC Hotel by Marriott Tokyo Ginza · foto 1"><img src="img/hoteis/ac-hotel-by-marriott-tokyo-ginza-1.jpg" alt="AC Hotel by Marriott Tokyo Ginza – foto 1" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="AC Hotel by Marriott Tokyo Ginza · foto 2"><img src="img/hoteis/ac-hotel-by-marriott-tokyo-ginza-2.jpg" alt="AC Hotel by Marriott Tokyo Ginza – foto 2" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="AC Hotel by Marriott Tokyo Ginza · foto 3"><img src="img/hoteis/ac-hotel-by-marriott-tokyo-ginza-3.jpg" alt="AC Hotel by Marriott Tokyo Ginza – foto 3" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="AC Hotel by Marriott Tokyo Ginza · foto 4"><img src="img/hoteis/ac-hotel-by-marriott-tokyo-ginza-4.jpg" alt="AC Hotel by Marriott Tokyo Ginza – foto 4" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="AC Hotel by Marriott Tokyo Ginza · foto 5"><img src="img/hoteis/ac-hotel-by-marriott-tokyo-ginza-5.jpg" alt="AC Hotel by Marriott Tokyo Ginza – foto 5" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="AC Hotel by Marriott Tokyo Ginza · foto 6"><img src="img/hoteis/ac-hotel-by-marriott-tokyo-ginza-6.jpg" alt="AC Hotel by Marriott Tokyo Ginza – foto 6" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+          </div>
+          <p class="hotel-blurb">Hotel da rede Marriott no coração de Ginza, a poucos passos das lojas de departamento, das butiques e dos restaurantes que fazem do bairro o endereço mais elegante de Tóquio. Base ideal para quem quer gastronomia e compras à porta.</p>
+        </article>
+        <article class="hotel">
+          <div class="hotel-top">
+            <div>
+              <span class="opt">Opção 2</span>
+              <div class="hotel-name">The Gate Hotel Tokyo by HULIC</div>
+              <div class="hotel-stars" aria-label="4 estrelas">★★★★</div>
+              <div class="hotel-city">Tóquio · Yurakucho / Ginza</div>
+            </div>
+            <div class="hotel-price"><b>R$ 19.700</b><span>5 noites · 2 adultos</span></div>
+          </div>
+          <div class="hotel-room"><b>Standard Room · cama double</b> <span>· Café da manhã</span></div>
+          <div class="gal" aria-label="Fotos do The Gate Hotel Tokyo by HULIC">
+            <figure data-label="The Gate Hotel Tokyo by HULIC · foto 1"><img src="img/hoteis/the-gate-hotel-tokyo-by-hulic-1.jpg" alt="The Gate Hotel Tokyo by HULIC – foto 1" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The Gate Hotel Tokyo by HULIC · foto 2"><img src="img/hoteis/the-gate-hotel-tokyo-by-hulic-2.jpg" alt="The Gate Hotel Tokyo by HULIC – foto 2" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The Gate Hotel Tokyo by HULIC · foto 3"><img src="img/hoteis/the-gate-hotel-tokyo-by-hulic-3.jpg" alt="The Gate Hotel Tokyo by HULIC – foto 3" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The Gate Hotel Tokyo by HULIC · foto 4"><img src="img/hoteis/the-gate-hotel-tokyo-by-hulic-4.jpg" alt="The Gate Hotel Tokyo by HULIC – foto 4" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The Gate Hotel Tokyo by HULIC · foto 5"><img src="img/hoteis/the-gate-hotel-tokyo-by-hulic-5.jpg" alt="The Gate Hotel Tokyo by HULIC – foto 5" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The Gate Hotel Tokyo by HULIC · foto 6"><img src="img/hoteis/the-gate-hotel-tokyo-by-hulic-6.jpg" alt="The Gate Hotel Tokyo by HULIC – foto 6" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+          </div>
+          <p class="hotel-blurb">Hotel de design entre Yurakucho e Ginza, com lobby, restaurante e terraço nos andares altos, de onde se vê a linha do horizonte de Tóquio. Localização central, a caminhada curta de Ginza, Hibiya e dos jardins do Palácio Imperial.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="leg" id="etapa-2">
+      <div class="leg-hd">
+        <div class="leg-city">Hakone<small>Etapa 2</small></div>
+        <div class="leg-data"><span>1 noite</span><span>1º a 2 de janeiro</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="leg-note">Águas termais e um dia inteiro com carro e motorista privativo.</div>
+      <div class="hotels">
+        <article class="hotel">
+          <div class="hotel-top">
+            <div>
+              <span class="opt">Opção 1</span>
+              <div class="hotel-name">Hakone Airu</div>
+              <div class="hotel-stars" aria-label="4 estrelas">★★★★</div>
+              <div class="hotel-city">Hakone · Yumoto</div>
+            </div>
+            <div class="hotel-price"><b>R$ 6.273</b><span>1 noite · 2 adultos</span></div>
+          </div>
+          <div class="hotel-room"><b>Deluxe Room</b> <span>· Meia pensão</span></div>
+          <div class="gal" aria-label="Fotos do Hakone Airu">
+            <figure data-label="Hakone Airu · foto 1"><img src="img/hoteis/hakone-airu-1.jpg" alt="Hakone Airu – foto 1" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Hakone Airu · foto 2"><img src="img/hoteis/hakone-airu-2.jpg" alt="Hakone Airu – foto 2" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Hakone Airu · foto 3"><img src="img/hoteis/hakone-airu-3.jpg" alt="Hakone Airu – foto 3" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Hakone Airu · foto 4"><img src="img/hoteis/hakone-airu-4.jpg" alt="Hakone Airu – foto 4" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Hakone Airu · foto 5"><img src="img/hoteis/hakone-airu-5.jpg" alt="Hakone Airu – foto 5" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Hakone Airu · foto 6"><img src="img/hoteis/hakone-airu-6.jpg" alt="Hakone Airu – foto 6" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+          </div>
+          <p class="hotel-blurb">Pequeno hotel de águas termais em Hakone, com banhos de onsen e jantar kaiseki incluído na meia pensão. Um dia de descanso entre Tóquio e a neve de Hakuba.</p>
+        </article>
+        <article class="hotel">
+          <div class="hotel-top">
+            <div>
+              <span class="opt">Opção 2</span><span class="badge">Adult only</span>
+              <div class="hotel-name">Kinnotake Tonosawa</div>
+              <div class="hotel-stars" aria-label="5 estrelas">★★★★★</div>
+              <div class="hotel-city">Hakone · Tonosawa</div>
+            </div>
+            <div class="hotel-price"><b>R$ 13.266</b><span>1 noite · 2 adultos</span></div>
+          </div>
+          <div class="hotel-room"><b>Superior Room com banho ao ar livre &quot;Take&quot;</b> <span>· Meia pensão</span></div>
+          <div class="gal" aria-label="Fotos do Kinnotake Tonosawa">
+            <figure data-label="Kinnotake Tonosawa · foto 1"><img src="img/hoteis/kinnotake-tonosawa-1.jpg" alt="Kinnotake Tonosawa – foto 1" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Kinnotake Tonosawa · foto 2"><img src="img/hoteis/kinnotake-tonosawa-2.jpg" alt="Kinnotake Tonosawa – foto 2" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Kinnotake Tonosawa · foto 3"><img src="img/hoteis/kinnotake-tonosawa-3.jpg" alt="Kinnotake Tonosawa – foto 3" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Kinnotake Tonosawa · foto 4"><img src="img/hoteis/kinnotake-tonosawa-4.jpg" alt="Kinnotake Tonosawa – foto 4" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Kinnotake Tonosawa · foto 5"><img src="img/hoteis/kinnotake-tonosawa-5.jpg" alt="Kinnotake Tonosawa – foto 5" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Kinnotake Tonosawa · foto 6"><img src="img/hoteis/kinnotake-tonosawa-6.jpg" alt="Kinnotake Tonosawa – foto 6" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+          </div>
+          <p class="hotel-blurb">Ryokan contemporâneo somente para adultos, à beira do rio Hayakawa. Cada quarto tem o seu próprio banho ao ar livre de águas termais, e o jantar e o café são servidos em ritmo lento, no estilo japonês.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="leg" id="etapa-3">
+      <div class="leg-hd">
+        <div class="leg-city">Hakuba<small>Etapa 3</small></div>
+        <div class="leg-data"><span>4 noites</span><span>2 a 6 de janeiro</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="leg-note">Neve nos Alpes Japoneses, com lift pass de dois dias e aluguel de equipamento no local.</div>
+      <div class="hotels">
+        <article class="hotel">
+          <div class="hotel-top">
+            <div>
+              <span class="opt">Hotel sugerido</span>
+              <div class="hotel-name">Courtyard by Marriott Hakuba</div>
+              <div class="hotel-stars" aria-label="4 estrelas">★★★★</div>
+              <div class="hotel-city">Hakuba · Alpes Japoneses</div>
+            </div>
+            <div class="hotel-price"><b>R$ 29.998</b><span>4 noites · 2 adultos</span></div>
+          </div>
+          <div class="hotel-room"><b>Japanese Western Superior Room</b> <span>· Café da manhã</span></div>
+          <div class="gal" aria-label="Fotos do Courtyard by Marriott Hakuba">
+            <figure data-label="Courtyard by Marriott Hakuba · foto 1"><img src="img/hoteis/courtyard-by-marriott-hakuba-1.jpg" alt="Courtyard by Marriott Hakuba – foto 1" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Courtyard by Marriott Hakuba · foto 2"><img src="img/hoteis/courtyard-by-marriott-hakuba-2.jpg" alt="Courtyard by Marriott Hakuba – foto 2" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Courtyard by Marriott Hakuba · foto 3"><img src="img/hoteis/courtyard-by-marriott-hakuba-3.jpg" alt="Courtyard by Marriott Hakuba – foto 3" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Courtyard by Marriott Hakuba · foto 4"><img src="img/hoteis/courtyard-by-marriott-hakuba-4.jpg" alt="Courtyard by Marriott Hakuba – foto 4" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Courtyard by Marriott Hakuba · foto 5"><img src="img/hoteis/courtyard-by-marriott-hakuba-5.jpg" alt="Courtyard by Marriott Hakuba – foto 5" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Courtyard by Marriott Hakuba · foto 6"><img src="img/hoteis/courtyard-by-marriott-hakuba-6.jpg" alt="Courtyard by Marriott Hakuba – foto 6" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+          </div>
+          <p class="hotel-blurb">Hotel de montanha no vale de Hakuba, uma das principais regiões de esqui do Japão. Quartos que unem o estilo japonês ao ocidental, banhos de onsen para depois da pista e acesso fácil às estações de esqui.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="leg" id="etapa-4">
+      <div class="leg-hd">
+        <div class="leg-city">Kyoto<small>Etapa 4</small></div>
+        <div class="leg-data"><span>2 noites</span><span>6 a 8 de janeiro</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="leg-note">Dois dias guiados na antiga capital.</div>
+      <div class="hotels">
+        <article class="hotel">
+          <div class="hotel-top">
+            <div>
+              <span class="opt">Opção 1</span>
+              <div class="hotel-name">Banyan Tree Higashiyama Kyoto</div>
+              <div class="hotel-stars" aria-label="5 estrelas">★★★★★</div>
+              <div class="hotel-city">Kyoto · Higashiyama</div>
+            </div>
+            <div class="hotel-price"><b>R$ 7.852</b><span>2 noites · 2 adultos</span></div>
+          </div>
+          <div class="hotel-room"><b>Serenity Room · cama king</b> <span>· Café da manhã</span></div>
+          <div class="gal" aria-label="Fotos do Banyan Tree Higashiyama Kyoto">
+            <figure data-label="Banyan Tree Higashiyama Kyoto · foto 1"><img src="img/hoteis/banyan-tree-higashiyama-kyoto-1.jpg" alt="Banyan Tree Higashiyama Kyoto – foto 1" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Banyan Tree Higashiyama Kyoto · foto 2"><img src="img/hoteis/banyan-tree-higashiyama-kyoto-2.jpg" alt="Banyan Tree Higashiyama Kyoto – foto 2" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Banyan Tree Higashiyama Kyoto · foto 3"><img src="img/hoteis/banyan-tree-higashiyama-kyoto-3.jpg" alt="Banyan Tree Higashiyama Kyoto – foto 3" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Banyan Tree Higashiyama Kyoto · foto 4"><img src="img/hoteis/banyan-tree-higashiyama-kyoto-4.jpg" alt="Banyan Tree Higashiyama Kyoto – foto 4" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Banyan Tree Higashiyama Kyoto · foto 5"><img src="img/hoteis/banyan-tree-higashiyama-kyoto-5.jpg" alt="Banyan Tree Higashiyama Kyoto – foto 5" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Banyan Tree Higashiyama Kyoto · foto 6"><img src="img/hoteis/banyan-tree-higashiyama-kyoto-6.jpg" alt="Banyan Tree Higashiyama Kyoto – foto 6" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+          </div>
+          <p class="hotel-blurb">Primeiro Banyan Tree do Japão, na encosta de Higashiyama, entre templos e ruas de pedra. Spa, banhos termais e um palco de teatro Nô dentro do hotel, a poucos minutos de Gion e de Kiyomizu-dera.</p>
+        </article>
+        <article class="hotel">
+          <div class="hotel-top">
+            <div>
+              <span class="opt">Opção 2</span>
+              <div class="hotel-name">Capella Kyoto</div>
+              <div class="hotel-stars" aria-label="5 estrelas">★★★★★</div>
+              <div class="hotel-city">Kyoto · Gion</div>
+            </div>
+            <div class="hotel-price"><b>R$ 17.915</b><span>2 noites · 2 adultos</span></div>
+          </div>
+          <div class="hotel-room"><b>Deluxe City King</b> <span>· Café da manhã</span></div>
+          <div class="gal" aria-label="Fotos do Capella Kyoto">
+            <figure data-label="Capella Kyoto · foto 1"><img src="img/hoteis/capella-kyoto-1.jpg" alt="Capella Kyoto – foto 1" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Capella Kyoto · foto 2"><img src="img/hoteis/capella-kyoto-2.jpg" alt="Capella Kyoto – foto 2" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Capella Kyoto · foto 3"><img src="img/hoteis/capella-kyoto-3.jpg" alt="Capella Kyoto – foto 3" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Capella Kyoto · foto 4"><img src="img/hoteis/capella-kyoto-4.jpg" alt="Capella Kyoto – foto 4" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Capella Kyoto · foto 5"><img src="img/hoteis/capella-kyoto-5.jpg" alt="Capella Kyoto – foto 5" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Capella Kyoto · foto 6"><img src="img/hoteis/capella-kyoto-6.jpg" alt="Capella Kyoto – foto 6" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+          </div>
+          <p class="hotel-blurb">Hotel de luxo aberto em 2025 dentro de Gion, o bairro das gueixas. Arquitetura que dialoga com as casas tradicionais de madeira, jardins internos, spa e serviço de concierge de alto nível.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="leg" id="etapa-5">
+      <div class="leg-hd">
+        <div class="leg-city">Osaka<small>Etapa 5</small></div>
+        <div class="leg-data"><span>1 noite</span><span>8 a 9 de janeiro</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="leg-note">Um dia guiado na capital gastronômica do Japão.</div>
+      <div class="hotels">
+        <article class="hotel">
+          <div class="hotel-top">
+            <div>
+              <span class="opt">Opção 1</span>
+              <div class="hotel-name">The St. Regis Osaka</div>
+              <div class="hotel-stars" aria-label="5 estrelas">★★★★★</div>
+              <div class="hotel-city">Osaka · Honmachi</div>
+            </div>
+            <div class="hotel-price"><b>R$ 3.854</b><span>1 noite · 2 adultos</span></div>
+          </div>
+          <div class="hotel-room"><b>Deluxe City View</b> <span>· Café da manhã</span></div>
+          <div class="gal" aria-label="Fotos do The St. Regis Osaka">
+            <figure data-label="The St. Regis Osaka · foto 1"><img src="img/hoteis/the-st-regis-osaka-1.jpg" alt="The St. Regis Osaka – foto 1" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The St. Regis Osaka · foto 2"><img src="img/hoteis/the-st-regis-osaka-2.jpg" alt="The St. Regis Osaka – foto 2" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The St. Regis Osaka · foto 3"><img src="img/hoteis/the-st-regis-osaka-3.jpg" alt="The St. Regis Osaka – foto 3" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The St. Regis Osaka · foto 4"><img src="img/hoteis/the-st-regis-osaka-4.jpg" alt="The St. Regis Osaka – foto 4" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The St. Regis Osaka · foto 5"><img src="img/hoteis/the-st-regis-osaka-5.jpg" alt="The St. Regis Osaka – foto 5" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The St. Regis Osaka · foto 6"><img src="img/hoteis/the-st-regis-osaka-6.jpg" alt="The St. Regis Osaka – foto 6" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+          </div>
+          <p class="hotel-blurb">Ícone de luxo na avenida Midosuji, com o lobby no 12º andar e o serviço de mordomo característico da marca. Ponto de partida cômodo para Dotonbori, Namba e o Castelo de Osaka.</p>
+        </article>
+        <article class="hotel">
+          <div class="hotel-top">
+            <div>
+              <span class="opt">Opção 2</span>
+              <div class="hotel-name">Patina Osaka</div>
+              <div class="hotel-stars" aria-label="5 estrelas">★★★★★</div>
+              <div class="hotel-city">Osaka · Castelo de Osaka</div>
+            </div>
+            <div class="hotel-price"><b>R$ 3.980</b><span>1 noite · 2 adultos</span></div>
+          </div>
+          <div class="hotel-room"><b>Deluxe Room Double · City View</b> <span>· Café da manhã</span></div>
+          <div class="gal" aria-label="Fotos do Patina Osaka">
+            <figure data-label="Patina Osaka · foto 1"><img src="img/hoteis/patina-osaka-1.jpg" alt="Patina Osaka – foto 1" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Patina Osaka · foto 2"><img src="img/hoteis/patina-osaka-2.jpg" alt="Patina Osaka – foto 2" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Patina Osaka · foto 3"><img src="img/hoteis/patina-osaka-3.jpg" alt="Patina Osaka – foto 3" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Patina Osaka · foto 4"><img src="img/hoteis/patina-osaka-4.jpg" alt="Patina Osaka – foto 4" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Patina Osaka · foto 5"><img src="img/hoteis/patina-osaka-5.jpg" alt="Patina Osaka – foto 5" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Patina Osaka · foto 6"><img src="img/hoteis/patina-osaka-6.jpg" alt="Patina Osaka – foto 6" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+          </div>
+          <p class="hotel-blurb">Hotel novo, do mesmo grupo do Capella, de frente para o parque do Castelo de Osaka. Quartos amplos com vista para a cidade e restaurantes que fazem parte da cena gastronômica atual de Osaka.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="leg" id="etapa-6">
+      <div class="leg-hd">
+        <div class="leg-city">Nagasaki<small>Etapa 6</small></div>
+        <div class="leg-data"><span>2 noites</span><span>9 a 11 de janeiro</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="leg-note">Ida e volta de avião a partir de Osaka. Dia guiado no domingo, 10 de janeiro.</div>
+      <div class="hotels">
+        <article class="hotel">
+          <div class="hotel-top">
+            <div>
+              <span class="opt">Opção 1</span>
+              <div class="hotel-name">Garden Terrace Nagasaki</div>
+              <div class="hotel-stars" aria-label="5 estrelas">★★★★★</div>
+              <div class="hotel-city">Nagasaki · Colina de Nabekanmuri</div>
+            </div>
+            <div class="hotel-price"><b>R$ 7.275</b><span>2 noites · 2 adultos</span></div>
+          </div>
+          <div class="hotel-room"><b>Garden Suite Room</b> <span>· Café da manhã</span></div>
+          <div class="gal" aria-label="Fotos do Garden Terrace Nagasaki">
+            <figure data-label="Garden Terrace Nagasaki · foto 1"><img src="img/hoteis/garden-terrace-nagasaki-1.jpg" alt="Garden Terrace Nagasaki – foto 1" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Garden Terrace Nagasaki · foto 2"><img src="img/hoteis/garden-terrace-nagasaki-2.jpg" alt="Garden Terrace Nagasaki – foto 2" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Garden Terrace Nagasaki · foto 3"><img src="img/hoteis/garden-terrace-nagasaki-3.jpg" alt="Garden Terrace Nagasaki – foto 3" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Garden Terrace Nagasaki · foto 4"><img src="img/hoteis/garden-terrace-nagasaki-4.jpg" alt="Garden Terrace Nagasaki – foto 4" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Garden Terrace Nagasaki · foto 5"><img src="img/hoteis/garden-terrace-nagasaki-5.jpg" alt="Garden Terrace Nagasaki – foto 5" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Garden Terrace Nagasaki · foto 6"><img src="img/hoteis/garden-terrace-nagasaki-6.jpg" alt="Garden Terrace Nagasaki – foto 6" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+          </div>
+          <p class="hotel-blurb">Hotel assinado pelo arquiteto Kengo Kuma, no alto de uma colina com vista para a baía de Nagasaki. Quartos amplos, restaurante panorâmico e uma das vistas noturnas mais bonitas do Japão.</p>
+        </article>
+        <article class="hotel">
+          <div class="hotel-top">
+            <div>
+              <span class="opt">Opção 2</span>
+              <div class="hotel-name">Hotel Indigo Nagasaki Glover Street</div>
+              <div class="hotel-stars" aria-label="4 estrelas">★★★★</div>
+              <div class="hotel-city">Nagasaki · Glover Street</div>
+            </div>
+            <div class="hotel-price"><b>R$ 3.072</b><span>2 noites · 2 adultos</span></div>
+          </div>
+          <div class="hotel-room"><b>Standard Room · 1 cama king</b> <span>· Café da manhã</span></div>
+          <div class="gal" aria-label="Fotos do Hotel Indigo Nagasaki Glover Street">
+            <figure data-label="Hotel Indigo Nagasaki Glover Street · foto 1"><img src="img/hoteis/hotel-indigo-nagasaki-glover-street-1.jpg" alt="Hotel Indigo Nagasaki Glover Street – foto 1" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Hotel Indigo Nagasaki Glover Street · foto 2"><img src="img/hoteis/hotel-indigo-nagasaki-glover-street-2.jpg" alt="Hotel Indigo Nagasaki Glover Street – foto 2" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Hotel Indigo Nagasaki Glover Street · foto 3"><img src="img/hoteis/hotel-indigo-nagasaki-glover-street-3.jpg" alt="Hotel Indigo Nagasaki Glover Street – foto 3" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Hotel Indigo Nagasaki Glover Street · foto 4"><img src="img/hoteis/hotel-indigo-nagasaki-glover-street-4.jpg" alt="Hotel Indigo Nagasaki Glover Street – foto 4" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Hotel Indigo Nagasaki Glover Street · foto 5"><img src="img/hoteis/hotel-indigo-nagasaki-glover-street-5.jpg" alt="Hotel Indigo Nagasaki Glover Street – foto 5" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Hotel Indigo Nagasaki Glover Street · foto 6"><img src="img/hoteis/hotel-indigo-nagasaki-glover-street-6.jpg" alt="Hotel Indigo Nagasaki Glover Street – foto 6" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+          </div>
+          <p class="hotel-blurb">Hotel boutique na rua histórica que sobe ao Jardim Glover, ao lado da Catedral de Oura, a igreja católica mais antiga do Japão. Localização perfeita para conhecer a herança cristã de Nagasaki a pé.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="leg" id="etapa-7">
+      <div class="leg-hd">
+        <div class="leg-city">Naoshima<small>Etapa 7</small></div>
+        <div class="leg-data"><span>1 noite</span><span>11 a 12 de janeiro</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="leg-note">Uma noite dentro do museu, na ilha da arte contemporânea.</div>
+      <div class="hotels">
+        <article class="hotel">
+          <div class="hotel-top">
+            <div>
+              <span class="opt">Hotel sugerido</span>
+              <div class="hotel-name">Benesse House · Museum</div>
+              <div class="hotel-stars" aria-label="5 estrelas">★★★★★</div>
+              <div class="hotel-city">Naoshima · Ilha da arte</div>
+            </div>
+            <div class="hotel-price"><b>R$ 8.910</b><span>1 noite · 2 adultos</span></div>
+          </div>
+          <div class="hotel-room"><b>Oval Room</b> <span>· Café da manhã</span></div>
+          <div class="gal" aria-label="Fotos do Benesse House · Museum">
+            <figure data-label="Benesse House · Museum · foto 1"><img src="img/hoteis/benesse-house-museum-1.jpg" alt="Benesse House · Museum – foto 1" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Benesse House · Museum · foto 2"><img src="img/hoteis/benesse-house-museum-2.jpg" alt="Benesse House · Museum – foto 2" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Benesse House · Museum · foto 3"><img src="img/hoteis/benesse-house-museum-3.jpg" alt="Benesse House · Museum – foto 3" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Benesse House · Museum · foto 4"><img src="img/hoteis/benesse-house-museum-4.jpg" alt="Benesse House · Museum – foto 4" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Benesse House · Museum · foto 5"><img src="img/hoteis/benesse-house-museum-5.jpg" alt="Benesse House · Museum – foto 5" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="Benesse House · Museum · foto 6"><img src="img/hoteis/benesse-house-museum-6.jpg" alt="Benesse House · Museum – foto 6" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+          </div>
+          <p class="hotel-blurb">Museu e hotel ao mesmo tempo, projetado por Tadao Ando na ilha de Naoshima. O quarto Oval fica em um anexo no alto da colina, acessado por monotrilho, com apenas seis quartos em torno de um espelho d&#x27;água e vista para o Mar Interior de Seto.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="leg" id="etapa-8">
+      <div class="leg-hd">
+        <div class="leg-city">Tóquio<small>Etapa 8</small></div>
+        <div class="leg-data"><span>2 noites</span><span>12 a 14 de janeiro</span></div>
+      </div>
+      <div class="leg-bar"></div>
+      <div class="leg-note">Últimos dias para compras e a experiência JMD à noite.</div>
+      <div class="hotels">
+        <article class="hotel">
+          <div class="hotel-top">
+            <div>
+              <span class="opt">Opção 1</span>
+              <div class="hotel-name">AC Hotel by Marriott Tokyo Ginza</div>
+              <div class="hotel-stars" aria-label="4 estrelas">★★★★</div>
+              <div class="hotel-city">Tóquio · Ginza</div>
+            </div>
+            <div class="hotel-price"><b>R$ 6.405</b><span>2 noites · 2 adultos</span></div>
+          </div>
+          <div class="hotel-room"><b>Standard Room · cama king</b> <span>· Café da manhã</span></div>
+          <div class="gal" aria-label="Fotos do AC Hotel by Marriott Tokyo Ginza">
+            <figure data-label="AC Hotel by Marriott Tokyo Ginza · foto 1"><img src="img/hoteis/ac-hotel-by-marriott-tokyo-ginza-1.jpg" alt="AC Hotel by Marriott Tokyo Ginza – foto 1" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="AC Hotel by Marriott Tokyo Ginza · foto 2"><img src="img/hoteis/ac-hotel-by-marriott-tokyo-ginza-2.jpg" alt="AC Hotel by Marriott Tokyo Ginza – foto 2" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="AC Hotel by Marriott Tokyo Ginza · foto 3"><img src="img/hoteis/ac-hotel-by-marriott-tokyo-ginza-3.jpg" alt="AC Hotel by Marriott Tokyo Ginza – foto 3" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="AC Hotel by Marriott Tokyo Ginza · foto 4"><img src="img/hoteis/ac-hotel-by-marriott-tokyo-ginza-4.jpg" alt="AC Hotel by Marriott Tokyo Ginza – foto 4" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="AC Hotel by Marriott Tokyo Ginza · foto 5"><img src="img/hoteis/ac-hotel-by-marriott-tokyo-ginza-5.jpg" alt="AC Hotel by Marriott Tokyo Ginza – foto 5" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="AC Hotel by Marriott Tokyo Ginza · foto 6"><img src="img/hoteis/ac-hotel-by-marriott-tokyo-ginza-6.jpg" alt="AC Hotel by Marriott Tokyo Ginza – foto 6" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+          </div>
+          <p class="hotel-blurb">Hotel da rede Marriott no coração de Ginza, a poucos passos das lojas de departamento, das butiques e dos restaurantes que fazem do bairro o endereço mais elegante de Tóquio. Base ideal para quem quer gastronomia e compras à porta.</p>
+        </article>
+        <article class="hotel">
+          <div class="hotel-top">
+            <div>
+              <span class="opt">Opção 2</span>
+              <div class="hotel-name">The Gate Hotel Tokyo by HULIC</div>
+              <div class="hotel-stars" aria-label="4 estrelas">★★★★</div>
+              <div class="hotel-city">Tóquio · Yurakucho / Ginza</div>
+            </div>
+            <div class="hotel-price"><b>R$ 4.530</b><span>2 noites · 2 adultos</span></div>
+          </div>
+          <div class="hotel-room"><b>Standard Double Room</b> <span>· Café da manhã</span></div>
+          <div class="gal" aria-label="Fotos do The Gate Hotel Tokyo by HULIC">
+            <figure data-label="The Gate Hotel Tokyo by HULIC · foto 1"><img src="img/hoteis/the-gate-hotel-tokyo-by-hulic-1.jpg" alt="The Gate Hotel Tokyo by HULIC – foto 1" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The Gate Hotel Tokyo by HULIC · foto 2"><img src="img/hoteis/the-gate-hotel-tokyo-by-hulic-2.jpg" alt="The Gate Hotel Tokyo by HULIC – foto 2" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The Gate Hotel Tokyo by HULIC · foto 3"><img src="img/hoteis/the-gate-hotel-tokyo-by-hulic-3.jpg" alt="The Gate Hotel Tokyo by HULIC – foto 3" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The Gate Hotel Tokyo by HULIC · foto 4"><img src="img/hoteis/the-gate-hotel-tokyo-by-hulic-4.jpg" alt="The Gate Hotel Tokyo by HULIC – foto 4" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The Gate Hotel Tokyo by HULIC · foto 5"><img src="img/hoteis/the-gate-hotel-tokyo-by-hulic-5.jpg" alt="The Gate Hotel Tokyo by HULIC – foto 5" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+            <figure data-label="The Gate Hotel Tokyo by HULIC · foto 6"><img src="img/hoteis/the-gate-hotel-tokyo-by-hulic-6.jpg" alt="The Gate Hotel Tokyo by HULIC – foto 6" loading="lazy" onerror="this.parentNode.classList.add('missing')"></figure>
+          </div>
+          <p class="hotel-blurb">Hotel de design entre Yurakucho e Ginza, com lobby, restaurante e terraço nos andares altos, de onde se vê a linha do horizonte de Tóquio. Localização central, a caminhada curta de Ginza, Hibiya e dos jardins do Palácio Imperial.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ DIA A DIA ══════════ -->
+<section class="sec" id="roteiro">
+  <div class="wrap">
+    <div class="eyebrow">Programação</div>
+    <h2>Dia a dia</h2>
+    <p class="lede">Os dias guiados, o parque e a experiência JMD estão marcados nas datas cotadas. Os demais dias ficam livres, no ritmo de vocês.</p>
+    <div class="days">
+      <div class="day"><div class="day-d">27/12</div><div><div class="day-h">Chegada em Tóquio</div><p class="day-t">Chegada e check-in no hotel em Ginza. Fim de dia livre para vencer o fuso.</p></div></div>
+      <div class="day"><div class="day-d">28/12</div><div><div class="day-h">Tóquio · dia guiado</div><p class="day-t">Primeiro dia com guia privativo em português, 7 horas.</p></div></div>
+      <div class="day"><div class="day-d">29/12</div><div><div class="day-h">Tóquio · dia guiado</div><p class="day-t">Segundo dia com guia privativo em português, 7 horas.</p></div></div>
+      <div class="day"><div class="day-d">30/12</div><div><div class="day-h">Tokyo DisneySea</div><p class="day-t">Dia inteiro no parque, com passaporte de 1 dia.</p></div></div>
+      <div class="day"><div class="day-d">31/12</div><div><div class="day-h">Réveillon em Tóquio</div><p class="day-t">Dia livre e virada do ano na cidade.</p></div></div>
+      <div class="day"><div class="day-d">01/01</div><div><div class="day-h">Tóquio → Hakone</div><p class="day-t">Saída para Hakone. Dia inteiro com carro e motorista privativo pela região, e noite de águas termais com jantar incluído.</p></div></div>
+      <div class="day"><div class="day-d">02/01</div><div><div class="day-h">Hakone → Hakuba</div><p class="day-t">Seguida para os Alpes Japoneses. Quatro noites em Hakuba.</p></div></div>
+      <div class="day"><div class="day-d">03 a 05/01</div><div><div class="day-h">Hakuba · neve</div><p class="day-t">Dois dias de esqui com lift pass incluído. Aluguel de equipamento no local.</p></div></div>
+      <div class="day"><div class="day-d">06/01</div><div><div class="day-h">Hakuba → Kyoto</div><p class="day-t">Chegada em Kyoto e primeiro dia com guia privativo, 7 horas.</p></div></div>
+      <div class="day"><div class="day-d">07/01</div><div><div class="day-h">Kyoto · dia guiado</div><p class="day-t">Segundo dia com guia privativo em Kyoto.</p></div></div>
+      <div class="day"><div class="day-d">08/01</div><div><div class="day-h">Kyoto → Osaka</div><p class="day-t">Dia guiado em Osaka, 7 horas. Noite em Osaka.</p></div></div>
+      <div class="day"><div class="day-d">09/01</div><div><div class="day-h">Osaka → Nagasaki</div><p class="day-t">Voo para Nagasaki. Tarde livre.</p></div></div>
+      <div class="day"><div class="day-d">10/01</div><div><div class="day-h">Nagasaki · dia guiado</div><p class="day-t">Domingo com guia privativo em português, 6 horas.</p></div></div>
+      <div class="day"><div class="day-d">11/01</div><div><div class="day-h">Nagasaki → Naoshima</div><p class="day-t">Voo de volta a Osaka e travessia para a ilha de Naoshima. Noite no Benesse House.</p></div></div>
+      <div class="day"><div class="day-d">12/01</div><div><div class="day-h">Naoshima → Tóquio</div><p class="day-t">Retorno a Tóquio. Às 19h, a experiência JMD: 3 horas de carro pelo circuito Shibuya, Ponte Rainbow, Daikoku PA e Torre de Tóquio, com vídeo e fotos.</p></div></div>
+      <div class="day"><div class="day-d">13/01</div><div><div class="day-h">Tóquio</div><p class="day-t">Dia livre para compras e despedida.</p></div></div>
+      <div class="day"><div class="day-d">14/01</div><div><div class="day-h">Check-out</div><p class="day-t">Encerramento da hospedagem em Tóquio.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SERVIÇOS ══════════ -->
+<section class="sec" id="servicos">
+  <div class="wrap">
+    <div class="eyebrow">Guias e experiências</div>
+    <h2>Serviços incluídos na cotação</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Serviço</th><th>Data</th><th>Descrição</th><th class="num">Valor (2 adultos)</th></tr></thead>
+        <tbody>
+          <tr><td><b>Guia privativo em Tóquio</b></td><td class="d">28 e 29/12</td><td>2 dias · privativo · em português · 7h por dia</td><td class="num">R$ 4.542</td></tr>
+          <tr><td><b>Tokyo DisneySea</b></td><td class="d">30/12</td><td>Passaporte de 1 dia</td><td class="num">R$ 1.122</td></tr>
+          <tr><td><b>Dia com carro e motorista em Hakone</b></td><td class="d">01 a 02/01</td><td>Dia inteiro · privativo</td><td class="num">R$ 3.205</td></tr>
+          <tr><td><b>Lift pass de ski em Hakuba</b></td><td class="d">02 a 06/01</td><td>2 dias</td><td class="num">R$ 1.656</td></tr>
+          <tr><td><b>Guia privativo em Kyoto</b></td><td class="d">06 e 07/01</td><td>2 dias · privativo · em português · 7h por dia</td><td class="num">R$ 4.542</td></tr>
+          <tr><td><b>Guia privativo em Osaka</b></td><td class="d">08/01</td><td>1 dia · privativo · em português · 7h</td><td class="num">R$ 2.424</td></tr>
+          <tr><td><b>Guia privativo em Nagasaki</b></td><td class="d">10/01</td><td>1 dia · privativo · em português · 6h</td><td class="num">R$ 2.424</td></tr>
+          <tr><td><b>Experiência JMD</b></td><td class="d">12/01</td><td>3h · início às 19h · vídeo e fotos · Shibuya → Ponte Rainbow → Daikoku PA → Torre de Tóquio → Shibuya</td><td class="num">R$ 5.182</td></tr>
+          <tr><td><b>Aéreo Osaka → Nagasaki → Osaka</b></td><td class="d">09/01 e 11/01</td><td>Trecho doméstico, ida e volta</td><td class="num">a confirmar</td></tr>
+          <tr class="total"><td colspan="3">Total de serviços</td><td class="num">R$ 25.097</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ VALORES ══════════ -->
+<section class="sec" id="valores">
+  <div class="wrap">
+    <div class="eyebrow">Resumo</div>
+    <h2>Valores</h2>
+    <p class="lede">Hospedagem por etapa, nas duas opções, e os totais de referência. Os hotéis podem ser combinados livremente entre as opções: o total final é a soma da hospedagem escolhida com os serviços.</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Etapa</th><th>Datas</th><th>Opção 1</th><th class="num">Valor</th><th>Opção 2</th><th class="num">Valor</th></tr></thead>
+        <tbody>
+          <tr><td><b>Tóquio</b><span class="sub">5 noites</span></td><td class="d">27/12 → 01/01</td><td>AC Hotel by Marriott Tokyo Ginza<span class="sub">Standard Room · cama king</span></td><td class="num">R$ 26.000</td><td>The Gate Hotel Tokyo by HULIC<span class="sub">Standard Room · cama double</span></td><td class="num">R$ 19.700</td></tr>
+          <tr><td><b>Hakone</b><span class="sub">1 noite</span></td><td class="d">01/01 → 02/01</td><td>Hakone Airu<span class="sub">Deluxe Room</span></td><td class="num">R$ 6.273</td><td>Kinnotake Tonosawa<span class="sub">Superior Room com banho ao ar livre &quot;Take&quot;</span></td><td class="num">R$ 13.266</td></tr>
+          <tr><td><b>Hakuba</b><span class="sub">4 noites</span></td><td class="d">02/01 → 06/01</td><td>Courtyard by Marriott Hakuba<span class="sub">Japanese Western Superior Room</span></td><td class="num">R$ 29.998</td><td colspan="2" style="color:var(--fg-mut)">Hotel único nesta etapa</td></tr>
+          <tr><td><b>Kyoto</b><span class="sub">2 noites</span></td><td class="d">06/01 → 08/01</td><td>Banyan Tree Higashiyama Kyoto<span class="sub">Serenity Room · cama king</span></td><td class="num">R$ 7.852</td><td>Capella Kyoto<span class="sub">Deluxe City King</span></td><td class="num">R$ 17.915</td></tr>
+          <tr><td><b>Osaka</b><span class="sub">1 noite</span></td><td class="d">08/01 → 09/01</td><td>The St. Regis Osaka<span class="sub">Deluxe City View</span></td><td class="num">R$ 3.854</td><td>Patina Osaka<span class="sub">Deluxe Room Double · City View</span></td><td class="num">R$ 3.980</td></tr>
+          <tr><td><b>Nagasaki</b><span class="sub">2 noites</span></td><td class="d">09/01 → 11/01</td><td>Garden Terrace Nagasaki<span class="sub">Garden Suite Room</span></td><td class="num">R$ 7.275</td><td>Hotel Indigo Nagasaki Glover Street<span class="sub">Standard Room · 1 cama king</span></td><td class="num">R$ 3.072</td></tr>
+          <tr><td><b>Naoshima</b><span class="sub">1 noite</span></td><td class="d">11/01 → 12/01</td><td>Benesse House · Museum<span class="sub">Oval Room</span></td><td class="num">R$ 8.910</td><td colspan="2" style="color:var(--fg-mut)">Hotel único nesta etapa</td></tr>
+          <tr><td><b>Tóquio</b><span class="sub">2 noites</span></td><td class="d">12/01 → 14/01</td><td>AC Hotel by Marriott Tokyo Ginza<span class="sub">Standard Room · cama king</span></td><td class="num">R$ 6.405</td><td>The Gate Hotel Tokyo by HULIC<span class="sub">Standard Double Room</span></td><td class="num">R$ 4.530</td></tr>
+          <tr class="total"><td colspan="3">Total de hospedagem</td><td class="num">R$ 96.567</td><td></td><td class="num">R$ 101.371</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="totals">
+      <div class="tot"><div class="k">Hospedagem · Opção 1 + serviços</div><div class="v">R$ 121.664</div><div class="s">R$ 96.567 de hospedagem + R$ 25.097 de guias e experiências</div></div>
+      <div class="tot"><div class="k">Hospedagem · Opção 2 + serviços</div><div class="v">R$ 126.468</div><div class="s">R$ 101.371 de hospedagem + R$ 25.097 de guias e experiências</div></div>
+    </div>
+    <p class="fine">Valores em reais para 2 adultos, calculados na data da cotação e sujeitos a alteração de câmbio e disponibilidade até a confirmação. Não inclui o aéreo internacional, o trecho doméstico Osaka – Nagasaki – Osaka, trens e traslados não citados, refeições fora do regime indicado e seguro viagem.</p>
+  </div>
+</section>
+
+<!-- ══════════ CONDIÇÕES ══════════ -->
+<section class="sec" id="condicoes">
+  <div class="wrap">
+    <div class="eyebrow">Como reservar</div>
+    <h2>Condições de pagamento</h2>
+    <div class="cond">
+      <div><b>Hotéis</b><p>Reservados por operadora parceira. Condições de pagamento e cancelamento informadas na confirmação de cada hotel.</p></div>
+      <div><b>Benesse House, Tokyo DisneySea e Experiência JMD</b><p>20% de entrada na reserva e saldo em até 10 vezes.</p></div>
+      <div><b>Guias privativos</b><p>US$ 50 de entrada por serviço na reserva e saldo em até 10 vezes.</p></div>
+      <div><b>Carro em Hakone e lift pass em Hakuba</b><p>Condições informadas na confirmação do serviço.</p></div>
+    </div>
+    <p class="fine">Réveillon e feriado de Ano Novo são período de alta demanda no Japão: as tarifas e a disponibilidade dos hotéis só ficam garantidas após a confirmação da reserva.</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-brand">LUSATRAVEL</div>
+    <div class="foot-grid">
+      <div><div class="foot-k">Atendimento</div><div class="foot-v"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div></div>
+      <div><div class="foot-k">Endereço</div><div class="foot-v">Alameda Princesa Izabel, 1700<br>Bigorrilho · Curitiba – PR</div></div>
+      <div><div class="foot-k">Viagem</div><div class="foot-v">Japão · 27/12/2026 a 14/01/2027<br>Mikael e Renata · 2 adultos</div></div>
+    </div>
+    <div class="foot-note">Cotação elaborada pela LusaTravel. Valores de referência, sujeitos a confirmação.</div>
+  </div>
+</footer>
+
+</body>
+</html>
