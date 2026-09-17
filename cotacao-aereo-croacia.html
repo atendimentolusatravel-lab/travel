@@ -177,7 +177,39 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
 .sum .k{ font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; }
 .sum .v{ font-size:14pt; font-weight:800; color:var(--ink); margin-top:1mm; }
 .sum .s{ font-size:8.8pt; color:var(--mut); margin-top:.5mm; }
- .body{ padding:11mm 22mm; } .h2{ margin:2mm 0 4mm; } .lead{ font-size:10.5pt; } .sum{ grid-template-columns:repeat(2,1fr); }</style></head><body>
+ .body{ padding:11mm 22mm; } .h2{ margin:2mm 0 4mm; } .lead{ font-size:10.5pt; } .sum{ grid-template-columns:repeat(2,1fr); }
+.res{ display:grid; grid-template-columns:repeat(4,1fr); gap:6mm; margin-top:6mm; }
+.res-col{ border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; }
+.res-top{ padding:6mm 6mm 5mm; color:#fff; background:
+  radial-gradient(90% 70% at 85% 10%, rgba(218,141,0,.55) 0%, rgba(218,141,0,.1) 50%, transparent 70%),
+  linear-gradient(160deg,#73805c 0%,#4a6b45 50%,#2d5e3a 100%); }
+.res-top .lt{ font-size:8pt; letter-spacing:.3em; text-transform:uppercase; color:#ffc25c; font-weight:700; }
+.res-top .tt{ font-size:15pt; font-weight:800; line-height:1.1; margin-top:1.5mm; }
+.res-top .st{ font-size:8pt; letter-spacing:.06em; text-transform:uppercase; color:#ffc25c; margin-top:1.5mm; }
+.res-body{ padding:5mm 6mm; flex:1; }
+.res-city{ display:flex; align-items:flex-start; gap:3.5mm; padding:3.2mm 0; border-bottom:1px solid var(--line); }
+.res-city:last-child{ border-bottom:none; }
+.res-n{ width:9mm; height:9mm; border-radius:50%; background:var(--dest); color:#ffc25c; font-weight:800; font-size:9.5pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.res-name{ font-size:11pt; font-weight:700; color:var(--ink); line-height:1.2; }
+.res-name small{ font-weight:400; color:var(--mut); font-size:9pt; }
+.res-nts{ font-size:9pt; color:var(--gold); font-weight:700; letter-spacing:.04em; margin-top:.5mm; }
+.res-bv{ font-size:8.6pt; color:var(--char); line-height:1.5; margin-top:1mm; }
+.res-foot{ background:var(--paper); border-top:1px solid var(--line); padding:4mm 6mm; }
+.res-foot .r{ display:block; font-size:7.8pt; letter-spacing:.08em; text-transform:uppercase; color:var(--mut); }
+.res-foot .r b, .res-foot .r span:last-child{ display:block; color:var(--ink); font-size:11pt; letter-spacing:0; text-transform:none; margin-top:.5mm; }
+.res-foot .r + .r{ margin-top:2.5mm; }
+.res-note{ margin-top:6mm; font-size:9pt; color:var(--mut); line-height:1.6; }
+
+.bar{ display:flex; margin-top:8mm; border-radius:6px; overflow:hidden; border:1px solid var(--line); height:16mm; }
+.bar div{ display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:10.5pt; letter-spacing:.04em; }
+.bar div small{ font-weight:400; opacity:.85; margin-left:2mm; font-size:8.5pt; }
+.bar .b1{ background:#73805c; } .bar .b2{ background:#4a6b45; } .bar .b3{ background:#2d5e3a; }
+.res-col .res-body p{ font-size:9.6pt; line-height:1.6; color:var(--char); margin-top:3mm; }
+.res-col .hotel{ font-size:9pt; color:var(--mut); margin-top:2mm; line-height:1.5; }
+.kpis{ display:flex; gap:12mm; margin-top:5mm; }
+.kpis b{ display:block; font-size:22pt; font-weight:800; color:var(--gold); line-height:1; }
+.kpis span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; }
+</style></head><body>
 <section class="page">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Cotação de aéreo</div></div><div class="goldbar"></div>
   <div class="body">
@@ -209,6 +241,51 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
     </div>
     <div class="sum"><div class='c'><div class='k'>Opção 1 · Air France</div><div class='v'>R$ 128.813,96</div><div class='s'>4 pessoas · USD 24.999,28</div></div><div class='c'><div class='k'>Opção 2 · LATAM</div><div class='v'>R$ 136.088,44</div><div class='s'>4 pessoas · USD 26.411,04</div></div></div>
     <div class="res-note" style="margin-top:4.5mm;font-size:8.8pt;color:var(--mut);line-height:1.6">Com o retorno em 28/10, a viagem passa a ter 19 noites no destino. Na opção 2, o trecho Curitiba–São Paulo e o retorno são em Economy Premium na LATAM; o internacional é executiva. Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.</div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Resumo do roteiro</div></div><div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Família Dalcanale · Croácia Completa · entrada por Dubrovnik, saída por Zagreb</div>
+    <h2 class="h2">Destinos e quantidade de dias</h2>
+    <p class="lead">Três bases de sul a norte, cada uma com hotel fixo e as cidades vizinhas em bate-volta. Com a chegada em 09/10 e o
+    voo de volta em 28/10, o roteiro tem 19 noites na Croácia.</p>
+    <div class="kpis">
+      <div><b>3</b><span>Bases</span></div><div><b>19</b><span>Noites</span></div><div><b>3</b><span>Hotéis</span></div><div><b>11</b><span>Cidades em bate-volta</span></div>
+    </div>
+    <div class="bar"><div class="b1" style="flex:6">Dubrovnik<small>6 noites</small></div><div class="b2" style="flex:7">Split<small>7 noites</small></div><div class="b3" style="flex:6">Zagreb<small>6 noites</small></div></div>
+    <div class="res" style="grid-template-columns:repeat(3,1fr)">
+        <div class="res-col">
+          <div class="res-top"><div class="lt">Base 1</div><div class="tt">Dubrovnik</div><div class="st">6 noites · 09 a 15/10</div></div>
+          <div class="res-body">
+            <div class="res-nts">Bate-voltas</div>
+            <div class="res-bv">Lokrum · Korčula e Pelješac · Ilhas Elafitas · Cavtat</div>
+            <p>Chegada às 14:20 pelo voo de Paris. Muralhas, Stradun e monte Srđ, com as ilhas e a península de Pelješac em bate-volta.</p>
+            <div class="hotel">Hotel 4★ · Royal Neptun Hotel · Babin Kuk, à beira-mar</div>
+          </div>
+        </div>
+        <div class="res-col">
+          <div class="res-top"><div class="lt">Base 2</div><div class="tt">Split</div><div class="st">7 noites · 15 a 22/10</div></div>
+          <div class="res-body">
+            <div class="res-nts">Bate-voltas</div>
+            <div class="res-bv">Hvar · Trogir e Krka · Brač e Zlatni Rat · Omiš</div>
+            <p>Transfer de 3h30 pela costa com parada em Ston. A noite extra do retorno em 28/10 fica aqui, para mais um dia de ilhas.</p>
+            <div class="hotel">Hotel 4★ · Heritage Hotel Cardo · dentro do Palácio de Diocleciano</div>
+          </div>
+        </div>
+        <div class="res-col">
+          <div class="res-top"><div class="lt">Base 3</div><div class="tt">Zagreb</div><div class="st">6 noites · 22 a 28/10</div></div>
+          <div class="res-body">
+            <div class="res-nts">Bate-voltas</div>
+            <div class="res-bv">Plitvice (no transfer) · Varaždin e Trakošćan · Samobor e Zagorje</div>
+            <p>Transfer com os Lagos de Plitvice no caminho. Cidade Alta, mercado Dolac e interior barroco. Voo de volta às 06:40 do dia 28.</p>
+            <div class="hotel">Hotel 4★ · Hotel PARK 45 · Ilica, a 500 m da Praça Ban Jelačić</div>
+          </div>
+        </div></div>
+    <div class="res-note">Hotelaria e bate-voltas conforme a proposta Croácia Completa, com a noite adicional de 28/10 alocada em Split.
+    Valores de hotelaria e serviços na proposta principal. *Nada reservado, apenas cotado.</div>
   </div>
   <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
 </section>

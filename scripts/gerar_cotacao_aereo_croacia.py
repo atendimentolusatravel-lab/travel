@@ -5,7 +5,9 @@ Uso: python3 scripts/gerar_cotacao_aereo_croacia.py
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gerar_cotacao_aereo_londres import build, CLIENTE, PAX, ROOT  # noqa: E402
+from gerar_cotacao_aereo_londres import build, CLIENTE, PAX, ROOT, hd, FT  # noqa: E402
+from gerar_proposta_dalcanale import RES_CSS  # noqa: E402
+from html import escape as _e  # noqa: E402
 
 OUT = os.path.join(ROOT, "cotacao-aereo-croacia.html")
 
@@ -44,6 +46,66 @@ OPCOES = [
     },
 ]
 
+BASES = [
+    {"cidade": "Dubrovnik", "noites": 6, "datas": "09 a 15/10", "hotel": "Royal Neptun Hotel · Babin Kuk, à beira-mar",
+     "bv": "Lokrum · Korčula e Pelješac · Ilhas Elafitas · Cavtat",
+     "txt": "Chegada às 14:20 pelo voo de Paris. Muralhas, Stradun e monte Srđ, com as ilhas e a península de Pelješac em bate-volta."},
+    {"cidade": "Split", "noites": 7, "datas": "15 a 22/10", "hotel": "Heritage Hotel Cardo · dentro do Palácio de Diocleciano",
+     "bv": "Hvar · Trogir e Krka · Brač e Zlatni Rat · Omiš",
+     "txt": "Transfer de 3h30 pela costa com parada em Ston. A noite extra do retorno em 28/10 fica aqui, para mais um dia de ilhas."},
+    {"cidade": "Zagreb", "noites": 6, "datas": "22 a 28/10", "hotel": "Hotel PARK 45 · Ilica, a 500 m da Praça Ban Jelačić",
+     "bv": "Plitvice (no transfer) · Varaždin e Trakošćan · Samobor e Zagorje",
+     "txt": "Transfer com os Lagos de Plitvice no caminho. Cidade Alta, mercado Dolac e interior barroco. Voo de volta às 06:40 do dia 28."},
+]
+
+TL_CSS = r"""
+.bar{ display:flex; margin-top:8mm; border-radius:6px; overflow:hidden; border:1px solid var(--line); height:16mm; }
+.bar div{ display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:10.5pt; letter-spacing:.04em; }
+.bar div small{ font-weight:400; opacity:.85; margin-left:2mm; font-size:8.5pt; }
+.bar .b1{ background:#73805c; } .bar .b2{ background:#4a6b45; } .bar .b3{ background:#2d5e3a; }
+.res-col .res-body p{ font-size:9.6pt; line-height:1.6; color:var(--char); margin-top:3mm; }
+.res-col .hotel{ font-size:9pt; color:var(--mut); margin-top:2mm; line-height:1.5; }
+.kpis{ display:flex; gap:12mm; margin-top:5mm; }
+.kpis b{ display:block; font-size:22pt; font-weight:800; color:var(--gold); line-height:1; }
+.kpis span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; }
+"""
+
+def resumo_page():
+    total = sum(b["noites"] for b in BASES)
+    bar = "".join(f'<div class="b{i}" style="flex:{b["noites"]}">{_e(b["cidade"])}<small>{b["noites"]} noites</small></div>'
+                  for i, b in enumerate(BASES, 1))
+    cols = ""
+    for i, b in enumerate(BASES, 1):
+        cols += f"""
+        <div class="res-col">
+          <div class="res-top"><div class="lt">Base {i}</div><div class="tt">{_e(b['cidade'])}</div><div class="st">{b['noites']} noites · {_e(b['datas'])}</div></div>
+          <div class="res-body">
+            <div class="res-nts">Bate-voltas</div>
+            <div class="res-bv">{_e(b['bv'])}</div>
+            <p>{_e(b['txt'])}</p>
+            <div class="hotel">Hotel 4★ · {_e(b['hotel'])}</div>
+          </div>
+        </div>"""
+    return f"""
+<section class="page">
+  {hd('Resumo do roteiro')}
+  <div class="body">
+    <div class="eyebrow">{CLIENTE.title()} · Croácia Completa · entrada por Dubrovnik, saída por Zagreb</div>
+    <h2 class="h2">Destinos e quantidade de dias</h2>
+    <p class="lead">Três bases de sul a norte, cada uma com hotel fixo e as cidades vizinhas em bate-volta. Com a chegada em 09/10 e o
+    voo de volta em 28/10, o roteiro tem {total} noites na Croácia.</p>
+    <div class="kpis">
+      <div><b>3</b><span>Bases</span></div><div><b>{total}</b><span>Noites</span></div><div><b>3</b><span>Hotéis</span></div><div><b>11</b><span>Cidades em bate-volta</span></div>
+    </div>
+    <div class="bar">{bar}</div>
+    <div class="res" style="grid-template-columns:repeat(3,1fr)">{cols}</div>
+    <div class="res-note">Hotelaria e bate-voltas conforme a proposta Croácia Completa, com a noite adicional de 28/10 alocada em Split.
+    Valores de hotelaria e serviços na proposta principal. *Nada reservado, apenas cotado.</div>
+  </div>
+  {FT}
+</section>"""
+
+
 if __name__ == "__main__":
     build(
         OPCOES,
@@ -56,4 +118,6 @@ if __name__ == "__main__":
         "são em Economy Premium na LATAM; o internacional é executiva. "
         "Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.",
         OUT,
+        extra_pages=resumo_page(),
+        extra_css=RES_CSS + TL_CSS,
     )

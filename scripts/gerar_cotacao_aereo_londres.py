@@ -89,7 +89,7 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
 """
 
 
-def build(opcoes, titulo, eyebrow, intro, rodape, out, hd_tag="Cotação de aéreo"):
+def build(opcoes, titulo, eyebrow, intro, rodape, out, hd_tag="Cotação de aéreo", extra_pages="", extra_css=""):
     blocks = ""
     for o in opcoes:
         rows = "".join(
@@ -117,7 +117,7 @@ def build(opcoes, titulo, eyebrow, intro, rodape, out, hd_tag="Cotação de aér
     html = f"""<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8">
 <title>{CLIENTE.title()} | {_e(titulo)} — LusaTravel</title>
-<style>{CSS}{EXTRA_CSS} .body{{ padding:11mm 22mm; }} .h2{{ margin:2mm 0 4mm; }} .lead{{ font-size:10.5pt; }} .sum{{ grid-template-columns:repeat({ncol},1fr); }}</style></head><body>
+<style>{CSS}{EXTRA_CSS} .body{{ padding:11mm 22mm; }} .h2{{ margin:2mm 0 4mm; }} .lead{{ font-size:10.5pt; }} .sum{{ grid-template-columns:repeat({ncol},1fr); }}{extra_css}</style></head><body>
 <section class="page">
   {hd(hd_tag)}
   <div class="body">
@@ -130,6 +130,7 @@ def build(opcoes, titulo, eyebrow, intro, rodape, out, hd_tag="Cotação de aér
   </div>
   {FT}
 </section>
+{extra_pages}
 </body></html>"""
     with open(out, "w", encoding="utf-8") as f:
         f.write(html)
