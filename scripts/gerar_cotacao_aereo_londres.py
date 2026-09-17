@@ -88,14 +88,16 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
 .sum .s{ font-size:8.8pt; color:var(--mut); margin-top:.5mm; }
 """
 
-blocks = ""
-for o in OPCOES:
-    rows = "".join(
-        f"<tr><td class='v'>{_e(v)}</td><td>{_e(d1)}</td><td>{_e(d2)}</td><td>{_e(o1)}</td><td>{_e(o2)}</td>"
-        f"<td class='v'>{_e(t)}</td><td class='c'>{_e(cx) or '—'}</td><td class='m'>{_e(ac)}</td><td class='m'>{_e(cl)}</td></tr>"
-        for v, d1, d2, o1, o2, t, cx, ac, cl in o["voos"]
-    )
-    blocks += f"""
+
+def build(opcoes, titulo, eyebrow, intro, rodape, out, hd_tag="Cotação de aéreo"):
+    blocks = ""
+    for o in opcoes:
+        rows = "".join(
+            f"<tr><td class='v'>{_e(v)}</td><td>{_e(d1)}</td><td>{_e(d2)}</td><td>{_e(o1)}</td><td>{_e(o2)}</td>"
+            f"<td class='v'>{_e(t)}</td><td class='c'>{_e(cx) or '—'}</td><td class='m'>{_e(ac)}</td><td class='m'>{_e(cl)}</td></tr>"
+            for v, d1, d2, o1, o2, t, cx, ac, cl in o["voos"]
+        )
+        blocks += f"""
     <div class="air">
       <div class="air-top">
         <div class="l"><div class="n">{o['letra']}</div><div><div class="tt">{_e(o['titulo'])}</div><div class="st">{_e(o['sub'])}</div></div></div>
@@ -107,35 +109,42 @@ for o in OPCOES:
       </table>
       <div class="air-foot"><div>{_e(o['nota'])}</div><div class="t">Tempo total ida · volta<b>{o['tempo'][0]} · {o['tempo'][1]}</b></div></div>
     </div>"""
-
-sum_cards = "".join(
-    f"<div class='c'><div class='k'>Opção {o['letra']} · {_e(o['titulo'].split(' ·')[0])}</div><div class='v'>R$ {usd(o['brl']*4)}</div><div class='s'>4 pessoas · USD {usd(o['usd']*4)}</div></div>"
-    for o in OPCOES
-)
-
-HTML = f"""<!doctype html>
+    ncol = len(opcoes)
+    sum_cards = "".join(
+        f"<div class='c'><div class='k'>Opção {o['letra']} · {_e(o['titulo'].split(' ·')[0])}</div><div class='v'>R$ {usd(o['brl']*4)}</div><div class='s'>4 pessoas · USD {usd(o['usd']*4)}</div></div>"
+        for o in opcoes
+    )
+    html = f"""<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8">
-<title>{CLIENTE.title()} | Cotação de aéreo Londres — LusaTravel</title>
-<style>{CSS}{EXTRA_CSS} .body{{ padding:11mm 22mm; }} .h2{{ margin:2mm 0 4mm; }} .lead{{ font-size:10.5pt; }}</style></head><body>
+<title>{CLIENTE.title()} | {_e(titulo)} — LusaTravel</title>
+<style>{CSS}{EXTRA_CSS} .body{{ padding:11mm 22mm; }} .h2{{ margin:2mm 0 4mm; }} .lead{{ font-size:10.5pt; }} .sum{{ grid-template-columns:repeat({ncol},1fr); }}</style></head><body>
 <section class="page">
-  {hd('Cotação de aéreo')}
+  {hd(hd_tag)}
   <div class="body">
-    <div class="eyebrow">{CLIENTE.title()} · {PAX} · saída 08/10 · retorno 28/10/2026</div>
-    <h2 class="h2">Aéreo para Londres em classe executiva</h2>
-    <p class="lead">Três formas de fazer o trecho internacional do roteiro Londres e Escócia. As opções 1 e 2 entram e saem por Londres;
-    a opção 3 entra por Londres e sai por Edimburgo. Valores por pessoa, tarifas executivas com bagagem, cotação do sistema em 17/09.</p>
+    <div class="eyebrow">{_e(eyebrow)}</div>
+    <h2 class="h2">{_e(titulo)}</h2>
+    <p class="lead">{_e(intro)}</p>
     {blocks}
     <div class="sum">{sum_cards}</div>
-    <div class="res-note" style="margin-top:4.5mm;font-size:8.8pt;color:var(--mut);line-height:1.6">
-      Com o retorno em 28/10, a viagem passa a ter 19 noites no destino. Na opção 1 a volta parte de Gatwick, não de Heathrow.
-      Na opção 3, o dia 27/10 fica livre em Edimburgo e o voo de volta sai às 05:50 do dia 28.
-      Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.
-    </div>
+    <div class="res-note" style="margin-top:4.5mm;font-size:8.8pt;color:var(--mut);line-height:1.6">{_e(rodape)}</div>
   </div>
   {FT}
 </section>
 </body></html>"""
+    with open(out, "w", encoding="utf-8") as f:
+        f.write(html)
+    print("ok", out)
 
-with open(OUT, "w", encoding="utf-8") as f:
-    f.write(HTML)
-print("ok", OUT)
+
+if __name__ == "__main__":
+    build(
+        OPCOES,
+        "Aéreo para Londres em classe executiva",
+        f"{CLIENTE.title()} · {PAX} · saída 08/10 · retorno 28/10/2026",
+        "Três formas de fazer o trecho internacional do roteiro Londres e Escócia. As opções 1 e 2 entram e saem por Londres; "
+        "a opção 3 entra por Londres e sai por Edimburgo. Valores por pessoa, tarifas executivas com bagagem, cotação do sistema em 17/09.",
+        "Com o retorno em 28/10, a viagem passa a ter 19 noites no destino. Na opção 1 a volta parte de Gatwick, não de Heathrow. "
+        "Na opção 3, o dia 27/10 fica livre em Edimburgo e o voo de volta sai às 05:50 do dia 28. "
+        "Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.",
+        OUT,
+    )
