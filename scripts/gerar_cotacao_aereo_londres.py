@@ -5,7 +5,7 @@ Uso: python3 scripts/gerar_cotacao_aereo_londres.py
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gerar_proposta_dalcanale import CSS, hd, FT, usd, CLIENTE, PAX, ROOT  # noqa: E402
+from gerar_proposta_dalcanale import CSS, hd, FT, usd, CLIENTE, PAX, ROOT, RES_CSS  # noqa: E402
 from html import escape as _e  # noqa: E402
 
 OUT = os.path.join(ROOT, "cotacao-aereo-londres.html")
@@ -89,6 +89,69 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
 """
 
 
+TL_CSS = r"""
+.bar{ display:flex; margin-top:8mm; border-radius:6px; overflow:hidden; border:1px solid var(--line); height:16mm; }
+.bar div{ display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:10.5pt; letter-spacing:.04em; }
+.bar div small{ font-weight:400; opacity:.85; margin-left:2mm; font-size:8.5pt; }
+.bar .b1{ background:#73805c; } .bar .b2{ background:#5f7650; } .bar .b3{ background:#4a6b45; } .bar .b4{ background:#2d5e3a; }
+.res-col .res-body p{ font-size:9.2pt; line-height:1.6; color:var(--char); margin-top:3mm; }
+.kpis{ display:flex; gap:12mm; margin-top:5mm; }
+.kpis b{ display:block; font-size:22pt; font-weight:800; color:var(--gold); line-height:1; }
+.kpis span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; }
+"""
+
+
+def resumo_page(bases, eyebrow, lead, nota, hd_tag="Resumo do roteiro"):
+    """Página de resumo: barra proporcional de noites + um cartão por base (sem hotéis)."""
+    total = sum(b["noites"] for b in bases)
+    n_bv = sum(len(b["bv"].split(" · ")) for b in bases)
+    bar = "".join(f'<div class="b{i}" style="flex:{b["noites"]}">{_e(b["cidade"])}<small>{b["noites"]} noites</small></div>'
+                  for i, b in enumerate(bases, 1))
+    cols = ""
+    for i, b in enumerate(bases, 1):
+        cols += f"""
+        <div class="res-col">
+          <div class="res-top"><div class="lt">Base {i}</div><div class="tt">{_e(b['cidade'])}</div><div class="st">{b['noites']} noites · {_e(b['datas'])}</div></div>
+          <div class="res-body">
+            <div class="res-nts">Bate-voltas</div>
+            <div class="res-bv">{_e(b['bv'])}</div>
+            <p>{_e(b['txt'])}</p>
+          </div>
+        </div>"""
+    return f"""
+<section class="page">
+  {hd(hd_tag)}
+  <div class="body">
+    <div class="eyebrow">{_e(eyebrow)}</div>
+    <h2 class="h2">Destinos e quantidade de dias</h2>
+    <p class="lead">{_e(lead.format(total=total))}</p>
+    <div class="kpis">
+      <div><b>{len(bases)}</b><span>Bases</span></div><div><b>{total}</b><span>Noites</span></div><div><b>{n_bv}</b><span>Bate-voltas</span></div>
+    </div>
+    <div class="bar">{bar}</div>
+    <div class="res" style="grid-template-columns:repeat({len(bases)},1fr)">{cols}</div>
+    <div class="res-note">{_e(nota)}</div>
+  </div>
+  {FT}
+</section>"""
+
+
+BASES_LONDRES = [
+    {"cidade": "Londres", "noites": 6, "datas": "09 a 15/10",
+     "bv": "Windsor e Hampton Court · Bath e Stonehenge · Oxford",
+     "txt": "Chegada em 09/10. Westminster, Tate Modern, Torre de Londres, South Kensington e um musical no West End, com três bate-voltas de trem ou privativo."},
+    {"cidade": "York", "noites": 3, "datas": "15 a 18/10",
+     "bv": "Castle Howard · Whitby e North York Moors · Harrogate",
+     "txt": "Trem de 2h de King's Cross. Cidade medieval murada: York Minster, The Shambles e o museu ferroviário. Parada natural a caminho da Escócia."},
+    {"cidade": "Glasgow", "noites": 5, "datas": "18 a 23/10",
+     "bv": "Loch Lomond e Stirling · Highlands: Glencoe e Loch Ness · Falkirk e New Lanark",
+     "txt": "Trem de 3h. Kelvingrove, West End, roteiro Mackintosh e música ao vivo, com as Highlands e Loch Lomond em bate-volta."},
+    {"cidade": "Edimburgo", "noites": 5, "datas": "23 a 28/10",
+     "bv": "St Andrews e Fife · Rosslyn Chapel · Leith e Royal Yacht Britannia",
+     "txt": "Trem de 50 min. Castelo, Royal Mile, Arthur's Seat, New Town e Dean Village. Na opção 3 o voo de volta sai daqui às 05:50 do dia 28."},
+]
+
+
 def build(opcoes, titulo, eyebrow, intro, rodape, out, hd_tag="Cotação de aéreo", extra_pages="", extra_css=""):
     blocks = ""
     for o in opcoes:
@@ -148,4 +211,14 @@ if __name__ == "__main__":
         "Na opção 3, o dia 27/10 fica livre em Edimburgo e o voo de volta sai às 05:50 do dia 28. "
         "Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.",
         OUT,
+        extra_pages=resumo_page(
+            BASES_LONDRES,
+            f"{CLIENTE.title()} · Londres e Escócia · entrada por Londres",
+            "Quatro bases ligadas por trem, cada uma com hospedagem fixa e as cidades vizinhas em bate-volta. "
+            "Com a chegada em 09/10 e o voo de volta em 28/10, o roteiro tem {total} noites no Reino Unido.",
+            "Nas opções 1 e 2 (volta por Londres) o dia 28/10 começa com o trem Edimburgo–Londres de 4h30, a tempo dos voos da tarde e da noite. "
+            "Na opção 3 a viagem termina em Edimburgo. Esta cotação cobre apenas o aéreo internacional; hotelaria, trens, transfers e passeios são cotados à parte. "
+            "*Nada reservado, apenas cotado.",
+        ),
+        extra_css=RES_CSS + TL_CSS,
     )
