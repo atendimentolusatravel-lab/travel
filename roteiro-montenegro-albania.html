@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="LusaTravel — roteiro de 18 dias saindo de São Paulo por Montenegro e Albânia: Baía de Kotor, Budva, Durmitor, Lago Skadar, Shkodër, Tirana, Berat e a Riviera Albanesa.">
+<title>Montenegro e Albânia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
+<style>
+/* ─── LUSATRAVEL · DESIGN SYSTEM TOKENS ─────────────────── */
+:root{
+  --gold:#da8d00; --gold-hi:#f0a010;
+  --ink:#1a1510; --char:#333131; --mut:#9a8d80;
+  --line:#e4ddd2; --paper:#faf7f2; --surf:#fff; --surf2:#f2ece3;
+  --onink:#f0e8de;
+  --dest:#1b3f5c;   /* Azul Adriático · Montenegro */
+  --dest2:#7a1a1a;  /* Vermelho Albanês · Albânia */
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+  --mx:1080px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+    --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+    --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+    --dest:#3d7ab8; --dest2:#c23434;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+  --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+  --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+  --dest:#3d7ab8; --dest2:#c23434;
+}
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  background:var(--paper); color:var(--char);
+  font-family:var(--sans); font-weight:400;
+  font-size:15px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+@media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } }
+
+.wrap{ max-width:var(--mx); margin:0 auto; padding:0 28px; }
+
+/* ─── MASTHEAD / CAPA ────────────────────────────────────── */
+.mh{ background:var(--ink); padding:56px 0 44px; position:relative; }
+.mh::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.mh-logo{ font-family:var(--con); font-weight:600; font-size:13px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.mh-kick{ margin-top:26px; font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+.mh-name{ margin-top:10px; font-weight:700; font-size:clamp(28px,5.2vw,46px); line-height:1.06; letter-spacing:.01em; color:#fff; text-transform:uppercase; text-wrap:balance; }
+.mh-dest{ margin-top:8px; font-weight:600; font-size:clamp(17px,2.4vw,22px); color:var(--gold); letter-spacing:.02em; }
+.mh-sub{ margin-top:16px; max-width:60ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.62); }
+.mh-sub strong{ font-weight:600; color:var(--gold); }
+.mh-stats{ margin-top:34px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid rgba(240,232,222,.14); }
+.mh-stat{ padding:18px 34px 4px 0; margin-right:34px; border-right:1px solid rgba(240,232,222,.12); }
+.mh-stat:last-child{ border-right:0; }
+.mh-stat .v{ font-weight:700; font-size:24px; color:#fff; line-height:1; font-variant-numeric:tabular-nums; }
+.mh-stat .k{ margin-top:7px; font-size:9.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.45); }
+
+/* ─── SEÇÕES ─────────────────────────────────────────────── */
+.sec{ padding:56px 0; }
+.sec + .sec{ border-top:1px solid var(--line); }
+.eyebrow{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; letter-spacing:-.01em; text-wrap:balance; }
+.lead{ margin-top:12px; max-width:66ch; font-weight:300; font-size:15.5px; color:var(--char); }
+.lead b{ font-weight:600; color:var(--ink); }
+.goldbar{ width:52px; height:3px; background:var(--gold); margin-top:18px; }
+
+/* ─── FAIXA DE PAÍS ──────────────────────────────────────── */
+.opt-hd{ background:var(--dest); padding:34px 0; position:relative; }
+.opt-hd.al{ background:var(--dest2); }
+.opt-hd::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.opt-tag{ font-size:9.5px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.66); }
+.opt-title{ margin-top:9px; font-weight:700; font-size:clamp(22px,3.4vw,32px); color:#fff; line-height:1.14; text-wrap:balance; }
+.opt-sub{ margin-top:10px; max-width:64ch; font-size:14px; font-weight:300; color:rgba(255,255,255,.78); }
+
+/* ─── TIMELINE ───────────────────────────────────────────── */
+.tl{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; }
+.tl-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--dest); padding:18px 18px 16px; }
+.tl-item.al{ border-top-color:var(--dest2); }
+.tl-badge{ display:inline-flex; align-items:center; justify-content:center; min-width:30px; height:30px; padding:0 9px; background:var(--dest); color:#fff; font-weight:700; font-size:12.5px; font-variant-numeric:tabular-nums; }
+.tl-item.al .tl-badge{ background:var(--dest2); }
+.tl-city{ margin-top:13px; font-weight:600; font-size:17px; color:var(--ink); }
+.tl-meta{ margin-top:5px; font-size:12.5px; font-weight:300; color:var(--mut); }
+.tl-move{ margin-top:11px; padding-top:11px; border-top:1px solid var(--line); font-size:11.5px; font-weight:400; color:var(--char); }
+
+/* ─── DIA A DIA ──────────────────────────────────────────── */
+.days{ margin-top:26px; border-top:1px solid var(--line); }
+.day{ display:grid; grid-template-columns:132px 1fr; gap:22px; padding:19px 0; border-bottom:1px solid var(--line); }
+.day-h{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--dest); line-height:1.5; font-variant-numeric:tabular-nums; }
+.day.al .day-h{ color:var(--dest2); }
+.day-h .cty{ display:block; color:var(--mut); font-size:10.5px; letter-spacing:.14em; margin-top:3px; }
+.day-t{ font-size:14.5px; font-weight:300; color:var(--char); }
+.day-t b{ font-weight:600; color:var(--ink); }
+.day-t .hi{ color:var(--gold); font-weight:600; }
+.day.travel{ background:var(--surf2); margin:0 -14px; padding:15px 14px; }
+.day.travel .day-t{ font-size:13.5px; }
+
+/* ─── CARTÕES DE INFORMAÇÃO ──────────────────────────────── */
+.cards{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
+.card{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--gold); padding:20px 20px 18px; }
+.card-k{ font-family:var(--lbl); font-weight:700; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); }
+.card-v{ margin-top:8px; font-weight:600; font-size:16px; color:var(--ink); line-height:1.3; }
+.card-t{ margin-top:8px; font-size:13.5px; font-weight:300; color:var(--char); }
+.card-t b{ font-weight:600; color:var(--ink); }
+
+/* ─── TABELA COMPARATIVA ─────────────────────────────────── */
+.cmp{ margin-top:28px; width:100%; border-collapse:collapse; font-size:14px; }
+.cmp th{ font-family:var(--lbl); font-weight:700; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; text-align:left; padding:12px 14px; border-bottom:2px solid var(--gold); color:var(--ink); }
+.cmp th.me{ color:var(--dest); }
+.cmp th.al{ color:var(--dest2); }
+.cmp td{ padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top; font-weight:300; }
+.cmp td:first-child{ font-weight:500; color:var(--ink); }
+.cmp-note{ margin-top:12px; font-size:12px; font-weight:300; color:var(--mut); }
+
+/* ─── RODAPÉ / ASSINATURA ────────────────────────────────── */
+.ft{ background:var(--ink); padding:44px 0 40px; position:relative; margin-top:0; }
+.ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
+.ft-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.ft-sig{ margin-top:18px; display:flex; flex-wrap:wrap; gap:10px 34px; font-family:var(--con); font-size:13px; color:rgba(240,232,222,.72); }
+.ft-sig a{ color:rgba(240,232,222,.72); text-decoration:none; border-bottom:1px solid rgba(218,141,0,.5); }
+.ft-sig a:hover{ color:var(--gold); }
+.ft-addr{ margin-top:16px; font-family:var(--con); font-size:11.5px; color:rgba(240,232,222,.38); }
+
+@media (max-width:640px){
+  .day{ grid-template-columns:1fr; gap:7px; }
+  .mh-stat{ padding-right:20px; margin-right:20px; }
+  .cmp{ font-size:13px; }
+  .cmp th,.cmp td{ padding:10px 8px; }
+}
+</style>
+</head>
+<body>
+<header class="mh">
+  <div class="wrap">
+    <div class="mh-logo">LusaTravel</div>
+    <div class="mh-kick">Cotação para sua viagem</div>
+    <h1 class="mh-name">Montenegro e Albânia</h1>
+    <div class="mh-dest">18 dias saindo de São Paulo</div>
+    <p class="mh-sub">Baía de Kotor, praias de Budva, montanhas do Durmitor e o Lago Skadar em Montenegro; depois a fronteira terrestre para a <strong>Albânia</strong>, o país mais barato da Europa, com Shkodër, Tirana, Berat e a Riviera. Sugerimos viajar entre <strong>maio e junho</strong> ou em <strong>setembro</strong>.</p>
+    <div class="mh-stats">
+      <div class="mh-stat"><div class="v">18</div><div class="k">Dias</div></div>
+      <div class="mh-stat"><div class="v">15</div><div class="k">Noites em hotel</div></div>
+      <div class="mh-stat"><div class="v">2</div><div class="k">Países</div></div>
+      <div class="mh-stat"><div class="v">9</div><div class="k">Cidades</div></div>
+      <div class="mh-stat"><div class="v">Mai–Jun · Set</div><div class="k">Época sugerida</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════ POR QUE ALBÂNIA ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">País vizinho sugerido</div>
+    <h2 class="h2">Por que combinar Montenegro com a Albânia</h2>
+    <p class="lead">A Albânia faz fronteira com o sul de Montenegro: de Podgorica a Shkodër são <b>menos de duas horas</b> por estrada, sem voo. É hoje o país mais barato da Europa para o turista, com hotéis, refeições e passeios custando em média <b>metade</b> do que se paga na costa montenegrina, e tem um patrimônio pouco visitado: cidades otomanas tombadas pela UNESCO, castelos, uma capital colorida e uma Riviera de água transparente.</p>
+    <div class="cards">
+      <div class="card"><div class="card-k">Custo</div><div class="card-v">Metade do preço</div><div class="card-t">Refeição completa por <b>€6 a €12</b>, hotel 3–4★ em quarto duplo por <b>€40 a €70</b>, entradas de museus e castelos por €2 a €5.</div></div>
+      <div class="card"><div class="card-k">Documentação</div><div class="card-v">Sem visto nos dois países</div><div class="card-t">Brasileiros entram em Montenegro e na Albânia com passaporte, por até 90 dias. Nenhum dos dois está no Espaço Schengen, então os dias não contam na cota europeia de 90 dias.</div></div>
+      <div class="card"><div class="card-k">Logística</div><div class="card-v">Fronteira terrestre</div><div class="card-t">Passagem por Sukobin–Muriqan ou Hani i Hotit, em transfer privativo. O aéreo é <b>open jaw</b>: chega em Tivat, volta por Tirana, sem retornar ao ponto de partida.</div></div>
+      <div class="card"><div class="card-k">Alternativa</div><div class="card-v">Bósnia e Herzegovina</div><div class="card-t">Se preferir montanha a praia: Mostar fica a 3h de Kotor e Sarajevo a mais 2h30. Também é barata, mas exige voltar por Sarajevo ou Dubrovnik e encurta o tempo de mar.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ VOOS ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Aéreo</div>
+    <h2 class="h2">Como chegar</h2>
+    <p class="lead">Não há voo direto do Brasil a Montenegro. A rota mais eficiente é pela <b>Turkish Airlines via Istambul</b>, que atende Tivat, Podgorica e Tirana no mesmo bilhete, com uma única conexão em cada sentido.</p>
+    <div class="cards">
+      <div class="card"><div class="card-k">Ida</div><div class="card-v">São Paulo → Istambul → Tivat</div><div class="card-t">Saída noturna de Guarulhos, cerca de <b>12h30</b> até Istambul, conexão e mais <b>2h</b> até Tivat, a 15 minutos de Kotor. Podgorica é a alternativa quando o voo para Tivat não opera.</div></div>
+      <div class="card"><div class="card-k">Volta</div><div class="card-v">Tirana → Istambul → São Paulo</div><div class="card-t">Voo de <b>1h50</b> de Tirana a Istambul e conexão noturna para Guarulhos, com chegada na manhã do dia 18.</div></div>
+      <div class="card"><div class="card-k">Terrestre</div><div class="card-v">Carro em Montenegro</div><div class="card-t">Carro alugado retirado em Tivat e devolvido em Podgorica, 9 dias. Na Albânia, transfers privativos entre cidades: custo baixo e sem a taxa de devolução em outro país.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ ITINERÁRIO ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Itinerário</div>
+    <h2 class="h2">Nove cidades, 15 noites</h2>
+    <div class="tl">
+      <div class="tl-item"><span class="tl-badge">3</span><div class="tl-city">Kotor</div><div class="tl-meta">Dias 2 a 4 · 3 noites</div><div class="tl-move">Voo via Istambul até Tivat</div></div>
+      <div class="tl-item"><span class="tl-badge">2</span><div class="tl-city">Budva</div><div class="tl-meta">Dias 5 e 6 · 2 noites</div><div class="tl-move">Carro por Lovćen e Cetinje · 2h30</div></div>
+      <div class="tl-item"><span class="tl-badge">2</span><div class="tl-city">Žabljak · Durmitor</div><div class="tl-meta">Dias 7 e 8 · 2 noites</div><div class="tl-move">Carro por Ostrog · 4h</div></div>
+      <div class="tl-item"><span class="tl-badge">2</span><div class="tl-city">Podgorica</div><div class="tl-meta">Dias 9 e 10 · 2 noites</div><div class="tl-move">Carro por Biogradska Gora · 3h</div></div>
+      <div class="tl-item al"><span class="tl-badge">1</span><div class="tl-city">Shkodër</div><div class="tl-meta">Dia 11 · 1 noite</div><div class="tl-move">Transfer por Ulcinj · 2h30</div></div>
+      <div class="tl-item al"><span class="tl-badge">2</span><div class="tl-city">Tirana</div><div class="tl-meta">Dias 12 e 13 · 2 noites</div><div class="tl-move">Transfer por Krujë · 2h30</div></div>
+      <div class="tl-item al"><span class="tl-badge">1</span><div class="tl-city">Berat</div><div class="tl-meta">Dia 14 · 1 noite</div><div class="tl-move">Transfer · 2h30</div></div>
+      <div class="tl-item al"><span class="tl-badge">1</span><div class="tl-city">Himarë · Riviera</div><div class="tl-meta">Dia 15 · 1 noite</div><div class="tl-move">Transfer por Vlorë e Llogara · 3h30</div></div>
+      <div class="tl-item al"><span class="tl-badge">1</span><div class="tl-city">Tirana</div><div class="tl-meta">Dia 16 · 1 noite</div><div class="tl-move">Transfer · 4h · voo no dia 17</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ MONTENEGRO ══════ -->
+<div class="opt-hd">
+  <div class="wrap">
+    <div class="opt-tag">Dias 1 a 10</div>
+    <h2 class="opt-title">Montenegro</h2>
+    <p class="opt-sub">Costa veneziana, serra e lago em um país do tamanho de Sergipe. Tudo a menos de quatro horas de carro.</p>
+  </div>
+</div>
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Roteiro dia a dia</div>
+    <h2 class="h2">O que fazer em cada dia</h2>
+    <p class="lead">A subida à fortaleza de Kotor e o rafting no Tara pedem manhãs cedo. O roteiro deixa as tardes mais leves nesses dias.</p>
+    <div class="days">
+      <div class="day travel"><div class="day-h">Dia 01<span class="cty">Embarque</span></div><div class="day-t">Voo noturno de São Paulo para Istambul.</div></div>
+      <div class="day"><div class="day-h">Dia 02<span class="cty">Kotor</span></div><div class="day-t">Chegada a Istambul pela manhã e conexão para Tivat. Retirada do carro e 15 minutos até Kotor. Fim de tarde na <b>cidade velha</b>, dentro das muralhas venezianas, e jantar na Praça das Armas.</div></div>
+      <div class="day"><div class="day-h">Dia 03<span class="cty">Kotor</span></div><div class="day-t"><b>Fortaleza de São João</b> logo cedo: 1.350 degraus e cerca de 1h30 de subida, com a vista mais famosa da baía. À tarde, Catedral de São Trifão, de 1166, e Museu Marítimo. Jantar em Dobrota, à beira d'água.</div></div>
+      <div class="day"><div class="day-h">Dia 04<span class="cty">Baía de Kotor</span></div><div class="day-t">Volta completa pela baía. <b>Perast</b> e o barco até a ilha artificial de Nossa Senhora das Rochas, almoço de frutos do mar, <b>Herceg Novi</b> e o Forte Mare. Retorno pela balsa Kamenari–Lepetane. Opcional: passeio de lancha à Gruta Azul e à ilha-fortaleza de Mamula.</div></div>
+      <div class="day travel"><div class="day-h">Dia 05<span class="cty">Lovćen → Budva</span></div><div class="day-t">A <b>estrada em serpentina</b> de Kotor a Lovćen, 25 curvas com a baía inteira aos pés. Mausoléu de Njegoš no alto do parque, 461 degraus. Almoço em Njeguši, vila do presunto e do queijo montenegrinos. <b>Cetinje</b>, a antiga capital real, e chegada a Budva no fim da tarde.</div></div>
+      <div class="day"><div class="day-h">Dia 06<span class="cty">Budva</span></div><div class="day-t">Manhã na Cidadela e na <b>Praia Mogren</b>, a 10 minutos a pé da cidade velha. À tarde, mirante de <b>Sveti Stefan</b>, a ilha-hotel símbolo do país, e a praia pública ao lado. Fim de dia na Praia de Jaz. Jantar em Budva.</div></div>
+      <div class="day travel"><div class="day-h">Dia 07<span class="cty">Ostrog → Durmitor</span></div><div class="day-t">Saída cedo rumo ao interior. <b>Mosteiro de Ostrog</b>, encravado numa parede de rocha a 900 metros, o lugar mais sagrado do país. Estrada de montanha até <b>Žabljak</b>, cerca de 4h com paradas. Pôr do sol no Lago Negro.</div></div>
+      <div class="day"><div class="day-h">Dia 08<span class="cty">Durmitor</span></div><div class="day-t"><span class="hi">Cânion do Tara</span>, o mais profundo da Europa, com 1.300 metros. <b>Rafting</b> de 2 a 3 horas no trecho suave, de maio a setembro, ou a caminhada em torno do Lago Negro. À tarde, a ponte Đurđevića Tara, 172 metros acima do rio, e o mirante de Ćurevac.</div></div>
+      <div class="day travel"><div class="day-h">Dia 09<span class="cty">Biogradska Gora → Podgorica</span></div><div class="day-t">Descida pelos cânions do Tara e do Morača. <b>Mosteiro de Morača</b>, do século XIII, e o Parque de <b>Biogradska Gora</b>, uma das últimas florestas primárias da Europa, com passeio de barco no lago. Chegada a Podgorica no fim da tarde.</div></div>
+      <div class="day"><div class="day-h">Dia 10<span class="cty">Lago Skadar</span></div><div class="day-t"><b>Lago Skadar</b>, o maior dos Bálcãs: barco de 2 a 3 horas saindo de Virpazar entre lírios, pelicanos e mosteiros em ilhas. Mirante de Pavlova Strana, com a curva em ferradura do rio, e almoço em Rijeka Crnojevića. Degustação de Vranac, o tinto do país, em vinícola familiar.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ ALBÂNIA ══════ -->
+<div class="opt-hd al">
+  <div class="wrap">
+    <div class="opt-tag">Dias 11 a 18</div>
+    <h2 class="opt-title">Albânia</h2>
+    <p class="opt-sub">Castelos otomanos, uma capital em transformação e a Riviera mais barata do Mediterrâneo. Transfers privativos entre as cidades.</p>
+  </div>
+</div>
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Roteiro dia a dia</div>
+    <h2 class="h2">O que fazer em cada dia</h2>
+    <p class="lead">A Riviera fica no extremo sul; por isso a última noite volta a Tirana, deixando o dia do voo sem estrada longa.</p>
+    <div class="days">
+      <div class="day al travel"><div class="day-h">Dia 11<span class="cty">Ulcinj → Shkodër</span></div><div class="day-t">Devolução do carro em Podgorica e transfer privativo pela costa sul. Parada em <b>Ulcinj</b>, cidade velha e os 12 km da Velika Plaža, e fronteira em Sukobin–Muriqan. Chegada a <b>Shkodër</b> e pôr do sol no Castelo de Rozafa, sobre o lago e os três rios.</div></div>
+      <div class="day al travel"><div class="day-h">Dia 12<span class="cty">Krujë → Tirana</span></div><div class="day-t">Manhã leve em Shkodër: centro pedestre da Rruga Kolë Idromeno e a Ponte de Mes, otomana. Transfer até <b>Krujë</b>: castelo, Museu Skanderbeg e o bazar otomano, o melhor lugar do país para tapetes e artesanato. Tirana no fim da tarde e jantar no bairro <b>Blloku</b>.</div></div>
+      <div class="day al"><div class="day-h">Dia 13<span class="cty">Tirana</span></div><div class="day-t">Praça Skanderbeg e Mesquita Et'hem Bey. <b>Bunk'Art 2</b> e a Casa das Folhas, os dois museus sobre a ditadura, ambos no centro. Almoço no Pazari i Ri, o mercado novo. Fim de tarde no teleférico <b>Dajti Ekspres</b>, 15 minutos até 1.000 metros, com a cidade inteira abaixo.</div></div>
+      <div class="day al travel"><div class="day-h">Dia 14<span class="cty">Berat</span></div><div class="day-t">Transfer de 2h30 até <b>Berat</b>, a cidade das mil janelas, tombada pela UNESCO. O castelo no alto ainda é bairro habitado, com o Museu Onufri de ícones. Tarde a pé por Mangalem e Gorica, ligados pela ponte de pedra. Jantar tradicional com tavë kosi. Opcional: vinícola Çobo, a 10 minutos.</div></div>
+      <div class="day al travel"><div class="day-h">Dia 15<span class="cty">Riviera Albanesa</span></div><div class="day-t">Descida ao sul por Vlorë e pelo <b>Passo de Llogara</b>, a 1.027 metros, onde a estrada despenca sobre o mar Jônico. Parada em Dhërmi e trilha de 30 minutos até a <b>praia de Gjipe</b>, entre paredões de um cânion. Noite em <b>Himarë</b>.</div></div>
+      <div class="day al travel"><div class="day-h">Dia 16<span class="cty">Riviera → Tirana</span></div><div class="day-t">Manhã de praia em Livadhi ou Jale, as mais tranquilas de Himarë. Transfer de 4h de volta a Tirana pela planície, com parada opcional nas ruínas gregas de <b>Apollonia</b>. Última noite e jantar de despedida em Tirana.</div></div>
+      <div class="day al travel"><div class="day-h">Dia 17<span class="cty">Retorno</span></div><div class="day-t">Voo de Tirana a Istambul e conexão noturna para São Paulo.</div></div>
+      <div class="day al travel"><div class="day-h">Dia 18<span class="cty">Chegada</span></div><div class="day-t">Chegada em São Paulo pela manhã.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CUSTOS E DICAS ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Orçamento</div>
+    <h2 class="h2">Quanto custa cada país</h2>
+    <p class="lead">Faixas de referência em euros por pessoa, em hotel de categoria média e fora de julho e agosto. Os valores finais dependem das datas e são apresentados na cotação fechada.</p>
+    <table class="cmp">
+      <thead><tr><th>Item</th><th class="me">Montenegro</th><th class="al">Albânia</th></tr></thead>
+      <tbody>
+        <tr><td>Hotel 3–4★, quarto duplo, por noite</td><td>€70 a €130 na costa · €50 a €80 na serra</td><td>€40 a €70</td></tr>
+        <tr><td>Refeição completa em restaurante</td><td>€12 a €25</td><td>€6 a €12</td></tr>
+        <tr><td>Entradas e passeios</td><td>Fortaleza de Kotor €15 · barco Skadar €25 a €35 · rafting €50 a €70</td><td>Castelos e museus €2 a €5 · Bunk'Art €5</td></tr>
+        <tr><td>Deslocamento</td><td>Carro alugado 9 dias, €300 a €450, mais combustível</td><td>Transfers privativos, €60 a €120 por trecho</td></tr>
+        <tr><td>Moeda</td><td>Euro</td><td>Lek albanês; euro aceito em hotéis e na Riviera</td></tr>
+      </tbody>
+    </table>
+    <p class="cmp-note">*Nada reservado, apenas cotado. Valores de referência para planejamento; câmbio e tarifas confirmados na proposta final.</p>
+
+    <div class="eyebrow" style="margin-top:44px">Bom saber</div>
+    <h2 class="h2">Dicas para a viagem</h2>
+    <div class="cards">
+      <div class="card"><div class="card-k">Época</div><div class="card-v">Maio, junho ou setembro</div><div class="card-t">Mar a 22–25 °C, trilhas abertas no Durmitor e Kotor sem os cruzeiros de julho e agosto, quando os preços da costa chegam a dobrar.</div></div>
+      <div class="card"><div class="card-k">Carro</div><div class="card-v">CNH brasileira aceita</div><div class="card-t">Vale em Montenegro acompanhada do passaporte; a PID é recomendada. Estradas boas, mas estreitas na serra: prefira carro pequeno.</div></div>
+      <div class="card"><div class="card-k">Kotor</div><div class="card-v">Fortaleza cedo</div><div class="card-t">A subida deve começar até as 8h, antes do calor e da chegada dos navios. Água e tênis fechado.</div></div>
+      <div class="card"><div class="card-k">Albânia</div><div class="card-v">Dinheiro em espécie</div><div class="card-t">Cartão é aceito em hotéis e restaurantes maiores; mercados, bazares e praias da Riviera ainda preferem lek em espécie. Saques em caixas de bancos, não de terceiros.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-logo">LusaTravel</div>
+    <div class="ft-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <div class="ft-addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+  </div>
+</footer>
+</body>
+</html>
