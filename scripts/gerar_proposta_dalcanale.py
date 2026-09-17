@@ -751,3 +751,76 @@ with open(OUT, "w", encoding="utf-8") as f:
 print("ok", OUT, len(pages), "páginas")
 for o in OPCOES:
     print(o["letra"], o["titulo"], "total/pessoa USD", usd(o["total"]), "≈", brl(o["total"]))
+
+
+# ────────────────────────────────────────────────────────────────────
+# RESUMO DE UMA PÁGINA
+# ────────────────────────────────────────────────────────────────────
+RES_CSS = r"""
+.res{ display:grid; grid-template-columns:repeat(4,1fr); gap:6mm; margin-top:6mm; }
+.res-col{ border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; }
+.res-top{ padding:6mm 6mm 5mm; color:#fff; background:
+  radial-gradient(90% 70% at 85% 10%, rgba(218,141,0,.55) 0%, rgba(218,141,0,.1) 50%, transparent 70%),
+  linear-gradient(160deg,#73805c 0%,#4a6b45 50%,#2d5e3a 100%); }
+.res-top .lt{ font-size:8pt; letter-spacing:.3em; text-transform:uppercase; color:#ffc25c; font-weight:700; }
+.res-top .tt{ font-size:15pt; font-weight:800; line-height:1.1; margin-top:1.5mm; }
+.res-top .st{ font-size:8pt; letter-spacing:.06em; text-transform:uppercase; color:#ffc25c; margin-top:1.5mm; }
+.res-body{ padding:5mm 6mm; flex:1; }
+.res-city{ display:flex; align-items:flex-start; gap:3.5mm; padding:3.2mm 0; border-bottom:1px solid var(--line); }
+.res-city:last-child{ border-bottom:none; }
+.res-n{ width:9mm; height:9mm; border-radius:50%; background:var(--dest); color:#ffc25c; font-weight:800; font-size:9.5pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.res-name{ font-size:11pt; font-weight:700; color:var(--ink); line-height:1.2; }
+.res-name small{ font-weight:400; color:var(--mut); font-size:9pt; }
+.res-nts{ font-size:9pt; color:var(--gold); font-weight:700; letter-spacing:.04em; margin-top:.5mm; }
+.res-bv{ font-size:8.6pt; color:var(--char); line-height:1.5; margin-top:1mm; }
+.res-foot{ background:var(--paper); border-top:1px solid var(--line); padding:4mm 6mm; }
+.res-foot .r{ display:block; font-size:7.8pt; letter-spacing:.08em; text-transform:uppercase; color:var(--mut); }
+.res-foot .r b, .res-foot .r span:last-child{ display:block; color:var(--ink); font-size:11pt; letter-spacing:0; text-transform:none; margin-top:.5mm; }
+.res-foot .r + .r{ margin-top:2.5mm; }
+.res-note{ margin-top:6mm; font-size:9pt; color:var(--mut); line-height:1.6; }
+"""
+
+cols = ""
+for o in OPCOES:
+    cities = ""
+    for i, b in enumerate(o["bases"], 1):
+        bv = " · ".join(x.split(" (")[0] for x in b["bate_volta"])
+        cities += f"""
+        <div class="res-city"><div class="res-n">{i}</div><div>
+          <div class="res-name">{_e(b['cidade'])} <small>· {_e(b['pais'])}</small></div>
+          <div class="res-nts">{b['noites']} noites · {_e(b['datas'])}</div>
+          <div class="res-bv">Bate-voltas: {_e(bv)}</div>
+        </div></div>"""
+    voo = o["aereo_desc"].split(".")[0].replace("Ida ", "")
+    cols += f"""
+    <div class="res-col">
+      <div class="res-top"><div class="lt">Roteiro {o['letra']}</div><div class="tt">{_e(o['titulo'])}</div><div class="st">{_e(o['sub'])}</div></div>
+      <div class="res-body">{cities}</div>
+      <div class="res-foot">
+        <div class="r"><span>Bases · noites · hotéis</span><b>{len(o['bases'])} · {o['noites']} · {o['n_hoteis']}</b></div>
+        <div class="r"><span>Total por pessoa</span><b>USD {usd(o['total'])}</b></div>
+        <div class="r"><span>Referência em reais</span><span>{brl(o['total'])}</span></div>
+      </div>
+    </div>"""
+
+RESUMO = f"""<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Família Dalcanale | Resumo dos roteiros — LusaTravel</title>
+<style>{CSS}{RES_CSS}</style></head><body>
+<section class="page">
+  {hd('Resumo')}
+  <div class="body">
+    <div class="eyebrow">{CLIENTE.title()} · {PERIODO} · {PAX}</div>
+    <h2 class="h2">Resumo dos quatro roteiros</h2>
+    <p class="lead">Saída de São Paulo em 08/10, 18 noites na Europa e retorno em 27/10. Classe executiva, hotéis 4 estrelas
+    com café da manhã e uma base fixa em cada cidade, com as vizinhas visitadas em bate-volta.</p>
+    <div class="res">{cols}</div>
+    <div class="res-note">Valores por pessoa em dólar, incluindo aéreo executiva, hotelaria, transfers, passeios e seguro (estes três como estimativa).
+    {CAMBIO}. Nada reservado, apenas cotado.</div>
+  </div>
+  {FT}
+</section>
+</body></html>"""
+with open(os.path.join(ROOT, "resumo-dalcanale.html"), "w", encoding="utf-8") as f:
+    f.write(RESUMO)
+print("ok resumo-dalcanale.html")

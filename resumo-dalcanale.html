@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Família Dalcanale | Resumo dos roteiros — LusaTravel</title>
+<style>
+@font-face{font-family:'Arimo';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/arimo-700.woff2') format('woff2');}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/montserrat-400.woff2') format('woff2');}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/montserrat-500.woff2') format('woff2');}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/montserrat-600.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:300;font-display:swap;src:url('fonts/poppins-300.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/poppins-400.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/poppins-500.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/poppins-600.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/poppins-700.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/poppins-800.woff2') format('woff2');}
+:root{
+  --gold:#da8d00; --dest:#2d5e3a; --ink:#2d5e3a; --char:#3f4a3a; --mut:#8a9480; --line:#dfe4d6; --paper:#f5f3ea; --sf:#e9ecdf;
+  --dest-soft: color-mix(in srgb, #73805c 14%, #faf9f2); --dest-mid: color-mix(in srgb, #73805c 34%, #faf9f2);
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif; --con:'Montserrat',var(--sans); --lbl:'Arimo',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; page-break-after:always; display:flex; flex-direction:column; }
+.page:last-child{ page-break-after:auto; }
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.65); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.8); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.4); }
+.body{ padding:14mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:3mm 0 6mm; }
+.lead{ font-size:11.5pt; line-height:1.7; color:var(--char); max-width:230mm; }
+
+/* CAPA */
+.cover{ position:relative; }
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink); display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.65); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0; background:
+  radial-gradient(100% 65% at 85% 15%, rgba(218,141,0,.6) 0%, rgba(218,141,0,.12) 45%, transparent 70%),
+  radial-gradient(70% 50% at 10% 95%, rgba(255,255,255,.12) 0%, transparent 60%),
+  linear-gradient(160deg,#73805c 0%,#4a6b45 45%,#2d5e3a 100%); }
+.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,0) 45%, rgba(45,94,58,.55) 85%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:#ffc25c; font-weight:700; }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.8); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.75); }
+.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:#ffc25c; margin-top:2mm; letter-spacing:.04em; }
+.cover .stat b{ color:#ffc25c; }
+.cover .stat span{ color:rgba(255,255,255,.8); }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.85); line-height:1.7; }
+.cover-sig a{ color:inherit; text-decoration:none; }
+
+/* COMPARATIVO */
+.cmp{ display:grid; grid-template-columns:1fr 1fr; gap:8mm; margin-top:6mm; }
+.cmp-card{ border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.cmp-card .top{ background:var(--dest-soft); color:var(--dest); padding:5mm 7mm; display:flex; align-items:center; gap:5mm; border-bottom:1px solid var(--line); }
+.cmp-card .lt{ width:12mm; height:12mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.cmp-card .tt{ font-size:14pt; font-weight:700; line-height:1.15; }
+.cmp-card .st{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; margin-top:1mm; }
+.cmp-card .mid{ padding:5mm 7mm; font-size:10pt; line-height:1.6; }
+.cmp-card .bases{ margin-top:3mm; font-family:var(--lbl); font-size:8.5pt; color:var(--mut); letter-spacing:.04em; text-transform:uppercase; }
+.cmp-card .bot{ background:var(--paper); border-top:1px solid var(--line); padding:4mm 7mm; display:flex; justify-content:space-between; align-items:baseline; }
+.cmp-card .bot .k{ font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.cmp-card .bot .v{ font-size:15pt; font-weight:800; color:var(--ink); }
+.cmp-card .bot .v small{ font-size:9pt; font-weight:500; color:var(--mut); margin-left:2mm; }
+
+/* SEPARADOR DE OPÇÃO */
+.opt-hero{ flex:1; position:relative; display:flex; align-items:flex-end; padding:22mm; color:#fff; background:
+  radial-gradient(85% 55% at 85% 12%, rgba(218,141,0,.55) 0%, rgba(218,141,0,.12) 45%, transparent 70%),
+  radial-gradient(60% 50% at 8% 95%, rgba(255,255,255,.10) 0%, transparent 60%),
+  linear-gradient(160deg, #73805c 0%, #4a6b45 45%, #2d5e3a 100%); }
+.opt-hero .lt{ font-size:9pt; letter-spacing:.3em; text-transform:uppercase; color:#ffc25c; font-weight:700; }
+.opt-hero .tt{ font-size:40pt; font-weight:800; line-height:1.05; margin:3mm 0 2mm; color:#fff; }
+.opt-hero .st{ font-size:12pt; color:#ffc25c; letter-spacing:.06em; text-transform:uppercase; }
+.opt-hero .rs{ font-size:12pt; line-height:1.7; color:rgba(255,255,255,.92); max-width:200mm; margin-top:8mm; }
+.opt-hero .stat b{ color:#ffc25c; }
+.opt-hero .stat span{ color:rgba(255,255,255,.75); }
+.opt-hero .stats{ margin-top:10mm; }
+
+/* ITINERÁRIO */
+.tl{ display:flex; flex-direction:column; }
+.tl-item{ display:flex; align-items:flex-start; gap:6mm; }
+.tl-badge{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tl-line{ width:2px; height:7mm; background:var(--line); margin-left:5.4mm; }
+.tl-city{ font-size:14pt; font-weight:700; color:var(--ink); }
+.tl-meta{ font-size:10pt; color:var(--mut); margin-top:1mm; }
+.tl-hotel{ font-size:10pt; color:var(--char); margin-top:1mm; font-weight:300; }
+.tl-bv{ font-size:9.5pt; color:var(--char); margin-top:1.5mm; line-height:1.55; }
+.tl-bv b{ color:var(--gold); font-weight:700; letter-spacing:.08em; text-transform:uppercase; font-size:8pt; margin-right:2mm; }
+.box{ margin-top:8mm; border:1px solid var(--line); border-radius:6px; padding:5mm 7mm; background:var(--paper); }
+.box .k{ font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.box .v{ font-size:10.5pt; line-height:1.65; margin-top:1.5mm; }
+
+/* DESTINO + HOTEL */
+.dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
+.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#ffc25c; }
+.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid #ffc25c; color:#ffc25c; font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.dest-photo{ height:105mm; position:relative; flex-shrink:0; background:
+  repeating-linear-gradient(135deg, rgba(255,255,255,.06) 0 6mm, transparent 6mm 12mm),
+  radial-gradient(80% 90% at 85% 10%, rgba(218,141,0,.6) 0%, rgba(218,141,0,.15) 45%, transparent 65%),
+  linear-gradient(160deg, #73805c 0%, #4a6b45 50%, #2d5e3a 100%); }
+.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; }
+.dest-photo .cap small{ display:block; font-size:8.5pt; font-weight:500; letter-spacing:.2em; color:#ffc25c; margin-top:1mm; }
+.dest-text{ font-size:11.5pt; font-weight:400; line-height:1.7; color:var(--char); }
+.loc{ margin-top:5mm; display:flex; gap:4mm; align-items:flex-start; }
+.loc .k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:700; white-space:nowrap; padding-top:1mm; }
+.loc .v{ font-size:10.5pt; line-height:1.6; }
+.hotel-card{ margin-top:7mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.hotel-card .top{ background:var(--paper); padding:5mm 8mm; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; }
+.hotel-card .name{ font-size:15pt; font-weight:700; color:var(--ink); }
+.hotel-card .stars{ font-size:14pt; color:var(--gold); letter-spacing:2px; margin-top:1mm; }
+.hotel-card .score{ font-family:var(--lbl); font-size:8.5pt; letter-spacing:.1em; text-transform:uppercase; color:var(--mut); text-align:right; }
+.hotel-card .score b{ display:block; font-size:16pt; color:var(--ink); font-family:var(--sans); letter-spacing:0; }
+.hotel-card .rows{ padding:5mm 8mm; display:grid; grid-template-columns:1fr 1fr; gap:3.5mm 10mm; }
+.hotel-card .k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.hotel-card .v{ font-size:11pt; font-weight:300; color:var(--char); margin-top:1mm; }
+
+/* DIA A DIA */
+.days{ columns:2; column-gap:12mm; }
+.day{ margin-bottom:4.2mm; break-inside:avoid; }
+.day-h{ font-size:9.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); }
+.day-t{ font-size:9.6pt; line-height:1.55; color:var(--char); margin-top:1mm; }
+
+/* VALORES */
+.val-note{ font-size:9pt; color:var(--mut); margin-bottom:5mm; }
+.val-row{ display:flex; justify-content:space-between; gap:10mm; padding:4mm 0; border-bottom:1px solid var(--line); }
+.val-row .lbl{ font-size:11.5pt; color:var(--char); }
+.val-row .amt{ font-size:11.5pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink); border-radius:5px; padding:6mm 8mm; margin-top:6mm; }
+.val-total .lbl{ font-size:11pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.85); }
+.val-total .amt{ font-size:16pt; font-weight:800; color:var(--gold); }
+.val-brl{ display:flex; justify-content:space-between; padding:4mm 8mm; font-size:10.5pt; color:var(--mut); }
+.val-brl b{ color:var(--ink); }
+.val-fx{ font-size:9pt; color:var(--mut); margin-top:5mm; line-height:1.6; }
+.val-air{ margin-top:8mm; }
+
+/* CONDIÇÕES */
+.cond{ margin-bottom:7mm; }
+.cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
+.cond-t{ font-size:11pt; line-height:1.8; color:var(--char); }
+
+.res{ display:grid; grid-template-columns:repeat(4,1fr); gap:6mm; margin-top:6mm; }
+.res-col{ border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; }
+.res-top{ padding:6mm 6mm 5mm; color:#fff; background:
+  radial-gradient(90% 70% at 85% 10%, rgba(218,141,0,.55) 0%, rgba(218,141,0,.1) 50%, transparent 70%),
+  linear-gradient(160deg,#73805c 0%,#4a6b45 50%,#2d5e3a 100%); }
+.res-top .lt{ font-size:8pt; letter-spacing:.3em; text-transform:uppercase; color:#ffc25c; font-weight:700; }
+.res-top .tt{ font-size:15pt; font-weight:800; line-height:1.1; margin-top:1.5mm; }
+.res-top .st{ font-size:8pt; letter-spacing:.06em; text-transform:uppercase; color:#ffc25c; margin-top:1.5mm; }
+.res-body{ padding:5mm 6mm; flex:1; }
+.res-city{ display:flex; align-items:flex-start; gap:3.5mm; padding:3.2mm 0; border-bottom:1px solid var(--line); }
+.res-city:last-child{ border-bottom:none; }
+.res-n{ width:9mm; height:9mm; border-radius:50%; background:var(--dest); color:#ffc25c; font-weight:800; font-size:9.5pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.res-name{ font-size:11pt; font-weight:700; color:var(--ink); line-height:1.2; }
+.res-name small{ font-weight:400; color:var(--mut); font-size:9pt; }
+.res-nts{ font-size:9pt; color:var(--gold); font-weight:700; letter-spacing:.04em; margin-top:.5mm; }
+.res-bv{ font-size:8.6pt; color:var(--char); line-height:1.5; margin-top:1mm; }
+.res-foot{ background:var(--paper); border-top:1px solid var(--line); padding:4mm 6mm; }
+.res-foot .r{ display:block; font-size:7.8pt; letter-spacing:.08em; text-transform:uppercase; color:var(--mut); }
+.res-foot .r b, .res-foot .r span:last-child{ display:block; color:var(--ink); font-size:11pt; letter-spacing:0; text-transform:none; margin-top:.5mm; }
+.res-foot .r + .r{ margin-top:2.5mm; }
+.res-note{ margin-top:6mm; font-size:9pt; color:var(--mut); line-height:1.6; }
+</style></head><body>
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Resumo</div></div><div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Família Dalcanale · 08/10 a 28/10/2026 · 4 adultos · 2 quartos duplos</div>
+    <h2 class="h2">Resumo dos quatro roteiros</h2>
+    <p class="lead">Saída de São Paulo em 08/10, 18 noites na Europa e retorno em 27/10. Classe executiva, hotéis 4 estrelas
+    com café da manhã e uma base fixa em cada cidade, com as vizinhas visitadas em bate-volta.</p>
+    <div class="res">
+    <div class="res-col">
+      <div class="res-top"><div class="lt">Roteiro A</div><div class="tt">Balcãs e Danúbio</div><div class="st">Albânia · Macedônia do Norte · Sérvia · Hungria</div></div>
+      <div class="res-body">
+        <div class="res-city"><div class="res-n">1</div><div>
+          <div class="res-name">Tirana <small>· Albânia</small></div>
+          <div class="res-nts">2 noites · 09 a 11/10</div>
+          <div class="res-bv">Bate-voltas: Blloku e Pazari i Ri · Teleférico Dajti</div>
+        </div></div>
+        <div class="res-city"><div class="res-n">2</div><div>
+          <div class="res-name">Ohrid <small>· Macedônia do Norte</small></div>
+          <div class="res-nts">4 noites · 11 a 15/10</div>
+          <div class="res-bv">Bate-voltas: Sveti Naum e Struga · Bitola e Heraclea</div>
+        </div></div>
+        <div class="res-city"><div class="res-n">3</div><div>
+          <div class="res-name">Belgrado <small>· Sérvia</small></div>
+          <div class="res-nts">6 noites · 15 a 21/10</div>
+          <div class="res-bv">Bate-voltas: Novi Sad e Sremski Karlovci · Zemun e torre Gardoš</div>
+        </div></div>
+        <div class="res-city"><div class="res-n">4</div><div>
+          <div class="res-name">Budapeste <small>· Hungria</small></div>
+          <div class="res-nts">6 noites · 21 a 27/10</div>
+          <div class="res-bv">Bate-voltas: Szentendre · Curva do Danúbio: Esztergom e Visegrád</div>
+        </div></div></div>
+      <div class="res-foot">
+        <div class="r"><span>Bases · noites · hotéis</span><b>4 · 18 · 4</b></div>
+        <div class="r"><span>Total por pessoa</span><b>USD 10.246,40</b></div>
+        <div class="r"><span>Referência em reais</span><span>R$ 52.768,97</span></div>
+      </div>
+    </div>
+    <div class="res-col">
+      <div class="res-top"><div class="lt">Roteiro B</div><div class="tt">Croácia Completa</div><div class="st">Dubrovnik · Split · Zagreb</div></div>
+      <div class="res-body">
+        <div class="res-city"><div class="res-n">1</div><div>
+          <div class="res-name">Dubrovnik <small>· Croácia</small></div>
+          <div class="res-nts">6 noites · 09 a 15/10</div>
+          <div class="res-bv">Bate-voltas: Lokrum · Korčula e Pelješac · Ilhas Elafitas · Cavtat</div>
+        </div></div>
+        <div class="res-city"><div class="res-n">2</div><div>
+          <div class="res-name">Split <small>· Croácia</small></div>
+          <div class="res-nts">6 noites · 15 a 21/10</div>
+          <div class="res-bv">Bate-voltas: Hvar · Trogir e Krka · Brač e Zlatni Rat</div>
+        </div></div>
+        <div class="res-city"><div class="res-n">3</div><div>
+          <div class="res-name">Zagreb <small>· Croácia</small></div>
+          <div class="res-nts">6 noites · 21 a 27/10</div>
+          <div class="res-bv">Bate-voltas: Varaždin e Trakošćan · Samobor e Zagorje · Plitvice</div>
+        </div></div></div>
+      <div class="res-foot">
+        <div class="r"><span>Bases · noites · hotéis</span><b>3 · 18 · 3</b></div>
+        <div class="r"><span>Total por pessoa</span><b>USD 11.103,89</b></div>
+        <div class="r"><span>Referência em reais</span><span>R$ 57.185,01</span></div>
+      </div>
+    </div>
+    <div class="res-col">
+      <div class="res-top"><div class="lt">Roteiro C</div><div class="tt">Albânia e Lago Ohrid</div><div class="st">Albânia · Macedônia do Norte</div></div>
+      <div class="res-body">
+        <div class="res-city"><div class="res-n">1</div><div>
+          <div class="res-name">Tirana <small>· Albânia</small></div>
+          <div class="res-nts">5 noites · 09 a 14/10</div>
+          <div class="res-bv">Bate-voltas: Berat · Krujë e Durrës · Dajti</div>
+        </div></div>
+        <div class="res-city"><div class="res-n">2</div><div>
+          <div class="res-name">Sarandë <small>· Albânia</small></div>
+          <div class="res-nts">6 noites · 14 a 20/10</div>
+          <div class="res-bv">Bate-voltas: Ksamil e Butrint · Gjirokastër · Corfu · Olho Azul</div>
+        </div></div>
+        <div class="res-city"><div class="res-n">3</div><div>
+          <div class="res-name">Ohrid <small>· Macedônia do Norte</small></div>
+          <div class="res-nts">5 noites · 20 a 25/10</div>
+          <div class="res-bv">Bate-voltas: Sveti Naum e Struga · Bitola</div>
+        </div></div>
+        <div class="res-city"><div class="res-n">4</div><div>
+          <div class="res-name">Tirana <small>· Albânia</small></div>
+          <div class="res-nts">2 noites · 25 a 27/10</div>
+          <div class="res-bv">Bate-voltas: Grand Park e Blloku</div>
+        </div></div></div>
+      <div class="res-foot">
+        <div class="r"><span>Bases · noites · hotéis</span><b>4 · 18 · 3</b></div>
+        <div class="r"><span>Total por pessoa</span><b>USD 7.548,89</b></div>
+        <div class="r"><span>Referência em reais</span><span>R$ 38.876,80</span></div>
+      </div>
+    </div>
+    <div class="res-col">
+      <div class="res-top"><div class="lt">Roteiro D</div><div class="tt">Londres e Escócia</div><div class="st">Inglaterra · Escócia</div></div>
+      <div class="res-body">
+        <div class="res-city"><div class="res-n">1</div><div>
+          <div class="res-name">Londres <small>· Inglaterra</small></div>
+          <div class="res-nts">7 noites · 09 a 16/10</div>
+          <div class="res-bv">Bate-voltas: Windsor e Hampton Court · Bath e Stonehenge · Oxford</div>
+        </div></div>
+        <div class="res-city"><div class="res-n">2</div><div>
+          <div class="res-name">Glasgow <small>· Escócia</small></div>
+          <div class="res-nts">6 noites · 16 a 22/10</div>
+          <div class="res-bv">Bate-voltas: Loch Lomond e Stirling Castle · Highlands: Glencoe e Loch Ness · Falkirk Kelpies e New Lanark</div>
+        </div></div>
+        <div class="res-city"><div class="res-n">3</div><div>
+          <div class="res-name">Edimburgo <small>· Escócia</small></div>
+          <div class="res-nts">5 noites · 22 a 27/10</div>
+          <div class="res-bv">Bate-voltas: St Andrews e Fife · Rosslyn Chapel · Leith e Royal Yacht Britannia</div>
+        </div></div></div>
+      <div class="res-foot">
+        <div class="r"><span>Bases · noites · hotéis</span><b>3 · 18 · 3</b></div>
+        <div class="r"><span>Total por pessoa</span><b>USD 12.151,96</b></div>
+        <div class="r"><span>Referência em reais</span><span>R$ 62.582,58</span></div>
+      </div>
+    </div></div>
+    <div class="res-note">Valores por pessoa em dólar, incluindo aéreo executiva, hotelaria, transfers, passeios e seguro (estes três como estimativa).
+    Cotação 17/09 · USD = 5,15. Nada reservado, apenas cotado.</div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+</body></html>
