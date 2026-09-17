@@ -40,8 +40,8 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .cover-photo::after{ content:""; position:absolute; inset:0;
   background:linear-gradient(to bottom, rgba(28,61,38,0) 55%, rgba(28,61,38,.85) 100%); }
 .cover-cnt{ padding:0 22mm; color:#fff; margin-top:auto; margin-bottom:auto; }
-.cover-strip{ padding:0 22mm; display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:62mm; gap:3mm; margin-bottom:14mm; }
-.cover-strip figure{ position:relative; height:62mm; overflow:hidden; border-radius:3px; }
+.cover-strip{ padding:0 22mm; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:66mm; gap:4mm; margin-bottom:14mm; }
+.cover-strip figure{ position:relative; height:66mm; overflow:hidden; border-radius:3px; }
 .cover-strip img{ width:100%; height:100%; object-fit:cover; display:block; }
 .cover-strip figcaption{ position:absolute; left:0; right:0; bottom:0; padding:9mm 4mm 3mm; font-size:8pt; font-weight:500; color:#fff; line-height:1.3;
   background:linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8)); }
@@ -69,9 +69,9 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .dest-photo .cap{ position:absolute; bottom:5mm; left:22mm; font-size:13pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.7); }
 .dest-text{ font-size:12pt; font-weight:400; line-height:1.75; color:var(--char); }
 .dest-text + .dest-text{ margin-top:5mm; }
-.opts{ margin-top:12mm; display:grid; grid-template-columns:1fr 1fr 1fr; gap:6mm; }
+.opts{ margin-top:12mm; display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
 .opt{ border:1px solid var(--line); border-radius:6px; overflow:hidden; background:#fff; }
-.opt img{ display:block; width:100%; height:46mm; object-fit:cover; }
+.opt img{ display:block; width:100%; height:56mm; object-fit:cover; }
 .opt .in{ padding:5mm 6mm 6mm; }
 .opt .n{ font-size:8pt; font-weight:700; letter-spacing:.14em; color:var(--gold); text-transform:uppercase; }
 .opt .nm{ font-size:11.5pt; font-weight:700; color:var(--ink); line-height:1.25; margin-top:1.5mm; min-height:12mm; }
@@ -100,6 +100,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .hotel-card .rows{ padding:5mm 8mm; display:grid; grid-template-columns:1fr 1fr 1fr; gap:4mm 8mm; background:var(--cream); }
 .hotel-card .k{ font-family:var(--lab); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
 .hotel-card .v{ font-size:10.5pt; font-weight:300; color:var(--char); margin-top:1mm; line-height:1.4; }
+.hotel-card .v.warn{ color:var(--dest); font-weight:500; }
 .hotel-desc{ font-size:10.5pt; font-weight:300; line-height:1.7; color:var(--char); margin-top:6mm; }
 .hl{ margin-top:6mm; display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:4mm; }
 .hl div{ border-top:2px solid var(--gold); padding-top:2.5mm; }
@@ -148,27 +149,26 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   <div class="cover-photo"></div>
   <div class="cover-cnt">
     <div class="cover-kicker">Cotação para sua viagem</div>
-    <div class="cover-basis">Baseado em 2 adultos · 11 a 14 de maio de 2027 · café da manhã incluído</div>
+    <div class="cover-basis">Baseado em 2 adultos · 11 a 14 de maio de 2027 · 3 noites em Beyoğlu</div>
     <div class="cover-to">Sua viagem para:</div>
     <div class="cover-name">Rodrigo Barrozo</div>
     <div class="cover-dest">ISTAMBUL · TURQUIA</div>
     <div class="stats">
       <div class="stat"><b>1</b><span>Destino</span></div>
       <div class="stat"><b>3</b><span>Noites</span></div>
-      <div class="stat"><b>3</b><span>Hotéis</span></div>
+      <div class="stat"><b>2</b><span>Hotéis</span></div>
       <div class="stat"><b>2</b><span>Hóspedes</span></div>
     </div>
     <div class="cover-info">
       <div><div class="k">Check-in</div><div class="v">11/05/2027<small>terça-feira · a partir das 15h</small></div></div>
       <div><div class="k">Check-out</div><div class="v">14/05/2027<small>sexta-feira · até 12h</small></div></div>
       <div><div class="k">Acomodação</div><div class="v">1 quarto duplo<small>2 adultos</small></div></div>
-      <div><div class="k">Plano</div><div class="v">Café da manhã<small>incluído em todas as opções</small></div></div>
+      <div><div class="k">Plano</div><div class="v">Café da manhã<small>incluído no Soho House · não incluído no Georges</small></div></div>
     </div>
   </div>
   <div class="cover-strip">
-    <figure><img src="img/cotacao-istambul/sultanahmet-palace-1.jpg" alt=""><figcaption><b>Opção 1 · ★★★★</b>Sultanahmet Palace Hotel – Special Class</figcaption></figure>
-    <figure><img src="img/cotacao-istambul/ajwa-1.jpg" alt=""><figcaption><b>Opção 2 · ★★★★★</b>AJWA Sultanahmet</figcaption></figure>
-    <figure><img src="img/cotacao-istambul/hagia-sofia-mansions-1.jpg" alt=""><figcaption><b>Opção 3 · ★★★★★</b>Hagia Sofia Mansions, Curio Collection by Hilton</figcaption></figure>
+    <figure><img src="img/cotacao-istambul/soho-house-1.jpg" alt=""><figcaption><b>Opção 1 · ★★★★★</b>Soho House Istanbul</figcaption></figure>
+    <figure><img src="img/cotacao-istambul/georges-galata-1.jpg" alt=""><figcaption><b>Opção 2 · ★★★★</b>Georges Hotel Galata</figcaption></figure>
   </div>
   <div class="cover-sig">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br>
@@ -183,21 +183,20 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   <div class="goldbar"></div>
   <div class="dest-photo"><div class="cap">Istambul</div></div>
   <div class="body">
-    <div class="eyebrow">11 a 14 de maio de 2027 · 3 noites · Sultanahmet</div>
+    <div class="eyebrow">11 a 14 de maio de 2027 · 3 noites · Beyoğlu &amp; Galata</div>
     <h2 class="h2">Onde dois continentes se encontram</h2>
     <p class="dest-text">Istambul é a única cidade do mundo que amanhece na Europa e anoitece na Ásia. Entre as duas margens do Bósforo, minaretes e cúpulas desenham um horizonte que atravessa dois mil anos de história: a Basílica de Santa Sofia, a Mesquita Azul com seus azulejos de Iznik, o Palácio de Topkapi e as cisternas subterrâneas de Constantinopla convivem com cafés à beira-d'água, galerias contemporâneas e o burburinho do Grande Bazar, onde o aroma de especiarias, chá de maçã e couro se mistura ao som dos vendedores.</p>
-    <p class="dest-text">Em maio, a primavera cobre os jardins de tulipas e as temperaturas amenas convidam a caminhar por Sultanahmet, cruzar a Ponte de Gálata ao entardecer e navegar pelo estreito enquanto o sol se põe atrás das mansões otomanas. As três opções selecionadas ficam no coração histórico da cidade, a poucos minutos a pé dos principais monumentos, todas com café da manhã incluído.</p>
+    <p class="dest-text">As duas opções selecionadas ficam em Beyoğlu, o lado cosmopolita da cidade: ruas de pedra que descem de Istiklal até a Torre de Gálata, ateliês, bares no terraço e a melhor cena gastronômica de Istambul. Dali, o bonde T1 e a ponte de Gálata levam ao centro histórico de Sultanahmet em cerca de 15 minutos, o que permite viver a Istambul moderna à noite e a Istambul imperial de dia.</p>
 
     <div class="opts">
-      <div class="opt"><img src="img/cotacao-istambul/sultanahmet-palace-1.jpg" alt=""><div class="in"><div class="n">Opção 1</div><div class="nm">Sultanahmet Palace Hotel – Special Class</div><div class="st">★★★★</div><div class="pr">R$ 4.159,30<small>3 noites · quarto duplo</small></div></div></div>
-      <div class="opt"><img src="img/cotacao-istambul/ajwa-1.jpg" alt=""><div class="in"><div class="n">Opção 2</div><div class="nm">AJWA Sultanahmet</div><div class="st">★★★★★</div><div class="pr">a partir de R$ 6.691,49<small>3 noites · quarto duplo</small></div></div></div>
-      <div class="opt"><img src="img/cotacao-istambul/hagia-sofia-mansions-1.jpg" alt=""><div class="in"><div class="n">Opção 3</div><div class="nm">Hagia Sofia Mansions Istanbul, Curio Collection by Hilton</div><div class="st">★★★★★</div><div class="pr">R$ 8.153,70<small>3 noites · quarto duplo</small></div></div></div>
+      <div class="opt"><img src="img/cotacao-istambul/soho-house-1.jpg" alt=""><div class="in"><div class="n">Opção 1</div><div class="nm">Soho House Istanbul</div><div class="st">★★★★★</div><div class="pr">R$ 7.653,36<small>3 noites · quarto duplo · café da manhã incluído</small></div></div></div>
+      <div class="opt"><img src="img/cotacao-istambul/georges-galata-1.jpg" alt=""><div class="in"><div class="n">Opção 2</div><div class="nm">Georges Hotel Galata</div><div class="st">★★★★</div><div class="pr">R$ 9.554,77<small>3 noites · quarto duplo · sem café da manhã</small></div></div></div>
     </div>
 
     <div class="tips">
       <div class="tip"><b>Clima em maio</b><span>Primavera plena: entre 14 °C e 22 °C, dias longos e pouca chuva. Ideal para caminhar e para passeios de barco no Bósforo.</span></div>
-      <div class="tip"><b>Chegando ao hotel</b><span>O Aeroporto de Istambul (IST) fica a cerca de 45 km de Sultanahmet, 50 a 60 minutos de carro. Transfer privativo pode ser cotado à parte.</span></div>
-      <div class="tip"><b>Imperdível</b><span>Santa Sofia, Mesquita Azul, Palácio de Topkapi, Cisterna da Basílica e Grande Bazar ficam a menos de 1 km dos três hotéis.</span></div>
+      <div class="tip"><b>Chegando ao hotel</b><span>O Aeroporto de Istambul (IST) fica a cerca de 35 a 40 km de Beyoğlu, 45 a 60 minutos de carro. Transfer privativo pode ser cotado à parte.</span></div>
+      <div class="tip"><b>Imperdível</b><span>Torre de Gálata, Istiklal e Karaköy a pé; Santa Sofia, Mesquita Azul, Topkapi e Grande Bazar a 15 minutos de bonde.</span></div>
       <div class="tip"><b>Moeda e pagamentos</b><span>Lira turca (TRY). Cartões são amplamente aceitos; leve um pouco de dinheiro para bazares e cafés menores.</span></div>
     </div>
   </div>
@@ -206,187 +205,137 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   </div>
 </section>
 
-<!-- ══════════ 03 · OPÇÃO 1 — SULTANAHMET PALACE ══════════ -->
+<!-- ══════════ 03 · OPÇÃO 1 — SOHO HOUSE ISTANBUL ══════════ -->
 <section class="page">
-  <div class="dest-hd"><div class="city">Istambul · Opção 1 de 3</div><div class="no">1</div></div>
+  <div class="dest-hd"><div class="city">Istambul · Opção 1 de 2</div><div class="no">1</div></div>
   <div class="goldbar"></div>
   <div class="gal">
-    <img class="hero" src="img/cotacao-istambul/sultanahmet-palace-1.jpg" alt="Quarto Deluxe com vista para o mar">
-    <img src="img/cotacao-istambul/sultanahmet-palace-2.jpg" alt="Fachada e jardim">
-    <img src="img/cotacao-istambul/sultanahmet-palace-3.jpg" alt="Restaurante no terraço">
+    <img class="hero" src="img/cotacao-istambul/soho-house-1.jpg" alt="Cecconi's, restaurante do Soho House">
+    <img src="img/cotacao-istambul/soho-house-2.jpg" alt="Quarto">
+    <img src="img/cotacao-istambul/soho-house-3.jpg" alt="Fachada do palazzo">
   </div>
   <div class="gal2">
-    <img src="img/cotacao-istambul/sultanahmet-palace-4.jpg" alt="Banheiro em mármore com vista">
-    <img src="img/cotacao-istambul/sultanahmet-palace-5.jpg" alt="Lobby">
+    <img src="img/cotacao-istambul/soho-house-4.jpg" alt="Banheiro">
+    <img src="img/cotacao-istambul/soho-house-5.jpg" alt="Cowshed Spa">
   </div>
   <div class="body">
     <div class="hotel-top">
       <div>
-        <div class="hotel-name">Sultanahmet Palace Hotel – Special Class</div>
+        <div class="hotel-name">Soho House Istanbul</div>
+        <div class="hotel-stars">★★★★★</div>
+        <div class="hotel-addr">Evliya Çelebi Mah. Meşrutiyet Cad. No. 56 · Beyoğlu, Istambul</div>
+      </div>
+      <div class="score"><b>91<span style="font-size:11pt;color:var(--mut)">/100</span></b><span>Excelente · 928 avaliações</span></div>
+    </div>
+    <div class="hotel-card">
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Room (Medium) · 36 m² · cama super-king</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã incluído</div></div>
+        <div><div class="k">Hóspedes</div><div class="v">2 adultos · 1 quarto</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">11/05/2027 → 14/05/2027 · 3 noites</div></div>
+        <div><div class="k">Cancelamento</div><div class="v warn">Tarifa não reembolsável</div></div>
+        <div><div class="k">Localização</div><div class="v">Coração de Beyoğlu, a 600 m da Torre de Gálata</div></div>
+      </div>
+    </div>
+    <p class="hotel-desc">Um palazzo do século XIX no coração de Beyoğlu, restaurado pelo clube mais cobiçado do mundo. O Soho House Istanbul reúne 87 quartos com tetos altos, camas king, banheiros em mármore com chuveiro de chuva, mobiliário sob medida e amenidades orgânicas locais. Hóspedes têm acesso à House: o Cecconi's, com cozinha italiana sob tetos ornamentados, o Allis Bar com releituras da cozinha turca, o terraço no rooftop e o Cowshed Spa, com hammam, sauna, sala de vapor, piscina coberta e estúdio de yoga. É a escolha para quem quer viver a Istambul contemporânea: bares, galerias e a Istiklal a poucos passos, com serviço de membro.</p>
+    <div class="hl">
+      <div><b>87 quartos</b><span>Palazzo histórico com design contemporâneo</span></div>
+      <div><b>Cecconi's &amp; Allis Bar</b><span>Italiano clássico, cozinha turca e rooftop</span></div>
+      <div><b>Cowshed Spa</b><span>Hammam, sauna, piscina coberta e yoga</span></div>
+      <div><b>Acesso à House</b><span>Espaços de membros, valet e concierge</span></div>
+    </div>
+    <div class="near"><span>Torre de Gálata · 600 m</span><span>Istiklal · 1 km</span><span>Metrô Taksim · a pé</span><span>Sultanahmet · 15 min de bonde</span><span>Aeroporto IST · 20 km</span></div>
+    <div class="hotel-price"><span class="lbl">TOTAL · 3 NOITES · 2 ADULTOS<small>Room (Medium) · café da manhã incluído · tarifa não reembolsável</small></span><span class="amt">R$ 7.653,36</span></div>
+    <div class="pol"><b>Tarifa não reembolsável.</b> Não permite cancelamento ou alteração após a confirmação.</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 04 · OPÇÃO 2 — GEORGES HOTEL GALATA ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Istambul · Opção 2 de 2</div><div class="no">2</div></div>
+  <div class="goldbar"></div>
+  <div class="gal">
+    <img class="hero" src="img/cotacao-istambul/georges-galata-1.jpg" alt="Quarto Deluxe com varanda e vista para o Bósforo">
+    <img src="img/cotacao-istambul/georges-galata-2.jpg" alt="Quarto Deluxe">
+    <img src="img/cotacao-istambul/georges-galata-3.jpg" alt="Varanda com vista">
+  </div>
+  <div class="gal2">
+    <img src="img/cotacao-istambul/georges-galata-4.jpg" alt="Fachada">
+    <img src="img/cotacao-istambul/georges-galata-5.jpg" alt="Rua Serdar-ı Ekrem à noite">
+  </div>
+  <div class="body">
+    <div class="hotel-top">
+      <div>
+        <div class="hotel-name">Georges Hotel Galata</div>
         <div class="hotel-stars">★★★★</div>
-        <div class="hotel-addr">Sultanahmet Mah. Torun Sokak, No:19 · Fatih, Istambul</div>
+        <div class="hotel-addr">Serdar-ı Ekrem Sokak No:24 · Galata, Beyoğlu, Istambul</div>
       </div>
-      <div class="score"><b>91<span style="font-size:11pt;color:var(--mut)">/100</span></b><span>Excelente · 1.827 avaliações</span></div>
+      <div class="score"><b>94<span style="font-size:11pt;color:var(--mut)">/100</span></b><span>Excelente · 662 avaliações</span></div>
     </div>
     <div class="hotel-card">
       <div class="rows">
-        <div><div class="k">Quarto</div><div class="v">Deluxe Room with Sea View · 1 cama de casal</div></div>
-        <div><div class="k">Plano</div><div class="v">Café da manhã incluído (buffet)</div></div>
+        <div><div class="k">Quarto</div><div class="v">Deluxe Room com varanda · 32 m² · cama king</div></div>
+        <div><div class="k">Plano</div><div class="v warn">Somente hospedagem · café da manhã não incluído</div></div>
         <div><div class="k">Hóspedes</div><div class="v">2 adultos · 1 quarto</div></div>
         <div><div class="k">Check-in / out</div><div class="v">11/05/2027 → 14/05/2027 · 3 noites</div></div>
-        <div><div class="k">Cancelamento</div><div class="v">Grátis até 07/05/2027</div></div>
-        <div><div class="k">Localização</div><div class="v">Próximo ao Mar de Mármara, no centro histórico</div></div>
+        <div><div class="k">Cancelamento</div><div class="v warn">Tarifa não reembolsável</div></div>
+        <div><div class="k">Localização</div><div class="v">A 200 m da Torre de Gálata, na rua mais charmosa do bairro</div></div>
       </div>
     </div>
-    <p class="hotel-desc">Um hotel-boutique de estilo otomano encravado no coração da cidade velha, a poucos passos da Mesquita Azul. São apenas 45 quartos, com roupa de cama de alta qualidade, banheiros em mármore e varandas voltadas para o mar ou para o jardim. O restaurante no terraço serve café da manhã com vista panorâmica sobre os telhados de Sultanahmet, e o pequeno spa oferece hammam tradicional e massagens. É a opção com o melhor custo-benefício da seleção: charme de mansão histórica, atendimento próximo e a localização mais central de todas.</p>
+    <p class="hotel-desc">Um edifício histórico de 1890 na Serdar-ı Ekrem, a rua de ateliês e cafés que desce da Torre de Gálata. Com apenas 20 quartos, o Georges é um boutique de verdade: pé-direito alto, tijolo aparente, madeira clara e varandas de ferro que se abrem para o Chifre de Ouro, com a cidade velha ao fundo. O quarto Deluxe cotado tem varanda privativa e vista para o mar. O restaurante Le Fumoir serve cozinha francesa do brunch ao jantar, com coquetéis no terraço ao entardecer. A poucos minutos a pé estão Karaköy, o Bazar das Especiarias e a ponte de Gálata, e o bonde para Sultanahmet passa na base da colina.</p>
     <div class="hl">
-      <div><b>45 quartos</b><span>Escala íntima, atendimento personalizado</span></div>
-      <div><b>Terraço panorâmico</b><span>Restaurante com vista para o mar e Santa Sofia</span></div>
-      <div><b>Spa &amp; hammam</b><span>Tratamentos, hidroterapia e sala de yoga</span></div>
-      <div><b>Wi-Fi grátis</b><span>Concierge, lavanderia e guarda-volumes</span></div>
+      <div><b>20 quartos</b><span>Boutique íntimo em prédio de 1890</span></div>
+      <div><b>Varanda com vista</b><span>Chifre de Ouro e cidade velha do quarto</span></div>
+      <div><b>Le Fumoir</b><span>Cozinha francesa, brunch e coquetéis no terraço</span></div>
+      <div><b>Galata a pé</b><span>Torre a 200 m, Karaköy e Istiklal a 10 min</span></div>
     </div>
-    <div class="near"><span>Mesquita Azul · 200 m</span><span>Palácio de Topkapi · 300 m</span><span>Santa Sofia · a pé</span><span>Grande Bazar · 1 km</span><span>Aeroporto IST · 45 km</span></div>
-    <div class="hotel-price"><span class="lbl">TOTAL · 3 NOITES · 2 ADULTOS<small>Deluxe Room with Sea View · café da manhã incluído</small></span><span class="amt">R$ 4.159,30</span></div>
-    <div class="pol"><b>Cancelamento gratuito até 07/05/2027.</b> Após essa data, aplicam-se as penalidades do hotel.</div>
+    <div class="near"><span>Torre de Gálata · 200 m</span><span>Karaköy · a pé</span><span>Bazar das Especiarias · a pé</span><span>Sultanahmet · 15 min de bonde</span><span>Aeroporto IST · 37 km</span></div>
+    <div class="hotel-price"><span class="lbl">TOTAL · 3 NOITES · 2 ADULTOS<small>Deluxe Room com varanda · somente hospedagem · tarifa não reembolsável</small></span><span class="amt">R$ 9.554,77</span></div>
+    <div class="pol"><b>Tarifa não reembolsável e sem café da manhã.</b> O café pode ser contratado diretamente no hotel ou cotado à parte.</div>
   </div>
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
   </div>
 </section>
 
-<!-- ══════════ 04 · OPÇÃO 2 — AJWA SULTANAHMET ══════════ -->
-<section class="page">
-  <div class="dest-hd"><div class="city">Istambul · Opção 2 de 3</div><div class="no">2</div></div>
-  <div class="goldbar"></div>
-  <div class="gal">
-    <img class="hero" src="img/cotacao-istambul/ajwa-1.jpg" alt="Quarto Deluxe com cama de dossel">
-    <img src="img/cotacao-istambul/ajwa-2.jpg" alt="Quarto Deluxe">
-    <img src="img/cotacao-istambul/ajwa-3.jpg" alt="Banheiro com azulejos turquesa">
-  </div>
-  <div class="gal2">
-    <img src="img/cotacao-istambul/ajwa-4.jpg" alt="Quarto com vista para o jardim">
-    <img src="img/cotacao-istambul/ajwa-5.jpg" alt="Quarto com sala de estar">
-  </div>
-  <div class="body">
-    <div class="hotel-top">
-      <div>
-        <div class="hotel-name">AJWA Sultanahmet</div>
-        <div class="hotel-stars">★★★★★</div>
-        <div class="hotel-addr">Emin Sinan Mah. Piyerloti Cad. No:30 · Sultanahmet, Istambul</div>
-      </div>
-      <div class="score"><b>96<span style="font-size:11pt;color:var(--mut)">/100</span></b><span>Excelente · 1.965 avaliações</span></div>
-    </div>
-    <div class="hotel-card">
-      <div class="rows">
-        <div><div class="k">Quarto</div><div class="v">Deluxe French · 32 m² · 1 cama de casal<br>vista rua <em>ou</em> vista mar</div></div>
-        <div><div class="k">Plano</div><div class="v">Café da manhã incluído</div></div>
-        <div><div class="k">Hóspedes</div><div class="v">2 adultos · 1 quarto</div></div>
-        <div><div class="k">Check-in / out</div><div class="v">11/05/2027 → 14/05/2027 · 3 noites</div></div>
-        <div><div class="k">Cancelamento</div><div class="v">Vista rua: não reembolsável<br>Vista mar: grátis até 08/05/2027</div></div>
-        <div><div class="k">Localização</div><div class="v">Ótimo para passeios e próximo a áreas de compras</div></div>
-      </div>
-    </div>
-    <p class="hotel-desc">Premiado por unir o luxo otomano clássico a práticas sustentáveis, o AJWA é uma joia arquitetônica no centro histórico. Cada um dos 61 quartos tem teto pintado à mão, tapetes de seda, cama king com enxoval premium e banheiro em mármore com amenidades de grife. O restaurante Zeferan serve cozinha azerbaijana com vista para o Mar de Mármara, e a pâtisserie da casa produz chocolates e doces artesanais. O spa completo inclui hammam, sauna, piscina coberta e tratamentos inspirados em rituais antigos. Duas categorias de quarto foram cotadas: a Deluxe French com vista para a rua, em tarifa promocional não reembolsável, e a Deluxe French com vista para o mar, com cancelamento gratuito.</p>
-    <div class="hl">
-      <div><b>61 quartos</b><span>Tetos pintados à mão e tapetes de seda</span></div>
-      <div><b>Restaurante Zeferan</b><span>Cozinha azerbaijana com vista para o mar</span></div>
-      <div><b>Spa &amp; piscina coberta</b><span>Hammam, sauna, sala de vapor e fitness</span></div>
-      <div><b>Estacionamento grátis</b><span>Valet, transfer de aeroporto sob consulta</span></div>
-    </div>
-    <div class="near"><span>Grande Bazar · 800 m</span><span>Palácio de Topkapi · 1 km</span><span>Santa Sofia · a pé</span><span>Estação Sirkeci · 5 km</span><span>Aeroporto IST · 20 km</span></div>
-    <div class="hotel-price"><span class="lbl">OPÇÃO 2A · DELUXE FRENCH STREET VIEW<small>3 noites · 2 adultos · café da manhã · tarifa não reembolsável</small></span><span class="amt">R$ 6.691,49</span></div>
-    <div class="hotel-price alt"><span class="lbl">OPÇÃO 2B · DELUXE FRENCH SEA VIEW<small>3 noites · 2 adultos · café da manhã · cancelamento grátis até 08/05/2027</small></span><span class="amt">R$ 8.871,92</span></div>
-  </div>
-  <div class="ft">
-    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
-  </div>
-</section>
-
-<!-- ══════════ 05 · OPÇÃO 3 — HAGIA SOFIA MANSIONS ══════════ -->
-<section class="page">
-  <div class="dest-hd"><div class="city">Istambul · Opção 3 de 3</div><div class="no">3</div></div>
-  <div class="goldbar"></div>
-  <div class="gal">
-    <img class="hero" src="img/cotacao-istambul/hagia-sofia-mansions-1.jpg" alt="King Guest Room">
-    <img src="img/cotacao-istambul/hagia-sofia-mansions-2.jpg" alt="Piscina na cisterna histórica">
-    <img src="img/cotacao-istambul/hagia-sofia-mansions-3.jpg" alt="Jardim e terraço ao anoitecer">
-  </div>
-  <div class="gal2">
-    <img src="img/cotacao-istambul/hagia-sofia-mansions-4.jpg" alt="Café da manhã">
-    <img src="img/cotacao-istambul/hagia-sofia-mansions-5.jpg" alt="Sala de estar da suíte">
-  </div>
-  <div class="body">
-    <div class="hotel-top">
-      <div>
-        <div class="hotel-name">Hagia Sofia Mansions Istanbul, Curio Collection by Hilton</div>
-        <div class="hotel-stars">★★★★★</div>
-        <div class="hotel-addr">Sultanahmet, Kabasakal Cd. No:5 · 34122 Fatih, Istambul</div>
-      </div>
-      <div class="score"><b>97<span style="font-size:11pt;color:var(--mut)">/100</span></b><span>Excelente · 1.409 avaliações</span></div>
-    </div>
-    <div class="hotel-card">
-      <div class="rows">
-        <div><div class="k">Quarto</div><div class="v">King Guest Room · 29 m² · cama super-king</div></div>
-        <div><div class="k">Plano</div><div class="v">Café da manhã incluído</div></div>
-        <div><div class="k">Hóspedes</div><div class="v">2 adultos · 1 quarto</div></div>
-        <div><div class="k">Check-in / out</div><div class="v">11/05/2027 → 14/05/2027 · 3 noites</div></div>
-        <div><div class="k">Cancelamento</div><div class="v">Grátis até 08/05/2027</div></div>
-        <div><div class="k">Localização</div><div class="v">Ao lado de Santa Sofia, no coração de Sultanahmet</div></div>
-      </div>
-    </div>
-    <p class="hotel-desc">Um conjunto de mansões otomanas restauradas a 300 metros de Santa Sofia, transformado em hotel de coleção da Hilton. Os 65 quartos combinam azulejos azuis, madeira entalhada e mármore com o conforto contemporâneo de uma cama super-king e amenidades ecológicas. O ponto alto é o spa instalado em uma cisterna bizantina, com piscina coberta sob arcos de tijolo iluminados, sauna e sala de vapor. O restaurante no terraço serve cozinha local e internacional, o café da manhã pode ser servido no quarto, e o jardim arborizado é um refúgio silencioso no meio da cidade velha. A pontuação mais alta da seleção e a assinatura de uma grande rede internacional.</p>
-    <div class="hl">
-      <div><b>65 quartos</b><span>Mansões históricas restauradas</span></div>
-      <div><b>Spa na cisterna</b><span>Piscina coberta, sauna, hammam e jacuzzi</span></div>
-      <div><b>Terraço &amp; jardim</b><span>Restaurante com vista, galeria de arte local</span></div>
-      <div><b>Hilton Honors</b><span>Padrão de rede, check-in privativo, pet-friendly</span></div>
-    </div>
-    <div class="near"><span>Santa Sofia · 300 m</span><span>Mesquita Azul · 500 m</span><span>Palácio de Topkapi · 600 m</span><span>Cisterna da Basílica · a pé</span><span>Aeroporto IST · 45 km</span></div>
-    <div class="hotel-price"><span class="lbl">TOTAL · 3 NOITES · 2 ADULTOS<small>King Guest Room · café da manhã incluído</small></span><span class="amt">R$ 8.153,70</span></div>
-    <div class="pol"><b>Cancelamento gratuito até 08/05/2027.</b> Após essa data, aplicam-se as penalidades do hotel.</div>
-  </div>
-  <div class="ft">
-    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
-  </div>
-</section>
-
-<!-- ══════════ 06 · VALORES ══════════ -->
+<!-- ══════════ 05 · VALORES ══════════ -->
 <section class="page">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Valores</div></div>
   <div class="goldbar"></div>
   <div class="body">
     <div class="eyebrow">Investimento</div>
     <h2 class="h2">Resumo das opções</h2>
-    <div class="val-note">*Valores em reais (BRL) · hospedagem para 2 adultos em 1 quarto · 3 noites (11 a 14/05/2027) · café da manhã incluído</div>
+    <div class="val-note">*Valores em reais (BRL) · hospedagem para 2 adultos em 1 quarto · 3 noites (11 a 14/05/2027)</div>
     <table class="vt">
       <thead><tr><th style="width:14mm"></th><th>Hotel · quarto</th><th class="r">Por pessoa</th><th class="r">Total do quarto</th></tr></thead>
       <tbody>
-        <tr><td><div class="no">1</div></td><td><span class="h">Sultanahmet Palace Hotel – Special Class ★★★★</span><span class="s">Deluxe Room with Sea View · cancelamento grátis até 07/05/2027</span></td><td class="r pp">R$ 2.079,65</td><td class="r amt">R$ 4.159,30</td></tr>
-        <tr><td><div class="no">2A</div></td><td><span class="h">AJWA Sultanahmet ★★★★★</span><span class="s">Deluxe French Street View · 32 m² · tarifa não reembolsável</span></td><td class="r pp">R$ 3.345,75</td><td class="r amt">R$ 6.691,49</td></tr>
-        <tr><td><div class="no">2B</div></td><td><span class="h">AJWA Sultanahmet ★★★★★</span><span class="s">Deluxe French Sea View · 32 m² · cancelamento grátis até 08/05/2027</span></td><td class="r pp">R$ 4.435,96</td><td class="r amt">R$ 8.871,92</td></tr>
-        <tr><td><div class="no">3</div></td><td><span class="h">Hagia Sofia Mansions Istanbul, Curio Collection by Hilton ★★★★★</span><span class="s">King Guest Room · 29 m² · cancelamento grátis até 08/05/2027</span></td><td class="r pp">R$ 4.076,85</td><td class="r amt">R$ 8.153,70</td></tr>
+        <tr><td><div class="no">1</div></td><td><span class="h">Soho House Istanbul ★★★★★</span><span class="s">Room (Medium) · 36 m² · café da manhã incluído · tarifa não reembolsável</span></td><td class="r pp">R$ 3.826,68</td><td class="r amt">R$ 7.653,36</td></tr>
+        <tr><td><div class="no">2</div></td><td><span class="h">Georges Hotel Galata ★★★★</span><span class="s">Deluxe Room com varanda · 32 m² · somente hospedagem, sem café · tarifa não reembolsável</span></td><td class="r pp">R$ 4.777,39</td><td class="r amt">R$ 9.554,77</td></tr>
       </tbody>
     </table>
-    <div class="val-fx">Cotação 11/09/2026 · valores convertidos para BRL pelo fornecedor na data da cotação e sujeitos à variação cambial até a confirmação<br>*Nada reservado, apenas cotado</div>
+    <div class="val-fx">Cotação 17/09/2026 · valores convertidos para BRL pelo fornecedor na data da cotação e sujeitos à variação cambial até a confirmação<br>*Nada reservado, apenas cotado</div>
 
-    <div class="callout"><b>Como escolher:</b> a Opção 1 é a mais acessível e a mais próxima da Mesquita Azul, com charme de mansão histórica. A Opção 2 é a experiência otomana mais imersiva, com spa e piscina coberta; a tarifa 2A é promocional e não permite cancelamento. A Opção 3 tem a melhor avaliação dos hóspedes, spa em cisterna bizantina e o padrão Hilton, a 300 m de Santa Sofia.</div>
+    <div class="callout"><b>Como escolher:</b> o Soho House é a experiência mais completa, com café da manhã, spa com piscina coberta e a vida de clube de Beyoğlu, pelo menor valor. O Georges é mais íntimo e romântico, com varanda privativa e vista para o Chifre de Ouro a 200 m da Torre de Gálata, mas a tarifa cotada não inclui café da manhã. Ambas as tarifas são promocionais e não permitem cancelamento.</div>
   </div>
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
   </div>
 </section>
 
-<!-- ══════════ 07 · CONDIÇÕES ══════════ -->
+<!-- ══════════ 06 · CONDIÇÕES ══════════ -->
 <section class="page">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Condições</div></div>
   <div class="goldbar"></div>
   <div class="body">
     <div class="eyebrow">Importante</div>
     <h2 class="h2">Condições e Observações</h2>
-    <div class="cond"><div class="cond-h">Inclui</div><div class="cond-t">· 3 diárias em quarto duplo na opção escolhida, de 11 a 14 de maio de 2027<br>· Café da manhã diário para 2 adultos<br>· Impostos hoteleiros incluídos na tarifa</div></div>
-    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Passagens aéreas e transfers (podem ser cotados à parte)<br>· City tax e taxas locais, quando cobradas diretamente pelo hotel<br>· Refeições não mencionadas, despesas pessoais e gorjetas<br>· Seguro viagem (recomendado; cotamos sob solicitação)</div></div>
+    <div class="cond"><div class="cond-h">Inclui</div><div class="cond-t">· 3 diárias em quarto duplo na opção escolhida, de 11 a 14 de maio de 2027<br>· Café da manhã diário para 2 adultos apenas na Opção 1 (Soho House Istanbul)<br>· Impostos hoteleiros incluídos na tarifa</div></div>
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Café da manhã na Opção 2 (Georges Hotel Galata)<br>· Passagens aéreas e transfers (podem ser cotados à parte)<br>· City tax e taxas locais, quando cobradas diretamente pelo hotel<br>· Refeições não mencionadas, despesas pessoais e gorjetas<br>· Seguro viagem (recomendado; cotamos sob solicitação)</div></div>
     <div class="cond"><div class="cond-h">Pagamento</div><div class="cond-t">Hotelaria: até 10x sem acréscimos no cartão de crédito · PIX: desconto de 5–13%</div></div>
-    <div class="cond"><div class="cond-h">Cancelamento</div><div class="cond-t">Opção 1: gratuito até 07/05/2027 · Opção 2B e Opção 3: gratuito até 08/05/2027 · Opção 2A: tarifa não reembolsável após a confirmação. Após os prazos, aplicam-se as penalidades de cada hotel, podendo chegar a 100% do valor.</div></div>
+    <div class="cond"><div class="cond-h">Cancelamento</div><div class="cond-t">As duas tarifas cotadas são promocionais e <b>não reembolsáveis</b>: após a confirmação não há cancelamento, alteração ou reembolso, e o no-show é cobrado integralmente. Tarifas flexíveis, com cancelamento gratuito, podem ser cotadas sob solicitação.</div></div>
     <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Tarifas e disponibilidade não são garantidas até a criação da reserva e podem sofrer alteração a qualquer momento. Os hotéis solicitam documento de identidade com foto e cartão de crédito para garantia de extras no check-in. Check-in a partir das 15h.</div></div>
     <div class="sig">
       <b>LUSATRAVEL</b><br>
