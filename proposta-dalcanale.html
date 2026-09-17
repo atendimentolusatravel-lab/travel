@@ -15,7 +15,8 @@
 @font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/poppins-700.woff2') format('woff2');}
 @font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/poppins-800.woff2') format('woff2');}
 :root{
-  --gold:#da8d00; --dest:#1a3a5c; --ink:#1a1510; --char:#333131; --mut:#9a8d80; --line:#e4ddd2; --paper:#faf7f2;
+  --gold:#da8d00; --dest:#1a3a5c; --ink:#1a1510; --char:#333131; --mut:#9a8d80; --line:#e4ddd2; --paper:#f5f0ea; --sf:#ede7de;
+  --dest-soft: color-mix(in srgb, var(--dest) 9%, #faf7f2); --dest-mid: color-mix(in srgb, var(--dest) 24%, #faf7f2);
   --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif; --con:'Montserrat',var(--sans); --lbl:'Arimo',var(--sans);
 }
 @page{ size:A3 portrait; margin:0; }
@@ -42,29 +43,29 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
 .cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
 .cover-photo{ position:absolute; inset:0; background:
-  radial-gradient(120% 70% at 80% 20%, rgba(218,141,0,.35) 0%, transparent 60%),
-  radial-gradient(90% 60% at 15% 85%, rgba(26,79,85,.9) 0%, transparent 65%),
-  linear-gradient(160deg,#1a3a5c 0%,#2a2620 55%,#5a2d0a 100%); }
-.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, transparent 30%, rgba(0,0,0,.78) 78%); z-index:2; }
-.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
-.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
-.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
-.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+  radial-gradient(110% 70% at 85% 18%, rgba(218,141,0,.28) 0%, transparent 60%),
+  radial-gradient(80% 55% at 12% 88%, rgba(26,79,85,.16) 0%, transparent 65%),
+  linear-gradient(160deg,#faf7f2 0%,#f0ebe3 60%,#e3dbd0 100%); }
+.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(255,255,255,0) 40%, rgba(245,240,234,.9) 80%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:var(--ink); }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.cover-basis{ font-size:10pt; color:var(--mut); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:var(--mut); }
 .cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
 .cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
 .stats{ display:flex; gap:14mm; margin-top:11mm; }
 .stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
-.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
-.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+.stat span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:#5c5249; line-height:1.7; }
 .cover-sig a{ color:inherit; text-decoration:none; }
 
 /* COMPARATIVO */
 .cmp{ display:grid; grid-template-columns:1fr 1fr; gap:8mm; margin-top:6mm; }
 .cmp-card{ border:1px solid var(--line); border-radius:6px; overflow:hidden; }
-.cmp-card .top{ background:var(--dest); color:#fff; padding:5mm 7mm; display:flex; align-items:center; gap:5mm; }
-.cmp-card .lt{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9); color:var(--gold); font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.cmp-card .top{ background:var(--dest-soft); color:var(--dest); padding:5mm 7mm; display:flex; align-items:center; gap:5mm; border-bottom:1px solid var(--line); }
+.cmp-card .lt{ width:12mm; height:12mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 .cmp-card .tt{ font-size:14pt; font-weight:700; line-height:1.15; }
-.cmp-card .st{ font-size:8.5pt; color:rgba(255,255,255,.7); letter-spacing:.06em; text-transform:uppercase; margin-top:1mm; }
+.cmp-card .st{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; margin-top:1mm; }
 .cmp-card .mid{ padding:5mm 7mm; font-size:10pt; line-height:1.6; }
 .cmp-card .bases{ margin-top:3mm; font-family:var(--lbl); font-size:8.5pt; color:var(--mut); letter-spacing:.04em; text-transform:uppercase; }
 .cmp-card .bot{ background:var(--paper); border-top:1px solid var(--line); padding:4mm 7mm; display:flex; justify-content:space-between; align-items:baseline; }
@@ -73,12 +74,12 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .cmp-card .bot .v small{ font-size:9pt; font-weight:500; color:var(--mut); margin-left:2mm; }
 
 /* SEPARADOR DE OPÇÃO */
-.opt-hero{ background:var(--dest); flex:1; position:relative; display:flex; align-items:flex-end; padding:22mm; color:#fff;
-  background-image: radial-gradient(90% 60% at 85% 15%, rgba(218,141,0,.30) 0%, transparent 60%), radial-gradient(70% 60% at 10% 90%, rgba(0,0,0,.35) 0%, transparent 60%); }
+.opt-hero{ background:var(--dest-soft); flex:1; position:relative; display:flex; align-items:flex-end; padding:22mm; color:var(--ink);
+  background-image: radial-gradient(90% 60% at 85% 15%, rgba(218,141,0,.22) 0%, transparent 60%), radial-gradient(70% 60% at 10% 90%, var(--dest-mid) 0%, transparent 60%); }
 .opt-hero .lt{ font-size:9pt; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.opt-hero .tt{ font-size:40pt; font-weight:800; line-height:1.05; margin:3mm 0 2mm; }
-.opt-hero .st{ font-size:12pt; color:rgba(255,255,255,.75); letter-spacing:.06em; text-transform:uppercase; }
-.opt-hero .rs{ font-size:12pt; line-height:1.7; color:rgba(255,255,255,.9); max-width:200mm; margin-top:8mm; }
+.opt-hero .tt{ font-size:40pt; font-weight:800; line-height:1.05; margin:3mm 0 2mm; color:var(--dest); }
+.opt-hero .st{ font-size:12pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; }
+.opt-hero .rs{ font-size:12pt; line-height:1.7; color:var(--char); max-width:200mm; margin-top:8mm; }
 .opt-hero .stats{ margin-top:10mm; }
 
 /* ITINERÁRIO */
@@ -96,15 +97,15 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .box .v{ font-size:10.5pt; line-height:1.65; margin-top:1.5mm; }
 
 /* DESTINO + HOTEL */
-.dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
-.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); }
-.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9); color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.dest-hd{ background:var(--dest-soft); padding:5mm 22mm; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
+.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--dest); }
+.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
 .dest-photo{ height:105mm; position:relative; flex-shrink:0; background:
-  repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 6mm, transparent 6mm 12mm),
-  radial-gradient(80% 90% at 85% 10%, rgba(218,141,0,.35) 0%, transparent 60%),
-  linear-gradient(160deg, var(--dest) 0%, #2a2620 100%); }
-.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.6); }
-.dest-photo .cap small{ display:block; font-size:8.5pt; font-weight:500; letter-spacing:.2em; color:rgba(255,255,255,.7); margin-top:1mm; }
+  repeating-linear-gradient(135deg, rgba(255,255,255,.18) 0 6mm, transparent 6mm 12mm),
+  radial-gradient(80% 90% at 85% 10%, rgba(218,141,0,.22) 0%, transparent 60%),
+  linear-gradient(160deg, var(--dest-mid) 0%, var(--dest-soft) 100%); }
+.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--dest); }
+.dest-photo .cap small{ display:block; font-size:8.5pt; font-weight:500; letter-spacing:.2em; color:var(--mut); margin-top:1mm; }
 .dest-text{ font-size:11.5pt; font-weight:400; line-height:1.7; color:var(--char); }
 .loc{ margin-top:5mm; display:flex; gap:4mm; align-items:flex-start; }
 .loc .k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:700; white-space:nowrap; padding-top:1mm; }
@@ -186,9 +187,9 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       <div class="bot"><span class="k">Total por pessoa</span><span class="v">USD 10.246,40<small>≈ R$ 52.768,97</small></span></div>
     </div>
     <div class="cmp-card" style="--dest:#1a4f55">
-      <div class="top"><div class="lt">B</div><div><div class="tt">Adriático</div><div class="st">Montenegro · Croácia</div></div></div>
-      <div class="mid">O roteiro mais bonito: três bases à beira-mar, de sul a norte, com Kotor, Dubrovnik e Split e mar ainda a 20 °C em outubro.<div class="bases">Kotor 6n → Dubrovnik 6n → Split 6n</div></div>
-      <div class="bot"><span class="k">Total por pessoa</span><span class="v">USD 11.037,79<small>≈ R$ 56.844,62</small></span></div>
+      <div class="top"><div class="lt">B</div><div><div class="tt">Croácia Completa</div><div class="st">Dubrovnik · Split · Zagreb</div></div></div>
+      <div class="mid">Somente Croácia, do sul ao norte: três bases de seis noites, mar ainda a 20 °C em outubro, ilhas de catamarã, os lagos de Plitvice no caminho e a capital para fechar.<div class="bases">Dubrovnik 6n → Split 6n → Zagreb 6n</div></div>
+      <div class="bot"><span class="k">Total por pessoa</span><span class="v">USD 11.103,89<small>≈ R$ 57.185,01</small></span></div>
     </div>
     <div class="cmp-card" style="--dest:#730505">
       <div class="top"><div class="lt">C</div><div><div class="tt">Albânia e Lago Ohrid</div><div class="st">Albânia · Macedônia do Norte</div></div></div>
@@ -203,7 +204,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <div class="box"><div class="k">Leitura rápida</div><div class="v">
       <b>C</b> é o roteiro de melhor custo-benefício e o único com bilhete simples de ida e volta.
       <b>A</b> entrega as capitais mais modernas dos Balcãs com Budapeste no fim.
-      <b>B</b> é o mais cênico, todo à beira-mar.
+      <b>B</b> é o mais cênico, só Croácia, com duas bases à beira-mar e Plitvice no caminho.
       <b>D</b> tem o aéreo mais curto, mas o custo diário mais alto da seleção.
       Valores por pessoa, em dólar, com referência em reais pela cotação de 17/09. Nada reservado, apenas cotado.
     </div></div>
@@ -397,14 +398,14 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   <div class="opt-hero">
     <div>
       <div class="lt">Roteiro B</div>
-      <div class="tt">Adriático</div>
-      <div class="st">Montenegro · Croácia</div>
-      <div class="rs">O roteiro mais bonito: três bases à beira-mar, de sul a norte, com Kotor, Dubrovnik e Split e mar ainda a 20 °C em outubro.</div>
+      <div class="tt">Croácia Completa</div>
+      <div class="st">Dubrovnik · Split · Zagreb</div>
+      <div class="rs">Somente Croácia, do sul ao norte: três bases de seis noites, mar ainda a 20 °C em outubro, ilhas de catamarã, os lagos de Plitvice no caminho e a capital para fechar.</div>
       <div class="stats">
         <div class="stat"><b>3</b><span>Bases</span></div>
         <div class="stat"><b>18</b><span>Noites</span></div>
         <div class="stat"><b>3</b><span>Hotéis</span></div>
-        <div class="stat"><b>USD 11.037,79</b><span>Por pessoa</span></div>
+        <div class="stat"><b>USD 11.103,89</b><span>Por pessoa</span></div>
       </div>
     </div>
   </div>
@@ -413,101 +414,101 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 <section class="page" style="--dest:#1a4f55">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Roteiro B · Itinerário</div></div><div class="goldbar"></div>
   <div class="body">
-    <div class="eyebrow">Roteiro B · Adriático</div>
+    <div class="eyebrow">Roteiro B · Croácia Completa</div>
     <h2 class="h2">Bases e bate-voltas</h2>
     <div class="tl">
       <div class="tl-item"><div class="tl-badge">1</div><div>
-        <div class="tl-city">Kotor <span style="font-weight:400;color:var(--mut)">· Montenegro</span></div>
+        <div class="tl-city">Dubrovnik <span style="font-weight:400;color:var(--mut)">· Croácia</span></div>
         <div class="tl-meta">09 a 15/10 · 6 noites</div>
-        <div class="tl-hotel">Hotel Alkima ★★★★ · Dobrota bb · orla da Baía de Kotor</div>
-        <div class="tl-bv"><b>Bate-voltas</b>Perast e Nossa Senhora das Rochas (barco) · Budva e Sveti Stefan (40 min) · Lovćen e Cetinje (1h)</div>
+        <div class="tl-hotel">Royal Neptun Hotel ★★★★ · Kardinala Stepinca 31 · Babin Kuk, à beira-mar</div>
+        <div class="tl-bv"><b>Bate-voltas</b>Lokrum (barco 15 min) · Korčula e Pelješac (privativo) · Ilhas Elafitas (barco) · Cavtat (barco 45 min)</div>
       </div></div><div class="tl-line"></div>
       <div class="tl-item"><div class="tl-badge">2</div><div>
-        <div class="tl-city">Dubrovnik <span style="font-weight:400;color:var(--mut)">· Croácia</span></div>
+        <div class="tl-city">Split <span style="font-weight:400;color:var(--mut)">· Croácia</span></div>
         <div class="tl-meta">15 a 21/10 · 6 noites</div>
-        <div class="tl-hotel">Berkeley Hotel ★★★★ · Andrije Hebranga 116A · porto de Gruž</div>
-        <div class="tl-bv"><b>Bate-voltas</b>Lokrum (barco 15 min) · Mostar e Kravice (privativo) · Ilhas Elafitas (balsa de Gruž)</div>
+        <div class="tl-hotel">Heritage Hotel Cardo ★★★★ · Dioklecijanova 2 · dentro do Palácio de Diocleciano</div>
+        <div class="tl-bv"><b>Bate-voltas</b>Hvar (catamarã 1h) · Trogir e Krka (1h) · Brač e Zlatni Rat (balsa 50 min)</div>
       </div></div><div class="tl-line"></div>
       <div class="tl-item"><div class="tl-badge">3</div><div>
-        <div class="tl-city">Split <span style="font-weight:400;color:var(--mut)">· Croácia</span></div>
+        <div class="tl-city">Zagreb <span style="font-weight:400;color:var(--mut)">· Croácia</span></div>
         <div class="tl-meta">21 a 27/10 · 6 noites</div>
-        <div class="tl-hotel">Heritage Hotel Santa Lucia ★★★★ · Narodni trg 1 · dentro do Palácio de Diocleciano</div>
-        <div class="tl-bv"><b>Bate-voltas</b>Hvar (catamarã 1h) · Trogir e Krka (1h) · Brač e Zlatni Rat (balsa 50 min)</div>
+        <div class="tl-hotel">Hotel PARK 45 ★★★★ · Ilica 45 · Donji Grad, a 500 m da Praça Ban Jelačić</div>
+        <div class="tl-bv"><b>Bate-voltas</b>Varaždin e Trakošćan (1h30) · Samobor e Zagorje (40 min) · Plitvice (na chegada de Split)</div>
       </div></div></div>
-    <div class="box"><div class="k">Aéreo internacional · classe executiva</div><div class="v">Ida Air France GRU 14:40 → Paris → Croatia Airlines → Dubrovnik 14:20 (executiva, 1 escala). Volta Lufthansa Split 14:40 → Frankfurt → Munique → GRU 20:25 (executiva).</div></div>
+    <div class="box"><div class="k">Aéreo internacional · classe executiva</div><div class="v">Ida Air France GRU 14:40 → Paris → Croatia Airlines → Dubrovnik 14:20 (executiva, 1 escala). Volta Croatia Airlines Zagreb 06:50 → Frankfurt → Air Canada → Montreal → GRU 09:00 (executiva).</div></div>
   </div>
   <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
 </section>
 <section class="page" style="--dest:#1a4f55">
-  <div class="dest-hd"><div class="city">Kotor · Montenegro</div><div class="no">1</div></div>
+  <div class="dest-hd"><div class="city">Dubrovnik · Croácia</div><div class="no">1</div></div>
   <div class="goldbar"></div>
-  <div class="dest-photo"><div class="cap">Kotor<small>Roteiro B · 09 a 15/10 · 6 noites</small></div></div>
+  <div class="dest-photo"><div class="cap">Dubrovnik<small>Roteiro B · 09 a 15/10 · 6 noites</small></div></div>
   <div class="body">
-    <p class="dest-text">A Baía de Kotor parece um fiorde mediterrâneo: paredões de pedra, vilas venezianas e uma cidade murada tombada pela UNESCO. A base em Dobrota, na orla, garante silêncio e vista para a água, com a Cidade Velha a poucos minutos. Daqui saem os bate-voltas clássicos: Perast e a ilha de Nossa Senhora das Rochas, Budva e Sveti Stefan, e a estrada em serpentina até o parque de Lovćen, com a vista mais famosa do país.</p>
-    <div class="loc"><div class="k">Localização</div><div class="v">Na orla de Dobrota, a 2 km da Cidade Velha (10 min de táxi ou 25 min pelo calçadão).</div></div>
-    <div class="loc"><div class="k">Bate-voltas</div><div class="v">Perast e Nossa Senhora das Rochas (barco) · Budva e Sveti Stefan (40 min) · Lovćen e Cetinje (1h)</div></div>
+    <p class="dest-text">Dubrovnik dispensa apresentação: as muralhas sobre o mar, o Stradun de mármore polido e o teleférico ao monte Srđ. Fora da alta temporada a cidade volta a ser caminhável. A base em Babin Kuk, à beira-mar e com piscina coberta, é onde os hotéis 4 estrelas de Dubrovnik ficam, a 15 minutos de ônibus da Porta Pile. Os seis dias combinam a Cidade Velha, a ilha de Lokrum, a península de Pelješac com Korčula, o arquipélago das Elafitas e a vila de Cavtat.</p>
+    <div class="loc"><div class="k">Localização</div><div class="v">À beira-mar em Babin Kuk, com praia privativa e spa; ônibus direto à Porta Pile em 15 min.</div></div>
+    <div class="loc"><div class="k">Bate-voltas</div><div class="v">Lokrum (barco 15 min) · Korčula e Pelješac (privativo) · Ilhas Elafitas (barco) · Cavtat (barco 45 min)</div></div>
     <div class="hotel-card">
       <div class="top">
-        <div><div class="name">Hotel Alkima</div><div class="stars">★★★★</div></div>
-        <div class="score">Avaliação<b>9,4</b></div>
+        <div><div class="name">Royal Neptun Hotel</div><div class="stars">★★★★</div></div>
+        <div class="score">Avaliação<b>9,2</b></div>
       </div>
       <div class="rows">
         <div><div class="k">Quarto</div><div class="v">2 × Duplo Standard (casal ou twin)</div></div>
         <div><div class="k">Plano</div><div class="v">Café da manhã incluso</div></div>
-        <div><div class="k">Endereço</div><div class="v">Dobrota bb · orla da Baía de Kotor</div></div>
+        <div><div class="k">Endereço</div><div class="v">Kardinala Stepinca 31 · Babin Kuk, à beira-mar</div></div>
         <div><div class="k">Check-in / out</div><div class="v">09/10 → 15/10</div></div>
-        <div><div class="k">Valor da estadia (2 quartos)</div><div class="v">USD 1.342,88</div></div>
-        <div><div class="k">Por pessoa</div><div class="v">USD 335,72</div></div>
+        <div><div class="k">Valor da estadia (2 quartos)</div><div class="v">USD 3.570,43</div></div>
+        <div><div class="k">Por pessoa</div><div class="v">USD 892,61</div></div>
       </div>
     </div>
   </div>
   <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
 </section>
 <section class="page" style="--dest:#1a4f55">
-  <div class="dest-hd"><div class="city">Dubrovnik · Croácia</div><div class="no">2</div></div>
+  <div class="dest-hd"><div class="city">Split · Croácia</div><div class="no">2</div></div>
   <div class="goldbar"></div>
-  <div class="dest-photo"><div class="cap">Dubrovnik<small>Roteiro B · 15 a 21/10 · 6 noites</small></div></div>
+  <div class="dest-photo"><div class="cap">Split<small>Roteiro B · 15 a 21/10 · 6 noites</small></div></div>
   <div class="body">
-    <p class="dest-text">Dubrovnik dispensa apresentação: as muralhas sobre o mar, o Stradun de mármore polido e o teleférico ao monte Srđ. Fora da alta temporada, a cidade volta a ser caminhável. A base em Gruž é estratégica: é do porto que partem as balsas às Ilhas Elafitas e os ônibus à Porta Pile. Os seis dias combinam a Cidade Velha, a ilha de Lokrum, um dia em Mostar, na Bósnia, e o arquipélago das Elafitas.</p>
-    <div class="loc"><div class="k">Localização</div><div class="v">Junto ao porto de Gruž, saída das balsas para as ilhas; 10 min de ônibus à Porta Pile.</div></div>
-    <div class="loc"><div class="k">Bate-voltas</div><div class="v">Lokrum (barco 15 min) · Mostar e Kravice (privativo) · Ilhas Elafitas (balsa de Gruž)</div></div>
-    <div class="hotel-card">
-      <div class="top">
-        <div><div class="name">Berkeley Hotel</div><div class="stars">★★★★</div></div>
-        <div class="score">Avaliação<b>9,1</b></div>
-      </div>
-      <div class="rows">
-        <div><div class="k">Quarto</div><div class="v">2 × Duplo Standard (casal ou twin)</div></div>
-        <div><div class="k">Plano</div><div class="v">Café da manhã incluso</div></div>
-        <div><div class="k">Endereço</div><div class="v">Andrije Hebranga 116A · porto de Gruž</div></div>
-        <div><div class="k">Check-in / out</div><div class="v">15/10 → 21/10</div></div>
-        <div><div class="k">Valor da estadia (2 quartos)</div><div class="v">USD 2.696,43</div></div>
-        <div><div class="k">Por pessoa</div><div class="v">USD 674,11</div></div>
-      </div>
-    </div>
-  </div>
-  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
-</section>
-<section class="page" style="--dest:#1a4f55">
-  <div class="dest-hd"><div class="city">Split · Croácia</div><div class="no">3</div></div>
-  <div class="goldbar"></div>
-  <div class="dest-photo"><div class="cap">Split<small>Roteiro B · 21 a 27/10 · 6 noites</small></div></div>
-  <div class="body">
-    <p class="dest-text">Split é uma cidade viva dentro de um palácio romano de 1.700 anos. O hotel fica na Praça do Povo, no coração do Palácio de Diocleciano, com a Riva, o mercado e o porto a dois minutos. É a base perfeita para as ilhas: catamarã a Hvar, balsa a Brač e a praia de Zlatni Rat, e a Trogir, cidade-ilha tombada pela UNESCO. Nos intervalos, a colina Marjan e a praia de Bačvice.</p>
-    <div class="loc"><div class="k">Localização</div><div class="v">Na Praça do Povo, dentro das muralhas do Palácio de Diocleciano; Riva a 2 minutos.</div></div>
+    <p class="dest-text">Split é uma cidade viva dentro de um palácio romano de 1.700 anos. O hotel fica na Dioklecijanova, o antigo cardo do Palácio de Diocleciano, com o Peristilo, a Riva, o mercado e o porto a poucos passos. É a base perfeita para as ilhas: catamarã a Hvar, balsa a Brač e a praia de Zlatni Rat, e a Trogir, cidade-ilha tombada pela UNESCO, com as cachoeiras de Krka. Nos intervalos, a colina Marjan e a praia de Bačvice.</p>
+    <div class="loc"><div class="k">Localização</div><div class="v">Na rua principal do Palácio de Diocleciano, a 1 minuto do Peristilo e a 3 da Riva.</div></div>
     <div class="loc"><div class="k">Bate-voltas</div><div class="v">Hvar (catamarã 1h) · Trogir e Krka (1h) · Brač e Zlatni Rat (balsa 50 min)</div></div>
     <div class="hotel-card">
       <div class="top">
-        <div><div class="name">Heritage Hotel Santa Lucia</div><div class="stars">★★★★</div></div>
-        <div class="score">Avaliação<b>9,3</b></div>
+        <div><div class="name">Heritage Hotel Cardo</div><div class="stars">★★★★</div></div>
+        <div class="score">Avaliação<b>9,6</b></div>
       </div>
       <div class="rows">
         <div><div class="k">Quarto</div><div class="v">2 × Duplo Standard (casal ou twin)</div></div>
         <div><div class="k">Plano</div><div class="v">Café da manhã incluso</div></div>
-        <div><div class="k">Endereço</div><div class="v">Narodni trg 1 · dentro do Palácio de Diocleciano</div></div>
+        <div><div class="k">Endereço</div><div class="v">Dioklecijanova 2 · dentro do Palácio de Diocleciano</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">15/10 → 21/10</div></div>
+        <div><div class="k">Valor da estadia (2 quartos)</div><div class="v">USD 4.153,68</div></div>
+        <div><div class="k">Por pessoa</div><div class="v">USD 1.038,42</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+<section class="page" style="--dest:#1a4f55">
+  <div class="dest-hd"><div class="city">Zagreb · Croácia</div><div class="no">3</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo"><div class="cap">Zagreb<small>Roteiro B · 21 a 27/10 · 6 noites</small></div></div>
+  <div class="body">
+    <p class="dest-text">Zagreb é a Croácia continental: uma capital austro-húngara de cafés, mercados e museus, com a Cidade Alta medieval ligada à Cidade Baixa pelo funicular mais curto do mundo. A base na Ilica coloca a Praça Ban Jelačić, o mercado Dolac e a Tkalčićeva a pé. É também a porta do interior: Varaždin barroca, o castelo de Trakošćan, Samobor e as colinas do Zagorje, além dos lagos de Plitvice visitados no caminho.</p>
+    <div class="loc"><div class="k">Localização</div><div class="v">Na Ilica, a rua principal, a 5 min a pé da Praça Ban Jelačić, do mercado Dolac e do funicular.</div></div>
+    <div class="loc"><div class="k">Bate-voltas</div><div class="v">Varaždin e Trakošćan (1h30) · Samobor e Zagorje (40 min) · Plitvice (na chegada de Split)</div></div>
+    <div class="hotel-card">
+      <div class="top">
+        <div><div class="name">Hotel PARK 45</div><div class="stars">★★★★</div></div>
+        <div class="score">Avaliação<b>9,0</b></div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">2 × Duplo Standard (casal ou twin)</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã incluso</div></div>
+        <div><div class="k">Endereço</div><div class="v">Ilica 45 · Donji Grad, a 500 m da Praça Ban Jelačić</div></div>
         <div><div class="k">Check-in / out</div><div class="v">21/10 → 27/10</div></div>
-        <div><div class="k">Valor da estadia (2 quartos)</div><div class="v">USD 3.358,25</div></div>
-        <div><div class="k">Por pessoa</div><div class="v">USD 839,56</div></div>
+        <div><div class="k">Valor da estadia (2 quartos)</div><div class="v">USD 1.898,23</div></div>
+        <div><div class="k">Por pessoa</div><div class="v">USD 474,56</div></div>
       </div>
     </div>
   </div>
@@ -516,26 +517,26 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 <section class="page" style="--dest:#1a4f55">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Roteiro B · Dia a dia</div></div><div class="goldbar"></div>
   <div class="body">
-    <div class="eyebrow">Roteiro B · Adriático</div>
+    <div class="eyebrow">Roteiro B · Croácia Completa</div>
     <h2 class="h2">Roteiro dia a dia</h2>
-    <div class="days"><div class="day"><div class="day-h">Dia 01 | Embarque | 08/10</div><div class="day-t">Saída de São Paulo às 14:40 com Air France, classe executiva, rumo a Paris.</div></div><div class="day"><div class="day-h">Dia 02 | Kotor | 09/10</div><div class="day-t">Conexão em Paris e chegada a Dubrovnik às 14:20. Transfer privativo de 2h a Kotor e check-in no Hotel Alkima, na baía.</div></div><div class="day"><div class="day-h">Dia 03 | Kotor | 10/10</div><div class="day-t">Cidade Velha: Catedral de São Trifão, praças venezianas e subida às muralhas até a fortaleza de São João.</div></div><div class="day"><div class="day-h">Dia 04 | Kotor | 11/10</div><div class="day-t">Bate-volta a Perast e à ilha artificial de Nossa Senhora das Rochas. Almoço à beira-mar.</div></div><div class="day"><div class="day-h">Dia 05 | Kotor | 12/10</div><div class="day-t">Bate-volta a Budva e Sveti Stefan. Tarde na praia de Mogren.</div></div><div class="day"><div class="day-h">Dia 06 | Kotor | 13/10</div><div class="day-t">Bate-volta pela estrada em serpentina até Lovćen e o mausoléu de Njegoš. Parada em Cetinje, antiga capital.</div></div><div class="day"><div class="day-h">Dia 07 | Kotor | 14/10</div><div class="day-t">Dia livre: spa do hotel, passeio de barco pela Boka ou tarde em Porto Montenegro, em Tivat.</div></div><div class="day"><div class="day-h">Dia 08 | Dubrovnik | 15/10</div><div class="day-t">Transfer de 2h a Dubrovnik. Check-in no Berkeley Hotel, em Gruž. Muralhas ao pôr do sol.</div></div><div class="day"><div class="day-h">Dia 09 | Dubrovnik | 16/10</div><div class="day-t">Cidade Velha: Stradun, Palácio do Reitor e mosteiros. Teleférico ao monte Srđ.</div></div><div class="day"><div class="day-h">Dia 10 | Dubrovnik | 17/10</div><div class="day-t">Bate-volta à ilha de Lokrum, reserva natural a 15 min de barco. Tarde livre na praia de Banje.</div></div><div class="day"><div class="day-h">Dia 11 | Dubrovnik | 18/10</div><div class="day-t">Bate-volta privativo a Mostar e às cachoeiras de Kravice, na Bósnia.</div></div><div class="day"><div class="day-h">Dia 12 | Dubrovnik | 19/10</div><div class="day-t">Bate-volta às Ilhas Elafitas (Koločep, Lopud e Šipan), saindo do porto de Gruž.</div></div><div class="day"><div class="day-h">Dia 13 | Dubrovnik | 20/10</div><div class="day-t">Dia livre: Cavtat, compras ou descanso. Jantar de despedida na Cidade Velha.</div></div><div class="day"><div class="day-h">Dia 14 | Split | 21/10</div><div class="day-t">Transfer de 3h30 pela costa, com parada nas muralhas de Ston. Check-in no Heritage Hotel Santa Lucia, dentro do Palácio.</div></div><div class="day"><div class="day-h">Dia 15 | Split | 22/10</div><div class="day-t">Palácio de Diocleciano, Peristilo e catedral. Tarde na Riva e caminhada na colina Marjan.</div></div><div class="day"><div class="day-h">Dia 16 | Split | 23/10</div><div class="day-t">Bate-volta a Hvar de catamarã: cidade de Hvar, fortaleza e praças venezianas.</div></div><div class="day"><div class="day-h">Dia 17 | Split | 24/10</div><div class="day-t">Bate-volta a Trogir (UNESCO) e ao Parque Nacional Krka.</div></div><div class="day"><div class="day-h">Dia 18 | Split | 25/10</div><div class="day-t">Bate-volta à ilha de Brač e à praia de Zlatni Rat, em Bol.</div></div><div class="day"><div class="day-h">Dia 19 | Split | 26/10</div><div class="day-t">Dia livre: mercado, Bačvice e jantar de despedida.</div></div><div class="day"><div class="day-h">Dia 20 | Retorno | 27/10</div><div class="day-t">Transfer ao aeroporto. Voo Lufthansa às 14:40 de Split para Frankfurt e Munique, classe executiva.</div></div><div class="day"><div class="day-h">Dia 21 | São Paulo | 28/10</div><div class="day-t">Chegada em Guarulhos às 20:25.</div></div></div>
+    <div class="days"><div class="day"><div class="day-h">Dia 01 | Embarque | 08/10</div><div class="day-t">Saída de São Paulo às 14:40 com Air France, classe executiva, rumo a Paris.</div></div><div class="day"><div class="day-h">Dia 02 | Dubrovnik | 09/10</div><div class="day-t">Conexão em Paris e chegada a Dubrovnik às 14:20. Transfer ao Royal Neptun, em Babin Kuk. Fim de tarde na Cidade Velha.</div></div><div class="day"><div class="day-h">Dia 03 | Dubrovnik | 10/10</div><div class="day-t">Muralhas pela manhã, Stradun, Palácio do Reitor e mosteiros. Teleférico ao monte Srđ ao pôr do sol.</div></div><div class="day"><div class="day-h">Dia 04 | Dubrovnik | 11/10</div><div class="day-t">Bate-volta à ilha de Lokrum, reserva natural a 15 min de barco. Tarde livre na praia de Banje.</div></div><div class="day"><div class="day-h">Dia 05 | Dubrovnik | 12/10</div><div class="day-t">Bate-volta privativo à península de Pelješac, com ostras e vinhos de Ston, e balsa a Korčula.</div></div><div class="day"><div class="day-h">Dia 06 | Dubrovnik | 13/10</div><div class="day-t">Bate-volta às Ilhas Elafitas (Koločep, Lopud e Šipan), saindo do porto de Gruž.</div></div><div class="day"><div class="day-h">Dia 07 | Dubrovnik | 14/10</div><div class="day-t">Manhã em Cavtat, de barco. Tarde livre e jantar de despedida na Cidade Velha.</div></div><div class="day"><div class="day-h">Dia 08 | Split | 15/10</div><div class="day-t">Transfer de 3h30 pela costa, com parada nas muralhas de Ston e na riviera de Makarska. Check-in no Heritage Hotel Cardo, dentro do Palácio.</div></div><div class="day"><div class="day-h">Dia 09 | Split | 16/10</div><div class="day-t">Palácio de Diocleciano, Peristilo e catedral. Tarde na Riva e caminhada na colina Marjan.</div></div><div class="day"><div class="day-h">Dia 10 | Split | 17/10</div><div class="day-t">Bate-volta a Hvar de catamarã: cidade de Hvar, fortaleza e praças venezianas.</div></div><div class="day"><div class="day-h">Dia 11 | Split | 18/10</div><div class="day-t">Bate-volta a Trogir (UNESCO) e às cachoeiras do Parque Nacional Krka.</div></div><div class="day"><div class="day-h">Dia 12 | Split | 19/10</div><div class="day-t">Bate-volta à ilha de Brač e à praia de Zlatni Rat, em Bol.</div></div><div class="day"><div class="day-h">Dia 13 | Split | 20/10</div><div class="day-t">Dia livre: mercado, Bačvice ou a vila de Omiš. Jantar de despedida.</div></div><div class="day"><div class="day-h">Dia 14 | Zagreb | 21/10</div><div class="day-t">Transfer privativo com parada nos Lagos de Plitvice (UNESCO): 3h de caminhada pelas passarelas. Chegada a Zagreb no fim da tarde e check-in no Hotel PARK 45.</div></div><div class="day"><div class="day-h">Dia 15 | Zagreb | 22/10</div><div class="day-t">Cidade Alta: mercado Dolac, Catedral, Igreja de São Marcos e Museu das Relações Rompidas. Funicular e noite na Tkalčićeva.</div></div><div class="day"><div class="day-h">Dia 16 | Zagreb | 23/10</div><div class="day-t">Bate-volta a Varaždin, a capital barroca, e ao castelo de Trakošćan.</div></div><div class="day"><div class="day-h">Dia 17 | Zagreb | 24/10</div><div class="day-t">Cidade Baixa: Ferradura de Lenuci, Museu de Arte Contemporânea e cemitério de Mirogoj. Cafés da Bogovićeva.</div></div><div class="day"><div class="day-h">Dia 18 | Zagreb | 25/10</div><div class="day-t">Bate-volta a Samobor (a kremšnita) e às colinas do Zagorje, com o castelo de Veliki Tabor.</div></div><div class="day"><div class="day-h">Dia 19 | Zagreb | 26/10</div><div class="day-t">Dia livre: compras na Ilica, lago Jarun. Jantar de despedida.</div></div><div class="day"><div class="day-h">Dia 20 | Retorno | 27/10</div><div class="day-t">Voo Croatia Airlines às 06:50 de Zagreb para Frankfurt e Montreal, classe executiva.</div></div><div class="day"><div class="day-h">Dia 21 | São Paulo | 28/10</div><div class="day-t">Chegada em Guarulhos às 09:00.</div></div></div>
   </div>
   <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
 </section>
 <section class="page" style="--dest:#1a4f55">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Roteiro B · Valores</div></div><div class="goldbar"></div>
   <div class="body">
-    <div class="eyebrow">Roteiro B · Adriático</div>
+    <div class="eyebrow">Roteiro B · Croácia Completa</div>
     <h2 class="h2">Valores</h2>
     <div class="val-note">*Valores em USD por adulto · 4 adultos · 2 quartos duplos</div>
-    <div class="val-row"><span class="lbl">Hotelaria (3 hotéis, 18 noites, café incluso)</span><span class="amt">USD 1.849,39</span></div><div class="val-row"><span class="lbl">Aéreo internacional executiva (Air France ida · Lufthansa volta)</span><span class="amt">USD 8.533,40</span></div><div class="val-row"><span class="lbl">Transfers privativos e bate-voltas (estimativa)</span><span class="amt">USD 560,00</span></div><div class="val-row"><span class="lbl">Seguro viagem 20 dias (estimativa)</span><span class="amt">USD 95,00</span></div>
-    <div class="val-total"><span class="lbl">TOTAL / PESSOA</span><span class="amt">USD 11.037,79</span></div>
-    <div class="val-brl"><span>Referência em reais</span><b>R$ 56.844,62</b></div>
-    <div class="val-brl"><span>Total para 4 pessoas</span><b>USD 44.151,16 · R$ 227.378,47</b></div>
+    <div class="val-row"><span class="lbl">Hotelaria (3 hotéis, 18 noites, café incluso)</span><span class="amt">USD 2.405,59</span></div><div class="val-row"><span class="lbl">Aéreo internacional executiva (Air France ida · Croatia/Air Canada volta)</span><span class="amt">USD 8.043,30</span></div><div class="val-row"><span class="lbl">Transfers privativos e bate-voltas, incl. Plitvice (estimativa)</span><span class="amt">USD 560,00</span></div><div class="val-row"><span class="lbl">Seguro viagem 20 dias (estimativa)</span><span class="amt">USD 95,00</span></div>
+    <div class="val-total"><span class="lbl">TOTAL / PESSOA</span><span class="amt">USD 11.103,89</span></div>
+    <div class="val-brl"><span>Referência em reais</span><b>R$ 57.185,01</b></div>
+    <div class="val-brl"><span>Total para 4 pessoas</span><b>USD 44.415,54 · R$ 228.740,03</b></div>
     <div class="val-fx">Cotação 17/09 · USD = 5,15<br>*Nada reservado, apenas cotado</div>
     <div class="val-air">
       <div class="eyebrow">Hotelaria por estadia (2 quartos)</div>
-      <div class="val-row"><span class="lbl">Hotel Alkima · Kotor · 6 noites</span><span class="amt">USD 1.342,88</span></div><div class="val-row"><span class="lbl">Berkeley Hotel · Dubrovnik · 6 noites</span><span class="amt">USD 2.696,43</span></div><div class="val-row"><span class="lbl">Heritage Hotel Santa Lucia · Split · 6 noites</span><span class="amt">USD 3.358,25</span></div>
+      <div class="val-row"><span class="lbl">Royal Neptun Hotel · Dubrovnik · 6 noites</span><span class="amt">USD 3.570,43</span></div><div class="val-row"><span class="lbl">Heritage Hotel Cardo · Split · 6 noites</span><span class="amt">USD 4.153,68</span></div><div class="val-row"><span class="lbl">Hotel PARK 45 · Zagreb · 6 noites</span><span class="amt">USD 1.898,23</span></div>
     </div>
     <div class="val-fx">Aéreo cotado em 17/09 (Expedia), tarifas executivas com 2 malas de 32 kg por pessoa. Hotéis cotados em 17/09 (Booking.com),
     categoria oficial 4 estrelas, 2 quartos duplos com café da manhã. Transfers, passeios e seguro são estimativas e serão cotados

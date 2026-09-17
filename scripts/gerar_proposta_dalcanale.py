@@ -136,81 +136,83 @@ OPCOES = [
         ],
     },
     {
-        "letra": "B",
+"letra": "B",
         "cor": "#1a4f55",
-        "titulo": "Adriático",
-        "sub": "Montenegro · Croácia",
-        "resumo": "O roteiro mais bonito: três bases à beira-mar, de sul a norte, com Kotor, Dubrovnik "
-                  "e Split e mar ainda a 20 °C em outubro.",
+        "titulo": "Croácia Completa",
+        "sub": "Dubrovnik · Split · Zagreb",
+        "resumo": "Somente Croácia, do sul ao norte: três bases de seis noites, mar ainda a 20 °C em "
+                  "outubro, ilhas de catamarã, os lagos de Plitvice no caminho e a capital para fechar.",
         "aereo_desc": "Ida Air France GRU 14:40 → Paris → Croatia Airlines → Dubrovnik 14:20 (executiva, 1 escala). "
-                      "Volta Lufthansa Split 14:40 → Frankfurt → Munique → GRU 20:25 (executiva).",
+                      "Volta Croatia Airlines Zagreb 06:50 → Frankfurt → Air Canada → Montreal → GRU 09:00 (executiva).",
         "bases": [
             {
-                "cidade": "Kotor", "pais": "Montenegro", "datas": "09 a 15/10", "noites": 6,
-                "hotel": "Hotel Alkima", "end": "Dobrota bb · orla da Baía de Kotor",
-                "cin": "09/10", "cout": "15/10", "preco": 1342.88, "nota": "9,4",
-                "local": "Na orla de Dobrota, a 2 km da Cidade Velha (10 min de táxi ou 25 min pelo calçadão).",
-                "texto": "A Baía de Kotor parece um fiorde mediterrâneo: paredões de pedra, vilas "
-                         "venezianas e uma cidade murada tombada pela UNESCO. A base em Dobrota, na "
-                         "orla, garante silêncio e vista para a água, com a Cidade Velha a poucos "
-                         "minutos. Daqui saem os bate-voltas clássicos: Perast e a ilha de Nossa "
-                         "Senhora das Rochas, Budva e Sveti Stefan, e a estrada em serpentina até o "
-                         "parque de Lovćen, com a vista mais famosa do país.",
-                "bate_volta": ["Perast e Nossa Senhora das Rochas (barco)", "Budva e Sveti Stefan (40 min)", "Lovćen e Cetinje (1h)"],
-            },
-            {
-                "cidade": "Dubrovnik", "pais": "Croácia", "datas": "15 a 21/10", "noites": 6,
-                "hotel": "Berkeley Hotel", "end": "Andrije Hebranga 116A · porto de Gruž",
-                "cin": "15/10", "cout": "21/10", "preco": 2696.43, "nota": "9,1",
-                "local": "Junto ao porto de Gruž, saída das balsas para as ilhas; 10 min de ônibus à Porta Pile.",
+                "cidade": "Dubrovnik", "pais": "Croácia", "datas": "09 a 15/10", "noites": 6,
+                "hotel": "Royal Neptun Hotel", "end": "Kardinala Stepinca 31 · Babin Kuk, à beira-mar",
+                "cin": "09/10", "cout": "15/10", "preco": 3570.43, "nota": "9,2",
+                "local": "À beira-mar em Babin Kuk, com praia privativa e spa; ônibus direto à Porta Pile em 15 min.",
                 "texto": "Dubrovnik dispensa apresentação: as muralhas sobre o mar, o Stradun de "
-                         "mármore polido e o teleférico ao monte Srđ. Fora da alta temporada, a "
-                         "cidade volta a ser caminhável. A base em Gruž é estratégica: é do porto que "
-                         "partem as balsas às Ilhas Elafitas e os ônibus à Porta Pile. Os seis dias "
-                         "combinam a Cidade Velha, a ilha de Lokrum, um dia em Mostar, na Bósnia, e o "
-                         "arquipélago das Elafitas.",
-                "bate_volta": ["Lokrum (barco 15 min)", "Mostar e Kravice (privativo)", "Ilhas Elafitas (balsa de Gruž)"],
+                         "mármore polido e o teleférico ao monte Srđ. Fora da alta temporada a "
+                         "cidade volta a ser caminhável. A base em Babin Kuk, à beira-mar e com "
+                         "piscina coberta, é onde os hotéis 4 estrelas de Dubrovnik ficam, a 15 "
+                         "minutos de ônibus da Porta Pile. Os seis dias combinam a Cidade Velha, a "
+                         "ilha de Lokrum, a península de Pelješac com Korčula, o arquipélago das "
+                         "Elafitas e a vila de Cavtat.",
+                "bate_volta": ["Lokrum (barco 15 min)", "Korčula e Pelješac (privativo)", "Ilhas Elafitas (barco)", "Cavtat (barco 45 min)"],
             },
             {
-                "cidade": "Split", "pais": "Croácia", "datas": "21 a 27/10", "noites": 6,
-                "hotel": "Heritage Hotel Santa Lucia", "end": "Narodni trg 1 · dentro do Palácio de Diocleciano",
-                "cin": "21/10", "cout": "27/10", "preco": 3358.25, "nota": "9,3",
-                "local": "Na Praça do Povo, dentro das muralhas do Palácio de Diocleciano; Riva a 2 minutos.",
-                "texto": "Split é uma cidade viva dentro de um palácio romano de 1.700 anos. O hotel "
-                         "fica na Praça do Povo, no coração do Palácio de Diocleciano, com a Riva, o "
-                         "mercado e o porto a dois minutos. É a base perfeita para as ilhas: catamarã "
-                         "a Hvar, balsa a Brač e a praia de Zlatni Rat, e a Trogir, cidade-ilha "
-                         "tombada pela UNESCO. Nos intervalos, a colina Marjan e a praia de Bačvice.",
+                "cidade": "Split", "pais": "Croácia", "datas": "15 a 21/10", "noites": 6,
+                "hotel": "Heritage Hotel Cardo", "end": "Dioklecijanova 2 · dentro do Palácio de Diocleciano",
+                "cin": "15/10", "cout": "21/10", "preco": 4153.68, "nota": "9,6",
+                "local": "Na rua principal do Palácio de Diocleciano, a 1 minuto do Peristilo e a 3 da Riva.",
+                "texto": "Split é uma cidade viva dentro de um palácio romano de 1.700 anos. O "
+                         "hotel fica na Dioklecijanova, o antigo cardo do Palácio de Diocleciano, "
+                         "com o Peristilo, a Riva, o mercado e o porto a poucos passos. É a base "
+                         "perfeita para as ilhas: catamarã a Hvar, balsa a Brač e a praia de "
+                         "Zlatni Rat, e a Trogir, cidade-ilha tombada pela UNESCO, com as "
+                         "cachoeiras de Krka. Nos intervalos, a colina Marjan e a praia de Bačvice.",
                 "bate_volta": ["Hvar (catamarã 1h)", "Trogir e Krka (1h)", "Brač e Zlatni Rat (balsa 50 min)"],
+            },
+            {
+                "cidade": "Zagreb", "pais": "Croácia", "datas": "21 a 27/10", "noites": 6,
+                "hotel": "Hotel PARK 45", "end": "Ilica 45 · Donji Grad, a 500 m da Praça Ban Jelačić",
+                "cin": "21/10", "cout": "27/10", "preco": 1898.23, "nota": "9,0",
+                "local": "Na Ilica, a rua principal, a 5 min a pé da Praça Ban Jelačić, do mercado Dolac e do funicular.",
+                "texto": "Zagreb é a Croácia continental: uma capital austro-húngara de cafés, "
+                         "mercados e museus, com a Cidade Alta medieval ligada à Cidade Baixa "
+                         "pelo funicular mais curto do mundo. A base na Ilica coloca a Praça Ban "
+                         "Jelačić, o mercado Dolac e a Tkalčićeva a pé. É também a porta do "
+                         "interior: Varaždin barroca, o castelo de Trakošćan, Samobor e as "
+                         "colinas do Zagorje, além dos lagos de Plitvice visitados no caminho.",
+                "bate_volta": ["Varaždin e Trakošćan (1h30)", "Samobor e Zagorje (40 min)", "Plitvice (na chegada de Split)"],
             },
         ],
         "dias": [
             ("08/10", "Embarque", "Saída de São Paulo às 14:40 com Air France, classe executiva, rumo a Paris."),
-            ("09/10", "Kotor", "Conexão em Paris e chegada a Dubrovnik às 14:20. Transfer privativo de 2h a Kotor e check-in no Hotel Alkima, na baía."),
-            ("10/10", "Kotor", "Cidade Velha: Catedral de São Trifão, praças venezianas e subida às muralhas até a fortaleza de São João."),
-            ("11/10", "Kotor", "Bate-volta a Perast e à ilha artificial de Nossa Senhora das Rochas. Almoço à beira-mar."),
-            ("12/10", "Kotor", "Bate-volta a Budva e Sveti Stefan. Tarde na praia de Mogren."),
-            ("13/10", "Kotor", "Bate-volta pela estrada em serpentina até Lovćen e o mausoléu de Njegoš. Parada em Cetinje, antiga capital."),
-            ("14/10", "Kotor", "Dia livre: spa do hotel, passeio de barco pela Boka ou tarde em Porto Montenegro, em Tivat."),
-            ("15/10", "Dubrovnik", "Transfer de 2h a Dubrovnik. Check-in no Berkeley Hotel, em Gruž. Muralhas ao pôr do sol."),
-            ("16/10", "Dubrovnik", "Cidade Velha: Stradun, Palácio do Reitor e mosteiros. Teleférico ao monte Srđ."),
-            ("17/10", "Dubrovnik", "Bate-volta à ilha de Lokrum, reserva natural a 15 min de barco. Tarde livre na praia de Banje."),
-            ("18/10", "Dubrovnik", "Bate-volta privativo a Mostar e às cachoeiras de Kravice, na Bósnia."),
-            ("19/10", "Dubrovnik", "Bate-volta às Ilhas Elafitas (Koločep, Lopud e Šipan), saindo do porto de Gruž."),
-            ("20/10", "Dubrovnik", "Dia livre: Cavtat, compras ou descanso. Jantar de despedida na Cidade Velha."),
-            ("21/10", "Split", "Transfer de 3h30 pela costa, com parada nas muralhas de Ston. Check-in no Heritage Hotel Santa Lucia, dentro do Palácio."),
-            ("22/10", "Split", "Palácio de Diocleciano, Peristilo e catedral. Tarde na Riva e caminhada na colina Marjan."),
-            ("23/10", "Split", "Bate-volta a Hvar de catamarã: cidade de Hvar, fortaleza e praças venezianas."),
-            ("24/10", "Split", "Bate-volta a Trogir (UNESCO) e ao Parque Nacional Krka."),
-            ("25/10", "Split", "Bate-volta à ilha de Brač e à praia de Zlatni Rat, em Bol."),
-            ("26/10", "Split", "Dia livre: mercado, Bačvice e jantar de despedida."),
-            ("27/10", "Retorno", "Transfer ao aeroporto. Voo Lufthansa às 14:40 de Split para Frankfurt e Munique, classe executiva."),
-            ("28/10", "São Paulo", "Chegada em Guarulhos às 20:25."),
+            ("09/10", "Dubrovnik", "Conexão em Paris e chegada a Dubrovnik às 14:20. Transfer ao Royal Neptun, em Babin Kuk. Fim de tarde na Cidade Velha."),
+            ("10/10", "Dubrovnik", "Muralhas pela manhã, Stradun, Palácio do Reitor e mosteiros. Teleférico ao monte Srđ ao pôr do sol."),
+            ("11/10", "Dubrovnik", "Bate-volta à ilha de Lokrum, reserva natural a 15 min de barco. Tarde livre na praia de Banje."),
+            ("12/10", "Dubrovnik", "Bate-volta privativo à península de Pelješac, com ostras e vinhos de Ston, e balsa a Korčula."),
+            ("13/10", "Dubrovnik", "Bate-volta às Ilhas Elafitas (Koločep, Lopud e Šipan), saindo do porto de Gruž."),
+            ("14/10", "Dubrovnik", "Manhã em Cavtat, de barco. Tarde livre e jantar de despedida na Cidade Velha."),
+            ("15/10", "Split", "Transfer de 3h30 pela costa, com parada nas muralhas de Ston e na riviera de Makarska. Check-in no Heritage Hotel Cardo, dentro do Palácio."),
+            ("16/10", "Split", "Palácio de Diocleciano, Peristilo e catedral. Tarde na Riva e caminhada na colina Marjan."),
+            ("17/10", "Split", "Bate-volta a Hvar de catamarã: cidade de Hvar, fortaleza e praças venezianas."),
+            ("18/10", "Split", "Bate-volta a Trogir (UNESCO) e às cachoeiras do Parque Nacional Krka."),
+            ("19/10", "Split", "Bate-volta à ilha de Brač e à praia de Zlatni Rat, em Bol."),
+            ("20/10", "Split", "Dia livre: mercado, Bačvice ou a vila de Omiš. Jantar de despedida."),
+            ("21/10", "Zagreb", "Transfer privativo com parada nos Lagos de Plitvice (UNESCO): 3h de caminhada pelas passarelas. Chegada a Zagreb no fim da tarde e check-in no Hotel PARK 45."),
+            ("22/10", "Zagreb", "Cidade Alta: mercado Dolac, Catedral, Igreja de São Marcos e Museu das Relações Rompidas. Funicular e noite na Tkalčićeva."),
+            ("23/10", "Zagreb", "Bate-volta a Varaždin, a capital barroca, e ao castelo de Trakošćan."),
+            ("24/10", "Zagreb", "Cidade Baixa: Ferradura de Lenuci, Museu de Arte Contemporânea e cemitério de Mirogoj. Cafés da Bogovićeva."),
+            ("25/10", "Zagreb", "Bate-volta a Samobor (a kremšnita) e às colinas do Zagorje, com o castelo de Veliki Tabor."),
+            ("26/10", "Zagreb", "Dia livre: compras na Ilica, lago Jarun. Jantar de despedida."),
+            ("27/10", "Retorno", "Voo Croatia Airlines às 06:50 de Zagreb para Frankfurt e Montreal, classe executiva."),
+            ("28/10", "São Paulo", "Chegada em Guarulhos às 09:00."),
         ],
         "valores": [
-            ("Hotelaria (3 hotéis, 18 noites, café incluso)", 7397.56 / 4),
-            ("Aéreo internacional executiva (Air France ida · Lufthansa volta)", 8533.40),
-            ("Transfers privativos e bate-voltas (estimativa)", 560.00),
+            ("Hotelaria (3 hotéis, 18 noites, café incluso)", 9622.34 / 4),
+            ("Aéreo internacional executiva (Air France ida · Croatia/Air Canada volta)", 8043.30),
+            ("Transfers privativos e bate-voltas, incl. Plitvice (estimativa)", 560.00),
             ("Seguro viagem 20 dias (estimativa)", 95.00),
         ],
     },
@@ -394,7 +396,8 @@ for o in OPCOES:
 CSS = r"""
 """ + open(os.path.join(ROOT, 'fonts', 'local-fonts.css'), encoding='utf-8').read() + r"""
 :root{
-  --gold:#da8d00; --dest:#1a3a5c; --ink:#1a1510; --char:#333131; --mut:#9a8d80; --line:#e4ddd2; --paper:#faf7f2;
+  --gold:#da8d00; --dest:#1a3a5c; --ink:#1a1510; --char:#333131; --mut:#9a8d80; --line:#e4ddd2; --paper:#f5f0ea; --sf:#ede7de;
+  --dest-soft: color-mix(in srgb, var(--dest) 9%, #faf7f2); --dest-mid: color-mix(in srgb, var(--dest) 24%, #faf7f2);
   --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif; --con:'Montserrat',var(--sans); --lbl:'Arimo',var(--sans);
 }
 @page{ size:A3 portrait; margin:0; }
@@ -421,29 +424,29 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
 .cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
 .cover-photo{ position:absolute; inset:0; background:
-  radial-gradient(120% 70% at 80% 20%, rgba(218,141,0,.35) 0%, transparent 60%),
-  radial-gradient(90% 60% at 15% 85%, rgba(26,79,85,.9) 0%, transparent 65%),
-  linear-gradient(160deg,#1a3a5c 0%,#2a2620 55%,#5a2d0a 100%); }
-.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, transparent 30%, rgba(0,0,0,.78) 78%); z-index:2; }
-.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
-.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
-.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
-.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+  radial-gradient(110% 70% at 85% 18%, rgba(218,141,0,.28) 0%, transparent 60%),
+  radial-gradient(80% 55% at 12% 88%, rgba(26,79,85,.16) 0%, transparent 65%),
+  linear-gradient(160deg,#faf7f2 0%,#f0ebe3 60%,#e3dbd0 100%); }
+.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(255,255,255,0) 40%, rgba(245,240,234,.9) 80%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:var(--ink); }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.cover-basis{ font-size:10pt; color:var(--mut); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:var(--mut); }
 .cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
 .cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
 .stats{ display:flex; gap:14mm; margin-top:11mm; }
 .stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
-.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
-.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+.stat span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:#5c5249; line-height:1.7; }
 .cover-sig a{ color:inherit; text-decoration:none; }
 
 /* COMPARATIVO */
 .cmp{ display:grid; grid-template-columns:1fr 1fr; gap:8mm; margin-top:6mm; }
 .cmp-card{ border:1px solid var(--line); border-radius:6px; overflow:hidden; }
-.cmp-card .top{ background:var(--dest); color:#fff; padding:5mm 7mm; display:flex; align-items:center; gap:5mm; }
-.cmp-card .lt{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9); color:var(--gold); font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.cmp-card .top{ background:var(--dest-soft); color:var(--dest); padding:5mm 7mm; display:flex; align-items:center; gap:5mm; border-bottom:1px solid var(--line); }
+.cmp-card .lt{ width:12mm; height:12mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 .cmp-card .tt{ font-size:14pt; font-weight:700; line-height:1.15; }
-.cmp-card .st{ font-size:8.5pt; color:rgba(255,255,255,.7); letter-spacing:.06em; text-transform:uppercase; margin-top:1mm; }
+.cmp-card .st{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; margin-top:1mm; }
 .cmp-card .mid{ padding:5mm 7mm; font-size:10pt; line-height:1.6; }
 .cmp-card .bases{ margin-top:3mm; font-family:var(--lbl); font-size:8.5pt; color:var(--mut); letter-spacing:.04em; text-transform:uppercase; }
 .cmp-card .bot{ background:var(--paper); border-top:1px solid var(--line); padding:4mm 7mm; display:flex; justify-content:space-between; align-items:baseline; }
@@ -452,12 +455,12 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .cmp-card .bot .v small{ font-size:9pt; font-weight:500; color:var(--mut); margin-left:2mm; }
 
 /* SEPARADOR DE OPÇÃO */
-.opt-hero{ background:var(--dest); flex:1; position:relative; display:flex; align-items:flex-end; padding:22mm; color:#fff;
-  background-image: radial-gradient(90% 60% at 85% 15%, rgba(218,141,0,.30) 0%, transparent 60%), radial-gradient(70% 60% at 10% 90%, rgba(0,0,0,.35) 0%, transparent 60%); }
+.opt-hero{ background:var(--dest-soft); flex:1; position:relative; display:flex; align-items:flex-end; padding:22mm; color:var(--ink);
+  background-image: radial-gradient(90% 60% at 85% 15%, rgba(218,141,0,.22) 0%, transparent 60%), radial-gradient(70% 60% at 10% 90%, var(--dest-mid) 0%, transparent 60%); }
 .opt-hero .lt{ font-size:9pt; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.opt-hero .tt{ font-size:40pt; font-weight:800; line-height:1.05; margin:3mm 0 2mm; }
-.opt-hero .st{ font-size:12pt; color:rgba(255,255,255,.75); letter-spacing:.06em; text-transform:uppercase; }
-.opt-hero .rs{ font-size:12pt; line-height:1.7; color:rgba(255,255,255,.9); max-width:200mm; margin-top:8mm; }
+.opt-hero .tt{ font-size:40pt; font-weight:800; line-height:1.05; margin:3mm 0 2mm; color:var(--dest); }
+.opt-hero .st{ font-size:12pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; }
+.opt-hero .rs{ font-size:12pt; line-height:1.7; color:var(--char); max-width:200mm; margin-top:8mm; }
 .opt-hero .stats{ margin-top:10mm; }
 
 /* ITINERÁRIO */
@@ -475,15 +478,15 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .box .v{ font-size:10.5pt; line-height:1.65; margin-top:1.5mm; }
 
 /* DESTINO + HOTEL */
-.dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
-.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); }
-.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9); color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.dest-hd{ background:var(--dest-soft); padding:5mm 22mm; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
+.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--dest); }
+.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
 .dest-photo{ height:105mm; position:relative; flex-shrink:0; background:
-  repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 6mm, transparent 6mm 12mm),
-  radial-gradient(80% 90% at 85% 10%, rgba(218,141,0,.35) 0%, transparent 60%),
-  linear-gradient(160deg, var(--dest) 0%, #2a2620 100%); }
-.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.6); }
-.dest-photo .cap small{ display:block; font-size:8.5pt; font-weight:500; letter-spacing:.2em; color:rgba(255,255,255,.7); margin-top:1mm; }
+  repeating-linear-gradient(135deg, rgba(255,255,255,.18) 0 6mm, transparent 6mm 12mm),
+  radial-gradient(80% 90% at 85% 10%, rgba(218,141,0,.22) 0%, transparent 60%),
+  linear-gradient(160deg, var(--dest-mid) 0%, var(--dest-soft) 100%); }
+.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--dest); }
+.dest-photo .cap small{ display:block; font-size:8.5pt; font-weight:500; letter-spacing:.2em; color:var(--mut); margin-top:1mm; }
 .dest-text{ font-size:11.5pt; font-weight:400; line-height:1.7; color:var(--char); }
 .loc{ margin-top:5mm; display:flex; gap:4mm; align-items:flex-start; }
 .loc .k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:700; white-space:nowrap; padding-top:1mm; }
@@ -579,7 +582,7 @@ pages.append(f"""
     <div class="box"><div class="k">Leitura rápida</div><div class="v">
       <b>C</b> é o roteiro de melhor custo-benefício e o único com bilhete simples de ida e volta.
       <b>A</b> entrega as capitais mais modernas dos Balcãs com Budapeste no fim.
-      <b>B</b> é o mais cênico, todo à beira-mar.
+      <b>B</b> é o mais cênico, só Croácia, com duas bases à beira-mar e Plitvice no caminho.
       <b>D</b> tem o aéreo mais curto, mas o custo diário mais alto da seleção.
       Valores por pessoa, em dólar, com referência em reais pela cotação de 17/09. Nada reservado, apenas cotado.
     </div></div>
