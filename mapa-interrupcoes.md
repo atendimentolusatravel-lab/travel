@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cotação Lucas – Itália** — iniciada em 17/09/2026 às 10:30
-⏸️ Pausada em 17/09/2026 às 15:06 por interrupção (Dalcanales – Assentos)
+▶️ Retomada em 17/09/2026 às 15:20 (interrupções nesta atividade: 3, total 1h06min)
 
 ## Histórico de atividades principais
 
@@ -60,7 +60,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 23 | 14/09/2026 | 17:37 | 17:45 | 8min | – | Assentos Dalcanales |
 | 24 | 17/09/2026 | 11:34 | 12:18 | 44min | – | Antonia e família – Tulum |
 | 25 | 17/09/2026 | 14:38 | 14:46 | 8min | – | Mariana Maske – Transfer |
-| 26 | 17/09/2026 | 15:06 | ⏳ em andamento | – | – | Dalcanales – Assentos (2ª vez) |
+| 26 | 17/09/2026 | 15:06 | 15:20 | 14min | – | Dalcanales – Assentos (2ª vez) |
 
 ## Visão consolidada: atividades × interrupções
 
@@ -82,12 +82,12 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 14 | Cotação Milena Naves – Euro Summer | 03–04/09 | 3h58min | 7 | 2h02min |
 | 15 | Cotação Luiz Maués – Pedido de casamento | 09–10/09 | 7h15min | 1 | 1h37min |
 | 16 | Recotação do Mikael | 14/09 | 3h39min | 3 | 22min |
-| 17 | Cotação Lucas – Itália | 17/09 | ⏳ em andamento | 2 (até agora) | 52min |
+| 17 | Cotação Lucas – Itália | 17/09 | ⏳ em andamento | 3 (até agora) | 1h06min |
 
 ## Resumo
 
 | Métrica | Valor |
 |---------|-------|
-| Total de interrupções | 25 |
-| Tempo total interrompido | 8h43min |
-| Duração média | 20min55s |
+| Total de interrupções | 26 |
+| Tempo total interrompido | 8h57min |
+| Duração média | 20min39s |
