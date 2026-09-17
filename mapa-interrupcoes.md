@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cotação Lucas – Itália** — iniciada em 17/09/2026 às 10:30
-▶️ Retomada em 17/09/2026 às 14:46 (interrupções nesta atividade: 2, total 52min)
+⏸️ Pausada em 17/09/2026 às 15:06 por interrupção (Dalcanales – Assentos)
 
 ## Histórico de atividades principais
 
@@ -60,6 +60,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 23 | 14/09/2026 | 17:37 | 17:45 | 8min | – | Assentos Dalcanales |
 | 24 | 17/09/2026 | 11:34 | 12:18 | 44min | – | Antonia e família – Tulum |
 | 25 | 17/09/2026 | 14:38 | 14:46 | 8min | – | Mariana Maske – Transfer |
+| 26 | 17/09/2026 | 15:06 | ⏳ em andamento | – | – | Dalcanales – Assentos (2ª vez) |
 
 ## Visão consolidada: atividades × interrupções
 
