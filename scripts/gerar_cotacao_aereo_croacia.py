@@ -46,16 +46,16 @@ OPCOES = [
 ]
 
 BASES = [
-    {"cidade": "Dubrovnik", "noites": 5, "datas": "09 a 14/10",
+    {"cidade": "Dubrovnik", "noites": 5, "datas": "09 a 14/10", "clima": (13, 20, "outubro · sol com chuvas ocasionais; mar a 20 °C"),
      "bv": "Lokrum · Korčula e Pelješac · Ilhas Elafitas",
      "txt": "Chegada às 14:20 pelo voo de Paris. Muralhas, Stradun e monte Srđ, com as ilhas e a península de Pelješac em bate-volta."},
-    {"cidade": "Split", "noites": 5, "datas": "14 a 19/10",
+    {"cidade": "Split", "noites": 5, "datas": "14 a 19/10", "clima": (12, 20, "outubro · dias amenos; mar a 19 °C, bom para as ilhas"),
      "bv": "Hvar · Trogir · Brač e Zlatni Rat",
      "txt": "Transfer de 3h30 pela costa com parada em Ston. Palácio de Diocleciano, Riva e colina Marjan; catamarã a Hvar e balsa a Brač."},
-    {"cidade": "Zadar", "noites": 4, "datas": "19 a 23/10",
+    {"cidade": "Zadar", "noites": 4, "datas": "19 a 23/10", "clima": (11, 19, "outubro · ameno; vento bora ocasional, mar a 18 °C"),
      "bv": "Kornati (barco) · Krka e Šibenik · Ilha de Pag · Nin",
      "txt": "Transfer de 1h30. Órgão do Mar e Saudação ao Sol, fórum romano e igreja de São Donato. Base para o arquipélago de Kornati e as cachoeiras de Krka."},
-    {"cidade": "Zagreb", "noites": 5, "datas": "23 a 28/10",
+    {"cidade": "Zagreb", "noites": 5, "datas": "23 a 28/10", "clima": (7, 16, "outubro · manhãs frias e névoa; Plitvice 3 a 5 °C abaixo"),
      "bv": "Plitvice (no transfer) · Varaždin e Trakošćan · Samobor",
      "txt": "Transfer com os Lagos de Plitvice no caminho, a 1h30 de Zadar. Cidade Alta, mercado Dolac e interior barroco. Voo de volta às 06:40 do dia 28."},
 ]
@@ -77,6 +77,7 @@ if __name__ == "__main__":
             f"{CLIENTE.title()} · Croácia Completa · entrada por Dubrovnik, saída por Zagreb",
             "Quatro bases de sul a norte, cada uma com hospedagem fixa e as cidades vizinhas em bate-volta. "
             "Com a chegada em 09/10 e o voo de volta em 28/10, o roteiro tem {total} noites na Croácia.",
+            "Temperaturas são médias históricas de outubro (mínima e máxima); na costa o mar ainda permite banho, no interior leve casaco. "
             "Esta cotação cobre apenas o aéreo internacional. Hotelaria, transfers e passeios são cotados à parte, após a escolha do roteiro. "
             "*Nada reservado, apenas cotado.",
         ),
