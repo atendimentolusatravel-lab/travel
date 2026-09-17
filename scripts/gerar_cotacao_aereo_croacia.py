@@ -47,23 +47,26 @@ OPCOES = [
 ]
 
 BASES = [
-    {"cidade": "Dubrovnik", "noites": 6, "datas": "09 a 15/10", "hotel": "Royal Neptun Hotel · Babin Kuk, à beira-mar",
-     "bv": "Lokrum · Korčula e Pelješac · Ilhas Elafitas · Cavtat",
+    {"cidade": "Dubrovnik", "noites": 5, "datas": "09 a 14/10", "hotel": "Royal Neptun Hotel · Babin Kuk, à beira-mar",
+     "bv": "Lokrum · Korčula e Pelješac · Ilhas Elafitas",
      "txt": "Chegada às 14:20 pelo voo de Paris. Muralhas, Stradun e monte Srđ, com as ilhas e a península de Pelješac em bate-volta."},
-    {"cidade": "Split", "noites": 7, "datas": "15 a 22/10", "hotel": "Heritage Hotel Cardo · dentro do Palácio de Diocleciano",
-     "bv": "Hvar · Trogir e Krka · Brač e Zlatni Rat · Omiš",
-     "txt": "Transfer de 3h30 pela costa com parada em Ston. A noite extra do retorno em 28/10 fica aqui, para mais um dia de ilhas."},
-    {"cidade": "Zagreb", "noites": 6, "datas": "22 a 28/10", "hotel": "Hotel PARK 45 · Ilica, a 500 m da Praça Ban Jelačić",
-     "bv": "Plitvice (no transfer) · Varaždin e Trakošćan · Samobor e Zagorje",
-     "txt": "Transfer com os Lagos de Plitvice no caminho. Cidade Alta, mercado Dolac e interior barroco. Voo de volta às 06:40 do dia 28."},
+    {"cidade": "Split", "noites": 5, "datas": "14 a 19/10", "hotel": "Heritage Hotel Cardo · dentro do Palácio de Diocleciano",
+     "bv": "Hvar · Trogir · Brač e Zlatni Rat",
+     "txt": "Transfer de 3h30 pela costa com parada em Ston. Palácio de Diocleciano, Riva e colina Marjan; catamarã a Hvar e balsa a Brač."},
+    {"cidade": "Zadar", "noites": 4, "datas": "19 a 23/10", "hotel": "Bastion Heritage Hotel · sobre as muralhas da península histórica",
+     "bv": "Kornati (barco) · Krka e Šibenik · Ilha de Pag · Nin",
+     "txt": "Transfer de 1h30. Órgão do Mar e Saudação ao Sol, fórum romano e igreja de São Donato. Base para o arquipélago de Kornati e as cachoeiras de Krka."},
+    {"cidade": "Zagreb", "noites": 5, "datas": "23 a 28/10", "hotel": "Hotel PARK 45 · Ilica, a 500 m da Praça Ban Jelačić",
+     "bv": "Plitvice (no transfer) · Varaždin e Trakošćan · Samobor",
+     "txt": "Transfer com os Lagos de Plitvice no caminho, a 1h30 de Zadar. Cidade Alta, mercado Dolac e interior barroco. Voo de volta às 06:40 do dia 28."},
 ]
 
 TL_CSS = r"""
 .bar{ display:flex; margin-top:8mm; border-radius:6px; overflow:hidden; border:1px solid var(--line); height:16mm; }
 .bar div{ display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:10.5pt; letter-spacing:.04em; }
 .bar div small{ font-weight:400; opacity:.85; margin-left:2mm; font-size:8.5pt; }
-.bar .b1{ background:#73805c; } .bar .b2{ background:#4a6b45; } .bar .b3{ background:#2d5e3a; }
-.res-col .res-body p{ font-size:9.6pt; line-height:1.6; color:var(--char); margin-top:3mm; }
+.bar .b1{ background:#73805c; } .bar .b2{ background:#5f7650; } .bar .b3{ background:#4a6b45; } .bar .b4{ background:#2d5e3a; }
+.res-col .res-body p{ font-size:9.2pt; line-height:1.6; color:var(--char); margin-top:3mm; }
 .res-col .hotel{ font-size:9pt; color:var(--mut); margin-top:2mm; line-height:1.5; }
 .kpis{ display:flex; gap:12mm; margin-top:5mm; }
 .kpis b{ display:block; font-size:22pt; font-weight:800; color:var(--gold); line-height:1; }
@@ -72,6 +75,7 @@ TL_CSS = r"""
 
 def resumo_page():
     total = sum(b["noites"] for b in BASES)
+    n_bv = sum(len(b["bv"].split(" · ")) for b in BASES)
     bar = "".join(f'<div class="b{i}" style="flex:{b["noites"]}">{_e(b["cidade"])}<small>{b["noites"]} noites</small></div>'
                   for i, b in enumerate(BASES, 1))
     cols = ""
@@ -92,14 +96,14 @@ def resumo_page():
   <div class="body">
     <div class="eyebrow">{CLIENTE.title()} · Croácia Completa · entrada por Dubrovnik, saída por Zagreb</div>
     <h2 class="h2">Destinos e quantidade de dias</h2>
-    <p class="lead">Três bases de sul a norte, cada uma com hotel fixo e as cidades vizinhas em bate-volta. Com a chegada em 09/10 e o
+    <p class="lead">Quatro bases de sul a norte, cada uma com hotel fixo e as cidades vizinhas em bate-volta. Com a chegada em 09/10 e o
     voo de volta em 28/10, o roteiro tem {total} noites na Croácia.</p>
     <div class="kpis">
-      <div><b>3</b><span>Bases</span></div><div><b>{total}</b><span>Noites</span></div><div><b>3</b><span>Hotéis</span></div><div><b>11</b><span>Cidades em bate-volta</span></div>
+      <div><b>{len(BASES)}</b><span>Bases</span></div><div><b>{total}</b><span>Noites</span></div><div><b>{len(BASES)}</b><span>Hotéis</span></div><div><b>{n_bv}</b><span>Bate-voltas</span></div>
     </div>
     <div class="bar">{bar}</div>
-    <div class="res" style="grid-template-columns:repeat(3,1fr)">{cols}</div>
-    <div class="res-note">Hotelaria e bate-voltas conforme a proposta Croácia Completa, com a noite adicional de 28/10 alocada em Split.
+    <div class="res" style="grid-template-columns:repeat({len(BASES)},1fr)">{cols}</div>
+    <div class="res-note">Hotelaria conforme a proposta Croácia Completa, com Zadar incluída como quarta base (Bastion Heritage Hotel, 4 estrelas, cotado em 17/09).
     Valores de hotelaria e serviços na proposta principal. *Nada reservado, apenas cotado.</div>
   </div>
   {FT}
@@ -111,7 +115,7 @@ if __name__ == "__main__":
         OPCOES,
         "Aéreo para a Croácia em classe executiva",
         f"{CLIENTE.title()} · {PAX} · saída 08/10 · retorno 28/10/2026",
-        "Duas formas de fazer o trecho internacional do roteiro Croácia Completa, sempre entrando por Dubrovnik e saindo por Zagreb, "
+        "Duas formas de fazer o trecho internacional do roteiro Croácia Completa (Dubrovnik, Split, Zadar e Zagreb), sempre entrando por Dubrovnik e saindo por Zagreb, "
         "sem voltar ao ponto de partida. A opção 1 sai de São Paulo; a opção 2 já inclui o voo de Curitiba. "
         "Valores por pessoa, tarifas executivas com bagagem, cotação do sistema em 17/09.",
         "Com o retorno em 28/10, a viagem passa a ter 19 noites no destino. Na opção 2, o trecho Curitiba–São Paulo e o retorno "

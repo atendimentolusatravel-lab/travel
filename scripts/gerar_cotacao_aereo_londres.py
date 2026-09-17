@@ -101,7 +101,7 @@ def build(opcoes, titulo, eyebrow, intro, rodape, out, hd_tag="Cotação de aér
     <div class="air">
       <div class="air-top">
         <div class="l"><div class="n">{o['letra']}</div><div><div class="tt">{_e(o['titulo'])}</div><div class="st">{_e(o['sub'])}</div></div></div>
-        <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ {usd(o['brl'])}</div><div class="u">USD {usd(o['usd'])} · 4 pessoas R$ {usd(o['brl']*4)}</div></div>
+        <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ {usd(o['brl'])}</div><div class="u">USD {usd(o['usd'])}</div></div>
       </div>
       <table class="fl">
         <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
@@ -111,7 +111,7 @@ def build(opcoes, titulo, eyebrow, intro, rodape, out, hd_tag="Cotação de aér
     </div>"""
     ncol = len(opcoes)
     sum_cards = "".join(
-        f"<div class='c'><div class='k'>Opção {o['letra']} · {_e(o['titulo'].split(' ·')[0])}</div><div class='v'>R$ {usd(o['brl']*4)}</div><div class='s'>4 pessoas · USD {usd(o['usd']*4)}</div></div>"
+        f"<div class='c'><div class='k'>Opção {o['letra']} · {_e(o['titulo'].split(' ·')[0])}</div><div class='v'>R$ {usd(o['brl'])}</div><div class='s'>por pessoa · USD {usd(o['usd'])}</div></div>"
         for o in opcoes
     )
     html = f"""<!doctype html>
