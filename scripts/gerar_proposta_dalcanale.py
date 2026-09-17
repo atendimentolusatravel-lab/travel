@@ -43,7 +43,7 @@ def brl(v):
 OPCOES = [
     {
         "letra": "A",
-        "cor": "#1a3a5c",
+        "cor": "#2d5e3a",
         "titulo": "Balcãs e Danúbio",
         "sub": "Albânia · Macedônia do Norte · Sérvia · Hungria",
         "resumo": "O roteiro mais moderno da seleção: quatro bases que sobem do Adriático ao Danúbio, "
@@ -137,7 +137,7 @@ OPCOES = [
     },
     {
 "letra": "B",
-        "cor": "#1a4f55",
+        "cor": "#2d5e3a",
         "titulo": "Croácia Completa",
         "sub": "Dubrovnik · Split · Zagreb",
         "resumo": "Somente Croácia, do sul ao norte: três bases de seis noites, mar ainda a 20 °C em "
@@ -218,7 +218,7 @@ OPCOES = [
     },
     {
         "letra": "C",
-        "cor": "#730505",
+        "cor": "#2d5e3a",
         "titulo": "Albânia e Lago Ohrid",
         "sub": "Albânia · Macedônia do Norte",
         "resumo": "O roteiro de melhor custo-benefício: um único bilhete de ida e volta a Tirana, "
@@ -306,7 +306,7 @@ OPCOES = [
     },
     {
         "letra": "D",
-        "cor": "#1f4a3a",
+        "cor": "#2d5e3a",
         "titulo": "Londres e Escócia",
         "sub": "Inglaterra · Escócia",
         "resumo": "Londres, Glasgow e Edimburgo em três bases ligadas por trem, com Highlands, "
@@ -396,8 +396,8 @@ for o in OPCOES:
 CSS = r"""
 """ + open(os.path.join(ROOT, 'fonts', 'local-fonts.css'), encoding='utf-8').read() + r"""
 :root{
-  --gold:#da8d00; --dest:#1a3a5c; --ink:#1a1510; --char:#333131; --mut:#9a8d80; --line:#e4ddd2; --paper:#f5f0ea; --sf:#ede7de;
-  --dest-soft: color-mix(in srgb, var(--dest) 9%, #faf7f2); --dest-mid: color-mix(in srgb, var(--dest) 24%, #faf7f2);
+  --gold:#da8d00; --dest:#2d5e3a; --ink:#2d5e3a; --char:#3f4a3a; --mut:#8a9480; --line:#dfe4d6; --paper:#f5f3ea; --sf:#e9ecdf;
+  --dest-soft: color-mix(in srgb, #73805c 14%, #faf9f2); --dest-mid: color-mix(in srgb, #73805c 34%, #faf9f2);
   --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif; --con:'Montserrat',var(--sans); --lbl:'Arimo',var(--sans);
 }
 @page{ size:A3 portrait; margin:0; }
@@ -407,11 +407,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .page:last-child{ page-break-after:auto; }
 .hd{ background:var(--ink); height:26mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
 .hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
-.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.65); }
 .goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
 .ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
-.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
-.ft .sep{ color:rgba(255,255,255,.2); }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.8); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.4); }
 .body{ padding:14mm 22mm; flex:1; }
 .eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
 .h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:3mm 0 6mm; }
@@ -421,13 +421,13 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .cover{ position:relative; }
 .cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink); display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
 .cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
-.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.65); }
 .cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
 .cover-photo{ position:absolute; inset:0; background:
   radial-gradient(110% 70% at 85% 18%, rgba(218,141,0,.28) 0%, transparent 60%),
-  radial-gradient(80% 55% at 12% 88%, rgba(26,79,85,.16) 0%, transparent 65%),
-  linear-gradient(160deg,#faf7f2 0%,#f0ebe3 60%,#e3dbd0 100%); }
-.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(255,255,255,0) 40%, rgba(245,240,234,.9) 80%); z-index:2; }
+  radial-gradient(80% 55% at 12% 88%, rgba(115,128,92,.28) 0%, transparent 65%),
+  linear-gradient(160deg,#faf9f2 0%,#eef0e4 60%,#dfe4d0 100%); }
+.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(255,255,255,0) 40%, rgba(245,243,234,.85) 80%); z-index:2; }
 .cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:var(--ink); }
 .cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
 .cover-basis{ font-size:10pt; color:var(--mut); margin:2mm 0 9mm; }
@@ -437,7 +437,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .stats{ display:flex; gap:14mm; margin-top:11mm; }
 .stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
 .stat span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; }
-.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:#5c5249; line-height:1.7; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:var(--char); line-height:1.7; }
 .cover-sig a{ color:inherit; text-decoration:none; }
 
 /* COMPARATIVO */
@@ -513,7 +513,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .val-row .lbl{ font-size:11.5pt; color:var(--char); }
 .val-row .amt{ font-size:11.5pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
 .val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink); border-radius:5px; padding:6mm 8mm; margin-top:6mm; }
-.val-total .lbl{ font-size:11pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.val-total .lbl{ font-size:11pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.85); }
 .val-total .amt{ font-size:16pt; font-weight:800; color:var(--gold); }
 .val-brl{ display:flex; justify-content:space-between; padding:4mm 8mm; font-size:10.5pt; color:var(--mut); }
 .val-brl b{ color:var(--ink); }
