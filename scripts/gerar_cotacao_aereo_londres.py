@@ -95,6 +95,9 @@ TL_CSS = r"""
 .bar div small{ font-weight:400; opacity:.85; margin-left:2mm; font-size:8.5pt; }
 .bar .b1{ background:#73805c; } .bar .b2{ background:#5f7650; } .bar .b3{ background:#4a6b45; } .bar .b4{ background:#2d5e3a; }
 .res-col .res-body p{ font-size:9.2pt; line-height:1.6; color:var(--char); margin-top:3mm; }
+.clima{ display:block; margin-bottom:3mm; padding-bottom:3mm; border-bottom:1px solid var(--line); }
+.clima .t{ display:block; font-size:15pt; font-weight:800; color:var(--dest); line-height:1; }
+.clima .o{ display:block; font-size:8.4pt; color:var(--mut); line-height:1.4; margin-top:1.2mm; }
 .kpis{ display:flex; gap:12mm; margin-top:5mm; }
 .kpis b{ display:block; font-size:22pt; font-weight:800; color:var(--gold); line-height:1; }
 .kpis span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; }
@@ -109,10 +112,16 @@ def resumo_page(bases, eyebrow, lead, nota, hd_tag="Resumo do roteiro"):
                   for i, b in enumerate(bases, 1))
     cols = ""
     for i, b in enumerate(bases, 1):
+        clima = ""
+        if b.get("clima"):
+            tmin, tmax, obs = b["clima"]
+            clima = (f'<div class="clima"><span class="t">{tmin}° a {tmax}°C</span>'
+                     f'<span class="o">{_e(obs)}</span></div>')
         cols += f"""
         <div class="res-col">
           <div class="res-top"><div class="lt">Base {i}</div><div class="tt">{_e(b['cidade'])}</div><div class="st">{b['noites']} noites · {_e(b['datas'])}</div></div>
           <div class="res-body">
+            {clima}
             <div class="res-nts">Bate-voltas</div>
             <div class="res-bv">{_e(b['bv'])}</div>
             <p>{_e(b['txt'])}</p>
@@ -137,16 +146,16 @@ def resumo_page(bases, eyebrow, lead, nota, hd_tag="Resumo do roteiro"):
 
 
 BASES_LONDRES = [
-    {"cidade": "Londres", "noites": 6, "datas": "09 a 15/10",
+    {"cidade": "Londres", "noites": 6, "datas": "09 a 15/10", "clima": (8, 15, "outubro · chuva leve em metade dos dias"),
      "bv": "Windsor e Hampton Court · Bath e Stonehenge · Oxford",
      "txt": "Chegada em 09/10. Westminster, Tate Modern, Torre de Londres, South Kensington e um musical no West End, com três bate-voltas de trem ou privativo."},
-    {"cidade": "York", "noites": 3, "datas": "15 a 18/10",
+    {"cidade": "York", "noites": 3, "datas": "15 a 18/10", "clima": (6, 14, "outubro · manhãs frias e névoa"),
      "bv": "Castle Howard · Whitby e North York Moors · Harrogate",
      "txt": "Trem de 2h de King's Cross. Cidade medieval murada: York Minster, The Shambles e o museu ferroviário. Parada natural a caminho da Escócia."},
-    {"cidade": "Glasgow", "noites": 5, "datas": "18 a 23/10",
+    {"cidade": "Glasgow", "noites": 5, "datas": "18 a 23/10", "clima": (5, 12, "outubro · o mês mais chuvoso; vento"),
      "bv": "Loch Lomond e Stirling · Highlands: Glencoe e Loch Ness · Falkirk e New Lanark",
      "txt": "Trem de 3h. Kelvingrove, West End, roteiro Mackintosh e música ao vivo, com as Highlands e Loch Lomond em bate-volta."},
-    {"cidade": "Edimburgo", "noites": 5, "datas": "23 a 28/10",
+    {"cidade": "Edimburgo", "noites": 5, "datas": "23 a 28/10", "clima": (5, 12, "outubro · frio seco, vento no castelo"),
      "bv": "St Andrews e Fife · Rosslyn Chapel · Leith e Royal Yacht Britannia",
      "txt": "Trem de 50 min. Castelo, Royal Mile, Arthur's Seat, New Town e Dean Village. Na opção 3 o voo de volta sai daqui às 05:50 do dia 28."},
 ]
@@ -217,7 +226,8 @@ if __name__ == "__main__":
             "Quatro bases ligadas por trem, cada uma com hospedagem fixa e as cidades vizinhas em bate-volta. "
             "Com a chegada em 09/10 e o voo de volta em 28/10, o roteiro tem {total} noites no Reino Unido.",
             "Nas opções 1 e 2 (volta por Londres) o dia 28/10 começa com o trem Edimburgo–Londres de 4h30, a tempo dos voos da tarde e da noite. "
-            "Na opção 3 a viagem termina em Edimburgo. Esta cotação cobre apenas o aéreo internacional; hotelaria, trens, transfers e passeios são cotados à parte. "
+            "Na opção 3 a viagem termina em Edimburgo. Temperaturas são médias históricas de outubro (mínima e máxima); leve casaco impermeável, camadas e sapato fechado. "
+            "Esta cotação cobre apenas o aéreo internacional; hotelaria, trens, transfers e passeios são cotados à parte. "
             "*Nada reservado, apenas cotado.",
         ),
         extra_css=RES_CSS + TL_CSS,
