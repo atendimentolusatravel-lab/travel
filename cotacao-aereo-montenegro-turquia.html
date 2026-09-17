@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Família Dalcanale | Aéreo para Montenegro e Turquia — LusaTravel</title>
+<style>
+@font-face{font-family:'Arimo';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/arimo-700.woff2') format('woff2');}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/montserrat-400.woff2') format('woff2');}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/montserrat-500.woff2') format('woff2');}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/montserrat-600.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:300;font-display:swap;src:url('fonts/poppins-300.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/poppins-400.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/poppins-500.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/poppins-600.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/poppins-700.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/poppins-800.woff2') format('woff2');}
+:root{
+  --gold:#da8d00; --dest:#2d5e3a; --ink:#2d5e3a; --char:#3f4a3a; --mut:#8a9480; --line:#dfe4d6; --paper:#f5f3ea; --sf:#e9ecdf;
+  --dest-soft: color-mix(in srgb, #73805c 14%, #faf9f2); --dest-mid: color-mix(in srgb, #73805c 34%, #faf9f2);
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif; --con:'Montserrat',var(--sans); --lbl:'Arimo',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; page-break-after:always; display:flex; flex-direction:column; }
+.page:last-child{ page-break-after:auto; }
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.65); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.8); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.4); }
+.body{ padding:14mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:3mm 0 6mm; }
+.lead{ font-size:11.5pt; line-height:1.7; color:var(--char); max-width:230mm; }
+
+/* CAPA */
+.cover{ position:relative; }
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink); display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.65); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0; background:
+  radial-gradient(100% 65% at 85% 15%, rgba(218,141,0,.6) 0%, rgba(218,141,0,.12) 45%, transparent 70%),
+  radial-gradient(70% 50% at 10% 95%, rgba(255,255,255,.12) 0%, transparent 60%),
+  linear-gradient(160deg,#73805c 0%,#4a6b45 45%,#2d5e3a 100%); }
+.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,0) 45%, rgba(45,94,58,.55) 85%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:#ffc25c; font-weight:700; }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.8); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.75); }
+.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:#ffc25c; margin-top:2mm; letter-spacing:.04em; }
+.cover .stat b{ color:#ffc25c; }
+.cover .stat span{ color:rgba(255,255,255,.8); }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.85); line-height:1.7; }
+.cover-sig a{ color:inherit; text-decoration:none; }
+
+/* COMPARATIVO */
+.cmp{ display:grid; grid-template-columns:1fr 1fr; gap:8mm; margin-top:6mm; }
+.cmp-card{ border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.cmp-card .top{ background:var(--dest-soft); color:var(--dest); padding:5mm 7mm; display:flex; align-items:center; gap:5mm; border-bottom:1px solid var(--line); }
+.cmp-card .lt{ width:12mm; height:12mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.cmp-card .tt{ font-size:14pt; font-weight:700; line-height:1.15; }
+.cmp-card .st{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; margin-top:1mm; }
+.cmp-card .mid{ padding:5mm 7mm; font-size:10pt; line-height:1.6; }
+.cmp-card .bases{ margin-top:3mm; font-family:var(--lbl); font-size:8.5pt; color:var(--mut); letter-spacing:.04em; text-transform:uppercase; }
+.cmp-card .bot{ background:var(--paper); border-top:1px solid var(--line); padding:4mm 7mm; display:flex; justify-content:space-between; align-items:baseline; }
+.cmp-card .bot .k{ font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.cmp-card .bot .v{ font-size:15pt; font-weight:800; color:var(--ink); }
+.cmp-card .bot .v small{ font-size:9pt; font-weight:500; color:var(--mut); margin-left:2mm; }
+
+/* SEPARADOR DE OPÇÃO */
+.opt-hero{ flex:1; position:relative; display:flex; align-items:flex-end; padding:22mm; color:#fff; background:
+  radial-gradient(85% 55% at 85% 12%, rgba(218,141,0,.55) 0%, rgba(218,141,0,.12) 45%, transparent 70%),
+  radial-gradient(60% 50% at 8% 95%, rgba(255,255,255,.10) 0%, transparent 60%),
+  linear-gradient(160deg, #73805c 0%, #4a6b45 45%, #2d5e3a 100%); }
+.opt-hero .lt{ font-size:9pt; letter-spacing:.3em; text-transform:uppercase; color:#ffc25c; font-weight:700; }
+.opt-hero .tt{ font-size:40pt; font-weight:800; line-height:1.05; margin:3mm 0 2mm; color:#fff; }
+.opt-hero .st{ font-size:12pt; color:#ffc25c; letter-spacing:.06em; text-transform:uppercase; }
+.opt-hero .rs{ font-size:12pt; line-height:1.7; color:rgba(255,255,255,.92); max-width:200mm; margin-top:8mm; }
+.opt-hero .stat b{ color:#ffc25c; }
+.opt-hero .stat span{ color:rgba(255,255,255,.75); }
+.opt-hero .stats{ margin-top:10mm; }
+
+/* ITINERÁRIO */
+.tl{ display:flex; flex-direction:column; }
+.tl-item{ display:flex; align-items:flex-start; gap:6mm; }
+.tl-badge{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tl-line{ width:2px; height:7mm; background:var(--line); margin-left:5.4mm; }
+.tl-city{ font-size:14pt; font-weight:700; color:var(--ink); }
+.tl-meta{ font-size:10pt; color:var(--mut); margin-top:1mm; }
+.tl-hotel{ font-size:10pt; color:var(--char); margin-top:1mm; font-weight:300; }
+.tl-bv{ font-size:9.5pt; color:var(--char); margin-top:1.5mm; line-height:1.55; }
+.tl-bv b{ color:var(--gold); font-weight:700; letter-spacing:.08em; text-transform:uppercase; font-size:8pt; margin-right:2mm; }
+.box{ margin-top:8mm; border:1px solid var(--line); border-radius:6px; padding:5mm 7mm; background:var(--paper); }
+.box .k{ font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.box .v{ font-size:10.5pt; line-height:1.65; margin-top:1.5mm; }
+
+/* DESTINO + HOTEL */
+.dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
+.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#ffc25c; }
+.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid #ffc25c; color:#ffc25c; font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.dest-photo{ height:105mm; position:relative; flex-shrink:0; background:
+  repeating-linear-gradient(135deg, rgba(255,255,255,.06) 0 6mm, transparent 6mm 12mm),
+  radial-gradient(80% 90% at 85% 10%, rgba(218,141,0,.6) 0%, rgba(218,141,0,.15) 45%, transparent 65%),
+  linear-gradient(160deg, #73805c 0%, #4a6b45 50%, #2d5e3a 100%); }
+.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; }
+.dest-photo .cap small{ display:block; font-size:8.5pt; font-weight:500; letter-spacing:.2em; color:#ffc25c; margin-top:1mm; }
+.dest-text{ font-size:11.5pt; font-weight:400; line-height:1.7; color:var(--char); }
+.loc{ margin-top:5mm; display:flex; gap:4mm; align-items:flex-start; }
+.loc .k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:700; white-space:nowrap; padding-top:1mm; }
+.loc .v{ font-size:10.5pt; line-height:1.6; }
+.hotel-card{ margin-top:7mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.hotel-card .top{ background:var(--paper); padding:5mm 8mm; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; }
+.hotel-card .name{ font-size:15pt; font-weight:700; color:var(--ink); }
+.hotel-card .stars{ font-size:14pt; color:var(--gold); letter-spacing:2px; margin-top:1mm; }
+.hotel-card .score{ font-family:var(--lbl); font-size:8.5pt; letter-spacing:.1em; text-transform:uppercase; color:var(--mut); text-align:right; }
+.hotel-card .score b{ display:block; font-size:16pt; color:var(--ink); font-family:var(--sans); letter-spacing:0; }
+.hotel-card .rows{ padding:5mm 8mm; display:grid; grid-template-columns:1fr 1fr; gap:3.5mm 10mm; }
+.hotel-card .k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.hotel-card .v{ font-size:11pt; font-weight:300; color:var(--char); margin-top:1mm; }
+
+/* DIA A DIA */
+.days{ columns:2; column-gap:12mm; }
+.day{ margin-bottom:4.2mm; break-inside:avoid; }
+.day-h{ font-size:9.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); }
+.day-t{ font-size:9.6pt; line-height:1.55; color:var(--char); margin-top:1mm; }
+
+/* VALORES */
+.val-note{ font-size:9pt; color:var(--mut); margin-bottom:5mm; }
+.val-row{ display:flex; justify-content:space-between; gap:10mm; padding:4mm 0; border-bottom:1px solid var(--line); }
+.val-row .lbl{ font-size:11.5pt; color:var(--char); }
+.val-row .amt{ font-size:11.5pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink); border-radius:5px; padding:6mm 8mm; margin-top:6mm; }
+.val-total .lbl{ font-size:11pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.85); }
+.val-total .amt{ font-size:16pt; font-weight:800; color:var(--gold); }
+.val-brl{ display:flex; justify-content:space-between; padding:4mm 8mm; font-size:10.5pt; color:var(--mut); }
+.val-brl b{ color:var(--ink); }
+.val-fx{ font-size:9pt; color:var(--mut); margin-top:5mm; line-height:1.6; }
+.val-air{ margin-top:8mm; }
+
+/* CONDIÇÕES */
+.cond{ margin-bottom:7mm; }
+.cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
+.cond-t{ font-size:11pt; line-height:1.8; color:var(--char); }
+
+.air{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-top:4.5mm; }
+.air-top{ display:flex; align-items:center; justify-content:space-between; padding:3.5mm 7mm; color:#fff; background:
+  radial-gradient(70% 90% at 90% 10%, rgba(218,141,0,.5) 0%, rgba(218,141,0,.08) 50%, transparent 70%),
+  linear-gradient(160deg,#73805c 0%,#4a6b45 50%,#2d5e3a 100%); }
+.air-top .l{ display:flex; align-items:center; gap:5mm; }
+.air-top .n{ width:11mm; height:11mm; border-radius:50%; border:2px solid #ffc25c; color:#ffc25c; font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.air-top .tt{ font-size:14pt; font-weight:800; line-height:1.1; }
+.air-top .st{ font-size:8.5pt; letter-spacing:.08em; text-transform:uppercase; color:#ffc25c; margin-top:1mm; }
+.air-top .pr{ text-align:right; }
+.air-top .pr .k{ font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.75); }
+.air-top .pr .v{ font-size:16pt; font-weight:800; color:#ffc25c; line-height:1.1; }
+.air-top .pr .u{ font-size:9.5pt; color:rgba(255,255,255,.9); margin-top:.5mm; }
+table.fl{ width:100%; border-collapse:collapse; font-size:9.6pt; }
+table.fl th{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); text-align:left; padding:2.5mm 3mm 2mm; background:var(--paper); border-bottom:1px solid var(--line); }
+table.fl td{ padding:2.4mm 3mm; border-bottom:1px solid var(--line); vertical-align:top; }
+table.fl tr:last-child td{ border-bottom:none; }
+table.fl td.v{ font-weight:700; color:var(--ink); white-space:nowrap; }
+table.fl td.c{ color:var(--gold); font-weight:700; white-space:nowrap; }
+table.fl td.m{ color:var(--mut); }
+table.fl td:first-child, table.fl th:first-child{ padding-left:7mm; }
+table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
+.air-foot{ display:flex; justify-content:space-between; gap:8mm; padding:2.8mm 7mm; background:var(--paper); border-top:1px solid var(--line); font-size:9.3pt; color:var(--char); line-height:1.55; }
+.air-foot .t{ white-space:nowrap; color:var(--mut); font-size:8.5pt; text-align:right; }
+.air-foot .t b{ display:block; color:var(--ink); font-size:10.5pt; }
+.sum{ margin-top:5mm; display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; }
+.sum .c{ border:1px solid var(--line); border-radius:6px; padding:3.5mm 6mm; background:var(--paper); }
+.sum .k{ font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.sum .v{ font-size:14pt; font-weight:800; color:var(--ink); margin-top:1mm; }
+.sum .s{ font-size:8.8pt; color:var(--mut); margin-top:.5mm; }
+ .body{ padding:11mm 22mm; } .h2{ margin:2mm 0 4mm; } .lead{ font-size:10.5pt; } .sum{ grid-template-columns:repeat(3,1fr); }
+.res{ display:grid; grid-template-columns:repeat(4,1fr); gap:6mm; margin-top:6mm; }
+.res-col{ border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; }
+.res-top{ padding:6mm 6mm 5mm; color:#fff; background:
+  radial-gradient(90% 70% at 85% 10%, rgba(218,141,0,.55) 0%, rgba(218,141,0,.1) 50%, transparent 70%),
+  linear-gradient(160deg,#73805c 0%,#4a6b45 50%,#2d5e3a 100%); }
+.res-top .lt{ font-size:8pt; letter-spacing:.3em; text-transform:uppercase; color:#ffc25c; font-weight:700; }
+.res-top .tt{ font-size:15pt; font-weight:800; line-height:1.1; margin-top:1.5mm; }
+.res-top .st{ font-size:8pt; letter-spacing:.06em; text-transform:uppercase; color:#ffc25c; margin-top:1.5mm; }
+.res-body{ padding:5mm 6mm; flex:1; }
+.res-city{ display:flex; align-items:flex-start; gap:3.5mm; padding:3.2mm 0; border-bottom:1px solid var(--line); }
+.res-city:last-child{ border-bottom:none; }
+.res-n{ width:9mm; height:9mm; border-radius:50%; background:var(--dest); color:#ffc25c; font-weight:800; font-size:9.5pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.res-name{ font-size:11pt; font-weight:700; color:var(--ink); line-height:1.2; }
+.res-name small{ font-weight:400; color:var(--mut); font-size:9pt; }
+.res-nts{ font-size:9pt; color:var(--gold); font-weight:700; letter-spacing:.04em; margin-top:.5mm; }
+.res-bv{ font-size:8.6pt; color:var(--char); line-height:1.5; margin-top:1mm; }
+.res-foot{ background:var(--paper); border-top:1px solid var(--line); padding:4mm 6mm; }
+.res-foot .r{ display:block; font-size:7.8pt; letter-spacing:.08em; text-transform:uppercase; color:var(--mut); }
+.res-foot .r b, .res-foot .r span:last-child{ display:block; color:var(--ink); font-size:11pt; letter-spacing:0; text-transform:none; margin-top:.5mm; }
+.res-foot .r + .r{ margin-top:2.5mm; }
+.res-note{ margin-top:6mm; font-size:9pt; color:var(--mut); line-height:1.6; }
+
+.bar{ display:flex; margin-top:8mm; border-radius:6px; overflow:hidden; border:1px solid var(--line); height:16mm; }
+.bar div{ display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:10.5pt; letter-spacing:.04em; }
+.bar div small{ font-weight:400; opacity:.85; margin-left:2mm; font-size:8.5pt; }
+.bar .b1{ background:#73805c; } .bar .b2{ background:#5f7650; } .bar .b3{ background:#4a6b45; } .bar .b4{ background:#2d5e3a; }
+.res-col .res-body p{ font-size:9.2pt; line-height:1.6; color:var(--char); margin-top:3mm; }
+.clima{ display:block; margin-bottom:3mm; padding-bottom:3mm; border-bottom:1px solid var(--line); }
+.clima .t{ display:block; font-size:15pt; font-weight:800; color:var(--dest); line-height:1; }
+.clima .o{ display:block; font-size:8.4pt; color:var(--mut); line-height:1.4; margin-top:1.2mm; }
+.kpis{ display:flex; gap:12mm; margin-top:5mm; }
+.kpis b{ display:block; font-size:22pt; font-weight:800; color:var(--gold); line-height:1; }
+.kpis span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; }
+
+/* página 1 tem 18 voos: compacta a tabela para caber no A3 */
+.body{ padding:9mm 22mm !important; }
+.lead{ font-size:9.8pt !important; }
+.air{ margin-top:3mm; }
+.air-top{ padding:2.4mm 7mm; }
+.air-top .tt{ font-size:13pt; }
+table.fl{ font-size:9pt; }
+table.fl th{ padding:1.8mm 3mm 1.5mm; }
+table.fl td{ padding:1.5mm 3mm; }
+.air-foot{ padding:2mm 7mm; font-size:8.6pt; }
+.sum{ margin-top:3.5mm; }
+.sum .c{ padding:2.5mm 6mm; }
+.bar .b5{ background:#234a2e; }
+.bar div{ white-space:nowrap; padding:0 2mm; }
+.res-col .res-body p{ font-size:8.8pt; }
+.res-bv{ font-size:8.3pt; }
+</style></head><body>
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Cotação de aéreo</div></div><div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Família Dalcanale · 4 adultos · 2 quartos duplos · saída 08/10 · retorno 25/10/2026 · 18 dias</div>
+    <h2 class="h2">Aéreo para Montenegro e Turquia</h2>
+    <p class="lead">Três formas de fazer o aéreo do roteiro Montenegro e Turquia, todas pela Turkish Airlines: o hub de Istambul vira destino em vez de conexão. Cada opção soma três bilhetes, São Paulo–Istambul ida e volta, Istambul–Tivat ida e volta e o doméstico Istambul–Capadócia. A opção 1 começa pela Turquia e sai por Tivat; a 2 começa por Montenegro e sai por Istambul. Valores por pessoa com bagagem, consulta em 17/09.</p>
+    
+    <div class="air">
+      <div class="air-top">
+        <div class="l"><div class="n">1</div><div><div class="tt">Turkish Airlines · Turquia primeiro</div><div class="st">Entrada por Istambul, saída por Tivat · econômica</div></div></div>
+        <div class="pr"><div class="k">Por pessoa · econômica</div><div class="v">R$ 16.039,06</div><div class="u">USD 3.114,38</div></div>
+      </div>
+      <table class="fl">
+        <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
+        <tr><td class='v'>TK 216</td><td>08/10 16:35</td><td>09/10 11:15</td><td>GRU · São Paulo</td><td>IST · Istambul</td><td class='v'>12h40</td><td class='c'>—</td><td class='m'>A359</td><td class='m'>Y · ExtraFly</td></tr><tr><td class='v'>TK 2002</td><td>12/10 08:15</td><td>12/10 09:35</td><td>IST · Istambul</td><td>NAV · Capadócia</td><td class='v'>1h20</td><td class='c'>—</td><td class='m'>—</td><td class='m'>Y · EcoFly</td></tr><tr><td class='v'>TK 2001</td><td>14/10 08:30</td><td>14/10 10:05</td><td>NAV · Capadócia</td><td>IST · Istambul</td><td class='v'>1h35</td><td class='c'>—</td><td class='m'>—</td><td class='m'>Y · EcoFly</td></tr><tr><td class='v'>TK 1097</td><td>14/10 15:55</td><td>14/10 16:40</td><td>IST · Istambul</td><td>TIV · Tivat</td><td class='v'>1h45</td><td class='c'>5h50</td><td class='m'>B738</td><td class='m'>Y · ExtraFly</td></tr><tr><td class='v'>TK 1096</td><td>24/10 09:05</td><td>24/10 11:55</td><td>TIV · Tivat</td><td>IST · Istambul</td><td class='v'>1h50</td><td class='c'>—</td><td class='m'>B738</td><td class='m'>Y · ExtraFly</td></tr><tr><td class='v'>TK 215</td><td>24/10 20:15</td><td>25/10 03:30</td><td>IST · Istambul</td><td>GRU · São Paulo</td><td class='v'>12h15</td><td class='c'>8h20</td><td class='m'>A359</td><td class='m'>Y · ExtraFly</td></tr>
+      </table>
+      <div class="air-foot"><div>Istambul e Capadócia na chegada, Montenegro na segunda metade e volta direto de Tivat, com 8h20 em Istambul antes do voo noturno. Tarifas ExtraFly (1 mala de 23 kg) nos trechos internacionais e EcoFly no doméstico. O voo TK 16, às 04:10 do dia 08, custa USD 279 a menos por pessoa na mesma tarifa.</div><div class="t">Tempo total ida · volta<b>12h40 · 23h25</b></div></div>
+    </div>
+    <div class="air">
+      <div class="air-top">
+        <div class="l"><div class="n">2</div><div><div class="tt">Turkish Airlines · Montenegro primeiro</div><div class="st">Entrada por Tivat, saída por Istambul · econômica</div></div></div>
+        <div class="pr"><div class="k">Por pessoa · econômica</div><div class="v">R$ 16.533,35</div><div class="u">USD 3.210,36</div></div>
+      </div>
+      <table class="fl">
+        <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
+        <tr><td class='v'>TK 216</td><td>08/10 16:35</td><td>09/10 11:15</td><td>GRU · São Paulo</td><td>IST · Istambul</td><td class='v'>12h40</td><td class='c'>—</td><td class='m'>A359</td><td class='m'>Y · ExtraFly</td></tr><tr><td class='v'>TK 1097</td><td>09/10 15:55</td><td>09/10 16:40</td><td>IST · Istambul</td><td>TIV · Tivat</td><td class='v'>1h45</td><td class='c'>4h40</td><td class='m'>B7M8</td><td class='m'>Y · ExtraFly</td></tr><tr><td class='v'>TK 1096</td><td>18/10 09:05</td><td>18/10 11:55</td><td>TIV · Tivat</td><td>IST · Istambul</td><td class='v'>1h50</td><td class='c'>—</td><td class='m'>B738</td><td class='m'>Y · ExtraFly</td></tr><tr><td class='v'>TK 2086</td><td>21/10 16:10</td><td>21/10 17:30</td><td>IST · Istambul</td><td>NAV · Capadócia</td><td class='v'>1h20</td><td class='c'>—</td><td class='m'>—</td><td class='m'>Y · EcoFly</td></tr><tr><td class='v'>TK 2005</td><td>24/10 13:25</td><td>24/10 14:55</td><td>NAV · Capadócia</td><td>IST · Istambul</td><td class='v'>1h30</td><td class='c'>—</td><td class='m'>—</td><td class='m'>Y · EcoFly</td></tr><tr><td class='v'>TK 215</td><td>24/10 20:15</td><td>25/10 03:30</td><td>IST · Istambul</td><td>GRU · São Paulo</td><td class='v'>12h15</td><td class='c'>5h20</td><td class='m'>A359</td><td class='m'>Y · ExtraFly</td></tr>
+      </table>
+      <div class="air-foot"><div>Mesmos três bilhetes na ordem inversa: chega a Tivat no mesmo dia, com 4h40 em Istambul, e termina a viagem na Turquia, voando da Capadócia direto para a conexão da volta. Tarifas ExtraFly (1 mala de 23 kg) nos trechos internacionais e EcoFly no doméstico.</div><div class="t">Tempo total ida · volta<b>19h05 · 20h05</b></div></div>
+    </div>
+    <div class="air">
+      <div class="air-top">
+        <div class="l"><div class="n">3</div><div><div class="tt">Turkish Airlines · executiva</div><div class="st">Entrada por Istambul, saída por Tivat · executiva</div></div></div>
+        <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ 51.554,59</div><div class="u">USD 10.010,60</div></div>
+      </div>
+      <table class="fl">
+        <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
+        <tr><td class='v'>TK 216</td><td>07/10 16:35</td><td>08/10 11:15</td><td>GRU · São Paulo</td><td>IST · Istambul</td><td class='v'>12h40</td><td class='c'>—</td><td class='m'>A359</td><td class='m'>C · BusinessFly</td></tr><tr><td class='v'>TK 2002</td><td>12/10 08:15</td><td>12/10 09:35</td><td>IST · Istambul</td><td>NAV · Capadócia</td><td class='v'>1h20</td><td class='c'>—</td><td class='m'>—</td><td class='m'>Y · EcoFly</td></tr><tr><td class='v'>TK 2001</td><td>14/10 08:30</td><td>14/10 10:05</td><td>NAV · Capadócia</td><td>IST · Istambul</td><td class='v'>1h35</td><td class='c'>—</td><td class='m'>—</td><td class='m'>Y · EcoFly</td></tr><tr><td class='v'>TK 1097</td><td>14/10 15:55</td><td>14/10 16:40</td><td>IST · Istambul</td><td>TIV · Tivat</td><td class='v'>1h45</td><td class='c'>5h50</td><td class='m'>B738</td><td class='m'>C · BusinessFly</td></tr><tr><td class='v'>TK 1096</td><td>24/10 09:05</td><td>24/10 11:55</td><td>TIV · Tivat</td><td>IST · Istambul</td><td class='v'>1h50</td><td class='c'>—</td><td class='m'>B738</td><td class='m'>C · BusinessFly</td></tr><tr><td class='v'>TK 15</td><td>25/10 09:50</td><td>25/10 17:40</td><td>IST · Istambul</td><td>GRU · São Paulo</td><td class='v'>13h50</td><td class='c'>21h55</td><td class='m'>A359</td><td class='m'>C · BusinessFly</td></tr>
+      </table>
+      <div class="air-foot"><div>Roteiro da opção 1 com executiva no trecho internacional e em Istambul–Tivat (2 malas de 32 kg e sala VIP); os voos de 1h20 da Capadócia ficam em econômica. Em 08/10 não há executiva na ida: a saída passa para 07/10 e a volta para a manhã de 25/10, com pernoite em Istambul no dia 24. Tarifa BusinessFly.</div><div class="t">Tempo total ida · volta<b>12h40 · 33h35</b></div></div>
+    </div>
+    <div class="sum"><div class='c'><div class='k'>Opção 1 · Turkish Airlines</div><div class='v'>R$ 16.039,06</div><div class='s'>por pessoa · USD 3.114,38</div></div><div class='c'><div class='k'>Opção 2 · Turkish Airlines</div><div class='v'>R$ 16.533,35</div><div class='s'>por pessoa · USD 3.210,36</div></div><div class='c'><div class='k'>Opção 3 · Turkish Airlines</div><div class='v'>R$ 51.554,59</div><div class='s'>por pessoa · USD 10.010,60</div></div></div>
+    <div class="res-note" style="margin-top:4.5mm;font-size:8.8pt;color:var(--mut);line-height:1.6">Alternativa a confirmar no GDS: a tarifa ida e volta São Paulo–Tivat de USD 1.831,65 admite stopover de até 6 dias em Istambul pelo programa Stopover in Istanbul, o que pode substituir os dois bilhetes internacionais da opção 1. Os voos domésticos foram cotados em liras (TRY = 48,67). Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.</div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Resumo do roteiro</div></div><div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Família Dalcanale · Montenegro e Turquia · entrada por Istambul, saída por Tivat</div>
+    <h2 class="h2">Destinos e quantidade de dias</h2>
+    <p class="lead">Cinco bases em circuito: a Turquia na chegada, aproveitando a conexão obrigatória em Istambul, e Montenegro de carro na segunda metade, com costa, serra e praia. Com a chegada em 09/10 e o voo de volta em 24/10, o roteiro tem 15 noites nos dois países.</p>
+    <div class="kpis">
+      <div><b>5</b><span>Bases</span></div><div><b>15</b><span>Noites</span></div><div><b>15</b><span>Bate-voltas</span></div>
+    </div>
+    <div class="bar"><div class="b1" style="flex:3">Istambul<small>3 noites</small></div><div class="b2" style="flex:2">Capadócia<small>2 noites</small></div><div class="b3" style="flex:4">Kotor<small>4 noites</small></div><div class="b4" style="flex:2">Žabljak<small>2 noites</small></div><div class="b5" style="flex:4">Budva<small>4 noites</small></div></div>
+    <div class="res" style="grid-template-columns:repeat(5,1fr)">
+        <div class="res-col">
+          <div class="res-top"><div class="lt">Base 1</div><div class="tt">Istambul</div><div class="st">3 noites · 09 a 12/10</div></div>
+          <div class="res-body">
+            <div class="clima"><span class="t">13° a 21°C</span><span class="o">outubro · ameno e seco; o melhor mês do ano</span></div>
+            <div class="res-nts">Bate-voltas</div>
+            <div class="res-bv">Bósforo de barco · Ilhas dos Príncipes · Hagia Sophia, Topkapi e Grande Bazar (a pé)</div>
+            <p>Chegada às 11:15. Hotel em Sultanahmet ou Karaköy, com a Cisterna, a Mesquita Azul e o Grande Bazar a pé; Bósforo, Galata e o lado asiático nos outros dias.</p>
+          </div>
+        </div>
+        <div class="res-col">
+          <div class="res-top"><div class="lt">Base 2</div><div class="tt">Capadócia</div><div class="st">2 noites · 12 a 14/10</div></div>
+          <div class="res-body">
+            <div class="clima"><span class="t">6° a 20°C</span><span class="o">outubro · noites frias; céu limpo para os balões</span></div>
+            <div class="res-nts">Bate-voltas</div>
+            <div class="res-bv">Balão ao amanhecer · Göreme e Museu ao Ar Livre · Cidade subterrânea de Derinkuyu</div>
+            <p>Voo de 1h20 até Nevşehir. Hotel-caverna em Göreme ou Uçhisar, balão na primeira manhã e os vales de Ihlara e das Fadas, com volta a Istambul a tempo do voo para Tivat.</p>
+          </div>
+        </div>
+        <div class="res-col">
+          <div class="res-top"><div class="lt">Base 3</div><div class="tt">Kotor</div><div class="st">4 noites · 14 a 18/10</div></div>
+          <div class="res-body">
+            <div class="clima"><span class="t">12° a 20°C</span><span class="o">outubro · sol com chuvas curtas; mar a 21 °C</span></div>
+            <div class="res-nts">Bate-voltas</div>
+            <div class="res-bv">Perast e Nossa Senhora das Rochas · Herceg Novi · Lovćen e Cetinje</div>
+            <p>Chegada às 16:40 pelo voo de Istambul, a 15 minutos do aeroporto de Tivat. Cidade velha veneziana, fortaleza de São João e a volta completa da baía, com carro alugado retirado no aeroporto.</p>
+          </div>
+        </div>
+        <div class="res-col">
+          <div class="res-top"><div class="lt">Base 4</div><div class="tt">Žabljak</div><div class="st">2 noites · 18 a 20/10</div></div>
+          <div class="res-body">
+            <div class="clima"><span class="t">2° a 12°C</span><span class="o">outubro · frio de serra; primeiras neves possíveis</span></div>
+            <div class="res-nts">Bate-voltas</div>
+            <div class="res-bv">Cânion do Tara · Lago Negro · Mosteiro de Ostrog (no caminho)</div>
+            <p>Carro de 4h passando pelo Mosteiro de Ostrog. Parque de Durmitor: Lago Negro, ponte Đurđevića Tara sobre o cânion mais profundo da Europa e rafting suave, que opera até meados de outubro.</p>
+          </div>
+        </div>
+        <div class="res-col">
+          <div class="res-top"><div class="lt">Base 5</div><div class="tt">Budva</div><div class="st">4 noites · 20 a 24/10</div></div>
+          <div class="res-body">
+            <div class="clima"><span class="t">13° a 20°C</span><span class="o">outubro · mar a 20 °C; tardes de sol</span></div>
+            <div class="res-nts">Bate-voltas</div>
+            <div class="res-bv">Sveti Stefan · Lago Skadar e Virpazar · Stari Bar</div>
+            <p>Descida de 3h pelo cânion do Morača. Cidade velha, praia Mogren e o mirante de Sveti Stefan; barco no Lago Skadar a 40 minutos. Voo de volta em Tivat, a 30 minutos, às 09:05 do dia 24.</p>
+          </div>
+        </div></div>
+    <div class="res-note">Na Turquia, transfers e passeios privativos; em Montenegro, carro alugado de Tivat a Tivat por 10 dias. Na opção 2 o circuito se inverte: Montenegro de 09 a 18/10 (Kotor 3, Žabljak 2 e Budva 4 noites), depois Istambul 3 noites e Capadócia 3 noites, com a volta saindo da Capadócia. Na opção 3 a chegada é em 08/10, com uma noite a mais em Istambul, e a volta na manhã de 25/10. Brasileiros não precisam de visto nos dois países. Temperaturas são médias históricas de outubro (mínima e máxima). Esta cotação cobre apenas o aéreo; hotelaria, carro, transfers e passeios são cotados à parte. *Nada reservado, apenas cotado.</div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+</body></html>
