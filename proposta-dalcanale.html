@@ -43,20 +43,22 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.65); }
 .cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
 .cover-photo{ position:absolute; inset:0; background:
-  radial-gradient(110% 70% at 85% 18%, rgba(218,141,0,.28) 0%, transparent 60%),
-  radial-gradient(80% 55% at 12% 88%, rgba(115,128,92,.28) 0%, transparent 65%),
-  linear-gradient(160deg,#faf9f2 0%,#eef0e4 60%,#dfe4d0 100%); }
-.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(255,255,255,0) 40%, rgba(245,243,234,.85) 80%); z-index:2; }
-.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:var(--ink); }
-.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.cover-basis{ font-size:10pt; color:var(--mut); margin:2mm 0 9mm; }
-.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:var(--mut); }
+  radial-gradient(100% 65% at 85% 15%, rgba(218,141,0,.6) 0%, rgba(218,141,0,.12) 45%, transparent 70%),
+  radial-gradient(70% 50% at 10% 95%, rgba(255,255,255,.12) 0%, transparent 60%),
+  linear-gradient(160deg,#73805c 0%,#4a6b45 45%,#2d5e3a 100%); }
+.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,0) 45%, rgba(45,94,58,.55) 85%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:#ffc25c; font-weight:700; }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.8); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.75); }
 .cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
-.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.cover-dest{ font-size:18pt; font-weight:600; color:#ffc25c; margin-top:2mm; letter-spacing:.04em; }
+.cover .stat b{ color:#ffc25c; }
+.cover .stat span{ color:rgba(255,255,255,.8); }
 .stats{ display:flex; gap:14mm; margin-top:11mm; }
 .stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
 .stat span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; }
-.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:var(--char); line-height:1.7; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.85); line-height:1.7; }
 .cover-sig a{ color:inherit; text-decoration:none; }
 
 /* COMPARATIVO */
@@ -74,12 +76,16 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .cmp-card .bot .v small{ font-size:9pt; font-weight:500; color:var(--mut); margin-left:2mm; }
 
 /* SEPARADOR DE OPÇÃO */
-.opt-hero{ background:var(--dest-soft); flex:1; position:relative; display:flex; align-items:flex-end; padding:22mm; color:var(--ink);
-  background-image: radial-gradient(90% 60% at 85% 15%, rgba(218,141,0,.22) 0%, transparent 60%), radial-gradient(70% 60% at 10% 90%, var(--dest-mid) 0%, transparent 60%); }
-.opt-hero .lt{ font-size:9pt; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.opt-hero .tt{ font-size:40pt; font-weight:800; line-height:1.05; margin:3mm 0 2mm; color:var(--dest); }
-.opt-hero .st{ font-size:12pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; }
-.opt-hero .rs{ font-size:12pt; line-height:1.7; color:var(--char); max-width:200mm; margin-top:8mm; }
+.opt-hero{ flex:1; position:relative; display:flex; align-items:flex-end; padding:22mm; color:#fff; background:
+  radial-gradient(85% 55% at 85% 12%, rgba(218,141,0,.55) 0%, rgba(218,141,0,.12) 45%, transparent 70%),
+  radial-gradient(60% 50% at 8% 95%, rgba(255,255,255,.10) 0%, transparent 60%),
+  linear-gradient(160deg, #73805c 0%, #4a6b45 45%, #2d5e3a 100%); }
+.opt-hero .lt{ font-size:9pt; letter-spacing:.3em; text-transform:uppercase; color:#ffc25c; font-weight:700; }
+.opt-hero .tt{ font-size:40pt; font-weight:800; line-height:1.05; margin:3mm 0 2mm; color:#fff; }
+.opt-hero .st{ font-size:12pt; color:#ffc25c; letter-spacing:.06em; text-transform:uppercase; }
+.opt-hero .rs{ font-size:12pt; line-height:1.7; color:rgba(255,255,255,.92); max-width:200mm; margin-top:8mm; }
+.opt-hero .stat b{ color:#ffc25c; }
+.opt-hero .stat span{ color:rgba(255,255,255,.75); }
 .opt-hero .stats{ margin-top:10mm; }
 
 /* ITINERÁRIO */
@@ -97,15 +103,15 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .box .v{ font-size:10.5pt; line-height:1.65; margin-top:1.5mm; }
 
 /* DESTINO + HOTEL */
-.dest-hd{ background:var(--dest-soft); padding:5mm 22mm; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
-.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--dest); }
-.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
+.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#ffc25c; }
+.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid #ffc25c; color:#ffc25c; font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
 .dest-photo{ height:105mm; position:relative; flex-shrink:0; background:
-  repeating-linear-gradient(135deg, rgba(255,255,255,.18) 0 6mm, transparent 6mm 12mm),
-  radial-gradient(80% 90% at 85% 10%, rgba(218,141,0,.22) 0%, transparent 60%),
-  linear-gradient(160deg, var(--dest-mid) 0%, var(--dest-soft) 100%); }
-.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--dest); }
-.dest-photo .cap small{ display:block; font-size:8.5pt; font-weight:500; letter-spacing:.2em; color:var(--mut); margin-top:1mm; }
+  repeating-linear-gradient(135deg, rgba(255,255,255,.06) 0 6mm, transparent 6mm 12mm),
+  radial-gradient(80% 90% at 85% 10%, rgba(218,141,0,.6) 0%, rgba(218,141,0,.15) 45%, transparent 65%),
+  linear-gradient(160deg, #73805c 0%, #4a6b45 50%, #2d5e3a 100%); }
+.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; }
+.dest-photo .cap small{ display:block; font-size:8.5pt; font-weight:500; letter-spacing:.2em; color:#ffc25c; margin-top:1mm; }
 .dest-text{ font-size:11.5pt; font-weight:400; line-height:1.7; color:var(--char); }
 .loc{ margin-top:5mm; display:flex; gap:4mm; align-items:flex-start; }
 .loc .k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:700; white-space:nowrap; padding-top:1mm; }
