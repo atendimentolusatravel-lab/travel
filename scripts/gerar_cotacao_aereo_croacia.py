@@ -87,7 +87,6 @@ def resumo_page():
             <div class="res-nts">Bate-voltas</div>
             <div class="res-bv">{_e(b['bv'])}</div>
             <p>{_e(b['txt'])}</p>
-            <div class="hotel">Hotel 4★ · {_e(b['hotel'])}</div>
           </div>
         </div>"""
     return f"""
@@ -96,15 +95,15 @@ def resumo_page():
   <div class="body">
     <div class="eyebrow">{CLIENTE.title()} · Croácia Completa · entrada por Dubrovnik, saída por Zagreb</div>
     <h2 class="h2">Destinos e quantidade de dias</h2>
-    <p class="lead">Quatro bases de sul a norte, cada uma com hotel fixo e as cidades vizinhas em bate-volta. Com a chegada em 09/10 e o
+    <p class="lead">Quatro bases de sul a norte, cada uma com hospedagem fixa e as cidades vizinhas em bate-volta. Com a chegada em 09/10 e o
     voo de volta em 28/10, o roteiro tem {total} noites na Croácia.</p>
     <div class="kpis">
-      <div><b>{len(BASES)}</b><span>Bases</span></div><div><b>{total}</b><span>Noites</span></div><div><b>{len(BASES)}</b><span>Hotéis</span></div><div><b>{n_bv}</b><span>Bate-voltas</span></div>
+      <div><b>{len(BASES)}</b><span>Bases</span></div><div><b>{total}</b><span>Noites</span></div><div><b>{n_bv}</b><span>Bate-voltas</span></div>
     </div>
     <div class="bar">{bar}</div>
     <div class="res" style="grid-template-columns:repeat({len(BASES)},1fr)">{cols}</div>
-    <div class="res-note">Hotelaria conforme a proposta Croácia Completa, com Zadar incluída como quarta base (Bastion Heritage Hotel, 4 estrelas, cotado em 17/09).
-    Valores de hotelaria e serviços na proposta principal. *Nada reservado, apenas cotado.</div>
+    <div class="res-note">Esta cotação cobre apenas o aéreo internacional. Hotelaria, transfers e passeios são cotados à parte, após a escolha do roteiro.
+    *Nada reservado, apenas cotado.</div>
   </div>
   {FT}
 </section>"""
