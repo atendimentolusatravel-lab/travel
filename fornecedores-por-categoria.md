@@ -110,6 +110,10 @@ Relação de fornecedores extraída dos prints do painel, agrupados pela categor
 6. Guerin P
 7. Bookroad P
 
+## Produto Canárias (1)
+
+1. Haiku Canarias
+
 ## Cruzeiros e Ferrys (13)
 
 1. Haiku Hotel + Ferris
@@ -210,6 +214,7 @@ Relação de fornecedores extraída dos prints do painel, agrupados pela categor
 - Haiku Hotel + Ferris aparece em Hotéis e em Cruzeiros e Ferrys.
 - Bookroad P aparece em Rent-a-Car e em Transportes.
 - Fly For Vacations aparece em Pacotes e em Recetivos.
+- Haiku Canarias aparece em Pacotes e em Produto Canárias.
 - Em Recetivos, vários cartões têm o país entre parênteses truncado no print; a truncatura foi mantida com "…" quando não foi possível completar pelo logótipo.
-- Os prints da vista agrupada (Aéreo, Hotéis, Pacotes e Tickets) foram conferidos e coincidem com as listas acima; não acrescentaram fornecedores.
-- Total de cartões contabilizados: 159 (com repetições entre categorias).
+- Os prints da vista agrupada (Aéreo, Hotéis, Pacotes, Tickets, Rent-a-Car, Cruzeiros e Ferrys, Transportes, Neve, Outros, Recetivos, Seguros e Vistos) foram conferidos e coincidem com as listas acima; só acrescentaram a categoria Produto Canárias.
+- Total de cartões contabilizados: 160 (com repetições entre categorias).
