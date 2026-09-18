@@ -150,6 +150,56 @@ Relação de fornecedores extraída dos prints do painel, agrupados pela categor
 6. Icarous P
 7. GBNTravel
 
+## Recetivos (35)
+
+1. Moza DMC Travel P
+2. Ofertas Benidorm
+3. Mundimaroc P
+4. Camino de Santiago (Reservas)
+5. VOS (Vision of Scandinavia)
+6. PT DMC Portugal
+7. A Class Travel
+8. American Receptive (American Rec. Avi…)
+9. AMV (Argentina)
+10. Armenia Holidays
+11. Bam Tours (Indon…)
+12. China Travel (Chi…)
+13. City Tours (Estad…)
+14. Dapaexplorer
+15. Dharma Adventures (N…)
+16. ENC Tours Azerb…
+17. Enjoy Cuba
+18. Fly For Vacations
+19. Formentera Break
+20. HCT Huaraz Chaví… (Perú HCT)
+21. Lares (Uruguay)
+22. Lotus Asia Tours …
+23. Mala Mala (Sudáf…)
+24. Mopane Game Safaris
+25. Mundo America (P…)
+26. Pandora Tours (I…)
+27. Pegu Travels
+28. Royal Expeditions
+29. See Dubai Tours (…)
+30. Selena Travel (Ch…)
+31. Talento Travel
+32. Turismo Rural Excepcional
+33. Ugarit Jordan (Si…)
+34. Viajes Melytour
+35. Visit Georgia
+
+## Seguros (4)
+
+1. Intermundial P
+2. In Sure Broker P
+3. Mawdy
+4. Haiku Seguros P
+
+## Vistos (2)
+
+1. Visateam P
+2. ATR P
+
 ---
 
 ### Notas
@@ -159,4 +209,7 @@ Relação de fornecedores extraída dos prints do painel, agrupados pela categor
 - Newblue aparece duas vezes em Pacotes ("Newblue P" e "Newblue"), tal como consta no painel.
 - Haiku Hotel + Ferris aparece em Hotéis e em Cruzeiros e Ferrys.
 - Bookroad P aparece em Rent-a-Car e em Transportes.
-- Total de cartões contabilizados: 118 (com repetições entre categorias).
+- Fly For Vacations aparece em Pacotes e em Recetivos.
+- Em Recetivos, vários cartões têm o país entre parênteses truncado no print; a truncatura foi mantida com "…" quando não foi possível completar pelo logótipo.
+- Os prints da vista agrupada (Aéreo, Hotéis, Pacotes e Tickets) foram conferidos e coincidem com as listas acima; não acrescentaram fornecedores.
+- Total de cartões contabilizados: 159 (com repetições entre categorias).
