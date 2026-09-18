@@ -30,7 +30,18 @@ for line in md.splitlines():
 
 for s in sections:
     assert len(s["itens"]) == s["n"], s["nome"]
+
+# --- exclui produtos Haiku (fornecedores próprios) ---
+EXCLUIR = "haiku"
+for s in sections:
+    s["itens"] = [i for i in s["itens"] if EXCLUIR not in i.lower()]
+    s["n"] = len(s["itens"])
+sections = [s for s in sections if s["n"] > 0]
+notas = [n for n in notas if EXCLUIR not in n.lower() and "Produto Canárias" not in n and not n.startswith("Total de cartões")]
 total = sum(s["n"] for s in sections)
+notas.append(f"Os produtos Haiku (fornecedores próprios) foram excluídos desta relação; "
+             f"as categorias que só continham produtos Haiku foram omitidas.")
+notas.append(f"Total de cartões contabilizados: {total} (com repetições entre categorias).")
 
 # --- styles ---
 GOLD = colors.HexColor("#B8860B"); NAVY = colors.HexColor("#1F3A5F")
