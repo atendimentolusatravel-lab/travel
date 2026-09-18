@@ -15,62 +15,52 @@ OUT_ = "Retorno em outubro"
 NOV_ = "Retorno em novembro"
 
 # voo = (número, saída "dd/mm HH:MM", chegada, origem, destino, duração, conexão, aeronave, "classe · tarifa")
-OPCOES = [
-    {
-        "letra": "1", "cia": "Air China", "titulo": "Air China · Madri",
-        "sub": "São Paulo ↔ Madri · voo direto · executiva · volta em outubro ou novembro",
-        "brl": 20271.51, "usd": 3934.61,
-        "ida": ("CA 898", "05/10 09:25", "06/10 00:45", "GRU · São Paulo", "MAD · Madri", "10h20", "", "B789", "D · Exec."),
-        "voltas": [
-            (OUT_, ("CA 897", "25/10 22:30", "26/10 05:30", "MAD · Madri", "GRU · São Paulo", "11h00", "", "B789", "Z · Exec.")),
-            (NOV_, ("CA 897", "09/11 22:30", "10/11 05:30", "MAD · Madri", "GRU · São Paulo", "11h00", "", "B789", "Z · Exec.")),
-        ],
-        "nota": "Voo direto nos dois sentidos, no Boeing 787. Mesma tarifa para a volta em 25/10 ou 09/11. "
-                "Chegada a Madri de madrugada e volta noturna. Conexão até o destino final em bilhete regional à parte. Classes D na ida e Z na volta.",
-        "tempo": ("10h20", "11h00"),
-    },
-    {
-        "letra": "2", "cia": "Air France", "titulo": "Air France · Paris",
-        "sub": "São Paulo ↔ Paris · voo direto · executiva · volta em outubro",
-        "brl": 23150.51, "usd": 4493.41,
-        "ida": ("AF 453", "05/10 14:40", "06/10 07:00", "GRU · São Paulo", "CDG · Paris", "11h20", "", "B77W", "O · Exec."),
-        "voltas": [
-            (OUT_, ("AF 460", "26/10 10:25", "26/10 18:25", "CDG · Paris", "GRU · São Paulo", "12h00", "", "A359", "O · Exec.")),
-        ],
-        "nota": "Voo direto nos dois sentidos, ida no 777 e volta no A350. Chegada a Paris às 07:00, com o dia inteiro para a conexão. "
-                "Conexão até o destino final em bilhete regional à parte. Classe O.",
-        "tempo": ("11h20", "12h00"),
-    },
-    {
-        "letra": "3", "cia": "LATAM", "titulo": "LATAM · Paris",
-        "sub": "São Paulo ↔ Paris · voo direto · executiva · volta em novembro",
-        "brl": 22745.49, "usd": 4414.80,
-        "ida": ("LA 8132", "06/10 18:20", "07/10 10:35", "GRU · São Paulo", "CDG · Paris", "11h15", "", "B789", "Z · PBS"),
-        "voltas": [
-            (NOV_, ("LA 8133", "09/11 12:05", "09/11 20:00", "CDG · Paris", "GRU · São Paulo", "11h55", "", "B789", "Z · PBS")),
-        ],
-        "nota": "Voo direto no Boeing 787, tarifa PBS. Os dois voos aparecem no sistema com aviso de alteração de horário; "
-                "confirmar na emissão. Conexão até o destino final em bilhete regional à parte. Classe Z.",
-        "tempo": ("11h15", "11h55"),
-    },
-    {
-        "letra": "4", "cia": "LATAM", "titulo": "LATAM · Roma",
-        "sub": "São Paulo ↔ Roma · voo direto · executiva · volta em novembro",
-        "brl": 22556.94, "usd": 4378.20,
-        "ida": ("LA 8120", "06/10 17:55", "07/10 10:10", "GRU · São Paulo", "FCO · Roma", "11h15", "", "B773", "I · PBS"),
-        "voltas": [
-            (NOV_, ("LA 8121", "09/11 12:10", "09/11 20:05", "FCO · Roma", "GRU · São Paulo", "11h55", "", "B773", "I · PBS")),
-        ],
-        "nota": "Voo direto no Boeing 777, tarifa PBS. Os dois voos aparecem no sistema com aviso de alteração de horário; "
-                "confirmar na emissão. Conexão até o destino final em bilhete regional à parte. Classe I.",
-        "tempo": ("11h15", "11h55"),
-    },
-]
+def _opt(letra, titulo, dest, retorno, brl, usd_, ida, volta, nota, tempo):
+    return {"letra": letra, "titulo": titulo, "retorno": retorno,
+            "sub": f"São Paulo ↔ {dest} · voo direto · executiva",
+            "brl": brl, "usd": usd_, "voos": [ida, volta], "nota": nota, "tempo": tempo}
+
+O1 = _opt("1", "Air China · Madri", "Madri", OUT_, 20271.51, 3934.61,
+          ("CA 898", "05/10 09:25", "06/10 00:45", "GRU · São Paulo", "MAD · Madri", "10h20", "", "B789", "D · Exec."),
+          ("CA 897", "25/10 22:30", "26/10 05:30", "MAD · Madri", "GRU · São Paulo", "11h00", "", "B789", "Z · Exec."),
+          "Voo direto nos dois sentidos, no Boeing 787. Chegada a Madri de madrugada e volta noturna. "
+          "Conexão até o destino final em bilhete regional à parte. Classes D na ida e Z na volta.",
+          ("10h20", "11h00"))
+O2 = _opt("2", "Air China · Madri", "Madri", NOV_, 20271.51, 3934.61,
+          ("CA 898", "05/10 09:25", "06/10 00:45", "GRU · São Paulo", "MAD · Madri", "10h20", "", "B789", "D · Exec."),
+          ("CA 897", "09/11 22:30", "10/11 05:30", "MAD · Madri", "GRU · São Paulo", "11h00", "", "B789", "Z · Exec."),
+          "Mesmos voos e mesma tarifa da opção 1, com a volta em 09/11. "
+          "Conexão até o destino final em bilhete regional à parte. Classes D na ida e Z na volta.",
+          ("10h20", "11h00"))
+O3 = _opt("3", "Air France · Paris", "Paris", OUT_, 23150.51, 4493.41,
+          ("AF 453", "05/10 14:40", "06/10 07:00", "GRU · São Paulo", "CDG · Paris", "11h20", "", "B77W", "O · Exec."),
+          ("AF 460", "26/10 10:25", "26/10 18:25", "CDG · Paris", "GRU · São Paulo", "12h00", "", "A359", "O · Exec."),
+          "Voo direto nos dois sentidos, ida no 777 e volta no A350. Chegada a Paris às 07:00, com o dia inteiro para a conexão. "
+          "Conexão até o destino final em bilhete regional à parte. Classe O.",
+          ("11h20", "12h00"))
+O4 = _opt("4", "LATAM · Paris", "Paris", NOV_, 22745.49, 4414.80,
+          ("LA 8132", "06/10 18:20", "07/10 10:35", "GRU · São Paulo", "CDG · Paris", "11h15", "", "B789", "Z · PBS"),
+          ("LA 8133", "09/11 12:05", "09/11 20:00", "CDG · Paris", "GRU · São Paulo", "11h55", "", "B789", "Z · PBS"),
+          "Voo direto no Boeing 787, tarifa PBS. Os dois voos aparecem no sistema com aviso de alteração de horário; "
+          "confirmar na emissão. Conexão até o destino final em bilhete regional à parte. Classe Z.",
+          ("11h15", "11h55"))
+O5 = _opt("5", "LATAM · Roma", "Roma", NOV_, 22556.94, 4378.20,
+          ("LA 8120", "06/10 17:55", "07/10 10:10", "GRU · São Paulo", "FCO · Roma", "11h15", "", "B773", "I · PBS"),
+          ("LA 8121", "09/11 12:10", "09/11 20:05", "FCO · Roma", "GRU · São Paulo", "11h55", "", "B773", "I · PBS"),
+          "Voo direto no Boeing 777, tarifa PBS. Os dois voos aparecem no sistema com aviso de alteração de horário; "
+          "confirmar na emissão. Conexão até o destino final em bilhete regional à parte. Classe I.",
+          ("11h15", "11h55"))
 
 # Páginas: (subtítulo, [(nome da cia, [opções])])
 PAGINAS = [
-    ("Air China e Air France", [("Air China", [OPCOES[0]]), ("Air France", [OPCOES[1]])]),
-    ("LATAM", [("LATAM", [OPCOES[2], OPCOES[3]])]),
+    ("Air China",
+     "Voos diretos São Paulo ↔ Madri pela Air China, um embaixo do outro: primeiro a volta em outubro e logo abaixo a volta em novembro. "
+     "Valores por pessoa, tarifa executiva com bagagem, cotação do sistema em 17/09.",
+     [("Air China", [O1, O2])]),
+    ("Air France e LATAM",
+     "Demais companhias: Air France para Paris com volta em outubro e LATAM para Paris e Roma com volta em novembro. "
+     "Valores por pessoa, tarifas executivas com bagagem, cotação do sistema em 17/09.",
+     [("Air France", [O3]), ("LATAM", [O4, O5])]),
 ]
 
 EXTRA_CSS = r"""
@@ -152,19 +142,15 @@ def _det_row(voo, sentido):
 
 
 def detalhe(o):
-    itens = f'<div class="band">Ida</div>' + _det_row(o["ida"], "Ida")
-    for rot, voo in o["voltas"]:
-        _, d1 = _dt(voo[1])
-        dd = _dt(voo[1])[0]
-        itens += f'<div class="band"><b>{_e(rot)}</b> · volta em {dd.day:02d}/{dd.month:02d}</div>' + _det_row(voo, "Volta")
-    return f'<div class="dets">{itens}</div>'
+    ida, volta = o["voos"]
+    return f'<div class="dets">{_det_row(ida, "Ida")}{_det_row(volta, "Volta")}</div>'
 
 
 def _option_block(o):
     return f"""
     <div class="air">
       <div class="air-top">
-        <div class="l"><div class="n">{o['letra']}</div><div><div class="tt">{_e(o['titulo'])}</div><div class="st">{_e(o['sub'])}</div></div></div>
+        <div class="l"><div class="n">{o['letra']}</div><div><div class="tt">{_e(o['titulo'])}</div><div class="st"><span class="pill">{_e(o['retorno'])}</span>{_e(o['sub'])}</div></div></div>
         <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ {usd(o['brl'])}</div><div class="u">USD {usd(o['usd'])}</div></div>
       </div>
       {detalhe(o)}
@@ -174,7 +160,7 @@ def _option_block(o):
 
 def _sum_cards(opcoes):
     return "".join(
-        f"<div class='c'><div class='k'>Opção {o['letra']} · {_e(o['titulo'])} · {_e(' ou '.join(r.replace('Retorno em ','') for r, _ in o['voltas']))}</div><div class='v'>R$ {usd(o['brl'])}</div><div class='s'>por pessoa · USD {usd(o['usd'])}</div></div>"
+        f"<div class='c'><div class='k'>Opção {o['letra']} · {_e(o['titulo'].split(' · ')[-1])} · {_e(o['retorno'].replace('Retorno em ','volta em '))}</div><div class='v'>R$ {usd(o['brl'])}</div><div class='s'>por pessoa · USD {usd(o['usd'])}</div></div>"
         for o in opcoes
     )
 
@@ -183,7 +169,7 @@ def _page(hd_tag, eyebrow, titulo, intro, secoes, rodape):
     """`secoes`: lista de (nome da cia, [opções]); as opções da página inteira vão para os cards de resumo."""
     corpo = ""
     for cia, lst in secoes:
-        corpo += f'<div class="grp"><span class="t">{_e(cia)}</span><span class="l"></span><span class="n">{_e(" · ".join(o["titulo"].split(" · ")[-1] for o in lst))}</span></div>'
+        corpo += f'<div class="grp"><span class="t">{_e(cia)}</span><span class="l"></span><span class="n">{_e(" · ".join(dict.fromkeys(o["titulo"].split(" · ")[-1] for o in lst)))}</span></div>'
         corpo += "".join(_option_block(o) for o in lst)
     todas = [o for _, lst in secoes for o in lst]
     return f"""
@@ -202,8 +188,8 @@ def _page(hd_tag, eyebrow, titulo, intro, secoes, rodape):
 
 
 def build(paginas, titulo, eyebrow, intro, rodape, out, hd_tag="Cotação de aéreo", extra_pages="", extra_css=""):
-    """`paginas`: lista de (subtítulo, [(cia, [opções])]) → uma página por item."""
-    pages = "".join(_page(hd_tag, eyebrow, f"{titulo} · {sub}", intro, secoes, rodape) for sub, secoes in paginas)
+    """`paginas`: lista de (subtítulo, intro da página ou None, [(cia, [opções])]) → uma página por item."""
+    pages = "".join(_page(hd_tag, eyebrow, f"{titulo} · {sub}", intro_pg or intro, secoes, rodape) for sub, intro_pg, secoes in paginas)
     html = f"""<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8">
 <title>{CLIENTE.title()} | {_e(titulo)} — LusaTravel</title>
@@ -220,8 +206,8 @@ if __name__ == "__main__":
         PAGINAS,
         "Aéreo internacional em classe executiva",
         f"{CLIENTE.title()} · {PAX} · saída 05 ou 06/10/2026",
-        "Voos diretos entre São Paulo e Madri, Paris ou Roma, separados por companhia aérea. "
-        "Em cada bloco, a ida e, logo abaixo, a volta em outubro e a volta em novembro. "
+        "Voos diretos entre São Paulo e Madri, Paris ou Roma, separados por companhia aérea: "
+        "Air China nesta página, com a volta em outubro e logo abaixo a volta em novembro; Air France e LATAM na página seguinte. "
         "Valores por pessoa, tarifas executivas com bagagem, cotação do sistema em 17/09.",
         "Horários locais de cada aeroporto. Voos LATAM sinalizados no sistema com aviso de alteração de horário; confirmar na emissão. "
         "Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.",
