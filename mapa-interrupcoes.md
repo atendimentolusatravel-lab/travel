@@ -8,8 +8,9 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cotação Lucas – Itália** — iniciada em 17/09/2026 às 10:30
-▶️ Retomada em 18/09/2026 às 17:00 (interrupções nesta atividade: 7, total 5h40min)
-⚠️ Dia 18/09: sem pausa de almoço (trabalhou direto); saída antecipada — sem desconto de almoço neste dia
+▶️ Retomada em 18/09/2026 às 17:00; ⏹️ expediente encerrado às 17:18 (saída antecipada) — atividade continua no próximo dia útil
+⚠️ Dia 18/09: sem pausa de almoço (trabalhou direto); saída antecipada às 17:18 — sem desconto de almoço neste dia
+Interrupções nesta atividade até agora: 7 (5h40min)
 
 ## Histórico de atividades principais
 
