@@ -173,60 +173,30 @@ table.fl td.c{ color:var(--gold); font-weight:700; white-space:nowrap; }
 table.fl td.m{ color:var(--mut); }
 table.fl td:first-child, table.fl th:first-child{ padding-left:7mm; }
 table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
+.dets{ }
+.det{ display:flex; gap:6mm; padding:3mm 7mm; border-bottom:1px solid var(--line); align-items:flex-start; }
+.det-n{ font-weight:800; color:var(--gold); font-size:10.5pt; white-space:nowrap; min-width:18mm; padding-top:2.2mm; }
+.det-n span{ display:block; font-family:var(--lbl); font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; margin-top:.8mm; }
+.det-b{ display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1.3fr) minmax(0,1fr) minmax(0,.8fr); gap:5mm; flex:1; min-width:0; }
+.det-l .k{ display:block; font-family:var(--lbl); font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.det-l b{ display:block; font-size:10pt; color:var(--ink); margin-top:.6mm; line-height:1.3; }
+.det-l span:last-child{ display:block; font-size:8.6pt; color:var(--char); margin-top:.5mm; line-height:1.35; }
 .air-foot{ display:flex; justify-content:space-between; gap:8mm; padding:2.8mm 7mm; background:var(--paper); border-top:1px solid var(--line); font-size:9.3pt; color:var(--char); line-height:1.55; }
 .air-foot .t{ white-space:nowrap; color:var(--mut); font-size:8.5pt; text-align:right; }
 .air-foot .t b{ display:block; color:var(--ink); font-size:10.5pt; }
-.sum{ margin-top:4mm; display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; }
+.sum{ margin-top:3.5mm; display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; }
 .sum .c{ border:1px solid var(--line); border-radius:6px; padding:3.5mm 6mm; background:var(--paper); }
 .sum .k{ font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; }
 .sum .v{ font-size:14pt; font-weight:800; color:var(--ink); margin-top:1mm; }
 .sum .s{ font-size:8.8pt; color:var(--mut); margin-top:.5mm; }
- .body{ padding:11mm 22mm; } .h2{ margin:2mm 0 4mm; } .lead{ font-size:10.5pt; }
-.res{ display:grid; grid-template-columns:repeat(4,1fr); gap:6mm; margin-top:6mm; }
-.res-col{ border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; }
-.res-top{ padding:6mm 6mm 5mm; color:#fff; background:
-  radial-gradient(90% 70% at 85% 10%, rgba(218,141,0,.55) 0%, rgba(218,141,0,.1) 50%, transparent 70%),
-  linear-gradient(160deg,#73805c 0%,#4a6b45 50%,#2d5e3a 100%); }
-.res-top .lt{ font-size:8pt; letter-spacing:.3em; text-transform:uppercase; color:#ffc25c; font-weight:700; }
-.res-top .tt{ font-size:15pt; font-weight:800; line-height:1.1; margin-top:1.5mm; }
-.res-top .st{ font-size:8pt; letter-spacing:.06em; text-transform:uppercase; color:#ffc25c; margin-top:1.5mm; }
-.res-body{ padding:5mm 6mm; flex:1; }
-.res-city{ display:flex; align-items:flex-start; gap:3.5mm; padding:3.2mm 0; border-bottom:1px solid var(--line); }
-.res-city:last-child{ border-bottom:none; }
-.res-n{ width:9mm; height:9mm; border-radius:50%; background:var(--dest); color:#ffc25c; font-weight:800; font-size:9.5pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-.res-name{ font-size:11pt; font-weight:700; color:var(--ink); line-height:1.2; }
-.res-name small{ font-weight:400; color:var(--mut); font-size:9pt; }
-.res-nts{ font-size:9pt; color:var(--gold); font-weight:700; letter-spacing:.04em; margin-top:.5mm; }
-.res-bv{ font-size:8.6pt; color:var(--char); line-height:1.5; margin-top:1mm; }
-.res-foot{ background:var(--paper); border-top:1px solid var(--line); padding:4mm 6mm; }
-.res-foot .r{ display:block; font-size:7.8pt; letter-spacing:.08em; text-transform:uppercase; color:var(--mut); }
-.res-foot .r b, .res-foot .r span:last-child{ display:block; color:var(--ink); font-size:11pt; letter-spacing:0; text-transform:none; margin-top:.5mm; }
-.res-foot .r + .r{ margin-top:2.5mm; }
-.res-note{ margin-top:6mm; font-size:9pt; color:var(--mut); line-height:1.6; }
-
-.bar{ display:flex; margin-top:8mm; border-radius:6px; overflow:hidden; border:1px solid var(--line); height:16mm; }
-.bar div{ display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:10.5pt; letter-spacing:.04em; }
-.bar div small{ font-weight:400; opacity:.85; margin-left:2mm; font-size:8.5pt; }
-.bar .b1{ background:#73805c; } .bar .b2{ background:#5f7650; } .bar .b3{ background:#4a6b45; } .bar .b4{ background:#2d5e3a; }
-.res-col .res-body p{ font-size:9.2pt; line-height:1.6; color:var(--char); margin-top:3mm; }
-.clima{ display:block; margin-bottom:3mm; padding-bottom:3mm; border-bottom:1px solid var(--line); }
-.clima .t{ display:block; font-size:15pt; font-weight:800; color:var(--dest); line-height:1; }
-.clima .o{ display:block; font-size:8.4pt; color:var(--mut); line-height:1.4; margin-top:1.2mm; }
-.dur{ display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-top:6mm; }
-.dur div{ border:1px solid var(--line); border-radius:6px; padding:3.5mm 6mm; background:var(--paper); }
-.dur .k{ display:block; font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.dur b{ display:block; font-size:11pt; color:var(--ink); margin-top:1mm; line-height:1.4; }
-.kpis{ display:flex; gap:12mm; margin-top:5mm; }
-.kpis b{ display:block; font-size:22pt; font-weight:800; color:var(--gold); line-height:1; }
-.kpis span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; }
-</style></head><body>
+ .body{ padding:11mm 22mm; } .h2{ margin:2mm 0 4mm; } .lead{ font-size:10.5pt; }</style></head><body>
 
 <section class="page">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Cotação de aéreo</div></div><div class="goldbar"></div>
   <div class="body">
     <div class="eyebrow">Família Dalcanale · 4 adultos · 2 quartos duplos · saída 05 ou 06/10/2026</div>
     <h2 class="h2">Aéreo internacional em classe executiva · retorno em outubro</h2>
-    <p class="lead">Cinco opções de voo direto de São Paulo a um hub europeu, divididas pelo mês de retorno. A partir do hub, a conexão até Londres (e a volta de Edimburgo) é feita em bilhete regional cotado à parte. Valores por pessoa, tarifas executivas com bagagem, cotação do sistema em 17/09.</p>
+    <p class="lead">Cinco opções de voo direto entre São Paulo e um hub europeu (Madri, Paris ou Roma), divididas pelo mês de retorno. Cada voo aparece detalhado com dia da semana, horários locais de saída e chegada, duração, aeronave e classe tarifária. Valores por pessoa, tarifas executivas com bagagem, cotação do sistema em 17/09.</p>
     <div class="grp"><span class="t">Retorno em outubro</span><span class="l"></span><span class="n">2 opções</span></div>
     
     <div class="air">
@@ -234,10 +204,25 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
         <div class="l"><div class="n">1</div><div><div class="tt">Air China · Madri</div><div class="st">São Paulo ↔ Madri · voo direto · executiva</div></div></div>
         <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ 20.271,51</div><div class="u">USD 3.934,61</div></div>
       </div>
-      <table class="fl">
-        <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
-        <tr><td class='v'>CA 898</td><td>05/10 09:25</td><td>06/10 00:45</td><td>GRU · São Paulo</td><td>MAD · Madri</td><td class='v'>10h20</td><td class='c'>—</td><td class='m'>B789</td><td class='m'>D · Exec.</td></tr><tr><td class='v'>CA 897</td><td>25/10 22:30</td><td>26/10 05:30</td><td>MAD · Madri</td><td>GRU · São Paulo</td><td class='v'>11h00</td><td class='c'>—</td><td class='m'>B789</td><td class='m'>Z · Exec.</td></tr>
-      </table>
+      <div class="dets">
+        <div class="det">
+          <div class="det-n">CA 898<span>Ida</span></div>
+          <div class="det-b">
+            <div class="det-l"><span class="k">Saída</span><b>Segunda-feira, 05/10, às 09:25</b><span>São Paulo, Guarulhos (GRU)</span></div>
+            <div class="det-l"><span class="k">Chegada</span><b>Terça-feira, 06/10, às 00:45</b><span>Madri, Barajas (MAD) · no dia seguinte</span></div>
+            <div class="det-l"><span class="k">Voo</span><b>10h20 · sem escala</b><span>Boeing 787-9 Dreamliner (B789)</span></div>
+            <div class="det-l"><span class="k">Classe · tarifa</span><b>Executiva · classe D</b><span>tarifa Exec.</span></div>
+          </div>
+        </div>
+        <div class="det">
+          <div class="det-n">CA 897<span>Volta</span></div>
+          <div class="det-b">
+            <div class="det-l"><span class="k">Saída</span><b>Domingo, 25/10, às 22:30</b><span>Madri, Barajas (MAD)</span></div>
+            <div class="det-l"><span class="k">Chegada</span><b>Segunda-feira, 26/10, às 05:30</b><span>São Paulo, Guarulhos (GRU) · no dia seguinte</span></div>
+            <div class="det-l"><span class="k">Voo</span><b>11h00 · sem escala</b><span>Boeing 787-9 Dreamliner (B789)</span></div>
+            <div class="det-l"><span class="k">Classe · tarifa</span><b>Executiva · classe Z</b><span>tarifa Exec.</span></div>
+          </div>
+        </div></div>
       <div class="air-foot"><div>Voo direto nos dois sentidos, no Boeing 787. Chegada a Madri de madrugada e volta noturna. Conexão até o destino final em bilhete regional à parte. Classes D na ida e Z na volta.</div><div class="t">Tempo total ida · volta<b>10h20 · 11h00</b></div></div>
     </div>
     <div class="air">
@@ -245,14 +230,29 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
         <div class="l"><div class="n">2</div><div><div class="tt">Air France · Paris</div><div class="st">São Paulo ↔ Paris · voo direto · executiva</div></div></div>
         <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ 23.150,51</div><div class="u">USD 4.493,41</div></div>
       </div>
-      <table class="fl">
-        <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
-        <tr><td class='v'>AF 453</td><td>05/10 14:40</td><td>06/10 07:00</td><td>GRU · São Paulo</td><td>CDG · Paris</td><td class='v'>11h20</td><td class='c'>—</td><td class='m'>B77W</td><td class='m'>O · Exec.</td></tr><tr><td class='v'>AF 460</td><td>26/10 10:25</td><td>26/10 18:25</td><td>CDG · Paris</td><td>GRU · São Paulo</td><td class='v'>12h00</td><td class='c'>—</td><td class='m'>A359</td><td class='m'>O · Exec.</td></tr>
-      </table>
+      <div class="dets">
+        <div class="det">
+          <div class="det-n">AF 453<span>Ida</span></div>
+          <div class="det-b">
+            <div class="det-l"><span class="k">Saída</span><b>Segunda-feira, 05/10, às 14:40</b><span>São Paulo, Guarulhos (GRU)</span></div>
+            <div class="det-l"><span class="k">Chegada</span><b>Terça-feira, 06/10, às 07:00</b><span>Paris, Charles de Gaulle (CDG) · no dia seguinte</span></div>
+            <div class="det-l"><span class="k">Voo</span><b>11h20 · sem escala</b><span>Boeing 777-300ER (B77W)</span></div>
+            <div class="det-l"><span class="k">Classe · tarifa</span><b>Executiva · classe O</b><span>tarifa Exec.</span></div>
+          </div>
+        </div>
+        <div class="det">
+          <div class="det-n">AF 460<span>Volta</span></div>
+          <div class="det-b">
+            <div class="det-l"><span class="k">Saída</span><b>Segunda-feira, 26/10, às 10:25</b><span>Paris, Charles de Gaulle (CDG)</span></div>
+            <div class="det-l"><span class="k">Chegada</span><b>Segunda-feira, 26/10, às 18:25</b><span>São Paulo, Guarulhos (GRU) · no mesmo dia</span></div>
+            <div class="det-l"><span class="k">Voo</span><b>12h00 · sem escala</b><span>Airbus A350-900 (A359)</span></div>
+            <div class="det-l"><span class="k">Classe · tarifa</span><b>Executiva · classe O</b><span>tarifa Exec.</span></div>
+          </div>
+        </div></div>
       <div class="air-foot"><div>Voo direto nos dois sentidos, ida no 777 e volta no A350. Chegada a Paris às 07:00, com o dia inteiro para a conexão. Conexão até o destino final em bilhete regional à parte. Classe O.</div><div class="t">Tempo total ida · volta<b>11h20 · 12h00</b></div></div>
     </div>
     <div class="sum" style="grid-template-columns:repeat(2,1fr)"><div class='c'><div class='k'>Opção 1 · Air China</div><div class='v'>R$ 20.271,51</div><div class='s'>por pessoa · USD 3.934,61</div></div><div class='c'><div class='k'>Opção 2 · Air France</div><div class='v'>R$ 23.150,51</div><div class='s'>por pessoa · USD 4.493,41</div></div></div>
-    <div class="res-note" style="margin-top:4.5mm;font-size:8.8pt;color:var(--mut);line-height:1.6">Retorno em outubro: 20 noites na Europa (05 a 26/10). Retorno em novembro: 34 noites (05/10 a 09/11). Voos LATAM sinalizados no sistema com alteração de horário; confirmar na emissão. Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.</div>
+    <div class="res-note" style="margin-top:4.5mm;font-size:8.8pt;color:var(--mut);line-height:1.6">Horários locais de cada aeroporto. Voos LATAM sinalizados no sistema com aviso de alteração de horário; confirmar na emissão. Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.</div>
   </div>
   <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
 </section>
@@ -261,7 +261,7 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
   <div class="body">
     <div class="eyebrow">Família Dalcanale · 4 adultos · 2 quartos duplos · saída 05 ou 06/10/2026</div>
     <h2 class="h2">Aéreo internacional em classe executiva · retorno em novembro</h2>
-    <p class="lead">Cinco opções de voo direto de São Paulo a um hub europeu, divididas pelo mês de retorno. A partir do hub, a conexão até Londres (e a volta de Edimburgo) é feita em bilhete regional cotado à parte. Valores por pessoa, tarifas executivas com bagagem, cotação do sistema em 17/09.</p>
+    <p class="lead">Cinco opções de voo direto entre São Paulo e um hub europeu (Madri, Paris ou Roma), divididas pelo mês de retorno. Cada voo aparece detalhado com dia da semana, horários locais de saída e chegada, duração, aeronave e classe tarifária. Valores por pessoa, tarifas executivas com bagagem, cotação do sistema em 17/09.</p>
     <div class="grp"><span class="t">Retorno em novembro</span><span class="l"></span><span class="n">3 opções</span></div>
     
     <div class="air">
@@ -269,10 +269,25 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
         <div class="l"><div class="n">3</div><div><div class="tt">Air China · Madri</div><div class="st">São Paulo ↔ Madri · voo direto · executiva</div></div></div>
         <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ 20.271,51</div><div class="u">USD 3.934,61</div></div>
       </div>
-      <table class="fl">
-        <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
-        <tr><td class='v'>CA 898</td><td>05/10 09:25</td><td>06/10 00:45</td><td>GRU · São Paulo</td><td>MAD · Madri</td><td class='v'>10h20</td><td class='c'>—</td><td class='m'>B789</td><td class='m'>D · Exec.</td></tr><tr><td class='v'>CA 897</td><td>09/11 22:30</td><td>10/11 05:30</td><td>MAD · Madri</td><td>GRU · São Paulo</td><td class='v'>11h00</td><td class='c'>—</td><td class='m'>B789</td><td class='m'>Z · Exec.</td></tr>
-      </table>
+      <div class="dets">
+        <div class="det">
+          <div class="det-n">CA 898<span>Ida</span></div>
+          <div class="det-b">
+            <div class="det-l"><span class="k">Saída</span><b>Segunda-feira, 05/10, às 09:25</b><span>São Paulo, Guarulhos (GRU)</span></div>
+            <div class="det-l"><span class="k">Chegada</span><b>Terça-feira, 06/10, às 00:45</b><span>Madri, Barajas (MAD) · no dia seguinte</span></div>
+            <div class="det-l"><span class="k">Voo</span><b>10h20 · sem escala</b><span>Boeing 787-9 Dreamliner (B789)</span></div>
+            <div class="det-l"><span class="k">Classe · tarifa</span><b>Executiva · classe D</b><span>tarifa Exec.</span></div>
+          </div>
+        </div>
+        <div class="det">
+          <div class="det-n">CA 897<span>Volta</span></div>
+          <div class="det-b">
+            <div class="det-l"><span class="k">Saída</span><b>Segunda-feira, 09/11, às 22:30</b><span>Madri, Barajas (MAD)</span></div>
+            <div class="det-l"><span class="k">Chegada</span><b>Terça-feira, 10/11, às 05:30</b><span>São Paulo, Guarulhos (GRU) · no dia seguinte</span></div>
+            <div class="det-l"><span class="k">Voo</span><b>11h00 · sem escala</b><span>Boeing 787-9 Dreamliner (B789)</span></div>
+            <div class="det-l"><span class="k">Classe · tarifa</span><b>Executiva · classe Z</b><span>tarifa Exec.</span></div>
+          </div>
+        </div></div>
       <div class="air-foot"><div>Mesmos voos e mesma tarifa da opção 1, com a volta em 09/11. Conexão até o destino final em bilhete regional à parte. Classes D na ida e Z na volta.</div><div class="t">Tempo total ida · volta<b>10h20 · 11h00</b></div></div>
     </div>
     <div class="air">
@@ -280,10 +295,25 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
         <div class="l"><div class="n">4</div><div><div class="tt">LATAM · Paris</div><div class="st">São Paulo ↔ Paris · voo direto · executiva</div></div></div>
         <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ 22.745,49</div><div class="u">USD 4.414,80</div></div>
       </div>
-      <table class="fl">
-        <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
-        <tr><td class='v'>LA 8132</td><td>06/10 18:20</td><td>07/10 10:35</td><td>GRU · São Paulo</td><td>CDG · Paris</td><td class='v'>11h15</td><td class='c'>—</td><td class='m'>B789</td><td class='m'>Z · PBS</td></tr><tr><td class='v'>LA 8133</td><td>09/11 12:05</td><td>09/11 20:00</td><td>CDG · Paris</td><td>GRU · São Paulo</td><td class='v'>11h55</td><td class='c'>—</td><td class='m'>B789</td><td class='m'>Z · PBS</td></tr>
-      </table>
+      <div class="dets">
+        <div class="det">
+          <div class="det-n">LA 8132<span>Ida</span></div>
+          <div class="det-b">
+            <div class="det-l"><span class="k">Saída</span><b>Terça-feira, 06/10, às 18:20</b><span>São Paulo, Guarulhos (GRU)</span></div>
+            <div class="det-l"><span class="k">Chegada</span><b>Quarta-feira, 07/10, às 10:35</b><span>Paris, Charles de Gaulle (CDG) · no dia seguinte</span></div>
+            <div class="det-l"><span class="k">Voo</span><b>11h15 · sem escala</b><span>Boeing 787-9 Dreamliner (B789)</span></div>
+            <div class="det-l"><span class="k">Classe · tarifa</span><b>Executiva · classe Z</b><span>tarifa PBS</span></div>
+          </div>
+        </div>
+        <div class="det">
+          <div class="det-n">LA 8133<span>Volta</span></div>
+          <div class="det-b">
+            <div class="det-l"><span class="k">Saída</span><b>Segunda-feira, 09/11, às 12:05</b><span>Paris, Charles de Gaulle (CDG)</span></div>
+            <div class="det-l"><span class="k">Chegada</span><b>Segunda-feira, 09/11, às 20:00</b><span>São Paulo, Guarulhos (GRU) · no mesmo dia</span></div>
+            <div class="det-l"><span class="k">Voo</span><b>11h55 · sem escala</b><span>Boeing 787-9 Dreamliner (B789)</span></div>
+            <div class="det-l"><span class="k">Classe · tarifa</span><b>Executiva · classe Z</b><span>tarifa PBS</span></div>
+          </div>
+        </div></div>
       <div class="air-foot"><div>Voo direto no Boeing 787, tarifa PBS. Os dois voos aparecem no sistema com aviso de alteração de horário; confirmar na emissão. Conexão até o destino final em bilhete regional à parte. Classe Z.</div><div class="t">Tempo total ida · volta<b>11h15 · 11h55</b></div></div>
     </div>
     <div class="air">
@@ -291,68 +321,31 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
         <div class="l"><div class="n">5</div><div><div class="tt">LATAM · Roma</div><div class="st">São Paulo ↔ Roma · voo direto · executiva</div></div></div>
         <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ 22.556,94</div><div class="u">USD 4.378,20</div></div>
       </div>
-      <table class="fl">
-        <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
-        <tr><td class='v'>LA 8120</td><td>06/10 17:55</td><td>07/10 10:10</td><td>GRU · São Paulo</td><td>FCO · Roma</td><td class='v'>11h15</td><td class='c'>—</td><td class='m'>B773</td><td class='m'>I · PBS</td></tr><tr><td class='v'>LA 8121</td><td>09/11 12:10</td><td>09/11 20:05</td><td>FCO · Roma</td><td>GRU · São Paulo</td><td class='v'>11h55</td><td class='c'>—</td><td class='m'>B773</td><td class='m'>I · PBS</td></tr>
-      </table>
+      <div class="dets">
+        <div class="det">
+          <div class="det-n">LA 8120<span>Ida</span></div>
+          <div class="det-b">
+            <div class="det-l"><span class="k">Saída</span><b>Terça-feira, 06/10, às 17:55</b><span>São Paulo, Guarulhos (GRU)</span></div>
+            <div class="det-l"><span class="k">Chegada</span><b>Quarta-feira, 07/10, às 10:10</b><span>Roma, Fiumicino (FCO) · no dia seguinte</span></div>
+            <div class="det-l"><span class="k">Voo</span><b>11h15 · sem escala</b><span>Boeing 777-300 (B773)</span></div>
+            <div class="det-l"><span class="k">Classe · tarifa</span><b>Executiva · classe I</b><span>tarifa PBS</span></div>
+          </div>
+        </div>
+        <div class="det">
+          <div class="det-n">LA 8121<span>Volta</span></div>
+          <div class="det-b">
+            <div class="det-l"><span class="k">Saída</span><b>Segunda-feira, 09/11, às 12:10</b><span>Roma, Fiumicino (FCO)</span></div>
+            <div class="det-l"><span class="k">Chegada</span><b>Segunda-feira, 09/11, às 20:05</b><span>São Paulo, Guarulhos (GRU) · no mesmo dia</span></div>
+            <div class="det-l"><span class="k">Voo</span><b>11h55 · sem escala</b><span>Boeing 777-300 (B773)</span></div>
+            <div class="det-l"><span class="k">Classe · tarifa</span><b>Executiva · classe I</b><span>tarifa PBS</span></div>
+          </div>
+        </div></div>
       <div class="air-foot"><div>Voo direto no Boeing 777, tarifa PBS. Os dois voos aparecem no sistema com aviso de alteração de horário; confirmar na emissão. Conexão até o destino final em bilhete regional à parte. Classe I.</div><div class="t">Tempo total ida · volta<b>11h15 · 11h55</b></div></div>
     </div>
     <div class="sum" style="grid-template-columns:repeat(3,1fr)"><div class='c'><div class='k'>Opção 3 · Air China</div><div class='v'>R$ 20.271,51</div><div class='s'>por pessoa · USD 3.934,61</div></div><div class='c'><div class='k'>Opção 4 · LATAM</div><div class='v'>R$ 22.745,49</div><div class='s'>por pessoa · USD 4.414,80</div></div><div class='c'><div class='k'>Opção 5 · LATAM</div><div class='v'>R$ 22.556,94</div><div class='s'>por pessoa · USD 4.378,20</div></div></div>
-    <div class="res-note" style="margin-top:4.5mm;font-size:8.8pt;color:var(--mut);line-height:1.6">Retorno em outubro: 20 noites na Europa (05 a 26/10). Retorno em novembro: 34 noites (05/10 a 09/11). Voos LATAM sinalizados no sistema com alteração de horário; confirmar na emissão. Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.</div>
+    <div class="res-note" style="margin-top:4.5mm;font-size:8.8pt;color:var(--mut);line-height:1.6">Horários locais de cada aeroporto. Voos LATAM sinalizados no sistema com aviso de alteração de horário; confirmar na emissão. Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.</div>
   </div>
   <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
 </section>
 
-<section class="page">
-  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Resumo do roteiro</div></div><div class="goldbar"></div>
-  <div class="body">
-    <div class="eyebrow">Família Dalcanale · Londres e Escócia · conexão regional a partir do hub europeu</div>
-    <h2 class="h2">Destinos e quantidade de dias</h2>
-    <p class="lead">Quatro bases ligadas por trem, cada uma com hospedagem fixa e as cidades vizinhas em bate-volta. A distribuição abaixo é a do retorno em outubro (20 noites); no retorno em novembro cada base ganha dias extras.</p>
-    <div class="kpis">
-      <div><b>4</b><span>Bases</span></div><div><b>20</b><span>Noites</span></div><div><b>12</b><span>Bate-voltas</span></div>
-    </div>
-    <div class="dur"><div><span class="k">Retorno em outubro</span><b>20 noites · 06 a 26/10 · Londres 6 · York 3 · Glasgow 5 · Edimburgo 6</b></div><div><span class="k">Retorno em novembro</span><b>34 noites · 06/10 a 09/11 · Londres 10 · York 5 · Glasgow 9 · Edimburgo 10</b></div></div>
-    <div class="bar"><div class="b1" style="flex:6">Londres<small>6 noites</small></div><div class="b2" style="flex:3">York<small>3 noites</small></div><div class="b3" style="flex:5">Glasgow<small>5 noites</small></div><div class="b4" style="flex:6">Edimburgo<small>6 noites</small></div></div>
-    <div class="res" style="grid-template-columns:repeat(4,1fr)">
-        <div class="res-col">
-          <div class="res-top"><div class="lt">Base 1</div><div class="tt">Londres</div><div class="st">6 noites</div></div>
-          <div class="res-body">
-            <div class="clima"><span class="t">8° a 15°C</span><span class="o">outubro · chuva leve em metade dos dias</span></div>
-            <div class="res-nts">Bate-voltas</div>
-            <div class="res-bv">Windsor e Hampton Court · Bath e Stonehenge · Oxford</div>
-            <p>Westminster, Tate Modern, Torre de Londres, South Kensington e um musical no West End, com três bate-voltas de trem ou privativo.</p>
-          </div>
-        </div>
-        <div class="res-col">
-          <div class="res-top"><div class="lt">Base 2</div><div class="tt">York</div><div class="st">3 noites</div></div>
-          <div class="res-body">
-            <div class="clima"><span class="t">6° a 14°C</span><span class="o">outubro · manhãs frias e névoa</span></div>
-            <div class="res-nts">Bate-voltas</div>
-            <div class="res-bv">Castle Howard · Whitby e North York Moors · Harrogate</div>
-            <p>Trem de 2h de King&#x27;s Cross. Cidade medieval murada: York Minster, The Shambles e o museu ferroviário. Parada natural a caminho da Escócia.</p>
-          </div>
-        </div>
-        <div class="res-col">
-          <div class="res-top"><div class="lt">Base 3</div><div class="tt">Glasgow</div><div class="st">5 noites</div></div>
-          <div class="res-body">
-            <div class="clima"><span class="t">5° a 12°C</span><span class="o">outubro · o mês mais chuvoso; vento</span></div>
-            <div class="res-nts">Bate-voltas</div>
-            <div class="res-bv">Loch Lomond e Stirling · Highlands: Glencoe e Loch Ness · Falkirk e New Lanark</div>
-            <p>Trem de 3h. Kelvingrove, West End, roteiro Mackintosh e música ao vivo, com as Highlands e Loch Lomond em bate-volta.</p>
-          </div>
-        </div>
-        <div class="res-col">
-          <div class="res-top"><div class="lt">Base 4</div><div class="tt">Edimburgo</div><div class="st">6 noites</div></div>
-          <div class="res-body">
-            <div class="clima"><span class="t">5° a 12°C</span><span class="o">outubro · frio seco, vento no castelo</span></div>
-            <div class="res-nts">Bate-voltas</div>
-            <div class="res-bv">St Andrews e Fife · Rosslyn Chapel · Leith e Royal Yacht Britannia</div>
-            <p>Trem de 50 min. Castelo, Royal Mile, Arthur&#x27;s Seat, New Town e Dean Village. Trem de volta a Londres (4h30) para o voo de retorno, ou voo regional Edimburgo–Madri/Paris/Roma.</p>
-          </div>
-        </div></div>
-    <div class="res-note">Temperaturas são médias históricas de outubro (mínima e máxima); em novembro, 2 a 3 °C abaixo. Leve casaco impermeável, camadas e sapato fechado. Esta cotação cobre apenas o aéreo intercontinental; voos regionais, hotelaria, trens, transfers e passeios são cotados à parte. *Nada reservado, apenas cotado.</div>
-  </div>
-  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
-</section>
 </body></html>

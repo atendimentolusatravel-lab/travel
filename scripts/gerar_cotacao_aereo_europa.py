@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
-"""Cotação de aéreo Londres · Família Dalcanale · tarifas executivas do GDS (17/09/2026).
+"""Cotação de aéreo Europa · Família Dalcanale · tarifas executivas do GDS (17/09/2026).
 
-Uso: python3 scripts/gerar_cotacao_aereo_londres.py
+Uso: python3 scripts/gerar_cotacao_aereo_europa.py
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gerar_proposta_dalcanale import CSS, hd, FT, usd, CLIENTE, PAX, ROOT, RES_CSS  # noqa: E402
+from gerar_proposta_dalcanale import CSS, hd, FT, usd, CLIENTE, PAX, ROOT  # noqa: E402
+from datetime import date  # noqa: E402
 from html import escape as _e  # noqa: E402
 
-OUT = os.path.join(ROOT, "cotacao-aereo-londres.html")
+OUT = os.path.join(ROOT, "cotacao-aereo-europa.html")
 
 GRUPOS = [
     ("Retorno em outubro", [
@@ -108,113 +109,66 @@ table.fl td.c{ color:var(--gold); font-weight:700; white-space:nowrap; }
 table.fl td.m{ color:var(--mut); }
 table.fl td:first-child, table.fl th:first-child{ padding-left:7mm; }
 table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
+.dets{ }
+.det{ display:flex; gap:6mm; padding:3mm 7mm; border-bottom:1px solid var(--line); align-items:flex-start; }
+.det-n{ font-weight:800; color:var(--gold); font-size:10.5pt; white-space:nowrap; min-width:18mm; padding-top:2.2mm; }
+.det-n span{ display:block; font-family:var(--lbl); font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; margin-top:.8mm; }
+.det-b{ display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1.3fr) minmax(0,1fr) minmax(0,.8fr); gap:5mm; flex:1; min-width:0; }
+.det-l .k{ display:block; font-family:var(--lbl); font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.det-l b{ display:block; font-size:10pt; color:var(--ink); margin-top:.6mm; line-height:1.3; }
+.det-l span:last-child{ display:block; font-size:8.6pt; color:var(--char); margin-top:.5mm; line-height:1.35; }
 .air-foot{ display:flex; justify-content:space-between; gap:8mm; padding:2.8mm 7mm; background:var(--paper); border-top:1px solid var(--line); font-size:9.3pt; color:var(--char); line-height:1.55; }
 .air-foot .t{ white-space:nowrap; color:var(--mut); font-size:8.5pt; text-align:right; }
 .air-foot .t b{ display:block; color:var(--ink); font-size:10.5pt; }
-.sum{ margin-top:4mm; display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; }
+.sum{ margin-top:3.5mm; display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; }
 .sum .c{ border:1px solid var(--line); border-radius:6px; padding:3.5mm 6mm; background:var(--paper); }
 .sum .k{ font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; }
 .sum .v{ font-size:14pt; font-weight:800; color:var(--ink); margin-top:1mm; }
 .sum .s{ font-size:8.8pt; color:var(--mut); margin-top:.5mm; }
 """
 
-
-TL_CSS = r"""
-.bar{ display:flex; margin-top:8mm; border-radius:6px; overflow:hidden; border:1px solid var(--line); height:16mm; }
-.bar div{ display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:10.5pt; letter-spacing:.04em; }
-.bar div small{ font-weight:400; opacity:.85; margin-left:2mm; font-size:8.5pt; }
-.bar .b1{ background:#73805c; } .bar .b2{ background:#5f7650; } .bar .b3{ background:#4a6b45; } .bar .b4{ background:#2d5e3a; }
-.res-col .res-body p{ font-size:9.2pt; line-height:1.6; color:var(--char); margin-top:3mm; }
-.clima{ display:block; margin-bottom:3mm; padding-bottom:3mm; border-bottom:1px solid var(--line); }
-.clima .t{ display:block; font-size:15pt; font-weight:800; color:var(--dest); line-height:1; }
-.clima .o{ display:block; font-size:8.4pt; color:var(--mut); line-height:1.4; margin-top:1.2mm; }
-.dur{ display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-top:6mm; }
-.dur div{ border:1px solid var(--line); border-radius:6px; padding:3.5mm 6mm; background:var(--paper); }
-.dur .k{ display:block; font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.dur b{ display:block; font-size:11pt; color:var(--ink); margin-top:1mm; line-height:1.4; }
-.kpis{ display:flex; gap:12mm; margin-top:5mm; }
-.kpis b{ display:block; font-size:22pt; font-weight:800; color:var(--gold); line-height:1; }
-.kpis span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; }
-"""
+DIAS = ["segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado", "domingo"]
+AERONAVES = {"B789": "Boeing 787-9 Dreamliner", "B77W": "Boeing 777-300ER", "A359": "Airbus A350-900", "B773": "Boeing 777-300"}
+CIDADES = {"GRU": "São Paulo, Guarulhos", "MAD": "Madri, Barajas", "CDG": "Paris, Charles de Gaulle", "FCO": "Roma, Fiumicino"}
 
 
-def resumo_page(bases, eyebrow, lead, nota, hd_tag="Resumo do roteiro", duracao=None):
-    """Página de resumo: barra proporcional de noites + um cartão por base (sem hotéis)."""
-    total = sum(b["noites"] for b in bases)
-    n_bv = sum(len(b["bv"].split(" · ")) for b in bases)
-    bar = "".join(f'<div class="b{i}" style="flex:{b["noites"]}">{_e(b["cidade"])}<small>{b["noites"]} noites</small></div>'
-                  for i, b in enumerate(bases, 1))
-    dur = ""
-    if duracao:
-        dur = '<div class="dur">' + "".join(f'<div><span class="k">{_e(k)}</span><b>{_e(v)}</b></div>' for k, v in duracao) + '</div>'
-    cols = ""
-    for i, b in enumerate(bases, 1):
-        clima = ""
-        if b.get("clima"):
-            tmin, tmax, obs = b["clima"]
-            clima = (f'<div class="clima"><span class="t">{tmin}° a {tmax}°C</span>'
-                     f'<span class="o">{_e(obs)}</span></div>')
-        cols += f"""
-        <div class="res-col">
-          <div class="res-top"><div class="lt">Base {i}</div><div class="tt">{_e(b['cidade'])}</div><div class="st">{b['noites']} noites{(' · ' + _e(b['datas'])) if b.get('datas') else ''}</div></div>
-          <div class="res-body">
-            {clima}
-            <div class="res-nts">Bate-voltas</div>
-            <div class="res-bv">{_e(b['bv'])}</div>
-            <p>{_e(b['txt'])}</p>
+def _dt(txt):
+    d, h = txt.split(" ")
+    dd, mm = d.split("/")
+    return date(2026, int(mm), int(dd)), h
+
+
+def detalhe(o):
+    itens = ""
+    for i, (v, d1, d2, o1, o2, t, cx, ac, cl) in enumerate(o["voos"]):
+        (da, ha), (db, hb) = _dt(d1), _dt(d2)
+        cod1, cod2 = o1.split(" ·")[0], o2.split(" ·")[0]
+        mais = (db - da).days
+        chega = "no mesmo dia" if mais == 0 else ("no dia seguinte" if mais == 1 else f"{mais} dias depois")
+        classe, tarifa = (cl.split(" · ") + [""])[:2]
+        sentido = "Ida" if i == 0 else "Volta"
+        escala = f"conexão em {cx}" if cx else "sem escala"
+        itens += f"""
+        <div class="det">
+          <div class="det-n">{_e(v)}<span>{sentido}</span></div>
+          <div class="det-b">
+            <div class="det-l"><span class="k">Saída</span><b>{DIAS[da.weekday()].capitalize()}, {da.day:02d}/{da.month:02d}, às {ha}</b><span>{_e(CIDADES.get(cod1, o1))} ({cod1})</span></div>
+            <div class="det-l"><span class="k">Chegada</span><b>{DIAS[db.weekday()].capitalize()}, {db.day:02d}/{db.month:02d}, às {hb}</b><span>{_e(CIDADES.get(cod2, o2))} ({cod2}) · {chega}</span></div>
+            <div class="det-l"><span class="k">Voo</span><b>{t} · {escala}</b><span>{AERONAVES.get(ac, ac)} ({ac})</span></div>
+            <div class="det-l"><span class="k">Classe · tarifa</span><b>Executiva · classe {_e(classe)}</b><span>{('tarifa ' + _e(tarifa)) if tarifa else ''}</span></div>
           </div>
         </div>"""
-    return f"""
-<section class="page">
-  {hd(hd_tag)}
-  <div class="body">
-    <div class="eyebrow">{_e(eyebrow)}</div>
-    <h2 class="h2">Destinos e quantidade de dias</h2>
-    <p class="lead">{_e(lead.format(total=total))}</p>
-    <div class="kpis">
-      <div><b>{len(bases)}</b><span>Bases</span></div><div><b>{total}</b><span>Noites</span></div><div><b>{n_bv}</b><span>Bate-voltas</span></div>
-    </div>
-    {dur}
-    <div class="bar">{bar}</div>
-    <div class="res" style="grid-template-columns:repeat({len(bases)},1fr)">{cols}</div>
-    <div class="res-note">{_e(nota)}</div>
-  </div>
-  {FT}
-</section>"""
-
-
-BASES_LONDRES = [
-    {"cidade": "Londres", "noites": 6, "clima": (8, 15, "outubro · chuva leve em metade dos dias"),
-     "bv": "Windsor e Hampton Court · Bath e Stonehenge · Oxford",
-     "txt": "Westminster, Tate Modern, Torre de Londres, South Kensington e um musical no West End, com três bate-voltas de trem ou privativo."},
-    {"cidade": "York", "noites": 3, "clima": (6, 14, "outubro · manhãs frias e névoa"),
-     "bv": "Castle Howard · Whitby e North York Moors · Harrogate",
-     "txt": "Trem de 2h de King's Cross. Cidade medieval murada: York Minster, The Shambles e o museu ferroviário. Parada natural a caminho da Escócia."},
-    {"cidade": "Glasgow", "noites": 5, "clima": (5, 12, "outubro · o mês mais chuvoso; vento"),
-     "bv": "Loch Lomond e Stirling · Highlands: Glencoe e Loch Ness · Falkirk e New Lanark",
-     "txt": "Trem de 3h. Kelvingrove, West End, roteiro Mackintosh e música ao vivo, com as Highlands e Loch Lomond em bate-volta."},
-    {"cidade": "Edimburgo", "noites": 6, "clima": (5, 12, "outubro · frio seco, vento no castelo"),
-     "bv": "St Andrews e Fife · Rosslyn Chapel · Leith e Royal Yacht Britannia",
-     "txt": "Trem de 50 min. Castelo, Royal Mile, Arthur's Seat, New Town e Dean Village. Trem de volta a Londres (4h30) para o voo de retorno, ou voo regional Edimburgo–Madri/Paris/Roma."},
-]
+    return f'<div class="dets">{itens}</div>'
 
 
 def _option_block(o):
-    rows = "".join(
-        f"<tr><td class='v'>{_e(v)}</td><td>{_e(d1)}</td><td>{_e(d2)}</td><td>{_e(o1)}</td><td>{_e(o2)}</td>"
-        f"<td class='v'>{_e(t)}</td><td class='c'>{_e(cx) or '—'}</td><td class='m'>{_e(ac)}</td><td class='m'>{_e(cl)}</td></tr>"
-        for v, d1, d2, o1, o2, t, cx, ac, cl in o["voos"]
-    )
     return f"""
     <div class="air">
       <div class="air-top">
         <div class="l"><div class="n">{o['letra']}</div><div><div class="tt">{_e(o['titulo'])}</div><div class="st">{_e(o['sub'])}</div></div></div>
         <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ {usd(o['brl'])}</div><div class="u">USD {usd(o['usd'])}</div></div>
       </div>
-      <table class="fl">
-        <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
-        {rows}
-      </table>
+      {detalhe(o)}
       <div class="air-foot"><div>{_e(o['nota'])}</div><div class="t">Tempo total ida · volta<b>{o['tempo'][0]} · {o['tempo'][1]}</b></div></div>
     </div>"""
 
@@ -266,24 +220,11 @@ if __name__ == "__main__":
         None,
         "Aéreo internacional em classe executiva",
         f"{CLIENTE.title()} · {PAX} · saída 05 ou 06/10/2026",
-        "Cinco opções de voo direto de São Paulo a um hub europeu, divididas pelo mês de retorno. A partir do hub, a conexão até "
-        "Londres (e a volta de Edimburgo) é feita em bilhete regional cotado à parte. Valores por pessoa, tarifas executivas com bagagem, "
-        "cotação do sistema em 17/09.",
-        "Retorno em outubro: 20 noites na Europa (05 a 26/10). Retorno em novembro: 34 noites (05/10 a 09/11). "
-        "Voos LATAM sinalizados no sistema com alteração de horário; confirmar na emissão. "
+        "Cinco opções de voo direto entre São Paulo e um hub europeu (Madri, Paris ou Roma), divididas pelo mês de retorno. "
+        "Cada voo aparece detalhado com dia da semana, horários locais de saída e chegada, duração, aeronave e classe tarifária. "
+        "Valores por pessoa, tarifas executivas com bagagem, cotação do sistema em 17/09.",
+        "Horários locais de cada aeroporto. Voos LATAM sinalizados no sistema com aviso de alteração de horário; confirmar na emissão. "
         "Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.",
         OUT,
         grupos=GRUPOS,
-        extra_pages=resumo_page(
-            BASES_LONDRES,
-            f"{CLIENTE.title()} · Londres e Escócia · conexão regional a partir do hub europeu",
-            "Quatro bases ligadas por trem, cada uma com hospedagem fixa e as cidades vizinhas em bate-volta. "
-            "A distribuição abaixo é a do retorno em outubro ({total} noites); no retorno em novembro cada base ganha dias extras.",
-            "Temperaturas são médias históricas de outubro (mínima e máxima); em novembro, 2 a 3 °C abaixo. Leve casaco impermeável, camadas e sapato fechado. "
-            "Esta cotação cobre apenas o aéreo intercontinental; voos regionais, hotelaria, trens, transfers e passeios são cotados à parte. "
-            "*Nada reservado, apenas cotado.",
-            duracao=[("Retorno em outubro", "20 noites · 06 a 26/10 · Londres 6 · York 3 · Glasgow 5 · Edimburgo 6"),
-                     ("Retorno em novembro", "34 noites · 06/10 a 09/11 · Londres 10 · York 5 · Glasgow 9 · Edimburgo 10")],
-        ),
-        extra_css=RES_CSS + TL_CSS,
     )
