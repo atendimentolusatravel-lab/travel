@@ -8,7 +8,8 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cotação Lucas – Itália** — iniciada em 17/09/2026 às 10:30
-▶️ Retomada em 18/09/2026 às 13:33 (interrupções nesta atividade: 5, total 3h58min)
+▶️ Retomada em 18/09/2026 às 13:33 (interrupções nesta atividade: 5, total 4h38min)
+⚠️ Dia 18/09: sem pausa de almoço (trabalhou direto); saída antecipada — sem desconto de almoço neste dia
 
 ## Histórico de atividades principais
 
@@ -61,8 +62,8 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 24 | 17/09/2026 | 11:34 | 12:18 | 44min | – | Antonia e família – Tulum |
 | 25 | 17/09/2026 | 14:38 | 14:46 | 8min | – | Mariana Maske – Transfer |
 | 26 | 17/09/2026 | 15:06 | 15:20 | 14min | – | Dalcanales – Assentos (2ª vez) |
-| 27 | 18/09/2026 | 10:00 | 13:10 | 2h30min | – | Dalcanales – Cadernos de voucher (fim dentro do almoço, contado até 12:30) |
-| 28 | 18/09/2026 | 13:11 | 13:33 | 22min | – | Mariana Maske – Finalização caderno de voucher (durante o almoço) |
+| 27 | 18/09/2026 | 10:00 | 13:10 | 3h10min | – | Dalcanales – Cadernos de voucher (sem pausa de almoço no dia 18) |
+| 28 | 18/09/2026 | 13:11 | 13:33 | 22min | – | Mariana Maske – Finalização caderno de voucher |
 
 ## Visão consolidada: atividades × interrupções
 
@@ -84,12 +85,12 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 14 | Cotação Milena Naves – Euro Summer | 03–04/09 | 3h58min | 7 | 2h02min |
 | 15 | Cotação Luiz Maués – Pedido de casamento | 09–10/09 | 7h15min | 1 | 1h37min |
 | 16 | Recotação do Mikael | 14/09 | 3h39min | 3 | 22min |
-| 17 | Cotação Lucas – Itália | 17–18/09 | ⏳ em andamento | 5 (até agora) | 3h58min |
+| 17 | Cotação Lucas – Itália | 17–18/09 | ⏳ em andamento | 5 (até agora) | 4h38min |
 
 ## Resumo
 
 | Métrica | Valor |
 |---------|-------|
 | Total de interrupções | 28 |
-| Tempo total interrompido | 11h49min |
-| Duração média | 25min19s |
+| Tempo total interrompido | 12h29min |
+| Duração média | 26min45s |
