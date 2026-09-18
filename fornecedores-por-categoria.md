@@ -100,11 +100,63 @@ Relação de fornecedores extraída dos prints do painel, agrupados pela categor
 2. Civitatis P
 3. Servantrip P
 
+## Rent-a-Car (7)
+
+1. Haiku Rent-a-Car P
+2. Flexible Autos P
+3. Auto Europe P
+4. Europcar P
+5. Sixt P
+6. Guerin P
+7. Bookroad P
+
+## Cruzeiros e Ferrys (13)
+
+1. Haiku Hotel + Ferris
+2. Haiku Cruzeiros P
+3. Haiku Ferris P
+4. MSC Cruzeiros P
+5. Royal Caribbean
+6. Mundomar Cruzeiros
+7. Rota do Douro P
+8. Costa Cruzeiros P
+9. Shore2Shore P
+10. Excursões para Cruzeiros
+11. Ferry GDS P
+12. Norwegian P
+13. Veltagus P
+
+## Transportes (5)
+
+1. Movelia P
+2. Flixbus P
+3. Gipsyy P
+4. Hoppa Go P
+5. Bookroad P
+
+## Neve (3)
+
+1. Haiku Neve P
+2. Neve - Hotéis + Serviços (Haiku)
+3. Planesqui P
+
+## Outros (7)
+
+1. Nice Lounge Aeroporto
+2. Parclick P
+3. Easy Parking P
+4. Low Cost Parking P
+5. Jet Park P
+6. Icarous P
+7. GBNTravel
+
 ---
 
 ### Notas
 
-- Alguns nomes aparecem truncados nos prints (ex.: "HAIKU MOTOR HOT...", "VALE DO AVE TOUR ...", "SOLO VIAJES DE LU..."). O nome completo foi inferido a partir do logótipo do cartão.
+- Alguns nomes aparecem truncados nos prints (ex.: "HAIKU MOTOR HOT...", "VALE DO AVE TOUR ...", "SOLO VIAJES DE LU...", "ROYAL CARIBBEAN -...", "MUNDOMAR CRUZEI...", "EXCURSÕES PARA ...", "NEVE - HOTÉIS + SE...", "NICE LOUNGE AERO..."). O nome completo foi inferido a partir do logótipo do cartão.
 - Haiku Voos e Haiku Vuela aparecem em duas categorias (Motores de Pesquisa Aéreo e Aéreo).
 - Newblue aparece duas vezes em Pacotes ("Newblue P" e "Newblue"), tal como consta no painel.
-- Total de cartões contabilizados: 83 (com repetições entre categorias).
+- Haiku Hotel + Ferris aparece em Hotéis e em Cruzeiros e Ferrys.
+- Bookroad P aparece em Rent-a-Car e em Transportes.
+- Total de cartões contabilizados: 118 (com repetições entre categorias).
