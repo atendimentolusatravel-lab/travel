@@ -4,116 +4,91 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="LusaTravel — roteiro dia a dia de 14 noites na Italia para um casal viajando com dois bebes, entre o fim de novembro e o inicio de dezembro.">
-<title>Europa em Família</title>
+<meta name="description" content="LusaTravel — roteiro dia a dia de 16 noites pela Italia: Roma, Florenca, Bolonha, Veneza e Milao, em fevereiro de 2027.">
+<title>Itália em Família</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
 <style>
-/* ─── LUSATRAVEL · DESIGN SYSTEM TOKENS ─────────────────── */
+/* ─── LUSATRAVEL · DESIGN SYSTEM ─────────────────────────── */
 :root{
   --gold:#da8d00; --gold-hi:#f0a010;
+  --dest:#730505;              /* Borgonha — Itália */
   --ink:#1a1510; --char:#333131; --mut:#9a8d80;
   --line:#e4ddd2; --paper:#faf7f2; --surf:#fff; --surf2:#f2ece3;
-  --onink:#f0e8de;
-  --dest:#730505;        /* Borgonha — Itália */
   --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
   --con:'Montserrat',var(--sans);
   --lbl:'Arimo',var(--sans);
   --mx:1080px;
 }
-
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
     --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
-    --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
-    --dest:#c23434;
+    --gold:#e8a210; --gold-hi:#ffc030; --dest:#c23434;
   }
 }
 :root[data-theme="dark"]{
   --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
   --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
-  --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
-  --dest:#c23434;
+  --gold:#e8a210; --gold-hi:#ffc030; --dest:#c23434;
 }
 
 *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
 body{
   background:var(--paper); color:var(--char);
-  font-family:var(--sans); font-weight:400;
-  font-size:15px; line-height:1.65;
+  font-family:var(--sans); font-weight:400; font-size:15px; line-height:1.65;
   -webkit-font-smoothing:antialiased;
 }
-:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
 @media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } }
-
 .wrap{ max-width:var(--mx); margin:0 auto; padding:0 28px; }
 
-/* ─── MASTHEAD / CAPA ────────────────────────────────────── */
+/* ─── CAPA ───────────────────────────────────────────────── */
 .mh{ background:var(--ink); padding:56px 0 44px; position:relative; }
 .mh::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
-.mh-logo{
-  font-family:var(--con); font-weight:600; font-size:13px;
-  letter-spacing:.34em; text-transform:uppercase; color:var(--gold);
-}
-.mh-kick{
-  margin-top:26px; font-size:10px; font-weight:600; letter-spacing:.24em;
-  text-transform:uppercase; color:rgba(240,232,222,.5);
-}
-.mh-name{
-  margin-top:10px; font-weight:700; font-size:clamp(28px,5.2vw,46px);
-  line-height:1.06; letter-spacing:.01em; color:#fff; text-transform:uppercase;
-  text-wrap:balance;
-}
-.mh-dest{
-  margin-top:8px; font-weight:600; font-size:clamp(17px,2.4vw,22px);
-  color:var(--gold); letter-spacing:.02em;
-}
+.mh-logo{ font-family:var(--con); font-weight:600; font-size:13px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.mh-kick{ margin-top:26px; font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+.mh-name{ margin-top:10px; font-weight:700; font-size:clamp(28px,5.2vw,46px); line-height:1.06; color:#fff; text-transform:uppercase; text-wrap:balance; }
+.mh-dest{ margin-top:8px; font-weight:600; font-size:clamp(17px,2.4vw,22px); color:var(--gold); }
+.mh-sub{ margin-top:16px; max-width:58ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.62); }
 .mh-sub strong{ font-weight:600; color:var(--gold); }
-.mh-sub{ margin-top:16px; max-width:56ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.62); }
-.mh-stats{ margin-top:34px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid rgba(240,232,222,.14); }
-.mh-stat{ padding:18px 34px 4px 0; margin-right:34px; border-right:1px solid rgba(240,232,222,.12); }
-.mh-stat:last-child{ border-right:0; }
-.mh-stat .v{ font-weight:700; font-size:24px; color:#fff; line-height:1; font-variant-numeric:tabular-nums; }
+.mh-stats{ margin-top:34px; display:flex; flex-wrap:wrap; border-top:1px solid rgba(240,232,222,.14); }
+.mh-stat{ padding:18px 30px 4px 0; margin-right:30px; border-right:1px solid rgba(240,232,222,.12); }
+.mh-stat:last-child{ border-right:0; margin-right:0; }
+.mh-stat .v{ font-weight:700; font-size:23px; color:#fff; line-height:1; font-variant-numeric:tabular-nums; }
 .mh-stat .k{ margin-top:7px; font-size:9.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.45); }
 
 /* ─── SEÇÕES ─────────────────────────────────────────────── */
-.sec{ padding:56px 0; }
+.sec{ padding:54px 0; }
 .sec + .sec{ border-top:1px solid var(--line); }
-.eyebrow{
-  font-size:10px; font-weight:600; letter-spacing:.22em;
-  text-transform:uppercase; color:var(--gold); margin-bottom:12px;
-}
-.h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; letter-spacing:-.01em; text-wrap:balance; }
+.eyebrow{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; text-wrap:balance; }
 .lead{ margin-top:12px; max-width:66ch; font-weight:300; font-size:15.5px; color:var(--char); }
-.goldbar{ width:52px; height:3px; background:var(--gold); margin-top:18px; }
 
-/* ─── TIMELINE ───────────────────────────────────────────── */
-.tl{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; }
-.tl-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--dest); padding:18px 18px 16px; }
-.tl-badge{
-  display:inline-flex; align-items:center; justify-content:center;
-  min-width:30px; height:30px; padding:0 9px; background:var(--dest); color:#fff;
-  font-weight:700; font-size:12.5px; font-variant-numeric:tabular-nums;
-}
+/* ─── ITINERÁRIO ─────────────────────────────────────────── */
+.tl{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(178px,1fr)); gap:14px; }
+.tl-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--dest); padding:18px; }
+.tl-badge{ display:inline-flex; align-items:center; justify-content:center; min-width:30px; height:30px; padding:0 9px; background:var(--dest); color:#fff; font-weight:700; font-size:12.5px; font-variant-numeric:tabular-nums; }
 .tl-city{ margin-top:13px; font-weight:600; font-size:17px; color:var(--ink); }
-.tl-meta{ margin-top:5px; font-size:12.5px; font-weight:300; color:var(--mut); }
-.tl-move{ margin-top:11px; padding-top:11px; border-top:1px solid var(--line); font-size:11.5px; font-weight:400; color:var(--char); }
+.tl-meta{ margin-top:5px; font-size:12.5px; font-weight:300; color:var(--mut); font-variant-numeric:tabular-nums; }
+.tl-move{ margin-top:11px; padding-top:11px; border-top:1px solid var(--line); font-size:11.5px; color:var(--char); }
 
 /* ─── DIA A DIA ──────────────────────────────────────────── */
 .days{ margin-top:26px; border-top:1px solid var(--line); }
-.day{ display:grid; grid-template-columns:132px 1fr; gap:22px; padding:19px 0; border-bottom:1px solid var(--line); }
-.day-h{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--dest); line-height:1.5; font-variant-numeric:tabular-nums; }
-.day-h .cty{ display:block; color:var(--mut); font-size:10.5px; letter-spacing:.14em; margin-top:3px; }
+.day{ display:grid; grid-template-columns:150px 1fr; gap:22px; padding:19px 0; border-bottom:1px solid var(--line); }
+.day-h{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--dest); line-height:1.55; font-variant-numeric:tabular-nums; }
+.day-h .cty{ display:block; color:var(--mut); font-size:10.5px; letter-spacing:.13em; margin-top:3px; }
 .day-t{ font-size:14.5px; font-weight:300; color:var(--char); }
 .day-t b{ font-weight:600; color:var(--ink); }
-.day-t .fair{ color:var(--gold); font-weight:600; }
+.day-t .hi{ color:var(--gold); font-weight:600; }
 .day.travel{ background:var(--surf2); margin:0 -14px; padding:15px 14px; }
 .day.travel .day-t{ font-size:13.5px; }
+.day.bday{ background:linear-gradient(90deg, rgba(218,141,0,.13), transparent 62%); margin:0 -14px; padding:19px 14px; border-left:3px solid var(--gold); }
+.bday-tag{ display:inline-block; margin-bottom:7px; font-family:var(--lbl); font-weight:700; font-size:9px; letter-spacing:.17em; text-transform:uppercase; color:var(--ink); background:var(--gold); padding:3px 9px; }
 
-/* ─── RODAPÉ / ASSINATURA ────────────────────────────────── */
-.ft{ background:var(--ink); padding:44px 0 40px; position:relative; margin-top:0; }
+/* ─── RODAPÉ ─────────────────────────────────────────────── */
+.ft{ background:var(--ink); padding:44px 0 40px; position:relative; }
 .ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
 .ft-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
 .ft-sig{ margin-top:18px; display:flex; flex-wrap:wrap; gap:10px 34px; font-family:var(--con); font-size:13px; color:rgba(240,232,222,.72); }
@@ -123,7 +98,7 @@ body{
 
 @media (max-width:640px){
   .day{ grid-template-columns:1fr; gap:7px; }
-  .mh-stat{ padding-right:20px; margin-right:20px; }
+  .mh-stat{ padding-right:18px; margin-right:18px; }
 }
 </style>
 
@@ -134,52 +109,73 @@ body{
     <div class="mh-logo">LusaTravel</div>
     <div class="mh-kick">Cotação para sua viagem</div>
     <h1 class="mh-name">Lucas</h1>
-    <div class="mh-dest">Itália · Roma, Florença e Bolonha</div>
-    <p class="mh-sub">Roteiro de 14 noites desenhado para viajar com dois bebês: apenas três hotéis, trens curtos entre as bases, uma atração principal por dia e tarde livre para o descanso. Viagem posicionada entre o <strong>fim de novembro e o início de dezembro</strong>.</p>
+    <div class="mh-dest">Itália · Roma, Florença, Bolonha, Veneza e Milão</div>
+    <p class="mh-sub">Dezesseis noites entre <strong>11 e 28 de fevereiro de 2027</strong>, com chegada por Roma e saída por Milão. Roteiro desenhado para viajar com dois bebês: deslocamentos curtos de trem, uma atração principal por dia e tarde livre para o descanso.</p>
     <div class="mh-stats">
-      <div class="mh-stat"><div class="v">3</div><div class="k">Cidades</div></div>
-      <div class="mh-stat"><div class="v">14</div><div class="k">Noites</div></div>
+      <div class="mh-stat"><div class="v">5</div><div class="k">Cidades</div></div>
+      <div class="mh-stat"><div class="v">16</div><div class="k">Noites</div></div>
       <div class="mh-stat"><div class="v">2+2</div><div class="k">Adultos e bebês</div></div>
-      <div class="mh-stat"><div class="v">Nov · Dez</div><div class="k">Período</div></div>
+      <div class="mh-stat"><div class="v">6h02</div><div class="k">Total de trem</div></div>
     </div>
   </div>
 </header>
 
-
-
-  <section class="sec">
-    <div class="wrap">
-      <div class="eyebrow">Itinerário</div>
-      <h2 class="h2">Três cidades, 14 noites</h2>
-      <div class="tl">
-        <div class="tl-item"><span class="tl-badge">5</span><div class="tl-city">Roma</div><div class="tl-meta">Dias 2 a 6 · 5 noites</div><div class="tl-move">Voo direto de São Paulo</div></div>
-        <div class="tl-item"><span class="tl-badge">5</span><div class="tl-city">Florença</div><div class="tl-meta">Dias 7 a 11 · 5 noites</div><div class="tl-move">Frecciarossa · 1h35</div></div>
-        <div class="tl-item"><span class="tl-badge">4</span><div class="tl-city">Bolonha</div><div class="tl-meta">Dias 12 a 15 · 4 noites</div><div class="tl-move">Frecciarossa · 37 min</div></div>
-      </div>
-
-      <div class="eyebrow" style="margin-top:44px">Roteiro dia a dia</div>
-      <h2 class="h2">O que fazer em cada dia</h2>
-      <p class="lead">Saindo do Brasil na última semana de novembro, a viagem atravessa a virada para dezembro — e alcança tanto a abertura dos mercados de Natal italianos quanto a Fiera Antiquaria de Arezzo, que acontece no primeiro domingo do mês e no sábado anterior.</p>
-      <div class="days">
-        <div class="day travel"><div class="day-h">Dia 01<span class="cty">Embarque</span></div><div class="day-t">Voo noturno direto de São Paulo para Roma.</div></div>
-        <div class="day"><div class="day-h">Dia 02<span class="cty">Roma</span></div><div class="day-t">Chegada e descanso. Fim de tarde a pé pelo <b>Panteão</b>, Piazza Navona e Fontana di Trevi. Jantar no Roscioli.</div></div>
-        <div class="day"><div class="day-h">Dia 03<span class="cty">Roma</span></div><div class="day-t"><b>Coliseu, Fórum Romano e Palatino</b> com guia privativo e entrada sem fila, pela manhã. Tarde de descanso. Jantar no Ghetto Judaico, com os carciofi alla giudia.</div></div>
-        <div class="day"><div class="day-h">Dia 04<span class="cty">Vaticano</span></div><div class="day-t"><b>Museus do Vaticano, Capela Sistina e Basílica de São Pedro</b> em entrada antecipada com guia. É o dia mais puxado da viagem — a tarde fica integralmente reservada ao hotel.</div></div>
-        <div class="day"><div class="day-h">Dia 05<span class="cty">Roma</span></div><div class="day-t"><span class="fair">Via dei Coronari</span>, a rua dos antiquários de Roma. À tarde, <b>Galleria Borghese</b> em visita de duas horas com hora marcada, e passeio pelo Parco di Villa Borghese. Já em dezembro, a <b>Piazza Navona</b> monta seu mercado de Natal, a poucos passos dali. Caindo num domingo, a manhã pode ir para o mercado de Porta Portese.</div></div>
-        <div class="day"><div class="day-h">Dia 06<span class="cty">Roma</span></div><div class="day-t"><b>Basílica de San Clemente</b>, com três camadas de história empilhadas do século XII até um templo romano do século I. Depois Trastevere a pé, almoço no Da Enzo al 29 e tarde livre na Via dei Condotti.</div></div>
-        <div class="day travel"><div class="day-h">Dia 07<span class="cty">Florença</span></div><div class="day-t">Trem pela manhã. Tarde no <b>Duomo</b>, Batistério com as Portas do Paraíso e Piazza della Signoria. No fim do dia, o <b>mercado de Natal da Piazza Santa Croce</b>, de tradição alemã, com vinho quente e artesanato. Jantar na Trattoria Sostanza.</div></div>
-        <div class="day"><div class="day-h">Dia 08<span class="cty">Florença</span></div><div class="day-t"><b>Galleria degli Uffizi</b> pela manhã, com reserva. Almoço no Mercato Centrale. Fim de tarde no Piazzale Michelangelo ou em San Miniato al Monte para o pôr do sol.</div></div>
-        <div class="day"><div class="day-h">Dia 09<span class="cty">Florença</span></div><div class="day-t"><span class="fair">Oltrarno e Via Maggio</span>: antiquários e os ateliês de artesãos do bairro — douradores, restauradores e marceneiros. À tarde, Palazzo Pitti e Jardim de Boboli.</div></div>
-        <div class="day"><div class="day-h">Dia 10<span class="cty">Arezzo</span></div><div class="day-t"><span class="fair">Fiera Antiquaria de Arezzo</span>, a uma hora de trem: centenas de expositores tomam a cidade inteira. A maior feira de antiguidades da Itália e o dia mais aguardado do roteiro.</div></div>
-        <div class="day"><div class="day-h">Dia 11<span class="cty">Chianti</span></div><div class="day-t">Dia no <b>Chianti</b> com motorista privativo: almoço e degustação em vinícola, em ritmo lento. Alternativa mais fácil com carrinho e mais protegida do frio: Lucca, cidade plana com muralhas renascentistas percorríveis a pé e mercado de Natal no centro histórico.</div></div>
-        <div class="day travel"><div class="day-h">Dia 12<span class="cty">Bolonha</span></div><div class="day-t">Trem de 37 minutos. Piazza Maggiore, Basílica de San Petronio e o <b>Archiginnasio</b>, com seu Teatro Anatômico do século XVII. A poucos metros, a <b>Fiera di Santa Lucia</b> ocupa a Piazza Santo Stefano — um dos mercados de Natal mais antigos da Itália, dedicado a presépios artesanais. Jantar na Osteria dell'Orsa.</div></div>
-        <div class="day"><div class="day-h">Dia 13<span class="cty">Modena</span></div><div class="day-t"><b>Modena</b>, a 35 minutos: visita a uma acetaia de aceto balsâmico tradicional com degustação, Duomo românico e Mercato Albinelli. Opcional: Museu Ferrari em Maranello.</div></div>
-        <div class="day"><div class="day-h">Dia 14<span class="cty">Parma</span></div><div class="day-t"><b>Parma</b>, a uma hora: visita a um caseificio de Parmigiano Reggiano logo cedo e a um produtor de prosciutto di Parma. Almoço na cidade.</div></div>
-        <div class="day"><div class="day-h">Dia 15<span class="cty">Ravenna</span></div><div class="day-t"><b>Ravenna</b> e os mosaicos bizantinos de San Vitale e do Mausoléu de Galla Placidia. Tudo plano, coberto e em ambientes pequenos — o passeio cultural mais confortável possível com bebês.</div></div>
-        <div class="day travel"><div class="day-h">Dia 16<span class="cty">Retorno</span></div><div class="day-t">Voo de volta ao Brasil, com conexão a partir de Bolonha.</div></div>
-      </div>
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Itinerário</div>
+    <h2 class="h2">Cinco cidades, de sul a norte</h2>
+    <p class="lead">Todos os trechos em Frecciarossa, sem nenhum voo interno. O percurso acompanha a linha de alta velocidade de Roma a Milão, e nenhum deslocamento passa de 2h25.</p>
+    <div class="tl">
+      <div class="tl-item"><span class="tl-badge">4</span><div class="tl-city">Roma</div><div class="tl-meta">12 a 16 Fev · 4 noites</div><div class="tl-move">Chegada do voo · 15:50</div></div>
+      <div class="tl-item"><span class="tl-badge">4</span><div class="tl-city">Florença</div><div class="tl-meta">16 a 20 Fev · 4 noites</div><div class="tl-move">Frecciarossa · 1h35</div></div>
+      <div class="tl-item"><span class="tl-badge">2</span><div class="tl-city">Bolonha</div><div class="tl-meta">20 a 22 Fev · 2 noites</div><div class="tl-move">Frecciarossa · 37 min</div></div>
+      <div class="tl-item"><span class="tl-badge">3</span><div class="tl-city">Veneza</div><div class="tl-meta">22 a 25 Fev · 3 noites</div><div class="tl-move">Frecciarossa · 1h25</div></div>
+      <div class="tl-item"><span class="tl-badge">3</span><div class="tl-city">Milão</div><div class="tl-meta">25 a 28 Fev · 3 noites</div><div class="tl-move">Frecciarossa · 2h25</div></div>
     </div>
-  </section>
+
+    <div class="eyebrow" style="margin-top:46px">Roteiro dia a dia</div>
+    <h2 class="h2">O que fazer em cada dia</h2>
+    <p class="lead">Os dias de troca de cidade têm programa leve, sempre com o trem pela manhã e a tarde livre para o check-in e o descanso dos meninos.</p>
+
+    <div class="days">
+      <div class="day travel"><div class="day-h">Dia 01 | 11/02<span class="cty">Embarque · Quinta</span></div><div class="day-t">Voo TAP 82, saída de Guarulhos às 16:20 com destino a Lisboa.</div></div>
+
+      <div class="day travel"><div class="day-h">Dia 02 | 12/02<span class="cty">Roma · Sexta</span></div><div class="day-t">Conexão em Lisboa e voo TAP 834, com chegada a Roma às 15:50. Traslado e check-in. À noite, o centro histórico a pé, todo iluminado e a poucos minutos de distância: <b>Pantheon</b>, <b>Piazza Navona</b> e <b>Fontana di Trevi</b>.</div></div>
+
+      <div class="day"><div class="day-h">Dia 03 | 13/02<span class="cty">Roma · Sábado</span></div><div class="day-t"><b>Coliseu, Foro Romano e Palatino</b> com guia privativo e entrada sem fila, pela manhã. Tarde livre para descanso no hotel.</div></div>
+
+      <div class="day"><div class="day-h">Dia 04 | 14/02<span class="cty">Roma · Domingo</span></div><div class="day-t">Manhã na feira de <span class="hi">Porta Portese</span>, que só acontece aos domingos. Ela fica na entrada de <b>Trastevere</b>, então o almoço, a tarde e o jantar ficam no bairro — que à noite é o melhor endereço de Roma para comer.</div></div>
+
+      <div class="day"><div class="day-h">Dia 05 | 15/02<span class="cty">Vaticano · Segunda</span></div><div class="day-t"><b>Museus do Vaticano, Capela Sistina e Basílica de São Pedro</b>, com entrada antecipada e guia. Segunda-feira é o dia mais vazio da semana no Vaticano. A tarde fica integralmente reservada ao hotel.</div></div>
+
+      <div class="day travel"><div class="day-h">Dia 06 | 16/02<span class="cty">Florença · Terça</span></div><div class="day-t">Frecciarossa pela manhã, 1h35. Tarde no <b>Complexo do Duomo</b>: Catedral, Batistério com as Portas do Paraíso e Campanile de Giotto. Fim de tarde na Piazza della Signoria.</div></div>
+
+      <div class="day"><div class="day-h">Dia 07 | 17/02<span class="cty">Florença · Quarta</span></div><div class="day-t"><b>Galleria degli Uffizi</b> pela manhã, com reserva. Almoço no Mercato Centrale. Fim de tarde na <b>Ponte Vecchio</b> e subida ao <b>Piazzale Michelangelo</b> para o pôr do sol, com a vista mais bonita da cidade.</div></div>
+
+      <div class="day"><div class="day-h">Dia 08 | 18/02<span class="cty">Florença · Quinta</span></div><div class="day-t"><b>Galleria dell'Accademia</b> e o David, em visita curta de uma hora. Na sequência, a <b>Basílica de Santa Croce</b>. À tarde, o Oltrarno: <span class="hi">antiquários da Via Maggio</span> e os ateliês de douradores e restauradores do bairro.</div></div>
+
+      <div class="day"><div class="day-h">Dia 09 | 19/02<span class="cty">Florença · Sexta</span></div><div class="day-t">Dia livre em ritmo lento. Officina Profumo-Farmaceutica di Santa Maria Novella, aberta ao público desde 1612, compras na Via de' Tornabuoni e o Palazzo Pitti com o Jardim de Boboli.</div></div>
+
+      <div class="day travel"><div class="day-h">Dia 10 | 20/02<span class="cty">Bolonha · Sábado</span></div><div class="day-t">Frecciarossa de apenas 37 minutos. Tarde na <b>Piazza Maggiore</b> e na <b>Basílica de San Petronio</b>, cuja fachada ficou inacabada e é metade mármore, metade tijolo. Ao lado, a <b>Torre dell'Orologio</b> e a <b>Biblioteca Salaborsa</b>, com ruínas romanas sob o piso de vidro. Almoço no <b>Mó Mortadella Lab</b>, o sanduíche de mortadela da cidade. Fim de tarde na <b>Via d'Azeglio</b> e no Quadrilatero, o mercado histórico, que no sábado está no auge. Jantar na <b>Osteria della Fondazza</b>, pela lasanha.</div></div>
+
+      <div class="day"><div class="day-h">Dia 11 | 21/02<span class="cty">Bolonha · Domingo</span></div><div class="day-t"><span class="hi">Mercato dell'Antiquariato</span> na Piazza Santo Stefano, e na mesma praça o conjunto das Sete Igrejas de Santo Stefano. Depois a <b>Finestrella di Via Piella</b>, a janelinha que se abre para o canal escondido e revela a pequena Veneza de Bolonha. Almoço no <b>Donatello</b> ou no <b>Via con Me</b>, com tortellini in brodo e ragù alla bolognese. Tarde livre sob os pórticos.</div></div>
+
+      <div class="day travel"><div class="day-h">Dia 12 | 22/02<span class="cty">Veneza · Segunda</span></div><div class="day-t">Frecciarossa de 1h25 e táxi aquático privativo da estação até o hotel. Tarde na <b>Praça e Basílica de San Marco</b>, com o campanário e os mosaicos dourados.</div></div>
+
+      <div class="day bday"><div class="day-h">Dia 13 | 23/02<span class="cty">Veneza · Terça</span></div><div class="day-t"><span class="bday-tag">Aniversário da Sofia</span><br>Dia inteiro em Veneza, sem mala e sem estação. <b>Palácio Ducal</b> e Ponte dos Suspiros pela manhã, com reserva antecipada. No fim da tarde, o <b>passeio de gôndola pelo Gran Canal</b> na hora dourada — em fevereiro o sol se põe por volta das 17h45, e o canal fica vazio e dourado. À noite, <b>jantar comemorativo na Terrazza Danieli</b>, no terraço do hotel de mesmo nome, com a lagoa e a ilha de San Giorgio Maggiore emolduradas em frente à mesa. Bolo combinado com antecedência.</div></div>
+
+      <div class="day"><div class="day-h">Dia 14 | 24/02<span class="cty">Veneza · Quarta</span></div><div class="day-t"><b>Ponte de Rialto</b> e o mercado de Rialto pela manhã, quando as bancas de peixe e produtos estão abertas. À tarde, <b>Murano</b> e as fornalhas de vidro soprado, com as peças feitas na frente de vocês.</div></div>
+
+      <div class="day travel"><div class="day-h">Dia 15 | 25/02<span class="cty">Milão · Quinta</span></div><div class="day-t">Frecciarossa de 2h25. Tarde no <b>Duomo de Milão</b>, com subida aos terraços entre as agulhas de mármore, e na <b>Galleria Vittorio Emanuele II</b>, logo ao lado.</div></div>
+
+      <div class="day"><div class="day-h">Dia 16 | 26/02<span class="cty">Milão · Sexta</span></div><div class="day-t"><b>Castello Sforzesco</b> e o Parque Sempione pela manhã — o passeio mais fácil da viagem com carrinho. À tarde, a <b>Pinacoteca di Brera</b> e as ruas do bairro de Brera. À noite, aperitivo e jantar no <b>bairro dos Navigli</b>, à beira dos canais.</div></div>
+
+      <div class="day"><div class="day-h">Dia 17 | 27/02<span class="cty">Milão · Sábado</span></div><div class="day-t">Dia livre para compras no <b>Quadrilátero da Moda</b>, o melhor endereço de compras da Itália. Opcional, mediante reserva antecipada: a <b>Última Ceia</b> de Leonardo, em Santa Maria delle Grazie.</div></div>
+
+      <div class="day travel"><div class="day-h">Dia 18 | 28/02<span class="cty">Retorno · Domingo</span></div><div class="day-t">Traslado privativo ao aeroporto de Malpensa. Voo TAP 823 às 11:55, conexão em Lisboa e chegada a Guarulhos às 23:55.</div></div>
+    </div>
+  </div>
+</section>
 
 <footer class="ft">
   <div class="wrap">
@@ -191,6 +187,5 @@ body{
     <div class="ft-addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
   </div>
 </footer>
-
 </body>
 </html>
