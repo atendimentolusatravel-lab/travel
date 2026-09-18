@@ -44,12 +44,6 @@ O3N = _opt("4", "Air France · Paris", "Paris", NOV_, 25711.26, 4990.44,
           "Mesmos voos da opção 3, com a ida em 06/10 e a volta em 06/11. Ida no 777 e volta no A350. "
           "Conexão até o destino final em bilhete regional à parte. Classes O na ida e Z na volta.",
           ("11h20", "12h00"))
-O4 = _opt("7", "LATAM · Paris", "Paris", NOV_, 22745.49, 4414.80,
-          ("LA 8132", "06/10 18:20", "07/10 10:35", "GRU · São Paulo", "CDG · Paris", "11h15", "", "B789", "Z · PBS"),
-          ("LA 8133", "09/11 12:05", "09/11 20:00", "CDG · Paris", "GRU · São Paulo", "11h55", "", "B789", "Z · PBS"),
-          "Voo direto no Boeing 787, tarifa PBS. Os dois voos aparecem no sistema com aviso de alteração de horário; "
-          "confirmar na emissão. Conexão até o destino final em bilhete regional à parte. Classe Z.",
-          ("11h15", "11h55"))
 O5O = _opt("5", "LATAM · Roma", "Roma", OUT_, 22559.92, 4378.78,
           ("LA 8120", "06/10 17:55", "07/10 10:10", "GRU · São Paulo", "FCO · Roma", "11h15", "", "B773", "I · PBS"),
           ("LA 8121", "27/10 12:10", "27/10 20:05", "FCO · Roma", "GRU · São Paulo", "11h55", "", "B773", "Z · PBS"),
@@ -74,9 +68,9 @@ PAGINAS = [
      "Valores por pessoa, tarifa executiva com bagagem, cotação do sistema em 17/09.",
      [("Air France", [O3, O3N])]),
     ("LATAM",
-     "Voos diretos pela LATAM: para Roma, um embaixo do outro, primeiro a volta em outubro e logo abaixo a volta em novembro; "
-     "em seguida, Paris com volta em novembro. Valores por pessoa, tarifa executiva com bagagem, cotação do sistema em 17/09.",
-     [("LATAM", [O5O, O5, O4])]),
+     "Voos diretos São Paulo ↔ Roma pela LATAM, um embaixo do outro: primeiro a volta em outubro e logo abaixo a volta em novembro. "
+     "Valores por pessoa, tarifa executiva com bagagem, cotação do sistema em 17/09.",
+     [("LATAM", [O5O, O5])]),
 ]
 
 EXTRA_CSS = r"""
