@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8">
-<title>Família Dalcanale | Aéreo para a Croácia em classe executiva — LusaTravel</title>
+<title>Família Dalcanale | Aéreo internacional em classe executiva — LusaTravel</title>
 <style>
 @font-face{font-family:'Arimo';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/arimo-700.woff2') format('woff2');}
 @font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/montserrat-400.woff2') format('woff2');}
@@ -148,7 +148,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
 .cond-t{ font-size:11pt; line-height:1.8; color:var(--char); }
 
-.air{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-top:4.5mm; }
+.grp{ display:flex; align-items:center; gap:4mm; margin-top:6mm; }
+.grp .t{ font-size:12pt; font-weight:800; color:var(--dest); letter-spacing:.02em; white-space:nowrap; }
+.grp .l{ flex:1; height:1px; background:var(--line); }
+.grp .n{ font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:700; white-space:nowrap; }
+.air{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-top:3.5mm; }
 .air-top{ display:flex; align-items:center; justify-content:space-between; padding:3.5mm 7mm; color:#fff; background:
   radial-gradient(70% 90% at 90% 10%, rgba(218,141,0,.5) 0%, rgba(218,141,0,.08) 50%, transparent 70%),
   linear-gradient(160deg,#73805c 0%,#4a6b45 50%,#2d5e3a 100%); }
@@ -172,12 +176,12 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
 .air-foot{ display:flex; justify-content:space-between; gap:8mm; padding:2.8mm 7mm; background:var(--paper); border-top:1px solid var(--line); font-size:9.3pt; color:var(--char); line-height:1.55; }
 .air-foot .t{ white-space:nowrap; color:var(--mut); font-size:8.5pt; text-align:right; }
 .air-foot .t b{ display:block; color:var(--ink); font-size:10.5pt; }
-.sum{ margin-top:5mm; display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; }
+.sum{ margin-top:4mm; display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; }
 .sum .c{ border:1px solid var(--line); border-radius:6px; padding:3.5mm 6mm; background:var(--paper); }
 .sum .k{ font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; }
 .sum .v{ font-size:14pt; font-weight:800; color:var(--ink); margin-top:1mm; }
 .sum .s{ font-size:8.8pt; color:var(--mut); margin-top:.5mm; }
- .body{ padding:11mm 22mm; } .h2{ margin:2mm 0 4mm; } .lead{ font-size:10.5pt; } .sum{ grid-template-columns:repeat(2,1fr); }
+ .body{ padding:11mm 22mm; } .h2{ margin:2mm 0 4mm; } .lead{ font-size:10.5pt; }
 .res{ display:grid; grid-template-columns:repeat(4,1fr); gap:6mm; margin-top:6mm; }
 .res-col{ border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; }
 .res-top{ padding:6mm 6mm 5mm; color:#fff; background:
@@ -208,41 +212,93 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
 .clima{ display:block; margin-bottom:3mm; padding-bottom:3mm; border-bottom:1px solid var(--line); }
 .clima .t{ display:block; font-size:15pt; font-weight:800; color:var(--dest); line-height:1; }
 .clima .o{ display:block; font-size:8.4pt; color:var(--mut); line-height:1.4; margin-top:1.2mm; }
+.dur{ display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-top:6mm; }
+.dur div{ border:1px solid var(--line); border-radius:6px; padding:3.5mm 6mm; background:var(--paper); }
+.dur .k{ display:block; font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.dur b{ display:block; font-size:11pt; color:var(--ink); margin-top:1mm; line-height:1.4; }
 .kpis{ display:flex; gap:12mm; margin-top:5mm; }
 .kpis b{ display:block; font-size:22pt; font-weight:800; color:var(--gold); line-height:1; }
 .kpis span{ font-size:8.5pt; color:var(--mut); letter-spacing:.06em; text-transform:uppercase; }
 </style></head><body>
+
 <section class="page">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Cotação de aéreo</div></div><div class="goldbar"></div>
   <div class="body">
-    <div class="eyebrow">Família Dalcanale · 4 adultos · 2 quartos duplos · saída 08/10 · retorno 28/10/2026</div>
-    <h2 class="h2">Aéreo para a Croácia em classe executiva</h2>
-    <p class="lead">Duas formas de fazer o trecho internacional do roteiro Croácia Completa (Dubrovnik, Split, Zadar e Zagreb), sempre entrando por Dubrovnik e saindo por Zagreb, sem voltar ao ponto de partida. A opção 1 sai de São Paulo; a opção 2 já inclui o voo de Curitiba. Valores por pessoa, tarifas executivas com bagagem, cotação do sistema em 17/09.</p>
+    <div class="eyebrow">Família Dalcanale · 4 adultos · 2 quartos duplos · saída 05 ou 06/10/2026</div>
+    <h2 class="h2">Aéreo internacional em classe executiva · retorno em outubro</h2>
+    <p class="lead">Cinco opções de voo direto de São Paulo a um hub europeu, divididas pelo mês de retorno. A partir do hub, a conexão até Dubrovnik (e a volta de Zagreb) é feita em bilhete regional cotado à parte. Valores por pessoa, tarifas executivas com bagagem, cotação do sistema em 17/09.</p>
+    <div class="grp"><span class="t">Retorno em outubro</span><span class="l"></span><span class="n">2 opções</span></div>
     
     <div class="air">
       <div class="air-top">
-        <div class="l"><div class="n">1</div><div><div class="tt">Air France · Croatia Airlines · KLM</div><div class="st">Saída de São Paulo · entrada por Dubrovnik, saída por Zagreb · executiva</div></div></div>
-        <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ 32.203,49</div><div class="u">USD 6.249,82</div></div>
+        <div class="l"><div class="n">1</div><div><div class="tt">Air China · Madri</div><div class="st">São Paulo ↔ Madri · voo direto · executiva</div></div></div>
+        <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ 20.271,51</div><div class="u">USD 3.934,61</div></div>
       </div>
       <table class="fl">
         <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
-        <tr><td class='v'>AF 453</td><td>08/10 14:40</td><td>09/10 07:00</td><td>GRU · São Paulo</td><td>CDG · Paris</td><td class='v'>11h20</td><td class='c'>—</td><td class='m'>B77W</td><td class='m'>D · BUS</td></tr><tr><td class='v'>OU 477</td><td>09/10 12:05</td><td>09/10 14:20</td><td>CDG · Paris</td><td>DBV · Dubrovnik</td><td class='v'>2h15</td><td class='c'>5h05</td><td class='m'>A223</td><td class='m'>D · BUS</td></tr><tr><td class='v'>KL 1964</td><td>28/10 06:40</td><td>28/10 08:45</td><td>ZAG · Zagreb</td><td>AMS · Amsterdã</td><td class='v'>2h05</td><td class='c'>—</td><td class='m'>E295</td><td class='m'>J · BUS</td></tr><tr><td class='v'>KL 791</td><td>28/10 10:45</td><td>28/10 18:50</td><td>AMS · Amsterdã</td><td>GRU · São Paulo</td><td class='v'>12h05</td><td class='c'>2h00</td><td class='m'>B772</td><td class='m'>Z · BUS</td></tr>
+        <tr><td class='v'>CA 898</td><td>05/10 09:25</td><td>06/10 00:45</td><td>GRU · São Paulo</td><td>MAD · Madri</td><td class='v'>10h20</td><td class='c'>—</td><td class='m'>B789</td><td class='m'>D · Exec.</td></tr><tr><td class='v'>CA 897</td><td>25/10 22:30</td><td>26/10 05:30</td><td>MAD · Madri</td><td>GRU · São Paulo</td><td class='v'>11h00</td><td class='c'>—</td><td class='m'>B789</td><td class='m'>Z · Exec.</td></tr>
       </table>
-      <div class="air-foot"><div>Ida por Paris com 5h05 de conexão e chegada a Dubrovnik às 14:20. Volta de Zagreb por Amsterdã com KLM, conexão curta de 2h e chegada a São Paulo no mesmo dia. Tarifa BUS nos quatro trechos.</div><div class="t">Tempo total ida · volta<b>18h40 · 16h10</b></div></div>
+      <div class="air-foot"><div>Voo direto nos dois sentidos, no Boeing 787. Chegada a Madri de madrugada e volta noturna. Conexão até o destino final em bilhete regional à parte. Classes D na ida e Z na volta.</div><div class="t">Tempo total ida · volta<b>10h20 · 11h00</b></div></div>
     </div>
     <div class="air">
       <div class="air-top">
-        <div class="l"><div class="n">2</div><div><div class="tt">LATAM · Air France · Croatia Airlines</div><div class="st">Saída de Curitiba · entrada por Dubrovnik, saída por Zagreb · executiva</div></div></div>
-        <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ 34.022,11</div><div class="u">USD 6.602,76</div></div>
+        <div class="l"><div class="n">2</div><div><div class="tt">Air France · Paris</div><div class="st">São Paulo ↔ Paris · voo direto · executiva</div></div></div>
+        <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ 23.150,51</div><div class="u">USD 4.493,41</div></div>
       </div>
       <table class="fl">
         <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
-        <tr><td class='v'>LA 3289</td><td>08/10 11:25</td><td>08/10 12:40</td><td>CWB · Curitiba</td><td>GRU · São Paulo</td><td class='v'>1h15</td><td class='c'>—</td><td class='m'>A320</td><td class='m'>W · Econ. Premium</td></tr><tr><td class='v'>AF 453</td><td>08/10 14:40</td><td>09/10 07:00</td><td>GRU · São Paulo</td><td>CDG · Paris</td><td class='v'>11h20</td><td class='c'>2h00</td><td class='m'>B77W</td><td class='m'>D · BUS</td></tr><tr><td class='v'>OU 477</td><td>09/10 12:05</td><td>09/10 14:20</td><td>CDG · Paris</td><td>DBV · Dubrovnik</td><td class='v'>2h15</td><td class='c'>5h05</td><td class='m'>A223</td><td class='m'>D · BUS</td></tr><tr><td class='v'>AF 1561</td><td>28/10 12:50</td><td>28/10 15:00</td><td>ZAG · Zagreb</td><td>CDG · Paris</td><td class='v'>2h10</td><td class='c'>—</td><td class='m'>E90</td><td class='m'>J · BUS</td></tr><tr><td class='v'>AF 454</td><td>28/10 23:20</td><td>29/10 07:20</td><td>CDG · Paris</td><td>GRU · São Paulo</td><td class='v'>12h00</td><td class='c'>8h20</td><td class='m'>B77W</td><td class='m'>I · BUS</td></tr><tr><td class='v'>LA 3282</td><td>29/10 13:15</td><td>29/10 14:20</td><td>GRU · São Paulo</td><td>CWB · Curitiba</td><td class='v'>1h05</td><td class='c'>5h55</td><td class='m'>A319</td><td class='m'>W · Econ. Premium</td></tr>
+        <tr><td class='v'>AF 453</td><td>05/10 14:40</td><td>06/10 07:00</td><td>GRU · São Paulo</td><td>CDG · Paris</td><td class='v'>11h20</td><td class='c'>—</td><td class='m'>B77W</td><td class='m'>O · Exec.</td></tr><tr><td class='v'>AF 460</td><td>26/10 10:25</td><td>26/10 18:25</td><td>CDG · Paris</td><td>GRU · São Paulo</td><td class='v'>12h00</td><td class='c'>—</td><td class='m'>A359</td><td class='m'>O · Exec.</td></tr>
       </table>
-      <div class="air-foot"><div>Mesmo trecho internacional da opção 1 na ida, com o voo Curitiba–São Paulo incluído em Economy Premium. Volta de Zagreb por Paris com 8h20 de conexão e chegada a Curitiba às 14:20 do dia 29. Tarifa BUS.</div><div class="t">Tempo total ida · volta<b>21h55 · 29h30</b></div></div>
+      <div class="air-foot"><div>Voo direto nos dois sentidos, ida no 777 e volta no A350. Chegada a Paris às 07:00, com o dia inteiro para a conexão. Conexão até o destino final em bilhete regional à parte. Classe O.</div><div class="t">Tempo total ida · volta<b>11h20 · 12h00</b></div></div>
     </div>
-    <div class="sum"><div class='c'><div class='k'>Opção 1 · Air France</div><div class='v'>R$ 32.203,49</div><div class='s'>por pessoa · USD 6.249,82</div></div><div class='c'><div class='k'>Opção 2 · LATAM</div><div class='v'>R$ 34.022,11</div><div class='s'>por pessoa · USD 6.602,76</div></div></div>
-    <div class="res-note" style="margin-top:4.5mm;font-size:8.8pt;color:var(--mut);line-height:1.6">Com o retorno em 28/10, a viagem passa a ter 19 noites no destino. Na opção 2, o trecho Curitiba–São Paulo e o retorno são em Economy Premium na LATAM; o internacional é executiva. Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.</div>
+    <div class="sum" style="grid-template-columns:repeat(2,1fr)"><div class='c'><div class='k'>Opção 1 · Air China</div><div class='v'>R$ 20.271,51</div><div class='s'>por pessoa · USD 3.934,61</div></div><div class='c'><div class='k'>Opção 2 · Air France</div><div class='v'>R$ 23.150,51</div><div class='s'>por pessoa · USD 4.493,41</div></div></div>
+    <div class="res-note" style="margin-top:4.5mm;font-size:8.8pt;color:var(--mut);line-height:1.6">Retorno em outubro: 20 noites na Europa (05 a 26/10). Retorno em novembro: 34 noites (05/10 a 09/11). Voos LATAM sinalizados no sistema com alteração de horário; confirmar na emissão. Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.</div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Cotação de aéreo</div></div><div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Família Dalcanale · 4 adultos · 2 quartos duplos · saída 05 ou 06/10/2026</div>
+    <h2 class="h2">Aéreo internacional em classe executiva · retorno em novembro</h2>
+    <p class="lead">Cinco opções de voo direto de São Paulo a um hub europeu, divididas pelo mês de retorno. A partir do hub, a conexão até Dubrovnik (e a volta de Zagreb) é feita em bilhete regional cotado à parte. Valores por pessoa, tarifas executivas com bagagem, cotação do sistema em 17/09.</p>
+    <div class="grp"><span class="t">Retorno em novembro</span><span class="l"></span><span class="n">3 opções</span></div>
+    
+    <div class="air">
+      <div class="air-top">
+        <div class="l"><div class="n">3</div><div><div class="tt">Air China · Madri</div><div class="st">São Paulo ↔ Madri · voo direto · executiva</div></div></div>
+        <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ 20.271,51</div><div class="u">USD 3.934,61</div></div>
+      </div>
+      <table class="fl">
+        <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
+        <tr><td class='v'>CA 898</td><td>05/10 09:25</td><td>06/10 00:45</td><td>GRU · São Paulo</td><td>MAD · Madri</td><td class='v'>10h20</td><td class='c'>—</td><td class='m'>B789</td><td class='m'>D · Exec.</td></tr><tr><td class='v'>CA 897</td><td>09/11 22:30</td><td>10/11 05:30</td><td>MAD · Madri</td><td>GRU · São Paulo</td><td class='v'>11h00</td><td class='c'>—</td><td class='m'>B789</td><td class='m'>Z · Exec.</td></tr>
+      </table>
+      <div class="air-foot"><div>Mesmos voos e mesma tarifa da opção 1, com a volta em 09/11. Conexão até o destino final em bilhete regional à parte. Classes D na ida e Z na volta.</div><div class="t">Tempo total ida · volta<b>10h20 · 11h00</b></div></div>
+    </div>
+    <div class="air">
+      <div class="air-top">
+        <div class="l"><div class="n">4</div><div><div class="tt">LATAM · Paris</div><div class="st">São Paulo ↔ Paris · voo direto · executiva</div></div></div>
+        <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ 22.745,49</div><div class="u">USD 4.414,80</div></div>
+      </div>
+      <table class="fl">
+        <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
+        <tr><td class='v'>LA 8132</td><td>06/10 18:20</td><td>07/10 10:35</td><td>GRU · São Paulo</td><td>CDG · Paris</td><td class='v'>11h15</td><td class='c'>—</td><td class='m'>B789</td><td class='m'>Z · PBS</td></tr><tr><td class='v'>LA 8133</td><td>09/11 12:05</td><td>09/11 20:00</td><td>CDG · Paris</td><td>GRU · São Paulo</td><td class='v'>11h55</td><td class='c'>—</td><td class='m'>B789</td><td class='m'>Z · PBS</td></tr>
+      </table>
+      <div class="air-foot"><div>Voo direto no Boeing 787, tarifa PBS. Os dois voos aparecem no sistema com aviso de alteração de horário; confirmar na emissão. Conexão até o destino final em bilhete regional à parte. Classe Z.</div><div class="t">Tempo total ida · volta<b>11h15 · 11h55</b></div></div>
+    </div>
+    <div class="air">
+      <div class="air-top">
+        <div class="l"><div class="n">5</div><div><div class="tt">LATAM · Roma</div><div class="st">São Paulo ↔ Roma · voo direto · executiva</div></div></div>
+        <div class="pr"><div class="k">Por pessoa · executiva</div><div class="v">R$ 22.556,94</div><div class="u">USD 4.378,20</div></div>
+      </div>
+      <table class="fl">
+        <tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th><th>Conexão</th><th>Aeronave</th><th>Classe · tarifa</th></tr>
+        <tr><td class='v'>LA 8120</td><td>06/10 17:55</td><td>07/10 10:10</td><td>GRU · São Paulo</td><td>FCO · Roma</td><td class='v'>11h15</td><td class='c'>—</td><td class='m'>B773</td><td class='m'>I · PBS</td></tr><tr><td class='v'>LA 8121</td><td>09/11 12:10</td><td>09/11 20:05</td><td>FCO · Roma</td><td>GRU · São Paulo</td><td class='v'>11h55</td><td class='c'>—</td><td class='m'>B773</td><td class='m'>I · PBS</td></tr>
+      </table>
+      <div class="air-foot"><div>Voo direto no Boeing 777, tarifa PBS. Os dois voos aparecem no sistema com aviso de alteração de horário; confirmar na emissão. Conexão até o destino final em bilhete regional à parte. Classe I.</div><div class="t">Tempo total ida · volta<b>11h15 · 11h55</b></div></div>
+    </div>
+    <div class="sum" style="grid-template-columns:repeat(3,1fr)"><div class='c'><div class='k'>Opção 3 · Air China</div><div class='v'>R$ 20.271,51</div><div class='s'>por pessoa · USD 3.934,61</div></div><div class='c'><div class='k'>Opção 4 · LATAM</div><div class='v'>R$ 22.745,49</div><div class='s'>por pessoa · USD 4.414,80</div></div><div class='c'><div class='k'>Opção 5 · LATAM</div><div class='v'>R$ 22.556,94</div><div class='s'>por pessoa · USD 4.378,20</div></div></div>
+    <div class="res-note" style="margin-top:4.5mm;font-size:8.8pt;color:var(--mut);line-height:1.6">Retorno em outubro: 20 noites na Europa (05 a 26/10). Retorno em novembro: 34 noites (05/10 a 09/11). Voos LATAM sinalizados no sistema com alteração de horário; confirmar na emissão. Cotação 17/09 · USD = 5,15 · *Nada reservado, apenas cotado. Tarifas sujeitas a alteração até a emissão.</div>
   </div>
   <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
 </section>
@@ -250,25 +306,26 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
 <section class="page">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Resumo do roteiro</div></div><div class="goldbar"></div>
   <div class="body">
-    <div class="eyebrow">Família Dalcanale · Croácia Completa · entrada por Dubrovnik, saída por Zagreb</div>
+    <div class="eyebrow">Família Dalcanale · Croácia Completa · conexão regional a partir do hub europeu</div>
     <h2 class="h2">Destinos e quantidade de dias</h2>
-    <p class="lead">Quatro bases de sul a norte, cada uma com hospedagem fixa e as cidades vizinhas em bate-volta. Com a chegada em 09/10 e o voo de volta em 28/10, o roteiro tem 19 noites na Croácia.</p>
+    <p class="lead">Quatro bases de sul a norte, cada uma com hospedagem fixa e as cidades vizinhas em bate-volta. A distribuição abaixo é a do retorno em outubro (20 noites); no retorno em novembro cada base ganha dias extras.</p>
     <div class="kpis">
-      <div><b>4</b><span>Bases</span></div><div><b>19</b><span>Noites</span></div><div><b>13</b><span>Bate-voltas</span></div>
+      <div><b>4</b><span>Bases</span></div><div><b>20</b><span>Noites</span></div><div><b>13</b><span>Bate-voltas</span></div>
     </div>
-    <div class="bar"><div class="b1" style="flex:5">Dubrovnik<small>5 noites</small></div><div class="b2" style="flex:5">Split<small>5 noites</small></div><div class="b3" style="flex:4">Zadar<small>4 noites</small></div><div class="b4" style="flex:5">Zagreb<small>5 noites</small></div></div>
+    <div class="dur"><div><span class="k">Retorno em outubro</span><b>20 noites · 06 a 26/10 · Dubrovnik 5 · Split 5 · Zadar 4 · Zagreb 6</b></div><div><span class="k">Retorno em novembro</span><b>34 noites · 06/10 a 09/11 · Dubrovnik 9 · Split 9 · Zadar 6 · Zagreb 10</b></div></div>
+    <div class="bar"><div class="b1" style="flex:5">Dubrovnik<small>5 noites</small></div><div class="b2" style="flex:5">Split<small>5 noites</small></div><div class="b3" style="flex:4">Zadar<small>4 noites</small></div><div class="b4" style="flex:6">Zagreb<small>6 noites</small></div></div>
     <div class="res" style="grid-template-columns:repeat(4,1fr)">
         <div class="res-col">
-          <div class="res-top"><div class="lt">Base 1</div><div class="tt">Dubrovnik</div><div class="st">5 noites · 09 a 14/10</div></div>
+          <div class="res-top"><div class="lt">Base 1</div><div class="tt">Dubrovnik</div><div class="st">5 noites</div></div>
           <div class="res-body">
             <div class="clima"><span class="t">13° a 20°C</span><span class="o">outubro · sol com chuvas ocasionais; mar a 20 °C</span></div>
             <div class="res-nts">Bate-voltas</div>
             <div class="res-bv">Lokrum · Korčula e Pelješac · Ilhas Elafitas</div>
-            <p>Chegada às 14:20 pelo voo de Paris. Muralhas, Stradun e monte Srđ, com as ilhas e a península de Pelješac em bate-volta.</p>
+            <p>Chegada por voo regional a partir do hub. Muralhas, Stradun e monte Srđ, com as ilhas e a península de Pelješac em bate-volta.</p>
           </div>
         </div>
         <div class="res-col">
-          <div class="res-top"><div class="lt">Base 2</div><div class="tt">Split</div><div class="st">5 noites · 14 a 19/10</div></div>
+          <div class="res-top"><div class="lt">Base 2</div><div class="tt">Split</div><div class="st">5 noites</div></div>
           <div class="res-body">
             <div class="clima"><span class="t">12° a 20°C</span><span class="o">outubro · dias amenos; mar a 19 °C, bom para as ilhas</span></div>
             <div class="res-nts">Bate-voltas</div>
@@ -277,7 +334,7 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
           </div>
         </div>
         <div class="res-col">
-          <div class="res-top"><div class="lt">Base 3</div><div class="tt">Zadar</div><div class="st">4 noites · 19 a 23/10</div></div>
+          <div class="res-top"><div class="lt">Base 3</div><div class="tt">Zadar</div><div class="st">4 noites</div></div>
           <div class="res-body">
             <div class="clima"><span class="t">11° a 19°C</span><span class="o">outubro · ameno; vento bora ocasional, mar a 18 °C</span></div>
             <div class="res-nts">Bate-voltas</div>
@@ -286,15 +343,15 @@ table.fl td:last-child, table.fl th:last-child{ padding-right:7mm; }
           </div>
         </div>
         <div class="res-col">
-          <div class="res-top"><div class="lt">Base 4</div><div class="tt">Zagreb</div><div class="st">5 noites · 23 a 28/10</div></div>
+          <div class="res-top"><div class="lt">Base 4</div><div class="tt">Zagreb</div><div class="st">6 noites</div></div>
           <div class="res-body">
             <div class="clima"><span class="t">7° a 16°C</span><span class="o">outubro · manhãs frias e névoa; Plitvice 3 a 5 °C abaixo</span></div>
             <div class="res-nts">Bate-voltas</div>
             <div class="res-bv">Plitvice (no transfer) · Varaždin e Trakošćan · Samobor</div>
-            <p>Transfer com os Lagos de Plitvice no caminho, a 1h30 de Zadar. Cidade Alta, mercado Dolac e interior barroco. Voo de volta às 06:40 do dia 28.</p>
+            <p>Transfer com os Lagos de Plitvice no caminho, a 1h30 de Zadar. Cidade Alta, mercado Dolac e interior barroco. Voo regional de Zagreb ao hub para o retorno.</p>
           </div>
         </div></div>
-    <div class="res-note">Temperaturas são médias históricas de outubro (mínima e máxima); na costa o mar ainda permite banho, no interior leve casaco. Esta cotação cobre apenas o aéreo internacional. Hotelaria, transfers e passeios são cotados à parte, após a escolha do roteiro. *Nada reservado, apenas cotado.</div>
+    <div class="res-note">Temperaturas são médias históricas de outubro (mínima e máxima); em novembro, 3 a 4 °C abaixo e mar mais frio. Esta cotação cobre apenas o aéreo intercontinental; voos regionais, hotelaria, transfers e passeios são cotados à parte. *Nada reservado, apenas cotado.</div>
   </div>
   <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
 </section>
