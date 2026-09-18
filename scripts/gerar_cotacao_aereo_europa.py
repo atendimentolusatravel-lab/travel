@@ -38,13 +38,19 @@ O3 = _opt("3", "Air France · Paris", "Paris", OUT_, 23150.51, 4493.41,
           "Voo direto nos dois sentidos, ida no 777 e volta no A350. Chegada a Paris às 07:00, com o dia inteiro para a conexão. "
           "Conexão até o destino final em bilhete regional à parte. Classe O.",
           ("11h20", "12h00"))
-O4 = _opt("4", "LATAM · Paris", "Paris", NOV_, 22745.49, 4414.80,
+O3N = _opt("4", "Air France · Paris", "Paris", NOV_, 25711.26, 4990.44,
+          ("AF 453", "06/10 14:40", "07/10 07:00", "GRU · São Paulo", "CDG · Paris", "11h20", "", "B77W", "O · Exec."),
+          ("AF 460", "06/11 10:25", "06/11 18:25", "CDG · Paris", "GRU · São Paulo", "12h00", "", "A359", "Z · Exec."),
+          "Mesmos voos da opção 3, com a ida em 06/10 e a volta em 06/11. Ida no 777 e volta no A350. "
+          "Conexão até o destino final em bilhete regional à parte. Classes O na ida e Z na volta.",
+          ("11h20", "12h00"))
+O4 = _opt("5", "LATAM · Paris", "Paris", NOV_, 22745.49, 4414.80,
           ("LA 8132", "06/10 18:20", "07/10 10:35", "GRU · São Paulo", "CDG · Paris", "11h15", "", "B789", "Z · PBS"),
           ("LA 8133", "09/11 12:05", "09/11 20:00", "CDG · Paris", "GRU · São Paulo", "11h55", "", "B789", "Z · PBS"),
           "Voo direto no Boeing 787, tarifa PBS. Os dois voos aparecem no sistema com aviso de alteração de horário; "
           "confirmar na emissão. Conexão até o destino final em bilhete regional à parte. Classe Z.",
           ("11h15", "11h55"))
-O5 = _opt("5", "LATAM · Roma", "Roma", NOV_, 22556.94, 4378.20,
+O5 = _opt("6", "LATAM · Roma", "Roma", NOV_, 22556.94, 4378.20,
           ("LA 8120", "06/10 17:55", "07/10 10:10", "GRU · São Paulo", "FCO · Roma", "11h15", "", "B773", "I · PBS"),
           ("LA 8121", "09/11 12:10", "09/11 20:05", "FCO · Roma", "GRU · São Paulo", "11h55", "", "B773", "I · PBS"),
           "Voo direto no Boeing 777, tarifa PBS. Os dois voos aparecem no sistema com aviso de alteração de horário; "
@@ -57,10 +63,14 @@ PAGINAS = [
      "Voos diretos São Paulo ↔ Madri pela Air China, um embaixo do outro: primeiro a volta em outubro e logo abaixo a volta em novembro. "
      "Valores por pessoa, tarifa executiva com bagagem, cotação do sistema em 17/09.",
      [("Air China", [O1, O2])]),
-    ("Air France e LATAM",
-     "Demais companhias: Air France para Paris com volta em outubro e LATAM para Paris e Roma com volta em novembro. "
-     "Valores por pessoa, tarifas executivas com bagagem, cotação do sistema em 17/09.",
-     [("Air France", [O3]), ("LATAM", [O4, O5])]),
+    ("Air France",
+     "Voos diretos São Paulo ↔ Paris pela Air France, um embaixo do outro: primeiro a volta em outubro e logo abaixo a volta em novembro. "
+     "Valores por pessoa, tarifa executiva com bagagem, cotação do sistema em 17/09.",
+     [("Air France", [O3, O3N])]),
+    ("LATAM",
+     "Voos diretos pela LATAM para Paris e para Roma, ambos com volta em novembro. "
+     "Valores por pessoa, tarifa executiva com bagagem, cotação do sistema em 17/09.",
+     [("LATAM", [O4, O5])]),
 ]
 
 EXTRA_CSS = r"""
