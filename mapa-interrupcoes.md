@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cotação Lucas – Itália** — iniciada em 17/09/2026 às 10:30
-▶️ Retomada em 18/09/2026 às 13:10 (interrupções nesta atividade: 4, total 3h36min)
+⏸️ Pausada em 18/09/2026 às 13:11 por interrupção (Mariana Maske – finalização caderno de voucher), emendada na anterior
 
 ## Histórico de atividades principais
 
@@ -62,6 +62,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 25 | 17/09/2026 | 14:38 | 14:46 | 8min | – | Mariana Maske – Transfer |
 | 26 | 17/09/2026 | 15:06 | 15:20 | 14min | – | Dalcanales – Assentos (2ª vez) |
 | 27 | 18/09/2026 | 10:00 | 13:10 | 2h30min | – | Dalcanales – Cadernos de voucher (fim dentro do almoço, contado até 12:30) |
+| 28 | 18/09/2026 | 13:11 | ⏳ em andamento | – | – | Mariana Maske – Finalização caderno de voucher |
 
 ## Visão consolidada: atividades × interrupções
 
