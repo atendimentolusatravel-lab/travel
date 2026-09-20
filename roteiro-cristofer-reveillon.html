@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="LusaTravel — roteiro de réveillon de 13 noites por Budapeste, Tokaj, Viena, Praga e Paris para família de cinco, com estimativa de investimento.">
+<title>Réveillon Europa Central</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
+<style>
+/* ─── LUSATRAVEL · DESIGN SYSTEM TOKENS ─────────────────── */
+:root{
+  --gold:#da8d00; --gold-hi:#f0a010;
+  --ink:#1a1510; --char:#333131; --mut:#9a8d80;
+  --line:#e4ddd2; --paper:#faf7f2; --surf:#fff; --surf2:#f2ece3;
+  --onink:#f0e8de;
+  --dest:#1a3a5c;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+  --mx:1080px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+    --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+    --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+    --dest:#3d78b8;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+  --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+  --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+  --dest:#3d78b8;
+}
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  background:var(--paper); color:var(--char);
+  font-family:var(--sans); font-weight:400;
+  font-size:15px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+@media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } }
+
+.wrap{ max-width:var(--mx); margin:0 auto; padding:0 28px; }
+
+/* ─── MASTHEAD / CAPA ────────────────────────────────────── */
+.mh{ background:#1a1510; padding:56px 0 44px; position:relative; }
+.mh::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.mh-logo{ font-family:var(--con); font-weight:600; font-size:13px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.mh-kick{ margin-top:26px; font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+.mh-name{ margin-top:10px; font-weight:700; font-size:clamp(28px,5.2vw,46px); line-height:1.06; letter-spacing:.01em; color:#fff; text-transform:uppercase; text-wrap:balance; }
+.mh-dest{ margin-top:8px; font-weight:600; font-size:clamp(17px,2.4vw,22px); color:var(--gold); letter-spacing:.02em; }
+.mh-sub{ margin-top:16px; max-width:60ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.62); }
+.mh-sub strong{ font-weight:600; color:var(--gold); }
+.mh-stats{ margin-top:34px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid rgba(240,232,222,.14); }
+.mh-stat{ padding:18px 34px 4px 0; margin-right:34px; border-right:1px solid rgba(240,232,222,.12); }
+.mh-stat:last-child{ border-right:0; }
+.mh-stat .v{ font-weight:700; font-size:24px; color:#fff; line-height:1; font-variant-numeric:tabular-nums; }
+.mh-stat .k{ margin-top:7px; font-size:9.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.45); }
+
+/* ─── SEÇÕES ─────────────────────────────────────────────── */
+.sec{ padding:56px 0; }
+.sec + .sec{ border-top:1px solid var(--line); }
+.eyebrow{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; letter-spacing:-.01em; text-wrap:balance; }
+.lead{ margin-top:12px; max-width:66ch; font-weight:300; font-size:15.5px; color:var(--char); }
+.lead b{ font-weight:600; color:var(--ink); }
+
+/* ─── FAIXA DE DESTINO ───────────────────────────────────── */
+.opt-hd{ background:var(--dest); padding:34px 0; position:relative; }
+.opt-hd::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.opt-tag{ font-size:9.5px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.66); }
+.opt-title{ margin-top:9px; font-weight:700; font-size:clamp(22px,3.4vw,32px); color:#fff; line-height:1.14; text-wrap:balance; }
+
+/* ─── TIMELINE ───────────────────────────────────────────── */
+.tl{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; }
+.tl-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--dest); padding:18px 18px 16px; }
+.tl-item.side{ border-top-color:var(--gold); }
+.tl-badge{ display:inline-flex; align-items:center; justify-content:center; min-width:30px; height:30px; padding:0 9px; background:var(--dest); color:#fff; font-weight:700; font-size:12.5px; font-variant-numeric:tabular-nums; }
+.tl-item.side .tl-badge{ background:var(--gold); color:#1a1510; }
+.tl-city{ margin-top:13px; font-weight:600; font-size:17px; color:var(--ink); }
+.tl-meta{ margin-top:5px; font-size:12.5px; font-weight:300; color:var(--mut); }
+.tl-move{ margin-top:11px; padding-top:11px; border-top:1px solid var(--line); font-size:11.5px; font-weight:400; color:var(--char); }
+
+/* ─── RAZÕES / CARDS ─────────────────────────────────────── */
+.why{ margin-top:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
+.why-item{ background:var(--surf); border:1px solid var(--line); padding:20px 20px 18px; }
+.why-n{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.12em; color:var(--gold); }
+.why-t{ margin-top:8px; font-weight:600; font-size:15.5px; color:var(--ink); line-height:1.3; }
+.why-d{ margin-top:8px; font-size:13.5px; font-weight:300; color:var(--char); }
+
+/* ─── DIA A DIA ──────────────────────────────────────────── */
+.days{ margin-top:26px; border-top:1px solid var(--line); }
+.day{ display:grid; grid-template-columns:132px 1fr; gap:22px; padding:19px 0; border-bottom:1px solid var(--line); }
+.day-h{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--dest); line-height:1.5; font-variant-numeric:tabular-nums; }
+.day-h .cty{ display:block; color:var(--mut); font-size:10.5px; letter-spacing:.14em; margin-top:3px; }
+.day-h .dt{ display:block; color:var(--gold); font-size:10.5px; letter-spacing:.14em; margin-top:2px; }
+.day-t{ font-size:14.5px; font-weight:300; color:var(--char); }
+.day-t b{ font-weight:600; color:var(--ink); }
+.day-t .fair{ color:var(--gold); font-weight:600; }
+.day.travel{ background:var(--surf2); margin:0 -14px; padding:15px 14px; }
+.day.travel .day-t{ font-size:13.5px; }
+.day.hi{ border-left:3px solid var(--gold); margin:0 -14px; padding:19px 14px 19px 11px; }
+
+/* ─── TABELA DE VALORES ──────────────────────────────────── */
+.tbl{ margin-top:26px; width:100%; border-collapse:collapse; background:var(--surf); border:1px solid var(--line); }
+.tbl th,.tbl td{ padding:13px 16px; text-align:left; border-bottom:1px solid var(--line); font-size:14px; vertical-align:top; }
+.tbl th{ font-family:var(--lbl); font-weight:700; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); background:var(--surf2); }
+.tbl td.num{ text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; font-weight:500; color:var(--ink); }
+.tbl td small{ display:block; font-size:12px; font-weight:300; color:var(--mut); margin-top:3px; }
+.tbl tr.total td{ background:#1a1510; color:#fff; font-weight:600; border-bottom:0; }
+.tbl tr.total td.num{ color:var(--gold); font-size:16px; font-weight:700; }
+.tbl tr.sub td{ background:var(--surf2); font-weight:500; color:var(--ink); }
+.note{ margin-top:12px; font-size:12.5px; font-weight:300; color:var(--mut); }
+.note b{ font-weight:600; color:var(--ink); }
+.cambio{ margin-top:18px; display:inline-block; font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); border:1px solid var(--gold); padding:7px 12px; }
+
+/* ─── LISTA DE CONDIÇÕES ─────────────────────────────────── */
+.chk{ margin-top:26px; list-style:none; border-top:1px solid var(--line); }
+.chk li{ position:relative; display:block; padding:15px 0 15px 40px; border-bottom:1px solid var(--line); font-size:14px; font-weight:300; }
+.chk li::before{ content:''; position:absolute; left:0; top:20px; width:14px; height:14px; border:2px solid var(--gold); }
+.chk li b{ font-weight:600; color:var(--ink); }
+.chk li.alert::before{ background:var(--gold); }
+
+/* ─── RODAPÉ / ASSINATURA ────────────────────────────────── */
+.ft{ background:#1a1510; padding:44px 0 40px; position:relative; }
+.ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
+.ft-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.ft-sig{ margin-top:18px; display:flex; flex-wrap:wrap; gap:10px 34px; font-family:var(--con); font-size:13px; color:rgba(240,232,222,.72); }
+.ft-sig a{ color:rgba(240,232,222,.72); text-decoration:none; border-bottom:1px solid rgba(218,141,0,.5); }
+.ft-sig a:hover{ color:var(--gold); }
+.ft-addr{ margin-top:16px; font-family:var(--con); font-size:11.5px; color:rgba(240,232,222,.38); }
+
+@media (max-width:640px){
+  .day{ grid-template-columns:1fr; gap:7px; }
+  .day.hi{ padding-left:11px; }
+  .mh-stat{ padding-right:20px; margin-right:20px; }
+  .tbl th,.tbl td{ padding:11px 10px; font-size:13px; }
+}
+@media print{
+  body{ background:#fff; }
+  .mh,.ft,.opt-hd{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+}
+</style>
+</head>
+<body>
+
+<header class="mh">
+  <div class="wrap">
+    <div class="mh-logo">LusaTravel</div>
+    <div class="mh-kick">Cotação para sua viagem</div>
+    <h1 class="mh-name">Cristofer</h1>
+    <div class="mh-dest">Réveillon na Europa Central · Budapeste, Viena, Praga e Paris</div>
+    <p class="mh-sub">Treze noites desenhadas para a família de cinco: <strong>virada do ano em Budapeste</strong>, um dia inteiro em Tokaj com visita à Oremus, encontro com o filho em Viena, Praga a caminho e <strong>dois dias em Paris</strong> para fechar. Trens de primeira classe entre as capitais e um único voo interno.</p>
+    <div class="mh-stats">
+      <div class="mh-stat"><div class="v">13</div><div class="k">Noites</div></div>
+      <div class="mh-stat"><div class="v">4+1</div><div class="k">Cidades e Tokaj</div></div>
+      <div class="mh-stat"><div class="v">4+1</div><div class="k">Viajantes</div></div>
+      <div class="mh-stat"><div class="v">29/12 → 12/01</div><div class="k">Período</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="opt-hd">
+  <div class="wrap">
+    <div class="opt-tag">Roteiro sugerido</div>
+    <h2 class="opt-title">Budapeste · Tokaj · Viena · Praga · Paris</h2>
+  </div>
+</div>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Itinerário</div>
+    <h2 class="h2">Quatro cidades, um dia de vinhas, 13 noites</h2>
+    <div class="tl">
+      <div class="tl-item"><span class="tl-badge">4</span><div class="tl-city">Budapeste</div><div class="tl-meta">30/12 a 03/01 · 4 noites · Réveillon</div><div class="tl-move">Voo de São Paulo com uma conexão</div></div>
+      <div class="tl-item side"><span class="tl-badge">1 dia</span><div class="tl-city">Tokaj</div><div class="tl-meta">02/01 · bate-volta com motorista</div><div class="tl-move">Oremus em Tolcsva · 2h30 de Budapeste</div></div>
+      <div class="tl-item"><span class="tl-badge">4</span><div class="tl-city">Viena</div><div class="tl-meta">03/01 a 07/01 · 4 noites · chegada do filho</div><div class="tl-move">Trem Railjet · 2h40</div></div>
+      <div class="tl-item"><span class="tl-badge">3</span><div class="tl-city">Praga</div><div class="tl-meta">07/01 a 10/01 · 3 noites</div><div class="tl-move">Trem Railjet · 4h</div></div>
+      <div class="tl-item"><span class="tl-badge">2</span><div class="tl-city">Paris</div><div class="tl-meta">10/01 a 12/01 · 2 noites · stopover</div><div class="tl-move">Voo Praga–Paris · 1h45</div></div>
+    </div>
+
+    <div class="eyebrow" style="margin-top:44px">Por que nesta ordem</div>
+    <h2 class="h2">Quatro decisões que sustentam o roteiro</h2>
+    <div class="why">
+      <div class="why-item"><div class="why-n">01</div><div class="why-t">Réveillon em Budapeste, não em Paris</div><div class="why-d">A virada no Danúbio, com o Parlamento iluminado e fogos vistos do barco, é a mais memorável das quatro cidades e custa uma fração de Paris na mesma noite. Paris fica para o fim, quando os preços de janeiro já caíram.</div></div>
+      <div class="why-item"><div class="why-n">02</div><div class="why-t">Tokaj no dia 02, em dia útil de vinícola</div><div class="why-d">Em 31/12 e 01/01 as adegas fecham. O dia 02 é o primeiro em que a Oremus pode receber, e ainda dentro dos dias em que a família está em Budapeste, a apenas 2h30 de carro.</div></div>
+      <div class="why-item"><div class="why-n">03</div><div class="why-t">O filho chega em Viena, dia 05</div><div class="why-d">Viena tem o aeroporto mais bem conectado do trio e fica a 16 minutos de trem do centro. Ele embarca no dia 04, desembarca na manhã do dia 05 e a família fica junta pelos oito dias restantes.</div></div>
+      <div class="why-item"><div class="why-n">04</div><div class="why-t">Sentido oeste, sem voltar atrás</div><div class="why-d">Budapeste → Viena → Praga → Paris é uma linha só. Dois trens curtos, um voo de 1h45 e o voo direto Paris–São Paulo na volta. Nenhuma troca de hotel desnecessária.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Roteiro dia a dia</div>
+    <h2 class="h2">O que fazer em cada dia</h2>
+    <p class="lead">Uma atração principal por dia e tardes leves. Os dias marcados em ouro são os que definem a viagem: o Réveillon, a Oremus e o reencontro com o filho.</p>
+    <div class="days">
+      <div class="day travel"><div class="day-h">Dia 01<span class="cty">Embarque</span><span class="dt">Ter · 29/12</span></div><div class="day-t">Voo noturno de São Paulo para Budapeste, com uma conexão europeia (Paris, Lisboa ou Frankfurt, conforme a tarifa).</div></div>
+      <div class="day"><div class="day-h">Dia 02<span class="cty">Budapeste</span><span class="dt">Qua · 30/12</span></div><div class="day-t">Chegada à tarde e transfer privativo ao hotel. Fim de tarde a pé pela <b>Basílica de Santo Estevão</b> e o mercado de Natal da praça, ainda aberto. Jantar húngaro leve e cedo para vencer o fuso.</div></div>
+      <div class="day hi"><div class="day-h">Dia 03<span class="cty">Budapeste</span><span class="dt">Qui · 31/12</span></div><div class="day-t">Manhã no <b>Castelo de Buda</b>: Bastião dos Pescadores, Igreja de Matias e a vista do Parlamento do outro lado do rio. Tarde de descanso no hotel. À noite, <span class="fair">Réveillon a bordo</span>: jantar de gala em cruzeiro pelo Danúbio, brinde à meia-noite com os fogos sobre o rio.</div></div>
+      <div class="day"><div class="day-h">Dia 04<span class="cty">Budapeste</span><span class="dt">Sex · 01/01</span></div><div class="day-t">Dia lento, como pede o 1º de janeiro. Manhã nas <b>Termas Széchenyi</b>, abertas no feriado, com as piscinas externas a 38 °C sob o ar frio. Tarde na Avenida Andrássy e na Praça dos Heróis, com a pista de patinação do Parque da Cidade para as meninas.</div></div>
+      <div class="day hi"><div class="day-h">Dia 05<span class="cty">Tokaj</span><span class="dt">Sáb · 02/01</span></div><div class="day-t">Dia inteiro com motorista-guia privativo. Saída às 8h rumo à região de Tokaj, Patrimônio Mundial. <span class="fair">Visita à Oremus</span>, em Tolcsva: as adegas do século XIII e a prova de Tokaji Aszú e Furmint secos, com agendamento feito pela LusaTravel. Almoço em Mád ou Tarcal, segunda vinícola à tarde (Disznókő ou Royal Tokaji) e passeio pela vila de Tokaj. Retorno por volta das 19h.</div></div>
+      <div class="day travel"><div class="day-h">Dia 06<span class="cty">Viena</span><span class="dt">Dom · 03/01</span></div><div class="day-t">Trem Railjet pela manhã, 2h40 em primeira classe. Tarde na <b>Ringstrasse</b> e na Catedral de Santo Estêvão. Lanche no Café Central e a Sachertorte original no Hotel Sacher.</div></div>
+      <div class="day"><div class="day-h">Dia 07<span class="cty">Viena</span><span class="dt">Seg · 04/01</span></div><div class="day-t"><b>Palácio de Schönbrunn</b> com entrada marcada pela manhã, jardins e o zoológico mais antigo do mundo. Tarde no Hofburg e no Museu Sisi. À noite, concerto de Strauss e Mozart no Hofburg ou no Musikverein, o programa de Ano Novo vienense.</div></div>
+      <div class="day hi"><div class="day-h">Dia 08<span class="cty">Viena</span><span class="dt">Ter · 05/01</span></div><div class="day-t"><span class="fair">Chegada do filho</span> pela manhã, com transfer privativo do aeroporto ao hotel. Manhã livre no Naschmarkt para o restante da família. Tarde no <b>Prater</b> e na Roda Gigante de 1897. Jantar de reencontro no Plachutta, com o Tafelspitz que era o prato do imperador.</div></div>
+      <div class="day"><div class="day-h">Dia 09<span class="cty">Viena</span><span class="dt">Qua · 06/01</span></div><div class="day-t">Feriado de Reis, museus abertos. <b>Belvedere</b> pela manhã, com O Beijo de Klimt. Tarde de patinação na Rathausplatz, no último dia da pista de inverno. À noite, opcional: récita na Ópera Estatal de Viena, com ingressos comprados com antecedência.</div></div>
+      <div class="day travel"><div class="day-h">Dia 10<span class="cty">Praga</span><span class="dt">Qui · 07/01</span></div><div class="day-t">Trem Railjet pela manhã, 4h com vagão-restaurante. Tarde na <b>Praça da Cidade Velha</b>, Relógio Astronômico e Ponte Carlos ao entardecer, quando as luzes acendem.</div></div>
+      <div class="day"><div class="day-h">Dia 11<span class="cty">Praga</span><span class="dt">Sex · 08/01</span></div><div class="day-t"><b>Castelo de Praga</b> logo cedo: Catedral de São Vito, Palácio Real Antigo e a Ruela Dourada. Descida a pé por Malá Strana e almoço junto ao rio. À noite, teatro de luz negra, um clássico de Praga que funciona muito bem com adolescentes.</div></div>
+      <div class="day"><div class="day-h">Dia 12<span class="cty">Praga</span><span class="dt">Sáb · 09/01</span></div><div class="day-t"><b>Bairro Judeu</b>: Sinagoga Espanhola, Cemitério Antigo e a Sinagoga Velha-Nova. Tarde no Monte Petřín, com o funicular e a torre de observação, ou compras na Pařížská. Alternativa para o dia: bate-volta a Kutná Hora, a 1h, com o Ossuário e a Catedral de Santa Bárbara.</div></div>
+      <div class="day travel"><div class="day-h">Dia 13<span class="cty">Paris</span><span class="dt">Dom · 10/01</span></div><div class="day-t">Voo Praga–Paris pela manhã, 1h45. Tarde no <b>Trocadéro</b> e subida à Torre Eiffel com hora marcada. Fim de tarde pela Champs-Élysées até o Arco do Triunfo.</div></div>
+      <div class="day"><div class="day-h">Dia 14<span class="cty">Paris</span><span class="dt">Seg · 11/01</span></div><div class="day-t"><b>Louvre</b> pela manhã, com entrada marcada e um percurso de três horas. Tarde em Montmartre e na Sacré-Cœur. À noite, cruzeiro pelo Sena com jantar, o encerramento da viagem.</div></div>
+      <div class="day travel"><div class="day-h">Dia 15<span class="cty">Retorno</span><span class="dt">Ter · 12/01</span></div><div class="day-t">Voo direto Paris–São Paulo, os cinco juntos.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Logística do filho</div>
+    <h2 class="h2">Como o encontro em Viena funciona</h2>
+    <p class="lead">Ele embarca em São Paulo na noite de <b>04/01</b>, com uma conexão europeia, e chega a Viena na manhã de <b>05/01</b>. Motorista privativo o espera no desembarque e o leva ao hotel, onde a família já está hospedada desde o dia 03. A partir daí, os cinco seguem juntos até Paris e voltam ao Brasil no mesmo voo do dia 12.</p>
+    <ul class="chk">
+      <li class="alert"><b>Autorização de viagem obrigatória.</b> Menor de 18 anos viajando ao exterior desacompanhado precisa de autorização de ambos os pais, com firma reconhecida em cartório, em duas vias, ou lançada no passaporte. Sem ela a Polícia Federal impede o embarque. Como o pai e a mãe já estarão na Europa, o documento deve ser assinado antes de 29/12.</li>
+      <li><b>Aéreo.</b> Aos 17 anos ele viaja como adulto, sem serviço de menor desacompanhado. Sugerimos a mesma companhia da família, para que a volta seja no mesmo bilhete e a conexão seja curta.</li>
+      <li><b>Hotel em Viena.</b> Reserva de um terceiro quarto ou cama extra a partir de 05/01, e triplos ou dois quartos duplos com cama extra em Praga e Paris.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Estimativa de investimento</div>
+    <h2 class="h2">Ordem de grandeza para a família de cinco</h2>
+    <p class="lead">Faixas preliminares para hotéis de <b>4 e 5 estrelas</b> em localização central, dois quartos, trens em primeira classe e serviços privativos. Aéreo em classe econômica, em período de alta temporada. Os valores fecham na cotação formal, com hotéis e voos nomeados.</p>
+    <table class="tbl">
+      <thead><tr><th>Item</th><th>Base</th><th style="text-align:right">Faixa estimada</th></tr></thead>
+      <tbody>
+        <tr><td>Aéreo internacional · 4 passageiros<small>São Paulo → Budapeste / Paris → São Paulo · econômica</small></td><td>R$</td><td class="num">34.000 – 48.000</td></tr>
+        <tr><td>Aéreo do filho<small>São Paulo → Viena (04/01) / Paris → São Paulo (12/01)</small></td><td>R$</td><td class="num">9.000 – 12.000</td></tr>
+        <tr><td>Seguro viagem · 5 passageiros · 15 dias</td><td>R$</td><td class="num">1.500 – 2.500</td></tr>
+        <tr class="sub"><td colspan="2">Subtotal em reais</td><td class="num">R$ 44.500 – 62.500</td></tr>
+        <tr><td>Hotelaria · 13 noites · 2 quartos · 4–5★<small>Budapeste no Réveillon é o trecho mais caro: € 2.400 a 4.100 pelas 4 noites</small></td><td>€</td><td class="num">6.500 – 9.500</td></tr>
+        <tr><td>Dia em Tokaj com motorista-guia · visita e prova na Oremus</td><td>€</td><td class="num">700 – 1.000</td></tr>
+        <tr><td>Réveillon · jantar de gala em cruzeiro no Danúbio · 4 pessoas</td><td>€</td><td class="num">600 – 1.000</td></tr>
+        <tr><td>Trens em 1ª classe e voo Praga–Paris<small>Budapeste–Viena · Viena–Praga · Praga–Paris</small></td><td>€</td><td class="num">1.100 – 1.700</td></tr>
+        <tr><td>Transfers privativos · aeroportos e estações</td><td>€</td><td class="num">500 – 700</td></tr>
+        <tr><td>Gastos diários · refeições, ingressos, transporte local<small>≈ € 500 a 700 por dia para a família</small></td><td>€</td><td class="num">6.500 – 9.000</td></tr>
+        <tr class="sub"><td colspan="2">Subtotal em euros</td><td class="num">€ 15.900 – 22.900</td></tr>
+        <tr class="total"><td colspan="2">Total estimado · família de cinco</td><td class="num">R$ 140.000 – 200.000</td></tr>
+      </tbody>
+    </table>
+    <div class="cambio">Cotação 19/09 · Euro = 5,91</div>
+    <p class="note"><b>*Nada reservado, apenas cotado.</b> Estimativa preliminar de setembro, sujeita à disponibilidade de Réveillon. Os dois maiores ajustes possíveis: hotelaria 4★ em vez de 5★ reduz cerca de € 2.500; classe executiva no aéreo internacional soma cerca de R$ 60.000 a 80.000.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Antes de confirmar</div>
+    <h2 class="h2">O que precisa ser fechado cedo</h2>
+    <ul class="chk">
+      <li class="alert"><b>Oremus recebe só com agendamento.</b> A visita à adega em Tolcsva é marcada por e-mail e dura cerca de uma hora. O dia 02/01 cai num sábado: a LusaTravel confirma a recepção nessa data. Se a vinícola não abrir no sábado, o dia de Tokaj passa para segunda 04/01, com uma noite a mais em Budapeste e uma a menos em Viena, sem afetar a chegada do filho.</li>
+      <li class="alert"><b>Réveillon esgota em outubro.</b> Hotéis em Budapeste e o cruzeiro de gala do dia 31 devem ser reservados assim que o roteiro for aprovado. Mínimo de 3 a 4 noites é comum nos hotéis nessa data.</li>
+      <li><b>ETIAS.</b> A autorização eletrônica europeia, de € 20 por adulto e gratuita para menores de 18, está prevista para entrar em vigor no último trimestre de 2026, com período de transição. Verificamos a obrigatoriedade no momento da emissão e orientamos o preenchimento.</li>
+      <li><b>Passaportes</b> dos cinco com validade mínima de seis meses após 12/01/2027.</li>
+      <li><b>Concerto de Ano Novo da Filarmônica de Viena.</b> Os ingressos do dia 01/01 são sorteados em fevereiro do ano anterior e a inscrição já encerrou. O roteiro propõe, no lugar, o concerto da Orquestra do Hofburg no dia 04/01, de compra normal.</li>
+      <li><b>Clima.</b> Entre −3 °C e 4 °C nas quatro cidades, com possibilidade de neve. Casaco térmico, calçado impermeável e luvas para os cinco. As termas de Budapeste e os cafés de Viena são o contraponto.</li>
+      <li><b>Variante para as meninas.</b> Os mercados de Natal de Praga fecham em 06/01. Se a família preferir alcançá-los, invertemos Viena e Praga: Praga de 03 a 06/01, com o filho chegando em Praga no dia 05, e Viena de 06 a 10/01. Custo equivalente.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-logo">LusaTravel</div>
+    <div class="ft-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <div class="ft-addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+  </div>
+</footer>
+
+</body>
+</html>
