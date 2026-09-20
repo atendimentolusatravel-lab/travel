@@ -6,15 +6,16 @@ const path = require("path");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType,
   AlignmentType, HeadingLevel, BorderStyle, ShadingType, Header, Footer, PageNumber,
-  PageBreak, LevelFormat, TabStopType, VerticalAlign,
+  PageBreak, LevelFormat, TabStopType, VerticalAlign, ImageRun,
 } = require("docx");
 
 const FONT = "Arial";
-const GOLD = "DA8D00";
-const INK = "1A1510";
-const GREY = "666666";
-const LIGHT = "F3EFE6";
-const HEAD = "E9E1D0";
+const OLIVE = "414725";   // verde-oliva da logo
+const GOLD = OLIVE;
+const INK = "23271A";
+const GREY = "6B6B60";
+const LIGHT = "EEF0E6";
+const HEAD = "DDE1CC";
 const PAGE_W = 11906; // A4
 const MARGIN = 1134; // 2 cm
 const CONTENT_W = PAGE_W - 2 * MARGIN; // 9638
@@ -62,7 +63,7 @@ const H2 = (text) => new Paragraph({
 });
 const H3 = (text) => new Paragraph({
   heading: HeadingLevel.HEADING_3,
-  children: [new TextRun({ text, font: FONT, size: 20, bold: true, color: "5A4A2A" })],
+  children: [new TextRun({ text, font: FONT, size: 20, bold: true, color: "5C6533" })],
   spacing: { before: 160, after: 80 },
   keepNext: true,
 });
@@ -86,7 +87,7 @@ const Box = (title, lines) => new Table({
     },
     margins: { top: 140, bottom: 100, left: 200, right: 200 },
     children: [
-      new Paragraph({ children: [new TextRun({ text: title, bold: true, font: FONT, size: 19, color: "5A4A2A" })], spacing: { after: 80 } }),
+      new Paragraph({ children: [new TextRun({ text: title, bold: true, font: FONT, size: 19, color: "5C6533" })], spacing: { after: 80 } }),
       ...lines.map((l) => new Paragraph({ children: runs(l, { size: 19 }), spacing: { after: 80, line: 260 }, alignment: AlignmentType.JUSTIFIED })),
     ],
   })] })],
@@ -97,7 +98,7 @@ function Tbl(headers, rows, widths, opts = {}) {
   const total = widths.reduce((a, b) => a + b, 0);
   const scale = CONTENT_W / total;
   const w = widths.map((x) => Math.round(x * scale));
-  const border = { style: BorderStyle.SINGLE, size: 4, color: "C9C1B0" };
+  const border = { style: BorderStyle.SINGLE, size: 4, color: "C5CAB0" };
   const borders = { top: border, bottom: border, left: border, right: border };
   const cell = (text, i, isHead, shade) => new TableCell({
     width: { size: w[i], type: WidthType.DXA },
@@ -121,7 +122,7 @@ function Tbl(headers, rows, widths, opts = {}) {
         columnSpan: headers.length, width: { size: CONTENT_W, type: WidthType.DXA }, borders,
         shading: { type: ShadingType.CLEAR, fill: LIGHT, color: "auto" },
         margins: { top: 50, bottom: 50, left: 90, right: 90 },
-        children: [new Paragraph({ children: [new TextRun({ text: r.__section, bold: true, font: FONT, size: 17, color: "5A4A2A" })] })],
+        children: [new Paragraph({ children: [new TextRun({ text: r.__section, bold: true, font: FONT, size: 17, color: "5C6533" })] })],
       })] });
     }
     return new TableRow({ cantSplit: true, children: r.map((c, i) => cell(c, i, false, r.__shade)) });
@@ -135,8 +136,7 @@ const doc = [];
 // CAPA
 doc.push(
   new Paragraph({ spacing: { before: 2400 } }),
-  new Paragraph({ children: [new TextRun({ text: "LUSATRAVEL", font: FONT, size: 44, bold: true, color: INK, characterSpacing: 120 })], alignment: AlignmentType.LEFT, spacing: { after: 0 } }),
-  new Paragraph({ children: [new TextRun({ text: "T R A V E L   A G E N C Y", font: FONT, size: 16, color: GOLD, bold: true })], spacing: { after: 1200 } }),
+  new Paragraph({ children: [new ImageRun({ type: "png", data: fs.readFileSync(path.join(__dirname, "assets", "logo-lusatravel.png")), transformation: { width: 236, height: 107 } })], alignment: AlignmentType.LEFT, spacing: { after: 1100 } }),
   new Paragraph({ children: [new TextRun({ text: "Programa de Cargos e Salários", font: FONT, size: 56, bold: true, color: INK })], spacing: { after: 120 } }),
   new Paragraph({ children: [new TextRun({ text: "Regulamento interno", font: FONT, size: 28, color: GREY })], spacing: { after: 600 } }),
   new Paragraph({ children: [new TextRun({ text: "Versão 1.1  ·  Setembro de 2026", font: FONT, size: 22, bold: true, color: INK })], spacing: { after: 80 } }),
@@ -681,7 +681,7 @@ doc.push(new Paragraph({ children: [new PageBreak()] }), H1("Anexo IV — Calend
 // ---------- documento ----------
 const header = new Header({ children: [new Paragraph({
   tabStops: [{ type: TabStopType.RIGHT, position: CONTENT_W }],
-  border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: "C9C1B0", space: 4 } },
+  border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: "C5CAB0", space: 4 } },
   children: [
     new TextRun({ text: "Lusatravel  ·  Programa de Cargos e Salários  ·  v1.1", font: FONT, size: 16, color: GREY }),
     new TextRun({ text: "\t", font: FONT, size: 16 }),
@@ -702,7 +702,7 @@ const document = new Document({
     paragraphStyles: [
       { id: "Heading1", name: "Heading 1", basedOn: "Normal", next: "Normal", quickFormat: true, run: { font: FONT, size: 30, bold: true, color: INK }, paragraph: { spacing: { before: 360, after: 160 }, outlineLevel: 0 } },
       { id: "Heading2", name: "Heading 2", basedOn: "Normal", next: "Normal", quickFormat: true, run: { font: FONT, size: 23, bold: true, color: INK }, paragraph: { spacing: { before: 240, after: 100 }, outlineLevel: 1 } },
-      { id: "Heading3", name: "Heading 3", basedOn: "Normal", next: "Normal", quickFormat: true, run: { font: FONT, size: 20, bold: true, color: "5A4A2A" }, paragraph: { spacing: { before: 160, after: 80 }, outlineLevel: 2 } },
+      { id: "Heading3", name: "Heading 3", basedOn: "Normal", next: "Normal", quickFormat: true, run: { font: FONT, size: 20, bold: true, color: "5C6533" }, paragraph: { spacing: { before: 160, after: 80 }, outlineLevel: 2 } },
     ],
   },
   numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "•", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 480, hanging: 240 } } } }] }] },
