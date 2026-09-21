@@ -7,9 +7,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 ## Atividade principal atual
 
-**Cotação Lucas – Itália** — iniciada em 17/09/2026 às 10:30
-▶️ Retomada em 21/09/2026 às 11:48 (interrupções nesta atividade: 9, total 6h33min)
-⚠️ Dia 18/09: sem pausa de almoço (trabalhou direto); saída antecipada às 17:18 — sem desconto de almoço neste dia
+_Nenhuma em andamento — aguardando próxima atividade._
 
 ## Histórico de atividades principais
 
@@ -31,6 +29,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 14 | 03–04/09/2026 | 03/09 15:30 | 04/09 12:55 | 3h58min | Cotação Milena Naves – Euro Summer | Concluída; 1h42min no dia 03 + 2h16min no dia 04, descontadas 7 interrupções (2h02min); fim dentro do almoço, contado até 12:30 |
 | 15 | 09–10/09/2026 | 09/09 13:54 | 10/09 14:46 | 7h15min | Cotação Luiz Maués – Pedido de casamento | Concluída; 4h06min no dia 09 + 3h09min no dia 10 (descontados almoço e 1 interrupção de 1h37min) |
 | 16 | 14/09/2026 | 14:30 | 18:31 | 3h39min | Recotação do Mikael | Concluída; descontadas 3 interrupções (22min); incluiu 31min além do expediente |
+| 17 | 17–21/09/2026 | 17/09 10:30 | 21/09 16:01 | 14h16min | Cotação Lucas – Itália | Concluída; 5h24min (17/09) + 3h44min (18/09, sem almoço, saída 17:18) + 5h08min (21/09); descontadas 9 interrupções (6h33min) |
 
 ## Tabela de Interrupções
 
@@ -89,7 +88,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 14 | Cotação Milena Naves – Euro Summer | 03–04/09 | 3h58min | 7 | 2h02min |
 | 15 | Cotação Luiz Maués – Pedido de casamento | 09–10/09 | 7h15min | 1 | 1h37min |
 | 16 | Recotação do Mikael | 14/09 | 3h39min | 3 | 22min |
-| 17 | Cotação Lucas – Itália | 17–21/09 | ⏳ em andamento | 9 (até agora) | 6h33min |
+| 17 | Cotação Lucas – Itália | 17–21/09 | 14h16min | 9 | 6h33min |
 
 ## Resumo
 
