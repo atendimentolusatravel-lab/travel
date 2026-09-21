@@ -212,7 +212,7 @@ for cat in CATS:
 parts.append(f"""<section class="sec"><div class="wrap">
   <div class="tot">
     <div class="tot-row"><span>Subtotal dos itens incluídos ({sum(1 for d in rows if d["total_brl"])} cotados)</span><span class="v">{brl(subtotal)}</span></div>
-    <div class="tot-row"><span>Taxa de serviço LusaTravel ({int(TAXA*100)}%)</span><span class="v">{brl(taxa_val)}</span></div>
+    {"" if TAXA == 0 else f'<div class="tot-row"><span>Taxa de serviço LusaTravel ({int(TAXA*100)}%)</span><span class="v">{brl(taxa_val)}</span></div>'}
     <div class="tot-row grand"><span>Total para o cliente até agora</span><span class="v">{brl(total)}</span></div>
   </div>
   <p class="note"><b>*Nada reservado, apenas cotado.</b> Câmbio {esc(CAMBIO_DATA)} · Euro = {f"{EUR:.2f}".replace(".", ",")} · Dólar = {f"{USD:.2f}".replace(".", ",")}. Faltam {len(ativos) - sum(1 for d in ativos if d["status"] != "A cotar")} itens a cotar. A estimativa preliminar do roteiro era R$ 140.000 a 200.000.</p>
