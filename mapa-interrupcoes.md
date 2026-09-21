@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cotação Lucas – Itália** — iniciada em 17/09/2026 às 10:30
-▶️ Retomada em 21/09/2026 às 09:00 (3º dia de trabalho na atividade; dias 19–20/09 foram fim de semana)
+⏸️ Pausada em 21/09/2026 às 10:00 por interrupção (Antonia e família – Tulum, 5ª vez)
 ⚠️ Dia 18/09: sem pausa de almoço (trabalhou direto); saída antecipada às 17:18 — sem desconto de almoço neste dia
 Interrupções nesta atividade até agora: 7 (5h40min)
 
@@ -67,6 +67,7 @@ Interrupções nesta atividade até agora: 7 (5h40min)
 | 28 | 18/09/2026 | 13:11 | 13:33 | 22min | – | Mariana Maske – Finalização caderno de voucher |
 | 29 | 18/09/2026 | 15:33 | 15:38 | 5min | – | Antonia e família – Tulum (3ª vez) |
 | 30 | 18/09/2026 | 16:03 | 17:00 | 57min | – | Antonia e família – Tulum (4ª vez) |
+| 31 | 21/09/2026 | 10:00 | ⏳ em andamento | – | – | Antonia e família – Tulum (5ª vez) |
 
 ## Visão consolidada: atividades × interrupções
 
