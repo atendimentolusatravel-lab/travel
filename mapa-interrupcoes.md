@@ -8,6 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Luiz Maués – Pedido de casamento (2ª rodada)** — iniciada em 22/09/2026 às 15:43
+▶️ Retomada em 22/09/2026 às 16:33 (interrupções nesta atividade: 12min)
 
 ## Histórico de atividades principais
 
@@ -69,6 +70,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 30 | 18/09/2026 | 16:03 | 17:00 | 57min | – | Antonia e família – Tulum (4ª vez) |
 | 31 | 21/09/2026 | 10:00 | 10:38 | 38min | – | Antonia e família – Tulum (5ª vez) |
 | 32 | 21/09/2026 | 11:33 | 11:48 | 15min | Fernanda | Ligação – Fernanda Japão |
+| 33 | 22/09/2026 | 16:21 | 16:33 | 12min | – | Ney e Viktor – Paris e Mykonos |
 
 ## Visão consolidada: atividades × interrupções
 
@@ -98,6 +100,6 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 | Métrica | Valor |
 |---------|-------|
-| Total de interrupções | 32 |
-| Tempo total interrompido | 14h24min |
-| Duração média | 27min |
+| Total de interrupções | 33 |
+| Tempo total interrompido | 14h36min |
+| Duração média | 26min33s |
