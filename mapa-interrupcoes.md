@@ -7,7 +7,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 ## Atividade principal atual
 
-_Nenhuma em andamento — aguardando próxima atividade._
+**Simone – Hotéis Istambul** — iniciada em 22/09/2026 às 11:43
 
 ## Histórico de atividades principais
 
