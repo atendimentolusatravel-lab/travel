@@ -7,8 +7,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 ## Atividade principal atual
 
-**Luiz Maués – Pedido de casamento (2ª rodada)** — iniciada em 22/09/2026 às 15:43
-▶️ Retomada em 22/09/2026 às 16:33 (interrupções nesta atividade: 12min)
+**Simone Maximiliano – Ski Carnaval** — iniciada em 23/09/2026 às 10:55
 
 ## Histórico de atividades principais
 
@@ -33,6 +32,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 17 | 17–21/09/2026 | 17/09 10:30 | 21/09 16:01 | 14h16min | Cotação Lucas – Itália | Concluída; 5h24min (17/09) + 3h44min (18/09, sem almoço, saída 17:18) + 5h08min (21/09); descontadas 9 interrupções (6h33min) |
 | 18 | 22/09/2026 | 09:31 | 11:39 | 2h08min | Ney e Viktor – Paris | Concluída; sem interrupções |
 | 19 | 22/09/2026 | 11:43 | 15:07 | 2h24min | Simone – Hotéis Istambul | Concluída; sem interrupções; descontado almoço (1h) |
+| 20 | 22/09/2026 | 15:43 | ? | ? | Luiz Maués – Pedido de casamento (2ª rodada) | Concluída no dia 22; fim não registrado; teve 1 interrupção (12min) |
 
 ## Tabela de Interrupções
 
@@ -95,6 +95,8 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 17 | Cotação Lucas – Itália | 17–21/09 | 14h16min | 9 | 6h33min |
 | 18 | Ney e Viktor – Paris | 22/09 | 2h08min | 0 | – |
 | 19 | Simone – Hotéis Istambul | 22/09 | 2h24min | 0 | – |
+| 20 | Luiz Maués – Pedido de casamento (2ª rodada) | 22/09 | ? | 1 | 12min |
+| 21 | Simone Maximiliano – Ski Carnaval | 23/09 | ⏳ em andamento | 0 (até agora) | – |
 
 ## Resumo
 
