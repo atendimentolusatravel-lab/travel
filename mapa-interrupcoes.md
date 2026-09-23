@@ -7,7 +7,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 ## Atividade principal atual
 
-**Revisão Ney e Viktor – Paris e Mykonos** — iniciada em 23/09/2026 às 15:36
+_Nenhuma em andamento — aguardando próxima atividade._
 
 ## Histórico de atividades principais
 
@@ -34,6 +34,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 19 | 22/09/2026 | 11:43 | 15:07 | 2h24min | Simone – Hotéis Istambul | Concluída; sem interrupções; descontado almoço (1h) |
 | 20 | 22/09/2026 | 15:43 | ? | ? | Luiz Maués – Pedido de casamento (2ª rodada) | Concluída no dia 22; fim não registrado; teve 1 interrupção (12min) |
 | 21 | 23/09/2026 | 10:55 | 15:29 | 3h34min | Simone Maximiliano – Ski Carnaval | Concluída; sem interrupções; descontado almoço (1h) |
+| 22 | 23/09/2026 | 15:36 | 16:59 | 1h23min | Revisão Ney e Viktor – Paris e Mykonos | Concluída; sem interrupções |
 
 ## Tabela de Interrupções
 
@@ -98,6 +99,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 19 | Simone – Hotéis Istambul | 22/09 | 2h24min | 0 | – |
 | 20 | Luiz Maués – Pedido de casamento (2ª rodada) | 22/09 | ? | 1 | 12min |
 | 21 | Simone Maximiliano – Ski Carnaval | 23/09 | 3h34min | 0 | – |
+| 22 | Revisão Ney e Viktor – Paris e Mykonos | 23/09 | 1h23min | 0 | – |
 
 ## Resumo
 
