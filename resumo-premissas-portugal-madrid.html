@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Resumo e Premissas · Portugal e Réveillon em Madrid — LusaTravel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap');
+:root{
+  --gold:#da8d00; --dest:#2d5e3a; --deep:#1c3d2b;
+  --ink:#1a1510; --char:#333131; --mut:#9a8d80; --line:#e4ddd2; --paper:#faf7f2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',Liberation Sans,sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',Liberation Sans,var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+a{ color:inherit; text-decoration:none; }
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; page-break-after:always; display:flex; flex-direction:column; }
+.page:last-child{ page-break-after:auto; }
+.hd{ background:var(--deep); height:26mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+.ft{ margin-top:auto; background:var(--deep); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.6); }
+.ft .sep{ color:rgba(218,141,0,.6); }
+.body{ padding:14mm 22mm; flex:1; display:flex; flex-direction:column; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:3mm 0 7mm; }
+.p{ font-size:11pt; line-height:1.7; color:var(--char); }
+.p b{ font-weight:600; color:var(--ink); }
+
+/* capa */
+.cover{ background:var(--deep); color:#fff; }
+.cover-hd{ height:26mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.cover-cnt{ padding:70mm 22mm 0; flex:1; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:4mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:3mm; letter-spacing:.04em; }
+.cover-basis{ font-size:11pt; color:rgba(255,255,255,.7); margin-top:8mm; max-width:150mm; line-height:1.7; font-weight:300; }
+.stats{ display:flex; gap:14mm; margin-top:16mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.65); letter-spacing:.06em; }
+.cover-sig{ padding:0 22mm 16mm; font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.65); line-height:1.7; }
+.cover-line{ height:2.6mm; background:var(--gold); }
+
+/* blocos */
+.grid{ display:grid; grid-template-columns:1fr 1fr; gap:6mm; }
+.box{ border:1px solid var(--line); border-radius:6px; padding:6mm 8mm; background:var(--paper); }
+.box .k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:2mm; }
+.box .t{ font-size:10.5pt; line-height:1.65; color:var(--char); font-weight:300; }
+.box .t b, .box li b{ font-weight:600; color:var(--ink); }
+.box ul{ padding-left:5mm; }
+.box li{ font-size:10.5pt; line-height:1.6; font-weight:300; margin-bottom:1.5mm; }
+.num{ display:grid; grid-template-columns:14mm 1fr; gap:4mm; padding:4mm 0; border-bottom:1px solid var(--line); }
+.num .n{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.num .h{ font-size:12pt; font-weight:700; color:var(--ink); }
+.num .d{ font-size:10.5pt; line-height:1.65; color:var(--char); font-weight:300; margin-top:1mm; }
+.num .d b{ font-weight:600; color:var(--ink); }
+table{ width:100%; border-collapse:collapse; font-size:10.5pt; }
+th{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); text-align:left; padding:3mm 3mm; border-bottom:2px solid var(--gold); }
+td{ padding:3mm; border-bottom:1px solid var(--line); vertical-align:top; font-weight:300; line-height:1.55; }
+td b{ font-weight:600; color:var(--ink); }
+td.r{ text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
+tr.total td{ background:var(--deep); color:#fff; font-weight:600; }
+tr.total td.r{ color:var(--gold); font-size:12pt; }
+.risk{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:4mm; margin-top:4mm; }
+.risk .c{ border:1px solid var(--line); border-top:3px solid var(--dest); padding:5mm 6mm; }
+.risk .c.hi{ border-top-color:var(--gold); }
+.risk .h{ font-size:11pt; font-weight:700; color:var(--ink); }
+.risk .lvl{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin:1mm 0 2mm; }
+.risk .d{ font-size:10pt; line-height:1.6; font-weight:300; }
+.risk .d b{ font-weight:600; color:var(--ink); }
+.fx{ font-size:9pt; color:var(--mut); margin-top:4mm; line-height:1.6; }
+.fx b{ color:var(--char); font-weight:600; }
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<section class="page cover">
+  <div class="cover-hd"><div class="logo">LUSATRAVEL</div><div class="tag">Resumo e premissas</div></div>
+  <div class="cover-line"></div>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Documento de trabalho · acompanha a proposta</div>
+    <div class="cover-name">Portugal e Réveillon em Madrid</div>
+    <div class="cover-dest">Resumo, premissas e considerações</div>
+    <p class="cover-basis">Família de 4 adultos e 3 crianças · 26/12/2026 a 05/01/2027 · 10 noites · Lisboa, Óbidos, Nazaré, Tomar, Fátima, Porto e Madrid. Este documento registra o que foi assumido para montar a proposta, as decisões de desenho do roteiro e o que ainda depende da família. Elaborado em 24/09/2026.</p>
+    <div class="stats">
+      <div class="stat"><b>10</b><span>Noites</span></div>
+      <div class="stat"><b>5</b><span>Hotéis</span></div>
+      <div class="stat"><b>3</b><span>Voos na Europa</span></div>
+      <div class="stat"><b>8</b><span>Premissas</span></div>
+      <div class="stat"><b>4</b><span>Pendências</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- RESUMO -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Resumo</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Resumo executivo</div>
+    <h2 class="h2">A viagem em uma página</h2>
+    <p class="p">Dez noites entre Portugal e Espanha, desenhadas em torno de dois eventos fixos: o <b>Réveillon em Madrid</b> e o jogo <b>Real Madrid × Getafe</b> no Santiago Bernabéu, domingo 03/01/2027. Portugal é percorrido de sul para norte sem voltar atrás, com hotéis da rede Vila Galé em Lisboa, Tomar e Porto. Madrid tem uma única base, o Catalonia Gran Vía, a 5 minutos da Puerta del Sol. O retorno ao Brasil é por Lisboa, com a última noite dentro do aeroporto.</p>
+    <table style="margin-top:7mm">
+      <thead><tr><th>Data</th><th>Onde</th><th>O que acontece</th><th>Hotel</th></tr></thead>
+      <tbody>
+        <tr><td><b>Sáb 26/12</b></td><td>Lisboa</td><td>Chegada pela manhã · Belém · LX Factory</td><td>Vila Galé Ópera</td></tr>
+        <tr><td><b>Dom 27/12</b></td><td>Lisboa</td><td>Oceanário · Baixa e Chiado · Wonderland Lisboa</td><td>Vila Galé Ópera</td></tr>
+        <tr><td><b>Seg 28/12</b></td><td>Óbidos · Nazaré · Tomar</td><td>Retirada da van · Óbidos Vila Natal · ondas de Nazaré</td><td>Vila Galé Collection Tomar</td></tr>
+        <tr><td><b>Ter 29/12</b></td><td>Fátima · Porto</td><td>Santuário de Fátima · Ribeira · Caves Cálem</td><td>Vila Galé Porto Ribeira</td></tr>
+        <tr><td><b>Qua 30/12</b></td><td>Porto → Madrid</td><td>Lello, Clérigos, seis pontes · devolução da van · voo 1h15</td><td>Catalonia Gran Vía</td></tr>
+        <tr><td><b>Qui 31/12</b></td><td>Madrid</td><td>Tour Bernabéu · Cortylandia · ceia de gala e uvas</td><td>Catalonia Gran Vía</td></tr>
+        <tr><td><b>Sex 01/01</b></td><td>Madrid</td><td>Parque Warner (12h a 19h)</td><td>Catalonia Gran Vía</td></tr>
+        <tr><td><b>Sáb 02/01</b></td><td>Madrid</td><td>Retiro · pista de gelo · Teleférico · Botín</td><td>Catalonia Gran Vía</td></tr>
+        <tr><td><b>Dom 03/01</b></td><td>Madrid</td><td>Real Madrid × Getafe, 15h · tapas em La Latina</td><td>Catalonia Gran Vía</td></tr>
+        <tr><td><b>Seg 04/01</b></td><td>Madrid → Lisboa</td><td>Prado ou Zoo · voo 15h · noite no aeroporto</td><td>Meliá Lisboa Aeroporto</td></tr>
+        <tr><td><b>Ter 05/01</b></td><td>Lisboa</td><td>Voo de retorno ao Brasil pela manhã</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <div class="grid" style="margin-top:7mm">
+      <div class="box"><div class="k">Números da proposta</div><div class="t">Hotelaria cotada: <b>€8.911 (BRL 52.575)</b>. Serviços estimados (van, transfers, voos internos, jogo, ceia, ingressos): <b>€5.300 (BRL 31.270)</b>. Total parcial: <b>€14.211 (BRL 83.845)</b>, sem aéreo internacional e seguro. Cotação 24/09 · Euro = 5,90. *Nada reservado, apenas cotado.</div></div>
+      <div class="box"><div class="k">O que torna esta versão diferente da anterior</div><div class="t">Retorno por Lisboa confirmado, com noite no Meliá Lisboa Aeroporto em 04/01. Madrid EDITION retirado; o Catalonia Gran Vía é a base única. Van de 9 lugares alugada (28 a 30/12) no lugar da van com motorista. Roteiro de Madrid detalhado por período. Identidade visual em verde e dourado.</div></div>
+    </div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- PREMISSAS -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Premissas</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">O que foi assumido</div>
+    <h2 class="h2">Premissas da cotação</h2>
+    <div class="num"><div class="n">1</div><div><div class="h">Chegada a Lisboa na manhã de 26/12</div><div class="d">Embarque no Brasil na noite de 25/12, em voo noturno. <b>Se o embarque for no dia 26</b>, a chegada passa para 27/12, Lisboa fica com 1 noite e o dia de Belém é perdido; o restante do roteiro não muda.</div></div></div>
+    <div class="num"><div class="n">2</div><div><div class="h">Retorno ao Brasil por Lisboa, na manhã de 05/01</div><div class="d">Confirmado pela família. A saída de Madrid é na tarde de 04/01 (voo Madrid–Lisboa às 15h) e a última noite é no Meliá Lisboa Aeroporto, a 5 minutos a pé do terminal.</div></div></div>
+    <div class="num"><div class="n">3</div><div><div class="h">Idades das crianças: 5, 8 e 11 anos (referência)</div><div class="d">Usadas em todas as cotações de hotel e ingressos. As idades reais alteram tarifas infantis, a configuração dos quartos, a obrigatoriedade de cadeirinhas na van (menores de 12 anos com menos de 135 cm) e a viabilidade da Puerta del Sol na virada.</div></div></div>
+    <div class="num"><div class="n">4</div><div><div class="h">Dois quartos por noite</div><div class="d">Configuração 2 adultos + 2 crianças e 2 adultos + 1 criança, em quartos familiares. No Vila Galé Porto Ribeira a combinação triplo + quádruplo precisa ser confirmada com o hotel.</div></div></div>
+    <div class="num"><div class="n">5</div><div><div class="h">Um adulto dirige a van nos dias 28, 29 e 30/12</div><div class="d">CNH brasileira válida, cartão de crédito físico para caução e disposição para cerca de 4h de estrada por dia nos dias 28 e 29. Sem condutor, a alternativa é a van com motorista, cerca de €500 mais cara.</div></div></div>
+    <div class="num"><div class="n">6</div><div><div class="h">Real Madrid × Getafe no domingo 03/01 às 15h</div><div class="d">Data da tabela oficial da LaLiga 2026/27; horário provisório. A LaLiga confirma o horário 2 a 3 semanas antes e pode mover o jogo para 02/01 ou 04/01. O roteiro prevê as duas hipóteses.</div></div></div>
+    <div class="num"><div class="n">7</div><div><div class="h">Câmbio de referência</div><div class="d">Cotação 24/09 · Euro = 5,90. Valores em euro obtidos na Booking.com em 24/09/2026 para as datas exatas; os demais serviços são estimativas de mercado para dimensionar o orçamento.</div></div></div>
+    <div class="num"><div class="n">8</div><div><div class="h">Hotéis Vila Galé onde a rede existe</div><div class="d">A rede não tem unidades em Fátima, Nazaré ou Óbidos. Tomar (35 min de Fátima) foi escolhida como base intermediária. Em Madrid, o Catalonia Gran Vía é a base única, por decisão da família. No aeroporto de Lisboa a rede também não opera; o Meliá é o único 4 estrelas dentro do perímetro.</div></div></div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- CONSIDERAÇÕES -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Considerações</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Decisões de desenho</div>
+    <h2 class="h2">Por que o roteiro é assim</h2>
+    <div class="grid">
+      <div class="box"><div class="k">Voo para Madrid no dia 30, não no 31</div><div class="t">O Réveillon é o evento âncora. Um atraso no voo do dia 31 colocaria a noite em risco, e com 3 crianças não há margem para improvisar. Chegar no dia 30 também libera a manhã do 31 para o Tour do Bernabéu no roteiro completo.</div></div>
+      <div class="box"><div class="k">Uma noite em Tomar</div><div class="t">Óbidos, Nazaré e Fátima num único dia entre Lisboa e Porto são 4h30 de estrada mais visitas, inviável com crianças. Tomar divide o trecho ao meio e oferece o hotel mais preparado para crianças do roteiro.</div></div>
+      <div class="box"><div class="k">Van alugada só por 3 diárias</div><div class="t">Em Lisboa e em Madrid o carro é um estorvo. Alugar no dia 28 no centro de Lisboa e devolver no aeroporto do Porto no dia 30 evita dirigir após o voo noturno, poupa 2 noites de estacionamento e custa cerca de €500 menos que a van com motorista.</div></div>
+      <div class="box"><div class="k">Ceia de gala no hotel, não a Puerta del Sol</div><div class="t">A praça recebe 17.500 pessoas, é esvaziada às 21h e reaberta às 22h, sem banheiros e com 2 a 5 °C. A ceia no Catalonia Gran Vía mantém as crianças à mesa e a 1 elevador da cama, e a rua fica para depois da meia-noite.</div></div>
+      <div class="box"><div class="k">Catalonia Gran Vía como base única</div><div class="t">Quartos familiares para 4 pessoas, metrô na porta, ceia de Réveillon no prédio e metade do valor do Madrid EDITION nas mesmas datas, que ainda exigiria 3 quartos por acomodar no máximo 3 pessoas por quarto.</div></div>
+      <div class="box"><div class="k">Última noite dentro do aeroporto</div><div class="t">Voo de retorno pela manhã com 3 crianças pede zero deslocamento. O Meliá Lisboa Aeroporto fica a 5 minutos a pé do terminal, tem piscina interior, buffet infantil e café da manhã a partir das 5h.</div></div>
+    </div>
+    <div class="eyebrow" style="margin-top:8mm">Riscos e mitigação</div>
+    <div class="risk">
+      <div class="c hi"><div class="h">Horário do jogo muda</div><div class="lvl">Probabilidade média</div><div class="d">Sábado 02/01: os dias 02 e 03 trocam de lugar. Segunda 04/01: o voo Madrid–Lisboa passa para a noite; a noite no Meliá é mantida. <b>Não comprar voo interno sem remarcação gratuita.</b></div></div>
+      <div class="c hi"><div class="h">7 lugares juntos no estádio</div><div class="lvl">Probabilidade alta na venda geral</div><div class="d">A venda geral abre 10 a 12 dias antes e não garante lugares contíguos. <b>Cotar hospitality oficial assim que a proposta for aprovada.</b></div></div>
+      <div class="c hi"><div class="h">Ceia de Réveillon esgotada</div><div class="lvl">Probabilidade alta a partir de novembro</div><div class="d">Reservar a ceia junto com o hotel. Plano B: ceia em restaurante da Plaza Mayor ou da Calle Mayor com reserva, e uvas no quarto.</div></div>
+      <div class="c"><div class="h">Bagagem na van</div><div class="lvl">Probabilidade média</div><div class="d">7 malas grandes não cabem com 7 ocupantes. Limitar a 1 mala grande por casal, ou trocar por 2 SUVs (2 condutores).</div></div>
+      <div class="c"><div class="h">Chuva e frio</div><div class="lvl">Probabilidade alta em dezembro</div><div class="d">Lisboa e Porto: 9 a 15 °C com chuva provável. Madrid: 2 a 10 °C, seco. Os dias têm alternativa coberta (Oceanário, caves, Museu de Cera, piscinas dos hotéis).</div></div>
+      <div class="c"><div class="h">Fechamentos de 01/01</div><div class="lvl">Certo</div><div class="d">Museus, Palácio Real e Tour Bernabéu fechados em 01/01; muitos restaurantes fechados no almoço. Por isso o dia é do Parque Warner, aberto das 12h às 19h.</div></div>
+    </div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- PENDÊNCIAS -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Pendências</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">O que depende da família</div>
+    <h2 class="h2">Pendências e próximos passos</h2>
+    <div class="num"><div class="n">1</div><div><div class="h">Idades e nomes das crianças, e nome do cliente para a capa</div><div class="d">Recalcula tarifas de hotel e ingressos, define cadeirinhas e a configuração final dos quartos.</div></div></div>
+    <div class="num"><div class="n">2</div><div><div class="h">Datas e aeroportos do aéreo internacional</div><div class="d">Confirma a chegada em 26/12 pela manhã e o retorno por Lisboa em 05/01. Só depois disso os voos Porto–Madrid e Madrid–Lisboa são emitidos.</div></div></div>
+    <div class="num"><div class="n">3</div><div><div class="h">Quem dirige e se a família aceita a van alugada</div><div class="d">Alternativa: van com motorista (cerca de €500 a mais nos 3 dias). Decisão até outubro, quando a categoria de 9 lugares ainda tem disponibilidade.</div></div></div>
+    <div class="num"><div class="n">4</div><div><div class="h">Jogo e Réveillon: setor do estádio e ceia para 7 ou só para os adultos</div><div class="d">Hospitality oficial para os 7 lugares juntos; ceia de gala com ou sem crianças (menu infantil a confirmar com o hotel).</div></div></div>
+    <div class="eyebrow" style="margin-top:8mm">Calendário de reservas</div>
+    <table style="margin-top:3mm">
+      <thead><tr><th>Quando</th><th>O quê</th><th>Por quê</th></tr></thead>
+      <tbody>
+        <tr><td><b>Imediato</b></td><td>Hotéis (5), ceia de Réveillon, hospitality do jogo</td><td>Tarifas de fim de ano sobem a cada semana; ceia e hospitality esgotam.</td></tr>
+        <tr><td><b>Outubro</b></td><td>Aéreo internacional, voos internos, van de 9 lugares</td><td>Categoria de 9 lugares limitada em alta temporada; voos internos com remarcação gratuita.</td></tr>
+        <tr><td><b>Novembro</b></td><td>Transfers privativos, seguro viagem, Parque Warner</td><td>Datas de Natal do Warner publicadas; seguro com idades finais.</td></tr>
+        <tr><td><b>Dezembro (2 a 4 semanas antes)</b></td><td>Oceanário, Livraria Lello, Tour Bernabéu, ingressos do jogo (se venda geral), restaurantes</td><td>Entradas com hora marcada; horário do jogo confirmado pela LaLiga.</td></tr>
+      </tbody>
+    </table>
+    <div class="fx"><b>Cotação 24/09 · Euro = 5,90 · *Nada reservado, apenas cotado.</b> Este documento acompanha a proposta "Portugal e Réveillon em Madrid" e deve ser lido junto com ela. Valores e disponibilidade sujeitos a confirmação no momento da reserva.</div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+</body>
+</html>
