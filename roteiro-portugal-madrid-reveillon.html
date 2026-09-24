@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="LusaTravel — roteiro de 10 noites para 4 adultos e 3 crianças: Lisboa, Óbidos, Nazaré, Fátima, Tomar e Porto com hotéis Vila Galé, Réveillon em Madrid e Real Madrid x Getafe no Bernabéu.">
+<title>Réveillon Ibérico em Família</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
+<style>
+/* ─── LUSATRAVEL · DESIGN SYSTEM TOKENS ─────────────────── */
+:root{
+  --gold:#da8d00; --gold-hi:#f0a010;
+  --ink:#1a1510; --char:#333131; --mut:#9a8d80;
+  --line:#e4ddd2; --paper:#faf7f2; --surf:#fff; --surf2:#f2ece3;
+  --onink:#f0e8de;
+  --dest:#1b3a63;          /* Portugal e Espanha */
+  --dest-soft:#e6edf6;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+  --mx:1080px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+    --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+    --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+    --dest:#3d78b8; --dest-soft:#1c2a3d;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+  --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+  --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+  --dest:#3d78b8; --dest-soft:#1c2a3d;
+}
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  background:var(--paper); color:var(--char);
+  font-family:var(--sans); font-weight:400;
+  font-size:15px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+@media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } }
+
+.wrap{ max-width:var(--mx); margin:0 auto; padding:0 28px; }
+
+/* ─── MASTHEAD / CAPA ────────────────────────────────────── */
+.mh{ background:#1a1510; padding:56px 0 44px; position:relative; }
+.mh::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.mh-logo{ font-family:var(--con); font-weight:600; font-size:13px; letter-spacing:.34em; text-transform:uppercase; color:#da8d00; }
+.mh-kick{ margin-top:26px; font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+.mh-name{ margin-top:10px; font-weight:700; font-size:clamp(28px,5.2vw,46px); line-height:1.06; letter-spacing:.01em; color:#fff; text-transform:uppercase; text-wrap:balance; }
+.mh-dest{ margin-top:8px; font-weight:600; font-size:clamp(17px,2.4vw,22px); color:#da8d00; letter-spacing:.02em; }
+.mh-sub{ margin-top:16px; max-width:60ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.62); }
+.mh-sub strong{ font-weight:600; color:#da8d00; }
+.mh-stats{ margin-top:34px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid rgba(240,232,222,.14); }
+.mh-stat{ padding:18px 34px 4px 0; margin-right:34px; border-right:1px solid rgba(240,232,222,.12); }
+.mh-stat:last-child{ border-right:0; }
+.mh-stat .v{ font-weight:700; font-size:24px; color:#fff; line-height:1; font-variant-numeric:tabular-nums; }
+.mh-stat .k{ margin-top:7px; font-size:9.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.45); }
+
+/* ─── SEÇÕES ─────────────────────────────────────────────── */
+.sec{ padding:56px 0; }
+.sec + .sec{ border-top:1px solid var(--line); }
+.eyebrow{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; letter-spacing:-.01em; text-wrap:balance; }
+.h3{ font-weight:600; font-size:17px; color:var(--ink); line-height:1.3; }
+.lead{ margin-top:12px; max-width:66ch; font-weight:300; font-size:15.5px; color:var(--char); }
+.lead b{ font-weight:600; color:var(--ink); }
+.goldbar{ width:52px; height:3px; background:var(--gold); margin-top:18px; }
+
+/* ─── CABEÇALHO DE BLOCO (cor de destino) ────────────────── */
+.opt-hd{ background:var(--dest); padding:34px 0; position:relative; }
+.opt-hd::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.opt-tag{ font-size:9.5px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.66); }
+.opt-title{ margin-top:9px; font-weight:700; font-size:clamp(22px,3.4vw,32px); color:#fff; line-height:1.14; text-wrap:balance; }
+
+/* ─── TIMELINE ───────────────────────────────────────────── */
+.tl{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:14px; }
+.tl-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--dest); padding:18px 18px 16px; }
+.tl-badge{ display:inline-flex; align-items:center; justify-content:center; min-width:30px; height:30px; padding:0 9px; background:var(--dest); color:#fff; font-weight:700; font-size:12.5px; font-variant-numeric:tabular-nums; }
+.tl-city{ margin-top:13px; font-weight:600; font-size:17px; color:var(--ink); }
+.tl-meta{ margin-top:5px; font-size:12.5px; font-weight:300; color:var(--mut); }
+.tl-move{ margin-top:11px; padding-top:11px; border-top:1px solid var(--line); font-size:11.5px; font-weight:400; color:var(--char); }
+
+/* ─── DIA A DIA ──────────────────────────────────────────── */
+.days{ margin-top:26px; border-top:1px solid var(--line); }
+.day{ display:grid; grid-template-columns:150px 1fr; gap:22px; padding:19px 0; border-bottom:1px solid var(--line); }
+.day-h{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--dest); line-height:1.5; font-variant-numeric:tabular-nums; }
+.day-h .cty{ display:block; color:var(--mut); font-size:10.5px; letter-spacing:.14em; margin-top:3px; }
+.day-h .dt{ display:block; color:var(--ink); font-size:10.5px; letter-spacing:.08em; margin-top:3px; }
+.day-t{ font-size:14.5px; font-weight:300; color:var(--char); }
+.day-t b{ font-weight:600; color:var(--ink); }
+.day-t .fair{ color:var(--gold); font-weight:600; }
+.day-t .hot{ display:block; margin-top:8px; font-size:12px; font-weight:500; color:var(--dest); }
+.day.travel{ background:var(--surf2); margin:0 -14px; padding:15px 14px; }
+.day.travel .day-t{ font-size:13.5px; }
+.day.star{ border-left:3px solid var(--gold); margin-left:-14px; padding-left:11px; }
+
+/* ─── HOTÉIS ─────────────────────────────────────────────── */
+.hotels{ margin-top:28px; display:grid; gap:22px; }
+.hotel{ background:var(--surf); border:1px solid var(--line); display:grid; grid-template-columns:1.15fr 1fr; overflow:hidden; }
+.hotel-gal{ display:grid; grid-template-columns:1fr 1fr; grid-template-rows:200px 130px; gap:3px; background:var(--surf2); }
+.hotel-gal figure{ margin:0; overflow:hidden; background:var(--surf2); position:relative; }
+.hotel-gal figure:first-child{ grid-column:1 / -1; }
+.hotel-gal img{ width:100%; height:100%; object-fit:cover; }
+.hotel-gal figcaption{ position:absolute; left:0; right:0; bottom:0; padding:4px 9px; font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:#fff; background:linear-gradient(transparent, rgba(26,21,16,.75)); }
+.hotel-body{ padding:22px 24px 20px; display:flex; flex-direction:column; gap:10px; }
+.hotel-tag{ font-family:var(--lbl); font-weight:700; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--dest); }
+.hotel-name{ font-weight:700; font-size:19px; color:var(--ink); line-height:1.2; }
+.stars{ color:var(--gold); font-size:13px; letter-spacing:.12em; }
+.hotel-desc{ font-weight:300; font-size:13.5px; color:var(--char); }
+.hotel-kv{ display:grid; grid-template-columns:auto 1fr; gap:4px 14px; font-size:12.5px; font-weight:300; margin-top:4px; }
+.hotel-kv dt{ font-family:var(--lbl); font-weight:700; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); padding-top:3px; }
+.hotel-kv dd{ color:var(--char); }
+.hotel-kv dd b{ font-weight:600; color:var(--ink); }
+.hotel-alt{ margin-top:auto; padding-top:10px; border-top:1px solid var(--line); font-size:12px; font-weight:300; color:var(--mut); }
+.hotel-alt b{ font-weight:500; color:var(--char); }
+.pick{ display:inline-block; padding:3px 9px; background:var(--gold); color:#1a1510; font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+
+/* ─── CARDS DE CONTEÚDO ──────────────────────────────────── */
+.grid2{ margin-top:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
+.card{ background:var(--surf); border:1px solid var(--line); padding:20px 22px; }
+.card .h3{ margin-bottom:8px; }
+.card p, .card li{ font-size:13.5px; font-weight:300; color:var(--char); }
+.card ul{ padding-left:18px; display:grid; gap:6px; margin-top:6px; }
+.card b{ font-weight:600; color:var(--ink); }
+.card.gold{ border-top:3px solid var(--gold); }
+.card.dest{ border-top:3px solid var(--dest); }
+
+/* ─── JOGO ───────────────────────────────────────────────── */
+.match{ margin-top:28px; background:var(--ink); color:var(--onink); padding:28px 30px; display:grid; grid-template-columns:1fr auto; gap:18px 30px; align-items:center; position:relative; }
+.match::before{ content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--gold); }
+.match-k{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); }
+.match-t{ margin-top:6px; font-weight:700; font-size:clamp(22px,3.6vw,34px); color:#fff; line-height:1.1; }
+.match-s{ margin-top:8px; font-size:13.5px; font-weight:300; color:rgba(240,232,222,.7); max-width:60ch; }
+.match-box{ border:1px solid rgba(240,232,222,.2); padding:14px 18px; min-width:200px; }
+.match-box .v{ font-weight:700; font-size:22px; color:#fff; font-variant-numeric:tabular-nums; line-height:1.1; }
+.match-box .k{ margin-top:5px; font-size:9.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+
+/* ─── TABELA ─────────────────────────────────────────────── */
+.tbl-wrap{ margin-top:26px; overflow-x:auto; }
+table{ width:100%; border-collapse:collapse; font-size:13.5px; }
+th{ font-family:var(--lbl); font-weight:700; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); text-align:left; padding:10px 12px; border-bottom:2px solid var(--gold); }
+td{ padding:12px; border-bottom:1px solid var(--line); vertical-align:top; font-weight:300; color:var(--char); }
+td b{ font-weight:600; color:var(--ink); }
+td.num, th.num{ text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+tr.total td{ background:var(--ink); color:var(--onink); font-weight:600; }
+tr.total td.num{ color:var(--gold); font-size:16px; }
+.note{ margin-top:12px; font-size:12px; font-weight:300; color:var(--mut); }
+.note b{ font-weight:600; color:var(--char); }
+
+/* ─── RODAPÉ / ASSINATURA ────────────────────────────────── */
+.ft{ background:#1a1510; padding:44px 0 40px; position:relative; }
+.ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
+.ft-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#da8d00; }
+.ft-sig{ margin-top:18px; display:flex; flex-wrap:wrap; gap:10px 34px; font-family:var(--con); font-size:13px; color:rgba(240,232,222,.72); }
+.ft-sig a{ color:rgba(240,232,222,.72); text-decoration:none; border-bottom:1px solid rgba(218,141,0,.5); }
+.ft-sig a:hover{ color:#da8d00; }
+.ft-addr{ margin-top:16px; font-family:var(--con); font-size:11.5px; color:rgba(240,232,222,.38); }
+
+@media (max-width:760px){
+  .hotel{ grid-template-columns:1fr; }
+  .hotel-gal{ grid-template-rows:180px 110px; }
+  .match{ grid-template-columns:1fr; }
+}
+@media (max-width:640px){
+  .wrap{ padding:0 16px; }
+  .day{ grid-template-columns:1fr; gap:7px; }
+  .day.travel, .day.star{ margin:0; padding-left:14px; }
+  .mh-stat{ padding-right:20px; margin-right:20px; }
+}
+</style>
+</head>
+<body>
+
+<header class="mh">
+  <div class="wrap">
+    <div class="mh-logo">LusaTravel</div>
+    <div class="mh-kick">Cotação para sua viagem</div>
+    <h1 class="mh-name">Portugal e Réveillon em Madrid</h1>
+    <div class="mh-dest">Lisboa · Óbidos · Nazaré · Fátima · Porto · Madrid</div>
+    <p class="mh-sub">Roteiro de 10 noites para <strong>4 adultos e 3 crianças</strong>, de 26/12/2026 a 05/01/2027. Hotéis da rede <strong>Vila Galé</strong> em todo o trecho português, Réveillon em Madrid e <strong>Real Madrid × Getafe</strong> no Santiago Bernabéu em 03/01.</p>
+    <div class="mh-stats">
+      <div class="mh-stat"><div class="v">6</div><div class="k">Destinos</div></div>
+      <div class="mh-stat"><div class="v">10</div><div class="k">Noites</div></div>
+      <div class="mh-stat"><div class="v">5</div><div class="k">Hotéis</div></div>
+      <div class="mh-stat"><div class="v">4+3</div><div class="k">Adultos e crianças</div></div>
+      <div class="mh-stat"><div class="v">03/01</div><div class="k">Jogo no Bernabéu</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════ ITINERÁRIO ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Itinerário</div>
+    <h2 class="h2">Seis paradas, 10 noites, uma só direção</h2>
+    <p class="lead">Portugal é percorrido de sul para norte, sem voltar atrás. Óbidos, Nazaré e Fátima entram no caminho entre Lisboa e Porto, com uma noite em Tomar para não fazer as três num único dia com crianças. O voo para Madrid sai do Porto no dia 30, deixando o dia 31 inteiro livre para o Réveillon.</p>
+    <div class="tl">
+      <div class="tl-item"><span class="tl-badge">2</span><div class="tl-city">Lisboa</div><div class="tl-meta">26 e 27/12 · 2 noites</div><div class="tl-move">Chegada do Brasil pela manhã</div></div>
+      <div class="tl-item"><span class="tl-badge">1</span><div class="tl-city">Tomar</div><div class="tl-meta">28/12 · 1 noite</div><div class="tl-move">Via Óbidos e Nazaré · van privativa</div></div>
+      <div class="tl-item"><span class="tl-badge">1</span><div class="tl-city">Porto</div><div class="tl-meta">29/12 · 1 noite</div><div class="tl-move">Via Fátima · van privativa · 2h</div></div>
+      <div class="tl-item"><span class="tl-badge">5</span><div class="tl-city">Madrid</div><div class="tl-meta">30/12 a 03/01 · 5 noites</div><div class="tl-move">Voo Porto–Madrid · 1h15</div></div>
+      <div class="tl-item"><span class="tl-badge">1</span><div class="tl-city">Lisboa</div><div class="tl-meta">04/01 · 1 noite</div><div class="tl-move">Voo Madrid–Lisboa · 1h20</div></div>
+    </div>
+
+    <div class="grid2">
+      <div class="card gold">
+        <div class="h3">Duas premissas que definem este desenho</div>
+        <ul>
+          <li><b>Chegada a Lisboa na manhã de 26/12</b> (embarque no Brasil na noite de 25/12). Se o embarque for no dia 26, a chegada passa para 27/12 e o roteiro perde o dia de Belém: Lisboa fica com 1 noite e o restante não muda.</li>
+          <li><b>Voo de volta ao Brasil saindo de Lisboa na manhã de 05/01.</b> Por isso a família deixa Madrid na tarde de 04/01 e dorme perto do aeroporto de Lisboa. Se o retorno for por Madrid, a noite de 04/01 fica em Madrid e o dia ganha um bate-volta a Toledo.</li>
+        </ul>
+      </div>
+      <div class="card dest">
+        <div class="h3">Por que voar para Madrid no dia 30 e não no 31</div>
+        <ul>
+          <li>O Réveillon é o evento âncora da viagem. Um atraso no voo do dia 31 colocaria a noite em risco, e com 3 crianças não há margem para improvisar.</li>
+          <li>O Tour do Bernabéu fica na manhã do dia 31, com o estádio aberto no roteiro completo. No dia 02/01 (véspera do jogo) a visita é reduzida a museu e vista panorâmica.</li>
+          <li>O Porto recebe uma tarde inteira e uma manhã, o suficiente para Ribeira, caves, Lello e o cruzeiro das seis pontes.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ JOGO ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Futebol</div>
+    <h2 class="h2">O jogo cabe no roteiro sem mudar nada</h2>
+    <p class="lead">O Real Madrid recebe o Getafe pela 19ª rodada da LaLiga no domingo <b>03/01/2027</b>, com horário provisório de <b>15h</b> (hora de Madrid). O único outro jogo do clube no período é fora de casa (Deportivo, 20/12). Não há partida nos dias 30 e 31.</p>
+    <div class="match">
+      <div>
+        <div class="match-k">LaLiga · Jornada 19 · Estádio Santiago Bernabéu</div>
+        <div class="match-t">Real Madrid × Getafe</div>
+        <p class="match-s">O horário oficial é confirmado pela LaLiga de 2 a 3 semanas antes e pode mover a partida para sábado 02/01 ou segunda 04/01. Os dias 02 e 03 estão desenhados como espelho um do outro, e, se cair no dia 04, o voo para Lisboa é remarcado para a manhã de 05/01 saindo de Madrid.</p>
+      </div>
+      <div class="match-box">
+        <div class="v">Dom 03/01 · 15h</div>
+        <div class="k">Horário provisório</div>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div class="h3">Ingressos para 7 pessoas</div>
+        <ul>
+          <li>A venda ao público geral abre no site oficial cerca de <b>10 a 12 dias antes</b>, depois da fase de sócios. Contra o Getafe há oferta ao público com regularidade.</li>
+          <li>Valores de referência para LaLiga: <b>€75 a €210</b> por ingresso conforme setor (Fondo, Lateral, Tribuna). Toda criança precisa de ingresso.</li>
+          <li>Para garantir 7 lugares juntos, a via mais segura é o <b>pacote hospitality oficial</b> do clube, que abre com meses de antecedência. Sugerimos cotar assim que a proposta for aprovada.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="h3">Tour Bernabéu · 31/12 pela manhã</div>
+        <ul>
+          <li>Aberto das 9h às 19h; em 31/12 pode fechar mais cedo, por isso a chegada às 9h. Fechado em 01/01.</li>
+          <li>Adulto <b>€25</b> · criança <b>€19</b> (menores de 5 anos gratuitos). Compra online evita a taxa de €3 da bilheteria.</li>
+          <li>Com crianças, deixe a loja oficial para o fim do circuito e reserve 2h no total.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ DIA A DIA ══════ -->
+<div class="opt-hd">
+  <div class="wrap">
+    <div class="opt-tag">Roteiro dia a dia</div>
+    <h2 class="opt-title">De Belém ao Bernabéu em 11 dias</h2>
+  </div>
+</div>
+<section class="sec">
+  <div class="wrap">
+    <p class="lead">Uma atração principal por período e tarde leve nos dias de deslocamento. Os deslocamentos em Portugal são feitos em <b>van privativa de 9 lugares com motorista</b>, o que permite parar em Óbidos, Nazaré e Fátima sem trocar de veículo nem carregar malas.</p>
+    <div class="days">
+      <div class="day travel"><div class="day-h">Dia 01<span class="dt">Sáb 26/12</span><span class="cty">Lisboa</span></div><div class="day-t">Chegada pela manhã e transfer para o hotel. Tarde em <b>Belém</b>, a 10 minutos do Vila Galé Ópera: Pastéis de Belém, Torre de Belém, Padrão dos Descobrimentos e Mosteiro dos Jerónimos por fora. Jantar cedo na <b>LX Factory</b>, ao lado do hotel, e noite de descanso.<span class="hot">Vila Galé Ópera · Lisboa</span></div></div>
+      <div class="day"><div class="day-h">Dia 02<span class="dt">Dom 27/12</span><span class="cty">Lisboa</span></div><div class="day-t">Manhã no <b>Oceanário de Lisboa</b>, com entrada marcada para as 10h, e passeio no Parque das Nações. À tarde, Praça do Comércio, Rua Augusta iluminada de Natal, Elevador de Santa Justa e Chiado. Fim de tarde no <span class="fair">Wonderland Lisboa</span>, no Parque Eduardo VII: roda-gigante, pista de gelo e mercado de Natal. Jantar na Cervejaria Ramiro.<span class="hot">Vila Galé Ópera · Lisboa</span></div></div>
+      <div class="day travel"><div class="day-h">Dia 03<span class="dt">Seg 28/12</span><span class="cty">Óbidos · Nazaré · Tomar</span></div><div class="day-t">Saída às 9h. <b>Óbidos</b> (1h): muralhas, Rua Direita, ginjinha em copo de chocolate e o <span class="fair">Óbidos Vila Natal</span>, parque de Natal dentro do castelo, aberto até 03/01. Almoço em <b>Nazaré</b> (40 min), depois funicular ao Sítio e o Forte de São Miguel Arcanjo para ver as ondas gigantes, que em dezembro estão no auge. Chegada a <b>Tomar</b> (1h) no fim da tarde: piscina interior e kids club do hotel.<span class="hot">Vila Galé Collection Tomar</span></div></div>
+      <div class="day travel"><div class="day-h">Dia 04<span class="dt">Ter 29/12</span><span class="cty">Fátima · Porto</span></div><div class="day-t">Saída às 9h30 para <b>Fátima</b> (35 min): Capelinha das Aparições, Basílica de Nossa Senhora do Rosário e Basílica da Santíssima Trindade, com tempo para missa ou oração. Almoço e viagem ao <b>Porto</b> pela A1 (2h). Tarde na Ribeira, travessia da Ponte Luís I a pé e visita às <b>Caves Cálem</b> em Gaia, com tour curto e sumo de uva para as crianças. Jantar na Ribeira.<span class="hot">Vila Galé Porto Ribeira</span></div></div>
+      <div class="day travel"><div class="day-h">Dia 05<span class="dt">Qua 30/12</span><span class="cty">Porto · Madrid</span></div><div class="day-t">Manhã no centro: Estação de São Bento, <b>Livraria Lello</b> (ingresso com hora marcada), Torre dos Clérigos e Rua de Santa Catarina. <b>Cruzeiro das seis pontes</b> (50 min) e almoço de francesinha. Às 15h, transfer ao aeroporto para o voo <b>Porto–Madrid</b> do fim da tarde (1h15; Iberia, TAP ou Ryanair). Chegada ao hotel por volta das 21h.<span class="hot">Catalonia Gran Vía · Madrid</span></div></div>
+      <div class="day star"><div class="day-h">Dia 06<span class="dt">Qui 31/12</span><span class="cty">Madrid · Réveillon</span></div><div class="day-t"><b>Tour Bernabéu</b> às 9h, no roteiro completo. Almoço leve e tarde de descanso no hotel, obrigatória para que as crianças aguentem a noite. Às 18h, <b>Cortylandia</b> e as luzes de Natal da Gran Vía a pé. Réveillon conforme o bloco abaixo.<span class="hot">Catalonia Gran Vía · Madrid</span></div></div>
+      <div class="day"><div class="day-h">Dia 07<span class="dt">Sex 01/01</span><span class="cty">Madrid</span></div><div class="day-t">Manhã livre e tardia. Museus e o Palácio Real fecham em 01/01, então o dia é do <b>Parque Warner Madrid</b>, aberto das 12h às 20h com a programação de Natal e um dos dias de menor fila do ano. Transfer privativo de 40 minutos. Jantar de churros com chocolate na <b>Chocolatería San Ginés</b>, aberta 24 horas.<span class="hot">Catalonia Gran Vía · Madrid</span></div></div>
+      <div class="day"><div class="day-h">Dia 08<span class="dt">Sáb 02/01</span><span class="cty">Madrid</span></div><div class="day-t"><b>Parque del Retiro</b> pela manhã: barcos no lago, Palacio de Cristal e a pista de gelo da Plaza de Colón ao lado. Almoço no Mercado de San Miguel. À tarde, <b>Museu de Cera</b> ou <b>Teleférico</b> para a Casa de Campo, conforme o clima. Se a LaLiga mover o jogo para este sábado, o dia troca de lugar com o 03/01.<span class="hot">Catalonia Gran Vía · Madrid</span></div></div>
+      <div class="day star"><div class="day-h">Dia 09<span class="dt">Dom 03/01</span><span class="cty">Madrid · Bernabéu</span></div><div class="day-t">Manhã calma: Plaza Mayor, Palácio Real por fora e Templo de Debod. Almoço às 12h30 e metrô (linha 10, estação Santiago Bernabéu) para chegar ao estádio às 13h45. <b>Real Madrid × Getafe às 15h.</b> Fim de tarde livre e jantar de tapas na Cava Baja.<span class="hot">Catalonia Gran Vía · Madrid</span></div></div>
+      <div class="day travel"><div class="day-h">Dia 10<span class="dt">Seg 04/01</span><span class="cty">Madrid · Lisboa</span></div><div class="day-t">Manhã no <b>Museu do Prado</b> (adultos revezam) ou no Zoo Aquarium de Madrid. Check-out ao meio-dia e voo <b>Madrid–Lisboa</b> no início da tarde (1h20). Noite no Vila Galé Ópera, a 15 minutos do aeroporto, com jantar no hotel e malas prontas.<span class="hot">Vila Galé Ópera · Lisboa</span></div></div>
+      <div class="day travel"><div class="day-h">Dia 11<span class="dt">Ter 05/01</span><span class="cty">Retorno</span></div><div class="day-t">Transfer para o aeroporto de Lisboa e voo de volta ao Brasil pela manhã.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ RÉVEILLON ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">31 de dezembro</div>
+    <h2 class="h2">Réveillon em Madrid com três crianças</h2>
+    <p class="lead">A Puerta del Sol é o coração da virada espanhola, com as 12 uvas ao som das badaladas do relógio da Casa de Correos. Os dois hotéis sugeridos ficam a 5 minutos a pé da praça, o que permite viver a festa sem depender de transporte. A recomendação abaixo prioriza a experiência das crianças.</p>
+    <div class="grid2">
+      <div class="card gold">
+        <div class="h3">Recomendado · Ceia de gala no hotel e a rua depois da meia-noite</div>
+        <ul>
+          <li><b>Catalonia Gran Vía</b>: ceia de gala, cotilhão, bebidas e ceia de madrugada das 21h às 3h, com DJ. Valor de referência da temporada 2026/27: <b>€235 por pessoa</b>, com menu infantil a confirmar.</li>
+          <li>Todos ficam à mesa para as 12 uvas transmitidas ao vivo, e quem quiser sobe ao quarto sem sair do prédio.</li>
+          <li>Depois da meia-noite, uma volta pela <b>Gran Vía</b> e pela Calle Alcalá, com fogos sobre a Cibeles e a cidade inteira na rua, seguida de churros no San Ginés.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="h3">Alternativa · As uvas na Puerta del Sol</div>
+        <ul>
+          <li>Lotação de 17.500 pessoas, com acesso pelas ruas Arenal, Mayor, Alcalá e San Jerónimo. A praça é esvaziada às 21h e reaberta às 22h, com concertos até as 23h40.</li>
+          <li>Sem banheiros, sem lugar para sentar e frio de 2 a 5 °C. Adequado apenas se as crianças tiverem 10 anos ou mais e a família aceitar 2h em pé.</li>
+          <li>Sugestão: apenas dois adultos vão à praça, os demais assistem do hotel com as crianças.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="h3">Preúvas, o ensaio das badaladas · 30/12</div>
+        <ul>
+          <li>Madrid ensaia a virada no dia 30 com as "preúvas" à meia-noite na Puerta del Sol, também com público e uvas. A chegada de Porto às 21h torna o programa apertado, mas viável para os adultos que quiserem.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="h3">Natal de Madrid ainda em cartaz</div>
+        <ul>
+          <li><b>Cortylandia</b> (Plaza del Celenque): espetáculo de bonecos mecânicos gratuito em sessões fixas, até 05/01. Fica na porta do Madrid EDITION.</li>
+          <li><b>Mercado de Natal da Plaza Mayor</b>: 104 barracas até 31/12, das 10h às 22h.</li>
+          <li><b>Pistas de gelo</b> em Colón e no Matadero até 06/01. Ônibus <b>Naviluz</b> das luzes, com ingresso online.</li>
+          <li>A <b>Cabalgata de Reyes</b> é na noite de 05/01, depois da partida da família. Só entra no roteiro se o retorno for por Madrid no dia 06.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ HOTÉIS ══════ -->
+<div class="opt-hd">
+  <div class="wrap">
+    <div class="opt-tag">Hospedagem</div>
+    <h2 class="opt-title">Cinco hotéis, dois quartos por noite</h2>
+  </div>
+</div>
+<section class="sec">
+  <div class="wrap">
+    <p class="lead">Em Portugal, a rede <b>Vila Galé</b> cobre Lisboa, Tomar e Porto. Não há Vila Galé em Fátima, Nazaré ou Óbidos; o <b>Vila Galé Collection Tomar</b> fica a 35 minutos de Fátima e é a unidade mais próxima com estrutura para crianças. Em Madrid, o Catalonia Gran Vía é o hotel base e o Madrid EDITION a opção de luxo. Valores por noite cotados em 24/09/2026 na Booking.com para 2 quartos, 4 adultos e 3 crianças (idades de referência 5, 8 e 11 anos).</p>
+
+    <div class="hotels">
+
+      <article class="hotel">
+        <div class="hotel-gal">
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/e8/b2/1a/vista-aerea-aerial-view.jpg?w=1200&h=800&s=1" alt="Vista aérea do Vila Galé Ópera, em Alcântara, com o Tejo ao fundo" loading="lazy" referrerpolicy="no-referrer"><figcaption>Vista aérea · Alcântara e o Tejo</figcaption></figure>
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/e8/b2/d6/piscina-interior-indoor.jpg?w=800&h=600&s=1" alt="Piscina interior do Vila Galé Ópera" loading="lazy" referrerpolicy="no-referrer"><figcaption>Piscina interior</figcaption></figure>
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/e8/b2/2c/lobby.jpg?w=800&h=600&s=1" alt="Lobby do Vila Galé Ópera" loading="lazy" referrerpolicy="no-referrer"><figcaption>Lobby</figcaption></figure>
+        </div>
+        <div class="hotel-body">
+          <div class="hotel-tag">Lisboa · 26 a 28/12 e 04/01 · 3 noites</div>
+          <div class="hotel-name">Vila Galé Ópera</div>
+          <div class="stars">★★★★</div>
+          <p class="hotel-desc">Hotel temático de ópera em Alcântara, entre Belém e a LX Factory, com piscina interior, spa e quartos familiares. Fica a 15 minutos do aeroporto, o que resolve também a última noite antes do voo de volta.</p>
+          <dl class="hotel-kv">
+            <dt>Quartos</dt><dd>2 quartos familiares (2 adultos + 2 crianças e 2 adultos + 1 criança)</dd>
+            <dt>Plano</dt><dd>Café da manhã incluído</dd>
+            <dt>Endereço</dt><dd>Travessa Conde da Ponte, Alcântara, 1300-141 Lisboa</dd>
+            <dt>Cotação</dt><dd><b>€603 / noite</b> (2 quartos) · €1.205 nas 2 primeiras noites</dd>
+          </dl>
+          <p class="hotel-alt"><b>Alternativa Vila Galé:</b> Collection Palácio dos Arcos, palácio do século XV em Paço de Arcos, a 20 minutos do centro. Mais charme, menos praticidade com crianças.</p>
+        </div>
+      </article>
+
+      <article class="hotel">
+        <div class="hotel-gal">
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/9f/b3/3d/vila-gale-collection.jpg?w=1200&h=800&s=1" alt="Fachada do Vila Galé Collection Tomar" loading="lazy" referrerpolicy="no-referrer"><figcaption>Antigo convento reconvertido</figcaption></figure>
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/e6/02/93/nep-kids-club.jpg?w=800&h=600&s=1" alt="Kids club NEP do Vila Galé Collection Tomar" loading="lazy" referrerpolicy="no-referrer"><figcaption>Kids club</figcaption></figure>
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/e6/02/88/piscina-interior-indoor.jpg?w=800&h=600&s=1" alt="Piscina interior do Vila Galé Collection Tomar" loading="lazy" referrerpolicy="no-referrer"><figcaption>Piscina interior</figcaption></figure>
+        </div>
+        <div class="hotel-body">
+          <div class="hotel-tag">Tomar · 28/12 · 1 noite <span class="pick">Escolha da família</span></div>
+          <div class="hotel-name">Vila Galé Collection Tomar</div>
+          <div class="stars">★★★★</div>
+          <p class="hotel-desc">O melhor hotel do roteiro para as crianças: kids club, piscina interior aquecida, piscina infantil com tobogã e spa, num antigo convento no centro de Tomar. Nota 9,0 na Booking em 1.260 avaliações. A 35 minutos de Fátima e a 1h de Nazaré.</p>
+          <dl class="hotel-kv">
+            <dt>Quartos</dt><dd>2 quartos familiares</dd>
+            <dt>Plano</dt><dd>Café da manhã incluído</dd>
+            <dt>Endereço</dt><dd>Rua Santa Iria 8, 2300-473 Tomar</dd>
+            <dt>Cotação</dt><dd><b>€363 / noite</b> (2 quartos)</dd>
+          </dl>
+          <p class="hotel-alt"><b>Se preferir dormir em Fátima:</b> não há Vila Galé na cidade. A alternativa seria um hotel do Santuário, mas perde-se a estrutura infantil de Tomar.</p>
+        </div>
+      </article>
+
+      <article class="hotel">
+        <div class="hotel-gal">
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/e8/c2/c9/exterior.jpg?w=1200&h=800&s=1" alt="Exterior do Vila Galé Porto Ribeira à beira do Douro" loading="lazy" referrerpolicy="no-referrer"><figcaption>À beira do Douro</figcaption></figure>
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/e8/c2/fa/patio-interior-interior.jpg?w=800&h=600&s=1" alt="Pátio interior do Vila Galé Porto Ribeira" loading="lazy" referrerpolicy="no-referrer"><figcaption>Pátio interior</figcaption></figure>
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/e8/c2/c7/vista-do-quarto-standard.jpg?w=800&h=600&s=1" alt="Quarto standard do Vila Galé Porto Ribeira" loading="lazy" referrerpolicy="no-referrer"><figcaption>Quarto standard</figcaption></figure>
+        </div>
+        <div class="hotel-body">
+          <div class="hotel-tag">Porto · 29/12 · 1 noite</div>
+          <div class="hotel-name">Vila Galé Porto Ribeira</div>
+          <div class="stars">★★★★</div>
+          <p class="hotel-desc">Hotel boutique num antigo armazém de vinho do Porto na marginal do Douro, em Massarelos. O elétrico histórico da linha 1 passa à porta e leva à Ribeira em 10 minutos. Nota 8,8 na Booking.</p>
+          <dl class="hotel-kv">
+            <dt>Quartos</dt><dd>2 quartos (1 triplo + 1 quádruplo, a confirmar)</dd>
+            <dt>Plano</dt><dd>Café da manhã incluído</dd>
+            <dt>Endereço</dt><dd>Cais das Pedras 22, 4050-499 Porto</dd>
+            <dt>Cotação</dt><dd><b>€426 / noite</b> (2 quartos)</dd>
+          </dl>
+          <p class="hotel-alt"><b>Alternativa Vila Galé:</b> Vila Galé Porto (centro, Bonfim), €330/noite, com piscina interior e quartos familiares, mas a 15 minutos de carro da Ribeira.</p>
+        </div>
+      </article>
+
+      <article class="hotel">
+        <div class="hotel-gal">
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/f7/00/ca/catalonia-gran-via.jpg?w=1200&h=800&s=1" alt="Fachada do Catalonia Gran Vía Madrid" loading="lazy" referrerpolicy="no-referrer"><figcaption>Gran Vía, 9</figcaption></figure>
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/f7/03/64/catalonia-gran-via.jpg?w=800&h=600&s=1" alt="Suíte com terraço do Catalonia Gran Vía Madrid" loading="lazy" referrerpolicy="no-referrer"><figcaption>Suíte com terraço</figcaption></figure>
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/f7/0a/4d/catalonia-gran-via.jpg?w=800&h=600&s=1" alt="Restaurante Bloved do Catalonia Gran Vía Madrid" loading="lazy" referrerpolicy="no-referrer"><figcaption>Restaurante Bloved</figcaption></figure>
+        </div>
+        <div class="hotel-body">
+          <div class="hotel-tag">Madrid · 30/12 a 04/01 · 5 noites <span class="pick">Hotel base</span></div>
+          <div class="hotel-name">Catalonia Gran Vía Madrid</div>
+          <div class="stars">★★★★</div>
+          <p class="hotel-desc">Edifício de 1917 no início da Gran Vía, a 5 minutos a pé da Puerta del Sol e de Cibeles. Quartos familiares, menu infantil, terraço com piscina e a ceia de Réveillon dentro de casa. Nota 8,6 na Booking em 6.310 avaliações.</p>
+          <dl class="hotel-kv">
+            <dt>Quartos</dt><dd>2 quartos familiares</dd>
+            <dt>Plano</dt><dd>Café da manhã incluído</dd>
+            <dt>Endereço</dt><dd>Gran Vía 9, 28013 Madrid</dd>
+            <dt>Cotação</dt><dd><b>€1.280 / noite</b> (2 quartos) · €6.400 nas 5 noites</dd>
+          </dl>
+          <p class="hotel-alt"><b>Por que é o hotel base:</b> quartos que acomodam 4 pessoas, ceia de Réveillon no próprio hotel e metade do valor do EDITION nas mesmas datas.</p>
+        </div>
+      </article>
+
+      <article class="hotel">
+        <div class="hotel-gal">
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/6d/58/9e/pool-deck.jpg?w=1200&h=800&s=1" alt="Deck da piscina no rooftop do The Madrid EDITION" loading="lazy" referrerpolicy="no-referrer"><figcaption>Rooftop</figcaption></figure>
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/fd/ab/ce/the-madrid-edition.jpg?w=800&h=600&s=1" alt="Escadaria e lobby do The Madrid EDITION" loading="lazy" referrerpolicy="no-referrer"><figcaption>Lobby</figcaption></figure>
+          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/25/b9/ae/bellissimo-hotel-di-design.jpg?w=800&h=600&s=1" alt="Interior de design do The Madrid EDITION" loading="lazy" referrerpolicy="no-referrer"><figcaption>Interiores</figcaption></figure>
+        </div>
+        <div class="hotel-body">
+          <div class="hotel-tag">Madrid · opção de luxo</div>
+          <div class="hotel-name">The Madrid EDITION</div>
+          <div class="stars">★★★★★</div>
+          <p class="hotel-desc">Hotel de design da Marriott na Plaza del Celenque, a 2 minutos da Puerta del Sol, com a Cortylandia literalmente na porta. Spa, rooftop e serviço de alto nível. A piscina do terraço fecha no inverno e os quartos padrão acomodam no máximo 3 pessoas, o que exige 3 quartos para a família.</p>
+          <dl class="hotel-kv">
+            <dt>Quartos</dt><dd>2 quartos cotados (3 recomendados)</dd>
+            <dt>Plano</dt><dd>Café da manhã a confirmar</dd>
+            <dt>Endereço</dt><dd>Plaza de Celenque 2, 28013 Madrid</dd>
+            <dt>Cotação</dt><dd><b>€2.046 / noite</b> (2 quartos) · €10.230 nas 5 noites</dd>
+          </dl>
+          <p class="hotel-alt"><b>Quando escolher o EDITION:</b> se o orçamento permitir e a família valorizar spa e gastronomia acima da configuração de quartos.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════ VALORES ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Valores de referência</div>
+    <h2 class="h2">Hotelaria cotada para a família</h2>
+    <p class="lead">Somente a hotelaria está cotada nesta etapa. Aéreo internacional, voos internos, van com motorista, ingressos e seguro entram na proposta fechada após a aprovação do desenho do roteiro.</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Hotel</th><th>Cidade</th><th>Noites</th><th class="num">Por noite · 2 quartos</th><th class="num">Subtotal</th></tr></thead>
+        <tbody>
+          <tr><td><b>Vila Galé Ópera</b></td><td>Lisboa</td><td>3</td><td class="num">€603</td><td class="num">€1.808</td></tr>
+          <tr><td><b>Vila Galé Collection Tomar</b></td><td>Tomar</td><td>1</td><td class="num">€363</td><td class="num">€363</td></tr>
+          <tr><td><b>Vila Galé Porto Ribeira</b></td><td>Porto</td><td>1</td><td class="num">€426</td><td class="num">€426</td></tr>
+          <tr><td><b>Catalonia Gran Vía Madrid</b></td><td>Madrid</td><td>5</td><td class="num">€1.280</td><td class="num">€6.400</td></tr>
+          <tr class="total"><td colspan="4">Total hotelaria · 10 noites · 4 adultos e 3 crianças</td><td class="num">€8.997</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><b>*Nada reservado, apenas cotado.</b> Cotação 24/09 · valores em euro (EUR) obtidos na Booking.com para 2 quartos, com idades de referência de 5, 8 e 11 anos para as crianças. Com o Madrid EDITION no lugar do Catalonia, o total passa para €12.827. A ceia de Réveillon do Catalonia (€235 por adulto, menu infantil a confirmar) e a van privativa em Portugal não estão incluídas.</p>
+  </div>
+</section>
+
+<!-- ══════ PRÓXIMOS PASSOS ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Para fechar a proposta</div>
+    <h2 class="h2">O que precisamos confirmar com a família</h2>
+    <div class="grid2">
+      <div class="card"><div class="h3">Idades das crianças</div><p>Definem a configuração de quartos, as tarifas infantis nos hotéis e nos ingressos, e se a Puerta del Sol é viável na virada.</p></div>
+      <div class="card"><div class="h3">Aeroporto de chegada e de retorno</div><p>Lisboa nos dois sentidos é a premissa. Retorno por Madrid elimina o voo do dia 04/01 e libera um dia para Toledo ou Segóvia.</p></div>
+      <div class="card"><div class="h3">Jogo: setor e forma de compra</div><p>Hospitality oficial garante os 7 lugares juntos com meses de antecedência. A venda geral abre só 10 dias antes e não garante lugares contíguos.</p></div>
+      <div class="card"><div class="h3">Réveillon</div><p>Ceia de gala no hotel para os 7, ou apenas para os adultos com babá no quarto. A reserva da ceia costuma esgotar em novembro.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-logo">LusaTravel</div>
+    <div class="ft-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <div class="ft-addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+  </div>
+</footer>
+
+</body>
+</html>
