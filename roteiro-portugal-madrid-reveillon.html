@@ -115,6 +115,7 @@ a{ color:inherit; }
 .hotel-gal{ display:grid; grid-template-columns:1fr 1fr; grid-template-rows:200px 130px; gap:3px; background:var(--surf2); }
 .hotel-gal figure{ margin:0; overflow:hidden; background:linear-gradient(160deg,var(--dest-soft),var(--surf2)); position:relative; }
 .hotel-gal figure:first-child{ grid-column:1 / -1; }
+.hotel-gal.four{ grid-template-columns:repeat(3,1fr); grid-template-rows:230px 110px; }
 .hotel-gal img{ width:100%; height:100%; object-fit:cover; }
 .hotel-gal figcaption{ position:absolute; left:0; right:0; bottom:0; padding:4px 9px; font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:#fff; background:linear-gradient(transparent, rgba(28,61,43,.8)); }
 .hotel-body{ padding:22px 24px 20px; display:flex; flex-direction:column; gap:10px; }
@@ -416,10 +417,11 @@ tr.total td.num{ color:var(--gold); font-size:16px; }
     <div class="hotels">
 
       <article class="hotel">
-        <div class="hotel-gal">
-          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/e8/b2/1a/vista-aerea-aerial-view.jpg?w=1200&h=800&s=1" alt="Vista aérea do Vila Galé Ópera, em Alcântara, com o Tejo ao fundo" loading="lazy" referrerpolicy="no-referrer"><figcaption>Vista aérea · Alcântara e o Tejo</figcaption></figure>
-          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/e8/b2/d6/piscina-interior-indoor.jpg?w=800&h=600&s=1" alt="Piscina interior do Vila Galé Ópera" loading="lazy" referrerpolicy="no-referrer"><figcaption>Piscina interior</figcaption></figure>
-          <figure><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/e8/b2/2c/lobby.jpg?w=800&h=600&s=1" alt="Lobby do Vila Galé Ópera" loading="lazy" referrerpolicy="no-referrer"><figcaption>Lobby</figcaption></figure>
+        <div class="hotel-gal four">
+          <figure><img src="fotos/vila-gale-opera/01-fachada-noite.webp" alt="Fachada do Vila Galé Ópera à noite, sob a Ponte 25 de Abril" loading="lazy"><figcaption>Fachada à noite · sob a Ponte 25 de Abril</figcaption></figure>
+          <figure><img src="fotos/vila-gale-opera/04-quarto.webp" alt="Quarto do Vila Galé Ópera com vista para a cidade" loading="lazy"><figcaption>Quarto</figcaption></figure>
+          <figure><img src="fotos/vila-gale-opera/02-piscina.webp" alt="Piscina exterior do Vila Galé Ópera" loading="lazy"><figcaption>Piscina exterior</figcaption></figure>
+          <figure><img src="fotos/vila-gale-opera/03-banheiro.webp" alt="Banheiro do Vila Galé Ópera" loading="lazy"><figcaption>Banheiro</figcaption></figure>
         </div>
         <div class="hotel-body">
           <div class="hotel-tag">Lisboa · 26 a 28/12 · 2 noites</div>
