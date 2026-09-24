@@ -7,7 +7,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 ## Atividade principal atual
 
-_Nenhuma em andamento — aguardando próxima atividade._
+**Anna Maria e família – Itália** — iniciada em 24/09/2026 às 11:11
 
 ## Histórico de atividades principais
 
