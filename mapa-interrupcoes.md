@@ -8,6 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Anna Maria e família – Itália** — iniciada em 24/09/2026 às 11:11
+⏸️ Pausada em 24/09/2026 às 12:13 por interrupção (Dalcanales – Assentos EUA)
 
 ## Histórico de atividades principais
 
@@ -73,6 +74,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 31 | 21/09/2026 | 10:00 | 10:38 | 38min | – | Antonia e família – Tulum (5ª vez) |
 | 32 | 21/09/2026 | 11:33 | 11:48 | 15min | Fernanda | Ligação – Fernanda Japão |
 | 33 | 22/09/2026 | 16:21 | 16:33 | 12min | – | Ney e Viktor – Paris e Mykonos |
+| 34 | 24/09/2026 | 12:13 | ⏳ em andamento | – | – | Dalcanales – Assentos EUA (3ª vez de assentos) |
 
 ## Visão consolidada: atividades × interrupções
 
