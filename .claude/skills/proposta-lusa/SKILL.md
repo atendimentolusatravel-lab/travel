@@ -87,9 +87,12 @@ O template já inclui um exemplo de cada tipo de página. Duplique/remova confor
 
 - E-mail: `atendimentolusatravel@gmail.com`
 - Telefone/WhatsApp: `+55 41 99189-6076` (link: `https://wa.me/5541991896076`)
-- Endereço: Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR
+- Endereço: Rua Grã Nicco, 113 · Bloco 2 · Sala 102 · Mossunguê · Curitiba – PR · CEP 81200-200
 - Marca: **LUSATRAVEL**
-- Logo oficial (branca, fundo transparente, para o cabeçalho escuro): `assets/lusatravel-logo-branca.png`.
+- Verde institucional LusaTravel: `#414625` (cor do logo oficial). Em vouchers e documentos
+  operacionais, cabeçalho e rodapé usam esse verde com textos em ouro `#da8d00`.
+- Logos oficiais (fundo transparente) em `assets/`: `lusatravel-logo-branca.png` (para fundos escuros),
+  `lusatravel-logo-dourada.png` (ouro, para o cabeçalho verde) e `lusatravel-logo-verde.png` (verde, para fundos claros).
   Use `<img>` no lugar do texto "LUSATRAVEL" sempre que o arquivo estiver disponível.
 - Fontes locais (Poppins + Montserrat, woff2): `assets/fonts/fonts.css`. Prefira `@import` desse
   arquivo ao Google Fonts, pois o Chromium headless do ambiente não carrega fontes remotas.

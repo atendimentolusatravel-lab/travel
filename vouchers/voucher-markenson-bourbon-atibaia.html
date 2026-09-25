@@ -10,6 +10,7 @@
   --gold:#da8d00;   /* FIXO */
   --dest:#2d5e3a;   /* Verde Tropical — Brasil */
   --ink:#1a1510;
+  --brand:#414625;  /* Verde LusaTravel (logo oficial) */
   --char:#333131;
   --mut:#9a8d80;
   --line:#e4ddd2;
@@ -26,19 +27,19 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .page:last-child{ page-break-after:auto; }
 
 /* cabeçalho + barra dourada (obrigatórios) */
-.hd{ background:var(--ink); height:24mm; display:flex; align-items:center; justify-content:space-between;
+.hd{ background:var(--brand); height:24mm; display:flex; align-items:center; justify-content:space-between;
   padding:0 16mm; flex-shrink:0; }
 .hd img{ height:13mm; width:auto; display:block; }
-.hd .tag{ font-size:7.5pt; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.55); text-align:right; line-height:1.7; }
+.hd .tag{ font-size:7.5pt; letter-spacing:.26em; text-transform:uppercase; color:rgba(218,141,0,.75); text-align:right; line-height:1.7; }
 .hd .tag b{ display:block; color:var(--gold); font-weight:700; letter-spacing:.2em; font-size:8.5pt; }
 .goldbar{ height:2.4mm; background:var(--gold); flex-shrink:0; }
 
 /* rodapé */
-.ft{ margin-top:auto; background:var(--ink); height:13mm; display:flex; align-items:center;
+.ft{ margin-top:auto; background:var(--brand); height:13mm; display:flex; align-items:center;
   justify-content:space-between; padding:0 16mm; flex-shrink:0; }
-.ft a, .ft span{ font-family:var(--con); font-size:8pt; color:rgba(255,255,255,.5); text-decoration:none; }
-.ft .sep{ margin:0 6px; color:rgba(255,255,255,.2); }
-.ft .pg{ color:rgba(255,255,255,.35); letter-spacing:.14em; }
+.ft a, .ft span{ font-family:var(--con); font-size:8pt; color:var(--gold); text-decoration:none; }
+.ft .sep{ margin:0 6px; color:rgba(218,141,0,.45); }
+.ft .pg{ color:rgba(218,141,0,.75); letter-spacing:.14em; }
 
 .body{ padding:9mm 16mm 5mm; flex:1; display:flex; flex-direction:column; }
 .eyebrow{ font-size:7.5pt; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); font-weight:700; }
@@ -129,7 +130,7 @@ td.r b{ font-weight:700; }
 <!-- ══════════ PÁGINA 1 · VOUCHER ══════════ -->
 <section class="page">
   <div class="hd">
-    <img src="../assets/lusatravel-logo-branca.png" alt="LusaTravel">
+    <img src="../assets/lusatravel-logo-dourada.png" alt="LusaTravel">
     <div class="tag"><b>Voucher de hospedagem</b>Confirmação de reserva</div>
   </div>
   <div class="goldbar"></div>
@@ -257,7 +258,7 @@ td.r b{ font-weight:700; }
 <!-- ══════════ PÁGINA 2 · CONDIÇÕES ══════════ -->
 <section class="page">
   <div class="hd">
-    <img src="../assets/lusatravel-logo-branca.png" alt="LusaTravel">
+    <img src="../assets/lusatravel-logo-dourada.png" alt="LusaTravel">
     <div class="tag"><b>Voucher de hospedagem</b>Condições e orientações</div>
   </div>
   <div class="goldbar"></div>
@@ -328,7 +329,8 @@ td.r b{ font-weight:700; }
         <div class="l">
           WhatsApp: <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
           <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br>
-          Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR
+          Rua Grã Nicco, 113 · Bloco 2 · Sala 102<br>
+          Mossunguê · Curitiba – PR · CEP 81200-200
         </div>
       </div>
     </div>
