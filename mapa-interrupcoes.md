@@ -8,7 +8,8 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Anna Maria e família – Itália** — iniciada em 24/09/2026 às 11:11
-🍽️ Almoço iniciado às 12:33 (deslocado; interrupções nesta atividade: 1, 20min) — retoma após o almoço
+⏸️ Dia 24/09: trabalhou nela só das 11:11 às 12:13; tarde perdida por falta de internet (13:33–18:00) — continua em 25/09
+Interrupções nesta atividade: 2 (4h47min)
 
 ## Histórico de atividades principais
 
@@ -75,6 +76,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 32 | 21/09/2026 | 11:33 | 11:48 | 15min | Fernanda | Ligação – Fernanda Japão |
 | 33 | 22/09/2026 | 16:21 | 16:33 | 12min | – | Ney e Viktor – Paris e Mykonos |
 | 34 | 24/09/2026 | 12:13 | 12:33 | 20min | – | Dalcanales – Assentos EUA (3ª vez de assentos) |
+| 35 | 24/09/2026 | 13:33 | 18:00 | 4h27min | – | Falta de internet no escritório (tarde toda perdida) |
 
 ## Visão consolidada: atividades × interrupções
 
@@ -102,12 +104,12 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 20 | Luiz Maués – Pedido de casamento (2ª rodada) | 22/09 | ? | 1 | 12min |
 | 21 | Simone Maximiliano – Ski Carnaval | 23/09 | 3h34min | 0 | – |
 | 22 | Revisão Ney e Viktor – Paris e Mykonos | 23/09 | 1h23min | 0 | – |
-| 23 | Anna Maria e família – Itália | 24/09 | ⏳ em andamento | 1 (até agora) | 20min |
+| 23 | Anna Maria e família – Itália | 24–25/09 | ⏳ em andamento | 2 (até agora) | 4h47min |
 
 ## Resumo
 
 | Métrica | Valor |
 |---------|-------|
-| Total de interrupções | 34 |
-| Tempo total interrompido | 14h56min |
-| Duração média | 26min21s |
+| Total de interrupções | 35 |
+| Tempo total interrompido | 19h23min |
+| Duração média | 33min14s |
