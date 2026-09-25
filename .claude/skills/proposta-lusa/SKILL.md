@@ -89,6 +89,11 @@ O template já inclui um exemplo de cada tipo de página. Duplique/remova confor
 - Telefone/WhatsApp: `+55 41 99189-6076` (link: `https://wa.me/5541991896076`)
 - Endereço: Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR
 - Marca: **LUSATRAVEL**
+- Logo oficial (branca, fundo transparente, para o cabeçalho escuro): `assets/lusatravel-logo-branca.png`.
+  Use `<img>` no lugar do texto "LUSATRAVEL" sempre que o arquivo estiver disponível.
+- Fontes locais (Poppins + Montserrat, woff2): `assets/fonts/fonts.css`. Prefira `@import` desse
+  arquivo ao Google Fonts, pois o Chromium headless do ambiente não carrega fontes remotas.
+- Exemplo de voucher de hospedagem (A4, 2 páginas) no mesmo padrão: `vouchers/voucher-markenson-bourbon-atibaia.html`.
 
 ## Exportar PDF
 

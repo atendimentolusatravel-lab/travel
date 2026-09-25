@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Voucher · Markenson Marques dos Santos · Bourbon Resort Atibaia — LusaTravel</title>
+<style>
+@import url('../assets/fonts/fonts.css');
+
+:root{
+  --gold:#da8d00;   /* FIXO */
+  --dest:#2d5e3a;   /* Verde Tropical — Brasil */
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#9a8d80;
+  --line:#e4ddd2;
+  --paper:#faf7f2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A4 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page{ width:210mm; height:297mm; position:relative; overflow:hidden; background:#fff;
+  page-break-after:always; display:flex; flex-direction:column; }
+.page:last-child{ page-break-after:auto; }
+
+/* cabeçalho + barra dourada (obrigatórios) */
+.hd{ background:var(--ink); height:24mm; display:flex; align-items:center; justify-content:space-between;
+  padding:0 16mm; flex-shrink:0; }
+.hd img{ height:13mm; width:auto; display:block; }
+.hd .tag{ font-size:7.5pt; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.55); text-align:right; line-height:1.7; }
+.hd .tag b{ display:block; color:var(--gold); font-weight:700; letter-spacing:.2em; font-size:8.5pt; }
+.goldbar{ height:2.4mm; background:var(--gold); flex-shrink:0; }
+
+/* rodapé */
+.ft{ margin-top:auto; background:var(--ink); height:13mm; display:flex; align-items:center;
+  justify-content:space-between; padding:0 16mm; flex-shrink:0; }
+.ft a, .ft span{ font-family:var(--con); font-size:8pt; color:rgba(255,255,255,.5); text-decoration:none; }
+.ft .sep{ margin:0 6px; color:rgba(255,255,255,.2); }
+.ft .pg{ color:rgba(255,255,255,.35); letter-spacing:.14em; }
+
+.body{ padding:9mm 16mm 5mm; flex:1; display:flex; flex-direction:column; }
+.eyebrow{ font-size:7.5pt; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h1{ font-size:20pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; line-height:1.15; margin-top:1.5mm; }
+.h3{ font-size:8pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:2.5mm; }
+
+/* emitido para */
+.who{ display:flex; justify-content:space-between; align-items:flex-end; margin-top:4.5mm; padding-bottom:4mm; border-bottom:1px solid var(--line); }
+.who .lbl{ font-size:7.5pt; letter-spacing:.18em; text-transform:uppercase; color:var(--mut); font-weight:600; }
+.who .name{ font-size:16pt; font-weight:800; color:var(--ink); text-transform:uppercase; letter-spacing:.02em; line-height:1.2; margin-top:1mm; }
+.who .meta{ text-align:right; font-size:8.5pt; color:var(--mut); line-height:1.75; }
+.who .meta b{ color:var(--ink); font-weight:600; }
+.status{ display:inline-block; background:var(--dest); color:#fff; font-size:7.5pt; font-weight:600; letter-spacing:.12em;
+  text-transform:uppercase; padding:1.4mm 3mm; border-radius:3px; margin-top:1mm; }
+
+/* cartão do hotel */
+.hotel{ margin-top:4.5mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; }
+.hotel .strip{ width:4mm; background:var(--dest); flex-shrink:0; }
+.hotel .in{ flex:1; }
+.hotel .top{ background:var(--paper); padding:3.5mm 6mm; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; }
+.hotel .name{ font-size:14pt; font-weight:700; color:var(--ink); }
+.hotel .sub{ font-size:8.5pt; font-weight:300; color:var(--char); margin-top:.6mm; }
+.hotel .kind{ font-size:7.5pt; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); font-weight:700; white-space:nowrap; margin-left:6mm; }
+.hotel .rows{ padding:3.5mm 6mm; display:grid; grid-template-columns:repeat(4,1fr); gap:3mm 5mm; }
+.k{ font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.v{ font-size:10pt; font-weight:300; color:var(--char); margin-top:.8mm; line-height:1.35; }
+.v b{ font-weight:600; color:var(--ink); }
+.v .g{ color:var(--gold); font-weight:700; }
+
+/* stats */
+.stats{ display:flex; gap:0; margin-top:4.5mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.stat{ flex:1; padding:2.6mm 0; text-align:center; border-right:1px solid var(--line); }
+.stat:last-child{ border-right:0; }
+.stat b{ display:block; font-size:14pt; font-weight:800; color:var(--gold); line-height:1.1; }
+.stat span{ font-size:7pt; color:var(--mut); letter-spacing:.14em; text-transform:uppercase; font-weight:600; }
+
+/* tabela de apartamentos */
+table{ width:100%; border-collapse:collapse; margin-top:3mm; }
+th{ font-size:6.8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; text-align:left; white-space:nowrap;
+  padding:0 2mm 2mm; border-bottom:1.5px solid var(--ink); }
+td{ padding:2.6mm 2mm; border-bottom:1px solid var(--line); font-size:8.8pt; font-weight:300; vertical-align:top; line-height:1.4; }
+td.n{ width:8mm; }
+td .badge{ width:7mm; height:7mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:9pt;
+  display:flex; align-items:center; justify-content:center; }
+td b{ font-weight:600; color:var(--ink); white-space:nowrap; }
+td .res{ font-family:var(--con); font-weight:600; color:var(--ink); letter-spacing:.02em; white-space:nowrap; font-size:8.5pt; }
+td .cat{ font-weight:600; color:var(--ink); white-space:nowrap; }
+td .small{ display:block; font-size:8pt; color:var(--mut); margin-top:.5mm; }
+th.r, td.r{ text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+td.r b{ font-weight:700; }
+
+.total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink); border-radius:5px;
+  padding:3.8mm 6mm; margin-top:4mm; gap:8mm; }
+.total .lbl{ font-size:9pt; font-weight:700; letter-spacing:.1em; color:rgba(255,255,255,.75); text-transform:uppercase; }
+.total .sub{ font-size:7.5pt; color:rgba(255,255,255,.45); margin-top:1mm; font-weight:300; letter-spacing:.02em; }
+.total .amt{ white-space:nowrap; font-size:17pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; }
+
+.pay{ display:grid; grid-template-columns:repeat(3,1fr); gap:3mm 5mm; margin-top:4mm; padding:3.5mm 6mm; background:var(--paper); border-radius:6px; border:1px solid var(--line); }
+
+.notice{ margin-top:auto; font-size:7.8pt; color:var(--mut); line-height:1.55; padding-top:3mm; border-top:1px solid var(--line); }
+.notice b{ color:var(--ink); font-weight:600; }
+
+/* página 2 */
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:6mm 8mm; margin-top:6mm; }
+.block{ margin-bottom:5.5mm; }
+.block ul{ list-style:none; }
+.block li{ font-size:9.2pt; line-height:1.55; font-weight:300; color:var(--char); padding-left:4.5mm; position:relative; margin-bottom:1.6mm; }
+.block li::before{ content:""; position:absolute; left:0; top:2.1mm; width:1.8mm; height:1.8mm; border-radius:50%; background:var(--gold); }
+.block li b{ font-weight:600; color:var(--ink); }
+.block p{ font-size:9.2pt; line-height:1.6; font-weight:300; color:var(--char); }
+.cancel{ border:1.5px solid var(--gold); border-radius:6px; padding:4mm 5mm; background:#fff8ec; }
+.cancel .h3{ margin-bottom:1.5mm; }
+.cancel p{ font-size:9.5pt; font-weight:500; color:var(--ink); line-height:1.5; }
+.contact{ display:grid; grid-template-columns:1fr 1fr; gap:5mm; }
+.card{ border:1px solid var(--line); border-radius:6px; padding:4mm 5mm; }
+.card .t{ font-size:10pt; font-weight:700; color:var(--ink); margin-bottom:1.5mm; }
+.card .l{ font-family:var(--con); font-size:8.8pt; line-height:1.8; color:var(--char); }
+.card .l a{ color:var(--char); text-decoration:none; }
+.sig{ margin-top:auto; padding-top:5mm; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:flex-end; }
+.sig .a{ font-family:var(--con); font-size:8.5pt; color:var(--char); line-height:1.75; }
+.sig .a b{ font-family:var(--sans); font-weight:800; color:var(--ink); letter-spacing:.1em; font-size:10pt; display:block; }
+.sig .a a{ color:inherit; text-decoration:none; }
+.sig .d{ text-align:right; font-size:8pt; color:var(--mut); line-height:1.7; }
+</style>
+</head>
+<body>
+
+<!-- ══════════ PÁGINA 1 · VOUCHER ══════════ -->
+<section class="page">
+  <div class="hd">
+    <img src="../assets/lusatravel-logo-branca.png" alt="LusaTravel">
+    <div class="tag"><b>Voucher de hospedagem</b>Confirmação de reserva</div>
+  </div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+    <div class="eyebrow">Réveillon 2026 / 2027 · Atibaia · SP</div>
+    <div class="h1">Voucher de Hospedagem</div>
+
+    <div class="who">
+      <div>
+        <div class="lbl">Emitido para</div>
+        <div class="name">Markenson Marques dos Santos</div>
+        <div class="status">Reservas e pagamentos confirmados</div>
+      </div>
+      <div class="meta">
+        Emitido em <b>25/09/2026</b><br>
+        Reservas <b>RES227898 · RES227944 · RES227985</b><br>
+        Localizador do grupo <b>1895</b>
+      </div>
+    </div>
+
+    <div class="hotel">
+      <div class="strip"></div>
+      <div class="in">
+        <div class="top">
+          <div>
+            <div class="name">Bourbon Resort Atibaia</div>
+            <div class="sub">Rodovia Fernão Dias, Km 37,5, s/n · Jardim Boa Vista · Atibaia – SP · CEP 12954-904 · Brasil</div>
+          </div>
+          <div class="kind">Resort · Pensão completa</div>
+        </div>
+        <div class="rows">
+          <div><div class="k">Check-in</div><div class="v"><b>29/12/2026</b><br>a partir das 15h</div></div>
+          <div><div class="k">Check-out</div><div class="v"><b>07/01/2027</b><br>até as 12h</div></div>
+          <div><div class="k">Regime</div><div class="v"><b>Pensão completa</b><br>café, almoço e jantar</div></div>
+          <div><div class="k">Apartamentos</div><div class="v"><b>3 apartamentos</b><br>1 Premier · 2 Superior Plus</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>9</b><span>Noites</span></div>
+      <div class="stat"><b>3</b><span>Apartamentos</span></div>
+      <div class="stat"><b>7</b><span>Adultos</span></div>
+      <div class="stat"><b>3</b><span>Crianças</span></div>
+      <div class="stat"><b>10</b><span>Pessoas</span></div>
+    </div>
+
+    <div style="margin-top:4.5mm">
+      <div class="h3">Apartamentos reservados</div>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Nº da reserva</th>
+            <th>Hóspede titular</th>
+            <th>Categoria</th>
+            <th>Ocupação</th>
+            <th class="r">Taxas incl.</th>
+            <th class="r">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="n"><div class="badge">1</div></td>
+            <td><span class="res">RES227898-1895</span></td>
+            <td><b>Markenson Santos</b></td>
+            <td><span class="cat">Premier</span></td>
+            <td>2 adultos</td>
+            <td class="r">R$ 670,50</td>
+            <td class="r"><b>R$ 34.195,50</b></td>
+          </tr>
+          <tr>
+            <td class="n"><div class="badge">2</div></td>
+            <td><span class="res">RES227944-1895</span></td>
+            <td><b>Renata Mansur</b></td>
+            <td><span class="cat">Superior Plus</span></td>
+            <td style="white-space:nowrap">2 adultos · 2 crianças</td>
+            <td class="r">R$ 638,10</td>
+            <td class="r"><b>R$ 32.543,10</b></td>
+          </tr>
+          <tr>
+            <td class="n"><div class="badge">3</div></td>
+            <td><span class="res">RES227985-1895</span></td>
+            <td><b>Nathalia Amaral</b></td>
+            <td><span class="cat">Superior Plus</span></td>
+            <td style="white-space:nowrap">3 adultos · 1 criança</td>
+            <td class="r">R$ 742,75</td>
+            <td class="r"><b>R$ 37.880,35</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="total">
+      <div>
+        <div class="lbl">Total das 3 reservas</div>
+        <div class="sub">Taxas incluídas: R$ 2.051,35 · 9 noites em pensão completa · conforme confirmações Bourbon Hotéis &amp; Resorts</div>
+      </div>
+      <div class="amt">R$ 104.618,95</div>
+    </div>
+
+    <div class="pay">
+      <div><div class="k">Pagamento</div><div class="v"><b>Realizado</b> no cartão de crédito</div></div>
+      <div><div class="k">Cartão utilizado</div><div class="v">Final <b>6462</b></div></div>
+      <div><div class="k">Parcelamento</div><div class="v"><b>10x</b> por reserva, sem juros</div></div>
+    </div>
+
+    <div class="notice">
+      <b>Apresente este voucher na recepção</b> junto com o documento original com foto de todos os hóspedes e com o cartão de crédito utilizado no pagamento.
+      Cada apartamento está registrado no hotel em nome do hóspede titular indicado acima. Consulte as condições completas na página 2.
+    </div>
+  </div>
+
+  <div class="ft">
+    <div>
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <span class="sep">·</span>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <span class="pg">LUSATRAVEL · 1 / 2</span>
+  </div>
+</section>
+
+<!-- ══════════ PÁGINA 2 · CONDIÇÕES ══════════ -->
+<section class="page">
+  <div class="hd">
+    <img src="../assets/lusatravel-logo-branca.png" alt="LusaTravel">
+    <div class="tag"><b>Voucher de hospedagem</b>Condições e orientações</div>
+  </div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+    <div class="eyebrow">Bourbon Resort Atibaia · 29/12/2026 → 07/01/2027</div>
+    <div class="h1">Condições e Orientações</div>
+
+    <div class="grid2">
+      <div>
+        <div class="block">
+          <div class="h3">O que está incluído</div>
+          <ul>
+            <li><b>Pensão completa:</b> café da manhã, almoço e jantar, com suco, água e refrigerante durante as refeições.</li>
+            <li>A pensão <b>inicia com o jantar</b> do dia da chegada (29/12) e <b>encerra com o almoço</b> do dia da saída (07/01).</li>
+            <li>O almoço do dia da entrada <b>não</b> está incluído na diária.</li>
+            <li>Taxas do hotel já incluídas nos valores deste voucher.</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <div class="h3">Check-in e documentação</div>
+          <ul>
+            <li><b>Entrada às 15h</b> e <b>saída até as 12h</b>.</li>
+            <li>Apresentação do <b>documento original com foto</b> de todos os hóspedes, inclusive crianças.</li>
+            <li>O cartão de crédito usado no pré-pagamento deve ser apresentado na recepção pelo seu titular. O hotel não aceita cartão de terceiros.</li>
+            <li>Menores de 18 anos desacompanhados dos pais ou responsáveis legais só se hospedam com autorização escrita destes ou da autoridade judiciária (originais ou cópias autenticadas).</li>
+            <li>A reserva é nominal e <b>intransferível</b>: cada apartamento está em nome do hóspede titular indicado na página 1.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="cancel block">
+          <div class="h3">Política de cancelamento</div>
+          <p>Tarifa <b>não reembolsável</b>. Em caso de cancelamento ou não comparecimento (no-show), o valor integral da reserva é cobrado, sem devolução.</p>
+        </div>
+
+        <div class="block">
+          <div class="h3">Crianças e ocupação</div>
+          <ul>
+            <li>Cortesia para até 2 crianças de <b>até 5 anos</b> no mesmo apartamento de 2 adultos pagantes.</li>
+            <li>Crianças de <b>6 a 11 anos</b> pagam taxa adicional; a partir de <b>12 anos</b> são cobradas como adulto.</li>
+            <li>Ocupação máxima da categoria Superior: 3 adultos e 1 criança, ou 2 adultos e 2 crianças (até 11 anos). O hotel não acomoda 5 pessoas nesta categoria.</li>
+            <li>O espaço <b>Acqua Kids fecha às terças-feiras</b> para manutenção.</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <div class="h3">Observações</div>
+          <p>Condições sujeitas a alteração sem aviso prévio, conforme necessidade do hotel. Despesas extras (frigobar, bar, spa, passeios e serviços não descritos) são pagas diretamente no resort.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="h3" style="margin-top:2mm">Contatos</div>
+    <div class="contact">
+      <div class="card">
+        <div class="t">Bourbon Resort Atibaia · Central de Reservas</div>
+        <div class="l">
+          Tel: <a href="tel:+551121194700">(11) 2119-4700</a><br>
+          <a href="mailto:centraldereservas@bourbon.com.br">centraldereservas@bourbon.com.br</a><br>
+          Rodovia Fernão Dias, Km 37,5 · Atibaia – SP
+        </div>
+      </div>
+      <div class="card">
+        <div class="t">LusaTravel · Atendimento</div>
+        <div class="l">
+          WhatsApp: <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
+          <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br>
+          Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR
+        </div>
+      </div>
+    </div>
+
+    <div class="sig">
+      <div class="a">
+        <b>LUSATRAVEL</b>
+        <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a> · <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+      </div>
+      <div class="d">
+        Voucher consolidado a partir das confirmações<br>RES227898-1895 · RES227944-1895 · RES227985-1895
+      </div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <div>
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <span class="sep">·</span>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <span class="pg">LUSATRAVEL · 2 / 2</span>
+  </div>
+</section>
+
+</body>
+</html>
