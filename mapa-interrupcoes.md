@@ -8,8 +8,8 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Anna Maria e família – Itália** — iniciada em 24/09/2026 às 11:11
-⏸️ Pausada em 25/09/2026 às 11:46 por interrupção (early check-in Amanda Rocco)
-Interrupções nesta atividade: 3 (5h33min)
+▶️ Retomada em 25/09/2026 às 11:58
+Interrupções nesta atividade: 4 (5h45min)
 
 ## Histórico de atividades principais
 
@@ -78,7 +78,7 @@ Interrupções nesta atividade: 3 (5h33min)
 | 34 | 24/09/2026 | 12:13 | 12:33 | 20min | – | Dalcanales – Assentos EUA (3ª vez de assentos) |
 | 35 | 24/09/2026 | 13:33 | 18:00 | 4h27min | – | Falta de internet no escritório (tarde toda perdida) |
 | 36 | 25/09/2026 | 09:00 | 09:46 | 46min | – | Responder emails e atualizar clientes (represados pela falta de internet) |
-| 37 | 25/09/2026 | 11:46 | ⏳ em andamento | – | – | Early check-in Amanda Rocco |
+| 37 | 25/09/2026 | 11:46 | 11:58 | 12min | – | Early check-in Amanda Rocco |
 
 ## Visão consolidada: atividades × interrupções
 
@@ -106,12 +106,12 @@ Interrupções nesta atividade: 3 (5h33min)
 | 20 | Luiz Maués – Pedido de casamento (2ª rodada) | 22/09 | ? | 1 | 12min |
 | 21 | Simone Maximiliano – Ski Carnaval | 23/09 | 3h34min | 0 | – |
 | 22 | Revisão Ney e Viktor – Paris e Mykonos | 23/09 | 1h23min | 0 | – |
-| 23 | Anna Maria e família – Itália | 24–25/09 | ⏳ em andamento | 3 (até agora) | 5h33min |
+| 23 | Anna Maria e família – Itália | 24–25/09 | ⏳ em andamento | 4 (até agora) | 5h45min |
 
 ## Resumo
 
 | Métrica | Valor |
 |---------|-------|
-| Total de interrupções | 36 |
-| Tempo total interrompido | 20h09min |
-| Duração média | 33min35s |
+| Total de interrupções | 37 |
+| Tempo total interrompido | 20h21min |
+| Duração média | 33min |
