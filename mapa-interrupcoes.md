@@ -7,9 +7,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 ## Atividade principal atual
 
-**Anna Maria e família – Itália** — iniciada em 24/09/2026 às 11:11
-▶️ Retomada em 25/09/2026 às 11:58
-Interrupções nesta atividade: 4 (5h45min)
+_Nenhuma em andamento — aguardando próxima atividade._
 
 ## Histórico de atividades principais
 
@@ -37,6 +35,7 @@ Interrupções nesta atividade: 4 (5h45min)
 | 20 | 22/09/2026 | 15:43 | ? | ? | Luiz Maués – Pedido de casamento (2ª rodada) | Concluída no dia 22; fim não registrado; teve 1 interrupção (12min) |
 | 21 | 23/09/2026 | 10:55 | 15:29 | 3h34min | Simone Maximiliano – Ski Carnaval | Concluída; sem interrupções; descontado almoço (1h) |
 | 22 | 23/09/2026 | 15:36 | 16:59 | 1h23min | Revisão Ney e Viktor – Paris e Mykonos | Concluída; sem interrupções |
+| 23 | 24–25/09/2026 | 24/09 11:11 | 25/09 17:37 | 7h41min | Anna Maria e família – Itália | Concluída; 1h02min no dia 24 (tarde perdida por falta de internet) + 6h39min no dia 25; descontadas 4 interrupções (5h45min) e almoços |
 
 ## Tabela de Interrupções
 
@@ -106,7 +105,7 @@ Interrupções nesta atividade: 4 (5h45min)
 | 20 | Luiz Maués – Pedido de casamento (2ª rodada) | 22/09 | ? | 1 | 12min |
 | 21 | Simone Maximiliano – Ski Carnaval | 23/09 | 3h34min | 0 | – |
 | 22 | Revisão Ney e Viktor – Paris e Mykonos | 23/09 | 1h23min | 0 | – |
-| 23 | Anna Maria e família – Itália | 24–25/09 | ⏳ em andamento | 4 (até agora) | 5h45min |
+| 23 | Anna Maria e família – Itália | 24–25/09 | 7h41min | 4 | 5h45min |
 
 ## Resumo
 
