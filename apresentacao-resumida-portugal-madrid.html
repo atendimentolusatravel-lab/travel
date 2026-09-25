@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="LusaTravel — apresentação resumida do roteiro de 10 noites para 4 adultos e 3 crianças: Portugal com hotéis Vila Galé, Réveillon em Madrid e Real Madrid x Getafe no Bernabéu.">
+<title>Réveillon Ibérico Resumo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
+<style>
+:root{
+  --gold:#da8d00; --gold-hi:#f0a010;
+  --ink:#1a1510; --char:#333131; --mut:#9a8d80;
+  --line:#e4ddd2; --paper:#faf7f2; --surf:#fff; --surf2:#f2ece3;
+  --onink:#f0e8de;
+  --dest:#2d5e3a; --deep:#1c3d2b; --dest-soft:#e6efe8;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+  --mx:1040px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+    --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+    --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+    --dest:#3f8455; --deep:#15301f; --dest-soft:#1b2d22;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+  --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+  --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+  --dest:#3f8455; --deep:#15301f; --dest-soft:#1b2d22;
+}
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+body{ background:var(--paper); color:var(--char); font-family:var(--sans); font-weight:400; font-size:15px; line-height:1.65; -webkit-font-smoothing:antialiased; }
+a{ color:inherit; }
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+@media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } }
+.wrap{ max-width:var(--mx); margin:0 auto; padding:0 28px; }
+
+.mh{ background:var(--deep); padding:52px 0 40px; position:relative; }
+.mh::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.mh-logo{ font-family:var(--con); font-weight:600; font-size:13px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.mh-kick{ margin-top:24px; font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:rgba(240,232,222,.55); }
+.mh-name{ margin-top:10px; font-weight:700; font-size:clamp(26px,4.8vw,42px); line-height:1.06; color:#fff; text-transform:uppercase; text-wrap:balance; }
+.mh-dest{ margin-top:8px; font-weight:600; font-size:clamp(16px,2.2vw,20px); color:var(--gold); }
+.mh-sub{ margin-top:14px; max-width:62ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.7); }
+.mh-sub strong{ font-weight:600; color:var(--gold); }
+.mh-stats{ margin-top:30px; display:flex; flex-wrap:wrap; border-top:1px solid rgba(218,141,0,.35); }
+.mh-stat{ padding:16px 30px 4px 0; margin-right:30px; border-right:1px solid rgba(240,232,222,.14); }
+.mh-stat:last-child{ border-right:0; }
+.mh-stat .v{ font-weight:700; font-size:22px; color:var(--gold); line-height:1; font-variant-numeric:tabular-nums; }
+.mh-stat .k{ margin-top:6px; font-size:9.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+
+.sec{ padding:46px 0; }
+.sec + .sec{ border-top:1px solid var(--line); }
+.eyebrow{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+.h2{ font-weight:700; font-size:clamp(20px,2.8vw,27px); color:var(--ink); line-height:1.18; letter-spacing:-.01em; text-wrap:balance; }
+.h3{ font-weight:600; font-size:16px; color:var(--ink); line-height:1.3; }
+.lead{ margin-top:10px; max-width:66ch; font-weight:300; font-size:15px; }
+.lead b{ font-weight:600; color:var(--ink); }
+
+.tl{ margin-top:24px; display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; }
+.tl-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--dest); padding:16px 16px 14px; }
+.tl-badge{ display:inline-flex; align-items:center; justify-content:center; min-width:28px; height:28px; padding:0 8px; background:var(--dest); color:#fff; font-weight:700; font-size:12px; }
+.tl-city{ margin-top:11px; font-weight:600; font-size:16px; color:var(--ink); }
+.tl-meta{ margin-top:4px; font-size:12px; font-weight:300; color:var(--mut); }
+.tl-move{ margin-top:9px; padding-top:9px; border-top:1px solid var(--line); font-size:11.5px; }
+
+.days{ margin-top:22px; border-top:1px solid var(--line); }
+.day{ display:grid; grid-template-columns:140px 1fr; gap:18px; padding:13px 0; border-bottom:1px solid var(--line); }
+.day-h{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--dest); line-height:1.5; }
+.day-h .cty{ display:block; color:var(--mut); font-size:10.5px; letter-spacing:.14em; margin-top:2px; }
+.day-t{ font-size:14px; font-weight:300; }
+.day-t b{ font-weight:600; color:var(--ink); }
+.day-t .fair{ color:var(--gold); font-weight:600; }
+.day.travel{ background:var(--surf2); margin:0 -14px; padding:12px 14px; }
+.day.star{ border-left:3px solid var(--gold); margin-left:-14px; padding-left:11px; }
+
+.grid2{ margin-top:22px; display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:14px; }
+.card{ background:var(--surf); border:1px solid var(--line); padding:18px 20px; }
+.card .h3{ margin-bottom:6px; }
+.card p, .card li{ font-size:13.5px; font-weight:300; }
+.card ul{ padding-left:18px; display:grid; gap:5px; margin-top:4px; }
+.card b{ font-weight:600; color:var(--ink); }
+.card.gold{ border-top:3px solid var(--gold); }
+.card.dest{ border-top:3px solid var(--dest); }
+
+.tbl-wrap{ margin-top:22px; overflow-x:auto; }
+table{ width:100%; border-collapse:collapse; font-size:13.5px; }
+th{ font-family:var(--lbl); font-weight:700; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); text-align:left; padding:9px 12px; border-bottom:2px solid var(--gold); }
+td{ padding:11px 12px; border-bottom:1px solid var(--line); vertical-align:top; font-weight:300; }
+td b{ font-weight:600; color:var(--ink); }
+td .alt{ display:block; font-size:12px; color:var(--mut); margin-top:3px; }
+td.num, th.num{ text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.pick{ display:inline-block; padding:2px 8px; background:var(--gold); color:#1a1510; font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; vertical-align:middle; margin-left:6px; }
+.note{ margin-top:12px; font-size:12px; font-weight:300; color:var(--mut); }
+.note b{ font-weight:600; color:var(--char); }
+
+.match{ margin-top:22px; background:var(--deep); color:var(--onink); padding:24px 28px; display:grid; grid-template-columns:1fr auto; gap:16px 28px; align-items:center; position:relative; }
+.match::before{ content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--gold); }
+.match-k{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); }
+.match-t{ margin-top:5px; font-weight:700; font-size:clamp(20px,3.2vw,30px); color:#fff; line-height:1.1; }
+.match-s{ margin-top:6px; font-size:13.5px; font-weight:300; color:rgba(240,232,222,.75); max-width:60ch; }
+.match-box{ border:1px solid rgba(218,141,0,.5); padding:12px 16px; min-width:190px; }
+.match-box .v{ font-weight:700; font-size:20px; color:var(--gold); line-height:1.1; }
+.match-box .k{ margin-top:4px; font-size:9.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.55); }
+
+.ft{ background:var(--deep); padding:40px 0 36px; position:relative; }
+.ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
+.ft-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.ft-sig{ margin-top:16px; display:flex; flex-wrap:wrap; gap:10px 30px; font-family:var(--con); font-size:13px; color:rgba(240,232,222,.78); }
+.ft-sig a{ color:rgba(240,232,222,.78); text-decoration:none; border-bottom:1px solid rgba(218,141,0,.6); }
+.ft-addr{ margin-top:14px; font-family:var(--con); font-size:11.5px; color:rgba(240,232,222,.45); }
+
+@media (max-width:760px){ .match{ grid-template-columns:1fr; } }
+@media (max-width:640px){
+  .wrap{ padding:0 16px; }
+  .day{ grid-template-columns:1fr; gap:6px; }
+  .day.travel, .day.star{ margin:0; padding-left:14px; }
+  .mh-stat{ padding-right:18px; margin-right:18px; }
+}
+</style>
+</head>
+<body>
+
+<header class="mh">
+  <div class="wrap">
+    <div class="mh-logo">LusaTravel</div>
+    <div class="mh-kick">Apresentação resumida · cotação para sua viagem</div>
+    <h1 class="mh-name">Portugal e Réveillon em Madrid</h1>
+    <div class="mh-dest">Lisboa · Óbidos · Nazaré · Fátima · Porto · Madrid</div>
+    <p class="mh-sub">Roteiro de 10 noites para <strong>4 adultos e 3 crianças</strong>, de 26/12/2026 a 05/01/2027, com retorno por Lisboa. Hotéis <strong>Vila Galé</strong> em Portugal, van de 9 lugares no trecho Óbidos–Nazaré–Fátima–Porto, Réveillon no <strong>Catalonia Gran Vía</strong> e <strong>Real Madrid × Getafe</strong> no Bernabéu em 03/01.</p>
+    <div class="mh-stats">
+      <div class="mh-stat"><div class="v">6</div><div class="k">Destinos</div></div>
+      <div class="mh-stat"><div class="v">10</div><div class="k">Noites</div></div>
+      <div class="mh-stat"><div class="v">5</div><div class="k">Hotéis</div></div>
+      <div class="mh-stat"><div class="v">4+3</div><div class="k">Adultos e crianças</div></div>
+      <div class="mh-stat"><div class="v">03/01</div><div class="k">Jogo no Bernabéu</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Itinerário</div>
+    <h2 class="h2">Seis paradas, 10 noites, uma só direção</h2>
+    <p class="lead">Portugal de sul para norte, sem voltar atrás. Óbidos, Nazaré e Fátima entram no caminho entre Lisboa e Porto, com uma noite em Tomar. Voo Porto–Madrid no dia 30 deixa o dia 31 livre para o Réveillon. Volta a Lisboa em 04/01 para dormir junto ao aeroporto.</p>
+    <div class="tl">
+      <div class="tl-item"><span class="tl-badge">2</span><div class="tl-city">Lisboa</div><div class="tl-meta">26 e 27/12 · 2 noites</div><div class="tl-move">Chegada do Brasil pela manhã · transfer privativo</div></div>
+      <div class="tl-item"><span class="tl-badge">1</span><div class="tl-city">Tomar</div><div class="tl-meta">28/12 · 1 noite</div><div class="tl-move">Van 9 lugares · via Óbidos e Nazaré</div></div>
+      <div class="tl-item"><span class="tl-badge">1</span><div class="tl-city">Porto</div><div class="tl-meta">29/12 · 1 noite</div><div class="tl-move">Van 9 lugares · via Fátima</div></div>
+      <div class="tl-item"><span class="tl-badge">5</span><div class="tl-city">Madrid</div><div class="tl-meta">30/12 a 03/01 · 5 noites</div><div class="tl-move">Voo Porto–Madrid · 1h15</div></div>
+      <div class="tl-item"><span class="tl-badge">1</span><div class="tl-city">Lisboa · Aeroporto</div><div class="tl-meta">04/01 · 1 noite</div><div class="tl-move">Voo Madrid–Lisboa · retorno 05/01 pela manhã</div></div>
+    </div>
+    <div class="grid2">
+      <div class="card gold"><div class="h3">Premissas</div><ul>
+        <li><b>Chegada a Lisboa na manhã de 26/12</b> e retorno ao Brasil por Lisboa na manhã de 05/01.</li>
+        <li><b>Idades das crianças</b> assumidas como 5, 8 e 11 anos; 2 quartos por noite.</li>
+        <li><b>Um adulto dirige</b> a van nos dias 28, 29 e 30/12. Em Lisboa e Madrid não há carro.</li>
+      </ul></div>
+      <div class="card dest"><div class="h3">Transporte</div><ul>
+        <li><b>Transfers privativos</b> na chegada a Lisboa e nas chegadas e saída de Madrid.</li>
+        <li><b>Van de 9 lugares</b> por 3 diárias: retirada no centro de Lisboa em 28/12, devolução no aeroporto do Porto em 30/12.</li>
+        <li><b>Voos internos:</b> Porto–Madrid (30/12) e Madrid–Lisboa (04/01).</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Roteiro dia a dia</div>
+    <h2 class="h2">De Belém ao Bernabéu em 11 dias</h2>
+    <div class="days">
+      <div class="day travel"><div class="day-h">Sáb 26/12<span class="cty">Lisboa</span></div><div class="day-t">Chegada pela manhã. Tarde em <b>Belém</b>: Pastéis de Belém, Torre, Jerónimos. Jantar na LX Factory.</div></div>
+      <div class="day"><div class="day-h">Dom 27/12<span class="cty">Lisboa</span></div><div class="day-t"><b>Oceanário</b> pela manhã. Baixa, Rua Augusta de Natal e Chiado à tarde. <span class="fair">Wonderland Lisboa</span> no fim do dia.</div></div>
+      <div class="day travel"><div class="day-h">Seg 28/12<span class="cty">Óbidos · Nazaré · Tomar</span></div><div class="day-t">Retirada da van. <b>Óbidos</b> e o <span class="fair">Óbidos Vila Natal</span>. Almoço em <b>Nazaré</b>, Sítio e ondas gigantes. Noite em Tomar, com kids club e piscina interior.</div></div>
+      <div class="day travel"><div class="day-h">Ter 29/12<span class="cty">Fátima · Porto</span></div><div class="day-t"><b>Santuário de Fátima</b> pela manhã. Porto à tarde: Ribeira, Ponte Luís I e Caves Cálem em Gaia.</div></div>
+      <div class="day travel"><div class="day-h">Qua 30/12<span class="cty">Porto · Madrid</span></div><div class="day-t">São Bento, <b>Livraria Lello</b>, Clérigos e cruzeiro das seis pontes. Devolução da van e voo para <b>Madrid</b> no fim da tarde.</div></div>
+      <div class="day star"><div class="day-h">Qui 31/12<span class="cty">Madrid · Réveillon</span></div><div class="day-t"><b>Tour Bernabéu</b> às 9h. Descanso à tarde. Cortylandia e luzes da Gran Vía às 18h. <b>Ceia de gala no hotel</b> às 21h, uvas à meia-noite e churros no San Ginés.</div></div>
+      <div class="day"><div class="day-h">Sex 01/01<span class="cty">Madrid</span></div><div class="day-t">Manhã livre. <b>Parque Warner</b> das 12h às 19h, com transfer privativo.</div></div>
+      <div class="day"><div class="day-h">Sáb 02/01<span class="cty">Madrid</span></div><div class="day-t"><b>Retiro</b> e pista de gelo de Colón. Mercado de San Miguel. Teleférico ou Museu de Cera. Jantar no Sobrino de Botín.</div></div>
+      <div class="day star"><div class="day-h">Dom 03/01<span class="cty">Madrid · Bernabéu</span></div><div class="day-t">Plaza Mayor, Palácio Real e Templo de Debod. <b>Real Madrid × Getafe às 15h.</b> Tapas na Cava Baja.</div></div>
+      <div class="day travel"><div class="day-h">Seg 04/01<span class="cty">Madrid · Lisboa</span></div><div class="day-t">Prado ou Zoo Aquarium. Voo <b>Madrid–Lisboa</b> às 15h. Noite em hotel junto ao aeroporto.</div></div>
+      <div class="day travel"><div class="day-h">Ter 05/01<span class="cty">Retorno</span></div><div class="day-t">Voo de volta ao Brasil pela manhã.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Futebol e Réveillon</div>
+    <h2 class="h2">Os dois eventos que ancoram a viagem</h2>
+    <div class="match">
+      <div>
+        <div class="match-k">LaLiga · Jornada 19 · Estádio Santiago Bernabéu</div>
+        <div class="match-t">Real Madrid × Getafe</div>
+        <p class="match-s">Único jogo do Real Madrid em casa no período. Horário confirmado pela LaLiga 2 a 3 semanas antes; se mover para 02 ou 04/01, o roteiro já prevê a troca. Para 7 lugares juntos, pacote hospitality oficial.</p>
+      </div>
+      <div class="match-box"><div class="v">Dom 03/01 · 15h</div><div class="k">Horário provisório</div></div>
+    </div>
+    <div class="grid2">
+      <div class="card gold"><div class="h3">Réveillon · ceia de gala no Catalonia Gran Vía</div><p>Das 21h às 3h, com cotilhão, uvas à meia-noite e festa. As crianças ficam à mesa e a um elevador da cama. Depois, Gran Vía e Alcalá a pé, fogos sobre a Cibeles e churros no San Ginés. A Puerta del Sol (17.500 pessoas, reabertura às 22h) fica como alternativa só para os adultos.</p></div>
+      <div class="card"><div class="h3">Natal de Madrid ainda em cartaz</div><p>Cortylandia até 05/01, mercado da Plaza Mayor até 31/12, pistas de gelo em Colón e Matadero até 06/01, Parque Warner aberto em 01/01 com programação de Natal.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Hospedagem</div>
+    <h2 class="h2">Cinco hotéis, dois quartos por noite</h2>
+    <p class="lead">Vila Galé onde a rede existe (Lisboa, Tomar e Porto). Em Madrid, o Catalonia Gran Vía como base única. Para a última noite, um hotel a 5 minutos do aeroporto.</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Datas</th><th>Cidade</th><th>Hotel</th><th>Por que este</th></tr></thead>
+        <tbody>
+          <tr><td>26 a 28/12</td><td>Lisboa</td><td><b>Vila Galé Ópera</b> ★★★★<span class="alt">Alcântara · Travessa Conde da Ponte</span></td><td>Entre Belém e a LX Factory, quartos familiares, piscina interior e spa.</td></tr>
+          <tr><td>28/12</td><td>Tomar</td><td><b>Vila Galé Collection Tomar</b> ★★★★<span class="alt">Rua Santa Iria 8 · a 35 min de Fátima</span></td><td>Kids club, piscina interior aquecida e piscina infantil com tobogã. Estacionamento gratuito.</td></tr>
+          <tr><td>29/12</td><td>Porto</td><td><b>Vila Galé Porto Ribeira</b> ★★★★<span class="alt">Cais das Pedras 22 · marginal do Douro</span></td><td>Boutique à beira-rio, elétrico da linha 1 à porta, garagem privativa.</td></tr>
+          <tr><td>30/12 a 04/01</td><td>Madrid</td><td><b>Catalonia Gran Vía Madrid</b> ★★★★<span class="alt">Gran Vía 9 · metrô na porta</span></td><td>5 minutos da Puerta del Sol, quartos familiares com beliche, ceia de Réveillon no próprio hotel.</td></tr>
+          <tr><td>04/01</td><td>Lisboa · Aeroporto</td><td><b>B&amp;B HOTEL Lisboa Aeroporto</b> ★★★<span class="pick">Opção acessível</span><span class="alt">Rua Vasco da Gama 5, Prior Velho · a 5 min do terminal</span><span class="alt">Alternativa: Meliá Lisboa Aeroporto ★★★★, dentro do aeroporto, com piscina interior</span></td><td>Quartos familiares, garagem, nota 8,3 em mais de 9.500 avaliações. Resolve a noite antes do voo pelo menor custo.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Serviços de referência</div>
+    <h2 class="h2">Estimativas para dimensionar o orçamento</h2>
+    <p class="lead">Hotelaria e transfers são apresentados em cotação separada. Os itens abaixo são estimativas de mercado para 7 pessoas.</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Item</th><th>Detalhe</th><th class="num">EUR</th><th class="num">BRL</th></tr></thead>
+        <tbody>
+          <tr><td><b>Van 9 lugares</b></td><td>3 diárias · one-way Lisboa → Porto · cobertura total · 3 cadeirinhas</td><td class="num">€750</td><td class="num">R$ 4.425</td></tr>
+          <tr><td><b>Voos internos</b></td><td>Porto–Madrid e Madrid–Lisboa · 7 passageiros</td><td class="num">€1.680</td><td class="num">R$ 9.912</td></tr>
+          <tr><td><b>Real Madrid × Getafe</b></td><td>7 ingressos · setor lateral</td><td class="num">€980</td><td class="num">R$ 5.782</td></tr>
+          <tr><td><b>Ceia de Réveillon</b></td><td>4 adultos · Catalonia Gran Vía · crianças a confirmar</td><td class="num">€940</td><td class="num">R$ 5.546</td></tr>
+          <tr><td><b>Ingressos</b></td><td>Tour Bernabéu, Parque Warner, Oceanário, Livraria Lello · 7 pessoas</td><td class="num">€620</td><td class="num">R$ 3.658</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><b>*Nada reservado, apenas cotado.</b> Cotação 24/09 · Euro = 5,90. Não inclui aéreo internacional, seguro viagem, hotelaria, transfers, refeições fora dos hotéis, city taxes, combustível e portagens.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Para fechar</div>
+    <h2 class="h2">O que precisamos da família</h2>
+    <div class="grid2">
+      <div class="card"><div class="h3">Idades das crianças</div><p>Definem quartos, tarifas, cadeirinhas e a viabilidade da Puerta del Sol.</p></div>
+      <div class="card"><div class="h3">Quem dirige</div><p>Sem condutor, a van com motorista custa cerca de €500 a mais nos 3 dias.</p></div>
+      <div class="card"><div class="h3">Jogo e Réveillon</div><p>Hospitality para 7 lugares juntos; ceia de gala para os 7 ou só para os adultos.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-logo">LusaTravel</div>
+    <div class="ft-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <div class="ft-addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+  </div>
+</footer>
+
+</body>
+</html>
