@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="LusaTravel — cotação de uma semana de descanso em Curaçao para Gustavo e família, em classe executiva pela Copa Airlines, com roteiro dia a dia e alternativa em Bonaire.">
+<title>Curaçao em Família</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
+<style>
+/* ─── LUSATRAVEL · DESIGN SYSTEM TOKENS ─────────────────── */
+:root{
+  --gold:#da8d00; --gold-hi:#f0a010;
+  --ink:#1a1510; --char:#333131; --mut:#9a8d80;
+  --line:#e4ddd2; --paper:#faf7f2; --surf:#fff; --surf2:#f2ece3;
+  --onink:#f0e8de;
+  --dest:#1a4f55;
+  --ok:#2d5e3a; --warn:#8a2b12;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+  --mx:1080px;
+}
+.opt-cw{ --dest:#1a4f55; }
+.opt-bq{ --dest:#2d5e3a; }
+
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+    --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+    --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+    --ok:#6fb582; --warn:#e07a5a;
+  }
+  :root:not([data-theme="light"]) .opt-cw{ --dest:#2f8a94; }
+  :root:not([data-theme="light"]) .opt-bq{ --dest:#4e9a63; }
+}
+:root[data-theme="dark"]{
+  --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+  --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+  --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+  --ok:#6fb582; --warn:#e07a5a;
+}
+:root[data-theme="dark"] .opt-cw{ --dest:#2f8a94; }
+:root[data-theme="dark"] .opt-bq{ --dest:#4e9a63; }
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  background:var(--paper); color:var(--char);
+  font-family:var(--sans); font-weight:400;
+  font-size:15px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+@media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } }
+
+.wrap{ max-width:var(--mx); margin:0 auto; padding:0 16px; }
+@media (min-width:640px){ .wrap{ padding:0 28px; } }
+
+/* ─── MASTHEAD / CAPA ────────────────────────────────────── */
+.mh{ background:#1a1510; padding:56px 0 44px; position:relative; }
+.mh::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.mh-logo{ font-family:var(--con); font-weight:600; font-size:13px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.mh-kick{ margin-top:26px; font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+.mh-name{ margin-top:10px; font-weight:700; font-size:clamp(28px,5.2vw,46px); line-height:1.06; letter-spacing:.01em; color:#fff; text-transform:uppercase; text-wrap:balance; }
+.mh-dest{ margin-top:8px; font-weight:600; font-size:clamp(17px,2.4vw,22px); color:var(--gold); letter-spacing:.02em; }
+.mh-sub{ margin-top:16px; max-width:60ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.62); }
+.mh-sub strong{ font-weight:600; color:var(--gold); }
+.mh-stats{ margin-top:34px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid rgba(240,232,222,.14); }
+.mh-stat{ padding:18px 20px 4px 0; margin-right:20px; border-right:1px solid rgba(240,232,222,.12); }
+@media (min-width:640px){ .mh-stat{ padding-right:34px; margin-right:34px; } }
+.mh-stat:last-child{ border-right:0; }
+.mh-stat .v{ font-weight:700; font-size:24px; color:#fff; line-height:1; font-variant-numeric:tabular-nums; }
+.mh-stat .k{ margin-top:7px; font-size:9.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.45); }
+
+/* ─── SEÇÕES ─────────────────────────────────────────────── */
+.sec{ padding:56px 0; }
+.sec + .sec{ border-top:1px solid var(--line); }
+.eyebrow{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; letter-spacing:-.01em; text-wrap:balance; }
+.lead{ margin-top:12px; max-width:66ch; font-weight:300; font-size:15.5px; color:var(--char); }
+.lead b{ font-weight:600; color:var(--ink); }
+.goldbar{ width:52px; height:3px; background:var(--gold); margin-top:18px; }
+
+/* ─── CARDS DE JANELA (QUANDO IR) ────────────────────────── */
+.win{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
+.win-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--mut); padding:18px 18px 16px; display:flex; flex-direction:column; }
+.win-item.rec{ border-top-color:var(--gold); }
+.win-item.no{ opacity:.85; }
+.win-tag{ font-size:9.5px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--mut); }
+.win-item.rec .win-tag{ color:var(--gold); }
+.win-item.no .win-tag{ color:var(--warn); }
+.win-title{ margin-top:8px; font-weight:600; font-size:17px; color:var(--ink); line-height:1.25; }
+.win-meta{ margin-top:4px; font-size:12.5px; font-weight:300; color:var(--mut); }
+.win-body{ margin-top:12px; padding-top:12px; border-top:1px solid var(--line); font-size:13px; font-weight:300; color:var(--char); flex:1; }
+.win-body b{ font-weight:600; color:var(--ink); }
+.win-price{ margin-top:12px; font-weight:700; font-size:15px; color:var(--ink); font-variant-numeric:tabular-nums; }
+.win-price small{ display:block; font-weight:300; font-size:11.5px; color:var(--mut); }
+
+/* ─── SWITCHER ───────────────────────────────────────────── */
+.tabs{ display:flex; flex-wrap:wrap; gap:10px; margin-top:30px; }
+.tab{ font-family:var(--sans); font-size:13px; font-weight:600; letter-spacing:.03em; padding:13px 22px; border:1px solid var(--line); background:var(--surf); color:var(--char); cursor:pointer; transition:background .15s,color .15s,border-color .15s; display:flex; align-items:center; gap:11px; }
+.tab:hover{ border-color:var(--mut); }
+.tab .dot{ width:11px; height:11px; flex:none; }
+.tab[aria-selected="true"]{ background:var(--ink); color:#fff; border-color:var(--ink); }
+:root[data-theme="dark"] .tab[aria-selected="true"], :root:not([data-theme="light"]) .tab[aria-selected="true"]{ color:var(--paper); }
+.tab-cw .dot{ background:#1a4f55; }
+.tab-bq .dot{ background:#2d5e3a; }
+
+/* ─── PAINEL ─────────────────────────────────────────────── */
+.opt-hd{ background:var(--dest); padding:34px 0; position:relative; }
+.opt-hd::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.opt-tag{ font-size:9.5px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.66); }
+.opt-title{ margin-top:9px; font-weight:700; font-size:clamp(22px,3.4vw,32px); color:#fff; line-height:1.14; text-wrap:balance; }
+.opt-sub{ margin-top:8px; font-size:14px; font-weight:300; color:rgba(255,255,255,.75); max-width:62ch; }
+
+/* ─── TIMELINE ───────────────────────────────────────────── */
+.tl{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; }
+.tl-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--dest); padding:18px 18px 16px; }
+.tl-badge{ display:inline-flex; align-items:center; justify-content:center; min-width:30px; height:30px; padding:0 9px; background:var(--dest); color:#fff; font-weight:700; font-size:12.5px; font-variant-numeric:tabular-nums; }
+.tl-city{ margin-top:13px; font-weight:600; font-size:17px; color:var(--ink); }
+.tl-meta{ margin-top:5px; font-size:12.5px; font-weight:300; color:var(--mut); }
+.tl-move{ margin-top:11px; padding-top:11px; border-top:1px solid var(--line); font-size:11.5px; font-weight:400; color:var(--char); }
+
+/* ─── CARTÃO DE HOTEL ────────────────────────────────────── */
+.hotel{ margin-top:26px; background:var(--surf); border:1px solid var(--line); display:grid; grid-template-columns:1fr; }
+@media (min-width:760px){ .hotel{ grid-template-columns:1.2fr 1fr; } }
+.hotel-txt{ padding:26px 24px; }
+.hotel-txt p{ font-size:14.5px; font-weight:400; color:var(--char); }
+.hotel-txt p + p{ margin-top:10px; }
+.hotel-card{ background:var(--surf2); padding:26px 24px; border-left:0; border-top:1px solid var(--line); }
+@media (min-width:760px){ .hotel-card{ border-top:0; border-left:1px solid var(--line); } }
+.hotel-name{ font-weight:700; font-size:19px; color:var(--ink); line-height:1.2; }
+.stars{ color:var(--gold); letter-spacing:.12em; font-size:14px; margin-top:4px; }
+.hotel-dl{ margin-top:16px; display:grid; grid-template-columns:auto 1fr; gap:7px 14px; font-size:13px; }
+.hotel-dl dt{ font-family:var(--lbl); font-weight:700; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--mut); padding-top:2px; }
+.hotel-dl dd{ font-weight:300; color:var(--char); }
+.hotel-dl dd b{ font-weight:600; color:var(--ink); }
+
+/* ─── DIA A DIA ──────────────────────────────────────────── */
+.days{ margin-top:26px; border-top:1px solid var(--line); }
+.day{ display:grid; grid-template-columns:132px 1fr; gap:22px; padding:19px 0; border-bottom:1px solid var(--line); }
+.day-h{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--dest); line-height:1.5; font-variant-numeric:tabular-nums; }
+.day-h .cty{ display:block; color:var(--mut); font-size:10.5px; letter-spacing:.14em; margin-top:3px; }
+.day-t{ font-size:14.5px; font-weight:300; color:var(--char); }
+.day-t b{ font-weight:600; color:var(--ink); }
+.day-t .tour{ color:var(--gold); font-weight:600; }
+.day.travel{ background:var(--surf2); margin:0 -14px; padding:15px 14px; }
+.day.travel .day-t{ font-size:13.5px; }
+
+/* ─── VOOS ───────────────────────────────────────────────── */
+.flights{ margin-top:22px; display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:760px){ .flights{ grid-template-columns:1fr 1fr; } }
+.fl{ background:var(--surf); border:1px solid var(--line); padding:18px 20px; }
+.fl-h{ font-family:var(--lbl); font-weight:700; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--dest); }
+.fl-row{ display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid var(--line); font-size:13.5px; }
+.fl-row:last-child{ border-bottom:0; }
+.fl-row .t{ font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.fl-row .d{ font-weight:300; color:var(--char); }
+.fl-note{ margin-top:10px; font-size:12px; font-weight:300; color:var(--mut); }
+
+/* ─── TABELA DE VALORES ──────────────────────────────────── */
+.tbl{ margin-top:24px; width:100%; border-collapse:collapse; font-size:14px; }
+.tbl th{ font-family:var(--lbl); font-weight:700; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); text-align:left; padding:10px 8px; border-bottom:2px solid var(--gold); }
+.tbl td{ padding:12px 8px; border-bottom:1px solid var(--line); vertical-align:top; font-weight:300; color:var(--char); }
+.tbl td b{ font-weight:600; color:var(--ink); }
+.tbl .num{ text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.tbl .sub{ font-size:12px; color:var(--mut); display:block; font-weight:300; }
+.tbl tr.total td{ background:#1a1510; color:#fff; font-weight:600; border-bottom:3px solid var(--gold); }
+.tbl tr.total td b{ color:var(--gold); }
+.note{ margin-top:12px; font-size:12.5px; font-weight:300; color:var(--mut); }
+.note b{ font-weight:600; color:var(--char); }
+.tbl-wrap{ overflow-x:auto; }
+
+/* ─── CALLOUTS ───────────────────────────────────────────── */
+.call{ margin-top:22px; border:1px solid var(--line); border-left:3px solid var(--gold); background:var(--surf); padding:16px 18px; font-size:14px; font-weight:300; }
+.call b{ font-weight:600; color:var(--ink); }
+.call.warn{ border-left-color:var(--warn); }
+.list{ margin-top:16px; padding-left:18px; font-size:14.5px; font-weight:300; }
+.list li{ margin-top:8px; }
+.list li b{ font-weight:600; color:var(--ink); }
+.grid2{ margin-top:22px; display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:760px){ .grid2{ grid-template-columns:1fr 1fr; } }
+.box{ background:var(--surf); border:1px solid var(--line); padding:18px 20px; }
+.box h3{ font-weight:600; font-size:15px; color:var(--ink); }
+.box p{ margin-top:8px; font-size:13.5px; font-weight:300; }
+.box p b{ font-weight:600; color:var(--ink); }
+
+/* ─── RODAPÉ / ASSINATURA ────────────────────────────────── */
+.ft{ background:#1a1510; padding:44px 0 40px; position:relative; margin-top:0; }
+.ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
+.ft-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.ft-sig{ margin-top:18px; display:flex; flex-wrap:wrap; gap:10px 34px; font-family:var(--con); font-size:13px; color:rgba(240,232,222,.72); }
+.ft-sig a{ color:rgba(240,232,222,.72); text-decoration:none; border-bottom:1px solid rgba(218,141,0,.5); }
+.ft-sig a:hover{ color:var(--gold); }
+.ft-addr{ margin-top:16px; font-family:var(--con); font-size:11.5px; color:rgba(240,232,222,.38); }
+
+@media (max-width:640px){
+  .day{ grid-template-columns:1fr; gap:7px; }
+}
+@media print{
+  .tabs{ display:none; }
+  [role="tabpanel"][hidden]{ display:block !important; }
+  .opt-hd{ break-before:page; }
+  .sec{ padding:32px 0; }
+  a{ color:inherit; }
+}
+</style>
+</head>
+<body>
+<header class="mh">
+  <div class="wrap">
+    <div class="mh-logo">LusaTravel</div>
+    <div class="mh-kick">Cotação para sua viagem</div>
+    <h1 class="mh-name">Gustavo e família</h1>
+    <div class="mh-dest">Curaçao · Uma semana para descansar</div>
+    <p class="mh-sub">Sete noites em um único resort à beira-mar, voando de executiva pela Copa Airlines com cama plana no trecho longo. Curaçao é a ilha mais tranquila do Caribe holandês com voo direto da região Sul, e <strong>janeiro</strong> é o mês que combina o melhor clima, o menor preço e disponibilidade real de assentos e quartos.</p>
+    <div class="mh-stats">
+      <div class="mh-stat"><div class="v">7</div><div class="k">Noites</div></div>
+      <div class="mh-stat"><div class="v">2+2</div><div class="k">Adultos e crianças</div></div>
+      <div class="mh-stat"><div class="v">Executiva</div><div class="k">Copa Airlines</div></div>
+      <div class="mh-stat"><div class="v">Janeiro</div><div class="k">Mês sugerido</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════ QUANDO IR ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Quando ir</div>
+    <h2 class="h2">Natal, Réveillon ou janeiro?</h2>
+    <p class="lead">Com as crianças de férias a partir de 18 de dezembro, cotamos as quatro janelas possíveis de uma semana. Duas delas não fecham na prática: no Natal a executiva da Copa não aparece disponível, e no Réveillon o Marriott está sem quartos e os voos de executiva estão nos últimos assentos. <b>Janeiro entrega a mesma viagem por até R$ 16 mil a menos</b>, com o mar mais calmo e sem as pancadas de chuva de dezembro.</p>
+    <div class="goldbar"></div>
+
+    <div class="win">
+      <div class="win-item no">
+        <div class="win-tag">Natal · não recomendado</div>
+        <div class="win-title">19 a 26 de dezembro</div>
+        <div class="win-meta">Sáb a sáb · 7 noites</div>
+        <div class="win-body">Nenhum assento de executiva da Copa foi encontrado saindo de Florianópolis ou Guarulhos. A única rota com executiva passa por Bogotá com quase dois dias de viagem. Marriott disponível a <b>USD 3.350</b>, mas sem aéreo viável.</div>
+        <div class="win-price">Aéreo indisponível<small>Confirmar diretamente com a Copa; tendência é esgotado</small></div>
+      </div>
+      <div class="win-item no">
+        <div class="win-tag">Réveillon · não recomendado</div>
+        <div class="win-title">27 de dezembro a 3 de janeiro</div>
+        <div class="win-meta">Dom a dom · 7 noites</div>
+        <div class="win-body"><b>Marriott sem disponibilidade</b> para 7 noites. Copa executiva só por Guarulhos, últimos assentos, com o trecho Navegantes–Guarulhos à parte. Réveillon é o pico de preço e movimento da ilha, o oposto do que a família procura.</div>
+        <div class="win-price">USD 4.412 por pessoa<small>Só o aéreo, por Guarulhos, sem o hotel escolhido</small></div>
+      </div>
+      <div class="win-item rec">
+        <div class="win-tag">Recomendada</div>
+        <div class="win-title">9 a 16 de janeiro</div>
+        <div class="win-meta">Sáb a sáb · 7 noites</div>
+        <div class="win-body">Executiva Copa por Florianópolis com assentos, Marriott com quarto, alta temporada de clima seco e ilha já mais vazia após o Ano-Novo. Volta um dia antes de muitas escolas retomarem.</div>
+        <div class="win-price">USD 4.228 por pessoa<small>Aéreo executiva, tarifa flexível · Marriott USD 3.523 por 7 noites</small></div>
+      </div>
+      <div class="win-item">
+        <div class="win-tag">Mais econômica</div>
+        <div class="win-title">16 a 23 de janeiro</div>
+        <div class="win-meta">Sáb a sáb · 7 noites</div>
+        <div class="win-body">Mesmos voos, uma semana depois. O aéreo cai <b>USD 774 por pessoa</b>, cerca de R$ 16 mil na família. Vale se as férias escolares permitirem voltar no dia 24.</div>
+        <div class="win-price">USD 3.454 por pessoa<small>Aéreo executiva, tarifa flexível · hotel a confirmar na data</small></div>
+      </div>
+    </div>
+
+    <div class="call">
+      <b>Por que Curaçao e não Aruba, Punta Cana ou Cancún.</b> A família quer descansar, não consome álcool e não precisa de all-inclusive. Punta Cana e Cancún são resorts de all-inclusive com bebida e animação; Aruba é a mais americanizada e cara das três ilhas ABC. Curaçao tem praias de enseada calmas, cidade histórica charmosa, boa gastronomia e voo direto da Copa a partir de Florianópolis. Para quem quiser algo ainda mais silencioso, incluímos Bonaire como Proposta B.
+    </div>
+  </div>
+</section>
+
+<!-- ══════ COMO CHEGAR ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Aéreo</div>
+    <h2 class="h2">Executiva Copa a partir de Florianópolis</h2>
+    <p class="lead">A Copa não opera em Navegantes. O aeroporto mais próximo com voo direto ao Panamá é <b>Florianópolis</b>, a 1h20 de carro de Balneário Camboriú. Esse trecho é voado pelo Boeing 737 MAX 9 com a cabine <b>Dreams</b>, de cama totalmente plana, o que faz diferença no voo noturno de 6h40. A alternativa por Guarulhos exige três voos e uma conexão longa em São Paulo, e não compensa.</p>
+    <div class="goldbar"></div>
+
+    <div class="flights">
+      <div class="fl">
+        <div class="fl-h">Ida · sábado 09/01</div>
+        <div class="fl-row"><span class="t">01:45 → 06:15</span><span class="d">CM 424 · Florianópolis → Panamá · 6h30 · Dreams cama plana</span></div>
+        <div class="fl-row"><span class="t">2h27 conexão</span><span class="d">Hub das Américas, sem trocar de terminal</span></div>
+        <div class="fl-row"><span class="t">08:42 → 12:18</span><span class="d">CM 288 · Panamá → Curaçao · 2h36 · executiva</span></div>
+        <div class="fl-note">Chegada ao meio-dia: almoço e a primeira tarde já na praia do hotel. Saída de Balneário por volta das 22h da sexta-feira, com transfer privativo até Florianópolis.</div>
+      </div>
+      <div class="fl">
+        <div class="fl-h">Volta · sábado 16/01</div>
+        <div class="fl-row"><span class="t">13:14 → 14:52</span><span class="d">CM 289 · Curaçao → Panamá · executiva</span></div>
+        <div class="fl-row"><span class="t">52 min conexão</span><span class="d">Conexão curta, mas protegida: bilhete único da Copa</span></div>
+        <div class="fl-row"><span class="t">15:44 → 00:35</span><span class="d">CM 423 · Panamá → Florianópolis · chegada na madrugada de domingo</span></div>
+        <div class="fl-note">Check-out tranquilo pela manhã e o último mergulho antes do voo. Chegada em Florianópolis à 0h35 de domingo, em casa por volta das 2h.</div>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="box">
+        <h3>O que está incluído na tarifa Business Full</h3>
+        <p>Duas malas de 32 kg por pessoa, bagagem de mão de 10 kg, marcação de assento, sala VIP Copa Club no Panamá, refeição a bordo e <b>cancelamento com reembolso</b>. Alteração de data com taxa de USD 300.</p>
+      </div>
+      <div class="box">
+        <h3>Tarifa das crianças</h3>
+        <p>Cotamos as quatro passagens pela tarifa de adulto, o cenário mais conservador. Na emissão, crianças de 2 a 11 anos podem ter desconto na executiva da Copa. <b>Precisamos das idades exatas</b> para fechar o valor e verificar se o Kids Club do hotel (4 a 10 anos) atende.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ ESCOLHA ══════ -->
+<section class="sec" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="eyebrow">Escolha a proposta</div>
+    <h2 class="h2">Duas ilhas, o mesmo aéreo</h2>
+    <div class="tabs" role="tablist" aria-label="Propostas">
+      <button class="tab tab-cw" role="tab" id="tab-cw" aria-controls="panel-cw" aria-selected="true"><span class="dot"></span>Curaçao · Marriott</button>
+      <button class="tab tab-bq" role="tab" id="tab-bq" aria-controls="panel-bq" aria-selected="false"><span class="dot"></span>Bonaire · ainda mais quieto</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PROPOSTA A · CURAÇAO ══════ -->
+<div class="opt-cw" id="panel-cw" role="tabpanel" aria-labelledby="tab-cw">
+  <div class="opt-hd">
+    <div class="wrap">
+      <div class="opt-tag">Proposta A · recomendada</div>
+      <h2 class="opt-title">Curaçao · Curaçao Marriott Beach Resort</h2>
+      <p class="opt-sub">O hotel que a família já olhou é uma boa escolha: praia própria de enseada, duas piscinas, Kids Club gratuito e, segundo os próprios hóspedes, o lado mais tranquilo da ilha. Fica em Piscadera Bay, a 10 minutos de Willemstad.</p>
+    </div>
+  </div>
+  <section class="sec">
+    <div class="wrap">
+      <div class="eyebrow">Itinerário</div>
+      <h2 class="h2">Um hotel, sete noites, sem trocar de mala</h2>
+      <div class="tl">
+        <div class="tl-item"><span class="tl-badge">7</span><div class="tl-city">Piscadera Bay</div><div class="tl-meta">09 a 16 de janeiro · 7 noites</div><div class="tl-move">Transfer privativo do aeroporto · 20 min</div></div>
+        <div class="tl-item"><span class="tl-badge">3</span><div class="tl-city">Dias de passeio</div><div class="tl-meta">Willemstad · Klein Curaçao · praias do oeste</div><div class="tl-move">Todos com retorno ao hotel no fim da tarde</div></div>
+        <div class="tl-item"><span class="tl-badge">4</span><div class="tl-city">Dias de descanso</div><div class="tl-meta">Praia, piscina e Kids Club</div><div class="tl-move">Sem compromisso de horário</div></div>
+      </div>
+
+      <div class="hotel">
+        <div class="hotel-txt">
+          <div class="eyebrow">Hospedagem</div>
+          <p>Reaberto após reforma completa, o Marriott ocupa uma enseada protegida na costa sul, onde o mar é calmo e transparente. Há uma piscina para famílias e outra só para adultos, três restaurantes, spa e o Green Turtle Kids Club, gratuito e supervisionado, com atividades diárias e saídas monitoradas à praia.</p>
+          <p>É um resort de tamanho médio, sem animação de palco e sem a agitação dos all-inclusive. Os hóspedes elogiam os quartos amplos com vista de mar, a praia e a equipe; a entrada no mar tem trechos de coral, então vale levar sapatilhas aquáticas para as crianças. Nota 8,7 no Booking e 4,4 no Tripadvisor com mais de mil avaliações.</p>
+          <p>Sugerimos o plano <b>apenas com café da manhã</b>: sem consumo de álcool, o all-inclusive do hotel não se paga. Os almoços ficam entre o restaurante da praia e os passeios, e os jantares alternam o resort com Pietermaai, o bairro mais charmoso de Willemstad.</p>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-name">Curaçao Marriott Beach Resort</div>
+          <div class="stars">★★★★★</div>
+          <dl class="hotel-dl">
+            <dt>Quarto</dt><dd><b>1 quarto família</b>, 2 camas queen, 2 adultos + 2 crianças</dd>
+            <dt>Plano</dt><dd>Sem refeições na tarifa · café da manhã USD 29,50 adulto e USD 14,75 criança por dia</dd>
+            <dt>Crianças</dt><dd>Até 16 anos não pagam na cama existente</dd>
+            <dt>Endereço</dt><dd>John F. Kennedy Boulevard 3, Piscadera Bay, Willemstad</dd>
+            <dt>Check-in</dt><dd>09/01 a partir das 16h · check-out 16/01 até 11h</dd>
+            <dt>Tarifa</dt><dd><b>USD 3.522,60</b> por 7 noites, com impostos</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="call">
+        <b>Se quiser gastar menos no hotel:</b> o Blue Bay Golf &amp; Beach Resort, 4 estrelas, nota 8,5, em uma enseada ainda mais isolada 15 minutos ao norte, sai por USD 3.344 nas mesmas datas. É mais simples e pede carro alugado. O Marriott continua sendo a melhor relação entre conforto, praia e proximidade da cidade.
+      </div>
+
+      <div class="eyebrow" style="margin-top:44px">Roteiro dia a dia</div>
+      <h2 class="h2">Sete dias em ritmo de descanso</h2>
+      <p class="lead">Um passeio a cada dois dias, sempre com a manhã ou a tarde livre. Nada de tour de bares ou degustação de licor, que são os passeios mais vendidos na ilha e não fazem sentido para a família.</p>
+      <div class="days">
+        <div class="day travel"><div class="day-h">Sex 08/01<span class="cty">Embarque</span></div><div class="day-t">Transfer privativo de Balneário Camboriú a Florianópolis às 22h. Voo Copa à 1h45 em cama plana, para dormir a noite inteira.</div></div>
+        <div class="day"><div class="day-h">Sáb 09/01<span class="cty">Chegada</span></div><div class="day-t">Chegada às 12h18, transfer de 20 minutos e almoço no hotel. Tarde na <b>praia da enseada</b>, mar calmo para as crianças. Jantar no resort e noite cedo.</div></div>
+        <div class="day"><div class="day-h">Dom 10/01<span class="cty">Descanso</span></div><div class="day-t">Dia inteiro no resort. Kids Club pela manhã para as crianças, piscina de adultos para os pais. Fim de tarde com pôr do sol de frente para o mar, um dos melhores da ilha.</div></div>
+        <div class="day"><div class="day-h">Seg 11/01<span class="cty">Willemstad</span></div><div class="day-t"><span class="tour">Willemstad</span> pela manhã: as fachadas coloridas de <b>Handelskade</b>, a ponte flutuante Rainha Emma e o mercado flutuante de Punda. O trem turístico de uma hora resolve o passeio com as crianças sem cansar. Almoço em Pietermaai e volta ao hotel para a tarde de praia.</div></div>
+        <div class="day"><div class="day-h">Ter 12/01<span class="cty">Klein Curaçao</span></div><div class="day-t"><span class="tour">Klein Curaçao</span> de catamarã, dia inteiro: uma ilha deserta a 2 horas de navegação, com praia branca, farol abandonado e tartarugas no snorkel. Almoço a bordo e refrigerantes incluídos. É o dia mais marcante da viagem; quem enjoa deve tomar o remédio antes de embarcar.</div></div>
+        <div class="day"><div class="day-h">Qua 13/01<span class="cty">Descanso</span></div><div class="day-t">Dia livre para recuperar do passeio de barco. Opcional à tarde: <b>Sea Aquarium e Dolphin Academy</b>, a 20 minutos, onde as crianças veem golfinhos e tubarões de perto sem esforço nenhum.</div></div>
+        <div class="day"><div class="day-h">Qui 14/01<span class="cty">Praias do oeste</span></div><div class="day-t"><span class="tour">Grote Knip, Playa Lagun e Piskado</span> com motorista: as praias de cartão-postal no lado oeste da ilha, com tartarugas marinhas em Piskado e água de piscina em Knip. Saída às 8h30 e volta ao hotel às 13h, para almoço tardio e resto do dia livre.</div></div>
+        <div class="day"><div class="day-h">Sex 15/01<span class="cty">Descanso</span></div><div class="day-t">Último dia inteiro. Manhã na praia, massagem no spa para o casal enquanto as crianças estão no Kids Club. Jantar de despedida com vista para o mar.</div></div>
+        <div class="day travel"><div class="day-h">Sáb 16/01<span class="cty">Retorno</span></div><div class="day-t">Café da manhã sem pressa, check-out e transfer às 10h30 para o voo das 13h14. Chegada em Florianópolis à 0h35 e em casa por volta das 2h de domingo.</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════ PROPOSTA B · BONAIRE ══════ -->
+<div class="opt-bq" id="panel-bq" role="tabpanel" aria-labelledby="tab-bq" hidden>
+  <div class="opt-hd">
+    <div class="wrap">
+      <div class="opt-tag">Proposta B · ainda mais tranquila</div>
+      <h2 class="opt-title">Bonaire · Delfins Beach Resort</h2>
+      <p class="opt-sub">A menor e mais silenciosa das três ilhas holandesas. Sem resorts grandes, sem trânsito e com o mar mais transparente do Caribe para snorkel direto da praia. Chega-se por um voo de 20 minutos a partir de Curaçao.</p>
+    </div>
+  </div>
+  <section class="sec">
+    <div class="wrap">
+      <div class="eyebrow">Itinerário</div>
+      <h2 class="h2">Um voo curto a mais, muito menos gente</h2>
+      <div class="tl">
+        <div class="tl-item"><span class="tl-badge">7</span><div class="tl-city">Kralendijk</div><div class="tl-meta">09 a 16 de janeiro · 7 noites</div><div class="tl-move">Voo Curaçao → Bonaire · 20 min · Divi Divi Air ou EZ Air</div></div>
+        <div class="tl-item"><span class="tl-badge">2</span><div class="tl-city">Dias de passeio</div><div class="tl-meta">Parque Washington Slagbaai · Lac Bay e flamingos</div><div class="tl-move">Carro alugado, a ilha se percorre em 1h</div></div>
+        <div class="tl-item"><span class="tl-badge">5</span><div class="tl-city">Dias de descanso</div><div class="tl-meta">Snorkel na porta do hotel</div><div class="tl-move">Ritmo de vila de pescadores</div></div>
+      </div>
+
+      <div class="hotel">
+        <div class="hotel-txt">
+          <div class="eyebrow">Hospedagem</div>
+          <p>O Delfins é o resort de praia mais completo de Bonaire: piscina grande, restaurante à beira-mar, quartos família com cozinha e uma praia de areia branca em frente à casa de mergulho. Nota 8,6 no Booking. A ilha inteira é um parque marinho e o snorkel começa a dois passos da espreguiçadeira.</p>
+          <p>O que se ganha em silêncio se perde em variedade: Bonaire tem poucas praias de areia, menos restaurantes e nenhum passeio de barco do porte de Klein Curaçao. Para uma família com crianças que quer praia calma e nada de programa, funciona muito bem; para quem gosta de ter opções, Curaçao segue à frente.</p>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-name">Delfins Beach Resort Bonaire</div>
+          <div class="stars">★★★★</div>
+          <dl class="hotel-dl">
+            <dt>Quarto</dt><dd><b>1 quarto família</b>, 2 adultos + 2 crianças</dd>
+            <dt>Plano</dt><dd>Sem refeições na tarifa · café da manhã a confirmar</dd>
+            <dt>Endereço</dt><dd>Punt Vierkant 44, Kralendijk</dd>
+            <dt>Check-in</dt><dd>09/01 · check-out 16/01</dd>
+            <dt>Tarifa</dt><dd><b>USD 3.802,41</b> por 7 noites, com impostos</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="call">
+        <b>Opção de luxo em Bonaire:</b> o Harbour Village Beach Club, boutique de nota 9,1 com praia privativa, spa e transfer incluído, sai por USD 5.309 nas mesmas datas.
+      </div>
+
+      <div class="eyebrow" style="margin-top:44px">Roteiro dia a dia</div>
+      <h2 class="h2">Sete dias com o mínimo de deslocamento</h2>
+      <div class="days">
+        <div class="day travel"><div class="day-h">Sex 08/01<span class="cty">Embarque</span></div><div class="day-t">Transfer de Balneário Camboriú a Florianópolis às 22h. Voo Copa à 1h45 em cama plana.</div></div>
+        <div class="day travel"><div class="day-h">Sáb 09/01<span class="cty">Chegada</span></div><div class="day-t">Chegada a Curaçao às 12h18 e conexão para Bonaire no meio da tarde, 20 minutos de voo. Check-in, mergulho rápido e jantar no hotel.</div></div>
+        <div class="day"><div class="day-h">Dom 10/01<span class="cty">Descanso</span></div><div class="day-t">Praia e piscina do resort. Primeiro <b>snorkel em família</b> na frente do hotel, com peixes-papagaio e tartarugas a poucos metros da areia.</div></div>
+        <div class="day"><div class="day-h">Seg 11/01<span class="cty">Kralendijk</span></div><div class="day-t">Manhã na capital, que se percorre a pé em uma hora: casinhas coloridas, mercado e sorveteria. Retirada do carro alugado. Tarde livre.</div></div>
+        <div class="day"><div class="day-h">Ter 12/01<span class="cty">Sul da ilha</span></div><div class="day-t"><span class="tour">Lac Bay e as salinas</span>: a lagoa rasa e turquesa onde as crianças ficam em pé com água na cintura, os flamingos das salinas cor-de-rosa e as cabanas históricas dos escravos. Meio dia, volta para almoço.</div></div>
+        <div class="day"><div class="day-h">Qua 13/01<span class="cty">Descanso</span></div><div class="day-t">Dia inteiro no hotel. Opcional: passeio de barco de fundo de vidro para as crianças verem o recife sem molhar o cabelo.</div></div>
+        <div class="day"><div class="day-h">Qui 14/01<span class="cty">Washington Slagbaai</span></div><div class="day-t"><span class="tour">Parque Nacional Washington Slagbaai</span> de carro: cactos, iguanas, flamingos selvagens e a praia de Boka Slagbaai. Levar lanche e sair cedo; volta às 15h.</div></div>
+        <div class="day"><div class="day-h">Sex 15/01<span class="cty">Descanso</span></div><div class="day-t">Último dia de praia e snorkel. Devolução do carro no fim da tarde. Jantar de despedida à beira-mar em Kralendijk.</div></div>
+        <div class="day travel"><div class="day-h">Sáb 16/01<span class="cty">Retorno</span></div><div class="day-t">Voo cedo de Bonaire a Curaçao para conectar no Copa das 13h14. Chegada em Florianópolis à 0h35 de domingo.</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════ VALORES ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Valores</div>
+    <h2 class="h2">Quanto custa a Proposta A</h2>
+    <p class="lead">Janela de 9 a 16 de janeiro, 2 adultos e 2 crianças, aéreo em executiva para os quatro. O aéreo representa três quartos do orçamento: é a decisão que mais pesa.</p>
+    <div class="goldbar"></div>
+
+    <div class="tbl-wrap">
+    <table class="tbl">
+      <thead><tr><th>Item</th><th class="num">Por pessoa</th><th class="num">Família (4)</th><th class="num">Em reais</th></tr></thead>
+      <tbody>
+        <tr><td><b>Aéreo executiva Copa</b><span class="sub">Florianópolis – Panamá – Curaçao, ida e volta, tarifa Business Full reembolsável, 2 malas de 32 kg</span></td><td class="num">USD 4.227,70</td><td class="num">USD 16.910,80</td><td class="num">R$ 87.598</td></tr>
+        <tr><td><b>Hospedagem</b><span class="sub">Curaçao Marriott Beach Resort · 7 noites · 1 quarto família · impostos inclusos</span></td><td class="num">—</td><td class="num">USD 3.522,60</td><td class="num">R$ 18.247</td></tr>
+        <tr><td><b>Café da manhã</b><span class="sub">Buffet do hotel · 7 dias · USD 29,50 adulto e USD 14,75 criança</span></td><td class="num">—</td><td class="num">USD 619,50</td><td class="num">R$ 3.209</td></tr>
+        <tr><td><b>Passeios</b><span class="sub">Klein Curaçao de catamarã USD 135 · praias do oeste USD 114 · trem de Willemstad USD 29, por pessoa</span></td><td class="num">USD 277,91</td><td class="num">USD 1.111,64</td><td class="num">R$ 5.758</td></tr>
+        <tr><td><b>Transfers</b><span class="sub">Aeroporto de Curaçao – hotel, privativo, ida e volta</span></td><td class="num">—</td><td class="num">USD 80,00</td><td class="num">R$ 414</td></tr>
+        <tr><td><b>Seguro viagem</b><span class="sub">Cobertura Caribe · 9 dias · estimativa, a cotar com a idade dos passageiros</span></td><td class="num">USD 80,00</td><td class="num">USD 320,00</td><td class="num">R$ 1.658</td></tr>
+        <tr><td><b>Transfer terrestre</b><span class="sub">Balneário Camboriú – aeroporto de Florianópolis, privativo, ida e volta</span></td><td class="num">—</td><td class="num">—</td><td class="num">R$ 500</td></tr>
+        <tr class="total"><td>Total estimado</td><td class="num"></td><td class="num">USD 22.564,54</td><td class="num"><b>≈ R$ 117.400</b></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="note">Cotação 25/09 · USD = 5,18. <b>*Nada reservado, apenas cotado.</b> Valores sujeitos a alteração até a emissão; a tarifa aérea muda diariamente e os assentos de executiva são poucos por voo.</p>
+
+    <div class="grid2">
+      <div class="box">
+        <h3>Semana de 16 a 23 de janeiro</h3>
+        <p>Mesma viagem com aéreo a <b>USD 3.453,80 por pessoa</b>. Total estimado <b>USD 19.469</b>, cerca de <b>R$ 101 mil</b>, uma economia de R$ 16 mil. Tarifa do hotel a confirmar para essas datas.</p>
+      </div>
+      <div class="box">
+        <h3>Proposta B · Bonaire</h3>
+        <p>Aéreo igual, mais o voo Curaçao–Bonaire (cerca de <b>USD 180 por pessoa</b> ida e volta) e o Delfins a USD 3.802. Menos passeios pagos, carro alugado 3 dias. Total estimado <b>USD 22.400</b>, praticamente o mesmo da Proposta A.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CONDIÇÕES ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Condições</div>
+    <h2 class="h2">O que precisamos para fechar</h2>
+    <ul class="list">
+      <li><b>Idades das crianças.</b> Definem a tarifa aérea infantil, a política do hotel e se o Kids Club (4 a 10 anos) atende.</li>
+      <li><b>Data de volta às aulas.</b> Decide entre a semana de 9 ou de 16 de janeiro; a segunda economiza R$ 16 mil.</li>
+      <li><b>Nomes como no passaporte e validade.</b> Curaçao e Panamá exigem passaporte com validade mínima de 6 meses. Brasileiros não precisam de visto para nenhum dos dois.</li>
+      <li><b>Decisão rápida sobre o aéreo.</b> A executiva do 737 MAX 9 tem 16 assentos; nas datas cotadas restavam poucos. A tarifa é reembolsável, então emitir cedo não trava a família.</li>
+    </ul>
+    <div class="call warn">
+      <b>Não está incluído:</b> almoços e jantares, gorjetas, aluguel de carro, atividades opcionais como Sea Aquarium e spa, taxas de saída não cobradas no bilhete e despesas pessoais. Curaçao aceita dólar e cartão em toda parte.
+    </div>
+    <div class="grid2">
+      <div class="box">
+        <h3>Pagamento</h3>
+        <p>Aéreo em até <b>10x sem juros</b> no cartão. Hospedagem e serviços em até 6x. <b>Desconto de 5% para pagamento via PIX</b> da parte terrestre.</p>
+      </div>
+      <div class="box">
+        <h3>Clima em janeiro</h3>
+        <p>Estação seca, <b>28 a 30 °C</b> de dia e 24 °C à noite, vento constante que ameniza o calor. Curaçao fica fora do cinturão de furacões. Dezembro ainda tem pancadas curtas de chuva; janeiro, quase nenhuma.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-logo">LusaTravel</div>
+    <div class="ft-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <div class="ft-addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs = [document.getElementById('tab-cw'), document.getElementById('tab-bq')];
+  var panels = [document.getElementById('panel-cw'), document.getElementById('panel-bq')];
+  function select(i){
+    tabs.forEach(function(t,n){ t.setAttribute('aria-selected', n===i ? 'true':'false'); });
+    panels.forEach(function(p,n){ p.hidden = (n!==i); });
+  }
+  tabs.forEach(function(t,i){ t.addEventListener('click', function(){ select(i); }); });
+})();
+</script>
+</body>
+</html>
