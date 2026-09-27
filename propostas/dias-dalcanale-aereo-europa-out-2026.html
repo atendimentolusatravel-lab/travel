@@ -142,10 +142,24 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .dead .k{ margin-bottom:1mm; }
 .dead .v{ font-size:9.5pt; }
 .dead .v b{ font-size:11pt; display:block; }
+
+/* ══ SIMPLIFICADA ══ */
+.opt{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-top:5mm; }
+.opt .top{ background:var(--dest); color:#fff; padding:3.5mm 8mm; display:flex; align-items:center; gap:5mm; }
+.opt .top .no{ width:10mm; height:10mm; border-radius:50%; border:2px solid rgba(218,141,0,.9); color:var(--gold); font-weight:800; font-size:11pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.opt .top .name{ font-size:14pt; font-weight:700; }
+.opt .top .name small{ font-size:9pt; font-weight:400; color:rgba(255,255,255,.7); margin-left:3mm; }
+.opt .top .pill{ color:#fff; border-color:var(--gold); background:var(--gold); margin-left:auto; }
+.opt .legs{ padding:1.5mm 8mm 2mm; } .opt .leg{ padding:2.4mm 0; }
+.opt .cabins{ display:grid; grid-template-columns:1.1fr 1.1fr .8fr; gap:3mm 8mm; padding:3mm 8mm; background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.opt .tot{ display:flex; justify-content:space-between; align-items:center; padding:3.5mm 8mm; background:var(--ink); }
+.opt .tot .lbl{ font-size:10pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.opt .tot .lbl small{ display:block; font-size:8pt; font-weight:400; letter-spacing:.04em; color:rgba(255,255,255,.45); margin-top:1mm; }
+.opt .tot .amt{ font-size:18pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; }
+.cmp td.tot{ font-size:12pt; }
 </style>
 </head>
 <body>
-
 <!-- ══════════ 01 · CAPA ══════════ -->
 <section class="page cover">
   <div class="cover-hd"><div class="logo">LUSATRAVEL</div><div class="tag">Glossário</div></div>
@@ -164,15 +178,15 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   <div class="cover-scrim"></div>
   <div class="cover-cnt">
     <div class="cover-kicker">Cotação para sua viagem</div>
-    <div class="cover-basis">Baseado em 6 adultos · 05/06 de outubro a 25–28 de outubro de 2026 · Aéreo internacional</div>
+    <div class="cover-basis">Baseado em 6 adultos · 05/06 de outubro a 25–27 de outubro de 2026 · Aéreo internacional</div>
     <div class="cover-to">Sua viagem para:</div>
     <div class="cover-name">Família Dias Dalcanale</div>
-    <div class="cover-dest">Itália · Europa</div>
+    <div class="cover-dest">Europa · Roma, Madri ou Paris</div>
     <div class="stats">
       <div class="stat"><b>6</b><span>Passageiros</span></div>
-      <div class="stat"><b>3</b><span>Grupos de viagem</span></div>
-      <div class="stat"><b>2</b><span>Opções aéreas</span></div>
-      <div class="stat"><b>20</b><span>Noites na Europa</span></div>
+      <div class="stat"><b>2</b><span>Grupos de viagem</span></div>
+      <div class="stat"><b>3</b><span>Opções de destino</span></div>
+      <div class="stat"><b>3</b><span>Semanas na Europa</span></div>
     </div>
   </div>
   <div class="cover-sig">
@@ -182,35 +196,30 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   </div>
 </section>
 
-<!-- ══════════ 02 · PASSAGEIROS & OPÇÕES ══════════ -->
+<!-- ══════════ 02 · PASSAGEIROS ══════════ -->
 <section class="page">
   <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Passageiros</div></div>
   <div class="goldbar"></div>
   <div class="body">
     <div class="eyebrow">Quem viaja</div>
     <h2 class="h2">Passageiros e grupos de viagem</h2>
-    <p class="lead">Seis adultos da família viajando juntos para a Europa em outubro de 2026, com saída de São Paulo. Para respeitar o conforto e o ritmo de cada um, a cotação foi organizada em <b>três grupos</b>: um em classe executiva, um em econômica e a Priscila com retorno um dia antes na opção via Roma. Duas rotas foram cotadas: <b>ITA Airways direto para Roma</b> e <b>Air China direto para Madri</b>.</p>
+    <p class="lead">Seis adultos da família viajando juntos para a Europa em outubro de 2026, com saída de São Paulo. A cotação foi organizada em <b>dois grupos</b>, um em classe executiva e outro em econômica, sempre no mesmo voo. Três portas de entrada foram cotadas: <b>Roma</b>, <b>Madri</b> e <b>Paris</b>.</p>
 
-    <div class="groups">
+    <div class="groups" style="grid-template-columns:1fr 1fr">
       <div class="gcard">
-        <div class="top"><div class="no">1</div><div><div class="ttl">Executiva</div><div class="sub">2 passageiras · Business Comfort</div></div></div>
+        <div class="top"><div class="no">1</div><div><div class="ttl">Executiva</div><div class="sub">2 passageiras</div></div></div>
         <ul>
           <li>Regina Célia Dias Dalcanale</li>
           <li>Laura Dias Dalcanale Pereira Alves</li>
         </ul>
       </div>
       <div class="gcard">
-        <div class="top"><div class="no">2</div><div><div class="ttl">Econômica Comfort</div><div class="sub">3 passageiros · Economy Comfort</div></div></div>
+        <div class="top"><div class="no">2</div><div><div class="ttl">Econômica</div><div class="sub">4 passageiros</div></div></div>
         <ul>
           <li>Adriana Dias Dalcanale</li>
+          <li>Priscila Dias Dalcanale</li>
           <li>Artur Dalcanale Pereira Alves</li>
           <li>Amanda Lídia Barbosa de Moura</li>
-        </ul>
-      </div>
-      <div class="gcard">
-        <div class="top"><div class="no">3</div><div><div class="ttl">Econômica Comfort</div><div class="sub">1 passageira · retorno em 26/10</div></div></div>
-        <ul>
-          <li>Priscila Dias Dalcanale</li>
         </ul>
       </div>
     </div>
@@ -219,13 +228,18 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <h2 class="h2" style="font-size:18pt">Resumo</h2>
     <div class="tl">
       <div class="tl-item"><div class="tl-badge">1</div><div>
-        <div class="tl-city">ITA Airways · São Paulo ⇄ Roma <span class="pill">Recomendada</span></div>
-        <div class="tl-meta">Toda a família no mesmo voo direto GRU → FCO em 06/10 · retorno direto FCO → GRU em 26/10 (Priscila) e 27/10 (demais)<br>Executiva para o grupo 1 · Economy Comfort para os grupos 2 e 3</div>
+        <div class="tl-city">Roma · ITA Airways <span class="pill">Recomendada</span></div>
+        <div class="tl-meta">Voo direto São Paulo ⇄ Roma · 06/10 a 27/10 · Airbus A330-900 · toda a família no mesmo voo</div>
       </div></div>
       <div class="tl-line"></div>
       <div class="tl-item"><div class="tl-badge alt">2</div><div>
-        <div class="tl-city">Air China · São Paulo ⇄ Madri</div>
-        <div class="tl-meta">Toda a família no mesmo voo direto GRU → MAD em 05/10 · retorno direto MAD → GRU em 25/10 · Boeing 787-9<br>Business Flex para o grupo 1 · Economy Flex para os grupos 2 e 3 (retorno na mesma data)</div>
+        <div class="tl-city">Madri · Air China</div>
+        <div class="tl-meta">Voo direto São Paulo ⇄ Madri · 05/10 a 25/10 · Boeing 787-9 · toda a família no mesmo voo</div>
+      </div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge alt">3</div><div>
+        <div class="tl-city">Paris · GOL, operado pela Air France</div>
+        <div class="tl-meta">Voo direto São Paulo ⇄ Paris · 06/10 a 26/10 · Boeing 777-300ER · toda a família no mesmo voo</div>
       </div></div>
     </div>
   </div>
@@ -234,167 +248,86 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   </div>
 </section>
 
-<!-- ══════════ 03 · OPÇÃO 1 — ITA AIRWAYS ══════════ -->
+<!-- ══════════ 03 · OPÇÕES ══════════ -->
 <section class="page">
-  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Opção 1 · Recomendada</div></div>
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Opções</div></div>
   <div class="goldbar"></div>
   <div class="body">
-    <div class="eyebrow">Opção 1 · Voo direto</div>
-    <h2 class="h2">ITA Airways · São Paulo ⇄ Roma</h2>
-    <p class="lead">Chegar a Roma sem conexão, todos juntos no mesmo Airbus A330-900, é o cenário mais confortável para uma viagem em família com três gerações. A ida é noturna, com chegada no fim da manhã, e a volta parte às 21h50 de Fiumicino. Nada de esperas em hubs: a viagem começa e termina onde o roteiro acontece.</p>
+    <div class="eyebrow">Voos e investimento</div>
+    <h2 class="h2">As três opções</h2>
+    <p class="lead" style="font-size:10.5pt">Todas as opções são em voo direto, com a família inteira no mesmo avião na ida e na volta. Valores com tarifa e taxas de embarque para os seis passageiros.</p>
 
-    <div class="fcard">
-      <div class="top"><div class="name">Grupo 1 <small>Regina Célia · Laura</small></div><div class="cab">Business Comfort · Executiva</div></div>
-      <div class="legs">
-        <div class="leg"><div class="fn">AZ 679<b>06 OUT</b></div><div class="ap">GRU 18:55<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">FCO 11:30 <small>Roma Fiumicino · Terminal 3 · chegada 07 OUT</small></div><div class="dur">Airbus A330-900<br>2 malas despachadas</div></div>
-        <div class="leg"><div class="fn">AZ 674<b>27 OUT</b></div><div class="ap">FCO 21:50<small>Roma Fiumicino · Terminal 1</small></div><div class="arrow">direto</div><div class="ap">GRU 06:25 <small>São Paulo · Terminal 3 · chegada 28 OUT</small></div><div class="dur">Airbus A330-900<br>2 malas despachadas</div></div>
+    <div class="opt">
+      <div class="top"><div class="no">1</div><div class="name">Roma · ITA Airways<small>São Paulo ⇄ Roma Fiumicino</small></div><span class="pill">Recomendada</span></div>
+      <div class="legs"><div class="leg"><div class="fn">AZ 679<b>06 OUT</b></div><div class="ap">GRU 18:55<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">FCO 11:30 <small>Roma · Terminal 3 · chegada 07 OUT</small></div><div class="dur">Airbus A330-900</div></div><div class="leg"><div class="fn">AZ 674<b>27 OUT</b></div><div class="ap">FCO 21:50<small>Roma · Terminal 1</small></div><div class="arrow">direto</div><div class="ap">GRU 06:25 <small>São Paulo · Terminal 3 · chegada 28 OUT</small></div><div class="dur">Airbus A330-900</div></div></div>
+      <div class="cabins">
+        <div><div class="k">Grupo 1 · 2 passageiras · executiva</div><div class="v"><b>Business Comfort</b> · 2 malas despachadas</div></div>
+        <div><div class="k">Grupo 2 · 4 passageiros · econômica</div><div class="v"><b>Economy Comfort</b> · 1 mala de 23 kg</div></div>
+        <div><div class="k">Pré-reserva válida até</div><div class="v"><b>30/09 · 10h15</b></div></div>
       </div>
-      <div class="rows">
-        <div><div class="k">Valor por pessoa</div><div class="price">R$ 32.186,44<small>tarifa + taxas de embarque</small></div></div>
-        <div><div class="k">Tarifa base</div><div class="v"><b>USD 5.678,00</b> · classe D</div></div>
-        <div><div class="k">Bagagem</div><div class="v"><b>2 peças</b> despachadas + mão</div></div>
-        <div><div class="k">Localizador</div><div class="v">J6RJXC · prazo <b>30/09 10h15</b></div></div>
-      </div>
+      <div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 executiva + 4 econômica · 06/10 – 27/10 · Priscila retorna em 26/10</small></span><span class="amt">R$ 100.773,58</span></div>
     </div>
 
-    <div class="fcard">
-      <div class="top"><div class="name">Grupo 2 <small>Adriana · Artur · Amanda</small></div><div class="cab">Economy Comfort</div></div>
-      <div class="legs">
-        <div class="leg"><div class="fn">AZ 679<b>06 OUT</b></div><div class="ap">GRU 18:55<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">FCO 11:30 <small>Roma Fiumicino · chegada 07 OUT</small></div><div class="dur">Airbus A330-900<br>1 mala de 23 kg</div></div>
-        <div class="leg"><div class="fn">AZ 674<b>27 OUT</b></div><div class="ap">FCO 21:50<small>Roma Fiumicino · Terminal 1</small></div><div class="arrow">direto</div><div class="ap">GRU 06:25 <small>São Paulo · chegada 28 OUT</small></div><div class="dur">Airbus A330-900<br>1 mala de 23 kg</div></div>
+
+    <div class="opt">
+      <div class="top"><div class="no">2</div><div class="name">Madri · Air China<small>São Paulo ⇄ Madri Barajas</small></div></div>
+      <div class="legs"><div class="leg"><div class="fn">CA 898<b>05 OUT</b></div><div class="ap">GRU 09:25<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">MAD 00:45 <small>Madri · Terminal 1 · chegada 06 OUT</small></div><div class="dur">Boeing 787-9</div></div><div class="leg"><div class="fn">CA 897<b>25 OUT</b></div><div class="ap">MAD 22:30<small>Madri · Terminal 1</small></div><div class="arrow">direto</div><div class="ap">GRU 05:30 <small>São Paulo · Terminal 3 · chegada 26 OUT</small></div><div class="dur">Boeing 787-9</div></div></div>
+      <div class="cabins">
+        <div><div class="k">Grupo 1 · 2 passageiras · executiva</div><div class="v"><b>Business Flex</b> · 2 malas despachadas</div></div>
+        <div><div class="k">Grupo 2 · 4 passageiros · econômica</div><div class="v"><b>Economy Flex</b> · 2 malas despachadas</div></div>
+        <div><div class="k">Pré-reserva válida até</div><div class="v"><b>28/09 · 12h51</b></div></div>
       </div>
-      <div class="rows">
-        <div><div class="k">Valor por pessoa</div><div class="price">R$ 8.995,87<small>tarifa + taxas de embarque</small></div></div>
-        <div><div class="k">Tarifa base</div><div class="v"><b>USD 1.528,00</b> · classes V / Q</div></div>
-        <div><div class="k">Bagagem</div><div class="v"><b>1 peça</b> despachada + mão</div></div>
-        <div><div class="k">Localizador</div><div class="v">J6RL7V · prazo <b>30/09 10h24</b></div></div>
-      </div>
+      <div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 executiva + 4 econômica · 05/10 – 25/10</small></span><span class="amt">R$ 77.926,14</span></div>
     </div>
 
-    <div class="fcard">
-      <div class="top"><div class="name">Grupo 3 <small>Priscila</small></div><div class="cab">Economy Comfort</div></div>
-      <div class="legs">
-        <div class="leg"><div class="fn">AZ 679<b>06 OUT</b></div><div class="ap">GRU 18:55<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">FCO 11:30 <small>Roma Fiumicino · chegada 07 OUT</small></div><div class="dur">Airbus A330-900<br>1 mala de 23 kg</div></div>
-        <div class="leg"><div class="fn">AZ 674<b>26 OUT</b></div><div class="ap">FCO 21:50<small>Roma Fiumicino · Terminal 1</small></div><div class="arrow">direto</div><div class="ap">GRU 06:25 <small>São Paulo · chegada 27 OUT</small></div><div class="dur">Airbus A330-900<br>1 mala de 23 kg</div></div>
+
+    <div class="opt">
+      <div class="top"><div class="no">3</div><div class="name">Paris · GOL / Air France<small>São Paulo ⇄ Paris Charles de Gaulle</small></div></div>
+      <div class="legs"><div class="leg"><div class="fn">G3 5000<b>06 OUT</b></div><div class="ap">GRU 14:40<small>São Paulo · operado pela Air France</small></div><div class="arrow">direto</div><div class="ap">CDG 07:00 <small>Paris · chegada 07 OUT</small></div><div class="dur">Boeing 777-300ER</div></div><div class="leg"><div class="fn">G3 5003<b>26 OUT</b></div><div class="ap">CDG 23:20<small>Paris · operado pela Air France</small></div><div class="arrow">direto</div><div class="ap">GRU 07:20 <small>São Paulo · chegada 27 OUT</small></div><div class="dur">Boeing 777-300ER</div></div></div>
+      <div class="cabins">
+        <div><div class="k">Grupo 1 · 2 passageiras · executiva</div><div class="v"><b>Executiva</b> · 2 malas de 23 kg</div></div>
+        <div><div class="k">Grupo 2 · 4 passageiros · econômica</div><div class="v"><b>Econômica Classic</b> · 1 mala de 23 kg</div></div>
+        <div><div class="k">Pré-reserva válida até</div><div class="v"><b>29/09 · 23h59</b></div></div>
       </div>
-      <div class="rows">
-        <div><div class="k">Valor por pessoa</div><div class="price">R$ 9.413,09<small>tarifa + taxas de embarque</small></div></div>
-        <div><div class="k">Tarifa base</div><div class="v"><b>USD 1.603,00</b> · classes V / H</div></div>
-        <div><div class="k">Bagagem</div><div class="v"><b>1 peça</b> despachada + mão</div></div>
-        <div><div class="k">Localizador</div><div class="v">J6RLSH · prazo <b>30/09 10h28</b></div></div>
-      </div>
+      <div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 executiva + 4 econômica · 06/10 – 26/10</small></span><span class="amt">R$ 114.296,18</span></div>
     </div>
 
-    <p class="note">Os três grupos embarcam no <b>mesmo voo de ida</b>. Na volta, a Priscila retorna em 26/10 e os demais em 27/10, ambos no AZ 674. Assentos ainda não marcados; a marcação segue a regra tarifária de cada cabine.</p>
+
+    <p class="note">Cotação 27/09 · USD = 5,1991 (câmbio BRT no momento da reserva) · <b>*Nada reservado, apenas cotado</b> — as pré-reservas têm prazo e não garantem tarifa até a emissão.</p>
   </div>
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
   </div>
 </section>
 
-<!-- ══════════ 04 · OPÇÃO 2 — AIR CHINA ══════════ -->
+<!-- ══════════ 04 · COMPARATIVO E CONDIÇÕES ══════════ -->
 <section class="page">
-  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Opção 2</div></div>
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Comparativo · Condições</div></div>
   <div class="goldbar"></div>
   <div class="body">
-    <div class="eyebrow">Opção 2 · Voo direto</div>
-    <h2 class="h2">Air China · São Paulo ⇄ Madri</h2>
-    <p class="lead">A rota mais econômica: toda a família no mesmo Boeing 787-9, saindo de São Paulo na manhã de 05/10 e chegando a Madri à meia-noite. Tarifas <b>Flex</b> nas duas cabines, com 2 malas despachadas por pessoa. Atenção: o destino final é <b>Madri</b>, não Roma. Para seguir à Itália é preciso um voo adicional, ainda não cotado.</p>
-
-    <div class="fcard">
-      <div class="top"><div class="name">Grupo 1 <small>Regina Célia · Laura</small></div><div class="cab">Business Flex · Executiva</div></div>
-      <div class="legs">
-        <div class="leg"><div class="fn">CA 898<b>05 OUT</b></div><div class="ap">GRU 09:25<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">MAD 00:45 <small>Madri Barajas · Terminal 1 · chegada 06 OUT</small></div><div class="dur">Boeing 787-9<br>2 malas despachadas</div></div>
-        <div class="leg"><div class="fn">CA 897<b>25 OUT</b></div><div class="ap">MAD 22:30<small>Madri Barajas · Terminal 1</small></div><div class="arrow">direto</div><div class="ap">GRU 05:30 <small>São Paulo · Terminal 3 · chegada 26 OUT</small></div><div class="dur">Boeing 787-9<br>2 malas despachadas</div></div>
-      </div>
-      <div class="rows">
-        <div><div class="k">Valor por pessoa</div><div class="price">R$ 24.681,19<small>tarifa + taxas + fee</small></div></div>
-        <div><div class="k">Tarifa base</div><div class="v"><b>USD 4.360,00</b> · classe D</div></div>
-        <div><div class="k">Bagagem</div><div class="v"><b>2 peças</b> despachadas + mão</div></div>
-        <div><div class="k">Localizador</div><div class="v">FIVRCL · prazo <b>28/09 12h51</b></div></div>
-      </div>
-    </div>
-
-    <div class="fcard">
-      <div class="top"><div class="name">Grupos 2 e 3 <small>Adriana · Priscila · Artur · Amanda</small></div><div class="cab">Economy Flex · Econômica</div></div>
-      <div class="legs">
-        <div class="leg"><div class="fn">CA 898<b>05 OUT</b></div><div class="ap">GRU 09:25<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">MAD 00:45 <small>Madri Barajas · Terminal 1 · chegada 06 OUT</small></div><div class="dur">Boeing 787-9<br>2 malas despachadas</div></div>
-        <div class="leg"><div class="fn">CA 897<b>25 OUT</b></div><div class="ap">MAD 22:30<small>Madri Barajas · Terminal 1</small></div><div class="arrow">direto</div><div class="ap">GRU 05:30 <small>São Paulo · Terminal 3 · chegada 26 OUT</small></div><div class="dur">Boeing 787-9<br>2 malas despachadas</div></div>
-      </div>
-      <div class="rows">
-        <div><div class="k">Valor por pessoa</div><div class="price">R$ 7.140,94<small>tarifa + taxas + fee</small></div></div>
-        <div><div class="k">Tarifa base</div><div class="v"><b>USD 1.207,00</b> · classes Q / V</div></div>
-        <div><div class="k">Bagagem</div><div class="v"><b>2 peças</b> despachadas + mão</div></div>
-        <div><div class="k">Localizador</div><div class="v">FKENPN · prazo <b>28/09 15h01</b></div></div>
-      </div>
-    </div>
-
-    <p class="note"><b>Ponto de atenção.</b> A Opção 2 economiza R$ 22.847,44 no total da família frente à ITA, mas chega a Madri à meia-noite, sai um dia antes e volta dois dias antes, e exige um voo Madri → Itália para os seis passageiros (não incluído). Na Opção 2 a Priscila retorna na mesma data que o restante da família (25/10).</p>
-  </div>
-  <div class="ft">
-    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
-  </div>
-</section>
-
-<!-- ══════════ 05 · VALORES ══════════ -->
-<section class="page">
-  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Valores</div></div>
-  <div class="goldbar"></div>
-  <div class="body">
-    <div class="eyebrow">Investimento</div>
-    <h2 class="h2">Valores</h2>
-    <div class="val-note">*Valores em Reais (BRL), aéreo internacional, incluindo tarifa e taxas de embarque · 6 adultos</div>
-
-    <div class="val-sec">Opção 1 · ITA Airways via Roma (recomendada)</div>
-    <div class="val-row"><span class="lbl">Grupo 1 · Executiva<small>Regina Célia · Laura</small></span><span class="amt"><small>2 × R$ 32.186,44</small>R$ 64.372,88</span></div>
-    <div class="val-row"><span class="lbl">Grupo 2 · Economy Comfort<small>Adriana · Artur · Amanda</small></span><span class="amt"><small>3 × R$ 8.995,87</small>R$ 26.987,61</span></div>
-    <div class="val-row"><span class="lbl">Grupo 3 · Economy Comfort<small>Priscila · retorno 26/10</small></span><span class="amt"><small>1 × R$ 9.413,09</small>R$ 9.413,09</span></div>
-    <div class="val-total"><span class="lbl">TOTAL AÉREO · OPÇÃO 1<small>6 passageiros · São Paulo ⇄ Roma</small></span><span class="amt">R$ 100.773,58</span></div>
-
-    <div class="val-sec" style="margin-top:12mm">Opção 2 · Air China via Madri</div>
+    <div class="eyebrow">Lado a lado</div>
+    <h2 class="h2">Comparativo</h2>
     <table class="cmp">
-      <tr><th>Grupo</th><th>Opção 1 · ITA via Roma</th><th class="n">Por pessoa</th><th>Opção 2 · Air China via Madri</th><th class="n">Por pessoa</th><th class="n">Diferença / pessoa</th></tr>
-      <tr><td>Grupo 1<small>2 pax · executiva</small></td><td>GRU ⇄ Roma direto<small>06/10 – 27/10 · Business Comfort</small></td><td class="n">R$ 32.186,44</td><td>GRU ⇄ Madri direto<small>05/10 – 25/10 · Business Flex</small></td><td class="n">R$ 24.681,19</td><td class="n diff">− R$ 7.505,25</td></tr>
-      <tr><td>Grupo 2<small>3 pax · econômica</small></td><td>GRU ⇄ Roma direto<small>06/10 – 27/10 · Economy Comfort</small></td><td class="n">R$ 8.995,87</td><td>GRU ⇄ Madri direto<small>05/10 – 25/10 · Economy Flex</small></td><td class="n">R$ 7.140,94</td><td class="n diff">− R$ 1.854,93</td></tr>
-      <tr><td>Grupo 3<small>1 pax · econômica</small></td><td>GRU ⇄ Roma direto<small>06/10 – 26/10 · Economy Comfort</small></td><td class="n">R$ 9.413,09</td><td>GRU ⇄ Madri direto<small>05/10 – 25/10 · Economy Flex</small></td><td class="n">R$ 7.140,94</td><td class="n diff">− R$ 2.272,15</td></tr>
+      <tr><th>Opção</th><th>Rota</th><th>Período</th><th>Cabines</th><th>Prazo</th><th class="n">Total · 6 pax</th></tr>
+      <tr><td><b>1 · Roma</b><small>ITA Airways</small></td><td>GRU ⇄ FCO direto<small>Airbus A330-900</small></td><td>06/10 – 27/10<small>Priscila volta 26/10</small></td><td>Business Comfort<small>Economy Comfort</small></td><td>30/09 · 10h15</td><td class="n tot">R$ 100.773,58</td></tr>
+      <tr><td><b>2 · Madri</b><small>Air China</small></td><td>GRU ⇄ MAD direto<small>Boeing 787-9</small></td><td>05/10 – 25/10<small>chegada 00h45</small></td><td>Business Flex<small>Economy Flex</small></td><td>28/09 · 12h51</td><td class="n tot">R$ 77.926,14</td></tr>
+      <tr><td><b>3 · Paris</b><small>GOL / Air France</small></td><td>GRU ⇄ CDG direto<small>Boeing 777-300ER</small></td><td>06/10 – 26/10<small>chegada 07h00</small></td><td>Executiva<small>Econômica Classic</small></td><td>29/09 · 23h59</td><td class="n tot">R$ 114.296,18</td></tr>
     </table>
-    <div class="val-row" style="margin-top:4mm"><span class="lbl">Grupo 1 · Executiva<small>2 × R$ 24.681,19</small></span><span class="amt">R$ 49.362,38</span></div>
-    <div class="val-row"><span class="lbl">Grupos 2 e 3 · Econômica<small>4 × R$ 7.140,94</small></span><span class="amt">R$ 28.563,76</span></div>
-    <div class="val-total" style="background:#fff;border:1.5px solid var(--ink)"><span class="lbl" style="color:var(--ink)">TOTAL AÉREO · OPÇÃO 2<small style="color:var(--mut)">6 passageiros · São Paulo ⇄ Madri · sem o trecho Madri → Itália</small></span><span class="amt" style="color:var(--ink)">R$ 77.926,14</span></div>
 
-    <div class="val-fx">Cotação 27/09 · USD = 5,1991 (câmbio BRT no momento da reserva)<br>*Nada reservado, apenas cotado — as reservas listadas são pré-reservas com prazo e não garantem tarifa até a emissão</div>
-  </div>
-  <div class="ft">
-    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
-  </div>
-</section>
+    <div class="eyebrow" style="margin-top:12mm">Importante</div>
+    <h2 class="h2" style="font-size:18pt">Condições e Observações</h2>
 
-<!-- ══════════ 06 · CONDIÇÕES ══════════ -->
-<section class="page">
-  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Condições</div></div>
-  <div class="goldbar"></div>
-  <div class="body">
-    <div class="eyebrow">Importante</div>
-    <h2 class="h2">Condições e Observações</h2>
+    <div class="cond"><div class="cond-h">Prazos das pré-reservas</div><div class="cond-t">As tarifas só ficam garantidas com a emissão. Cada pré-reserva cancela automaticamente no prazo indicado acima; a Air China vence primeiro, em 28/09.</div></div>
 
-    <div class="cond"><div class="cond-h">Prazos das pré-reservas</div>
-      <div class="cond-t">As tarifas só ficam garantidas com a emissão. Cada pré-reserva tem um prazo de cancelamento automático:</div>
-      <div class="dead">
-        <div><div class="k">Opção 1 · ITA Airways</div><div class="v"><b>30/09 · 10h15</b>J6RJXC · J6RL7V · J6RLSH</div></div>
-        <div><div class="k">Opção 2 · Air China · executiva</div><div class="v"><b>28/09 · 12h51</b>FIVRCL</div></div>
-        <div><div class="k">Opção 2 · Air China · econômica</div><div class="v"><b>28/09 · 15h01</b>FKENPN</div></div>
-      </div>
-    </div>
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">ITA Airways e GOL: até 6x sem juros no cartão de crédito · Air China: até 5x sem juros no cartão de crédito · PIX: desconto de 5–13% sobre o valor à vista · Cada grupo pode ser emitido em um cartão diferente.</div></div>
 
-    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">ITA Airways: até 6x sem juros no cartão de crédito · Air China: até 5x sem juros no cartão de crédito · PIX: desconto de 5–13% sobre o valor à vista · Cada grupo pode ser emitido em um cartão diferente.</div></div>
+    <div class="cond"><div class="cond-h">Bagagem e assentos</div><div class="cond-t">Executiva: 2 malas despachadas por pessoa em todas as opções · Econômica: 1 mala de 23 kg na ITA e na GOL, 2 malas na Air China. Bagagem de mão em todas as cabines. Assentos ainda não marcados; a marcação segue a regra tarifária de cada cabine.</div></div>
 
-    <div class="cond"><div class="cond-h">Bagagem e assentos</div><div class="cond-t">Executiva (ITA e Air China): 2 peças despachadas por pessoa · Economy Comfort (ITA): 1 peça de 23 kg · Economy Flex (Air China): 2 peças despachadas. Bagagem de mão em todas as cabines. Marcação de assentos conforme regra tarifária; assentos ainda não marcados em nenhuma das reservas.</div></div>
+    <div class="cond"><div class="cond-h">Alterações e reembolso</div><div class="cond-t">Tarifas em classes promocionais normalmente <b>não permitem reembolso</b> e cobram multa para alteração de data. As tarifas Flex da Air China têm regras mais brandas de alteração. Confirmamos as condições exatas antes da emissão.</div></div>
 
-    <div class="cond"><div class="cond-h">Alterações e reembolso</div><div class="cond-t">Tarifas ITA em classes promocionais (V, Q, H) normalmente <b>não permitem reembolso</b> e cobram multa para alteração de data. As tarifas Flex da Air China têm regras mais brandas de alteração; confirmamos as condições exatas antes da emissão. Consulte-nos caso precise de flexibilidade — em especial para a Priscila, cujo retorno na Opção 1 está um dia antes do restante do grupo.</div></div>
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Trechos Curitiba ⇄ São Paulo<br>· Voos internos na Europa a partir da cidade de chegada<br>· Hospedagem, transfers, trens e passeios<br>· Seguro-viagem (obrigatório para o Espaço Schengen)<br>· Despesas pessoais e taxas locais</div></div>
 
-    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Trechos Curitiba ⇄ São Paulo<br>· Voo Madri → Itália, caso a Opção 2 seja escolhida<br>· Hospedagem, transfers, trens e passeios<br>· Seguro-viagem (obrigatório para o Espaço Schengen)<br>· Despesas pessoais e taxas locais</div></div>
-
-    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Passaportes precisam ter validade mínima de <b>6 meses</b> a partir da data de retorno (abril de 2027). Brasileiros não precisam de visto para até 90 dias no Espaço Schengen; a autorização eletrônica ETIAS, quando entrar em vigor, será informada por nós. Valores sujeitos a confirmação e disponibilidade no momento da emissão.</div></div>
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Passaportes precisam ter validade mínima de <b>6 meses</b> a partir da data de retorno (abril de 2027). Brasileiros não precisam de visto para até 90 dias no Espaço Schengen. Valores sujeitos a confirmação e disponibilidade no momento da emissão.</div></div>
   </div>
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
