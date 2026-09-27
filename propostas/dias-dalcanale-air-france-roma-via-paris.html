@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>FAMÍLIA DIAS DALCANALE | Roma via Paris · Air France — LusaTravel</title>
+<style>
+@import url('fonts/fonts.css');
+
+:root{
+  --gold:#da8d00;
+  --dest:#424324;
+  --ink:#424324;
+  --char:#333131;
+  --mut:#8a8b76;
+  --line:#dedcd0;
+  --paper:#f6f5ee;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff;
+  page-break-after:always; display:flex; flex-direction:column; }
+.page:last-child{ page-break-after:auto; }
+
+.hd{ background:#fff; height:30mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd img{ height:19mm; width:auto; display:block; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.75); text-decoration:none; }
+.ft .sep{ color:var(--gold); }
+.body{ padding:14mm 22mm 10mm; flex:1; }
+.eyebrow{ font-size:8pt; margin-top:1mm; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:3mm 0 6mm; }
+.lead{ font-size:11pt; line-height:1.7; color:var(--char); max-width:215mm; }
+.lead b{ color:var(--ink); font-weight:600; }
+
+/* ══ GRUPOS ══ */
+.groups{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:6mm; margin-top:6mm; }
+.gcard{ border:1px solid var(--line); border-radius:6px; overflow:hidden; background:#fff; }
+.gcard .top{ background:var(--dest); color:#fff; padding:4mm 6mm; display:flex; align-items:center; gap:4mm; }
+.gcard .no{ width:9mm; height:9mm; border-radius:50%; border:2px solid rgba(218,141,0,.9); color:var(--gold); font-weight:800; font-size:10pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.gcard .ttl{ font-size:10.5pt; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+.gcard .sub{ font-size:8pt; color:rgba(255,255,255,.7); margin-top:.5mm; }
+.gcard ul{ list-style:none; padding:4mm 6mm; }
+.gcard li{ font-size:10pt; font-weight:400; color:var(--char); padding:1.6mm 0; border-bottom:1px solid var(--line); }
+.gcard li:last-child{ border-bottom:0; }
+.gcard li small{ display:block; font-size:8pt; color:var(--mut); font-weight:300; }
+
+/* ══ OPÇÕES (timeline) ══ */
+.tl{ display:flex; flex-direction:column; margin-top:6mm; }
+.tl-item{ display:flex; align-items:flex-start; gap:6mm; }
+.tl-badge{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tl-badge.alt{ background:#fff; color:var(--dest); border:2px solid var(--dest); }
+.tl-line{ width:2px; height:8mm; background:var(--line); margin-left:5.4mm; }
+.tl-city{ font-size:14pt; font-weight:700; color:var(--ink); }
+.tl-meta{ font-size:10pt; color:var(--mut); margin-top:1mm; line-height:1.55; }
+.pill{ display:inline-block; font-size:7.5pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border:1px solid var(--gold); border-radius:999px; padding:.8mm 3mm; margin-left:3mm; vertical-align:middle; }
+
+/* ══ VOO (card) ══ */
+.fcard{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-top:6mm; }
+.fcard .top{ background:var(--paper); padding:4.5mm 8mm; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; }
+.fcard .name{ font-size:13pt; font-weight:700; color:var(--ink); }
+.fcard .name small{ font-size:9pt; font-weight:400; color:var(--mut); margin-left:3mm; }
+.fcard .cab{ font-size:9pt; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); }
+.legs{ padding:4mm 8mm 5mm; }
+.leg{ display:grid; grid-template-columns:22mm 1fr 34mm 1fr 30mm; align-items:center; gap:4mm; padding:3.2mm 0; border-bottom:1px dashed var(--line); }
+.leg:last-child{ border-bottom:0; }
+.leg .fn{ font-family:var(--lbl); font-size:8.5pt; font-weight:700; letter-spacing:.06em; color:var(--mut); }
+.leg .fn b{ display:block; color:var(--ink); font-size:10pt; font-family:var(--sans); font-weight:700; }
+.leg .ap{ font-size:12.5pt; font-weight:700; color:var(--ink); }
+.leg .ap small{ display:block; font-size:8pt; font-weight:300; color:var(--mut); }
+.leg .arrow{ text-align:center; font-size:8pt; color:var(--mut); letter-spacing:.1em; }
+.leg .arrow::before{ content:""; display:block; height:1px; background:var(--gold); margin:0 2mm 1.2mm; }
+.leg .dur{ font-size:8.5pt; color:var(--mut); font-weight:300; text-align:right; line-height:1.5; }
+.fcard .rows{ padding:4mm 8mm 5mm; display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:3mm 8mm; background:#fff; border-top:1px solid var(--line); }
+.k{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.v{ font-size:10pt; font-weight:300; color:var(--char); margin-top:.8mm; }
+.v b{ font-weight:600; color:var(--ink); }
+.price{ font-size:14pt; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; }
+.price small{ font-size:8pt; font-weight:300; color:var(--mut); display:block; }
+.note{ font-size:9pt; color:var(--mut); line-height:1.6; margin-top:4mm; }
+.note b{ color:var(--dest); font-weight:600; }
+
+/* ══ VALORES ══ */
+.val-note{ font-size:9pt; color:var(--mut); margin-bottom:4mm; }
+.val-sec{ font-family:var(--lbl); font-size:8pt; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:700; margin:7mm 0 2mm; }
+.val-row{ display:flex; justify-content:space-between; align-items:baseline; padding:3.4mm 0; border-bottom:1px solid var(--line); }
+.val-row .lbl{ font-size:11pt; color:var(--char); }
+.val-row .lbl small{ display:block; font-size:8.5pt; color:var(--mut); font-weight:300; }
+.val-row .amt{ font-size:11.5pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.val-row .amt small{ font-size:8.5pt; font-weight:300; color:var(--mut); margin-right:3mm; }
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink); border-radius:5px; padding:6mm 8mm; margin-top:6mm; }
+.val-total .lbl{ font-size:11pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.val-total .lbl small{ display:block; font-size:8pt; font-weight:400; letter-spacing:.04em; color:rgba(255,255,255,.45); margin-top:1mm; }
+.val-total .amt{ font-size:18pt; font-weight:800; color:var(--gold); }
+.val-fx{ font-size:9pt; color:var(--mut); margin-top:5mm; line-height:1.6; }
+.cmp{ width:100%; border-collapse:collapse; margin-top:3mm; }
+.cmp th{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); text-align:left; padding:2mm 5mm 2mm 0; border-bottom:2px solid var(--line); }
+.cmp td{ font-size:10pt; padding:3mm 5mm 3mm 0; border-bottom:1px solid var(--line); vertical-align:top; }
+.cmp td.n{ text-align:right; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.cmp th.n{ text-align:right; }
+.cmp td small{ display:block; font-size:8pt; color:var(--mut); font-weight:300; }
+.cmp .diff{ color:var(--dest); font-weight:700; }
+
+/* ══ CONDIÇÕES ══ */
+.cond{ margin-bottom:3.5mm; }
+.cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5mm; }
+.cond-t{ font-size:10pt; line-height:1.6; color:var(--char); }
+.cond-t b{ font-weight:600; color:var(--ink); }
+.dead{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:4mm; margin-top:2mm; }
+.dead > div{ border:1px solid var(--line); border-left:3px solid var(--dest); border-radius:4px; padding:3mm 4mm; }
+.dead .k{ margin-bottom:1mm; }
+.dead .v{ font-size:9.5pt; }
+.dead .v b{ font-size:11pt; display:block; }
+
+/* ══ SIMPLIFICADA ══ */
+.opt{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-top:5mm; }
+.opt .top{ background:var(--dest); color:#fff; padding:3.5mm 8mm; display:flex; align-items:center; gap:5mm; }
+.opt .top .no{ width:10mm; height:10mm; border-radius:50%; border:2px solid rgba(218,141,0,.9); color:var(--gold); font-weight:800; font-size:11pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.opt .top .name{ font-size:14pt; font-weight:700; }
+.opt .top .name small{ font-size:9pt; font-weight:400; color:rgba(255,255,255,.7); margin-left:3mm; }
+.opt .top .pill{ color:#fff; border-color:var(--gold); background:var(--gold); margin-left:auto; }
+.opt .legs{ padding:1.5mm 8mm 2mm; } .opt .leg{ padding:2.4mm 0; }
+.opt .cabins{ display:grid; grid-template-columns:1.1fr 1.1fr .8fr; gap:3mm 8mm; padding:3mm 8mm; background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.opt .tot{ display:flex; justify-content:space-between; align-items:center; padding:3.5mm 8mm; background:var(--ink); }
+.opt .tot .lbl{ font-size:10pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.opt .tot .lbl small{ display:block; font-size:8pt; font-weight:400; letter-spacing:.04em; color:rgba(255,255,255,.45); margin-top:1mm; }
+.opt .tot .amt{ font-size:18pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; }
+.cmp td.tot{ font-size:12pt; }
+.opt .locs{ display:grid; grid-template-columns:1.1fr 1.1fr .8fr; gap:3mm 8mm; padding:3mm 8mm; background:#fff; border-bottom:1px solid var(--line); }
+.opt .locs .v b{ font-family:var(--lbl); letter-spacing:.06em; }
+.opt .locs .v small{ color:var(--mut); font-weight:300; font-size:8.5pt; }
+
+.title{ margin-bottom:5mm; padding-bottom:4mm; border-bottom:1px solid var(--line); }
+.title .kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.title h1{ font-size:30pt; font-weight:800; color:var(--ink); letter-spacing:.01em; line-height:1.1; margin:2mm 0 1mm; text-transform:uppercase; }
+.title .sub{ font-size:12pt; color:var(--char); }
+.title .sub b{ color:var(--ink); font-weight:600; }
+.tl-item .amt{ margin-left:auto; text-align:right; font-size:16pt; font-weight:800; color:var(--ink); white-space:nowrap; font-variant-numeric:tabular-nums; padding-top:1mm; }
+.tl-item .amt small{ display:block; font-size:8pt; font-weight:400; color:var(--mut); letter-spacing:.06em; }
+.tl-item{ align-items:flex-start; }
+.tl-badge.alt{ color:var(--ink); border-color:var(--ink); }
+.pill.rec{ background:var(--gold); color:#fff; }
+.opt .top .pill{ background:var(--gold); }
+.cmp td.tot.rec{ color:var(--gold); }
+
+.leg .arrow.cx::before{ background:var(--mut); }
+.legsep{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:700; padding:2.5mm 0 .5mm; border-bottom:1px solid var(--line); }
+</style>
+</head>
+<body>
+<section class="page">
+  <div class="hd"><img src="assets/logo-lusatravel.webp" alt="LusaTravel"><div class="tag">Cotação aérea · folha avulsa</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="title">
+      <div class="kicker">Cotação para sua viagem</div>
+      <h1>Família Dias Dalcanale</h1>
+      <div class="sub"><b>Roma via Paris · Air France</b> · 6 adultos · 06 a 30 de outubro de 2026 · aéreo internacional</div>
+    </div>
+
+    <div class="eyebrow">Voos e investimento</div>
+    <h2 class="h2" style="font-size:18pt;margin-bottom:4mm">Opção 5 · Roma via Paris</h2>
+    <p class="lead" style="font-size:10pt;line-height:1.6">Toda a família nos mesmos voos, com conexão curta em Paris na ida e na volta. É a única opção que <b>chega e sai de Roma</b>. Valores com tarifa e taxas de embarque para os seis passageiros.</p>
+
+    <div class="opt">
+      <div class="top"><div class="no">5</div><div class="name">Roma · Air France<small>São Paulo ⇄ Paris ⇄ Roma Fiumicino</small></div></div>
+      <div class="legs">
+        <div class="legsep">Ida · 06 e 07 de outubro</div>
+        <div class="leg"><div class="fn">AF 453<b>06 OUT</b></div><div class="ap">GRU 14:40<small>São Paulo</small></div><div class="arrow">direto</div><div class="ap">CDG 07:00 <small>Paris Charles de Gaulle · chegada 07 OUT</small></div><div class="dur">Boeing 777-300ER</div></div>
+        <div class="leg"><div class="fn">AF 1104<b>07 OUT</b></div><div class="ap">CDG 09:15<small>Paris · conexão 2h15</small></div><div class="arrow">direto</div><div class="ap">FCO 11:25 <small>Roma Fiumicino</small></div><div class="dur">Airbus A320</div></div>
+        <div class="legsep">Volta · 30 de outubro</div>
+        <div class="leg"><div class="fn">AF 1005<b>30 OUT</b></div><div class="ap">FCO 06:00<small>Roma Fiumicino</small></div><div class="arrow">direto</div><div class="ap">CDG 08:15 <small>Paris Charles de Gaulle</small></div><div class="dur">Airbus A320</div></div>
+        <div class="leg"><div class="fn">AF 460<b>30 OUT</b></div><div class="ap">CDG 10:25<small>Paris · conexão 2h10</small></div><div class="arrow">direto</div><div class="ap">GRU 18:25 <small>São Paulo · chegada 30 OUT</small></div><div class="dur">Airbus A350-900</div></div>
+      </div>
+      <div class="cabins">
+        <div><div class="k">Grupo 1 · 2 passageiras · executiva</div><div class="v"><b>Executiva</b> · Regina Célia · Laura</div></div>
+        <div><div class="k">Grupo 2 · 4 passageiros · econômica</div><div class="v"><b>Econômica Standard</b> · 1 mala de 23 kg</div></div>
+        <div><div class="k">Reserva ativa até</div><div class="v"><b>19h00</b> · hoje, 27/09/2026</div></div>
+      </div>
+      <div class="locs">
+        <div><div class="k">Localizador Air France</div><div class="v"><b>XC7BPJ</b></div></div>
+        <div><div class="k">Passageiros · econômica</div><div class="v">Adriana · Priscila · Artur · Amanda</div></div>
+        <div><div class="k">Bagagem de mão</div><div class="v">Incluída em todas as cabines</div></div>
+      </div>
+      <div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 executiva + 4 econômica · 06/10 – 30/10 · chegada e saída por Roma</small></span><span class="amt">R$ 78.197,82</span></div>
+    </div>
+
+    <p class="note"><b>Comparação com a Air China via Madri.</b> Esta opção fica R$ 271,68 acima da Air China no total das seis passagens, mas leva a família direto a Roma, sem necessidade de voo adicional a partir de Madri, e devolve todos a São Paulo em 30/10, três dias mais tarde.</p>
+
+    <div class="eyebrow" style="margin-top:5mm">Importante</div>
+    <h2 class="h2" style="font-size:16pt">Condições e Observações</h2>
+    <div class="cond"><div class="cond-h">Validade dos valores</div><div class="cond-t"><b>Valores para a data de hoje, 27/09/2026.</b> Reservas ativas até as <b>19h00</b>. Para emissão em outra data, consultar disponibilidade e valores. As tarifas só ficam garantidas com a emissão. *Nada reservado, apenas cotado.</div></div>
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Até 6x sem juros no cartão de crédito · PIX: desconto de 5–13% sobre o valor à vista · Cada grupo pode ser emitido em um cartão diferente.</div></div>
+    <div class="cond"><div class="cond-h">Alterações, reembolso e assentos</div><div class="cond-t">Tarifas promocionais normalmente <b>não permitem reembolso</b> e cobram multa para alteração de data; confirmamos as regras antes da emissão. Assentos ainda não marcados.</div></div>
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Trechos Curitiba ⇄ São Paulo · Hospedagem, transfers, trens e passeios · Seguro-viagem (obrigatório para o Espaço Schengen) · Despesas pessoais e taxas locais</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a><span class="sep">·</span><a href="#">Alameda Princesa Izabel, 1700 · Curitiba – PR</a>
+  </div>
+</section>
+</body>
+</html>
