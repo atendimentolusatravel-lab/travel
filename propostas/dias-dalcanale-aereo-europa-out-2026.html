@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>FAMÍLIA DIAS DALCANALE | Itália · Europa — LusaTravel</title>
+<style>
+@import url('fonts/fonts.css');
+
+:root{
+  --gold:#da8d00;
+  --dest:#730505;
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#9a8d80;
+  --line:#e4ddd2;
+  --paper:#faf7f2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff;
+  page-break-after:always; display:flex; flex-direction:column; }
+.page:last-child{ page-break-after:auto; }
+
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.2); }
+.body{ padding:14mm 22mm 10mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:3mm 0 6mm; }
+.lead{ font-size:11pt; line-height:1.7; color:var(--char); max-width:215mm; }
+.lead b{ color:var(--ink); font-weight:600; }
+
+/* ══ CAPA ══ */
+.cover{ position:relative; }
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink); display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 90% 60% at 20% 30%, rgba(218,141,0,.22), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 85% 75%, rgba(115,5,5,.55), transparent 65%),
+    linear-gradient(165deg,#4a2a1e 0%,#2b1712 45%,#1a1510 100%); }
+.cover-motif{ position:absolute; inset:0; z-index:1; opacity:.16; }
+.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.25) 0%, transparent 30%, rgba(0,0,0,.72) 78%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:36mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+.cover-sig a{ color:inherit; text-decoration:none; }
+
+/* ══ GRUPOS ══ */
+.groups{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:6mm; margin-top:6mm; }
+.gcard{ border:1px solid var(--line); border-radius:6px; overflow:hidden; background:#fff; }
+.gcard .top{ background:var(--dest); color:#fff; padding:4mm 6mm; display:flex; align-items:center; gap:4mm; }
+.gcard .no{ width:9mm; height:9mm; border-radius:50%; border:2px solid rgba(218,141,0,.9); color:var(--gold); font-weight:800; font-size:10pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.gcard .ttl{ font-size:10.5pt; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+.gcard .sub{ font-size:8pt; color:rgba(255,255,255,.7); margin-top:.5mm; }
+.gcard ul{ list-style:none; padding:4mm 6mm; }
+.gcard li{ font-size:10pt; font-weight:400; color:var(--char); padding:1.6mm 0; border-bottom:1px solid var(--line); }
+.gcard li:last-child{ border-bottom:0; }
+.gcard li small{ display:block; font-size:8pt; color:var(--mut); font-weight:300; }
+
+/* ══ OPÇÕES (timeline) ══ */
+.tl{ display:flex; flex-direction:column; margin-top:6mm; }
+.tl-item{ display:flex; align-items:flex-start; gap:6mm; }
+.tl-badge{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tl-badge.alt{ background:#fff; color:var(--dest); border:2px solid var(--dest); }
+.tl-line{ width:2px; height:8mm; background:var(--line); margin-left:5.4mm; }
+.tl-city{ font-size:14pt; font-weight:700; color:var(--ink); }
+.tl-meta{ font-size:10pt; color:var(--mut); margin-top:1mm; line-height:1.55; }
+.pill{ display:inline-block; font-size:7.5pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border:1px solid var(--gold); border-radius:999px; padding:.8mm 3mm; margin-left:3mm; vertical-align:middle; }
+
+/* ══ VOO (card) ══ */
+.fcard{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-top:6mm; }
+.fcard .top{ background:var(--paper); padding:4.5mm 8mm; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; }
+.fcard .name{ font-size:13pt; font-weight:700; color:var(--ink); }
+.fcard .name small{ font-size:9pt; font-weight:400; color:var(--mut); margin-left:3mm; }
+.fcard .cab{ font-size:9pt; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); }
+.legs{ padding:4mm 8mm 5mm; }
+.leg{ display:grid; grid-template-columns:22mm 1fr 34mm 1fr 30mm; align-items:center; gap:4mm; padding:3.2mm 0; border-bottom:1px dashed var(--line); }
+.leg:last-child{ border-bottom:0; }
+.leg .fn{ font-family:var(--lbl); font-size:8.5pt; font-weight:700; letter-spacing:.06em; color:var(--mut); }
+.leg .fn b{ display:block; color:var(--ink); font-size:10pt; font-family:var(--sans); font-weight:700; }
+.leg .ap{ font-size:12.5pt; font-weight:700; color:var(--ink); }
+.leg .ap small{ display:block; font-size:8pt; font-weight:300; color:var(--mut); }
+.leg .arrow{ text-align:center; font-size:8pt; color:var(--mut); letter-spacing:.1em; }
+.leg .arrow::before{ content:""; display:block; height:1px; background:var(--gold); margin:0 2mm 1.2mm; }
+.leg .dur{ font-size:8.5pt; color:var(--mut); font-weight:300; text-align:right; line-height:1.5; }
+.fcard .rows{ padding:4mm 8mm 5mm; display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:3mm 8mm; background:#fff; border-top:1px solid var(--line); }
+.k{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.v{ font-size:10pt; font-weight:300; color:var(--char); margin-top:.8mm; }
+.v b{ font-weight:600; color:var(--ink); }
+.price{ font-size:14pt; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; }
+.price small{ font-size:8pt; font-weight:300; color:var(--mut); display:block; }
+.note{ font-size:9pt; color:var(--mut); line-height:1.6; margin-top:4mm; }
+.note b{ color:var(--dest); font-weight:600; }
+
+/* ══ VALORES ══ */
+.val-note{ font-size:9pt; color:var(--mut); margin-bottom:4mm; }
+.val-sec{ font-family:var(--lbl); font-size:8pt; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:700; margin:7mm 0 2mm; }
+.val-row{ display:flex; justify-content:space-between; align-items:baseline; padding:3.4mm 0; border-bottom:1px solid var(--line); }
+.val-row .lbl{ font-size:11pt; color:var(--char); }
+.val-row .lbl small{ display:block; font-size:8.5pt; color:var(--mut); font-weight:300; }
+.val-row .amt{ font-size:11.5pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.val-row .amt small{ font-size:8.5pt; font-weight:300; color:var(--mut); margin-right:3mm; }
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink); border-radius:5px; padding:6mm 8mm; margin-top:6mm; }
+.val-total .lbl{ font-size:11pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.val-total .lbl small{ display:block; font-size:8pt; font-weight:400; letter-spacing:.04em; color:rgba(255,255,255,.45); margin-top:1mm; }
+.val-total .amt{ font-size:18pt; font-weight:800; color:var(--gold); }
+.val-fx{ font-size:9pt; color:var(--mut); margin-top:5mm; line-height:1.6; }
+.cmp{ width:100%; border-collapse:collapse; margin-top:3mm; }
+.cmp th{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); text-align:left; padding:2mm 5mm 2mm 0; border-bottom:2px solid var(--line); }
+.cmp td{ font-size:10pt; padding:3mm 5mm 3mm 0; border-bottom:1px solid var(--line); vertical-align:top; }
+.cmp td.n{ text-align:right; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.cmp th.n{ text-align:right; }
+.cmp td small{ display:block; font-size:8pt; color:var(--mut); font-weight:300; }
+.cmp .diff{ color:var(--dest); font-weight:700; }
+
+/* ══ CONDIÇÕES ══ */
+.cond{ margin-bottom:6.5mm; }
+.cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5mm; }
+.cond-t{ font-size:10.5pt; line-height:1.75; color:var(--char); }
+.cond-t b{ font-weight:600; color:var(--ink); }
+.dead{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:4mm; margin-top:2mm; }
+.dead > div{ border:1px solid var(--line); border-left:3px solid var(--dest); border-radius:4px; padding:3mm 4mm; }
+.dead .k{ margin-bottom:1mm; }
+.dead .v{ font-size:9.5pt; }
+.dead .v b{ font-size:11pt; display:block; }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 01 · CAPA ══════════ -->
+<section class="page cover">
+  <div class="cover-hd"><div class="logo">LUSATRAVEL</div><div class="tag">Glossário</div></div>
+  <div class="cover-bar"></div>
+  <div class="cover-photo"></div>
+  <svg class="cover-motif" viewBox="0 0 297 420" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs><pattern id="arc" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M0 60 A30 30 0 0 1 60 60" fill="none" stroke="#da8d00" stroke-width=".6"/>
+      <path d="M0 30 A30 30 0 0 1 60 30" fill="none" stroke="#da8d00" stroke-width=".35"/>
+    </pattern></defs>
+    <rect width="297" height="420" fill="url(#arc)"/>
+    <g fill="none" stroke="#da8d00" stroke-width=".9" opacity=".9">
+      <circle cx="220" cy="150" r="70"/><circle cx="220" cy="150" r="52"/><circle cx="220" cy="150" r="34"/>
+    </g>
+  </svg>
+  <div class="cover-scrim"></div>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em 6 adultos · 05/06 de outubro a 25–28 de outubro de 2026 · Aéreo internacional</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">Família Dias Dalcanale</div>
+    <div class="cover-dest">Itália · Europa</div>
+    <div class="stats">
+      <div class="stat"><b>6</b><span>Passageiros</span></div>
+      <div class="stat"><b>3</b><span>Grupos de viagem</span></div>
+      <div class="stat"><b>3</b><span>Opções aéreas</span></div>
+      <div class="stat"><b>20</b><span>Noites na Europa</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ══════════ 02 · PASSAGEIROS & OPÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Passageiros</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Quem viaja</div>
+    <h2 class="h2">Passageiros e grupos de viagem</h2>
+    <p class="lead">Seis adultos da família viajando juntos para a Europa em outubro de 2026, com saída de São Paulo e chegada em <b>Roma</b>. Para respeitar o conforto e o ritmo de cada um, a cotação foi organizada em <b>três grupos</b>: um em classe executiva, um em econômica premium e a Priscila com retorno um dia antes.</p>
+
+    <div class="groups">
+      <div class="gcard">
+        <div class="top"><div class="no">1</div><div><div class="ttl">Executiva</div><div class="sub">2 passageiras · Business Comfort</div></div></div>
+        <ul>
+          <li>Regina Célia Dias Dalcanale</li>
+          <li>Laura Dias Dalcanale Pereira Alves</li>
+        </ul>
+      </div>
+      <div class="gcard">
+        <div class="top"><div class="no">2</div><div><div class="ttl">Econômica Comfort</div><div class="sub">3 passageiros · Economy Comfort</div></div></div>
+        <ul>
+          <li>Adriana Dias Dalcanale</li>
+          <li>Artur Dalcanale Pereira Alves</li>
+          <li>Amanda Lídia Barbosa de Moura</li>
+        </ul>
+      </div>
+      <div class="gcard">
+        <div class="top"><div class="no">3</div><div><div class="ttl">Econômica Comfort</div><div class="sub">1 passageira · retorno em 26/10</div></div></div>
+        <ul>
+          <li>Priscila Dias Dalcanale</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="eyebrow" style="margin-top:12mm">As opções cotadas</div>
+    <h2 class="h2" style="font-size:18pt">Resumo</h2>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-badge">1</div><div>
+        <div class="tl-city">ITA Airways · São Paulo ⇄ Roma <span class="pill">Recomendada</span></div>
+        <div class="tl-meta">Toda a família no mesmo voo direto GRU → FCO em 06/10 · retorno direto FCO → GRU em 26/10 (Priscila) e 27/10 (demais)<br>Executiva para o grupo 1 · Economy Comfort para os grupos 2 e 3</div>
+      </div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge alt">A</div><div>
+        <div class="tl-city">Alternativa · Turkish Airlines via Istambul</div>
+        <div class="tl-meta">Grupos 2 e 3 (4 pax) em econômica, com trechos Curitiba ⇄ São Paulo incluídos · destino final Istambul · 06/10 a 27/10</div>
+      </div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge alt">B</div><div>
+        <div class="tl-city">Alternativa · Air China · São Paulo ⇄ Madri (executiva)</div>
+        <div class="tl-meta">Grupo 1 (2 pax) em executiva · destino final Madri · 05/10 a 25/10 · Boeing 787-9</div>
+      </div></div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 03 · OPÇÃO 1 — ITA AIRWAYS ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Opção 1 · Recomendada</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Opção 1 · Voo direto</div>
+    <h2 class="h2">ITA Airways · São Paulo ⇄ Roma</h2>
+    <p class="lead">Chegar a Roma sem conexão, todos juntos no mesmo Airbus A330-900, é o cenário mais confortável para uma viagem em família com três gerações. A ida é noturna, com chegada no fim da manhã, e a volta parte às 21h50 de Fiumicino. Nada de esperas em hubs: a viagem começa e termina onde o roteiro acontece.</p>
+
+    <div class="fcard">
+      <div class="top"><div class="name">Grupo 1 <small>Regina Célia · Laura</small></div><div class="cab">Business Comfort · Executiva</div></div>
+      <div class="legs">
+        <div class="leg"><div class="fn">AZ 679<b>06 OUT</b></div><div class="ap">GRU 18:55<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">FCO 11:30 <small>Roma Fiumicino · Terminal 3 · chegada 07 OUT</small></div><div class="dur">Airbus A330-900<br>2 malas de 23 kg</div></div>
+        <div class="leg"><div class="fn">AZ 674<b>27 OUT</b></div><div class="ap">FCO 21:50<small>Roma Fiumicino · Terminal 1</small></div><div class="arrow">direto</div><div class="ap">GRU 06:25 <small>São Paulo · Terminal 3 · chegada 28 OUT</small></div><div class="dur">Airbus A330-900<br>2 malas de 23 kg</div></div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Valor por pessoa</div><div class="price">R$ 32.186,44<small>tarifa + taxas de embarque</small></div></div>
+        <div><div class="k">Tarifa base</div><div class="v"><b>USD 5.678,00</b> · classe D</div></div>
+        <div><div class="k">Bagagem</div><div class="v"><b>2 peças</b> despachadas + mão</div></div>
+        <div><div class="k">Localizador</div><div class="v">J6RJXC · prazo <b>30/09 13h15</b></div></div>
+      </div>
+    </div>
+
+    <div class="fcard">
+      <div class="top"><div class="name">Grupo 2 <small>Adriana · Artur · Amanda</small></div><div class="cab">Economy Comfort</div></div>
+      <div class="legs">
+        <div class="leg"><div class="fn">AZ 679<b>06 OUT</b></div><div class="ap">GRU 18:55<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">FCO 11:30 <small>Roma Fiumicino · chegada 07 OUT</small></div><div class="dur">Airbus A330-900<br>1 mala de 23 kg</div></div>
+        <div class="leg"><div class="fn">AZ 674<b>27 OUT</b></div><div class="ap">FCO 21:50<small>Roma Fiumicino · Terminal 1</small></div><div class="arrow">direto</div><div class="ap">GRU 06:25 <small>São Paulo · chegada 28 OUT</small></div><div class="dur">Airbus A330-900<br>1 mala de 23 kg</div></div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Valor por pessoa</div><div class="price">R$ 8.995,87<small>tarifa + taxas de embarque</small></div></div>
+        <div><div class="k">Tarifa base</div><div class="v"><b>USD 1.528,00</b> · classes V / Q</div></div>
+        <div><div class="k">Bagagem</div><div class="v"><b>1 peça</b> despachada + mão</div></div>
+        <div><div class="k">Localizador</div><div class="v">J6RL7V · prazo <b>30/09 13h24</b></div></div>
+      </div>
+    </div>
+
+    <div class="fcard">
+      <div class="top"><div class="name">Grupo 3 <small>Priscila</small></div><div class="cab">Economy Comfort</div></div>
+      <div class="legs">
+        <div class="leg"><div class="fn">AZ 679<b>06 OUT</b></div><div class="ap">GRU 18:55<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">FCO 11:30 <small>Roma Fiumicino · chegada 07 OUT</small></div><div class="dur">Airbus A330-900<br>1 mala de 23 kg</div></div>
+        <div class="leg"><div class="fn">AZ 674<b>26 OUT</b></div><div class="ap">FCO 21:50<small>Roma Fiumicino · Terminal 1</small></div><div class="arrow">direto</div><div class="ap">GRU 06:25 <small>São Paulo · chegada 27 OUT</small></div><div class="dur">Airbus A330-900<br>1 mala de 23 kg</div></div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Valor por pessoa</div><div class="price">R$ 9.413,09<small>tarifa + taxas de embarque</small></div></div>
+        <div><div class="k">Tarifa base</div><div class="v"><b>USD 1.603,00</b> · classes V / H</div></div>
+        <div><div class="k">Bagagem</div><div class="v"><b>1 peça</b> despachada + mão</div></div>
+        <div><div class="k">Localizador</div><div class="v">J6RLSH · prazo <b>30/09 13h28</b></div></div>
+      </div>
+    </div>
+
+    <p class="note">Os três grupos embarcam no <b>mesmo voo de ida</b>. Na volta, a Priscila retorna em 26/10 e os demais em 27/10, ambos no AZ 674. Assentos ainda não marcados; a marcação segue a regra tarifária de cada cabine.</p>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 04 · ALTERNATIVAS ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Alternativas</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Outras rotas cotadas</div>
+    <h2 class="h2">Alternativas A e B</h2>
+    <p class="lead">Duas rotas foram cotadas como comparação. Atenção: nenhuma delas chega a Roma. Só fazem sentido se o roteiro terrestre começar ou terminar em <b>Istambul</b> (A) ou em <b>Madri</b> (B). A alternativa A inclui os trechos Curitiba ⇄ São Paulo; a alternativa B reduz o investimento da executiva, mas com saída um dia antes e conexão em Madri para seguir à Itália.</p>
+
+    <div class="fcard">
+      <div class="top"><div class="name">Alternativa A · Turkish Airlines <small>Adriana · Priscila · Artur · Amanda</small></div><div class="cab">Econômica · 4 passageiros</div></div>
+      <div class="legs">
+        <div class="leg"><div class="fn">TK 9180<b>06 OUT</b></div><div class="ap">CWB 08:00<small>Curitiba · operado pela Azul</small></div><div class="arrow">1h10</div><div class="ap">GRU 09:10 <small>São Paulo · Terminal 1</small></div><div class="dur">conexão 7h25<br>troca de terminal</div></div>
+        <div class="leg"><div class="fn">TK 216<b>06 OUT</b></div><div class="ap">GRU 16:35<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">IST 11:15 <small>Istambul · chegada 07 OUT</small></div><div class="dur">Airbus A350-900<br>1 mala de 23 kg</div></div>
+        <div class="leg"><div class="fn">TK 15<b>27 OUT</b></div><div class="ap">IST 09:55<small>Istambul</small></div><div class="arrow">direto</div><div class="ap">GRU 17:45 <small>São Paulo · Terminal 3</small></div><div class="dur">Airbus A350-900<br>conexão 2h50</div></div>
+        <div class="leg"><div class="fn">TK 9563<b>27 OUT</b></div><div class="ap">GRU 20:35<small>São Paulo · Terminal 2 · operado pela LATAM</small></div><div class="arrow">1h10</div><div class="ap">CWB 21:45 <small>Curitiba</small></div><div class="dur">Airbus A321</div></div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Valor por pessoa</div><div class="price">R$ 9.981,33<small>tarifa + taxas + fee</small></div></div>
+        <div><div class="k">Tarifa base</div><div class="v"><b>USD 1.219,00</b> · classes U / L / V</div></div>
+        <div><div class="k">Bagagem</div><div class="v"><b>1 peça</b> despachada + mão</div></div>
+        <div><div class="k">Localizador</div><div class="v">C2P73E · prazo <b>28/09 13h00</b></div></div>
+      </div>
+    </div>
+
+    <div class="fcard">
+      <div class="top"><div class="name">Alternativa B · Air China <small>Regina Célia · Laura</small></div><div class="cab">Executiva · 2 passageiras</div></div>
+      <div class="legs">
+        <div class="leg"><div class="fn">CA 898<b>05 OUT</b></div><div class="ap">GRU 09:25<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">MAD 00:45 <small>Madri · Terminal 1 · chegada 06 OUT</small></div><div class="dur">Boeing 787-9<br>2 malas de 23 kg</div></div>
+        <div class="leg"><div class="fn">CA 897<b>25 OUT</b></div><div class="ap">MAD 22:30<small>Madri · Terminal 1</small></div><div class="arrow">direto</div><div class="ap">GRU 05:30 <small>São Paulo · chegada 26 OUT</small></div><div class="dur">Boeing 787-9<br>2 malas de 23 kg</div></div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Valor por pessoa</div><div class="price">R$ 24.681,19<small>tarifa + taxas + fee</small></div></div>
+        <div><div class="k">Tarifa base</div><div class="v"><b>USD 4.360,00</b> · classe D</div></div>
+        <div><div class="k">Bagagem</div><div class="v"><b>2 peças</b> despachadas + mão</div></div>
+        <div><div class="k">Localizador</div><div class="v">FIVRCL · prazo <b>28/09 12h51</b></div></div>
+      </div>
+    </div>
+
+    <p class="note"><b>Ponto de atenção.</b> A alternativa B chega a Madri à meia-noite e exige um voo adicional Madri → Itália (não cotado) para encontrar o restante da família. A economia de R$ 7.505,25 por pessoa frente à ITA precisa ser pesada contra a chegada de madrugada, o dia extra de viagem e a conexão para duas passageiras que viajam em executiva justamente pelo conforto.</p>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 05 · VALORES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Valores</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Investimento</div>
+    <h2 class="h2">Valores</h2>
+    <div class="val-note">*Valores em Reais (BRL), aéreo internacional, incluindo tarifa e taxas de embarque · 6 adultos</div>
+
+    <div class="val-sec">Opção 1 · ITA Airways via Roma (recomendada)</div>
+    <div class="val-row"><span class="lbl">Grupo 1 · Executiva<small>Regina Célia · Laura</small></span><span class="amt"><small>2 × R$ 32.186,44</small>R$ 64.372,88</span></div>
+    <div class="val-row"><span class="lbl">Grupo 2 · Economy Comfort<small>Adriana · Artur · Amanda</small></span><span class="amt"><small>3 × R$ 8.995,87</small>R$ 26.987,61</span></div>
+    <div class="val-row"><span class="lbl">Grupo 3 · Economy Comfort<small>Priscila · retorno 26/10</small></span><span class="amt"><small>1 × R$ 9.413,09</small>R$ 9.413,09</span></div>
+    <div class="val-total"><span class="lbl">TOTAL AÉREO · OPÇÃO 1<small>6 passageiros · São Paulo ⇄ Roma</small></span><span class="amt">R$ 100.773,58</span></div>
+
+    <div class="val-sec" style="margin-top:12mm">Comparativo das alternativas</div>
+    <table class="cmp">
+      <tr><th>Grupo</th><th>Opção 1 · ITA</th><th class="n">Por pessoa</th><th>Alternativa</th><th class="n">Por pessoa</th><th class="n">Diferença / pessoa</th></tr>
+      <tr><td>Grupo 1<small>2 pax · executiva</small></td><td>GRU ⇄ Roma direto<small>06/10 – 27/10</small></td><td class="n">R$ 32.186,44</td><td>B · Air China GRU ⇄ Madri<small>05/10 – 25/10 · sem trecho até a Itália</small></td><td class="n">R$ 24.681,19</td><td class="n diff">− R$ 7.505,25</td></tr>
+      <tr><td>Grupo 2<small>3 pax · econômica</small></td><td>GRU ⇄ Roma direto<small>06/10 – 27/10</small></td><td class="n">R$ 8.995,87</td><td>A · Turkish CWB ⇄ Istambul<small>06/10 – 27/10 · inclui CWB ⇄ GRU</small></td><td class="n">R$ 9.981,33</td><td class="n diff">+ R$ 985,46</td></tr>
+      <tr><td>Grupo 3<small>1 pax · econômica</small></td><td>GRU ⇄ Roma direto<small>06/10 – 26/10</small></td><td class="n">R$ 9.413,09</td><td>A · Turkish CWB ⇄ Istambul<small>06/10 – 27/10 · inclui CWB ⇄ GRU</small></td><td class="n">R$ 9.981,33</td><td class="n diff">+ R$ 568,24</td></tr>
+    </table>
+    <div class="val-row" style="margin-top:4mm"><span class="lbl">Total com as alternativas A + B<small>4 pax Turkish via Istambul + 2 pax Air China via Madri</small></span><span class="amt">R$ 89.287,70</span></div>
+
+    <div class="val-fx">Cotação 27/09 · USD = 5,1991 (câmbio BRT no momento da reserva)<br>*Nada reservado, apenas cotado — as reservas listadas são pré-reservas com prazo e não garantem tarifa até a emissão</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 06 · CONDIÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Condições</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Importante</div>
+    <h2 class="h2">Condições e Observações</h2>
+
+    <div class="cond"><div class="cond-h">Prazos das pré-reservas</div>
+      <div class="cond-t">As tarifas só ficam garantidas com a emissão. Cada pré-reserva tem um prazo de cancelamento automático:</div>
+      <div class="dead">
+        <div><div class="k">Opção 1 · ITA Airways</div><div class="v"><b>30/09 · 13h15</b>J6RJXC · J6RL7V · J6RLSH</div></div>
+        <div><div class="k">Alternativa A · Turkish</div><div class="v"><b>28/09 · 13h00</b>C2P73E</div></div>
+        <div><div class="k">Alternativa B · Air China</div><div class="v"><b>28/09 · 12h51</b>FIVRCL</div></div>
+      </div>
+    </div>
+
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Aéreo: até 6x sem acréscimos no cartão de crédito · PIX: desconto de 5–13% sobre o valor à vista · Cabines diferentes podem ser emitidas em cartões diferentes.</div></div>
+
+    <div class="cond"><div class="cond-h">Bagagem e assentos</div><div class="cond-t">Executiva: 2 peças de 23 kg por pessoa · Economy Comfort (ITA) e Econômica (Turkish): 1 peça de 23 kg por pessoa, além da bagagem de mão. Marcação de assentos conforme regra tarifária de cada cabine; assentos ainda não marcados em nenhuma das reservas.</div></div>
+
+    <div class="cond"><div class="cond-h">Alterações e reembolso</div><div class="cond-t">Tarifas internacionais em classes promocionais (V, Q, H, L, U) normalmente <b>não permitem reembolso</b> e cobram multa para alteração de data. Consulte-nos antes da emissão caso precise de flexibilidade — em especial para a Priscila, cujo retorno está um dia antes do restante do grupo.</div></div>
+
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Trechos Curitiba ⇄ São Paulo na Opção 1 e na Alternativa B (inclusos apenas na Alternativa A)<br>· Hospedagem, transfers, trens e passeios na Europa — cotamos assim que o roteiro terrestre estiver definido<br>· Seguro-viagem (obrigatório para o Espaço Schengen — enviamos cotação junto com a hotelaria)<br>· Voo de conexão Madri → Itália, caso a Alternativa B seja escolhida<br>· Despesas pessoais e taxas locais</div></div>
+
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Passaportes precisam ter validade mínima de <b>6 meses</b> a partir da data de retorno (abril de 2027). Brasileiros não precisam de visto para até 90 dias no Espaço Schengen; a autorização eletrônica ETIAS, quando entrar em vigor, será informada por nós. Valores sujeitos a confirmação e disponibilidade no momento da emissão.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
