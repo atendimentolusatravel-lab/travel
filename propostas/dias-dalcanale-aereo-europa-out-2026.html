@@ -8,12 +8,12 @@
 
 :root{
   --gold:#da8d00;
-  --dest:#730505;
-  --ink:#1a1510;
+  --dest:#424324;
+  --ink:#424324;
   --char:#333131;
-  --mut:#9a8d80;
-  --line:#e4ddd2;
-  --paper:#faf7f2;
+  --mut:#8a8b76;
+  --line:#dedcd0;
+  --paper:#f6f5ee;
   --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
   --con:'Montserrat',var(--sans);
   --lbl:'Arimo',var(--sans);
@@ -26,43 +26,19 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   page-break-after:always; display:flex; flex-direction:column; }
 .page:last-child{ page-break-after:auto; }
 
-.hd{ background:var(--ink); height:26mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd{ background:#fff; height:30mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd img{ height:19mm; width:auto; display:block; }
 .hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
-.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); font-weight:700; }
 .goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
 .ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
-.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
-.ft .sep{ color:rgba(255,255,255,.2); }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.75); text-decoration:none; }
+.ft .sep{ color:var(--gold); }
 .body{ padding:14mm 22mm 10mm; flex:1; }
-.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.eyebrow{ font-size:8pt; margin-top:1mm; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
 .h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:3mm 0 6mm; }
 .lead{ font-size:11pt; line-height:1.7; color:var(--char); max-width:215mm; }
 .lead b{ color:var(--ink); font-weight:600; }
-
-/* ══ CAPA ══ */
-.cover{ position:relative; }
-.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink); display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
-.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
-.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
-.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
-.cover-photo{ position:absolute; inset:0;
-  background:
-    radial-gradient(ellipse 90% 60% at 20% 30%, rgba(218,141,0,.22), transparent 60%),
-    radial-gradient(ellipse 70% 50% at 85% 75%, rgba(115,5,5,.55), transparent 65%),
-    linear-gradient(165deg,#4a2a1e 0%,#2b1712 45%,#1a1510 100%); }
-.cover-motif{ position:absolute; inset:0; z-index:1; opacity:.16; }
-.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.25) 0%, transparent 30%, rgba(0,0,0,.72) 78%); z-index:2; }
-.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:36mm; z-index:3; color:#fff; }
-.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
-.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
-.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
-.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
-.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
-.stats{ display:flex; gap:14mm; margin-top:11mm; }
-.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
-.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
-.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
-.cover-sig a{ color:inherit; text-decoration:none; }
 
 /* ══ GRUPOS ══ */
 .groups{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:6mm; margin-top:6mm; }
@@ -157,53 +133,36 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .opt .tot .lbl small{ display:block; font-size:8pt; font-weight:400; letter-spacing:.04em; color:rgba(255,255,255,.45); margin-top:1mm; }
 .opt .tot .amt{ font-size:18pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; }
 .cmp td.tot{ font-size:12pt; }
+
+.title{ margin-bottom:8mm; padding-bottom:6mm; border-bottom:1px solid var(--line); }
+.title .kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.title h1{ font-size:30pt; font-weight:800; color:var(--ink); letter-spacing:.01em; line-height:1.1; margin:2mm 0 1mm; text-transform:uppercase; }
+.title .sub{ font-size:12pt; color:var(--char); }
+.title .sub b{ color:var(--ink); font-weight:600; }
+.tl-item .amt{ margin-left:auto; text-align:right; font-size:16pt; font-weight:800; color:var(--ink); white-space:nowrap; font-variant-numeric:tabular-nums; padding-top:1mm; }
+.tl-item .amt small{ display:block; font-size:8pt; font-weight:400; color:var(--mut); letter-spacing:.06em; }
+.tl-item{ align-items:flex-start; }
+.tl-badge.alt{ color:var(--ink); border-color:var(--ink); }
+.pill.rec{ background:var(--gold); color:#fff; }
+.opt .top .pill{ background:var(--gold); }
+.cmp td.tot.rec{ color:var(--gold); }
 </style>
 </head>
 <body>
-<!-- ══════════ 01 · CAPA ══════════ -->
-<section class="page cover">
-  <div class="cover-hd"><div class="logo">LUSATRAVEL</div><div class="tag">Glossário</div></div>
-  <div class="cover-bar"></div>
-  <div class="cover-photo"></div>
-  <svg class="cover-motif" viewBox="0 0 297 420" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-    <defs><pattern id="arc" width="60" height="60" patternUnits="userSpaceOnUse">
-      <path d="M0 60 A30 30 0 0 1 60 60" fill="none" stroke="#da8d00" stroke-width=".6"/>
-      <path d="M0 30 A30 30 0 0 1 60 30" fill="none" stroke="#da8d00" stroke-width=".35"/>
-    </pattern></defs>
-    <rect width="297" height="420" fill="url(#arc)"/>
-    <g fill="none" stroke="#da8d00" stroke-width=".9" opacity=".9">
-      <circle cx="220" cy="150" r="70"/><circle cx="220" cy="150" r="52"/><circle cx="220" cy="150" r="34"/>
-    </g>
-  </svg>
-  <div class="cover-scrim"></div>
-  <div class="cover-cnt">
-    <div class="cover-kicker">Cotação para sua viagem</div>
-    <div class="cover-basis">Baseado em 6 adultos · 05/06 de outubro a 25–27 de outubro de 2026 · Aéreo internacional</div>
-    <div class="cover-to">Sua viagem para:</div>
-    <div class="cover-name">Família Dias Dalcanale</div>
-    <div class="cover-dest">Europa · Roma, Madri ou Paris</div>
-    <div class="stats">
-      <div class="stat"><b>6</b><span>Passageiros</span></div>
-      <div class="stat"><b>2</b><span>Grupos de viagem</span></div>
-      <div class="stat"><b>3</b><span>Opções de destino</span></div>
-      <div class="stat"><b>3</b><span>Semanas na Europa</span></div>
-    </div>
-  </div>
-  <div class="cover-sig">
-    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br>
-    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
-    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
-  </div>
-</section>
-
-<!-- ══════════ 02 · PASSAGEIROS ══════════ -->
+<!-- ══════════ 01 · PASSAGEIROS E RESUMO ══════════ -->
 <section class="page">
-  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Passageiros</div></div>
+  <div class="hd"><img src="assets/logo-lusatravel.webp" alt="LusaTravel"><div class="tag">Cotação aérea</div></div>
   <div class="goldbar"></div>
   <div class="body">
+    <div class="title">
+      <div class="kicker">Cotação para sua viagem</div>
+      <h1>Família Dias Dalcanale</h1>
+      <div class="sub"><b>Europa · Madri, Roma ou Paris</b> · 6 adultos · outubro de 2026 · aéreo internacional</div>
+    </div>
+
     <div class="eyebrow">Quem viaja</div>
-    <h2 class="h2">Passageiros e grupos de viagem</h2>
-    <p class="lead">Seis adultos da família viajando juntos para a Europa em outubro de 2026, com saída de São Paulo. A cotação foi organizada em <b>dois grupos</b>, um em classe executiva e outro em econômica, sempre no mesmo voo. Três portas de entrada foram cotadas: <b>Roma</b>, <b>Madri</b> e <b>Paris</b>.</p>
+    <h2 class="h2" style="font-size:18pt">Passageiros e grupos de viagem</h2>
+    <p class="lead">A cotação foi organizada em <b>dois grupos</b>, um em classe executiva e outro em econômica, sempre no mesmo voo. Três portas de entrada na Europa foram cotadas, todas em voo direto a partir de São Paulo.</p>
 
     <div class="groups" style="grid-template-columns:1fr 1fr">
       <div class="gcard">
@@ -228,29 +187,30 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <h2 class="h2" style="font-size:18pt">Resumo</h2>
     <div class="tl">
       <div class="tl-item"><div class="tl-badge">1</div><div>
-        <div class="tl-city">Roma · ITA Airways <span class="pill">Recomendada</span></div>
-        <div class="tl-meta">Voo direto São Paulo ⇄ Roma · 06/10 a 27/10 · Airbus A330-900 · toda a família no mesmo voo</div>
-      </div></div>
+        <div class="tl-city">Madri · Air China <span class="pill rec">Recomendada · menor valor</span></div>
+        <div class="tl-meta">Voo direto São Paulo ⇄ Madri · 05/10 a 25/10 · Boeing 787-9 · Business Flex e Economy Flex</div>
+      </div><div class="amt">R$ 77.926,14<small>total · 6 passageiros</small></div></div>
       <div class="tl-line"></div>
       <div class="tl-item"><div class="tl-badge alt">2</div><div>
-        <div class="tl-city">Madri · Air China</div>
-        <div class="tl-meta">Voo direto São Paulo ⇄ Madri · 05/10 a 25/10 · Boeing 787-9 · toda a família no mesmo voo</div>
-      </div></div>
+        <div class="tl-city">Roma · ITA Airways</div>
+        <div class="tl-meta">Voo direto São Paulo ⇄ Roma · 06/10 a 27/10 · Airbus A330-900 · Business Comfort e Economy Comfort</div>
+      </div><div class="amt">R$ 100.773,58<small>total · 6 passageiros</small></div></div>
       <div class="tl-line"></div>
       <div class="tl-item"><div class="tl-badge alt">3</div><div>
         <div class="tl-city">Paris · GOL, operado pela Air France</div>
-        <div class="tl-meta">Voo direto São Paulo ⇄ Paris · 06/10 a 26/10 · Boeing 777-300ER · toda a família no mesmo voo</div>
-      </div></div>
+        <div class="tl-meta">Voo direto São Paulo ⇄ Paris · 06/10 a 26/10 · Boeing 777-300ER · Executiva e Econômica Classic</div>
+      </div><div class="amt">R$ 114.296,18<small>total · 6 passageiros</small></div></div>
     </div>
+    <p class="note">Valores com tarifa e taxas de embarque para os seis passageiros · Cotação 27/09 · USD = 5,1991 · <b>*Nada reservado, apenas cotado</b></p>
   </div>
   <div class="ft">
-    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a><span class="sep">·</span><a href="#">Alameda Princesa Izabel, 1700 · Curitiba – PR</a>
   </div>
 </section>
 
-<!-- ══════════ 03 · OPÇÕES ══════════ -->
+<!-- ══════════ 02 · OPÇÕES ══════════ -->
 <section class="page">
-  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Opções</div></div>
+  <div class="hd"><img src="assets/logo-lusatravel.webp" alt="LusaTravel"><div class="tag">Voos e valores</div></div>
   <div class="goldbar"></div>
   <div class="body">
     <div class="eyebrow">Voos e investimento</div>
@@ -258,19 +218,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <p class="lead" style="font-size:10.5pt">Todas as opções são em voo direto, com a família inteira no mesmo avião na ida e na volta. Valores com tarifa e taxas de embarque para os seis passageiros.</p>
 
     <div class="opt">
-      <div class="top"><div class="no">1</div><div class="name">Roma · ITA Airways<small>São Paulo ⇄ Roma Fiumicino</small></div><span class="pill">Recomendada</span></div>
-      <div class="legs"><div class="leg"><div class="fn">AZ 679<b>06 OUT</b></div><div class="ap">GRU 18:55<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">FCO 11:30 <small>Roma · Terminal 3 · chegada 07 OUT</small></div><div class="dur">Airbus A330-900</div></div><div class="leg"><div class="fn">AZ 674<b>27 OUT</b></div><div class="ap">FCO 21:50<small>Roma · Terminal 1</small></div><div class="arrow">direto</div><div class="ap">GRU 06:25 <small>São Paulo · Terminal 3 · chegada 28 OUT</small></div><div class="dur">Airbus A330-900</div></div></div>
-      <div class="cabins">
-        <div><div class="k">Grupo 1 · 2 passageiras · executiva</div><div class="v"><b>Business Comfort</b> · 2 malas despachadas</div></div>
-        <div><div class="k">Grupo 2 · 4 passageiros · econômica</div><div class="v"><b>Economy Comfort</b> · 1 mala de 23 kg</div></div>
-        <div><div class="k">Pré-reserva válida até</div><div class="v"><b>30/09 · 10h15</b></div></div>
-      </div>
-      <div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 executiva + 4 econômica · 06/10 – 27/10 · Priscila retorna em 26/10</small></span><span class="amt">R$ 100.773,58</span></div>
-    </div>
-
-
-    <div class="opt">
-      <div class="top"><div class="no">2</div><div class="name">Madri · Air China<small>São Paulo ⇄ Madri Barajas</small></div></div>
+      <div class="top"><div class="no">1</div><div class="name">Madri · Air China<small>São Paulo ⇄ Madri Barajas</small></div><span class="pill">Recomendada · menor valor</span></div>
       <div class="legs"><div class="leg"><div class="fn">CA 898<b>05 OUT</b></div><div class="ap">GRU 09:25<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">MAD 00:45 <small>Madri · Terminal 1 · chegada 06 OUT</small></div><div class="dur">Boeing 787-9</div></div><div class="leg"><div class="fn">CA 897<b>25 OUT</b></div><div class="ap">MAD 22:30<small>Madri · Terminal 1</small></div><div class="arrow">direto</div><div class="ap">GRU 05:30 <small>São Paulo · Terminal 3 · chegada 26 OUT</small></div><div class="dur">Boeing 787-9</div></div></div>
       <div class="cabins">
         <div><div class="k">Grupo 1 · 2 passageiras · executiva</div><div class="v"><b>Business Flex</b> · 2 malas despachadas</div></div>
@@ -278,6 +226,18 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         <div><div class="k">Pré-reserva válida até</div><div class="v"><b>28/09 · 12h51</b></div></div>
       </div>
       <div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 executiva + 4 econômica · 05/10 – 25/10</small></span><span class="amt">R$ 77.926,14</span></div>
+    </div>
+
+
+    <div class="opt">
+      <div class="top"><div class="no">2</div><div class="name">Roma · ITA Airways<small>São Paulo ⇄ Roma Fiumicino</small></div></div>
+      <div class="legs"><div class="leg"><div class="fn">AZ 679<b>06 OUT</b></div><div class="ap">GRU 18:55<small>São Paulo · Terminal 3</small></div><div class="arrow">direto</div><div class="ap">FCO 11:30 <small>Roma · Terminal 3 · chegada 07 OUT</small></div><div class="dur">Airbus A330-900</div></div><div class="leg"><div class="fn">AZ 674<b>27 OUT</b></div><div class="ap">FCO 21:50<small>Roma · Terminal 1</small></div><div class="arrow">direto</div><div class="ap">GRU 06:25 <small>São Paulo · Terminal 3 · chegada 28 OUT</small></div><div class="dur">Airbus A330-900</div></div></div>
+      <div class="cabins">
+        <div><div class="k">Grupo 1 · 2 passageiras · executiva</div><div class="v"><b>Business Comfort</b> · 2 malas despachadas</div></div>
+        <div><div class="k">Grupo 2 · 4 passageiros · econômica</div><div class="v"><b>Economy Comfort</b> · 1 mala de 23 kg</div></div>
+        <div><div class="k">Pré-reserva válida até</div><div class="v"><b>30/09 · 10h15</b></div></div>
+      </div>
+      <div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 executiva + 4 econômica · 06/10 – 27/10 · Priscila retorna em 26/10</small></span><span class="amt">R$ 100.773,58</span></div>
     </div>
 
 
@@ -296,21 +256,21 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <p class="note">Cotação 27/09 · USD = 5,1991 (câmbio BRT no momento da reserva) · <b>*Nada reservado, apenas cotado</b> — as pré-reservas têm prazo e não garantem tarifa até a emissão.</p>
   </div>
   <div class="ft">
-    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a><span class="sep">·</span><a href="#">Alameda Princesa Izabel, 1700 · Curitiba – PR</a>
   </div>
 </section>
 
-<!-- ══════════ 04 · COMPARATIVO E CONDIÇÕES ══════════ -->
+<!-- ══════════ 03 · COMPARATIVO E CONDIÇÕES ══════════ -->
 <section class="page">
-  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Comparativo · Condições</div></div>
+  <div class="hd"><img src="assets/logo-lusatravel.webp" alt="LusaTravel"><div class="tag">Comparativo · Condições</div></div>
   <div class="goldbar"></div>
   <div class="body">
     <div class="eyebrow">Lado a lado</div>
     <h2 class="h2">Comparativo</h2>
     <table class="cmp">
       <tr><th>Opção</th><th>Rota</th><th>Período</th><th>Cabines</th><th>Prazo</th><th class="n">Total · 6 pax</th></tr>
-      <tr><td><b>1 · Roma</b><small>ITA Airways</small></td><td>GRU ⇄ FCO direto<small>Airbus A330-900</small></td><td>06/10 – 27/10<small>Priscila volta 26/10</small></td><td>Business Comfort<small>Economy Comfort</small></td><td>30/09 · 10h15</td><td class="n tot">R$ 100.773,58</td></tr>
-      <tr><td><b>2 · Madri</b><small>Air China</small></td><td>GRU ⇄ MAD direto<small>Boeing 787-9</small></td><td>05/10 – 25/10<small>chegada 00h45</small></td><td>Business Flex<small>Economy Flex</small></td><td>28/09 · 12h51</td><td class="n tot">R$ 77.926,14</td></tr>
+      <tr><td><b>1 · Madri</b><small>Air China · recomendada</small></td><td>GRU ⇄ MAD direto<small>Boeing 787-9</small></td><td>05/10 – 25/10<small>chegada 00h45</small></td><td>Business Flex<small>Economy Flex</small></td><td>28/09 · 12h51</td><td class="n tot rec">R$ 77.926,14</td></tr>
+      <tr><td><b>2 · Roma</b><small>ITA Airways</small></td><td>GRU ⇄ FCO direto<small>Airbus A330-900</small></td><td>06/10 – 27/10<small>Priscila volta 26/10</small></td><td>Business Comfort<small>Economy Comfort</small></td><td>30/09 · 10h15</td><td class="n tot">R$ 100.773,58</td></tr>
       <tr><td><b>3 · Paris</b><small>GOL / Air France</small></td><td>GRU ⇄ CDG direto<small>Boeing 777-300ER</small></td><td>06/10 – 26/10<small>chegada 07h00</small></td><td>Executiva<small>Econômica Classic</small></td><td>29/09 · 23h59</td><td class="n tot">R$ 114.296,18</td></tr>
     </table>
 
@@ -330,7 +290,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Passaportes precisam ter validade mínima de <b>6 meses</b> a partir da data de retorno (abril de 2027). Brasileiros não precisam de visto para até 90 dias no Espaço Schengen. Valores sujeitos a confirmação e disponibilidade no momento da emissão.</div></div>
   </div>
   <div class="ft">
-    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a><span class="sep">·</span><a href="#">Alameda Princesa Izabel, 1700 · Curitiba – PR</a>
   </div>
 </section>
 
