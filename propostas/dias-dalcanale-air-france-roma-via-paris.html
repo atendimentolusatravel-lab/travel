@@ -102,7 +102,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .val-fx{ font-size:9pt; color:var(--mut); margin-top:5mm; line-height:1.6; }
 .cmp{ width:100%; border-collapse:collapse; margin-top:3mm; }
 .cmp th{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); text-align:left; padding:2mm 5mm 2mm 0; border-bottom:2px solid var(--line); }
-.cmp td{ font-size:10pt; padding:3mm 5mm 3mm 0; border-bottom:1px solid var(--line); vertical-align:top; }
+.cmp td{ font-size:9.5pt; padding:3mm 4mm 3mm 0; border-bottom:1px solid var(--line); vertical-align:top; }
 .cmp td.n{ text-align:right; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
 .cmp th.n{ text-align:right; }
 .cmp td small{ display:block; font-size:8pt; color:var(--mut); font-weight:300; }
@@ -152,6 +152,13 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
 .leg .arrow.cx::before{ background:var(--mut); }
 .legsep{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:700; padding:2.5mm 0 .5mm; border-bottom:1px solid var(--line); }
+
+.opt .brk{ display:grid; grid-template-columns:1fr 1fr; gap:0 8mm; padding:3mm 8mm; background:var(--paper); border-top:1px solid var(--line); }
+.opt .brk .row{ display:flex; justify-content:space-between; align-items:baseline; }
+.opt .brk .k{ margin-bottom:.5mm; }
+.opt .brk .calc{ font-size:9.5pt; color:var(--char); font-weight:300; }
+.opt .brk .calc b{ font-weight:600; color:var(--ink); }
+.opt .brk .sub{ font-size:11pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; margin-left:4mm; }
 </style>
 </head>
 <body>
@@ -189,7 +196,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         <div><div class="k">Localizador · Adriana · Priscila · Artur · Amanda</div><div class="v"><b>C6QZWT</b> <small>· Air France XC7BPJ</small></div></div>
         <div><div class="k">Bagagem de mão</div><div class="v">Incluída em todas as cabines</div></div>
       </div>
-      <div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 executiva + 4 econômica · 06/10 – 30/10 · chegada e saída por Roma</small></span><span class="amt">R$ 78.197,82</span></div>
+            <div class="brk">
+        <div><div class="k">Executiva · 2 passageiras</div><div class="row"><span class="calc">2 × <b>R$ 19.971,37</b> por pessoa</span><span class="sub">R$ 39.942,74</span></div></div>
+        <div><div class="k">Econômica · 4 passageiros</div><div class="row"><span class="calc">4 × <b>R$ 9.563,77</b> por pessoa</span><span class="sub">R$ 38.255,08</span></div></div>
+      </div>
+<div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 × executiva + 4 × econômica · 06/10 – 30/10 · chegada e saída por Roma</small></span><span class="amt">R$ 78.197,82</span></div>
     </div>
 
     <p class="note"><b>Comparação com a Air China via Madri.</b> Esta opção fica R$ 271,68 acima da Air China no total das seis passagens, mas leva a família direto a Roma, sem necessidade de voo adicional a partir de Madri, e devolve todos a São Paulo em 30/10, três dias mais tarde.</p>

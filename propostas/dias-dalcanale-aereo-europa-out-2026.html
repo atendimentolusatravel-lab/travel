@@ -102,7 +102,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .val-fx{ font-size:9pt; color:var(--mut); margin-top:5mm; line-height:1.6; }
 .cmp{ width:100%; border-collapse:collapse; margin-top:3mm; }
 .cmp th{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); text-align:left; padding:2mm 5mm 2mm 0; border-bottom:2px solid var(--line); }
-.cmp td{ font-size:10pt; padding:3mm 5mm 3mm 0; border-bottom:1px solid var(--line); vertical-align:top; }
+.cmp td{ font-size:9.5pt; padding:3mm 4mm 3mm 0; border-bottom:1px solid var(--line); vertical-align:top; }
 .cmp td.n{ text-align:right; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
 .cmp th.n{ text-align:right; }
 .cmp td small{ display:block; font-size:8pt; color:var(--mut); font-weight:300; }
@@ -149,6 +149,13 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .pill.rec{ background:var(--gold); color:#fff; }
 .opt .top .pill{ background:var(--gold); }
 .cmp td.tot.rec{ color:var(--gold); }
+
+.opt .brk{ display:grid; grid-template-columns:1fr 1fr; gap:0 8mm; padding:3mm 8mm; background:var(--paper); border-top:1px solid var(--line); }
+.opt .brk .row{ display:flex; justify-content:space-between; align-items:baseline; }
+.opt .brk .k{ margin-bottom:.5mm; }
+.opt .brk .calc{ font-size:9.5pt; color:var(--char); font-weight:300; }
+.opt .brk .calc b{ font-weight:600; color:var(--ink); }
+.opt .brk .sub{ font-size:11pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; margin-left:4mm; }
 </style>
 </head>
 <body>
@@ -233,7 +240,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         <div><div class="k">Grupo 2 · 4 passageiros · econômica</div><div class="v"><b>Economy Flex</b> · 2 malas despachadas</div></div>
         <div><div class="k">Reserva ativa até</div><div class="v"><b>19h00</b> · hoje, 27/09/2026</div></div>
       </div>
-      <div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 executiva + 4 econômica · 05/10 – 25/10</small></span><span class="amt">R$ 77.926,14</span></div>
+            <div class="brk">
+        <div><div class="k">Executiva · 2 passageiras</div><div class="row"><span class="calc">2 × <b>R$ 24.681,19</b> por pessoa</span><span class="sub">R$ 49.362,38</span></div></div>
+        <div><div class="k">Econômica · 4 passageiros</div><div class="row"><span class="calc">4 × <b>R$ 7.140,94</b> por pessoa</span><span class="sub">R$ 28.563,76</span></div></div>
+      </div>
+<div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 × executiva + 4 × econômica · 05/10 – 25/10</small></span><span class="amt">R$ 77.926,14</span></div>
     </div>
 
 
@@ -250,7 +261,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         <div><div class="k">Localizador · Adriana · Artur · Amanda</div><div class="v"><b>J6RL7V</b> <small>· ITA C2WCXB</small></div></div>
         <div><div class="k">Localizador · Priscila</div><div class="v"><b>J6RLSH</b> <small>· ITA C2VZGL</small></div></div>
       </div>
-      <div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 executiva + 4 econômica · 06/10 – 27/10</small></span><span class="amt">R$ 100.356,36</span></div>
+            <div class="brk">
+        <div><div class="k">Executiva · 2 passageiras</div><div class="row"><span class="calc">2 × <b>R$ 32.186,44</b> por pessoa</span><span class="sub">R$ 64.372,88</span></div></div>
+        <div><div class="k">Econômica · 4 passageiros</div><div class="row"><span class="calc">4 × <b>R$ 8.995,87</b> por pessoa</span><span class="sub">R$ 35.983,48</span></div></div>
+      </div>
+<div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 × executiva + 4 × econômica · 06/10 – 27/10</small></span><span class="amt">R$ 100.356,36</span></div>
     </div>
 
 
@@ -277,7 +292,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         <div><div class="k">Grupo 2 · 4 passageiros · econômica</div><div class="v"><b>Econômica Classic</b> · 1 mala de 23 kg</div></div>
         <div><div class="k">Reserva ativa até</div><div class="v"><b>19h00</b> · hoje, 27/09/2026</div></div>
       </div>
-      <div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 executiva + 4 econômica · 06/10 – 26/10</small></span><span class="amt">R$ 114.296,18</span></div>
+            <div class="brk">
+        <div><div class="k">Executiva · 2 passageiras</div><div class="row"><span class="calc">2 × <b>R$ 34.692,93</b> por pessoa</span><span class="sub">R$ 69.385,86</span></div></div>
+        <div><div class="k">Econômica · 4 passageiros</div><div class="row"><span class="calc">4 × <b>R$ 11.227,58</b> por pessoa</span><span class="sub">R$ 44.910,32</span></div></div>
+      </div>
+<div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 × executiva + 4 × econômica · 06/10 – 26/10</small></span><span class="amt">R$ 114.296,18</span></div>
     </div>
 
 
@@ -290,7 +309,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         <div><div class="k">Grupo 2 · 4 passageiros · econômica</div><div class="v"><b>Econômica Full</b> · 1 mala de 23 kg</div></div>
         <div><div class="k">Reserva ativa até</div><div class="v"><b>19h00</b> · hoje, 27/09/2026</div></div>
       </div>
-      <div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 executiva + 4 econômica · 06/10 – 26/10 · Grupo 1 retorna em 27/10</small></span><span class="amt">R$ 79.687,38</span></div>
+            <div class="brk">
+        <div><div class="k">Executiva · 2 passageiras</div><div class="row"><span class="calc">2 × <b>R$ 23.040,49</b> por pessoa</span><span class="sub">R$ 46.080,98</span></div></div>
+        <div><div class="k">Econômica · 4 passageiros</div><div class="row"><span class="calc">4 × <b>R$ 8.401,60</b> por pessoa</span><span class="sub">R$ 33.606,40</span></div></div>
+      </div>
+<div class="tot"><span class="lbl">TOTAL AÉREO · 6 PASSAGEIROS<small>2 × executiva + 4 × econômica · 06/10 – 26/10 · Grupo 1 retorna em 27/10</small></span><span class="amt">R$ 79.687,38</span></div>
     </div>
 
     <p class="note"><b>Comparação com a Air China.</b> A LATAM via Frankfurt fica R$ 1.761,24 acima da Air China via Madri no total das seis passagens, com 1 mala despachada por pessoa contra 2 e retorno do grupo 1 em data diferente do grupo 2. A Air China permanece a opção de menor valor.</p>
@@ -310,13 +333,13 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <div class="eyebrow">Lado a lado</div>
     <h2 class="h2">Comparativo</h2>
     <table class="cmp">
-      <tr><th>Opção</th><th>Rota</th><th>Período</th><th>Cabines</th><th>Reserva ativa</th><th class="n">Total · 6 pax</th></tr>
-      <tr><td><b>1 · Madri</b><small>Air China · recomendada</small></td><td>GRU ⇄ MAD direto<small>Boeing 787-9</small></td><td>05/10 – 25/10<small>chegada 00h45</small></td><td>Business Flex<small>Economy Flex</small></td><td>até 19h00<small>hoje, 27/09</small></td><td class="n tot rec">R$ 77.926,14</td></tr>
-      <tr><td><b>2 · Roma</b><small>ITA Airways</small></td><td>GRU ⇄ FCO direto<small>Airbus A330-900</small></td><td>06/10 – 27/10<small>chegada 11h30</small></td><td>Business Comfort<small>Economy Comfort</small></td><td>até 19h00<small>hoje, 27/09</small></td><td class="n tot">R$ 100.356,36</td></tr>
-      <tr><td><b>3 · Paris</b><small>GOL / Air France</small></td><td>GRU ⇄ CDG direto<small>Boeing 777-300ER</small></td><td>06/10 – 26/10<small>chegada 07h00</small></td><td>Executiva<small>Econômica Classic</small></td><td>até 19h00<small>hoje, 27/09</small></td><td class="n tot">R$ 114.296,18</td></tr>
-      <tr><td><b>4 · Frankfurt</b><small>LATAM</small></td><td>GRU ⇄ FRA direto<small>Boeing 777-300</small></td><td>06/10 – 26/10<small>grupo 1 volta 27/10</small></td><td>Premium Business<small>Econômica Full</small></td><td>até 19h00<small>hoje, 27/09</small></td><td class="n tot">R$ 79.687,38</td></tr>
+      <tr><th>Opção</th><th>Rota</th><th>Período</th><th>Cabines</th><th class="n">Executiva · pessoa</th><th class="n">Econômica · pessoa</th><th class="n">Total · 6 pax</th></tr>
+      <tr><td><b>1 · Madri</b><small>Air China · recomendada</small></td><td>GRU ⇄ MAD direto<small>Boeing 787-9</small></td><td>05/10 – 25/10<small>chegada 00h45</small></td><td>Business Flex<small>Economy Flex</small></td><td class="n">R$ 24.681,19<small>× 2</small></td><td class="n">R$ 7.140,94<small>× 4</small></td><td class="n tot rec">R$ 77.926,14</td></tr>
+      <tr><td><b>2 · Roma</b><small>ITA Airways</small></td><td>GRU ⇄ FCO direto<small>Airbus A330-900</small></td><td>06/10 – 27/10<small>chegada 11h30</small></td><td>Business Comfort<small>Economy Comfort</small></td><td class="n">R$ 32.186,44<small>× 2</small></td><td class="n">R$ 8.995,87<small>× 4</small></td><td class="n tot">R$ 100.356,36</td></tr>
+      <tr><td><b>3 · Paris</b><small>GOL / Air France</small></td><td>GRU ⇄ CDG direto<small>Boeing 777-300ER</small></td><td>06/10 – 26/10<small>chegada 07h00</small></td><td>Executiva<small>Econômica Classic</small></td><td class="n">R$ 34.692,93<small>× 2</small></td><td class="n">R$ 11.227,58<small>× 4</small></td><td class="n tot">R$ 114.296,18</td></tr>
+      <tr><td><b>4 · Frankfurt</b><small>LATAM</small></td><td>GRU ⇄ FRA direto<small>Boeing 777-300</small></td><td>06/10 – 26/10<small>grupo 1 volta 27/10</small></td><td>Premium Business<small>Econômica Full</small></td><td class="n">R$ 23.040,49<small>× 2</small></td><td class="n">R$ 8.401,60<small>× 4</small></td><td class="n tot">R$ 79.687,38</td></tr>
     </table>
-    <p class="note"><b>Menor valor: Madri · Air China.</b> R$ 1.761,24 abaixo da LATAM via Frankfurt, R$ 22.430,22 abaixo da ITA via Roma e R$ 36.370,04 abaixo da GOL via Paris.</p>
+    <p class="note">Totais = 2 × executiva + 4 × econômica, com tarifa e taxas de embarque · Reservas ativas até as 19h00 de hoje, 27/09/2026 · <b>Menor valor: Madri · Air China.</b> R$ 1.761,24 abaixo da LATAM via Frankfurt, R$ 22.430,22 abaixo da ITA via Roma e R$ 36.370,04 abaixo da GOL via Paris.</p>
 
     <div class="eyebrow" style="margin-top:12mm">Importante</div>
     <h2 class="h2" style="font-size:18pt">Condições e Observações</h2>
