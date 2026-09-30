@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cristofer – Fim de ano** — iniciada em 30/09/2026 às 09:30
-⏸️ Pausada em 30/09/2026 às 09:57 por interrupção (Amanda Calheiros – caderno de voucher)
+▶️ Retomada em 30/09/2026 às 10:17 (interrupções nesta atividade: 1, 20min)
 
 ## Histórico de atividades principais
 
@@ -79,7 +79,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 35 | 24/09/2026 | 13:33 | 18:00 | 4h27min | – | Falta de internet no escritório (tarde toda perdida) |
 | 36 | 25/09/2026 | 09:00 | 09:46 | 46min | – | Responder emails e atualizar clientes (represados pela falta de internet) |
 | 37 | 25/09/2026 | 11:46 | 11:58 | 12min | – | Early check-in Amanda Rocco |
-| 38 | 30/09/2026 | 09:57 | ⏳ em andamento | – | – | Amanda Calheiros – Caderno de voucher |
+| 38 | 30/09/2026 | 09:57 | 10:17 | 20min | – | Amanda Calheiros – Caderno de voucher |
 
 ## Visão consolidada: atividades × interrupções
 
@@ -108,11 +108,12 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 21 | Simone Maximiliano – Ski Carnaval | 23/09 | 3h34min | 0 | – |
 | 22 | Revisão Ney e Viktor – Paris e Mykonos | 23/09 | 1h23min | 0 | – |
 | 23 | Anna Maria e família – Itália | 24–25/09 | 7h41min | 4 | 5h45min |
+| 24 | Cristofer – Fim de ano | 30/09 | ⏳ em andamento | 1 (até agora) | 20min |
 
 ## Resumo
 
 | Métrica | Valor |
 |---------|-------|
-| Total de interrupções | 37 |
-| Tempo total interrompido | 20h21min |
-| Duração média | 33min |
+| Total de interrupções | 38 |
+| Tempo total interrompido | 20h41min |
+| Duração média | 32min39s |
