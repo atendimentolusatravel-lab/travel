@@ -7,7 +7,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 ## Atividade principal atual
 
-_Nenhuma em andamento — aguardando próxima atividade._
+**Cristofer – Fim de ano** — iniciada em 30/09/2026 às 09:30
 
 ## Histórico de atividades principais
 
