@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>EDUARDO SLAVIERO PIMENTEL | Madrid — LusaTravel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap');
+
+:root{
+  --gold:#da8d00;
+  --gold-hi:#ffd27a;
+  --dest:#1f4a35;        /* Verde LusaTravel */
+  --dest-deep:#123021;
+  --dest-soft:#e8efe9;
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#9a8d80;
+  --line:#e4ddd2;
+  --paper:#faf7f2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff;
+  page-break-after:always; display:flex; flex-direction:column; }
+.page:last-child{ page-break-after:auto; }
+
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd img{ height:15mm; width:auto; display:block; }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.2); }
+
+.body{ padding:14mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:4mm 0 7mm; }
+.h3{ font-size:12pt; font-weight:700; color:var(--ink); margin:8mm 0 4mm; }
+.k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+
+/* ══ CAPA ══ */
+.cover{ position:relative; background:var(--ink); }
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink); display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd img{ height:16mm; width:auto; display:block; }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0; }
+.cover-photo svg{ width:100%; height:100%; display:block; }
+.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.25) 0%, transparent 30%, rgba(0,0,0,.82) 78%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:36mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.cover-name{ font-size:32pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+.cover-logo-big{ position:absolute; left:22mm; top:52mm; z-index:3; width:70mm; opacity:.95; }
+
+/* ══ ITINERÁRIO ══ */
+.tl-item{ display:flex; align-items:flex-start; gap:6mm; }
+.tl-badge{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tl-city{ font-size:14pt; font-weight:700; color:var(--ink); }
+.tl-meta{ font-size:10pt; color:var(--mut); margin-top:1mm; }
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:5mm; }
+.grid3{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:5mm; }
+.card{ border:1px solid var(--line); border-radius:6px; padding:5.5mm 7mm; background:#fff; }
+.card .v{ font-size:11.5pt; font-weight:300; color:var(--char); margin-top:1.5mm; line-height:1.5; }
+.card .v b{ font-weight:600; color:var(--ink); }
+.pill{ display:inline-block; font-size:8pt; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#fff; background:var(--dest); border-radius:3px; padding:1.2mm 3mm; }
+.pill.gold{ background:var(--gold); }
+.pill.red{ background:#8a2a10; }
+.calendar{ margin-top:7mm; display:grid; grid-template-columns:repeat(6,1fr); gap:3mm; }
+.cal{ border:1px solid var(--line); border-radius:5px; padding:4mm 3mm; text-align:center; }
+.cal .d{ font-size:16pt; font-weight:800; color:var(--ink); line-height:1; }
+.cal .m{ font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:700; margin-top:1mm; }
+.cal .w{ font-size:8pt; color:var(--mut); margin-top:1mm; }
+.cal.hi{ background:var(--dest); border-color:var(--dest); }
+.cal.hi .d,.cal.hi .w{ color:#fff; } .cal.hi .m{ color:var(--gold-hi); }
+
+/* ══ OPÇÕES DE HOTEL ══ */
+.opt-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
+.opt-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.88); }
+.opt-hd .no{ min-width:12mm; height:12mm; padding:0 4mm; border-radius:6mm; border:2px solid rgba(218,141,0,.9); color:var(--gold); font-weight:800; font-size:11pt; display:flex; align-items:center; justify-content:center; letter-spacing:.08em; }
+.opt-photo{ height:112mm; position:relative; flex-shrink:0; background:var(--ink) center/cover no-repeat; }
+.opt-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.7); }
+.opt-photo .cap small{ display:block; font-size:9pt; font-weight:400; letter-spacing:.1em; opacity:.85; }
+.dest-text{ font-size:11.5pt; font-weight:400; line-height:1.7; color:var(--char); }
+.hotel-card{ margin-top:7mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.hotel-card .top{ background:var(--paper); padding:5.5mm 8mm; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:flex-start; }
+.hotel-card .name{ font-size:15pt; font-weight:700; color:var(--ink); }
+.hotel-card .stars{ font-size:14pt; color:var(--gold); letter-spacing:2px; margin-top:1mm; }
+.hotel-card .rows{ padding:5.5mm 8mm; display:grid; grid-template-columns:1fr 1fr; gap:4mm 10mm; }
+.hotel-card .v{ font-size:11pt; font-weight:300; color:var(--char); margin-top:1mm; line-height:1.5; }
+.hotel-card .v b{ font-weight:600; color:var(--ink); }
+.amen{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:2.5mm 8mm; margin-top:3mm; }
+.amen div{ font-size:10pt; font-weight:300; color:var(--char); padding-left:5mm; position:relative; line-height:1.5; }
+.amen div::before{ content:'◆'; position:absolute; left:0; top:0; color:var(--gold); font-size:7pt; line-height:1.9; }
+.price-strip{ display:flex; justify-content:space-between; align-items:center; background:var(--dest); color:#fff; padding:4.5mm 8mm; }
+.price-strip .l{ font-size:9pt; letter-spacing:.1em; text-transform:uppercase; opacity:.8; }
+.price-strip .p{ font-size:16pt; font-weight:800; color:var(--gold-hi); }
+
+/* ══ COMPARATIVO ══ */
+table.cmp{ width:100%; border-collapse:collapse; font-size:8.9pt; }
+table.cmp th{ font-family:var(--lbl); font-size:8pt; letter-spacing:.1em; text-transform:uppercase; text-align:left; padding:2.2mm 3mm; color:#fff; background:var(--dest); }
+table.cmp th:first-child{ background:var(--ink); width:24%; }
+table.cmp td{ padding:1.7mm 3mm; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.35; }
+table.cmp td:first-child{ font-weight:600; color:var(--ink); font-size:8.7pt; }
+table.cmp tr.sec td{ background:var(--dest-soft); color:var(--dest); font-family:var(--lbl); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; font-weight:700; padding:1.4mm 3mm; }
+table.cmp .win{ color:var(--dest); font-weight:600; }
+table.cmp .win::before{ content:'★ '; color:var(--gold); }
+.mapbox{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-top:4mm; background:var(--paper); }
+.mapbox svg{ width:100%; height:auto; display:block; }
+
+/* ══ VALORES ══ */
+.val-note{ font-size:9pt; color:var(--mut); margin-bottom:4mm; }
+table.val{ width:100%; border-collapse:collapse; }
+table.val th{ font-family:var(--lbl); font-size:8pt; letter-spacing:.1em; text-transform:uppercase; text-align:right; padding:3mm; color:#fff; background:var(--dest); }
+table.val th:first-child{ text-align:left; background:var(--ink); }
+table.val td{ padding:3.6mm 3mm; border-bottom:1px solid var(--line); font-size:11.5pt; text-align:right; font-variant-numeric:tabular-nums; }
+table.val td:first-child{ text-align:left; color:var(--char); }
+table.val td:first-child small{ display:block; font-size:8.5pt; color:var(--mut); }
+table.val td.amt{ font-weight:700; color:var(--ink); }
+table.val tr.tot td{ background:var(--ink); color:#fff; font-weight:700; font-size:12pt; border:0; }
+table.val tr.tot td.amt{ color:var(--gold); font-size:15pt; font-weight:800; }
+.val-fx{ font-size:9pt; color:var(--mut); margin-top:4mm; line-height:1.6; }
+.reco{ margin-top:7mm; border:2px solid var(--gold); border-radius:6px; overflow:hidden; }
+.reco .top{ background:var(--dest); color:#fff; padding:4mm 7mm; display:flex; justify-content:space-between; align-items:center; }
+.reco .top .t{ font-size:11pt; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.reco .top .s{ font-size:16pt; font-weight:800; color:var(--gold-hi); }
+.reco .bd{ padding:5mm 7mm; font-size:10.5pt; line-height:1.65; }
+.tips{ display:grid; grid-template-columns:1fr 1fr; gap:4mm; margin-top:6mm; }
+.tip{ border-left:3px solid var(--gold); background:var(--paper); padding:3.5mm 5mm; border-radius:0 5px 5px 0; }
+.tip .t{ font-size:9.5pt; font-weight:700; color:var(--dest); }
+.tip .d{ font-size:9.5pt; line-height:1.55; color:var(--char); margin-top:1mm; }
+
+/* ══ ROTEIRO / CONDIÇÕES ══ */
+.day{ margin-bottom:6mm; }
+.day-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); }
+.day-t{ font-size:10.8pt; line-height:1.65; color:var(--char); margin-top:1.5mm; }
+.cond{ margin-bottom:6mm; }
+.cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
+.cond-t{ font-size:10.5pt; line-height:1.75; color:var(--char); }
+.alert{ border-left:3px solid var(--dest); background:var(--dest-soft); padding:5mm 7mm; border-radius:0 5px 5px 0; margin-bottom:7mm; }
+.alert .cond-h{ color:var(--dest); }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 01 · CAPA ══════════ -->
+<section class="page cover">
+  <div class="cover-hd">
+    <img src="assets/logo-lusatravel-branca.png" alt="LusaTravel">
+    <div class="tag">Glossário</div>
+  </div>
+  <div class="cover-bar"></div>
+  <div class="cover-photo">
+    <svg viewBox="0 0 842 1190" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0d1a13"/>
+          <stop offset=".42" stop-color="#1f4a35"/>
+          <stop offset=".72" stop-color="#5f6a1f"/>
+          <stop offset="1" stop-color="#da8d00"/>
+        </linearGradient>
+        <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffd27a" stop-opacity="1"/>
+          <stop offset="1" stop-color="#ffd27a" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="842" height="1190" fill="url(#sky)"/>
+      <circle cx="600" cy="760" r="190" fill="url(#sun)" opacity=".5"/>
+      <circle cx="600" cy="760" r="62" fill="#ffe0a3" opacity=".9"/>
+      <g fill="#123021" opacity=".85">
+        <rect x="0" y="880" width="842" height="310"/>
+        <rect x="40" y="820" width="70" height="80"/><rect x="130" y="840" width="50" height="60"/><rect x="210" y="800" width="90" height="100"/>
+        <rect x="330" y="835" width="60" height="70"/><rect x="420" y="790" width="40" height="110"/><rect x="490" y="825" width="80" height="80"/>
+        <rect x="600" y="810" width="60" height="95"/><rect x="690" y="845" width="110" height="60"/><rect x="780" y="800" width="62" height="105"/>
+      </g>
+      <g fill="#1a1510">
+        <rect x="0" y="960" width="842" height="230"/>
+        <path d="M60 960 V850 h30 V780 h28 V850 h30 V960 Z"/>
+        <path d="M170 960 V830 h120 V960 Z"/><path d="M180 830 V810 h100 V830 Z"/>
+        <path d="M330 960 V760 h34 V720 h22 V760 h34 V960 Z"/>
+        <path d="M520 960 V800 h150 V960 Z"/><path d="M560 800 V740 h70 V800 Z"/>
+        <path d="M595 740 c0 -60 -48 -95 -48 -95 c0 0 48 -20 48 -60 c0 40 48 60 48 60 c0 0 -48 35 -48 95 z"/>
+        <path d="M590 585 h10 v40 h-10 z"/>
+        <path d="M700 960 V820 h60 V960 Z"/><path d="M790 960 V860 h52 V960 Z"/>
+      </g>
+      <g fill="#ffd27a" opacity=".55">
+        <rect x="185" y="850" width="8" height="12"/><rect x="205" y="850" width="8" height="12"/><rect x="225" y="850" width="8" height="12"/><rect x="245" y="850" width="8" height="12"/><rect x="265" y="850" width="8" height="12"/>
+        <rect x="185" y="880" width="8" height="12"/><rect x="225" y="880" width="8" height="12"/><rect x="265" y="880" width="8" height="12"/>
+        <rect x="185" y="910" width="8" height="12"/><rect x="205" y="910" width="8" height="12"/><rect x="245" y="910" width="8" height="12"/>
+        <rect x="535" y="825" width="8" height="12"/><rect x="560" y="825" width="8" height="12"/><rect x="585" y="825" width="8" height="12"/><rect x="610" y="825" width="8" height="12"/><rect x="635" y="825" width="8" height="12"/>
+        <rect x="535" y="860" width="8" height="12"/><rect x="585" y="860" width="8" height="12"/><rect x="635" y="860" width="8" height="12"/>
+        <rect x="535" y="895" width="8" height="12"/><rect x="560" y="895" width="8" height="12"/><rect x="610" y="895" width="8" height="12"/>
+        <rect x="342" y="790" width="6" height="10"/><rect x="342" y="820" width="6" height="10"/><rect x="342" y="850" width="6" height="10"/><rect x="342" y="880" width="6" height="10"/>
+        <rect x="372" y="790" width="6" height="10"/><rect x="372" y="850" width="6" height="10"/><rect x="372" y="910" width="6" height="10"/>
+        <rect x="712" y="840" width="7" height="11"/><rect x="740" y="840" width="7" height="11"/><rect x="712" y="880" width="7" height="11"/><rect x="740" y="920" width="7" height="11"/>
+      </g>
+    </svg>
+  </div>
+  <div class="cover-scrim"></div>
+  <img class="cover-logo-big" src="assets/logo-lusatravel-branca.png" alt="">
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em 4 adultos + 3 crianças · 30 dez 2026 → 04 jan 2027 · Réveillon em Madrid · 2 opções de apart-hotel na Gran Vía</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">Sr. Eduardo Slaviero Pimentel</div>
+    <div class="cover-dest">Madrid · Espanha</div>
+    <div class="stats">
+      <div class="stat"><b>1</b><span>Destino</span></div>
+      <div class="stat"><b>5</b><span>Noites</span></div>
+      <div class="stat"><b>2</b><span>Opções de hotel</span></div>
+      <div class="stat"><b>2</b><span>Apartamentos</span></div>
+      <div class="stat"><b>7</b><span>Viajantes</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com" style="color:inherit;text-decoration:none">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076" style="color:inherit;text-decoration:none">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ══════════ 02 · ITINERÁRIO ══════════ -->
+<section class="page">
+  <div class="hd"><img src="assets/logo-lusatravel-branca.png" alt="LusaTravel"><div class="tag">Itinerário</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Sua rota</div>
+    <h2 class="h2">Itinerário</h2>
+    <div class="tl-item"><div class="tl-badge">1</div><div><div class="tl-city">Madrid, Espanha</div><div class="tl-meta">Quarta, 30 dez 2026 → Segunda, 04 jan 2027 · 5 noites · Gran Vía, coração do centro histórico</div></div></div>
+
+    <div class="calendar">
+      <div class="cal hi"><div class="d">30</div><div class="m">Dez</div><div class="w">Qua · Check-in</div></div>
+      <div class="cal"><div class="d">31</div><div class="m">Dez</div><div class="w">Qui · Nochevieja</div></div>
+      <div class="cal"><div class="d">01</div><div class="m">Jan</div><div class="w">Sex · Ano Novo</div></div>
+      <div class="cal"><div class="d">02</div><div class="m">Jan</div><div class="w">Sáb</div></div>
+      <div class="cal"><div class="d">03</div><div class="m">Jan</div><div class="w">Dom</div></div>
+      <div class="cal hi"><div class="d">04</div><div class="m">Jan</div><div class="w">Seg · Check-out</div></div>
+    </div>
+
+    <div class="h3">Resumo da hospedagem (igual para as duas opções)</div>
+    <div class="grid2">
+      <div class="card"><div class="k">Viajantes</div><div class="v"><b>4 adultos e 3 crianças</b><br>Idades das crianças a confirmar no momento da reserva.</div></div>
+      <div class="card"><div class="k">Acomodação</div><div class="v"><b>2 apartamentos · 5 diárias cada</b><br>1 quarto, cama queen + sofá-cama de casal · até 4 pessoas por unidade.</div></div>
+      <div class="card"><div class="k">Regime</div><div class="v"><b>Sem refeições incluídas</b><br>Café da manhã opcional, pago no local. Cozinha equipada nos dois apart-hotéis.</div></div>
+      <div class="card"><div class="k">Cancelamento</div><div class="v"><span class="pill red">Tarifa não reembolsável</span><br><span style="font-size:10pt">Nas duas opções. Melhor preço para o Réveillon; sem devolução após confirmação.</span></div></div>
+    </div>
+
+    <div class="h3">As duas opções, em uma frase</div>
+    <div class="grid2">
+      <div class="card" style="border-top:4px solid var(--dest)">
+        <div class="k">Opção A · Gran Vía 14</div>
+        <div class="v"><b>SmartRental Collection Gran Vía Capital</b><br>No trecho elegante da avenida, a 5 minutos a pé da Puerta del Sol. Restaurante próprio, piscina no rooftop, equipe 24h. A opção mais "hotel".</div>
+        <div style="margin-top:3mm;font-size:13pt;font-weight:800;color:var(--ink)">R$ 25.129,46 <span style="font-size:9pt;font-weight:400;color:var(--mut)">total, 2 aptos × 5 noites</span></div>
+      </div>
+      <div class="card" style="border-top:4px solid var(--gold)">
+        <div class="k">Opção B · Gran Vía 48</div>
+        <div class="v"><b>Gran View Apartments</b><br>Na Plaza de Callao, o ponto mais movimentado da Gran Vía, com terraço, academia, bar e apartamentos 3 m² maiores. A opção mais "casa", e R$ 3.375 mais barata.</div>
+        <div style="margin-top:3mm;font-size:13pt;font-weight:800;color:var(--ink)">R$ 21.754,13 <span style="font-size:9pt;font-weight:400;color:var(--mut)">total, 2 aptos × 5 noites</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 03 · OPÇÃO A ══════════ -->
+<section class="page">
+  <div class="opt-hd"><div class="city">Madrid · Espanha</div><div class="no">Opção A</div></div>
+  <div class="goldbar"></div>
+  <div class="opt-photo" style="background-image:url('assets/hotel-smartrental-piscina.jpg')">
+    <div class="cap">SmartRental Collection Gran Vía Capital<small>Piscina no rooftop · Gran Vía 14</small></div>
+  </div>
+  <div class="body" style="padding-top:9mm">
+    <p class="dest-text">
+      O SmartRental ocupa um edifício histórico no primeiro trecho da Gran Vía, entre a Calle de Alcalá e a Red de San Luis: é o pedaço
+      mais elegante da avenida, com o Edificio Metrópolis na esquina, o Círculo de Bellas Artes na diagonal e a Puerta del Sol a cinco
+      minutos de caminhada. São 60 apartamentos mobiliados individualmente, com sala separada, cozinha, geladeira e lavadora, mais
+      restaurante próprio, bar e recepção 24 horas. As avaliações destacam a limpeza dos quartos e a equipe prestativa.
+    </p>
+    <div class="hotel-card">
+      <div class="top">
+        <div><div class="name">SmartRental Collection Gran Vía Capital</div><div class="stars">★★★★</div></div>
+        <div style="text-align:right"><span class="pill gold">Apart-hotel</span><div style="font-size:9pt;color:var(--mut);margin-top:2mm">Tripadvisor 4,5 / 5 · 140 avaliações</div></div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Acomodação</div><div class="v"><b>2 × Apartamento Superior, 1 quarto</b><br>1 cama queen + 1 sofá-cama de casal · até 4 pessoas · 42 m²</div></div>
+        <div><div class="k">Plano</div><div class="v">Sem refeições · buffet de café da manhã EUR 20 por pessoa, pago no local</div></div>
+        <div><div class="k">Endereço</div><div class="v">Calle Gran Vía, 14 · 28013 Madrid</div></div>
+        <div><div class="k">Check-in / out</div><div class="v"><b>30 dez 2026</b> → <b>04 jan 2027</b> · 5 diárias</div></div>
+      </div>
+      <div style="padding:0 8mm 5mm">
+        <div class="k">Comodidades</div>
+        <div class="amen">
+          <div>Cozinha, geladeira e micro-ondas</div><div>Lavadora e secadora no apartamento</div><div>Ar-condicionado e quartos à prova de som</div>
+          <div>Wi-Fi grátis (500 Mbps ou mais)</div><div>TV de 45" e cofre</div><div>Piscina externa no rooftop (10h–19h, sazonal)</div>
+          <div>Restaurante La Catorce e bar</div><div>Recepção 24 h e guarda-bagagem</div><div>Concierge, equipe em inglês e espanhol</div>
+          <div>Garagem no local: EUR 36/dia</div><div>Traslado aeroporto 24 h (sobretaxa)</div><div>Somente animais de serviço</div>
+        </div>
+      </div>
+      <div class="price-strip"><span class="l">Total · 2 apartamentos · 5 noites · impostos e taxas incluídos</span><span class="p">R$ 25.129,46</span></div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 04 · OPÇÃO B ══════════ -->
+<section class="page">
+  <div class="opt-hd"><div class="city">Madrid · Espanha</div><div class="no">Opção B</div></div>
+  <div class="goldbar"></div>
+  <div class="opt-photo" style="background-image:url('assets/hotel-granview-terraco.jpg');background-position:center 40%">
+    <div class="cap">Gran View Apartments<small>Terraço com vista para a Plaza de Callao · Gran Vía 48</small></div>
+  </div>
+  <div class="body" style="padding-top:9mm">
+    <p class="dest-text">
+      O Gran View fica de frente para a Plaza de Callao, o ponto central e mais vibrante da Gran Vía: os letreiros do Edificio Carrión
+      (Schweppes), o Cine Capitol, a FNAC e o El Corte Inglés estão literalmente do outro lado da rua. Dali, a Puerta del Sol fica a
+      8 minutos a pé pela Calle de Preciados, o Palácio Real e o Templo de Debod a pouco mais de 10. Os apartamentos Conforto têm 45 m²,
+      cozinha completa e ar-condicionado; o prédio oferece piscina, academia e bar. As avaliações elogiam a localização acima de tudo.
+    </p>
+    <div class="hotel-card">
+      <div class="top">
+        <div><div class="name">Gran View Apartments</div><div class="stars">★★★★</div></div>
+        <div style="text-align:right"><span class="pill gold">Apart-hotel</span><div style="font-size:9pt;color:var(--mut);margin-top:2mm">Tripadvisor 4,1 / 5 · 269 avaliações · localização 4,9</div></div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Acomodação</div><div class="v"><b>2 × Apartamento Conforto, 1 quarto</b><br>1 cama queen + 1 sofá-cama de casal · até 4 pessoas · 45 m²</div></div>
+        <div><div class="k">Plano</div><div class="v">Sem refeições · café da manhã disponível no local, valor sob consulta</div></div>
+        <div><div class="k">Endereço</div><div class="v">Calle Gran Vía, 48 · 28013 Madrid</div></div>
+        <div><div class="k">Check-in / out</div><div class="v"><b>30 dez 2026</b> → <b>04 jan 2027</b> · 5 diárias</div></div>
+      </div>
+      <div style="padding:0 8mm 5mm">
+        <div class="k">Comodidades</div>
+        <div class="amen">
+          <div>Cozinha equipada no apartamento</div><div>Ar-condicionado</div><div>Wi-Fi grátis</div>
+          <div>Piscina</div><div>Academia</div><div>Bar</div>
+          <div>Café da manhã disponível (pago)</div><div>Estacionamento disponível (pago)</div><div>Terraço com vista para a Gran Vía</div>
+        </div>
+      </div>
+      <div class="price-strip"><span class="l">Total · 2 apartamentos · 5 noites · impostos e taxas incluídos</span><span class="p">R$ 21.754,13</span></div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 05 · COMPARATIVO ══════════ -->
+<section class="page">
+  <div class="hd"><img src="assets/logo-lusatravel-branca.png" alt="LusaTravel"><div class="tag">Comparativo</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Lado a lado</div>
+    <h2 class="h2">Comparativo das duas opções</h2>
+
+    <div class="mapbox">
+      <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" font-family="Poppins, sans-serif">
+        <rect width="1000" height="300" fill="#faf7f2"/>
+        <!-- Gran Vía -->
+        <path d="M60 130 L940 130" stroke="#1a1510" stroke-width="14" stroke-linecap="round"/>
+        <path d="M60 130 L940 130" stroke="#da8d00" stroke-width="3" stroke-dasharray="14 10" opacity=".9"/>
+        <text x="500" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1510" letter-spacing="3">GRAN VÍA · 1,3 KM</text>
+        <text x="60" y="80" text-anchor="middle" font-size="9" fill="#9a8d80">OESTE</text>
+        <text x="940" y="80" text-anchor="middle" font-size="9" fill="#9a8d80">LESTE</text>
+        <!-- praças -->
+        <g>
+          <circle cx="60" cy="130" r="13" fill="#1f4a35"/><text x="60" y="164" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1a1510">Plaza de España</text>
+          <text x="60" y="180" text-anchor="middle" font-size="9" fill="#9a8d80">Metrô L3 · L10</text>
+          <circle cx="430" cy="130" r="13" fill="#1f4a35"/><text x="430" y="164" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1a1510">Plaza de Callao</text>
+          <text x="430" y="180" text-anchor="middle" font-size="9" fill="#9a8d80">Metrô L3 · L5 · El Corte Inglés</text>
+          <circle cx="680" cy="130" r="13" fill="#1f4a35"/><text x="680" y="164" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1a1510">Red de San Luis</text>
+          <text x="680" y="180" text-anchor="middle" font-size="9" fill="#9a8d80">Metrô Gran Vía L1 · L5</text>
+          <circle cx="940" cy="130" r="13" fill="#1f4a35"/><text x="940" y="164" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1a1510">Calle de Alcalá</text>
+          <text x="940" y="180" text-anchor="middle" font-size="9" fill="#9a8d80">Metrópolis · Cibeles 400 m</text>
+        </g>
+        <!-- hotéis -->
+        <g>
+          <path d="M395 60 l18 0 l0 40 l-18 0 z" fill="#da8d00"/><path d="M386 60 l36 0 l-18 -22 z" fill="#da8d00"/>
+          <line x1="404" y1="100" x2="404" y2="117" stroke="#da8d00" stroke-width="3"/>
+          <text x="404" y="50" text-anchor="middle" font-size="11" font-weight="800" fill="#1a1510">B · GRAN VIEW</text>
+          <text x="404" y="30" text-anchor="middle" font-size="9" fill="#9a8d80">Gran Vía 48 · Callao a 50 m</text>
+          <path d="M841 60 l18 0 l0 40 l-18 0 z" fill="#1f4a35"/><path d="M832 60 l36 0 l-18 -22 z" fill="#1f4a35"/>
+          <line x1="850" y1="100" x2="850" y2="117" stroke="#1f4a35" stroke-width="3"/>
+          <text x="850" y="50" text-anchor="middle" font-size="11" font-weight="800" fill="#1a1510">A · SMARTRENTAL</text>
+          <text x="850" y="30" text-anchor="middle" font-size="9" fill="#9a8d80">Gran Vía 14 · Metrópolis a 150 m</text>
+        </g>
+        <!-- Sol ao sul -->
+        <path d="M430 143 Q 560 250 620 258" stroke="#9a8d80" stroke-width="2" fill="none" stroke-dasharray="5 5"/>
+        <path d="M850 143 Q 760 250 660 258" stroke="#9a8d80" stroke-width="2" fill="none" stroke-dasharray="5 5"/>
+        <circle cx="640" cy="258" r="15" fill="#da8d00"/><text x="640" y="262" text-anchor="middle" font-size="9" font-weight="800" fill="#1a1510">SOL</text>
+        <text x="640" y="290" text-anchor="middle" font-size="10" font-weight="600" fill="#1a1510">Puerta del Sol · Metrô L1 · L2 · L3 · Cercanías</text>
+        <text x="500" y="232" text-anchor="middle" font-size="9" fill="#9a8d80">B → Sol: 650 m · 8 min</text>
+        <text x="780" y="232" text-anchor="middle" font-size="9" fill="#9a8d80">A → Sol: 400 m · 5 min</text>
+      </svg>
+    </div>
+
+    <table class="cmp" style="margin-top:4mm">
+      <thead><tr><th>Critério</th><th>A · SmartRental Collection Gran Vía Capital</th><th>B · Gran View Apartments</th></tr></thead>
+      <tbody>
+        <tr class="sec"><td colspan="3">Posição na Gran Vía</td></tr>
+        <tr><td>Trecho da avenida</td><td>Gran Vía 14 · 1º trecho (Alcalá → Red de San Luis), o mais elegante e tranquilo</td><td class="win">Gran Vía 48 · Plaza de Callao, o ponto central e mais movimentado</td></tr>
+        <tr><td>Ambiente noturno</td><td class="win">Mais silencioso; quartos à prova de som</td><td>Muito movimento até tarde, especialmente no Réveillon</td></tr>
+        <tr class="sec"><td colspan="3">Pontos turísticos (a pé)</td></tr>
+        <tr><td>Puerta del Sol (12 uvas)</td><td class="win">400 m · 5 min</td><td>650 m · 8 min</td></tr>
+        <tr><td>Plaza Mayor · Mercado de San Miguel</td><td>800 m · 10 min</td><td class="win">750 m · 9 min</td></tr>
+        <tr><td>Palácio Real · Almudena</td><td>1,3 km · 16 min</td><td class="win">850 m · 11 min</td></tr>
+        <tr><td>Templo de Debod (pôr do sol)</td><td>1,4 km · 18 min</td><td class="win">800 m · 10 min</td></tr>
+        <tr><td>Cibeles · Círculo de Bellas Artes</td><td class="win">450 m · 6 min · Bellas Artes a 150 m</td><td>1,0 km · 13 min</td></tr>
+        <tr><td>Museu do Prado · Reina Sofía</td><td class="win">1,1 km · 14 min</td><td>1,7 km · 21 min (ou metrô)</td></tr>
+        <tr><td>Parque do Retiro</td><td class="win">1,3 km · 17 min</td><td>2,0 km · metrô L2 até Retiro</td></tr>
+        <tr class="sec"><td colspan="3">Metrô e transporte</td></tr>
+        <tr><td>Estação mais próxima</td><td>Gran Vía (L1 · L5) · 200 m</td><td class="win">Callao (L3 · L5) · 50 m</td></tr>
+        <tr><td>Outras estações a até 500 m</td><td class="win">Sevilla (L2) 250 m · Sol (L1 L2 L3) 400 m · Banco de España (L2) 450 m</td><td>Santo Domingo (L2) 250 m · Plaza de España (L3 L10) 450 m · Gran Vía (L1 L5) 500 m</td></tr>
+        <tr><td>Chegada do aeroporto (Barajas)</td><td class="win">Cercanías C-1 do T4 direto até Sol, depois 5 min a pé · Ônibus Exprés 203 até Cibeles</td><td>Metrô L8 + L10 até Plaza de España, depois 6 min a pé · Táxi tarifa fixa (aprox. EUR 33)</td></tr>
+        <tr class="sec"><td colspan="3">Conveniência para a família</td></tr>
+        <tr><td>Supermercado e compras</td><td>Minimercados na Montera e Calle de Alcalá · Primark Gran Vía 32 a 400 m</td><td class="win">El Corte Inglés Callao (supermercado e Gourmet Experience) e FNAC do outro lado da rua</td></tr>
+        <tr><td>Refeições no prédio</td><td class="win">Restaurante La Catorce + bar · café buffet EUR 20</td><td>Bar · café da manhã sob consulta</td></tr>
+        <tr><td>Estrutura</td><td>Piscina rooftop (sazonal) · recepção 24 h · concierge · lavadora no apto</td><td class="win">Piscina · academia · bar · terraço</td></tr>
+        <tr><td>Apartamento</td><td>Superior · 42 m² · sala separada</td><td class="win">Conforto · 45 m²</td></tr>
+        <tr><td>Avaliação Tripadvisor</td><td class="win">4,5 / 5 (140 avaliações)</td><td>4,1 / 5 (269 avaliações) · localização 4,9 · limpeza 4,0</td></tr>
+        <tr class="sec"><td colspan="3">Investimento</td></tr>
+        <tr><td>Total 2 aptos × 5 noites</td><td>R$ 25.129,46</td><td class="win">R$ 21.754,13 · economia de R$ 3.375,33 (13%)</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:8.5pt;color:var(--mut);margin-top:4mm;line-height:1.5">Distâncias e tempos a pé são aproximados, medidos pelo trajeto mais curto. ★ indica a opção com vantagem no critério.</p>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 06 · ORÇAMENTO OTIMIZADO ══════════ -->
+<section class="page">
+  <div class="hd"><img src="assets/logo-lusatravel-branca.png" alt="LusaTravel"><div class="tag">Valores</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Investimento</div>
+    <h2 class="h2">Orçamento otimizado</h2>
+    <div class="val-note">*Valores em BRL (R$) para a hospedagem completa: 2 apartamentos × 5 diárias · 4 adultos + 3 crianças · 30 dez 2026 → 04 jan 2027</div>
+
+    <table class="val">
+      <thead><tr><th>Item</th><th>A · SmartRental</th><th>B · Gran View</th></tr></thead>
+      <tbody>
+        <tr><td>Hotelaria<small>2 apartamentos × 5 diárias</small></td><td class="amt">R$ 22.844,98</td><td class="amt">R$ 19.776,49</td></tr>
+        <tr><td>Impostos e taxas</td><td class="amt">R$ 1.873,28</td><td class="amt">R$ 1.671,82</td></tr>
+        <tr><td>Taxa da propriedade</td><td class="amt">R$ 411,20</td><td class="amt">R$ 305,82</td></tr>
+        <tr><td>Aéreo internacional<small>Não incluído · cotado sob consulta</small></td><td style="color:var(--mut)">—</td><td style="color:var(--mut)">—</td></tr>
+        <tr><td>Seguro de viagem<small>Não incluído · obrigatório no Espaço Schengen</small></td><td style="color:var(--mut)">—</td><td style="color:var(--mut)">—</td></tr>
+        <tr class="tot"><td>TOTAL HOSPEDAGEM · 7 VIAJANTES</td><td class="amt">R$ 25.129,46</td><td class="amt">R$ 21.754,13</td></tr>
+        <tr><td>Média por diária, por apartamento<small>antes de impostos</small></td><td>R$ 2.284,50</td><td>R$ 1.977,65</td></tr>
+        <tr><td>Por apartamento, 5 noites<small>com impostos e taxas</small></td><td>R$ 12.564,73</td><td>R$ 10.877,07</td></tr>
+        <tr><td>Por viajante<small>total dividido por 7</small></td><td>R$ 3.589,92</td><td>R$ 3.107,73</td></tr>
+        <tr><td>Diferença entre as opções</td><td colspan="2" style="text-align:center;font-weight:700;color:var(--dest)">Gran View custa R$ 3.375,33 a menos (−13,4%)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="reco">
+      <div class="top"><span class="t">Recomendação LusaTravel · Opção B · Gran View Apartments</span><span class="s">R$ 21.754,13</span></div>
+      <div class="bd">
+        Para uma família de sete com três crianças, o Gran View entrega o melhor equilíbrio: apartamentos maiores, supermercado e lojas
+        do El Corte Inglés na porta, metrô a 50 metros e os três passeios mais "de criança" (Palácio Real, Templo de Debod, Plaza Mayor)
+        a menos de 12 minutos a pé. A economia de R$ 3.375,33 cobre com folga o café da manhã dos cinco dias ou o seguro de viagem de todo o
+        grupo. A Opção A vale a diferença se a prioridade for silêncio à noite, restaurante dentro do hotel e a menor caminhada até a Puerta
+        del Sol na virada do ano.
+      </div>
+    </div>
+
+    <div class="tips">
+      <div class="tip"><div class="t">Café da manhã no apartamento</div><div class="d">Os dois apart-hotéis têm cozinha. O buffet a EUR 20 por pessoa custaria EUR 700 para 7 pessoas em 5 dias; um café de supermercado fica abaixo de EUR 100.</div></div>
+      <div class="tip"><div class="t">Transporte a pé + metrô</div><div class="d">Tudo o que importa está a menos de 20 minutos a pé. Para dias de museu, o bilhete turístico de 5 dias (Zona A) custa cerca de EUR 27 por adulto e metade para crianças de até 11 anos.</div></div>
+      <div class="tip"><div class="t">Chegada do aeroporto</div><div class="d">Dois táxis com tarifa fixa (aprox. EUR 33 cada) levam a família com bagagem até a porta por menos do que o traslado privativo com sobretaxa do hotel. A LusaTravel também cota van privativa.</div></div>
+      <div class="tip"><div class="t">Pagamento</div><div class="d">Hotelaria em até 10x sem acréscimo no cartão, ou desconto de 5 a 13% no PIX. Na Opção B, o desconto PIX pode chegar a R$ 2.800.</div></div>
+    </div>
+
+    <div class="val-fx">Cotação 30/09/2026 · Tarifas expressas pelos fornecedores diretamente em BRL, sem conversão adicional no ato da reserva. Valores em EUR citados nas dicas são referências de mercado, sujeitos a alteração.<br>*Nada reservado, apenas cotado. Preço e disponibilidade não garantidos até a confirmação da estadia.</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 07 · ROTEIRO SUGERIDO ══════════ -->
+<section class="page">
+  <div class="hd"><img src="assets/logo-lusatravel-branca.png" alt="LusaTravel"><div class="tag">Roteiro</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Dia a dia · sugestão sem custo incluído</div>
+    <h2 class="h2">Roteiro sugerido</h2>
+    <div class="day"><div class="day-h">Dia 01 | Madrid | Qua, 30 dez</div><div class="day-t">Chegada e check-in. Primeiro passeio a pé pela Gran Vía, da Plaza de Callao à Puerta del Sol, para conhecer o cenário da virada com calma. Compras de mercado para o café dos próximos dias e jantar leve.</div></div>
+    <div class="day"><div class="day-h">Dia 02 | Madrid | Qui, 31 dez · Nochevieja</div><div class="day-t">Manhã no Parque do Retiro, com o Palácio de Cristal e o lago para as crianças. Tarde de compras nas ruas Preciados e Carmen. À noite, as doze uvas: a Puerta del Sol tem acesso controlado e lota cedo. Para uma família com crianças, recomendamos acompanhar a contagem regressiva da Gran Vía ou de um restaurante com ceia reservada.</div></div>
+    <div class="day"><div class="day-h">Dia 03 | Madrid | Sex, 01 jan</div><div class="day-t">A cidade acorda tarde. Chocolate com churros na Chocolatería San Ginés e caminhada pela Plaza Mayor e pelo Mercado de San Miguel. Tarde livre; o Prado e o Reina Sofía abrem em horário reduzido no dia 1º.</div></div>
+    <div class="day"><div class="day-h">Dia 04 | Madrid | Sáb, 02 jan</div><div class="day-t">Palácio Real e Catedral de la Almudena pela manhã, seguidos dos Jardins de Sabatini. Almoço em La Latina. À tarde, teleférico ou Casa de Campo para as crianças gastarem energia; pôr do sol no Templo de Debod.</div></div>
+    <div class="day"><div class="day-h">Dia 05 | Madrid | Dom, 03 jan</div><div class="day-t">Dia de museus com as crianças: CaixaForum e Museu de Ciências Naturais, ou o Prado com trajeto curto e obras selecionadas. Últimas compras com as luzes de Natal ainda acesas. Jantar de despedida.</div></div>
+    <div class="day"><div class="day-h">Dia 06 | Madrid | Seg, 04 jan</div><div class="day-t">Check-out. Guarda-bagagem na recepção para aproveitar a manhã livre antes de seguir ao aeroporto de táxi, Cercanías ou van privativa cotada pela LusaTravel.</div></div>
+    <p style="font-size:9pt;color:var(--mut);margin-top:5mm;line-height:1.6">O roteiro acima é uma sugestão de aproveitamento dos dias e não faz parte do valor cotado. Ingressos, refeições, ceia de Réveillon e traslados podem ser cotados à parte pela LusaTravel.</p>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 08 · CONDIÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><img src="assets/logo-lusatravel-branca.png" alt="LusaTravel"><div class="tag">Condições</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Importante</div>
+    <h2 class="h2">Condições e Observações</h2>
+    <div class="alert">
+      <div class="cond-h">Tarifa não reembolsável nas duas opções</div>
+      <div class="cond-t">As tarifas cotadas são as mais competitivas para o Réveillon justamente por não permitirem cancelamento nem alteração após a confirmação. Recomendamos confirmar as datas do aéreo antes de reservar a hospedagem e contratar seguro de viagem com cobertura de cancelamento.</div>
+    </div>
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Hotelaria: até 10x sem acréscimos no cartão de crédito · PIX: desconto de 5–13% sobre o valor total.</div></div>
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">
+      · Passagens aéreas e seguro de viagem (cotados à parte)<br>
+      · Café da manhã (Opção A: EUR 20 por pessoa, adulto ou criança · Opção B: sob consulta), pago no hotel<br>
+      · Estacionamento (Opção A: EUR 36 por dia · Opção B: sob consulta) e traslados de/para o aeroporto<br>
+      · Refeições, ingressos, passeios e despesas pessoais<br>
+      · Taxas locais eventualmente cobradas pelo hotel no check-in</div></div>
+    <div class="cond"><div class="cond-h">Ocupação e crianças</div><div class="cond-t">Cada apartamento acomoda até 4 pessoas em 1 cama queen e 1 sofá-cama de casal. Os 7 viajantes serão distribuídos em 2 apartamentos; a idade das crianças precisa ser informada na reserva, pois pode alterar a tarifa e a distribuição das camas. Berço ou cama extra sob consulta.</div></div>
+    <div class="cond"><div class="cond-h">Sobre as propriedades</div><div class="cond-t">Ambas são apart-hotéis 4 estrelas na Gran Vía, com cozinha no apartamento e piscina (externa, sujeita a fechamento no inverno). O SmartRental tem recepção 24 horas, restaurante La Catorce (reserva necessária), guarda-bagagem e concierge; não aceita animais de estimação. O Gran View tem academia, bar e terraço; horários de recepção e guarda-bagagem a confirmar na reserva.</div></div>
+    <div class="cond"><div class="cond-h">Documentação</div><div class="cond-t">Passaporte com validade mínima de 6 meses a partir da entrada no Espaço Schengen. Brasileiros não precisam de visto para estadias de até 90 dias. Seguro de viagem com cobertura mínima de EUR 30.000 é exigido na Europa; a LusaTravel cota o seguro sob consulta.</div></div>
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Valores sujeitos a confirmação e disponibilidade no momento da reserva. Períodos de Réveillon têm procura elevada e a tarifa pode mudar sem aviso até a confirmação do pagamento.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
