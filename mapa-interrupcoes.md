@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cristofer – Fim de ano** — iniciada em 30/09/2026 às 09:30
-▶️ Retomada em 30/09/2026 às 10:17 (interrupções nesta atividade: 1, 20min)
+⏸️ Pausada em 30/09/2026 às 11:16 por interrupção (Amanda Calheiros – caderno de voucher, retorno)
 
 ## Histórico de atividades principais
 
@@ -80,6 +80,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 36 | 25/09/2026 | 09:00 | 09:46 | 46min | – | Responder emails e atualizar clientes (represados pela falta de internet) |
 | 37 | 25/09/2026 | 11:46 | 11:58 | 12min | – | Early check-in Amanda Rocco |
 | 38 | 30/09/2026 | 09:57 | 10:17 | 20min | – | Amanda Calheiros – Caderno de voucher |
+| 39 | 30/09/2026 | 11:16 | ⏳ em andamento | – | – | Amanda Calheiros – Caderno de voucher (retorno) |
 
 ## Visão consolidada: atividades × interrupções
 
