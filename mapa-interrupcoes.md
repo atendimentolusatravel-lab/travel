@@ -7,8 +7,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 ## Atividade principal atual
 
-**Cristofer – Fim de ano** — iniciada em 30/09/2026 às 09:30
-▶️ Retomada em 01/10/2026 às 09:49 (interrupções nesta atividade: 3, total 1h32min)
+_Nenhuma no momento_
 
 ## Histórico de atividades principais
 
@@ -37,6 +36,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 21 | 23/09/2026 | 10:55 | 15:29 | 3h34min | Simone Maximiliano – Ski Carnaval | Concluída; sem interrupções; descontado almoço (1h) |
 | 22 | 23/09/2026 | 15:36 | 16:59 | 1h23min | Revisão Ney e Viktor – Paris e Mykonos | Concluída; sem interrupções |
 | 23 | 24–25/09/2026 | 24/09 11:11 | 25/09 17:37 | 7h41min | Anna Maria e família – Itália | Concluída; 1h02min no dia 24 (tarde perdida por falta de internet) + 6h39min no dia 25; descontadas 4 interrupções (5h45min) e almoços |
+| 24 | 30/09–01/10/2026 | 30/09 09:30 | 01/10 14:42 | 10h40min | Cristofer – Fim de ano | Concluída; 6h42min no dia 30 + 3h58min no dia 01; descontados almoços e 3 interrupções (1h32min) |
 
 ## Tabela de Interrupções
 
@@ -110,7 +110,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 21 | Simone Maximiliano – Ski Carnaval | 23/09 | 3h34min | 0 | – |
 | 22 | Revisão Ney e Viktor – Paris e Mykonos | 23/09 | 1h23min | 0 | – |
 | 23 | Anna Maria e família – Itália | 24–25/09 | 7h41min | 4 | 5h45min |
-| 24 | Cristofer – Fim de ano | 30/09–01/10 | ⏳ em andamento | 3 (até agora) | 1h32min |
+| 24 | Cristofer – Fim de ano | 30/09–01/10 | 10h40min | 3 | 1h32min |
 
 ## Resumo
 
