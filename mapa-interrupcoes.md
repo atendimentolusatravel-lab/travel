@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cristofer – Fim de ano** — iniciada em 30/09/2026 às 09:30
-⏸️ Pausada em 01/10/2026 às 09:05 — Interrupção #40 em andamento: Dalcanales – Caderno de Voucher
+▶️ Retomada em 01/10/2026 às 09:49 (interrupções nesta atividade: 3, total 1h32min)
 
 ## Histórico de atividades principais
 
@@ -81,7 +81,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 37 | 25/09/2026 | 11:46 | 11:58 | 12min | – | Early check-in Amanda Rocco |
 | 38 | 30/09/2026 | 09:57 | 10:17 | 20min | – | Amanda Calheiros – Caderno de voucher |
 | 39 | 30/09/2026 | 11:16 | 11:44 | 28min | – | Amanda Calheiros – Caderno de voucher (retorno) |
-| 40 | 01/10/2026 | 09:05 | _em andamento_ | – | – | Dalcanales – Caderno de Voucher |
+| 40 | 01/10/2026 | 09:05 | 09:49 | 44min | – | Dalcanales – Caderno de Voucher (2ª vez de caderno) |
 
 ## Visão consolidada: atividades × interrupções
 
@@ -110,12 +110,12 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 21 | Simone Maximiliano – Ski Carnaval | 23/09 | 3h34min | 0 | – |
 | 22 | Revisão Ney e Viktor – Paris e Mykonos | 23/09 | 1h23min | 0 | – |
 | 23 | Anna Maria e família – Itália | 24–25/09 | 7h41min | 4 | 5h45min |
-| 24 | Cristofer – Fim de ano | 30/09 | ⏳ em andamento | 2 (até agora) | 48min |
+| 24 | Cristofer – Fim de ano | 30/09–01/10 | ⏳ em andamento | 3 (até agora) | 1h32min |
 
 ## Resumo
 
 | Métrica | Valor |
 |---------|-------|
-| Total de interrupções | 39 |
-| Tempo total interrompido | 21h09min |
-| Duração média | 32min32s |
+| Total de interrupções | 40 |
+| Tempo total interrompido | 21h53min |
+| Duração média | 32min50s |
