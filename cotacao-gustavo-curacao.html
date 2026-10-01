@@ -88,6 +88,7 @@ body{
 .win-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--mut); padding:18px 18px 16px; display:flex; flex-direction:column; }
 .win-item.rec{ border-top-color:var(--gold); }
 .win-item.no{ opacity:.85; }
+.win.hg{ grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
 .win-tag{ font-size:9.5px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--mut); }
 .win-item.rec .win-tag{ color:var(--gold); }
 .win-item.no .win-tag{ color:var(--warn); }
@@ -360,8 +361,55 @@ body{
         </div>
       </div>
 
+      <div class="eyebrow" style="margin-top:44px">Outros hotéis</div>
+      <h2 class="h2">Seis alternativas parecidas com o Marriott</h2>
+      <p class="lead">Mesmo perfil: resort de praia, 4 ou 5 estrelas, bom para família, sem all-inclusive obrigatório e longe da agitação. Preços para as mesmas 7 noites de 9 a 16 de janeiro, 1 acomodação para 2 adultos e 2 crianças, impostos inclusos. O Marriott, para referência, está em <b>USD 3.523</b>.</p>
+      <div class="win hg">
+        <div class="win-item rec">
+          <div class="win-tag">Melhor custo-benefício</div>
+          <div class="win-title">Blue Bay Golf &amp; Beach Resort</div>
+          <div class="win-meta">★★★★ · Blue Bay, costa oeste · nota 8,5</div>
+          <div class="win-body">Enseada própria e isolada, água de piscina, campo de golfe e apartamentos com cozinha, a 15 minutos do Marriott. O mais silencioso da lista. <b>Atenção:</b> pede carro alugado para jantar fora; restaurantes do resort são poucos.</div>
+          <div class="win-price">USD 3.344<small>7 noites · apartamento família</small></div>
+        </div>
+        <div class="win-item">
+          <div class="win-tag">Mais perto das crianças</div>
+          <div class="win-title">The Royal Sea Aquarium Resort</div>
+          <div class="win-meta">★★★★★ · Bapor Kibrá · nota 8,5</div>
+          <div class="win-body">Apartamentos à beira-mar grudados no Sea Aquarium e na Dolphin Academy, com praia de areia e lagoa rasa. Classificado como "tranquilo" e "resort de família" no Tripadvisor. <b>Atenção:</b> a Mambo Beach, mais movimentada, fica a 5 minutos a pé, mas não invade o resort.</div>
+          <div class="win-price">USD 4.479<small>7 noites no Booking · direto no hotel a partir de USD 2.759 + taxas</small></div>
+        </div>
+        <div class="win-item">
+          <div class="win-tag">Mais barato</div>
+          <div class="win-title">Papagayo Beach Resort</div>
+          <div class="win-meta">★★★★ · Jan Thiel · nota 8,0</div>
+          <div class="win-body">Vilas modernas com piscina compartilhada e acesso ao Papagayo Beach Club. Jan Thiel é a praia preferida das famílias holandesas: segura, rasa, com restaurantes. <b>Atenção:</b> a praia é um beach club pago e tem música à tarde; é o menos "quieto" dos seis.</div>
+          <div class="win-price">USD 2.997<small>7 noites · vila família</small></div>
+        </div>
+        <div class="win-item">
+          <div class="win-tag">Charme e cidade a pé</div>
+          <div class="win-title">Avila Beach Hotel</div>
+          <div class="win-meta">★★★★ · Pietermaai · nota 9,0</div>
+          <div class="win-body">O hotel mais tradicional da ilha, de 1949, com duas praias privativas de enseada, spa e o bairro de Pietermaai na porta. É o melhor avaliado da lista e muito tranquilo. <b>Atenção:</b> a tarifa cotada é de suíte família; quartos menores para 4 pessoas podem baixar o valor.</div>
+          <div class="win-price">USD 7.106<small>7 noites · suíte família</small></div>
+        </div>
+        <div class="win-item">
+          <div class="win-tag">Mesma rede, no centro</div>
+          <div class="win-title">Renaissance Wind Creek</div>
+          <div class="win-meta">★★★★ · Otrobanda, Willemstad · nota 8,8</div>
+          <div class="win-body">Marriott de cidade: fica dentro do Rif Fort, a pé de Punda e de dezenas de restaurantes, com uma lagoa-praia artificial de água calma. <b>Atenção:</b> é urbano e tem cassino; funciona para quem quer sair à noite, não para quem quer sumir.</div>
+          <div class="win-price">USD 5.054<small>7 noites · quarto família</small></div>
+        </div>
+        <div class="win-item">
+          <div class="win-tag">Luxo absoluto</div>
+          <div class="win-title">Baoase Luxury Resort</div>
+          <div class="win-meta">23 vilas e suítes · nota 4,8 no Tripadvisor</div>
+          <div class="win-body">Eleito o melhor resort do Caribe pela Travel + Leisure 2025. Piscinas privativas, mordomo de praia, enseada só para hóspedes, muito família. <b>Atenção:</b> custa quase três vezes o Marriott e o plano de refeições não vale no início de janeiro.</div>
+          <div class="win-price">USD 9.543<small>7 noites · suíte família, tarifa a partir de</small></div>
+        </div>
+      </div>
       <div class="call">
-        <b>Se quiser gastar menos no hotel:</b> o Blue Bay Golf &amp; Beach Resort, 4 estrelas, nota 8,5, em uma enseada ainda mais isolada 15 minutos ao norte, sai por USD 3.344 nas mesmas datas. É mais simples e pede carro alugado. O Marriott continua sendo a melhor relação entre conforto, praia e proximidade da cidade.
+        <b>O que ficou de fora e por quê.</b> Dreams, Corendon Mangrove e Zoëtry são all-inclusive com bebida; Sandals é só para adultos; LionsDive e Kontiki ficam na Mambo Beach, a praia com música da ilha, e o LionsDive nem tem vaga nas datas. Nenhum deles combina com uma família que quer silêncio e não bebe.
       </div>
 
       <div class="eyebrow" style="margin-top:44px">Roteiro dia a dia</div>
