@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Cristofer – Fim de ano** — iniciada em 30/09/2026 às 09:30
-▶️ Retomada em 30/09/2026 às 11:44 (interrupções nesta atividade: 2, total 48min)
+⏸️ Pausada em 01/10/2026 às 09:05 — Interrupção #40 em andamento: Dalcanales – Caderno de Voucher
 
 ## Histórico de atividades principais
 
@@ -81,6 +81,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 37 | 25/09/2026 | 11:46 | 11:58 | 12min | – | Early check-in Amanda Rocco |
 | 38 | 30/09/2026 | 09:57 | 10:17 | 20min | – | Amanda Calheiros – Caderno de voucher |
 | 39 | 30/09/2026 | 11:16 | 11:44 | 28min | – | Amanda Calheiros – Caderno de voucher (retorno) |
+| 40 | 01/10/2026 | 09:05 | _em andamento_ | – | – | Dalcanales – Caderno de Voucher |
 
 ## Visão consolidada: atividades × interrupções
 
