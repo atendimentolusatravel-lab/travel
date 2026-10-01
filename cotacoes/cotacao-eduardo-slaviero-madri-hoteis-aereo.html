@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Lusatravel · Cotação de hospedagem + aéreo · Madri · 3 apartamentos · Eduardo Pimentel Slaviero</title>
+
+
+<link href="fonts/fonts.css" rel="stylesheet">
+<style>
+  :root{
+    --olive:#414625; --olive-mid:#5c6435; --gold:#d6b24b;
+    --ink:#122018; --muted:#6b7a70; --panel:#f2f5f0; --line:#dfe6e0;
+    --red:#8a1c1c; --white:#fff;
+  }
+  @page{ size:A4 portrait; margin:0; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:#fff; color:var(--ink); font-family:'IBM Plex Mono',monospace; font-size:8.6px; line-height:1.45; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:210mm; height:297mm; overflow:hidden; padding:9mm 12mm 7mm; position:relative; page-break-after:always; display:flex; flex-direction:column; }
+  .page:last-child{ page-break-after:auto; }
+  .serif{ font-family:'Marcellus',serif; }
+  .eyebrow{ font-size:7.2px; letter-spacing:.18em; text-transform:uppercase; color:var(--olive-mid); }
+  .eyebrow.gold{ color:var(--gold); }
+  .r{ text-align:right; }
+  .mono{ font-family:'IBM Plex Mono',monospace; }
+  .w5{ font-weight:500; } .w6{ font-weight:600; }
+  .red{ color:var(--red); }
+
+  /* header */
+  .hdr{ display:flex; justify-content:space-between; align-items:flex-start; padding-bottom:7px; border-bottom:2px solid var(--olive); margin-bottom:12px; }
+  .hdr img{ height:19px; display:block; margin-top:2px; }
+  .hdr .meta{ text-align:right; line-height:1.55; }
+  .hdr .meta .t{ font-size:7.6px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--olive); }
+  .hdr .meta .s{ font-size:7.2px; color:var(--muted); }
+
+  /* title block */
+  .title{ display:flex; justify-content:space-between; gap:18px; margin-bottom:10px; }
+  .title h1{ font-family:'Marcellus',serif; font-size:22px; font-weight:400; margin:5px 0 4px; letter-spacing:.005em; }
+  .title .sub{ font-size:7.2px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); }
+  .title .for{ border-left:1px solid var(--line); padding:4px 0 4px 14px; min-width:190px; }
+  .title .for .n{ font-family:'Marcellus',serif; font-size:12.5px; margin:5px 0 3px; }
+  .title .for .d{ font-size:7.4px; color:var(--muted); line-height:1.6; }
+
+  .facts{ display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); background:var(--panel); margin-bottom:10px; }
+  .facts > div{ padding:8px 11px; border-right:1px solid var(--line); }
+  .facts > div:last-child{ border-right:0; }
+  .facts .v{ font-size:11.2px; font-weight:600; margin-top:5px; }
+  .facts .v small{ font-size:7.4px; font-weight:400; color:var(--muted); margin-left:4px; }
+
+  .sec{ display:flex; justify-content:space-between; align-items:baseline; margin:4px 0 7px; }
+  .sec h2{ font-family:'Marcellus',serif; font-size:12.5px; font-weight:400; }
+
+  .rooms{ display:grid; grid-template-columns:repeat(3,1fr); gap:7px; margin-bottom:10px; }
+  .rooms > div{ background:var(--panel); border:1px solid var(--line); padding:8px 10px; }
+  .rooms .n{ font-family:'Marcellus',serif; font-size:11px; margin:4px 0 2px; }
+  .rooms .p{ font-weight:600; }
+  .rooms .b{ color:var(--muted); font-size:7.6px; margin-top:1px; }
+
+  /* card (hotel / flight) */
+  .card{ border:1px solid var(--line); margin-bottom:9px; break-inside:avoid; }
+  .card .ch{ display:flex; justify-content:space-between; align-items:flex-start; padding:8px 11px 7px; }
+  .card .tag{ display:inline-block; background:var(--olive); color:#fff; font-size:6.6px; letter-spacing:.16em; text-transform:uppercase; padding:2px 6px; font-weight:500; }
+  .card .tag.rec{ background:var(--gold); color:var(--ink); margin-left:5px; }
+  .card h3{ font-family:'Marcellus',serif; font-size:15px; font-weight:400; margin:5px 0 2px; }
+  .card .addr{ font-size:7.4px; color:var(--muted); max-width:400px; }
+  .score{ text-align:right; }
+  .score .bx{ display:inline-block; border:1px solid var(--olive); padding:2px 8px; font-weight:600; font-size:9px; }
+  .score .l{ font-size:7.2px; color:var(--muted); margin-top:4px; }
+
+  table{ width:100%; border-collapse:collapse; }
+  th{ font-size:6.6px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:500; text-align:left; padding:6px 11px 5px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#fff; }
+  td{ padding:7px 11px; vertical-align:top; border-bottom:1px solid var(--line); }
+  tr:last-child td{ border-bottom:0; }
+  td .n{ font-weight:600; }
+  td .d{ color:var(--muted); font-size:7.6px; margin-top:2px; }
+  td .d b{ color:var(--red); font-weight:500; }
+  .num{ text-align:right; white-space:nowrap; }
+  .num.big{ font-weight:600; font-size:9.4px; }
+  .tot td{ background:var(--olive); color:#fff; border:0; padding:9px 11px; }
+  .tot .l{ font-family:'Marcellus',serif; font-size:11.5px; color:var(--gold); }
+  .tot .l small{ font-family:'IBM Plex Mono',monospace; font-size:7.2px; color:#d8dccb; margin-left:6px; }
+  .tot .num.big{ color:var(--gold); font-size:10.6px; }
+
+  /* flight segment list */
+  .seg{ display:grid; grid-template-columns:62px 1fr 1fr 70px 95px; gap:0 10px; padding:7px 11px; border-bottom:1px solid var(--line); align-items:center; }
+  .seg .fl{ font-weight:600; } .seg .fl small{ display:block; font-weight:400; color:var(--muted); font-size:7px; }
+  .seg .ap .t{ font-size:11px; font-weight:600; } .seg .ap .c{ color:var(--muted); font-size:7.4px; }
+  .seg .ap .dt{ font-size:7.2px; color:var(--olive-mid); letter-spacing:.06em; text-transform:uppercase; }
+  .seg .dur{ text-align:center; color:var(--muted); font-size:7.4px; } .seg .dur b{ display:block; color:var(--ink); font-weight:600; font-size:8.6px; }
+  .seg .ac{ text-align:right; font-size:7.4px; color:var(--muted); } .seg .ac b{ display:block; color:var(--ink); font-weight:500; }
+  .seghead{ font-size:6.6px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); padding:6px 11px 5px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); display:grid; grid-template-columns:62px 1fr 1fr 70px 95px; gap:0 10px; }
+  .seghead .c{ text-align:center; } .seghead .r{ text-align:right; }
+
+  /* combos */
+  .combo td:first-child{ width:48%; }
+
+  .cond{ display:grid; grid-template-columns:1fr 1fr; gap:6px 22px; font-size:7.6px; }
+  .cond p{ padding-left:9px; text-indent:-9px; color:var(--ink); }
+  .cond p b{ font-weight:600; }
+
+  .note{ margin-top:10px; border-top:1px solid var(--line); padding-top:9px; font-size:7.8px; line-height:1.55; }
+  .note .b{ font-family:'Marcellus',serif; font-size:9.4px; margin-right:6px; }
+
+  .foot{ margin-top:auto; border-top:1px solid var(--line); padding-top:7px; display:flex; justify-content:space-between; font-size:6.8px; color:var(--muted); line-height:1.6; }
+  .foot .b{ font-family:'Marcellus',serif; font-size:9px; color:var(--ink); letter-spacing:.08em; }
+  .foot a{ color:inherit; text-decoration:none; }
+  .spacer{ flex:1; }
+</style>
+</head>
+<body>
+
+<!-- ================= PÁGINA 1 · HOSPEDAGEM ================= -->
+<section class="page">
+  <div class="hdr">
+    <img src="assets/lusatravel-logo.png" alt="LusaTravel">
+    <div class="meta">
+      <div class="t">Cotação de hospedagem + aéreo · 3 apartamentos</div>
+      <div class="s">COT-MAD-1007 · rev. 2 (inclui aéreo) · emitida em 1º de outubro de 2026</div>
+      <div class="s">Madri · Espanha · 30 de dezembro de 2026 a 4 de janeiro de 2027</div>
+    </div>
+  </div>
+
+  <div class="title">
+    <div>
+      <div class="eyebrow">Cotação de hospedagem + aéreo · Madri · Espanha</div>
+      <h1>Réveillon em Madri · 3 apartamentos + voos</h1>
+      <div class="sub">2 hotéis · 5 noites · voos Lisboa–Madri–Lisboa · 2 opções Iberia</div>
+    </div>
+    <div class="for">
+      <div class="eyebrow">Preparada para</div>
+      <div class="n">Sr. Eduardo Pimentel Slaviero</div>
+      <div class="d">3 apartamentos · 04 adultos · 03 crianças<br>7 passageiros no aéreo</div>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div><div class="eyebrow">Check-in</div><div class="v">30 dez 2026 <small>quarta</small></div></div>
+    <div><div class="eyebrow">Check-out</div><div class="v">04 jan 2027 <small>segunda</small></div></div>
+    <div><div class="eyebrow">Noites</div><div class="v">5 noites <small>inclui 31/12</small></div></div>
+    <div><div class="eyebrow">Voos</div><div class="v">LIS–MAD–LIS <small>Iberia</small></div></div>
+  </div>
+
+  <div class="sec"><h2>Distribuição dos apartamentos</h2><div class="eyebrow">4 adultos · 3 crianças</div></div>
+  <div class="rooms">
+    <div><div class="eyebrow">Apartamento 1</div><div class="n">Casal</div><div class="p">2 adultos</div><div class="b">Somente hospedagem</div></div>
+    <div><div class="eyebrow">Apartamento 2</div><div class="n">Adulto + criança</div><div class="p">1 adulto + 1 criança</div><div class="b">Com café da manhã</div></div>
+    <div><div class="eyebrow">Apartamento 3</div><div class="n">Adulto + 2 crianças</div><div class="p">1 adulto + 2 crianças</div><div class="b">Com café da manhã</div></div>
+  </div>
+
+  <!-- HOTEL 1 -->
+  <div class="card">
+    <div class="ch">
+      <div>
+        <span class="tag">Hotel 1</span>
+        <h3>Hotel Regente</h3>
+        <div class="addr">Gran Vía, 19 · Centro de Madri · a poucos passos da Puerta del Sol · metrô Gran Vía</div>
+      </div>
+      <div class="score"><span class="bx">8,8 / 10</span><div class="l">Excelente · 1.015 avaliações</div></div>
+    </div>
+    <table>
+      <thead><tr><th>Apartamentos</th><th class="num">Total 5 noites</th><th class="num">10x cartão</th><th class="num">Pix −5%</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><div class="n">Apto 1 · Doble Standard</div><div class="d">2 adultos · somente hospedagem · <b>não reembolsável</b></div></td>
+          <td class="num big">R$ 8.316,13</td><td class="num">10x R$ 831,61</td><td class="num">R$ 7.900,32</td>
+        </tr>
+        <tr>
+          <td><div class="n">Aptos 2 e 3 · Double Room + Family Room</div><div class="d">Double Room 18 m²: 1 adulto + 1 criança · Family Room: 1 adulto + 2 crianças<br>com café da manhã · <b>cancelamento gratuito até 26/12/2026</b></div></td>
+          <td class="num big">R$ 23.556,27</td><td class="num">10x R$ 2.355,63</td><td class="num">R$ 22.378,46</td>
+        </tr>
+        <tr class="tot">
+          <td><span class="l">Total · 3 apartamentos <small>4 adultos + 3 crianças · 5 noites</small></span></td>
+          <td class="num big">R$ 31.872,40</td><td class="num">10x R$ 3.187,24</td><td class="num">R$ 30.278,78</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- HOTEL 2 -->
+  <div class="card">
+    <div class="ch">
+      <div>
+        <span class="tag">Hotel 2</span>
+        <h3>Hotel Ópera</h3>
+        <div class="addr">Cuesta de Santo Domingo, 2 · Centro · junto ao Teatro Real e ao Palácio Real · metrô Ópera · 4 estrelas</div>
+      </div>
+      <div class="score"><span class="bx">91 / 100</span><div class="l">Excelente · 1.800 avaliações</div></div>
+    </div>
+    <table>
+      <thead><tr><th>Apartamentos</th><th class="num">Total 5 noites</th><th class="num">10x cartão</th><th class="num">Pix −5%</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><div class="n">Apto 1 · Room Double or Twin Bed</div><div class="d">2 adultos · somente hospedagem · <b>não reembolsável</b></div></td>
+          <td class="num big">R$ 8.404,25</td><td class="num">10x R$ 840,43</td><td class="num">R$ 7.984,04</td>
+        </tr>
+        <tr>
+          <td><div class="n">Aptos 2 e 3 · Double Standard + Double with Extra Bed</div><div class="d">Double Standard: 1 adulto + 1 criança · Double with Extra Bed (solteiro 80–130): 1 adulto + 2 crianças<br>com café da manhã · <b>não reembolsável</b></div></td>
+          <td class="num big">R$ 24.635,15</td><td class="num">10x R$ 2.463,52</td><td class="num">R$ 23.403,39</td>
+        </tr>
+        <tr class="tot">
+          <td><span class="l">Total · 3 apartamentos <small>4 adultos + 3 crianças · 5 noites</small></span></td>
+          <td class="num big">R$ 33.039,40</td><td class="num">10x R$ 3.303,94</td><td class="num">R$ 31.387,43</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec"><h2>Pagamento e condições</h2></div>
+  <div class="cond">
+    <p>· <b>Hospedagem:</b> cartão de crédito em até 10x por link de pagamento, ou Pix à vista com 5% de desconto. Valores indicados em cada hotel.</p>
+    <p>· <b>Aéreo:</b> cartão de crédito em até 10x por link de pagamento, ou Pix à vista pelo valor da tarifa. *O desconto Pix de 5% aplica-se somente à hospedagem; o aéreo não tem desconto.</p>
+    <p>· Valores do aéreo em reais, totais para 4 adultos e 3 crianças, cotados em 01/10/2026 ao câmbio USD = R$ 5,18. Tarifas aéreas mudam a qualquer momento até a emissão.</p>
+    <p>· Aéreo em tarifa NDC Iberia, econômica. Franquia de bagagem despachada, marcação de assento e regras de alteração/reembolso conforme a tarifa, a confirmar antes da emissão.</p>
+    <p>· Apartamento 1 (casal): somente hospedagem, tarifa não reembolsável nos dois hotéis. Apartamentos 2 e 3 (com crianças): café da manhã incluído nos dois hotéis.</p>
+    <p>· Hotel Regente: aptos 2 e 3 com cancelamento gratuito até 26/12/2026; após essa data, tarifa não reembolsável. Hotel Ópera: aptos 2 e 3 com tarifa não reembolsável.</p>
+    <p>· Idades das crianças serão validadas na reserva e na emissão dos bilhetes. Taxas locais, quando aplicáveis, são pagas diretamente no hotel.</p>
+    <p>· Valores sujeitos a alteração e à disponibilidade até a confirmação. Esta cotação não é uma reserva. <b>*Nada reservado, apenas cotado.</b></p>
+  </div>
+
+  <div class="note"><span class="b">LUSATRAVEL</span> Hospedagem conforme a COT-MAD-1007. Na página seguinte, as duas opções de voos Lisboa–Madri–Lisboa para os 7 passageiros, o resumo combinado hotel + aéreo e nossa recomendação.</div>
+
+  <div class="foot">
+    <div><span class="b">LUSATRAVEL</span> Viagens e Turismo Ltda · CNPJ 45.824.599/0001-16<br>Rua Grã Nicco, 113 · Bloco 2 · Sala 102 · Mossunguê · Curitiba · PR · CEP 81200-200<br>(41) 3154-1117 · <a href="https://wa.me/5541992750065">(41) 99275-0065</a> · <a href="mailto:atendimento@lusatravel.com.br">atendimento@lusatravel.com.br</a></div>
+    <div class="r">COT-MAD-1007 · rev. 2 · Eduardo Pimentel Slaviero<br>Página 1 de 2</div>
+  </div>
+</section>
+
+<!-- ================= PÁGINA 2 · AÉREO + RESUMO ================= -->
+<section class="page">
+  <div class="hdr">
+    <img src="assets/lusatravel-logo.png" alt="LusaTravel">
+    <div class="meta">
+      <div class="t">Aéreo Lisboa–Madri–Lisboa · 7 passageiros</div>
+      <div class="s">COT-MAD-1007 · rev. 2 (inclui aéreo) · emitida em 1º de outubro de 2026</div>
+      <div class="s">Iberia · voos diretos · 30 de dezembro de 2026 e 4 de janeiro de 2027</div>
+    </div>
+  </div>
+
+  <div class="title">
+    <div>
+      <div class="eyebrow">Aéreo · Lisboa–Madri–Lisboa · Iberia</div>
+      <h1>Voos para Madri e Lisboa</h1>
+      <div class="sub">2 opções · mesma ida · volta às 17h40 ou 19h40 · econômica · tarifa NDC</div>
+    </div>
+    <div class="for">
+      <div class="eyebrow">Passageiros</div>
+      <div class="n">4 adultos + 3 crianças</div>
+      <div class="d">Valores totais para os 7 passageiros<br>Câmbio 01/10 · USD = R$ 5,18</div>
+    </div>
+  </div>
+
+  <!-- VOO OPÇÃO 1 -->
+  <div class="card">
+    <div class="ch">
+      <div>
+        <span class="tag">Aéreo · opção 1</span><span class="tag rec">Recomendada</span>
+        <h3>Iberia · volta às 19h40</h3>
+        <div class="addr">Ida IB 530 · volta IB 1145 · voos diretos · econômica · tarifa NDC · classes N / A · menor valor e mais tempo em Madri no último dia</div>
+      </div>
+      <div class="score"><span class="bx">R$ 11.722,72</span><div class="l">USD 2.262,72 · 7 passageiros</div></div>
+    </div>
+    <div class="seghead"><div>Voo</div><div>Partida</div><div>Chegada</div><div class="c">Duração</div><div class="r">Aeronave · classe</div></div>
+    <div class="seg">
+      <div class="fl">IB 530<small>Iberia</small></div>
+      <div class="ap"><div class="dt">Qua 30 dez</div><div class="t">08:20</div><div class="c">LIS · Lisboa</div></div>
+      <div class="ap"><div class="dt">Qua 30 dez</div><div class="t">10:45</div><div class="c">MAD · Madri</div></div>
+      <div class="dur"><b>1h25</b>direto</div>
+      <div class="ac"><b>Airbus A320</b>Econômica · N</div>
+    </div>
+    <div class="seg" style="border-bottom:0">
+      <div class="fl">IB 1145<small>Iberia</small></div>
+      <div class="ap"><div class="dt">Seg 04 jan</div><div class="t">19:40</div><div class="c">MAD · Madri</div></div>
+      <div class="ap"><div class="dt">Seg 04 jan</div><div class="t">20:05</div><div class="c">LIS · Lisboa</div></div>
+      <div class="dur"><b>1h25</b>direto</div>
+      <div class="ac"><b>Airbus A350-900</b>Econômica · A</div>
+    </div>
+    <table>
+      <thead><tr><th>Aéreo · 7 passageiros</th><th class="num">Total</th><th class="num">10x cartão</th><th class="num">Pix</th></tr></thead>
+      <tbody>
+        <tr class="tot">
+          <td><span class="l">Total · aéreo opção 1 <small>4 adultos + 3 crianças · ida e volta · média R$ 1.674,67 por passageiro</small></span></td>
+          <td class="num big">R$ 11.722,72</td><td class="num">10x R$ 1.172,27</td><td class="num">R$ 11.722,72</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- VOO OPÇÃO 2 -->
+  <div class="card">
+    <div class="ch">
+      <div>
+        <span class="tag">Aéreo · opção 2</span>
+        <h3>Iberia · volta às 17h40</h3>
+        <div class="addr">Ida IB 530 · volta IB 535 · voos diretos · econômica · tarifa NDC · classes N / O · chegada a Lisboa 2 horas mais cedo · R$ 659,28 a mais</div>
+      </div>
+      <div class="score"><span class="bx">R$ 12.382,00</span><div class="l">USD 2.389,92 · 7 passageiros</div></div>
+    </div>
+    <div class="seghead"><div>Voo</div><div>Partida</div><div>Chegada</div><div class="c">Duração</div><div class="r">Aeronave · classe</div></div>
+    <div class="seg">
+      <div class="fl">IB 530<small>Iberia</small></div>
+      <div class="ap"><div class="dt">Qua 30 dez</div><div class="t">08:20</div><div class="c">LIS · Lisboa</div></div>
+      <div class="ap"><div class="dt">Qua 30 dez</div><div class="t">10:45</div><div class="c">MAD · Madri</div></div>
+      <div class="dur"><b>1h25</b>direto</div>
+      <div class="ac"><b>Airbus A320</b>Econômica · N</div>
+    </div>
+    <div class="seg" style="border-bottom:0">
+      <div class="fl">IB 535<small>Iberia</small></div>
+      <div class="ap"><div class="dt">Seg 04 jan</div><div class="t">17:40</div><div class="c">MAD · Madri</div></div>
+      <div class="ap"><div class="dt">Seg 04 jan</div><div class="t">18:05</div><div class="c">LIS · Lisboa</div></div>
+      <div class="dur"><b>1h25</b>direto</div>
+      <div class="ac"><b>Airbus A320</b>Econômica · O</div>
+    </div>
+    <table>
+      <thead><tr><th>Aéreo · 7 passageiros</th><th class="num">Total</th><th class="num">10x cartão</th><th class="num">Pix</th></tr></thead>
+      <tbody>
+        <tr class="tot">
+          <td><span class="l">Total · aéreo opção 2 <small>4 adultos + 3 crianças · ida e volta · média R$ 1.768,86 por passageiro</small></span></td>
+          <td class="num big">R$ 12.382,00</td><td class="num">10x R$ 1.238,20</td><td class="num">R$ 12.382,00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- RESUMO COMBINADO -->
+  <div class="sec"><h2>Resumo · hospedagem + aéreo</h2><div class="eyebrow">4 adultos · 3 crianças · 5 noites · ida e volta</div></div>
+  <div class="card">
+    <table class="combo">
+      <thead><tr><th>Combinação</th><th class="num">Hospedagem</th><th class="num">Aéreo</th><th class="num">Total cartão</th><th class="num">10x cartão</th><th class="num">Total Pix*</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><div class="n">Hotel Regente + aéreo opção 1</div><div class="d">volta 19h40 · menor valor total</div></td>
+          <td class="num">R$ 31.872,40</td><td class="num">R$ 11.722,72</td><td class="num big">R$ 43.595,12</td><td class="num">10x R$ 4.359,51</td><td class="num">R$ 42.001,50</td>
+        </tr>
+        <tr>
+          <td><div class="n">Hotel Regente + aéreo opção 2</div><div class="d">volta 17h40</div></td>
+          <td class="num">R$ 31.872,40</td><td class="num">R$ 12.382,00</td><td class="num big">R$ 44.254,40</td><td class="num">10x R$ 4.425,44</td><td class="num">R$ 42.660,78</td>
+        </tr>
+        <tr>
+          <td><div class="n">Hotel Ópera + aéreo opção 1</div><div class="d">volta 19h40</div></td>
+          <td class="num">R$ 33.039,40</td><td class="num">R$ 11.722,72</td><td class="num big">R$ 44.762,12</td><td class="num">10x R$ 4.476,21</td><td class="num">R$ 43.110,15</td>
+        </tr>
+        <tr>
+          <td><div class="n">Hotel Ópera + aéreo opção 2</div><div class="d">volta 17h40</div></td>
+          <td class="num">R$ 33.039,40</td><td class="num">R$ 12.382,00</td><td class="num big">R$ 45.421,40</td><td class="num">10x R$ 4.542,14</td><td class="num">R$ 43.769,43</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="note"><span class="b">LUSATRAVEL</span> Réveillon é período de alta demanda em Madri e os voos Lisboa–Madri de 30/12 e 04/01 tendem a subir de preço: recomendamos confirmar hospedagem e emitir o aéreo o quanto antes. Nossa sugestão é o Hotel Regente com o aéreo opção 1 (volta às 19h40), a combinação de menor valor e com a tarde inteira livre em Madri no dia 4.</div>
+
+  <div class="foot">
+    <div><span class="b">LUSATRAVEL</span> Viagens e Turismo Ltda · CNPJ 45.824.599/0001-16<br>Rua Grã Nicco, 113 · Bloco 2 · Sala 102 · Mossunguê · Curitiba · PR · CEP 81200-200<br>(41) 3154-1117 · <a href="https://wa.me/5541992750065">(41) 99275-0065</a> · <a href="mailto:atendimento@lusatravel.com.br">atendimento@lusatravel.com.br</a></div>
+    <div class="r">COT-MAD-1007 · rev. 2 · Eduardo Pimentel Slaviero<br>Página 2 de 2</div>
+  </div>
+</section>
+
+</body>
+</html>
