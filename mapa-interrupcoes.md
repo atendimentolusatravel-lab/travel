@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Gustavo Gomes – Curaçao** — iniciada em 01/10/2026 às 15:43
-⏸️ Pausada em 02/10/2026 às 10:05 — Interrupção #42 em andamento: Simone Maximiliano – China
+▶️ Retomada em 02/10/2026 às 10:26 (interrupções nesta atividade: 2, total 1h10min)
 
 ## Histórico de atividades principais
 
@@ -84,7 +84,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 39 | 30/09/2026 | 11:16 | 11:44 | 28min | – | Amanda Calheiros – Caderno de voucher (retorno) |
 | 40 | 01/10/2026 | 09:05 | 09:49 | 44min | – | Dalcanales – Caderno de Voucher (2ª vez de caderno) |
 | 41 | 02/10/2026 | 09:05 | 09:54 | 49min | – | Dalcanales – Caderno de vouchers (3ª vez de caderno) |
-| 42 | 02/10/2026 | 10:05 | _em andamento_ | – | – | Simone Maximiliano – China |
+| 42 | 02/10/2026 | 10:05 | 10:26 | 21min | – | Simone Maximiliano – China |
 
 ## Visão consolidada: atividades × interrupções
 
@@ -114,12 +114,12 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 22 | Revisão Ney e Viktor – Paris e Mykonos | 23/09 | 1h23min | 0 | – |
 | 23 | Anna Maria e família – Itália | 24–25/09 | 7h41min | 4 | 5h45min |
 | 24 | Cristofer – Fim de ano | 30/09–01/10 | 10h40min | 3 | 1h32min |
-| 25 | Gustavo Gomes – Curaçao | 01/10– | ⏳ em andamento | 1 (até agora) | 49min |
+| 25 | Gustavo Gomes – Curaçao | 01/10– | ⏳ em andamento | 2 (até agora) | 1h10min |
 
 ## Resumo
 
 | Métrica | Valor |
 |---------|-------|
-| Total de interrupções | 41 |
-| Tempo total interrompido | 22h42min |
-| Duração média | 33min13s |
+| Total de interrupções | 42 |
+| Tempo total interrompido | 23h03min |
+| Duração média | 32min56s |
