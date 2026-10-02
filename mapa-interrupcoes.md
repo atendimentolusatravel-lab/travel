@@ -8,7 +8,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 ## Atividade principal atual
 
 **Gustavo Gomes – Curaçao** — iniciada em 01/10/2026 às 15:43
-▶️ Retomada em 02/10/2026 às 09:54 (interrupções nesta atividade: 1, total 49min)
+⏸️ Pausada em 02/10/2026 às 10:05 — Interrupção #42 em andamento: Simone Maximiliano – China
 
 ## Histórico de atividades principais
 
@@ -84,6 +84,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 39 | 30/09/2026 | 11:16 | 11:44 | 28min | – | Amanda Calheiros – Caderno de voucher (retorno) |
 | 40 | 01/10/2026 | 09:05 | 09:49 | 44min | – | Dalcanales – Caderno de Voucher (2ª vez de caderno) |
 | 41 | 02/10/2026 | 09:05 | 09:54 | 49min | – | Dalcanales – Caderno de vouchers (3ª vez de caderno) |
+| 42 | 02/10/2026 | 10:05 | _em andamento_ | – | – | Simone Maximiliano – China |
 
 ## Visão consolidada: atividades × interrupções
 
