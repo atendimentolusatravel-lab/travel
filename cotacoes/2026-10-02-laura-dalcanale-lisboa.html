@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Laura Dalcanale | Lisboa — LusaTravel</title>
+<style>
+@import url('fonts/fonts.css');
+
+:root{
+  --gold:#da8d00;
+  --dest:#1b3a63;        /* Portugal — azul azulejo (padrão .opt-pt do repositório) */
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#9a8d80;
+  --line:#e4ddd2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff;
+  page-break-after:always; display:flex; flex-direction:column; }
+.page:last-child{ page-break-after:auto; }
+
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.2); }
+
+.body{ padding:16mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:4mm 0 8mm; }
+
+/* CAPA */
+.cover{ position:relative; }
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink); display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0;
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 28mm),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, transparent 1px 28mm),
+    radial-gradient(ellipse at 70% 20%, rgba(218,141,0,.35), transparent 55%),
+    linear-gradient(165deg, #2c5a8c 0%, #1b3a63 45%, #0d1f3a 100%); }
+.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, transparent 30%, rgba(0,0,0,.78) 78%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:40mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+
+/* DESTINO + HOTEL */
+.dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
+.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); }
+.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9); color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.dest-photo{ height:100mm; position:relative; flex-shrink:0;
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.04) 0 1px, transparent 1px 24mm),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.04) 0 1px, transparent 1px 24mm),
+    radial-gradient(ellipse at 20% 100%, rgba(218,141,0,.30), transparent 55%),
+    linear-gradient(160deg, #3a6d9e 0%, #1b3a63 55%, #0d1f3a 100%); }
+.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+.dest-text{ font-size:11.5pt; font-weight:400; line-height:1.7; color:var(--char); }
+.hotel-card{ margin-top:9mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.hotel-card .top{ background:#faf7f2; padding:6mm 8mm; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:flex-start; }
+.hotel-card .name{ font-size:15pt; font-weight:700; color:var(--ink); }
+.hotel-card .stars{ font-size:14pt; color:var(--gold); letter-spacing:2px; margin-top:1mm; }
+.hotel-card .score{ text-align:right; }
+.hotel-card .score b{ display:block; font-size:18pt; font-weight:800; color:var(--dest); line-height:1; }
+.hotel-card .score span{ font-size:8pt; color:var(--mut); letter-spacing:.06em; }
+.hotel-card .rows{ padding:6mm 8mm; display:grid; grid-template-columns:1fr 1fr; gap:4mm 10mm; }
+.hotel-card .k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.hotel-card .v{ font-size:11pt; font-weight:300; color:var(--char); margin-top:1mm; }
+.hotel-card .v.alert{ color:#8a2a00; font-weight:500; }
+
+/* VALORES */
+.val-note{ font-size:9pt; color:var(--mut); margin-bottom:5mm; }
+.val-row{ display:flex; justify-content:space-between; padding:4mm 0; border-bottom:1px solid var(--line); }
+.val-row .lbl{ font-size:12pt; color:var(--char); }
+.val-row .lbl small{ display:block; font-size:9pt; color:var(--mut); margin-top:1mm; }
+.val-row .amt{ font-size:12pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; }
+.val-row.sub .lbl, .val-row.sub .amt{ font-size:10.5pt; font-weight:400; color:var(--mut); }
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink); border-radius:5px; padding:6mm 8mm; margin-top:6mm; }
+.val-total .lbl{ font-size:11pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.val-total .amt{ font-size:16pt; font-weight:800; color:var(--gold); }
+.val-total .amt small{ display:block; font-size:9.5pt; font-weight:500; color:rgba(255,255,255,.55); text-align:right; margin-top:1mm; }
+.val-fx{ font-size:9pt; color:var(--mut); margin-top:5mm; line-height:1.6; }
+
+/* CONDIÇÕES */
+.cond{ margin-bottom:7mm; }
+.cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
+.cond-t{ font-size:11pt; line-height:1.8; color:var(--char); }
+.cond.warn{ border-left:3px solid #8a2a00; padding-left:6mm; }
+.cond.warn .cond-h{ color:#8a2a00; }
+</style>
+</head>
+<body>
+
+<!-- 01 · CAPA -->
+<section class="page cover">
+  <div class="cover-hd"><div class="logo">LUSATRAVEL</div><div class="tag">Glossário</div></div>
+  <div class="cover-bar"></div>
+  <div class="cover-photo"></div>
+  <div class="cover-scrim"></div>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em 2 quartos duplos (2 hóspedes por quarto) · 24 a 26 de outubro de 2026</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">Laura Dalcanale</div>
+    <div class="cover-dest">Lisboa · Portugal</div>
+    <div class="stats">
+      <div class="stat"><b>1</b><span>Destino</span></div>
+      <div class="stat"><b>2</b><span>Noites</span></div>
+      <div class="stat"><b>1</b><span>Hotel</span></div>
+      <div class="stat"><b>2</b><span>Quartos</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com" style="color:inherit;text-decoration:none">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076" style="color:inherit;text-decoration:none">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- 02 · DESTINO + HOTEL -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Lisboa · Portugal</div><div class="no">1</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo"><div class="cap">Lisboa</div></div>
+  <div class="body">
+    <p class="dest-text">Lisboa é uma cidade que se revela devagar, colina a colina. A luz atlântica escorre pelas fachadas de azulejo, o elétrico amarelo range pelas ladeiras da Alfama e, lá embaixo, o Tejo abre-se largo como um mar. Entre o Bairro Alto e o Chiado, livrarias centenárias dividem calçada com cafés onde o pastel de nata ainda sai quente da fornada. Em Belém, a Torre e o Mosteiro dos Jerónimos guardam a memória das grandes navegações, enquanto o MAAT e a LX Factory mostram a Lisboa criativa de hoje. À noite, o fado ecoa em casas pequenas da Mouraria, e os miradouros de Santa Catarina e da Graça enchem-se de gente para ver o sol mergulhar atrás da Ponte 25 de Abril. Dois dias são um convite, não uma despedida: o suficiente para caminhar sem pressa pela Avenida da Liberdade, provar um bacalhau à Brás e sentir por que esta cidade conquista quem chega. O InterContinental fica exatamente nesse eixo, a passos do Parque Eduardo VII e do Marquês de Pombal, com a cidade inteira ao alcance de uma caminhada.</p>
+    <div class="hotel-card">
+      <div class="top">
+        <div>
+          <div class="name">InterContinental Lisbon by IHG</div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="score"><b>93<span style="font-size:10pt;color:var(--mut)">/100</span></b><span>Excelente · 1.359 avaliações</span></div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">2 × Classic Room · 34 m² · cama de casal ou 2 camas de solteiro (conforme disponibilidade)</div></div>
+        <div><div class="k">Ocupação</div><div class="v">2 hóspedes por quarto · 4 hóspedes no total</div></div>
+        <div><div class="k">Plano</div><div class="v">Somente hospedagem · Wi-Fi gratuito</div></div>
+        <div><div class="k">Tarifa</div><div class="v alert">Não reembolsável</div></div>
+        <div><div class="k">Endereço</div><div class="v">R. Castilho, 149 · 1070-050 Lisboa · Portugal</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">Sáb 24/10/2026 → Seg 26/10/2026 · 2 noites</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- 03 · VALORES -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Valores</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Investimento</div>
+    <h2 class="h2">Valores</h2>
+    <div class="val-note">*Valores em Reais (BRL) para 2 quartos Classic Room · 2 noites · 4 hóspedes</div>
+    <div class="val-row"><span class="lbl">Hotelaria<small>InterContinental Lisbon by IHG · 2 quartos · 24 a 26/10/2026</small></span><span class="amt">BRL 5.612,31</span></div>
+    <div class="val-row sub"><span class="lbl">Por quarto (2 noites)</span><span class="amt">BRL 2.806,16</span></div>
+    <div class="val-row sub"><span class="lbl">Por quarto, por noite</span><span class="amt">BRL 1.403,08</span></div>
+    <div class="val-row"><span class="lbl">Aéreo Internacional</span><span class="amt">não cotado</span></div>
+    <div class="val-row"><span class="lbl">Seguro de Viagem</span><span class="amt">não cotado</span></div>
+    <div class="val-row"><span class="lbl">Traslados / Passeios</span><span class="amt">não cotado</span></div>
+    <div class="val-total"><span class="lbl">TOTAL · 2 QUARTOS · 2 NOITES</span><span class="amt">BRL 5.612,31<small>≈ USD 1.065,74</small></span></div>
+    <div class="val-fx">Cotação 02/10 · USD = 5,27<br>*Nada reservado, apenas cotado</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- 04 · CONDIÇÕES -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Condições</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Importante</div>
+    <h2 class="h2">Condições e Observações</h2>
+    <div class="cond warn"><div class="cond-h">Tarifa não reembolsável</div><div class="cond-t">A tarifa cotada não permite cancelamento, alteração de datas ou reembolso após a confirmação. Recomendamos confirmar o aéreo antes de emitir a hospedagem e contratar seguro de viagem com cobertura de cancelamento.</div></div>
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Hotelaria: até 10x sem acréscimos · PIX: desconto de 5–13%</div></div>
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Passagens aéreas e traslados<br>· Café da manhã (tarifa somente hospedagem)<br>· Seguro de viagem<br>· Taxa Municipal Turística de Lisboa, paga diretamente no hotel (€ 4,00 por hóspede, por noite)<br>· Despesas pessoais, gorjetas e extras no hotel</div></div>
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Horários padrão do hotel: check-in a partir das 15h e check-out até as 12h, sujeitos a confirmação. Valores e disponibilidade sujeitos a confirmação no momento da reserva; o valor em Reais pode variar conforme o câmbio do dia da emissão. Documentos: passaporte com validade mínima de 3 meses após a data de saída do Espaço Schengen.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
