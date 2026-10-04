@@ -17,19 +17,21 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
 .brand{ display:flex; align-items:baseline; justify-content:space-between; }
 .brand .logo{ font-size:20pt; font-weight:800; letter-spacing:.1em; color:var(--gold); }
-.brand .date{ font-family:var(--con); font-size:9pt; color:var(--mut); letter-spacing:.06em; }
-.rule{ height:1.2mm; background:var(--gold); margin:5mm 0 0; }
+.brand .date{ font-family:var(--con); font-size:9pt; color:var(--mut); letter-spacing:.04em; text-align:right; line-height:1.7; }
+.brand .date a{ color:var(--mut); text-decoration:none; }
+.rule{ height:.8mm; background:var(--gold); margin:4mm 0 0; }
 
-.band{ margin-top:12mm; background:var(--dest); color:#fff; border-radius:6px; padding:9mm 10mm; display:flex; justify-content:space-between; align-items:flex-end; }
-.band .kicker{ font-size:8pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
-.band .title{ font-size:26pt; font-weight:800; text-transform:uppercase; letter-spacing:.02em; line-height:1.1; margin-top:1.5mm; }
-.band .sub{ font-size:12pt; font-weight:600; color:var(--gold); margin-top:1.5mm; letter-spacing:.04em; }
-.band .meta{ text-align:right; font-size:10pt; line-height:1.7; color:rgba(255,255,255,.8); }
-.band .meta b{ color:#fff; font-weight:600; }
+.head{ margin-top:12mm; display:flex; justify-content:space-between; align-items:flex-end; padding-bottom:6mm; border-bottom:1px solid var(--line); }
+.head .kicker{ font-size:8pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.head .title{ font-size:30pt; font-weight:800; text-transform:uppercase; letter-spacing:.02em; line-height:1.1; margin-top:1.5mm; color:var(--ink); }
+.head .sub{ font-size:12pt; font-weight:600; color:var(--dest-soft); margin-top:1.5mm; letter-spacing:.04em; }
+.head .meta{ text-align:right; font-size:10pt; line-height:1.7; color:var(--mut); }
+.head .meta b{ color:var(--char); font-weight:600; }
+.head .meta .st{ color:var(--gold); }
 
 .card{ margin-top:10mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; display:grid; grid-template-columns:110mm 1fr; }
 .photo{ position:relative; min-height:78mm; background:#ddd center/cover no-repeat; }
-.photo .badge{ position:absolute; top:5mm; left:5mm; background:var(--dest); border:2px solid var(--gold); color:#fff; font-weight:700; font-size:8.5pt; letter-spacing:.1em; text-transform:uppercase; padding:1.5mm 4mm; border-radius:3px; }
+.photo .badge{ position:absolute; top:5mm; left:5mm; background:rgba(255,255,255,.92); border:1.5px solid var(--gold); color:var(--dest); font-weight:700; font-size:8.5pt; letter-spacing:.1em; text-transform:uppercase; padding:1.5mm 4mm; border-radius:3px; }
 .info{ padding:8mm 9mm; }
 .info .name{ font-size:20pt; font-weight:700; color:var(--ink); line-height:1.15; }
 .info .stars{ font-size:14pt; color:var(--gold); letter-spacing:2px; margin-top:1.5mm; }
@@ -51,10 +53,10 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .tile .k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
 .tile .v{ font-size:17pt; font-weight:700; color:var(--ink); margin-top:2mm; font-variant-numeric:tabular-nums; white-space:nowrap; }
 .tile .s{ font-size:9pt; color:var(--mut); margin-top:1mm; }
-.tile.main{ background:var(--ink); }
-.tile.main .k{ color:rgba(255,255,255,.6); }
-.tile.main .v{ font-size:24pt; font-weight:800; color:var(--gold); }
-.tile.main .s{ color:rgba(255,255,255,.6); }
+.tile.main{ background:#fff; border:2px solid var(--gold); }
+.tile.main .k{ color:var(--dest); }
+.tile.main .v{ font-size:24pt; font-weight:800; color:var(--dest); }
+.tile.main .s{ color:var(--mut); }
 
 .fx{ margin-top:5mm; font-size:9pt; color:var(--mut); line-height:1.7; }
 
@@ -64,17 +66,17 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .cond.warn{ grid-column:1 / -1; border-left:3px solid var(--dest); padding-left:6mm; }
 .cond.warn .cond-h{ color:var(--dest); }
 
-.sig{ margin-top:auto; padding-top:6mm; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; font-family:var(--con); font-size:9pt; color:var(--mut); }
-.sig a{ color:var(--char); text-decoration:none; }
-.sig .l b{ color:var(--gold); font-family:var(--sans); font-weight:800; letter-spacing:.1em; }
 </style>
 </head>
 <body>
 <section class="page">
-  <div class="brand"><div class="logo">LUSATRAVEL</div><div class="date">Cotação · 04/10/2026</div></div>
+  <div class="brand">
+    <div class="logo">LUSATRAVEL</div>
+    <div class="date">Cotação · 04/10/2026<br><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a> · <a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+  </div>
   <div class="rule"></div>
 
-  <div class="band">
+  <div class="head">
     <div>
       <div class="kicker">Cotação de hospedagem</div>
       <div class="title">Positano</div>
@@ -83,7 +85,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <div class="meta">
       <b>2 quartos duplos</b> · 2 hóspedes por quarto · 4 hóspedes<br>
       Período: a confirmar<br>
-      Hotel Eden Roc ★★★★
+      Hotel Eden Roc <span class="st">★★★★</span>
     </div>
   </div>
 
@@ -118,10 +120,6 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <div class="cond"><div class="cond-h">Documentos</div><div class="cond-t">Passaporte com validade mínima de 3 meses após a data de saída do Espaço Schengen. Valores e disponibilidade sujeitos a confirmação no momento da reserva; o valor em Reais pode variar conforme o câmbio do dia da emissão.</div></div>
   </div>
 
-  <div class="sig">
-    <div class="l"><b>LUSATRAVEL</b> · Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
-    <div class="r"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a> &nbsp;·&nbsp; <a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
-  </div>
 </section>
 </body>
 </html>
