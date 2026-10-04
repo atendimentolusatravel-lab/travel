@@ -15,6 +15,7 @@
 html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; display:flex; flex-direction:column; padding:22mm 24mm 18mm; page-break-after:always; }
 .page:last-child{ page-break-after:auto; }
+.page > *{ flex-shrink:0; }
 
 .brand{ display:flex; align-items:baseline; justify-content:space-between; }
 .brand .logo{ font-size:20pt; font-weight:800; letter-spacing:.1em; color:var(--gold); }
@@ -22,7 +23,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .brand .date a{ color:var(--mut); text-decoration:none; }
 .rule{ height:.8mm; background:var(--gold); margin:4mm 0 0; }
 
-.head{ margin-top:12mm; display:flex; justify-content:space-between; align-items:flex-end; padding-bottom:6mm; border-bottom:1px solid var(--line); }
+.head{ margin-top:10mm; display:flex; justify-content:space-between; align-items:flex-end; padding-bottom:6mm; border-bottom:1px solid var(--line); }
 .head .kicker{ font-size:8pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
 .head .title{ font-size:30pt; font-weight:800; text-transform:uppercase; letter-spacing:.02em; line-height:1.1; margin-top:1.5mm; color:var(--ink); }
 .head .sub{ font-size:12pt; font-weight:600; color:var(--dest-soft); margin-top:1.5mm; letter-spacing:.04em; }
@@ -62,34 +63,43 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .fx{ margin-top:5mm; font-size:9pt; color:var(--mut); line-height:1.7; }
 
 /* ── TREM ── */
-.train{ margin-top:10mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
-.train .top{ background:var(--paper); padding:6mm 9mm; display:flex; justify-content:space-between; align-items:center; }
+.train{ margin-top:0; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.train .top{ background:var(--paper); padding:4.5mm 9mm; display:flex; justify-content:space-between; align-items:center; }
 .train .op{ font-size:15pt; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); font-style:italic; }
 .train .op small{ display:block; font-size:8.5pt; font-weight:600; letter-spacing:.14em; color:var(--mut); font-style:normal; margin-top:1mm; }
 .train .day{ font-size:10pt; color:var(--char); font-weight:600; }
-.train .leg{ padding:9mm 9mm; display:grid; grid-template-columns:1fr 2fr 1fr; align-items:center; gap:6mm; }
-.train .t{ font-size:28pt; font-weight:800; color:var(--ink); line-height:1; }
+.train .leg{ padding:5.5mm 9mm; display:grid; grid-template-columns:1fr 2fr 1fr; align-items:center; gap:6mm; }
+.train .t{ font-size:24pt; font-weight:800; color:var(--ink); line-height:1; }
 .train .t small{ display:block; font-size:9pt; font-weight:500; color:var(--mut); margin-top:2mm; letter-spacing:.06em; text-transform:uppercase; }
 .train .t.r{ text-align:right; }
 .train .mid{ text-align:center; position:relative; }
 .train .mid .line{ height:1px; border-top:2px dashed var(--line); position:absolute; left:0; right:0; top:50%; }
 .train .mid .pill{ position:relative; display:inline-block; background:#fff; border:1.5px solid var(--gold); color:var(--dest); border-radius:20px; padding:2mm 6mm; font-size:10pt; font-weight:600; }
-.fares{ margin-top:7mm; display:grid; grid-template-columns:1fr 1fr; gap:6mm; }
-.fare{ border:1px solid var(--line); border-radius:6px; padding:7mm 8mm; display:flex; flex-direction:column; }
+.fares{ margin-top:5mm; display:grid; grid-template-columns:1fr 1fr; gap:6mm; }
+.fare{ border:1px solid var(--line); border-radius:6px; padding:5mm 8mm; display:flex; flex-direction:column; }
 .fare .cls{ font-size:15pt; font-weight:700; color:var(--ink); }
 .fare .flex{ display:inline-block; margin-top:2mm; font-size:8.5pt; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:1.2mm 3.5mm; border-radius:3px; }
 .fare .flex.no{ background:#f6e9e3; color:#8a2a00; }
 .fare .flex.semi{ background:#edf1e6; color:var(--dest); }
-.fare .desc{ font-size:10pt; color:var(--char); line-height:1.6; margin-top:4mm; font-weight:300; }
-.fare .amt{ margin-top:6mm; font-size:22pt; font-weight:800; color:var(--dest); line-height:1; white-space:nowrap; }
+.fare .desc{ font-size:9.5pt; color:var(--char); line-height:1.55; margin-top:3mm; font-weight:300; }
+.fare .amt{ margin-top:4mm; font-size:22pt; font-weight:800; color:var(--dest); line-height:1; white-space:nowrap; }
 .fare .usd{ font-size:10pt; color:var(--mut); margin-top:1.5mm; }
-.fare .inst{ margin-top:4mm; padding-top:4mm; border-top:1px solid var(--line); font-size:9.5pt; color:var(--char); line-height:1.6; }
+.fare .inst{ margin-top:3mm; padding-top:3mm; border-top:1px solid var(--line); font-size:9.5pt; color:var(--char); line-height:1.6; }
 .fare .inst b{ font-weight:600; }
 .fare.pick{ border:2px solid var(--gold); }
 
-.conds{ margin-top:10mm; display:grid; grid-template-columns:1fr 1fr; gap:7mm 12mm; }
+.optlbl{ margin-top:6mm; margin-bottom:3mm; display:flex; align-items:center; gap:4mm; }
+.optlbl .n{ width:9mm; height:9mm; border-radius:50%; background:var(--dest); border:1.5px solid var(--gold); color:#fff; font-weight:800; font-size:10pt; display:flex; align-items:center; justify-content:center; }
+.optlbl .t{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:var(--dest); font-weight:700; }
+.optlbl .t small{ letter-spacing:.04em; text-transform:none; font-weight:400; color:var(--mut); margin-left:2mm; }
+.train .st{ font-size:10pt; font-weight:600; color:var(--char); margin-top:1mm; }
+.fare.wide{ flex-direction:row; align-items:center; justify-content:space-between; gap:10mm; margin-top:4mm; }
+.fare.wide .amt{ margin-top:0; text-align:right; }
+.fare.wide .usd{ text-align:right; }
+.fare.wide .inc{ font-size:9.5pt; color:var(--char); line-height:1.6; font-weight:300; margin-top:3mm; }
+.conds{ margin-top:8mm; display:grid; grid-template-columns:1fr 1fr; gap:5mm 12mm; }
 .cond-h{ font-size:9.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5mm; }
-.cond-t{ font-size:10pt; line-height:1.7; color:var(--char); }
+.cond-t{ font-size:9.5pt; line-height:1.6; color:var(--char); }
 .cond.warn{ grid-column:1 / -1; border-left:3px solid var(--dest); padding-left:6mm; }
 .cond.warn .cond-h{ color:var(--dest); }
 
@@ -163,17 +173,14 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       <div class="sub">Frecciarossa · Alta velocidade · Itália</div>
     </div>
     <div class="meta">
-      <b>Qua 21/10/2026</b> · trajeto direto<br>
-      Duração total 7h40<br>
-      2 opções de tarifa
+      <b>Qua 21/10/2026</b> · trajeto direto · 7h40<br>
+      4 passageiros<br>
+      2 opções de horário
     </div>
   </div>
 
+  <div class="optlbl"><div class="n">1</div><div class="t">Opção 1<small>· Frecciarossa · Qua 21/10/2026 · duas tarifas à escolha</small></div></div>
   <div class="train">
-    <div class="top">
-      <div class="op">Frecciarossa<small>Trenitalia · trem de alta velocidade</small></div>
-      <div class="day">Quarta-feira, 21 de outubro de 2026</div>
-    </div>
     <div class="leg">
       <div class="t">09:30<small>Partida · 21/10</small></div>
       <div class="mid"><div class="line"></div><span class="pill">7h 40min · Direto, sem conexões</span></div>
@@ -199,11 +206,31 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       <div class="inst">Parcelado no cartão em 2 a 10x: <b>USD 501,54</b> (≈ BRL 2.638,23) · acréscimo do fornecedor</div>
     </div>
   </div>
-  <div class="fx">Valores em Reais (BRL) conforme exibidos pelo fornecedor · Cotação 04/10 · USD = 5,26<br>*Nada reservado, apenas cotado · Bilhetes de trem são emitidos em nome de cada passageiro e exigem documento de identidade a bordo.</div>
+
+  <div class="optlbl"><div class="n">2</div><div class="t">Opção 2<small>· Frecciarossa · Qua 21/10/2026 · Bari Centrale → Milão Centrale</small></div></div>
+  <div class="train">
+    <div class="leg">
+      <div class="t">10:30<small>Partida · 21/10</small><div class="st">Bari Centrale</div></div>
+      <div class="mid"><div class="line"></div><span class="pill">7h 40min · Direto, sem conexões</span></div>
+      <div class="t r">18:10<small>Chegada · 21/10</small><div class="st">Milão Centrale</div></div>
+    </div>
+  </div>
+  <div class="fare wide">
+    <div>
+      <div class="cls">Premium</div>
+      <span class="flex semi">Classe superior · 4 passageiros</span>
+      <div class="inc">Poltrona de couro, serviço de bistrô e jornal · Wi-Fi gratuito · tomadas elétricas · bebidas gratuitas · alimentação disponível a bordo.</div>
+    </div>
+    <div>
+      <div class="amt">BRL 1.894,87</div>
+      <div class="usd">total para 4 passageiros · taxas incluídas · BRL 473,72 por pessoa</div>
+    </div>
+  </div>
+  <div class="fx">Valores em Reais (BRL) · Cotação 04/10 · USD = 5,26 (opção 1)<br>*Nada reservado, apenas cotado · Bilhetes de trem são emitidos em nome de cada passageiro e exigem documento de identidade a bordo.</div>
 
   <div class="conds">
-    <div class="cond warn"><div class="cond-h">Tarifas e flexibilidade</div><div class="cond-t">A tarifa Premier Non Flex não admite remarcação nem reembolso. A tarifa Comfort Semi Flex admite alterações com custo, segundo as regras do fornecedor. Como a hospedagem em Positano também é não reembolsável, recomendamos confirmar o aéreo antes de emitir trem e hotel.</div></div>
-    <div class="cond"><div class="cond-h">Pagamento</div><div class="cond-t">À vista no cartão pelo valor em dólar indicado. Parcelamento em 2 a 10x com acréscimo aplicado pelo fornecedor, já informado em cada opção.</div></div>
+    <div class="cond warn"><div class="cond-h">Tarifas e flexibilidade</div><div class="cond-t">Opção 1: Premier Non Flex não admite remarcação nem reembolso; Comfort Semi Flex admite alterações com custo. Opção 2: condições de alteração e reembolso conforme regras tarifárias da classe Premium. Como a hospedagem em Positano é não reembolsável, recomendamos confirmar o aéreo antes de emitir trem e hotel.</div></div>
+    <div class="cond"><div class="cond-h">Pagamento</div><div class="cond-t">Opção 1: à vista no cartão pelo valor indicado, ou em 2 a 10x com o acréscimo informado. Opção 2: valor total em Reais, taxas incluídas.</div></div>
     <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Chegue à estação com pelo menos 20 minutos de antecedência. Bagagem segue com o passageiro, sem despacho. Positano não tem estação: a última etapa a partir de Salerno ou Nápoles é feita por ferry, ônibus ou transfer privativo, não incluídos.</div></div>
   </div>
 </section>
