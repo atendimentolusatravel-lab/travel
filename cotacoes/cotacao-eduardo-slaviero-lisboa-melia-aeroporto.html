@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Lusatravel · Cotação de hospedagem · Lisboa · Meliá Lisboa Aeroporto · Eduardo Pimentel Slaviero</title>
+
+<link href="fonts/fonts.css" rel="stylesheet">
+<style>
+  :root{
+    --olive:#414625; --olive-mid:#5c6435; --gold:#d6b24b;
+    --ink:#122018; --muted:#6b7a70; --panel:#f2f5f0; --line:#dfe6e0;
+    --red:#8a1c1c; --white:#fff;
+  }
+  @page{ size:A4 portrait; margin:0; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:#fff; color:var(--ink); font-family:'IBM Plex Mono',monospace; font-size:8.6px; line-height:1.45; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:210mm; height:297mm; overflow:hidden; padding:9mm 12mm 7mm; position:relative; page-break-after:always; display:flex; flex-direction:column; }
+  .page:last-child{ page-break-after:auto; }
+  .serif{ font-family:'Marcellus',serif; }
+  .eyebrow{ font-size:7.2px; letter-spacing:.18em; text-transform:uppercase; color:var(--olive-mid); }
+  .eyebrow.gold{ color:var(--gold); }
+  .r{ text-align:right; }
+  .mono{ font-family:'IBM Plex Mono',monospace; }
+  .w5{ font-weight:500; } .w6{ font-weight:600; }
+  .red{ color:var(--red); }
+
+  /* header */
+  .hdr{ display:flex; justify-content:space-between; align-items:flex-start; padding-bottom:7px; border-bottom:2px solid var(--olive); margin-bottom:12px; }
+  .hdr img{ height:19px; display:block; margin-top:2px; }
+  .hdr .meta{ text-align:right; line-height:1.55; }
+  .hdr .meta .t{ font-size:7.6px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--olive); }
+  .hdr .meta .s{ font-size:7.2px; color:var(--muted); }
+
+  /* title block */
+  .title{ display:flex; justify-content:space-between; gap:18px; margin-bottom:10px; }
+  .title h1{ font-family:'Marcellus',serif; font-size:22px; font-weight:400; margin:5px 0 4px; letter-spacing:.005em; }
+  .title .sub{ font-size:7.2px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); }
+  .title .for{ border-left:1px solid var(--line); padding:4px 0 4px 14px; min-width:190px; }
+  .title .for .n{ font-family:'Marcellus',serif; font-size:12.5px; margin:5px 0 3px; }
+  .title .for .d{ font-size:7.4px; color:var(--muted); line-height:1.6; }
+
+  .facts{ display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); background:var(--panel); margin-bottom:10px; }
+  .facts > div{ padding:8px 11px; border-right:1px solid var(--line); }
+  .facts > div:last-child{ border-right:0; }
+  .facts .v{ font-size:11.2px; font-weight:600; margin-top:5px; }
+  .facts .v small{ font-size:7.4px; font-weight:400; color:var(--muted); margin-left:4px; }
+
+  .sec{ display:flex; justify-content:space-between; align-items:baseline; margin:4px 0 7px; }
+  .sec h2{ font-family:'Marcellus',serif; font-size:12.5px; font-weight:400; }
+
+  .rooms{ display:grid; grid-template-columns:repeat(3,1fr); gap:7px; margin-bottom:10px; }
+  .rooms > div{ background:var(--panel); border:1px solid var(--line); padding:8px 10px; }
+  .rooms .n{ font-family:'Marcellus',serif; font-size:11px; margin:4px 0 2px; }
+  .rooms .p{ font-weight:600; }
+  .rooms .b{ color:var(--muted); font-size:7.6px; margin-top:1px; }
+
+  /* card (hotel / flight) */
+  .card{ border:1px solid var(--line); margin-bottom:9px; break-inside:avoid; }
+  .card .ch{ display:flex; justify-content:space-between; align-items:flex-start; padding:7px 11px 6px; }
+  .card .tag{ display:inline-block; background:var(--olive); color:#fff; font-size:6.6px; letter-spacing:.16em; text-transform:uppercase; padding:2px 6px; font-weight:500; }
+  .card .tag.rec{ background:var(--gold); color:var(--ink); margin-left:5px; }
+  .card h3{ font-family:'Marcellus',serif; font-size:15px; font-weight:400; margin:5px 0 2px; }
+  .card .addr{ font-size:7.4px; color:var(--muted); max-width:400px; }
+  .score{ text-align:right; }
+  .score .bx{ display:inline-block; border:1px solid var(--olive); padding:2px 8px; font-weight:600; font-size:9px; }
+  .score .l{ font-size:7.2px; color:var(--muted); margin-top:4px; }
+
+  table{ width:100%; border-collapse:collapse; }
+  th{ font-size:6.6px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:500; text-align:left; padding:6px 11px 5px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#fff; }
+  td{ padding:6px 11px; vertical-align:top; border-bottom:1px solid var(--line); }
+  tr:last-child td{ border-bottom:0; }
+  td .n{ font-weight:600; }
+  td .d{ color:var(--muted); font-size:7.6px; margin-top:2px; }
+  td .d b{ color:var(--red); font-weight:500; }
+  .num{ text-align:right; white-space:nowrap; }
+  .num.big{ font-weight:600; font-size:9.4px; }
+  .tot td{ background:var(--olive); color:#fff; border:0; padding:9px 11px; }
+  .tot .l{ font-family:'Marcellus',serif; font-size:11.5px; color:var(--gold); }
+  .tot .l small{ font-family:'IBM Plex Mono',monospace; font-size:7.2px; color:#d8dccb; margin-left:6px; }
+  .tot .num.big{ color:var(--gold); font-size:10.6px; }
+
+  /* flight segment list */
+  .seg{ display:grid; grid-template-columns:62px 1fr 1fr 70px 95px; gap:0 10px; padding:7px 11px; border-bottom:1px solid var(--line); align-items:center; }
+  .seg .fl{ font-weight:600; } .seg .fl small{ display:block; font-weight:400; color:var(--muted); font-size:7px; }
+  .seg .ap .t{ font-size:11px; font-weight:600; } .seg .ap .c{ color:var(--muted); font-size:7.4px; }
+  .seg .ap .dt{ font-size:7.2px; color:var(--olive-mid); letter-spacing:.06em; text-transform:uppercase; }
+  .seg .dur{ text-align:center; color:var(--muted); font-size:7.4px; } .seg .dur b{ display:block; color:var(--ink); font-weight:600; font-size:8.6px; }
+  .seg .ac{ text-align:right; font-size:7.4px; color:var(--muted); } .seg .ac b{ display:block; color:var(--ink); font-weight:500; }
+  .seghead{ font-size:6.6px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); padding:6px 11px 5px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); display:grid; grid-template-columns:62px 1fr 1fr 70px 95px; gap:0 10px; }
+  .seghead .c{ text-align:center; } .seghead .r{ text-align:right; }
+
+  /* combos */
+  .combo td:first-child{ width:48%; }
+
+  .cond{ display:grid; grid-template-columns:1fr 1fr; gap:6px 22px; font-size:7.6px; }
+  .cond p{ padding-left:9px; text-indent:-9px; color:var(--ink); }
+  .cond p b{ font-weight:600; }
+
+  .note{ margin-top:10px; border-top:1px solid var(--line); padding-top:9px; font-size:7.8px; line-height:1.55; }
+  .note .b{ font-family:'Marcellus',serif; font-size:9.4px; margin-right:6px; }
+
+  .foot{ margin-top:auto; border-top:1px solid var(--line); padding-top:7px; display:flex; justify-content:space-between; font-size:6.8px; color:var(--muted); line-height:1.6; }
+  .foot .b{ font-family:'Marcellus',serif; font-size:9px; color:var(--ink); letter-spacing:.08em; }
+  .foot a{ color:inherit; text-decoration:none; }
+  .spacer{ flex:1; }
+</style>
+</head>
+<body>
+
+<section class="page">
+  <div class="hdr">
+    <img src="assets/lusatravel-logo.png" alt="LusaTravel">
+    <div class="meta">
+      <div class="t">Cotação de hospedagem · 3 apartamentos</div>
+      <div class="s">COT-LIS-1008 · emitida em 4 de outubro de 2026</div>
+      <div class="s">Lisboa · Portugal · Meliá Lisboa Aeroporto · 1 noite</div>
+    </div>
+  </div>
+
+  <div class="title">
+    <div>
+      <div class="eyebrow">Cotação de hospedagem · Lisboa · Portugal</div>
+      <h1>Lisboa · Meliá Lisboa Aeroporto</h1>
+      <div class="sub">1 hotel · 1 noite · 3 apartamentos · ao lado do aeroporto</div>
+    </div>
+    <div class="for">
+      <div class="eyebrow">Preparada para</div>
+      <div class="n">Sr. Eduardo Pimentel Slaviero</div>
+      <div class="d">3 apartamentos · 04 adultos · 03 crianças</div>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div><div class="eyebrow">Check-in</div><div class="v">a confirmar</div></div>
+    <div><div class="eyebrow">Check-out</div><div class="v">a confirmar</div></div>
+    <div><div class="eyebrow">Noites</div><div class="v">1 noite</div></div>
+    <div><div class="eyebrow">Apartamentos</div><div class="v">3 apartamentos</div></div>
+  </div>
+
+  <div class="sec"><h2>Distribuição dos apartamentos</h2><div class="eyebrow">4 adultos · 3 crianças</div></div>
+  <div class="rooms">
+    <div><div class="eyebrow">Apartamento 1</div><div class="n">Casal</div><div class="p">2 adultos</div><div class="b">Com café da manhã</div></div>
+    <div><div class="eyebrow">Apartamento 2</div><div class="n">Adulto + criança</div><div class="p">1 adulto + 1 criança</div><div class="b">Com café da manhã</div></div>
+    <div><div class="eyebrow">Apartamento 3</div><div class="n">Adulto + 2 crianças</div><div class="p">1 adulto + 2 crianças</div><div class="b">Com café da manhã</div></div>
+  </div>
+
+  <div class="card">
+    <div class="ch">
+      <div>
+        <span class="tag">Hotel</span>
+        <h3>Meliá Lisboa Aeroporto</h3>
+        <div class="addr">Rua C 2, 1749-125 Lisboa · junto ao Aeroporto Humberto Delgado · 4 estrelas · ideal para a noite anterior ou posterior ao voo</div>
+      </div>
+      <div class="score"><span class="bx">93 / 100</span><div class="l">Excelente · 7.664 avaliações</div></div>
+    </div>
+    <table>
+      <thead><tr><th>Apartamentos</th><th class="num">Total 1 noite</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><div class="n">Apto 1 · Melia Room Double</div><div class="d">2 adultos · com café da manhã · <b>não reembolsável</b></div></td>
+          <td class="num big">R$ 1.032,52</td>
+        </tr>
+        <tr>
+          <td><div class="n">Aptos 2 e 3 · 2x Melia Twin/Double Room</div><div class="d">1 adulto + 1 criança · 1 adulto + 2 crianças · com café da manhã · <b>não reembolsável</b></div></td>
+          <td class="num big">R$ 2.289,58</td>
+        </tr>
+        <tr class="tot">
+          <td><span class="l">Total · 3 apartamentos <small>4 adultos + 3 crianças · 1 noite · café da manhã incluído</small></span></td>
+          <td class="num big">R$ 3.322,10</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec"><h2>Pagamento e condições</h2></div>
+  <div class="cond">
+    <p>· <b>Pix à vista com 5% de desconto</b>, ou <b>cartão de crédito em até 10x</b> por link de pagamento (10x de R$ 332,21).</p>
+    <p>· Valores em reais, cotados em 04/10/2026, sujeitos a alteração e à disponibilidade até a confirmação. Esta cotação não é uma reserva.</p>
+    <p>· Café da manhã incluído nos três apartamentos.</p>
+    <p>· Tarifa não reembolsável nos três apartamentos: sem alteração ou cancelamento após a confirmação.</p>
+    <p>· Idades das crianças serão validadas na reserva. Taxas locais, quando aplicáveis, são pagas diretamente no hotel.</p>
+    <p>· Complementa a cotação COT-MAD-1007 (Madri + aéreo Lisboa–Madri–Lisboa). <b>*Nada reservado, apenas cotado.</b></p>
+  </div>
+
+  <div class="note"><span class="b">LUSATRAVEL</span> O Meliá Lisboa Aeroporto fica a poucos minutos do terminal, o que facilita o voo para Madri às 08h20 do dia 30/12 e o retorno às 20h05 do dia 04/01. Fico à disposição para reservar ou cotar outras datas e hotéis em Lisboa.</div>
+
+  <div class="foot">
+    <div><span class="b">LUSATRAVEL</span> Viagens e Turismo Ltda · CNPJ 45.824.599/0001-16<br>Rua Grã Nicco, 113 · Bloco 2 · Sala 102 · Mossunguê · Curitiba · PR · CEP 81200-200<br>(41) 3154-1117 · <a href="https://wa.me/5541992750065">(41) 99275-0065</a> · <a href="mailto:atendimento@lusatravel.com.br">atendimento@lusatravel.com.br</a></div>
+    <div class="r">COT-LIS-1008 · Eduardo Pimentel Slaviero<br>Página 1 de 1</div>
+  </div>
+</section>
+
+</body>
+</html>
