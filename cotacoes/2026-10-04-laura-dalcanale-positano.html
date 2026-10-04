@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>Positano · Hotel Eden Roc — LusaTravel</title>
+<title>Laura Dalcanale | Positano — LusaTravel</title>
 <style>
 @import url('fonts/fonts.css');
 :root{
@@ -13,7 +13,8 @@
 @page{ size:A3 portrait; margin:0; }
 *{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
 html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
-.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; display:flex; flex-direction:column; padding:22mm 24mm 18mm; }
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; display:flex; flex-direction:column; padding:22mm 24mm 18mm; page-break-after:always; }
+.page:last-child{ page-break-after:auto; }
 
 .brand{ display:flex; align-items:baseline; justify-content:space-between; }
 .brand .logo{ font-size:20pt; font-weight:800; letter-spacing:.1em; color:var(--gold); }
@@ -60,6 +61,32 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
 .fx{ margin-top:5mm; font-size:9pt; color:var(--mut); line-height:1.7; }
 
+/* ── TREM ── */
+.train{ margin-top:10mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.train .top{ background:var(--paper); padding:6mm 9mm; display:flex; justify-content:space-between; align-items:center; }
+.train .op{ font-size:15pt; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); font-style:italic; }
+.train .op small{ display:block; font-size:8.5pt; font-weight:600; letter-spacing:.14em; color:var(--mut); font-style:normal; margin-top:1mm; }
+.train .day{ font-size:10pt; color:var(--char); font-weight:600; }
+.train .leg{ padding:9mm 9mm; display:grid; grid-template-columns:1fr 2fr 1fr; align-items:center; gap:6mm; }
+.train .t{ font-size:28pt; font-weight:800; color:var(--ink); line-height:1; }
+.train .t small{ display:block; font-size:9pt; font-weight:500; color:var(--mut); margin-top:2mm; letter-spacing:.06em; text-transform:uppercase; }
+.train .t.r{ text-align:right; }
+.train .mid{ text-align:center; position:relative; }
+.train .mid .line{ height:1px; border-top:2px dashed var(--line); position:absolute; left:0; right:0; top:50%; }
+.train .mid .pill{ position:relative; display:inline-block; background:#fff; border:1.5px solid var(--gold); color:var(--dest); border-radius:20px; padding:2mm 6mm; font-size:10pt; font-weight:600; }
+.fares{ margin-top:7mm; display:grid; grid-template-columns:1fr 1fr; gap:6mm; }
+.fare{ border:1px solid var(--line); border-radius:6px; padding:7mm 8mm; display:flex; flex-direction:column; }
+.fare .cls{ font-size:15pt; font-weight:700; color:var(--ink); }
+.fare .flex{ display:inline-block; margin-top:2mm; font-size:8.5pt; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:1.2mm 3.5mm; border-radius:3px; }
+.fare .flex.no{ background:#f6e9e3; color:#8a2a00; }
+.fare .flex.semi{ background:#edf1e6; color:var(--dest); }
+.fare .desc{ font-size:10pt; color:var(--char); line-height:1.6; margin-top:4mm; font-weight:300; }
+.fare .amt{ margin-top:6mm; font-size:22pt; font-weight:800; color:var(--dest); line-height:1; white-space:nowrap; }
+.fare .usd{ font-size:10pt; color:var(--mut); margin-top:1.5mm; }
+.fare .inst{ margin-top:4mm; padding-top:4mm; border-top:1px solid var(--line); font-size:9.5pt; color:var(--char); line-height:1.6; }
+.fare .inst b{ font-weight:600; }
+.fare.pick{ border:2px solid var(--gold); }
+
 .conds{ margin-top:10mm; display:grid; grid-template-columns:1fr 1fr; gap:7mm 12mm; }
 .cond-h{ font-size:9.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5mm; }
 .cond-t{ font-size:10pt; line-height:1.7; color:var(--char); }
@@ -78,14 +105,14 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
   <div class="head">
     <div>
-      <div class="kicker">Cotação de hospedagem</div>
+      <div class="kicker">Cotação para sua viagem · Laura Dalcanale</div>
       <div class="title">Positano</div>
       <div class="sub">Costa Amalfitana · Itália</div>
     </div>
     <div class="meta">
       <b>2 quartos duplos</b> · 2 hóspedes por quarto · 4 hóspedes<br>
       Período: a confirmar<br>
-      Hotel Eden Roc <span class="st">★★★★</span>
+      Hospedagem + trem Frecciarossa
     </div>
   </div>
 
@@ -120,6 +147,65 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <div class="cond"><div class="cond-h">Documentos</div><div class="cond-t">Passaporte com validade mínima de 3 meses após a data de saída do Espaço Schengen. Valores e disponibilidade sujeitos a confirmação no momento da reserva; o valor em Reais pode variar conforme o câmbio do dia da emissão.</div></div>
   </div>
 
+</section>
+
+<section class="page">
+  <div class="brand">
+    <div class="logo">LUSATRAVEL</div>
+    <div class="date">Cotação · 04/10/2026<br><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a> · <a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+  </div>
+  <div class="rule"></div>
+
+  <div class="head">
+    <div>
+      <div class="kicker">Cotação para sua viagem · Laura Dalcanale</div>
+      <div class="title">Trem</div>
+      <div class="sub">Frecciarossa · Alta velocidade · Itália</div>
+    </div>
+    <div class="meta">
+      <b>Qua 21/10/2026</b> · trajeto direto<br>
+      Duração total 7h40<br>
+      2 opções de tarifa
+    </div>
+  </div>
+
+  <div class="train">
+    <div class="top">
+      <div class="op">Frecciarossa<small>Trenitalia · trem de alta velocidade</small></div>
+      <div class="day">Quarta-feira, 21 de outubro de 2026</div>
+    </div>
+    <div class="leg">
+      <div class="t">09:30<small>Partida · 21/10</small></div>
+      <div class="mid"><div class="line"></div><span class="pill">7h 40min · Direto, sem conexões</span></div>
+      <div class="t r">17:10<small>Chegada · 21/10</small></div>
+    </div>
+  </div>
+
+  <div class="fares">
+    <div class="fare">
+      <div class="cls">Premier</div>
+      <span class="flex no">Non Flex · sem flexibilidade</span>
+      <div class="desc">Tarifa mais econômica. Não permite alteração de data ou horário nem reembolso após a emissão, conforme regras tarifárias do fornecedor.</div>
+      <div class="amt">BRL 1.887,59</div>
+      <div class="usd">≈ USD 358,84 · à vista no cartão</div>
+      <div class="inst">Parcelado no cartão em 2 a 10x: <b>USD 369,61</b> (≈ BRL 1.944,24) · acréscimo do fornecedor</div>
+    </div>
+    <div class="fare">
+      <div class="cls">Comfort</div>
+      <span class="flex semi">Semi Flex · flexibilidade parcial</span>
+      <div class="desc">Classe superior, com mais espaço. Permite alterações e reembolso parcial mediante taxa, conforme regras tarifárias do fornecedor.</div>
+      <div class="amt">BRL 2.561,38</div>
+      <div class="usd">≈ USD 486,93 · à vista no cartão</div>
+      <div class="inst">Parcelado no cartão em 2 a 10x: <b>USD 501,54</b> (≈ BRL 2.638,23) · acréscimo do fornecedor</div>
+    </div>
+  </div>
+  <div class="fx">Valores em Reais (BRL) conforme exibidos pelo fornecedor · Cotação 04/10 · USD = 5,26<br>*Nada reservado, apenas cotado · Bilhetes de trem são emitidos em nome de cada passageiro e exigem documento de identidade a bordo.</div>
+
+  <div class="conds">
+    <div class="cond warn"><div class="cond-h">Tarifas e flexibilidade</div><div class="cond-t">A tarifa Premier Non Flex não admite remarcação nem reembolso. A tarifa Comfort Semi Flex admite alterações com custo, segundo as regras do fornecedor. Como a hospedagem em Positano também é não reembolsável, recomendamos confirmar o aéreo antes de emitir trem e hotel.</div></div>
+    <div class="cond"><div class="cond-h">Pagamento</div><div class="cond-t">À vista no cartão pelo valor em dólar indicado. Parcelamento em 2 a 10x com acréscimo aplicado pelo fornecedor, já informado em cada opção.</div></div>
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Chegue à estação com pelo menos 20 minutos de antecedência. Bagagem segue com o passageiro, sem despacho. Positano não tem estação: a última etapa a partir de Salerno ou Nápoles é feita por ferry, ônibus ou transfer privativo, não incluídos.</div></div>
+  </div>
 </section>
 </body>
 </html>
