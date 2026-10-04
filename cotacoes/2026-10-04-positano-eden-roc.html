@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Positano · Hotel Eden Roc — LusaTravel</title>
+<style>
+@import url('fonts/fonts.css');
+:root{
+  --gold:#da8d00; --dest:#404525; --dest-soft:#73805c;
+  --ink:#1a1510; --char:#333131; --mut:#9a8d80; --line:#e4ddd2; --paper:#faf7f2;
+  --sans:'Poppins',system-ui,sans-serif; --con:'Montserrat',var(--sans); --lbl:'Arimo',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; display:flex; flex-direction:column; padding:22mm 24mm 18mm; }
+
+.brand{ display:flex; align-items:baseline; justify-content:space-between; }
+.brand .logo{ font-size:20pt; font-weight:800; letter-spacing:.1em; color:var(--gold); }
+.brand .date{ font-family:var(--con); font-size:9pt; color:var(--mut); letter-spacing:.06em; }
+.rule{ height:1.2mm; background:var(--gold); margin:5mm 0 0; }
+
+.band{ margin-top:12mm; background:var(--dest); color:#fff; border-radius:6px; padding:9mm 10mm; display:flex; justify-content:space-between; align-items:flex-end; }
+.band .kicker{ font-size:8pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.band .title{ font-size:26pt; font-weight:800; text-transform:uppercase; letter-spacing:.02em; line-height:1.1; margin-top:1.5mm; }
+.band .sub{ font-size:12pt; font-weight:600; color:var(--gold); margin-top:1.5mm; letter-spacing:.04em; }
+.band .meta{ text-align:right; font-size:10pt; line-height:1.7; color:rgba(255,255,255,.8); }
+.band .meta b{ color:#fff; font-weight:600; }
+
+.card{ margin-top:10mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; display:grid; grid-template-columns:110mm 1fr; }
+.photo{ position:relative; min-height:78mm; background:#ddd center/cover no-repeat; }
+.photo .badge{ position:absolute; top:5mm; left:5mm; background:var(--dest); border:2px solid var(--gold); color:#fff; font-weight:700; font-size:8.5pt; letter-spacing:.1em; text-transform:uppercase; padding:1.5mm 4mm; border-radius:3px; }
+.info{ padding:8mm 9mm; }
+.info .name{ font-size:20pt; font-weight:700; color:var(--ink); line-height:1.15; }
+.info .stars{ font-size:14pt; color:var(--gold); letter-spacing:2px; margin-top:1.5mm; }
+.info .addr{ font-size:10pt; color:var(--mut); margin-top:2mm; }
+.info .score{ display:inline-flex; align-items:baseline; gap:2mm; margin-top:4mm; background:var(--paper); border-radius:4px; padding:2mm 4mm; }
+.info .score b{ font-size:15pt; font-weight:800; color:var(--dest); }
+.info .score span{ font-size:9pt; color:var(--mut); }
+
+.rows{ display:grid; grid-template-columns:1fr 1fr; gap:0 10mm; border-top:1px solid var(--line); }
+.row{ padding:5mm 9mm; border-bottom:1px solid var(--line); }
+.row .k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.row .v{ font-size:11.5pt; font-weight:300; color:var(--char); margin-top:1mm; line-height:1.5; }
+.row .v.alert{ color:#8a2a00; font-weight:500; }
+.row .v small{ display:block; font-size:9pt; color:var(--mut); margin-top:1mm; font-weight:300; }
+.rows .row:nth-child(odd){ border-right:1px solid var(--line); }
+
+.total{ margin-top:10mm; display:grid; grid-template-columns:1fr 1fr 1.4fr; gap:5mm; }
+.tile{ background:var(--paper); border-radius:6px; padding:7mm 8mm; }
+.tile .k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.tile .v{ font-size:17pt; font-weight:700; color:var(--ink); margin-top:2mm; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.tile .s{ font-size:9pt; color:var(--mut); margin-top:1mm; }
+.tile.main{ background:var(--ink); }
+.tile.main .k{ color:rgba(255,255,255,.6); }
+.tile.main .v{ font-size:24pt; font-weight:800; color:var(--gold); }
+.tile.main .s{ color:rgba(255,255,255,.6); }
+
+.fx{ margin-top:5mm; font-size:9pt; color:var(--mut); line-height:1.7; }
+
+.conds{ margin-top:10mm; display:grid; grid-template-columns:1fr 1fr; gap:7mm 12mm; }
+.cond-h{ font-size:9.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5mm; }
+.cond-t{ font-size:10pt; line-height:1.7; color:var(--char); }
+.cond.warn{ grid-column:1 / -1; border-left:3px solid var(--dest); padding-left:6mm; }
+.cond.warn .cond-h{ color:var(--dest); }
+
+.sig{ margin-top:auto; padding-top:6mm; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; font-family:var(--con); font-size:9pt; color:var(--mut); }
+.sig a{ color:var(--char); text-decoration:none; }
+.sig .l b{ color:var(--gold); font-family:var(--sans); font-weight:800; letter-spacing:.1em; }
+</style>
+</head>
+<body>
+<section class="page">
+  <div class="brand"><div class="logo">LUSATRAVEL</div><div class="date">Cotação · 04/10/2026</div></div>
+  <div class="rule"></div>
+
+  <div class="band">
+    <div>
+      <div class="kicker">Cotação de hospedagem</div>
+      <div class="title">Positano</div>
+      <div class="sub">Costa Amalfitana · Itália</div>
+    </div>
+    <div class="meta">
+      <b>2 quartos duplos</b> · 2 hóspedes por quarto · 4 hóspedes<br>
+      Período: a confirmar<br>
+      Hotel Eden Roc ★★★★
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="photo" style="background-image:url('img/edenroc.jpg')"><div class="badge">Vista mar</div></div>
+    <div class="info">
+      <div class="name">Hotel Eden Roc</div>
+      <div class="stars">★★★★</div>
+      <div class="addr">Via G. Marconi, 110 · Positano · Costa Amalfitana</div>
+      <div class="score"><b>98<span style="font-size:10pt">/100</span></b><span>Excelente · 338 avaliações</span></div>
+    </div>
+    <div class="rows" style="grid-column:1 / -1">
+      <div class="row"><div class="k">Quarto</div><div class="v">2 × Superior Room · Vista Mar · Piso térreo</div></div>
+      <div class="row"><div class="k">Camas</div><div class="v">2 camas de solteiro<small>Tipo de cama não garantido: definido pelo hotel conforme disponibilidade.</small></div></div>
+      <div class="row"><div class="k">Plano</div><div class="v">Café da manhã buffet incluído</div></div>
+      <div class="row"><div class="k">Tarifa</div><div class="v alert">Não reembolsável · tarifa pacote<small style="color:var(--dest-soft)">Desconto de 21% já aplicado</small></div></div>
+    </div>
+  </div>
+
+  <div class="total">
+    <div class="tile"><div class="k">Por quarto</div><div class="v">BRL 4.138,91</div><div class="s">2 hóspedes · estadia completa</div></div>
+    <div class="tile"><div class="k">Em dólar</div><div class="v">USD 1.573,21</div><div class="s">total · 2 quartos</div></div>
+    <div class="tile main"><div class="k">Total · 2 quartos</div><div class="v">BRL 8.277,81</div><div class="s">4 hóspedes · café da manhã incluído</div></div>
+  </div>
+  <div class="fx">Valores em Reais (BRL) · Cotação 04/10 · USD = 5,26<br>*Nada reservado, apenas cotado</div>
+
+  <div class="conds">
+    <div class="cond warn"><div class="cond-h">Tarifa não reembolsável</div><div class="cond-t">A tarifa cotada não permite cancelamento, alteração de datas ou reembolso após a confirmação. Recomendamos confirmar o aéreo e os demais trechos antes de emitir a hospedagem e contratar seguro de viagem com cobertura de cancelamento.</div></div>
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Hotelaria: até 10x sem acréscimos</div></div>
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">Aéreo, traslados e seguro de viagem · Tassa di soggiorno (taxa de estadia) paga diretamente no hotel · Despesas pessoais e extras</div></div>
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Horários padrão de check-in a partir das 15h e check-out até as 11h, sujeitos à política do hotel. Positano é uma vila de escadarias: o hotel fica em encosta e o acesso a carros é restrito no centro.</div></div>
+    <div class="cond"><div class="cond-h">Documentos</div><div class="cond-t">Passaporte com validade mínima de 3 meses após a data de saída do Espaço Schengen. Valores e disponibilidade sujeitos a confirmação no momento da reserva; o valor em Reais pode variar conforme o câmbio do dia da emissão.</div></div>
+  </div>
+
+  <div class="sig">
+    <div class="l"><b>LUSATRAVEL</b> · Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+    <div class="r"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a> &nbsp;·&nbsp; <a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+  </div>
+</section>
+</body>
+</html>
