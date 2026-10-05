@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Lusatravel · Cotação de hospedagem · Lisboa · NH Collection Lisboa Liberdade · Marcos Mocellin</title>
+<link href="../assets/fonts/fonts.css" rel="stylesheet">
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  :root {
+    --ink: #1f1d18;
+    --olive: #404525;
+    --olive-soft: #6b6f4a;
+    --gold: #d9b85a;
+    --muted: #7a776f;
+    --line: #d9d6cf;
+    --line-soft: #e6e3dc;
+    --card: #f5f4ef;
+    --red: #a52a1a;
+    --mono: 'IBM Plex Mono', 'Courier New', monospace;
+    --serif: 'Marcellus', Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  @media print { html, body { height: 297mm; overflow: hidden; } }
+  body {
+    font-family: var(--mono);
+    color: var(--ink);
+    font-size: 7.5pt;
+    line-height: 1.42;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm; height: 297mm;
+    padding: 11mm 15mm 9mm 15mm;
+    position: relative; overflow: hidden; page-break-after: avoid;
+    display: flex; flex-direction: column;
+  }
+  .label { font-size: 6.6pt; letter-spacing: .16em; text-transform: uppercase; color: var(--olive-soft); }
+  .label.dark { color: var(--olive); font-weight: 600; }
+  .serif { font-family: var(--serif); font-weight: 400; }
+  .num { font-weight: 600; }
+  .muted { color: var(--muted); }
+  .red { color: var(--red); font-weight: 500; }
+  b { font-weight: 600; }
+
+  /* Header */
+  .header { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 5mm; border-bottom: 1.5px solid var(--olive); }
+  .header img { height: 9.5mm; display: block; }
+  .header .meta { text-align: right; font-size: 7.4pt; color: var(--muted); line-height: 1.55; }
+  .header .meta .label { color: var(--olive); font-weight: 600; font-size: 7pt; letter-spacing: .14em; }
+
+  /* Title row */
+  .titlerow { display: flex; justify-content: space-between; margin-top: 5mm; }
+  .titlerow .left { flex: 1; }
+  .titlerow h1 { font-family: var(--serif); font-weight: 400; font-size: 17.5pt; margin: 2mm 0 2mm; letter-spacing: .01em; white-space: nowrap; }
+  .titlerow .right { width: 54mm; border-left: 1px solid var(--line); padding-left: 5mm; }
+  .titlerow .right .name { font-family: var(--serif); font-size: 12.5pt; margin: 1.6mm 0 1mm; }
+  .titlerow .right .sub { font-size: 7.2pt; color: var(--muted); }
+
+  /* Key facts */
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 4.5mm; background: var(--line-soft); border: 2px solid var(--line-soft); }
+  .facts div { background: var(--card); padding: 2.6mm 3.5mm; }
+  .facts .label { display: block; margin-bottom: 1mm; }
+  .facts .v { font-size: 9.5pt; font-weight: 600; }
+
+  /* Section heading */
+  .sechead { display: flex; justify-content: space-between; align-items: baseline; margin-top: 5mm; margin-bottom: 2.6mm; }
+  .sechead h2 { font-family: var(--serif); font-weight: 400; font-size: 12.5pt; margin: 0; }
+
+  /* Rooms distribution */
+  .rooms { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3mm; }
+  .room { background: var(--card); border: 1px solid var(--line-soft); border-top: 2px solid #c8c6b4; padding: 2.4mm 3.5mm; }
+  .room .t { font-family: var(--serif); font-size: 10pt; margin: 1.2mm 0 .6mm; }
+  .room .p { font-weight: 600; font-size: 8pt; }
+  .room .m { font-size: 7.2pt; color: var(--muted); }
+
+  /* Hotel card */
+  .hotel { border: 1px solid var(--line); margin-top: 5mm; }
+  .hotel .top { padding: 3.2mm 4mm 2.6mm; display: flex; justify-content: space-between; }
+  .hotel .badge { display: inline-block; background: var(--olive); color: #fff; font-size: 6.2pt; letter-spacing: .18em; padding: .9mm 2mm .7mm; font-weight: 600; }
+  .hotel h3 { font-family: var(--serif); font-weight: 400; font-size: 13.5pt; margin: 1.8mm 0 1.2mm; }
+  .hotel .addr { font-size: 7.3pt; color: var(--muted); max-width: 120mm; line-height: 1.55; }
+  .hotel .score { text-align: right; }
+  .hotel .score .n { display: inline-block; border: 1.5px solid var(--ink); padding: 1mm 2.4mm; font-weight: 600; font-size: 8.4pt; }
+  .hotel .score .r { font-size: 7.2pt; color: var(--muted); margin-top: 2mm; }
+  .hotel .thead { display: flex; justify-content: space-between; padding: 2mm 4mm; background: var(--card); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+  .hotel .row { display: flex; justify-content: space-between; align-items: flex-start; padding: 2.4mm 4mm; border-bottom: 1px solid var(--line-soft); }
+  .hotel .row .rn { font-weight: 600; font-size: 8.4pt; }
+  .hotel .row .rd { font-size: 7.4pt; color: var(--muted); margin-top: 1.2mm; }
+  .hotel .row .rp { font-weight: 600; font-size: 9.2pt; white-space: nowrap; }
+  .hotel .total { display: flex; justify-content: space-between; align-items: center; background: var(--olive); color: #fff; padding: 2.8mm 4mm; }
+  .hotel .total .tt { font-family: var(--serif); font-size: 11.5pt; color: var(--gold); }
+  .hotel .total .td { font-size: 7.4pt; color: #e4e3d6; margin-left: 3mm; }
+  .hotel .total .tp { font-weight: 600; font-size: 11pt; color: var(--gold); }
+
+  /* Conditions */
+  .cond { display: grid; grid-template-columns: 1fr 1fr; column-gap: 8mm; row-gap: 1.8mm; margin-top: 1mm; }
+  .cond p { margin: 0; padding-left: 3mm; text-indent: -3mm; font-size: 7.2pt; color: #3a3832; line-height: 1.5; }
+  .cond p::before { content: '· '; }
+
+  .note { margin-top: 4mm; padding-top: 3mm; border-top: 1px solid var(--line-soft); font-size: 7.4pt; line-height: 1.6; color: #3a3832; }
+  .note .brand { font-family: var(--serif); font-size: 8.6pt; margin-right: 2mm; }
+
+  /* Footer */
+  .footer { margin-top: auto; padding-top: 3mm; border-top: 1px solid var(--line-soft); display: flex; justify-content: space-between; font-size: 6.9pt; color: var(--muted); line-height: 1.7; }
+  .footer .brand { font-family: var(--serif); color: var(--ink); font-size: 8.6pt; }
+  .footer .r { text-align: right; }
+</style>
+</head>
+<body>
+<section class="page">
+
+  <div class="header">
+    <img src="../assets/logo-lusatravel.png" alt="LusaTravel">
+    <div class="meta">
+      <div class="label">Cotação de hospedagem · 2 apartamentos</div>
+      <div>COT-LIS-1009 · emitida em 5 de outubro de 2026</div>
+      <div>Lisboa · Portugal · NH Collection Lisboa Liberdade</div>
+    </div>
+  </div>
+
+  <div class="titlerow">
+    <div class="left">
+      <div class="label dark">Cotação de hospedagem · Lisboa · Portugal</div>
+      <h1>Lisboa · NH Collection Lisboa Liberdade</h1>
+      <div class="label">1 hotel · 2 apartamentos · 4 adultos · Avenida da Liberdade</div>
+    </div>
+    <div class="right">
+      <div class="label">Preparada para</div>
+      <div class="name">Sr. Marcos Mocellin</div>
+      <div class="sub">2 apartamentos · 04 adultos</div>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div><span class="label">Check-in</span><span class="v">a confirmar</span></div>
+    <div><span class="label">Check-out</span><span class="v">a confirmar</span></div>
+    <div><span class="label">Noites</span><span class="v">a confirmar</span></div>
+    <div><span class="label">Apartamentos</span><span class="v">2 apartamentos</span></div>
+  </div>
+
+  <div class="sechead">
+    <h2>Distribuição dos apartamentos</h2>
+    <div class="label">4 adultos</div>
+  </div>
+  <div class="rooms">
+    <div class="room">
+      <div class="label">Apartamento 1</div>
+      <div class="t">Casal</div>
+      <div class="p">2 adultos</div>
+      <div class="m">Somente hospedagem · sem café da manhã</div>
+    </div>
+    <div class="room">
+      <div class="label">Apartamento 2</div>
+      <div class="t">Casal</div>
+      <div class="p">2 adultos</div>
+      <div class="m">Somente hospedagem · sem café da manhã</div>
+    </div>
+  </div>
+
+  <div class="hotel">
+    <div class="top">
+      <div>
+        <span class="badge">HOTEL</span>
+        <h3>NH Collection Lisboa Liberdade</h3>
+        <div class="addr">Avenida da Liberdade 180 B, Lisboa · 4 estrelas · na avenida mais elegante da cidade, junto às áreas de compras e com fácil acesso ao transporte público</div>
+      </div>
+      <div class="score">
+        <span class="n">93 / 100</span>
+        <div class="r">Excelente · 1.114 avaliações</div>
+      </div>
+    </div>
+    <div class="thead"><span class="label">Apartamentos</span><span class="label">Total da estadia</span></div>
+    <div class="row">
+      <div>
+        <div class="rn">Apto 1 · Superior Room (SUPDBL)</div>
+        <div class="rd">2 adultos · somente hospedagem · <span class="red">não reembolsável</span></div>
+      </div>
+      <div class="rp">R$ 3.272,82</div>
+    </div>
+    <div class="row">
+      <div>
+        <div class="rn">Apto 2 · Superior Room (SUPDBL)</div>
+        <div class="rd">2 adultos · somente hospedagem · <span class="red">não reembolsável</span></div>
+      </div>
+      <div class="rp">R$ 3.272,82</div>
+    </div>
+    <div class="total">
+      <div><span class="tt">Total · 2 apartamentos</span><span class="td">4 adultos · 2x Superior Room · somente hospedagem</span></div>
+      <div class="tp">R$ 6.545,64</div>
+    </div>
+  </div>
+
+  <div class="sechead" style="margin-top:5mm">
+    <h2>Pagamento e condições</h2>
+  </div>
+  <div class="cond">
+    <p><b>Pix à vista com 5% de desconto</b> (R$ 6.218,36), ou <b>cartão de crédito em até 10x</b> por link de pagamento (10x de R$ 654,56).</p>
+    <p>Valores em reais, cotados em 05/10/2026 (referência USD 1.242,98), sujeitos a alteração e à disponibilidade até a confirmação. Esta cotação não é uma reserva.</p>
+    <p>Café da manhã <b>não incluído</b>: tarifa somente hospedagem nos dois apartamentos.</p>
+    <p>Tarifa não reembolsável nos dois apartamentos: sem alteração ou cancelamento após a confirmação.</p>
+    <p>Taxa turística municipal de Lisboa e demais taxas locais, quando aplicáveis, são pagas diretamente no hotel.</p>
+    <p>Datas de check-in e check-out a confirmar com o cliente antes da reserva. <b>*Nada reservado, apenas cotado.</b></p>
+  </div>
+
+  <div class="note">
+    <span class="brand">LUSATRAVEL</span> O NH Collection Lisboa Liberdade fica na Avenida da Liberdade, a poucos minutos a pé do Marquês de Pombal e do Rossio, com metrô na porta. Fico à disposição para reservar ou cotar outras datas e hotéis em Lisboa.
+  </div>
+
+  <div class="footer">
+    <div>
+      <span class="brand">LUSATRAVEL</span> Viagens e Turismo Ltda · CNPJ 45.824.599/0001-16<br>
+      Rua Grã Nicco, 113 · Bloco 2 · Sala 102 · Mossunguê · Curitiba · PR · CEP 81200-200<br>
+      (41) 3154-1117 · (41) 99275-0065 · atendimento@lusatravel.com.br
+    </div>
+    <div class="r">COT-LIS-1009 · Marcos Mocellin<br>Página 1 de 1</div>
+  </div>
+
+</section>
+</body>
+</html>
