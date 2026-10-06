@@ -199,8 +199,7 @@ gôndola), reproduza o documento em imagem, nunca o reescreva:
 - `<title>`: `Lusa Travel — Caderno de vouchers · <Clientes> · <Destino>`.
 - Alterações depois da entrega = novo deploy de produção no mesmo projeto (a URL não muda; o
   `no-store` garante que o cliente veja a versão nova).
-- PDF, se o cliente pedir: `chromium --headless --disable-gpu --no-sandbox --no-pdf-header-footer --print-to-pdf=caderno.pdf index.html`
-  (o `@page { size: A4; margin: 0 }` do template já cuida do formato).
+- PDF: **só quando o usuário pedir** (ver "PDF" abaixo). O link da Vercel é a entrega padrão.
 
 ### Caminho A — upload direto (CLI `vercel deploy` ou API `files`)
 
@@ -224,6 +223,32 @@ da chamada, o caderno vai em arquivos separados para manter a chamada pequena e 
 - **Verificação obrigatória**: um sandbox Vercel (`create_sandboxes_v4`, não persistente) alcança a
   URL publicada; baixe cada arquivo e compare o `sha1sum` com o local antes de entregar o link.
   Encerre o sandbox ao final (`stop_session`).
+
+## PDF (padrão de referência: "Lusa Travel - Família Dalcanale - Estados Unidos.pdf")
+
+O PDF de referência foi impresso pelo Chromium num Windows **sem** Poppins e **sem** Cormorant
+Garamond, então o que o cliente recebe é o caderno nas fontes de reserva: **Segoe UI** (texto),
+**Georgia** (título da capa e "Boa viagem!") e **Consolas** (localizadores). O padrão do PDF é
+esse, não o das fontes declaradas no CSS. Para reproduzi-lo em qualquer ambiente Linux:
+
+```bash
+python3 .claude/skills/caderno-vouchers/assets/gerar-pdf.py src/index.html "Lusa Travel - <Clientes> - <Destino>.pdf"
+```
+
+O script instala os clones métricos que ficam em `assets/fonts` (Selawik = Segoe UI, Gelasio =
+Georgia, Inconsolata = Consolas; todos OFL), troca as famílias **só numa cópia temporária** do
+HTML, imprime em A4 e falha se alguma fonte fora do padrão for embutida. O Chromium no Linux
+ignora aliases do fontconfig para famílias que não constam da sua lista fixa (Arial/Times/
+Courier), por isso a troca precisa ser feita no CSS da cópia.
+
+- Nome do arquivo: `Lusa Travel - <Clientes> - <Destino>.pdf`, com acentos
+  (`Lusa Travel - Família Dalcanale - Estados Unidos.pdf`, `Lusa Travel - Ronaldo e Regiane - Itália e Espanha.pdf`).
+- A4, uma página por `.page`, `<title>` vira o título do PDF. Conferir `pdfinfo` (páginas) e
+  `pdffonts` (só Selawik/Gelasio/Inconsolata).
+- Gerar o PDF **fora do repositório** (é dado de cliente; o repositório é público) e entregar
+  com `SendUserFile`. Nunca commitar.
+- Selawik não tem itálico (o Chromium inclina sinteticamente) nem a seta `→`; `º`/`ª` foram
+  adicionados como glifos compostos. Evite `→` em texto; prefira "/" ou "para".
 
 ## Checklist antes de publicar
 
