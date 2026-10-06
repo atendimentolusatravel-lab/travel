@@ -190,15 +190,40 @@ gôndola), reproduza o documento em imagem, nunca o reescreva:
 
 ## Deploy
 
-- Estrutura do projeto: `src/index.html`, `src/vercel.json`, `src/robots.txt` (copiar de `assets/`).
-- Projeto Vercel: `caderno-<cliente>-<destino>` em minúsculas sem acento
-  (`caderno-albert-mariana-quenia`, `caderno-amanda-familia-portugal`). Deploy de produção;
-  a URL entregue ao cliente é `https://<projeto>.vercel.app`.
+- Projeto Vercel: `caderno-<cliente>-<destino>`, minúsculas, sem acento, **no máximo 30 caracteres**
+  (`caderno-albert-mariana-quenia`, `caderno-ronaldo-regiane-italia`). Nomes maiores viram uma URL
+  truncada e feia. A URL entregue ao cliente é `https://<projeto>.vercel.app`.
+- Ao criar o projeto pela API/MCP, a Vercel liga a **Vercel Authentication** por padrão: desligue
+  (`ssoProtection: null`) antes do primeiro deploy, senão o cliente cai numa tela de login.
+  Se o domínio `<projeto>.vercel.app` não aparecer sozinho, adicione-o com `add_project_domain`.
 - `<title>`: `Lusa Travel — Caderno de vouchers · <Clientes> · <Destino>`.
-- Alterações depois da entrega = novo deploy no mesmo projeto (a URL não muda; o `no-store`
-  garante que o cliente veja a versão nova).
-- PDF, se o cliente pedir: `chromium --headless --disable-gpu --no-sandbox --no-pdf-header-footer --print-to-pdf=caderno.pdf src/index.html`
+- Alterações depois da entrega = novo deploy de produção no mesmo projeto (a URL não muda; o
+  `no-store` garante que o cliente veja a versão nova).
+- PDF, se o cliente pedir: `chromium --headless --disable-gpu --no-sandbox --no-pdf-header-footer --print-to-pdf=caderno.pdf index.html`
   (o `@page { size: A4; margin: 0 }` do template já cuida do formato).
+
+### Caminho A — upload direto (CLI `vercel deploy` ou API `files`)
+
+Estrutura `src/index.html`, `src/vercel.json`, `src/robots.txt`; deploy de produção. É o caminho
+dos cadernos originais, com os logos embutidos como data URI.
+
+### Caminho B — a partir do ambiente Claude (sem rede para vercel.app)
+
+O ambiente Claude não alcança `*.vercel.app` nem `api.vercel.com`, e o app GitHub da Vercel não está
+instalado na organização (deploy via `gitSource` falha com `git_info_fail`). O que funciona é o
+`create_deployment` do MCP Vercel com os arquivos **inline** na chamada. Como tudo passa pelo texto
+da chamada, o caderno vai em arquivos separados para manter a chamada pequena e recuperável:
+
+- `index.html` (CSS inline, `--logo-green: url('logo-verde.png')`, `--logo-white: url('logo-branco.png')`), `encoding: utf-8`;
+- `logo-verde.png` e `logo-branco.png` em 450 px, paleta de 16 cores (≈6 KB cada), `encoding: base64`;
+- `robots.txt` e `vercel.json` referenciados por `sha` + `size` (já existem no armazenamento da Vercel:
+  `63657cbb7d7086c56b0cd4e5c6999bb683664868`/26 e `da8b950a63cf760a590ea3e4f667f0f3c594a0ea`/236).
+  Os logos, depois do primeiro envio, também podem ser referenciados por sha
+  (`519c01af83b98dd85852f5902b6e1aec448aeb84`/5733 e `d7acfc3de1e6303b4f098a22317c4f4b8857de11`/5964).
+- Documentos do fornecedor (`.doc-orig`) idem: um PNG/JPEG por arquivo, referenciado por `src="nome.png"`.
+- **Verificação obrigatória**: um sandbox Vercel (`create_sandboxes_v4`, não persistente) alcança a
+  URL publicada; baixe cada arquivo e compare o `sha1sum` com o local antes de entregar o link.
+  Encerre o sandbox ao final (`stop_session`).
 
 ## Checklist antes de publicar
 
