@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Lusa Travel — Caderno de vouchers · Marcos e Stella · Madrid e Lisboa</title>
+<style>
+:root{
+  --logo-green: url('logo-verde.png');
+  --logo-white: url('logo-branco.png');
+}
+/* ============================================================
+   LUSA TRAVEL — folha de estilo padrão dos vouchers
+   Paleta e tipografia herdadas do template de cotações.
+   ============================================================ */
+
+:root {
+  --green:  #404626;
+  --green2: #5a6337;
+  --sage:   #d9ead3;
+  --sage2:  #eef4ea;
+  --cream:  #faf9f5;
+  --ink:    #23261a;
+  --muted:  #6b7060;
+  --line:   #d7dbcd;
+  --alert:  #8a3b12;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;   /* mantém faixas e fundos na impressão/PDF */
+  print-color-adjust: exact;
+}
+
+body {
+  margin: 0;
+  background: #e7e5df;
+  color: var(--ink);
+  font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 9.8pt;
+  line-height: 1.4;
+}
+
+/* ---------- folha A4 ---------- */
+.page {
+  width: 210mm;
+  min-height: 296.5mm;   /* folga p/ o rodape absoluto nao empurrar uma folha extra */
+  margin: 8mm auto;
+  padding: 12mm 14mm 23mm;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, .18);
+  page-break-after: always;
+  overflow: hidden;
+}
+.page:last-child { page-break-after: auto; }
+
+/* voucher que ocupa duas folhas A4 — o rodapé cai no fim da segunda.
+   Use quando o conteúdo não couber em uma folha (ex.: aéreo com muitos trechos). */
+.page.two { min-height: 593mm; }
+.page.two::before { top: 25%; }
+
+/* marca d'água central */
+.page::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 130mm; height: 130mm;
+  transform: translate(-50%, -50%);
+  background: var(--logo-green) center/contain no-repeat;
+  opacity: .055;
+  pointer-events: none;
+}
+.page > * { position: relative; z-index: 1; }
+
+/* ---------- cabeçalho ---------- */
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10mm;
+  padding-bottom: 5mm;
+  border-bottom: 2px solid var(--sage);
+}
+.head .logo {
+  width: 46mm; height: 21mm;
+  background: var(--logo-green) left center/contain no-repeat;
+  flex: 0 0 auto;
+}
+.head .agency {
+  font-size: 8.2pt;
+  line-height: 1.5;
+  color: var(--muted);
+  text-align: left;
+}
+.head .agency strong { color: var(--green); font-size: 9pt; letter-spacing: .04em; }
+/* sem bloco de referência à direita, o texto da agência alinha pela direita */
+.head .agency:last-child { text-align: right; }
+.head .ref {
+  text-align: right;
+  font-size: 8.2pt;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+.head .ref b { color: var(--green); }
+.head .ref .num {
+  display: block;
+  font-size: 12pt;
+  font-weight: 600;
+  color: var(--green);
+  letter-spacing: .06em;
+}
+
+/* ---------- faixa de título ---------- */
+.bar {
+  margin: 5mm 0 3mm;
+  padding: 2.1mm 5mm;
+  background: var(--sage);
+  color: var(--green);
+  font-size: 11.5pt;
+  font-weight: 600;
+  letter-spacing: .10em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.bar.sub {
+  background: var(--sage2);
+  font-size: 9.2pt;
+  letter-spacing: .14em;
+  text-align: left;
+  margin-top: 3.2mm;
+}
+
+/* ---------- grades de campos ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8mm 7mm;
+  margin: 0 0 2mm;
+}
+.grid.one { grid-template-columns: 1fr; }
+.grid.three { grid-template-columns: repeat(3, 1fr); }
+
+.f { line-height: 1.5; }
+.f .k {
+  display: block;
+  font-size: 7.6pt;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+.f .v { font-size: 9.8pt; }
+.f .v.big { font-size: 11pt; font-weight: 600; color: var(--green); }
+.f .v.code {
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11pt;
+  font-weight: 700;
+  letter-spacing: .09em;
+  color: var(--green);
+}
+
+/* ---------- caixas ---------- */
+.box {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--sage);
+  background: var(--cream);
+  padding: 2.6mm 4mm;
+  margin: 1.8mm 0;
+}
+.box h4 {
+  margin: 0 0 2mm;
+  font-size: 8.4pt;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.box ul { margin: 0; padding-left: 4.5mm; }
+.box li { margin-bottom: 0.6mm; }
+.box p { margin: 0 0 1.5mm; }
+.box p:last-child, .box li:last-child { margin-bottom: 0; }
+
+.box.alert { border-left-color: var(--alert); background: #fdf6f1; }
+.box.alert h4 { color: var(--alert); }
+.box.prepay {
+  border-left-color: var(--green2);
+  background: var(--sage2);
+  font-weight: 600;
+  color: var(--green);
+}
+
+/* ---------- tabelas ---------- */
+table.t {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8.4pt;
+  margin: 1.5mm 0 2.5mm;
+}
+table.t th {
+  background: var(--sage2);
+  color: var(--green);
+  font-size: 7.8pt;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 2mm 2.5mm;
+  border-bottom: 1px solid var(--line);
+}
+table.t td {
+  padding: 1.5mm 2.2mm;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+table.t tr:last-child td { border-bottom: 0; }
+table.t td.c, table.t th.c { text-align: center; }
+table.t .strong { font-weight: 600; color: var(--green); }
+/* roteiro dia a dia: texto corrido, maior que o das tabelas de dados */
+table.t.roteiro td { font-size: 10pt; line-height: 1.5; padding: 2.2mm 2.5mm; }
+table.t.roteiro td.c { font-size: 10pt; white-space: nowrap; }
+
+.conx td {
+  background: var(--sage2);
+  font-size: 8.2pt;
+  color: var(--green2);
+  font-style: italic;
+}
+
+/* ---------- rodapé ---------- */
+.foot {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 3.2mm 14mm;
+  background: var(--green);
+  color: #dfe4d3;
+  font-size: 7.2pt;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8mm;
+}
+.foot .logo-w {
+  width: 27mm; height: 11mm;
+  background: var(--logo-white) left center/contain no-repeat;
+  flex: 0 0 auto;
+}
+.foot .issued { text-align: right; white-space: nowrap; }
+.foot b { color: #fff; font-weight: 600; }
+
+/* ---------- capa ---------- */
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 240mm;
+}
+.cover .logo-big {
+  width: 90mm; height: 40mm;
+  background: var(--logo-green) center/contain no-repeat;
+  margin-bottom: 14mm;
+}
+.cover .eyebrow {
+  font-size: 9.5pt;
+  letter-spacing: .34em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6mm;
+}
+.cover h1 {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 34pt;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--green);
+  margin: 0 0 5mm;
+}
+.cover h2 {
+  font-size: 13pt;
+  font-weight: 400;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--green2);
+  margin: 0 0 12mm;
+}
+.cover .rule { width: 40mm; height: 2px; background: var(--sage); margin: 0 0 12mm; }
+.cover .meta { font-size: 10pt; color: var(--muted); line-height: 1.9; }
+
+/* ---------- capa de prêmio ---------- */
+.cover .tagline {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 17pt;
+  font-style: italic;
+  color: var(--green2);
+  margin: -2mm 0 7mm;
+}
+.cover .lead {
+  font-size: 10pt;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 128mm;
+  margin: 0 0 12mm;
+}
+.prize {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7mm 9mm;
+  width: 152mm;
+  text-align: left;
+}
+.prize .item { display: flex; gap: 4mm; align-items: flex-start; }
+.prize .n {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 24pt;
+  line-height: .9;
+  font-weight: 600;
+  color: var(--sage);
+  min-width: 10mm;
+}
+.prize h3 {
+  margin: 0 0 1.5mm;
+  font-size: 8.4pt;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.prize p { margin: 0; font-size: 9.4pt; line-height: 1.45; }
+
+/* ---------- índice ---------- */
+ol.toc { list-style: none; counter-reset: v; margin: 0; padding: 0; }
+ol.toc li {
+  counter-increment: v;
+  display: flex;
+  align-items: baseline;
+  gap: 3mm;
+  padding: 1.7mm 0;
+  border-bottom: 1px dotted var(--line);
+  font-size: 10pt;
+}
+ol.toc li::before {
+  content: counter(v, decimal-leading-zero);
+  font-size: 8.5pt;
+  font-weight: 700;
+  color: var(--sage);
+  min-width: 8mm;
+}
+ol.toc li .d { margin-left: auto; color: var(--muted); font-size: 8.8pt; white-space: nowrap; }
+ol.toc li.grp {
+  border-bottom: 0;
+  counter-increment: none;
+  margin-top: 4mm;
+  font-size: 8.4pt;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--green);
+  font-weight: 600;
+}
+ol.toc li.grp::before { content: ""; min-width: 0; }
+
+/* ---------- página final ---------- */
+.bonvoyage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 240mm;
+}
+.bonvoyage h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 40pt;
+  font-weight: 500;
+  color: var(--green);
+  margin: 0 0 6mm;
+}
+.bonvoyage p {
+  font-size: 11.5pt;
+  letter-spacing: .1em;
+  color: var(--green2);
+  text-transform: uppercase;
+  line-height: 2;
+  margin: 0;
+}
+
+/* ---------- fotos de orientação ---------- */
+.fotos { margin: 3mm 0 0; }
+.fotos figure { margin: 0 0 4mm; text-align: center; }
+.fotos img { display: block; margin: 0 auto; border: 1px solid var(--line); }
+.fotos figcaption {
+  margin-top: 1.6mm;
+  font-size: 8.4pt;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ---------- utilitários ---------- */
+.tip {
+  font-size: 8.2pt;
+  color: var(--muted);
+  font-style: italic;
+  margin: 1.5mm 0 0;
+}
+.ph { color: #a9a08c; font-style: italic; }   /* placeholder {{campo}} */
+.note-doc {
+  max-width: 210mm;
+  margin: 8mm auto 0;
+  padding: 6mm 15mm;
+  background: #fffdf3;
+  border: 1px solid #e6dfc4;
+  font-size: 9.5pt;
+  color: #5a5340;
+}
+.note-doc b { color: var(--green); }
+
+@media print {
+  body { background: #fff; }
+  .page { margin: 0; box-shadow: none; }
+  .note-doc { display: none; }
+  @page { size: A4; margin: 0; }
+}
+
+/* ---------- documento do fornecedor reproduzido na íntegra ---------- */
+.doc-orig { position: relative; display: block; margin: 3mm auto 0; }
+.doc-orig img { display: block; width: 100%; border: 1px solid var(--line); }
+.doc-orig .tapa { position: absolute; background: #cccccc; }
+</style>
+<body>
+<!-- title: Lusa Travel — Caderno de vouchers · Marcos e Stella · Madrid e Lisboa -->
+
+
+<!-- ══════════════════════════════ 01 · CAPA ══════════════════════════════ -->
+<section class="page">
+  <div class="cover">
+    <div class="logo-big"></div>
+    <div class="eyebrow">Caderno de vouchers</div>
+    <h1>Espanha e Portugal</h1>
+    <div class="rule"></div>
+    <h2>Marcos e Stella</h2>
+    <div class="meta">
+      Madrid · Lisboa<br>
+      30 de dezembro de 2026 a 05 de janeiro de 2027
+    </div>
+  </div>
+  <div class="foot">
+    <div class="logo-w"></div>
+    <div>
+      Rua Grã Nicco, 113 — Bloco 2, cj 102 — Curitiba/PR — CEP 81200-200<br>
+      atendimentolusatravel@gmail.com · +55 41 99189-6076
+    </div>
+    <div class="issued"><b>Emergência 24h</b><br>Claudia +55 41 99275-0065<br>Victoria +55 41 99912-1919</div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════ 02 · ÍNDICE E RESUMO ══════════════════════════════ -->
+<section class="page">
+  <div class="head">
+    <div class="logo"></div>
+    <div class="agency">
+      <strong>LUSATRAVEL</strong><br>
+      Rua Grã Nicco, 113 — Bloco 2, cj 102 — Curitiba/PR<br>
+      atendimentolusatravel@gmail.com<br>
+      +55 41 99189-6076<br>
+      Emergência 24h: Claudia +55 41 99275-0065 · Victoria +55 41 99912-1919
+    </div>
+  </div>
+
+  <div class="bar">Resumo da viagem</div>
+
+  <div class="bar sub">Hospedagens</div>
+  <table class="t roteiro">
+    <tr>
+      <th>Cidade</th><th>Hotel</th><th class="c">Check-in</th><th class="c">Check-out</th><th class="c">Noites</th>
+    </tr>
+    <tr>
+      <td class="strong">Madrid</td>
+      <td>NH Collection Madrid Gran Vía<br><span class="tip">Quarto Superior com varanda · café da manhã</span></td>
+      <td class="c">30 dez 2026</td>
+      <td class="c">04 jan 2027</td>
+      <td class="c">5</td>
+    </tr>
+    <tr>
+      <td class="strong">Lisboa</td>
+      <td>Meliá Lisboa Aeroporto<br><span class="tip">Meliá Room, cama de casal · café da manhã</span></td>
+      <td class="c">04 jan 2027</td>
+      <td class="c">05 jan 2027</td>
+      <td class="c">1</td>
+    </tr>
+  </table>
+
+  <div class="bar sub">Viajantes</div>
+  <div class="grid">
+    <div class="f"><span class="k">Hóspede 1</span><span class="v big">MARCOS MOCELLIN</span></div>
+    <div class="f"><span class="k">Hóspede 2</span><span class="v big">STELLA REGINA ANTUNES MOCELLIN</span></div>
+  </div>
+
+  <div class="bar sub">Neste caderno</div>
+  <ol class="toc">
+    <li class="grp">Madrid · 30 dez 2026 a 04 jan 2027</li>
+    <li>Voucher de hotel — NH Collection Madrid Gran Vía <span class="d">confirmação 0204355956</span></li>
+    <li>Voucher do fornecedor — apresentar no check-in <span class="d">TBO EEHVW3</span></li>
+    <li class="grp">Lisboa · 04 a 05 jan 2027</li>
+    <li>Voucher de hotel — Meliá Lisboa Aeroporto <span class="d">confirmação QP68VR</span></li>
+    <li>Voucher do fornecedor — apresentar no check-in <span class="d">TBO QP68VR</span></li>
+  </ol>
+
+  <div class="box">
+    <h4>Como usar este caderno</h4>
+    <ul>
+      <li>As duas hospedagens estão <b>pagas integralmente</b>. No check-in, apresentem o passaporte e, se solicitado, o voucher do fornecedor que segue após cada página de hotel.</li>
+      <li>Os hotéis costumam pedir um <b>cartão de crédito como garantia</b> para despesas extras (frigobar, estacionamento, taxas locais). Nada além disso deve ser cobrado.</li>
+      <li>Qualquer divergência no hotel: liguem para a emergência 24h da LusaTravel antes de aceitar cobranças.</li>
+    </ul>
+  </div>
+
+  <div class="foot">
+    <div class="logo-w"></div>
+    <div>Reserva e emissão através de <b>LUSATRAVEL</b> · +55 41 99189-6076<br>Emergência 24h: Claudia +55 41 99275-0065 · Victoria +55 41 99912-1919</div>
+    <div class="issued">Curitiba,<br><b>06 de outubro de 2026</b></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════ 03 · HOTEL MADRID · NH COLLECTION GRAN VÍA ══════════════════════════════ -->
+<section class="page">
+  <div class="head">
+    <div class="logo"></div>
+    <div class="agency">
+      <strong>LUSATRAVEL</strong><br>
+      Rua Grã Nicco, 113 — Bloco 2, cj 102 — Curitiba/PR<br>
+      atendimentolusatravel@gmail.com<br>
+      +55 41 99189-6076<br>
+      Emergência 24h: Claudia +55 41 99275-0065 · Victoria +55 41 99912-1919
+    </div>
+  </div>
+
+  <div class="bar">Voucher de hotel — Madrid · 5 noites</div>
+
+  <div class="bar sub">Reserva</div>
+  <div class="grid three">
+    <div class="f"><span class="k">Confirmação do hotel</span><span class="v code">0204355956</span></div>
+    <div class="f"><span class="k">Confirmação TBO</span><span class="v code">EEHVW3</span></div>
+    <div class="f"><span class="k">Regime</span><span class="v big">Café da manhã incluído</span><br><span class="tip">tarifa não reembolsável</span></div>
+  </div>
+
+  <div class="bar sub">Hotel</div>
+  <div class="grid">
+    <div class="f"><span class="k">Hotel</span><span class="v big">NH Collection Madrid Gran Vía</span></div>
+    <div class="f"><span class="k">Endereço</span><span class="v">Gran Vía, 21 — Madrid, Espanha</span></div>
+    <div class="f"><span class="k">Check-in</span><span class="v">30 dez 2026 · <b>a partir das 15:00</b></span></div>
+    <div class="f"><span class="k">Check-out</span><span class="v">04 jan 2027 · <b>até as 12:00</b></span></div>
+    <div class="f"><span class="k">Acomodação</span><span class="v">Quarto Superior com varanda (Superior with Balcony Room)</span></div>
+    <div class="f"><span class="k">Ocupação</span><span class="v">1 quarto · 2 adultos</span></div>
+  </div>
+
+  <div class="bar sub">Hóspedes</div>
+  <table class="t">
+    <tr><th>Hóspede (como no passaporte)</th><th class="c">Quarto</th></tr>
+    <tr><td class="strong">MOCELLIN / MARCOS — SR.</td><td class="c">1</td></tr>
+    <tr><td class="strong">ANTUNES MOCELLIN / STELLA REGINA — SRA.</td><td class="c">1</td></tr>
+  </table>
+
+  <div class="box prepay">
+    Reserva pré-paga: diárias e café da manhã já estão pagos ao fornecedor. O hotel não deve cobrar nenhum valor pela hospedagem.
+  </div>
+
+  <div class="box alert">
+    <h4>Importante</h4>
+    <ul>
+      <li>Tarifa <b>não reembolsável</b>, sem alterações de datas ou de nomes.</li>
+      <li>O hotel <b>não faz check-in fora do horário</b> da recepção. Se a chegada a Madrid for tarde da noite, avisem a LusaTravel com antecedência para alinharmos com o hotel.</li>
+      <li>No check-in serão pedidos <b>passaporte e um cartão de crédito</b> como garantia de despesas extras. O hotel pode fazer uma pré-autorização no cartão.</li>
+      <li>O hotel <b>não aceita pagamentos em dinheiro</b>; extras somente no cartão.</li>
+      <li>O hotel <b>não tem estacionamento</b> próprio.</li>
+    </ul>
+  </div>
+
+  <div class="foot">
+    <div class="logo-w"></div>
+    <div>Reserva e emissão através de <b>LUSATRAVEL</b> · +55 41 99189-6076<br>Emergência 24h: Claudia +55 41 99275-0065 · Victoria +55 41 99912-1919</div>
+    <div class="issued">Curitiba,<br><b>06 de outubro de 2026</b></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════ 04 · DOCUMENTO DO FORNECEDOR · MADRID ══════════════════════════════ -->
+<section class="page">
+  <div class="head">
+    <div class="logo"></div>
+    <div class="agency">
+      <strong>LUSATRAVEL</strong><br>
+      Rua Grã Nicco, 113 — Bloco 2, cj 102 — Curitiba/PR<br>
+      atendimentolusatravel@gmail.com<br>
+      +55 41 99189-6076<br>
+      Emergência 24h: Claudia +55 41 99275-0065 · Victoria +55 41 99912-1919
+    </div>
+  </div>
+
+  <div class="bar">Voucher do fornecedor — NH Collection Madrid Gran Vía</div>
+  <p class="tip">Documento emitido pelo fornecedor da reserva. Apresentem no check-in caso o hotel solicite; a confirmação do hotel é a <b>0204355956</b>.</p>
+
+  <div class="doc-orig">
+    <img src="voucher-madrid.png" alt="Voucher do fornecedor — NH Collection Madrid Gran Vía, confirmação EEHVW3">
+  </div>
+
+  <div class="foot">
+    <div class="logo-w"></div>
+    <div>Reserva e emissão através de <b>LUSATRAVEL</b> · +55 41 99189-6076<br>Emergência 24h: Claudia +55 41 99275-0065 · Victoria +55 41 99912-1919</div>
+    <div class="issued">Curitiba,<br><b>06 de outubro de 2026</b></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════ 05 · HOTEL LISBOA · MELIÁ LISBOA AEROPORTO ══════════════════════════════ -->
+<section class="page">
+  <div class="head">
+    <div class="logo"></div>
+    <div class="agency">
+      <strong>LUSATRAVEL</strong><br>
+      Rua Grã Nicco, 113 — Bloco 2, cj 102 — Curitiba/PR<br>
+      atendimentolusatravel@gmail.com<br>
+      +55 41 99189-6076<br>
+      Emergência 24h: Claudia +55 41 99275-0065 · Victoria +55 41 99912-1919
+    </div>
+  </div>
+
+  <div class="bar">Voucher de hotel — Lisboa · 1 noite</div>
+
+  <div class="bar sub">Reserva</div>
+  <div class="grid three">
+    <div class="f"><span class="k">Confirmação</span><span class="v code">QP68VR</span></div>
+    <div class="f"><span class="k">Fornecedor</span><span class="v big">TBO Holidays</span></div>
+    <div class="f"><span class="k">Regime</span><span class="v big">Café da manhã incluído</span></div>
+  </div>
+
+  <div class="bar sub">Hotel</div>
+  <div class="grid">
+    <div class="f"><span class="k">Hotel</span><span class="v big">Meliá Lisboa Aeroporto</span></div>
+    <div class="f"><span class="k">Endereço</span><span class="v">Rua C 2, 1749-125 Lisboa, Portugal — ao lado do Aeroporto Humberto Delgado</span></div>
+    <div class="f"><span class="k">Check-in</span><span class="v">04 jan 2027</span></div>
+    <div class="f"><span class="k">Check-out</span><span class="v">05 jan 2027</span></div>
+    <div class="f"><span class="k">Acomodação</span><span class="v">Meliá Room, cama de casal (Melia Room Double)</span></div>
+    <div class="f"><span class="k">Ocupação</span><span class="v">1 quarto · 2 adultos</span></div>
+  </div>
+
+  <div class="bar sub">Hóspedes</div>
+  <table class="t">
+    <tr><th>Hóspede (como no passaporte)</th><th class="c">Quarto</th></tr>
+    <tr><td class="strong">MOCELLIN / MARCOS — SR.</td><td class="c">1</td></tr>
+    <tr><td class="strong">ANTUNES MOCELLIN / STELLA REGINA — SRA.</td><td class="c">1</td></tr>
+  </table>
+
+  <div class="box prepay">
+    Reserva pré-paga: diária e café da manhã já estão pagos ao fornecedor. O hotel não deve cobrar nenhum valor pela hospedagem.
+  </div>
+
+  <div class="box alert">
+    <h4>Importante</h4>
+    <ul>
+      <li><b>Taxa turística municipal de Lisboa</b>: € 4 por pessoa, por noite, paga diretamente no hotel. Para esta estadia: <b>€ 8 no total</b> (2 adultos × 1 noite).</li>
+      <li>O hotel pode pedir <b>cartão de crédito ou depósito</b> como garantia; o valor é liberado no check-out, descontadas eventuais despesas extras.</li>
+      <li>O hotel fica junto ao aeroporto. Confirmem na recepção, ao chegar, a melhor forma de ir aos terminais no dia seguinte (traslado do hotel, se disponível, ou caminhada curta).</li>
+    </ul>
+  </div>
+
+  <div class="foot">
+    <div class="logo-w"></div>
+    <div>Reserva e emissão através de <b>LUSATRAVEL</b> · +55 41 99189-6076<br>Emergência 24h: Claudia +55 41 99275-0065 · Victoria +55 41 99912-1919</div>
+    <div class="issued">Curitiba,<br><b>06 de outubro de 2026</b></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════ 06 · DOCUMENTO DO FORNECEDOR · LISBOA ══════════════════════════════ -->
+<section class="page">
+  <div class="head">
+    <div class="logo"></div>
+    <div class="agency">
+      <strong>LUSATRAVEL</strong><br>
+      Rua Grã Nicco, 113 — Bloco 2, cj 102 — Curitiba/PR<br>
+      atendimentolusatravel@gmail.com<br>
+      +55 41 99189-6076<br>
+      Emergência 24h: Claudia +55 41 99275-0065 · Victoria +55 41 99912-1919
+    </div>
+  </div>
+
+  <div class="bar">Voucher do fornecedor — Meliá Lisboa Aeroporto</div>
+  <p class="tip">Documento emitido pelo fornecedor da reserva. Apresentem no check-in caso o hotel solicite; a confirmação é a <b>QP68VR</b>.</p>
+
+  <div class="doc-orig">
+    <img src="voucher-lisboa.png" alt="Voucher do fornecedor — Meliá Lisboa Aeroporto, confirmação QP68VR">
+  </div>
+
+  <div class="foot">
+    <div class="logo-w"></div>
+    <div>Reserva e emissão através de <b>LUSATRAVEL</b> · +55 41 99189-6076<br>Emergência 24h: Claudia +55 41 99275-0065 · Victoria +55 41 99912-1919</div>
+    <div class="issued">Curitiba,<br><b>06 de outubro de 2026</b></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════ 07 · BOA VIAGEM ══════════════════════════════ -->
+<section class="page">
+  <div class="bonvoyage">
+    <h1>Boa viagem!</h1>
+    <p>Estaremos daqui acompanhando<br>cada detalhe da sua jornada</p>
+  </div>
+  <div class="foot">
+    <div class="logo-w"></div>
+    <div>Rua Grã Nicco, 113 — Bloco 2, cj 102 — Curitiba/PR<br>atendimentolusatravel@gmail.com · +55 41 99189-6076</div>
+    <div class="issued"><b>Emergência 24h</b><br>Claudia +55 41 99275-0065<br>Victoria +55 41 99912-1919</div>
+  </div>
+</section>
+
+</body>
+</html>
