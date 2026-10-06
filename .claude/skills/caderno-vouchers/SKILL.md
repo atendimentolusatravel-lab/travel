@@ -65,7 +65,7 @@ Arquivos desta skill:
 - **Dados fixos da agência** (iguais em todas as folhas, copiar literalmente):
   - `LUSATRAVEL` · Rua Grã Nicco, 113 — Bloco 2, cj 102 — Curitiba/PR (capa e última folha
     acrescentam `— CEP 81200-200`)
-  - atendimentolusatravel@gmail.com · +55 41 3154-1117 · Emergência 24h +55 41 99912-1919
+  - atendimentolusatravel@gmail.com · +55 41 99189-6076 · Emergência 24h +55 41 99912-1919
 - **Rodapé de cada voucher** diz quem respondeu pelo serviço + a data de emissão daquele voucher
   (`Curitiba,<br><b>13 de agosto de 2026</b>`):
   - aéreo → "Reserva e emissão através de **LUSATRAVEL**"
@@ -88,7 +88,7 @@ Arquivos desta skill:
       <strong>LUSATRAVEL</strong><br>
       Rua Grã Nicco, 113 — Bloco 2, cj 102 — Curitiba/PR<br>
       atendimentolusatravel@gmail.com<br>
-      +55 41 3154-1117 · Emergência +55 41 99912-1919
+      +55 41 99189-6076 · Emergência +55 41 99912-1919
     </div>
   </div>
 
@@ -114,7 +114,7 @@ Arquivos desta skill:
 
   <div class="foot">
     <div class="logo-w"></div>
-    <div>Reserva e pagamento através de <b>LUSATRAVEL</b><br>+55 41 3154-1117 · Emergência 24h +55 41 99912-1919</div>
+    <div>Reserva e pagamento através de <b>LUSATRAVEL</b><br>+55 41 99189-6076 · Emergência 24h +55 41 99912-1919</div>
     <div class="issued">Curitiba,<br><b>13 de agosto de 2026</b></div>
   </div>
 </section>
@@ -183,7 +183,7 @@ gôndola), reproduza o documento em imagem, nunca o reescreva:
   "Importante" (ou "Como acionar", no seguro).
 - Nomes de fornecedores, hotéis e programas em CAIXA ALTA dentro de `.v.big`. Cidade/país em
   caixa normal. Siglas de aeroporto antes do nome: `GRU — São Paulo/Guarulhos`.
-- Telefones com código do país: `+55 41 3154-1117`, `+254 793 927868`, `+1 (718) 316-5296`.
+- Telefones com código do país: `+55 41 99189-6076`, `+254 793 927868`, `+1 (718) 316-5296`.
 - Comentário HTML antes de cada folha: `<!-- ═══ 07 · HOSPEDAGEM ZANZIBAR ═══ -->`, numerado na
   ordem do caderno. Facilita revisar e reordenar.
 
