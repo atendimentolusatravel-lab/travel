@@ -8,327 +8,207 @@
 
 :root{
   --gold:#da8d00;
-  --dest:#730505;
+  --green:#414625;        /* verde da logomarca LusaTravel */
+  --green-soft:#f3f4ee;
   --ink:#1a1510;
   --char:#333131;
-  --mut:#9a8d80;
-  --line:#e4ddd2;
+  --mut:#8f8a7c;
+  --line:#dfe0d5;
   --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
   --con:'Montserrat',var(--sans);
 }
-@page{ size:A3 portrait; margin:0; }
+@page{ size:A4 portrait; margin:0; }
 *{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-html,body{ font-family:var(--sans); color:var(--char); }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
-.page{
-  width:297mm; height:420mm; position:relative; overflow:hidden;
-  background:#fff; page-break-after:always; display:flex; flex-direction:column;
-}
-.page:last-child{ page-break-after:auto; }
+.page > *{ flex-shrink:0; }
+.page{ width:210mm; height:297mm; padding:12mm 16mm 10mm; position:relative; overflow:hidden; background:#fff; display:flex; flex-direction:column; }
 
-.hd{ background:var(--ink); height:26mm; display:flex; align-items:center;
-     justify-content:space-between; padding:0 22mm; flex-shrink:0; }
-.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
-.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
-.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+/* ── Topo: logo + título ── */
+.top{ display:flex; align-items:flex-end; justify-content:space-between; gap:10mm; }
+.top img{ height:19mm; width:auto; display:block; }
+.top .ttl{ text-align:right; }
+.top .kicker{ font-size:7.5pt; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.top .name{ font-size:16pt; font-weight:800; text-transform:uppercase; color:var(--green); letter-spacing:.02em; line-height:1.15; margin-top:1mm; }
+.top .meta{ font-size:8.5pt; color:var(--mut); margin-top:1mm; }
+.rule{ height:0.9mm; background:var(--gold); margin:4mm 0 4mm; }
 
-.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center;
-     justify-content:center; gap:14px; flex-shrink:0; }
-.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
-.ft .sep{ color:rgba(255,255,255,.2); }
+/* ── Faixa de rota ── */
+.route{ display:flex; align-items:center; gap:5mm; background:var(--green); color:#fff; border-radius:3px; padding:3.2mm 6mm; }
+.route .code{ font-size:17pt; font-weight:800; letter-spacing:.04em; line-height:1; }
+.route .city{ font-size:7pt; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.6); margin-top:.6mm; }
+.route .arrow{ flex:1; height:1.5px; background:var(--gold); position:relative; margin:0 2mm; }
+.route .arrow::after{ content:''; position:absolute; right:-1px; top:-3.5px; border:4px solid transparent; border-left:6px solid var(--gold); }
+.route .arrow .lbl{ position:absolute; top:-4.6mm; left:0; right:0; text-align:center; font-size:6.8pt; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.route .info{ text-align:right; font-size:8pt; line-height:1.5; color:rgba(255,255,255,.85); }
+.route .info b{ color:#fff; font-weight:600; }
 
-.body{ padding:16mm 22mm; flex:1; }
-.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:4mm 0 8mm; }
-.lead{ font-size:11pt; line-height:1.7; color:var(--char); margin-bottom:9mm; max-width:200mm; }
-
-/* ══ CAPA ══ */
-.cover{ position:relative; }
-.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink);
-  display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
-.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
-.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
-.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
-.cover-photo{ position:absolute; inset:0;
-  background:
-    radial-gradient(ellipse at 70% 28%, rgba(218,141,0,.32) 0%, transparent 45%),
-    radial-gradient(ellipse at 20% 70%, rgba(115,5,5,.55) 0%, transparent 55%),
-    linear-gradient(160deg,#5a2a22 0%,#3a1a16 45%,#1a1210 100%); }
-.cover-scrim{ position:absolute; inset:0;
-  background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, transparent 30%, rgba(0,0,0,.78) 78%); z-index:2; }
-.cover-route{ position:absolute; top:96mm; left:22mm; right:22mm; z-index:3; color:#fff; display:flex; align-items:center; gap:10mm; }
-.cover-route .code{ font-size:54pt; font-weight:800; letter-spacing:.04em; line-height:1; }
-.cover-route .city{ font-size:10pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); margin-top:2mm; }
-.cover-route .arrow{ flex:1; height:2px; background:linear-gradient(90deg, rgba(218,141,0,.2), var(--gold), rgba(218,141,0,.2)); position:relative; }
-.cover-route .arrow::after{ content:''; position:absolute; right:-1px; top:-4px; border:5px solid transparent; border-left:8px solid var(--gold); }
-.cover-route .arrow .lbl{ position:absolute; top:-9mm; left:0; right:0; text-align:center; font-size:8.5pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
-.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
-.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
-.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
-.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
-.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
-.stats{ display:flex; gap:14mm; margin-top:11mm; }
-.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
-.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
-.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3;
-  font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
-
-/* ══ OPÇÕES DE VOO ══ */
-.opt{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-bottom:8mm; }
-.opt-hd{ background:var(--dest); display:flex; align-items:center; justify-content:space-between; padding:4mm 7mm; }
-.opt-hd .l{ display:flex; align-items:center; gap:5mm; }
-.opt-hd .no{ width:11mm; height:11mm; border-radius:50%; border:2px solid rgba(218,141,0,.9);
-  color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
-.opt-hd .air{ font-size:13pt; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#fff; }
-.opt-hd .sub{ font-size:8.5pt; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.6); margin-top:.5mm; }
-.opt-hd .pill{ font-size:8pt; letter-spacing:.16em; text-transform:uppercase; font-weight:700; color:var(--gold);
-  border:1px solid rgba(218,141,0,.7); border-radius:20px; padding:1.6mm 4mm; }
-.opt-body{ display:grid; grid-template-columns:1fr 62mm; }
-.legs{ padding:5mm 7mm; border-right:1px solid var(--line); }
-.leg{ display:grid; grid-template-columns:22mm 1fr 1fr 36mm; gap:4mm; align-items:center; padding:3.5mm 0; }
+/* ── Opções ── */
+.sec{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; margin:4.5mm 0 2.2mm; }
+.opt{ border:1px solid var(--line); border-radius:3px; overflow:hidden; margin-bottom:3mm; display:grid; grid-template-columns:1fr 44mm; }
+.opt.best{ border-color:var(--gold); }
+.legs{ padding:2.4mm 4.5mm; }
+.opt-h{ display:flex; align-items:center; gap:3mm; margin-bottom:1.6mm; }
+.opt-h .no{ width:6.5mm; height:6.5mm; border-radius:50%; background:var(--green); color:var(--gold); font-weight:800; font-size:8.5pt; display:flex; align-items:center; justify-content:center; }
+.opt-h .air{ font-size:10pt; font-weight:700; color:var(--green); letter-spacing:.04em; text-transform:uppercase; }
+.opt-h .sub{ font-size:7.5pt; color:var(--mut); font-weight:300; margin-left:auto; }
+.leg{ display:grid; grid-template-columns:14mm 30mm 30mm 1fr; gap:3mm; align-items:center; padding:1.3mm 0; }
 .leg + .leg{ border-top:1px dashed var(--line); }
-.leg .dir{ font-size:8pt; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); font-weight:800; }
-.leg .fn{ font-size:9pt; color:var(--mut); margin-top:1mm; font-weight:300; }
-.leg .t{ font-size:17pt; font-weight:700; color:var(--ink); line-height:1; font-variant-numeric:tabular-nums; }
-.leg .d{ font-size:8.5pt; color:var(--gold); font-weight:700; margin-top:1.5mm; letter-spacing:.04em; }
-.leg .ap{ font-size:9.5pt; color:var(--char); font-weight:300; margin-top:1mm; }
-.leg .meta{ font-size:9pt; color:var(--char); font-weight:300; line-height:1.6; }
+.leg .dir{ font-size:6.8pt; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:800; }
+.leg .fn{ font-size:7.5pt; color:var(--mut); font-weight:300; margin-top:.4mm; }
+.leg .t{ font-size:12pt; font-weight:700; color:var(--ink); line-height:1; font-variant-numeric:tabular-nums; }
+.leg .d{ font-size:7pt; color:var(--gold); font-weight:700; margin-top:.8mm; letter-spacing:.03em; }
+.leg .ap{ font-size:7.5pt; color:var(--char); font-weight:300; margin-top:.3mm; }
+.leg .meta{ font-size:7.5pt; color:var(--char); font-weight:300; line-height:1.5; }
 .leg .meta b{ font-weight:600; color:var(--ink); }
-.price{ padding:5mm 7mm; display:flex; flex-direction:column; justify-content:center; background:#faf7f2; }
-.price .k{ font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; }
-.price .brl{ font-size:20pt; font-weight:800; color:var(--ink); line-height:1.1; margin-top:1.5mm; font-variant-numeric:tabular-nums; }
-.price .fx{ font-size:10pt; color:var(--char); font-weight:300; margin-top:1.5mm; }
-.price .tags{ margin-top:4mm; display:flex; flex-wrap:wrap; gap:1.5mm; }
-.price .tag2{ font-size:7.5pt; letter-spacing:.06em; color:var(--char); border:1px solid var(--line); border-radius:3px; padding:1mm 2.4mm; background:#fff; }
-.opt-note{ font-size:9pt; color:var(--mut); line-height:1.6; margin-top:2mm; }
+.price{ background:var(--green-soft); border-left:1px solid var(--line); padding:3mm 4.5mm; display:flex; flex-direction:column; justify-content:center; }
+.opt.best .price{ background:var(--green); border-left-color:var(--green); }
+.price .k{ font-size:6.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.price .brl{ font-size:14.5pt; font-weight:800; color:var(--green); line-height:1.1; margin-top:1mm; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.price .fx{ font-size:8pt; color:var(--char); font-weight:300; margin-top:.8mm; }
+.price .bag{ font-size:7pt; color:var(--mut); margin-top:2mm; line-height:1.45; }
+.opt.best .price .k{ color:rgba(255,255,255,.6); }
+.opt.best .price .brl{ color:var(--gold); }
+.opt.best .price .fx,.opt.best .price .bag{ color:rgba(255,255,255,.8); }
+.opt.best .price .tag{ display:inline-block; font-size:6.3pt; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--green); background:var(--gold); border-radius:2px; padding:.6mm 1.8mm; margin-bottom:1.4mm; }
 
-/* ══ VALORES ══ */
-.val-note{ font-size:9pt; color:var(--mut); margin-bottom:5mm; }
-.val-head{ display:grid; grid-template-columns:1fr 50mm 50mm; padding:0 0 2.5mm; border-bottom:2px solid var(--ink); }
-.val-head span{ font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; }
-.val-head span:not(:first-child){ text-align:right; }
-.val-row{ display:grid; grid-template-columns:1fr 50mm 50mm; align-items:center; padding:4.5mm 0; border-bottom:1px solid var(--line); }
-.val-row .lbl{ font-size:12pt; color:var(--char); }
-.val-row .lbl small{ display:block; font-size:9pt; color:var(--mut); font-weight:300; margin-top:.8mm; }
-.val-row .amt{ font-size:12pt; font-weight:700; color:var(--ink); text-align:right; font-variant-numeric:tabular-nums; }
-.val-row .amt.fx{ font-weight:300; color:var(--char); }
-.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink);
-  border-radius:5px; padding:6mm 8mm; margin-top:6mm; }
-.val-total .lbl{ font-size:11pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
-.val-total .lbl small{ display:block; font-size:8.5pt; font-weight:400; letter-spacing:.04em; color:rgba(255,255,255,.45); margin-top:1mm; }
-.val-total .amt{ font-size:16pt; font-weight:800; color:var(--gold); }
-.val-fx{ font-size:9pt; color:var(--mut); margin-top:5mm; line-height:1.6; }
+/* ── Resumo de valores ── */
+.vals{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:3mm; }
+.val{ border:1px solid var(--line); border-radius:3px; padding:2.6mm 3.5mm; }
+.val .l{ font-size:7.5pt; color:var(--char); font-weight:500; }
+.val .l small{ display:block; font-size:6.8pt; color:var(--mut); font-weight:300; margin-top:.3mm; }
+.val .a{ font-size:11pt; font-weight:800; color:var(--green); margin-top:1.2mm; font-variant-numeric:tabular-nums; }
+.val .a small{ font-size:7.5pt; font-weight:300; color:var(--char); margin-left:1.5mm; }
+.val.best{ background:var(--green-soft); border-color:var(--gold); }
+.fx-line{ font-size:7.5pt; color:var(--mut); margin-top:1mm; line-height:1.6; }
+.fx-line b{ color:var(--green); font-weight:600; }
 
-/* ══ CONDIÇÕES ══ */
-.conds{ margin-top:12mm; padding-top:9mm; border-top:1px solid var(--line); }
-.cond{ margin-bottom:6mm; }
-.cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
-.cond-t{ font-size:11pt; line-height:1.8; color:var(--char); }
+/* ── Condições ── */
+.conds{ display:grid; grid-template-columns:1fr 1fr; gap:2.5mm 7mm; margin-top:1mm; }
+.cond-h{ font-size:7pt; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:.8mm; }
+.cond-t{ font-size:7.8pt; line-height:1.55; color:var(--char); }
+
+/* ── Assinatura ── */
+.sig{ margin-top:auto; padding-top:3.5mm; border-top:0.9mm solid var(--gold); display:flex; justify-content:space-between; align-items:center; font-family:var(--con); font-size:7.8pt; color:var(--char); }
+.sig a{ color:var(--green); text-decoration:none; font-weight:600; }
+.sig .addr{ color:var(--mut); }
 </style>
 </head>
 <body>
-
-<!-- ══════════ 01 · CAPA ══════════ -->
-<section class="page cover">
-  <div class="cover-hd">
-    <div class="logo">LUSATRAVEL</div>
-    <div class="tag">Cotação Aérea</div>
-  </div>
-  <div class="cover-bar"></div>
-  <div class="cover-photo"></div>
-  <div class="cover-scrim"></div>
-
-  <div class="cover-route">
-    <div><div class="code">LIS</div><div class="city">Lisboa · Portugal</div></div>
-    <div class="arrow"><div class="lbl">Ida e volta · voos diretos</div></div>
-    <div><div class="code">MAD</div><div class="city">Madri · Espanha</div></div>
-  </div>
-
-  <div class="cover-cnt">
-    <div class="cover-kicker">Cotação para sua viagem</div>
-    <div class="cover-basis">Aéreo ida e volta · 30 Dez 2026 – 04 Jan 2027 · Classe Econômica</div>
-    <div class="cover-to">Sua viagem para:</div>
-    <div class="cover-name">Eduardo Pimentel Slavoero</div>
-    <div class="cover-dest">Lisboa → Madri → Lisboa</div>
-    <div class="stats">
-      <div class="stat"><b>3</b><span>Opções</span></div>
-      <div class="stat"><b>5</b><span>Noites</span></div>
-      <div class="stat"><b>0</b><span>Escalas</span></div>
-      <div class="stat"><b>2</b><span>Cias. Aéreas</span></div>
-    </div>
-  </div>
-  <div class="cover-sig">
-    <a href="mailto:atendimentolusatravel@gmail.com" style="color:inherit;text-decoration:none">atendimentolusatravel@gmail.com</a><br>
-    <a href="https://wa.me/5541991896076" style="color:inherit;text-decoration:none">+55 41 99189-6076</a><br>
-    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
-  </div>
-</section>
-
-<!-- ══════════ 02 · OPÇÕES DE VOO ══════════ -->
 <section class="page">
-  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Opções de Voo</div></div>
-  <div class="goldbar"></div>
-  <div class="body">
-    <div class="eyebrow">Lisboa ⇄ Madri</div>
-    <h2 class="h2">Opções de Voo</h2>
-    <p class="lead">Três alternativas de ida e volta entre Lisboa e Madri, todas em voos diretos e classe econômica, com saída em 30 de dezembro de 2026 e retorno em 04 de janeiro de 2027. Horários no fuso local de cada aeroporto.</p>
 
-    <!-- OPÇÃO 1 · TAP -->
-    <div class="opt">
-      <div class="opt-hd">
-        <div class="l">
-          <div class="no">1</div>
-          <div><div class="air">TAP Air Portugal</div><div class="sub">Saída matinal · chegada em Madri antes do almoço</div></div>
-        </div>
-        <div class="pill">Direto</div>
-      </div>
-      <div class="opt-body">
-        <div class="legs">
-          <div class="leg">
-            <div><div class="dir">Ida</div><div class="fn">TP 1012</div></div>
-            <div><div class="t">09:00</div><div class="d">30 DEZ 2026</div><div class="ap">LIS · Lisboa</div></div>
-            <div><div class="t">11:20</div><div class="d">30 DEZ 2026</div><div class="ap">MAD · Madri</div></div>
-            <div class="meta"><b>01h20</b> de voo<br>Direto · Econômica<br>Airbus A320neo</div>
-          </div>
-          <div class="leg">
-            <div><div class="dir">Volta</div><div class="fn">TP 1017</div></div>
-            <div><div class="t">18:00</div><div class="d">04 JAN 2027</div><div class="ap">MAD · Madri</div></div>
-            <div><div class="t">18:25</div><div class="d">04 JAN 2027</div><div class="ap">LIS · Lisboa</div></div>
-            <div class="meta"><b>01h25</b> de voo<br>Direto · Econômica<br>Airbus A320</div>
-          </div>
-        </div>
-        <div class="price">
-          <div class="k">Valor total do aéreo</div>
-          <div class="brl">R$ 10.613,94</div>
-          <div class="fx">EUR 1.899,33</div>
-          <div class="tags"><span class="tag2">1 bagagem despachada</span><span class="tag2">Bagagem de mão</span></div>
-        </div>
-      </div>
+  <div class="top">
+    <img src="assets/logo-lusatravel-verde.png" alt="LusaTravel">
+    <div class="ttl">
+      <div class="kicker">Cotação aérea</div>
+      <div class="name">Eduardo Pimentel Slavoero</div>
+      <div class="meta">Cotação 07/10/2026 · Classe Econômica · Ida e volta</div>
     </div>
-
-    <!-- OPÇÃO 2 · IBERIA manhã -->
-    <div class="opt">
-      <div class="opt-hd">
-        <div class="l">
-          <div class="no">2</div>
-          <div><div class="air">Iberia</div><div class="sub">Saída cedo · melhor valor da cotação</div></div>
-        </div>
-        <div class="pill">Direto</div>
-      </div>
-      <div class="opt-body">
-        <div class="legs">
-          <div class="leg">
-            <div><div class="dir">Ida</div><div class="fn">IB 530</div></div>
-            <div><div class="t">08:20</div><div class="d">30 DEZ 2026</div><div class="ap">LIS · Lisboa</div></div>
-            <div><div class="t">10:45</div><div class="d">30 DEZ 2026</div><div class="ap">MAD · Madri</div></div>
-            <div class="meta"><b>01h25</b> de voo<br>Direto · Econômica<br>Airbus A320</div>
-          </div>
-          <div class="leg">
-            <div><div class="dir">Volta</div><div class="fn">IB 535</div></div>
-            <div><div class="t">17:40</div><div class="d">04 JAN 2027</div><div class="ap">MAD · Madri</div></div>
-            <div><div class="t">18:05</div><div class="d">04 JAN 2027</div><div class="ap">LIS · Lisboa</div></div>
-            <div class="meta"><b>01h25</b> de voo<br>Direto · Econômica<br>Airbus A320</div>
-          </div>
-        </div>
-        <div class="price">
-          <div class="k">Valor total do aéreo</div>
-          <div class="brl">R$ 10.075,87</div>
-          <div class="fx">USD 2.027,34</div>
-          <div class="tags"><span class="tag2">1 bagagem despachada</span><span class="tag2">Bagagem de mão</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- OPÇÃO 3 · IBERIA tarde -->
-    <div class="opt">
-      <div class="opt-hd">
-        <div class="l">
-          <div class="no">3</div>
-          <div><div class="air">Iberia</div><div class="sub">Horários mais tarde · ida ao meio-dia e volta à noite</div></div>
-        </div>
-        <div class="pill">Direto</div>
-      </div>
-      <div class="opt-body">
-        <div class="legs">
-          <div class="leg">
-            <div><div class="dir">Ida</div><div class="fn">IB 1142</div></div>
-            <div><div class="t">12:30</div><div class="d">30 DEZ 2026</div><div class="ap">LIS · Lisboa</div></div>
-            <div><div class="t">14:55</div><div class="d">30 DEZ 2026</div><div class="ap">MAD · Madri</div></div>
-            <div class="meta"><b>01h25</b> de voo<br>Direto · Econômica<br>Bombardier CRJ</div>
-          </div>
-          <div class="leg">
-            <div><div class="dir">Volta</div><div class="fn">IB 1145</div></div>
-            <div><div class="t">19:40</div><div class="d">04 JAN 2027</div><div class="ap">MAD · Madri</div></div>
-            <div><div class="t">20:05</div><div class="d">04 JAN 2027</div><div class="ap">LIS · Lisboa</div></div>
-            <div class="meta"><b>01h25</b> de voo<br>Direto · Econômica<br>Bombardier CRJ</div>
-          </div>
-        </div>
-        <div class="price">
-          <div class="k">Valor total do aéreo</div>
-          <div class="brl">R$ 11.080,41</div>
-          <div class="fx">USD 2.229,55</div>
-          <div class="tags"><span class="tag2">1 bagagem despachada</span><span class="tag2">Bagagem de mão</span></div>
-        </div>
-      </div>
-    </div>
-
-    <p class="opt-note">Madri está uma hora à frente de Lisboa; por isso o tempo de voo é menor do que a diferença entre os horários de partida e chegada. Franquia de bagagem conforme regra tarifária da companhia, confirmada no momento da emissão.</p>
   </div>
-  <div class="ft">
-    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
-    <span class="sep">·</span>
-    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  <div class="rule"></div>
+
+  <div class="route">
+    <div><div class="code">LIS</div><div class="city">Lisboa</div></div>
+    <div class="arrow"><div class="lbl">Voos diretos</div></div>
+    <div><div class="code">MAD</div><div class="city">Madri</div></div>
+    <div class="arrow"><div class="lbl">Voos diretos</div></div>
+    <div><div class="code">LIS</div><div class="city">Lisboa</div></div>
+    <div class="info"><b>Ida</b> 30 Dez 2026 · <b>Volta</b> 04 Jan 2027<br>5 noites em Madri · 3 opções</div>
   </div>
+
+  <div class="sec">Opções de voo</div>
+
+  <!-- OPÇÃO 1 · TAP -->
+  <div class="opt">
+    <div class="legs">
+      <div class="opt-h"><div class="no">1</div><div class="air">TAP Air Portugal</div><div class="sub">Saída matinal · chegada antes do almoço</div></div>
+      <div class="leg">
+        <div><div class="dir">Ida</div><div class="fn">TP 1012</div></div>
+        <div><div class="t">09:00</div><div class="d">30 DEZ 2026</div><div class="ap">LIS · Lisboa</div></div>
+        <div><div class="t">11:20</div><div class="d">30 DEZ 2026</div><div class="ap">MAD · Madri</div></div>
+        <div class="meta"><b>01h20</b> · Direto · Econômica<br>Airbus A320neo</div>
+      </div>
+      <div class="leg">
+        <div><div class="dir">Volta</div><div class="fn">TP 1017</div></div>
+        <div><div class="t">18:00</div><div class="d">04 JAN 2027</div><div class="ap">MAD · Madri</div></div>
+        <div><div class="t">18:25</div><div class="d">04 JAN 2027</div><div class="ap">LIS · Lisboa</div></div>
+        <div class="meta"><b>01h25</b> · Direto · Econômica<br>Airbus A320</div>
+      </div>
+    </div>
+    <div class="price">
+      <div class="k">Total do aéreo</div>
+      <div class="brl">R$ 10.613,94</div>
+      <div class="fx">EUR 1.899,33</div>
+      <div class="bag">1 bagagem despachada<br>+ bagagem de mão</div>
+    </div>
+  </div>
+
+  <!-- OPÇÃO 2 · IBERIA manhã (melhor valor) -->
+  <div class="opt best">
+    <div class="legs">
+      <div class="opt-h"><div class="no">2</div><div class="air">Iberia</div><div class="sub">Saída cedo · melhor valor da cotação</div></div>
+      <div class="leg">
+        <div><div class="dir">Ida</div><div class="fn">IB 530</div></div>
+        <div><div class="t">08:20</div><div class="d">30 DEZ 2026</div><div class="ap">LIS · Lisboa</div></div>
+        <div><div class="t">10:45</div><div class="d">30 DEZ 2026</div><div class="ap">MAD · Madri</div></div>
+        <div class="meta"><b>01h25</b> · Direto · Econômica<br>Airbus A320</div>
+      </div>
+      <div class="leg">
+        <div><div class="dir">Volta</div><div class="fn">IB 535</div></div>
+        <div><div class="t">17:40</div><div class="d">04 JAN 2027</div><div class="ap">MAD · Madri</div></div>
+        <div><div class="t">18:05</div><div class="d">04 JAN 2027</div><div class="ap">LIS · Lisboa</div></div>
+        <div class="meta"><b>01h25</b> · Direto · Econômica<br>Airbus A320</div>
+      </div>
+    </div>
+    <div class="price">
+      <div><span class="tag">Melhor valor</span></div>
+      <div class="k">Total do aéreo</div>
+      <div class="brl">R$ 10.075,87</div>
+      <div class="fx">USD 2.027,34</div>
+      <div class="bag">1 bagagem despachada<br>+ bagagem de mão</div>
+    </div>
+  </div>
+
+  <!-- OPÇÃO 3 · IBERIA tarde -->
+  <div class="opt">
+    <div class="legs">
+      <div class="opt-h"><div class="no">3</div><div class="air">Iberia</div><div class="sub">Horários mais tarde · ida ao meio-dia, volta à noite</div></div>
+      <div class="leg">
+        <div><div class="dir">Ida</div><div class="fn">IB 1142</div></div>
+        <div><div class="t">12:30</div><div class="d">30 DEZ 2026</div><div class="ap">LIS · Lisboa</div></div>
+        <div><div class="t">14:55</div><div class="d">30 DEZ 2026</div><div class="ap">MAD · Madri</div></div>
+        <div class="meta"><b>01h25</b> · Direto · Econômica<br>Bombardier CRJ</div>
+      </div>
+      <div class="leg">
+        <div><div class="dir">Volta</div><div class="fn">IB 1145</div></div>
+        <div><div class="t">19:40</div><div class="d">04 JAN 2027</div><div class="ap">MAD · Madri</div></div>
+        <div><div class="t">20:05</div><div class="d">04 JAN 2027</div><div class="ap">LIS · Lisboa</div></div>
+        <div class="meta"><b>01h25</b> · Direto · Econômica<br>Bombardier CRJ</div>
+      </div>
+    </div>
+    <div class="price">
+      <div class="k">Total do aéreo</div>
+      <div class="brl">R$ 11.080,41</div>
+      <div class="fx">USD 2.229,55</div>
+      <div class="bag">1 bagagem despachada<br>+ bagagem de mão</div>
+    </div>
+  </div>
+
+  <div class="fx-line"><b>Cotação 07/10 · Dólar = 4,97 · Euro = 5,59</b> · Valores totais do aéreo ida e volta, em Reais, com referência na moeda de emissão de cada companhia.<br>*Nada reservado, apenas cotado</div>
+
+  <div class="sec">Condições e observações</div>
+  <div class="conds">
+    <div><div class="cond-h">Parcelamento</div><div class="cond-t">Aéreo em até 6x sem acréscimos no cartão de crédito. PIX com desconto de 5–13%.</div></div>
+    <div><div class="cond-h">Tarifas e disponibilidade</div><div class="cond-t">Valores e assentos sujeitos a alteração até a emissão. Período de fim de ano tem alta procura; a tarifa cotada só é garantida na emissão. Valores em Reais acompanham o câmbio do dia.</div></div>
+    <div><div class="cond-h">Não inclui</div><div class="cond-t">Seguro viagem (obrigatório no Espaço Schengen, cotamos sob consulta) · Hospedagem, traslados e passeios · Marcação de assento, quando cobrada · Despesas pessoais.</div></div>
+    <div><div class="cond-h">Documentação e horários</div><div class="cond-t">Passaporte com validade mínima de 3 meses após o retorno. Horários no fuso local de cada aeroporto; Madri está 1h à frente de Lisboa. Bagagem conforme regra tarifária, confirmada na emissão.</div></div>
+  </div>
+
+  <div class="sig">
+    <div><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a> &nbsp;·&nbsp; <a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+    <div class="addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+  </div>
+
 </section>
-
-<!-- ══════════ 03 · VALORES + CONDIÇÕES ══════════ -->
-<section class="page">
-  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Valores</div></div>
-  <div class="goldbar"></div>
-  <div class="body">
-    <div class="eyebrow">Investimento</div>
-    <h2 class="h2">Valores</h2>
-    <div class="val-note">*Valores totais do aéreo ida e volta, em Reais, com referência na moeda de emissão de cada companhia</div>
-
-    <div class="val-head"><span>Opção</span><span>Total em R$</span><span>Moeda de origem</span></div>
-    <div class="val-row">
-      <span class="lbl">Opção 1 · TAP Air Portugal<small>TP 1012 / TP 1017 · 30 Dez – 04 Jan</small></span>
-      <span class="amt">R$ 10.613,94</span>
-      <span class="amt fx">EUR 1.899,33</span>
-    </div>
-    <div class="val-row">
-      <span class="lbl">Opção 2 · Iberia<small>IB 530 / IB 535 · 30 Dez – 04 Jan</small></span>
-      <span class="amt">R$ 10.075,87</span>
-      <span class="amt fx">USD 2.027,34</span>
-    </div>
-    <div class="val-row">
-      <span class="lbl">Opção 3 · Iberia<small>IB 1142 / IB 1145 · 30 Dez – 04 Jan</small></span>
-      <span class="amt">R$ 11.080,41</span>
-      <span class="amt fx">USD 2.229,55</span>
-    </div>
-
-    <div class="val-total">
-      <span class="lbl">MELHOR VALOR · OPÇÃO 2 · IBERIA<small>Voos diretos IB 530 / IB 535 · Econômica · 1 bagagem despachada</small></span>
-      <span class="amt">R$ 10.075,87</span>
-    </div>
-    <div class="val-fx">Cotação 07/10 · Dólar = 4,97 · Euro = 5,59<br>*Nada reservado, apenas cotado</div>
-
-    <div class="conds">
-      <div class="eyebrow">Importante</div>
-      <h2 class="h2" style="font-size:18pt">Condições e Observações</h2>
-      <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Aéreo: até 6x sem acréscimos no cartão de crédito · PIX: desconto de 5–13%</div></div>
-      <div class="cond"><div class="cond-h">Tarifas e disponibilidade</div><div class="cond-t">Valores e assentos sujeitos a alteração e confirmação de disponibilidade até a emissão do bilhete. Período de fim de ano tem alta procura; recomendamos decisão em curto prazo para garantir a tarifa cotada. Os valores em Reais acompanham o câmbio do dia da emissão.</div></div>
-      <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Seguro viagem (obrigatório para o Espaço Schengen; cotamos sob consulta)<br>· Hospedagem, traslados e passeios<br>· Marcação de assento, quando cobrada pela companhia<br>· Despesas pessoais</div></div>
-      <div class="cond"><div class="cond-h">Documentação</div><div class="cond-t">Passaporte com validade mínima de 3 meses após a data de retorno. Verificar as exigências de entrada vigentes na data da viagem.</div></div>
-    </div>
-  </div>
-  <div class="ft">
-    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
-    <span class="sep">·</span>
-    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
-  </div>
-</section>
-
 </body>
 </html>
