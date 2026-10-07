@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>Eduardo Pimentel Slavoero | Lisboa – Madri — LusaTravel</title>
+<title>{{CLIENTE}} | Lisboa – Madri — LusaTravel</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
 
@@ -42,17 +42,18 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .route .arrow .lbl{ position:absolute; top:-4.6mm; left:0; right:0; text-align:center; font-size:6.8pt; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); font-weight:700; }
 .route .info{ text-align:right; font-size:8pt; line-height:1.5; color:rgba(255,255,255,.85); }
 .route .info b{ color:#fff; font-weight:600; }
+.route .info .pax{ color:var(--gold); font-weight:700; }
 
 /* ── Opções ── */
-.sec{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; margin:4.5mm 0 2.2mm; }
-.opt{ border:1px solid var(--line); border-radius:3px; overflow:hidden; margin-bottom:3mm; display:grid; grid-template-columns:1fr 44mm; }
+.sec{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; margin:4mm 0 2mm; }
+.opt{ border:1px solid var(--line); border-radius:3px; overflow:hidden; margin-bottom:3mm; display:grid; grid-template-columns:1fr 46mm; }
 .opt.best{ border-color:var(--gold); }
-.legs{ padding:2.4mm 4.5mm; }
+.legs{ padding:2.1mm 4.5mm; }
 .opt-h{ display:flex; align-items:center; gap:3mm; margin-bottom:1.6mm; }
 .opt-h .no{ width:6.5mm; height:6.5mm; border-radius:50%; background:var(--green); color:var(--gold); font-weight:800; font-size:8.5pt; display:flex; align-items:center; justify-content:center; }
 .opt-h .air{ font-size:10pt; font-weight:700; color:var(--green); letter-spacing:.04em; text-transform:uppercase; }
 .opt-h .sub{ font-size:7.5pt; color:var(--mut); font-weight:300; margin-left:auto; }
-.leg{ display:grid; grid-template-columns:14mm 30mm 30mm 1fr; gap:3mm; align-items:center; padding:1.3mm 0; }
+.leg{ display:grid; grid-template-columns:14mm 30mm 30mm 1fr; gap:3mm; align-items:center; padding:1.1mm 0; }
 .leg + .leg{ border-top:1px dashed var(--line); }
 .leg .dir{ font-size:6.8pt; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:800; }
 .leg .fn{ font-size:7.5pt; color:var(--mut); font-weight:300; margin-top:.4mm; }
@@ -61,30 +62,26 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .leg .ap{ font-size:7.5pt; color:var(--char); font-weight:300; margin-top:.3mm; }
 .leg .meta{ font-size:7.5pt; color:var(--char); font-weight:300; line-height:1.5; }
 .leg .meta b{ font-weight:600; color:var(--ink); }
-.price{ background:var(--green-soft); border-left:1px solid var(--line); padding:3mm 4.5mm; display:flex; flex-direction:column; justify-content:center; }
+.price{ background:var(--green-soft); border-left:1px solid var(--line); padding:2.6mm 4.5mm; display:flex; flex-direction:column; justify-content:center; }
 .opt.best .price{ background:var(--green); border-left-color:var(--green); }
 .price .k{ font-size:6.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; }
-.price .brl{ font-size:14.5pt; font-weight:800; color:var(--green); line-height:1.1; margin-top:1mm; font-variant-numeric:tabular-nums; white-space:nowrap; }
-.price .fx{ font-size:8pt; color:var(--char); font-weight:300; margin-top:.8mm; }
-.price .bag{ font-size:7pt; color:var(--mut); margin-top:2mm; line-height:1.45; }
+.price .brl{ font-size:14pt; font-weight:800; color:var(--green); line-height:1.1; margin-top:.8mm; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.price .fx{ font-size:7.8pt; color:var(--char); font-weight:300; margin-top:.6mm; }
+.price .pp{ font-size:7.5pt; color:var(--char); margin-top:1.8mm; padding-top:1.6mm; border-top:1px solid var(--line); line-height:1.45; }
+.price .pp b{ font-weight:700; color:var(--green); }
+.price .bag{ font-size:6.8pt; color:var(--mut); margin-top:1.2mm; line-height:1.4; }
 .opt.best .price .k{ color:rgba(255,255,255,.6); }
 .opt.best .price .brl{ color:var(--gold); }
-.opt.best .price .fx,.opt.best .price .bag{ color:rgba(255,255,255,.8); }
-.opt.best .price .tag{ display:inline-block; font-size:6.3pt; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--green); background:var(--gold); border-radius:2px; padding:.6mm 1.8mm; margin-bottom:1.4mm; }
+.opt.best .price .fx,.opt.best .price .bag,.opt.best .price .pp{ color:rgba(255,255,255,.8); }
+.opt.best .price .pp{ border-top-color:rgba(255,255,255,.2); }
+.opt.best .price .pp b{ color:var(--gold); }
+.opt.best .price .tag{ display:inline-block; font-size:6.3pt; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--green); background:var(--gold); border-radius:2px; padding:.6mm 1.8mm; margin-bottom:1.2mm; }
 
-/* ── Resumo de valores ── */
-.vals{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:3mm; }
-.val{ border:1px solid var(--line); border-radius:3px; padding:2.6mm 3.5mm; }
-.val .l{ font-size:7.5pt; color:var(--char); font-weight:500; }
-.val .l small{ display:block; font-size:6.8pt; color:var(--mut); font-weight:300; margin-top:.3mm; }
-.val .a{ font-size:11pt; font-weight:800; color:var(--green); margin-top:1.2mm; font-variant-numeric:tabular-nums; }
-.val .a small{ font-size:7.5pt; font-weight:300; color:var(--char); margin-left:1.5mm; }
-.val.best{ background:var(--green-soft); border-color:var(--gold); }
 .fx-line{ font-size:7.5pt; color:var(--mut); margin-top:1mm; line-height:1.6; }
 .fx-line b{ color:var(--green); font-weight:600; }
 
 /* ── Condições ── */
-.conds{ display:grid; grid-template-columns:1fr 1fr; gap:2.5mm 7mm; margin-top:1mm; }
+.conds{ display:grid; grid-template-columns:1fr 1fr; gap:2.2mm 7mm; margin-top:.5mm; }
 .cond-h{ font-size:7pt; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:.8mm; }
 .cond-t{ font-size:7.8pt; line-height:1.55; color:var(--char); }
 
@@ -101,8 +98,8 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <img src="assets/logo-lusatravel-verde.png" alt="LusaTravel">
     <div class="ttl">
       <div class="kicker">Cotação aérea</div>
-      <div class="name">Eduardo Pimentel Slavoero</div>
-      <div class="meta">Cotação 07/10/2026 · Classe Econômica · Ida e volta</div>
+      <div class="name">{{CLIENTE}}</div>
+      <div class="meta">Cotação 07/10/2026 · {{PAX_DETALHE}} · Classe Econômica</div>
     </div>
   </div>
   <div class="rule"></div>
@@ -113,7 +110,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <div><div class="code">MAD</div><div class="city">Madri</div></div>
     <div class="arrow"><div class="lbl">Voos diretos</div></div>
     <div><div class="code">LIS</div><div class="city">Lisboa</div></div>
-    <div class="info"><b>Ida</b> 30 Dez 2026 · <b>Volta</b> 04 Jan 2027<br>5 noites em Madri · 3 opções</div>
+    <div class="info"><b>Ida</b> 30 Dez 2026 · <b>Volta</b> 04 Jan 2027<br><span class="pax">{{PAX_LINHA}}</span> · 5 noites em Madri</div>
   </div>
 
   <div class="sec">Opções de voo</div>
@@ -136,10 +133,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       </div>
     </div>
     <div class="price">
-      <div class="k">Total do aéreo</div>
-      <div class="brl">R$ 10.613,94</div>
-      <div class="fx">EUR 1.899,33</div>
-      <div class="bag">1 bagagem despachada<br>+ bagagem de mão</div>
+      <div class="k">Total · {{PAX_CURTO}}</div>
+      <div class="brl">R$ {{O1_BRL}}</div>
+      <div class="fx">EUR {{O1_FX}}</div>
+      <div class="pp">Por passageiro <b>R$ {{O1_PP}}</b><br>EUR {{O1_PPFX}}</div>
+      <div class="bag">1 bagagem despachada + bagagem de mão</div>
     </div>
   </div>
 
@@ -162,10 +160,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     </div>
     <div class="price">
       <div><span class="tag">Melhor valor</span></div>
-      <div class="k">Total do aéreo</div>
-      <div class="brl">R$ 10.075,87</div>
-      <div class="fx">USD 2.027,34</div>
-      <div class="bag">1 bagagem despachada<br>+ bagagem de mão</div>
+      <div class="k">Total · {{PAX_CURTO}}</div>
+      <div class="brl">R$ {{O2_BRL}}</div>
+      <div class="fx">USD {{O2_FX}}</div>
+      <div class="pp">Por passageiro <b>R$ {{O2_PP}}</b><br>USD {{O2_PPFX}}</div>
+      <div class="bag">1 bagagem despachada + bagagem de mão</div>
     </div>
   </div>
 
@@ -187,21 +186,22 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       </div>
     </div>
     <div class="price">
-      <div class="k">Total do aéreo</div>
-      <div class="brl">R$ 11.080,41</div>
-      <div class="fx">USD 2.229,55</div>
-      <div class="bag">1 bagagem despachada<br>+ bagagem de mão</div>
+      <div class="k">Total · {{PAX_CURTO}}</div>
+      <div class="brl">R$ {{O3_BRL}}</div>
+      <div class="fx">USD {{O3_FX}}</div>
+      <div class="pp">Por passageiro <b>R$ {{O3_PP}}</b><br>USD {{O3_PPFX}}</div>
+      <div class="bag">1 bagagem despachada + bagagem de mão</div>
     </div>
   </div>
 
-  <div class="fx-line"><b>Cotação 07/10 · Dólar = 4,97 · Euro = 5,59</b> · Valores totais do aéreo ida e volta, em Reais, com referência na moeda de emissão de cada companhia.<br>*Nada reservado, apenas cotado</div>
+  <div class="fx-line"><b>Cotação 07/10 · Dólar = 4,97 · Euro = 5,59</b> · Valores totais do aéreo ida e volta para {{PAX_LINHA}}, em Reais, com referência na moeda de emissão de cada companhia. {{NOTA_PAX}}<br>*Nada reservado, apenas cotado</div>
 
   <div class="sec">Condições e observações</div>
   <div class="conds">
     <div><div class="cond-h">Parcelamento</div><div class="cond-t">Aéreo em até 6x sem acréscimos no cartão de crédito. PIX com desconto de 5–13%.</div></div>
     <div><div class="cond-h">Tarifas e disponibilidade</div><div class="cond-t">Valores e assentos sujeitos a alteração até a emissão. Período de fim de ano tem alta procura; a tarifa cotada só é garantida na emissão. Valores em Reais acompanham o câmbio do dia.</div></div>
     <div><div class="cond-h">Não inclui</div><div class="cond-t">Seguro viagem (obrigatório no Espaço Schengen, cotamos sob consulta) · Hospedagem, traslados e passeios · Marcação de assento, quando cobrada · Despesas pessoais.</div></div>
-    <div><div class="cond-h">Documentação e horários</div><div class="cond-t">Passaporte com validade mínima de 3 meses após o retorno. Horários no fuso local de cada aeroporto; Madri está 1h à frente de Lisboa. Bagagem conforme regra tarifária, confirmada na emissão.</div></div>
+    <div><div class="cond-h">Documentação e horários</div><div class="cond-t">Passaporte com validade mínima de 3 meses após o retorno{{DOC_EXTRA}}. Horários no fuso local; Madri está 1h à frente de Lisboa. Bagagem conforme regra tarifária, confirmada na emissão.</div></div>
   </div>
 
   <div class="sig">
