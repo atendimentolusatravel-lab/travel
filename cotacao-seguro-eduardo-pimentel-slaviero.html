@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Eduardo Pimentel Slaviero | Seguro Viagem Europa — LusaTravel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+  --gold:#da8d00;
+  --green:#414625;
+  --green-soft:#f3f4ee;
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#8f8a7c;
+  --line:#dfe0d5;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A4 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page > *{ flex-shrink:0; }
+.page{ width:210mm; height:297mm; padding:9mm 16mm 7mm; position:relative; overflow:hidden; background:#fff; display:flex; flex-direction:column; }
+
+/* ── Topo ── */
+.top{ display:flex; align-items:flex-end; justify-content:space-between; gap:10mm; }
+.top img{ height:16mm; width:auto; display:block; }
+.top .ttl{ text-align:right; }
+.top .kicker{ font-size:7.5pt; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.top .name{ font-size:16pt; font-weight:800; text-transform:uppercase; color:var(--green); letter-spacing:.02em; line-height:1.15; margin-top:1mm; }
+.top .meta{ font-size:8.5pt; color:var(--mut); margin-top:1mm; }
+.rule{ height:0.9mm; background:var(--gold); margin:3mm 0 3mm; }
+
+/* ── Faixa ── */
+.band{ display:flex; align-items:center; justify-content:space-between; gap:5mm; background:var(--green); color:#fff; border-radius:3px; padding:2.4mm 5mm; }
+.band .big{ font-size:12pt; white-space:nowrap; font-weight:800; letter-spacing:.03em; line-height:1; }
+.band .small{ font-size:7pt; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.6); margin-top:.8mm; }
+.band .stat{ text-align:center; }
+.band .stat b{ display:block; font-size:10.5pt; font-weight:800; color:var(--gold); line-height:1; }
+.band .stat span{ font-size:6.8pt; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.65); }
+.band .info{ text-align:right; font-size:8pt; line-height:1.5; color:rgba(255,255,255,.85); }
+.band .info b{ color:#fff; font-weight:600; }
+
+.sec{ font-size:7.2pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; margin:2.5mm 0 1.4mm; }
+
+/* ── Planos ── */
+.plans{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:3mm; margin-top:1mm; }
+.plan{ border:1px solid var(--line); border-radius:3px; padding:2.2mm 3.5mm; background:#fff; position:relative; }
+.plan.best{ background:var(--green); border-color:var(--gold); }
+.plan .tag{ position:absolute; top:-2.4mm; right:3mm; font-size:6pt; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--green); background:var(--gold); border-radius:2px; padding:.5mm 1.8mm; }
+.plan .pn{ font-size:10.5pt; font-weight:700; color:var(--green); text-transform:uppercase; letter-spacing:.06em; line-height:1.15; }
+.plan .pk{ font-size:6.3pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; margin-top:1.2mm; }
+.plan .brl{ font-size:13pt; font-weight:800; color:var(--green); line-height:1.1; margin-top:.6mm; font-variant-numeric:tabular-nums; }
+.plan .usd{ font-size:7.8pt; color:var(--char); font-weight:300; margin-top:.4mm; }
+.plan .pp{ font-size:6.9pt; color:var(--char); margin-top:1.3mm; padding-top:1.1mm; border-top:1px solid var(--line); line-height:1.5; }
+.plan .pp b{ font-weight:600; color:var(--ink); }
+.plan.best .pn,.plan.best .brl{ color:var(--gold); }
+.plan.best .pk{ color:rgba(255,255,255,.6); }
+.plan.best .usd,.plan.best .pp{ color:rgba(255,255,255,.85); }
+.plan.best .pp{ border-top-color:rgba(255,255,255,.2); }
+.plan.best .pp b{ color:#fff; }
+
+/* ── Tabela de coberturas ── */
+table{ width:100%; border-collapse:collapse; font-size:6.9pt; }
+thead th{ text-align:right; font-size:6.3pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; padding:0 2mm 1mm; border-bottom:1.5px solid var(--green); }
+thead th:first-child{ text-align:left; padding-left:0; }
+thead th.best{ color:var(--green); }
+tbody td{ padding:.35mm 2mm; border-bottom:1px solid var(--line); text-align:right; font-variant-numeric:tabular-nums; color:var(--char); white-space:nowrap; }
+tbody td:first-child{ text-align:left; padding-left:0; white-space:normal; color:var(--char); }
+tbody td.best{ background:var(--green-soft); font-weight:600; color:var(--green); }
+tbody tr.grp td{ padding:1.3mm 0 .4mm; border-bottom:none; text-align:left; font-size:6.5pt; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:800; background:none; }
+tbody td.hi{ color:var(--ink); font-weight:600; }
+.incl{ font-size:6.9pt; color:var(--char); line-height:1.5; margin-top:1.8mm; padding:1.6mm 3mm; background:var(--green-soft); border-radius:3px; }
+.incl b{ color:var(--green); font-weight:700; }
+
+.fx-line{ font-size:7pt; color:var(--mut); margin-top:1.6mm; line-height:1.55; }
+.fx-line b{ color:var(--green); font-weight:600; }
+
+/* ── Condições ── */
+.conds{ display:grid; grid-template-columns:1fr 1fr; gap:1.6mm 7mm; margin-top:.3mm; }
+.cond-h{ font-size:7pt; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:.6mm; }
+.cond-t{ font-size:7.1pt; line-height:1.45; color:var(--char); }
+
+/* ── Assinatura ── */
+.sig{ margin-top:auto; padding-top:2.4mm; border-top:0.9mm solid var(--gold); display:flex; justify-content:space-between; align-items:center; font-family:var(--con); font-size:7.8pt; color:var(--char); }
+.sig a{ color:var(--green); text-decoration:none; font-weight:600; }
+.sig .addr{ color:var(--mut); }
+</style>
+</head>
+<body>
+<section class="page">
+
+  <div class="top">
+    <img src="assets/logo-lusatravel-verde.png" alt="LusaTravel">
+    <div class="ttl">
+      <div class="kicker">Cotação de seguro viagem</div>
+      <div class="name">Eduardo Pimentel Slaviero</div>
+      <div class="meta">Cotação 08/10/2026 · 2 adultos e 3 crianças · GTA Global Travel Assistance</div>
+    </div>
+  </div>
+  <div class="rule"></div>
+
+  <div class="band">
+    <div><div class="big">Seguro Viagem · Europa</div><div class="small">Portugal e Espanha</div></div>
+    <div class="stat"><b>13</b><span>dias</span></div>
+    <div class="stat"><b>5</b><span>segurados</span></div>
+    <div class="stat"><b>3</b><span>planos</span></div>
+    <div class="info"><b>Início</b> 25 Dez 2026 · <b>Fim</b> 06 Jan 2027<br>Até 64 anos · Plano familiar</div>
+  </div>
+
+  <div class="sec">Planos cotados · valor total para 5 segurados</div>
+  <div class="plans">
+    <div class="plan">
+      <div class="pn">Prata</div>
+      <div class="pk">Total · 5 segurados</div>
+      <div class="brl">R$ 1.108,62</div>
+      <div class="usd">US$ 220,40</div>
+      <div class="pp">Titular <b>R$ 291,74</b> · acompanhantes <b>R$ 204,22</b></div>
+    </div>
+    <div class="plan best">
+      <span class="tag">Recomendado</span>
+      <div class="pn">Diamante</div>
+      <div class="pk">Total · 5 segurados</div>
+      <div class="brl">R$ 1.223,28</div>
+      <div class="usd">US$ 243,20</div>
+      <div class="pp">Titular <b>R$ 321,92</b> · acompanhantes <b>R$ 225,34</b></div>
+    </div>
+    <div class="plan">
+      <div class="pn">Euro Assist em Dobro</div>
+      <div class="pk">Total · 5 segurados</div>
+      <div class="brl">R$ 1.280,65</div>
+      <div class="usd">US$ 254,60</div>
+      <div class="pp">Titular <b>R$ 337,01</b> · acompanhantes <b>R$ 235,91</b></div>
+    </div>
+  </div>
+
+  <div class="sec">Coberturas por segurado · valores em US$</div>
+  <table>
+    <thead><tr><th>Cobertura</th><th>Prata</th><th class="best">Diamante</th><th>Euro Assist em Dobro</th></tr></thead>
+    <tbody>
+      <tr class="grp"><td colspan="4">Saúde</td></tr>
+      <tr><td>Despesas médicas e hospitalares no exterior, por evento (inclui Covid-19)</td><td class="hi">36.000</td><td class="best">45.000</td><td class="hi">84.000</td></tr>
+      <tr><td>Despesas odontológicas</td><td>650</td><td class="best">700</td><td>150</td></tr>
+      <tr><td>Despesas farmacêuticas</td><td>650</td><td class="best">700</td><td>150</td></tr>
+      <tr><td>Traslado médico</td><td>9.000</td><td class="best">17.500</td><td>15.000</td></tr>
+      <tr><td>Regresso sanitário</td><td>18.000</td><td class="best">35.000</td><td>30.000</td></tr>
+      <tr><td>Prorrogação de estadia</td><td>800</td><td class="best">1.200</td><td>1.500</td></tr>
+      <tr><td>Acompanhante em caso de hospitalização prolongada</td><td>1.400</td><td class="best">2.000</td><td>2.000</td></tr>
+
+      <tr class="grp"><td colspan="4">Bagagem e voo</td></tr>
+      <tr><td>Perda de bagagem em viagem</td><td>1.000</td><td class="best">1.200</td><td>1.200</td></tr>
+      <tr><td>Atraso de bagagem (a partir de 6 horas)</td><td>400</td><td class="best">500</td><td>180</td></tr>
+      <tr><td>Danos à mala</td><td>90</td><td class="best">100</td><td>130</td></tr>
+      <tr><td>Atraso de voo (a partir de 6 horas)</td><td>450</td><td class="best">600</td><td>250</td></tr>
+
+      <tr class="grp"><td colspan="4">Cancelamento e retorno</td></tr>
+      <tr><td>Cancelamento de viagem Plus Reason</td><td>1.000</td><td class="best">1.200</td><td>1.000</td></tr>
+      <tr><td>Interrupção de viagem</td><td>1.030</td><td class="best">1.050</td><td>920</td></tr>
+      <tr><td>Retorno antecipado do segurado</td><td>1.000</td><td class="best">1.500</td><td>1.500</td></tr>
+      <tr><td>Retorno de menores e/ou idosos</td><td>1.800</td><td class="best">1.800</td><td>1.500</td></tr>
+
+      <tr class="grp"><td colspan="4">Jurídico e acidentes pessoais</td></tr>
+      <tr><td>Despesas jurídicas</td><td>1.000</td><td class="best">7.000</td><td>750</td></tr>
+      <tr><td>Fiança e despesas legais</td><td>10.000</td><td class="best">10.000</td><td>7.500</td></tr>
+      <tr><td>Morte acidental ou invalidez permanente por acidente em viagem</td><td>12.000</td><td class="best">12.000</td><td>12.000</td></tr>
+      <tr><td>Traslado de corpo</td><td>18.000</td><td class="best">35.000</td><td>30.000</td></tr>
+    </tbody>
+  </table>
+  <div class="incl"><b>Incluído nos três planos:</b> central 24 horas · orientação à rede médica · telemedicina · orientação para bagagem extraviada, perda de documentos e reembolso · concierge. <b>Gravidez, prática de esportes e doenças preexistentes</b> inclusas na cobertura médica e hospitalar.</div>
+
+  <div class="fx-line"><b>Cotação 08/10 · Dólar = 5,03</b> · Valores totais do seguro para 5 segurados, em Reais, com referência em dólar. Plano familiar: titular a 100% da tarifa e até 4 acompanhantes de 1º grau com desconto.<br>*Nada reservado, apenas cotado</div>
+
+  <div class="sec">Condições e observações</div>
+  <div class="conds">
+    <div><div class="cond-h">Por que o Diamante</div><div class="cond-t">Cobertura médica de US$ 45 mil, acima do mínimo Schengen (€ 30 mil), e os maiores limites para farmácia, odontologia, bagagem e atraso de voo. Custa R$ 114,66 a mais que o Prata para toda a família.</div></div>
+    <div><div class="cond-h">Pagamento</div><div class="cond-t">Até 6x sem acréscimos no cartão de crédito. PIX com desconto de 5–13%. Emissão imediata, com apólice individual por e-mail.</div></div>
+    <div><div class="cond-h">Vigência e limites</div><div class="cond-t">13 dias, de 25 Dez 2026 a 06 Jan 2027. Limite de idade 85 anos (de 65 a 85, a tarifa dobra). Preços sujeitos a alteração até a emissão.</div></div>
+    <div><div class="cond-h">Importante</div><div class="cond-t">Morte acidental garantida pela IZA Seguradora S.A. (SUSEP 15414.644857/2024-27). Sem atendimento em países sancionados: Coreia do Norte, Irã, Síria, Sudão, Rússia e regiões ocupadas da Ucrânia.</div></div>
+  </div>
+
+  <div class="sig">
+    <div><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a> &nbsp;·&nbsp; <a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+    <div class="addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+  </div>
+
+</section>
+</body>
+</html>
