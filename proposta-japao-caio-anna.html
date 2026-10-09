@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Caio Coimbra &amp; Anna Luiza | Japão — LusaTravel</title>
+<style>
+/* ══════════════════════════════════════════════════════════════
+   LUSATRAVEL — PROPOSTA JAPÃO · LUA DE MEL (A3 Portrait, print-ready)
+   Cor de destino: Vermelho Torii (#8b1e1e). Ouro fixo #da8d00.
+   ══════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+  --gold:#da8d00;
+  --dest:#8b1e1e;
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#9a8d80;
+  --line:#e4ddd2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page{
+  width:297mm; height:420mm; position:relative; overflow:hidden;
+  background:#fff; page-break-after:always; display:flex; flex-direction:column;
+}
+.page:last-child{ page-break-after:auto; }
+
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center;
+     justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center;
+     justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.2); }
+
+.body{ padding:14mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:4mm 0 8mm; }
+.lead{ font-size:11.5pt; line-height:1.7; color:var(--char); margin-bottom:8mm; }
+
+/* ══ CAPA ══ */
+.cover{ position:relative; }
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink);
+  display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0; background:#1b1f3a; }
+.cover-photo svg{ width:100%; height:100%; display:block; }
+.cover-scrim{ position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, transparent 30%, rgba(0,0,0,.80) 78%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:36mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.cover-name{ font-size:32pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.12; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3;
+  font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+
+/* ══ ITINERÁRIO ══ */
+.tl{ display:flex; flex-direction:column; }
+.tl-item{ display:flex; align-items:flex-start; gap:6mm; }
+.tl-badge{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff;
+  font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tl-badge.fly{ background:var(--ink); color:var(--gold); font-size:11pt; }
+.tl-line{ width:2px; height:8mm; background:var(--line); margin-left:5.4mm; }
+.tl-city{ font-size:14pt; font-weight:700; color:var(--ink); }
+.tl-meta{ font-size:10pt; color:var(--mut); margin-top:.5mm; }
+.tl-note{ font-size:9.5pt; color:var(--char); margin-top:1mm; line-height:1.5; font-weight:300; }
+.why{ margin-top:10mm; border-left:3px solid var(--gold); padding:4mm 8mm; background:#faf7f2; }
+.why h4{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:var(--dest); font-weight:700; margin-bottom:2mm; }
+.why p{ font-size:10.5pt; line-height:1.65; }
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:6mm 10mm; margin-top:6mm; }
+.pill{ border:1px solid var(--line); border-radius:6px; padding:4mm 6mm; }
+.pill b{ display:block; font-size:10pt; color:var(--ink); font-weight:700; }
+.pill span{ font-size:9.5pt; color:var(--char); font-weight:300; line-height:1.5; }
+
+/* ══ DESTINO + HOTEL ══ */
+.dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center;
+  justify-content:space-between; flex-shrink:0; }
+.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.88); }
+.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9);
+  color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.dest-photo{ height:118mm; position:relative; flex-shrink:0; overflow:hidden; background:#2a2733; }
+.dest-photo svg{ position:absolute; inset:0; width:100%; height:100%; }
+.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800;
+  letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.6); z-index:2; }
+.dest-photo .sub{ position:absolute; bottom:6mm; right:22mm; font-size:9pt; letter-spacing:.14em; text-transform:uppercase;
+  color:rgba(255,255,255,.85); text-shadow:0 1px 6px rgba(0,0,0,.6); z-index:2; }
+.dest-text{ font-size:11.5pt; font-weight:400; line-height:1.7; color:var(--char); }
+.hotel-card{ margin-top:9mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.hotel-card .top{ background:#faf7f2; padding:5mm 8mm; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:flex-end; }
+.hotel-card .name{ font-size:15pt; font-weight:700; color:var(--ink); }
+.hotel-card .stars{ font-size:14pt; color:var(--gold); letter-spacing:2px; margin-top:1mm; }
+.hotel-card .score{ font-size:9pt; color:var(--mut); text-align:right; line-height:1.5; }
+.hotel-card .score b{ display:block; font-size:14pt; color:var(--dest); font-weight:800; }
+.hotel-card .rows{ padding:5mm 8mm; display:grid; grid-template-columns:1fr 1fr; gap:4mm 10mm; }
+.hotel-card .k{ font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.hotel-card .v{ font-size:10.5pt; font-weight:300; color:var(--char); margin-top:1mm; line-height:1.45; }
+.hotel-card .wide{ grid-column:1 / -1; }
+
+/* ══ ROTEIRO DIA A DIA ══ */
+.day{ margin-bottom:5.2mm; }
+.day-h{ font-size:10.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); }
+.day-h .d{ color:var(--dest); }
+.day-t{ font-size:10.5pt; line-height:1.6; color:var(--char); margin-top:1mm; }
+
+/* ══ SERVIÇOS ══ */
+.svc-h{ font-size:10pt; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--dest); margin:6mm 0 2mm; padding-bottom:1.5mm; border-bottom:2px solid var(--gold); display:inline-block; }
+.svc-row{ display:flex; justify-content:space-between; align-items:baseline; gap:6mm; padding:2.4mm 0; border-bottom:1px solid var(--line); }
+.svc-row .n{ font-size:10.5pt; color:var(--char); }
+.svc-row .n small{ color:var(--mut); font-size:9pt; margin-left:2mm; }
+.svc-row .p{ font-size:10.5pt; font-weight:700; color:var(--ink); white-space:nowrap; font-variant-numeric:tabular-nums; }
+.svc-row .p.free{ color:var(--mut); font-weight:500; }
+.svc-sub{ display:flex; justify-content:space-between; padding:3mm 0 0; font-size:10pt; color:var(--mut); }
+.svc-sub b{ color:var(--ink); }
+.note{ font-size:9pt; color:var(--mut); line-height:1.55; margin-top:3mm; }
+
+/* ══ VALORES ══ */
+.val-note{ font-size:9pt; color:var(--mut); margin-bottom:5mm; }
+.val-row{ display:flex; justify-content:space-between; align-items:baseline; padding:4mm 0; border-bottom:1px solid var(--line); }
+.val-row .lbl{ font-size:12pt; color:var(--char); }
+.val-row .lbl small{ display:block; font-size:9pt; color:var(--mut); font-weight:300; margin-top:.5mm; }
+.val-row .amt{ font-size:12pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; }
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink);
+  border-radius:5px; padding:6mm 8mm; margin-top:6mm; }
+.val-total .lbl{ font-size:11pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.val-total .lbl small{ display:block; font-size:9pt; letter-spacing:.04em; color:rgba(255,255,255,.45); font-weight:400; margin-top:1mm; }
+.val-total .amt{ font-size:18pt; font-weight:800; color:var(--gold); text-align:right; }
+.val-total .amt small{ display:block; font-size:9.5pt; color:rgba(255,255,255,.55); font-weight:500; margin-top:1mm; }
+.val-fx{ font-size:9pt; color:var(--mut); margin-top:5mm; line-height:1.6; }
+.val-fx b{ color:var(--ink); }
+
+/* ══ CONDIÇÕES ══ */
+.cond{ margin-bottom:5.5mm; }
+.cond-h{ font-size:10.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5mm; }
+.cond-t{ font-size:10.5pt; line-height:1.7; color:var(--char); }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 01 · CAPA ══════════ -->
+<section class="page cover">
+  <div class="cover-hd">
+    <div class="logo">LUSATRAVEL</div>
+    <div class="tag">Glossário</div>
+  </div>
+  <div class="cover-bar"></div>
+  <div class="cover-photo">
+    <svg viewBox="0 0 1000 1414" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#141830"/>
+          <stop offset=".45" stop-color="#3a1f3a"/>
+          <stop offset=".68" stop-color="#8b2a2e"/>
+          <stop offset=".80" stop-color="#d9693a"/>
+          <stop offset=".86" stop-color="#1a1520"/>
+        </linearGradient>
+        <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+          <stop offset="0" stop-color="#ffb070" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#ffb070" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#2b1d2a"/>
+          <stop offset="1" stop-color="#0d0b12"/>
+        </linearGradient>
+      </defs>
+      <rect width="1000" height="1414" fill="url(#sky)"/>
+      <!-- estrelas -->
+      <g fill="#fff" opacity=".7">
+        <circle cx="120" cy="140" r="1.6"/><circle cx="310" cy="90" r="1.2"/><circle cx="560" cy="160" r="1.8"/>
+        <circle cx="820" cy="110" r="1.3"/><circle cx="900" cy="260" r="1.5"/><circle cx="430" cy="260" r="1.1"/>
+        <circle cx="200" cy="330" r="1.4"/><circle cx="700" cy="300" r="1.2"/><circle cx="60" cy="480" r="1.3"/>
+      </g>
+      <g transform="translate(0,-130)">
+      <!-- sol -->
+      <circle cx="690" cy="930" r="260" fill="url(#glow)"/>
+      <circle cx="690" cy="930" r="118" fill="#e9623d"/>
+      <!-- montanhas distantes -->
+      <path d="M0 1080 L140 990 L260 1050 L380 960 L470 1020 L600 940 L720 1010 L860 950 L1000 1030 L1000 1220 L0 1220 Z" fill="#2a1a28" opacity=".85"/>
+      <!-- Fuji -->
+      <path d="M90 1200 C 300 1120, 400 1040, 500 860 C 600 1040, 700 1120, 910 1200 Z" fill="#231c2c"/>
+      <path d="M500 860 C 540 920, 585 940, 630 975 L 600 982 L 578 968 L 556 985 L 532 970 L 505 988 L 480 972 L 456 986 L 432 970 L 404 980 L 372 975 C 420 940, 462 920, 500 860 Z" fill="#f3efe8"/>
+      <!-- lago -->
+      <rect x="0" y="1200" width="1000" height="360" fill="url(#lake)"/>
+      <path d="M0 1200 L1000 1200 L1000 1214 L0 1214Z" fill="#4a2a35" opacity=".6"/>
+      <ellipse cx="690" cy="1240" rx="120" ry="7" fill="#e9623d" opacity=".25"/>
+      <!-- torii em primeiro plano -->
+      <g fill="#0b0a0f">
+        <rect x="118" y="1010" width="22" height="330"/>
+        <rect x="300" y="1010" width="22" height="330"/>
+        <path d="M88 990 L352 990 L362 1012 L78 1012 Z"/>
+        <path d="M70 968 Q220 940 370 968 L376 992 Q220 964 64 992 Z"/>
+        <rect x="112" y="1050" width="216" height="16"/>
+        <rect x="212" y="1012" width="16" height="40"/>
+      </g>
+      <!-- pinheiros -->
+      <g fill="#0b0a0f">
+        <path d="M900 1200 L930 1090 L960 1200 Z"/><path d="M905 1150 L930 1050 L955 1150 Z"/>
+        <path d="M940 1200 L975 1110 L1000 1200 Z"/>
+      </g>
+      </g>
+    </svg>
+  </div>
+  <div class="cover-scrim"></div>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em 2 adultos · Lua de mel · 26/12/2026 a 15/01/2027</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">Caio Coimbra<br>&amp; Anna Luiza</div>
+    <div class="cover-dest">JAPÃO · Tóquio, Fuji, Hakone, Kyoto, Nara e Osaka</div>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>Destinos</span></div>
+      <div class="stat"><b>16</b><span>Noites</span></div>
+      <div class="stat"><b>4</b><span>Hotéis</span></div>
+      <div class="stat"><b>21</b><span>Dias de seguro</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com" style="color:inherit;text-decoration:none">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076" style="color:inherit;text-decoration:none">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ══════════ 02 · ITINERÁRIO ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Itinerário</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Sua rota</div>
+    <h2 class="h2">Itinerário</h2>
+    <p class="lead">Vinte e um dias para conhecer o Japão inteiro em um só arco: a energia de Tóquio na virada do ano, o Monte Fuji no inverno (a estação de céu mais limpo do ano), uma noite de ryokan e onsen em Hakone, a Kyoto imperial com bate-volta a Nara, e o final festivo em Osaka. Retorno com stopover de duas noites, do jeito que vocês pediram.</p>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-badge fly">✈</div><div><div class="tl-city">São Paulo → Tóquio</div><div class="tl-meta">Sáb 26/12 · voo noturno em classe econômica, 1 conexão</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge">1</div><div><div class="tl-city">Tóquio</div><div class="tl-meta">27/12 → 03/01 · 7 noites</div><div class="tl-note">Réveillon japonês, leilão de atum em Toyosu, excursão ao Monte Fuji e dia em Nikko.</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge">2</div><div><div class="tl-city">Hakone</div><div class="tl-meta">03/01 → 04/01 · 1 noite · ryokan com onsen</div><div class="tl-note">Teleférico, Lago Ashi e banho termal ao ar livre com o Fuji na frente.</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge">3</div><div><div class="tl-city">Kyoto</div><div class="tl-meta">04/01 → 09/01 · 5 noites</div><div class="tl-note">Templos, Gion à noite, tour de bicicleta, Arashiyama e bate-volta a Nara e Uji.</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge">4</div><div><div class="tl-city">Osaka</div><div class="tl-meta">09/01 → 12/01 · 3 noites</div><div class="tl-note">Castelo, Dotonbori, mercado Kuromon e um dia inteiro no Universal Studios Japan.</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge fly">✈</div><div><div class="tl-city">Osaka → Stopover → São Paulo</div><div class="tl-meta">Ter 12/01 · 2 noites em Doha, Dubai ou Istambul · chegada em GRU sex 15/01</div></div></div>
+    </div>
+
+    <div class="why">
+      <h4>Por que este desenho de viagem</h4>
+      <p>O roteiro foi montado para um casal que gosta de dia cheio e prefere <b>localização a luxo</b>: todos os hotéis ficam a poucos minutos a pé de uma grande estação, com café da manhã incluso, e o único “mimo” é a noite de ryokan em Hakone, com jantar kaiseki e onsen. Entrada por Tóquio e saída por Osaka evitam voltar sobre o mesmo caminho. O Ano Novo cai em Tóquio, onde a virada é mais vibrante, e o Fuji é visitado em dezembro e janeiro, quando o ar seco garante a melhor visibilidade do ano.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="pill"><b>Ritmo</b><span>Um passeio guiado por dia, em média, com tardes ou noites livres para explorar por conta própria.</span></div>
+      <div class="pill"><b>Guiamento</b><span>Tours regulares em grupo pequeno (inglês/espanhol). Guia em português disponível em versão privativa, sob consulta.</span></div>
+      <div class="pill"><b>Deslocamentos</b><span>Romancecar até Hakone, Shinkansen até Kyoto e trens locais. Mala grande segue de Tóquio a Kyoto por serviço de entrega.</span></div>
+      <div class="pill"><b>Flexível</b><span>A estrutura pode ser reduzida (menos noites em Tóquio ou Osaka, sem Nikko) para ajustar o investimento.</span></div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 03 · ROTEIRO DIA A DIA (1/2) ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Roteiro · 1/2</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Dia a dia</div>
+    <h2 class="h2">Roteiro · Tóquio e Hakone</h2>
+
+    <div class="day"><div class="day-h">Dia 01 | <span class="d">São Paulo</span> | Sáb 26/12</div><div class="day-t">Embarque em Guarulhos no fim da noite, classe econômica, com uma conexão (Doha, Dubai ou Istambul, conforme a companhia escolhida). Cerca de 26 a 30 horas de viagem total, chegando a Tóquio na noite seguinte.</div></div>
+
+    <div class="day"><div class="day-h">Dia 02 | <span class="d">Tóquio</span> | Dom 27/12</div><div class="day-t">Chegada a Tóquio. Trem expresso até Shinjuku e check-in no Hotel Sunroute Plaza, colado na saída sul da maior estação do mundo. Noite leve para vencer o fuso: yakitori nas vielas de Omoide Yokocho, a cabeça do Godzilla em Kabukicho e o primeiro contato com o neon.</div></div>
+
+    <div class="day"><div class="day-h">Dia 03 | <span class="d">Tóquio</span> | Seg 28/12</div><div class="day-t">Visita guiada de dia inteiro: templo Senso-ji e a rua Nakamise em Asakusa, o santuário Meiji e sua floresta urbana, Harajuku e o cruzamento de Shibuya. Ao anoitecer, Shibuya Sky para ver a cidade acender de cima.</div></div>
+
+    <div class="day"><div class="day-h">Dia 04 | <span class="d">Tóquio</span> | Ter 29/12</div><div class="day-t">Despertador às 4h30: leilão de atum no mercado de Toyosu, visto da galeria pública, seguido de café da manhã de sushi ali mesmo. Free tour pelo mercado externo de Tsukiji, tarde em Ginza e, no fim do dia, a imersão digital do TeamLab Planets.</div></div>
+
+    <div class="day"><div class="day-h">Dia 05 | <span class="d">Monte Fuji</span> | Qua 30/12</div><div class="day-t">Excursão ao Monte Fuji pelo lago Kawaguchi, com o pagode Chureito (o cartão-postal do Fuji), as nascentes de Oshino Hakkai e tempo para fotos à beira do lago. No inverno o céu seco oferece as melhores chances de ver o pico inteiro.</div></div>
+
+    <div class="day"><div class="day-h">Dia 06 | <span class="d">Tóquio · Réveillon</span> | Qui 31/12</div><div class="day-t">Manhã geek em Akihabara (free tour) e Ueno. Tarde em Yanaka, o bairro antigo. Na virada, duas opções: os sinos de Joya no Kane no templo Zojo-ji, com balões soltos ao pé da Tokyo Tower, ou a contagem regressiva em Shibuya. Depois da meia-noite, o hatsumode (primeira visita do ano) no santuário Meiji.</div></div>
+
+    <div class="day"><div class="day-h">Dia 07 | <span class="d">Tóquio · Ano Novo</span> | Sex 01/01</div><div class="day-t">Manhã tranquila. Senso-ji em clima de festa, com barracas de comida de rua por toda a Nakamise. Passeio pelos jardins externos do Palácio Imperial e, à tarde, o mirante da Tokyo Skytree. Noite nos bares minúsculos de Golden Gai, em Shinjuku.</div></div>
+
+    <div class="day"><div class="day-h">Dia 08 | <span class="d">Nikko</span> | Sáb 02/01</div><div class="day-t">Excursão de dia inteiro a Nikko, Patrimônio da Humanidade: o santuário dourado Toshogu, o lago Chuzenji e a cascata Kegon, com boa chance de paisagem nevada. Alternativa gratuita no mesmo dia: a saudação de Ano Novo da família imperial, no Palácio Imperial.</div></div>
+
+    <div class="day"><div class="day-h">Dia 09 | <span class="d">Hakone</span> | Dom 03/01</div><div class="day-t">Trem panorâmico Romancecar de Shinjuku a Hakone-Yumoto. Circuito clássico com o Hakone Free Pass: trem de montanha, teleférico sobre o vale vulcânico de Owakudani (com os ovos negros cozidos na fumarola) e barco pelo Lago Ashi. Check-in no ryokan Hakone Ashinoko Hanaori, onsen ao ar livre com vista para o Fuji e jantar kaiseki.</div></div>
+
+    <div class="day"><div class="day-h">Dia 10 | <span class="d">Hakone → Kyoto</span> | Seg 04/01</div><div class="day-t">Manhã no santuário de Hakone, com o torii vermelho dentro do lago, e no antigo posto de controle Sekisho. Ônibus até Odawara e Shinkansen até Kyoto (cerca de 2h). Check-in no Hotel Intergate, no coração de Shijo. À noite, tour guiado por Gion: Yasaka, Hanamikoji e Pontocho, com sorte avistando uma maiko a caminho do trabalho.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 04 · ROTEIRO DIA A DIA (2/2) ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Roteiro · 2/2</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Dia a dia</div>
+    <h2 class="h2">Roteiro · Kyoto, Nara, Osaka e retorno</h2>
+
+    <div class="day"><div class="day-h">Dia 11 | <span class="d">Kyoto</span> | Ter 05/01</div><div class="day-t">Tour completo de Kyoto com ingressos inclusos: os grandes ícones da antiga capital em um só dia, dos templos de Higashiyama aos milhares de torii vermelhos de Fushimi Inari, para então saber onde voltar com calma nos dias livres.</div></div>
+
+    <div class="day"><div class="day-h">Dia 12 | <span class="d">Kyoto</span> | Qua 06/01</div><div class="day-t">Manhã de tour de bicicleta pelas margens do rio Kamo, Palácio Imperial e bairros residenciais que o turista a pé não alcança. Tarde no Caminho do Filósofo e no templo Nanzen-ji (free tour). Fim de dia com o tour gastronômico do mercado Nishiki, a “cozinha de Kyoto”.</div></div>
+
+    <div class="day"><div class="day-h">Dia 13 | <span class="d">Nara e Uji</span> | Qui 07/01</div><div class="day-t">Bate-volta guiado a Nara: o Grande Buda do Todai-ji, o parque com mais de mil cervos que fazem reverência pedindo biscoito, e as lanternas do santuário Kasuga Taisha. Parada em Uji, terra do melhor matcha do Japão, com o templo Byodo-in, o mesmo da moeda de 10 ienes.</div></div>
+
+    <div class="day"><div class="day-h">Dia 14 | <span class="d">Kyoto</span> | Sex 08/01</div><div class="day-t">Dia livre em Arashiyama, cedo para ter o bosque de bambu quase vazio: templo Tenryu-ji, ponte Togetsukyo e a subida ao parque dos macacos Iwatayama, com Kyoto aos pés. Tarde no Pavilhão Dourado (Kinkaku-ji). Opcional: aluguel de kimono para fotos em Higashiyama. Noite livre em Pontocho.</div></div>
+
+    <div class="day"><div class="day-h">Dia 15 | <span class="d">Kyoto → Osaka</span> | Sáb 09/01</div><div class="day-t">Trem de 30 minutos até Osaka e check-in no Citadines Namba. Tarde no Castelo de Osaka e no mirante do Umeda Sky Building ao pôr do sol. À noite, Dotonbori: o letreiro do Glico Man, takoyaki e okonomiyaki na rua mais barulhenta e divertida do país.</div></div>
+
+    <div class="day"><div class="day-h">Dia 16 | <span class="d">Osaka</span> | Dom 10/01</div><div class="day-t">Tour completo de Osaka com ingressos: Shinsekai e a torre Tsutenkaku, o templo Shitenno-ji, o mercado Kuromon e os bairros que fazem de Osaka a capital gastronômica do Japão. Noite livre em Namba e Shinsaibashi.</div></div>
+
+    <div class="day"><div class="day-h">Dia 17 | <span class="d">Osaka · USJ</span> | Seg 11/01</div><div class="day-t">Dia inteiro no Universal Studios Japan, com o Super Nintendo World e a área de Harry Potter. Segunda-feira fora de feriado é o melhor dia da semana para filas menores.</div></div>
+
+    <div class="day"><div class="day-h">Dia 18 | <span class="d">Osaka → Stopover</span> | Ter 12/01</div><div class="day-t">Manhã livre no mercado Kuromon, a dois passos do hotel, para as últimas compras. Trem Haruka ou Nankai até o aeroporto de Kansai e embarque no fim da tarde rumo ao stopover.</div></div>
+
+    <div class="day"><div class="day-h">Dias 19 e 20 | <span class="d">Stopover</span> | Qua 13 e Qui 14/01</div><div class="day-t">Duas noites de respiro na cidade da conexão, a definir junto com a companhia aérea: Doha (museus e deserto), Dubai (Burj Khalifa e safári no deserto) ou Istambul (Bósforo, Hagia Sophia e Grande Bazar). Hotel e passeios desta etapa são cotados à parte, após a escolha da companhia.</div></div>
+
+    <div class="day"><div class="day-h">Dia 21 | <span class="d">→ São Paulo</span> | Sex 15/01</div><div class="day-t">Voo de retorno a Guarulhos, com chegada prevista para o dia 15 de janeiro.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 05 · TÓQUIO ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Tóquio · Japão</div><div class="no">1</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo">
+    <svg viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="tsky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#1a1430"/><stop offset=".55" stop-color="#5a2340"/><stop offset=".9" stop-color="#d9684a"/>
+        </linearGradient>
+      </defs>
+      <rect width="1000" height="400" fill="url(#tsky)"/>
+      <circle cx="760" cy="300" r="70" fill="#f0a060" opacity=".9"/>
+      <!-- skyline fundo -->
+      <g fill="#2a1d33">
+        <rect x="0" y="250" width="60" height="150"/><rect x="70" y="220" width="40" height="180"/><rect x="120" y="265" width="70" height="135"/>
+        <rect x="200" y="200" width="45" height="200"/><rect x="255" y="240" width="60" height="160"/><rect x="330" y="180" width="38" height="220"/>
+        <rect x="380" y="230" width="80" height="170"/><rect x="470" y="210" width="50" height="190"/><rect x="530" y="255" width="60" height="145"/>
+        <rect x="600" y="190" width="42" height="210"/><rect x="650" y="235" width="70" height="165"/><rect x="800" y="225" width="60" height="175"/>
+        <rect x="870" y="260" width="55" height="140"/><rect x="930" y="215" width="70" height="185"/>
+      </g>
+      <!-- Tokyo Tower -->
+      <g fill="#c7452e">
+        <path d="M250 400 L300 400 L283 200 L267 200 Z"/>
+        <path d="M267 200 L283 200 L278 120 L272 120 Z"/>
+        <rect x="258" y="270" width="34" height="8"/><rect x="263" y="215" width="24" height="7"/>
+        <rect x="272" y="60" width="6" height="60"/>
+      </g>
+      <!-- Skytree -->
+      <g fill="#e8e3ee">
+        <path d="M690 400 L730 400 L716 170 L704 170 Z"/>
+        <path d="M704 170 L716 170 L713 40 L707 40 Z"/>
+        <rect x="698" y="235" width="24" height="10" fill="#f6f1f7"/><rect x="700" y="180" width="20" height="8" fill="#f6f1f7"/>
+        <rect x="708" y="10" width="4" height="30"/>
+      </g>
+      <!-- skyline frente -->
+      <g fill="#120d18">
+        <rect x="0" y="320" width="90" height="80"/><rect x="100" y="300" width="60" height="100"/><rect x="170" y="330" width="70" height="70"/>
+        <rect x="330" y="310" width="90" height="90"/><rect x="430" y="290" width="50" height="110"/><rect x="490" y="325" width="110" height="75"/>
+        <rect x="610" y="300" width="70" height="100"/><rect x="760" y="320" width="80" height="80"/><rect x="850" y="295" width="60" height="105"/><rect x="920" y="330" width="80" height="70"/>
+      </g>
+      <!-- janelas -->
+      <g fill="#ffd27a" opacity=".85">
+        <rect x="110" y="312" width="5" height="6"/><rect x="125" y="312" width="5" height="6"/><rect x="140" y="326" width="5" height="6"/>
+        <rect x="345" y="322" width="5" height="6"/><rect x="360" y="322" width="5" height="6"/><rect x="390" y="340" width="5" height="6"/>
+        <rect x="440" y="302" width="5" height="6"/><rect x="455" y="318" width="5" height="6"/><rect x="620" y="312" width="5" height="6"/>
+        <rect x="640" y="330" width="5" height="6"/><rect x="860" y="306" width="5" height="6"/><rect x="880" y="320" width="5" height="6"/>
+        <rect x="20" y="335" width="5" height="6"/><rect x="50" y="350" width="5" height="6"/><rect x="930" y="345" width="5" height="6"/>
+      </g>
+    </svg>
+    <div class="cap">Tóquio</div><div class="sub">27/12 → 03/01 · 7 noites</div>
+  </div>
+  <div class="body">
+    <p class="dest-text">Tóquio é a cidade que nunca cabe em uma visita, e por isso ela abre a viagem com sete noites. Em uma mesma tarde é possível cruzar o Shibuya mais frenético, rezar em silêncio sob os cedros do santuário Meiji e se perder em uma viela de dez bares em Golden Gai. Chegar no fim de dezembro significa viver o Oshogatsu, o Ano Novo japonês: os templos lotados de famílias, os sinos tocando 108 vezes à meia-noite, as primeiras orações do ano no Meiji Jingu e as lojas reabrindo com as sacolas da sorte. Entre uma coisa e outra, um despertador às 4h30 leva ao leilão de atum em Toyosu, e um dia inteiro é reservado para o Monte Fuji, que no inverno se mostra inteiro quase todas as manhãs. A base em Shinjuku foi escolhida pela logística: a estação liga tudo, inclusive o trem panorâmico até Hakone.</p>
+    <div class="hotel-card">
+      <div class="top">
+        <div><div class="name">Hotel Sunroute Plaza Shinjuku</div><div class="stars">★★★★</div></div>
+        <div class="score"><b>8,6</b>mais de 13 mil avaliações</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Duplo standard, cama de casal, não fumante</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã incluso</div></div>
+        <div class="wide"><div class="k">Endereço</div><div class="v">2-3-1 Yoyogi, Shibuya-ku, Tóquio 151-0053 · 3 min a pé da saída sul da estação Shinjuku (JR, metrô e Odakyu)</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">27/12/2026 → 03/01/2027 · 7 noites</div></div>
+        <div><div class="k">Por que ele</div><div class="v">Localização imbatível, quartos silenciosos e preço honesto no período de Ano Novo</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 06 · HAKONE ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Hakone · Monte Fuji · Japão</div><div class="no">2</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo">
+    <svg viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hsky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#8fa6bd"/><stop offset=".6" stop-color="#e6d3c3"/><stop offset="1" stop-color="#f3e4d6"/>
+        </linearGradient>
+        <linearGradient id="hlake" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#6e8ea4"/><stop offset="1" stop-color="#3b5668"/>
+        </linearGradient>
+      </defs>
+      <rect width="1000" height="400" fill="url(#hsky)"/>
+      <!-- Fuji -->
+      <path d="M180 290 C 360 240, 440 170, 520 90 C 600 170, 680 240, 860 290 Z" fill="#6c7a94"/>
+      <path d="M520 90 C 548 130, 575 148, 605 170 L 584 174 L 566 162 L 548 178 L 530 164 L 512 180 L 494 166 L 476 176 L 458 164 L 436 170 C 466 148, 494 130, 520 90 Z" fill="#fbfbfd"/>
+      <!-- colinas -->
+      <path d="M0 300 L120 250 L240 290 L360 262 L470 300 L600 268 L720 300 L840 262 L1000 300 L1000 330 L0 330 Z" fill="#3f5a4a"/>
+      <!-- lago -->
+      <rect x="0" y="300" width="1000" height="100" fill="url(#hlake)"/>
+      <path d="M430 300 C 470 300, 540 300, 610 300 L 600 330 L 440 330 Z" fill="#fbfbfd" opacity=".18"/>
+      <!-- barco -->
+      <g fill="#1d1a22">
+        <path d="M610 346 L720 346 L706 362 L624 362 Z"/><rect x="650" y="316" width="6" height="30"/><rect x="684" y="322" width="5" height="24"/>
+        <path d="M656 318 L690 326 L656 340 Z" fill="#8b1e1e"/>
+      </g>
+      <!-- torii na água -->
+      <g fill="#b8321f">
+        <rect x="118" y="238" width="14" height="118"/><rect x="226" y="238" width="14" height="118"/>
+        <path d="M100 226 L258 226 L264 240 L94 240 Z"/><path d="M90 208 Q179 194 268 208 L272 224 Q179 210 86 224 Z" fill="#1d1a22"/>
+        <rect x="112" y="262" width="134" height="10"/><rect x="173" y="240" width="12" height="22"/>
+      </g>
+      <g fill="#b8321f" opacity=".35"><rect x="118" y="356" width="14" height="30"/><rect x="226" y="356" width="14" height="30"/></g>
+      <!-- cedros -->
+      <g fill="#1f2d24">
+        <path d="M20 330 L48 210 L76 330 Z"/><path d="M60 330 L95 180 L130 330 Z"/><path d="M880 330 L915 200 L950 330 Z"/><path d="M940 330 L970 230 L1000 330 Z"/>
+      </g>
+    </svg>
+    <div class="cap">Hakone</div><div class="sub">03/01 → 04/01 · 1 noite</div>
+  </div>
+  <div class="body">
+    <p class="dest-text">Hakone é a pausa que a lua de mel pede. A uma hora e meia de Tóquio, o parque nacional reúne em um único circuito o trem de montanha em zigue-zague, o teleférico que cruza o vale fumegante de Owakudani e o barco que atravessa o Lago Ashi com o Monte Fuji ao fundo. A noite é em um ryokan de verdade: tatame, yukata, jantar kaiseki de muitos pratos pequenos e, principalmente, o onsen ao ar livre. O Hanaori fica em Togendai, na ponta do lago, e seu banho termal no terraço aponta direto para o Fuji, que em janeiro costuma aparecer inteiro ao amanhecer. Na manhã seguinte, o santuário de Hakone, com o torii vermelho mergulhado na água, fecha a etapa antes do Shinkansen para Kyoto. A chegada no dia 3 foi programada para a tarde, depois da passagem da maratona Hakone Ekiden, que ocupa as estradas pela manhã.</p>
+    <div class="hotel-card">
+      <div class="top">
+        <div><div class="name">Hakone Ashinoko Hanaori · Ryokan</div><div class="stars">★★★★</div></div>
+        <div class="score"><b>9,1</b>mais de 3 mil avaliações</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Quarto japonês-ocidental com vista para o Lago Ashi</div></div>
+        <div><div class="k">Plano</div><div class="v">Meia pensão: jantar kaiseki e café da manhã</div></div>
+        <div class="wide"><div class="k">Endereço</div><div class="v">160 Motohakone (Togendai), Hakone, Kanagawa 250-0522 · ao lado da estação do teleférico e do píer do Lago Ashi</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">03/01/2027 → 04/01/2027 · 1 noite</div></div>
+        <div><div class="k">Por que ele</div><div class="v">Onsen panorâmico no terraço com vista do Fuji, banhos privativos e jantar incluso</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 07 · KYOTO ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Kyoto · Nara · Japão</div><div class="no">3</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo">
+    <svg viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="kbg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#3b1512"/><stop offset=".5" stop-color="#7a2a1c"/><stop offset="1" stop-color="#2a0f0c"/>
+        </linearGradient>
+        <linearGradient id="kfloor" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#5a3a2a"/><stop offset="1" stop-color="#1f120d"/>
+        </linearGradient>
+      </defs>
+      <rect width="1000" height="400" fill="url(#kbg)"/>
+      <rect x="0" y="330" width="1000" height="70" fill="url(#kfloor)"/>
+      <!-- corredor de torii em perspectiva -->
+      <g fill="#c9391f" stroke="#1a0a08" stroke-width="2">
+        <g><rect x="40" y="60" width="38" height="300"/><rect x="922" y="60" width="38" height="300"/><path d="M0 40 L1000 40 L1000 66 L0 66 Z"/><rect x="40" y="110" width="920" height="22"/></g>
+        <g><rect x="150" y="100" width="30" height="250"/><rect x="820" y="100" width="30" height="250"/><path d="M120 82 L880 82 L880 104 L120 104 Z"/><rect x="150" y="142" width="700" height="18"/></g>
+        <g><rect x="240" y="132" width="24" height="210"/><rect x="736" y="132" width="24" height="210"/><path d="M216 116 L784 116 L784 134 L216 134 Z"/><rect x="240" y="168" width="520" height="15"/></g>
+        <g><rect x="312" y="158" width="19" height="178"/><rect x="669" y="158" width="19" height="178"/><path d="M292 144 L708 144 L708 160 L292 160 Z"/><rect x="312" y="188" width="376" height="12"/></g>
+        <g><rect x="368" y="178" width="15" height="152"/><rect x="617" y="178" width="15" height="152"/><path d="M352 166 L648 166 L648 180 L352 180 Z"/><rect x="368" y="204" width="264" height="10"/></g>
+        <g><rect x="412" y="194" width="12" height="130"/><rect x="576" y="194" width="12" height="130"/><path d="M398 184 L602 184 L602 196 L398 196 Z"/><rect x="412" y="216" width="176" height="8"/></g>
+        <g><rect x="446" y="206" width="9" height="112"/><rect x="545" y="206" width="9" height="112"/><path d="M436 198 L564 198 L564 208 L436 208 Z"/><rect x="446" y="226" width="108" height="6"/></g>
+        <g><rect x="472" y="216" width="7" height="98"/><rect x="521" y="216" width="7" height="98"/><path d="M465 210 L535 210 L535 218 L465 218 Z"/><rect x="472" y="232" width="56" height="5"/></g>
+      </g>
+      <!-- luz ao fundo -->
+      <rect x="486" y="222" width="28" height="92" fill="#ffd9a0" opacity=".85"/>
+      <!-- lanternas -->
+      <g fill="#ffb347" opacity=".9"><circle cx="110" cy="190" r="7"/><circle cx="890" cy="190" r="7"/><circle cx="205" cy="210" r="5"/><circle cx="795" cy="210" r="5"/></g>
+    </svg>
+    <div class="cap">Kyoto</div><div class="sub">04/01 → 09/01 · 5 noites</div>
+  </div>
+  <div class="body">
+    <p class="dest-text">Se Tóquio é o Japão do futuro, Kyoto é o Japão que resistiu a ele. Capital imperial por mais de mil anos, a cidade guarda dezessete sítios Patrimônio da Humanidade, dois mil templos e santuários e os bairros de gueixas onde, ao cair da noite, ainda se ouve o tamanco de madeira nas pedras de Gion. Cinco noites permitem alternar o essencial guiado com o prazer de descobrir sozinhos: pedalar pelas margens do rio Kamo, caminhar o Caminho do Filósofo no frio seco de janeiro, acordar cedo para ter o bosque de bambu de Arashiyama quase vazio e subir até os macacos de Iwatayama. Um dia é dedicado a Nara, a capital anterior, com o Grande Buda de bronze e os cervos que reverenciam quem lhes oferece biscoito, e a Uji, berço do matcha. A base fica em Shijo, o centro exato da cidade, a cinco minutos do metrô, do mercado Nishiki e de Gion.</p>
+    <div class="hotel-card">
+      <div class="top">
+        <div><div class="name">Hotel Intergate Kyoto Shijo Shinmachi</div><div class="stars">★★★★</div></div>
+        <div class="score"><b>8,9</b>mais de 2,5 mil avaliações</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Duplo superior, cama de casal, não fumante</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã incluso (obanzai, a cozinha caseira de Kyoto) · lounge com chá, café e happy hour</div></div>
+        <div class="wide"><div class="k">Endereço</div><div class="v">387 Mukadeya-cho, Shinmachi-dori Nishikikoji-agaru, Nakagyo-ku, Kyoto 604-8214 · 5 min a pé do metrô Shijo e do mercado Nishiki</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">04/01/2027 → 09/01/2027 · 5 noites</div></div>
+        <div><div class="k">Por que ele</div><div class="v">Café da manhã premiado, banho público (sento) para relaxar as pernas e centralidade total</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 08 · OSAKA ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Osaka · Japão</div><div class="no">4</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo">
+    <svg viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="osky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0c1024"/><stop offset=".7" stop-color="#2b1b3d"/><stop offset="1" stop-color="#4a2a3a"/>
+        </linearGradient>
+      </defs>
+      <rect width="1000" height="400" fill="url(#osky)"/>
+      <circle cx="170" cy="90" r="38" fill="#f3e9c6"/>
+      <!-- castelo de Osaka -->
+      <g transform="translate(500,0)">
+        <rect x="-220" y="300" width="440" height="100" fill="#3b3a44"/>
+        <path d="M-240 300 L240 300 L200 250 L-200 250 Z" fill="#4b4a56"/>
+        <g fill="#e9eef3">
+          <rect x="-150" y="215" width="300" height="38"/><rect x="-120" y="170" width="240" height="40"/><rect x="-90" y="128" width="180" height="38"/><rect x="-62" y="90" width="124" height="34"/><rect x="-40" y="56" width="80" height="30"/>
+        </g>
+        <g fill="#2a5a4a">
+          <path d="M-175 215 L175 215 L150 200 Q 0 190 -150 200 Z"/>
+          <path d="M-145 170 L145 170 L120 155 Q 0 146 -120 155 Z"/>
+          <path d="M-112 128 L112 128 L90 114 Q 0 106 -90 114 Z"/>
+          <path d="M-82 90 L82 90 L62 78 Q 0 70 -62 78 Z"/>
+          <path d="M-56 56 L56 56 L40 44 Q 0 34 -40 44 Z"/>
+          <path d="M-30 40 L30 40 L0 18 Z"/>
+        </g>
+        <g fill="#d6a53a">
+          <rect x="-150" y="212" width="300" height="3"/><rect x="-120" y="167" width="240" height="3"/><rect x="-90" y="125" width="180" height="3"/><rect x="-62" y="87" width="124" height="3"/><rect x="-40" y="53" width="80" height="3"/>
+          <circle cx="0" cy="16" r="4"/>
+        </g>
+      </g>
+      <!-- água / neon -->
+      <rect x="0" y="330" width="1000" height="70" fill="#0a0c18"/>
+      <g opacity=".7">
+        <rect x="60" y="340" width="4" height="50" fill="#ff5fa2"/><rect x="120" y="340" width="4" height="50" fill="#5fd3ff"/><rect x="860" y="340" width="4" height="50" fill="#ffd25f"/><rect x="930" y="340" width="4" height="50" fill="#ff5fa2"/>
+      </g>
+      <!-- prédios laterais -->
+      <g fill="#171428">
+        <rect x="0" y="230" width="70" height="110"/><rect x="80" y="260" width="50" height="80"/><rect x="140" y="210" width="60" height="130"/><rect x="800" y="240" width="60" height="100"/><rect x="870" y="200" width="50" height="140"/><rect x="930" y="250" width="70" height="90"/>
+      </g>
+      <g fill="#ffd27a" opacity=".8"><rect x="15" y="245" width="5" height="6"/><rect x="40" y="260" width="5" height="6"/><rect x="155" y="225" width="5" height="6"/><rect x="175" y="250" width="5" height="6"/><rect x="885" y="215" width="5" height="6"/><rect x="950" y="265" width="5" height="6"/></g>
+    </svg>
+    <div class="cap">Osaka</div><div class="sub">09/01 → 12/01 · 3 noites</div>
+  </div>
+  <div class="body">
+    <p class="dest-text">Osaka é o contraponto perfeito para fechar a viagem: menos reverente, mais barulhenta, apaixonada por comida. A cidade cunhou a palavra kuidaore, “comer até cair”, e leva isso a sério em Dotonbori, onde o letreiro do Glico Man ilumina um rio de barracas de takoyaki, okonomiyaki e espetinhos kushikatsu. De dia, o Castelo de Osaka reconta a unificação do Japão e o mirante do Umeda Sky Building entrega o pôr do sol mais bonito da região. Para um casal que gosta de dia cheio, o roteiro reserva um dia inteiro ao Universal Studios Japan, com o Super Nintendo World, e um tour guiado por Shinsekai, Shitenno-ji e o mercado Kuromon. A hospedagem em Namba coloca tudo a pé e deixa o trem para o aeroporto de Kansai a quarenta minutos de distância, para o embarque rumo ao stopover.</p>
+    <div class="hotel-card">
+      <div class="top">
+        <div><div class="name">Citadines Namba Osaka</div><div class="stars">★★★★</div></div>
+        <div class="score"><b>9,1</b>mais de 3 mil avaliações</div>
+      </div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Studio deluxe, cama de casal, com kitchenette</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã incluso</div></div>
+        <div class="wide"><div class="k">Endereço</div><div class="v">3-5-25 Nippombashi, Naniwa-ku, Osaka 556-0005 · entre o mercado Kuromon e a estação Namba (5 min a pé)</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">09/01/2027 → 12/01/2027 · 3 noites</div></div>
+        <div><div class="k">Por que ele</div><div class="v">Quartos amplos para o padrão japonês, lavanderia no hotel e Dotonbori a 10 minutos a pé</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 09 · SERVIÇOS ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Serviços</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Experiências e serviços</div>
+    <h2 class="h2">Passeios, ingressos e extras</h2>
+    <p class="lead" style="margin-bottom:2mm">Valores para o casal (2 pessoas), em reais, consultados em 09/10/2026. Tours regulares em grupo pequeno, com guia em inglês ou espanhol; versão privativa com guia em português sob consulta.</p>
+
+    <div class="svc-h">Tóquio e arredores</div>
+    <div class="svc-row"><span class="n">Visita guiada por Tóquio <small>8h · Asakusa, Meiji, Harajuku, Shibuya</small></span><span class="p">R$ 451,86</span></div>
+    <div class="svc-row"><span class="n">Excursão ao Monte Fuji, lago Kawaguchi e pagode Chureito <small>9h</small></span><span class="p">R$ 531,60</span></div>
+    <div class="svc-row"><span class="n">Excursão a Nikko <small>11h · Toshogu, lago Chuzenji, cascata Kegon</small></span><span class="p">R$ 382,75</span></div>
+    <div class="svc-row"><span class="n">Ingresso TeamLab Planets Tokyo</span><span class="p">R$ 180,36</span></div>
+    <div class="svc-row"><span class="n">Ingresso do mirante Tokyo Skytree</span><span class="p">R$ 117,50</span></div>
+    <div class="svc-row"><span class="n">Leilão de atum em Toyosu (galeria pública) + free tour por Tsukiji <small>29/12</small></span><span class="p free">sem custo</span></div>
+    <div class="svc-row"><span class="n">Free tours: santuário Meiji, Akihabara, Ginza <small>gorjeta ao guia</small></span><span class="p free">sem custo</span></div>
+
+    <div class="svc-h">Kyoto e Nara</div>
+    <div class="svc-row"><span class="n">Tour completo por Kyoto com ingressos <small>8h30</small></span><span class="p">R$ 645,61</span></div>
+    <div class="svc-row"><span class="n">Tour noturno por Gion <small>3h</small></span><span class="p">R$ 349,03</span></div>
+    <div class="svc-row"><span class="n">Tour de bicicleta por Kyoto <small>4h</small></span><span class="p">R$ 447,78</span></div>
+    <div class="svc-row"><span class="n">Tour gastronômico pelo mercado de Nishiki <small>2h</small></span><span class="p">R$ 349,98</span></div>
+    <div class="svc-row"><span class="n">Excursão a Nara e Uji <small>8h30</small></span><span class="p">R$ 645,61</span></div>
+    <div class="svc-row"><span class="n">Free tours: Fushimi Inari, Nanzen-ji e Caminho do Filósofo</span><span class="p free">sem custo</span></div>
+
+    <div class="svc-h">Osaka</div>
+    <div class="svc-row"><span class="n">Tour completo por Osaka com ingressos <small>6h30</small></span><span class="p">R$ 510,12</span></div>
+    <div class="svc-row"><span class="n">Ingresso Universal Studios Japan <small>1 dia · inclui Super Nintendo World</small></span><span class="p">R$ 446,44</span></div>
+    <div class="svc-sub"><span>Subtotal passeios e ingressos (casal)</span><b>R$ 5.058,64</b></div>
+
+    <div class="svc-h">Transporte interno <span style="color:var(--mut);font-weight:500;letter-spacing:0;text-transform:none">· estimativa por pessoa</span></div>
+    <div class="svc-row"><span class="n">Trem expresso aeroporto → Shinjuku e passe de metrô 72h</span><span class="p">¥ 4.750</span></div>
+    <div class="svc-row"><span class="n">Hakone Free Pass 2 dias + Romancecar panorâmico</span><span class="p">¥ 7.300</span></div>
+    <div class="svc-row"><span class="n">Shinkansen Odawara → Kyoto, assento reservado</span><span class="p">¥ 12.200</span></div>
+    <div class="svc-row"><span class="n">Kyoto → Osaka, Osaka → aeroporto Kansai, entrega de mala Tóquio → Kyoto</span><span class="p">¥ 4.880</span></div>
+    <div class="svc-row"><span class="n">Recarga do cartão IC (metrôs e ônibus locais)</span><span class="p">¥ 5.000</span></div>
+    <div class="svc-sub"><span>Subtotal transporte interno (por pessoa)</span><b>¥ 34.130 ≈ R$ 1.130</b></div>
+
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 10 · VALORES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Valores</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Investimento</div>
+    <h2 class="h2">Valores</h2>
+    <div class="val-note">*Valores em R$ por pessoa, base 2 adultos em quarto duplo</div>
+    <div class="val-row"><span class="lbl">Hotelaria<small>16 noites em 4 hotéis · café da manhã incluso · Hakone com jantar kaiseki</small></span><span class="amt">R$ 9.000,59</span></div>
+    <div class="val-row"><span class="lbl">Aéreo internacional*<small>São Paulo → Tóquio / Osaka → São Paulo · econômica · 1 conexão · stopover na volta</small></span><span class="amt">R$ 10.500,00</span></div>
+    <div class="val-row"><span class="lbl">Seguro de viagem*<small>21 dias · despesas médicas USD 60.000</small></span><span class="amt">R$ 750,00</span></div>
+    <div class="val-row"><span class="lbl">Passeios e ingressos<small>13 experiências guiadas e ingressos, conforme página de serviços</small></span><span class="amt">R$ 2.529,32</span></div>
+    <div class="val-row"><span class="lbl">Transporte interno*<small>Romancecar, Hakone Free Pass, Shinkansen, trens locais e entrega de mala</small></span><span class="amt">R$ 1.130,00</span></div>
+    <div class="val-total">
+      <span class="lbl">TOTAL / PESSOA<small>Casal: R$ 47.819,82</small></span>
+      <span class="amt">R$ 23.909,91<small>por pessoa</small></span>
+    </div>
+    <div class="val-fx">
+      Cotação 09/10 · USD = 5,01 · JPY = 0,033<br>
+      <b>*Nada reservado, apenas cotado</b><br>
+      Hotelaria e passeios: tarifas públicas consultadas em 09/10/2026, sujeitas a disponibilidade no momento da reserva.<br>
+      *Aéreo, seguro e transporte interno são estimativas de mercado para o período de alta temporada; o valor exato é confirmado na emissão. O aéreo de fim de ano é o item que mais varia: quanto antes emitir, menor o preço.<br>
+      Não inclusos: refeições não mencionadas, hotel e passeios do stopover, taxas de hospedagem municipais pagas no hotel e despesas pessoais.
+    </div>
+
+    <div class="cond" style="margin-top:12mm"><div class="cond-h">Seguro de viagem</div><div class="cond-t">Plano internacional de 21 dias com despesas médicas de USD 60.000, cobertura de bagagem e assistência 24h em português. Estimativa de R$ 750 por pessoa; o valor final depende da seguradora e da idade dos viajantes.</div></div>
+
+    <div class="cond"><div class="cond-h">Stopover no retorno · opcional</div><div class="cond-t">Duas noites em Doha, Dubai ou Istambul, conforme a companhia aérea emitida. Hotel 4★ e um passeio de meio dia costumam ficar entre R$ 2.500 e R$ 3.500 para o casal. Cotamos à parte assim que o aéreo for definido, sem alterar o restante do roteiro.</div></div>
+
+    <div class="cond"><div class="cond-h">Como fechar</div><div class="cond-t">1. Aprovação do roteiro e das datas · 2. Emissão do aéreo (item mais sensível ao tempo) · 3. Reserva dos hotéis e do ryokan, que lotam no Ano Novo · 4. Compra dos passeios e sorteio do leilão de atum · 5. Entrega do roteiro final com vouchers e mapa offline.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 11 · CONDIÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Condições</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Importante</div>
+    <h2 class="h2">Condições e Observações</h2>
+
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Hotelaria: até 10x sem acréscimos · Aéreo: até 6x sem acréscimos · PIX: desconto de 5–13% conforme o item.</div></div>
+
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Refeições além dos cafés da manhã e do jantar kaiseki em Hakone<br>· Taxa de hospedagem municipal de Tóquio, Kyoto e Osaka (de ¥100 a ¥1.000 por pessoa por noite, paga no hotel) e taxa de onsen em Hakone (¥150)<br>· Hotel e passeios do stopover (cotados à parte)<br>· Gorjetas opcionais nos free tours e despesas pessoais</div></div>
+
+    <div class="cond"><div class="cond-h">Documentação</div><div class="cond-t">Brasileiros estão isentos de visto para turismo no Japão por até 90 dias. Passaporte com validade mínima de 6 meses após o retorno. Pré-cadastro no Visit Japan Web antes do embarque agiliza imigração e alfândega. Em caso de stopover nos Emirados, Catar ou Turquia, brasileiros também entram sem visto prévio.</div></div>
+
+    <div class="cond"><div class="cond-h">O que o especialista precisa que vocês saibam</div><div class="cond-t">· <b>Ano Novo (31/12 a 03/01):</b> muitos museus, restaurantes e lojas pequenas fecham; templos e santuários ficam abertos e lotados, e é justamente isso que torna a data especial. Lojas de departamento reabrem em 02/01 com as “sacolas da sorte”.<br>· <b>Leilão de atum:</b> o mercado de Toyosu fecha de 31/12 a 04/01. Por isso ele está no dia 29/12. A visita é pela galeria pública, sem reserva; vagas na plataforma baixa dependem de sorteio prévio, que faremos por vocês.<br>· <b>Hakone Ekiden (02 e 03/01):</b> a maratona universitária mais famosa do Japão ocupa as estradas de Hakone pela manhã. A chegada foi programada para a tarde do dia 03.<br>· <b>Clima:</b> inverno seco, de 2 °C a 10 °C em Tóquio e Kyoto, mais frio em Hakone e Nikko. Céu limpo na maior parte dos dias e a melhor visibilidade do ano para o Fuji. Não há neve nas cidades, apenas eventualmente em Hakone e Nikko.<br>· <b>Idioma dos tours:</b> os passeios regulares são em inglês ou espanhol. Para guia em português, a opção é privativa, com custo adicional sob consulta.<br>· <b>Dinheiro e conexão:</b> cartão é aceito na maioria dos lugares, mas templos e barracas pedem dinheiro. Recomendamos eSIM de dados e o cartão Suica no celular.</div></div>
+
+    <div class="cond"><div class="cond-h">Opções para ajustar o investimento</div><div class="cond-t">· Retirar a excursão a Nikko e uma noite em Tóquio: cerca de R$ 1.900 a menos para o casal<br>· Reduzir Osaka para 2 noites: cerca de R$ 840 a menos<br>· Voltar direto, sem stopover: elimina o custo da etapa opcional<br>· Hotéis 3★ em Tóquio e Kyoto: de R$ 3.000 a R$ 4.000 a menos, mantendo a mesma localização</div></div>
+
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Valores sujeitos a confirmação e disponibilidade no momento da reserva. Tarifas aéreas de alta temporada mudam diariamente; a emissão antecipada garante o preço. Esta proposta tem validade de 7 dias.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
