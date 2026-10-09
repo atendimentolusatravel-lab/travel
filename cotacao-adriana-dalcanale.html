@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Adriana Dalcanale | Milão → Curitiba — LusaTravel</title>
+<style>
+/* ══════════════════════════════════════════════════════════════
+   LUSATRAVEL — COTAÇÃO SIMPLIFICADA · AÉREO (A3 Portrait, print-ready)
+   Baseado no template oficial (.claude/skills/proposta-lusa/assets/template.html)
+   ══════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap');
+
+:root{
+  --gold:#da8d00;        /* FIXO */
+  --dest:#730505;        /* Itália / Europa Mediterrânea */
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#9a8d80;
+  --line:#e4ddd2;
+  --paper:#faf7f2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page{
+  width:297mm; height:420mm; position:relative; overflow:hidden;
+  background:#fff; page-break-after:always; display:flex; flex-direction:column;
+}
+.page:last-child{ page-break-after:auto; }
+
+/* ── Cabeçalho ── */
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center;
+     justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+/* ── Masthead da capa compacta ── */
+.mh{ background:var(--ink); padding:11mm 22mm 10mm; flex-shrink:0; color:#fff; }
+.mh-top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:9mm; }
+.mh-top .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.mh-top .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.mh-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.mh-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); margin-top:7mm; }
+.mh-name{ font-size:32pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; color:#fff; }
+.mh-dest{ font-size:17pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.mh-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin-top:3mm; }
+.stats{ display:flex; gap:14mm; margin-top:7mm; }
+.stat b{ display:block; font-size:24pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
+
+/* ── Rodapé ── */
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center;
+     justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.2); }
+
+.body{ padding:10mm 22mm 8mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:3mm 0 6mm; }
+.lead{ font-size:10.5pt; line-height:1.65; color:var(--char); max-width:200mm; margin-bottom:8mm; }
+
+/* ── Cartão de opção ── */
+.opt{ border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-bottom:5mm;
+      display:grid; grid-template-columns:42mm 1fr 46mm; }
+.opt-l{ background:var(--paper); padding:5mm 5mm; border-right:1px solid var(--line); }
+.opt-no{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff;
+  font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.opt-air{ font-size:13pt; font-weight:700; color:var(--ink); margin-top:4mm; line-height:1.15; }
+.opt-cab{ display:inline-block; margin-top:3mm; padding:1.2mm 3mm; border-radius:3px;
+  font-size:7.5pt; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+.opt-cab.exec{ background:var(--dest); color:#fff; }
+.opt-cab.econ{ border:1.5px solid var(--dest); color:var(--dest); }
+.opt-fare{ font-size:8.5pt; font-weight:300; color:var(--char); margin-top:3mm; line-height:1.6; }
+.opt-fare b{ font-weight:600; color:var(--ink); }
+
+.opt-m{ padding:4mm 6mm; min-width:0; }
+.leg{ display:grid; grid-template-columns:22mm 1fr 30mm 12mm 28mm; gap:0 3mm; align-items:center;
+      padding:2.2mm 0; border-bottom:1px solid var(--line); }
+.leg:last-of-type{ border-bottom:none; }
+.leg .fl{ font-family:var(--lbl); font-weight:700; font-size:9pt; color:var(--ink); }
+.leg .fl .dt{ display:block; font-family:var(--sans); font-size:8pt; font-weight:600; color:var(--gold); margin-top:.5mm; }
+.leg .rt{ font-size:9.5pt; font-weight:500; color:var(--ink); line-height:1.3; }
+.leg .rt small{ font-weight:300; color:var(--mut); font-size:8.5pt; }
+.leg .tm{ font-size:9.5pt; white-space:nowrap; font-weight:600; color:var(--char); font-variant-numeric:tabular-nums; }
+.leg .tm small{ font-weight:300; color:var(--mut); font-size:8pt; }
+.leg .du{ font-size:9pt; font-weight:300; color:var(--char); font-variant-numeric:tabular-nums; }
+.leg .cb{ font-size:8.5pt; font-weight:300; color:var(--char); text-align:right; }
+.leg .cb b{ font-weight:600; color:var(--ink); }
+.conn{ font-size:8.5pt; color:var(--mut); padding:1.4mm 0 1.4mm 25mm; border-bottom:1px solid var(--line); }
+.conn b{ color:var(--dest); font-weight:600; }
+.leg-head{ display:grid; grid-template-columns:22mm 1fr 30mm 12mm 28mm; gap:0 3mm;
+  font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700;
+  padding-bottom:1.5mm; border-bottom:1.5px solid var(--line); margin-bottom:.5mm; }
+.leg-head .r{ text-align:right; }
+
+.opt-r{ background:var(--paper); border-left:1px solid var(--line); padding:5mm 5mm;
+  display:flex; flex-direction:column; justify-content:center; text-align:right; }
+.opt-r .lbl{ font-size:7.5pt; letter-spacing:.16em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.opt-r .brl{ font-size:15.5pt; font-weight:800; color:var(--ink); margin-top:1mm; letter-spacing:-.01em; white-space:nowrap; }
+.opt-r .eur{ font-size:11pt; font-weight:600; color:var(--gold); margin-top:1mm; white-space:nowrap; }
+.opt-r .meta{ font-size:8.5pt; font-weight:300; color:var(--char); margin-top:4mm; line-height:1.6; }
+.opt-r .meta b{ font-weight:600; color:var(--ink); }
+
+/* ── Divisor de cabine ── */
+.cab-h{ display:flex; align-items:center; gap:5mm; margin:4mm 0 5mm; }
+.cab-h .t{ font-size:12pt; font-weight:700; color:var(--ink); letter-spacing:.06em; text-transform:uppercase; }
+.cab-h .ln{ flex:1; height:1px; background:var(--line); }
+.cab-h .n{ font-size:8.5pt; color:var(--mut); }
+
+/* ── Resumo comparativo ── */
+table.sum{ width:100%; border-collapse:collapse; margin-top:2mm; }
+.sum th{ font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700;
+  text-align:left; padding:0 3mm 2.5mm 0; border-bottom:1.5px solid var(--line); }
+.sum td{ font-size:9.5pt; padding:2.6mm 3mm 2.6mm 0; border-bottom:1px solid var(--line); vertical-align:middle; color:var(--char); }
+.sum td.n{ width:10mm; }
+.sum .no{ width:8mm; height:8mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800;
+  font-size:9pt; display:inline-flex; align-items:center; justify-content:center; }
+.sum td.air{ font-weight:600; color:var(--ink); }
+.sum td.amt{ font-weight:700; color:var(--ink); text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.sum td.eur{ color:var(--gold); font-weight:600; text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.sum th.r{ text-align:right; }
+.sum td small{ font-weight:300; color:var(--mut); }
+.val-fx{ font-size:8.5pt; color:var(--mut); margin-top:4mm; line-height:1.6; }
+
+/* ── Observações / Condições ── */
+.cond{ margin-bottom:4mm; }
+.cond-h{ font-size:10.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5mm; }
+.cond-t{ font-size:9.5pt; line-height:1.7; color:var(--char); }
+.cond-t b{ font-weight:600; color:var(--ink); }
+.two{ display:grid; grid-template-columns:1fr 1fr; gap:0 14mm; margin-top:4mm; }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 01 · CAPA COMPACTA + OPÇÕES EXECUTIVA ══════════ -->
+<section class="page">
+  <div class="mh">
+    <div class="mh-top"><div class="logo">LUSATRAVEL</div><div class="tag">Cotação simplificada · Aéreo</div></div>
+    <div class="mh-kicker">Cotação para sua viagem</div>
+    <div class="mh-to">Sua viagem para:</div>
+    <div class="mh-name">Adriana Dalcanale</div>
+    <div class="mh-dest">Milão → Curitiba</div>
+    <div class="mh-basis">Baseado em 1 passageiro · Saída 12 de outubro de 2026 · Somente ida</div>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>Opções</span></div>
+      <div class="stat"><b>3</b><span>Companhias</span></div>
+      <div class="stat"><b>2</b><span>Cabines</span></div>
+      <div class="stat"><b>2</b><span>Bagagens despachadas</span></div>
+    </div>
+  </div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+    <div class="eyebrow">Opções de voo</div>
+    <h2 class="h2">Executiva</h2>
+
+    <!-- Opção 1 · TAP Executiva -->
+    <div class="opt">
+      <div class="opt-l">
+        <div class="opt-no">1</div>
+        <div class="opt-air">TAP Air Portugal</div>
+        <span class="opt-cab exec">Executiva</span>
+        <div class="opt-fare">Tarifa <b>TOP</b><br>Via Lisboa · 1 conexão</div>
+      </div>
+      <div class="opt-m">
+        <div class="leg-head"><span>Voo · Data</span><span>Trecho</span><span>Horário</span><span>Duração</span><span class="r">Cabine</span></div>
+        <div class="leg"><span class="fl">TP 825<span class="dt">12 out</span></span><span class="rt">Milão <small>MXP</small> → Lisboa <small>LIS</small></span><span class="tm">17:25 → 19:25</span><span class="du">3h00</span><span class="cb"><b>Executiva</b></span></div>
+        <div class="conn">Conexão em Lisboa · <b>17h30 · pernoite</b> (hospedagem não incluída)</div>
+        <div class="leg"><span class="fl">TP 67<span class="dt">13 out</span></span><span class="rt">Lisboa <small>LIS</small> → Curitiba <small>CWB</small></span><span class="tm">12:55 → 19:55</span><span class="du">11h00</span><span class="cb"><b>Executiva</b></span></div>
+      </div>
+      <div class="opt-r">
+        <div class="lbl">Por passageiro</div>
+        <div class="brl">R$ 14.812,28</div>
+        <div class="eur">€ 2.646,91</div>
+        <div class="meta">Tempo total <b>31h30</b><br>2 bagagens despachadas</div>
+      </div>
+    </div>
+
+    <!-- Opção 2 · Air France Executiva -->
+    <div class="opt">
+      <div class="opt-l">
+        <div class="opt-no">2</div>
+        <div class="opt-air">Air France</div>
+        <span class="opt-cab exec">Executiva</span>
+        <div class="opt-fare">Tarifa <b>BIZ</b><br>Via Paris e São Paulo · 2 conexões</div>
+      </div>
+      <div class="opt-m">
+        <div class="leg-head"><span>Voo · Data</span><span>Trecho</span><span>Horário</span><span>Duração</span><span class="r">Cabine</span></div>
+        <div class="leg"><span class="fl">AF 1231<span class="dt">12 out</span></span><span class="rt">Milão <small>MXP</small> → Paris <small>CDG</small></span><span class="tm">15:45 → 17:15</span><span class="du">1h30</span><span class="cb"><b>Executiva</b></span></div>
+        <div class="conn">Conexão em Paris · <b>6h20</b></div>
+        <div class="leg"><span class="fl">AF 454<span class="dt">12 out</span></span><span class="rt">Paris <small>CDG</small> → São Paulo <small>GRU</small></span><span class="tm">23:35 → 06:15 <small>+1</small></span><span class="du">11h40</span><span class="cb"><b>Executiva</b></span></div>
+        <div class="conn">Conexão em São Paulo · <b>3h20</b></div>
+        <div class="leg"><span class="fl">AF 1988<span class="dt">13 out</span></span><span class="rt">São Paulo <small>GRU</small> → Curitiba <small>CWB</small></span><span class="tm">09:35 → 10:45</span><span class="du">1h10</span><span class="cb">Econômica <small>· parceira*</small></span></div>
+      </div>
+      <div class="opt-r">
+        <div class="lbl">Por passageiro</div>
+        <div class="brl">R$ 15.240,90</div>
+        <div class="eur">€ 2.723,50</div>
+        <div class="meta">Tempo total <b>24h00</b><br>2 bagagens despachadas</div>
+      </div>
+    </div>
+
+    <!-- Opção 3 · ITA Executiva -->
+    <div class="opt">
+      <div class="opt-l">
+        <div class="opt-no">3</div>
+        <div class="opt-air">ITA Airways</div>
+        <span class="opt-cab exec">Executiva</span>
+        <div class="opt-fare">Tarifa <b>BUS</b><br>Via Roma e Rio · 2 conexões<br>Saída por Milão Linate</div>
+      </div>
+      <div class="opt-m">
+        <div class="leg-head"><span>Voo · Data</span><span>Trecho</span><span>Horário</span><span>Duração</span><span class="r">Cabine</span></div>
+        <div class="leg"><span class="fl">AZ 2061<span class="dt">12 out</span></span><span class="rt">Milão <small>LIN</small> → Roma <small>FCO</small></span><span class="tm">17:00 → 18:10</span><span class="du">1h10</span><span class="cb"><b>Executiva</b></span></div>
+        <div class="conn">Conexão em Roma · <b>4h00</b></div>
+        <div class="leg"><span class="fl">AZ 672<span class="dt">12 out</span></span><span class="rt">Roma <small>FCO</small> → Rio de Janeiro <small>GIG</small></span><span class="tm">22:10 → 05:05 <small>+1</small></span><span class="du">11h55</span><span class="cb"><b>Executiva</b></span></div>
+        <div class="conn">Conexão no Rio · <b>4h20</b></div>
+        <div class="leg"><span class="fl">AZ 6552<span class="dt">13 out</span></span><span class="rt">Rio de Janeiro <small>GIG</small> → Curitiba <small>CWB</small></span><span class="tm">09:25 → 11:00</span><span class="du">1h35</span><span class="cb">Econômica <small>· parceira*</small></span></div>
+      </div>
+      <div class="opt-r">
+        <div class="lbl">Por passageiro</div>
+        <div class="brl">R$ 29.433,02</div>
+        <div class="eur">€ 5.259,59</div>
+        <div class="meta">Tempo total <b>23h00</b><br>2 bagagens despachadas</div>
+      </div>
+    </div>
+
+    <div class="val-fx">* Trecho doméstico em codeshare, operado por companhia parceira, em cabine Econômica.<br>Horários locais · Cotação 09/10 · Euro = 5,60 · *Nada reservado, apenas cotado</div>
+  </div>
+
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 02 · OPÇÕES ECONÔMICA + RESUMO + CONDIÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Cotação simplificada · Aéreo</div></div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+    <div class="eyebrow">Opções de voo</div>
+    <h2 class="h2">Econômica</h2>
+
+    <!-- Opção 4 · TAP Econômica -->
+    <div class="opt">
+      <div class="opt-l">
+        <div class="opt-no">4</div>
+        <div class="opt-air">TAP Air Portugal</div>
+        <span class="opt-cab econ">Econômica</span>
+        <div class="opt-fare">Tarifa <b>TOP</b><br>Via Lisboa · 1 conexão</div>
+      </div>
+      <div class="opt-m">
+        <div class="leg-head"><span>Voo · Data</span><span>Trecho</span><span>Horário</span><span>Duração</span><span class="r">Cabine</span></div>
+        <div class="leg"><span class="fl">TP 825<span class="dt">12 out</span></span><span class="rt">Milão <small>MXP</small> → Lisboa <small>LIS</small></span><span class="tm">17:25 → 19:25</span><span class="du">3h00</span><span class="cb"><b>Econômica</b></span></div>
+        <div class="conn">Conexão em Lisboa · <b>17h30 · pernoite</b> (hospedagem não incluída)</div>
+        <div class="leg"><span class="fl">TP 67<span class="dt">13 out</span></span><span class="rt">Lisboa <small>LIS</small> → Curitiba <small>CWB</small></span><span class="tm">12:55 → 19:55</span><span class="du">11h00</span><span class="cb"><b>Econômica Premium</b></span></div>
+      </div>
+      <div class="opt-r">
+        <div class="lbl">Por passageiro</div>
+        <div class="brl">R$ 13.006,29</div>
+        <div class="eur">€ 2.324,19</div>
+        <div class="meta">Tempo total <b>31h30</b><br>2 bagagens despachadas</div>
+      </div>
+    </div>
+
+    <!-- Opção 5 · ITA Econômica -->
+    <div class="opt">
+      <div class="opt-l">
+        <div class="opt-no">5</div>
+        <div class="opt-air">ITA Airways</div>
+        <span class="opt-cab econ">Econômica</span>
+        <div class="opt-fare">Tarifa <b>PRE</b><br>Via Roma e Rio · 2 conexões<br>Saída por Milão Linate</div>
+      </div>
+      <div class="opt-m">
+        <div class="leg-head"><span>Voo · Data</span><span>Trecho</span><span>Horário</span><span>Duração</span><span class="r">Cabine</span></div>
+        <div class="leg"><span class="fl">AZ 2061<span class="dt">12 out</span></span><span class="rt">Milão <small>LIN</small> → Roma <small>FCO</small></span><span class="tm">17:00 → 18:10</span><span class="du">1h10</span><span class="cb"><b>Econômica</b></span></div>
+        <div class="conn">Conexão em Roma · <b>4h00</b></div>
+        <div class="leg"><span class="fl">AZ 672<span class="dt">12 out</span></span><span class="rt">Roma <small>FCO</small> → Rio de Janeiro <small>GIG</small></span><span class="tm">22:10 → 05:05 <small>+1</small></span><span class="du">11h55</span><span class="cb"><b>Econômica Premium</b></span></div>
+        <div class="conn">Conexão no Rio · <b>4h20</b></div>
+        <div class="leg"><span class="fl">AZ 6552<span class="dt">13 out</span></span><span class="rt">Rio de Janeiro <small>GIG</small> → Curitiba <small>CWB</small></span><span class="tm">09:25 → 11:00</span><span class="du">1h35</span><span class="cb">Econômica <small>· parceira*</small></span></div>
+      </div>
+      <div class="opt-r">
+        <div class="lbl">Por passageiro</div>
+        <div class="brl">R$ 15.821,40</div>
+        <div class="eur">€ 2.827,24</div>
+        <div class="meta">Tempo total <b>23h00</b><br>2 bagagens despachadas</div>
+      </div>
+    </div>
+
+    <div class="val-fx" style="margin-top:0">* Trecho doméstico em codeshare, operado por companhia parceira, em cabine Econômica.</div>
+
+    <!-- Resumo -->
+    <div style="margin-top:5mm">
+      <div class="eyebrow">Investimento</div>
+      <h2 class="h2">Resumo das opções</h2>
+      <table class="sum">
+        <thead><tr><th></th><th>Companhia</th><th>Cabine</th><th>Rota</th><th>Tempo total</th><th class="r">Euro</th><th class="r">Reais</th></tr></thead>
+        <tbody>
+          <tr><td class="n"><span class="no">4</span></td><td class="air">TAP Air Portugal</td><td>Econômica <small>/ Premium</small></td><td>Milão MXP · Lisboa · Curitiba</td><td>31h30 <small>· pernoite</small></td><td class="eur">€ 2.324,19</td><td class="amt">R$ 13.006,29</td></tr>
+          <tr><td class="n"><span class="no">1</span></td><td class="air">TAP Air Portugal</td><td>Executiva</td><td>Milão MXP · Lisboa · Curitiba</td><td>31h30 <small>· pernoite</small></td><td class="eur">€ 2.646,91</td><td class="amt">R$ 14.812,28</td></tr>
+          <tr><td class="n"><span class="no">2</span></td><td class="air">Air France</td><td>Executiva</td><td>Milão MXP · Paris · São Paulo · Curitiba</td><td>24h00</td><td class="eur">€ 2.723,50</td><td class="amt">R$ 15.240,90</td></tr>
+          <tr><td class="n"><span class="no">5</span></td><td class="air">ITA Airways</td><td>Econômica <small>/ Premium</small></td><td>Milão LIN · Roma · Rio · Curitiba</td><td>23h00</td><td class="eur">€ 2.827,24</td><td class="amt">R$ 15.821,40</td></tr>
+          <tr><td class="n"><span class="no">3</span></td><td class="air">ITA Airways</td><td>Executiva</td><td>Milão LIN · Roma · Rio · Curitiba</td><td>23h00</td><td class="eur">€ 5.259,59</td><td class="amt">R$ 29.433,02</td></tr>
+        </tbody>
+      </table>
+      <div class="val-fx">Valores por passageiro, tarifa + taxas, em ordem crescente de preço · Cotação 09/10 · Euro = 5,60<br>*Nada reservado, apenas cotado · **Valores finais de acordo com a cotação na data de fechamento</div>
+    </div>
+
+    <!-- Condições -->
+    <div class="two">
+      <div>
+        <div class="cond"><div class="cond-h">Importante</div><div class="cond-t">· Disponibilidade limitada na tarifa cotada: algumas opções têm <b>apenas 1 assento</b> no valor indicado.<br>· Nas opções TAP, a conexão em Lisboa é de <b>17h30 com pernoite</b>; hospedagem não está incluída.<br>· Nas opções ITA, o embarque é por <b>Milão Linate (LIN)</b>, não Malpensa.<br>· Nas opções Executiva, o trecho doméstico final (São Paulo ou Rio → Curitiba) é operado em cabine Econômica.</div></div>
+      </div>
+      <div>
+        <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Aéreo internacional: até 6x sem acréscimos · Desconto para pagamento via PIX sob consulta</div></div>
+        <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Seguro de viagem<br>· Hospedagem e despesas durante conexões<br>· Marcação de assento, quando cobrada pela companhia<br>· Despesas pessoais</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
