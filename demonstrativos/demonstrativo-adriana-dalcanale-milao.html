@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Demonstrativo de Despesas · Adriana Dalcanale · Milão</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#1f4d3a;      /* verde Lusa — fundo de cabeçalho e faixas */
+    --green-deep:#153527; /* verde profundo — rodapé */
+    --green-soft:#eaf1ec; /* verde claro — linhas zebradas */
+    --gold:#da8d00;       /* ouro fixo do Design System */
+    --gold-soft:#fbf3e3;
+    --ink:#1a1510;
+    --text:#333131;
+    --muted:#6b6762;
+    --line:#d9d5cf;
+    --pri:'Poppins',Arial,Helvetica,sans-serif;
+    --con:'Montserrat',Arial,Helvetica,sans-serif;
+  }
+  @page{ size:A4 portrait; margin:0; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:#fff; color:var(--text); font-family:var(--pri); font-size:10pt; line-height:1.45;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:210mm; height:297mm; display:flex; flex-direction:column; position:relative; overflow:hidden; }
+
+  /* ── Cabeçalho ── */
+  .hd{ background:var(--green); padding:0 18mm; height:30mm; display:flex; align-items:center; justify-content:space-between; }
+  .logo{ display:flex; flex-direction:column; line-height:1; }
+  .logo .mark{ font-size:21pt; font-weight:800; letter-spacing:.10em; color:var(--gold); }
+  .logo .sub{ font-family:var(--con); font-size:6.5pt; letter-spacing:.34em; text-transform:uppercase; color:rgba(255,255,255,.55); margin-top:2.2mm; }
+  .hd-right{ text-align:right; color:#fff; }
+  .hd-right .doc{ font-size:13pt; font-weight:600; letter-spacing:.06em; text-transform:uppercase; }
+  .hd-right .meta{ font-family:var(--con); font-size:8pt; color:rgba(255,255,255,.7); margin-top:1.5mm; }
+  .goldbar{ height:2.6mm; background:var(--gold); }
+
+  .body{ padding:9mm 18mm 6mm; flex:1; }
+
+  /* ── Bloco cliente / agência ── */
+  .parties{ display:grid; grid-template-columns:1fr 1fr; gap:10mm; margin-bottom:7mm; }
+  .eyebrow{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:2mm; }
+  .party .name{ font-size:13pt; font-weight:700; color:var(--ink); text-transform:uppercase; letter-spacing:.02em; line-height:1.2; }
+  .party .det{ font-size:8.8pt; color:var(--muted); margin-top:1.5mm; line-height:1.55; }
+  .party .det b{ color:var(--text); font-weight:500; }
+
+  /* ── Resumo da reserva ── */
+  .card{ border:1px solid var(--line); border-left:4px solid var(--green); border-radius:3px; padding:4mm 6mm; margin-bottom:6.5mm; background:#fff; }
+  .card .hotel{ font-size:12.5pt; font-weight:700; color:var(--ink); }
+  .card .stars{ color:var(--gold); letter-spacing:.1em; font-size:9pt; margin-left:2mm; }
+  .card .addr{ font-size:8.8pt; color:var(--muted); margin-top:.8mm; }
+  .grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:4mm; margin-top:3.5mm; }
+  .kv .k{ font-family:var(--con); font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+  .kv .v{ font-size:9.5pt; font-weight:600; color:var(--ink); margin-top:.6mm; }
+  .rooms{ margin-top:3.5mm; border-top:1px dashed var(--line); padding-top:3mm; display:grid; grid-template-columns:1fr 1fr; gap:4mm; }
+  .room .t{ font-size:9.5pt; font-weight:600; color:var(--green); }
+  .room .g{ font-size:8.8pt; color:var(--text); margin-top:.6mm; font-weight:300; }
+  .room .g span{ display:block; }
+
+  /* ── Tabela de despesas ── */
+  table{ width:100%; border-collapse:collapse; }
+  thead th{ background:var(--green); color:#fff; font-family:var(--con); font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase;
+    font-weight:600; padding:3.2mm 4mm; text-align:left; }
+  thead th.num, td.num{ text-align:right; white-space:nowrap; }
+  tbody td{ padding:3mm 4mm; border-bottom:1px solid var(--line); vertical-align:top; font-size:9.5pt; }
+  tbody tr:nth-child(even) td{ background:var(--green-soft); }
+  td .d1{ font-weight:600; color:var(--ink); }
+  td .d2{ font-size:8.5pt; color:var(--muted); margin-top:.5mm; font-weight:300; }
+  .tot{ display:flex; justify-content:flex-end; margin-top:3mm; }
+  .tot-box{ min-width:92mm; }
+  .tot-row{ display:flex; justify-content:space-between; padding:1.6mm 4mm; font-size:9.5pt; color:var(--muted); }
+  .tot-row.grand{ background:var(--ink); color:#fff; border-left:5px solid var(--gold); padding:3mm 4mm; margin-top:1mm; align-items:baseline; }
+  .tot-row.grand .l{ font-size:8pt; letter-spacing:.2em; text-transform:uppercase; font-weight:600; color:rgba(255,255,255,.75); }
+  .tot-row.grand .a{ font-size:17pt; font-weight:800; color:var(--gold); letter-spacing:.01em; }
+
+  /* ── Observações ── */
+  .obs{ margin-top:6mm; background:var(--gold-soft); border-left:4px solid var(--gold); padding:3.5mm 6mm; border-radius:2px; }
+  .obs .h{ font-size:8pt; letter-spacing:.2em; text-transform:uppercase; font-weight:700; color:var(--ink); margin-bottom:2mm; }
+  .obs ul{ list-style:none; }
+  .obs li{ font-size:8.8pt; color:var(--text); padding-left:4mm; position:relative; margin-bottom:1.2mm; font-weight:300; }
+  .obs li::before{ content:""; position:absolute; left:0; top:1.9mm; width:1.6mm; height:1.6mm; background:var(--gold); border-radius:50%; }
+  .obs li b{ font-weight:600; }
+
+  /* ── Assinatura ── */
+  .sign{ margin-top:8mm; display:flex; justify-content:space-between; align-items:flex-end; }
+  .sign .who{ font-size:9pt; }
+  .sign .who .n{ font-weight:600; color:var(--ink); }
+  .sign .who .r{ font-size:8pt; color:var(--muted); }
+  .sign .line{ width:70mm; border-top:1px solid var(--ink); padding-top:1.5mm; font-size:7.5pt; color:var(--muted); text-align:center; font-family:var(--con); letter-spacing:.1em; text-transform:uppercase; }
+
+  /* ── Rodapé ── */
+  .ft{ margin-top:auto; background:var(--green-deep); border-top:2.6mm solid var(--gold); padding:4mm 18mm; display:flex; justify-content:space-between; align-items:center; }
+  .ft .co{ font-family:var(--con); font-size:7.5pt; color:rgba(255,255,255,.55); line-height:1.5; }
+  .ft .co b{ color:rgba(255,255,255,.85); font-weight:600; }
+  .ft .ct{ text-align:right; font-family:var(--con); font-size:8.5pt; line-height:1.6; }
+  .ft .ct a{ color:#fff; text-decoration:none; }
+  .ft .ct .gold{ color:var(--gold); font-weight:600; }
+</style>
+</head>
+<body>
+<section class="page">
+
+  <div class="hd">
+    <div class="logo">
+      <div class="mark">LUSATRAVEL</div>
+      <div class="sub">Viagens e Turismo</div>
+    </div>
+    <div class="hd-right">
+      <div class="doc">Demonstrativo de Despesas</div>
+      <div class="meta">Emissão: 09/10/2026 &nbsp;·&nbsp; Ref.: TQUBB / JTPD71</div>
+    </div>
+  </div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+
+    <div class="parties">
+      <div class="party">
+        <div class="eyebrow">Cliente</div>
+        <div class="name">Sra. Adriana Dias Dalcanale</div>
+        <div class="det">Hóspede principal · Nacionalidade: Brasil<br>Viagem: <b>Milão, Itália</b> · 09 a 12 de outubro de 2026</div>
+      </div>
+      <div class="party">
+        <div class="eyebrow">Agência</div>
+        <div class="name">LusaTravel</div>
+        <div class="det">Consultora: <b>Claudia Zattar</b><br>Rua Grã Nicco, 113 · Bloco 2 · Cj. 102 · Curitiba – PR · 81200-200</div>
+      </div>
+    </div>
+
+    <div class="eyebrow">Serviço contratado</div>
+    <div class="card">
+      <div class="hotel">Hotel Dei Cavalieri Milano Duomo</div>
+      <div class="addr">Piazza Giuseppe Missori, 1 · Milão · Itália</div>
+      <div class="grid">
+        <div class="kv"><div class="k">Check-in</div><div class="v">09/10/2026</div></div>
+        <div class="kv"><div class="k">Check-out</div><div class="v">12/10/2026</div></div>
+        <div class="kv"><div class="k">Noites</div><div class="v">3 noites · 2 quartos</div></div>
+        <div class="kv"><div class="k">Regime</div><div class="v">Café da manhã</div></div>
+      </div>
+      <div class="grid" style="margin-top:3mm">
+        <div class="kv"><div class="k">Hóspedes</div><div class="v">3 adultos</div></div>
+        <div class="kv"><div class="k">Conf. hotel</div><div class="v">247232 · 247233</div></div>
+        <div class="kv"><div class="k">Conf. operadora</div><div class="v">JTPD71</div></div>
+        <div class="kv"><div class="k">Status</div><div class="v">Emitida · voucher</div></div>
+      </div>
+      <div class="rooms">
+        <div class="room">
+          <div class="t">Quarto 1 · Superior Room</div>
+          <div class="g"><span>Sra. Adriana Dias Dalcanale</span><span>Sra. Regina Celia Dias Dalcanale</span></div>
+        </div>
+        <div class="room">
+          <div class="t">Quarto 2 · Classic Single Room</div>
+          <div class="g"><span>Sra. Priscila Dias Dalcanale</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="eyebrow">Demonstrativo</div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:52%">Descrição</th>
+          <th>Período</th>
+          <th class="num">Qtd.</th>
+          <th class="num">Valor (R$)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="d1">Hospedagem · Hotel Dei Cavalieri Milano Duomo</div>
+            <div class="d2">Quarto Superior (2 adultos) + Quarto Classic Single (1 adulto) · café da manhã incluído · tarifa pré-paga</div>
+          </td>
+          <td>09/10 – 12/10/2026</td>
+          <td class="num">3 noites</td>
+          <td class="num">14.845,23</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="tot">
+      <div class="tot-box">
+        <div class="tot-row"><span>Subtotal hospedagem</span><span>R$ 14.845,23</span></div>
+        <div class="tot-row"><span>Taxas e serviços adicionais</span><span>R$ 0,00</span></div>
+        <div class="tot-row grand"><span class="l">Total</span><span class="a">R$ 14.845,23</span></div>
+      </div>
+    </div>
+
+    <div class="obs">
+      <div class="h">Observações</div>
+      <ul>
+        <li><b>Não incluso:</b> taxa de turismo municipal, estimada pelo hotel em <b>EUR 30,00 por quarto</b>, paga diretamente na recepção na chegada.</li>
+        <li><b>Estacionamento</b> opcional no hotel: EUR 26,00 por diária, pago no local.</li>
+        <li>Check-in a partir das 15h · Check-out até 12h · Apresentar passaporte válido no check-in.</li>
+        <li>Tarifa <b>pré-paga e não reembolsável</b>; alterações de nome ou datas sujeitas à aprovação do hotel.</li>
+      </ul>
+    </div>
+
+    <div class="sign">
+      <div class="who">
+        <div class="n">Claudia Zattar</div>
+        <div class="r">Consultora de viagens · LusaTravel</div>
+      </div>
+      <div class="line">Assinatura</div>
+    </div>
+
+  </div>
+
+  <div class="ft">
+    <div class="co">
+      <b>LUSA TRAVEL VIAGENS E TURISMO LTDA</b><br>
+      CNPJ 45.824.599/0001-16 · Curitiba – PR
+    </div>
+    <div class="ct">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br>
+      <a class="gold" href="https://wa.me/5541991896076">+55 41 99189-6076</a> &nbsp;·&nbsp; <a href="tel:+554131541117">41 3154-1117</a>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>
