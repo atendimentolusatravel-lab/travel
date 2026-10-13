@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lusa Travel · Cotação Canadá &amp; Nova York</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#404626; --green-dark:#363b1f; --green-soft:#5a6238;
+  --sage:#d9ead3; --sage-head:#c6d8b0;
+  --ink:#333131; --muted:#6f6f68; --line:#e7e7e0; --bg:#ffffff; --cream:#faf9f5;
+  --terra:#b4622f;
+  --shadow:0 10px 30px rgba(64,70,38,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{line-height:1.15}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:64px 56px}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+.muted{color:var(--muted)}
+
+/* ---------- HERO ---------- */
+.hero{padding:56px 56px 40px}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.hero h1 .amp{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-style:italic}
+.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
+.hero-img{margin:34px 0 0;height:340px;border-radius:14px;overflow:hidden;position:relative;
+  display:flex;align-items:flex-end;box-shadow:var(--shadow);
+  background:
+    radial-gradient(120% 130% at 12% 8%, rgba(120,150,190,.55), rgba(70,100,150,.15) 42%, transparent 60%),
+    radial-gradient(120% 130% at 92% 96%, rgba(190,80,70,.55), rgba(150,50,50,.2) 44%, transparent 64%),
+    linear-gradient(120deg, #2b3f5c 0%, #43617f 28%, #7d97ad 52%, #b9772f 82%, #9c3b26 100%);}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-img::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top, rgba(18,22,30,.6), rgba(18,22,30,.05) 55%, transparent)}
+.hero-img .cap{position:relative;z-index:2;padding:22px 26px;color:#fff}
+.hero-img .cap .k{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;opacity:.92}
+.hero-img .cap .t{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.55rem;font-weight:600;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
+.hero-info .r{text-align:right}
+.hero-info p{font-size:.95rem}
+
+/* glossary chips */
+.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);
+  border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
+.chip b{font-size:1.15rem;font-weight:700}
+.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
+.chip .ic svg{width:18px;height:18px}
+
+/* ---------- TIMELINE ---------- */
+.tl{margin-top:34px;border-left:2px solid var(--line);padding-left:0}
+.tl-item{display:grid;grid-template-columns:56px 1fr auto;gap:20px;padding:22px 0 22px 26px;position:relative;border-bottom:1px solid var(--line)}
+.tl-item:last-child{border-bottom:none}
+.tl-num{width:40px;height:40px;background:var(--green);color:#fff;border-radius:9px;display:grid;place-items:center;font-weight:700;font-size:1.05rem;margin-left:-27px}
+.tl-city{font-weight:600;font-size:1.12rem}
+.tl-country{color:var(--muted);font-size:.9rem}
+.tl-meta{color:var(--muted);font-size:.9rem;margin-top:4px}
+.tl-nights{text-align:right;font-weight:700;font-size:1.4rem;line-height:1}
+.tl-nights span{display:block;font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:2px}
+
+/* ---------- ROTEIRO DIA A DIA ---------- */
+.rday{display:flex;gap:22px;padding:24px 0;border-bottom:1px solid var(--line)}
+.rday:last-child{border-bottom:none}
+.rday .dnum{flex:none;width:74px;text-align:center}
+.rday .dnum .n{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.1rem;font-weight:700;color:var(--terra);line-height:1}
+.rday .dnum .dow{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.rday .dnum .dt{font-size:.72rem;font-weight:600;color:var(--green-soft);margin-top:2px}
+.rday .dbody{flex:1;min-width:0}
+.rday .dbody h4{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.32rem;font-weight:600;color:var(--green-dark);margin-bottom:6px}
+.rday .dbody p{font-size:.92rem;color:var(--ink)}
+.rday .dbody p b{color:var(--green-dark);font-weight:600}
+.cot{display:inline-block;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;background:var(--sage);color:var(--green-dark);padding:2px 8px;border-radius:20px;margin-left:4px;vertical-align:middle}
+
+/* ---------- AEREO ---------- */
+.air{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:18px;background:#fff;box-shadow:var(--shadow)}
+.air-head{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--green);color:#fff;padding:14px 22px}
+.air-head .dir{font-weight:700;letter-spacing:.14em;font-size:.78rem;text-transform:uppercase}
+.air-head .route{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;font-weight:600}
+.opt-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:26px;margin-bottom:2px}
+.opt-head h3{font-size:1.25rem;font-weight:700}
+.opt-head .badge{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;background:var(--sage);color:var(--green-dark);padding:5px 12px;border-radius:20px}
+.leg{display:grid;grid-template-columns:210px 1fr auto;gap:18px;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line)}
+.leg .fl{font-size:.78rem;color:var(--muted)}
+.leg .fl b{display:block;color:var(--ink);font-size:.92rem;font-weight:600}
+.leg .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.leg .pt .code{font-weight:700;font-size:1.05rem}
+.leg .pt .tm{font-size:.82rem;color:var(--muted)}
+.leg .arrow{color:var(--green-soft);flex:none}
+.leg .cls{text-align:right;font-size:.78rem}
+.leg .cls b{display:block;color:var(--green);font-size:.86rem}
+.cnx{display:flex;align-items:center;gap:8px;padding:9px 22px;background:#f4f5ef;font-size:.75rem;color:var(--muted);border-bottom:1px solid var(--line)}
+.cnx svg{width:14px;height:14px;flex:none;color:var(--green-soft)}
+.air-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;background:#f4f5ef}
+.air-foot .lbl{font-size:.78rem;color:var(--muted)}
+.air-foot .val{font-weight:700;font-size:1.3rem;color:var(--green)}
+
+/* ---------- HOTELS ---------- */
+.city-block{margin-top:36px}
+.city-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--green);padding-bottom:10px;margin-bottom:22px}
+.city-head h3{font-size:1.5rem;font-weight:700}
+.city-head .dates{color:var(--green-soft);font-weight:600;font-size:.92rem;letter-spacing:.04em}
+.hotel{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:18px;background:#fff;box-shadow:var(--shadow)}
+.hotel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 22px 16px}
+.hotel-name{font-size:1.12rem;font-weight:600;display:flex;align-items:center;gap:12px}
+.hotel-name .bldg{width:36px;height:36px;flex:none;border:1.6px solid var(--ink);border-radius:50%;display:grid;place-items:center}
+.hotel-name .bldg svg{width:18px;height:18px}
+.opt-tag{display:inline-block;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+  padding:4px 9px;border-radius:20px;margin-left:2px;vertical-align:middle;background:#efe7d6;color:#8a6d2f}
+.hotel-price{text-align:right;flex:none}
+.hotel-price .v{font-size:1.34rem;font-weight:700;color:var(--green)}
+.hotel-price .u{font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:2px 22px 8px}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;display:block;background:#eceadf}
+.rate{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 22px;border-top:1px solid var(--line)}
+.rate .rt{font-size:.9rem}
+.rate .rt b{font-weight:600;color:var(--green-dark)}
+.rate .rv{font-weight:700;font-size:1.05rem;color:var(--green);white-space:nowrap}
+
+/* generic service card */
+.svc{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:center;border:1px solid var(--line);
+  border-radius:14px;padding:18px 22px;margin-top:14px;background:#fff;box-shadow:var(--shadow)}
+.svc .ic{width:52px;height:52px;background:var(--green);border-radius:12px;display:grid;place-items:center;color:#fff}
+.svc .ic svg{width:24px;height:24px}
+.svc .t{font-weight:600;font-size:1.02rem}
+.svc .d{color:var(--muted);font-size:.86rem;margin-top:2px}
+.svc .p{text-align:right;font-weight:700;font-size:1.18rem;color:var(--green);white-space:nowrap}
+.flag-note{background:#fbf3e6;border:1px solid #e9d7b3;border-left:4px solid #c9a227;border-radius:8px;padding:12px 16px;margin-top:14px;font-size:.85rem;color:#6b5a2e}
+
+/* ---------- TABLE ---------- */
+.tbl-wrap{overflow-x:auto;margin-top:30px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:560px}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line)}
+.sec-row td{background:var(--sage);font-weight:700;text-align:center;letter-spacing:.04em;color:var(--green-dark)}
+.head-row td{background:#efeee7;font-weight:600;color:#4a4a44}
+.total-row td{background:#eef2e6;font-weight:700;font-size:1rem}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+
+/* ---------- PAYMENT / OBS ---------- */
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.pay h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
+.pay p{font-size:.9rem;margin-bottom:4px}
+.obs{margin-top:28px;font-size:.82rem;color:var(--muted)}
+.obs li{margin:6px 0 6px 18px}
+.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px;letter-spacing:.02em}
+
+/* ---------- FOOTER ---------- */
+.footer{background:var(--green);color:#fff;padding:44px 56px;position:relative;overflow:hidden}
+.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
+.footlogo{width:190px;height:auto;display:block;margin-bottom:14px}
+
+.sh .eyebrow{margin-bottom:10px;display:block}
+.brandbar{display:flex;flex-direction:column;align-items:center;gap:8px;padding:38px 0 6px}
+.brandbar .brandlogo{width:210px;height:auto;display:block}
+
+@media(max-width:720px){
+  .leg{grid-template-columns:1fr;gap:8px}
+  .air-head{flex-direction:column;align-items:flex-start;gap:2px}
+  .section,.hero,.footer{padding-left:24px;padding-right:24px}
+  .hero h1{font-size:2.2rem}
+  .hero-info{grid-template-columns:1fr}
+  .hero-info .r{text-align:left}
+  .pay{grid-template-columns:1fr}
+  .hotel-top{flex-direction:column}
+  .hotel-price{text-align:left}
+  .svc{grid-template-columns:1fr}
+  .svc .p{text-align:left}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ================= BRAND BAR ================= -->
+  <div class="brandbar">
+    <img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel — travel agency">
+  </div>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="eyebrow">Cotação para sua viagem</div>
+    <h1>CANADÁ <span class="amp">&amp;</span> NOVA YORK</h1>
+    <div class="accent-line"></div>
+    <p class="hero-sub">Montreal · Mont Tremblant · Nova York — <b>22 de novembro a 03 de dezembro de 2026</b></p>
+
+    <div class="hero-img">
+      <img src="img/capa.jpg" alt="Canadá &amp; Nova York" onerror="this.style.display='none'">
+      <div class="cap">
+        <div class="k">Rota da viagem</div>
+        <div class="t">Curitiba / São Paulo → Nova York → Montreal → Mont Tremblant → Nova York</div>
+      </div>
+    </div>
+
+    <div class="hero-info">
+      <div>
+        <div class="lbl">Detalhes da viagem</div>
+        <p>2 adultos · 9 noites · 3 cidades · esqui em Mont Tremblant</p>
+        <p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>27/08/2026</b> · valores em <b>BRL (2 ADT)</b> · Dólar: <b>USD 1 = R$ 5,21</b></p>
+      </div>
+      <div class="r">
+        <div class="lbl">Contato</div>
+        <p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p>
+      </div>
+    </div>
+
+    <div class="gloss">
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3"/><path d="M21 3v5h-5"/></svg></span><b>9</b>&nbsp;Noites</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>3</b>&nbsp;Cidades</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l7-7M8 4l3 3M14 6l4 4-9 9-4-1-1-4z"/></svg></span><b>Ski</b>&nbsp;Mont Tremblant</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16l20-7-9 13-2-6z"/></svg></span><b>2</b>&nbsp;Voos</div>
+    </div>
+  </header>
+
+  <!-- ================= TIMELINE ================= -->
+  <section class="section sh">
+    <span class="eyebrow">Resumo</span>
+    <h2>Roteiro</h2>
+    <div class="accent-line"></div>
+
+    <div class="tl">
+      <div class="tl-item"><div class="tl-num">1</div><div>
+        <div class="tl-city">Montreal</div><div class="tl-country">Quebec · Canadá</div>
+        <div class="tl-meta">23 – 25 nov · chegada via Nova York (EWR → YUL)</div></div>
+        <div class="tl-nights">2<span>Noites</span></div></div>
+      <div class="tl-item"><div class="tl-num">2</div><div>
+        <div class="tl-city">Mont Tremblant</div><div class="tl-country">Quebec · Canadá</div>
+        <div class="tl-meta">25 – 28 nov · esqui · conjunto completo + lift 2 dias</div></div>
+        <div class="tl-nights">3<span>Noites</span></div></div>
+      <div class="tl-item"><div class="tl-num">3</div><div>
+        <div class="tl-city">Nova York</div><div class="tl-country">EUA</div>
+        <div class="tl-meta">28 nov – 02 dez · Midtown Manhattan</div></div>
+        <div class="tl-nights">4<span>Noites</span></div></div>
+    </div>
+  </section>
+
+  <!-- ================= ROTEIRO DIA A DIA ================= -->
+  <section class="section sh">
+    <span class="eyebrow">Dia a dia</span>
+    <h2>Roteiro sugerido</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Uma sugestão de como aproveitar cada dia. Os itens marcados com <span class="cot">já cotado</span> fazem parte desta cotação; os demais são apenas sugestões de programas livres.</p>
+
+    <div style="margin-top:20px">
+      <div class="rday"><div class="dnum"><div class="n">01</div><div class="dow">Dom</div><div class="dt">22/11</div></div>
+        <div class="dbody"><h4>Embarque no Brasil</h4><p>Voo <b>Curitiba → São Paulo</b> (AA 7652, 19:40) <span class="cot">já cotado</span> e, à noite, o voo internacional <b>São Paulo → Nova York</b> (AA 950, 23:00) <span class="cot">já cotado</span>. Noite a bordo.</p></div></div>
+
+      <div class="rday"><div class="dnum"><div class="n">02</div><div class="dow">Seg</div><div class="dt">23/11</div></div>
+        <div class="dbody"><h4>Chegada &amp; conexão para Montreal</h4><p>Chegada a <b>Nova York (JFK)</b> às 07:00. Transfer de carro <b>JFK → Newark (EWR)</b> <span class="cot">já cotado</span> para o voo <b>EWR → Montreal (YUL)</b> (Air Canada, 15:30–17:07) <span class="cot">já cotado</span>. Transfer ao hotel <span class="cot">já cotado</span> e primeira noite em <b>Montreal</b>.</p></div></div>
+
+      <div class="rday"><div class="dnum"><div class="n">03</div><div class="dow">Ter</div><div class="dt">24/11</div></div>
+        <div class="dbody"><h4>Montreal</h4><p>Dia livre para explorar a <b>Vieux-Montréal</b>, a Basílica de <b>Notre-Dame</b>, o <b>Vieux-Port</b> e o mirante do <b>Mont Royal</b>. Sugestão: mercado Jean-Talon e a movimentada rua Sainte-Catherine.</p></div></div>
+
+      <div class="rday"><div class="dnum"><div class="n">04</div><div class="dow">Qua</div><div class="dt">25/11</div></div>
+        <div class="dbody"><h4>Montreal → Mont Tremblant</h4><p>Manhã e início de tarde em Montreal — sugestão: visitar o <b>Oratório São José</b>, curtir o boêmio <b>Plateau Mont-Royal</b> com um brunch pela rue Saint-Denis, ou uma última volta pela <b>Vieux-Montréal</b> com almoço no Vieux-Port. No <b>meio/fim da tarde</b>, seguimos para <b>Mont Tremblant</b> (±1h30), a charmosa vila alpina das Laurentides. Check-in e primeira caminhada pelo <b>pedestrian village</b> ao anoitecer.</p></div></div>
+
+      <div class="rday"><div class="dnum"><div class="n">05</div><div class="dow">Qui</div><div class="dt">26/11</div></div>
+        <div class="dbody"><h4>Esqui em Mont Tremblant · dia 1</h4><p>Primeiro dia de <b>esqui</b> com <b>conjunto completo</b> (esquis, bastões, botas e capacete) e <b>lift</b> <span class="cot">já cotado</span>. Pistas para todos os níveis e vistas incríveis da montanha.</p></div></div>
+
+      <div class="rday"><div class="dnum"><div class="n">06</div><div class="dow">Sex</div><div class="dt">27/11</div></div>
+        <div class="dbody"><h4>Esqui em Mont Tremblant · dia 2</h4><p>Segundo dia de <b>esqui</b> (lift de 2 dias) <span class="cot">já cotado</span>. À tarde, um bom <b>après-ski</b> na vila: cafés, chocolate quente e as lojinhas.</p></div></div>
+
+      <div class="rday"><div class="dnum"><div class="n">07</div><div class="dow">Sáb</div><div class="dt">28/11</div></div>
+        <div class="dbody"><h4>Mont Tremblant → Nova York</h4><p>Retorno a Montreal e voo <b>Montreal (YUL) → Newark (EWR)</b> (Air Canada, 15:00–16:53) <span class="cot">já cotado</span>. Transfer <b>EWR → hotel em Midtown</b> <span class="cot">já cotado</span> e primeira noite em <b>Nova York</b>.</p></div></div>
+
+      <div class="rday"><div class="dnum"><div class="n">08</div><div class="dow">Dom</div><div class="dt">29/11</div></div>
+        <div class="dbody"><h4>Nova York · clássicos</h4><p>Os ícones de Manhattan: <b>Times Square</b>, <b>Central Park</b>, o <b>Rockefeller</b> e a 5ª Avenida em pleno clima natalino.</p></div></div>
+
+      <div class="rday"><div class="dnum"><div class="n">09</div><div class="dow">Seg</div><div class="dt">30/11</div></div>
+        <div class="dbody"><h4>Nova York · arte &amp; passeios</h4><p>Museus (<b>MET</b>, MoMA), a <b>High Line</b> e o mirante em Hudson Yards. À noite, um musical na <b>Broadway</b>.</p></div></div>
+
+      <div class="rday"><div class="dnum"><div class="n">10</div><div class="dow">Ter</div><div class="dt">01/12</div></div>
+        <div class="dbody"><h4>Nova York · mirantes &amp; compras</h4><p><b>Estátua da Liberdade</b> e Ellis Island, o <b>One World Observatory</b> e Wall Street. Compras em SoHo e no Macy's.</p></div></div>
+
+      <div class="rday"><div class="dnum"><div class="n">11</div><div class="dow">Qua</div><div class="dt">02/12</div></div>
+        <div class="dbody"><h4>Último dia &amp; embarque</h4><p>Manhã livre para as últimas compras. Transfer <b>hotel → JFK</b> <span class="cot">já cotado</span> e voo <b>Nova York → São Paulo</b> (AA 951, 18:35) <span class="cot">já cotado</span>. Noite a bordo.</p></div></div>
+
+      <div class="rday"><div class="dnum"><div class="n">12</div><div class="dow">Qui</div><div class="dt">03/12</div></div>
+        <div class="dbody"><h4>Chegada ao Brasil</h4><p>Chegada a <b>São Paulo (GRU)</b> às 06:05 e voo de conexão <b>São Paulo → Curitiba</b> (GOL, 09:10–10:20) <span class="cot">já cotado</span>. Fim de uma viagem inesquecível.</p></div></div>
+    </div>
+
+    <p class="note" style="margin-top:22px">Obs.: os traslados <b>Montreal ⇄ Mont Tremblant</b> não estão incluídos nesta cotação — se quiserem, cotamos à parte.</p>
+  </section>
+
+  <!-- ================= AÉREO ================= -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Passagens aéreas</span>
+    <h2>Aéreo</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Dois voos · Classe Econômica · valores em BRL para <b>2 adultos</b>. Os dois compõem o trajeto completo (não é escolha).</p>
+
+    <!-- VOO INTERNACIONAL -->
+    <div class="opt-head"><h3>Voo internacional · American Airlines / GOL</h3><span class="badge">Curitiba ⇄ Nova York</span></div>
+    <div class="air">
+      <div class="air-head">
+        <div class="dir">Ida · 22 – 23 nov</div>
+        <div class="route">Curitiba → Nova York</div>
+      </div>
+      <div class="leg">
+        <div class="fl">American Airlines · AA 7652<b>CWB → GRU</b>Boeing 737 · 1h15</div>
+        <div class="rt">
+          <div class="pt"><div class="code">CWB</div><div class="tm">Curitiba · 22 nov 19:40</div></div>
+          <div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div>
+          <div class="pt"><div class="code">GRU</div><div class="tm">São Paulo · 22 nov 20:55</div></div>
+        </div>
+        <div class="cls"><b>Econômica</b>direto</div>
+      </div>
+      <div class="cnx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Conexão em São Paulo · 2h05</div>
+      <div class="leg">
+        <div class="fl">American Airlines · AA 950<b>GRU → JFK</b>Boeing 787-9 · 10h00</div>
+        <div class="rt">
+          <div class="pt"><div class="code">GRU</div><div class="tm">São Paulo · 22 nov 23:00</div></div>
+          <div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div>
+          <div class="pt"><div class="code">JFK</div><div class="tm">Nova York · 23 nov 07:00</div></div>
+        </div>
+        <div class="cls"><b>Econômica</b>direto</div>
+      </div>
+      <div class="air-head" style="margin-top:0">
+        <div class="dir">Volta · 02 – 03 dez</div>
+        <div class="route">Nova York → Curitiba</div>
+      </div>
+      <div class="leg">
+        <div class="fl">American Airlines · AA 951<b>JFK → GRU</b>Boeing 787-9 · 9h30</div>
+        <div class="rt">
+          <div class="pt"><div class="code">JFK</div><div class="tm">Nova York · 02 dez 18:35</div></div>
+          <div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div>
+          <div class="pt"><div class="code">GRU</div><div class="tm">São Paulo · 03 dez 06:05</div></div>
+        </div>
+        <div class="cls"><b>Econômica</b>direto</div>
+      </div>
+      <div class="cnx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Conexão em São Paulo · 3h05</div>
+      <div class="leg">
+        <div class="fl">GOL · G3 1168<b>GRU → CWB</b>Boeing 737-800 · 1h10</div>
+        <div class="rt">
+          <div class="pt"><div class="code">GRU</div><div class="tm">São Paulo · 03 dez 09:10</div></div>
+          <div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div>
+          <div class="pt"><div class="code">CWB</div><div class="tm">Curitiba · 03 dez 10:20</div></div>
+        </div>
+        <div class="cls"><b>Econômica</b>direto</div>
+      </div>
+      <div class="air-foot"><span class="lbl">American Airlines / GOL · Curitiba ⇄ Nova York · 2 adultos</span><span class="val">R$ 11.767,92 <small style="font-weight:500;font-size:.8rem;color:var(--muted)">· USD 2.285,48</small></span></div>
+    </div>
+
+    <!-- VOO REGIONAL -->
+    <div class="opt-head"><h3>Voo regional · Air Canada</h3><span class="badge">Newark ⇄ Montreal</span></div>
+    <div class="air">
+      <div class="air-head">
+        <div class="dir">Ida · 23 nov</div>
+        <div class="route">Newark → Montreal</div>
+      </div>
+      <div class="leg">
+        <div class="fl">Air Canada · AC 8497<b>EWR → YUL</b>Embraer 175 · 1h37</div>
+        <div class="rt">
+          <div class="pt"><div class="code">EWR</div><div class="tm">Newark · 23 nov 15:30</div></div>
+          <div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div>
+          <div class="pt"><div class="code">YUL</div><div class="tm">Montreal · 23 nov 17:07</div></div>
+        </div>
+        <div class="cls"><b>Econômica</b>direto</div>
+      </div>
+      <div class="air-head" style="margin-top:0">
+        <div class="dir">Volta · 28 nov</div>
+        <div class="route">Montreal → Newark</div>
+      </div>
+      <div class="leg">
+        <div class="fl">Air Canada · AC 4602<b>YUL → EWR</b>Embraer 175 · 1h53</div>
+        <div class="rt">
+          <div class="pt"><div class="code">YUL</div><div class="tm">Montreal · 28 nov 15:00</div></div>
+          <div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div>
+          <div class="pt"><div class="code">EWR</div><div class="tm">Newark · 28 nov 16:53</div></div>
+        </div>
+        <div class="cls"><b>Econômica</b>direto</div>
+      </div>
+      <div class="air-foot"><span class="lbl">Air Canada · Newark ⇄ Montreal · 2 adultos</span><span class="val">R$ 6.382,34 <small style="font-weight:500;font-size:.8rem;color:var(--muted)">· USD 1.236,78</small></span></div>
+    </div>
+  </section>
+
+  <!-- ================= HOTELS ================= -->
+  <section class="section sh">
+    <span class="eyebrow">Acomodações</span>
+    <h2>Hotéis</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Valores em <b>BRL para 2 adultos</b>. <b>Escolher 1 opção por cidade</b> (cada hotel com as tarifas disponíveis).</p>
+
+    <!-- MONTREAL -->
+    <div class="city-block">
+      <div class="city-head"><h3>Montreal</h3><span class="dates">23 – 25 NOV · 2 noites</span></div>
+      <div class="hotel"><div class="hotel-top">
+        <div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>DoubleTree by Hilton Montreal <span class="opt-tag">Hilton</span></span></div>
+        <div class="hotel-price"><div class="v">a partir de R$ 2.700</div><div class="u">2 adultos · 2 noites</div></div></div>
+        <div class="gallery">
+          <img src="img/hotels/doubletree-montreal/1.jpg" alt="doubletree-montreal" loading="lazy">
+          <img src="img/hotels/doubletree-montreal/2.jpg" alt="doubletree-montreal" loading="lazy">
+          <img src="img/hotels/doubletree-montreal/3.jpg" alt="doubletree-montreal" loading="lazy">
+          <img src="img/hotels/doubletree-montreal/4.jpg" alt="doubletree-montreal" loading="lazy">
+          <img src="img/hotels/doubletree-montreal/5.jpg" alt="doubletree-montreal" loading="lazy">
+          <img src="img/hotels/doubletree-montreal/6.jpg" alt="doubletree-montreal" loading="lazy">
+        </div>
+        <div class="rate"><span class="rt">Double Room · <b>Room only</b></span><span class="rv">R$ 2.700</span></div>
+        <div class="rate"><span class="rt">Room with King Bed · <b>Café da manhã</b></span><span class="rv">R$ 3.660</span></div></div>
+      <div class="hotel"><div class="hotel-top">
+        <div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Sofitel Montreal Golden Mile</span></div>
+        <div class="hotel-price"><div class="v">a partir de R$ 2.645</div><div class="u">2 adultos · 2 noites</div></div></div>
+        <div class="gallery">
+          <img src="img/hotels/sofitel-montreal/1.jpg" alt="sofitel-montreal" loading="lazy">
+          <img src="img/hotels/sofitel-montreal/2.jpg" alt="sofitel-montreal" loading="lazy">
+          <img src="img/hotels/sofitel-montreal/3.jpg" alt="sofitel-montreal" loading="lazy">
+          <img src="img/hotels/sofitel-montreal/4.jpg" alt="sofitel-montreal" loading="lazy">
+          <img src="img/hotels/sofitel-montreal/5.jpg" alt="sofitel-montreal" loading="lazy">
+          <img src="img/hotels/sofitel-montreal/6.jpg" alt="sofitel-montreal" loading="lazy">
+        </div>
+        <div class="rate"><span class="rt">Superior Room · <b>Room only</b></span><span class="rv">R$ 2.645</span></div>
+        <div class="rate"><span class="rt">Superior Room · <b>Café da manhã</b></span><span class="rv">R$ 3.565</span></div></div>
+    </div>
+
+    <!-- MONT TREMBLANT -->
+    <div class="city-block">
+      <div class="city-head"><h3>Mont Tremblant</h3><span class="dates">25 – 28 NOV · 3 noites</span></div>
+      <div class="hotel"><div class="hotel-top">
+        <div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Le Westin Tremblant</span></div>
+        <div class="hotel-price"><div class="v">a partir de R$ 3.907</div><div class="u">2 adultos · 3 noites</div></div></div>
+        <div class="gallery">
+          <img src="img/hotels/westin-tremblant/1.jpg" alt="westin-tremblant" loading="lazy">
+          <img src="img/hotels/westin-tremblant/2.jpg" alt="westin-tremblant" loading="lazy">
+          <img src="img/hotels/westin-tremblant/3.jpg" alt="westin-tremblant" loading="lazy">
+          <img src="img/hotels/westin-tremblant/4.jpg" alt="westin-tremblant" loading="lazy">
+          <img src="img/hotels/westin-tremblant/5.jpg" alt="westin-tremblant" loading="lazy">
+          <img src="img/hotels/westin-tremblant/6.jpg" alt="westin-tremblant" loading="lazy">
+        </div>
+        <div class="rate"><span class="rt">Traditional Room Fireplace · <b>Room only</b></span><span class="rv">R$ 3.907</span></div>
+        <div class="rate"><span class="rt">Traditional Room Fireplace · <b>Café da manhã</b></span><span class="rv">R$ 6.580</span></div></div>
+      <div class="hotel"><div class="hotel-top">
+        <div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Sommet des Neiges</span></div>
+        <div class="hotel-price"><div class="v">R$ 3.922</div><div class="u">2 adultos · 3 noites</div></div></div>
+        <div class="gallery">
+          <img src="img/hotels/sommet-tremblant/1.jpg" alt="sommet-tremblant" loading="lazy">
+          <img src="img/hotels/sommet-tremblant/2.jpg" alt="sommet-tremblant" loading="lazy">
+          <img src="img/hotels/sommet-tremblant/3.jpg" alt="sommet-tremblant" loading="lazy">
+          <img src="img/hotels/sommet-tremblant/4.jpg" alt="sommet-tremblant" loading="lazy">
+          <img src="img/hotels/sommet-tremblant/5.jpg" alt="sommet-tremblant" loading="lazy">
+          <img src="img/hotels/sommet-tremblant/6.jpg" alt="sommet-tremblant" loading="lazy">
+        </div>
+        <div class="rate"><span class="rt">Suite 1 Bedroom · 1 King Bed + 1 Double Sofa Bed · <b>Room only</b></span><span class="rv">R$ 3.922</span></div></div>
+    </div>
+
+    <!-- NOVA YORK -->
+    <div class="city-block">
+      <div class="city-head"><h3>Nova York</h3><span class="dates">28 NOV – 02 DEZ · 4 noites</span></div>
+      <div class="hotel"><div class="hotel-top">
+        <div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Fairfield Inn &amp; Suites · Midtown Manhattan/Penn Station</span></div>
+        <div class="hotel-price"><div class="v">R$ 8.936</div><div class="u">2 adultos · 4 noites</div></div></div>
+        <div class="gallery">
+          <img src="img/hotels/fairfield-ny/1.jpg" alt="fairfield-ny" loading="lazy">
+          <img src="img/hotels/fairfield-ny/2.jpg" alt="fairfield-ny" loading="lazy">
+          <img src="img/hotels/fairfield-ny/3.jpg" alt="fairfield-ny" loading="lazy">
+          <img src="img/hotels/fairfield-ny/4.jpg" alt="fairfield-ny" loading="lazy">
+          <img src="img/hotels/fairfield-ny/5.jpg" alt="fairfield-ny" loading="lazy">
+          <img src="img/hotels/fairfield-ny/6.jpg" alt="fairfield-ny" loading="lazy">
+        </div>
+        <div class="rate"><span class="rt">Room · 1 King Bed · <b>Café da manhã</b></span><span class="rv">R$ 8.936</span></div></div>
+      <div class="hotel"><div class="hotel-top">
+        <div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>EVEN Hotel New York · Midtown East <span class="opt-tag">IHG</span></span></div>
+        <div class="hotel-price"><div class="v">a partir de R$ 8.592</div><div class="u">2 adultos · 4 noites</div></div></div>
+        <div class="gallery">
+          <img src="img/hotels/even-ny/1.webp" alt="even-ny" loading="lazy">
+          <img src="img/hotels/even-ny/2.jpg" alt="even-ny" loading="lazy">
+          <img src="img/hotels/even-ny/3.jpg" alt="even-ny" loading="lazy">
+          <img src="img/hotels/even-ny/4.jpg" alt="even-ny" loading="lazy">
+          <img src="img/hotels/even-ny/5.jpg" alt="even-ny" loading="lazy">
+          <img src="img/hotels/even-ny/6.jpg" alt="even-ny" loading="lazy">
+        </div>
+        <div class="rate"><span class="rt">Standard Room · <b>Room only</b></span><span class="rv">R$ 8.592</span></div>
+        <div class="rate"><span class="rt">Standard Room · <b>Café da manhã</b></span><span class="rv">R$ 9.720</span></div></div>
+    </div>
+  </section>
+
+  <!-- ================= SERVIÇOS ================= -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Transfers &amp; esqui</span>
+    <h2>Serviços</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Valores em <b>BRL para 2 adultos</b>. Transfers privativos (Economy Sedan) e pacote de esqui.</p>
+
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 16l2-6h10l2 6"/><path d="M3 16h18v3H3z"/><circle cx="7" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg></div>
+      <div><div class="t">Transfer entre aeroportos · JFK → EWR</div><div class="d">23/11 · somente ida · de carro · Aeroporto JFK → Aeroporto EWR (Newark) · privativo · Economy Sedan</div></div><div class="p">R$ 982</div></div>
+
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 16l2-6h10l2 6"/><path d="M3 16h18v3H3z"/><circle cx="7" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg></div>
+      <div><div class="t">Transfer in · Montreal</div><div class="d">23/11 · YUL → DoubleTree by Hilton Montreal · somente ida · privativo · Economy Sedan</div></div><div class="p">R$ 306</div></div>
+
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l7-7M8 4l3 3M14 6l4 4-9 9-4-1-1-4z"/></svg></div>
+      <div><div class="t">Esqui · Mont Tremblant</div><div class="d">26–27/11 · 2 dias · conjunto completo (esquis, bastões, botas e capacete) + Lift Adult (18–69)</div></div><div class="p">R$ 4.165</div></div>
+
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 16l2-6h10l2 6"/><path d="M3 16h18v3H3z"/><circle cx="7" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg></div>
+      <div><div class="t">Transfer in &amp; out · Nova York</div><div class="d">28/11–02/12 · EWR ⇄ EVEN Hotel Midtown East ⇄ JFK · privativo · Economy Sedan</div></div><div class="p">R$ 1.266</div></div>
+  </section>
+
+  <!-- ================= VALORES ================= -->
+  <section class="section sh">
+    <span class="eyebrow">Investimento</span>
+    <h2>Resumo de valores</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">*Valores em <b>BRL para 2 adultos</b>. Hotelaria: escolher 1 opção/tarifa por cidade. Nada reservado, apenas cotado.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <tbody>
+        <tr class="sec-row"><td colspan="3">Hotéis — escolher 1 opção por cidade</td></tr>
+        <tr class="head-row"><td>Cidade</td><td>Hotel · tarifa</td><td style="text-align:right">Valor</td></tr>
+        <tr><td>Montreal</td><td>DoubleTree by Hilton · Double Room · room only</td><td class="v">R$ 2.700</td></tr>
+        <tr><td>Montreal</td><td>DoubleTree by Hilton · King Bed · café</td><td class="v">R$ 3.660</td></tr>
+        <tr><td>Montreal</td><td>Sofitel Golden Mile · Superior · room only</td><td class="v">R$ 2.645</td></tr>
+        <tr><td>Montreal</td><td>Sofitel Golden Mile · Superior · café</td><td class="v">R$ 3.565</td></tr>
+        <tr><td>Mont Tremblant</td><td>Le Westin · Traditional Fireplace · room only</td><td class="v">R$ 3.907</td></tr>
+        <tr><td>Mont Tremblant</td><td>Le Westin · Traditional Fireplace · café</td><td class="v">R$ 6.580</td></tr>
+        <tr><td>Mont Tremblant</td><td>Sommet des Neiges · Suite · room only</td><td class="v">R$ 3.922</td></tr>
+        <tr><td>Nova York</td><td>Fairfield Inn &amp; Suites · King · café</td><td class="v">R$ 8.936</td></tr>
+        <tr><td>Nova York</td><td>EVEN Hotel Midtown East · Standard · room only</td><td class="v">R$ 8.592</td></tr>
+        <tr><td>Nova York</td><td>EVEN Hotel Midtown East · Standard · café</td><td class="v">R$ 9.720</td></tr>
+
+        <tr class="sec-row"><td colspan="3">Aéreo, transfers &amp; esqui</td></tr>
+        <tr><td>Aéreo internacional</td><td>American Airlines / GOL · Curitiba ⇄ Nova York</td><td class="v">R$ 11.767,92</td></tr>
+        <tr><td>Aéreo regional</td><td>Air Canada · Newark ⇄ Montreal</td><td class="v">R$ 6.382,34</td></tr>
+        <tr><td>Transfers</td><td>Aeroportos · Montreal · Nova York (privativos)</td><td class="v">R$ 2.554</td></tr>
+        <tr><td>Esqui</td><td>Conjunto completo + Lift 2 dias · Mont Tremblant</td><td class="v">R$ 4.165</td></tr>
+        <tr class="total-row"><td colspan="2">Subtotal aéreo, transfers &amp; esqui</td><td class="v">R$ 24.869,26</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><b>Exemplo de total</b> (hotéis/tarifas mais econômicos por cidade + aéreo + transfers + esqui): Sofitel room only (R$ 2.645) + Le Westin room only (R$ 3.907) + EVEN room only (R$ 8.592) + R$ 24.869,26 = <b>R$ 40.013,26</b>. O total varia conforme os hotéis e as tarifas escolhidos.</p>
+
+    <div class="pay">
+      <div class="box">
+        <h4>Condições de pagamento</h4>
+        <p><b>Aéreo</b> (American Airlines e Air Canada) — em até <b>6x</b></p>
+        <p><b>Esqui</b> (conjunto + lift) — em até <b>4x</b></p>
+        <p><b>Hotéis e transfers</b> — em até <b>10x</b></p>
+      </div>
+      <div class="box">
+        <h4>Referência</h4>
+        <p>Dólar: USD 1 = R$ 5,21 · 27/08/2026</p>
+        <p class="muted" style="margin-top:8px;font-size:.82rem">Valores finais conforme disponibilidade e câmbio na data de fechamento.</p>
+      </div>
+    </div>
+
+    <div class="obs">
+      <h4>Não inclui</h4>
+      <ul>
+        <li>Refeições não mencionadas, bebidas e despesas pessoais</li>
+        <li>Ingressos, passeios e serviços não descritos nesta cotação · gorjetas</li>
+        <li>City Taxes / taxas hoteleiras pagas localmente</li>
+        <li>Seguro viagem · autorização eTA (Canadá) e ESTA (EUA), quando aplicável</li>
+      </ul>
+      <h4>Observações</h4>
+      <ul>
+        <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
+        <li>A confirmação está sujeita à disponibilidade no momento do pagamento.</li>
+        <li>O preço final pode variar conforme a política de preços dinâmica de companhias aéreas e hotéis.</li>
+        <li>Valores condicionados à flutuação de câmbio, impostos e sobretaxas.</li>
+        <li>Horários de voo sujeitos a alteração pelas companhias aéreas.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel">
+    <div class="contact">
+      atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>
+      Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

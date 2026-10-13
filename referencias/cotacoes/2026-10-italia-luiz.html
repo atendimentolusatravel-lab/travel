@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lusa Travel · Itália — Luiz Maués</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#404626; --green-dark:#363b1f; --green-soft:#5a6238;
+  --sage:#d9ead3; --sage-head:#c6d8b0;
+  --ink:#333131; --muted:#6f6f68; --line:#e7e7e0; --bg:#ffffff; --cream:#faf9f5;
+  --terra:#b4622f;
+  --shadow:0 10px 30px rgba(64,70,38,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{line-height:1.15}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:60px 56px}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+.muted{color:var(--muted)}
+
+.brandbar{display:flex;flex-direction:column;align-items:center;gap:8px;padding:38px 0 6px}
+.brandbar .brandlogo{width:210px;height:auto;display:block}
+.footlogo{width:190px;height:auto;display:block;margin-bottom:14px}
+
+/* HERO */
+.hero{padding:56px 56px 40px}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.hero h1 .amp{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-style:italic}
+.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
+.hero-img{margin:34px 0 0;height:330px;border-radius:14px;overflow:hidden;position:relative;
+  display:flex;align-items:flex-end;box-shadow:var(--shadow);
+  background:
+    radial-gradient(120% 130% at 12% 8%, rgba(70,120,150,.55), rgba(40,80,110,.15) 42%, transparent 60%),
+    radial-gradient(120% 130% at 92% 96%, rgba(150,170,120,.55), rgba(90,110,70,.2) 44%, transparent 64%),
+    linear-gradient(120deg, #3a5f80 0%, #5a7d92 30%, #8aa0a2 55%, #b0a878 80%, #7a6a3a 100%);}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-img::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top, rgba(20,26,32,.6), rgba(20,26,32,.05) 55%, transparent)}
+.hero-img .cap{position:relative;z-index:2;padding:22px 26px;color:#fff}
+.hero-img .cap .k{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;opacity:.92}
+.hero-img .cap .t{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:600;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
+.hero-info .r{text-align:right}
+.hero-info p{font-size:.95rem}
+.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
+.chip b{font-size:1.15rem;font-weight:700}
+.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
+.chip .ic svg{width:18px;height:18px}
+
+/* AEREO */
+.air{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:18px;background:#fff;box-shadow:var(--shadow)}
+.air-head{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--green);color:#fff;padding:14px 22px}
+.air-head .dir{font-weight:700;letter-spacing:.14em;font-size:.78rem;text-transform:uppercase}
+.air-head .route{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;font-weight:600}
+.leg{display:grid;grid-template-columns:200px 1fr auto;gap:18px;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line)}
+.leg .fl{font-size:.78rem;color:var(--muted)}
+.leg .fl b{display:block;color:var(--ink);font-size:.92rem;font-weight:600}
+.leg .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.leg .pt .code{font-weight:700;font-size:1.05rem}
+.leg .pt .tm{font-size:.82rem;color:var(--muted)}
+.leg .arrow{color:var(--green-soft);flex:none}
+.leg .cls{text-align:right;font-size:.78rem}
+.leg .cls b{display:block;color:var(--green);font-size:.86rem}
+.cnx{display:flex;align-items:center;gap:8px;padding:9px 22px;background:#f4f5ef;font-size:.75rem;color:var(--muted);border-bottom:1px solid var(--line)}
+.cnx svg{width:14px;height:14px;flex:none;color:var(--green-soft)}
+.air-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;background:#f4f5ef}
+.air-foot .lbl{font-size:.78rem;color:var(--muted)}
+.air-foot .val{font-weight:700;font-size:1.3rem;color:var(--green)}
+
+/* HOTELS */
+.city-block{margin-top:34px}
+.city-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--green);padding-bottom:10px;margin-bottom:22px}
+.city-head h3{font-size:1.4rem;font-weight:700}
+.city-head .dates{color:var(--green-soft);font-weight:600;font-size:.9rem;letter-spacing:.04em}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.hgrid{grid-template-columns:1fr}}
+.hotel{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:20px 22px}
+.hotel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.hotel-name{font-size:1.06rem;font-weight:600;display:flex;align-items:center;gap:12px}
+.hotel-name .bldg{width:34px;height:34px;flex:none;border:1.6px solid var(--ink);border-radius:50%;display:grid;place-items:center}
+.hotel-name .bldg svg{width:17px;height:17px}
+.hotel-price{text-align:right;flex:none}
+.hotel-price .v{font-size:1.3rem;font-weight:700;color:var(--green);white-space:nowrap}
+.hotel-price .u{font-size:.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.hotel-room{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
+.hotel-room b{color:var(--green-dark);font-weight:600}
+.bf{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-soft);background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:3px 9px;margin-top:10px}
+.hgal{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:14px}
+.hgal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px;display:block;background:#eceadf}
+
+/* experience card */
+.svc{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:start;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-top:14px;background:#fff;box-shadow:var(--shadow)}
+.svc .ic{width:52px;height:52px;background:var(--green);border-radius:12px;display:grid;place-items:center;color:#fff;flex:none}
+.svc .ic svg{width:24px;height:24px}
+.svc .t{font-weight:600;font-size:1.02rem}
+.svc .d{color:var(--muted);font-size:.86rem;margin-top:2px}
+.svc .dt{text-align:right;font-weight:700;font-size:.9rem;color:var(--green-soft);white-space:nowrap}
+.dayrow{display:grid;grid-template-columns:78px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}
+.dayrow:last-child{border-bottom:none}
+.daynum{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.7rem;font-weight:700;color:var(--green);line-height:1}
+.daynum span{display:block;font-family:'Poppins',system-ui,sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.daybody .city{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--terra)}
+.daybody ul{margin:7px 0 0;padding-left:17px}
+.daybody li{font-size:.88rem;color:var(--ink);margin-bottom:4px;line-height:1.55}
+.daybody .hl{background:var(--sage);border-radius:9px;padding:10px 13px;margin-top:10px;font-size:.85rem;color:var(--green-dark)}
+@media(max-width:620px){.dayrow{grid-template-columns:58px 1fr;gap:12px}.daynum{font-size:1.4rem}}
+.pkg-note{background:var(--sage);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:.9rem;color:var(--green-dark)}
+
+/* TABLE */
+.tbl-wrap{overflow-x:auto;margin-top:24px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:560px}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line)}
+.sec-row td{background:var(--sage);font-weight:700;text-align:center;letter-spacing:.04em;color:var(--green-dark)}
+.head-row td{background:#efeee7;font-weight:600;color:#4a4a44}
+.total-row td{background:#eef2e6;font-weight:700}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+
+/* PAY */
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.pay h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
+.pay p{font-size:.9rem;margin-bottom:4px}
+.obs{margin-top:26px;font-size:.82rem;color:var(--muted)}
+.obs li{margin:6px 0 6px 18px}
+.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px}
+.flval{display:flex;justify-content:space-between;align-items:center;background:var(--green);color:#fff;border-radius:12px;padding:16px 24px;margin-top:16px;flex-wrap:wrap;gap:12px}
+.flval .lbl{font-weight:600;font-size:.9rem}
+.flval .amt{text-align:right}
+.flval .amt .t{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;line-height:1}
+.flval .amt .p{font-size:.74rem;opacity:.9;margin-top:3px}
+
+/* FOOTER */
+.footer{background:var(--green);color:#fff;padding:44px 56px}
+.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
+.footer .fnote{font-size:.8rem;opacity:.7;margin-top:16px}
+.sh .eyebrow{margin-bottom:10px;display:block}
+
+@media(max-width:720px){
+  .section,.hero,.footer,.brandbar{padding-left:24px;padding-right:24px}
+  .hero h1{font-size:2.2rem}
+  .hero-info{grid-template-columns:1fr}.hero-info .r{text-align:left}
+  .leg{grid-template-columns:1fr;gap:8px}
+  .air-head{flex-direction:column;align-items:flex-start;gap:2px}
+  .pay{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr;text-align:left}.svc .dt{text-align:left}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="brandbar"><img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel — travel agency"></div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="eyebrow">Cotação para sua viagem</div>
+    <h1>ITÁLIA</h1>
+    <div class="accent-line"></div>
+    <p class="hero-sub"><b>Luiz Maués</b> · Milão · Lago de Como · Veneza · Florença · Roma — <b>01 a 16 de abril de 2027</b></p>
+
+    <div class="hero-img">
+      <img src="img/capa.jpg" alt="Itália" onerror="this.style.display='none'">
+    </div>
+
+    <div class="hero-info">
+      <div>
+        <div class="lbl">Detalhes da viagem</div>
+        <p>2 viajantes · 5 cidades · 15 noites · por trem</p>
+        <p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>08/10/2026</b> · valores em <b>BRL</b> · Dólar: <b>USD 1 = R$ 5,15</b></p>
+      </div>
+      <div class="r">
+        <div class="lbl">Contato</div>
+        <p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p>
+      </div>
+    </div>
+
+    <div class="gloss">
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>5</b>&nbsp;Cidades</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3"/><path d="M21 3v5h-5"/></svg></span><b>15</b>&nbsp;Noites</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="16" cy="8" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 20c0-2 .8-3.4 2-4"/></svg></span><b>2</b>&nbsp;Viajantes</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15l4-8 5 6 3-3 4 5"/><path d="M2 20h20"/></svg></span><b>Trem</b>&nbsp;entre cidades</div>
+    </div>
+  </header>
+
+  <!-- HOTÉIS -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Acomodações</span>
+    <h2>Hotéis</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Duas opções por cidade, com café da manhã. Valores em <b>BRL para 2 adultos</b>, total do período. <b>Escolher 1 opção por cidade.</b> Parcelável em <b>até 10x</b>.</p>
+
+    <div class="city-block">
+      <div class="city-head"><h3>Milão · 1ª estada</h3><span class="dates">01 – 02 ABR · 1 noite</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>UNA Hotels Cusani Milano</span></div><div class="hotel-price"><div class="v">R$ 1.918</div><div class="u">1 noite</div></div></div><div class="hgal"><img src="img/hotels/una-cusani/1.jpg" alt="UNA Cusani" loading="lazy"><img src="img/hotels/una-cusani/2.jpg" alt="UNA Cusani" loading="lazy"><img src="img/hotels/una-cusani/3.jpg" alt="UNA Cusani" loading="lazy"><img src="img/hotels/una-cusani/4.jpg" alt="UNA Cusani" loading="lazy"><img src="img/hotels/una-cusani/5.jpg" alt="UNA Cusani" loading="lazy"><img src="img/hotels/una-cusani/6.jpg" alt="UNA Cusani" loading="lazy"></div><div class="hotel-room"><b>Superior Double</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>NH Collection Milano Porta Nuova</span></div><div class="hotel-price"><div class="v">R$ 1.653</div><div class="u">1 noite</div></div></div><div class="hgal"><img src="img/hotels/nh-milano/1.jpg" alt="NH Collection Milano" loading="lazy"><img src="img/hotels/nh-milano/2.jpg" alt="NH Collection Milano" loading="lazy"><img src="img/hotels/nh-milano/3.jpg" alt="NH Collection Milano" loading="lazy"><img src="img/hotels/nh-milano/4.jpg" alt="NH Collection Milano" loading="lazy"><img src="img/hotels/nh-milano/5.jpg" alt="NH Collection Milano" loading="lazy"><img src="img/hotels/nh-milano/6.jpg" alt="NH Collection Milano" loading="lazy"></div><div class="hotel-room"><b>Superior Room</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+      </div>
+    </div>
+
+    <div class="city-block">
+      <div class="city-head"><h3>Lago de Como</h3><span class="dates">02 – 04 ABR · 2 noites</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hilton Lake Como</span></div><div class="hotel-price"><div class="v">R$ 9.274</div><div class="u">2 noites</div></div></div><div class="hgal"><img src="img/hotels/hilton-como/1.jpg" alt="Hilton Lake Como" loading="lazy"><img src="img/hotels/hilton-como/2.jpg" alt="Hilton Lake Como" loading="lazy"><img src="img/hotels/hilton-como/3.jpg" alt="Hilton Lake Como" loading="lazy"><img src="img/hotels/hilton-como/4.jpg" alt="Hilton Lake Como" loading="lazy"><img src="img/hotels/hilton-como/5.jpg" alt="Hilton Lake Como" loading="lazy"><img src="img/hotels/hilton-como/6.jpg" alt="Hilton Lake Como" loading="lazy"></div><div class="hotel-room"><b>Premium Room, Lake View</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Albergo Terminus Hotel</span></div><div class="hotel-price"><div class="v">R$ 5.602</div><div class="u">2 noites</div></div></div><div class="hgal"><img src="img/hotels/terminus-como/1.jpg" alt="Albergo Terminus Hotel" loading="lazy"><img src="img/hotels/terminus-como/2.jpg" alt="Albergo Terminus Hotel" loading="lazy"><img src="img/hotels/terminus-como/3.jpg" alt="Albergo Terminus Hotel" loading="lazy"><img src="img/hotels/terminus-como/4.jpg" alt="Albergo Terminus Hotel" loading="lazy"><img src="img/hotels/terminus-como/5.jpg" alt="Albergo Terminus Hotel" loading="lazy"><img src="img/hotels/terminus-como/6.jpg" alt="Albergo Terminus Hotel" loading="lazy"></div><div class="hotel-room"><b>Premium Room, Lake View</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+      </div>
+    </div>
+
+    <div class="city-block">
+      <div class="city-head"><h3>Veneza</h3><span class="dates">04 – 06 ABR · 2 noites</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hotel A La Commedia</span></div><div class="hotel-price"><div class="v">R$ 4.513</div><div class="u">2 noites</div></div></div><div class="hgal"><img src="img/hotels/commedia-ve/1.jpg" alt="Hotel A La Commedia" loading="lazy"><img src="img/hotels/commedia-ve/2.jpg" alt="Hotel A La Commedia" loading="lazy"><img src="img/hotels/commedia-ve/3.jpg" alt="Hotel A La Commedia" loading="lazy"><img src="img/hotels/commedia-ve/4.jpg" alt="Hotel A La Commedia" loading="lazy"><img src="img/hotels/commedia-ve/5.jpg" alt="Hotel A La Commedia" loading="lazy"><img src="img/hotels/commedia-ve/6.jpg" alt="Hotel A La Commedia" loading="lazy"></div><div class="hotel-room"><b>Classic Double Room</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hotel Saturnia &amp; International</span></div><div class="hotel-price"><div class="v">R$ 3.405</div><div class="u">2 noites</div></div></div><div class="hgal"><img src="img/hotels/saturnia-ve/1.jpg" alt="Hotel Saturnia e International" loading="lazy"><img src="img/hotels/saturnia-ve/2.jpg" alt="Hotel Saturnia e International" loading="lazy"><img src="img/hotels/saturnia-ve/3.jpg" alt="Hotel Saturnia e International" loading="lazy"><img src="img/hotels/saturnia-ve/4.jpg" alt="Hotel Saturnia e International" loading="lazy"><img src="img/hotels/saturnia-ve/5.jpg" alt="Hotel Saturnia e International" loading="lazy"><img src="img/hotels/saturnia-ve/6.jpg" alt="Hotel Saturnia e International" loading="lazy"></div><div class="hotel-room"><b>Classic Room</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+      </div>
+    </div>
+
+    <div class="city-block">
+      <div class="city-head"><h3>Florença</h3><span class="dates">06 – 10 ABR · 4 noites</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hotel Kraft</span></div><div class="hotel-price"><div class="v">R$ 7.954</div><div class="u">4 noites</div></div></div><div class="hgal"><img src="img/hotels/kraft-fi/1.jpg" alt="Hotel Kraft" loading="lazy"><img src="img/hotels/kraft-fi/2.jpg" alt="Hotel Kraft" loading="lazy"><img src="img/hotels/kraft-fi/3.jpg" alt="Hotel Kraft" loading="lazy"><img src="img/hotels/kraft-fi/4.jpg" alt="Hotel Kraft" loading="lazy"><img src="img/hotels/kraft-fi/5.jpg" alt="Hotel Kraft" loading="lazy"><img src="img/hotels/kraft-fi/6.jpg" alt="Hotel Kraft" loading="lazy"></div><div class="hotel-room"><b>Superior Room</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Albergo Firenze</span></div><div class="hotel-price"><div class="v">R$ 5.442</div><div class="u">4 noites</div></div></div><div class="hgal"><img src="img/hotels/albergo-fi/1.jpg" alt="Albergo Firenze" loading="lazy"><img src="img/hotels/albergo-fi/2.jpg" alt="Albergo Firenze" loading="lazy"><img src="img/hotels/albergo-fi/3.jpg" alt="Albergo Firenze" loading="lazy"><img src="img/hotels/albergo-fi/4.jpg" alt="Albergo Firenze" loading="lazy"><img src="img/hotels/albergo-fi/5.jpg" alt="Albergo Firenze" loading="lazy"><img src="img/hotels/albergo-fi/6.jpg" alt="Albergo Firenze" loading="lazy"></div><div class="hotel-room"><b>Superior Double</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+      </div>
+    </div>
+
+    <div class="city-block">
+      <div class="city-head"><h3>Roma</h3><span class="dates">10 – 14 ABR · 4 noites</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Best Western Plus Hotel Universo</span></div><div class="hotel-price"><div class="v">R$ 7.414</div><div class="u">4 noites</div></div></div><div class="hgal"><img src="img/hotels/universo-rm/1.jpg" alt="Best Western Plus Hotel Universo" loading="lazy"><img src="img/hotels/universo-rm/2.jpg" alt="Best Western Plus Hotel Universo" loading="lazy"><img src="img/hotels/universo-rm/3.jpg" alt="Best Western Plus Hotel Universo" loading="lazy"><img src="img/hotels/universo-rm/4.jpg" alt="Best Western Plus Hotel Universo" loading="lazy"><img src="img/hotels/universo-rm/5.jpg" alt="Best Western Plus Hotel Universo" loading="lazy"><img src="img/hotels/universo-rm/6.jpg" alt="Best Western Plus Hotel Universo" loading="lazy"></div><div class="hotel-room"><b>Superior Double Room</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hotel Quirinale</span></div><div class="hotel-price"><div class="v">R$ 6.250</div><div class="u">4 noites</div></div></div><div class="hgal"><img src="img/hotels/quirinale/6.png" alt="Hotel Quirinale" loading="lazy"><img src="img/hotels/quirinale/1.jpg" alt="Hotel Quirinale" loading="lazy"><img src="img/hotels/quirinale/2.jpg" alt="Hotel Quirinale" loading="lazy"><img src="img/hotels/quirinale/3.jpg" alt="Hotel Quirinale" loading="lazy"><img src="img/hotels/quirinale/4.jpg" alt="Hotel Quirinale" loading="lazy"><img src="img/hotels/quirinale/5.jpg" alt="Hotel Quirinale" loading="lazy"></div><div class="hotel-room"><b>Superior Double Room</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+      </div>
+    </div>
+
+    <div class="city-block">
+      <div class="city-head"><h3>Milão · 2ª estada</h3><span class="dates">14 – 16 ABR · 2 noites</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Starhotels Ritz</span></div><div class="hotel-price"><div class="v">R$ 7.425</div><div class="u">2 noites</div></div></div><div class="hgal"><img src="img/hotels/ritz-mi/1.jpg" alt="Starhotels Ritz" loading="lazy"><img src="img/hotels/ritz-mi/2.jpg" alt="Starhotels Ritz" loading="lazy"><img src="img/hotels/ritz-mi/3.jpg" alt="Starhotels Ritz" loading="lazy"><img src="img/hotels/ritz-mi/4.jpg" alt="Starhotels Ritz" loading="lazy"><img src="img/hotels/ritz-mi/5.jpg" alt="Starhotels Ritz" loading="lazy"><img src="img/hotels/ritz-mi/6.jpg" alt="Starhotels Ritz" loading="lazy"></div><div class="hotel-room"><b>Superior Double</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hotel Ariston</span></div><div class="hotel-price"><div class="v">R$ 7.956</div><div class="u">2 noites</div></div></div><div class="hgal"><img src="img/hotels/ariston-mi/1.jpg" alt="Hotel Ariston" loading="lazy"><img src="img/hotels/ariston-mi/2.jpg" alt="Hotel Ariston" loading="lazy"><img src="img/hotels/ariston-mi/3.jpg" alt="Hotel Ariston" loading="lazy"><img src="img/hotels/ariston-mi/4.jpg" alt="Hotel Ariston" loading="lazy"><img src="img/hotels/ariston-mi/5.jpg" alt="Hotel Ariston" loading="lazy"><img src="img/hotels/ariston-mi/6.jpg" alt="Hotel Ariston" loading="lazy"></div><div class="hotel-room"><b>Classic Room</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRENS -->
+  <section class="section sh">
+    <span class="eyebrow">Transporte</span>
+    <h2>Trens entre as cidades</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Trens em classe standard. Valores em <b>BRL para 2 adultos</b>. Parcelável em <b>até 5x</b>.</p>
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Trecho</td><td>Detalhe</td><td class="v">Valor · 2 ad</td></tr>
+      <tr><td><b>Milão → Lago de Como</b></td><td>02 abr · 10:43 Milano Centrale → 11:23 Como S. Giovanni · standard · direto</td><td class="v">R$ 85</td></tr>
+      <tr><td><b>Lago de Como → Veneza</b></td><td>04 abr · 08:36 Como S. Giovanni → 12:14 Venezia Santa Lucia · standard · 1 conexão</td><td class="v">R$ 430</td></tr>
+      <tr><td><b>Veneza → Florença</b></td><td>06 abr · 09:20 Venezia Mestre → 11:20 Firenze Santa Maria Novella · standard · direto</td><td class="v">R$ 420</td></tr>
+      <tr><td><b>Florença → Roma</b></td><td>10 abr · 10:03 Firenze Santa Maria Novella → 11:40 Roma Termini · standard · direto</td><td class="v">R$ 280</td></tr>
+      <tr><td><b>Roma → Milão</b></td><td>14 abr · 08:05 Roma Termini → 11:15 Milano Centrale · standard · direto</td><td class="v">R$ 460</td></tr>
+      <tr class="total-row"><td>Total dos trens</td><td>5 trechos</td><td class="v">R$ 1.675</td></tr>
+    </table></div>
+  </section>
+
+  <!-- EXPERIÊNCIAS -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Lago de Como · 03 de abril</span>
+    <h2>O pedido de casamento</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Toda a experiência acontece em <b>03/04</b>, no Lago de Como — véspera da saída para Veneza. São duas opções de barco — <b>escolher 1</b> — mais o fotógrafo a bordo e o jantar do casal. Valores em <b>BRL para 2 adultos</b>. Parcelável em <b>até 5x</b>.</p>
+
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M5 17l1.5-7h11L19 17M12 5v5"/></svg></div>
+      <div><div class="t">Opção 01 · Passeio de barco privativo ao pôr do sol</div><div class="d"><b>Sailing Como Lake</b> · lancha privativa com comandante, até 10 lugares · <b>02 horas</b>, das 16h45 às 18h45 (o sol se põe por volta das 18h20 nessa data).<br><b>Roteiro sugerido:</b> Como → Cernobbio → Villa d&rsquo;Este → Torno → Villa Pliniana / Nesso → retorno a Como ao crepúsculo.<br><span style="font-size:.82rem">O pedido de casamento é feito a bordo, no ponto escolhido pelo noivo com o comandante.</span></div><div class="hgal"><img src="img/barco/opcao01/2.jpg" alt="Sailing Como Lake" loading="lazy"><img src="img/barco/opcao01/3.avif" alt="Sailing Como Lake" loading="lazy"><img src="img/barco/opcao01/1.png" alt="Sailing Como Lake" loading="lazy"></div></div><div class="dt">03/04<br><span style="color:var(--green);font-size:1.05rem">R$ 4.212</span></div></div>
+
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M5 17l1.5-7h11L19 17M12 5v5"/></svg></div>
+      <div><div class="t">Opção 02 · Lancha veneziana de luxo ao pôr do sol</div><div class="d"><b>Mostes Classic Boats</b> · embarcação &ldquo;Romance&rdquo; · <b>02 horas</b>, até 08 lugares · prosecco e refrigerantes inclusos a bordo · mesmo horário, das 16h45 às 18h45.<br><span style="font-size:.82rem">Barco de madeira estilo Riva — o mais fotogênico para o pedido.</span></div><div class="hgal"><img src="img/barco/opcao02/1.jpg" alt="Mostes Classic Boats" loading="lazy"><img src="img/barco/opcao02/2.jpg" alt="Mostes Classic Boats" loading="lazy"><img src="img/barco/opcao02/3.avif" alt="Mostes Classic Boats" loading="lazy"></div></div><div class="dt">03/04<br><span style="color:var(--green);font-size:1.05rem">R$ 5.096</span></div></div>
+
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13" r="3"/></svg></div>
+      <div><div class="t">Fotógrafo profissional a bordo</div><div class="d">Cerca de <b>01 hora</b> de cobertura do pedido e do casal na luz do pôr do sol. O fotógrafo embarca <b>como membro da tripulação</b> (traje náutico), para não levantar suspeitas — combinado previamente com o noivo e com o comandante.<br><span style="font-size:.82rem">Entrega de galeria digital editada.</span></div></div><div class="dt">03/04<br><span style="color:var(--green);font-size:1.05rem">R$ 4.248</span></div></div>
+
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v7a3 3 0 006 0V3M9 3v18M15 3c-1 2-1 5 0 7v11"/></svg></div>
+      <div><div class="t">Jantar romântico à beira do lago</div><div class="d">Mesa reservada em nome do casal no <b>Ristorante Imbarcadero</b> (Piazza Cavour, Como — à beira do lago, a 2 minutos do cais). Menu de <b>03 pratos</b> (entrada, primeiro prato e segundo prato), água e serviço inclusos.<br><span style="font-size:.82rem">Vinhos e bebidas à parte, pagos no local.</span></div></div><div class="dt">03/04<br><span style="color:var(--green);font-size:1.05rem">R$ 613</span></div></div>
+
+  </section>
+
+  <!-- PASSEIOS E INGRESSOS -->
+  <section class="section sh">
+    <span class="eyebrow">Experiências</span>
+    <h2>Passeios e ingressos</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Todos com data e horário já definidos. Valores em <b>BRL para 2 adultos</b>. Parcelável em <b>até 6x</b>.</p>
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Experiência</td><td>Data · detalhe</td><td class="v">Valor · 2 ad</td></tr>
+
+      <tr class="sec-row"><td colspan="3">Veneza</td></tr>
+      <tr><td><b>Basílica de San Marco</b></td><td>04/04 · 15:30 · Basílica + Pala d&rsquo;Oro</td><td class="v">R$ 280</td></tr>
+      <tr><td><b>Palácio Ducal</b></td><td>05/04 · Museum Pass</td><td class="v">R$ 700</td></tr>
+      <tr><td><b>Passeio de gôndola · 30 min</b></td><td>05/04 · entre 09h30 e 18h30 · embarque em Bacino Orseolo, Danieli, Accademia, Estação, San Tomà, Giglio ou Piazzale Roma</td><td class="v">R$ 710</td></tr>
+
+      <tr class="sec-row"><td colspan="3">Florença e Toscana</td></tr>
+      <tr><td><b>Complexo do Duomo</b></td><td>06/04 · 15:45 · Brunelleschi Pass: cúpula, campanário, batistério, museu e Santa Reparata</td><td class="v">R$ 440</td></tr>
+      <tr><td><b>Galleria degli Uffizi</b></td><td>07/04 · 09:00 · Uffizi + Palácio Pitti + Jardins de Boboli</td><td class="v">R$ 580</td></tr>
+      <tr><td><b>Galleria dell&rsquo;Accademia</b></td><td>07/04 · 14:00</td><td class="v">R$ 170</td></tr>
+      <tr><td><b>Dia em Pisa, Siena e San Gimignano</b></td><td>08/04 · saída 07:45 · 12 horas · almoço na vinícola Agricola Poggio ai Laghi · transporte entre os locais e ingresso da Catedral de Siena inclusos</td><td class="v">R$ 1.560</td></tr>
+      <tr><td><b>Vinícola Antinori nel Chianti Classico</b></td><td>09/04 · 2h30 · degustação de vinhos com almoço</td><td class="v">R$ 2.790</td></tr>
+
+      <tr class="sec-row"><td colspan="3">Roma</td></tr>
+      <tr><td><b>Aula de massas</b></td><td>11/04 · 09:30 · 3 horas · região do Vaticano · massa artesanal e tiramisù, vinhos e prosecco à vontade</td><td class="v">R$ 710</td></tr>
+      <tr><td><b>Coliseu e Fórum Romano</b></td><td>12/04 · 11:00 · Coliseu + Arena + área arqueológica do Fórum Romano-Palatino</td><td class="v">R$ 420</td></tr>
+      <tr><td><b>Museus Vaticanos e Capela Sistina</b></td><td>13/04 · 10:15 · acesso sem fila da bilheteria</td><td class="v">R$ 355</td></tr>
+
+      <tr class="sec-row"><td colspan="3">Milão</td></tr>
+      <tr><td><b>Duomo de Milão</b></td><td>14/04 · 15:30 · catedral (interior) e terraços, com elevador</td><td class="v">R$ 380</td></tr>
+      <tr><td><b>Pinacoteca di Brera</b></td><td>15/04 · 10:30</td><td class="v">R$ 290</td></tr>
+      <tr><td><b>Castello Sforzesco</b></td><td>15/04 · 14:00</td><td class="v">R$ 145</td></tr>
+
+      <tr class="total-row"><td>Total de passeios e ingressos</td><td>13 experiências</td><td class="v">R$ 9.530</td></tr>
+    </table></div>
+  </section>
+
+  <!-- ROTEIRO -->
+  <section class="section sh">
+    <span class="eyebrow">Dia a dia</span>
+    <h2>Sugestão de roteiro</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Montado em cima do que já está cotado — trens, passeios e ingressos com horário marcado. Os espaços livres ficam propositalmente abertos, para vocês decidirem na hora.</p>
+
+    <div style="margin-top:20px">
+
+      <div class="dayrow"><div class="daynum">01<span>qui · abr</span></div><div class="daybody">
+        <div class="city">Milão · chegada</div>
+        <ul><li>Chegada a Milão e check-in no hotel.</li>
+        <li>Resto do dia livre — uma volta pela Galleria Vittorio Emanuele II e pela Piazza del Duomo cai bem para o primeiro dia.</li></ul>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">02<span>sex · abr</span></div><div class="daybody">
+        <div class="city">Milão → Lago de Como</div>
+        <ul><li><b>10:43</b> trem Milano Centrale → <b>11:23</b> Como S. Giovanni.</li>
+        <li>Check-in em Como e tarde livre pela Piazza Cavour e pela beira do lago.</li></ul>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">03<span>sáb · abr</span></div><div class="daybody">
+        <div class="city">Lago de Como · o pedido</div>
+        <ul><li>Manhã e começo da tarde livres no lago.</li>
+        <li><b>16h45 às 18h45</b> — passeio de barco privativo ao pôr do sol, com o fotógrafo a bordo como tripulante.</li>
+        <li>À noite, jantar reservado no <b>Ristorante Imbarcadero</b>, na Piazza Cavour.</li></ul>
+        <div class="hl">💍 É o dia do pedido. O sol se põe por volta das <b>18h20</b> — o barco sai antes para pegar a melhor luz.</div>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">04<span>dom · abr</span></div><div class="daybody">
+        <div class="city">Lago de Como → Veneza</div>
+        <ul><li><b>08:36</b> trem Como S. Giovanni → <b>12:14</b> Venezia Santa Lucia (1 conexão).</li>
+        <li>Check-in em Veneza e almoço livre.</li>
+        <li><b>15:30</b> — Basílica de San Marco com a Pala d&rsquo;Oro.</li></ul>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">05<span>seg · abr</span></div><div class="daybody">
+        <div class="city">Veneza</div>
+        <ul><li>Palácio Ducal, com o Museum Pass.</li>
+        <li>Passeio de gôndola de 30 minutos, em qualquer horário entre <b>09h30 e 18h30</b> — o fim da tarde é o mais bonito.</li>
+        <li>Resto do dia livre para Rialto, Dorsoduro ou um vaporetto até Murano e Burano.</li></ul>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">06<span>ter · abr</span></div><div class="daybody">
+        <div class="city">Veneza → Florença</div>
+        <ul><li><b>09:20</b> trem Venezia Mestre → <b>11:20</b> Firenze Santa Maria Novella.</li>
+        <li>Check-in em Florença e almoço livre.</li>
+        <li><b>15:45</b> — Complexo do Duomo com o Brunelleschi Pass: cúpula, campanário, batistério, museu e Santa Reparata.</li></ul>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">07<span>qua · abr</span></div><div class="daybody">
+        <div class="city">Florença</div>
+        <ul><li><b>09:00</b> — Galleria degli Uffizi, com Palácio Pitti e Jardins de Boboli no mesmo ingresso.</li>
+        <li><b>14:00</b> — Galleria dell&rsquo;Accademia, para o Davi de Michelangelo.</li>
+        <li>Fim de tarde livre — a Piazzale Michelangelo tem a melhor vista da cidade no pôr do sol.</li></ul>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">08<span>qui · abr</span></div><div class="daybody">
+        <div class="city">Toscana · dia inteiro</div>
+        <ul><li><b>07:45</b> — saída para Pisa, Siena e San Gimignano, cerca de <b>12 horas</b> de passeio.</li>
+        <li>Almoço na vinícola Agricola Poggio ai Laghi; transporte entre os locais e ingresso da Catedral de Siena inclusos.</li></ul>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">09<span>sex · abr</span></div><div class="daybody">
+        <div class="city">Chianti</div>
+        <ul><li>Visita à <b>Vinícola Antinori nel Chianti Classico</b> — 2h30, com degustação de vinhos e almoço.</li>
+        <li>Tarde e noite livres em Florença.</li></ul>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">10<span>sáb · abr</span></div><div class="daybody">
+        <div class="city">Florença → Roma</div>
+        <ul><li><b>10:03</b> trem Firenze Santa Maria Novella → <b>11:40</b> Roma Termini.</li>
+        <li>Check-in em Roma e dia livre — Fontana di Trevi, Pantheon e Piazza Navona ficam todos a pé.</li></ul>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">11<span>dom · abr</span></div><div class="daybody">
+        <div class="city">Roma · aniversário da Bia</div>
+        <ul><li><b>09:30</b> — aula de massas de 3 horas na região do Vaticano: massa artesanal e tiramisù, com vinhos e prosecco à vontade.</li>
+        <li>Tarde livre.</li>
+        <li><b>A partir das 18h</b> — jantar de aniversário sugerido no <b>All&rsquo;Oro</b>, uma estrela no Guia Michelin.</li></ul>
+        <div class="hl">🎂 <b>Dia do aniversário da Bia.</b> A sugestão é o <b>All&rsquo;Oro</b>, uma estrela Michelin desde 2010, na Via Giuseppe Pisanelli 23/25, dentro do hotel-butique The H&rsquo;All Tailor Suite, a poucos minutos da Piazza del Popolo. O chef <b>Riccardo Di Giacinto</b> abriu a casa em 2007 com a mulher, Ramona, que comanda a carta de vinhos — e o serviço tem mesmo jeito de restaurante de família.
+        <br><br>A cozinha é italiana contemporânea, construída sobre os clássicos romanos e toscanos, mas desmontados e remontados de um jeito que surpreende: o prato chega parecendo uma coisa e é outra. Ficaram famosos o <b>tiramisù de bacalhau</b>, no menu desde 2008, o <b>&ldquo;resumo de carbonara&rdquo;</b> servido dentro da casca do ovo e o <b>rocher de rabada à vaccinara</b>. Há à la carte e três menus degustação, além de um inteiramente vegetal.
+        <br><br>Entre os estrelados de Roma é dos mais calorosos — tem a técnica de uma estrela sem a rigidez que costuma vir junto, e porções generosas. <b>Abre no domingo das 18h às 23h.</b>
+        <br><br><span style="font-size:.8rem">Sugestão, <b>ainda não cotada</b> e fora do total. Podemos reservar em nome do casal, avisar que é aniversário e pedir um brinde da casa.</span></div>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">12<span>seg · abr</span></div><div class="daybody">
+        <div class="city">Roma</div>
+        <ul><li><b>11:00</b> — Coliseu, com entrada para a Arena, e área arqueológica do Fórum Romano-Palatino.</li>
+        <li>Tarde livre pelo centro histórico.</li></ul>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">13<span>ter · abr</span></div><div class="daybody">
+        <div class="city">Roma</div>
+        <ul><li><b>10:15</b> — Museus Vaticanos e Capela Sistina, sem fila da bilheteria.</li>
+        <li>Tarde livre — a Basílica de São Pedro fica ao lado, e o Trastevere é um bom fim de dia.</li></ul>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">14<span>qua · abr</span></div><div class="daybody">
+        <div class="city">Roma → Milão</div>
+        <ul><li><b>08:05</b> trem Roma Termini → <b>11:15</b> Milano Centrale.</li>
+        <li>Check-in em Milão e almoço livre.</li>
+        <li><b>15:30</b> — Duomo de Milão: interior da catedral e terraços, com elevador.</li></ul>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">15<span>qui · abr</span></div><div class="daybody">
+        <div class="city">Milão</div>
+        <ul><li><b>10:30</b> — Pinacoteca di Brera.</li>
+        <li><b>14:00</b> — Castello Sforzesco.</li>
+        <li>Fim de tarde livre — o bairro de Brera e os Navigli são boas últimas caminhadas.</li></ul>
+      </div></div>
+
+      <div class="dayrow"><div class="daynum">16<span>sex · abr</span></div><div class="daybody">
+        <div class="city">Milão · retorno</div>
+        <ul><li>Check-out e volta para casa.</li></ul>
+      </div></div>
+
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section class="section sh">
+    <span class="eyebrow">Investimento</span>
+    <h2>Resumo de valores</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">*Valores em <b>BRL</b> para <b>2 adultos</b>. Hotéis: escolher 1 opção por cidade — por isso a hospedagem é uma faixa. <b>O aéreo não consta: já está comprado.</b> O jantar do aniversário no All&rsquo;Oro é sugestão e não entra no total. Nada reservado, apenas cotado.</p>
+
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Hotel</td><td>Quarto · regime</td><td class="v">Valor · 2 ad</td></tr>
+      <tr class="sec-row"><td colspan="3">Milão · 1ª estada · 01–02/04 · 1 noite · escolher 1</td></tr>
+      <tr><td><b>UNA Hotels Cusani Milano</b></td><td>Superior Double · café da manhã</td><td class="v">R$ 1.918</td></tr>
+      <tr><td><b>NH Collection Milano Porta Nuova</b></td><td>Superior Room · café da manhã</td><td class="v">R$ 1.653</td></tr>
+      <tr class="sec-row"><td colspan="3">Lago de Como · 02–04/04 · 2 noites · escolher 1</td></tr>
+      <tr><td><b>Hilton Lake Como</b></td><td>Premium Room, Lake View · café da manhã</td><td class="v">R$ 9.274</td></tr>
+      <tr><td><b>Albergo Terminus Hotel</b></td><td>Premium Room, Lake View · café da manhã</td><td class="v">R$ 5.602</td></tr>
+      <tr class="sec-row"><td colspan="3">Veneza · 04–06/04 · 2 noites · escolher 1</td></tr>
+      <tr><td><b>Hotel A La Commedia</b></td><td>Classic Double Room · café da manhã</td><td class="v">R$ 4.513</td></tr>
+      <tr><td><b>Hotel Saturnia &amp; International</b></td><td>Classic Room · café da manhã</td><td class="v">R$ 3.405</td></tr>
+      <tr class="sec-row"><td colspan="3">Florença · 06–10/04 · 4 noites · escolher 1</td></tr>
+      <tr><td><b>Hotel Kraft</b></td><td>Superior Room · café da manhã</td><td class="v">R$ 7.954</td></tr>
+      <tr><td><b>Albergo Firenze</b></td><td>Superior Double · café da manhã</td><td class="v">R$ 5.442</td></tr>
+      <tr class="sec-row"><td colspan="3">Roma · 10–14/04 · 4 noites · escolher 1</td></tr>
+      <tr><td><b>Best Western Plus Hotel Universo</b></td><td>Superior Double Room · café da manhã</td><td class="v">R$ 7.414</td></tr>
+      <tr><td><b>Hotel Quirinale</b></td><td>Superior Double Room · café da manhã</td><td class="v">R$ 6.250</td></tr>
+      <tr class="sec-row"><td colspan="3">Milão · 2ª estada · 14–16/04 · 2 noites · escolher 1</td></tr>
+      <tr><td><b>Starhotels Ritz</b></td><td>Superior Double · café da manhã</td><td class="v">R$ 7.425</td></tr>
+      <tr><td><b>Hotel Ariston</b></td><td>Classic Room · café da manhã</td><td class="v">R$ 7.956</td></tr>
+
+      <tr class="sec-row"><td colspan="3">Trens, experiências &amp; ingressos</td></tr>
+      <tr><td><b>Trens</b></td><td>5 trechos · standard · 2 adultos</td><td class="v">R$ 1.675</td></tr>
+      <tr><td><b>Experiência no Lago de Como</b></td><td>Barco (opção 01 ou 02) + fotógrafo + jantar</td><td class="v">R$ 9.073 – 9.957</td></tr>
+      <tr><td><b>Passeios e ingressos</b></td><td>13 experiências em Veneza, Florença, Toscana, Roma e Milão</td><td class="v">R$ 9.530</td></tr>
+    </table></div>
+
+    <div class="flval"><span class="lbl">Total estimado do casal (2 adultos)</span><div class="amt"><div class="t">R$ 50.055 – 60.191</div><div class="p">hospedagem + trens + experiência no Lago de Como + passeios e ingressos</div></div></div>
+    <p class="note"><b>Como é calculado:</b> hospedagem (R$ 29.777 – 39.029) + trens (R$ 1.675) + experiência no Lago de Como (R$ 9.073 – 9.957) + passeios e ingressos (R$ 9.530). Varia conforme os hotéis e a opção de barco escolhidos. <b>O aéreo não entra — já foi comprado.</b></p>
+
+    <div class="pay">
+      <div class="box">
+        <h4>Condições de pagamento</h4>
+        <p><b>Hotéis</b> — em até <b>10x</b></p>
+        <p><b>Trens, barco, fotógrafo e jantar no lago</b> — em até <b>5x</b></p>
+        <p><b>Demais experiências e ingressos</b> — em até <b>6x</b></p>
+      </div>
+      <div class="box">
+        <h4>Referência</h4>
+        <p>Dólar: USD 1 = R$ 5,15 · 08/10/2026</p>
+        <p class="muted" style="margin-top:8px;font-size:.82rem">Valores finais conforme disponibilidade e câmbio na data de fechamento.</p>
+      </div>
+    </div>
+
+    <div class="obs">
+      <h4>Não inclui</h4>
+      <ul>
+        <li>Refeições e bebidas não descritas · gorjetas · despesas pessoais</li>
+        <li>Transfers e serviços não listados nesta cotação</li>
+        <li>Aéreo — já comprado pelo cliente</li>
+        <li>Jantar no All&rsquo;Oro (11/04) — sugestão, ainda não cotada</li>
+        <li>Vinhos e bebidas no jantar do Ristorante Imbarcadero — pagos no local</li>
+        <li>Seguro viagem · autorização ETIAS/vistos, quando aplicável</li>
+      </ul>
+      <h4>Observações</h4>
+      <ul>
+        <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
+        <li>A confirmação está sujeita à disponibilidade no momento do pagamento.</li>
+        <li>Horários de trem sujeitos a alteração pelas companhias.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel">
+    <div class="contact">
+      atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>
+      Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR
+    </div>
+    <div class="fnote">*Nada reservado, apenas cotado.</div>
+  </footer>
+
+</div>
+</body>
+</html>

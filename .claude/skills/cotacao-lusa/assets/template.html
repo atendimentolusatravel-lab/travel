@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Título: "Lusa Travel · <Destino> — <Cliente>" -->
+<title>Lusa Travel · Portugal &amp; Espanha — Marina e Pedro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#404626; --green-dark:#363b1f; --green-soft:#5a6238;
+  --sage:#d9ead3; --sage-head:#c6d8b0;
+  --ink:#333131; --muted:#6f6f68; --line:#e7e7e0; --bg:#ffffff; --cream:#faf9f5;
+  --terra:#b4622f;
+  --shadow:0 10px 30px rgba(64,70,38,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{line-height:1.15}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:60px 56px}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+.muted{color:var(--muted)}
+
+.brandbar{display:flex;flex-direction:column;align-items:center;gap:8px;padding:38px 0 6px}
+.brandbar .brandlogo{width:210px;height:auto;display:block}
+.footlogo{width:190px;height:auto;display:block;margin-bottom:14px}
+
+/* HERO */
+.hero{padding:56px 56px 40px}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.hero h1 .amp{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-style:italic}
+.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
+.hero-img{margin:34px 0 0;height:330px;border-radius:14px;overflow:hidden;position:relative;
+  display:flex;align-items:flex-end;box-shadow:var(--shadow);
+  background:
+    radial-gradient(120% 130% at 12% 8%, rgba(70,120,150,.55), rgba(40,80,110,.15) 42%, transparent 60%),
+    radial-gradient(120% 130% at 92% 96%, rgba(150,170,120,.55), rgba(90,110,70,.2) 44%, transparent 64%),
+    linear-gradient(120deg, #3a5f80 0%, #5a7d92 30%, #8aa0a2 55%, #b0a878 80%, #7a6a3a 100%);}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-img::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top, rgba(20,26,32,.6), rgba(20,26,32,.05) 55%, transparent)}
+.hero-img .cap{position:relative;z-index:2;padding:22px 26px;color:#fff}
+.hero-img .cap .k{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;opacity:.92}
+.hero-img .cap .t{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:600;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
+.hero-info .r{text-align:right}
+.hero-info p{font-size:.95rem}
+.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
+.chip b{font-size:1.15rem;font-weight:700}
+.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
+.chip .ic svg{width:18px;height:18px}
+
+/* AEREO */
+.air{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:18px;background:#fff;box-shadow:var(--shadow)}
+.air-head{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--green);color:#fff;padding:14px 22px}
+.air-head .dir{font-weight:700;letter-spacing:.14em;font-size:.78rem;text-transform:uppercase}
+.air-head .route{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;font-weight:600}
+.leg{display:grid;grid-template-columns:200px 1fr auto;gap:18px;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line)}
+.leg .fl{font-size:.78rem;color:var(--muted)}
+.leg .fl b{display:block;color:var(--ink);font-size:.92rem;font-weight:600}
+.leg .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.leg .pt .code{font-weight:700;font-size:1.05rem}
+.leg .pt .tm{font-size:.82rem;color:var(--muted)}
+.leg .arrow{color:var(--green-soft);flex:none}
+.leg .cls{text-align:right;font-size:.78rem}
+.leg .cls b{display:block;color:var(--green);font-size:.86rem}
+.cnx{display:flex;align-items:center;gap:8px;padding:9px 22px;background:#f4f5ef;font-size:.75rem;color:var(--muted);border-bottom:1px solid var(--line)}
+.cnx svg{width:14px;height:14px;flex:none;color:var(--green-soft)}
+.air-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;background:#f4f5ef}
+.air-foot .lbl{font-size:.78rem;color:var(--muted)}
+.air-foot .val{font-weight:700;font-size:1.3rem;color:var(--green)}
+
+/* HOTELS */
+.city-block{margin-top:34px}
+.city-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--green);padding-bottom:10px;margin-bottom:22px}
+.city-head h3{font-size:1.4rem;font-weight:700}
+.city-head .dates{color:var(--green-soft);font-weight:600;font-size:.9rem;letter-spacing:.04em}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hgrid>.hotel{min-width:0}
+@media(max-width:720px){.hgrid{grid-template-columns:1fr}}
+.hotel{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:20px 22px}
+.hotel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.hotel-name{font-size:1.06rem;font-weight:600;display:flex;align-items:center;gap:12px}
+.hotel-name .bldg{width:34px;height:34px;flex:none;border:1.6px solid var(--ink);border-radius:50%;display:grid;place-items:center}
+.hotel-name .bldg svg{width:17px;height:17px}
+.hotel-price{text-align:right;flex:none}
+.hotel-price .v{font-size:1.3rem;font-weight:700;color:var(--green);white-space:nowrap}
+.hotel-price .u{font-size:.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.hotel-room{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
+.hotel-room b{color:var(--green-dark);font-weight:600}
+.bf{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-soft);background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:3px 9px;margin-top:10px}
+.hgal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin-top:14px}
+.hgal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px;display:block;background:#eceadf}
+
+/* experience card */
+.svc{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:start;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-top:14px;background:#fff;box-shadow:var(--shadow)}
+.svc .ic{width:52px;height:52px;background:var(--green);border-radius:12px;display:grid;place-items:center;color:#fff;flex:none}
+.svc .ic svg{width:24px;height:24px}
+.svc .t{font-weight:600;font-size:1.02rem}
+.svc .d{color:var(--muted);font-size:.86rem;margin-top:2px}
+.svc .dt{text-align:right;font-weight:700;font-size:.9rem;color:var(--green-soft);white-space:nowrap}
+.dayrow{display:grid;grid-template-columns:92px 1fr;gap:22px;padding:22px 0;border-bottom:1px solid var(--line)}
+.dayrow:last-of-type{border-bottom:none}
+.daynum{text-align:right}
+.daynum .d{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;font-weight:700;color:var(--green);line-height:1}
+.daynum .m{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green-soft);font-weight:700;margin-top:2px}
+.daynum .w{font-size:.7rem;color:var(--muted);margin-top:2px}
+.daybody .city{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--green);border-radius:12px;padding:3px 11px;display:inline-block;margin-bottom:9px}
+.daybody h4{font-size:1.06rem;font-weight:600;margin-bottom:5px;color:var(--green-dark)}
+.daybody p{font-size:.88rem;color:var(--muted)}
+.daybody ul{margin:9px 0 0 18px;font-size:.88rem;color:var(--muted)}
+.daybody li{margin:5px 0}
+.tag-q,.tag-s{display:inline-block;font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:10px;padding:2px 8px;margin-left:5px;white-space:nowrap}
+.tag-q{color:var(--terra);background:#fdf3ec;border:1px solid #f0dccd}
+.tag-s{color:var(--green-dark);background:#eef2e6;border:1px solid #dde5cf}
+@media(max-width:720px){.dayrow{grid-template-columns:64px 1fr;gap:14px}.daynum .d{font-size:1.5rem}}
+
+.svc .d ul.incl{margin:8px 0 0 18px;padding:0}
+.svc .d ul.incl li{margin:5px 0;font-size:.86rem;line-height:1.55}
+.svc .d .fine{margin-top:10px;padding-top:9px;border-top:1px solid var(--line);font-size:.78rem;line-height:1.55}
+.svc .d .upg{margin-top:9px;background:var(--sage);border-radius:8px;padding:9px 12px;font-size:.8rem;color:var(--green-dark)}
+
+.svc .d .sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.12rem;font-weight:600;color:var(--green-dark);margin:6px 0 8px;line-height:1.3}
+.svc .d p{margin-bottom:8px;font-size:.86rem;line-height:1.6}
+
+
+.svc .d .carimg{margin-top:12px;max-width:320px}
+.svc .d .carimg img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;display:block;background:#eceadf}
+
+.subh{font-size:1.15rem;font-weight:700;color:var(--green-dark);margin:30px 0 4px}
+.shipbox{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:22px 26px;margin-top:20px}
+.shipbox .shipname{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.8rem;font-weight:700;color:var(--green-dark)}
+.shipstats{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.shipstats div{text-align:center}
+.shipstats b{display:block;font-size:1.15rem;font-weight:700;color:var(--green)}
+.shipstats span{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.cabgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.cab{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.cabhd{background:var(--green);color:#fff;padding:16px 22px}
+.cabcat{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;opacity:.8}
+.cabname{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-weight:700;margin-top:2px}
+.shipgal{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.shipgal img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;display:block;background:#eceadf}
+.cabimg img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;background:#eceadf}
+@media(max-width:720px){.shipgal{grid-template-columns:1fr}}
+
+.cabbody{padding:20px 22px}
+.cabprice .v{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--green-dark);line-height:1}
+.cabprice .u{font-size:.76rem;color:var(--muted);margin-top:3px}
+.cabinc{margin:14px 0 0 18px;font-size:.86rem;color:var(--muted)}
+.cabinc li{margin:5px 0}
+@media(max-width:720px){.shipstats{grid-template-columns:repeat(3,1fr)}.cabgrid{grid-template-columns:1fr}}
+.pkg-note{background:var(--sage);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:.9rem;color:var(--green-dark)}
+
+/* TABLE */
+.tbl-wrap{overflow-x:auto;margin-top:24px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:560px}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line)}
+.sec-row td{background:var(--sage);font-weight:700;text-align:center;letter-spacing:.04em;color:var(--green-dark)}
+.head-row td{background:#efeee7;font-weight:600;color:#4a4a44}
+.total-row td{background:#eef2e6;font-weight:700}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+
+/* PAY */
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.pay h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
+.pay p{font-size:.9rem;margin-bottom:4px}
+.obs{margin-top:26px;font-size:.82rem;color:var(--muted)}
+.obs li{margin:6px 0 6px 18px}
+.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px}
+.flval{display:flex;justify-content:space-between;align-items:center;background:var(--green);color:#fff;border-radius:12px;padding:16px 24px;margin-top:16px;flex-wrap:wrap;gap:12px}
+.flval .lbl{font-weight:600;font-size:.9rem}
+.flval .amt{text-align:right}
+.flval .amt .t{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;line-height:1}
+.flval .amt .p{font-size:.74rem;opacity:.9;margin-top:3px}
+
+/* FOOTER */
+.footer{background:var(--green);color:#fff;padding:44px 56px}
+.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
+.footer .fnote{font-size:.8rem;opacity:.7;margin-top:16px}
+.sh .eyebrow{margin-bottom:10px;display:block}
+
+/* ---------- COMPONENTES OPCIONAIS (herdados da cotação Canadá & NY) ---------- */
+/* Timeline-resumo do roteiro (1 linha por cidade) */
+.tl{margin-top:34px;border-left:2px solid var(--line);padding-left:0}
+.tl-item{display:grid;grid-template-columns:56px 1fr auto;gap:20px;padding:22px 0 22px 26px;position:relative;border-bottom:1px solid var(--line)}
+.tl-item:last-child{border-bottom:none}
+.tl-num{width:40px;height:40px;background:var(--green);color:#fff;border-radius:9px;display:grid;place-items:center;font-weight:700;font-size:1.05rem;margin-left:-27px}
+.tl-city{font-weight:600;font-size:1.12rem}
+.tl-country{color:var(--muted);font-size:.9rem}
+.tl-meta{color:var(--muted);font-size:.9rem;margin-top:4px}
+.tl-nights{text-align:right;font-weight:700;font-size:1.4rem;line-height:1}
+.tl-nights span{display:block;font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:2px}
+
+/* Cabeçalho de opção dentro de uma seção (ex.: 2 blocos de aéreo) */
+.opt-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:26px;margin-bottom:2px}
+.opt-head h3{font-size:1.25rem;font-weight:700}
+.opt-head .badge{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;background:var(--sage);color:var(--green-dark);padding:5px 12px;border-radius:20px}
+
+/* Etiqueta de rede/bandeira ao lado do nome do hotel */
+.opt-tag{display:inline-block;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:4px 9px;border-radius:20px;margin-left:2px;vertical-align:middle;background:#efe7d6;color:#8a6d2f}
+
+/* Hotel com mais de uma tarifa: linhas .rate dentro do card */
+.rate{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line);margin-top:10px}
+.rate .rt{font-size:.88rem}
+.rate .rt b{font-weight:600;color:var(--green-dark)}
+.rate .rv{font-weight:700;font-size:1rem;color:var(--green);white-space:nowrap}
+
+/* Aviso âmbar (ex.: item fora da cotação) */
+.flag-note{background:#fbf3e6;border:1px solid #e9d7b3;border-left:4px solid #c9a227;border-radius:8px;padding:12px 16px;margin-top:14px;font-size:.85rem;color:#6b5a2e}
+
+/* Destaque verde dentro de um dia do roteiro (data especial, aviso) */
+.daybody .hl{background:var(--sage);border-radius:9px;padding:10px 13px;margin-top:10px;font-size:.85rem;color:var(--green-dark)}
+
+/* Localidade do hotel na tabela de valores (usado nas cotações, faltava no CSS) */
+.rm{font-size:.78rem;color:var(--muted);font-weight:400;margin-top:2px}
+
+/* Fallback de marca em texto, quando img/logo-*.png não existir */
+.brandtext{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:.3em;color:var(--green);text-transform:uppercase}
+.footer .brandtext{color:#fff;margin-bottom:14px}
+
+@media(max-width:720px){
+  .section,.hero,.footer,.brandbar{padding-left:24px;padding-right:24px}
+  .hero h1{font-size:2.2rem}
+  .hero-info{grid-template-columns:1fr}.hero-info .r{text-align:left}
+  .leg{grid-template-columns:1fr;gap:8px}
+  .air-head{flex-direction:column;align-items:flex-start;gap:2px}
+  .pay{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr;text-align:left}.svc .dt{text-align:left}
+  .tl-item{grid-template-columns:40px 1fr auto;gap:12px}
+  .hotel-top{flex-direction:column}.hotel-price{text-align:left}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ===== 0. BRAND BAR (obrigatório) — logo verde centralizado ===== -->
+  <div class="brandbar"><img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel — travel agency" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'"></div>
+
+  <!-- ===== 1. HERO / CAPA (obrigatório) ===== -->
+  <header class="hero">
+    <div class="eyebrow">Cotação para sua viagem</div>
+    <!-- Destino em CAIXA ALTA. Dois destinos: separar com <span class="amp">&amp;</span> -->
+    <h1>PORTUGAL <span class="amp">&amp;</span> ESPANHA</h1>
+    <div class="accent-line"></div>
+    <!-- Nome(s) do cliente em negrito · cidades na ordem · período em negrito -->
+    <p class="hero-sub"><b>Marina e Pedro</b> · Lisboa · Sintra · Madrid — <b>15 a 22 de março de 2027</b></p>
+
+    <!-- Foto de capa (img/capa.jpg). Se faltar, o gradiente de fundo assume. A legenda (.cap) é opcional. -->
+    <div class="hero-img">
+      <img src="img/capa.jpg" alt="Portugal e Espanha" onerror="this.style.display='none'">
+      <div class="cap">
+        <div class="k">Rota da viagem</div>
+        <div class="t">Curitiba / São Paulo → Lisboa → Madrid → São Paulo / Curitiba</div>
+      </div>
+    </div>
+
+    <div class="hero-info">
+      <div>
+        <div class="lbl">Detalhes da viagem</div>
+        <p>2 viajantes · 2 cidades · 6 noites · trem entre as cidades</p>
+        <p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>13/10/2026</b> · valores em <b>BRL</b> · Euro: <b>EUR 1 = R$ 6,12</b></p>
+      </div>
+      <div class="r">
+        <div class="lbl">Contato</div>
+        <p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p>
+      </div>
+    </div>
+
+    <!-- Glossário em chips: 3 a 5 números-chave da viagem -->
+    <div class="gloss">
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>2</b>&nbsp;Cidades</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3"/><path d="M21 3v5h-5"/></svg></span><b>6</b>&nbsp;Noites</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="16" cy="8" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 20c0-2 .8-3.4 2-4"/></svg></span><b>2</b>&nbsp;Viajantes</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15l4-8 5 6 3-3 4 5"/><path d="M2 20h20"/></svg></span><b>Trem</b>&nbsp;Lisboa → Madrid</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><b>3</b>&nbsp;Programas</div>
+    </div>
+  </header>
+
+  <!-- ===== 2. RESUMO DO ROTEIRO (opcional) — timeline por cidade ===== -->
+  <section class="section sh">
+    <span class="eyebrow">Resumo</span>
+    <h2>Roteiro</h2>
+    <div class="accent-line"></div>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-num">1</div><div>
+        <div class="tl-city">Lisboa</div><div class="tl-country">Portugal</div>
+        <div class="tl-meta">16 – 19 mar · chegada pela manhã · bate e volta a Sintra</div></div>
+        <div class="tl-nights">3<span>Noites</span></div></div>
+      <div class="tl-item"><div class="tl-num">2</div><div>
+        <div class="tl-city">Madrid</div><div class="tl-country">Espanha</div>
+        <div class="tl-meta">19 – 22 mar · trem desde Lisboa · museus e Retiro</div></div>
+        <div class="tl-nights">3<span>Noites</span></div></div>
+    </div>
+  </section>
+
+  <!-- ===== 3. AÉREO (obrigatório quando cotado; se o cliente já comprou, omitir e avisar nos valores) ===== -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Passagens aéreas</span>
+    <h2>Aéreo · TAP Air Portugal</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">TAP · classe econômica · entrada por <b>Lisboa</b> e saída por <b>Madrid</b>. Trechos domésticos operados pela <b>LATAM</b>. Valores em <b>BRL para 2 adultos</b>. Parcelável em <b>até 5x</b>.</p>
+
+    <div class="air">
+      <div class="air-head"><div class="dir">Ida · 15–16 mar · duração total 14h50</div><div class="route">Curitiba → Lisboa</div></div>
+      <div class="leg">
+        <div class="fl">LATAM · LA 3301 · A320<b>CWB → GRU</b>Curitiba → São Paulo</div>
+        <div class="rt"><div class="pt"><div class="code">CWB</div><div class="tm">Curitiba · 15 mar 14:10</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">São Paulo · 15 mar 15:20</div></div></div>
+        <div class="cls"><b>Econômica</b>1h10</div>
+      </div>
+      <div class="cnx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Conexão em São Paulo · 3h25</div>
+      <div class="leg">
+        <div class="fl">TAP · TP 84 · A339<b>GRU → LIS</b>São Paulo → Lisboa</div>
+        <div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">São Paulo · 15 mar 18:45</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">LIS</div><div class="tm">Lisboa · 16 mar 09:00</div></div></div>
+        <div class="cls"><b>Econômica</b>10h15</div>
+      </div>
+    </div>
+
+    <div class="air">
+      <div class="air-head"><div class="dir">Volta · 22–23 mar · duração total 17h30</div><div class="route">Madrid → Curitiba</div></div>
+      <div class="leg">
+        <div class="fl">TAP · TP 1019 · A320<b>MAD → LIS</b>Madrid → Lisboa</div>
+        <div class="rt"><div class="pt"><div class="code">MAD</div><div class="tm">Madrid · 22 mar 11:20</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">LIS</div><div class="tm">Lisboa · 22 mar 11:45</div></div></div>
+        <div class="cls"><b>Econômica</b>1h25</div>
+      </div>
+      <div class="cnx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Conexão em Lisboa · 2h45</div>
+      <div class="leg">
+        <div class="fl">TAP · TP 83 · A339<b>LIS → GRU</b>Lisboa → São Paulo</div>
+        <div class="rt"><div class="pt"><div class="code">LIS</div><div class="tm">Lisboa · 22 mar 14:30</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">São Paulo · 22 mar 21:40</div></div></div>
+        <div class="cls"><b>Econômica</b>11h10</div>
+      </div>
+      <div class="cnx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Conexão em São Paulo · 2h05</div>
+      <div class="leg">
+        <div class="fl">LATAM · LA 3318 · A320<b>GRU → CWB</b>São Paulo → Curitiba</div>
+        <div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">São Paulo · 22 mar 23:45</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">CWB</div><div class="tm">Curitiba · 23 mar 00:50</div></div></div>
+        <div class="cls"><b>Econômica</b>1h05</div>
+      </div>
+      <!-- O rodapé do aéreo vai no ÚLTIMO bloco .air -->
+      <div class="air-foot"><span class="lbl">TAP Air Portugal · Curitiba → Lisboa · Madrid → Curitiba · 2 adultos</span><span class="val">R$ 12.480,00</span></div>
+    </div>
+  </section>
+
+  <!-- ===== 4. HOTÉIS (obrigatório) — 2 opções por cidade, 6 fotos cada ===== -->
+  <section class="section sh">
+    <span class="eyebrow">Acomodações</span>
+    <h2>Hotéis</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Duas opções por cidade, todas com café da manhã. Valores em <b>BRL para 2 adultos</b>, total do período. <b>Escolher 1 opção por cidade.</b> Parcelável em <b>até 10x</b>.</p>
+
+    <div class="city-block">
+      <div class="city-head"><h3>Lisboa</h3><span class="dates">16 – 19 MAR · 3 noites</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hotel Avenida Palace <span class="loc2">· Baixa</span></span></div><div class="hotel-price"><div class="v">R$ 4.950</div><div class="u">3 noites</div></div></div><div class="hgal"><img src="img/hotels/avenida-palace/1.jpg" alt="Hotel Avenida Palace" loading="lazy"><img src="img/hotels/avenida-palace/2.jpg" alt="Hotel Avenida Palace" loading="lazy"><img src="img/hotels/avenida-palace/3.jpg" alt="Hotel Avenida Palace" loading="lazy"><img src="img/hotels/avenida-palace/4.jpg" alt="Hotel Avenida Palace" loading="lazy"><img src="img/hotels/avenida-palace/5.jpg" alt="Hotel Avenida Palace" loading="lazy"><img src="img/hotels/avenida-palace/6.jpg" alt="Hotel Avenida Palace" loading="lazy"></div><div class="hotel-room"><b>Deluxe Double</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Memmo Príncipe Real <span class="loc2">· Príncipe Real</span></span></div><div class="hotel-price"><div class="v">R$ 3.600</div><div class="u">3 noites</div></div></div><div class="hgal"><img src="img/hotels/memmo/1.jpg" alt="Memmo Príncipe Real" loading="lazy"><img src="img/hotels/memmo/2.jpg" alt="Memmo Príncipe Real" loading="lazy"><img src="img/hotels/memmo/3.jpg" alt="Memmo Príncipe Real" loading="lazy"><img src="img/hotels/memmo/4.jpg" alt="Memmo Príncipe Real" loading="lazy"><img src="img/hotels/memmo/5.jpg" alt="Memmo Príncipe Real" loading="lazy"><img src="img/hotels/memmo/6.jpg" alt="Memmo Príncipe Real" loading="lazy"></div><div class="hotel-room"><b>Superior Room</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+      </div>
+      <!-- Nota opcional abaixo do grid quando as opções diferem em localização/perfil -->
+      <p class="note">O <b>Avenida Palace</b> fica na Baixa, ao lado do Rossio; o <b>Memmo</b> no Príncipe Real, bairro mais residencial e com vista para o rio.</p>
+    </div>
+
+    <div class="city-block">
+      <div class="city-head"><h3>Madrid</h3><span class="dates">19 – 22 MAR · 3 noites</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hotel Urban <span class="loc2">· Carrera de San Jerónimo</span></span></div><div class="hotel-price"><div class="v">R$ 5.280</div><div class="u">3 noites</div></div></div><div class="hgal"><img src="img/hotels/urban/1.jpg" alt="Hotel Urban" loading="lazy"><img src="img/hotels/urban/2.jpg" alt="Hotel Urban" loading="lazy"><img src="img/hotels/urban/3.jpg" alt="Hotel Urban" loading="lazy"><img src="img/hotels/urban/4.jpg" alt="Hotel Urban" loading="lazy"><img src="img/hotels/urban/5.jpg" alt="Hotel Urban" loading="lazy"><img src="img/hotels/urban/6.jpg" alt="Hotel Urban" loading="lazy"></div><div class="hotel-room"><b>Deluxe Room</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Only YOU Boutique Hotel <span class="loc2">· Chueca</span></span></div><div class="hotel-price"><div class="v">R$ 3.900</div><div class="u">3 noites</div></div></div><div class="hgal"><img src="img/hotels/onlyyou/1.jpg" alt="Only YOU Boutique Hotel" loading="lazy"><img src="img/hotels/onlyyou/2.jpg" alt="Only YOU Boutique Hotel" loading="lazy"><img src="img/hotels/onlyyou/3.jpg" alt="Only YOU Boutique Hotel" loading="lazy"><img src="img/hotels/onlyyou/4.jpg" alt="Only YOU Boutique Hotel" loading="lazy"><img src="img/hotels/onlyyou/5.jpg" alt="Only YOU Boutique Hotel" loading="lazy"><img src="img/hotels/onlyyou/6.jpg" alt="Only YOU Boutique Hotel" loading="lazy"></div><div class="hotel-room"><b>Superior Room</b> · café da manhã</div><span class="bf">Café da manhã</span>
+          <!-- Variante: hotel com mais de uma tarifa — acrescentar linhas .rate dentro do card -->
+          <div class="rate"><span class="rt">Superior Room · <b>Room only</b></span><span class="rv">R$ 3.420</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. TRANSPORTE (quando houver): trens / transfers em tabela; carro em card .svc ===== -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Transporte</span>
+    <h2>Trens &amp; transfers</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Trem em classe standard. Valores em <b>BRL para 2 adultos</b>. Parcelável em <b>até 5x</b>.</p>
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Serviço</td><td>Detalhe</td><td class="v">Valor · 2 ad</td></tr>
+      <tr><td><b>Transfer de chegada em Lisboa</b></td><td>16/03 · Aeroporto LIS → hotel · <b>privativo</b> · sedan</td><td class="v">R$ 240</td></tr>
+      <tr><td><b>Trem Lisboa → Madrid</b></td><td>19/03 · 09:20 Lisboa Oriente → 17:35 Madrid Chamartín · standard · 1 conexão em Badajoz</td><td class="v">R$ 620</td></tr>
+      <tr class="total-row"><td>Total de trens e transfers</td><td>2 serviços</td><td class="v">R$ 860</td></tr>
+    </table></div>
+  </section>
+
+  <!-- ===== 6. PASSEIOS & INGRESSOS (quando houver) — cards .svc com data + valor à direita ===== -->
+  <section class="section sh">
+    <span class="eyebrow">Experiências</span>
+    <h2>Passeios &amp; ingressos</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Programas já cotados, com data e horário definidos. Valores em <b>BRL para 2 adultos</b>. Parcelável em <b>até 6x</b>.</p>
+
+    <h3 class="subh">Lisboa</h3>
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0114 0"/></svg></div>
+      <div><div class="t">Sintra e Cascais · privativo</div><div class="d"><b>Inclui:</b><ul class="incl"><li>Palácio da Pena e Quinta da Regaleira</li><li>Cabo da Roca e Cascais</li><li><b>Guia em português</b> e carro privativo · 8 horas</li></ul><div class="fine"><b>Ingressos inclusos.</b> Almoço não incluso. O passeio acontecerá independentemente das condições meteorológicas.</div></div></div><div class="dt">17/03<br><span style="color:var(--green);font-size:1.05rem">R$ 2.150</span></div></div>
+
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v7a3 3 0 006 0V3M9 3v18M15 3c-1 2-1 5 0 7v11"/></svg></div>
+      <div><div class="t">Jantar com fado na Alfama</div><div class="d">Mesa reservada em nome do casal · menu de <b>3 pratos</b>, água e serviço inclusos · início às <b>20:30</b><br><span style="font-size:.82rem">Vinhos e bebidas à parte, pagos no local.</span></div></div><div class="dt">18/03<br><span style="color:var(--green);font-size:1.05rem">R$ 980</span></div></div>
+
+    <h3 class="subh">Madrid</h3>
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 10h8M8 14h5"/></svg></div>
+      <div><div class="t">Museu do Prado + Reina Sofía</div><div class="d">Prado às <b>10:00</b> · Reina Sofía às <b>16:00</b> · acesso sem fila da bilheteria</div></div><div class="dt">20/03<br><span style="color:var(--green);font-size:1.05rem">R$ 310</span></div></div>
+
+    <div class="pkg-note">🎟️ Os três programas somam <b>R$ 3.440</b> para o casal.</div>
+  </section>
+
+  <!-- ===== 7. ROTEIRO DIA A DIA (obrigatório) — 1 .dayrow por dia; etiquetas cotado / sugestão ===== -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Dia a dia</span>
+    <h2>Roteiro</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">O que já está cotado, com horário marcado, aparece como <span class="tag-q">cotado</span>. O restante é <span class="tag-s">sugestão</span> nossa e pode ser trocado livremente.</p>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">15</div><div class="m">Mar</div><div class="w">segunda</div></div>
+      <div class="daybody"><span class="city">Curitiba → São Paulo</span>
+        <h4>Embarque</h4>
+        <p>LATAM das <b>14:10</b> para Guarulhos e, às <b>18:45</b>, o voo da TAP para Lisboa — noite a bordo.</p>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">16</div><div class="m">Mar</div><div class="w">terça</div></div>
+      <div class="daybody"><span class="city">Lisboa</span>
+        <h4>Chegada</h4>
+        <ul>
+          <li>Pouso em Lisboa às <b>09:00</b> e <b>transfer privativo</b> ao hotel <span class="tag-q">cotado</span></li>
+          <li>Tarde leve: Baixa, elevador de Santa Justa e o fim de tarde no Miradouro de Santa Catarina <span class="tag-s">sugestão</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">17</div><div class="m">Mar</div><div class="w">quarta</div></div>
+      <div class="daybody"><span class="city">Sintra · Cascais</span>
+        <h4>Dia inteiro fora da cidade</h4>
+        <ul>
+          <li><b>Sintra e Cascais privativo</b>, 8 horas, com guia em português <span class="tag-q">cotado</span></li>
+          <li>Almoço em Sintra — a Tascantiga, perto do centro histórico <span class="tag-s">sugestão</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">18</div><div class="m">Mar</div><div class="w">quinta</div></div>
+      <div class="daybody"><span class="city">Lisboa</span>
+        <h4>Belém de manhã, Alfama à noite</h4>
+        <ul>
+          <li>Mosteiro dos Jerónimos, Torre de Belém e os pastéis <span class="tag-s">sugestão</span></li>
+          <li><b>20:30 · jantar com fado na Alfama</b> <span class="tag-q">cotado</span></li>
+        </ul>
+        <div class="hl">🎂 <b>Aniversário da Marina.</b> Avisamos o restaurante — e podemos pedir um brinde da casa.</div>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">19</div><div class="m">Mar</div><div class="w">sexta</div></div>
+      <div class="daybody"><span class="city">Lisboa → Madrid</span>
+        <h4>Trem para a Espanha</h4>
+        <ul>
+          <li><b>09:20 · trem de Lisboa Oriente</b> a Madrid Chamartín, chegando às <b>17:35</b> <span class="tag-q">cotado</span></li>
+          <li>Noite: tapas no bairro de La Latina <span class="tag-s">sugestão</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">20</div><div class="m">Mar</div><div class="w">sábado</div></div>
+      <div class="daybody"><span class="city">Madrid</span>
+        <h4>Dia dos museus</h4>
+        <ul>
+          <li><b>10:00 · Museu do Prado</b> <span class="tag-q">cotado</span></li>
+          <li>Almoço e passeio no Parque do Retiro <span class="tag-s">sugestão</span></li>
+          <li><b>16:00 · Reina Sofía</b>, para a Guernica <span class="tag-q">cotado</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">21</div><div class="m">Mar</div><div class="w">domingo</div></div>
+      <div class="daybody"><span class="city">Madrid</span>
+        <h4>Dia livre</h4>
+        <ul>
+          <li>Palácio Real, Plaza Mayor e o Mercado de San Miguel <span class="tag-s">sugestão</span></li>
+          <li>Bate e volta a Toledo, 30 minutos de trem, se quiserem sair da cidade <span class="tag-s">sugestão</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">22</div><div class="m">Mar</div><div class="w">segunda</div></div>
+      <div class="daybody"><span class="city">Madrid → Curitiba</span>
+        <h4>Volta</h4>
+        <p>Voo das <b>11:20</b> para Lisboa, conexão e, às <b>14:30</b>, o voo para São Paulo — chegada a Curitiba às <b>00:50</b> do dia 23.</p>
+      </div>
+    </div>
+
+    <!-- Nota de pacote (opcional): aviso prático que vale para o roteiro inteiro -->
+    <div class="pkg-note">🚆 <b>Sobre o trem Lisboa–Madrid:</b> há uma troca em Badajoz; as malas vão com vocês, sem despacho. Chegada na Chamartín, a 15 minutos de táxi do centro.</div>
+  </section>
+
+  <!-- ===== 8. RESUMO DE VALORES (obrigatório) ===== -->
+  <section class="section sh">
+    <span class="eyebrow">Investimento</span>
+    <h2>Resumo de valores</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">*Cada item com o seu valor exato, em <b>BRL</b> para <b>2 adultos</b>. Hotéis: escolher 1 opção por cidade — por isso o total é uma faixa. Nada reservado, apenas cotado.</p>
+
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Item</td><td>Detalhe</td><td class="v">Valor · 2 ad</td></tr>
+      <tr class="sec-row"><td colspan="3">Lisboa · 16–19/03 · 3 noites · escolher 1</td></tr>
+      <tr><td><b>Hotel Avenida Palace</b><div class="rm">Baixa</div></td><td>Deluxe Double · café da manhã</td><td class="v">R$ 4.950</td></tr>
+      <tr><td><b>Memmo Príncipe Real</b><div class="rm">Príncipe Real</div></td><td>Superior Room · café da manhã</td><td class="v">R$ 3.600</td></tr>
+      <tr class="sec-row"><td colspan="3">Madrid · 19–22/03 · 3 noites · escolher 1</td></tr>
+      <tr><td><b>Hotel Urban</b></td><td>Deluxe Room · café da manhã</td><td class="v">R$ 5.280</td></tr>
+      <tr><td><b>Only YOU Boutique Hotel</b></td><td>Superior Room · café da manhã</td><td class="v">R$ 3.900</td></tr>
+      <tr class="sec-row"><td colspan="3">Aéreo, transporte &amp; passeios</td></tr>
+      <tr><td><b>Aéreo</b> · TAP Air Portugal</td><td>Curitiba → Lisboa · Madrid → Curitiba · econômica</td><td class="v">R$ 12.480,00</td></tr>
+      <tr><td><b>Trens &amp; transfers</b></td><td>Transfer em Lisboa + trem Lisboa → Madrid</td><td class="v">R$ 860</td></tr>
+      <tr><td><b>Passeios &amp; ingressos</b></td><td>3 programas em Lisboa e Madrid</td><td class="v">R$ 3.440</td></tr>
+    </table></div>
+
+    <div class="flval"><span class="lbl">Total estimado do casal (2 adultos)</span><div class="amt"><div class="t">R$ 24.280 – 27.010</div><div class="p">hospedagem + aéreo + trens e transfers + passeios</div></div></div>
+    <p class="note"><b>Como é calculado:</b> hospedagem (R$ 7.500 – 10.230) + aéreo (R$ 12.480) + trens e transfers (R$ 860) + passeios (R$ 3.440). Varia conforme os hotéis escolhidos.</p>
+
+    <div class="pay">
+      <div class="box">
+        <h4>Condições de pagamento</h4>
+        <p><b>Hotéis</b> — em até <b>10x</b></p>
+        <p><b>Passeios &amp; ingressos</b> — em até <b>6x</b></p>
+        <p><b>Trens &amp; transfers</b> — em até <b>5x</b></p>
+        <p><b>Aéreo</b> — em até <b>5x</b></p>
+      </div>
+      <div class="box">
+        <h4>Referência</h4>
+        <p>Euro: EUR 1 = R$ 6,12 · 13/10/2026</p>
+        <p class="muted" style="margin-top:8px;font-size:.82rem">Valores finais conforme disponibilidade e câmbio na data de fechamento.</p>
+      </div>
+    </div>
+
+    <div class="obs">
+      <h4>Não inclui</h4>
+      <ul>
+        <li>Refeições e bebidas não descritas · gorjetas · despesas pessoais</li>
+        <li>Passeios, ingressos e serviços não listados nesta cotação</li>
+        <li>Taxas turísticas municipais pagas no hotel</li>
+        <li>Seguro viagem · autorização ETIAS/vistos, quando aplicável</li>
+      </ul>
+      <h4>Observações</h4>
+      <ul>
+        <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
+        <li>A confirmação está sujeita à disponibilidade no momento do pagamento.</li>
+        <li>O preço final pode variar conforme a política de preços dinâmica de companhias aéreas e hotéis.</li>
+        <li>Horários de voo e trem sujeitos a alteração pelas companhias.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 9. FOOTER (obrigatório) ===== -->
+  <footer class="footer">
+    <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'">
+    <div class="contact">
+      atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>
+      Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR
+    </div>
+    <div class="fnote">*Nada reservado, apenas cotado.</div>
+  </footer>
+
+</div>
+</body>
+</html>

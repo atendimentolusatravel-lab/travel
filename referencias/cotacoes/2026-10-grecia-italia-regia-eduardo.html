@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lusa Travel · Grécia &amp; Itália — Regia e Eduardo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#404626; --green-dark:#363b1f; --green-soft:#5a6238;
+  --sage:#d9ead3; --sage-head:#c6d8b0;
+  --ink:#333131; --muted:#6f6f68; --line:#e7e7e0; --bg:#ffffff; --cream:#faf9f5;
+  --terra:#b4622f;
+  --shadow:0 10px 30px rgba(64,70,38,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{line-height:1.15}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:60px 56px}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+.muted{color:var(--muted)}
+
+.brandbar{display:flex;flex-direction:column;align-items:center;gap:8px;padding:38px 0 6px}
+.brandbar .brandlogo{width:210px;height:auto;display:block}
+.footlogo{width:190px;height:auto;display:block;margin-bottom:14px}
+
+/* HERO */
+.hero{padding:56px 56px 40px}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.hero h1 .amp{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-style:italic}
+.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
+.hero-img{margin:34px 0 0;height:330px;border-radius:14px;overflow:hidden;position:relative;
+  display:flex;align-items:flex-end;box-shadow:var(--shadow);
+  background:
+    radial-gradient(120% 130% at 12% 8%, rgba(70,120,150,.55), rgba(40,80,110,.15) 42%, transparent 60%),
+    radial-gradient(120% 130% at 92% 96%, rgba(150,170,120,.55), rgba(90,110,70,.2) 44%, transparent 64%),
+    linear-gradient(120deg, #3a5f80 0%, #5a7d92 30%, #8aa0a2 55%, #b0a878 80%, #7a6a3a 100%);}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-img::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top, rgba(20,26,32,.6), rgba(20,26,32,.05) 55%, transparent)}
+.hero-img .cap{position:relative;z-index:2;padding:22px 26px;color:#fff}
+.hero-img .cap .k{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;opacity:.92}
+.hero-img .cap .t{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:600;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
+.hero-info .r{text-align:right}
+.hero-info p{font-size:.95rem}
+.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
+.chip b{font-size:1.15rem;font-weight:700}
+.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
+.chip .ic svg{width:18px;height:18px}
+
+/* AEREO */
+.air{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:18px;background:#fff;box-shadow:var(--shadow)}
+.air-head{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--green);color:#fff;padding:14px 22px}
+.air-head .dir{font-weight:700;letter-spacing:.14em;font-size:.78rem;text-transform:uppercase}
+.air-head .route{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;font-weight:600}
+.leg{display:grid;grid-template-columns:200px 1fr auto;gap:18px;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line)}
+.leg .fl{font-size:.78rem;color:var(--muted)}
+.leg .fl b{display:block;color:var(--ink);font-size:.92rem;font-weight:600}
+.leg .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.leg .pt .code{font-weight:700;font-size:1.05rem}
+.leg .pt .tm{font-size:.82rem;color:var(--muted)}
+.leg .arrow{color:var(--green-soft);flex:none}
+.leg .cls{text-align:right;font-size:.78rem}
+.leg .cls b{display:block;color:var(--green);font-size:.86rem}
+.cnx{display:flex;align-items:center;gap:8px;padding:9px 22px;background:#f4f5ef;font-size:.75rem;color:var(--muted);border-bottom:1px solid var(--line)}
+.cnx svg{width:14px;height:14px;flex:none;color:var(--green-soft)}
+.air-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;background:#f4f5ef}
+.air-foot .lbl{font-size:.78rem;color:var(--muted)}
+.air-foot .val{font-weight:700;font-size:1.3rem;color:var(--green)}
+
+/* HOTELS */
+.city-block{margin-top:34px}
+.city-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--green);padding-bottom:10px;margin-bottom:22px}
+.city-head h3{font-size:1.4rem;font-weight:700}
+.city-head .dates{color:var(--green-soft);font-weight:600;font-size:.9rem;letter-spacing:.04em}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.hgrid{grid-template-columns:1fr}}
+.hotel{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:20px 22px}
+.hotel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.hotel-name{font-size:1.06rem;font-weight:600;display:flex;align-items:center;gap:12px}
+.hotel-name .bldg{width:34px;height:34px;flex:none;border:1.6px solid var(--ink);border-radius:50%;display:grid;place-items:center}
+.hotel-name .bldg svg{width:17px;height:17px}
+.hotel-price{text-align:right;flex:none}
+.hotel-price .v{font-size:1.3rem;font-weight:700;color:var(--green);white-space:nowrap}
+.hotel-price .u{font-size:.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.hotel-room{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
+.hotel-room b{color:var(--green-dark);font-weight:600}
+.bf{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-soft);background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:3px 9px;margin-top:10px}
+.hgal{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:14px}
+.hgal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px;display:block;background:#eceadf}
+
+/* experience card */
+.svc{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:start;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-top:14px;background:#fff;box-shadow:var(--shadow)}
+.svc .ic{width:52px;height:52px;background:var(--green);border-radius:12px;display:grid;place-items:center;color:#fff;flex:none}
+.svc .ic svg{width:24px;height:24px}
+.svc .t{font-weight:600;font-size:1.02rem}
+.svc .d{color:var(--muted);font-size:.86rem;margin-top:2px}
+.svc .dt{text-align:right;font-weight:700;font-size:.9rem;color:var(--green-soft);white-space:nowrap}
+.dayrow{display:grid;grid-template-columns:92px 1fr;gap:22px;padding:22px 0;border-bottom:1px solid var(--line)}
+.dayrow:last-of-type{border-bottom:none}
+.daynum{text-align:right}
+.daynum .d{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;font-weight:700;color:var(--green);line-height:1}
+.daynum .m{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green-soft);font-weight:700;margin-top:2px}
+.daynum .w{font-size:.7rem;color:var(--muted);margin-top:2px}
+.daybody .city{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--green);border-radius:12px;padding:3px 11px;display:inline-block;margin-bottom:9px}
+.daybody h4{font-size:1.06rem;font-weight:600;margin-bottom:5px;color:var(--green-dark)}
+.daybody p{font-size:.88rem;color:var(--muted)}
+.daybody ul{margin:9px 0 0 18px;font-size:.88rem;color:var(--muted)}
+.daybody li{margin:5px 0}
+.tag-q,.tag-s{display:inline-block;font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:10px;padding:2px 8px;margin-left:5px;white-space:nowrap}
+.tag-q{color:var(--terra);background:#fdf3ec;border:1px solid #f0dccd}
+.tag-s{color:var(--green-dark);background:#eef2e6;border:1px solid #dde5cf}
+@media(max-width:720px){.dayrow{grid-template-columns:64px 1fr;gap:14px}.daynum .d{font-size:1.5rem}}
+
+.svc .d ul.incl{margin:8px 0 0 18px;padding:0}
+.svc .d ul.incl li{margin:5px 0;font-size:.86rem;line-height:1.55}
+.svc .d .fine{margin-top:10px;padding-top:9px;border-top:1px solid var(--line);font-size:.78rem;line-height:1.55}
+.svc .d .upg{margin-top:9px;background:var(--sage);border-radius:8px;padding:9px 12px;font-size:.8rem;color:var(--green-dark)}
+
+.svc .d .sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.12rem;font-weight:600;color:var(--green-dark);margin:6px 0 8px;line-height:1.3}
+.svc .d p{margin-bottom:8px;font-size:.86rem;line-height:1.6}
+
+
+.svc .d .carimg{margin-top:12px;max-width:320px}
+.svc .d .carimg img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;display:block;background:#eceadf}
+
+.subh{font-size:1.15rem;font-weight:700;color:var(--green-dark);margin:30px 0 4px}
+.shipbox{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:22px 26px;margin-top:20px}
+.shipbox .shipname{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.8rem;font-weight:700;color:var(--green-dark)}
+.shipstats{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.shipstats div{text-align:center}
+.shipstats b{display:block;font-size:1.15rem;font-weight:700;color:var(--green)}
+.shipstats span{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.cabgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.cab{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.cabhd{background:var(--green);color:#fff;padding:16px 22px}
+.cabcat{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;opacity:.8}
+.cabname{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-weight:700;margin-top:2px}
+.shipgal{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.shipgal img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;display:block;background:#eceadf}
+.cabimg img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;background:#eceadf}
+@media(max-width:720px){.shipgal{grid-template-columns:1fr}}
+
+.cabbody{padding:20px 22px}
+.cabprice .v{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--green-dark);line-height:1}
+.cabprice .u{font-size:.76rem;color:var(--muted);margin-top:3px}
+.cabinc{margin:14px 0 0 18px;font-size:.86rem;color:var(--muted)}
+.cabinc li{margin:5px 0}
+@media(max-width:720px){.shipstats{grid-template-columns:repeat(3,1fr)}.cabgrid{grid-template-columns:1fr}}
+.pkg-note{background:var(--sage);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:.9rem;color:var(--green-dark)}
+
+/* TABLE */
+.tbl-wrap{overflow-x:auto;margin-top:24px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:560px}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line)}
+.sec-row td{background:var(--sage);font-weight:700;text-align:center;letter-spacing:.04em;color:var(--green-dark)}
+.head-row td{background:#efeee7;font-weight:600;color:#4a4a44}
+.total-row td{background:#eef2e6;font-weight:700}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+
+/* PAY */
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.pay h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
+.pay p{font-size:.9rem;margin-bottom:4px}
+.obs{margin-top:26px;font-size:.82rem;color:var(--muted)}
+.obs li{margin:6px 0 6px 18px}
+.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px}
+.flval{display:flex;justify-content:space-between;align-items:center;background:var(--green);color:#fff;border-radius:12px;padding:16px 24px;margin-top:16px;flex-wrap:wrap;gap:12px}
+.flval .lbl{font-weight:600;font-size:.9rem}
+.flval .amt{text-align:right}
+.flval .amt .t{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;line-height:1}
+.flval .amt .p{font-size:.74rem;opacity:.9;margin-top:3px}
+
+/* FOOTER */
+.footer{background:var(--green);color:#fff;padding:44px 56px}
+.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
+.footer .fnote{font-size:.8rem;opacity:.7;margin-top:16px}
+.sh .eyebrow{margin-bottom:10px;display:block}
+
+@media(max-width:720px){
+  .section,.hero,.footer,.brandbar{padding-left:24px;padding-right:24px}
+  .hero h1{font-size:2.2rem}
+  .hero-info{grid-template-columns:1fr}.hero-info .r{text-align:left}
+  .leg{grid-template-columns:1fr;gap:8px}
+  .air-head{flex-direction:column;align-items:flex-start;gap:2px}
+  .pay{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr;text-align:left}.svc .dt{text-align:left}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="brandbar"><img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel — travel agency"></div>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="eyebrow">Cotação para sua viagem</div>
+    <h1>GRÉCIA <span class="amp">&amp;</span> ITÁLIA</h1>
+    <div class="accent-line"></div>
+    <p class="hero-sub"><b>Regia e Eduardo</b> · Cruzeiro Istambul → Civitavecchia · Milão · Florença · San Gimignano — <b>08 a 28 de julho de 2027</b></p>
+
+    <div class="hero-img"><img src="img/capa.jpg" alt="Grécia e Itália" onerror="this.style.display='none'"></div>
+
+    <div class="hero-info">
+      <div>
+        <div class="lbl">Detalhes da viagem</div>
+        <p>2 viajantes · 18 noites · cruzeiro de 10 noites + 8 noites em terra</p>
+        <p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>06/10/2026</b> · valores em <b>BRL</b> · Dólar: <b>USD 1 = R$ 5,04</b></p>
+      </div>
+      <div class="r">
+        <div class="lbl">Contato</div>
+        <p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p>
+      </div>
+    </div>
+
+    <div class="gloss">
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M5 17l1.5-7h11L19 17M12 5v5"/></svg></span><b>10</b>&nbsp;Noites de navio</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>11</b>&nbsp;Portos</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3"/><path d="M21 3v5h-5"/></svg></span><b>18</b>&nbsp;Noites</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="16" cy="8" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 20c0-2 .8-3.4 2-4"/></svg></span><b>2</b>&nbsp;Viajantes</div>
+    </div>
+  </header>
+
+  <!-- AÉREO -->
+  <section class="section sh">
+    <span class="eyebrow">Passagens aéreas</span>
+    <h2>Aéreo · Turkish Airlines</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Turkish Airlines · classe econômica · entrada por <b>Istambul</b>, onde começa o cruzeiro, e saída por <b>Milão-Malpensa</b>. Os trechos domésticos são operados pela <b>GOL</b> na ida e pela <b>Azul</b> na volta.</p>
+
+    <div class="air">
+      <div class="air-head"><div class="dir">Ida · 08–09 jul · duração total 18h45</div><div class="route">Curitiba → Istambul</div></div>
+      <div class="leg">
+        <div class="fl">GOL · G3 1169 · B737<b>CWB → GRU</b>Curitiba → São Paulo</div>
+        <div class="rt"><div class="pt"><div class="code">CWB</div><div class="tm">Curitiba · 08 jul 11:30</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">São Paulo · 08 jul 12:40</div></div></div>
+        <div class="cls"><b>Econômica</b>1h10</div>
+      </div>
+      <div class="cnx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Conexão em São Paulo · 3h55</div>
+      <div class="leg">
+        <div class="fl">Turkish Airlines · TK 216 · A359<b>GRU → IST</b>São Paulo → Istambul</div>
+        <div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">São Paulo · 08 jul 16:35</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">IST</div><div class="tm">Istambul · 09 jul 11:15</div></div></div>
+        <div class="cls"><b>Econômica</b>13h40</div>
+      </div>
+    </div>
+
+    <div class="air">
+      <div class="air-head"><div class="dir">Volta · 27–28 jul · duração total 24h25</div><div class="route">Milão → Curitiba</div></div>
+      <div class="leg">
+        <div class="fl">Turkish Airlines · TK 1874 · A359<b>MXP → IST</b>Milão → Istambul</div>
+        <div class="rt"><div class="pt"><div class="code">MXP</div><div class="tm">Milão · 27 jul 10:40</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">IST</div><div class="tm">Istambul · 27 jul 14:35</div></div></div>
+        <div class="cls"><b>Econômica</b>2h55</div>
+      </div>
+      <div class="cnx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Conexão em Istambul · 5h50</div>
+      <div class="leg">
+        <div class="fl">Turkish Airlines · TK 215 · A359<b>IST → GRU</b>Istambul → São Paulo</div>
+        <div class="rt"><div class="pt"><div class="code">IST</div><div class="tm">Istambul · 27 jul 20:25</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">São Paulo · 28 jul 03:30</div></div></div>
+        <div class="cls"><b>Econômica</b>12h05</div>
+      </div>
+      <div class="cnx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Conexão em São Paulo · 2h35</div>
+      <div class="leg">
+        <div class="fl">Azul · AD 4826 · E295<b>GRU → CWB</b>São Paulo → Curitiba</div>
+        <div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">São Paulo · 28 jul 06:05</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">CWB</div><div class="tm">Curitiba · 28 jul 07:05</div></div></div>
+        <div class="cls"><b>Econômica</b>1h00</div>
+      </div>
+      <div class="air-foot"><span class="lbl">Turkish Airlines · Curitiba → Istambul · Milão → Curitiba · 2 adultos</span><span class="val">R$ 14.781,12</span></div>
+    </div>
+  </section>
+
+  <!-- CRUZEIRO -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Cruzeiro · Oceania Cruises</span>
+    <h2>Sirena · 10 noites pelo Mediterrâneo Oriental</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">De <b>Istambul a Civitavecchia (Roma)</b>, passando por Grécia e Itália. Regime <b>all inclusive</b>, com gorjetas incluídas, vinhos e cervejas de cortesia e pacote de internet para os dois hóspedes. Parcelável em <b>até 12x</b>.</p>
+
+    <div class="shipbox">
+      <div class="shipname">Sirena</div>
+      <div class="shipstats">
+        <div><b>Navio pequeno</b><span>tamanho</span></div>
+        <div><b>1999</b><span>inauguração</span></div>
+        <div><b>2019</b><span>última reforma</span></div>
+        <div><b>11</b><span>decks</span></div>
+        <div><b>684</b><span>passageiros</span></div>
+        <div><b>400</b><span>tripulantes</span></div>
+      </div><div class="shipgal"><img src="img/navio/sirena.avif" alt="Oceania Sirena" loading="lazy"><img src="img/navio/piscina.avif" alt="Piscina do Sirena" loading="lazy"><img src="img/navio/waves-grill.avif" alt="Waves Grill" loading="lazy"></div>
+    </div>
+
+    <h3 class="subh">Roteiro do navio</h3>
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Dia</td><td>Data</td><td>Porto</td><td>Chegada</td><td>Partida</td></tr>
+      <tr><td><b>01</b></td><td>sex · 09/07</td><td><b>Istambul</b> · Turquia</td><td>07:00</td><td>17:00</td></tr>
+      <tr><td><b>02</b></td><td>sáb · 10/07</td><td><b>Mytilini</b> · Lesbos, Grécia</td><td>10:00</td><td>18:00</td></tr>
+      <tr><td><b>03</b></td><td>dom · 11/07</td><td><b>Cavala</b> · Grécia</td><td>12:00</td><td>20:00</td></tr>
+      <tr><td><b>04</b></td><td>seg · 12/07</td><td><b>Tessalônica</b> · Grécia</td><td>08:00</td><td>17:00</td></tr>
+      <tr><td><b>05</b></td><td>ter · 13/07</td><td><b>Mykonos</b> · Grécia</td><td>09:00</td><td>18:00</td></tr>
+      <tr><td><b>06</b></td><td>qua · 14/07</td><td><b>Santorini</b> · Grécia</td><td>09:00</td><td>19:00</td></tr>
+      <tr><td><b>07</b></td><td>qui · 15/07</td><td><b>Aghios Nikolaos</b> · Creta, Grécia</td><td>07:00</td><td>14:00</td></tr>
+      <tr><td><b>08</b></td><td>sex · 16/07</td><td><b>Katakolo</b> · Olímpia, Grécia</td><td>10:00</td><td>17:00</td></tr>
+      <tr><td><b>09</b></td><td>sáb · 17/07</td><td><b>Taormina</b> · Sicília, Itália</td><td>11:00</td><td>20:00</td></tr>
+      <tr><td><b>10</b></td><td>dom · 18/07</td><td><b>Amalfi</b> · Itália</td><td>09:00</td><td>17:00</td></tr>
+      <tr><td><b>11</b></td><td>seg · 19/07</td><td><b>Civitavecchia</b> · Roma, Itália &mdash; desembarque</td><td>07:00</td><td>&mdash;</td></tr>
+    </table></div>
+
+    <h3 class="subh">Opções de cabine · escolher 1</h3>
+    <div class="cabgrid">
+      <div class="cab">
+        <div class="cabhd"><div class="cabcat">Categoria D</div><div class="cabname">Externa Escotilha</div></div><div class="cabimg"><img src="img/navio/oceanview.jpg" alt="Cabine Externa Escotilha" loading="lazy"></div>
+        <div class="cabbody">
+          <div class="cabprice"><div class="v">R$ 22.942,94</div><div class="u">o casal &middot; R$ 11.471,47 por pessoa</div></div>
+          <ul class="cabinc">
+            <li>Regime <b>all inclusive</b></li>
+            <li>Pacote de internet gratuito para os dois hóspedes</li>
+            <li><b>Gorjetas incluídas</b></li>
+            <li>Vinhos e cervejas de cortesia</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cab">
+        <div class="cabhd"><div class="cabcat">Categoria B2</div><div class="cabname">Varanda</div></div><div class="cabimg"><img src="img/navio/varanda.jpg" alt="Cabine Varanda" loading="lazy"></div>
+        <div class="cabbody">
+          <div class="cabprice"><div class="v">R$ 33.419,40</div><div class="u">o casal &middot; R$ 16.709,70 por pessoa</div></div>
+          <ul class="cabinc">
+            <li>Regime <b>all inclusive</b></li>
+            <li>Pacote de internet gratuito para os dois hóspedes</li>
+            <li><b>Gorjetas incluídas</b></li>
+            <li>Vinhos e cervejas de cortesia</li>
+            <li><b>Varanda privativa</b> na cabine</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOTÉIS -->
+  <section class="section sh">
+    <span class="eyebrow">Acomodações em terra</span>
+    <h2>Hotéis</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Depois do desembarque em Civitavecchia. Duas opções por cidade, todas com café da manhã. Valores em <b>BRL para 2 adultos</b>, total do período. <b>Escolher 1 opção por cidade.</b></p>
+
+    <div class="city-block">
+      <div class="city-head"><h3>Milão</h3><span class="dates">19 – 22 JUL · 3 noites</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>The Square Milano Duomo</span></div><div class="hotel-price"><div class="v">R$ 8.100</div><div class="u">3 noites</div></div></div><div class="hgal"><img src="img/hotels/square/1.jpg" alt="The Square Milano Duomo" loading="lazy"><img src="img/hotels/square/2.jpg" alt="The Square Milano Duomo" loading="lazy"><img src="img/hotels/square/3.jpg" alt="The Square Milano Duomo" loading="lazy"><img src="img/hotels/square/4.jpg" alt="The Square Milano Duomo" loading="lazy"><img src="img/hotels/square/5.jpg" alt="The Square Milano Duomo" loading="lazy"><img src="img/hotels/square/6.jpg" alt="The Square Milano Duomo" loading="lazy"></div><div class="hotel-room"><b>Deluxe Double Room</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Rosa Grand Milano</span></div><div class="hotel-price"><div class="v">R$ 8.110</div><div class="u">3 noites</div></div></div><div class="hgal"><img src="img/hotels/rosa/1.jpg" alt="Rosa Grand Milano" loading="lazy"><img src="img/hotels/rosa/2.jpg" alt="Rosa Grand Milano" loading="lazy"><img src="img/hotels/rosa/3.jpg" alt="Rosa Grand Milano" loading="lazy"><img src="img/hotels/rosa/4.jpg" alt="Rosa Grand Milano" loading="lazy"><img src="img/hotels/rosa/5.jpg" alt="Rosa Grand Milano" loading="lazy"><img src="img/hotels/rosa/6.jpg" alt="Rosa Grand Milano" loading="lazy"></div><div class="hotel-room"><b>Deluxe Double Room</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+      </div>
+    </div>
+
+    <div class="city-block">
+      <div class="city-head"><h3>Florença</h3><span class="dates">22 – 24 JUL · 2 noites</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>W Florence</span></div><div class="hotel-price"><div class="v">R$ 9.253</div><div class="u">2 noites</div></div></div><div class="hgal"><img src="img/hotels/wflorence/1.jpg" alt="W Florence" loading="lazy"><img src="img/hotels/wflorence/2.jpg" alt="W Florence" loading="lazy"><img src="img/hotels/wflorence/3.jpg" alt="W Florence" loading="lazy"><img src="img/hotels/wflorence/4.jpg" alt="W Florence" loading="lazy"><img src="img/hotels/wflorence/5.jpg" alt="W Florence" loading="lazy"><img src="img/hotels/wflorence/6.jpg" alt="W Florence" loading="lazy"></div><div class="hotel-room"><b>Deluxe Room King with Balcony</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Tivoli Palazzo Gaddi Firenze Hotel</span></div><div class="hotel-price"><div class="v">R$ 5.450</div><div class="u">2 noites</div></div></div><div class="hgal"><img src="img/hotels/tivoli-gaddi/1.jpg" alt="Tivoli Palazzo Gaddi" loading="lazy"><img src="img/hotels/tivoli-gaddi/2.jpg" alt="Tivoli Palazzo Gaddi" loading="lazy"><img src="img/hotels/tivoli-gaddi/3.jpg" alt="Tivoli Palazzo Gaddi" loading="lazy"><img src="img/hotels/tivoli-gaddi/4.jpg" alt="Tivoli Palazzo Gaddi" loading="lazy"><img src="img/hotels/tivoli-gaddi/5.jpg" alt="Tivoli Palazzo Gaddi" loading="lazy"><img src="img/hotels/tivoli-gaddi/6.jpg" alt="Tivoli Palazzo Gaddi" loading="lazy"></div><div class="hotel-room"><b>Premium Room</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+      </div>
+    </div>
+
+    <div class="city-block">
+      <div class="city-head"><h3>San Gimignano e arredores</h3><span class="dates">24 – 26 JUL · 2 noites</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Relais Della Rovere <span class="loc2">· Colle Val d'Elsa</span></span></div><div class="hotel-price"><div class="v">R$ 4.376</div><div class="u">2 noites</div></div></div><div class="hgal"><img src="img/hotels/rovere/1.jpg" alt="Relais Della Rovere" loading="lazy"><img src="img/hotels/rovere/2.jpg" alt="Relais Della Rovere" loading="lazy"><img src="img/hotels/rovere/3.jpg" alt="Relais Della Rovere" loading="lazy"><img src="img/hotels/rovere/4.jpg" alt="Relais Della Rovere" loading="lazy"><img src="img/hotels/rovere/5.jpg" alt="Relais Della Rovere" loading="lazy"><img src="img/hotels/rovere/6.jpg" alt="Relais Della Rovere" loading="lazy"></div><div class="hotel-room"><b>Junior Suite</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Villa Sabolini <span class="loc2">· Colle Val d'Elsa</span></span></div><div class="hotel-price"><div class="v">R$ 5.166</div><div class="u">2 noites</div></div></div><div class="hgal"><img src="img/hotels/sabolini/1.jpg" alt="Villa Sabolini" loading="lazy"><img src="img/hotels/sabolini/2.jpg" alt="Villa Sabolini" loading="lazy"><img src="img/hotels/sabolini/3.jpg" alt="Villa Sabolini" loading="lazy"><img src="img/hotels/sabolini/4.jpg" alt="Villa Sabolini" loading="lazy"><img src="img/hotels/sabolini/5.jpg" alt="Villa Sabolini" loading="lazy"><img src="img/hotels/sabolini/6.jpg" alt="Villa Sabolini" loading="lazy"></div><div class="hotel-room"><b>Room, Balcony, Garden View</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hotel La Collegiata <span class="loc2">· San Gimignano · adults only</span></span></div><div class="hotel-price"><div class="v">R$ 7.521</div><div class="u">2 noites</div></div></div><div class="hgal"><img src="img/hotels/collegiata/1.jpg" alt="Hotel La Collegiata" loading="lazy"><img src="img/hotels/collegiata/2.jpg" alt="Hotel La Collegiata" loading="lazy"><img src="img/hotels/collegiata/3.jpg" alt="Hotel La Collegiata" loading="lazy"><img src="img/hotels/collegiata/4.jpg" alt="Hotel La Collegiata" loading="lazy"><img src="img/hotels/collegiata/5.jpg" alt="Hotel La Collegiata" loading="lazy"><img src="img/hotels/collegiata/6.jpg" alt="Hotel La Collegiata" loading="lazy"></div><div class="hotel-room"><b>Junior Suite</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hotel Borgo San Luigi <span class="loc2">· Monteriggioni</span></span></div><div class="hotel-price"><div class="v">R$ 7.375</div><div class="u">2 noites</div></div></div><div class="hgal"><img src="img/hotels/sanluigi/1.jpg" alt="Hotel Borgo San Luigi" loading="lazy"><img src="img/hotels/sanluigi/2.jpg" alt="Hotel Borgo San Luigi" loading="lazy"><img src="img/hotels/sanluigi/3.jpg" alt="Hotel Borgo San Luigi" loading="lazy"><img src="img/hotels/sanluigi/4.jpg" alt="Hotel Borgo San Luigi" loading="lazy"><img src="img/hotels/sanluigi/5.jpg" alt="Hotel Borgo San Luigi" loading="lazy"><img src="img/hotels/sanluigi/6.jpg" alt="Hotel Borgo San Luigi" loading="lazy"></div><div class="hotel-room"><b>Deluxe Room, Terrace</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+      </div>
+      <p class="note">Quatro casas de campo toscanas a <b>10 a 20 minutos de San Gimignano</b> e a cerca de <b>meia hora de Siena</b> — os mesmos da Anna e do Guilherme, para o grupo ficar junto nos dois últimos dias. O <b>La Collegiata</b> é <b>adults only</b>.</p>
+    </div>
+
+    <div class="city-block">
+      <div class="city-head"><h3>Milão · última noite, no aeroporto</h3><span class="dates">26 – 27 JUL · 1 noite</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Sheraton Milan Malpensa Airport Hotel &amp; Conference Center</span></div><div class="hotel-price"><div class="v">R$ 2.625</div><div class="u">1 noite</div></div></div><div class="hgal"><img src="img/hotels/sheraton-mxp/1.jpg" alt="Sheraton Milan Malpensa" loading="lazy"><img src="img/hotels/sheraton-mxp/2.jpg" alt="Sheraton Milan Malpensa" loading="lazy"><img src="img/hotels/sheraton-mxp/3.jpg" alt="Sheraton Milan Malpensa" loading="lazy"><img src="img/hotels/sheraton-mxp/4.jpg" alt="Sheraton Milan Malpensa" loading="lazy"><img src="img/hotels/sheraton-mxp/5.jpg" alt="Sheraton Milan Malpensa" loading="lazy"><img src="img/hotels/sheraton-mxp/6.jpg" alt="Sheraton Milan Malpensa" loading="lazy"></div><div class="hotel-room"><b>Deluxe Room</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>TRIBE Milan Malpensa</span></div><div class="hotel-price"><div class="v">R$ 1.310</div><div class="u">1 noite</div></div></div><div class="hgal"><img src="img/hotels/tribe-mxp/1.jpg" alt="TRIBE Milan Malpensa" loading="lazy"><img src="img/hotels/tribe-mxp/2.jpg" alt="TRIBE Milan Malpensa" loading="lazy"><img src="img/hotels/tribe-mxp/3.jpg" alt="TRIBE Milan Malpensa" loading="lazy"><img src="img/hotels/tribe-mxp/4.jpg" alt="TRIBE Milan Malpensa" loading="lazy"><img src="img/hotels/tribe-mxp/5.jpg" alt="TRIBE Milan Malpensa" loading="lazy"><img src="img/hotels/tribe-mxp/6.jpg" alt="TRIBE Milan Malpensa" loading="lazy"></div><div class="hotel-room"><b>Tribe Essential</b> · café da manhã</div><span class="bf">Café da manhã</span></div>
+      </div>
+      <p class="note">Os dois ficam no <b>aeroporto de Milão-Malpensa</b>, de onde sai o voo das 10:40 do dia 27.</p>
+    </div>
+  </section>
+
+  <!-- TRENS & TRANSFER -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Transporte</span>
+    <h2>Trens &amp; transfer</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Trens em classe standard. Valores em <b>BRL para 2 adultos</b>.</p>
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Serviço</td><td>Detalhe</td><td class="v">Valor · 2 ad</td></tr>
+      <tr><td><b>Transfer de chegada em Istambul</b></td><td>09/07 · Aeroporto IST &rarr; Galataport Istambul · <b>privativo</b> · standard</td><td class="v">R$ 500</td></tr>
+      <tr><td><b>Trem Civitavecchia &rarr; Milão</b></td><td>19/07 · 13:43 Civitavecchia &rarr; 18:30 Milano Centrale · 4h47 · 1 troca em Roma Termini (Regionale + Frecciarossa) · standard</td><td class="v">R$ 932</td></tr>
+      <tr><td><b>Trem Milão &rarr; Florença</b></td><td>22/07 · 10:05 Milano Rogoredo &rarr; 11:50 Firenze Santa Maria Novella · <b>direto</b> · standard</td><td class="v">R$ 550</td></tr>
+      <tr class="total-row"><td>Total de trens e transfer</td><td>3 serviços</td><td class="v">R$ 1.982</td></tr>
+    </table></div>
+  </section>
+
+  <!-- PASSEIOS -->
+  <section class="section sh">
+    <span class="eyebrow">Experiências</span>
+    <h2>Passeios &amp; ingressos</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Programas já cotados em Milão e Florença, com data e horário definidos. Valores em <b>BRL para 2 adultos</b>.</p>
+
+    <h3 class="subh">Milão</h3>
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V9l8-5 8 5v11"/><path d="M4 13h16"/></svg></div>
+      <div><div class="t">Duomo de Milão</div><div class="d">Catedral (interior) e <b>Terraços</b>, com acesso de <b>elevador</b> · entrada às <b>15:30</b></div></div><div class="dt">20/07<br><span style="color:var(--green);font-size:1.05rem">R$ 380</span></div></div>
+
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 10h8M8 14h5"/></svg></div>
+      <div><div class="t">Pinacoteca di Brera</div><div class="d">Entrada às <b>10:30</b></div></div><div class="dt">21/07<br><span style="color:var(--green);font-size:1.05rem">R$ 290</span></div></div>
+
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V9l4-3 5 3 5-3 4 3v12"/><path d="M9 21v-6h6v6"/></svg></div>
+      <div><div class="t">Castello Sforzesco</div><div class="d">Entrada às <b>14:00</b></div></div><div class="dt">21/07<br><span style="color:var(--green);font-size:1.05rem">R$ 145</span></div></div>
+
+    <h3 class="subh">Florença</h3>
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V9l8-5 8 5v11"/><path d="M4 13h16"/></svg></div>
+      <div><div class="t">Complexo do Duomo · Brunelleschi Pass</div><div class="d">Cúpula, Campanário, Batistério, Museu e Santa Reparata · entrada às <b>15:45</b></div></div><div class="dt">22/07<br><span style="color:var(--green);font-size:1.05rem">R$ 440</span></div></div>
+
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-7h6v7"/></svg></div>
+      <div><div class="t">Vinícola Antinori nel Chianti Classico</div><div class="d"><div class="sub">Uma visão da filosofia de produção de Marchesi Antinori</div><p>Uma excursão evocativa pela arquitetura, degustação de vinhos e alta gastronomia num cenário deslumbrante: um conceito que revela as características únicas da vinícola e a elegância dos seus vinhos mais representativos &mdash; <b>Cervaro della Sala Umbria IGT</b>, <b>Badia a Passignano Chianti Classico DOCG Gran Selezione</b>, <b>Pian delle Vigne Brunello di Montalcino DOCG</b> e <b>Tignanello Toscana IGT</b>. A degustação será realizada na exclusiva e intimista <b>sala da bottaia</b> ou na deslumbrante <b>sala de degustação suspensa em vidro</b>, com vista para a adega de barricas.</p><p>A visita culmina no restaurante no terraço, o <b>Rinuccio 1180</b>, com vista para as suaves colinas do Chianti Classico. Um <b>Toscana Rosato IGT</b>, um <b>Poggio alle Nane Maremma Toscana DOC</b> e um <b>Muffato della Sala Umbria IGT</b> serão harmonizados com pratos tradicionais da Toscana.</p><div class="fine">Visita de <b>2h30</b>, com degustação de vinhos e almoço. Todos os vinhos selecionados para a degustação são de safras atuais e podem variar conforme a estação e a disponibilidade.</div><div class="hgal"><img src="img/antinori/1.jpg" alt="Vinicola Antinori nel Chianti Classico" loading="lazy"><img src="img/antinori/2.jpg" alt="Vinicola Antinori nel Chianti Classico" loading="lazy"><img src="img/antinori/3.jpg" alt="Vinicola Antinori nel Chianti Classico" loading="lazy"></div></div></div><div class="dt">23/07<br><span style="color:var(--green);font-size:1.05rem">R$ 2.790</span></div></div>
+
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 10h8M8 14h5"/></svg></div>
+      <div><div class="t">Galleria degli Uffizi</div><div class="d">Galeria Uffizi, o <b>Palácio Pitti</b> e os <b>Jardins de Boboli</b> · entrada às <b>09:00</b></div></div><div class="dt">24/07<br><span style="color:var(--green);font-size:1.05rem">R$ 580</span></div></div>
+
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 10h8M8 14h5"/></svg></div>
+      <div><div class="t">Galleria dell&rsquo;Accademia</div><div class="d">O <i>Davi</i> de Michelangelo · entrada às <b>14:00</b></div></div><div class="dt">24/07<br><span style="color:var(--green);font-size:1.05rem">R$ 170</span></div></div>
+
+    <div class="pkg-note">🎟️ Os sete programas somam <b>R$ 4.795</b> para o casal.</div>
+  </section>
+
+  <!-- ROTEIRO -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Dia a dia</span>
+    <h2>Roteiro</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">O que já está cotado, com horário marcado, aparece como <span class="tag-q">cotado</span>. O restante é <span class="tag-s">sugestão</span> nossa e pode ser trocado livremente.</p>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">08</div><div class="m">Jul</div><div class="w">quinta</div></div>
+      <div class="daybody"><span class="city">Curitiba → São Paulo</span>
+        <h4>Embarque</h4>
+        <p>GOL das <b>11:30</b> para Guarulhos e, às <b>16:35</b>, o voo da Turkish para Istambul — noite a bordo.</p>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">09</div><div class="m">Jul</div><div class="w">sexta</div></div>
+      <div class="daybody"><span class="city">Istambul · embarque</span>
+        <h4>Chegada e início do cruzeiro</h4>
+        <ul>
+          <li>Pouso em Istambul às <b>11:15</b></li>
+          <li><b>Transfer privativo</b> do aeroporto ao Galataport <span class="tag-q">cotado</span></li>
+          <li>O <b>Sirena</b> parte às <b>17:00</b>. Sobra pouco tempo em terra — a Torre Gálata e o bairro de Karaköy ficam ao lado do terminal <span class="tag-s">sugestão</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">10–18</div><div class="m">Jul</div><div class="w">nove dias</div></div>
+      <div class="daybody"><span class="city">Grécia e sul da Itália</span>
+        <h4>Os portos do cruzeiro</h4>
+        <ul>
+          <li><b>10/07 · Mytilini</b> (10:00–18:00) — Lesbos, a ilha do ouzo e das oliveiras</li>
+          <li><b>11/07 · Cavala</b> (12:00–20:00) — aqueduto e cidade alta; base para Filipos <span class="tag-s">sugestão</span></li>
+          <li><b>12/07 · Tessalônica</b> (08:00–17:00) — a Torre Branca e a Rotunda</li>
+          <li><b>13/07 · Mykonos</b> (09:00–18:00) — os moinhos e a Pequena Veneza</li>
+          <li><b>14/07 · Santorini</b> (09:00–19:00) — Oia e Fira, na borda da caldeira</li>
+          <li><b>15/07 · Aghios Nikolaos</b> (07:00–14:00) — Creta; o lago Voulismeni e Spinalonga <span class="tag-s">sugestão</span></li>
+          <li><b>16/07 · Katakolo</b> (10:00–17:00) — porta de entrada para <b>Olímpia</b></li>
+          <li><b>17/07 · Taormina</b> (11:00–20:00) — o teatro grego com o Etna ao fundo</li>
+          <li><b>18/07 · Amalfi</b> (09:00–17:00) — o Duomo e a costa</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">19</div><div class="m">Jul</div><div class="w">segunda</div></div>
+      <div class="daybody"><span class="city">Civitavecchia → Milão</span>
+        <h4>Desembarque e trem para o norte</h4>
+        <ul>
+          <li>Desembarque em <b>Civitavecchia</b> às <b>07:00</b></li>
+          <li>Manhã livre no porto ou uma escapada a Roma antes do trem <span class="tag-s">sugestão</span></li>
+          <li><b>13:43 · trem para Milano Centrale</b>, chegando às <b>18:30</b> — 4h47 no total, com <b>uma troca em Roma Termini</b> (Regionale até Roma, Frecciarossa até Milão) <span class="tag-q">cotado</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">20</div><div class="m">Jul</div><div class="w">terça</div></div>
+      <div class="daybody"><span class="city">Milão</span>
+        <h4>O Duomo e os terraços</h4>
+        <ul>
+          <li>Manhã livre: a <b>Galleria Vittorio Emanuele II</b> e o bairro de Brera <span class="tag-s">sugestão</span></li>
+          <li><b>15:30 · Duomo de Milão</b> — interior da catedral e os <b>terraços</b>, com elevador <span class="tag-q">cotado</span></li>
+          <li>Fim de tarde: aperitivo nos <b>Navigli</b> <span class="tag-s">sugestão</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">21</div><div class="m">Jul</div><div class="w">quarta</div></div>
+      <div class="daybody"><span class="city">Milão</span>
+        <h4>Brera de manhã, Sforzesco à tarde</h4>
+        <ul>
+          <li><b>10:30 · Pinacoteca di Brera</b> <span class="tag-q">cotado</span></li>
+          <li><b>14:00 · Castello Sforzesco</b> <span class="tag-q">cotado</span></li>
+          <li>Os dois ficam a 10 minutos a pé um do outro, com o <b>Parco Sempione</b> logo atrás do castelo <span class="tag-s">sugestão</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">22</div><div class="m">Jul</div><div class="w">quinta</div></div>
+      <div class="daybody"><span class="city">Milão → Florença</span>
+        <h4>Trem para a Toscana e o Duomo no fim da tarde</h4>
+        <ul>
+          <li><b>10:05 · trem de Milano Rogoredo</b> a Firenze Santa Maria Novella, chegando às <b>11:50</b> <span class="tag-q">cotado</span></li>
+          <li><b>15:45 · Complexo do Duomo</b> com o Brunelleschi Pass: Cúpula, Campanário, Batistério, Museu e Santa Reparata <span class="tag-q">cotado</span></li>
+          <li>Jantar no Oltrarno, o lado mais tranquilo do rio <span class="tag-s">sugestão</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">23</div><div class="m">Jul</div><div class="w">sexta</div></div>
+      <div class="daybody"><span class="city">Chianti</span>
+        <h4>Vinícola Antinori nel Chianti Classico</h4>
+        <ul>
+          <li><b>Visita de 2h30 com degustação e almoço</b> na Antinori, a cerca de 30 minutos de Florença <span class="tag-q">cotado</span></li>
+          <li>Fim de tarde no <b>Piazzale Michelangelo</b>, para ver Florença inteira do alto <span class="tag-s">sugestão</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">24</div><div class="m">Jul</div><div class="w">sábado</div></div>
+      <div class="daybody"><span class="city">Florença → San Gimignano</span>
+        <h4>Uffizi de manhã, Accademia à tarde</h4>
+        <ul>
+          <li><b>09:00 · Galleria degli Uffizi</b>, com o Palácio Pitti e os Jardins de Boboli <span class="tag-q">cotado</span></li>
+          <li><b>14:00 · Galleria dell&rsquo;Accademia</b>, o <i>Davi</i> de Michelangelo <span class="tag-q">cotado</span></li>
+          <li>Entre os dois, um almoço no Mercato Centrale <span class="tag-s">sugestão</span></li>
+          <li>Depois dos museus, <b>saída para San Gimignano</b> — cerca de <b>1h</b>, <b>de carro com a Anna e o Guilherme</b> — e check-in na casa de campo <span class="tag-s">sugestão</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">25</div><div class="m">Jul</div><div class="w">domingo</div></div>
+      <div class="daybody"><span class="city">Toscana</span>
+        <h4>Bate e volta · Siena</h4>
+        <ul>
+          <li><b>Siena</b>, a cerca de <b>40 minutos</b> da base <b>de carro, junto com a Anna e o Guilherme</b>: a Piazza del Campo em forma de concha, o Duomo de mármore listrado e a Torre del Mangia <span class="tag-s">sugestão</span></li>
+          <li>Na volta, <b>San Gimignano</b> e as suas torres medievais ao fim da tarde, ou <b>Monteriggioni</b>, a vila murada, que fica no caminho <span class="tag-s">sugestão</span></li>
+          <li>Última noite na Toscana, já no campo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">26</div><div class="m">Jul</div><div class="w">segunda</div></div>
+      <div class="daybody"><span class="city">San Gimignano → Malpensa</span>
+        <h4>Subida para o aeroporto</h4>
+        <ul>
+          <li>Estrada até o aeroporto de Milão-Malpensa, cerca de <b>4h</b>, <b>de carro com a Anna e o Guilherme</b></li>
+          <li>Com saída cedo, dá para uma parada em <b>Bolonha</b> ou <b>Parma</b> no caminho, para almoçar <span class="tag-s">sugestão</span></li>
+          <li>Noite no hotel do aeroporto, já com as malas prontas</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">27</div><div class="m">Jul</div><div class="w">terça</div></div>
+      <div class="daybody"><span class="city">Milão → Istambul</span>
+        <h4>Volta</h4>
+        <ul>
+          <li><b>10:40</b> · voo para Istambul, com chegada às 14:35</li>
+          <li>Conexão de quase 6h e, às <b>20:25</b>, o voo para São Paulo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayrow">
+      <div class="daynum"><div class="d">28</div><div class="m">Jul</div><div class="w">quarta</div></div>
+      <div class="daybody"><span class="city">São Paulo → Curitiba</span>
+        <h4>Chegada</h4>
+        <p>Pouso em Guarulhos às <b>03:30</b> e, às <b>06:05</b>, o voo da Azul — chegada a Curitiba às <b>07:05</b>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section class="section sh">
+    <span class="eyebrow">Investimento</span>
+    <h2>Resumo de valores</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">*Cada item com o seu valor exato, em <b>BRL</b> para <b>2 adultos</b>. Cabine e hotéis: escolher 1 opção — por isso o total é uma faixa. Nada reservado, apenas cotado.</p>
+
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Item</td><td>Detalhe</td><td class="v">Valor · 2 ad</td></tr>
+      <tr class="sec-row"><td colspan="3">Cruzeiro Oceania Sirena · 09–19/07 · 10 noites · escolher 1</td></tr>
+      <tr><td><b>Externa Escotilha</b> · Categoria D</td><td>All inclusive · gorjetas, vinhos e internet inclusos</td><td class="v">R$ 22.942,94</td></tr>
+      <tr><td><b>Varanda</b> · Categoria B2</td><td>All inclusive · gorjetas, vinhos e internet inclusos</td><td class="v">R$ 33.419,40</td></tr>
+      <tr class="sec-row"><td colspan="3">Milão · 19–22/07 · 3 noites · escolher 1</td></tr>
+      <tr><td><b>The Square Milano Duomo</b></td><td>Deluxe Double Room · café da manhã</td><td class="v">R$ 8.100</td></tr>
+      <tr><td><b>Rosa Grand Milano</b></td><td>Deluxe Double Room · café da manhã</td><td class="v">R$ 8.110</td></tr>
+      <tr class="sec-row"><td colspan="3">Florença · 22–24/07 · 2 noites · escolher 1</td></tr>
+      <tr><td><b>W Florence</b></td><td>Deluxe Room King · café da manhã</td><td class="v">R$ 9.253</td></tr>
+      <tr><td><b>Tivoli Palazzo Gaddi Firenze Hotel</b></td><td>Premium Room · café da manhã</td><td class="v">R$ 5.450</td></tr>
+      <tr class="sec-row"><td colspan="3">San Gimignano e arredores · 24–26/07 · 2 noites · escolher 1</td></tr>
+      <tr><td><b>Relais Della Rovere</b><div class="rm">Colle Val d&rsquo;Elsa</div></td><td>Junior Suite · café da manhã</td><td class="v">R$ 4.376</td></tr>
+      <tr><td><b>Villa Sabolini</b><div class="rm">Colle Val d&rsquo;Elsa</div></td><td>Room, Balcony, Garden View · café da manhã</td><td class="v">R$ 5.166</td></tr>
+      <tr><td><b>Hotel La Collegiata</b><div class="rm">San Gimignano · adults only</div></td><td>Junior Suite · café da manhã</td><td class="v">R$ 7.521</td></tr>
+      <tr><td><b>Hotel Borgo San Luigi</b><div class="rm">Monteriggioni</div></td><td>Deluxe Room, Terrace · café da manhã</td><td class="v">R$ 7.375</td></tr>
+
+      <tr class="sec-row"><td colspan="3">Milão · aeroporto Malpensa · 26–27/07 · 1 noite · escolher 1</td></tr>
+      <tr><td><b>Sheraton Milan Malpensa Airport Hotel &amp; Conference Center</b></td><td>Classic Room · café da manhã</td><td class="v">R$ 2.625</td></tr>
+      <tr><td><b>TRIBE Milan Malpensa</b></td><td>Tribe Essential · café da manhã</td><td class="v">R$ 1.310</td></tr>
+      <tr class="sec-row"><td colspan="3">Aéreo, trens, transfer &amp; passeios</td></tr>
+      <tr><td><b>Aéreo</b> · Turkish Airlines</td><td>Curitiba → Istambul · Milão → Curitiba · econômica</td><td class="v">R$ 14.781,12</td></tr>
+      <tr><td><b>Trens &amp; transfer</b></td><td>Transfer em Istambul + 2 trens</td><td class="v">R$ 1.982</td></tr>
+      <tr><td><b>Passeios &amp; ingressos</b></td><td>7 programas em Milão e Florença</td><td class="v">R$ 4.795</td></tr>
+    </table></div>
+
+    <div class="flval"><span class="lbl">Total estimado do casal (2 adultos)</span><div class="amt"><div class="t">R$ 63.737,06 – 82.486,52</div><div class="p">cruzeiro + hospedagem + aéreo + trens + transfer + passeios</div></div></div>
+    <p class="note"><b>Como é calculado:</b> cruzeiro (R$ 22.942,94 – 33.419,40) + hospedagem (R$ 19.236 – 27.509) + aéreo (R$ 14.781,12) + trens e transfer (R$ 1.982) + passeios (R$ 4.795). Varia conforme a cabine e os hotéis escolhidos.</p>
+
+    <div class="pay">
+      <div class="box">
+        <h4>Condições de pagamento</h4>
+        <p><b>Cruzeiro</b> — em até <b>12x</b></p>
+        <p><b>Hotéis</b> — em até <b>10x</b></p>
+        <p><b>Trens &amp; transfer</b> — em até <b>6x</b></p>
+        <p><b>Passeios &amp; ingressos</b> — em até <b>6x</b></p>
+        <p><b>Aéreo</b> — em até <b>5x</b></p>
+      </div>
+      <div class="box">
+        <h4>Referência</h4>
+        <p>Dólar: USD 1 = R$ 5,23 · 25/09/2026</p>
+        <p class="muted" style="margin-top:8px;font-size:.82rem">Valores finais conforme disponibilidade e câmbio na data de fechamento.</p>
+      </div>
+    </div>
+
+    <div class="obs">
+      <h4>Não inclui</h4>
+      <ul>
+        <li>Excursões nos portos do cruzeiro</li>
+        <li>Refeições e bebidas fora do navio · gorjetas em terra · despesas pessoais</li>
+        <li>Passeios, ingressos e serviços não listados nesta cotação</li>
+        <li>Seguro viagem · autorização ETIAS/vistos, quando aplicável</li>
+      </ul>
+      <h4>Observações</h4>
+      <ul>
+        <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
+        <li>A confirmação está sujeita à disponibilidade no momento do pagamento.</li>
+        <li>Horários de voo, trem e de escala do navio sujeitos a alteração.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel">
+    <div class="contact">
+      atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>
+      Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR
+    </div>
+    <div class="fnote">*Nada reservado, apenas cotado.</div>
+  </footer>
+
+</div>
+</body>
+</html>
