@@ -7,7 +7,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 ## Atividade principal atual
 
-_Nenhuma no momento_
+**Angela Milito** — iniciada em 13/10/2026 às 09:00 (ao chegar no escritório)
 
 ## Histórico de atividades principais
 
