@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="LusaTravel — roteiro dia a dia de 12 noites em Singapura, Langkawi e Kuala Lumpur para a família da Angela, em junho de 2027.">
+<title>Singapura e Malásia em Família</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
+<style>
+/* ─── LUSATRAVEL · DESIGN SYSTEM TOKENS ─────────────────── */
+:root{
+  --gold:#da8d00; --gold-hi:#f0a010;
+  --ink:#1a1510; --char:#333131; --mut:#9a8d80;
+  --line:#e4ddd2; --paper:#faf7f2; --surf:#fff; --surf2:#f2ece3;
+  --onink:#f0e8de;
+  --dest:#0f5c55;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+  --mx:1080px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+    --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+    --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+    --dest:#2a9d8f;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+  --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+  --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+  --dest:#2a9d8f;
+}
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  background:var(--paper); color:var(--char);
+  font-family:var(--sans); font-weight:400;
+  font-size:15px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+@media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } }
+
+.wrap{ max-width:var(--mx); margin:0 auto; padding:0 28px; }
+
+/* ─── MASTHEAD / CAPA ────────────────────────────────────── */
+.mh{ background:var(--ink); padding:56px 0 44px; position:relative; }
+.mh::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.mh-logo{ font-family:var(--con); font-weight:600; font-size:13px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.mh-kick{ margin-top:26px; font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+.mh-name{ margin-top:10px; font-weight:700; font-size:clamp(28px,5.2vw,46px); line-height:1.06; letter-spacing:.01em; color:#fff; text-transform:uppercase; text-wrap:balance; }
+.mh-dest{ margin-top:8px; font-weight:600; font-size:clamp(17px,2.4vw,22px); color:var(--gold); letter-spacing:.02em; }
+.mh-sub{ margin-top:16px; max-width:58ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.62); }
+.mh-sub strong{ font-weight:600; color:var(--gold); }
+.mh-stats{ margin-top:34px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid rgba(240,232,222,.14); }
+.mh-stat{ padding:18px 34px 4px 0; margin-right:34px; border-right:1px solid rgba(240,232,222,.12); }
+.mh-stat:last-child{ border-right:0; }
+.mh-stat .v{ font-weight:700; font-size:24px; color:#fff; line-height:1; font-variant-numeric:tabular-nums; }
+.mh-stat .k{ margin-top:7px; font-size:9.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.45); }
+
+/* ─── SEÇÕES ─────────────────────────────────────────────── */
+.sec{ padding:56px 0; }
+.sec + .sec{ border-top:1px solid var(--line); }
+.eyebrow{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; letter-spacing:-.01em; text-wrap:balance; }
+.lead{ margin-top:12px; max-width:66ch; font-weight:300; font-size:15.5px; color:var(--char); }
+
+/* ─── TIMELINE ───────────────────────────────────────────── */
+.tl{ margin-top:30px; display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px; }
+.tl-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--dest); padding:20px 20px 18px; }
+.tl-badge{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:30px; height:30px; padding:0 9px; background:var(--dest); color:#fff;
+  font-weight:700; font-size:12.5px; font-variant-numeric:tabular-nums;
+}
+.tl-city{ margin-top:13px; font-weight:600; font-size:17px; color:var(--ink); }
+.tl-meta{ margin-top:5px; font-size:12.5px; font-weight:300; color:var(--mut); }
+.tl-hotel{ margin-top:11px; padding-top:11px; border-top:1px solid var(--line); font-size:12px; font-weight:400; color:var(--char); line-height:1.55; }
+.tl-hotel .lbl{ display:block; font-size:9.5px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--mut); margin-bottom:4px; }
+.tl-move{ margin-top:11px; padding-top:11px; border-top:1px solid var(--line); font-size:11.5px; font-weight:400; color:var(--char); }
+
+/* ─── DIA A DIA ──────────────────────────────────────────── */
+.days{ margin-top:26px; border-top:1px solid var(--line); }
+.day{ display:grid; grid-template-columns:132px 1fr; gap:22px; padding:19px 0; border-bottom:1px solid var(--line); }
+.day-h{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--dest); line-height:1.5; font-variant-numeric:tabular-nums; }
+.day-h .cty{ display:block; color:var(--mut); font-size:10.5px; letter-spacing:.14em; margin-top:3px; }
+.day-t{ font-size:14.5px; font-weight:300; color:var(--char); }
+.day-t b{ font-weight:600; color:var(--ink); }
+.day-t .night{ color:var(--gold); font-weight:600; }
+.day.travel{ background:var(--surf2); margin:0 -14px; padding:15px 14px; }
+.day.travel .day-t{ font-size:13.5px; }
+
+/* ─── RODAPÉ / ASSINATURA ────────────────────────────────── */
+.ft{ background:var(--ink); padding:44px 0 40px; position:relative; }
+.ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
+.ft-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.ft-sig{ margin-top:18px; display:flex; flex-wrap:wrap; gap:10px 34px; font-family:var(--con); font-size:13px; color:rgba(240,232,222,.72); }
+.ft-sig a{ color:rgba(240,232,222,.72); text-decoration:none; border-bottom:1px solid rgba(218,141,0,.5); }
+.ft-sig a:hover{ color:var(--gold); }
+.ft-addr{ margin-top:16px; font-family:var(--con); font-size:11.5px; color:rgba(240,232,222,.38); }
+
+@media (max-width:640px){
+  .wrap{ padding:0 16px; }
+  .day{ grid-template-columns:1fr; gap:7px; }
+  .mh-stat{ padding-right:20px; margin-right:20px; }
+}
+</style>
+</head>
+<body>
+<header class="mh">
+  <div class="wrap">
+    <div class="mh-logo">LusaTravel</div>
+    <div class="mh-kick">Roteiro da sua viagem</div>
+    <h1 class="mh-name">Angela</h1>
+    <div class="mh-dest">Singapura · Langkawi · Kuala Lumpur</div>
+    <p class="mh-sub">Doze noites em junho de 2027 desenhadas para viajar com crianças de 4 e 7 anos: cidade, praia e cidade, uma atração principal por período e tardes livres no resort. Langkawi fica logo depois do feriado malaio de 6 a 8 de junho, com a ilha já tranquila.</p>
+    <div class="mh-stats">
+      <div class="mh-stat"><div class="v">12</div><div class="k">Noites</div></div>
+      <div class="mh-stat"><div class="v">3</div><div class="k">Destinos</div></div>
+      <div class="mh-stat"><div class="v">2+2</div><div class="k">Adultos e crianças</div></div>
+      <div class="mh-stat"><div class="v">05 a 17/06</div><div class="k">Junho 2027</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Itinerário</div>
+    <h2 class="h2">Três destinos, 12 noites</h2>
+    <div class="tl">
+      <div class="tl-item">
+        <span class="tl-badge">4</span>
+        <div class="tl-city">Singapura</div>
+        <div class="tl-meta">05 a 09/06 · 4 noites</div>
+        <div class="tl-hotel"><span class="lbl">Hospedagem</span>Hilton Garden Inn Singapore Serangoon<br>ou Hotel Traveltine Downtown Singapore, Trademark Collection by Wyndham</div>
+        <div class="tl-move">Voo de Milão Malpensa</div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-badge">4</span>
+        <div class="tl-city">Langkawi</div>
+        <div class="tl-meta">09 a 13/06 · 4 noites</div>
+        <div class="tl-hotel"><span class="lbl">Hospedagem</span>Four Seasons Resort Langkawi<br>ou Tanjung Rhu Resort</div>
+        <div class="tl-move">Voo direto Singapura–Langkawi · 1h30</div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-badge">4</span>
+        <div class="tl-city">Kuala Lumpur</div>
+        <div class="tl-meta">13 a 17/06 · 4 noites</div>
+        <div class="tl-hotel"><span class="lbl">Hospedagem</span>Dorsett Kuala Lumpur<br>ou Ramada Suites by Wyndham Kuala Lumpur City Centre</div>
+        <div class="tl-move">Voo Langkawi–Kuala Lumpur · 1h</div>
+      </div>
+    </div>
+
+    <div class="eyebrow" style="margin-top:44px">Roteiro dia a dia</div>
+    <h2 class="h2">O que fazer em cada dia</h2>
+    <p class="lead">Os programas noturnos de Singapura são gratuitos e começam às 20h. Em Langkawi, os passeios ficam pela manhã e a tarde é sempre do resort.</p>
+    <div class="days">
+      <div class="day travel"><div class="day-h">Sex 04/06<span class="cty">Embarque</span></div><div class="day-t">Voo de Milão Malpensa para Singapura.</div></div>
+
+      <div class="day"><div class="day-h">Sáb 05/06<span class="cty">Singapura</span></div><div class="day-t">Chegada. Antes de sair do aeroporto, <b>Jewel Changi Airport</b>: a cachoeira coberta Rain Vortex e o Canopy Park. Check-in e descanso. <span class="night">À noite</span>, Marina Bay: show de luzes Spectra, gratuito, às 20h e 21h, e subida ao <b>Marina Bay Sands SkyPark</b> com a cidade iluminada.</div></div>
+
+      <div class="day"><div class="day-h">Dom 06/06<span class="cty">Singapura</span></div><div class="day-t"><b>Gardens by the Bay</b>: <b>Cloud Forest</b>, com a cachoeira interna de 35 metros, e a passarela <b>OCBC Skyway</b> entre as Supertrees. À tarde, <b>ArtScience Museum</b>, com a exposição interativa Future World, a favorita das crianças. <span class="night">À noite</span>, Garden Rhapsody, o show de luz e som das Supertrees, às 19h45 e 20h45.</div></div>
+
+      <div class="day"><div class="day-h">Seg 07/06<span class="cty">Singapura</span></div><div class="day-t">Dia inteiro na <b>Universal Studios Singapore</b>, na ilha de Sentosa. Chegar na abertura e usar o Express Pass: é temporada de férias escolares em Singapura.</div></div>
+
+      <div class="day"><div class="day-h">Ter 08/06<span class="cty">Singapura</span></div><div class="day-t">Manhã no <b>Singapore Botanic Garden</b>, Patrimônio Mundial da UNESCO, com o Jacob Ballas Children's Garden. À tarde, <b>Chinatown</b> e o <b>Buddha Tooth Relic Temple</b>. Fim de tarde em <b>Little India</b>, com as casas coloridas e o mercado Tekka Centre.</div></div>
+
+      <div class="day travel"><div class="day-h">Qua 09/06<span class="cty">Langkawi</span></div><div class="day-t">Voo direto Singapura–Langkawi, 1h30. Transfer do resort. Tarde na praia de Tanjung Rhu e na piscina.</div></div>
+
+      <div class="day"><div class="day-h">Qui 10/06<span class="cty">Langkawi</span></div><div class="day-t">Manhã de barco no <b>Geoparque de Kilim</b>: mangues, caverna dos morcegos e águias pescando. Tarde no kids club e na praia.</div></div>
+
+      <div class="day"><div class="day-h">Sex 11/06<span class="cty">Langkawi</span></div><div class="day-t"><b>SkyCab</b>, o teleférico até o topo do monte Machinchang, e a <b>SkyBridge</b>, passarela curva sobre a floresta. Ir cedo, antes do calor. Tarde livre no resort.</div></div>
+
+      <div class="day"><div class="day-h">Sáb 12/06<span class="cty">Langkawi</span></div><div class="day-t">Passeio de <b>ilha em ilha</b>: lago da Donzela Grávida, na ilha Dayang Bunting, praia de Beras Basah e observação de águias. Tarde livre. Pôr do sol em Pantai Cenang, opcional.</div></div>
+
+      <div class="day travel"><div class="day-h">Dom 13/06<span class="cty">Kuala Lumpur</span></div><div class="day-t">Voo Langkawi–Kuala Lumpur, 1h. Fim de tarde no <b>parque KLCC</b>, com playground e piscina infantil pública, e as Torres Petronas iluminadas à noite.</div></div>
+
+      <div class="day"><div class="day-h">Seg 14/06<span class="cty">Kuala Lumpur</span></div><div class="day-t"><b>Petronas Twin Towers</b>: skybridge e mirante, com ingresso de horário marcado. Depois <b>Aquaria KLCC</b>, com túnel submarino, e <b>Petrosains</b>, museu de ciência para crianças, tudo no mesmo complexo.</div></div>
+
+      <div class="day"><div class="day-h">Ter 15/06<span class="cty">Kuala Lumpur</span></div><div class="day-t"><b>Batu Caves</b> cedo pela manhã: a estátua dourada de 43 metros e a escadaria colorida de 272 degraus, com macacos. À tarde, <b>KL Bird Park</b>, o maior aviário de voo livre do mundo, nos Jardins Perdana.</div></div>
+
+      <div class="day"><div class="day-h">Qua 16/06<span class="cty">Kuala Lumpur</span></div><div class="day-t">Dia no <b>Sunway Lagoon</b>, parque aquático e de diversões a 30 minutos da cidade. Jantar de despedida em Bangsar.</div></div>
+
+      <div class="day travel"><div class="day-h">Qui 17/06<span class="cty">Retorno</span></div><div class="day-t">Voo de Kuala Lumpur para Milão.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-logo">LusaTravel</div>
+    <div class="ft-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <div class="ft-addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+  </div>
+</footer>
+</body>
+</html>
