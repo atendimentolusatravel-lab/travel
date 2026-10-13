@@ -7,7 +7,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 
 ## Atividade principal atual
 
-**Angela Milito** — iniciada em 13/10/2026 às 09:00 (ao chegar no escritório)
+_Nenhuma no momento_
 
 ## Histórico de atividades principais
 
@@ -38,6 +38,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 23 | 24–25/09/2026 | 24/09 11:11 | 25/09 17:37 | 7h41min | Anna Maria e família – Itália | Concluída; 1h02min no dia 24 (tarde perdida por falta de internet) + 6h39min no dia 25; descontadas 4 interrupções (5h45min) e almoços |
 | 24 | 30/09–01/10/2026 | 30/09 09:30 | 01/10 14:42 | 10h40min | Cristofer – Fim de ano | Concluída; 6h42min no dia 30 + 3h58min no dia 01; descontados almoços e 3 interrupções (1h32min) |
 | 25 | 01–02/10/2026 | 01/10 15:43 | 02/10 12:34 | 4h37min | Gustavo Gomes – Curaçao | Concluída; 2h17min no dia 01 + 2h20min no dia 02; descontadas 2 interrupções (1h10min); fim dentro do almoço, contado até 12:30 |
+| 26 | 13/10/2026 | 09:00 | 17:43 | 7h43min | Angela Milito | Concluída; sem interrupções; descontado almoço (1h) |
 
 ## Tabela de Interrupções
 
@@ -115,6 +116,7 @@ Horário de trabalho: 09:00 – 18:00 | Almoço: 12:30 – 13:30 (descontado das
 | 23 | Anna Maria e família – Itália | 24–25/09 | 7h41min | 4 | 5h45min |
 | 24 | Cristofer – Fim de ano | 30/09–01/10 | 10h40min | 3 | 1h32min |
 | 25 | Gustavo Gomes – Curaçao | 01–02/10 | 4h37min | 2 | 1h10min |
+| 26 | Angela Milito | 13/10 | 7h43min | 0 | – |
 
 ## Resumo
 
