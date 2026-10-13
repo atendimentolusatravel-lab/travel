@@ -11,16 +11,16 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
 <style>
 /* ─── LUSATRAVEL · DESIGN SYSTEM TOKENS ─────────────────── */
-/* Layout: masthead escuro, seções em coluna única de 1080px, linha do tempo vertical com trilho à esquerda, mapas em SVG inline. */
+/* Layout: cabeçalho simples claro, seções em coluna única de 1080px, linha do tempo vertical com trilho à esquerda, mapas em SVG inline. */
 :root{
   --gold:#da8d00; --gold-hi:#f0a010;
   --ink:#1a1510; --char:#333131; --mut:#9a8d80;
   --line:#e4ddd2; --paper:#faf7f2; --surf:#fff; --surf2:#f2ece3;
   --onink:#f0e8de;
-  --dest:#9b2226;            /* vermelho Japão */
-  --dest-soft:#f6e4e3;
+  --dest:#2f6b4a;            /* verde */
+  --dest-soft:#e3eee6;
   --warn:#b7791f; --warn-bg:#fdf3df;
-  --sea:#e9eef1; --land:#d9d2c6; --land-line:#c6bdae;
+  --sea:#f1f3ee; --land:#d6dfd3; --land-line:#b9c8b6;
   --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
   --con:'Montserrat',var(--sans);
   --lbl:'Arimo',var(--sans);
@@ -31,9 +31,9 @@
     --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
     --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
     --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
-    --dest:#d8484c; --dest-soft:#3a1f1f;
+    --dest:#5fa47c; --dest-soft:#1f2f26;
     --warn:#e2a93b; --warn-bg:#3a2d14;
-    --sea:#1a1f24; --land:#3a342b; --land-line:#54493b;
+    --sea:#171c19; --land:#2b3a30; --land-line:#44584a;
     color-scheme:dark;
   }
 }
@@ -41,9 +41,9 @@
   --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
   --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
   --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
-  --dest:#d8484c; --dest-soft:#3a1f1f;
+  --dest:#5fa47c; --dest-soft:#1f2f26;
   --warn:#e2a93b; --warn-bg:#3a2d14;
-  --sea:#1a1f24; --land:#3a342b; --land-line:#54493b;
+  --sea:#171c19; --land:#2b3a30; --land-line:#44584a;
   color-scheme:dark;
 }
 
@@ -60,23 +60,17 @@ body{
 
 .wrap{ max-width:var(--mx); margin:0 auto; padding-inline:28px; min-width:0; }
 
-/* ─── MASTHEAD / CAPA ────────────────────────────────────── */
-.mh{ background:#1a1510; padding-block:56px 44px; position:relative; }
-.mh::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
-.mh-logo{ font-family:var(--con); font-weight:600; font-size:13px; letter-spacing:.34em; text-transform:uppercase; color:#da8d00; }
-.mh-kick{ margin-top:26px; font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:rgba(240,232,222,.5); }
-.mh-name{ margin-top:10px; font-weight:700; font-size:clamp(28px,5.2vw,46px); line-height:1.06; letter-spacing:.01em; color:#fff; text-transform:uppercase; text-wrap:balance; }
-.mh-dest{ margin-top:8px; font-weight:600; font-size:clamp(17px,2.4vw,22px); color:#da8d00; letter-spacing:.02em; }
-.mh-sub{ margin-top:16px; max-width:58ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.62); }
-.mh-sub strong{ font-weight:600; color:#da8d00; }
-.mh-stats{ margin-top:34px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid rgba(240,232,222,.14); }
-.mh-stat{ padding:18px 34px 4px 0; margin-right:34px; border-right:1px solid rgba(240,232,222,.12); }
-.mh-stat:last-child{ border-right:0; }
-.mh-stat .v{ font-weight:700; font-size:24px; color:#fff; line-height:1; font-variant-numeric:tabular-nums; }
-.mh-stat .k{ margin-top:7px; font-size:9.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.45); }
+/* ─── CABEÇALHO SIMPLES ──────────────────────────────────── */
+.hd{ padding-block:40px 6px; }
+.hd-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.hd-name{ margin-top:14px; font-weight:700; font-size:clamp(24px,4vw,34px); line-height:1.1; color:var(--ink); text-wrap:balance; }
+.hd-dest{ margin-top:6px; font-weight:600; font-size:clamp(15px,2.2vw,19px); color:var(--dest); }
+.hd-meta{ margin-top:14px; display:flex; flex-wrap:wrap; gap:6px 22px; font-size:13px; color:var(--mut); font-variant-numeric:tabular-nums; }
+.hd-meta b{ color:var(--ink); font-weight:600; }
+.hd-rule{ margin-top:22px; height:3px; background:var(--gold); }
 
 /* ─── SEÇÕES ─────────────────────────────────────────────── */
-.sec{ padding-block:52px; }
+.sec{ padding-block:44px; }
 .sec + .sec{ border-top:1px solid var(--line); }
 .eyebrow{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
 .h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; letter-spacing:-.01em; text-wrap:balance; }
@@ -168,40 +162,25 @@ body{
 .note-t{ font-size:14px; font-weight:300; color:var(--char); }
 .note-t b{ font-weight:600; color:var(--ink); }
 
-/* ─── RODAPÉ ─────────────────────────────────────────────── */
-.ft{ background:#1a1510; padding-block:44px 40px; position:relative; }
-.ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
-.ft-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#da8d00; }
-.ft-sig{ margin-top:18px; display:flex; flex-wrap:wrap; gap:10px 34px; font-family:var(--con); font-size:13px; color:rgba(240,232,222,.72); }
-.ft-sig span{ border-bottom:1px solid rgba(218,141,0,.5); }
-.ft-addr{ margin-top:16px; font-family:var(--con); font-size:11.5px; color:rgba(240,232,222,.38); }
-
 @media (max-width:720px){
   .fl{ grid-template-columns:1fr; gap:12px; }
   .fl-ap.dst{ text-align:left; }
   .fl-mid{ text-align:left; min-width:0; }
   .fl-line::after{ left:0; transform:translate(0,-52%); padding-left:0; }
   .day{ grid-template-columns:1fr; gap:7px; }
-  .mh-stat{ padding-right:20px; margin-right:20px; }
   .note{ grid-template-columns:1fr; gap:6px; }
 }
 </style>
 </head>
 <body>
 
-<header class="mh">
+<header class="hd">
   <div class="wrap">
-    <div class="mh-logo">LusaTravel</div>
-    <div class="mh-kick">Roteiro de viagem</div>
-    <h1 class="mh-name">Rodrigo Barrozo</h1>
-    <div class="mh-dest">Istambul e Japão · 10 de maio a 3 de junho de 2027</div>
-    <p class="mh-sub">Saída de São Paulo com a Turkish Airlines em classe executiva, três noites em Istambul na ida e um circuito de 18 noites pelo Japão: Tóquio, Hakone, Kyoto, Osaka, Okinawa, Naoshima e Hiroshima. Itens marcados como <strong>a confirmar</strong> ainda não estão garantidos.</p>
-    <div class="mh-stats">
-      <div class="mh-stat"><div class="v">24</div><div class="k">Dias de viagem</div></div>
-      <div class="mh-stat"><div class="v">21</div><div class="k">Noites em hotel</div></div>
-      <div class="mh-stat"><div class="v">8</div><div class="k">Destinos</div></div>
-      <div class="mh-stat"><div class="v">4</div><div class="k">Voos internacionais</div></div>
-    </div>
+    <div class="hd-logo">LusaTravel</div>
+    <h1 class="hd-name">Rodrigo Barrozo · Istambul e Japão</h1>
+    <div class="hd-dest">10 de maio a 3 de junho de 2027</div>
+    <div class="hd-meta"><span><b>24</b> dias</span><span><b>21</b> noites em hotel</span><span><b>8</b> destinos</span><span><b>4</b> voos Turkish Airlines, executiva</span><span>Itens marcados <span class="tbc">A confirmar</span> ainda não estão garantidos</span></div>
+    <div class="hd-rule"></div>
   </div>
 </header>
 
@@ -344,16 +323,6 @@ body{
   </div>
 </section>
 
-<footer class="ft">
-  <div class="wrap">
-    <div class="ft-logo">LusaTravel</div>
-    <div class="ft-sig">
-      <span>atendimentolusatravel@gmail.com</span>
-      <span>+55 41 99189-6076</span>
-    </div>
-    <div class="ft-addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
-  </div>
-</footer>
 
 </body>
 </html>
