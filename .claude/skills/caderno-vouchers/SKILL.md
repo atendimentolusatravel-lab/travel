@@ -36,6 +36,9 @@ Arquivos desta skill:
 4. **Reproduza documentos do fornecedor** quando o cliente precisa apresentar um QR Code ou
    bilhete original (ingressos, trens): imagem em data URI dentro de `.doc-orig`, com `.tapa`
    cobrindo preço, dados de pagamento ou marcas de terceiros (ver seção "Documento do fornecedor").
+   Quando a imagem não puder ser publicada (pesada demais para a chamada de deploy, só o QR importa),
+   use o bloco `.ticket` com o QR regenerado a partir do conteúdo decodificado (ver "Ingresso com QR
+   regenerado").
 5. **Valide** com o checklist do fim deste arquivo. Renderize em Chromium headless e confira que
    cada `.page` cabe em uma folha A4 (sem conteúdo cortado pelo `overflow: hidden`).
 6. **Publique na Vercel** (ver "Deploy"). Entregue ao usuário a URL `caderno-<cliente>-<destino>.vercel.app`.
@@ -136,6 +139,7 @@ do fornecedor, datas de check-in/out, tipo de serviço, status, telefone de emer
 | **Hospedagem** | `Voucher de hospedagem` | **Fornecedor** (Hotel `big`, Cidade / país, Endereço) · **Hóspedes** (Nomes, Ocupação) — com 2+ quartos use **Quartos e hóspedes** (tabela Quarto / Hóspedes / Acomodação / Ocupação) · **Detalhes da reserva** (`grid three`: Check-in, Check-out, Noites em `big`; Acomodação, Regime `big`, Localizador `code`; Confirmação do hotel `code`, Chegada tardia) · `.box.prepay` · `.box` "Incluso no quarto" · `.box.alert` (horários, taxa de turismo, documentos, cartões). |
 | **Passeio / experiência** | `Voucher de passeio — Nome` / `Voucher de passeios — Cidade` / `Voucher de experiência — Nome` | **Serviço** (Operador ou Guia, Modalidade, Participantes) · **Passeios contratados** ou **Programa** (tabela) · **Encontro** / **Contato no destino** · `.box` "O que inclui" (experiências) · `.box.prepay` · `.box.alert`. |
 | **Ingresso** (documento do fornecedor) | `Voucher de ingresso — Atração, Cidade` | **Visita** (`grid three`: Data e hora `big`, Duração/Ingresso, Referência `code`; ponto de encontro em `grid one`) · `.tip` centrado "Bilhete de **Nome**. Apresentem **este QR Code**…" · `.doc-orig` + `.tapa` · `.box.alert`. Mais bilhetes → folhas "— continuação" sem a subfaixa Visita. |
+| **Ingresso** (QR regenerado) | `Voucher de passeio — Nome` | **Passeio** (`grid three`: Data e hora `big`, Passeio `big`, Referência `code` + "N adultos") · `.tip` "Dois ingressos, um por pessoa. Apresentem **estes QR Codes** ao guia no embarque." · `.box` "Busca no hotel" · um `.ticket` por pessoa (título do fornecedor, data · hora · duração · idioma, "1 adulto · Fornecedor", referência em `.code`, QR 32mm) · `.box.alert` curto. Folha seguinte "— informações do dia" (O que esperar, O roteiro, O que levar, Importante). Usado nos passeios GetYourGuide de Cidade do Cabo. |
 | **Trem** | `Bilhete de trem — Origem / Destino` | `.tip` centrado com nome do passageiro e assento · `.doc-orig` do bilhete (largura 170mm) · `.box.alert` (portas fecham 1 min antes, regra da tarifa). Uma folha por passageiro. |
 | **Cruzeiro** | `Voucher de cruzeiro — Navio` | **Cruzeiro** (Navio, Roteiro, Reserva; Embarque, Desembarque, Cabine) · **Passageiros** · **Itinerário** (tabela Dia / Data / Porto / Em terra / A bordo) · `.box` "Como embarcar" · `.box.alert` (passaporte, formulários on-line). |
 | **Safári / pacote multi-dia** | `Voucher de safári` (+ `— continuação`) | Folha 1: **Serviço** (Programa, Modalidade, Período, Participantes; Localizador, Status, Idioma do guia) · **Contatos no destino** · **Roteiro dia a dia** (`table.t.roteiro`: Data / Programa / Refeições). Folha 2: **Acomodações** (tabela) · **Traslados e voo inclusos** · `.box` Incluso · `.box` Não incluso. |
@@ -167,6 +171,38 @@ gôndola), reproduza o documento em imagem, nunca o reescreva:
 - Um bilhete por passageiro = uma folha por passageiro. Até três documentos baixos (≈48mm) cabem
   numa folha; bilhetes altos (≈120mm) ocupam uma folha cada.
 - `alt` descreve o documento (fornecedor, trajeto, nº, assento) — é o que resta se a imagem falhar.
+
+## Ingresso com QR regenerado (`.ticket`)
+
+Alternativa ao `.doc-orig` quando a imagem do fornecedor não cabe na chamada de deploy (cada PNG de
+ingresso GetYourGuide tem 200–230 KB em data URI, inviável de reenviar inline) ou quando só o QR Code
+importa para o embarque. O conteúdo do QR é texto (ex.: `BAS-T149846521-382641098`,
+`4METID7ESKEEHPAKLBYBYU5J07ZETZOD-6YM2B`); um QR regenerado com o mesmo texto lê igual ao original.
+
+1. Decodifique: `cv2.QRCodeDetector().detectAndDecode(cv2.imread('ingresso.png'))`
+   (`pip install opencv-python-headless`; se falhar, tente a imagem ampliada 2–4× ou em cinza).
+2. Regenere: `qrcode.QRCode(error_correction=ERROR_CORRECT_M, box_size=8, border=2)` → PNG de
+   ≈230 px, ≈500 bytes em base64. Confira que o PNG novo decodifica para o mesmo texto.
+3. Monte um `.ticket` por pessoa, com os dados visíveis no ingresso original:
+
+```html
+<div class="ticket">
+  <div class="info">
+    <div class="n">Ingresso 1 de 2</div>
+    <div class="t">Cape of Good Hope &amp; Penguins Day Tour with Pickup</div>
+    <div>17 out 2026 · 07:00 · 10 horas · em inglês</div>
+    <div>1 adulto · GetYourGuide</div>
+    <div class="code">GYGBLG99858A</div>
+  </div>
+  <img class="qr" src="data:image/png;base64,…" alt="QR Code do ingresso 1 de 2 da excursão ao Cabo da Boa Esperança">
+</div>
+```
+
+4. Depois de gerar o PDF, recorte a região do QR na página rasterizada (150 dpi) e decodifique de
+   novo: o QR impresso tem de devolver o mesmo texto.
+
+Dois `.ticket` (≈42mm cada) cabem na folha junto com a grade, o `.tip`, uma `.box` e uma `.box.alert`
+curta; detalhes do dia vão para a folha "— informações do dia".
 
 ## Redação
 
@@ -220,6 +256,13 @@ da chamada, o caderno vai em arquivos separados para manter a chamada pequena e 
   Os logos, depois do primeiro envio, também podem ser referenciados por sha
   (`519c01af83b98dd85852f5902b6e1aec448aeb84`/5733 e `d7acfc3de1e6303b4f098a22317c4f4b8857de11`/5964).
 - Documentos do fornecedor (`.doc-orig`) idem: um PNG/JPEG por arquivo, referenciado por `src="nome.png"`.
+  Só é viável para imagens pequenas (até ≈60 KB em base64): tudo o que vai inline é digitado na chamada.
+  Para ingressos com QR, prefira `.ticket` com QR regenerado (ver seção acima).
+- **Editar um caderno já publicado**: o sandbox baixa o `index.html` atual (`curl`), e a partir dele dá
+  para extrair o texto sem data URIs (`perl`/`split -b 1800` + `cat` com `sleep 0.1` para o texto chegar
+  inteiro) e decodificar os QR das imagens embutidas (`pip install opencv-python-headless` funciona no
+  sandbox, que tem rede). Reconstrua o caderno localmente, alinhe o bloco da agência ao padrão atual
+  e republique com `create_deployment` no mesmo projeto (`project: prj_…`, `target: production`).
 - **Verificação obrigatória**: um sandbox Vercel (`create_sandboxes_v4`, não persistente) alcança a
   URL publicada; baixe cada arquivo e compare o `sha1sum` com o local antes de entregar o link.
   Encerre o sandbox ao final (`stop_session`).

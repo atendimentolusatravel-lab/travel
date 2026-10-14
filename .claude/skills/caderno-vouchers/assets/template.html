@@ -425,6 +425,18 @@ ol.toc li.grp::before { content: ""; min-width: 0; }
 .doc-orig { position: relative; display: block; margin: 3mm auto 0; }
 .doc-orig img { display: block; width: 100%; border: 1px solid var(--line); }
 .doc-orig .tapa { position: absolute; background: #cccccc; }
+
+/* ---------- ingresso com QR Code (dados do fornecedor, QR regenerado) ---------- */
+.ticket {
+  display: flex; align-items: center; gap: 6mm;
+  border: 1px solid var(--line); border-left: 3px solid var(--sage);
+  background: #fff; padding: 2.5mm 4mm; margin: 2mm 0;
+}
+.ticket .qr { width: 32mm; height: 32mm; flex: 0 0 auto; image-rendering: pixelated; image-rendering: crisp-edges; }
+.ticket .info { flex: 1; line-height: 1.55; }
+.ticket .info .n { font-size: 7.6pt; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.ticket .info .t { font-size: 10.5pt; font-weight: 600; color: var(--green); }
+.ticket .info .code { font-family: 'Consolas', 'Courier New', monospace; font-size: 9.5pt; font-weight: 700; letter-spacing: .07em; color: var(--green); }
 </style>
 </head>
 <body>
