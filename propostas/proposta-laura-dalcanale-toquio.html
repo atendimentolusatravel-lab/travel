@@ -99,6 +99,11 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
 .note{ font-size:8pt; color:var(--mut); margin-top:2mm; line-height:1.5; }
 .note b{ color:var(--ink); font-weight:600; }
 
+.p2 .body{ padding-top:5mm; }
+.p2 .opt{ margin-bottom:2.5mm; }
+.p2 .sec{ margin-top:2mm; }
+.p2 td{ padding:1.5mm 3mm; }
+.p2 .opt-hd{ padding:2.2mm 6mm; }
 .sig{ margin-top:auto; padding-top:3mm; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center;
   font-family:var(--con); font-size:8.5pt; color:var(--mut); }
 .sig a{ color:var(--green); text-decoration:none; font-weight:600; }
@@ -187,7 +192,7 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
 </section>
 
 <!-- ═══════════════ PÁGINA 2 ═══════════════ -->
-<section class="page">
+<section class="page p2">
   <div class="hd">
     <div class="logo">
       <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
@@ -233,7 +238,7 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
     <!-- ── 3. TURKISH COM STOPOVER ── -->
     <div class="sec">
       <div class="sec-hd"><div class="num" style="background:var(--gold)">3</div><h2>Opção especial · Turkish Airlines com stopover em Istambul</h2><div class="cab" style="color:#8a5a00;border-color:var(--gold)">Economy + Stopover</div></div>
-      <p class="note" style="margin:0 0 3mm; font-size:9pt; color:var(--char)">Apresentada à parte porque a conexão da ida vira uma <b>parada de 3 noites em Istambul</b> antes de seguir para Tóquio. Mesma tarifa nos dois horários de saída; a Opção A garante as 3 noites completas.</p>
+      <p class="note" style="margin:0 0 3mm; font-size:9pt; color:var(--char)">A conexão da ida vira uma <b>parada em Istambul</b>: 3 noites na Econômica (Opção A) ou 2 noites na Executiva.</p>
 
       <div class="opt gold">
         <div class="opt-hd">
@@ -254,6 +259,25 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
           <tr><td>TK 215</td><td class="leg">IST → GRU<span>Istambul → São Paulo</span></td><td class="dt"><b>26 jan</b> 20:35</td><td class="dt"><b>27 jan</b> 04:20</td><td class="dur">13h45</td><td>Airbus A350</td></tr>
         </table>
         <div class="opt-ft"><span><b>Bagagem:</b> 1 mala despachada</span><span><b>Chegada e retorno</b> por Narita</span><span><b>Permanência:</b> 2 ou 3 noites em Istambul + 27 noites no Japão</span></div>
+      </div>
+      <div class="opt gold">
+        <div class="opt-hd">
+          <div class="air">Turkish Airlines <small>Saída à tarde · 2 noites em Istambul · 2 malas despachadas · assento-cama e sala VIP</small></div>
+          <span class="pill">Executiva</span>
+          <div class="price"><div class="lab">Total</div><div class="brl">R$ 79.967,15</div><div class="usd">USD 15.853,60</div></div>
+        </div>
+        <table>
+          <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>
+          <tr class="dir"><td colspan="6"><span class="dirlab">Ida · 26 dez → 30 dez</span></td></tr>
+          <tr><td>TK 216</td><td class="leg">GRU → IST<span>São Paulo → Istambul</span></td><td class="dt"><b>26 dez</b> 17:10</td><td class="dt"><b>27 dez</b> 11:45</td><td class="dur">12h35</td><td>Airbus A350</td></tr>
+          <tr class="stop"><td colspan="6">✦ <b>Stopover em Istambul · 2 noites</b> (27 e 28 dez) · hospedagem não inclusa nesta cotação</td></tr>
+          <tr><td>TK 50</td><td class="leg">IST → NRT<span>Istambul → Tóquio Narita</span></td><td class="dt"><b>29 dez</b> 15:25</td><td class="dt"><b>30 dez</b> 08:40</td><td class="dur">11h15</td><td>Boeing 787-9</td></tr>
+          <tr class="dir"><td colspan="6"><span class="dirlab">Volta · 26 jan → 27 jan · tempo total 31h40</span></td></tr>
+          <tr><td>TK 199</td><td class="leg">HND → IST<span>Tóquio Haneda → Istambul</span></td><td class="dt"><b>26 jan</b> 22:05</td><td class="dt"><b>27 jan</b> 05:45</td><td class="dur">13h40</td><td>Boeing 777-300ER</td></tr>
+          <tr class="conn"><td colspan="6">Conexão em Istambul · <b>4h10</b></td></tr>
+          <tr><td>TK 15</td><td class="leg">IST → GRU<span>Istambul → São Paulo</span></td><td class="dt"><b>27 jan</b> 09:55</td><td class="dt"><b>27 jan</b> 17:45</td><td class="dur">13h50</td><td>Airbus A350</td></tr>
+        </table>
+        <div class="opt-ft"><span><b>Bagagem:</b> 2 malas despachadas</span><span><b>Chegada</b> por Narita · <b>retorno</b> por Haneda</span><span><b>Permanência:</b> 2 noites em Istambul + 27 noites no Japão</span></div>
       </div>
     </div>
 
@@ -419,6 +443,7 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
           <tr><td class="leg">Lufthansa + Swiss <span>via Frankfurt / Zurique</span></td><td>Executiva</td><td>28 dez</td><td>28 jan</td><td>2 malas</td><td class="r"><b>R$ 41.903,34</b></td><td class="r">USD 8.307,40</td></tr>
           <tr><td class="leg">American Airlines <span>via Nova York</span></td><td>Executiva</td><td>28 dez</td><td>26 jan</td><td>2 malas</td><td class="r"><b>R$ 43.902,86</b></td><td class="r">USD 8.703,80</td></tr>
           <tr class="hl"><td class="leg">Turkish Airlines <span>stopover em Istambul (A ou B)</span></td><td>Econômica</td><td>26 dez</td><td>26 jan</td><td>1 mala</td><td class="r"><b>R$ 61.806,96</b></td><td class="r">USD 12.253,32</td></tr>
+          <tr class="hl"><td class="leg">Turkish Airlines <span>stopover em Istambul · 2 noites</span></td><td>Executiva</td><td>26 dez</td><td>26 jan</td><td>2 malas</td><td class="r"><b>R$ 79.967,15</b></td><td class="r">USD 15.853,60</td></tr>
         </table>
       </div>
       <p class="note">
