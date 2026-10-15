@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Laura Dalcanale | Tóquio — LusaTravel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+:root{
+  --gold:#da8d00;
+  --green:#1f4d3a;
+  --green-soft:#eaf2ec;
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#8a8178;
+  --line:#e2ddd3;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff;
+  page-break-after:always; display:flex; flex-direction:column; }
+.page:last-child{ page-break-after:auto; }
+
+/* Cabeçalho com logotipo */
+.hd{ background:var(--green); height:22mm; display:flex; align-items:center;
+     justify-content:space-between; padding:0 20mm; flex-shrink:0; }
+.logo{ display:flex; align-items:center; gap:4mm; }
+.logo svg{ width:11mm; height:11mm; }
+.logo .word{ font-size:17pt; font-weight:800; letter-spacing:.1em; color:var(--gold); line-height:1; }
+.logo .sub{ font-family:var(--con); font-size:6.5pt; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.6); margin-top:1.2mm; }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+.body{ padding:7mm 20mm 6mm; flex:1; display:flex; flex-direction:column; }
+
+/* Título */
+.intro{ display:flex; justify-content:space-between; align-items:flex-end; border-bottom:1px solid var(--line); padding-bottom:4mm; margin-bottom:3mm; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h1{ font-size:22pt; font-weight:800; color:var(--ink); letter-spacing:-.01em; line-height:1.1; margin-top:2mm; }
+.h1 small{ display:block; font-size:12pt; font-weight:500; color:var(--green); letter-spacing:.04em; margin-top:1.5mm; }
+.meta{ text-align:right; font-size:9pt; color:var(--mut); line-height:1.7; }
+.meta b{ color:var(--ink); font-weight:600; }
+
+/* Seções */
+.sec{ margin-top:3mm; }
+.sec-hd{ display:flex; align-items:center; gap:4mm; margin-bottom:2.5mm; }
+.sec-hd .num{ width:9mm; height:9mm; border-radius:50%; background:var(--green); color:#fff; font-weight:800; font-size:11pt;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.sec-hd h2{ font-size:15pt; font-weight:700; color:var(--ink); }
+.sec-hd .cab{ margin-left:auto; font-size:8pt; letter-spacing:.2em; text-transform:uppercase; color:var(--green); font-weight:700;
+  border:1.5px solid var(--green); border-radius:3mm; padding:1.2mm 4mm; }
+
+/* Cartão de opção */
+.opt{ border:1px solid var(--line); border-left:3mm solid var(--green); border-radius:2mm; margin-bottom:3.5mm; overflow:hidden; page-break-inside:avoid; }
+.opt.gold{ border-left-color:var(--gold); }
+.opt-hd{ display:flex; align-items:center; gap:5mm; padding:2.6mm 6mm; background:var(--green-soft); }
+.opt.gold .opt-hd{ background:#fbf3e3; }
+.opt-hd .air{ font-size:12.5pt; font-weight:700; color:var(--ink); }
+.opt-hd .air small{ display:block; font-size:8.5pt; font-weight:400; color:var(--mut); margin-top:.5mm; }
+.pill{ font-size:7.5pt; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--green);
+  background:#fff; border:1px solid var(--green); border-radius:2.5mm; padding:1mm 3mm; }
+.opt.gold .pill{ color:#8a5a00; border-color:var(--gold); }
+.opt-hd .price{ margin-left:auto; text-align:right; }
+.opt-hd .price .brl{ font-size:15pt; font-weight:800; color:var(--ink); line-height:1; }
+.opt-hd .price .usd{ font-family:var(--con); font-size:8.5pt; color:var(--mut); margin-top:1mm; }
+.opt-hd .price .lab{ font-size:7pt; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+
+table{ width:100%; border-collapse:collapse; font-size:8.5pt; }
+th{ text-align:left; font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:600;
+  padding:1.8mm 3mm 1.4mm; border-bottom:1px solid var(--line); }
+td{ padding:1.7mm 3mm; border-bottom:1px solid #efebe4; vertical-align:top; color:var(--char); }
+tr:last-child td{ border-bottom:none; }
+td.leg{ font-weight:600; color:var(--ink); }
+td.leg span{ display:block; font-weight:300; font-size:8pt; color:var(--mut); }
+td.dt b{ color:var(--ink); font-weight:600; }
+td.dt{ white-space:nowrap; }
+td.dur{ white-space:nowrap; font-family:var(--con); }
+tr.conn td{ padding:1mm 3mm; background:#faf8f4; font-size:8pt; color:var(--mut); font-style:italic; border-bottom:1px solid #efebe4; }
+tr.conn td b{ color:var(--green); font-style:normal; font-weight:600; }
+tr.stop td{ padding:1.6mm 3mm; background:#fbf3e3; font-size:8.5pt; color:#6b4600; border-bottom:1px solid #efebe4; }
+tr.stop td b{ color:#8a5a00; }
+.dirlab{ font-size:7pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
+
+.opt-ft{ display:flex; gap:8mm; padding:2mm 6mm; border-top:1px solid var(--line); font-size:8.5pt; color:var(--char); }
+.opt-ft b{ color:var(--ink); font-weight:600; }
+
+/* Resumo */
+.sum{ margin-top:1mm; border:1px solid var(--line); border-radius:2mm; overflow:hidden; }
+.sum table td, .sum table th{ padding:1.6mm 5mm; }
+.sum th{ background:var(--green); color:rgba(255,255,255,.85); border-bottom:none; }
+.sum td.r{ text-align:right; font-family:var(--con); white-space:nowrap; }
+.sum td.r b{ color:var(--ink); }
+.sum tr.hl td{ background:#fbf3e3; }
+.note{ font-size:8pt; color:var(--mut); margin-top:2mm; line-height:1.5; }
+.note b{ color:var(--ink); font-weight:600; }
+
+.sig{ margin-top:auto; padding-top:3mm; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center;
+  font-family:var(--con); font-size:8.5pt; color:var(--mut); }
+.sig a{ color:var(--green); text-decoration:none; font-weight:600; }
+.sig .word{ font-weight:800; letter-spacing:.1em; color:var(--gold); font-family:var(--sans); }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ PÁGINA 1 ═══════════════ -->
+<section class="page">
+  <div class="hd">
+    <div class="logo">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" stroke="#da8d00" stroke-width="2.2"/>
+        <path d="M24 6 L29 22 L24 20 L19 22 Z" fill="#da8d00"/>
+        <path d="M24 42 L19 26 L24 28 L29 26 Z" fill="rgba(255,255,255,.55)"/>
+        <path d="M6 24 L22 19 L20 24 L22 29 Z" fill="rgba(255,255,255,.55)"/>
+        <path d="M42 24 L26 29 L28 24 L26 19 Z" fill="#da8d00"/>
+        <circle cx="24" cy="24" r="2.4" fill="#fff"/>
+      </svg>
+      <div><div class="word">LUSATRAVEL</div><div class="sub">Viagens sob medida</div></div>
+    </div>
+    <div class="tag">Proposta de voos</div>
+  </div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+    <div class="intro">
+      <div>
+        <div class="eyebrow">Cotação para sua viagem</div>
+        <div class="h1">Sra. Laura Dalcanale<small>São Paulo ⇄ Tóquio · Dezembro 2026 – Janeiro 2027</small></div>
+      </div>
+      <div class="meta">
+        Cotação <b>15/10/2026</b><br>
+        Câmbio de referência <b>USD 1 = R$ 5,04</b><br>
+        Valores com taxas de embarque incluídas
+      </div>
+    </div>
+
+    <!-- ── 1. ECONÔMICA ── -->
+    <div class="sec">
+      <div class="sec-hd"><div class="num">1</div><h2>Classe Econômica</h2><div class="cab">Economy</div></div>
+
+      <div class="opt">
+        <div class="opt-hd">
+          <div class="air">Japan Airlines <small>Voos em código compartilhado · via Dallas · 2 malas despachadas</small></div>
+          <span class="pill">Econômica</span>
+          <div class="price"><div class="lab">Total</div><div class="brl">R$ 37.702,48</div><div class="usd">USD 7.474,56</div></div>
+        </div>
+        <table>
+          <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>
+          <tr class="dir"><td colspan="6"><span class="dirlab">Ida · 23 dez → 25 dez · tempo total 28h55</span></td></tr>
+          <tr><td>JL 7205</td><td class="leg">GRU → DFW<span>São Paulo → Dallas</span></td><td class="dt"><b>23 dez</b> 22:35</td><td class="dt"><b>24 dez</b> 05:55</td><td class="dur">10h20</td><td>Boeing 787-9</td></tr>
+          <tr class="conn"><td colspan="6">Conexão em Dallas · <b>4h50</b></td></tr>
+          <tr><td>JL 7011</td><td class="leg">DFW → NRT<span>Dallas → Tóquio Narita</span></td><td class="dt"><b>24 dez</b> 10:45</td><td class="dt"><b>25 dez</b> 15:30</td><td class="dur">13h45</td><td>Boeing 777-200</td></tr>
+          <tr class="dir"><td colspan="6"><span class="dirlab">Volta · 26 jan → 27 jan · tempo total 24h05</span></td></tr>
+          <tr><td>JL 7014</td><td class="leg">HND → DFW<span>Tóquio Haneda → Dallas</span></td><td class="dt"><b>26 jan</b> 20:25</td><td class="dt"><b>26 jan</b> 17:05</td><td class="dur">11h40</td><td>Boeing 777-200</td></tr>
+          <tr class="conn"><td colspan="6">Conexão em Dallas · <b>2h15</b></td></tr>
+          <tr><td>JL 7204</td><td class="leg">DFW → GRU<span>Dallas → São Paulo</span></td><td class="dt"><b>26 jan</b> 19:20</td><td class="dt"><b>27 jan</b> 08:30</td><td class="dur">10h10</td><td>Boeing 787-9</td></tr>
+        </table>
+        <div class="opt-ft"><span><b>Bagagem:</b> 2 malas despachadas</span><span><b>Chegada</b> por Narita · <b>retorno</b> por Haneda</span><span><b>Permanência:</b> 32 noites no Japão</span></div>
+      </div>
+
+      <div class="opt">
+        <div class="opt-hd">
+          <div class="air">American Airlines <small>Ida via Dallas · volta via Nova York · 1 mala despachada</small></div>
+          <span class="pill">Econômica</span>
+          <div class="price"><div class="lab">Total</div><div class="brl">R$ 37.443,44</div><div class="usd">USD 7.423,20</div></div>
+        </div>
+        <table>
+          <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>
+          <tr class="dir"><td colspan="6"><span class="dirlab">Ida · 29 dez → 31 dez · tempo total 31h50</span></td></tr>
+          <tr><td>AA 962</td><td class="leg">GRU → DFW<span>São Paulo → Dallas</span></td><td class="dt"><b>29 dez</b> 22:35</td><td class="dt"><b>30 dez</b> 05:55</td><td class="dur">10h20</td><td>Boeing 787-9</td></tr>
+          <tr class="conn"><td colspan="6">Conexão em Dallas · <b>7h45</b></td></tr>
+          <tr><td>AA 175</td><td class="leg">DFW → HND<span>Dallas → Tóquio Haneda</span></td><td class="dt"><b>30 dez</b> 13:40</td><td class="dt"><b>31 dez</b> 18:25</td><td class="dur">13h45</td><td>Boeing 777-200</td></tr>
+          <tr class="dir"><td colspan="6"><span class="dirlab">Volta · 29 jan → 30 jan · tempo total 24h55</span></td></tr>
+          <tr><td>AA 168</td><td class="leg">HND → JFK<span>Tóquio Haneda → Nova York</span></td><td class="dt"><b>29 jan</b> 17:10</td><td class="dt"><b>29 jan</b> 16:15</td><td class="dur">13h05</td><td>Boeing 787-9</td></tr>
+          <tr class="conn"><td colspan="6">Conexão em Nova York · <b>2h20</b></td></tr>
+          <tr><td>AA 951</td><td class="leg">JFK → GRU<span>Nova York → São Paulo</span></td><td class="dt"><b>29 jan</b> 18:35</td><td class="dt"><b>30 jan</b> 06:05</td><td class="dur">09h30</td><td>Boeing 787-9</td></tr>
+        </table>
+        <div class="opt-ft"><span><b>Bagagem:</b> 1 mala despachada</span><span><b>Chegada e retorno</b> por Haneda (mais próximo do centro)</span><span><b>Permanência:</b> 29 noites no Japão</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ PÁGINA 2 ═══════════════ -->
+<section class="page">
+  <div class="hd">
+    <div class="logo">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" stroke="#da8d00" stroke-width="2.2"/>
+        <path d="M24 6 L29 22 L24 20 L19 22 Z" fill="#da8d00"/>
+        <path d="M24 42 L19 26 L24 28 L29 26 Z" fill="rgba(255,255,255,.55)"/>
+        <path d="M6 24 L22 19 L20 24 L22 29 Z" fill="rgba(255,255,255,.55)"/>
+        <path d="M42 24 L26 29 L28 24 L26 19 Z" fill="#da8d00"/>
+        <circle cx="24" cy="24" r="2.4" fill="#fff"/>
+      </svg>
+      <div><div class="word">LUSATRAVEL</div><div class="sub">Viagens sob medida</div></div>
+    </div>
+    <div class="tag">Proposta de voos</div>
+  </div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+    <!-- ── 2. PREMIUM ── -->
+    <div class="sec">
+      <div class="sec-hd"><div class="num">2</div><h2>Classe Econômica Premium</h2><div class="cab">Premium Economy</div></div>
+
+      <div class="opt">
+        <div class="opt-hd">
+          <div class="air">Aeroméxico <small>Via Cidade do México · 2 malas despachadas · assento mais amplo e serviço diferenciado</small></div>
+          <span class="pill">Econômica Premium</span>
+          <div class="price"><div class="lab">Total</div><div class="brl">R$ 54.714,92</div><div class="usd">USD 10.847,32</div></div>
+        </div>
+        <table>
+          <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>
+          <tr class="dir"><td colspan="6"><span class="dirlab">Ida · 27 dez → 29 dez · tempo total 30h30</span></td></tr>
+          <tr><td>AM 15</td><td class="leg">GRU → MEX<span>São Paulo → Cidade do México</span></td><td class="dt"><b>27 dez</b> 12:00</td><td class="dt"><b>27 dez</b> 18:35</td><td class="dur">09h35</td><td>Boeing 787-9</td></tr>
+          <tr class="conn"><td colspan="6">Conexão na Cidade do México · <b>3h10</b></td></tr>
+          <tr><td>AM 58</td><td class="leg">MEX → NRT<span>Cidade do México → Tóquio Narita · 1 escala intermediária</span></td><td class="dt"><b>27 dez</b> 21:45</td><td class="dt"><b>29 dez</b> 06:30</td><td class="dur">17h45</td><td>Boeing 787-8</td></tr>
+          <tr class="dir"><td colspan="6"><span class="dirlab">Volta · 25 jan → 26 jan · tempo total 36h20</span></td></tr>
+          <tr><td>AM 57</td><td class="leg">NRT → MEX<span>Tóquio Narita → Cidade do México</span></td><td class="dt"><b>25 jan</b> 09:35</td><td class="dt"><b>25 jan</b> 07:30</td><td class="dur">12h55</td><td>Boeing 787-8</td></tr>
+          <tr class="conn"><td colspan="6">Conexão na Cidade do México · <b>13h25</b> (conexão longa)</td></tr>
+          <tr><td>AM 14</td><td class="leg">MEX → GRU<span>Cidade do México → São Paulo</span></td><td class="dt"><b>25 jan</b> 20:55</td><td class="dt"><b>26 jan</b> 09:55</td><td class="dur">10h00</td><td>Boeing 787-9</td></tr>
+        </table>
+        <div class="opt-ft"><span><b>Bagagem:</b> 2 malas despachadas</span><span><b>Chegada e retorno</b> por Narita</span><span><b>Permanência:</b> 27 noites no Japão</span></div>
+      </div>
+    </div>
+
+    <!-- ── 3. TURKISH COM STOPOVER ── -->
+    <div class="sec">
+      <div class="sec-hd"><div class="num" style="background:var(--gold)">3</div><h2>Opção especial · Turkish Airlines com stopover em Istambul</h2><div class="cab" style="color:#8a5a00;border-color:var(--gold)">Economy + Stopover</div></div>
+      <p class="note" style="margin:0 0 3mm; font-size:9pt; color:var(--char)">Apresentada à parte porque a conexão da ida vira uma <b>parada de 3 noites em Istambul</b> antes de seguir para Tóquio. Mesma tarifa nos dois horários de saída; a Opção A garante as 3 noites completas.</p>
+
+      <div class="opt gold">
+        <div class="opt-hd">
+          <div class="air">Turkish Airlines <small>Dois horários de saída de São Paulo · mesma tarifa · 1 mala despachada</small></div>
+          <span class="pill">Econômica</span>
+          <div class="price"><div class="lab">Total</div><div class="brl">R$ 61.806,96</div><div class="usd">USD 12.253,32</div></div>
+        </div>
+        <table>
+          <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>
+          <tr class="dir"><td colspan="6"><span class="dirlab">Ida · 26 dez → 30 dez · escolha um dos dois voos de saída</span></td></tr>
+          <tr><td>TK 16<span style="display:block;font-size:7pt;color:#8a5a00;font-weight:600">Opção A</span></td><td class="leg">GRU → IST<span>São Paulo → Istambul · saída de madrugada</span></td><td class="dt"><b>26 dez</b> 04:10</td><td class="dt"><b>26 dez</b> 22:35</td><td class="dur">12h25</td><td>Airbus A350</td></tr>
+          <tr><td>TK 216<span style="display:block;font-size:7pt;color:#8a5a00;font-weight:600">Opção B</span></td><td class="leg">GRU → IST<span>São Paulo → Istambul · saída à tarde</span></td><td class="dt"><b>26 dez</b> 17:10</td><td class="dt"><b>27 dez</b> 11:45</td><td class="dur">12h35</td><td>Airbus A350</td></tr>
+          <tr class="stop"><td colspan="6">✦ <b>Stopover em Istambul</b> · <b>3 noites</b> com a Opção A (26, 27 e 28 dez) ou <b>2 noites</b> com a Opção B (27 e 28 dez) · hospedagem não inclusa nesta cotação</td></tr>
+          <tr><td>TK 50</td><td class="leg">IST → NRT<span>Istambul → Tóquio Narita</span></td><td class="dt"><b>29 dez</b> 15:25</td><td class="dt"><b>30 dez</b> 08:40</td><td class="dur">11h15</td><td>Boeing 787-9</td></tr>
+          <tr class="dir"><td colspan="6"><span class="dirlab">Volta · 26 jan → 27 jan · tempo total 30h10</span></td></tr>
+          <tr><td>TK 51</td><td class="leg">NRT → IST<span>Tóquio Narita → Istambul</span></td><td class="dt"><b>26 jan</b> 10:10</td><td class="dt"><b>26 jan</b> 18:00</td><td class="dur">13h50</td><td>Boeing 787-9</td></tr>
+          <tr class="conn"><td colspan="6">Conexão em Istambul · <b>2h35</b></td></tr>
+          <tr><td>TK 215</td><td class="leg">IST → GRU<span>Istambul → São Paulo</span></td><td class="dt"><b>26 jan</b> 20:35</td><td class="dt"><b>27 jan</b> 04:20</td><td class="dur">13h45</td><td>Airbus A350</td></tr>
+        </table>
+        <div class="opt-ft"><span><b>Bagagem:</b> 1 mala despachada</span><span><b>Chegada e retorno</b> por Narita</span><span><b>Permanência:</b> 2 ou 3 noites em Istambul + 27 noites no Japão</span></div>
+      </div>
+    </div>
+
+    <!-- ── RESUMO ── -->
+    <div class="sec">
+      <div class="sec-hd"><div class="num">✓</div><h2>Resumo comparativo</h2></div>
+      <div class="sum">
+        <table>
+          <tr><th>Opção</th><th>Cabine</th><th>Ida</th><th>Volta</th><th>Bagagem</th><th style="text-align:right">Total R$</th><th style="text-align:right">Total USD</th></tr>
+          <tr><td class="leg">Japan Airlines <span>via Dallas</span></td><td>Econômica</td><td>23 dez</td><td>26 jan</td><td>2 malas</td><td class="r"><b>R$ 37.702,48</b></td><td class="r">USD 7.474,56</td></tr>
+          <tr><td class="leg">American Airlines <span>via Dallas / Nova York</span></td><td>Econômica</td><td>29 dez</td><td>29 jan</td><td>1 mala</td><td class="r"><b>R$ 37.443,44</b></td><td class="r">USD 7.423,20</td></tr>
+          <tr><td class="leg">Aeroméxico <span>via Cidade do México</span></td><td>Econômica Premium</td><td>27 dez</td><td>25 jan</td><td>2 malas</td><td class="r"><b>R$ 54.714,92</b></td><td class="r">USD 10.847,32</td></tr>
+          <tr class="hl"><td class="leg">Turkish Airlines <span>stopover em Istambul (A ou B)</span></td><td>Econômica</td><td>26 dez</td><td>26 jan</td><td>1 mala</td><td class="r"><b>R$ 61.806,96</b></td><td class="r">USD 12.253,32</td></tr>
+        </table>
+      </div>
+      <p class="note">
+        <b>*Nada reservado, apenas cotado.</b> Cotação 15/10 · USD 1 = R$ 5,04. Tarifas sujeitas a alteração e disponibilidade até a emissão.
+        Valores incluem tarifa e taxas de embarque. Hospedagem, seguro-viagem e transporte terrestre não estão incluídos nesta proposta.
+        Horários em hora local de cada aeroporto.
+      </p>
+    </div>
+
+    <div class="sig">
+      <span class="word">LUSATRAVEL</span>
+      <span><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a> &nbsp;·&nbsp; <a href="https://wa.me/5541991896076">+55 41 99189-6076</a></span>
+    </div>
+  </div>
+</section>
+</body>
+</html>
