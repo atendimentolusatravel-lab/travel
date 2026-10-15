@@ -246,8 +246,8 @@ INTRO = f'''    <div class="intro">
       <div class="meta">Cotação <b>{COTACAO}</b><br>Câmbio de referência <b>{CAMBIO}</b><br>Valores com taxas de embarque incluídas</div>
     </div>
 '''
-LEAD1 = '<p class="lead">Econômica e Econômica Premium cotadas para <b>2 passageiros</b>, com o valor por pessoa indicado. Executiva cotada <b>por passageiro</b>. Quando a mesma companhia oferece as duas cabines nas mesmas datas, o cartão traz também o <b>total Econômica + Executiva</b>.</p>\n'
-LEAD2 = '<p class="lead">A conexão da ida vira uma <b>parada em Istambul</b> antes de seguir para Tóquio: 3 noites com a saída de madrugada (TK 16) ou 2 noites com a saída à tarde (TK 216). Hospedagem em Istambul não está incluída.</p>\n'
+LEAD1 = '<p class="lead">Cada cartão reúne, nas mesmas datas e nos mesmos voos, a cabine <b>Econômica para 2 passageiros</b> (com o valor por pessoa) e a <b>Executiva para 1 passageiro</b>, além do total das duas cabines.</p>\n'
+LEAD2 = '<p class="lead">A conexão da ida vira uma <b>parada de 2 noites em Istambul</b> (27 e 28 dez) antes de seguir para Tóquio. Hospedagem em Istambul não está incluída.</p>\n'
 
 def summary():
     rows=''
@@ -275,13 +275,14 @@ SIG = f'''    <div class="sig"><img src="data:image/png;base64,{LOGO_DARK}" alt=
 def page(inner):
     return f'<section class="page">\n{header()}  <div class="body">\n{inner}  </div>\n</section>\n'
 
+CARDS = [c for c in CARDS if len(c['prices'])>1]
+TURKISH = [c for c in TURKISH if len(c['prices'])>1]
 C = {c['id']:c for c in CARDS+TURKISH}
 pages = [
-  INTRO + '    <div class="sec">\n' + sec_hd(1,'Opções por companhia aérea','Economy · Premium · Business') + LEAD1 + card(C['aa-eco'])+card(C['aa-exec']) + '    </div>\n',
-  '    <div class="sec">\n' + sec_hd(1,'Opções por companhia aérea','Economy · Premium · Business',cont=True) + card(C['ac'])+card(C['am-27'])+card(C['am-28']) + '    </div>\n',
-  '    <div class="sec">\n' + sec_hd(1,'Opções por companhia aérea','Economy · Business',cont=True) + card(C['ita'])+card(C['lh']) + '    </div>\n',
-  '    <div class="sec">\n' + sec_hd(2,'Opção especial · Turkish Airlines com stopover em Istambul','Stopover Istambul',gold=True) + LEAD2 + card(C['tk-1'])+card(C['tk-2']) + '    </div>\n',
-  summary() + SIG,
+  INTRO + '    <div class="sec">\n' + sec_hd(1,'Opções por companhia aérea','Economy + Business') + LEAD1 + card(C['ac'])+card(C['am-27']) + '    </div>\n',
+  '    <div class="sec">\n' + sec_hd(1,'Opções por companhia aérea','Economy + Business',cont=True) + card(C['am-28'])+card(C['ita']) + '    </div>\n',
+  '    <div class="sec">\n' + sec_hd(2,'Opção especial · Turkish Airlines com stopover em Istambul','Stopover Istambul',gold=True) + LEAD2 + card(C['tk-2']) + '    </div>\n'
+  + summary() + SIG,
 ]
 html = f'''<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><title>Laura Dalcanale | Tóquio — LusaTravel</title>
