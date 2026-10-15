@@ -235,7 +235,10 @@ curta; detalhes do dia vão para a folha "— informações do dia".
 - `<title>`: `Lusa Travel — Caderno de vouchers · <Clientes> · <Destino>`.
 - Alterações depois da entrega = novo deploy de produção no mesmo projeto (a URL não muda; o
   `no-store` garante que o cliente veja a versão nova).
-- PDF: **só quando o usuário pedir** (ver "PDF" abaixo). O link da Vercel é a entrega padrão.
+- PDF: **NUNCA gere nem mencione o PDF por conta própria.** A entrega é só o link da Vercel.
+  Gere o PDF exclusivamente quando o usuário pedir, naquela mensagem (ver "PDF" abaixo).
+  Para conferir quebra de página antes do deploy, use screenshots do Chromium headless
+  (`--screenshot`, `--window-size=794,1123` por página ou altura total), não o gerar-pdf.py.
 
 ### Caminho A — upload direto (CLI `vercel deploy` ou API `files`)
 
