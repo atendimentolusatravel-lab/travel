@@ -32,14 +32,16 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .opt.gold{ border-left-color:var(--gold); }
 .opt-hd{ display:flex; align-items:center; gap:5mm; padding:2.4mm 6mm; background:var(--green-soft); }
 .opt.gold .opt-hd{ background:var(--gold-soft); }
-.opt-hd .air{ font-size:12.5pt; font-weight:700; color:var(--ink); }
+.opt-hd .air{ font-size:12.5pt; font-weight:700; color:var(--ink); flex:0 1 58mm; }
 .opt-hd .air small{ display:block; font-size:8.5pt; font-weight:400; color:var(--mut); margin-top:.5mm; }
-.prices{ margin-left:auto; display:flex; gap:0; }
+.prices{ margin-left:auto; display:flex; gap:0; flex-shrink:0; align-items:center; }
 .pr{ text-align:right; padding:0 0 0 6mm; margin-left:6mm; border-left:1px solid rgba(0,0,0,.12); }
 .pr:first-child{ border-left:none; margin-left:0; padding-left:0; }
-.pr .lab{ font-size:7pt; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.pr .brl{ font-size:14.5pt; font-weight:800; color:var(--ink); line-height:1.05; }
-.pr .usd{ font-family:var(--con); font-size:8pt; color:var(--mut); margin-top:.8mm; } .pr .usd b{ color:var(--char); font-weight:600; }
+.pr .lab{ white-space:nowrap; font-size:6.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.pr .brl{ font-size:13.5pt; font-weight:800; color:var(--ink); line-height:1.05; }
+.pr.tot{ background:var(--green); color:#fff; border-radius:1.5mm; padding:1.5mm 3mm; border-left:none; }
+.pr.tot .brl{ color:#fff; } .pr.tot .usd{ color:rgba(255,255,255,.75); } .pr.tot .lab{ color:var(--gold); }
+.pr .usd{ white-space:nowrap; font-family:var(--con); font-size:7.6pt; color:var(--mut); margin-top:.8mm; } .pr .usd b{ color:var(--char); font-weight:600; }
 table{ width:100%; border-collapse:collapse; font-size:8.5pt; }
 th{ text-align:left; font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:600; padding:1.8mm 3mm 1.4mm; border-bottom:1px solid var(--line); }
 td{ padding:1.6mm 3mm; border-bottom:1px solid #efebe4; vertical-align:top; color:var(--char); }
@@ -55,9 +57,10 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
 .sum{ margin-top:1mm; border:1px solid var(--line); border-radius:2mm; overflow:hidden; }
 .sum table{ font-size:8pt; } .sum table td,.sum table th{ padding:1mm 5mm; }
 .sum th{ background:var(--green); color:rgba(255,255,255,.85); border-bottom:none; }
-.sum td.leg span{ font-size:7.2pt; line-height:1.15; }
+.sum td{ white-space:nowrap; } .sum td.leg{ white-space:normal; min-width:52mm; } .sum td.leg span{ font-size:7pt; line-height:1.15; }
 .sum td.r{ text-align:right; font-family:var(--con); white-space:nowrap; } .sum td.r b{ color:var(--ink); }
 .sum tr.hl td{ background:var(--gold-soft); }
+.sum tr.tot td{ background:var(--green-soft); color:var(--ink); font-weight:600; border-bottom:2px solid #fff; } .sum tr.tot td.leg{ color:var(--green); }
 .note{ font-size:8pt; color:var(--mut); margin-top:2mm; line-height:1.5; } .note b{ color:var(--ink); font-weight:600; }
 .sig{ margin-top:auto; padding-top:3mm; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; font-family:var(--con); font-size:8.5pt; color:var(--mut); }
 .sig a{ color:var(--green); text-decoration:none; font-weight:600; } .sig img{ height:11mm; }
@@ -74,10 +77,10 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
     </div>
     <div class="sec">
       <div class="sec-hd"><div class="num">1</div><h2>Opções por companhia aérea</h2><div class="cab">Economy · Premium · Business</div></div>
-<p class="lead">Quando a mesma companhia oferece mais de uma cabine <b>nas mesmas datas</b>, os valores aparecem lado a lado no mesmo cartão. Franquia de bagagem indicada junto a cada valor.</p>
+<p class="lead">Econômica e Econômica Premium cotadas para <b>2 passageiros</b>, com o valor por pessoa indicado. Executiva cotada <b>por passageiro</b>. Quando a mesma companhia oferece as duas cabines nas mesmas datas, o cartão traz também o <b>total Econômica + Executiva</b>.</p>
       <div class="opt">
         <div class="opt-hd"><div class="air">American Airlines <small>Ida via Dallas · volta via Nova York</small></div><div class="prices">
-          <div class="pr"><div class="lab">Econômica</div><div class="brl">R$ 37.443,44</div><div class="usd">USD 7.423,20 · <b>1 mala</b></div></div>
+          <div class="pr"><div class="lab">Econômica · 2 passageiros</div><div class="brl">R$ 37.443,44</div><div class="usd"><b>R$ 18.721,72 por pessoa</b> · USD 7.423,20 · 1 mala</div></div>
         </div></div>
         <table>
           <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>
@@ -94,7 +97,7 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
       </div>
       <div class="opt">
         <div class="opt-hd"><div class="air">American Airlines <small>Via Nova York</small></div><div class="prices">
-          <div class="pr"><div class="lab">Executiva</div><div class="brl">R$ 43.902,86</div><div class="usd">USD 8.703,80 · <b>2 malas</b></div></div>
+          <div class="pr"><div class="lab">Executiva · por passageiro</div><div class="brl">R$ 43.902,86</div><div class="usd">USD 8.703,80 · <b>2 malas</b></div></div>
         </div></div>
         <table>
           <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>
@@ -120,8 +123,9 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
       <div class="sec-hd"><div class="num">1</div><h2>Opções por companhia aérea <span>· continuação</span></h2><div class="cab">Economy · Premium · Business</div></div>
       <div class="opt">
         <div class="opt-hd"><div class="air">Air Canada <small>Ida via Toronto · volta via Montreal</small></div><div class="prices">
-          <div class="pr"><div class="lab">Econômica</div><div class="brl">R$ 61.799,48</div><div class="usd">USD 12.251,84 · <b>1 mala</b></div></div>
-          <div class="pr"><div class="lab">Executiva</div><div class="brl">R$ 37.060,20</div><div class="usd">USD 7.347,24 · <b>2 malas</b></div></div>
+          <div class="pr"><div class="lab">Econômica · 2 passageiros</div><div class="brl">R$ 61.799,48</div><div class="usd"><b>R$ 30.899,74 por pessoa</b> · USD 12.251,84 · 1 mala</div></div>
+          <div class="pr"><div class="lab">Executiva · por passageiro</div><div class="brl">R$ 37.060,20</div><div class="usd">USD 7.347,24 · <b>2 malas</b></div></div>
+          <div class="pr tot"><div class="lab">Econ. + Exec. · 3 passageiros</div><div class="brl">R$ 98.859,68</div><div class="usd">USD 19.599,08</div></div>
         </div></div>
         <table>
           <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>
@@ -138,8 +142,9 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
       </div>
       <div class="opt">
         <div class="opt-hd"><div class="air">Aeroméxico <small>Via Cidade do México · saída 27 dez</small></div><div class="prices">
-          <div class="pr"><div class="lab">Econômica Premium</div><div class="brl">R$ 54.714,92</div><div class="usd">USD 10.847,32 · <b>2 malas</b></div></div>
-          <div class="pr"><div class="lab">Executiva</div><div class="brl">R$ 53.262,11</div><div class="usd">USD 10.559,29 · <b>2 malas</b></div></div>
+          <div class="pr"><div class="lab">Econômica Premium · 2 passageiros</div><div class="brl">R$ 54.714,92</div><div class="usd"><b>R$ 27.357,46 por pessoa</b> · USD 10.847,32 · 2 malas</div></div>
+          <div class="pr"><div class="lab">Executiva · por passageiro</div><div class="brl">R$ 53.262,11</div><div class="usd">USD 10.559,29 · <b>2 malas</b></div></div>
+          <div class="pr tot"><div class="lab">Econ. + Exec. · 3 passageiros</div><div class="brl">R$ 107.977,03</div><div class="usd">USD 21.406,61</div></div>
         </div></div>
         <table>
           <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>
@@ -156,8 +161,9 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
       </div>
       <div class="opt">
         <div class="opt-hd"><div class="air">Aeroméxico <small>Via Cidade do México · saída 28 dez</small></div><div class="prices">
-          <div class="pr"><div class="lab">Econômica</div><div class="brl">R$ 51.001,68</div><div class="usd">USD 10.111,16 · <b>2 malas</b></div></div>
-          <div class="pr"><div class="lab">Executiva</div><div class="brl">R$ 39.331,97</div><div class="usd">USD 7.797,62 · <b>2 malas</b></div></div>
+          <div class="pr"><div class="lab">Econômica · 2 passageiros</div><div class="brl">R$ 51.001,68</div><div class="usd"><b>R$ 25.500,84 por pessoa</b> · USD 10.111,16 · 2 malas</div></div>
+          <div class="pr"><div class="lab">Executiva · por passageiro</div><div class="brl">R$ 39.331,97</div><div class="usd">USD 7.797,62 · <b>2 malas</b></div></div>
+          <div class="pr tot"><div class="lab">Econ. + Exec. · 3 passageiros</div><div class="brl">R$ 90.333,65</div><div class="usd">USD 17.908,78</div></div>
         </div></div>
         <table>
           <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>
@@ -183,8 +189,9 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
       <div class="sec-hd"><div class="num">1</div><h2>Opções por companhia aérea <span>· continuação</span></h2><div class="cab">Economy · Business</div></div>
       <div class="opt">
         <div class="opt-hd"><div class="air">ITA Airways <small>Via Roma · Airbus A350 em todos os trechos</small></div><div class="prices">
-          <div class="pr"><div class="lab">Econômica</div><div class="brl">R$ 55.858,36</div><div class="usd">USD 11.074,00 · <b>2 malas</b></div></div>
-          <div class="pr"><div class="lab">Executiva</div><div class="brl">R$ 41.767,67</div><div class="usd">USD 8.280,50 · <b>2 malas</b></div></div>
+          <div class="pr"><div class="lab">Econômica · 2 passageiros</div><div class="brl">R$ 55.858,36</div><div class="usd"><b>R$ 27.929,18 por pessoa</b> · USD 11.074,00 · 2 malas</div></div>
+          <div class="pr"><div class="lab">Executiva · por passageiro</div><div class="brl">R$ 41.767,67</div><div class="usd">USD 8.280,50 · <b>2 malas</b></div></div>
+          <div class="pr tot"><div class="lab">Econ. + Exec. · 3 passageiros</div><div class="brl">R$ 97.626,03</div><div class="usd">USD 19.354,50</div></div>
         </div></div>
         <table>
           <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>
@@ -201,7 +208,7 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
       </div>
       <div class="opt">
         <div class="opt-hd"><div class="air">Lufthansa + Swiss <small>Ida via Frankfurt · volta via Zurique</small></div><div class="prices">
-          <div class="pr"><div class="lab">Executiva</div><div class="brl">R$ 41.903,34</div><div class="usd">USD 8.307,40 · <b>2 malas</b></div></div>
+          <div class="pr"><div class="lab">Executiva · por passageiro</div><div class="brl">R$ 41.903,34</div><div class="usd">USD 8.307,40 · <b>2 malas</b></div></div>
         </div></div>
         <table>
           <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>
@@ -228,7 +235,7 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
 <p class="lead">A conexão da ida vira uma <b>parada em Istambul</b> antes de seguir para Tóquio: 3 noites com a saída de madrugada (TK 16) ou 2 noites com a saída à tarde (TK 216). Hospedagem em Istambul não está incluída.</p>
       <div class="opt gold">
         <div class="opt-hd"><div class="air">Turkish Airlines <small>Volta de Narita pela manhã · dois horários de saída de São Paulo, mesma tarifa</small></div><div class="prices">
-          <div class="pr"><div class="lab">Econômica</div><div class="brl">R$ 61.806,96</div><div class="usd">USD 12.253,32 · <b>1 mala</b></div></div>
+          <div class="pr"><div class="lab">Econômica · 2 passageiros</div><div class="brl">R$ 61.806,96</div><div class="usd"><b>R$ 30.903,48 por pessoa</b> · USD 12.253,32 · 1 mala</div></div>
         </div></div>
         <table>
           <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>
@@ -246,8 +253,9 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
       </div>
       <div class="opt gold">
         <div class="opt-hd"><div class="air">Turkish Airlines <small>Volta de Haneda à noite · 2 noites em Istambul</small></div><div class="prices">
-          <div class="pr"><div class="lab">Econômica</div><div class="brl">R$ 69.509,16</div><div class="usd">USD 13.780,28 · <b>1 mala</b></div></div>
-          <div class="pr"><div class="lab">Executiva</div><div class="brl">R$ 79.967,15</div><div class="usd">USD 15.853,60 · <b>2 malas</b></div></div>
+          <div class="pr"><div class="lab">Econômica · 2 passageiros</div><div class="brl">R$ 69.509,16</div><div class="usd"><b>R$ 34.754,58 por pessoa</b> · USD 13.780,28 · 1 mala</div></div>
+          <div class="pr"><div class="lab">Executiva · por passageiro</div><div class="brl">R$ 79.967,15</div><div class="usd">USD 15.853,60 · <b>2 malas</b></div></div>
+          <div class="pr tot"><div class="lab">Econ. + Exec. · 3 passageiros</div><div class="brl">R$ 149.476,31</div><div class="usd">USD 29.633,88</div></div>
         </div></div>
         <table>
           <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>
@@ -271,22 +279,28 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
   <div class="body">
     <div class="sec">
       <div class="sec-hd"><div class="num">✓</div><h2>Resumo comparativo</h2></div>
+      <p class="lead">Econômica e Econômica Premium cotadas para <b>2 passageiros</b> (valor por pessoa indicado). Executiva cotada <b>por passageiro</b>. A linha de total soma as duas cabines quando estão nas mesmas datas.</p>
       <div class="sum"><table>
-          <tr><th>Companhia</th><th>Cabine</th><th>Ida</th><th>Volta</th><th>Bagagem</th><th style="text-align:right">Total R$</th><th style="text-align:right">Total USD</th></tr>
-          <tr><td class="leg">American Airlines<span>via Dallas / Nova York</span></td><td>Econômica</td><td>29 dez</td><td>29 jan</td><td>1 mala</td><td class="r"><b>R$ 37.443,44</b></td><td class="r">USD 7.423,20</td></tr>
-          <tr><td class="leg">American Airlines<span>via Nova York</span></td><td>Executiva</td><td>28 dez</td><td>26 jan</td><td>2 malas</td><td class="r"><b>R$ 43.902,86</b></td><td class="r">USD 8.703,80</td></tr>
-          <tr><td class="leg">Air Canada<span>via Toronto / Montreal</span></td><td>Econômica</td><td>27 dez</td><td>26 jan</td><td>1 mala</td><td class="r"><b>R$ 61.799,48</b></td><td class="r">USD 12.251,84</td></tr>
-          <tr><td class="leg">Air Canada<span>via Toronto / Montreal</span></td><td>Executiva</td><td>27 dez</td><td>26 jan</td><td>2 malas</td><td class="r"><b>R$ 37.060,20</b></td><td class="r">USD 7.347,24</td></tr>
-          <tr><td class="leg">Aeroméxico<span>via Cidade do México</span></td><td>Econômica Premium</td><td>27 dez</td><td>25 jan</td><td>2 malas</td><td class="r"><b>R$ 54.714,92</b></td><td class="r">USD 10.847,32</td></tr>
-          <tr><td class="leg">Aeroméxico<span>via Cidade do México</span></td><td>Executiva</td><td>27 dez</td><td>25 jan</td><td>2 malas</td><td class="r"><b>R$ 53.262,11</b></td><td class="r">USD 10.559,29</td></tr>
-          <tr><td class="leg">Aeroméxico<span>via Cidade do México</span></td><td>Econômica</td><td>28 dez</td><td>26 jan</td><td>2 malas</td><td class="r"><b>R$ 51.001,68</b></td><td class="r">USD 10.111,16</td></tr>
-          <tr><td class="leg">Aeroméxico<span>via Cidade do México</span></td><td>Executiva</td><td>28 dez</td><td>26 jan</td><td>2 malas</td><td class="r"><b>R$ 39.331,97</b></td><td class="r">USD 7.797,62</td></tr>
-          <tr><td class="leg">ITA Airways<span>via Roma</span></td><td>Econômica</td><td>28 dez</td><td>28 jan</td><td>2 malas</td><td class="r"><b>R$ 55.858,36</b></td><td class="r">USD 11.074,00</td></tr>
-          <tr><td class="leg">ITA Airways<span>via Roma</span></td><td>Executiva</td><td>28 dez</td><td>28 jan</td><td>2 malas</td><td class="r"><b>R$ 41.767,67</b></td><td class="r">USD 8.280,50</td></tr>
-          <tr><td class="leg">Lufthansa + Swiss<span>via Frankfurt / Zurique</span></td><td>Executiva</td><td>28 dez</td><td>28 jan</td><td>2 malas</td><td class="r"><b>R$ 41.903,34</b></td><td class="r">USD 8.307,40</td></tr>
-          <tr class="hl"><td class="leg">Turkish Airlines<span>stopover Istambul · volta Narita (TK 51/215)</span></td><td>Econômica</td><td>26 dez</td><td>26 jan</td><td>1 mala</td><td class="r"><b>R$ 61.806,96</b></td><td class="r">USD 12.253,32</td></tr>
-          <tr class="hl"><td class="leg">Turkish Airlines<span>stopover Istambul · volta Haneda (TK 199/15)</span></td><td>Econômica</td><td>26 dez</td><td>26 jan</td><td>1 mala</td><td class="r"><b>R$ 69.509,16</b></td><td class="r">USD 13.780,28</td></tr>
-          <tr class="hl"><td class="leg">Turkish Airlines<span>stopover Istambul · volta Haneda (TK 199/15)</span></td><td>Executiva</td><td>26 dez</td><td>26 jan</td><td>2 malas</td><td class="r"><b>R$ 79.967,15</b></td><td class="r">USD 15.853,60</td></tr>
+          <tr><th>Companhia</th><th>Cabine</th><th>Ida</th><th>Volta</th><th>Bagagem</th><th style="text-align:right">Por pessoa</th><th style="text-align:right">Total R$</th><th style="text-align:right">Total USD</th></tr>
+          <tr><td class="leg">American Airlines<span>via Dallas / Nova York</span></td><td>Econômica · 2 pax</td><td>29 dez</td><td>29 jan</td><td>1 mala</td><td class="r"><b>R$ 18.721,72</b></td><td class="r"><b>R$ 37.443,44</b></td><td class="r">USD 7.423,20</td></tr>
+          <tr><td class="leg">American Airlines<span>via Nova York</span></td><td>Executiva · 1 pax</td><td>28 dez</td><td>26 jan</td><td>2 malas</td><td class="r">—</td><td class="r"><b>R$ 43.902,86</b></td><td class="r">USD 8.703,80</td></tr>
+          <tr><td class="leg">Air Canada<span>via Toronto / Montreal</span></td><td>Econômica · 2 pax</td><td>27 dez</td><td>26 jan</td><td>1 mala</td><td class="r"><b>R$ 30.899,74</b></td><td class="r"><b>R$ 61.799,48</b></td><td class="r">USD 12.251,84</td></tr>
+          <tr><td class="leg">Air Canada<span>via Toronto / Montreal</span></td><td>Executiva · 1 pax</td><td>27 dez</td><td>26 jan</td><td>2 malas</td><td class="r">—</td><td class="r"><b>R$ 37.060,20</b></td><td class="r">USD 7.347,24</td></tr>
+          <tr class="tot"><td class="leg">Total Air Canada · 27 dez</td><td colspan="4">Econômica + Executiva · 3 passageiros</td><td></td><td class="r"><b>R$ 98.859,68</b></td><td class="r">USD 19.599,08</td></tr>
+          <tr><td class="leg">Aeroméxico<span>via Cidade do México</span></td><td>Econômica Premium · 2 pax</td><td>27 dez</td><td>25 jan</td><td>2 malas</td><td class="r"><b>R$ 27.357,46</b></td><td class="r"><b>R$ 54.714,92</b></td><td class="r">USD 10.847,32</td></tr>
+          <tr><td class="leg">Aeroméxico<span>via Cidade do México</span></td><td>Executiva · 1 pax</td><td>27 dez</td><td>25 jan</td><td>2 malas</td><td class="r">—</td><td class="r"><b>R$ 53.262,11</b></td><td class="r">USD 10.559,29</td></tr>
+          <tr class="tot"><td class="leg">Total Aeroméxico · 27 dez</td><td colspan="4">Econômica + Executiva · 3 passageiros</td><td></td><td class="r"><b>R$ 107.977,03</b></td><td class="r">USD 21.406,61</td></tr>
+          <tr><td class="leg">Aeroméxico<span>via Cidade do México</span></td><td>Econômica · 2 pax</td><td>28 dez</td><td>26 jan</td><td>2 malas</td><td class="r"><b>R$ 25.500,84</b></td><td class="r"><b>R$ 51.001,68</b></td><td class="r">USD 10.111,16</td></tr>
+          <tr><td class="leg">Aeroméxico<span>via Cidade do México</span></td><td>Executiva · 1 pax</td><td>28 dez</td><td>26 jan</td><td>2 malas</td><td class="r">—</td><td class="r"><b>R$ 39.331,97</b></td><td class="r">USD 7.797,62</td></tr>
+          <tr class="tot"><td class="leg">Total Aeroméxico · 28 dez</td><td colspan="4">Econômica + Executiva · 3 passageiros</td><td></td><td class="r"><b>R$ 90.333,65</b></td><td class="r">USD 17.908,78</td></tr>
+          <tr><td class="leg">ITA Airways<span>via Roma</span></td><td>Econômica · 2 pax</td><td>28 dez</td><td>28 jan</td><td>2 malas</td><td class="r"><b>R$ 27.929,18</b></td><td class="r"><b>R$ 55.858,36</b></td><td class="r">USD 11.074,00</td></tr>
+          <tr><td class="leg">ITA Airways<span>via Roma</span></td><td>Executiva · 1 pax</td><td>28 dez</td><td>28 jan</td><td>2 malas</td><td class="r">—</td><td class="r"><b>R$ 41.767,67</b></td><td class="r">USD 8.280,50</td></tr>
+          <tr class="tot"><td class="leg">Total ITA Airways · 28 dez</td><td colspan="4">Econômica + Executiva · 3 passageiros</td><td></td><td class="r"><b>R$ 97.626,03</b></td><td class="r">USD 19.354,50</td></tr>
+          <tr><td class="leg">Lufthansa + Swiss<span>via Frankfurt / Zurique</span></td><td>Executiva · 1 pax</td><td>28 dez</td><td>28 jan</td><td>2 malas</td><td class="r">—</td><td class="r"><b>R$ 41.903,34</b></td><td class="r">USD 8.307,40</td></tr>
+          <tr class="hl"><td class="leg">Turkish Airlines<span>stopover Istambul · volta Narita (TK 51/215)</span></td><td>Econômica · 2 pax</td><td>26 dez</td><td>26 jan</td><td>1 mala</td><td class="r"><b>R$ 30.903,48</b></td><td class="r"><b>R$ 61.806,96</b></td><td class="r">USD 12.253,32</td></tr>
+          <tr class="hl"><td class="leg">Turkish Airlines<span>stopover Istambul · volta Haneda (TK 199/15)</span></td><td>Econômica · 2 pax</td><td>26 dez</td><td>26 jan</td><td>1 mala</td><td class="r"><b>R$ 34.754,58</b></td><td class="r"><b>R$ 69.509,16</b></td><td class="r">USD 13.780,28</td></tr>
+          <tr class="hl"><td class="leg">Turkish Airlines<span>stopover Istambul · volta Haneda (TK 199/15)</span></td><td>Executiva · 1 pax</td><td>26 dez</td><td>26 jan</td><td>2 malas</td><td class="r">—</td><td class="r"><b>R$ 79.967,15</b></td><td class="r">USD 15.853,60</td></tr>
+          <tr class="tot"><td class="leg">Total Turkish Airlines · 26 dez</td><td colspan="4">Econômica + Executiva · 3 passageiros</td><td></td><td class="r"><b>R$ 149.476,31</b></td><td class="r">USD 29.633,88</td></tr>
       </table></div>
       <p class="note"><b>*Nada reservado, apenas cotado.</b> Cotação 15/10 · USD 1 = R$ 5,04. Tarifas sujeitas a alteração e disponibilidade até a emissão. Valores incluem tarifa e taxas de embarque. Hospedagem, seguro-viagem e transporte terrestre não estão incluídos nesta proposta. Horários em hora local de cada aeroporto.</p>
     </div>

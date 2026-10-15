@@ -17,11 +17,17 @@ def R(voo, leg, sub, d1, t1, d2, t2, dur, ac):
 def C(txt): return dict(k='c', txt=txt)
 def D(txt): return dict(k='d', txt=txt)
 def S(txt): return dict(k='s', txt=txt)
-def P(cab, brl, usd, bag): return dict(cab=cab, brl=brl, usd=usd, bag=bag)
+def num(t): return float(t.replace('R$','').replace('USD','').strip().replace('.','').replace(',','.'))
+def brl(v): return 'R$ '+f'{v:,.2f}'.replace(',','X').replace('.',',').replace('X','.')
+def usd(v): return 'USD '+f'{v:,.2f}'.replace(',','X').replace('.',',').replace('X','.')
+PAX_ECO = 2   # cotações de Econômica / Econômica Premium vieram para 2 passageiros
+def P(cab, b, u, bag):
+    eco = cab.startswith('Econômica')
+    return dict(cab=cab, brl=num(b), usd=num(u), bag=bag, pax=PAX_ECO if eco else 1)
 
 # ── dados ───────────────────────────────────────────────────────
 CARDS = [
- dict(id='aa-eco', air='American Airlines', sub='Ida via Dallas · volta via Nova York', gold=False,
+ dict(id='aa-eco', route='via Dallas / Nova York', ida='29 dez', volta='29 jan', air='American Airlines', sub='Ida via Dallas · volta via Nova York', gold=False,
   prices=[P('Econômica','R$ 37.443,44','USD 7.423,20','1 mala')],
   rows=[D('Ida · 29 dez → 31 dez · tempo total 31h50'),
    R('AA 962','GRU → DFW','São Paulo → Dallas','29 dez','22:35','30 dez','05:55','10h20','Boeing 787-9'),
@@ -33,7 +39,7 @@ CARDS = [
    R('AA 951','JFK → GRU','Nova York → São Paulo','29 jan','18:35','30 jan','06:05','09h30','Boeing 787-9')],
   ft=['<b>Chegada e retorno</b> por Haneda (mais próximo do centro)','<b>Permanência:</b> 29 noites no Japão']),
 
- dict(id='aa-exec', air='American Airlines', sub='Via Nova York', gold=False,
+ dict(id='aa-exec', route='via Nova York', ida='28 dez', volta='26 jan', air='American Airlines', sub='Via Nova York', gold=False,
   prices=[P('Executiva','R$ 43.902,86','USD 8.703,80','2 malas')],
   rows=[D('Ida · 28 dez → 30 dez · tempo total 27h35'),
    R('AA 950','GRU → JFK','São Paulo → Nova York','28 dez','23:00','29 dez','06:50','09h50','Boeing 787-9'),
@@ -45,7 +51,7 @@ CARDS = [
    R('AA 951','JFK → GRU','Nova York → São Paulo','26 jan','18:35','27 jan','06:05','09h30','Boeing 787-9')],
   ft=['<b>Chegada e retorno</b> por Haneda (mais próximo do centro)','<b>Permanência:</b> 27 noites no Japão']),
 
- dict(id='ac', air='Air Canada', sub='Ida via Toronto · volta via Montreal', gold=False,
+ dict(id='ac', route='via Toronto / Montreal', ida='27 dez', volta='26 jan', air='Air Canada', sub='Ida via Toronto · volta via Montreal', gold=False,
   prices=[P('Econômica','R$ 61.799,48','USD 12.251,84','1 mala'), P('Executiva','R$ 37.060,20','USD 7.347,24','2 malas')],
   rows=[D('Ida · 27 dez → 29 dez · tempo total 31h10'),
    R('AC 91','GRU → YYZ','São Paulo → Toronto','27 dez','21:30','28 dez','05:50','10h20','Boeing 787-9'),
@@ -57,7 +63,7 @@ CARDS = [
    R('AC 96','YUL → GRU','Montreal → São Paulo','26 jan','20:55','27 jan','09:00','10h05','Boeing 787-9')],
   ft=['<b>Chegada</b> por Haneda · <b>retorno</b> por Narita','<b>Permanência:</b> 28 noites no Japão']),
 
- dict(id='am-27', air='Aeroméxico', sub='Via Cidade do México · saída 27 dez', gold=False,
+ dict(id='am-27', route='via Cidade do México', ida='27 dez', volta='25 jan', air='Aeroméxico', sub='Via Cidade do México · saída 27 dez', gold=False,
   prices=[P('Econômica Premium','R$ 54.714,92','USD 10.847,32','2 malas'), P('Executiva','R$ 53.262,11','USD 10.559,29','2 malas')],
   rows=[D('Ida · 27 dez → 29 dez · tempo total 30h30'),
    R('AM 15','GRU → MEX','São Paulo → Cidade do México','27 dez','12:00','27 dez','18:35','09h35','Boeing 787-9'),
@@ -69,7 +75,7 @@ CARDS = [
    R('AM 14','MEX → GRU','Cidade do México → São Paulo','25 jan','20:55','26 jan','09:55','10h00','Boeing 787-9')],
   ft=['<b>Chegada e retorno</b> por Narita','<b>Permanência:</b> 27 noites no Japão']),
 
- dict(id='am-28', air='Aeroméxico', sub='Via Cidade do México · saída 28 dez', gold=False,
+ dict(id='am-28', route='via Cidade do México', ida='28 dez', volta='26 jan', air='Aeroméxico', sub='Via Cidade do México · saída 28 dez', gold=False,
   prices=[P('Econômica','R$ 51.001,68','USD 10.111,16','2 malas'), P('Executiva','R$ 39.331,97','USD 7.797,62','2 malas')],
   rows=[D('Ida · 28 dez → 30 dez · tempo total 30h30'),
    R('AM 15','GRU → MEX','São Paulo → Cidade do México','28 dez','12:00','28 dez','18:35','09h35','Boeing 787-9'),
@@ -81,7 +87,7 @@ CARDS = [
    R('AM 14','MEX → GRU','Cidade do México → São Paulo','26 jan','20:55','27 jan','09:55','10h00','Boeing 787-9')],
   ft=['<b>Chegada e retorno</b> por Narita','<b>Permanência:</b> 27 noites no Japão']),
 
- dict(id='ita', air='ITA Airways', sub='Via Roma · Airbus A350 em todos os trechos', gold=False,
+ dict(id='ita', route='via Roma', ida='28 dez', volta='28 jan', air='ITA Airways', sub='Via Roma · Airbus A350 em todos os trechos', gold=False,
   prices=[P('Econômica','R$ 55.858,36','USD 11.074,00','2 malas'), P('Executiva','R$ 41.767,67','USD 8.280,50','2 malas')],
   rows=[D('Ida · 28 dez → 30 dez · tempo total 26h40'),
    R('AZ 679','GRU → FCO','São Paulo → Roma','28 dez','20:40','29 dez','11:35','10h55','Airbus A350'),
@@ -93,7 +99,7 @@ CARDS = [
    R('AZ 678','FCO → GRU','Roma → São Paulo','29 jan','10:35','29 jan','18:40','12h05','Airbus A350')],
   ft=['<b>Chegada e retorno</b> por Haneda (mais próximo do centro)','<b>Permanência:</b> 29 noites no Japão']),
 
- dict(id='lh', air='Lufthansa + Swiss', sub='Ida via Frankfurt · volta via Zurique', gold=False,
+ dict(id='lh', route='via Frankfurt / Zurique', ida='28 dez', volta='28 jan', air='Lufthansa + Swiss', sub='Ida via Frankfurt · volta via Zurique', gold=False,
   prices=[P('Executiva','R$ 41.903,34','USD 8.307,40','2 malas')],
   rows=[D('Ida · 28 dez → 30 dez · tempo total 28h00'),
    R('LH 507','GRU → FRA','São Paulo → Frankfurt','28 dez','18:45','29 dez','10:15','11h30','Boeing 747-8'),
@@ -107,7 +113,7 @@ CARDS = [
 ]
 
 TURKISH = [
- dict(id='tk-1', air='Turkish Airlines', sub='Volta de Narita pela manhã · dois horários de saída de São Paulo, mesma tarifa', gold=True,
+ dict(id='tk-1', route='stopover Istambul · volta Narita (TK 51/215)', ida='26 dez', volta='26 jan', air='Turkish Airlines', sub='Volta de Narita pela manhã · dois horários de saída de São Paulo, mesma tarifa', gold=True,
   prices=[P('Econômica','R$ 61.806,96','USD 12.253,32','1 mala')],
   rows=[D('Ida · 26 dez → 30 dez · escolha um dos dois voos de saída'),
    R('TK 16<i>Opção A</i>','GRU → IST','São Paulo → Istambul · saída de madrugada','26 dez','04:10','26 dez','22:35','12h25','Airbus A350'),
@@ -120,7 +126,7 @@ TURKISH = [
    R('TK 215','IST → GRU','Istambul → São Paulo','26 jan','20:35','27 jan','04:20','13h45','Airbus A350')],
   ft=['<b>Chegada e retorno</b> por Narita','<b>Permanência:</b> 2 ou 3 noites em Istambul + 27 noites no Japão']),
 
- dict(id='tk-2', air='Turkish Airlines', sub='Volta de Haneda à noite · 2 noites em Istambul', gold=True,
+ dict(id='tk-2', route='stopover Istambul · volta Haneda (TK 199/15)', ida='26 dez', volta='26 jan', air='Turkish Airlines', sub='Volta de Haneda à noite · 2 noites em Istambul', gold=True,
   prices=[P('Econômica','R$ 69.509,16','USD 13.780,28','1 mala'), P('Executiva','R$ 79.967,15','USD 15.853,60','2 malas')],
   rows=[D('Ida · 26 dez → 30 dez'),
    R('TK 216','GRU → IST','São Paulo → Istambul','26 dez','17:10','27 dez','11:45','12h35','Airbus A350'),
@@ -131,24 +137,6 @@ TURKISH = [
    C('Conexão em Istambul · <b>4h10</b>'),
    R('TK 15','IST → GRU','Istambul → São Paulo','27 jan','09:55','27 jan','17:45','13h50','Airbus A350')],
   ft=['<b>Chegada</b> por Narita · <b>retorno</b> por Haneda','<b>Permanência:</b> 2 noites em Istambul + 27 noites no Japão']),
-]
-
-# resumo: (companhia, rota, cabine, ida, volta, bag, brl, usd, destaque)
-SUMMARY = [
- ('American Airlines','via Dallas / Nova York','Econômica','29 dez','29 jan','1 mala','R$ 37.443,44','USD 7.423,20',False),
- ('American Airlines','via Nova York','Executiva','28 dez','26 jan','2 malas','R$ 43.902,86','USD 8.703,80',False),
- ('Air Canada','via Toronto / Montreal','Econômica','27 dez','26 jan','1 mala','R$ 61.799,48','USD 12.251,84',False),
- ('Air Canada','via Toronto / Montreal','Executiva','27 dez','26 jan','2 malas','R$ 37.060,20','USD 7.347,24',False),
- ('Aeroméxico','via Cidade do México','Econômica Premium','27 dez','25 jan','2 malas','R$ 54.714,92','USD 10.847,32',False),
- ('Aeroméxico','via Cidade do México','Executiva','27 dez','25 jan','2 malas','R$ 53.262,11','USD 10.559,29',False),
- ('Aeroméxico','via Cidade do México','Econômica','28 dez','26 jan','2 malas','R$ 51.001,68','USD 10.111,16',False),
- ('Aeroméxico','via Cidade do México','Executiva','28 dez','26 jan','2 malas','R$ 39.331,97','USD 7.797,62',False),
- ('ITA Airways','via Roma','Econômica','28 dez','28 jan','2 malas','R$ 55.858,36','USD 11.074,00',False),
- ('ITA Airways','via Roma','Executiva','28 dez','28 jan','2 malas','R$ 41.767,67','USD 8.280,50',False),
- ('Lufthansa + Swiss','via Frankfurt / Zurique','Executiva','28 dez','28 jan','2 malas','R$ 41.903,34','USD 8.307,40',False),
- ('Turkish Airlines','stopover Istambul · volta Narita (TK 51/215)','Econômica','26 dez','26 jan','1 mala','R$ 61.806,96','USD 12.253,32',True),
- ('Turkish Airlines','stopover Istambul · volta Haneda (TK 199/15)','Econômica','26 dez','26 jan','1 mala','R$ 69.509,16','USD 13.780,28',True),
- ('Turkish Airlines','stopover Istambul · volta Haneda (TK 199/15)','Executiva','26 dez','26 jan','2 malas','R$ 79.967,15','USD 15.853,60',True),
 ]
 
 # ── render ──────────────────────────────────────────────────────
@@ -184,14 +172,16 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .opt.gold{ border-left-color:var(--gold); }
 .opt-hd{ display:flex; align-items:center; gap:5mm; padding:2.4mm 6mm; background:var(--green-soft); }
 .opt.gold .opt-hd{ background:var(--gold-soft); }
-.opt-hd .air{ font-size:12.5pt; font-weight:700; color:var(--ink); }
+.opt-hd .air{ font-size:12.5pt; font-weight:700; color:var(--ink); flex:0 1 58mm; }
 .opt-hd .air small{ display:block; font-size:8.5pt; font-weight:400; color:var(--mut); margin-top:.5mm; }
-.prices{ margin-left:auto; display:flex; gap:0; }
+.prices{ margin-left:auto; display:flex; gap:0; flex-shrink:0; align-items:center; }
 .pr{ text-align:right; padding:0 0 0 6mm; margin-left:6mm; border-left:1px solid rgba(0,0,0,.12); }
 .pr:first-child{ border-left:none; margin-left:0; padding-left:0; }
-.pr .lab{ font-size:7pt; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.pr .brl{ font-size:14.5pt; font-weight:800; color:var(--ink); line-height:1.05; }
-.pr .usd{ font-family:var(--con); font-size:8pt; color:var(--mut); margin-top:.8mm; } .pr .usd b{ color:var(--char); font-weight:600; }
+.pr .lab{ white-space:nowrap; font-size:6.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.pr .brl{ font-size:13.5pt; font-weight:800; color:var(--ink); line-height:1.05; }
+.pr.tot{ background:var(--green); color:#fff; border-radius:1.5mm; padding:1.5mm 3mm; border-left:none; }
+.pr.tot .brl{ color:#fff; } .pr.tot .usd{ color:rgba(255,255,255,.75); } .pr.tot .lab{ color:var(--gold); }
+.pr .usd{ white-space:nowrap; font-family:var(--con); font-size:7.6pt; color:var(--mut); margin-top:.8mm; } .pr .usd b{ color:var(--char); font-weight:600; }
 table{ width:100%; border-collapse:collapse; font-size:8.5pt; }
 th{ text-align:left; font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:600; padding:1.8mm 3mm 1.4mm; border-bottom:1px solid var(--line); }
 td{ padding:1.6mm 3mm; border-bottom:1px solid #efebe4; vertical-align:top; color:var(--char); }
@@ -207,9 +197,10 @@ tr.dir td{ padding:1.8mm 3mm .6mm; border-bottom:none; }
 .sum{ margin-top:1mm; border:1px solid var(--line); border-radius:2mm; overflow:hidden; }
 .sum table{ font-size:8pt; } .sum table td,.sum table th{ padding:1mm 5mm; }
 .sum th{ background:var(--green); color:rgba(255,255,255,.85); border-bottom:none; }
-.sum td.leg span{ font-size:7.2pt; line-height:1.15; }
+.sum td{ white-space:nowrap; } .sum td.leg{ white-space:normal; min-width:52mm; } .sum td.leg span{ font-size:7pt; line-height:1.15; }
 .sum td.r{ text-align:right; font-family:var(--con); white-space:nowrap; } .sum td.r b{ color:var(--ink); }
 .sum tr.hl td{ background:var(--gold-soft); }
+.sum tr.tot td{ background:var(--green-soft); color:var(--ink); font-weight:600; border-bottom:2px solid #fff; } .sum tr.tot td.leg{ color:var(--green); }
 .note{ font-size:8pt; color:var(--mut); margin-top:2mm; line-height:1.5; } .note b{ color:var(--ink); font-weight:600; }
 .sig{ margin-top:auto; padding-top:3mm; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; font-family:var(--con); font-size:8.5pt; color:var(--mut); }
 .sig a{ color:var(--green); text-decoration:none; font-weight:600; } .sig img{ height:11mm; }
@@ -224,7 +215,15 @@ def card(c):
     h = [f'      <div class="opt{" gold" if c["gold"] else ""}">',
          f'        <div class="opt-hd"><div class="air">{c["air"]} <small>{c["sub"]}</small></div><div class="prices">']
     for p in c['prices']:
-        h.append(f'          <div class="pr"><div class="lab">{p["cab"]}</div><div class="brl">{p["brl"]}</div><div class="usd">{p["usd"]} · <b>{p["bag"]}</b></div></div>')
+        if p['pax']>1:
+            h.append(f'          <div class="pr"><div class="lab">{p["cab"]} · {p["pax"]} passageiros</div><div class="brl">{brl(p["brl"])}</div>'
+                     f'<div class="usd"><b>{brl(p["brl"]/p["pax"])} por pessoa</b> · {usd(p["usd"])} · {p["bag"]}</div></div>')
+        else:
+            h.append(f'          <div class="pr"><div class="lab">{p["cab"]} · por passageiro</div><div class="brl">{brl(p["brl"])}</div><div class="usd">{usd(p["usd"])} · <b>{p["bag"]}</b></div></div>')
+    if len(c['prices'])>1:
+        tb=sum(p['brl'] for p in c['prices']); tu=sum(p['usd'] for p in c['prices'])
+        npax=sum(p['pax'] for p in c['prices'])
+        h.append(f'          <div class="pr tot"><div class="lab">Econ. + Exec. · {npax} passageiros</div><div class="brl">{brl(tb)}</div><div class="usd">{usd(tu)}</div></div>')
     h.append('        </div></div>\n        <table>\n          <tr><th>Voo</th><th>Trecho</th><th>Saída</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr>')
     for r in c['rows']:
         if r['k']=='r':
@@ -247,17 +246,25 @@ INTRO = f'''    <div class="intro">
       <div class="meta">Cotação <b>{COTACAO}</b><br>Câmbio de referência <b>{CAMBIO}</b><br>Valores com taxas de embarque incluídas</div>
     </div>
 '''
-LEAD1 = '<p class="lead">Quando a mesma companhia oferece mais de uma cabine <b>nas mesmas datas</b>, os valores aparecem lado a lado no mesmo cartão. Franquia de bagagem indicada junto a cada valor.</p>\n'
+LEAD1 = '<p class="lead">Econômica e Econômica Premium cotadas para <b>2 passageiros</b>, com o valor por pessoa indicado. Executiva cotada <b>por passageiro</b>. Quando a mesma companhia oferece as duas cabines nas mesmas datas, o cartão traz também o <b>total Econômica + Executiva</b>.</p>\n'
 LEAD2 = '<p class="lead">A conexão da ida vira uma <b>parada em Istambul</b> antes de seguir para Tóquio: 3 noites com a saída de madrugada (TK 16) ou 2 noites com a saída à tarde (TK 216). Hospedagem em Istambul não está incluída.</p>\n'
 
 def summary():
     rows=''
-    for air,route,cab,ida,volta,bag,brl,usd,hl in SUMMARY:
-        rows+=f'          <tr{" class=\"hl\"" if hl else ""}><td class="leg">{air}<span>{route}</span></td><td>{cab}</td><td>{ida}</td><td>{volta}</td><td>{bag}</td><td class="r"><b>{brl}</b></td><td class="r">{usd}</td></tr>\n'
+    for c in CARDS+TURKISH:
+        hl=' class="hl"' if c['gold'] else ''
+        for p in c['prices']:
+            pp = f'<b>{brl(p["brl"]/p["pax"])}</b>' if p['pax']>1 else '—'
+            paxlab = f'{p["cab"]} · {p["pax"]} pax' if p['pax']>1 else f'{p["cab"]} · 1 pax'
+            rows+=f'          <tr{hl}><td class="leg">{c["air"]}<span>{c["route"]}</span></td><td>{paxlab}</td><td>{c["ida"]}</td><td>{c["volta"]}</td><td>{p["bag"]}</td><td class="r">{pp}</td><td class="r"><b>{brl(p["brl"])}</b></td><td class="r">{usd(p["usd"])}</td></tr>\n'
+        if len(c['prices'])>1:
+            tb=sum(p['brl'] for p in c['prices']); tu=sum(p['usd'] for p in c['prices']); npax=sum(p['pax'] for p in c['prices'])
+            rows+=f'          <tr class="tot"><td class="leg">Total {c["air"]} · {c["ida"]}</td><td colspan="4">Econômica + Executiva · {npax} passageiros</td><td></td><td class="r"><b>{brl(tb)}</b></td><td class="r">{usd(tu)}</td></tr>\n'
     return f'''    <div class="sec">
       <div class="sec-hd"><div class="num">✓</div><h2>Resumo comparativo</h2></div>
+      <p class="lead">Econômica e Econômica Premium cotadas para <b>2 passageiros</b> (valor por pessoa indicado). Executiva cotada <b>por passageiro</b>. A linha de total soma as duas cabines quando estão nas mesmas datas.</p>
       <div class="sum"><table>
-          <tr><th>Companhia</th><th>Cabine</th><th>Ida</th><th>Volta</th><th>Bagagem</th><th style="text-align:right">Total R$</th><th style="text-align:right">Total USD</th></tr>
+          <tr><th>Companhia</th><th>Cabine</th><th>Ida</th><th>Volta</th><th>Bagagem</th><th style="text-align:right">Por pessoa</th><th style="text-align:right">Total R$</th><th style="text-align:right">Total USD</th></tr>
 {rows}      </table></div>
       <p class="note"><b>*Nada reservado, apenas cotado.</b> Cotação {COTACAO[:5]} · {CAMBIO}. Tarifas sujeitas a alteração e disponibilidade até a emissão. Valores incluem tarifa e taxas de embarque. Hospedagem, seguro-viagem e transporte terrestre não estão incluídos nesta proposta. Horários em hora local de cada aeroporto.</p>
     </div>
