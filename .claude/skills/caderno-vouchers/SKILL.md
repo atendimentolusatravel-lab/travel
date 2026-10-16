@@ -266,6 +266,16 @@ da chamada, o caderno vai em arquivos separados para manter a chamada pequena e 
   inteiro) e decodificar os QR das imagens embutidas (`pip install opencv-python-headless` funciona no
   sandbox, que tem rede). Reconstrua o caderno localmente, alinhe o bloco da agência ao padrão atual
   e republique com `create_deployment` no mesmo projeto (`project: prj_…`, `target: production`).
+- **Acrescentar ou trocar uma folha num caderno grande sem redigitar o arquivo** (caminho usado no
+  caderno Carlos e Kateline): faça o deploy com um `patch.py` pequeno inline e
+  `projectSettings: {buildCommand: "python3 patch.py", outputDirectory: "public", installCommand: ""}`
+  mais `vercel.json` por sha. O script baixa o `index.html` publicado com `curl`, insere/substitui a
+  folha, renumera os comentários e grava `public/index.html` e `public/robots.txt`. O build da Vercel
+  tem `python3` e `curl` e leva segundos; `patch.py` não vai para o site (404). Antes, rode o mesmo
+  script num sandbox sobre o HTML baixado para obter o sha1 esperado; depois do deploy, confira pelo
+  sandbox que a URL de produção serve exatamente esse sha. Ao terminar, zere `buildCommand`,
+  `outputDirectory` e `installCommand` do projeto (`update_project`) para o próximo deploy inline
+  não executar o patch de novo.
 - **Verificação obrigatória**: um sandbox Vercel (`create_sandboxes_v4`, não persistente) alcança a
   URL publicada; baixe cada arquivo e compare o `sha1sum` com o local antes de entregar o link.
   Encerre o sandbox ao final (`stop_session`).
