@@ -23,7 +23,7 @@ Peça o que faltar. Sem isso a cotação sai errada:
 - Período (data de ida e volta) e nº de viajantes
 - Cidades na ordem, com nº de noites e datas de cada estada
 - **Aéreo:** cia, nº de voo, aeroportos, horários, duração, classe, conexões, valor total — ou "já comprado"
-- **Hotéis:** 2 opções por cidade (até 4), com nome, bairro/localidade, quarto, regime, valor total do período, 6 fotos
+- **Hotéis:** 2 opções por cidade (até 4), com nome, bairro/localidade, quarto, regime, valor total do período, 6 fotos (ver regra de fotos na seção 4)
 - Transporte entre cidades (trem/carro/transfer) com datas, horários, valor
 - Passeios/ingressos com data, horário, o que inclui, valor
 - Câmbio de referência com data; data de emissão
@@ -69,6 +69,22 @@ Peça o que faltar. Sem isso a cotação sai errada:
 - Hotéis: 6 fotos cada, 4:3, nomeadas `1.jpg … 6.jpg`. Peça ao usuário ou baixe do site
   do hotel com autorização.
 
+### Regra das fotos de hotel (obrigatória)
+
+Das 6 fotos de cada hotel, **4 são fixas** e entram nesta ordem:
+
+| Posição | Foto | Critério |
+|---|---|---|
+| `1.jpg` | **Fachada** do hotel | Vista externa, de dia |
+| `2.jpg` | **Quarto da categoria cotada**, com a **cama** aparecendo | Tem de ser o quarto do card (ex.: "Superior Double"), não um quarto genérico ou a suíte mais cara |
+| `3.jpg` | **Banheiro** | De preferência do mesmo quarto |
+| `4.jpg` | **Ambiente do café da manhã** | Sala/restaurante onde o café é servido, ou o buffet |
+| `5.jpg`, `6.jpg` | Livres | Piscina, lobby, vista, terraço, bar, área externa |
+
+Quando uma das 4 fotos fixas não existir no material do hotel, substitua por outra foto
+boa (lobby, vista, piscina) e **avise o usuário** qual faltou. Nunca repita a mesma foto
+nem use foto de outro hotel da mesma rede.
+
 ## 5. Verificação antes de entregar
 
 Renderize com o Chromium instalado e olhe o resultado — desktop e celular:
@@ -84,6 +100,7 @@ Checklist:
 - [ ] Chips do hero batem com o conteúdo (nº de cidades, noites, viajantes, programas)
 - [ ] Aéreo: `.air-foot` com o valor total só no último card
 - [ ] 2 opções por cidade, 6 fotos, quarto · regime, selo "Café da manhã"
+- [ ] Fotos de cada hotel: fachada, quarto da categoria cotada com a cama, banheiro, café da manhã (ou substituta avisada)
 - [ ] Roteiro cobre todos os dias; todo item com horário tem etiqueta `cotado`
 - [ ] Tabela: toda cidade com `sec-row` "escolher 1"; faixa e "Como é calculado" conferidos
 - [ ] "Nada reservado, apenas cotado." na nota e no rodapé

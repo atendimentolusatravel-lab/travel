@@ -57,7 +57,7 @@ skill que o usa em `.claude/skills/cotacao-lusa/SKILL.md`.
 | 2 | **Resumo do roteiro** — timeline 1 linha por cidade com nº de noites | opcional | `.tl` |
 | 3 | **Aéreo** — 1 card `.air` por sentido (ida / volta), cada trecho em `.leg`, conexões em `.cnx`, valor total no `.air-foot` do último card | quando cotado | `.air` |
 | 3b | **Cruzeiro** — box do navio com stats, galeria, tabela de portos, grade de cabines | quando houver | `.shipbox` `.cabgrid` |
-| 4 | **Hotéis** — por cidade: `city-head` (nome + datas + noites) e `hgrid` com **2 opções** (até 4), cada card com nome, bairro/localidade, valor total do período, 6 fotos, quarto · regime, selo "Café da manhã" | sim | `.city-block` `.hotel` |
+| 4 | **Hotéis** — por cidade: `city-head` (nome + datas + noites) e `hgrid` com **2 opções** (até 4), cada card com nome, bairro/localidade, valor total do período, 6 fotos (regra 13), quarto · regime, selo "Café da manhã" | sim | `.city-block` `.hotel` |
 | 5 | **Transporte** — trens/transfers em tabela; carro alugado em card `.svc` com cobertura detalhada | quando houver | `table` `.svc` |
 | 6 | **Passeios & ingressos** — cards `.svc` (ícone · título · descrição · data + valor à direita), agrupados por cidade com `h3.subh`; ou tabela quando são muitos itens curtos; fecha com `.pkg-note` somando | quando houver | `.svc` `.pkg-note` |
 | 7 | **Roteiro dia a dia** — 1 `.dayrow` por dia: número do dia em serifa, mês, dia da semana; pílula verde com a cidade; `h4` título do dia; `ul` com itens; cada item etiquetado **cotado** ou **sugestão** | sim | `.dayrow` `.tag-q` `.tag-s` |
@@ -96,6 +96,11 @@ skill que o usa em `.claude/skills/cotacao-lusa/SKILL.md`.
     destaque `.hl`, com a frase "sugestão, ainda não cotada, fora do total".
 12. **Contato fixo:** `atendimentolusatravel@gmail.com` · `+55 41 99189-6076` ·
     `Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR`.
+13. **Fotos de hotel (6 por card).** Quatro são obrigatórias, nesta ordem: **fachada**;
+    **quarto da categoria cotada, com a cama** visível (o quarto do card, não um genérico);
+    **banheiro**; **ambiente do café da manhã**. As outras duas são livres (piscina,
+    lobby, vista). Se alguma das quatro não existir no material do hotel, substituir por
+    outra foto e avisar. Nunca repetir foto nem usar foto de outra unidade da rede.
 
 ## 5. Evolução v1 → v2 (o que mudou e por quê)
 

@@ -12,6 +12,9 @@ transporte → passeios → roteiro dia a dia (`cotado` / `sugestão`) → resum
 total em faixa → rodapé. Valores em BRL para o grupo. "Nada reservado, apenas cotado."
 Publicação: projeto Vercel `cotacao-<cliente>-<destino>`.
 
+Fotos de hotel (regra fixa): fachada, quarto da categoria cotada com a cama, banheiro e
+ambiente do café da manhã; as outras duas livres. Faltou uma, substitua e avise.
+
 ## Legado (não usar para cotações)
 
 `design-system.html`, `padrao-visual.html` e `roteiro-europa-familia.html` descrevem o
