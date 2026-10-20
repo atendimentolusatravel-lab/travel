@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Laura Dalcanale | Japão — LusaTravel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
+<style>
+/* ══════════════════════════════════════════════════════════════
+   LUSATRAVEL — COTAÇÃO AÉREA · LAURA DALCANALE · JAPÃO (via DUBAI)
+   A3 Portrait · Design System LusaTravel · cor de destino: Ocre/Âmbar
+   ══════════════════════════════════════════════════════════════ */
+:root{
+  --gold:#da8d00;        /* FIXO */
+  --dest:#5a2d0a;        /* Oriente Médio / Ásia — Ocre/Âmbar */
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#9a8d80;
+  --line:#e4ddd2;
+  --paper:#faf7f2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page{
+  width:297mm; height:420mm; position:relative; overflow:hidden;
+  background:#fff; page-break-after:always; display:flex; flex-direction:column;
+}
+.page:last-child{ page-break-after:auto; }
+
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center;
+     justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center;
+     justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.2); }
+
+.body{ padding:16mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:4mm 0 8mm; }
+.lead{ font-size:11pt; line-height:1.7; color:var(--char); max-width:200mm; margin-bottom:10mm; }
+
+/* ══ CAPA ══ */
+.cover{ position:relative; }
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink);
+  display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+/* Composição de capa — substitua por background:url('capa-toquio.jpg') center/cover quando houver foto */
+.cover-photo{ position:absolute; inset:0; overflow:hidden;
+  background:
+    radial-gradient(ellipse 60% 40% at 50% 62%, rgba(218,141,0,.35), transparent 70%),
+    linear-gradient(180deg,#2a1a12 0%,#5a2d0a 45%,#1a1510 100%); }
+.cover-photo .sun{ position:absolute; left:50%; top:46%; width:120mm; height:120mm; margin-left:-60mm;
+  border-radius:50%; background:radial-gradient(circle,#f0b84a 0%,#da8d00 55%,rgba(218,141,0,0) 72%); opacity:.85; }
+.cover-photo .fuji{ position:absolute; left:50%; bottom:33%; width:0; height:0; margin-left:-110mm;
+  border-left:110mm solid transparent; border-right:110mm solid transparent; border-bottom:78mm solid #2b1b12; }
+.cover-photo .fuji::after{ content:''; position:absolute; left:-26mm; top:0; width:0; height:0;
+  border-left:26mm solid transparent; border-right:26mm solid transparent; border-bottom:19mm solid #efe3d2; }
+.cover-photo .mist{ position:absolute; left:0; right:0; bottom:28%; height:14%;
+  background:linear-gradient(to top, rgba(26,21,16,1), rgba(26,21,16,0)); }
+.cover-scrim{ position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, transparent 30%, rgba(0,0,0,.80) 78%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:38mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.cover-sub{ font-size:10.5pt; color:rgba(255,255,255,.7); margin-top:2mm; font-weight:300; }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3;
+  font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+
+/* ══ ITINERÁRIO ══ */
+.tl{ display:flex; flex-direction:column; }
+.tl-item{ display:flex; align-items:flex-start; gap:6mm; }
+.tl-badge{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff;
+  font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tl-badge.air{ background:var(--ink); color:var(--gold); font-size:11pt; }
+.tl-line{ width:2px; height:9mm; background:var(--line); margin-left:5.4mm; }
+.tl-city{ font-size:14pt; font-weight:700; color:var(--ink); }
+.tl-meta{ font-size:10pt; color:var(--mut); margin-top:1mm; }
+.tl-move{ font-size:9.5pt; color:var(--char); margin-top:1.5mm; font-weight:300; }
+.tl-move b{ font-weight:600; color:var(--ink); }
+
+.summary{ margin-top:14mm; display:grid; grid-template-columns:repeat(4,1fr); gap:6mm; }
+.sum{ border:1px solid var(--line); border-radius:6px; padding:5mm 6mm; background:var(--paper); }
+.sum .k{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); }
+.sum .v{ font-size:13pt; font-weight:700; color:var(--ink); margin-top:1.5mm; }
+.sum .s{ font-size:8.5pt; color:var(--mut); margin-top:.5mm; font-weight:300; }
+
+/* ══ VOOS ══ */
+.airline{ display:flex; align-items:center; gap:5mm; margin-bottom:6mm; }
+.airline .badge{ background:#d71921; color:#fff; font-weight:800; font-size:10pt; letter-spacing:.06em; padding:1.5mm 4mm; border-radius:3px; }
+.airline .name{ font-size:12pt; font-weight:600; color:var(--ink); }
+.airline .meta{ font-size:9pt; color:var(--mut); }
+.ftab{ width:100%; border-collapse:collapse; margin-bottom:8mm; }
+.ftab th{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut);
+  text-align:left; padding:0 3mm 3mm 0; border-bottom:2px solid var(--line); }
+.ftab td{ font-size:10.5pt; color:var(--char); padding:4.5mm 3mm 4.5mm 0; border-bottom:1px solid var(--line); vertical-align:top; }
+.ftab td.no{ font-weight:700; color:var(--ink); white-space:nowrap; }
+.ftab td.no small{ display:block; font-weight:300; color:var(--mut); font-size:8.5pt; }
+.ftab .rt{ font-weight:600; color:var(--ink); }
+.ftab .rt small{ display:block; font-weight:300; color:var(--mut); font-size:8.5pt; }
+.ftab .dt{ font-weight:600; color:var(--gold); }
+.ftab .dt small{ display:block; font-weight:400; color:var(--char); font-size:10pt; }
+.ftab .dur{ font-variant-numeric:tabular-nums; }
+.ftab .dur small{ display:block; font-weight:300; color:var(--mut); font-size:8.5pt; }
+.ftab tr.stop td{ background:var(--paper); font-size:9pt; color:var(--mut); padding:2.5mm 3mm; font-weight:300; }
+.ftab tr.stop td b{ color:var(--dest); font-weight:700; }
+
+.opts{ display:grid; grid-template-columns:1fr 1fr; gap:8mm; margin-top:4mm; }
+.opt{ border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.opt .top{ padding:5mm 7mm; border-bottom:1px solid var(--line); background:var(--paper); display:flex; justify-content:space-between; align-items:center; }
+.opt .top .t{ font-size:13pt; font-weight:700; color:var(--ink); }
+.opt .top .c{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); }
+.opt.hi .top{ background:var(--dest); border-color:var(--dest); }
+.opt.hi .top .t{ color:#fff; }
+.opt.hi .top .c{ color:var(--gold); }
+.opt .rows{ padding:5mm 7mm; display:grid; grid-template-columns:1fr 1fr; gap:3.5mm 6mm; }
+.opt .k{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); }
+.opt .v{ font-size:10.5pt; font-weight:300; color:var(--char); margin-top:.8mm; }
+.opt .price{ padding:4mm 7mm 5mm; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; }
+.opt .price .brl{ font-size:16pt; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; }
+.opt .price .usd{ font-size:9.5pt; color:var(--mut); font-variant-numeric:tabular-nums; }
+
+.note{ font-size:9pt; color:var(--mut); line-height:1.6; margin-top:6mm; }
+
+/* ══ DESTINO ══ */
+.dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center;
+  justify-content:space-between; flex-shrink:0; }
+.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); }
+.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9);
+  color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.dest-photo{ height:120mm; position:relative; flex-shrink:0; overflow:hidden; }
+.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:13pt; font-weight:800;
+  letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.6); z-index:2; }
+.dest-photo .cap small{ display:block; font-size:9pt; font-weight:400; letter-spacing:.14em; opacity:.8; margin-top:1mm; }
+/* Composição Dubai — substitua por url('dubai.jpg') center/cover */
+.ph-dubai{ background:linear-gradient(180deg,#2a1708 0%,#7a3d0e 40%,#c98a3a 70%,#5a2d0a 100%); }
+.ph-dubai .sky{ position:absolute; left:0; right:0; top:0; height:70%;
+  background:radial-gradient(ellipse 50% 60% at 70% 95%, rgba(240,184,74,.75), transparent 70%); }
+.ph-dubai .tower{ position:absolute; bottom:28%; background:#1a1510; }
+.ph-dubai .t1{ left:62%; width:6mm; height:88mm; }
+.ph-dubai .t1::after{ content:''; position:absolute; left:1.5mm; top:-22mm; width:3mm; height:22mm; background:#1a1510; }
+.ph-dubai .t2{ left:54%; width:10mm; height:48mm; }
+.ph-dubai .t3{ left:70%; width:9mm; height:56mm; }
+.ph-dubai .t4{ left:44%; width:12mm; height:36mm; }
+.ph-dubai .t5{ left:80%; width:7mm; height:40mm; }
+.ph-dubai .t6{ left:30%; width:14mm; height:26mm; }
+.ph-dubai .dune{ position:absolute; left:-10%; right:-10%; bottom:0; height:34%; border-radius:50% 50% 0 0 / 100% 100% 0 0;
+  background:linear-gradient(180deg,#b8742a,#5a2d0a); }
+.ph-dubai .dune2{ position:absolute; left:40%; right:-20%; bottom:0; height:24%; border-radius:50% 50% 0 0 / 100% 100% 0 0;
+  background:linear-gradient(180deg,#8a4e16,#3a1d08); }
+/* Composição Tóquio — substitua por url('toquio.jpg') center/cover */
+.ph-tokyo{ background:linear-gradient(180deg,#0f1a2b 0%,#1e2f4a 45%,#3b2a24 75%,#1a1510 100%); }
+.ph-tokyo .moon{ position:absolute; left:18%; top:14%; width:22mm; height:22mm; border-radius:50%;
+  background:radial-gradient(circle,#fff6e0,#f0d9a0 60%,rgba(240,217,160,0) 75%); opacity:.9; }
+.ph-tokyo .fuji{ position:absolute; left:50%; bottom:30%; width:0; height:0; margin-left:-95mm;
+  border-left:95mm solid transparent; border-right:95mm solid transparent; border-bottom:60mm solid #2a3650; }
+.ph-tokyo .fuji::after{ content:''; position:absolute; left:-22mm; top:0; width:0; height:0;
+  border-left:22mm solid transparent; border-right:22mm solid transparent; border-bottom:15mm solid #f3ece0; }
+.ph-tokyo .city{ position:absolute; left:0; right:0; bottom:0; height:32%;
+  background:linear-gradient(180deg,rgba(26,21,16,0),#1a1510 60%); }
+.ph-tokyo .b{ position:absolute; bottom:12%; background:#120e0b; }
+.ph-tokyo .b1{ left:8%; width:9mm; height:30mm; } .ph-tokyo .b2{ left:14%; width:14mm; height:22mm; }
+.ph-tokyo .b3{ left:26%; width:8mm; height:38mm; } .ph-tokyo .b4{ left:34%; width:16mm; height:26mm; }
+.ph-tokyo .b5{ left:60%; width:12mm; height:28mm; } .ph-tokyo .b6{ left:72%; width:7mm; height:44mm; }
+.ph-tokyo .b7{ left:82%; width:18mm; height:24mm; }
+.ph-tokyo .torii{ position:absolute; left:46%; bottom:14%; width:30mm; height:26mm; }
+.ph-tokyo .torii i{ position:absolute; background:#b3261e; display:block; }
+.ph-tokyo .torii .p1{ left:4mm; bottom:0; width:3mm; height:22mm; }
+.ph-tokyo .torii .p2{ right:4mm; bottom:0; width:3mm; height:22mm; }
+.ph-tokyo .torii .k1{ left:0; top:0; width:30mm; height:3mm; border-radius:2mm 2mm 0 0; }
+.ph-tokyo .torii .k2{ left:3mm; top:6mm; width:24mm; height:2.2mm; }
+.ph-tokyo .lights{ position:absolute; left:0; right:0; bottom:12%; height:30mm;
+  background-image:radial-gradient(circle,rgba(240,184,74,.9) 0.6mm,transparent 1mm);
+  background-size:7mm 5mm; opacity:.35; }
+
+.dest-text{ font-size:12pt; font-weight:400; line-height:1.7; color:var(--char); }
+.hotel-card{ margin-top:10mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.hotel-card .top{ background:var(--paper); padding:6mm 8mm; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; }
+.hotel-card .name{ font-size:15pt; font-weight:700; color:var(--ink); }
+.hotel-card .stars{ font-size:14pt; color:var(--gold); letter-spacing:2px; margin-top:1mm; }
+.hotel-card .rows{ padding:6mm 8mm; display:grid; grid-template-columns:1fr 1fr; gap:4mm 10mm; }
+.hotel-card .k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.hotel-card .v{ font-size:11pt; font-weight:300; color:var(--char); margin-top:1mm; }
+.pill{ display:inline-block; border:1px solid var(--gold); color:var(--gold); font-family:var(--lbl); font-size:7.5pt;
+  letter-spacing:.12em; text-transform:uppercase; padding:1.2mm 3mm; border-radius:20px; }
+
+/* ══ VALORES ══ */
+.val-note{ font-size:9pt; color:var(--mut); margin-bottom:5mm; }
+.val-group{ margin-bottom:10mm; }
+.val-group .gh{ display:flex; justify-content:space-between; align-items:baseline; padding-bottom:2mm; border-bottom:2px solid var(--line); margin-bottom:1mm; }
+.val-group .gh .t{ font-size:13pt; font-weight:700; color:var(--ink); }
+.val-group .gh .c{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); }
+.val-row{ display:flex; justify-content:space-between; padding:4mm 0; border-bottom:1px solid var(--line); }
+.val-row .lbl{ font-size:12pt; color:var(--char); }
+.val-row .lbl small{ display:block; font-size:9pt; color:var(--mut); font-weight:300; margin-top:.5mm; }
+.val-row .amt{ font-size:12pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; text-align:right; }
+.val-row .amt small{ display:block; font-size:9pt; font-weight:400; color:var(--mut); margin-top:.5mm; }
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink);
+  border-radius:5px; padding:6mm 8mm; margin-top:6mm; }
+.val-total .lbl{ font-size:11pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.val-total .lbl small{ display:block; font-size:8.5pt; font-weight:400; letter-spacing:.04em; color:rgba(255,255,255,.45); margin-top:1mm; }
+.val-total .amt{ font-size:16pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; text-align:right; }
+.val-total .amt small{ display:block; font-size:9pt; font-weight:500; color:rgba(255,255,255,.55); margin-top:.5mm; }
+.val-total.alt{ background:var(--paper); border:1px solid var(--line); }
+.val-total.alt .lbl{ color:var(--char); } .val-total.alt .lbl small{ color:var(--mut); }
+.val-total.alt .amt{ color:var(--ink); } .val-total.alt .amt small{ color:var(--mut); }
+.val-fx{ font-size:9pt; color:var(--mut); margin-top:5mm; line-height:1.6; }
+
+/* ══ CONDIÇÕES ══ */
+.cond{ margin-bottom:7mm; }
+.cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
+.cond-t{ font-size:11pt; line-height:1.8; color:var(--char); }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 01 · CAPA ══════════ -->
+<section class="page cover">
+  <div class="cover-hd">
+    <div class="logo">LUSATRAVEL</div>
+    <div class="tag">Glossário</div>
+  </div>
+  <div class="cover-bar"></div>
+  <div class="cover-photo"><div class="sun"></div><div class="fuji"></div><div class="mist"></div></div>
+  <div class="cover-scrim"></div>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em 1 passageira · 26 Dez 2026 – 28 Jan 2027 · Aéreo internacional</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">Laura Dalcanale</div>
+    <div class="cover-dest">JAPÃO</div>
+    <div class="cover-sub">Tóquio no Ano Novo, com escala de 4 noites em Dubai</div>
+    <div class="stats">
+      <div class="stat"><b>2</b><span>Destinos</span></div>
+      <div class="stat"><b>32</b><span>Noites</span></div>
+      <div class="stat"><b>4</b><span>Voos</span></div>
+      <div class="stat"><b>2</b><span>Opções de cabine</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com" style="color:inherit;text-decoration:none">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076" style="color:inherit;text-decoration:none">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ══════════ 02 · ITINERÁRIO ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Itinerário</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Sua rota</div>
+    <h2 class="h2">Itinerário</h2>
+    <p class="lead">Saída de São Paulo na madrugada de 26 de dezembro com a Emirates. A rota faz uma pausa de quatro noites em Dubai antes de seguir para Tóquio, onde a Sra. Laura chega na noite de 30 de dezembro, a tempo da virada do ano japonesa. O retorno parte de Narita em 27 de janeiro, com conexão curta em Dubai e chegada a São Paulo na tarde de 28 de janeiro.</p>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-badge air">✈</div><div><div class="tl-city">São Paulo · Embarque</div><div class="tl-meta">26 Dez 2026 · 01:30</div><div class="tl-move"><b>EK 262</b> Guarulhos → Dubai · 14h05 · voo direto · Airbus A380</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge">1</div><div><div class="tl-city">Dubai</div><div class="tl-meta">26 Dez – 30 Dez · 4 noites</div><div class="tl-move">Chegada 26 Dez às 22:35 · Partida 30 Dez às 08:20</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge air">✈</div><div><div class="tl-city">Dubai → Tóquio</div><div class="tl-meta">30 Dez 2026 · 08:20 → 22:30</div><div class="tl-move"><b>EK 312</b> Dubai → Haneda · 9h10 · voo direto · Boeing 777-300ER</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge">2</div><div><div class="tl-city">Tóquio</div><div class="tl-meta">30 Dez – 27 Jan · 28 noites</div><div class="tl-move">Chegada em Haneda (HND) · Partida por Narita (NRT)</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge air">✈</div><div><div class="tl-city">Tóquio → São Paulo</div><div class="tl-meta">27 Jan 2027 · 22:20 → 28 Jan · 17:35</div><div class="tl-move"><b>EK 319</b> Narita → Dubai · 12h10 · conexão de 3h35 em Dubai · <b>EK 261</b> Dubai → Guarulhos · 15h30 · tempo total 31h15</div></div></div>
+    </div>
+
+    <div class="summary">
+      <div class="sum"><div class="k">Companhia</div><div class="v">Emirates</div><div class="s">Tarifa NDC</div></div>
+      <div class="sum"><div class="k">Duração</div><div class="v">34 dias</div><div class="s">26 Dez → 28 Jan</div></div>
+      <div class="sum"><div class="k">Bagagem</div><div class="v">2 malas</div><div class="s">despachadas por trecho</div></div>
+      <div class="sum"><div class="k">Escalas</div><div class="v">Dubai</div><div class="s">4 noites na ida · 3h35 na volta</div></div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 03 · VOOS ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Voos</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Aéreo internacional</div>
+    <h2 class="h2">Voos</h2>
+    <div class="airline">
+      <div class="badge">EMIRATES</div>
+      <div><div class="name">Emirates · São Paulo – Dubai – Tóquio – Dubai – São Paulo</div><div class="meta">Mesmos voos e horários nas duas opções de cabine · horários locais</div></div>
+    </div>
+    <table class="ftab">
+      <thead><tr><th>Voo</th><th>Partida</th><th>Chegada</th><th>Trecho</th><th>Duração</th><th>Aeronave</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="no">EK 262<small>Emirates</small></td>
+          <td class="dt">26 Dez<small>01:30</small></td>
+          <td class="dt">26 Dez<small>22:35</small></td>
+          <td class="rt">GRU → DXB<small>São Paulo · Guarulhos → Dubai</small></td>
+          <td class="dur">14h05<small>direto</small></td>
+          <td>Airbus A380</td>
+        </tr>
+        <tr class="stop"><td colspan="6"><b>Escala em Dubai · 4 noites</b> · 26 Dez 22:35 → 30 Dez 08:20</td></tr>
+        <tr>
+          <td class="no">EK 312<small>Emirates</small></td>
+          <td class="dt">30 Dez<small>08:20</small></td>
+          <td class="dt">30 Dez<small>22:30</small></td>
+          <td class="rt">DXB → HND<small>Dubai → Tóquio · Haneda</small></td>
+          <td class="dur">9h10<small>direto</small></td>
+          <td>Boeing 777-300ER</td>
+        </tr>
+        <tr class="stop"><td colspan="6"><b>Permanência no Japão · 28 noites</b> · 30 Dez → 27 Jan</td></tr>
+        <tr>
+          <td class="no">EK 319<small>Emirates</small></td>
+          <td class="dt">27 Jan<small>22:20</small></td>
+          <td class="dt">28 Jan<small>05:30</small></td>
+          <td class="rt">NRT → DXB<small>Tóquio · Narita → Dubai</small></td>
+          <td class="dur">12h10<small>direto</small></td>
+          <td>Airbus A380</td>
+        </tr>
+        <tr class="stop"><td colspan="6"><b>Conexão em Dubai · 3h35</b> · 28 Jan 05:30 → 09:05</td></tr>
+        <tr>
+          <td class="no">EK 261<small>Emirates</small></td>
+          <td class="dt">28 Jan<small>09:05</small></td>
+          <td class="dt">28 Jan<small>17:35</small></td>
+          <td class="rt">DXB → GRU<small>Dubai → São Paulo · Guarulhos</small></td>
+          <td class="dur">15h30<small>total da volta 31h15</small></td>
+          <td>Airbus A380</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="eyebrow">Escolha sua cabine</div>
+    <div class="opts">
+      <div class="opt hi">
+        <div class="top"><div class="t">Classe Executiva</div><div class="c">Business · classe J</div></div>
+        <div class="rows">
+          <div><div class="k">Assento</div><div class="v">Poltrona-cama (lie-flat) nos 4 trechos</div></div>
+          <div><div class="k">Bagagem</div><div class="v">2 malas despachadas</div></div>
+          <div><div class="k">Aeronaves</div><div class="v">A380 · 777-300ER · A380 · A380</div></div>
+          <div><div class="k">Lounge</div><div class="v">Acesso aos lounges Emirates em Dubai</div></div>
+        </div>
+        <div class="price"><span class="brl">R$ 64.230,96</span><span class="usd">USD 12.702,90</span></div>
+      </div>
+      <div class="opt">
+        <div class="top"><div class="t">Classe Econômica</div><div class="c">Economy · classes X / U</div></div>
+        <div class="rows">
+          <div><div class="k">Assento</div><div class="v">Econômica padrão nos 4 trechos</div></div>
+          <div><div class="k">Bagagem</div><div class="v">2 malas despachadas</div></div>
+          <div><div class="k">Aeronaves</div><div class="v">A380 · 777-300ER · A380 · A380</div></div>
+          <div><div class="k">Lounge</div><div class="v">Não incluso</div></div>
+        </div>
+        <div class="price"><span class="brl">R$ 74.040,64</span><span class="usd">USD 14.642,96</span></div>
+      </div>
+    </div>
+    <div class="note">Valores totais da cotação do sistema em 20/10/2026, com tarifa e taxas. Tarifa NDC Emirates: regras de alteração e reembolso conforme a classe tarifária. Horários locais, sujeitos a alteração pela companhia aérea.</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 04 · DESTINO 1 · DUBAI ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Dubai · Emirados Árabes Unidos</div><div class="no">1</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo ph-dubai">
+    <div class="sky"></div>
+    <div class="tower t6"></div><div class="tower t4"></div><div class="tower t2"></div><div class="tower t1"></div><div class="tower t3"></div><div class="tower t5"></div>
+    <div class="dune"></div><div class="dune2"></div>
+    <div class="cap">Dubai<small>26 – 30 de dezembro · 4 noites</small></div>
+  </div>
+  <div class="body">
+    <p class="dest-text">Entre o deserto e o Golfo, Dubai é uma cidade que reinventou o próprio horizonte. Quatro noites são o tempo certo para subir ao Burj Khalifa ao entardecer, quando a luz dourada escorre pelos vidros das torres e a cidade começa a acender uma a uma. Pela manhã, os souks de ouro e especiarias de Deira guardam o ritmo antigo dos mercadores; à tarde, um abra de madeira atravessa o Creek por poucos dirhams, ligando dois séculos em cinco minutos. O deserto espera a meia hora do centro: dunas de areia vermelha, jantar sob as estrelas e um silêncio que a cidade não conhece. Para quem prefere o mar, as praias de Jumeirah e os canais do Madinat oferecem o contraponto sereno ao vertiginoso Dubai Mall. É uma escala que vira capítulo, e que prepara os sentidos para a mudança de mundo que vem em seguida: do calor seco do Golfo ao inverno limpo e silencioso de Tóquio.</p>
+    <div class="hotel-card">
+      <div class="top">
+        <div><div class="name">Hospedagem em Dubai</div><div class="stars" style="font-size:10pt;letter-spacing:.1em;font-weight:600">A COTAR</div></div>
+        <span class="pill">Não incluso nesta cotação</span>
+      </div>
+      <div class="rows">
+        <div><div class="k">Check-in</div><div class="v">26 Dez 2026 (chegada 22:35)</div></div>
+        <div><div class="k">Check-out</div><div class="v">30 Dez 2026 (voo 08:20)</div></div>
+        <div><div class="k">Sugestão</div><div class="v">Downtown ou Jumeirah · 4 noites</div></div>
+        <div><div class="k">Observação</div><div class="v">Hotéis e transfers cotados sob consulta</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 05 · DESTINO 2 · TÓQUIO ══════════ -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Tóquio · Japão</div><div class="no">2</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo ph-tokyo">
+    <div class="moon"></div>
+    <div class="fuji"></div>
+    <div class="city"></div>
+    <div class="lights"></div>
+    <div class="b b1"></div><div class="b b2"></div><div class="b b3"></div><div class="b b4"></div><div class="b b5"></div><div class="b b6"></div><div class="b b7"></div>
+    <div class="torii"><i class="k1"></i><i class="k2"></i><i class="p1"></i><i class="p2"></i></div>
+    <div class="cap">Tóquio<small>30 de dezembro – 27 de janeiro · 28 noites</small></div>
+  </div>
+  <div class="body">
+    <p class="dest-text">Chegar a Tóquio na véspera do Ano Novo é entrar na cidade no seu momento mais íntimo. O Oshōgatsu, a virada japonesa, não é festa de rua: é o silêncio dos templos, o sino que toca cento e oito vezes à meia-noite e a primeira visita do ano ao santuário Meiji, onde milhões caminham sob os torii de madeira entre lanternas de papel. O inverno tokyoita é seco e de céu limpo, e é nessa estação que o Monte Fuji aparece nítido no horizonte, do alto do Shibuya Sky ou da janela do shinkansen. São quatro semanas: tempo para conhecer a Tóquio dos bairros, de Yanaka a Shimokitazawa, de Tsukiji ao Omotesandō; para deixar a cidade por alguns dias rumo a Kyoto, Nara e Hakone, com seus onsen fumegantes ao pé da montanha; e para voltar e sentir que já se conhece o caminho de casa. Tóquio recompensa quem fica.</p>
+    <div class="hotel-card">
+      <div class="top">
+        <div><div class="name">Hospedagem no Japão</div><div class="stars" style="font-size:10pt;letter-spacing:.1em;font-weight:600">A COTAR</div></div>
+        <span class="pill">Não incluso nesta cotação</span>
+      </div>
+      <div class="rows">
+        <div><div class="k">Check-in</div><div class="v">30 Dez 2026 (chegada em Haneda 22:30)</div></div>
+        <div><div class="k">Check-out</div><div class="v">27 Jan 2027 (voo por Narita 22:20)</div></div>
+        <div><div class="k">Sugestão</div><div class="v">Tóquio + Kyoto · JR Pass ou trechos de shinkansen</div></div>
+        <div><div class="k">Observação</div><div class="v">Hotéis, trens e passeios cotados sob consulta</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 06 · VALORES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Valores</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Investimento</div>
+    <h2 class="h2">Valores</h2>
+    <div class="val-note">*Valores em R$ para 1 passageira · aéreo internacional Emirates · mesmos voos nas duas opções</div>
+
+    <div class="val-group">
+      <div class="gh"><span class="t">Opção 1 · Classe Executiva</span><span class="c">Business · classe J</span></div>
+      <div class="val-row"><span class="lbl">Aéreo Internacional<small>GRU – DXB – HND / NRT – DXB – GRU · 4 trechos · 2 malas</small></span><span class="amt">R$ 64.230,96<small>USD 12.702,90</small></span></div>
+      <div class="val-row"><span class="lbl">Hotelaria<small>Dubai (4 noites) e Japão (28 noites)</small></span><span class="amt">sob consulta</span></div>
+      <div class="val-row"><span class="lbl">Seguro de Viagem<small>34 dias · cobertura internacional</small></span><span class="amt">sob consulta</span></div>
+      <div class="val-total"><span class="lbl">TOTAL AÉREO · EXECUTIVA<small>por passageira</small></span><span class="amt">R$ 64.230,96<small>USD 12.702,90</small></span></div>
+    </div>
+
+    <div class="val-group">
+      <div class="gh"><span class="t">Opção 2 · Classe Econômica</span><span class="c">Economy · classes X / U</span></div>
+      <div class="val-row"><span class="lbl">Aéreo Internacional<small>GRU – DXB – HND / NRT – DXB – GRU · 4 trechos · 2 malas</small></span><span class="amt">R$ 74.040,64<small>USD 14.642,96</small></span></div>
+      <div class="val-row"><span class="lbl">Hotelaria<small>Dubai (4 noites) e Japão (28 noites)</small></span><span class="amt">sob consulta</span></div>
+      <div class="val-row"><span class="lbl">Seguro de Viagem<small>34 dias · cobertura internacional</small></span><span class="amt">sob consulta</span></div>
+      <div class="val-total alt"><span class="lbl">TOTAL AÉREO · ECONÔMICA<small>por passageira</small></span><span class="amt">R$ 74.040,64<small>USD 14.642,96</small></span></div>
+    </div>
+
+    <div class="val-fx">Cotação 20/10 · USD = 5,06<br>*Nada reservado, apenas cotado<br>Valores com tarifa e taxas, sujeitos a disponibilidade e reajuste até a emissão.</div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 07 · CONDIÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Condições</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Importante</div>
+    <h2 class="h2">Condições e Observações</h2>
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Aéreo internacional: até 6x sem acréscimos · Hotelaria e serviços (quando contratados): até 10x sem acréscimos · PIX: desconto de 5–13%</div></div>
+    <div class="cond"><div class="cond-h">Inclui</div><div class="cond-t">· Passagem aérea internacional Emirates nos 4 trechos, na cabine escolhida<br>· 2 malas despachadas por trecho, conforme a franquia da tarifa<br>· Taxas de embarque e tarifa conforme cotação do sistema</div></div>
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Hotelaria em Dubai e no Japão<br>· Seguro de viagem<br>· Transfers, trens (JR Pass / shinkansen) e passeios<br>· Despesas pessoais e alimentação fora do voo</div></div>
+    <div class="cond"><div class="cond-h">Atenção aos aeroportos</div><div class="cond-t">A chegada ao Japão é em Haneda (HND) e a partida é por Narita (NRT), a cerca de 1h de distância entre si. Planeje o último dia com margem para o deslocamento até Narita.</div></div>
+    <div class="cond"><div class="cond-h">Documentação</div><div class="cond-t">Passaporte com validade mínima de 6 meses após a data de retorno. Brasileiros estão isentos de visto para turismo nos Emirados Árabes Unidos e no Japão para estadias curtas; confirmamos as regras vigentes no momento da emissão.</div></div>
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Tarifa NDC Emirates: alterações e reembolsos seguem as regras da classe tarifária. Período de alta temporada (Natal e Ano Novo): disponibilidade e valores sujeitos a confirmação no momento da reserva. Nada reservado, apenas cotado.</div></div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
