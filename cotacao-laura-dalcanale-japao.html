@@ -17,22 +17,22 @@
 @page{ size:A3 portrait; margin:0; }
 *{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
 html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
-.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; display:flex; flex-direction:column; padding:12mm 22mm 10mm; }
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; display:flex; flex-direction:column; padding:10mm 22mm 8mm; }
 
-.hd{ display:flex; align-items:flex-end; justify-content:space-between; padding-bottom:5mm; border-bottom:2.2mm solid var(--gold); }
-.hd img{ height:22mm; width:auto; display:block; }
+.hd{ display:flex; align-items:flex-end; justify-content:space-between; padding-bottom:4mm; border-bottom:2.2mm solid var(--gold); }
+.hd img{ height:18mm; width:auto; display:block; }
 .hd .tag{ text-align:right; }
 .hd .tag b{ display:block; font-size:9pt; letter-spacing:.24em; text-transform:uppercase; color:var(--green); font-weight:700; }
 .hd .tag span{ display:block; font-family:var(--con); font-size:8.5pt; color:var(--mut); margin-top:1.5mm; }
 
-.title{ margin:6mm 0 4mm; display:flex; justify-content:space-between; align-items:flex-end; }
+.title{ margin:4mm 0 3mm; display:flex; justify-content:space-between; align-items:flex-end; }
 .eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.h1{ font-size:24pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin-top:1.5mm; }
+.h1{ font-size:21pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin-top:1.5mm; }
 .h1 small{ font-size:12pt; font-weight:500; color:var(--green); display:block; margin-top:1mm; }
 .meta{ text-align:right; font-size:9.5pt; color:var(--char); line-height:1.7; }
 .meta b{ color:var(--ink); font-weight:600; }
 
-.sec{ margin-top:5mm; }
+.sec{ margin-top:4mm; }
 .sec-h{ display:flex; align-items:center; gap:4mm; padding-bottom:2.5mm; border-bottom:1px solid var(--line); margin-bottom:3mm; }
 .sec-h .n{ width:9mm; height:9mm; border-radius:50%; background:var(--green); color:#fff; font-weight:800; font-size:11pt; display:flex; align-items:center; justify-content:center; }
 .sec-h .t{ font-size:14pt; font-weight:700; color:var(--ink); }
@@ -42,31 +42,36 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
 .ftab{ width:100%; border-collapse:collapse; }
 .ftab th{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--green); text-align:left; padding:1.5mm 3mm 2mm 0; border-bottom:1.5px solid var(--green); }
-.ftab td{ font-size:10pt; color:var(--char); padding:2.6mm 3mm 2.6mm 0; border-bottom:1px solid var(--line); vertical-align:top; }
+.ftab td{ font-size:10pt; color:var(--char); padding:1.4mm 3mm 1.4mm 0; border-bottom:1px solid var(--line); vertical-align:top; }
 .ftab td.no{ font-weight:700; color:var(--ink); white-space:nowrap; }
 .ftab .rt{ font-weight:600; color:var(--ink); } .ftab .rt small{ display:block; font-weight:300; color:var(--mut); font-size:8.5pt; }
 .ftab .dt{ font-weight:600; color:var(--gold); } .ftab .dt small{ display:block; font-weight:400; color:var(--char); font-size:9.5pt; }
 .ftab .dur small{ display:block; font-weight:300; color:var(--mut); font-size:8.5pt; }
 
-.opts{ display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-top:3mm; }
+.opts{ display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-top:2mm; }
 .opt{ border:1px solid var(--line); border-radius:5px; overflow:hidden; display:flex; flex-direction:column; }
-.opt .top{ padding:3.5mm 6mm; display:flex; justify-content:space-between; align-items:center; background:var(--green-soft); border-bottom:1px solid var(--line); }
+.opt .top{ padding:3mm 6mm; display:flex; justify-content:space-between; align-items:center; background:var(--green-soft); border-bottom:1px solid var(--line); }
 .opt .top .t{ font-size:12pt; font-weight:700; color:var(--green); }
-.opt .top .c{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); }
-.opt .rows{ padding:3.5mm 6mm; display:grid; grid-template-columns:1fr 1fr; gap:2.5mm 6mm; }
-.opt .k{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); }
-.opt .v{ font-size:10pt; font-weight:300; color:var(--char); margin-top:.6mm; }
-.opt .price{ margin-top:auto; padding:3.5mm 6mm 4mm; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:flex-end; }
+.opt .top .c{ font-family:var(--lbl); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); text-align:right; }
+.opt .line{ display:flex; justify-content:space-between; align-items:baseline; padding:1.6mm 6mm; border-bottom:1px solid var(--line); font-size:9.5pt; }
+.opt .line .l{ color:var(--char); font-weight:300; } .opt .line .l b{ font-weight:600; color:var(--ink); }
+.opt .line .a{ font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.opt .line .a small{ font-weight:400; color:var(--mut); font-size:8.5pt; margin-left:2mm; }
+.opt .price{ margin-top:auto; padding:3mm 6mm 3.5mm; display:flex; justify-content:space-between; align-items:flex-end; }
 .opt .price .lbl{ font-size:9pt; color:var(--char); line-height:1.5; }
 .opt .price .lbl b{ display:block; font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--green); }
 .opt .price .amt{ text-align:right; }
-.opt .price .brl{ font-size:19pt; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; display:block; line-height:1.1; }
-.opt .price .usd{ font-size:9.5pt; color:var(--mut); font-variant-numeric:tabular-nums; display:block; margin-top:1mm; }
-.opt .price .pp{ font-size:9pt; color:var(--gold); font-weight:600; display:block; margin-top:1mm; }
+.opt .price .brl{ font-size:18pt; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; display:block; line-height:1.1; }
+.opt .price .usd{ font-size:9.5pt; color:var(--mut); font-variant-numeric:tabular-nums; display:block; margin-top:.8mm; }
+.opt .price .pp{ font-size:9pt; color:var(--gold); font-weight:600; display:block; margin-top:.8mm; }
+.callout{ margin-top:2.5mm; border-left:3px solid var(--gold); background:var(--paper); padding:2mm 5mm; font-size:9pt; line-height:1.55; color:var(--char); font-weight:300; }
+.callout b{ font-weight:700; color:var(--ink); }
+.ftab td.no small{ display:block; font-weight:600; color:var(--green); font-size:7.5pt; letter-spacing:.08em; text-transform:uppercase; }
 
-.notes{ margin-top:6mm; display:grid; grid-template-columns:repeat(3,1fr); gap:5mm 8mm; }
-.note h4{ font-size:8.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:1.2mm; }
-.note p{ font-size:9pt; line-height:1.55; color:var(--char); font-weight:300; }
+.notes{ margin-top:5mm; display:flex; flex-direction:column; gap:1.5mm; }
+.note{ display:flex; gap:4mm; align-items:baseline; font-size:8.5pt; line-height:1.45; }
+.note h4{ flex:0 0 38mm; font-size:8pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); }
+.note p{ color:var(--char); font-weight:300; }
 
 .ft{ margin-top:auto; padding-top:4mm; border-top:1px solid var(--gold); display:flex; justify-content:space-between; align-items:flex-end; }
 .ft .l{ font-size:9pt; color:var(--mut); line-height:1.6; } .ft .l b{ color:var(--ink); font-weight:600; }
@@ -103,19 +108,13 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     </table>
     <div class="opts">
       <div class="opt">
-        <div class="top"><div class="t">Classe Executiva</div><div class="c">Business · classe J</div></div>
-        <div class="rows">
-          <div><div class="k">Assento</div><div class="v">Poltrona-cama nos 4 trechos</div></div>
-          <div><div class="k">Bagagem</div><div class="v">2 malas despachadas</div></div>
-        </div>
+        <div class="top"><div class="t">Classe Executiva</div><div class="c">Business · classe J<br>2 malas despachadas</div></div>
+        <div class="line"><span class="l"><b>Bilhete único</b> · São Paulo – Dubai – Tóquio – Dubai – São Paulo</span><span class="a">R$ 64.230,96<small>USD 12.702,90</small></span></div>
         <div class="price"><div class="lbl"><b>Total</b>1 adulto</div><div class="amt"><span class="brl">R$ 64.230,96</span><span class="usd">USD 12.702,90</span></div></div>
       </div>
       <div class="opt">
-        <div class="top"><div class="t">Classe Econômica</div><div class="c">Economy · classes X / U</div></div>
-        <div class="rows">
-          <div><div class="k">Assento</div><div class="v">Econômica padrão nos 4 trechos</div></div>
-          <div><div class="k">Bagagem</div><div class="v">2 malas despachadas por adulto</div></div>
-        </div>
+        <div class="top"><div class="t">Classe Econômica</div><div class="c">Economy · classes X / U<br>2 malas despachadas por adulto</div></div>
+        <div class="line"><span class="l"><b>Bilhete único</b> · São Paulo – Dubai – Tóquio – Dubai – São Paulo</span><span class="a">R$ 74.040,64<small>USD 14.642,96</small></span></div>
         <div class="price"><div class="lbl"><b>Total</b>4 adultos</div><div class="amt"><span class="brl">R$ 74.040,64</span><span class="usd">USD 14.642,96</span><span class="pp">R$ 18.510,16 por adulto</span></div></div>
       </div>
     </div>
@@ -123,30 +122,29 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
   <!-- OPÇÃO 2 · TURKISH -->
   <div class="sec">
-    <div class="sec-h"><div class="n">2</div><div class="t">Turkish Airlines</div><div class="badge tk">TURKISH AIRLINES</div><div class="s">São Paulo – Istambul – São Paulo · 2 voos</div></div>
+    <div class="sec-h"><div class="n">2</div><div class="t">Turkish Airlines</div><div class="badge tk">TURKISH AIRLINES</div><div class="s">São Paulo – Istambul – Tóquio – Istambul – São Paulo · 4 voos · 2 bilhetes</div></div>
     <table class="ftab">
       <thead><tr><th>Voo</th><th>Partida</th><th>Chegada</th><th>Trecho</th><th>Duração</th><th>Aeronave</th></tr></thead>
       <tbody>
-        <tr><td class="no">TK 216</td><td class="dt">26 Dez<small>17:10</small></td><td class="dt">27 Dez<small>11:45</small></td><td class="rt">GRU → IST<small>São Paulo · Guarulhos → Istambul</small></td><td class="dur">12h35<small>direto</small></td><td>Airbus A350-900</td></tr>
-        <tr><td class="no">TK 215</td><td class="dt">28 Jan<small>20:35</small></td><td class="dt">29 Jan<small>04:20</small></td><td class="rt">IST → GRU<small>Istambul → São Paulo · Guarulhos</small></td><td class="dur">13h45<small>direto</small></td><td>Airbus A350-900</td></tr>
+        <tr><td class="no">TK 216<small>Bilhete A</small></td><td class="dt">26 Dez<small>17:10</small></td><td class="dt">27 Dez<small>11:45</small></td><td class="rt">GRU → IST<small>São Paulo · Guarulhos → Istambul</small></td><td class="dur">12h35<small>direto</small></td><td>Airbus A350-900</td></tr>
+        <tr><td class="no">TK 50<small>Bilhete B</small></td><td class="dt">29 Dez<small>15:25</small></td><td class="dt">30 Dez<small>08:40</small></td><td class="rt">IST → NRT<small>Istambul → Tóquio · Narita</small></td><td class="dur">11h15<small>direto</small></td><td>Boeing 787-9</td></tr>
+        <tr><td class="no">TK 199<small>Bilhete B</small></td><td class="dt">26 Jan<small>22:05</small></td><td class="dt">27 Jan<small>05:45</small></td><td class="rt">HND → IST<small>Tóquio · Haneda → Istambul</small></td><td class="dur">13h40<small>direto</small></td><td>Boeing 777-300ER</td></tr>
+        <tr><td class="no">TK 215<small>Bilhete A</small></td><td class="dt">28 Jan<small>20:35</small></td><td class="dt">29 Jan<small>04:20</small></td><td class="rt">IST → GRU<small>Istambul → São Paulo · Guarulhos</small></td><td class="dur">13h45<small>direto</small></td><td>Airbus A350-900</td></tr>
       </tbody>
     </table>
+    <div class="callout"><b>Esta opção é composta por 2 passagens distintas:</b> o Bilhete A (São Paulo – Istambul – São Paulo) e o Bilhete B (Istambul – Tóquio – Istambul), emitidos separadamente. Os valores abaixo somam os dois bilhetes. Por serem emissões independentes, a conexão entre eles em Istambul não é protegida pela companhia.</div>
     <div class="opts">
       <div class="opt">
-        <div class="top"><div class="t">Classe Executiva</div><div class="c">Business · classes C / D · tarifa BF</div></div>
-        <div class="rows">
-          <div><div class="k">Assento</div><div class="v">Poltrona-cama nos 2 trechos</div></div>
-          <div><div class="k">Bagagem</div><div class="v">2 malas despachadas</div></div>
-        </div>
-        <div class="price"><div class="lbl"><b>Total</b>1 adulto</div><div class="amt"><span class="brl">R$ 56.811,55</span><span class="usd">USD 11.235,57</span></div></div>
+        <div class="top"><div class="t">Classe Executiva</div><div class="c">Business · tarifa BF<br>2 malas despachadas</div></div>
+        <div class="line"><span class="l"><b>Bilhete A</b> · São Paulo – Istambul – São Paulo · classes C / D</span><span class="a">R$ 56.811,55<small>USD 11.235,57</small></span></div>
+        <div class="line"><span class="l"><b>Bilhete B</b> · Istambul – Tóquio – Istambul · classes K / C</span><span class="a">R$ 40.394,74<small>USD 7.988,83</small></span></div>
+        <div class="price"><div class="lbl"><b>Total · 2 bilhetes</b>1 adulto</div><div class="amt"><span class="brl">R$ 97.206,29</span><span class="usd">USD 19.224,40</span></div></div>
       </div>
       <div class="opt">
-        <div class="top"><div class="t">Classe Econômica</div><div class="c">Economy · classes O / L · tarifa EF</div></div>
-        <div class="rows">
-          <div><div class="k">Assento</div><div class="v">Econômica padrão nos 2 trechos</div></div>
-          <div><div class="k">Bagagem</div><div class="v">1 mala despachada por adulto</div></div>
-        </div>
-        <div class="price"><div class="lbl"><b>Total</b>4 adultos</div><div class="amt"><span class="brl">R$ 43.064,12</span><span class="usd">USD 8.516,76</span><span class="pp">R$ 10.766,03 por adulto</span></div></div>
+        <div class="top"><div class="t">Classe Econômica</div><div class="c">Economy · tarifa EF<br>1 mala despachada por adulto</div></div>
+        <div class="line"><span class="l"><b>Bilhete A</b> · São Paulo – Istambul – São Paulo · classes O / L</span><span class="a">R$ 43.064,12<small>USD 8.516,76</small></span></div>
+        <div class="line"><span class="l"><b>Bilhete B</b> · Istambul – Tóquio – Istambul · classes L / W</span><span class="a">R$ 25.164,36<small>USD 4.976,72</small></span></div>
+        <div class="price"><div class="lbl"><b>Total · 2 bilhetes</b>4 adultos</div><div class="amt"><span class="brl">R$ 68.228,48</span><span class="usd">USD 13.493,48</span><span class="pp">R$ 17.057,12 por adulto</span></div></div>
       </div>
     </div>
   </div>
