@@ -2,6 +2,13 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/", "destination": "/roteiro-europa-familia.html" }
+    {
+      "source": "/",
+      "destination": "/roteiro-europa-familia.html"
+    },
+    {
+      "source": "/laura",
+      "destination": "/cotacao-laura-dalcanale-japao.html"
+    }
   ]
 }
