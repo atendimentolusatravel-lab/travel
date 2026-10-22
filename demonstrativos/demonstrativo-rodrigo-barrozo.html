@@ -104,6 +104,14 @@ tr.sub td{ background:var(--surf); color:var(--ink); font-weight:600; border-bot
 tr.sub td.num{ color:var(--green); }
 .tot-note{ font-size:7.3pt; font-weight:400; color:rgba(255,255,255,.65); display:block; margin-top:.5mm; }
 
+
+.air{ margin-top:3.5mm; display:flex; align-items:center; justify-content:space-between; gap:6mm; border:1px solid var(--green-line); border-left:4px solid var(--gold); border-radius:3px; padding:3mm 4mm; background:var(--gold-soft); }
+.air-k{ font-size:7.5pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); }
+.air-t{ margin-top:1mm; font-size:9.5pt; font-weight:600; color:var(--ink); }
+.air-d{ margin-top:1mm; font-size:8pt; line-height:1.5; color:var(--char); font-weight:300; max-width:118mm; }
+.air-v{ font-size:15pt; font-weight:700; color:var(--ink); white-space:nowrap; text-align:right; }
+.air-v small{ display:block; font-size:7pt; font-weight:500; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-top:.5mm; }
+
 /* Rodapé */
 .ft{ background:var(--green); padding:3mm 14mm; position:relative; display:flex; justify-content:space-between; align-items:center; gap:6mm; }
 .ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
@@ -350,27 +358,34 @@ tr.sub td.num{ color:var(--green); }
       </div>
     </div>
 
-    <p class="intro">Valores atualizados dos serviços para o novo embarque ao Japão em 2027, com escala em Istambul. O hotel de Hakone / Monte Fuji permanece <b>em aberto</b>, com valor a ser definido.</p>
+    <div class="air">
+      <div>
+        <div class="air-k">Passagem aérea internacional · paga diretamente pelo cliente</div>
+        <div class="air-t">Aéreo GRU – Istambul – Tóquio – GRU</div>
+        <div class="air-d">Paga com o cartão de crédito do cliente <b>diretamente à companhia aérea</b>. Por isso, é apresentada em separado e não compõe os demais valores desta página.</div>
+      </div>
+      <div class="air-v">R$ 81.856,42<small>Pago à cia. aérea</small></div>
+    </div>
 
     <div class="kpis">
       <div class="kpi">
-        <div class="kpi-k">Aéreo e transfer</div>
-        <div class="kpi-v">R$ 85.660,90</div>
-        <div class="kpi-s">Aéreo internacional, aéreo interno e transfer em Tóquio.</div>
+        <div class="kpi-k">Aéreo interno e transfer</div>
+        <div class="kpi-v">R$ 3.804,48</div>
+        <div class="kpi-s">Osaka – Okinawa – Osaka e transfer IN em Tóquio.</div>
       </div>
       <div class="kpi">
         <div class="kpi-k">Hospedagem</div>
         <div class="kpi-v">R$ 46.279,27</div>
-        <div class="kpi-s">Oito hotéis confirmados. Hakone / Monte Fuji em aberto.</div>
+        <div class="kpi-s">Oito hotéis. Hakone / Monte Fuji em aberto.</div>
       </div>
       <div class="kpi dark">
-        <div class="kpi-k">Total da nova despesa</div>
-        <div class="kpi-v">R$ 141.215,17</div>
-        <div class="kpi-s">Inclui guia privativo. Não inclui o hotel de Hakone / Monte Fuji.</div>
+        <div class="kpi-k">Total dos demais serviços</div>
+        <div class="kpi-v">R$ 59.358,75</div>
+        <div class="kpi-s">Inclui guia privativo. Não inclui a passagem aérea nem o hotel de Hakone.</div>
       </div>
     </div>
 
-    <h2>Detalhamento · valores atuais</h2>
+    <h2>Demais serviços · valores atuais</h2>
     <table>
       <thead>
         <tr>
@@ -380,8 +395,7 @@ tr.sub td.num{ color:var(--green); }
         </tr>
       </thead>
       <tbody>
-        <tr class="grp"><td colspan="3">Aéreo e transfer</td></tr>
-        <tr><td>Aéreo GRU – Istambul – Tóquio – GRU</td><td class="per"></td><td class="num">R$ 81.856,42</td></tr>
+        <tr class="grp"><td colspan="3">Aéreo interno e transfer</td></tr>
         <tr><td>Aéreo interno Osaka – Okinawa – Osaka</td><td class="per"></td><td class="num">R$ 2.308,04</td></tr>
         <tr><td>Transfer IN Tóquio</td><td class="per"></td><td class="num">R$ 1.496,44</td></tr>
 
@@ -400,13 +414,13 @@ tr.sub td.num{ color:var(--green); }
         <tr><td>Guia privativo – 5 dias <span style="color:var(--mute);font-weight:300">(US$ 1.750,00)</span></td><td class="per"></td><td class="num">R$ 9.275,00</td></tr>
       </tbody>
       <tfoot>
-        <tr><td colspan="2">Total da nova despesa<span class="tot-note">Hotel Hakone / Monte Fuji em aberto, a ser acrescido quando definido.</span></td><td class="num">R$ 141.215,17</td></tr>
+        <tr><td colspan="2">Total dos demais serviços<span class="tot-note">Não inclui a passagem aérea internacional. Hotel Hakone / Monte Fuji em aberto, a ser acrescido quando definido.</span></td><td class="num">R$ 59.358,75</td></tr>
       </tfoot>
     </table>
 
     <div class="box" style="margin-top:3mm">
       <div class="box-k">Item em aberto</div>
-      <p><b>Hotel Hakone / Monte Fuji</b>, de 19/05 a 21/05/2027. O valor será informado assim que a hospedagem for definida e passará a compor o total desta página.</p>
+      <p><b>Hotel Hakone / Monte Fuji</b>, de 19/05 a 21/05/2027. O valor será informado assim que a hospedagem for definida e passará a compor o total dos demais serviços.</p>
     </div>
 
     <p class="obs">Valores em reais (BRL), conforme cotação atual de cada serviço, sujeitos a alteração até a confirmação. Guia privativo cotado em dólar (US$ 1.750,00) e convertido para R$ 9.275,00.</p>
