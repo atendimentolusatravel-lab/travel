@@ -126,6 +126,17 @@ tr.cx td i{ font-style:normal; font-weight:400; color:var(--mut); }
 .blk-n li{ flex:1; font-size:8.5pt; font-weight:300; line-height:1.55; color:var(--char); padding-left:4.5mm; position:relative; }
 .blk-n li::before{ content:'✦'; color:var(--gold); position:absolute; left:0; font-size:7pt; top:.4mm; }
 
+/* visualização em tela (Vercel) — não afeta o PDF */
+@media screen{
+  body{ background:#e9e4dc; padding:10mm 0; }
+  .page{ margin:0 auto 10mm; box-shadow:0 6px 30px rgba(0,0,0,.18); }
+  .print-btn{ position:fixed; right:18px; bottom:18px; z-index:50; background:var(--gold); color:#fff; font-family:var(--sans);
+    font-weight:700; font-size:13px; letter-spacing:.04em; padding:12px 18px; border-radius:30px; border:0; cursor:pointer;
+    box-shadow:0 4px 18px rgba(0,0,0,.25); }
+  .print-btn:hover{ background:#c27e00; }
+}
+@media print{ .print-btn{ display:none !important; } }
+
 /* páginas com dois blocos: compactas */
 .dense .body{ padding-top:8mm; }
 .dense .sec{ margin-bottom:5mm; }
@@ -248,7 +259,7 @@ tr.cx td i{ font-style:normal; font-weight:400; color:var(--mut); }
           <td class="ori"><b>Miami</b><span>MIA → CWB · via São Paulo</span></td>
           <td>American Airlines</td>
           <td class="cab">Premium Economy</td>
-          <td>2 bagagenss</td>
+          <td>2 bagagens</td>
           <td class="tt">ida <b>12h35</b> · volta <b>13h10</b></td>
           <td class="r"><div class="brl"><small>R$</small>14.374,00</div><div class="usd">USD 2.852,95</div></td>
         </tr>
@@ -703,6 +714,8 @@ tr.cx td i{ font-style:normal; font-weight:400; color:var(--mut); }
     <span class="pg">4 / 4</span>
   </div>
 </section>
+
+<button class="print-btn" onclick="window.print()">Imprimir ou salvar em PDF</button>
 
 </body>
 </html>
