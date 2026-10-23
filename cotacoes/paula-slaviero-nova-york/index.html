@@ -75,7 +75,7 @@
   .opt-f .warn{color:#8a5a00}
 
   /* Hotel */
-  .hotel{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:4mm;margin-top:3.5mm}
+  .hotel{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:4mm;margin-top:3mm}
   .hcard{border:1px solid var(--line);border-radius:3px;padding:4.5mm 5mm;display:flex;flex-direction:column}
   .hcard.info{background:var(--green-soft);border-color:transparent}
   .hcard .k{font-size:6.5pt;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:500}
@@ -93,7 +93,7 @@
   .hcard .pr small{display:block;font-size:6.6pt;color:var(--muted);margin-top:1.5mm;font-weight:300}
 
   /* Resumo */
-  .sum{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-top:3.5mm}
+  .sum{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-top:3mm}
   .scard{border:1px solid var(--line);border-radius:3px;padding:4.5mm 5mm}
   .scard.best{background:var(--ink);color:#fff;border-color:var(--ink)}
   .scard .k{font-size:6.5pt;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
@@ -120,6 +120,27 @@
   .ft .c a{color:#fff;text-decoration:none;font-weight:600}
   .ft .c span{display:block;font-size:6pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.8mm}
   .pg{font-size:6pt;color:rgba(255,255,255,.45);letter-spacing:.14em;font-family:'Montserrat',sans-serif}
+
+  /* Página 2 — versão compacta */
+  .p2 .body{gap:3.2mm;padding-top:5mm}
+  .p2 h2{font-size:12.5pt}
+  .p2 .sec-h{padding-bottom:1.8mm}
+  .p2 .hotel{margin-top:2.2mm;gap:3.5mm}
+  .p2 .hcard{padding:3.2mm 4mm}
+  .p2 .hcard .nm{font-size:10pt;margin:.8mm 0 1mm}
+  .p2 .hcard ul{font-size:7.4pt;line-height:1.45}
+  .p2 .hcard .rt{font-size:8.5pt}
+  .p2 .hcard .pol{margin:1.5mm 0 2mm}
+  .p2 .hcard .pr b{font-size:12.5pt}
+  .p2 .sum{margin-top:2.2mm;gap:3.5mm}
+  .p2 .scard{padding:3.2mm 4mm}
+  .p2 .scard .row{padding:1.2mm 0;font-size:7.5pt}
+  .p2 .scard .tot{margin-top:1.8mm}
+  .p2 .scard .tot b{font-size:13pt}
+  .p2 .cambio{margin-top:2mm;padding-top:1.8mm}
+  .p2 .cond{margin-top:2mm;gap:3.5mm}
+  .p2 .cond div{font-size:7pt;line-height:1.45}
+  .p2 .opt{margin-top:2.2mm}
 </style>
 </head>
 <body>
@@ -143,7 +164,7 @@
     <div>
       <div class="sec-h">
         <div><div class="eyebrow">Opções de aéreo</div><h2>Curitiba ⇄ Nova York</h2></div>
-        <div class="note">Classe econômica<br>1 bagagem despachada + bagagem de mão em todas as opções</div>
+        <div class="note">Classe econômica · 4 opções (continua na pág. 2)<br>1 bagagem despachada + bagagem de mão em todas as opções</div>
       </div>
 
       <!-- OPÇÃO 1 -->
@@ -209,7 +230,7 @@
 </section>
 
 <!-- ═══════════ PÁGINA 2 · HOTEL · RESUMO · CONDIÇÕES ═══════════ -->
-<section class="page">
+<section class="page p2">
   <div class="hd">
     <img src="../../assets/logo-lusatravel-branca.png" alt="LusaTravel · travel agency">
     <div class="tag"><b>Cotação de viagem</b><span>Paula Mocelin Pimentel Slaviero · Nova York</span></div>
@@ -217,6 +238,29 @@
   <div class="goldbar"></div>
 
   <div class="body">
+    <div>
+      <div class="sec-h">
+        <div><div class="eyebrow">Opções de aéreo · continuação</div><h2>Curitiba ⇄ Nova York</h2></div>
+        <div class="note">Classe econômica · 1 bagagem despachada + bagagem de mão</div>
+      </div>
+
+      <!-- OPÇÃO 4 -->
+      <div class="opt">
+        <div class="opt-h">
+          <div class="n"><div class="badge">4</div><div class="t">LATAM · via Lima<small>Voo diurno na ida, chegada ao JFK no início da noite · tarifa Standard</small></div></div>
+          <div class="p"><b>R$ 11.355,10</b><span>USD 2.253,76 · tarifa STANDARD</span></div>
+        </div>
+        <table class="legs">
+          <tr><th>Cia · Voo</th><th>Saída</th><th>Chegada</th><th>Trecho</th><th>Duração</th><th>Conexão</th></tr>
+          <tr><td class="cia">LATAM 2463</td><td class="hr"><b>25 Nov</b> 07:55</td><td class="hr"><b>25 Nov</b> 10:45</td><td>CWB Curitiba → LIM Lima</td><td class="dur">04h50</td><td class="dur">01h15 em LIM</td></tr>
+          <tr><td class="cia">LATAM 2690</td><td class="hr"><b>25 Nov</b> 12:00</td><td class="hr"><b>25 Nov</b> 20:10</td><td>LIM Lima → JFK Nova York</td><td class="dur">08h10</td><td class="dur">—</td></tr>
+          <tr class="sep"><td class="cia">LATAM 8181</td><td class="hr"><b>01 Dez</b> 19:10</td><td class="hr"><b>02 Dez</b> 07:00</td><td>JFK Nova York → GRU São Paulo</td><td class="dur">09h50</td><td class="dur">02h45 em GRU</td></tr>
+          <tr><td class="cia">LATAM 3288</td><td class="hr"><b>02 Dez</b> 09:45</td><td class="hr"><b>02 Dez</b> 10:50</td><td>GRU São Paulo → CWB Curitiba</td><td class="dur">01h05</td><td class="dur">—</td></tr>
+        </table>
+        <div class="opt-f"><span><b>Ida:</b> 14h15 totais · 1 conexão</span><span><b>Volta:</b> 13h40 totais · 1 conexão</span><span class="warn">⚠ Conexão curta em Lima (1h15) · valor quase o dobro da opção 2</span></div>
+      </div>
+    </div>
+
     <div>
       <div class="sec-h">
         <div><div class="eyebrow">Hospedagem</div><h2>5 noites em Nova York</h2></div>
