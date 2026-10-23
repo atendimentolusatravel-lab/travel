@@ -89,6 +89,8 @@ O template já inclui um exemplo de cada tipo de página. Duplique/remova confor
 - Telefone/WhatsApp: `+55 41 99189-6076` (link: `https://wa.me/5541991896076`)
 - Endereço: Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR
 - Marca: **LUSATRAVEL**
+- Logo oficial (versão branca, PNG com fundo transparente): `assets/logo-lusatravel-branca.png` na raiz
+  do repositório. Use-o como `<img>` no cabeçalho escuro em vez do texto "LUSATRAVEL".
 
 ## Exportar PDF
 
