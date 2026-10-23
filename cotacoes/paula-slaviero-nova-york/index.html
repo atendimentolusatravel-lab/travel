@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cotação Nova York · Paula Slaviero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#1f4a33;      /* verde LusaTravel (blocos, cabeçalhos) */
+    --green-deep:#143324; /* verde profundo (cabeçalho/rodapé) */
+    --green-soft:#e9f0ea; /* fundo suave */
+    --gold:#da8d00;       /* ouro — accent fixo da marca */
+    --ink:#1a1510;
+    --text:#333131;
+    --muted:#6a5c4f;
+    --line:#d9d2c7;
+    --paper:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  @page{ size:A4 portrait; margin:0 }
+  html,body{background:#e6e2db;color:var(--text);font-family:'Poppins',system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:210mm;height:297mm;background:var(--paper);margin:0 auto;display:flex;flex-direction:column;page-break-after:always;break-after:page;position:relative;overflow:hidden}
+  .page:last-child{page-break-after:auto;break-after:auto}
+  @media screen{ .page{margin:10mm auto;box-shadow:0 6px 30px rgba(0,0,0,.18)} }
+  @media print{ html,body{background:#fff} .page{margin:0;box-shadow:none} }
+
+  /* Cabeçalho verde + barra dourada */
+  .hd{background:var(--green-deep);height:26mm;display:flex;align-items:center;justify-content:space-between;padding:0 16mm;flex-shrink:0}
+  .hd img{height:17mm;width:auto;display:block}
+  .hd .tag{text-align:right;color:rgba(255,255,255,.85)}
+  .hd .tag b{display:block;font-size:9pt;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .hd .tag span{display:block;font-size:7.5pt;letter-spacing:.08em;color:rgba(255,255,255,.55);margin-top:2mm}
+  .goldbar{height:2.6mm;background:var(--gold);flex-shrink:0}
+
+  .body{padding:6mm 16mm 5mm;flex:1;display:flex;flex-direction:column;gap:4.5mm}
+
+  /* Bloco cliente */
+  .client{display:grid;grid-template-columns:1.6fr 1fr 1fr .9fr;gap:4mm;background:var(--green-soft);border-left:2.2mm solid var(--gold);padding:3.5mm 6mm;border-radius:2px}
+  .client .k{font-size:6.5pt;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:500}
+  .client .v{font-size:10pt;font-weight:700;color:var(--ink);margin-top:1mm;line-height:1.25}
+  .client .v.name{font-size:11.5pt;text-transform:uppercase;letter-spacing:.02em}
+  .client .v.gold{color:var(--gold)}
+
+  .eyebrow{font-size:7pt;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  h2{font-size:14pt;font-weight:700;color:var(--ink);line-height:1.1;margin-top:1mm}
+  .sec-h{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:2.5mm}
+  .sec-h .note{font-size:7pt;color:var(--muted);font-weight:300;text-align:right}
+
+  /* Cartão de opção aérea */
+  .opt{border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:2.5mm}
+  .opt-h{display:flex;align-items:center;justify-content:space-between;background:var(--green);color:#fff;padding:1.7mm 5mm}
+  .opt-h .n{display:flex;align-items:center;gap:3mm}
+  .opt-h .badge{background:var(--gold);color:var(--ink);font-weight:800;font-size:8.5pt;width:7mm;height:7mm;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .opt-h .t{font-size:9.5pt;font-weight:600}
+  .opt-h .t small{display:block;font-size:6.8pt;font-weight:300;opacity:.85;letter-spacing:.04em}
+  .opt-h .p{text-align:right}
+  .opt-h .p b{font-size:12.5pt;font-weight:800;color:var(--gold);display:block;line-height:1}
+  .opt-h .p span{font-size:6.8pt;opacity:.8}
+  .opt.rec{border-color:var(--gold)}
+  .opt.rec .opt-h{background:var(--green-deep)}
+  table.legs{width:100%;border-collapse:collapse;font-size:7.6pt}
+  table.legs th{font-size:6.2pt;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;text-align:left;padding:1.2mm 2.5mm 1mm;border-bottom:1px solid var(--line);background:#faf8f4}
+  table.legs td{padding:1.1mm 2.5mm;border-bottom:1px solid #eee9e1;vertical-align:top;color:var(--text)}
+  table.legs tr:last-child td{border-bottom:0}
+  table.legs td.cia{font-weight:600;color:var(--ink);white-space:nowrap}
+  table.legs td.cia small{display:block;font-weight:300;font-size:6.2pt;color:var(--muted)}
+  table.legs td.hr{white-space:nowrap}
+  table.legs td.hr b{color:var(--ink);font-weight:600}
+  table.legs td.dur{color:var(--muted);white-space:nowrap}
+  table.legs tr.sep td{border-top:2px solid var(--green-soft)}
+  .opt-f{display:flex;gap:5mm;flex-wrap:wrap;padding:1.4mm 5mm;background:#faf8f4;border-top:1px solid var(--line);font-size:6.9pt;color:var(--muted)}
+  .opt-f b{color:var(--green);font-weight:600}
+  .opt-f .warn{color:#8a5a00}
+
+  /* Hotel */
+  .hotel{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:4mm;margin-top:3.5mm}
+  .hcard{border:1px solid var(--line);border-radius:3px;padding:4.5mm 5mm;display:flex;flex-direction:column}
+  .hcard.info{background:var(--green-soft);border-color:transparent}
+  .hcard .k{font-size:6.5pt;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:500}
+  .hcard .nm{font-size:10.5pt;font-weight:700;color:var(--ink);line-height:1.2;margin:1mm 0 1.5mm}
+  .hcard .stars{color:var(--gold);letter-spacing:2px;font-size:10pt}
+  .hcard ul{list-style:none;font-size:7.8pt;line-height:1.55;font-weight:300;color:var(--text)}
+  .hcard ul b{font-weight:600;color:var(--ink)}
+  .hcard .rt{font-size:9pt;font-weight:600;color:var(--green);line-height:1.25;margin-top:1mm}
+  .hcard .pol{font-size:7.2pt;margin:2mm 0 3mm;padding:1.4mm 2.5mm;border-radius:2px;display:inline-block;align-self:flex-start;font-weight:500}
+  .pol.ok{background:#e6f3e8;color:#1f6b36}
+  .pol.no{background:#fbe8e4;color:#9b2c1c}
+  .hcard .pr{margin-top:auto}
+  .hcard .pr b{display:block;font-size:13.5pt;font-weight:800;color:var(--ink);line-height:1}
+  .hcard .pr span{font-size:7.2pt;color:var(--muted)}
+  .hcard .pr small{display:block;font-size:6.6pt;color:var(--muted);margin-top:1.5mm;font-weight:300}
+
+  /* Resumo */
+  .sum{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-top:3.5mm}
+  .scard{border:1px solid var(--line);border-radius:3px;padding:4.5mm 5mm}
+  .scard.best{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .scard .k{font-size:6.5pt;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .scard .row{display:flex;justify-content:space-between;font-size:7.8pt;padding:1.6mm 0;border-bottom:1px solid var(--line);font-weight:300}
+  .scard.best .row{border-color:rgba(255,255,255,.15)}
+  .scard .row b{font-weight:500}
+  .scard .tot{display:flex;justify-content:space-between;align-items:baseline;margin-top:2.5mm}
+  .scard .tot span{font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+  .scard .tot b{font-size:14.5pt;font-weight:800;color:var(--gold)}
+  .scard .usd{font-size:7pt;color:var(--muted);text-align:right;margin-top:.5mm}
+  .scard.best .usd{color:rgba(255,255,255,.6)}
+
+  /* Condições */
+  .cond{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm;margin-top:3mm}
+  .cond div{font-size:7.3pt;line-height:1.5;font-weight:300}
+  .cond b{display:block;font-size:6.8pt;letter-spacing:.18em;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:1.2mm}
+  .cambio{margin-top:3mm;font-size:7.2pt;color:var(--muted);display:flex;justify-content:space-between;align-items:center;border-top:1px dashed var(--line);padding-top:2.5mm;gap:4mm}
+  .cambio .nr{font-weight:600;color:var(--ink)}
+
+  /* Rodapé */
+  .ft{margin-top:auto;background:var(--green-deep);padding:0 16mm;height:17mm;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;font-family:'Montserrat',sans-serif}
+  .ft img{height:9mm;width:auto;opacity:.95}
+  .ft .c{display:flex;gap:7mm;font-size:7.4pt;color:rgba(255,255,255,.8)}
+  .ft .c a{color:#fff;text-decoration:none;font-weight:600}
+  .ft .c span{display:block;font-size:6pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.8mm}
+  .pg{font-size:6pt;color:rgba(255,255,255,.45);letter-spacing:.14em;font-family:'Montserrat',sans-serif}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ PÁGINA 1 · AÉREO ═══════════ -->
+<section class="page">
+  <div class="hd">
+    <img src="../../assets/logo-lusatravel-branca.png" alt="LusaTravel · travel agency">
+    <div class="tag"><b>Cotação de viagem</b><span>Nova York · Emitida em 23/10/2026</span></div>
+  </div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+    <div class="client">
+      <div><div class="k">Cliente</div><div class="v name">Paula Mocelin Pimentel Slaviero</div></div>
+      <div><div class="k">Destino</div><div class="v gold">Nova York, EUA</div></div>
+      <div><div class="k">Período</div><div class="v">25 Nov → 02 Dez 2026</div></div>
+      <div><div class="k">Saída</div><div class="v">Curitiba (CWB)</div></div>
+    </div>
+
+    <div>
+      <div class="sec-h">
+        <div><div class="eyebrow">Opções de aéreo</div><h2>Curitiba ⇄ Nova York</h2></div>
+        <div class="note">Classe econômica<br>1 bagagem despachada + bagagem de mão em todas as opções</div>
+      </div>
+
+      <!-- OPÇÃO 1 -->
+      <div class="opt">
+        <div class="opt-h">
+          <div class="n"><div class="badge">1</div><div class="t">Azul + United · via Guarulhos<small>Volta com escala em Washington · opção mais econômica</small></div></div>
+          <div class="p"><b>R$ 4.846,08</b><span>USD 961,85 · tarifa ECO</span></div>
+        </div>
+        <table class="legs">
+          <tr><th>Cia · Voo</th><th>Saída</th><th>Chegada</th><th>Trecho</th><th>Duração</th><th>Conexão</th></tr>
+          <tr><td class="cia">Azul 4972</td><td class="hr"><b>25 Nov</b> 15:35</td><td class="hr"><b>25 Nov</b> 16:45</td><td>CWB Curitiba → GRU São Paulo</td><td class="dur">01h10</td><td class="dur">05h00 em GRU</td></tr>
+          <tr><td class="cia">United 148</td><td class="hr"><b>25 Nov</b> 21:45</td><td class="hr"><b>26 Nov</b> 05:30</td><td>GRU São Paulo → EWR Newark</td><td class="dur">09h45</td><td class="dur">—</td></tr>
+          <tr class="sep"><td class="cia">United 2755</td><td class="hr"><b>01 Dez</b> 15:10</td><td class="hr"><b>01 Dez</b> 16:33</td><td>EWR Newark → IAD Washington</td><td class="dur">01h23</td><td class="dur">05h52 em IAD</td></tr>
+          <tr><td class="cia">United 861</td><td class="hr"><b>01 Dez</b> 22:25</td><td class="hr"><b>02 Dez</b> 10:20</td><td>IAD Washington → GRU São Paulo</td><td class="dur">09h55</td><td class="dur">03h30 em GRU</td></tr>
+          <tr><td class="cia">United 7331<small>operado por cia. parceira</small></td><td class="hr"><b>02 Dez</b> 13:50</td><td class="hr"><b>02 Dez</b> 14:55</td><td>GRU São Paulo → CWB Curitiba</td><td class="dur">01h05</td><td class="dur">—</td></tr>
+        </table>
+        <div class="opt-f"><span><b>Ida:</b> 15h55 totais</span><span><b>Volta:</b> 21h45 totais · 2 conexões</span><span class="warn">⚠ Volta mais longa — passa por Washington antes de São Paulo</span></div>
+      </div>
+
+      <!-- OPÇÃO 2 -->
+      <div class="opt rec">
+        <div class="opt-h">
+          <div class="n"><div class="badge">2</div><div class="t">United · via Guarulhos<small>Voos diretos GRU ⇄ Newark na ida e na volta · recomendada LusaTravel</small></div></div>
+          <div class="p"><b>R$ 5.778,72</b><span>USD 1.146,96 · tarifa ECO</span></div>
+        </div>
+        <table class="legs">
+          <tr><th>Cia · Voo</th><th>Saída</th><th>Chegada</th><th>Trecho</th><th>Duração</th><th>Conexão</th></tr>
+          <tr><td class="cia">United 7354<small>operado por cia. parceira</small></td><td class="hr"><b>25 Nov</b> 15:35</td><td class="hr"><b>25 Nov</b> 16:45</td><td>CWB Curitiba → GRU São Paulo</td><td class="dur">01h10</td><td class="dur">05h00 em GRU</td></tr>
+          <tr><td class="cia">United 148</td><td class="hr"><b>25 Nov</b> 21:45</td><td class="hr"><b>26 Nov</b> 05:30</td><td>GRU São Paulo → EWR Newark</td><td class="dur">09h45</td><td class="dur">—</td></tr>
+          <tr class="sep"><td class="cia">United 149</td><td class="hr"><b>01 Dez</b> 19:30</td><td class="hr"><b>02 Dez</b> 07:10</td><td>EWR Newark → GRU São Paulo</td><td class="dur">09h40</td><td class="dur">02h45 em GRU</td></tr>
+          <tr><td class="cia">United 7335<small>operado por cia. parceira</small></td><td class="hr"><b>02 Dez</b> 09:55</td><td class="hr"><b>02 Dez</b> 11:05</td><td>GRU São Paulo → CWB Curitiba</td><td class="dur">01h10</td><td class="dur">—</td></tr>
+        </table>
+        <div class="opt-f"><span><b>Ida:</b> 15h55 totais</span><span><b>Volta:</b> 13h35 totais · 1 conexão</span><span><b>Melhor equilíbrio</b> entre preço e conforto: volta 8h mais curta que a opção 1</span></div>
+      </div>
+
+      <!-- OPÇÃO 3 -->
+      <div class="opt">
+        <div class="opt-h">
+          <div class="n"><div class="badge">3</div><div class="t">American Airlines · via Rio de Janeiro<small>Chegada pelo JFK · tarifa Main Cabin</small></div></div>
+          <div class="p"><b>R$ 6.188,80</b><span>USD 1.228,35 · tarifa MAIN</span></div>
+        </div>
+        <table class="legs">
+          <tr><th>Cia · Voo</th><th>Saída</th><th>Chegada</th><th>Trecho</th><th>Duração</th><th>Conexão</th></tr>
+          <tr><td class="cia">American 7732<small>operado por cia. parceira</small></td><td class="hr"><b>25 Nov</b> 18:55</td><td class="hr"><b>25 Nov</b> 20:20</td><td>CWB Curitiba → GIG Rio de Janeiro</td><td class="dur">01h25</td><td class="dur">02h40 em GIG</td></tr>
+          <tr><td class="cia">American 974</td><td class="hr"><b>25 Nov</b> 23:00</td><td class="hr"><b>26 Nov</b> 07:00</td><td>GIG Rio de Janeiro → JFK Nova York</td><td class="dur">10h00</td><td class="dur">—</td></tr>
+          <tr class="sep"><td class="cia">American 951</td><td class="hr"><b>01 Dez</b> 18:20</td><td class="hr"><b>02 Dez</b> 06:05</td><td>JFK Nova York → GRU São Paulo</td><td class="dur">09h45</td><td class="dur">03h15 em GRU</td></tr>
+          <tr><td class="cia">American 7710<small>operado por cia. parceira</small></td><td class="hr"><b>02 Dez</b> 09:20</td><td class="hr"><b>02 Dez</b> 10:30</td><td>GRU São Paulo → CWB Curitiba</td><td class="dur">01h10</td><td class="dur">—</td></tr>
+        </table>
+        <div class="opt-f"><span><b>Ida:</b> 14h05 totais</span><span><b>Volta:</b> 14h10 totais · 1 conexão</span><span>Saída de Curitiba mais tarde (18:55) e conexão curta no Rio</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <img src="../../assets/logo-lusatravel-branca.png" alt="LusaTravel">
+    <div class="c">
+      <div><span>E-mail</span><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a></div>
+      <div><span>WhatsApp</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+      <div><span>Endereço</span>Al. Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+    </div>
+    <div class="pg">1 / 2</div>
+  </div>
+</section>
+
+<!-- ═══════════ PÁGINA 2 · HOTEL · RESUMO · CONDIÇÕES ═══════════ -->
+<section class="page">
+  <div class="hd">
+    <img src="../../assets/logo-lusatravel-branca.png" alt="LusaTravel · travel agency">
+    <div class="tag"><b>Cotação de viagem</b><span>Paula Mocelin Pimentel Slaviero · Nova York</span></div>
+  </div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+    <div>
+      <div class="sec-h">
+        <div><div class="eyebrow">Hospedagem</div><h2>5 noites em Nova York</h2></div>
+        <div class="note">Check-in 26 Nov · Check-out 01 Dez 2026</div>
+      </div>
+      <div class="hotel">
+        <div class="hcard info">
+          <div class="k">Hotel selecionado</div>
+          <div class="nm">Hotel em Nova York</div>
+          <ul style="margin-top:1.5mm">
+            <li><b>Quarto:</b> Double Room with Queen Bed</li>
+            <li><b>Ocupação:</b> 1 quarto · 1 adulto + 1 criança</li>
+            <li><b>Regime:</b> somente hospedagem (sem café)</li>
+            <li><b>Noites:</b> 5 (26 Nov → 01 Dez)</li>
+          </ul>
+        </div>
+        <div class="hcard">
+          <div class="k">Tarifa A</div>
+          <div class="rt">Double Room Queen Bed<br>Room Only</div>
+          <div class="pol no">✕ Não reembolsável</div>
+          <div class="pr"><b>R$ 10.835,41</b><span>USD 2.130,38 · total da estadia</span><small>Até 10x no cartão · sem cancelamento ou alteração</small></div>
+        </div>
+        <div class="hcard">
+          <div class="k">Tarifa B</div>
+          <div class="rt">Double Room Queen Bed<br>Room Only</div>
+          <div class="pol ok">✓ Cancelamento grátis até 22 Nov 2026</div>
+          <div class="pr"><b>R$ 12.845,32</b><span>USD 2.525,55 · total da estadia</span><small>Até 10x no cartão · flexível até 4 dias antes do check-in</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sec-h">
+        <div><div class="eyebrow">Resumo do investimento</div><h2>Aéreo + Hospedagem</h2></div>
+        <div class="note">Combinações sugeridas<br>outras combinações sob consulta</div>
+      </div>
+      <div class="sum">
+        <div class="scard">
+          <div class="k">Menor valor</div>
+          <div class="row"><span>Aéreo · Opção 1 (Azul + United)</span><b>R$ 4.846,08</b></div>
+          <div class="row"><span>Hotel · Tarifa A (não reembolsável)</span><b>R$ 10.835,41</b></div>
+          <div class="tot"><span>Total</span><b>R$ 15.681,49</b></div>
+          <div class="usd">≈ USD 3.092,23</div>
+        </div>
+        <div class="scard best">
+          <div class="k">Recomendação LusaTravel · mais conforto e flexibilidade</div>
+          <div class="row"><span>Aéreo · Opção 2 (United direto GRU ⇄ EWR)</span><b>R$ 5.778,72</b></div>
+          <div class="row"><span>Hotel · Tarifa B (cancelamento grátis)</span><b>R$ 12.845,32</b></div>
+          <div class="tot"><span>Total</span><b>R$ 18.624,04</b></div>
+          <div class="usd">≈ USD 3.672,51</div>
+        </div>
+      </div>
+      <div class="cambio">
+        <span>Cotação 23/10 · USD = <span class="nr">5,04</span> (aéreo) · <span class="nr">5,09</span> (hotelaria) — valores em reais podem variar até a emissão.</span>
+        <span class="nr">*Nada reservado, apenas cotado</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="sec-h"><div><div class="eyebrow">Importante</div><h2>Condições e observações</h2></div></div>
+      <div class="cond">
+        <div><b>Pagamento</b>Hotelaria em até 10x sem acréscimo no cartão. Aéreo em até 6x sem acréscimo. Desconto para pagamento à vista via PIX — consulte.</div>
+        <div><b>Não inclui</b>Autorização ESTA / visto americano · Seguro viagem internacional (recomendado) · Taxas de resort ou facility fee cobradas pelo hotel, quando aplicáveis · Despesas pessoais e refeições.</div>
+        <div><b>Validade</b>Tarifas aéreas e hoteleiras sujeitas a disponibilidade e alteração sem aviso até a confirmação da reserva. Voos "operados por cia. parceira" são codeshare. Garantimos o valor apenas após emissão.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <img src="../../assets/logo-lusatravel-branca.png" alt="LusaTravel">
+    <div class="c">
+      <div><span>E-mail</span><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a></div>
+      <div><span>WhatsApp</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+      <div><span>Endereço</span>Al. Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+    </div>
+    <div class="pg">2 / 2</div>
+  </div>
+</section>
+
+</body>
+</html>
