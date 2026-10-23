@@ -2,111 +2,157 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>Andra Prosdocimo | Atlanta ⇄ Curitiba — LusaTravel</title>
+<title>Andra Prosdocimo | EUA ⇄ Curitiba — LusaTravel</title>
 <style>
 /* ══════════════════════════════════════════════════════════════
    LUSATRAVEL — ORÇAMENTO SIMPLIFICADO (A3 Portrait, print-ready)
    Cliente: Sra. Andra Prosdocimo · Passageiro: Leonardo
-   Paleta: verde (destino) + ouro #da8d00 (fixo)
+   6 opções · saídas por Atlanta, Orlando e Miami · verde + ouro
    ══════════════════════════════════════════════════════════════ */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
-
 :root{
-  --gold:#da8d00;        /* FIXO — nunca muda */
-  --dest:#2d5e3a;        /* Verde LusaTravel (padrão) */
-  --dest-deep:#1f4429;   /* verde mais profundo para cabeçalho/rodapé */
-  --dest-soft:#eef4ef;   /* verde-claro de fundo */
-  --ink:#1a1510;         /* preto quente */
-  --char:#333131;        /* carvão / texto */
-  --mut:#8a8278;         /* texto discreto */
-  --line:#e4ddd2;
-  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --con:'Montserrat',var(--sans);
+  --gold:#da8d00; --dest:#2d5e3a; --dest-deep:#1f4429; --dest-soft:#eef4ef;
+  --ink:#1a1510; --char:#333131; --mut:#8a8278; --line:#e4ddd2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif; --con:'Montserrat',var(--sans);
 }
 @page{ size:A3 portrait; margin:0; }
 *{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
 html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 a{ color:inherit; text-decoration:none; }
-
-.page{
-  width:297mm; height:420mm; position:relative; overflow:hidden;
-  background:#fff; page-break-after:always; display:flex; flex-direction:column;
-}
+ul{ list-style:none; }
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; page-break-after:always; display:flex; flex-direction:column; }
 .page:last-child{ page-break-after:auto; }
 
-/* ── Cabeçalho ── */
-.hd{ background:var(--dest-deep); height:34mm; display:flex; align-items:center;
-     justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd{ background:var(--dest-deep); height:34mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
 .hd .logo img{ height:20mm; width:auto; display:block; }
 .hd .tag{ text-align:right; }
 .hd .tag b{ display:block; font-size:9pt; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); font-weight:700; }
 .hd .tag span{ display:block; font-family:var(--con); font-size:8pt; color:rgba(255,255,255,.55); margin-top:1.5mm; letter-spacing:.04em; }
-.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; } /* BARRA DOURADA — obrigatória */
-
-/* ── Rodapé ── */
-.ft{ margin-top:auto; background:var(--dest-deep); height:16mm; display:flex; align-items:center;
-     justify-content:center; gap:14px; flex-shrink:0; border-top:1mm solid var(--gold); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+.ft{ margin-top:auto; background:var(--dest-deep); height:16mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; border-top:1mm solid var(--gold); }
 .ft a{ font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.75); }
 .ft .sep{ color:var(--gold); }
 .ft .addr{ font-family:var(--con); font-size:8pt; color:rgba(255,255,255,.4); }
-
-.body{ padding:9mm 22mm 5mm; flex:1; display:flex; flex-direction:column; }
+.ft .pg{ position:absolute; right:22mm; font-family:var(--con); font-size:8pt; color:rgba(255,255,255,.4); }
+.body{ padding:10mm 22mm 6mm; flex:1; display:flex; flex-direction:column; }
 .eyebrow{ font-size:8.5pt; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); font-weight:700; }
 
-/* ── Bloco de abertura ── */
+/* abertura */
 .intro{ display:flex; justify-content:space-between; align-items:flex-end; gap:12mm; border-bottom:1px solid var(--line); padding-bottom:5mm; }
 .intro .to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:var(--mut); margin-top:3.5mm; }
 .intro .name{ font-size:26pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; color:var(--ink); line-height:1.1; margin-top:1mm; }
-.intro .pax{ font-size:11.5pt; font-weight:400; color:var(--char); margin-top:2.5mm; }
+.intro .pax{ font-size:11.5pt; color:var(--char); margin-top:2.5mm; }
 .intro .pax b{ font-weight:600; color:var(--dest); }
 .route{ text-align:right; flex-shrink:0; }
-.route .cities{ font-size:22pt; font-weight:700; color:var(--dest); letter-spacing:.02em; line-height:1.15; white-space:nowrap; }
+.route .cities{ font-size:21pt; font-weight:700; color:var(--dest); line-height:1.15; white-space:nowrap; }
 .route .cities .arr{ color:var(--gold); font-weight:400; padding:0 2mm; }
 .route .via{ font-size:9.5pt; color:var(--mut); margin-top:1.5mm; letter-spacing:.04em; }
-
-/* ── Stats ── */
-.stats{ display:flex; gap:0; margin:6mm 0 8mm; border:1px solid var(--line); border-radius:5px; overflow:hidden; }
+.stats{ display:flex; margin:6mm 0 8mm; border:1px solid var(--line); border-radius:5px; overflow:hidden; }
 .stat{ flex:1; padding:3mm 5mm; border-right:1px solid var(--line); background:#fcfaf7; }
 .stat:last-child{ border-right:0; }
 .stat b{ display:block; font-size:14pt; font-weight:800; color:var(--dest); line-height:1.1; }
 .stat span{ font-size:8pt; color:var(--mut); letter-spacing:.1em; text-transform:uppercase; font-weight:600; }
 
-/* ── Voos ── */
-.leg{ margin-bottom:7mm; }
-.leg-h{ display:flex; align-items:center; gap:4mm; margin-bottom:2mm; }
-.leg-h .badge{ background:var(--dest); color:#fff; font-weight:800; font-size:9pt; letter-spacing:.2em;
-  text-transform:uppercase; padding:1.8mm 4mm; border-radius:3px; }
-.leg-h .date{ font-size:11pt; font-weight:700; color:var(--ink); }
-.leg-h .tot{ margin-left:auto; font-size:9pt; color:var(--mut); }
-.leg-h .tot b{ color:var(--gold); font-weight:700; }
-table.fl{ width:100%; border-collapse:collapse; }
-table.fl th{ font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700;
-  text-align:left; padding:0 3mm 2mm; border-bottom:1.5px solid var(--dest); }
-table.fl td{ padding:3.2mm 3mm; border-bottom:1px solid var(--line); vertical-align:middle; font-size:10.5pt; }
-table.fl td.num{ font-variant-numeric:tabular-nums; }
-.fno{ font-weight:700; color:var(--ink); white-space:nowrap; }
-.fno small{ display:block; font-size:7.5pt; font-weight:500; color:var(--mut); letter-spacing:.04em; margin-top:.5mm; }
-.ap b{ display:block; font-size:11.5pt; font-weight:700; color:var(--ink); line-height:1; }
-.ap span{ display:block; font-size:8.5pt; color:var(--mut); margin-top:1mm; letter-spacing:.04em; }
-.tm{ font-size:11.5pt; font-weight:600; color:var(--ink); white-space:nowrap; }
-.tm small{ font-size:8pt; font-weight:600; color:var(--gold); vertical-align:super; margin-left:.5mm; }
-.dur b{ display:block; font-weight:700; color:var(--dest); font-size:11pt; line-height:1; }
-.dur span{ display:block; font-size:8pt; color:var(--mut); margin-top:1mm; letter-spacing:.04em; }
-tr.cx td{ padding:1.5mm 3mm; background:var(--dest-soft); font-size:8.5pt; color:var(--dest); font-weight:600; letter-spacing:.04em; border-bottom:1px solid var(--line); }
+/* critérios */
+.h2{ font-size:17pt; font-weight:700; color:var(--ink); margin:1.5mm 0 4mm; }
+.crit{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:6mm; margin-bottom:9mm; }
+.crit > div{ background:var(--dest-soft); border-left:3px solid var(--gold); padding:4.5mm 5.5mm; border-radius:0 4px 4px 0; }
+.crit .ch{ font-size:9.5pt; font-weight:700; color:var(--dest); margin-bottom:1.5mm; }
+.crit .ct{ font-size:9pt; font-weight:300; line-height:1.6; color:var(--char); }
 
-/* ── Opções de tarifa ── */
-.opts{ display:flex; gap:8mm; margin-top:3mm; }
+/* resumo */
+table.sum{ width:100%; border-collapse:collapse; }
+table.sum th{ font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; text-align:left; padding:0 3mm 2mm; border-bottom:1.5px solid var(--dest); }
+table.sum td{ padding:3.4mm 3mm; border-bottom:1px solid var(--line); vertical-align:middle; font-size:10pt; }
+table.sum td.r, table.sum th.r{ text-align:right; }
+table.sum .no{ width:9mm; height:9mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:10pt; display:flex; align-items:center; justify-content:center; }
+table.sum .ori b{ display:block; font-size:11.5pt; font-weight:700; color:var(--ink); }
+table.sum .ori span{ font-size:8.5pt; color:var(--mut); }
+table.sum .cab{ font-weight:600; color:var(--dest); }
+table.sum .brl{ font-size:13pt; font-weight:800; color:var(--ink); white-space:nowrap; }
+table.sum .brl small{ font-size:8.5pt; font-weight:600; color:var(--mut); margin-right:1mm; }
+table.sum .usd{ font-family:var(--con); font-size:8.5pt; color:var(--mut); white-space:nowrap; }
+table.sum .tt{ font-size:9pt; color:var(--char); white-space:nowrap; }
+table.sum .tt b{ font-weight:600; color:var(--ink); }
+.fx{ margin-top:6mm; display:flex; justify-content:space-between; align-items:center; background:var(--dest-soft); border-left:3px solid var(--gold); padding:2.5mm 5mm; }
+.fx .a{ font-size:9pt; color:var(--dest); font-weight:600; }
+.fx .b{ font-size:9pt; color:var(--dest); font-weight:700; letter-spacing:.04em; }
+.notes{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:8mm; margin-top:8mm; padding-top:6mm; border-top:1px solid var(--line); }
+.note-h{ font-size:8.5pt; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
+.note-t{ font-size:8.5pt; font-weight:300; line-height:1.6; color:var(--char); }
+.note-t b{ font-weight:600; color:var(--ink); }
+
+/* páginas de origem */
+.sec{ display:flex; justify-content:space-between; align-items:flex-end; border-bottom:1px solid var(--line); padding-bottom:4mm; margin-bottom:7mm; }
+.sec .t{ font-size:24pt; font-weight:800; color:var(--ink); line-height:1.1; text-transform:uppercase; letter-spacing:.02em; }
+.sec .t em{ font-style:normal; color:var(--dest); }
+.sec .s{ font-size:10pt; color:var(--mut); margin-top:1.5mm; }
+.sec .r{ text-align:right; font-size:9pt; color:var(--mut); line-height:1.6; }
+.sec .r b{ color:var(--dest); font-weight:700; }
+
+.blk{ border:1.5px solid var(--line); border-radius:6px; overflow:hidden; margin-bottom:8mm; }
+.blk-h{ background:var(--dest); color:#fff; padding:4mm 6mm; display:flex; justify-content:space-between; align-items:center; }
+.blk-h .no{ width:11mm; height:11mm; border-radius:50%; border:2px solid var(--gold); color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-right:4mm; }
+.blk-h .l{ display:flex; align-items:center; }
+.blk-h .k{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.blk-h .t{ font-size:14pt; font-weight:700; line-height:1.15; }
+.blk-h .t span{ font-weight:400; color:rgba(255,255,255,.75); }
+.blk-h .p{ text-align:right; }
+.blk-h .brl{ font-size:20pt; font-weight:800; color:var(--gold); line-height:1; }
+.blk-h .brl small{ font-size:10pt; font-weight:600; margin-right:1.5mm; }
+.blk-h .usd{ font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.7); margin-top:1.5mm; }
+.chips{ display:flex; gap:3mm; padding:3.5mm 6mm; background:#fcfaf7; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+.chip{ font-size:8.5pt; color:var(--char); border:1px solid var(--line); border-radius:20px; padding:1.2mm 3.5mm; background:#fff; }
+.chip b{ font-weight:700; color:var(--dest); }
+table.fl{ width:100%; border-collapse:collapse; }
+table.fl th{ font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; text-align:left; padding:3mm 3mm 2mm; border-bottom:1.5px solid var(--dest); }
+table.fl th:first-child, table.fl td:first-child{ padding-left:6mm; }
+table.fl td{ padding:2.8mm 3mm; border-bottom:1px solid var(--line); vertical-align:middle; font-size:10pt; }
+tr.lg td{ padding:1.8mm 6mm; background:var(--ink); color:#fff; font-size:8pt; letter-spacing:.2em; text-transform:uppercase; font-weight:700; }
+tr.lg td span{ color:var(--gold); margin-left:3mm; letter-spacing:.06em; text-transform:none; font-weight:600; }
+tr.lg td em{ float:right; font-style:normal; color:rgba(255,255,255,.6); letter-spacing:.04em; text-transform:none; font-weight:500; }
+tr.lg td em b{ color:var(--gold); font-weight:700; }
+tr.cx td{ padding:1.6mm 6mm; background:var(--dest-soft); font-size:8.5pt; color:var(--dest); font-weight:600; letter-spacing:.03em; }
+tr.cx td i{ font-style:normal; font-weight:400; color:var(--mut); }
+.fno{ font-weight:700; color:var(--ink); white-space:nowrap; font-size:10.5pt; }
+.fno small{ display:block; font-size:7.5pt; font-weight:500; color:var(--mut); letter-spacing:.03em; margin-top:.4mm; }
+.ap b{ display:block; font-size:11.5pt; font-weight:700; color:var(--ink); line-height:1; }
+.ap span{ display:block; font-size:8pt; color:var(--mut); margin-top:1mm; letter-spacing:.03em; }
+.tm b{ display:block; font-size:11.5pt; font-weight:600; color:var(--ink); line-height:1; white-space:nowrap; }
+.tm span{ display:block; font-size:8pt; color:var(--mut); margin-top:1mm; }
+.dur b{ display:block; font-weight:700; color:var(--dest); font-size:10.5pt; line-height:1; }
+.dur span{ display:block; font-size:7.5pt; color:var(--mut); margin-top:1mm; }
+.blk-n{ padding:3.5mm 6mm; display:flex; gap:6mm; }
+.blk-n li{ flex:1; font-size:8.5pt; font-weight:300; line-height:1.55; color:var(--char); padding-left:4.5mm; position:relative; }
+.blk-n li::before{ content:'✦'; color:var(--gold); position:absolute; left:0; font-size:7pt; top:.4mm; }
+
+/* páginas com dois blocos: compactas */
+.dense .body{ padding-top:8mm; }
+.dense .sec{ margin-bottom:5mm; }
+.dense .blk{ margin-bottom:6mm; }
+.dense .chips{ padding:2.5mm 6mm; }
+.dense table.fl td{ padding:2mm 3mm; }
+.dense tr.lg td{ padding:1.4mm 6mm; }
+.dense tr.cx td{ padding:1.2mm 6mm; }
+.dense .blk-n{ padding:2.5mm 6mm; }
+.dense .fx{ margin-top:4mm; }
+
+/* Atlanta: dois preços para os mesmos voos */
+.opts{ display:flex; gap:8mm; margin-top:2mm; }
 .opt{ flex:1; border:1.5px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; }
 .opt.hi{ border-color:var(--gold); }
-.opt .top{ padding:3.5mm 6mm 3mm; background:#fcfaf7; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; }
+.opt .top{ padding:3.5mm 6mm 3mm; background:#fcfaf7; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; }
 .opt.hi .top{ background:var(--dest); border-bottom-color:var(--dest); }
+.opt .top .l{ display:flex; align-items:center; }
+.opt .top .no{ width:10mm; height:10mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:11pt; display:flex; align-items:center; justify-content:center; margin-right:3.5mm; flex-shrink:0; }
+.opt.hi .top .no{ background:transparent; border:2px solid var(--gold); color:var(--gold); }
 .opt .k{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-.opt .t{ font-size:12.5pt; font-weight:700; color:var(--ink); margin-top:1mm; }
+.opt .t{ font-size:12.5pt; font-weight:700; color:var(--ink); line-height:1.15; }
 .opt.hi .t{ color:#fff; }
-.opt .fare{ font-family:var(--con); font-size:7.5pt; color:var(--mut); letter-spacing:.06em; }
-.opt.hi .fare{ color:rgba(255,255,255,.55); }
-.opt .mid{ padding:4mm 6mm; font-size:9pt; font-weight:300; line-height:1.7; color:var(--char); flex:1; }
-.opt .mid li{ list-style:none; padding-left:5mm; position:relative; }
+.opt .fare{ font-family:var(--con); font-size:7.5pt; color:var(--mut); letter-spacing:.06em; text-align:right; }
+.opt.hi .fare{ color:rgba(255,255,255,.6); }
+.opt .mid{ padding:4mm 6mm; font-size:9pt; font-weight:300; line-height:1.65; color:var(--char); flex:1; }
+.opt .mid li{ padding-left:5mm; position:relative; }
 .opt .mid li::before{ content:'✦'; color:var(--gold); position:absolute; left:0; font-size:7pt; top:.5mm; }
 .opt .price{ padding:3.5mm 6mm; background:var(--ink); display:flex; justify-content:space-between; align-items:flex-end; }
 .opt.hi .price{ background:var(--dest-deep); }
@@ -114,15 +160,6 @@ tr.cx td{ padding:1.5mm 3mm; background:var(--dest-soft); font-size:8.5pt; color
 .opt .price .brl{ font-size:19pt; font-weight:800; color:var(--gold); line-height:1; margin-top:1.5mm; }
 .opt .price .brl small{ font-size:11pt; font-weight:600; margin-right:1.5mm; }
 .opt .price .usd{ font-family:var(--con); font-size:9.5pt; color:rgba(255,255,255,.7); text-align:right; }
-
-/* ── Observações ── */
-.notes{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:8mm; margin-top:8mm; padding-top:6mm; border-top:1px solid var(--line); }
-.note-h{ font-size:8.5pt; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
-.note-t{ font-size:8.5pt; font-weight:300; line-height:1.6; color:var(--char); }
-.note-t b{ font-weight:600; color:var(--ink); }
-.fx{ margin-top:6mm; display:flex; justify-content:space-between; align-items:center; background:var(--dest-soft); border-left:3px solid var(--gold); padding:2.5mm 5mm; }
-.fx .a{ font-size:9pt; color:var(--dest); font-weight:600; }
-.fx .b{ font-size:9pt; color:var(--dest); font-weight:700; letter-spacing:.04em; }
 </style>
 </head>
 <body>
@@ -133,143 +170,114 @@ tr.cx td{ padding:1.5mm 3mm; background:var(--dest-soft); font-size:8.5pt; color
     <div class="tag"><b>Orçamento</b><span>Aéreo internacional · emitido em 23/10/2026</span></div>
   </div>
   <div class="goldbar"></div>
-
   <div class="body">
-
-    <!-- Abertura -->
     <div class="intro">
       <div>
         <div class="eyebrow">Cotação para sua viagem</div>
         <div class="to">Preparado para</div>
         <div class="name">Sra. Andra Prosdocimo</div>
-        <div class="pax">Viagem de <b>Leonardo</b> · 1 passageiro · 09 Dez 2026 → 17 Jan 2027</div>
+        <div class="pax">Viagem de <b>Leonardo</b> · 1 passageiro · 09 Dez 2026 → 16/17 Jan 2027</div>
       </div>
       <div class="route">
-        <div class="cities">Atlanta <span class="arr">⇄</span> Curitiba</div>
-        <div class="via">conexão em São Paulo · LATAM Airlines</div>
+        <div class="cities">Estados Unidos <span class="arr">⇄</span> Curitiba</div>
+        <div class="via">saídas por Atlanta, Orlando ou Miami · conexão no Brasil</div>
       </div>
     </div>
 
-    <!-- Stats -->
     <div class="stats">
-      <div class="stat"><b>4</b><span>Voos</span></div>
+      <div class="stat"><b>6</b><span>Opções cotadas</span></div>
+      <div class="stat"><b>3</b><span>Cidades de saída</span></div>
       <div class="stat"><b>1</b><span>Passageiro</span></div>
-      <div class="stat"><b>09 Dez</b><span>Ida · Atlanta</span></div>
-      <div class="stat"><b>16 Jan</b><span>Volta · Curitiba</span></div>
-      <div class="stat"><b>38</b><span>Noites no Brasil</span></div>
+      <div class="stat"><b>09 Dez</b><span>Ida · EUA → Curitiba</span></div>
+      <div class="stat"><b>16 Jan</b><span>Volta · Curitiba → EUA</span></div>
     </div>
 
-    <!-- IDA -->
-    <div class="leg">
-      <div class="leg-h">
-        <span class="badge">Ida</span>
-        <span class="date">Quarta, 09 de dezembro de 2026</span>
-        <span class="tot">Tempo total de viagem <b>14h45</b></span>
+    <div class="eyebrow">Como montamos esta cotação</div>
+    <h2 class="h2">Critérios de seleção dos voos</h2>
+    <div class="crit">
+      <div>
+        <div class="ch">Charlotte não foi cotada</div>
+        <div class="ct">A opção de melhor valor com saída de Charlotte exigia <b>3 paradas</b>. Optamos por não incluí-la: a economia não compensa o desgaste de uma viagem tão longa para o Leonardo.</div>
       </div>
-      <table class="fl">
-        <thead><tr>
-          <th style="width:17%">Voo</th><th style="width:21%">Origem</th><th style="width:14%">Saída</th>
-          <th style="width:21%">Destino</th><th style="width:14%">Chegada</th><th>Duração</th>
-        </tr></thead>
-        <tbody>
-          <tr>
-            <td><div class="fno">LATAM 6345<small>Operado por Delta · A330-300</small></div></td>
-            <td class="ap"><b>ATL</b><span>Atlanta</span></td>
-            <td class="num"><div class="tm">18:05</div></td>
-            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
-            <td class="num"><div class="tm">05:40<small>+1</small></div></td>
-            <td class="dur"><b>9h35</b><span>sem escalas</span></td>
-          </tr>
-          <tr class="cx"><td colspan="6">✦ Conexão em São Paulo (GRU) · 4h05 de espera · 10 Dez</td></tr>
-          <tr>
-            <td><div class="fno">LATAM 3288<small>Airbus A321</small></div></td>
-            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
-            <td class="num"><div class="tm">09:45</div></td>
-            <td class="ap"><b>CWB</b><span>Curitiba · Afonso Pena</span></td>
-            <td class="num"><div class="tm">10:50</div></td>
-            <td class="dur"><b>1h05</b><span>sem escalas</span></td>
-          </tr>
-        </tbody>
-      </table>
+      <div>
+        <div class="ch">Sem conexões em Lima ou Santiago</div>
+        <div class="ct">Excluímos todos os itinerários com conexão em <b>Lima</b> e <b>Santiago</b>, priorizando o conforto e a segurança do Leonardo. Todas as opções conectam apenas no Brasil (São Paulo ou Campinas).</div>
+      </div>
+      <div>
+        <div class="ch">Somente tarifas com bagagem</div>
+        <div class="ct">Todas as opções incluem ao menos <b>1 bagagem despachada</b>. Tarifas "Light" sem bagagem foram descartadas, pois a mala avulsa costuma consumir a diferença de preço.</div>
+      </div>
     </div>
 
-    <!-- VOLTA -->
-    <div class="leg">
-      <div class="leg-h">
-        <span class="badge">Volta</span>
-        <span class="date">Sábado, 16 de janeiro de 2027</span>
-        <span class="tot">Tempo total de viagem <b>13h13</b></span>
-      </div>
-      <table class="fl">
-        <thead><tr>
-          <th style="width:17%">Voo</th><th style="width:21%">Origem</th><th style="width:14%">Saída</th>
-          <th style="width:21%">Destino</th><th style="width:14%">Chegada</th><th>Duração</th>
-        </tr></thead>
-        <tbody>
-          <tr>
-            <td><div class="fno">LATAM 4569<small>Embraer E195</small></div></td>
-            <td class="ap"><b>CWB</b><span>Curitiba · Afonso Pena</span></td>
-            <td class="num"><div class="tm">20:35</div></td>
-            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
-            <td class="num"><div class="tm">21:50</div></td>
-            <td class="dur"><b>1h15</b><span>sem escalas</span></td>
-          </tr>
-          <tr class="cx"><td colspan="6">✦ Conexão em São Paulo (GRU) · 1h55 de espera</td></tr>
-          <tr>
-            <td><div class="fno">LATAM 6346<small>Operado por Delta · A330-900</small></div></td>
-            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
-            <td class="num"><div class="tm">23:45</div></td>
-            <td class="ap"><b>ATL</b><span>Atlanta</span></td>
-            <td class="num"><div class="tm">07:48<small>+1</small></div></td>
-            <td class="dur"><b>10h03</b><span>sem escalas</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- OPÇÕES -->
-    <div class="eyebrow" style="margin-top:2mm">Investimento · valores por passageiro</div>
-    <div class="opts">
-      <div class="opt">
-        <div class="top">
-          <div><div class="k">Opção 1</div><div class="t">Classe Econômica</div></div>
-          <div class="fare">tarifa PLU</div>
-        </div>
-        <ul class="mid">
-          <li>Mesmos 4 voos e horários acima</li>
-          <li>1 bagagem despachada inclusa em todos os trechos</li>
-          <li>Bagagem de mão + item pessoal</li>
-          <li>Assento padrão em classe econômica</li>
-        </ul>
-        <div class="price">
-          <div><div class="l">Total</div><div class="brl"><small>R$</small>10.053,76</div></div>
-          <div class="usd">USD 1.995,47</div>
-        </div>
-      </div>
-      <div class="opt hi">
-        <div class="top">
-          <div><div class="k">Opção 2</div><div class="t">Premium Economy</div></div>
-          <div class="fare">tarifa PEF</div>
-        </div>
-        <ul class="mid">
-          <li>Mesmos 4 voos e horários acima</li>
-          <li>1 bagagem despachada inclusa em todos os trechos</li>
-          <li>Cabine Premium Economy nos voos internacionais: assento mais largo, maior reclinação e espaço para as pernas</li>
-          <li>Embarque prioritário e serviço de bordo diferenciado</li>
-        </ul>
-        <div class="price">
-          <div><div class="l">Total</div><div class="brl"><small>R$</small>17.385,50</div></div>
-          <div class="usd">USD 3.450,67</div>
-        </div>
-      </div>
-    </div>
+    <div class="eyebrow">Investimento · valores por passageiro, taxas inclusas</div>
+    <h2 class="h2">Resumo das opções</h2>
+    <table class="sum">
+      <thead><tr>
+        <th style="width:12mm"></th><th>Saída</th><th>Cia aérea</th><th>Cabine internacional</th><th>Bagagem</th><th>Tempo de viagem</th><th class="r">Valor total</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><div class="no">1</div></td>
+          <td class="ori"><b>Orlando</b><span>MCO → CWB · via Campinas</span></td>
+          <td>Azul</td>
+          <td class="cab">Econômica</td>
+          <td>1 bagagem</td>
+          <td class="tt">ida <b>15h35</b> · volta <b>15h15</b></td>
+          <td class="r"><div class="brl"><small>R$</small>6.256,85</div><div class="usd">USD 1.241,85</div></td>
+        </tr>
+        <tr>
+          <td><div class="no">2</div></td>
+          <td class="ori"><b>Miami</b><span>MIA → CWB · via São Paulo</span></td>
+          <td>LATAM</td>
+          <td class="cab">Econômica</td>
+          <td>1 bagagem</td>
+          <td class="tt">ida <b>20h55</b> · volta <b>12h30</b></td>
+          <td class="r"><div class="brl"><small>R$</small>6.980,90</div><div class="usd">USD 1.385,57</div></td>
+        </tr>
+        <tr>
+          <td><div class="no">3</div></td>
+          <td class="ori"><b>Atlanta</b><span>ATL → CWB · via São Paulo</span></td>
+          <td>LATAM</td>
+          <td class="cab">Econômica</td>
+          <td>1 bagagem</td>
+          <td class="tt">ida <b>14h45</b> · volta <b>13h13</b></td>
+          <td class="r"><div class="brl"><small>R$</small>10.053,76</div><div class="usd">USD 1.995,47</div></td>
+        </tr>
+        <tr>
+          <td><div class="no">4</div></td>
+          <td class="ori"><b>Miami</b><span>MIA → CWB · via São Paulo</span></td>
+          <td>American Airlines</td>
+          <td class="cab">Premium Economy</td>
+          <td>2 bagagenss</td>
+          <td class="tt">ida <b>12h35</b> · volta <b>13h10</b></td>
+          <td class="r"><div class="brl"><small>R$</small>14.374,00</div><div class="usd">USD 2.852,95</div></td>
+        </tr>
+        <tr>
+          <td><div class="no">5</div></td>
+          <td class="ori"><b>Atlanta</b><span>ATL → CWB · via São Paulo</span></td>
+          <td>LATAM</td>
+          <td class="cab">Premium Economy</td>
+          <td>1 bagagem</td>
+          <td class="tt">ida <b>14h45</b> · volta <b>13h13</b></td>
+          <td class="r"><div class="brl"><small>R$</small>17.385,50</div><div class="usd">USD 3.450,67</div></td>
+        </tr>
+        <tr>
+          <td><div class="no">6</div></td>
+          <td class="ori"><b>Orlando</b><span>MCO → CWB · via São Paulo</span></td>
+          <td>LATAM</td>
+          <td class="cab">Premium Business</td>
+          <td>1 bagagem</td>
+          <td class="tt">ida <b>12h20</b> · volta <b>14h20</b></td>
+          <td class="r"><div class="brl"><small>R$</small>34.712,12</div><div class="usd">USD 6.889,65</div></td>
+        </tr>
+      </tbody>
+    </table>
 
     <div class="fx">
-      <span class="a">Cotação 23/10 · USD 1,00 = R$ 5,04 · valores com taxas de embarque inclusas</span>
+      <span class="a">Cotação 23/10 · USD 1,00 = R$ 5,04 · detalhes de cada opção nas páginas seguintes</span>
       <span class="b">*Nada reservado, apenas cotado</span>
     </div>
 
-    <!-- OBSERVAÇÕES -->
     <div class="notes">
       <div>
         <div class="note-h">Pagamento</div>
@@ -281,18 +289,418 @@ tr.cx td{ padding:1.5mm 3mm; background:var(--dest-soft); font-size:8.5pt; color
       </div>
       <div>
         <div class="note-h">Importante</div>
-        <div class="note-t">Tarifa e disponibilidade sujeitas a alteração até a emissão. Voos noturnos com chegada no dia seguinte (+1). Documentos: passaporte válido e, se aplicável, visto/ESTA.</div>
+        <div class="note-t">Tarifa e disponibilidade sujeitas a alteração até a emissão. Documentos: passaporte válido e, se aplicável, visto/ESTA. Horários no fuso local de cada aeroporto.</div>
       </div>
     </div>
-
   </div>
-
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
     <span class="sep">·</span>
     <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
     <span class="sep">·</span>
     <span class="addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+    <span class="pg">1 / 4</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hd">
+    <div class="logo"><img src="assets/logo-lusatravel-branca.png" alt="LusaTravel · travel agency"></div>
+    <div class="tag"><b>Opções 3 e 5</b><span>Saída por Atlanta · LATAM / Delta</span></div>
+  </div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="sec">
+      <div><div class="t">Saída por <em>Atlanta</em></div><div class="s">ATL → São Paulo → Curitiba · LATAM em codeshare com Delta Air Lines · mesmos voos nas duas opções</div></div>
+      <div class="r">Ida <b>14h45</b> porta a porta<br>Volta <b>13h13</b> porta a porta</div>
+    </div>
+    <div class="blk">
+      <table class="fl">
+        <thead><tr>
+          <th style="width:20%">Voo</th><th style="width:19%">Origem</th><th style="width:13%">Saída</th>
+          <th style="width:19%">Destino</th><th style="width:13%">Chegada</th><th>Duração</th>
+        </tr></thead>
+        <tbody>
+          <tr class="lg"><td colspan="6">Ida<span>Quarta, 09 de dezembro de 2026</span><em>tempo total <b>14h45</b></em></td></tr>
+          <tr>
+            <td><div class="fno">LATAM 6345<small>Operado por Delta · Airbus A330-300</small></div></td>
+            <td class="ap"><b>ATL</b><span>Atlanta</span></td>
+            <td class="tm"><b>18:05</b><span>Qua 09 Dez</span></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>05:40</b><span>Qui 10 Dez</span></td>
+            <td class="dur"><b>9h35</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="cx"><td colspan="6">✦ Conexão em São Paulo (GRU) · 4h05 de espera</td></tr>
+          <tr>
+            <td><div class="fno">LATAM 3288<small>Airbus A321</small></div></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>09:45</b><span>Qui 10 Dez</span></td>
+            <td class="ap"><b>CWB</b><span>Curitiba · Afonso Pena</span></td>
+            <td class="tm"><b>10:50</b><span>Qui 10 Dez</span></td>
+            <td class="dur"><b>1h05</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="lg"><td colspan="6">Volta<span>Sábado, 16 de janeiro de 2027</span><em>tempo total <b>13h13</b></em></td></tr>
+          <tr>
+            <td><div class="fno">LATAM 4569<small>Embraer E195</small></div></td>
+            <td class="ap"><b>CWB</b><span>Curitiba · Afonso Pena</span></td>
+            <td class="tm"><b>20:35</b><span>Sáb 16 Jan</span></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>21:50</b><span>Sáb 16 Jan</span></td>
+            <td class="dur"><b>1h15</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="cx"><td colspan="6">✦ Conexão em São Paulo (GRU) · 1h55 de espera</td></tr>
+          <tr>
+            <td><div class="fno">LATAM 6346<small>Operado por Delta · Airbus A330-900</small></div></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>23:45</b><span>Sáb 16 Jan</span></td>
+            <td class="ap"><b>ATL</b><span>Atlanta</span></td>
+            <td class="tm"><b>07:48</b><span>Dom 17 Jan</span></td>
+            <td class="dur"><b>10h03</b><span>sem escalas</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="eyebrow">Escolha a cabine · valores por passageiro, taxas inclusas</div>
+    <div class="opts">
+      <div class="opt">
+        <div class="top">
+          <div class="l"><div class="no">3</div><div><div class="k">Opção 3</div><div class="t">Classe Econômica</div></div></div>
+          <div class="fare">Tarifa PLU · classe S<br>1 bagagem despachada</div>
+        </div>
+        <ul class="mid">
+          <li>Voos internacionais noturnos, operados pela Delta em codeshare com a LATAM</li>
+          <li>Assento padrão em classe econômica</li>
+          <li>1 bagagem despachada + bagagem de mão e item pessoal</li>
+        </ul>
+        <div class="price">
+          <div><div class="l">Total por passageiro</div><div class="brl"><small>R$</small>10.053,76</div></div>
+          <div class="usd">USD 1.995,47</div>
+        </div>
+      </div>
+      <div class="opt hi">
+        <div class="top">
+          <div class="l"><div class="no">5</div><div><div class="k">Opção 5</div><div class="t">Premium Economy</div></div></div>
+          <div class="fare">Tarifa PEF · classe P<br>1 bagagem despachada</div>
+        </div>
+        <ul class="mid">
+          <li>Mesmos voos e horários da Opção 3</li>
+          <li>Premium Economy nos voos internacionais: assento mais largo, maior reclinação, embarque prioritário e serviço de bordo diferenciado</li>
+          <li>1 bagagem despachada + bagagem de mão e item pessoal</li>
+        </ul>
+        <div class="price">
+          <div><div class="l">Total por passageiro</div><div class="brl"><small>R$</small>17.385,50</div></div>
+          <div class="usd">USD 3.450,67</div>
+        </div>
+      </div>
+    </div>
+    <div class="fx">
+      <span class="a">Cotação 23/10 · USD 1,00 = R$ 5,04</span>
+      <span class="b">*Nada reservado, apenas cotado</span>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    <span class="sep">·</span>
+    <span class="addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+    <span class="pg">2 / 4</span>
+  </div>
+</section>
+
+<section class="page dense">
+  <div class="hd">
+    <div class="logo"><img src="assets/logo-lusatravel-branca.png" alt="LusaTravel · travel agency"></div>
+    <div class="tag"><b>Opções 1 e 6</b><span>MCO → Campinas ou São Paulo → Curitiba · Azul ou LATAM</span></div>
+  </div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="sec">
+      <div><div class="t">Saída por <em>Orlando</em></div><div class="s">MCO → Campinas ou São Paulo → Curitiba · Azul ou LATAM</div></div>
+      <div class="r">Valores por passageiro<br>taxas de embarque inclusas</div>
+    </div>
+    <div class="blk">
+      <div class="blk-h">
+        <div class="l"><div class="no">1</div><div><div class="k">Opção 1</div><div class="t">Azul <span>· Classe Econômica</span></div></div></div>
+        <div class="p"><div class="brl"><small>R$</small>6.256,85</div><div class="usd">USD 1.241,85 · Tarifa +AZ · classe K</div></div>
+      </div>
+      <div class="chips">
+        <span class="chip">Bagagem <b>1 bagagem despachada</b></span>
+        <span class="chip">Ida <b>15h35</b> porta a porta</span>
+        <span class="chip">Volta <b>15h15</b> porta a porta</span>
+        <span class="chip">Internacional em <b>Econômica</b></span>
+      </div>
+      <table class="fl">
+        <thead><tr>
+          <th style="width:20%">Voo</th><th style="width:19%">Origem</th><th style="width:13%">Saída</th>
+          <th style="width:19%">Destino</th><th style="width:13%">Chegada</th><th>Duração</th>
+        </tr></thead>
+        <tbody>
+          <tr class="lg"><td colspan="6">Ida<span>Quarta, 09 de dezembro de 2026</span><em>tempo total <b>15h35</b></em></td></tr>
+          <tr>
+            <td><div class="fno">Azul 8707<small>Airbus A330-900</small></div></td>
+            <td class="ap"><b>MCO</b><span>Orlando</span></td>
+            <td class="tm"><b>19:00</b><span>Qua 09 Dez</span></td>
+            <td class="ap"><b>VCP</b><span>Campinas · Viracopos</span></td>
+            <td class="tm"><b>05:55</b><span>Qui 10 Dez</span></td>
+            <td class="dur"><b>8h55</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="cx"><td colspan="6">✦ Conexão em Campinas (VCP) · 5h35 de espera</td></tr>
+          <tr>
+            <td><div class="fno">Azul 2772<small>Embraer E195</small></div></td>
+            <td class="ap"><b>VCP</b><span>Campinas · Viracopos</span></td>
+            <td class="tm"><b>11:30</b><span>Qui 10 Dez</span></td>
+            <td class="ap"><b>CWB</b><span>Curitiba · Afonso Pena</span></td>
+            <td class="tm"><b>12:35</b><span>Qui 10 Dez</span></td>
+            <td class="dur"><b>1h05</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="lg"><td colspan="6">Volta<span>Sábado, 16 de janeiro de 2027</span><em>tempo total <b>15h15</b></em></td></tr>
+          <tr>
+            <td><div class="fno">Azul 4315<small>Embraer E195</small></div></td>
+            <td class="ap"><b>CWB</b><span>Curitiba · Afonso Pena</span></td>
+            <td class="tm"><b>06:15</b><span>Sáb 16 Jan</span></td>
+            <td class="ap"><b>VCP</b><span>Campinas · Viracopos</span></td>
+            <td class="tm"><b>07:15</b><span>Sáb 16 Jan</span></td>
+            <td class="dur"><b>1h00</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="cx"><td colspan="6">✦ Conexão em Campinas (VCP) · 5h00 de espera</td></tr>
+          <tr>
+            <td><div class="fno">Azul 8708<small>Airbus A330-200</small></div></td>
+            <td class="ap"><b>VCP</b><span>Campinas · Viracopos</span></td>
+            <td class="tm"><b>12:15</b><span>Sáb 16 Jan</span></td>
+            <td class="ap"><b>MCO</b><span>Orlando</span></td>
+            <td class="tm"><b>19:30</b><span>Sáb 16 Jan</span></td>
+            <td class="dur"><b>9h15</b><span>sem escalas</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="blk-n">
+        <li>Voos internacionais diretos Orlando ⇄ Campinas (Viracopos) pela Azul</li>
+        <li>Conexão doméstica no mesmo aeroporto, sem troca de terminal entre cidades</li>
+        <li>1 bagagem despachada + bagagem de mão e item pessoal</li>
+      </ul>
+    </div>
+    <div class="blk">
+      <div class="blk-h">
+        <div class="l"><div class="no">6</div><div><div class="k">Opção 6</div><div class="t">LATAM <span>· Premium Business</span></div></div></div>
+        <div class="p"><div class="brl"><small>R$</small>34.712,12</div><div class="usd">USD 6.889,65 · Tarifa PBS · classes I/W</div></div>
+      </div>
+      <div class="chips">
+        <span class="chip">Bagagem <b>1 bagagem despachada</b></span>
+        <span class="chip">Ida <b>12h20</b> porta a porta</span>
+        <span class="chip">Volta <b>14h20</b> porta a porta</span>
+        <span class="chip">Internacional em <b>Premium Business</b></span>
+      </div>
+      <table class="fl">
+        <thead><tr>
+          <th style="width:20%">Voo</th><th style="width:19%">Origem</th><th style="width:13%">Saída</th>
+          <th style="width:19%">Destino</th><th style="width:13%">Chegada</th><th>Duração</th>
+        </tr></thead>
+        <tbody>
+          <tr class="lg"><td colspan="6">Ida<span>Quarta, 09 de dezembro de 2026</span><em>tempo total <b>12h20</b></em></td></tr>
+          <tr>
+            <td><div class="fno">LATAM 8187<small>Boeing 787-9</small></div></td>
+            <td class="ap"><b>MCO</b><span>Orlando</span></td>
+            <td class="tm"><b>22:00</b><span>Qua 09 Dez</span></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>08:50</b><span>Qui 10 Dez</span></td>
+            <td class="dur"><b>8h50</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="cx"><td colspan="6">✦ Conexão em São Paulo (GRU) · 2h25 de espera</td></tr>
+          <tr>
+            <td><div class="fno">LATAM 4512<small>Embraer E195</small></div></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>11:15</b><span>Qui 10 Dez</span></td>
+            <td class="ap"><b>CWB</b><span>Curitiba · Afonso Pena</span></td>
+            <td class="tm"><b>12:20</b><span>Qui 10 Dez</span></td>
+            <td class="dur"><b>1h05</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="lg"><td colspan="6">Volta<span>Sábado, 16 de janeiro de 2027</span><em>tempo total <b>14h20</b></em></td></tr>
+          <tr>
+            <td><div class="fno">LATAM 4709<small>Airbus A320</small></div></td>
+            <td class="ap"><b>CWB</b><span>Curitiba · Afonso Pena</span></td>
+            <td class="tm"><b>06:10</b><span>Sáb 16 Jan</span></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>07:25</b><span>Sáb 16 Jan</span></td>
+            <td class="dur"><b>1h15</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="cx"><td colspan="6">✦ Conexão em São Paulo (GRU) · 4h15 de espera</td></tr>
+          <tr>
+            <td><div class="fno">LATAM 8186<small>Boeing 787-9</small></div></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>11:40</b><span>Sáb 16 Jan</span></td>
+            <td class="ap"><b>MCO</b><span>Orlando</span></td>
+            <td class="tm"><b>18:30</b><span>Sáb 16 Jan</span></td>
+            <td class="dur"><b>8h50</b><span>sem escalas</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="blk-n">
+        <li>Premium Business nos voos internacionais: poltrona-cama totalmente reclinável, sala VIP e serviço de bordo premium</li>
+        <li>Trechos domésticos em classe econômica</li>
+        <li>1 bagagem despachada + bagagem de mão e item pessoal</li>
+      </ul>
+    </div>
+    <div class="fx">
+      <span class="a">Cotação 23/10 · USD 1,00 = R$ 5,04</span>
+      <span class="b">*Nada reservado, apenas cotado</span>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    <span class="sep">·</span>
+    <span class="addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+    <span class="pg">3 / 4</span>
+  </div>
+</section>
+
+<section class="page dense">
+  <div class="hd">
+    <div class="logo"><img src="assets/logo-lusatravel-branca.png" alt="LusaTravel · travel agency"></div>
+    <div class="tag"><b>Opções 2 e 4</b><span>MIA → São Paulo → Curitiba · LATAM ou American Airlines</span></div>
+  </div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="sec">
+      <div><div class="t">Saída por <em>Miami</em></div><div class="s">MIA → São Paulo → Curitiba · LATAM ou American Airlines</div></div>
+      <div class="r">Valores por passageiro<br>taxas de embarque inclusas</div>
+    </div>
+    <div class="blk">
+      <div class="blk-h">
+        <div class="l"><div class="no">2</div><div><div class="k">Opção 2</div><div class="t">LATAM <span>· Classe Econômica</span></div></div></div>
+        <div class="p"><div class="brl"><small>R$</small>6.980,90</div><div class="usd">USD 1.385,57 · Tarifa PLU · classes S/V</div></div>
+      </div>
+      <div class="chips">
+        <span class="chip">Bagagem <b>1 bagagem despachada</b></span>
+        <span class="chip">Ida <b>20h55</b> porta a porta</span>
+        <span class="chip">Volta <b>12h30</b> porta a porta</span>
+        <span class="chip">Internacional em <b>Econômica</b></span>
+      </div>
+      <table class="fl">
+        <thead><tr>
+          <th style="width:20%">Voo</th><th style="width:19%">Origem</th><th style="width:13%">Saída</th>
+          <th style="width:19%">Destino</th><th style="width:13%">Chegada</th><th>Duração</th>
+        </tr></thead>
+        <tbody>
+          <tr class="lg"><td colspan="6">Ida<span>Quarta, 09 de dezembro de 2026</span><em>tempo total <b>20h55</b></em></td></tr>
+          <tr>
+            <td><div class="fno">LATAM 8195<small>Boeing 787-9</small></div></td>
+            <td class="ap"><b>MIA</b><span>Miami</span></td>
+            <td class="tm"><b>09:20</b><span>Qua 09 Dez</span></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>19:45</b><span>Qua 09 Dez</span></td>
+            <td class="dur"><b>8h25</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="cx"><td colspan="6">✦ Conexão em São Paulo (GRU) · 11h30 de espera <i>· conexão longa · pernoite em Guarulhos</i></td></tr>
+          <tr>
+            <td><div class="fno">LATAM 3284<small>Airbus A321</small></div></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>07:15</b><span>Qui 10 Dez</span></td>
+            <td class="ap"><b>CWB</b><span>Curitiba · Afonso Pena</span></td>
+            <td class="tm"><b>08:15</b><span>Qui 10 Dez</span></td>
+            <td class="dur"><b>1h00</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="lg"><td colspan="6">Volta<span>Sábado, 16 de janeiro de 2027</span><em>tempo total <b>12h30</b></em></td></tr>
+          <tr>
+            <td><div class="fno">LATAM 4709<small>Airbus A320</small></div></td>
+            <td class="ap"><b>CWB</b><span>Curitiba · Afonso Pena</span></td>
+            <td class="tm"><b>06:10</b><span>Sáb 16 Jan</span></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>07:25</b><span>Sáb 16 Jan</span></td>
+            <td class="dur"><b>1h15</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="cx"><td colspan="6">✦ Conexão em São Paulo (GRU) · 2h50 de espera</td></tr>
+          <tr>
+            <td><div class="fno">LATAM 8194<small>Boeing 777-300ER</small></div></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>10:15</b><span>Sáb 16 Jan</span></td>
+            <td class="ap"><b>MIA</b><span>Miami</span></td>
+            <td class="tm"><b>16:40</b><span>Sáb 16 Jan</span></td>
+            <td class="dur"><b>8h25</b><span>sem escalas</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="blk-n">
+        <li>Voo diurno na ida (chega em São Paulo às 19:45) e conexão longa de 11h30 em Guarulhos</li>
+        <li>Volta rápida: 12h30 de porta a porta</li>
+        <li>1 bagagem despachada + bagagem de mão e item pessoal</li>
+      </ul>
+    </div>
+    <div class="blk">
+      <div class="blk-h">
+        <div class="l"><div class="no">4</div><div><div class="k">Opção 4</div><div class="t">American Airlines <span>· Premium Economy</span></div></div></div>
+        <div class="p"><div class="brl"><small>R$</small>14.374,00</div><div class="usd">USD 2.852,95 · Tarifa PEC · classes P/V</div></div>
+      </div>
+      <div class="chips">
+        <span class="chip">Bagagem <b>2 bagagens despachadas</b></span>
+        <span class="chip">Ida <b>12h35</b> porta a porta</span>
+        <span class="chip">Volta <b>13h10</b> porta a porta</span>
+        <span class="chip">Internacional em <b>Premium Economy</b></span>
+      </div>
+      <table class="fl">
+        <thead><tr>
+          <th style="width:20%">Voo</th><th style="width:19%">Origem</th><th style="width:13%">Saída</th>
+          <th style="width:19%">Destino</th><th style="width:13%">Chegada</th><th>Duração</th>
+        </tr></thead>
+        <tbody>
+          <tr class="lg"><td colspan="6">Ida<span>Quarta, 09 de dezembro de 2026</span><em>tempo total <b>12h35</b></em></td></tr>
+          <tr>
+            <td><div class="fno">American 929<small>Boeing 777-300ER</small></div></td>
+            <td class="ap"><b>MIA</b><span>Miami</span></td>
+            <td class="tm"><b>19:45</b><span>Qua 09 Dez</span></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>06:20</b><span>Qui 10 Dez</span></td>
+            <td class="dur"><b>8h35</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="cx"><td colspan="6">✦ Conexão em São Paulo (GRU) · 2h50 de espera</td></tr>
+          <tr>
+            <td><div class="fno">American 7710<small>Operado por GOL · Boeing 737</small></div></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>09:10</b><span>Qui 10 Dez</span></td>
+            <td class="ap"><b>CWB</b><span>Curitiba · Afonso Pena</span></td>
+            <td class="tm"><b>10:20</b><span>Qui 10 Dez</span></td>
+            <td class="dur"><b>1h10</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="lg"><td colspan="6">Volta<span>Sábado, 16 de janeiro de 2027</span><em>tempo total <b>13h10</b></em></td></tr>
+          <tr>
+            <td><div class="fno">American 7652<small>Operado por GOL · Boeing 737</small></div></td>
+            <td class="ap"><b>CWB</b><span>Curitiba · Afonso Pena</span></td>
+            <td class="tm"><b>19:40</b><span>Sáb 16 Jan</span></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>20:55</b><span>Sáb 16 Jan</span></td>
+            <td class="dur"><b>1h15</b><span>sem escalas</span></td>
+          </tr>
+          <tr class="cx"><td colspan="6">✦ Conexão em São Paulo (GRU) · 3h10 de espera</td></tr>
+          <tr>
+            <td><div class="fno">American 906<small>Boeing 777-200</small></div></td>
+            <td class="ap"><b>GRU</b><span>São Paulo · Guarulhos</span></td>
+            <td class="tm"><b>00:05</b><span>Dom 17 Jan</span></td>
+            <td class="ap"><b>MIA</b><span>Miami</span></td>
+            <td class="tm"><b>06:50</b><span>Dom 17 Jan</span></td>
+            <td class="dur"><b>8h45</b><span>sem escalas</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="blk-n">
+        <li>Premium Economy nos voos internacionais: assento mais largo, maior reclinação e espaço para as pernas</li>
+        <li>Trechos domésticos em classe econômica, operados pela GOL em codeshare</li>
+        <li>2 bagagens despachadas + bagagem de mão e item pessoal</li>
+      </ul>
+    </div>
+    <div class="fx">
+      <span class="a">Cotação 23/10 · USD 1,00 = R$ 5,04</span>
+      <span class="b">*Nada reservado, apenas cotado</span>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    <span class="sep">·</span>
+    <span class="addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+    <span class="pg">4 / 4</span>
   </div>
 </section>
 
