@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lusa Travel · Tulum — Ana e Antonia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#404626; --green-dark:#363b1f; --green-soft:#5a6238;
+  --sage:#d9ead3; --sage-head:#c6d8b0;
+  --ink:#333131; --muted:#6f6f68; --line:#e7e7e0; --bg:#ffffff; --cream:#faf9f5;
+  --terra:#b4622f;
+  --shadow:0 10px 30px rgba(64,70,38,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{line-height:1.15}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:64px 56px}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+.muted{color:var(--muted)}
+
+/* ---------- HERO ---------- */
+.hero{padding:56px 56px 40px}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.hero h1 .amp{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-style:italic}
+.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
+.hero-img{margin:34px 0 0;height:340px;border-radius:14px;overflow:hidden;position:relative;
+  display:flex;align-items:flex-end;box-shadow:var(--shadow);
+  background:
+    radial-gradient(120% 130% at 12% 8%, rgba(40,170,180,.55), rgba(20,120,140,.15) 42%, transparent 60%),
+    radial-gradient(120% 130% at 92% 96%, rgba(230,190,110,.6), rgba(210,150,70,.2) 44%, transparent 64%),
+    linear-gradient(120deg, #0f7d8c 0%, #1aa3ab 28%, #46c4bf 52%, #e2c078 80%, #d99a4a 100%);}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-img::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top, rgba(12,30,32,.6), rgba(12,30,32,.05) 55%, transparent)}
+.hero-img .cap{position:relative;z-index:2;padding:22px 26px;color:#fff}
+.hero-img .cap .k{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;opacity:.92}
+.hero-img .cap .t{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.7rem;font-weight:600;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
+.hero-info .r{text-align:right}
+.hero-info p{font-size:.95rem}
+
+/* glossary chips */
+.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);
+  border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
+.chip b{font-size:1.15rem;font-weight:700}
+.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
+.chip .ic svg{width:18px;height:18px}
+
+/* ---------- AEREO ---------- */
+.air{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:18px;background:#fff;box-shadow:var(--shadow)}
+.air-head{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--green);color:#fff;padding:14px 22px}
+.air-head .dir{font-weight:700;letter-spacing:.14em;font-size:.78rem;text-transform:uppercase}
+.air-head .route{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;font-weight:600}
+.leg{display:grid;grid-template-columns:190px 1fr auto;gap:18px;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line)}
+.leg .fl{font-size:.78rem;color:var(--muted)}
+.leg .fl b{display:block;color:var(--ink);font-size:.92rem;font-weight:600}
+.leg .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.leg .pt .code{font-weight:700;font-size:1.05rem}
+.leg .pt .tm{font-size:.82rem;color:var(--muted)}
+.leg .arrow{color:var(--green-soft);flex:none}
+.leg .cls{text-align:right;font-size:.78rem}
+.leg .cls b{display:block;color:var(--green);font-size:.86rem}
+.cnx{display:flex;align-items:center;gap:8px;padding:9px 22px;background:#f4f5ef;font-size:.75rem;color:var(--muted);border-bottom:1px solid var(--line)}
+.cnx svg{width:14px;height:14px;flex:none;color:var(--green-soft)}
+.air-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;background:#f4f5ef}
+.air-foot .lbl{font-size:.78rem;color:var(--muted)}
+.air-foot .val{font-weight:700;font-size:1.3rem;color:var(--green)}
+
+/* ---------- HOTELS ---------- */
+.city-block{margin-top:40px}
+.city-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--green);padding-bottom:10px;margin-bottom:26px}
+.city-head h3{font-size:1.5rem;font-weight:700}
+.city-head .dates{color:var(--green-soft);font-weight:600;font-size:.92rem;letter-spacing:.04em}
+.hotel{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:18px;background:#fff;box-shadow:var(--shadow)}
+.hotel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 22px 14px}
+.hotel-name{font-size:1.14rem;font-weight:600;display:flex;align-items:center;gap:12px}
+.hotel-name .bldg{width:36px;height:36px;flex:none;border:1.6px solid var(--ink);border-radius:50%;display:grid;place-items:center}
+.hotel-name .bldg svg{width:18px;height:18px}
+.opt-tag{display:inline-block;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+  padding:4px 9px;border-radius:20px;margin-left:2px;vertical-align:middle;background:#efe7d6;color:#8a6d2f}
+.hotel-price{text-align:right;flex:none}
+.hotel-price .v{font-size:1.4rem;font-weight:700;color:var(--green)}
+.hotel-price .u{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.attrs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:4px 22px 22px}
+.attr .k{font-size:.72rem;font-weight:600;letter-spacing:.06em}
+.attr .val{font-size:.9rem;color:var(--muted);margin-top:3px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:2px 22px 8px}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;display:block;background:#eceadf}
+
+/* experience card */
+.svc{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:start;border:1px solid var(--line);
+  border-radius:14px;padding:18px 22px;margin-top:14px;background:#fff;box-shadow:var(--shadow)}
+.svc .ic{width:52px;height:52px;background:var(--green);border-radius:12px;display:grid;place-items:center;color:#fff}
+.svc .ic svg{width:24px;height:24px}
+.svc .t{font-weight:600;font-size:1.02rem}
+.svc .d{color:var(--muted);font-size:.86rem;margin-top:2px}
+.svc .dt{text-align:right;font-weight:700;font-size:.92rem;color:var(--green-soft);white-space:nowrap}
+.svc .d .sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.08rem;font-weight:600;color:var(--green-dark);margin:10px 0 6px;line-height:1.3}
+.svc .d .sub2{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--green-soft);margin:12px 0 4px}
+.svc .d p{margin-bottom:8px;font-size:.86rem;line-height:1.6}
+.svc .d ul.incl,.svc .d ul.tt{margin:6px 0 0 18px;padding:0}
+.svc .d ul.incl li,.svc .d ul.tt li{margin:4px 0;font-size:.85rem;line-height:1.5}
+.svc .d .fine{margin-top:10px;padding-top:9px;border-top:1px solid var(--line);font-size:.78rem;line-height:1.55}
+.expcard .tgal{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:8px}
+.expcard .tgal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;display:block;background:#eceadf}
+@media(max-width:640px){.expcard .tgal{grid-template-columns:1fr}}
+
+.pkg-note{background:var(--sage);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:.9rem;color:var(--green-dark)}
+.expcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:14px;background:#fff;box-shadow:var(--shadow)}
+.expcard .svc{border:none;box-shadow:none;margin:0;border-radius:0;border-bottom:1px solid var(--line)}
+.expcard .tgal{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:8px}
+.expcard .tgal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;display:block;background:#eceadf}
+
+/* ---------- TABLE ---------- */
+.tbl-wrap{overflow-x:auto;margin-top:30px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:560px}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line)}
+.sec-row td{background:var(--sage);font-weight:700;text-align:center;letter-spacing:.04em;color:var(--green-dark)}
+.head-row td{background:#efeee7;font-weight:600;color:#4a4a44}
+td .rm{color:var(--muted);font-size:.82rem;font-weight:400;margin-top:2px}
+.total-row td{background:#eef2e6;font-weight:700;font-size:1rem}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+
+/* ---------- PAYMENT / OBS ---------- */
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.pay h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
+.pay p{font-size:.9rem;margin-bottom:4px}
+.obs{margin-top:28px;font-size:.82rem;color:var(--muted)}
+.obs li{margin:6px 0 6px 18px}
+.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px;letter-spacing:.02em}
+
+/* ---------- FOOTER ---------- */
+.footer{background:var(--green);color:#fff;padding:44px 56px;position:relative;overflow:hidden}
+.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
+.footlogo{width:190px;height:auto;display:block;margin-bottom:14px}
+
+.sh .eyebrow{margin-bottom:10px;display:block}
+.brandbar{display:flex;flex-direction:column;align-items:center;gap:8px;padding:38px 0 6px}
+.brandbar .brandlogo{width:210px;height:auto;display:block}
+
+@media(max-width:720px){
+  .leg{grid-template-columns:1fr;gap:8px}
+  .air-head{flex-direction:column;align-items:flex-start;gap:2px}
+  .section,.hero,.footer{padding-left:24px;padding-right:24px}
+  .hero h1{font-size:2.2rem}
+  .hero-info{grid-template-columns:1fr}
+  .hero-info .r{text-align:left}
+  .attrs{grid-template-columns:repeat(2,1fr)}
+  .pay{grid-template-columns:1fr}
+  .hotel-top{flex-direction:column}
+  .hotel-price{text-align:left}
+  .svc{grid-template-columns:1fr;text-align:left}
+  .svc .dt{text-align:left}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ================= BRAND BAR ================= -->
+  <div class="brandbar">
+    <img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel — travel agency">
+  </div>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="eyebrow">Cotação para sua viagem</div>
+    <h1>TULUM</h1>
+    <div class="accent-line"></div>
+    <p class="hero-sub">Riviera Maya, México · Transfers, seguro e passeios — <b>30 de dezembro de 2026 a 06 de janeiro de 2027</b></p>
+
+    <div class="hero-img">
+      <img src="img/capa.jpg" alt="Tulum · Riviera Maya" onerror="this.style.display='none'">
+    </div>
+
+    <div class="hero-info">
+      <div>
+        <div class="lbl">Detalhes da viagem</div>
+        <p>4 adultos · hospedados no <b>Secrets Tulum Resort &amp; Beach Club</b></p>
+        <p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>29/09/2026</b> · valores em <b>BRL</b> · Dólar: <b>USD 1 = R$ 5,27</b></p>
+      </div>
+      <div class="r">
+        <div class="lbl">Contato</div>
+        <p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p>
+      </div>
+    </div>
+
+    <div class="gloss">
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16V9l2-4h12l2 4v7"/><path d="M2 16h20"/><circle cx="8" cy="17" r="1.6"/><circle cx="16" cy="17" r="1.6"/></svg></span><b>2</b>&nbsp;Transfers</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><b>1</b>&nbsp;Seguro</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M5 17l1.5-7h11L19 17M12 5v5"/></svg></span><b>2</b>&nbsp;Excursões</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="16" cy="8" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 20c0-2 .8-3.4 2-4"/></svg></span><b>4</b>&nbsp;Adultos</div>
+    </div>
+  </header>
+
+  <!-- ================= TRANSFERS ================= -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Traslados</span>
+    <h2>Transfers privativos</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Traslados <b>privativos</b> de chegada e de saída, entre o <b>Aeroporto de Cancún (CUN)</b> e o <b>Secrets Tulum Resort &amp; Beach Club</b>. Valor total do conjunto: <b>R$ 6.622</b>. Parcelável em <b>até 5x</b>.</p>
+
+    <div class="expcard">
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16V9l2-4h12l2 4v7"/><path d="M2 16h20"/><circle cx="8" cy="17" r="1.6"/><circle cx="16" cy="17" r="1.6"/></svg></div>
+        <div><div class="t">Transfer Ana e família</div><div class="d">Aeroporto CUN → Secrets Tulum Resort &amp; Beach Club → Aeroporto CUN<br><b>3 adultos</b> · privativo · <b>Standard Van</b></div></div><div class="dt">30/12 &ndash; 06/01<br><span style="color:var(--green);font-size:1.05rem">R$ 3.542</span></div></div>
+    </div>
+
+    <div class="expcard">
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16V9l2-4h12l2 4v7"/><path d="M2 16h20"/><circle cx="8" cy="17" r="1.6"/><circle cx="16" cy="17" r="1.6"/></svg></div>
+        <div><div class="t">Transfer Antonia</div><div class="d">Aeroporto CUN → Secrets Tulum Resort &amp; Beach Club → Aeroporto CUN<br><b>1 adulto</b> · privativo · <b>Automóvel Standard</b></div></div><div class="dt">30/12 &ndash; 06/01<br><span style="color:var(--green);font-size:1.05rem">R$ 3.080</span></div></div>
+    </div>
+
+    <div class="pkg-note">🚐 Os dois transfers somam <b>R$ 6.622</b> e cobrem os <b>4 adultos</b>, na chegada e na saída.</div>
+  </section>
+
+  <!-- ================= SEGURO ================= -->
+  <section class="section sh">
+    <span class="eyebrow">Proteção</span>
+    <h2>Seguro viagem</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Cobertura para toda a janela da viagem, incluindo o dia do retorno. Parcelável em <b>até 10x</b>.</p>
+
+    <div class="expcard">
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div><div class="t">Seguro Ana e família</div><div class="d"><b>Universal Assistance CMH 80K USA</b> · cobertura médico-hospitalar de <b>USD 80 mil</b><br><b>3 adultos</b> · vigência de <b>30/12 a 07/01</b></div></div><div class="dt">30/12 &ndash; 07/01<br><span style="color:var(--green);font-size:1.05rem">R$ 930</span></div></div>
+    </div>
+  </section>
+
+  <!-- ================= EXCURSÕES ================= -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Experiências</span>
+    <h2>Excursões</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Duas saídas de barco, em regime <b>compartilhado</b>. Valores para <b>4 adultos</b>. Valor total do conjunto: <b>R$ 6.160</b>. Parcelável em <b>até 3x</b>.</p>
+
+    <div class="expcard">
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M5 17l1.5-7h11L19 17M12 5v5"/></svg></div>
+        <div><div class="t">Isla Contoy &amp; Isla Mujeres</div><div class="d"><b>Duração de 8h</b> · transfer incluso · compartilhado · <b>passeio de lancha</b> · <b>4 adultos</b>
+          <div class="sub">Duas ilhas caribenhas em um dia</div>
+          <p>Começa por <b>Isla Contoy</b>, parque nacional protegido com número limitado de visitantes por dia, onde vivem dezenas de espécies de aves e a natureza segue intocada. Banho nas águas rasas da ilha e almoço preparado na hora. Depois, tempo livre em <b>Isla Mujeres</b> para conhecer a Playa Norte, fazer compras ou provar as delícias locais.</p>
+          <div class="sub2">O que está incluído no dia</div>
+          <ul class="incl"><li>Banho de mar nas praias das duas ilhas</li><li>Observação de aves em Isla Contoy</li><li>Observação de peixes</li><li>Tempo livre para descanso</li><li>Passeio de lancha</li></ul>
+          <div class="sub2">Roteiro do dia</div>
+          <ul class="tt">
+            <li><b>07:00 &ndash; 08:30</b> · embarque na região de Cancún</li>
+            <li><b>09:00</b> · chegada ao píer exclusivo e <i>coffee break</i></li>
+            <li><b>09:30</b> · saída de barco</li>
+            <li><b>10:00</b> · <b>mergulho de snorkel</b> com guia</li>
+            <li><b>10:50</b> · barco rumo a Isla Contoy</li>
+            <li><b>11:20</b> · chegada e tour guiado (opcional) em Isla Contoy</li>
+            <li><b>12:00</b> · almoço e tempo livre</li>
+            <li><b>14:15</b> · partida para Isla Mujeres</li>
+            <li><b>15:00</b> · chegada a Isla Mujeres e tempo livre</li>
+            <li><b>16:30</b> · retorno ao píer em Flamingos</li>
+            <li><b>17:00</b> · saída para os hotéis</li>
+          </ul>
+          <div class="fine">Horários podem variar conforme as condições do mar e do tempo. <b>Não inclui</b> a taxa de acesso ao cais e à reserva natural — <b>US$ 20 por pessoa</b>, paga no local.</div>
+        </div></div><div class="dt">02/01<br><span style="color:var(--green);font-size:1.05rem">R$ 4.160</span></div></div>
+    <div class="tgal"><img src="img/tours/contoy/1.webp" alt="Isla Contoy e Isla Mujeres" loading="lazy"><img src="img/tours/contoy/2.webp" alt="Isla Contoy e Isla Mujeres" loading="lazy"><img src="img/tours/contoy/3.webp" alt="Isla Contoy e Isla Mujeres" loading="lazy"></div>
+    </div>
+
+    <div class="expcard">
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M8 12a4 4 0 118 0"/></svg></div>
+        <div><div class="t">Colômbia, Palancar &amp; Cielo Snorkel</div><div class="d"><b>Duração de 4h</b> · passeio de <b>catamarã</b> · compartilhado · <b>4 adultos</b>
+          <div class="sub">Os recifes de Cozumel e as estrelas-do-mar de El Cielo</div>
+          <p>O barco desliza sobre os recifes vivos de <b>Cozumel</b> — Colômbia e Palancar — e depois lança âncora nas águas cristalinas e rasas de <b>El Cielo</b>, onde se nada cercado de estrelas-do-mar, com petiscos e bebidas servidos a bordo. Um roteiro pensado para fugir da aglomeração.</p>
+          <div class="sub2">O que está incluído</div>
+          <ul class="incl">
+            <li>Cerca de <b>4 horas</b> percorrendo os melhores pontos de snorkel</li>
+            <li>Todo o <b>equipamento</b> necessário</li>
+            <li>Bebidas geladas e comida mexicana feita na hora</li>
+            <li>Barcos com motores potentes e confiáveis</li>
+            <li>Tripulação que fala <b>inglês e espanhol</b></li>
+            <li><b>Seguro completo</b> durante todo o passeio</li>
+          </ul>
+          <div class="fine">Saídas diárias às <b>09:30</b>, ao <b>meio-dia</b> e às <b>14:00</b> — o horário é definido na confirmação. <b>Não inclui</b> a taxa do parque marinho — <b>US$ 10 por pessoa</b>, paga no local. <b>Também não inclui o transporte até o ponto de encontro</b>, que fica por conta de vocês.</div>
+        </div></div><div class="dt">04/01<br><span style="color:var(--green);font-size:1.05rem">R$ 2.000</span></div></div>
+    <div class="tgal"><img src="img/tours/cozumel/1.webp" alt="Colombia, Palancar e Cielo Snorkel" loading="lazy"><img src="img/tours/cozumel/2.webp" alt="Colombia, Palancar e Cielo Snorkel" loading="lazy"><img src="img/tours/cozumel/3.jpg" alt="Colombia, Palancar e Cielo Snorkel" loading="lazy"></div>
+    </div>
+
+    <div class="pkg-note">🤿 As duas excursões somam <b>R$ 6.160</b> para os <b>4 adultos</b>. As taxas de acesso (US$ 20 por pessoa em Isla Contoy e US$ 10 por pessoa em Cozumel) são pagas no local e não entram nesta cotação.</div>
+  </section>
+
+  <!-- ================= VALORES ================= -->
+  <section class="section sh">
+    <span class="eyebrow">Investimento</span>
+    <h2>Resumo de valores</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">*Valores em <b>BRL</b>. Nada reservado, apenas cotado.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <tbody>
+        <tr class="sec-row"><td colspan="3">Transfers privativos</td></tr>
+        <tr class="head-row"><td>Item</td><td>Data</td><td style="text-align:right">Valor</td></tr>
+        <tr><td>Transfer Ana e fam&iacute;lia &middot; 3 adultos<div class="rm">CUN &rarr; Secrets Tulum &rarr; CUN &middot; privativo &middot; Standard Van</div></td><td>30/12 &ndash; 06/01</td><td class="v">R$ 3.542</td></tr>
+        <tr><td>Transfer Antonia &middot; 1 adulto<div class="rm">CUN &rarr; Secrets Tulum &rarr; CUN &middot; privativo &middot; Autom&oacute;vel Standard</div></td><td>30/12 &ndash; 06/01</td><td class="v">R$ 3.080</td></tr>
+        <tr class="total-row"><td>Total transfers</td><td></td><td class="v">R$ 6.622</td></tr>
+
+        <tr class="sec-row"><td colspan="3">Seguro viagem</td></tr>
+        <tr><td>Seguro Ana e fam&iacute;lia &middot; 3 adultos<div class="rm">Universal Assistance CMH 80K USA</div></td><td>30/12 &ndash; 07/01</td><td class="v">R$ 930</td></tr>
+
+        <tr class="sec-row"><td colspan="3">Excurs&otilde;es</td></tr>
+        <tr><td>Isla Contoy &amp; Isla Mujeres<div class="rm">8h &middot; transfer incluso &middot; compartilhado &middot; 4 adultos</div></td><td>02/01</td><td class="v">R$ 4.160</td></tr>
+        <tr><td>Col&ocirc;mbia, Palancar &amp; Cielo Snorkel<div class="rm">4h &middot; catamar&atilde; &middot; compartilhado &middot; 4 adultos</div></td><td>04/01</td><td class="v">R$ 2.000</td></tr>
+        <tr class="total-row"><td>Total excurs&otilde;es</td><td></td><td class="v">R$ 6.160</td></tr>
+
+        <tr class="sec-row"><td colspan="3">Total geral</td></tr>
+        <tr class="total-row"><td>Transfers + seguro + excurs&otilde;es</td><td>4 adultos</td><td class="v">R$ 13.712</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pay">
+      <div class="box">
+        <h4>Condições de pagamento</h4>
+        <p><b>Transfers</b> — em até <b>5x</b></p>
+        <p><b>Seguro viagem</b> — em até <b>10x</b></p>
+        <p><b>Excursões</b> — em até <b>3x</b></p>
+      </div>
+      <div class="box">
+        <h4>Referência</h4>
+        <p>Dólar: USD 1 = R$ 5,27 · 29/09/2026</p>
+        <p class="muted" style="margin-top:8px;font-size:.82rem">Valores finais conforme disponibilidade e câmbio na data de fechamento.</p>
+      </div>
+    </div>
+
+    <div class="obs">
+      <h4>Não inclui</h4>
+      <ul>
+        <li><b>Taxa de acesso ao cais e à reserva natural</b> de Isla Contoy — US$ 20 por pessoa, paga no local</li>
+        <li><b>Taxa do parque marinho</b> de Cozumel — US$ 10 por pessoa, paga no local</li>
+        <li><b>Transporte até o ponto de encontro</b> da excursão a Cozumel (Colômbia, Palancar &amp; Cielo)</li>
+        <li>Hospedagem, aéreo, refeições fora das excursões, gorjetas e despesas pessoais</li>
+      </ul>
+      <h4>Observações</h4>
+      <ul>
+        <li>Este documento não constitui confirmação nem reserva dos serviços descritos.</li>
+        <li>A confirmação está sujeita à disponibilidade no momento do pagamento.</li>
+        <li>Horários das excursões sujeitos às condições do mar e do tempo.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel">
+    <div class="contact">
+      atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>
+      Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
