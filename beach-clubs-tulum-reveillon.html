@@ -1,0 +1,429 @@
+<title>Réveillon Tulum Beach Clubs</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600&display=swap">
+<style>
+/* Layout: LusaTravel brief. Gold rule under a warm-black masthead, teal (Caribe) for destination accents,
+   one ranked list of venues as dossier cards, a comparison table, then the logistics warning and next steps. */
+:root{
+  --gold:#da8d00; --gold-lo:rgba(218,141,0,.13);
+  --dest:#1a4f55; --dest-lo:rgba(26,79,85,.10);
+  --bg:#f5f0ea; --sf:#ffffff; --sf2:#ece5da; --bd:#cec4b4;
+  --t:#1a1510; --t2:#333131; --t3:#6e655b;
+  --ok:#2d5e3a; --warn:#8a4b00; --crit:#8c1d1d;
+  --ff:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --ff2:'Montserrat','Poppins',system-ui,sans-serif;
+  --r:5px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --gold:#e8a210; --gold-lo:rgba(232,162,16,.14);
+    --dest:#4fa3ab; --dest-lo:rgba(79,163,171,.14);
+    --bg:#141108; --sf:#1e1a12; --sf2:#26211a; --bd:#38301f;
+    --t:#f0e8de; --t2:#d9d0c4; --t3:#9c9183;
+    --ok:#7dbd8a; --warn:#f0a44a; --crit:#e07070;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --gold:#e8a210; --gold-lo:rgba(232,162,16,.14);
+  --dest:#4fa3ab; --dest-lo:rgba(79,163,171,.14);
+  --bg:#141108; --sf:#1e1a12; --sf2:#26211a; --bd:#38301f;
+  --t:#f0e8de; --t2:#d9d0c4; --t3:#9c9183;
+  --ok:#7dbd8a; --warn:#f0a44a; --crit:#e07070;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--t2);font-family:var(--ff);font-size:15px;line-height:1.55;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-block:0 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{color:var(--t);font-family:var(--ff);text-wrap:balance;margin:0}
+h1{font-size:clamp(26px,4vw,38px);font-weight:700;line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(20px,2.6vw,26px);font-weight:600;margin-top:48px;padding-bottom:8px;border-bottom:2px solid var(--gold)}
+h3{font-size:18px;font-weight:600}
+p{margin:0}
+a{color:var(--dest)}
+.eyebrow{font-family:var(--ff2);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+/* masthead */
+.mast{border-bottom:3px solid var(--gold);padding-block:22px 18px;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between}
+.brand{font-weight:700;color:var(--t);font-size:18px;letter-spacing:.02em}
+.brand span{color:var(--gold)}
+.mast .meta{font-family:var(--ff2);font-size:12px;color:var(--t3);letter-spacing:.04em}
+.hero{padding-block:34px 8px;display:grid;gap:14px}
+.hero p.lead{max-width:62ch;font-size:16px;color:var(--t2)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:10px}
+.fact{background:var(--sf2);border-radius:var(--r);padding:12px 14px;border-left:3px solid var(--gold)}
+.fact b{display:block;color:var(--t);font-size:15px;font-weight:600}
+.fact small{color:var(--t3);font-size:12px}
+/* alert */
+.alert{margin-top:28px;background:var(--sf);border:1px solid var(--bd);border-left:5px solid var(--crit);border-radius:var(--r);padding:16px 18px;display:grid;gap:8px}
+.alert h3{color:var(--crit)}
+.alert ul{margin:0;padding-left:18px;display:grid;gap:4px}
+/* venue cards */
+.venues{display:grid;gap:18px;margin-top:22px}
+.venue{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden}
+.venue header{display:grid;grid-template-columns:auto 1fr auto;gap:12px 16px;align-items:start;padding:16px 18px 12px;border-bottom:1px solid var(--bd);background:var(--dest-lo)}
+.rank{font-family:var(--ff2);font-weight:600;font-size:12px;color:#fff;background:var(--dest);border-radius:3px;padding:4px 8px;letter-spacing:.06em;align-self:start}
+:root[data-theme="dark"] .rank{color:#141108}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .rank{color:#141108}}
+.venue header h3{font-size:19px}
+.venue header .sub{font-size:13px;color:var(--t3);margin-top:2px}
+.fit{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.pill{font-family:var(--ff2);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:999px;border:1px solid var(--bd);color:var(--t2);background:var(--sf);white-space:nowrap}
+.pill.gold{border-color:var(--gold);color:var(--gold);font-weight:600}
+.pill.ok{border-color:var(--ok);color:var(--ok)}
+.pill.warn{border-color:var(--warn);color:var(--warn)}
+.pill.crit{border-color:var(--crit);color:var(--crit)}
+.body{display:grid;grid-template-columns:1.4fr 1fr;gap:16px 24px;padding:16px 18px 18px}
+.body > div{min-width:0}
+.body p + p{margin-top:8px}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
+dt{color:var(--t3);font-weight:500;white-space:nowrap}
+dd{margin:0;color:var(--t);font-variant-numeric:tabular-nums}
+.why{margin-top:10px;padding:10px 12px;background:var(--gold-lo);border-radius:var(--r);font-size:13.5px}
+.why b{color:var(--t)}
+@media (max-width:640px){
+  .body{grid-template-columns:1fr}
+  .venue header{grid-template-columns:auto 1fr}
+  .fit{grid-column:1/-1;justify-content:flex-start}
+}
+/* table */
+.tablewrap{overflow-x:auto;margin-top:18px;border:1px solid var(--bd);border-radius:var(--r);background:var(--sf)}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:13.5px}
+th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--bd)}
+th{font-family:var(--ff2);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);background:var(--sf2)}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.note{font-size:12.5px;color:var(--t3);margin-top:10px}
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+.plan{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:16px 18px;display:grid;gap:10px;align-content:start}
+.plan.rec{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-lo)}
+.plan h3{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.plan ol{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14px}
+.plan .total{font-family:var(--ff2);font-size:13px;color:var(--t);font-weight:600;border-top:1px dashed var(--bd);padding-top:8px;font-variant-numeric:tabular-nums}
+/* steps */
+.steps{margin:18px 0 0;padding-left:0;list-style:none;display:grid;gap:10px}
+.steps li{display:grid;grid-template-columns:auto 1fr;gap:12px;background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:12px 14px}
+.steps .d{font-family:var(--ff2);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:600;padding-top:3px;white-space:nowrap}
+.steps b{color:var(--t)}
+.ask{margin-top:18px;background:var(--dest-lo);border-radius:var(--r);padding:16px 18px}
+.ask ul{margin:8px 0 0;padding-left:18px;display:grid;gap:5px}
+footer{margin-top:48px;border-top:3px solid var(--gold);padding-top:14px;font-family:var(--ff2);font-size:12px;color:var(--t3);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer b{color:var(--t)}
+.src{margin-top:14px;font-size:12px;color:var(--t3);columns:2;column-gap:28px}
+.src a{color:var(--t3)}
+@media (max-width:640px){.src{columns:1}}
+</style>
+
+<div class="wrap">
+  <div class="mast">
+    <div class="brand">Lusa<span>Travel</span></div>
+    <div class="meta">Dossiê · Tulum · Réveillon 2026 → 2027 · 4 passageiros · elaborado em 26/10/2026</div>
+  </div>
+
+  <section class="hero">
+    <div class="eyebrow">Beach clubs &amp; festas de Réveillon</div>
+    <h1>Onde um grupo de quatro passa a virada com estilo, a partir do Secrets Tulum</h1>
+    <p class="lead">Relação dos beach clubs e festas de 31 de dezembro de 2026 em Tulum, filtrada para o perfil do grupo: jovens, elegantes, público bonito, clima “ver e ser visto”. Ordenada por adequação ao perfil, com preço, dress code, o que está incluído e o que ainda não foi anunciado.</p>
+    <div class="facts">
+      <div class="fact"><b>Quinta-feira, 31/12/2026</b><small>Noite da virada</small></div>
+      <div class="fact"><b>Aldea Zama (selva)</b><small>Onde fica o Secrets, não na praia</small></div>
+      <div class="fact"><b>15 a 30 min de carro</b><small>Do hotel até qualquer beach club</small></div>
+      <div class="fact"><b>Câmbio ref. 26/10 · USD = 20 MXN</b><small>Valores em MXN convertidos a esta taxa</small></div>
+    </div>
+  </section>
+
+  <div class="alert">
+    <h3>Antes de escolher o club: três fatos que mudam o plano</h3>
+    <ul>
+      <li><b>O Secrets Tulum não fica na praia.</b> O resort está em Aldea Zama, do lado da selva. O beach club próprio é acessado por shuttle de 15 a 30 minutos, que normalmente roda só de 9h30 às 16h. “Perto do hotel”, na prática, significa 15 a 30 minutos de carro para qualquer opção desta lista, ida e volta.</li>
+      <li><b>Não existe Uber em Tulum e os táxis somem depois das 22h na virada.</b> A estrada da praia (Carretera Tulum–Boca Paila) trava entre 29/12 e 08/01. O grupo precisa de motorista privado contratado para a noite inteira, com espera. Sem isso, o retorno às 3h da manhã vira o problema da viagem.</li>
+      <li><b>O Bagatelle, a opção mais alinhada ao perfil, já mostrava lotes esgotados em outubro.</b> As mesas de Réveillon em Tulum são pré-pagas e vendem semanas antes. A decisão precisa sair nos próximos 7 a 10 dias, não em dezembro.</li>
+    </ul>
+  </div>
+
+  <h2>Ranking por adequação ao perfil</h2>
+  <div class="venues">
+
+    <article class="venue">
+      <header>
+        <span class="rank">01</span>
+        <div><h3>Bagatelle Tulum</h3><p class="sub">Beach club · estrada da praia, km 7,5 · mesma marca de St-Tropez, Miami e Mykonos</p></div>
+        <div class="fit"><span class="pill gold">Melhor fit</span><span class="pill crit">Lotes esgotados</span></div>
+      </header>
+      <div class="body">
+        <div>
+          <p>É o endereço mais “ver e ser visto” de Tulum e o mais seletivo na porta. Jantar de três tempos com uma taça de Dom Pérignon por pessoa, DJ, show de champanhe e a festa que emenda do jantar até a madrugada. O público é exatamente o que o grupo procura: internacional, bem vestido, 25 a 40 anos.</p>
+          <p>Vende por mesa, não por pessoa. Na última consulta, todos os lotes (incluindo o “Second Release”) apareciam esgotados na plataforma. Vale pedir lista de espera e verificar liberação de mesas diretamente com a casa; cancelamentos acontecem até 7 dias antes.</p>
+          <div class="why"><b>Por que primeiro:</b> é a única casa cujo público, dress code e produção foram pensados para o mesmo perfil do grupo. Se houver mesa, fecha aqui.</div>
+        </div>
+        <dl>
+          <dt>Formato</dt><dd>Jantar 20h às 22h30 + festa até tarde</dd>
+          <dt>Mesa 4 pax</dt><dd>30.000 a 38.000 MXN + 15% serviço (≈ USD 1.725 a 2.185 a mesa; ≈ USD 430 a 545 por pessoa)</dd>
+          <dt>Inclui</dt><dd>Menu fixo 3 tempos, 1 taça Dom Pérignon/pessoa</dd>
+          <dt>Dress code</dt><dd>“Dress to impress”</dd>
+          <dt>Reserva</dt><dd>Ticket Fairy (lotes) ou direto com a casa; pré-pago</dd>
+          <dt>Cancelamento</dt><dd>Reembolso integral só com 7+ dias</dd>
+        </dl>
+      </div>
+    </article>
+
+    <article class="venue">
+      <header>
+        <span class="rank">02</span>
+        <div><h3>Taboo Tulum</h3><p class="sub">Beach club com piscina · centro da zona hoteleira · Grupo RosaNegra</p></div>
+        <div class="fit"><span class="pill gold">Melhor fit</span><span class="pill warn">Preço 26/27 a confirmar</span></div>
+      </header>
+      <div class="body">
+        <div>
+          <p>“Mediterranean glam”: 2.000 m² de areia, piscina, mesas na beira-mar e a produção de festa típica do Grupo RosaNegra (fogos, sabrage, performers). Para o Réveillon, a casa anuncia jantar seguido de “countdown celebration” na praia a partir das 22h30.</p>
+          <p>Referência do ano passado: jantar pré-pago via OpenTable a 8.050 MXN por pessoa. O valor 2026/27 ainda não estava publicado; o contato comercial do grupo fecha mesa por e-mail.</p>
+          <div class="why"><b>Por que segundo:</b> mesma faixa de público do Bagatelle, com piscina e festa mais aberta. É o plano B natural se o Bagatelle não liberar mesa, e combina com o Rosa Negra do mesmo grupo.</div>
+        </div>
+        <dl>
+          <dt>Formato</dt><dd>Jantar 19h + countdown na praia 22h30</dd>
+          <dt>Referência</dt><dd>8.050 MXN/pessoa em 2025/26 (≈ USD 400)</dd>
+          <dt>Est. 4 pax</dt><dd>≈ 32.000 a 36.000 MXN (≈ USD 1.600 a 1.800)</dd>
+          <dt>Dress code</dt><dd>Beach chic elevado à noite</dd>
+          <dt>Contato</dt><dd>ventastulum@gruporosanegra.com.mx · +52 998 690 0259</dd>
+          <dt>Dia 31 de tarde</dt><dd>Day beds de USD 100 a 300+ de consumo mínimo</dd>
+        </dl>
+      </div>
+    </article>
+
+    <article class="venue">
+      <header>
+        <span class="rank">03</span>
+        <div><h3>Gitano Beach · “Grand Oasis”</h3><p class="sub">Beach club · sul da zona hoteleira · disco-chic, coquetéis de mezcal</p></div>
+        <div class="fit"><span class="pill gold">Melhor fit</span><span class="pill ok">À venda</span></div>
+      </header>
+      <div class="body">
+        <div>
+          <p>Eleito o melhor beach club de Tulum na votação dos leitores do Tulum Times. Clima disco-chic sob palapas e bolas de espelho, com público jovem e fotogênico. O Réveillon 2027 tem dress code temático “Black Glamour &amp; Antique Gold” e três formatos de ingresso, todos à venda.</p>
+          <p>Há também a versão Gitano Jungle (do lado da selva, mais barata: jantar 9.000 MXN e open bar 5.000 MXN por pessoa), mas para este perfil a praia é a escolha.</p>
+          <div class="why"><b>Por que terceiro:</b> é a opção mais segura de fechar hoje, com preço publicado e jantar com mesa garantida por 3 horas. Perde para os dois primeiros só em exclusividade.</div>
+        </div>
+        <dl>
+          <dt>Jantar + festa</dt><dd>8.800 MXN/pessoa (USD 440): menu 4 tempos, 1 taça Moët, mesa 3h a partir das 20h</dd>
+          <dt>Premium</dt><dd>13.000 MXN/pessoa (USD 650): jantar + bottle service</dd>
+          <dt>Só festa</dt><dd>6.000 MXN/pessoa (USD 300): entrada 22h + open bar top shelf</dd>
+          <dt>4 pax jantar</dt><dd>35.200 MXN (≈ USD 1.760)</dd>
+          <dt>Dress code</dt><dd>Black Glamour &amp; Antique Gold</dd>
+          <dt>Reserva</dt><dd>Ticket Fairy · tulum@gitano.com</dd>
+        </dl>
+      </div>
+    </article>
+
+    <article class="venue">
+      <header>
+        <span class="rank">04</span>
+        <div><h3>Vagalume Tulum</h3><p class="sub">Beach &amp; jungle club · sul da estrada da praia · maior produção de música eletrônica da costa</p></div>
+        <div class="fit"><span class="pill">Fit alto</span><span class="pill warn">Não anunciado</span></div>
+      </header>
+      <div class="body">
+        <div>
+          <p>A casa com a cenografia mais impressionante da Riviera Maya: selva, praia e palco em um só lugar. No Réveillon passado fez jantar compartilhado seguido de festa até a madrugada com Âme, Echonomist e Trikk, “formal beach attire”. Lotes early bird e jantar esgotaram.</p>
+          <p>O evento 2026/27 ainda não foi publicado. Pelo histórico, sai em novembro com três faixas: jantar, cover geral e bottle service.</p>
+          <div class="why"><b>Quando escolher:</b> se o grupo prefere house e techno de qualidade a jantar formal. É a melhor festa pura da lista para quem quer dançar até as 4h.</div>
+        </div>
+        <dl>
+          <dt>Formato</dt><dd>Jantar 18h30 a 20h + festa até 3h (ref. 2024/25)</dd>
+          <dt>Preço 26/27</dt><dd>Não publicado; monitorar</dd>
+          <dt>Dress code</dt><dd>Formal beach attire</dd>
+          <dt>Cancelamento</dt><dd>100% com 7+ dias, 50% com 3+ dias (ref.)</dd>
+          <dt>Reserva</dt><dd>Ticket Fairy (quando abrir)</dd>
+        </dl>
+      </div>
+    </article>
+
+    <article class="venue">
+      <header>
+        <span class="rank">05</span>
+        <div><h3>Papaya Playa Project · PPP Presents NYE</h3><p class="sub">Beach club icônico · norte da zona hoteleira · a festa de Réveillon mais conhecida de Tulum</p></div>
+        <div class="fit"><span class="pill">Fit médio</span><span class="pill ok">À venda</span></div>
+      </header>
+      <div class="body">
+        <div>
+          <p>A festa clássica da cidade: das 18h de 31/12 às 5h de 01/01, direto na areia, com DJs internacionais (no passado, Jan Blomqvist). É grande, democrática e cheia; menos “elegante”, mais festival. Em caso de chuva, muda para área coberta.</p>
+          <p>Funciona muito bem como after-party depois de um jantar no Bagatelle, Taboo ou Gitano, ou como opção principal se o grupo quer festa grande e não quer gastar em jantar de gala.</p>
+          <div class="why"><b>Cuidado:</b> sem reembolso, sem reentrada, 18+. Mesas só por WhatsApp ou e-mail da casa.</div>
+        </div>
+        <dl>
+          <dt>Horário</dt><dd>18h de 31/12 às 5h de 01/01</dd>
+          <dt>Ingresso geral</dt><dd>4.697 MXN early bird, subindo para 5.720 MXN (≈ USD 235 a 286)</dd>
+          <dt>4 pax</dt><dd>≈ 19.000 a 23.000 MXN (≈ USD 950 a 1.150)</dd>
+          <dt>Mesas</dt><dd>Sob consulta, WhatsApp/e-mail</dd>
+          <dt>Reserva</dt><dd>Ticket Fairy</dd>
+        </dl>
+      </div>
+    </article>
+
+    <article class="venue">
+      <header>
+        <span class="rank">06</span>
+        <div><h3>Zamna Tulum · 10 anos</h3><p class="sub">Festival na selva · 31/12/2026 a 10/01/2027 · não é beach club</p></div>
+        <div class="fit"><span class="pill">Complemento</span><span class="pill ok">Multipass à venda</span></div>
+      </header>
+      <div class="body">
+        <div>
+          <p>O maior festival de eletrônica da região faz edição de aniversário com 10 noites independentes. Lineup completo ainda não divulgado (há rumor não confirmado de Anyma em 04/01; a imprensa local diz que nem Zamna nem o artista confirmaram). Público jovem, bonito, internacional, mas é selva, pó e techno até o amanhecer.</p>
+          <div class="why"><b>Como usar:</b> não como a noite da virada, e sim para as noites de 1 a 3 de janeiro, se o grupo gosta de eletrônica. Multipass de 3 eventos a partir de USD 375 por pessoa.</div>
+        </div>
+        <dl>
+          <dt>Período</dt><dd>31/12/2026 a 10/01/2027</dd>
+          <dt>Multipass 3 noites</dt><dd>A partir de USD 375/pessoa</dd>
+          <dt>Lineup</dt><dd>Por anunciar</dd>
+          <dt>Transporte</dt><dd>Trânsito pesado; contratar shuttle</dd>
+        </dl>
+      </div>
+    </article>
+
+    <article class="venue">
+      <header>
+        <span class="rank">07</span>
+        <div><h3>Rosa Negra Tulum</h3><p class="sub">Restaurante com show · zona hoteleira · Grupo RosaNegra</p></div>
+        <div class="fit"><span class="pill">Jantar</span><span class="pill warn">NYE a confirmar</span></div>
+      </header>
+      <div class="body">
+        <div>
+          <p>Não é beach club, mas é a casa de jantar mais “glamour” de Tulum: cozinha latina, show de fogo, sabrage e DJ, com público que se arruma para sair. O pacote “Champagne Moments” (Moët no gelo, 6.260 MXN por mesa) está em venda para datas diversas; o jantar de Réveillon ainda não foi publicado.</p>
+          <div class="why"><b>Como usar:</b> jantar de gala em 30/12 ou 01/01, ou como jantar da virada seguido de festa no Taboo (mesmo grupo, 5 minutos de distância).</div>
+        </div>
+        <dl>
+          <dt>Formato</dt><dd>Jantar-show, mesa com cartão de garantia</dd>
+          <dt>Referência</dt><dd>Champagne Moments 6.260 MXN/mesa, sem comida</dd>
+          <dt>Contato</dt><dd>contacto@gruporosanegra.com.mx · +52 998 690 0252</dd>
+        </dl>
+      </div>
+    </article>
+
+    <article class="venue">
+      <header>
+        <span class="rank">08</span>
+        <div><h3>Tantra Tulum · Casa Malca · Nômade</h3><p class="sub">Para o dia 31 de tarde e a recuperação de 1º de janeiro</p></div>
+        <div class="fit"><span class="pill">Dia</span></div>
+      </header>
+      <div class="body">
+        <div>
+          <p><b>Tantra</b>: day club boho-chic com clima de balada à tarde, dress code “smart and elegant”, 21+, quarta a domingo das 11h às 19h. Ideal para o almoço de 31/12 antes de voltar ao hotel para se arrumar.</p>
+          <p><b>Casa Malca</b>: a antiga mansão de Pablo Escobar virou hotel-galeria de arte (coleção Lio Malca), com três piscinas e day beds de USD 150 a 200 de consumo mínimo. O mais fotogênico para 1º de janeiro.</p>
+          <p><b>Nômade</b>: Réveillon com coquetel no Macondo e festa na selva, clima espiritual e boho. Bonito, mas menos “balada” do que o grupo pede; fica como alternativa.</p>
+        </div>
+        <dl>
+          <dt>Tantra</dt><dd>Qua a dom, 11h às 19h · a partir de 500 MXN/pessoa</dd>
+          <dt>Casa Malca</dt><dd>Day bed USD 150 a 200 mín. consumo</dd>
+          <dt>Nômade</dt><dd>NYE 26/27 sem detalhes publicados</dd>
+        </dl>
+      </div>
+    </article>
+
+  </div>
+
+  <h2>Comparativo rápido</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Casa</th><th>Tipo de noite</th><th>Por pessoa (MXN)</th><th>4 pax (≈ USD)</th><th>Status 26/27</th><th>Dress code</th></tr></thead>
+      <tbody>
+        <tr><td><b>Bagatelle</b></td><td>Jantar 3 tempos + Dom Pérignon + festa</td><td class="num">7.500 a 9.500 (+15%)</td><td class="num">1.725 a 2.185</td><td>Lotes esgotados; lista de espera</td><td>Dress to impress</td></tr>
+        <tr><td><b>Taboo</b></td><td>Jantar + countdown na praia</td><td class="num">≈ 8.000 a 9.000 (ref.)</td><td class="num">1.600 a 1.800</td><td>Anunciado, preço a confirmar</td><td>Beach chic elevado</td></tr>
+        <tr><td><b>Gitano Beach</b></td><td>Jantar 4 tempos + Moët + festa</td><td class="num">8.800</td><td class="num">1.760</td><td>À venda</td><td>Black Glamour &amp; Antique Gold</td></tr>
+        <tr><td>Gitano Beach</td><td>Só festa, open bar 22h</td><td class="num">6.000</td><td class="num">1.200</td><td>À venda</td><td>Idem</td></tr>
+        <tr><td><b>Vagalume</b></td><td>Jantar + festa eletrônica</td><td class="num">Não publicado</td><td class="num">—</td><td>Aguardando anúncio</td><td>Formal beach attire</td></tr>
+        <tr><td><b>Papaya Playa</b></td><td>Festa na areia 18h às 5h</td><td class="num">4.697 a 5.720</td><td class="num">950 a 1.150</td><td>À venda</td><td>Livre</td></tr>
+        <tr><td>Mia Tulum</td><td>Festa com jantar opcional</td><td class="num">≈ 4.000 (ref. antiga)</td><td class="num">≈ 800</td><td>Não publicado</td><td>Livre</td></tr>
+        <tr><td>Ahau · White Oracle</td><td>Jantar de chef + open bar, tudo branco</td><td class="num">8.000 (ref. 24/25)</td><td class="num">1.600</td><td>Anunciado, preço a confirmar</td><td>Branco</td></tr>
+        <tr><td>Zamna</td><td>Festival, noites 31/12 a 10/01</td><td class="num">Multipass USD 375+</td><td class="num">1.500+</td><td>Multipass à venda</td><td>Festival</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">*Nada reservado, apenas cotado. Valores públicos coletados em 26/10/2026; taxas de serviço e de plataforma não incluídas salvo indicação. Conversão de referência: 26/10 · USD = 20 MXN. Transporte não incluído.</p>
+
+  <h2>Três roteiros para a noite</h2>
+  <div class="plans">
+    <div class="plan rec">
+      <h3>A · Glamour <span class="pill gold">Recomendado</span></h3>
+      <ol>
+        <li>Tarde: day beds no Taboo (almoço e piscina).</li>
+        <li>Retorno ao Secrets às 17h para se arrumar.</li>
+        <li>20h: jantar no Bagatelle (ou Taboo, se não houver mesa).</li>
+        <li>00h: virada na própria casa, festa até 2h.</li>
+        <li>Opcional: after no Papaya Playa até o amanhecer.</li>
+      </ol>
+      <p class="total">4 pax ≈ USD 2.200 a 2.800 + motorista</p>
+    </div>
+    <div class="plan">
+      <h3>B · Disco-chic</h3>
+      <ol>
+        <li>Tarde livre no beach club do Secrets.</li>
+        <li>20h: jantar 4 tempos no Gitano Beach, mesa por 3h.</li>
+        <li>23h: festa Grand Oasis, open bar, tema preto e dourado.</li>
+        <li>01/01: recuperação no Casa Malca.</li>
+      </ol>
+      <p class="total">4 pax ≈ USD 1.760 + consumo + motorista</p>
+    </div>
+    <div class="plan">
+      <h3>C · Festa pura</h3>
+      <ol>
+        <li>Jantar cedo no hotel (all inclusive).</li>
+        <li>22h: Gitano Beach open bar ou Papaya Playa.</li>
+        <li>Se o grupo for de eletrônica: Vagalume, quando anunciar.</li>
+        <li>01 a 03/01: uma ou duas noites de Zamna.</li>
+      </ol>
+      <p class="total">4 pax ≈ USD 1.000 a 1.300 na virada + Zamna</p>
+    </div>
+  </div>
+
+  <h2>Logística que decide a noite</h2>
+  <ol class="steps">
+    <li><span class="d">Transporte</span><div><b>Motorista privado por toda a noite, com espera.</b> Sem Uber na cidade, táxis escassos após 22h e tarifa inflada na virada. Fora de pico um táxi centro–praia custa 150 a 250 MXN; na virada, sem motorista contratado, o grupo fica refém. Cotar van 4 pax das 18h às 4h.</div></li>
+    <li><span class="d">Shuttle do hotel</span><div><b>O shuttle do Secrets para o beach club roda, em regra, só até as 16h.</b> Não serve para a noite. Confirmar com o resort se haverá operação especial em 31/12.</div></li>
+    <li><span class="d">Pré-pagamento</span><div><b>Toda casa cobra antecipado e não reembolsa a menos de 7 dias.</b> Orientar o cliente a decidir com clareza antes de pagar; troca de casa depois custa o valor cheio.</div></li>
+    <li><span class="d">Dress code</span><div><b>Os clubs do topo exigem produção.</b> Bagatelle (“dress to impress”), Gitano (preto e dourado) e Taboo (beach chic elevado). Sapato: sola baixa ou sandália elegante, tudo acontece na areia.</div></li>
+    <li><span class="d">Sargaço</span><div><b>Fim de dezembro é baixa temporada de sargaço.</b> Praias limpas é o esperado para a data; não é risco relevante para o plano.</div></li>
+  </ol>
+
+  <h2>Próximos passos e prazos</h2>
+  <ol class="steps">
+    <li><span class="d">Até 30/10</span><div><b>Cliente escolhe entre Plano A, B ou C</b> e aprova teto de gasto por pessoa.</div></li>
+    <li><span class="d">Até 02/11</span><div><b>LusaTravel pede mesa no Bagatelle (lista de espera) e cota Taboo por e-mail</b> ao Grupo RosaNegra. Em paralelo, segura jantar no Gitano Beach como garantia, já que está à venda e esgota.</div></li>
+    <li><span class="d">Até 10/11</span><div><b>Fechar motorista privado para 31/12 e beach club do dia 31 à tarde.</b></div></li>
+    <li><span class="d">Novembro</span><div><b>Monitorar anúncio do Vagalume e lineup do Zamna</b> e ajustar as noites de 1 a 3 de janeiro.</div></li>
+  </ol>
+
+  <div class="ask">
+    <b>O que precisamos do cliente para fechar com precisão</b>
+    <ul>
+      <li>Teto de gasto por pessoa na virada (USD 300, 500 ou acima), porque isso elimina metade da lista.</li>
+      <li>Música: eletrônica de qualidade (Vagalume, Zamna) ou festa com repertório mais aberto (Bagatelle, Taboo, Gitano)?</li>
+      <li>Querem jantar sentados com mesa garantida ou preferem jantar no hotel e só festa?</li>
+      <li>Datas exatas da estadia, para planejar 30/12 e 1 a 3 de janeiro.</li>
+      <li>Aceitam 20 a 30 minutos de carro em cada sentido? Se não, a resposta honesta é trocar o hotel por um da estrada da praia.</li>
+    </ul>
+  </div>
+
+  <h2>Fontes consultadas</h2>
+  <div class="src">
+    <a href="https://tulumbible.com/tulum-new-years-eve">Tulum Bible · NYE 2026–2027 guide</a><br>
+    <a href="https://www.tulum.party/tulum-new-year-festival-2025">Tulum.party · New Year Festival 2026/27</a><br>
+    <a href="https://www.ticketfairy.com/event/nye-2027-gitano-beach-31dec2026">Ticket Fairy · NYE 2027 Gitano Beach</a><br>
+    <a href="https://www.ticketfairy.com/event/ppp-presents-nye-2026-2027-31dec2026.md?locale=en">Ticket Fairy · PPP Presents NYE 2026–2027</a><br>
+    <a href="https://www.ticketfairy.com/r/45045/849470">Ticket Fairy · NYE Bagatelle Tulum (lotes e preços)</a><br>
+    <a href="https://www.ticketfairy.com/event/nye-party-2025-vagalume.md">Ticket Fairy · Vagalume NYE (histórico)</a><br>
+    <a href="https://opentable.co.uk/r/taboo-tulum">OpenTable · Taboo Tulum</a><br>
+    <a href="https://www.opentable.com.mx/r/tulum-rosa-negra-tulum">OpenTable · Rosa Negra Tulum</a><br>
+    <a href="https://www.opentable.co.uk/r/tantra-tulum">OpenTable · Tantra Tulum</a><br>
+    <a href="https://magneticmag.com/2026/09/zamna-tulum-2027-dates-multipass-tickets/">Magnetic Mag · Zamna Tulum 2027</a><br>
+    <a href="https://www.rivieramayanews.mx/zamna-tulum-is-about-to-reveal-its-2027-festival-lineup/">Riviera Maya News · Zamna 2027 lineup</a><br>
+    <a href="https://tulumtimes.com/best-beaches-tulum">Tulum Times · votação de beach clubs</a><br>
+    <a href="https://pulserevops.com/clubs/cl0034">Pulse · consumo mínimo Taboo e Bagatelle</a><br>
+    <a href="https://www.machupicchu.org/tulum-beach-clubs-2026-prices-free-access-best-day-beds.htm">Guia 2026 · preços de beach clubs</a><br>
+    <a href="https://happyshuttlecancun.com/tulum-festival-season">Happy Shuttle · temporada de festivais e trânsito</a><br>
+    <a href="https://www.lonelyplanet.com/articles/getting-around-tulum">Lonely Planet · transporte em Tulum</a><br>
+    <a href="https://sembo.com/places/tulum-quintana-roo-mexico/hotels/4414060/secrets-tulum-resort-beach-club-adults-only-all-inclusive">Sembo · localização do Secrets Tulum</a><br>
+    <a href="https://destination2.co.uk/hotels/secrets-tulum-resort-beach-club">Destination2 · shuttle do Secrets ao beach club</a>
+  </div>
+
+  <footer>
+    <div><b>LusaTravel</b> · atendimentolusatravel@gmail.com · WhatsApp +55 41 99189-6076</div>
+    <div>Dossiê informativo. Nada reservado, apenas cotado.</div>
+  </footer>
+</div>
