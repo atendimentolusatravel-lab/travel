@@ -7,303 +7,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --green:#404626; --green-dark:#363b1f; --green-soft:#5a6238;
-  --sage:#d9ead3; --sage-head:#c6d8b0;
-  --ink:#333131; --muted:#6f6f68; --line:#e7e7e0; --bg:#ffffff; --cream:#faf9f5;
-  --terra:#b4622f;
-  --shadow:0 10px 30px rgba(64,70,38,.08);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
-.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
-img{max-width:100%;display:block}
-h1,h2,h3,h4{line-height:1.15}
-.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
-.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
-.section{padding:60px 56px}
-.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
-.muted{color:var(--muted)}
-
-.brandbar{display:flex;flex-direction:column;align-items:center;gap:8px;padding:38px 0 6px}
-.brandbar .brandlogo{width:210px;height:auto;display:block}
-.footlogo{width:190px;height:auto;display:block;margin-bottom:14px}
-
-/* HERO */
-.hero{padding:56px 56px 40px}
-.hero .eyebrow{margin-bottom:14px}
-.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em;line-height:1.05}
-.hero h1 .amp{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-style:italic}
-.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
-.hero-img{margin:34px 0 0;height:330px;border-radius:14px;overflow:hidden;position:relative;
-  display:flex;align-items:flex-end;box-shadow:var(--shadow);
-  background:
-    radial-gradient(120% 130% at 12% 8%, rgba(70,120,150,.55), rgba(40,80,110,.15) 42%, transparent 60%),
-    radial-gradient(120% 130% at 92% 96%, rgba(150,170,120,.55), rgba(90,110,70,.2) 44%, transparent 64%),
-    linear-gradient(120deg, #3a5f80 0%, #5a7d92 30%, #8aa0a2 55%, #b0a878 80%, #7a6a3a 100%);}
-.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.hero-img.crop img{width:120%;height:auto;min-height:120%;inset:auto auto auto 0;top:0;object-position:left top}
-.hero-img::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(to top, rgba(20,26,32,.6), rgba(20,26,32,.05) 55%, transparent)}
-.hero-img .cap{position:relative;z-index:2;padding:22px 26px;color:#fff}
-.hero-img .cap .k{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;opacity:.92}
-.hero-img .cap .t{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:600;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.35)}
-.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
-.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
-.hero-info .r{text-align:right}
-.hero-info p{font-size:.95rem}
-.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
-.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
-.chip b{font-size:1.15rem;font-weight:700}
-.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
-.chip .ic svg{width:18px;height:18px}
-
-/* AEREO */
-.air{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:18px;background:#fff;box-shadow:var(--shadow)}
-.air-head{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--green);color:#fff;padding:14px 22px}
-.air-head .dir{font-weight:700;letter-spacing:.14em;font-size:.78rem;text-transform:uppercase}
-.air-head .route{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;font-weight:600}
-.leg{display:grid;grid-template-columns:200px 1fr auto;gap:18px;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line)}
-.leg .fl{font-size:.78rem;color:var(--muted)}
-.leg .fl b{display:block;color:var(--ink);font-size:.92rem;font-weight:600}
-.leg .fl strong{color:var(--ink);font-weight:700}
-.leg .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.leg .pt .code{font-weight:700;font-size:1.05rem}
-.leg .pt .tm{font-size:.82rem;color:var(--muted)}
-.leg .arrow{color:var(--green-soft);flex:none}
-.leg .cls{text-align:right;font-size:.78rem}
-.leg .cls b{display:block;color:var(--green);font-size:.86rem}
-.cnx{display:flex;align-items:center;gap:8px;padding:9px 22px;background:#f4f5ef;font-size:.75rem;color:var(--muted);border-bottom:1px solid var(--line)}
-.cnx svg{width:14px;height:14px;flex:none;color:var(--green-soft)}
-.air-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;background:#f4f5ef}
-.air-foot .lbl{font-size:.78rem;color:var(--muted)}
-.air-foot .val{font-weight:700;font-size:1.3rem;color:var(--green)}
-
-/* HOTELS */
-.city-block{margin-top:34px}
-.city-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--green);padding-bottom:10px;margin-bottom:22px}
-.city-head h3{font-size:1.4rem;font-weight:700}
-.city-head .dates{color:var(--green-soft);font-weight:600;font-size:.9rem;letter-spacing:.04em}
-.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:720px){.hgrid{grid-template-columns:1fr}}
-.hotel{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:20px 22px}
-.hotel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
-.hotel-name{font-size:1.06rem;font-weight:600;display:flex;align-items:center;gap:12px}
-.hotel-name .bldg{width:34px;height:34px;flex:none;border:1.6px solid var(--ink);border-radius:50%;display:grid;place-items:center}
-.hotel-name .bldg svg{width:17px;height:17px}
-.hotel-name .loc2{font-weight:400;color:var(--muted);font-size:.86rem}
-.hotel-price{text-align:right;flex:none}
-.hotel-price .v{font-size:1.3rem;font-weight:700;color:var(--green);white-space:nowrap}
-.hotel-price .u{font-size:.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
-.hotel-room{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
-.hotel-room b{color:var(--green-dark);font-weight:600}
-.bf{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-soft);background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:3px 9px;margin-top:10px}
-.hgal{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:14px}
-.hgal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px;display:block;background:#eceadf}
-
-/* experience card */
-.svc{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:start;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-top:14px;background:#fff;box-shadow:var(--shadow)}
-.svc .ic{width:52px;height:52px;background:var(--green);border-radius:12px;display:grid;place-items:center;color:#fff;flex:none}
-.svc .ic svg{width:24px;height:24px}
-.svc .t{font-weight:600;font-size:1.02rem}
-.svc .d{color:var(--muted);font-size:.86rem;margin-top:2px}
-.svc .dt{text-align:right;font-weight:700;font-size:.9rem;color:var(--green-soft);white-space:nowrap}
-.dayrow{display:grid;grid-template-columns:92px 1fr;gap:22px;padding:22px 0;border-bottom:1px solid var(--line)}
-.dayrow:last-of-type{border-bottom:none}
-.daynum{text-align:right}
-.daynum .d{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;font-weight:700;color:var(--green);line-height:1}
-.daynum .m{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green-soft);font-weight:700;margin-top:2px}
-.daynum .w{font-size:.7rem;color:var(--muted);margin-top:2px}
-.daybody .city{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--green);border-radius:12px;padding:3px 11px;display:inline-block;margin-bottom:9px}
-.daybody h4{font-size:1.06rem;font-weight:600;margin-bottom:5px;color:var(--green-dark)}
-.daybody p{font-size:.88rem;color:var(--muted)}
-.daybody ul{margin:9px 0 0 18px;font-size:.88rem;color:var(--muted)}
-.daybody li{margin:5px 0}
-.tag-q,.tag-s{display:inline-block;font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:10px;padding:2px 8px;margin-left:5px;white-space:nowrap}
-.tag-q{color:var(--terra);background:#fdf3ec;border:1px solid #f0dccd}
-.tag-s{color:var(--green-dark);background:#eef2e6;border:1px solid #dde5cf}
-@media(max-width:720px){.dayrow{grid-template-columns:64px 1fr;gap:14px}.daynum .d{font-size:1.5rem}}
-
-.svc .d ul.incl{margin:8px 0 0 18px;padding:0}
-.svc .d ul.incl li{margin:5px 0;font-size:.86rem;line-height:1.55}
-.svc .d .fine{margin-top:10px;padding-top:9px;border-top:1px solid var(--line);font-size:.78rem;line-height:1.55}
-.svc .d .upg{margin-top:9px;background:var(--sage);border-radius:8px;padding:9px 12px;font-size:.8rem;color:var(--green-dark)}
-
-.svc .d .sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.12rem;font-weight:600;color:var(--green-dark);margin:6px 0 8px;line-height:1.3}
-.svc .d p{margin-bottom:8px;font-size:.86rem;line-height:1.6}
-
-
-
-.svc .d .carimg{margin-top:12px;max-width:340px}
-.svc .d .carimg img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;display:block;background:#eceadf}
-
-.split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
-.split .col{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:#fff}
-.split .colA{border-top:3px solid var(--terra)}
-.split .colB{border-top:3px solid var(--green)}
-.split .colh{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--green-soft);margin-bottom:8px}
-.split .colA .colh{color:var(--terra)}
-.split ul{margin:0 0 0 17px;font-size:.86rem;color:var(--muted)}
-.split li{margin:5px 0}
-.split .colnote{margin-top:10px;padding-top:9px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted)}
-.winebox{margin-top:12px;background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:11px 14px}
-.winebox .wh{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--terra);margin-bottom:4px}
-.winebox .wl{font-size:.82rem;color:var(--green-dark);line-height:1.6}
-.feature{margin-top:14px;border:1px solid var(--line);border-left:3px solid var(--terra);border-radius:10px;padding:16px 18px;background:#fff}
-.feature.alt{border-left-color:var(--green)}
-.feature .fh{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--terra);margin-bottom:8px}
-.feature.alt .fh{color:var(--green-soft)}
-.feature p{font-size:.87rem;line-height:1.65;color:var(--muted);margin-bottom:9px}
-.feature p:last-of-type{margin-bottom:0}
-.feature .fnote2{margin-top:10px;padding-top:9px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted);line-height:1.55}
-.daytip{margin-top:12px;background:var(--sage);border-radius:9px;padding:10px 14px;font-size:.84rem;color:var(--green-dark)}
-.svc .d .sub2{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--green-soft);margin:12px 0 4px}
-@media(max-width:760px){.split{grid-template-columns:1fr}}
-.pkg-note{background:var(--sage);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:.9rem;color:var(--green-dark)}
-
-/* TABLE */
-.tbl-wrap{overflow-x:auto;margin-top:24px;border:1px solid var(--line);border-radius:12px}
-table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:560px}
-th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line)}
-.sec-row td{background:var(--sage);font-weight:700;text-align:center;letter-spacing:.04em;color:var(--green-dark)}
-.head-row td{background:#efeee7;font-weight:600;color:#4a4a44}
-.total-row td{background:#eef2e6;font-weight:700}
-td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
-.note{font-size:.82rem;color:var(--muted);margin-top:12px}
-.days{margin-top:18px;border-top:1px solid var(--line)}
-.day{display:grid;grid-template-columns:148px 1fr;gap:22px;padding:16px 4px;border-bottom:1px solid var(--line)}
-.day:nth-child(odd){background:var(--cream)}
-.day .d{font-size:.78rem;font-weight:700;color:var(--ink);letter-spacing:.03em}
-.day .d span{display:block;margin-top:5px;font-size:.66rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
-.day .tx{font-size:.92rem}
-.day .tx b{font-weight:600}
-.day .tx .pl{color:var(--terra);font-weight:600}
-.sug{display:inline-block;margin-left:10px;padding:4px 10px;border-radius:999px;background:var(--terra);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;vertical-align:middle}
-
-
-/* PAY */
-.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
-.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
-.pay h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
-.pay p{font-size:.9rem;margin-bottom:4px}
-.obs{margin-top:26px;font-size:.82rem;color:var(--muted)}
-.obs li{margin:6px 0 6px 18px}
-.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px}
-.flval{display:flex;justify-content:space-between;align-items:center;background:var(--green);color:#fff;border-radius:12px;padding:16px 24px;margin-top:16px;flex-wrap:wrap;gap:12px}
-.flval .lbl{font-weight:600;font-size:.9rem}
-.flval .amt{text-align:right}
-.flval .amt .t{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;line-height:1}
-.flval .amt .p{font-size:.74rem;opacity:.9;margin-top:3px}
-
-/* FOOTER */
-.footer{background:var(--green);color:#fff;padding:44px 56px}
-.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
-.footer .fnote{font-size:.8rem;opacity:.7;margin-top:16px}
-.sh .eyebrow{margin-bottom:10px;display:block}
-
-@media(max-width:720px){
-  .section,.hero,.footer,.brandbar{padding-left:24px;padding-right:24px}
-  .hero h1{font-size:2.2rem}
-  .hero-info{grid-template-columns:1fr}.hero-info .r{text-align:left}
-  .leg{grid-template-columns:1fr;gap:8px}
-  .day{grid-template-columns:1fr;gap:6px}
-  .air-head{flex-direction:column;align-items:flex-start;gap:2px}
-  .pay{grid-template-columns:1fr}
-  .svc{grid-template-columns:1fr;text-align:left}.svc .dt{text-align:left}
-}
-.optgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
-.optcard{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);overflow:hidden}
-.optcard .oh{background:var(--green);color:#fff;padding:15px 20px}
-.optcard.b .oh{background:var(--green-soft)}
-.optcard .oh .k{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;opacity:.9}
-.optcard .oh .n{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.75rem;font-weight:700;line-height:1.1}
-.optcard .ob{padding:16px 20px}
-.optcard .ob p{font-size:.87rem;color:var(--muted);margin-bottom:6px}
-.optcard .ob p b{color:var(--ink);font-weight:600}
-.optcard .ob .tot{margin-top:13px;padding-top:13px;border-top:1px solid var(--line);font-size:1.4rem;font-weight:700;color:var(--green)}
-.optcard .ob .tot span{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.opthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;border-bottom:2px solid var(--green);padding-bottom:12px;margin-bottom:6px}
-.opthead h3{font-size:1.5rem;font-weight:700}
-.opthead .dates{color:var(--green-soft);font-weight:600;font-size:.9rem;letter-spacing:.04em}
-.onecol{display:grid;grid-template-columns:1fr;gap:16px;margin-top:20px}
-@media(max-width:760px){.optgrid{grid-template-columns:1fr}}
-/* ---- seção de assentos (visual da cotação André) ---- */
-    .howbox{background:var(--sage);border-radius:12px;padding:18px 22px;margin-top:20px}
-    .howbox p{font-size:.9rem;color:var(--green-dark);line-height:1.65;margin-bottom:8px}
-    .howbox p:last-child{margin-bottom:0}
-    .grphead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;border-bottom:2px solid var(--green);padding-bottom:11px;margin:38px 0 4px}
-    .grphead h3{font-size:1.35rem;font-weight:700}
-    .grphead .gt{color:var(--green-soft);font-weight:600;font-size:.86rem;letter-spacing:.04em}
-    .trecho{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);overflow:hidden;margin-top:18px}
-    .trecho-head{background:var(--green);color:#fff;padding:13px 22px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    .trecho-head .rt{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-weight:700;line-height:1.1}
-    .trecho-head .sub{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;opacity:.92;font-weight:600}
-    .tiers{display:grid;grid-template-columns:1fr 1fr}
-    .tier{display:grid;grid-template-columns:30px 1fr auto;gap:13px;align-items:start;padding:15px 22px;border-bottom:1px solid var(--line)}
-    .tier:nth-child(odd){border-right:1px solid var(--line)}
-    .tier .sw{width:26px;height:32px;border-radius:5px;border:1px solid rgba(0,0,0,.2);margin-top:2px}
-    .tier .nm{font-weight:600;font-size:.94rem;line-height:1.3}
-    .tier .bn{font-size:.8rem;color:var(--muted);margin-top:5px;line-height:1.55}
-    .tier .pr{text-align:right;white-space:nowrap}
-    .tier .pr .p{font-weight:700;color:var(--green);font-size:1.02rem}
-    .tier .pr .q{font-size:.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:2px}
-    .seatmap{padding:16px 22px 20px;background:var(--cream);border-top:1px solid var(--line)}
-    .tier .pr .ap{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.09em;font-weight:600;margin-bottom:1px}
-    .mapcrop{position:relative;overflow:hidden;border-radius:10px;border:1px solid var(--line);background:#fff;width:100%;max-width:360px;margin:0 auto}
-    .mapcrop img{position:absolute;top:0;display:block;max-width:none;height:auto}
-    .mapgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .seatmap .cap2{font-size:.78rem;color:var(--muted);margin-top:9px;line-height:1.5}
-    @media(max-width:760px){.tiers{grid-template-columns:1fr}.tier:nth-child(odd){border-right:none}.mapgrid{grid-template-columns:1fr}}
-/* mapas largos (Emirates: fileiras na horizontal) */
-.mapgrid-wide{grid-template-columns:2fr 1fr;align-items:start}
-.mapgrid-wide:has(.mapwide:nth-child(2):not(.mapwide-sm)){grid-template-columns:1fr 1fr}
-.mapwide{border:1px solid var(--line);border-radius:10px;background:#fff;padding:12px 12px 10px;overflow:hidden}
-.mapwide img{width:100%;height:auto;display:block}
-.maplbl{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--green-soft);margin-bottom:8px}
-@media(max-width:760px){.mapgrid-wide{grid-template-columns:1fr}}
-/* amostras de cor dos assentos */
-.tier .sw{display:grid;place-items:center;font-size:.6rem;font-weight:700;line-height:1}
-.sw-ek-reg{background:#d6eef2;border-color:#4aa3b5!important}
-.sw-ek-pref{background:#1f6f8b;border-color:#1f6f8b!important}
-.sw-ek-duo{background:linear-gradient(135deg,#d6eef2 55%,#e8832a 56%);border-color:#4aa3b5!important}
-.sw-ek-leg{background:linear-gradient(135deg,#d6eef2 55%,#3f9e52 56%);border-color:#4aa3b5!important}
-.sw-ek-na{background:#cfcac2;border-color:#b9b3aa!important}
-.sw-ek-wc{background:#e6f3fb;border-color:#8ab0e8!important;color:#1f5fa8;font-size:.8rem}
-.sw-la-xl{background:#f7b8c8;border-color:#e4788f!important;color:#b8294c}
-.sw-la-front{background:#c9b6ea;border-color:#9b7fd0!important}
-.sw-la-exit{background:#c6e0b4;border-color:#8bb56e!important}
-.sw-la-std{background:#d3ddf5;border-color:#a7bbe8!important}
-.sw-la-na{background:#fff;border-color:#c9c5bd!important;color:#8a857d;font-size:.9rem}
-.tier .pr .p-free{color:#2f7a3a}
-.tier .pr .p-dash{color:var(--muted);font-weight:500}
-.rm{font-size:.78rem;color:var(--muted);font-weight:400;margin-top:2px}
-.tbl-wrap table{min-width:0}
-.mapsvg{max-width:380px;margin:0 auto;border:1px solid var(--line);border-radius:10px;background:#fff;padding:10px}
-.mapsvg svg{display:block;width:100%;height:auto}
-.brandtext{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:.3em;color:var(--green);text-transform:uppercase}
-.footer .brandtext{color:#fff;margin-bottom:14px}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="page">
-
   <div class="brandbar"><img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel — travel agency" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'"></div>
-
   <!-- HERO -->
   <header class="hero">
     <div class="eyebrow">Marcação de assentos</div>
     <h1>CHINA <span class="amp">·</span> ASSENTOS</h1>
     <div class="accent-line"></div>
     <p class="hero-sub"><b>Luiz Gabriel Ladeia Scaburi</b> · Rio de Janeiro → Dubai → Shenzhen · Milão → São Paulo — <b>08 de abril a 01 de maio de 2027</b></p>
-
     <style>.hero-img{height:420px}.hero-img img{object-position:center 40%}@media(max-width:720px){.hero-img{height:230px}}</style>
     <div class="hero-img">
       <img src="img/capa.jpg" alt="China" onerror="this.style.display='none'">
       <div class="cap"><div class="k">Ida com Emirates · volta com LATAM</div><div class="t">Três voos para escolher o assento</div></div>
     </div>
-
     <div class="hero-info">
       <div>
         <div class="lbl">Detalhes da cotação</div>
@@ -315,7 +34,6 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
         <p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p>
       </div>
     </div>
-
     <div class="gloss">
       <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16l20-7-9 13-2-6z"/></svg></span><b>3</b>&nbsp;Voos</div>
       <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l7-7M8 4l3 3M14 6l4 4-9 9-4-1-1-4z"/></svg></span><b>Emirates</b>&nbsp;ida</div>
@@ -323,14 +41,12 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
       <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><b>4</b>&nbsp;Categorias de assento</div>
     </div>
   </header>
-
   <!-- RESUMO DOS VOOS -->
   <section class="section sh" style="background:var(--cream)">
     <span class="eyebrow">Itinerário</span>
     <h2>Os três voos</h2>
     <div class="accent-line"></div>
     <p class="note" style="margin-top:16px">Ida em dois trechos pela <b>Emirates</b>, com conexão em Dubai. Volta pela <b>LATAM</b>, de Milão a São Paulo, com conexão para Curitiba. Os mapas de assento e os valores de cada voo estão logo abaixo.</p>
-
     <div class="tbl-wrap"><table>
       <tr class="head-row"><td>Voo</td><td>Data</td><td>Trecho</td><td>Aeronave</td><td class="v">Categorias pagas</td></tr>
       <tr class="sec-row"><td colspan="5">Ida · Emirates</td></tr>
@@ -341,16 +57,13 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
     </table></div>
     <p class="note">Valores por passageiro e por trecho. Na Emirates o assento regular é <b>gratuito</b>; na LATAM os valores são <b>"a partir de"</b>, em dólar.</p>
   </section>
-
   <!-- ASSENTOS -->
   <section class="section sh">
     <span class="eyebrow">Mapas de cabine</span>
     <h2>Marcação de assentos</h2>
     <div class="accent-line"></div>
     <p class="note" style="margin-top:16px">Em cada voo, as categorias com o valor por passageiro e, abaixo, o mapa da cabine com a disponibilidade no momento da consulta. As cores dos assentos correspondem às categorias listadas.</p>
-
     <div class="grphead"><h3>Ida · Emirates</h3><span class="gt">Rio de Janeiro → Dubai → Shenzhen · valores em BRL</span></div>
-
     <!-- EK248 -->
     <div class="trecho">
       <div class="trecho-head"><div class="rt">GIG → DXB</div><div class="sub">EK248 · 08 abr 2027 · Boeing 777 · Econômica</div></div>
@@ -370,7 +83,6 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
         <div class="cap2">Mapa da classe econômica — <b>GIG → DXB</b>, fileiras 17 a 46. Colunas A–C (janela/corredor esq.), D–G (centro), H–K (corredor/janela dir.). Os cinzas já estão ocupados.</div>
       </div>
     </div>
-
     <!-- EK328 -->
     <div class="trecho">
       <div class="trecho-head"><div class="rt">DXB → SZX</div><div class="sub">EK328 · 11 abr 2027 · Boeing 777-300ER · Econômica</div></div>
@@ -384,15 +96,13 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
       </div>
       <div class="seatmap">
         <div class="mapgrid mapgrid-wide">
-          <div class="mapwide"><div class="maplbl">Fileiras 23–36</div><img src="img/assentos/ek328-1.png" alt="Mapa de assentos do EK328, fileiras 23 a 36" loading="lazy"></div>
-          <div class="mapwide"><div class="maplbl">Fileiras 37–50</div><img src="img/assentos/ek328-2.png" alt="Mapa de assentos do EK328, fileiras 37 a 50" loading="lazy"></div>
+          <div class="mapwide"><div class="maplbl">Fileiras 23–36</div><img src="img/assentos/ek328-1a.png" alt="Mapa de assentos do EK328, fileiras 23 a 36 (parte superior)" loading="lazy"><img src="img/assentos/ek328-1b.png" alt="Mapa de assentos do EK328, fileiras 23 a 36 (parte inferior)" loading="lazy"></div>
+          <div class="mapwide"><div class="maplbl">Fileiras 37–50</div><img src="img/assentos/ek328-2a.png" alt="Mapa de assentos do EK328, fileiras 37 a 50 (parte superior)" loading="lazy"><img src="img/assentos/ek328-2b.png" alt="Mapa de assentos do EK328, fileiras 37 a 50 (parte inferior)" loading="lazy"></div>
         </div>
         <div class="cap2">Mapa da classe econômica — <b>DXB → SZX</b>, fileiras 23 a 50. Colunas A–C (janela/corredor esq.), D–G (centro), H–K (corredor/janela dir.). Os cinzas já estão ocupados.</div>
       </div>
     </div>
-
     <div class="grphead"><h3>Volta · LATAM</h3><span class="gt">Milão → São Paulo · valores em USD, a partir de</span></div>
-
     <!-- LA8073 -->
     <div class="trecho">
       <div class="trecho-head"><div class="rt">MXP → GRU</div><div class="sub">LA8073 · 01 mai 2027 · 13:00 → 20:00 · Boeing 777-300 · operado por LATAM Airlines Brasil</div></div>
@@ -404,21 +114,18 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
         <div class="tier"><span class="sw sw-la-na">✕</span><div><div class="nm">Indisponível</div><div class="bn">Marcado com X — já ocupado ou bloqueado.</div></div><div class="pr"><div class="p p-dash">—</div></div></div>
       </div>
       <div class="seatmap">
-        <div class="mapsvg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348 850" width="100%" role="img" aria-label="Mapa de assentos do LA8073, Boeing 777-300, fileiras 12 a 27" font-family="Poppins,system-ui,sans-serif"><defs><symbol id="p" viewBox="0 0 22 22"><rect width="22" height="22" rx="5" fill="#f9c7d1" stroke="#e58aa0" stroke-width="1.2"/><rect x="3" y="15" width="16" height="4" rx="2" fill="#e58aa0" opacity=".55"/></symbol><symbol id="u" viewBox="0 0 22 22"><rect width="22" height="22" rx="5" fill="#cdbbec" stroke="#a48dd8" stroke-width="1.2"/><rect x="3" y="15" width="16" height="4" rx="2" fill="#a48dd8" opacity=".55"/></symbol><symbol id="g" viewBox="0 0 22 22"><rect width="22" height="22" rx="5" fill="#c8dcb6" stroke="#9ab983" stroke-width="1.2"/><rect x="3" y="15" width="16" height="4" rx="2" fill="#9ab983" opacity=".55"/></symbol><symbol id="b" viewBox="0 0 22 22"><rect width="22" height="22" rx="5" fill="#d3ddf5" stroke="#a7bbe8" stroke-width="1.2"/><rect x="3" y="15" width="16" height="4" rx="2" fill="#a7bbe8" opacity=".55"/></symbol><symbol id="x" viewBox="0 0 22 22"><rect width="22" height="22" rx="5" fill="#fff" stroke="#d6d3cd" stroke-width="1.2"/><path d="M6.5 6.5l9 9M15.5 6.5l-9 9" stroke="#b9b5ae" stroke-width="1.6" stroke-linecap="round"/></symbol></defs><path d="M10 60Q10 8 174 6Q338 8 338 60V820Q338 850 174 850Q10 850 10 820Z" fill="#f4f4f4" stroke="#e4e2dc"/><text x="174" y="22" font-size="12" font-weight="600" text-anchor="middle" fill="#333131">Boeing 777-300</text><g font-size="10" font-weight="600" text-anchor="middle" fill="#1c2a6b"><text x="35" y="52">A</text><text x="61" y="52">B</text><text x="87" y="52">C</text><text x="135" y="52">D</text><text x="161" y="52">E</text><text x="187" y="52">F</text><text x="213" y="52">H</text><text x="261" y="52">J</text><text x="287" y="52">K</text><text x="313" y="52">L</text></g><g><use width="22" height="22" href="#p" x="24" y="80"/><use width="22" height="22" href="#x" x="50" y="80"/><use width="22" height="22" href="#x" x="76" y="80"/><use width="22" height="22" href="#x" x="124" y="80"/><use width="22" height="22" href="#p" x="150" y="80"/><use width="22" height="22" href="#p" x="176" y="80"/><use width="22" height="22" href="#p" x="202" y="80"/><use width="22" height="22" href="#x" x="250" y="80"/><use width="22" height="22" href="#x" x="276" y="80"/><use width="22" height="22" href="#x" x="302" y="80"/><use width="22" height="22" href="#x" x="24" y="126"/><use width="22" height="22" href="#x" x="50" y="126"/><use width="22" height="22" href="#p" x="76" y="126"/><use width="22" height="22" href="#p" x="124" y="126"/><use width="22" height="22" href="#p" x="150" y="126"/><use width="22" height="22" href="#p" x="176" y="126"/><use width="22" height="22" href="#p" x="202" y="126"/><use width="22" height="22" href="#x" x="250" y="126"/><use width="22" height="22" href="#p" x="276" y="126"/><use width="22" height="22" href="#x" x="302" y="126"/><use width="22" height="22" href="#x" x="24" y="172"/><use width="22" height="22" href="#p" x="50" y="172"/><use width="22" height="22" href="#x" x="76" y="172"/><use width="22" height="22" href="#p" x="124" y="172"/><use width="22" height="22" href="#p" x="150" y="172"/><use width="22" height="22" href="#p" x="176" y="172"/><use width="22" height="22" href="#p" x="202" y="172"/><use width="22" height="22" href="#p" x="250" y="172"/><use width="22" height="22" href="#p" x="276" y="172"/><use width="22" height="22" href="#p" x="302" y="172"/><use width="22" height="22" href="#p" x="24" y="218"/><use width="22" height="22" href="#p" x="50" y="218"/><use width="22" height="22" href="#p" x="76" y="218"/><use width="22" height="22" href="#p" x="124" y="218"/><use width="22" height="22" href="#p" x="150" y="218"/><use width="22" height="22" href="#p" x="176" y="218"/><use width="22" height="22" href="#p" x="202" y="218"/><use width="22" height="22" href="#p" x="250" y="218"/><use width="22" height="22" href="#p" x="276" y="218"/><use width="22" height="22" href="#p" x="302" y="218"/><use width="22" height="22" href="#p" x="24" y="264"/><use width="22" height="22" href="#p" x="50" y="264"/><use width="22" height="22" href="#p" x="76" y="264"/><use width="22" height="22" href="#p" x="124" y="264"/><use width="22" height="22" href="#p" x="150" y="264"/><use width="22" height="22" href="#p" x="176" y="264"/><use width="22" height="22" href="#p" x="202" y="264"/><use width="22" height="22" href="#p" x="250" y="264"/><use width="22" height="22" href="#p" x="276" y="264"/><use width="22" height="22" href="#p" x="302" y="264"/><use width="22" height="22" href="#u" x="24" y="310"/><use width="22" height="22" href="#u" x="50" y="310"/><use width="22" height="22" href="#u" x="76" y="310"/><use width="22" height="22" href="#u" x="124" y="310"/><use width="22" height="22" href="#u" x="150" y="310"/><use width="22" height="22" href="#u" x="176" y="310"/><use width="22" height="22" href="#u" x="202" y="310"/><use width="22" height="22" href="#u" x="250" y="310"/><use width="22" height="22" href="#u" x="276" y="310"/><use width="22" height="22" href="#u" x="302" y="310"/><use width="22" height="22" href="#u" x="24" y="356"/><use width="22" height="22" href="#u" x="50" y="356"/><use width="22" height="22" href="#u" x="76" y="356"/><use width="22" height="22" href="#x" x="124" y="356"/><use width="22" height="22" href="#x" x="150" y="356"/><use width="22" height="22" href="#x" x="176" y="356"/><use width="22" height="22" href="#x" x="202" y="356"/><use width="22" height="22" href="#u" x="250" y="356"/><use width="22" height="22" href="#u" x="276" y="356"/><use width="22" height="22" href="#u" x="302" y="356"/><use width="22" height="22" href="#u" x="24" y="402"/><use width="22" height="22" href="#u" x="50" y="402"/><use width="22" height="22" href="#u" x="76" y="402"/><use width="22" height="22" href="#x" x="124" y="402"/><use width="22" height="22" href="#x" x="150" y="402"/><use width="22" height="22" href="#x" x="176" y="402"/><use width="22" height="22" href="#x" x="202" y="402"/><use width="22" height="22" href="#u" x="250" y="402"/><use width="22" height="22" href="#u" x="276" y="402"/><use width="22" height="22" href="#u" x="302" y="402"/><use width="22" height="22" href="#u" x="24" y="448"/><use width="22" height="22" href="#u" x="50" y="448"/><use width="22" height="22" href="#u" x="76" y="448"/><use width="22" height="22" href="#u" x="124" y="448"/><use width="22" height="22" href="#u" x="150" y="448"/><use width="22" height="22" href="#u" x="176" y="448"/><use width="22" height="22" href="#u" x="202" y="448"/><use width="22" height="22" href="#u" x="250" y="448"/><use width="22" height="22" href="#u" x="276" y="448"/><use width="22" height="22" href="#u" x="302" y="448"/><use width="22" height="22" href="#x" x="24" y="494"/><use width="22" height="22" href="#x" x="50" y="494"/><use width="22" height="22" href="#x" x="76" y="494"/><use width="22" height="22" href="#u" x="124" y="494"/><use width="22" height="22" href="#u" x="150" y="494"/><use width="22" height="22" href="#u" x="176" y="494"/><use width="22" height="22" href="#u" x="202" y="494"/><use width="22" height="22" href="#u" x="250" y="494"/><use width="22" height="22" href="#u" x="276" y="494"/><use width="22" height="22" href="#u" x="302" y="494"/><use width="22" height="22" href="#x" x="24" y="540"/><use width="22" height="22" href="#x" x="50" y="540"/><use width="22" height="22" href="#x" x="76" y="540"/><use width="22" height="22" href="#u" x="124" y="540"/><use width="22" height="22" href="#u" x="150" y="540"/><use width="22" height="22" href="#u" x="176" y="540"/><use width="22" height="22" href="#u" x="202" y="540"/><use width="22" height="22" href="#u" x="250" y="540"/><use width="22" height="22" href="#u" x="276" y="540"/><use width="22" height="22" href="#u" x="302" y="540"/><use width="22" height="22" href="#p" x="124" y="620"/><use width="22" height="22" href="#p" x="150" y="620"/><use width="22" height="22" href="#p" x="176" y="620"/><use width="22" height="22" href="#p" x="202" y="620"/><use width="22" height="22" href="#g" x="24" y="666"/><use width="22" height="22" href="#g" x="50" y="666"/><use width="22" height="22" href="#g" x="76" y="666"/><use width="22" height="22" href="#x" x="124" y="666"/><use width="22" height="22" href="#x" x="150" y="666"/><use width="22" height="22" href="#b" x="176" y="666"/><use width="22" height="22" href="#b" x="202" y="666"/><use width="22" height="22" href="#g" x="250" y="666"/><use width="22" height="22" href="#g" x="276" y="666"/><use width="22" height="22" href="#g" x="302" y="666"/><use width="22" height="22" href="#b" x="24" y="712"/><use width="22" height="22" href="#b" x="50" y="712"/><use width="22" height="22" href="#b" x="76" y="712"/><use width="22" height="22" href="#b" x="124" y="712"/><use width="22" height="22" href="#b" x="150" y="712"/><use width="22" height="22" href="#b" x="176" y="712"/><use width="22" height="22" href="#b" x="202" y="712"/><use width="22" height="22" href="#b" x="250" y="712"/><use width="22" height="22" href="#b" x="276" y="712"/><use width="22" height="22" href="#b" x="302" y="712"/><use width="22" height="22" href="#x" x="24" y="758"/><use width="22" height="22" href="#x" x="50" y="758"/><use width="22" height="22" href="#b" x="76" y="758"/><use width="22" height="22" href="#b" x="124" y="758"/><use width="22" height="22" href="#b" x="150" y="758"/><use width="22" height="22" href="#b" x="176" y="758"/><use width="22" height="22" href="#b" x="202" y="758"/><use width="22" height="22" href="#x" x="250" y="758"/><use width="22" height="22" href="#x" x="276" y="758"/><use width="22" height="22" href="#b" x="302" y="758"/><use width="22" height="22" href="#b" x="24" y="804"/><use width="22" height="22" href="#b" x="50" y="804"/><use width="22" height="22" href="#b" x="76" y="804"/><use width="22" height="22" href="#b" x="124" y="804"/><use width="22" height="22" href="#b" x="150" y="804"/><use width="22" height="22" href="#b" x="176" y="804"/><use width="22" height="22" href="#b" x="202" y="804"/><use width="22" height="22" href="#b" x="250" y="804"/><use width="22" height="22" href="#b" x="276" y="804"/><use width="22" height="22" href="#b" x="302" y="804"/></g><g font-size="9" font-weight="600" text-anchor="middle" fill="#333131"><text x="111" y="94.5">12</text><text x="237" y="94.5">12</text><text x="111" y="140.5">13</text><text x="237" y="140.5">13</text><text x="111" y="186.5">14</text><text x="237" y="186.5">14</text><text x="111" y="232.5">15</text><text x="237" y="232.5">15</text><text x="111" y="278.5">16</text><text x="237" y="278.5">16</text><text x="111" y="324.5">17</text><text x="237" y="324.5">17</text><text x="111" y="370.5">18</text><text x="237" y="370.5">18</text><text x="111" y="416.5">19</text><text x="237" y="416.5">19</text><text x="111" y="462.5">20</text><text x="237" y="462.5">20</text><text x="111" y="508.5">21</text><text x="237" y="508.5">21</text><text x="111" y="554.5">22</text><text x="237" y="554.5">22</text><text x="111" y="634.5">23</text><text x="237" y="634.5">23</text><text x="111" y="680.5">24</text><text x="237" y="680.5">24</text><text x="111" y="726.5">25</text><text x="237" y="726.5">25</text><text x="111" y="772.5">26</text><text x="237" y="772.5">26</text><text x="111" y="818.5">27</text><text x="237" y="818.5">27</text></g><g font-size="6.5" font-weight="700" text-anchor="middle" fill="#c2385b"><text x="35" y="77.5">XL</text><text x="161" y="77.5">XL</text><text x="187" y="77.5">XL</text><text x="213" y="77.5">XL</text><text x="87" y="123.5">XL</text><text x="135" y="123.5">XL</text><text x="161" y="123.5">XL</text><text x="187" y="123.5">XL</text><text x="213" y="123.5">XL</text><text x="287" y="123.5">XL</text><text x="61" y="169.5">XL</text><text x="135" y="169.5">XL</text><text x="161" y="169.5">XL</text><text x="187" y="169.5">XL</text><text x="213" y="169.5">XL</text><text x="261" y="169.5">XL</text><text x="287" y="169.5">XL</text><text x="313" y="169.5">XL</text><text x="35" y="215.5">XL</text><text x="61" y="215.5">XL</text><text x="87" y="215.5">XL</text><text x="135" y="215.5">XL</text><text x="161" y="215.5">XL</text><text x="187" y="215.5">XL</text><text x="213" y="215.5">XL</text><text x="261" y="215.5">XL</text><text x="287" y="215.5">XL</text><text x="313" y="215.5">XL</text><text x="35" y="261.5">XL</text><text x="61" y="261.5">XL</text><text x="87" y="261.5">XL</text><text x="135" y="261.5">XL</text><text x="161" y="261.5">XL</text><text x="187" y="261.5">XL</text><text x="213" y="261.5">XL</text><text x="261" y="261.5">XL</text><text x="287" y="261.5">XL</text><text x="313" y="261.5">XL</text><text x="135" y="617.5">XL</text><text x="161" y="617.5">XL</text><text x="187" y="617.5">XL</text><text x="213" y="617.5">XL</text></g><g font-size="6.5" font-weight="700" text-anchor="middle" fill="#4f7a3a"><text x="35" y="663.5">XL</text><text x="61" y="663.5">XL</text><text x="87" y="663.5">XL</text><text x="261" y="663.5">XL</text><text x="287" y="663.5">XL</text><text x="313" y="663.5">XL</text></g><text x="174" y="594" font-size="8.5" font-weight="700" letter-spacing=".08em" text-anchor="middle" fill="#333131">SALIDA DE EMERGENCIA</text><path d="M24 590h60M264 590h60" stroke="#b9b5ae" stroke-dasharray="3 3"/><path d="M24 590l4-3.5M24 590l4 3.5M324 590l-4-3.5M324 590l-4 3.5" stroke="#b9b5ae" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+        <div class="mapsvg"><img src="img/assentos/la8073.svg" alt="Mapa de assentos do LA8073, Boeing 777-300, fileiras 12 a 27" loading="lazy"></div>
         <div class="cap2">Mapa da cabine — <b>MXP → GRU</b>, exibido da fileira 12 à 27. Colunas A–C (janela/corredor esq.), D–H (centro), J–L (corredor/janela dir.). O trecho de conexão São Paulo → Curitiba não consta neste mapa.</div>
       </div>
     </div>
-
     <p class="note" style="margin-top:18px">Valores por pessoa, por trecho, informados pelas companhias em <b>26/10/2026</b> e sujeitos a alteração até a marcação. Na LATAM os valores são <b>"a partir de"</b>: o preço final depende da posição exata do assento. A disponibilidade indicada é a do momento da consulta.</p>
   </section>
-
   <!-- VALORES -->
   <section class="section sh" style="background:var(--cream)">
     <span class="eyebrow">Investimento</span>
     <h2>Valores da marcação</h2>
     <div class="accent-line"></div>
     <p class="note" style="margin-top:16px">Por <b>passageiro</b> e por <b>trecho</b>. A mesma categoria pode ser escolhida em um voo e não no outro. Nada reservado, apenas cotado.</p>
-
     <div class="tbl-wrap"><table>
       <tr class="head-row"><td>Categoria</td><td class="v">EK248<br><span style="font-weight:400;font-size:.78rem">GIG → DXB</span></td><td class="v">EK328<br><span style="font-weight:400;font-size:.78rem">DXB → SZX</span></td><td class="v">Ida completa<br><span style="font-weight:400;font-size:.78rem">2 trechos</span></td></tr>
       <tr class="sec-row"><td colspan="4">Ida · Emirates · valores em BRL</td></tr>
@@ -428,7 +135,6 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
       <tr><td><b>Mais espaço para as pernas</b><div class="rm">Fileiras 24 e 37 · atrás das divisórias (bulkhead)</div></td><td class="v">BRL 755</td><td class="v">BRL 370</td><td class="v"><b>BRL 1.125</b></td></tr>
     </table></div>
     <p class="note">Ida: valores informados pela Emirates em 26/10/2026. Os preços podem mudar de acordo com o passageiro e o destino.</p>
-
     <div class="tbl-wrap" style="margin-top:22px"><table>
       <tr class="head-row"><td>Categoria</td><td>Localização</td><td class="v">LA8073<br><span style="font-weight:400;font-size:.78rem">MXP → GRU · a partir de</span></td></tr>
       <tr class="sec-row"><td colspan="3">Volta · LATAM · valores em USD</td></tr>
@@ -437,12 +143,10 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
       <tr><td><b>Mais à frente</b><div class="rm">Desembarque mais rápido</div></td><td>Fileiras 17 a 20</td><td class="v"><b>USD 103,74</b></td></tr>
     </table></div>
     <p class="note">Volta: valores informados pela LATAM em 26/10/2026, em dólar americano. A conversão para reais segue o câmbio do dia do pagamento.</p>
-
     <div class="howbox">
       <p><b>Como escolher.</b> Consulte os mapas acima e nos envie, para cada um dos três voos, a <b>fileira e a letra</b> do assento desejado. Indique uma <b>segunda opção</b> caso a primeira já não esteja disponível no momento da marcação.</p>
       <p>Exemplo: <b>EK248</b> · 1ª opção 24K · 2ª opção 37A &nbsp;·&nbsp; <b>EK328</b> · 1ª opção 29K · 2ª opção 38A &nbsp;·&nbsp; <b>LA8073</b> · 1ª opção 17A · 2ª opção 19L</p>
     </div>
-
     <div class="obs">
       <h4>Observações</h4>
       <ul>
@@ -455,7 +159,6 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
       </ul>
     </div>
   </section>
-
   <!-- FOOTER -->
   <footer class="footer">
     <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'">
@@ -465,7 +168,6 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
     </div>
     <div class="fnote">*Nada reservado, apenas cotado.</div>
   </footer>
-
 </div>
 </body>
 </html>
