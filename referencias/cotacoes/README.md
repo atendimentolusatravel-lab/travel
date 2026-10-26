@@ -10,5 +10,6 @@ nos projetos Vercel de origem.
 | `2026-10-italia-luiz.html` | `cotacao-italia-luiz-abril-rev` | v2 |
 | `2026-10-italia-anna-guilherme.html` | `cotacao-italia-anna-guilherme-rev` | v2 |
 | `2026-10-grecia-italia-regia-eduardo.html` | `cotacao-grecia-italia-regia-eduardo` (alias `-gamma`) | v2 |
+| `2026-10-paris-andre-hospedagem-assentos.html` | `cotacao-andre-paris` | v2 · variante: hospedagem para grupo (11 pessoas, 6 hotéis, comparativo duplo/triplo) + seção **Marcação de assentos** com mapas de cabine |
 
 Não edite estes arquivos: são o registro do que foi enviado ao cliente.

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lusa Travel · Paris — André Egoroff e família</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#404626; --green-dark:#363b1f; --green-soft:#5a6238;
+  --sage:#d9ead3; --sage-head:#c6d8b0;
+  --ink:#333131; --muted:#6f6f68; --line:#e7e7e0; --bg:#ffffff; --cream:#faf9f5;
+  --terra:#b4622f;
+  --shadow:0 10px 30px rgba(64,70,38,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{line-height:1.15}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:60px 56px}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+.muted{color:var(--muted)}
+
+.brandbar{display:flex;flex-direction:column;align-items:center;gap:8px;padding:38px 0 6px}
+.brandbar .brandlogo{width:210px;height:auto;display:block}
+.footlogo{width:190px;height:auto;display:block;margin-bottom:14px}
+
+/* HERO */
+.hero{padding:56px 56px 40px}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.hero h1 .amp{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-style:italic}
+.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
+.hero-img{margin:34px 0 0;height:330px;border-radius:14px;overflow:hidden;position:relative;
+  display:flex;align-items:flex-end;box-shadow:var(--shadow);
+  background:
+    radial-gradient(120% 130% at 12% 8%, rgba(70,120,150,.55), rgba(40,80,110,.15) 42%, transparent 60%),
+    radial-gradient(120% 130% at 92% 96%, rgba(150,170,120,.55), rgba(90,110,70,.2) 44%, transparent 64%),
+    linear-gradient(120deg, #3a5f80 0%, #5a7d92 30%, #8aa0a2 55%, #b0a878 80%, #7a6a3a 100%);}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-img.crop img{width:120%;height:auto;min-height:120%;inset:auto auto auto 0;top:0;object-position:left top}
+.hero-img::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top, rgba(20,26,32,.6), rgba(20,26,32,.05) 55%, transparent)}
+.hero-img .cap{position:relative;z-index:2;padding:22px 26px;color:#fff}
+.hero-img .cap .k{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;opacity:.92}
+.hero-img .cap .t{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:600;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
+.hero-info .r{text-align:right}
+.hero-info p{font-size:.95rem}
+.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
+.chip b{font-size:1.15rem;font-weight:700}
+.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
+.chip .ic svg{width:18px;height:18px}
+
+/* AEREO */
+.air{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:18px;background:#fff;box-shadow:var(--shadow)}
+.air-head{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--green);color:#fff;padding:14px 22px}
+.air-head .dir{font-weight:700;letter-spacing:.14em;font-size:.78rem;text-transform:uppercase}
+.air-head .route{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;font-weight:600}
+.leg{display:grid;grid-template-columns:200px 1fr auto;gap:18px;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line)}
+.leg .fl{font-size:.78rem;color:var(--muted)}
+.leg .fl b{display:block;color:var(--ink);font-size:.92rem;font-weight:600}
+.leg .fl strong{color:var(--ink);font-weight:700}
+.leg .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.leg .pt .code{font-weight:700;font-size:1.05rem}
+.leg .pt .tm{font-size:.82rem;color:var(--muted)}
+.leg .arrow{color:var(--green-soft);flex:none}
+.leg .cls{text-align:right;font-size:.78rem}
+.leg .cls b{display:block;color:var(--green);font-size:.86rem}
+.cnx{display:flex;align-items:center;gap:8px;padding:9px 22px;background:#f4f5ef;font-size:.75rem;color:var(--muted);border-bottom:1px solid var(--line)}
+.cnx svg{width:14px;height:14px;flex:none;color:var(--green-soft)}
+.air-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;background:#f4f5ef}
+.air-foot .lbl{font-size:.78rem;color:var(--muted)}
+.air-foot .val{font-weight:700;font-size:1.3rem;color:var(--green)}
+
+/* HOTELS */
+.city-block{margin-top:34px}
+.city-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--green);padding-bottom:10px;margin-bottom:22px}
+.city-head h3{font-size:1.4rem;font-weight:700}
+.city-head .dates{color:var(--green-soft);font-weight:600;font-size:.9rem;letter-spacing:.04em}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.hgrid{grid-template-columns:1fr}}
+.hotel{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:20px 22px}
+.hotel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.hotel-name{font-size:1.06rem;font-weight:600;display:flex;align-items:center;gap:12px}
+.hotel-name .bldg{width:34px;height:34px;flex:none;border:1.6px solid var(--ink);border-radius:50%;display:grid;place-items:center}
+.hotel-name .bldg svg{width:17px;height:17px}
+.hotel-name .loc2{font-weight:400;color:var(--muted);font-size:.86rem}
+.hotel-price{text-align:right;flex:none}
+.hotel-price .v{font-size:1.3rem;font-weight:700;color:var(--green);white-space:nowrap}
+.hotel-price .u{font-size:.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.hotel-room{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
+.hotel-room b{color:var(--green-dark);font-weight:600}
+.bf{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-soft);background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:3px 9px;margin-top:10px}
+.hgal{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:14px}
+.hgal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px;display:block;background:#eceadf}
+
+/* experience card */
+.svc{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:start;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-top:14px;background:#fff;box-shadow:var(--shadow)}
+.svc .ic{width:52px;height:52px;background:var(--green);border-radius:12px;display:grid;place-items:center;color:#fff;flex:none}
+.svc .ic svg{width:24px;height:24px}
+.svc .t{font-weight:600;font-size:1.02rem}
+.svc .d{color:var(--muted);font-size:.86rem;margin-top:2px}
+.svc .dt{text-align:right;font-weight:700;font-size:.9rem;color:var(--green-soft);white-space:nowrap}
+.dayrow{display:grid;grid-template-columns:92px 1fr;gap:22px;padding:22px 0;border-bottom:1px solid var(--line)}
+.dayrow:last-of-type{border-bottom:none}
+.daynum{text-align:right}
+.daynum .d{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;font-weight:700;color:var(--green);line-height:1}
+.daynum .m{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green-soft);font-weight:700;margin-top:2px}
+.daynum .w{font-size:.7rem;color:var(--muted);margin-top:2px}
+.daybody .city{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--green);border-radius:12px;padding:3px 11px;display:inline-block;margin-bottom:9px}
+.daybody h4{font-size:1.06rem;font-weight:600;margin-bottom:5px;color:var(--green-dark)}
+.daybody p{font-size:.88rem;color:var(--muted)}
+.daybody ul{margin:9px 0 0 18px;font-size:.88rem;color:var(--muted)}
+.daybody li{margin:5px 0}
+.tag-q,.tag-s{display:inline-block;font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:10px;padding:2px 8px;margin-left:5px;white-space:nowrap}
+.tag-q{color:var(--terra);background:#fdf3ec;border:1px solid #f0dccd}
+.tag-s{color:var(--green-dark);background:#eef2e6;border:1px solid #dde5cf}
+@media(max-width:720px){.dayrow{grid-template-columns:64px 1fr;gap:14px}.daynum .d{font-size:1.5rem}}
+
+.svc .d ul.incl{margin:8px 0 0 18px;padding:0}
+.svc .d ul.incl li{margin:5px 0;font-size:.86rem;line-height:1.55}
+.svc .d .fine{margin-top:10px;padding-top:9px;border-top:1px solid var(--line);font-size:.78rem;line-height:1.55}
+.svc .d .upg{margin-top:9px;background:var(--sage);border-radius:8px;padding:9px 12px;font-size:.8rem;color:var(--green-dark)}
+
+.svc .d .sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.12rem;font-weight:600;color:var(--green-dark);margin:6px 0 8px;line-height:1.3}
+.svc .d p{margin-bottom:8px;font-size:.86rem;line-height:1.6}
+
+
+
+.svc .d .carimg{margin-top:12px;max-width:340px}
+.svc .d .carimg img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;display:block;background:#eceadf}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+.split .col{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:#fff}
+.split .colA{border-top:3px solid var(--terra)}
+.split .colB{border-top:3px solid var(--green)}
+.split .colh{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--green-soft);margin-bottom:8px}
+.split .colA .colh{color:var(--terra)}
+.split ul{margin:0 0 0 17px;font-size:.86rem;color:var(--muted)}
+.split li{margin:5px 0}
+.split .colnote{margin-top:10px;padding-top:9px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted)}
+.winebox{margin-top:12px;background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:11px 14px}
+.winebox .wh{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--terra);margin-bottom:4px}
+.winebox .wl{font-size:.82rem;color:var(--green-dark);line-height:1.6}
+.feature{margin-top:14px;border:1px solid var(--line);border-left:3px solid var(--terra);border-radius:10px;padding:16px 18px;background:#fff}
+.feature.alt{border-left-color:var(--green)}
+.feature .fh{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--terra);margin-bottom:8px}
+.feature.alt .fh{color:var(--green-soft)}
+.feature p{font-size:.87rem;line-height:1.65;color:var(--muted);margin-bottom:9px}
+.feature p:last-of-type{margin-bottom:0}
+.feature .fnote2{margin-top:10px;padding-top:9px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted);line-height:1.55}
+.daytip{margin-top:12px;background:var(--sage);border-radius:9px;padding:10px 14px;font-size:.84rem;color:var(--green-dark)}
+.svc .d .sub2{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--green-soft);margin:12px 0 4px}
+@media(max-width:760px){.split{grid-template-columns:1fr}}
+.pkg-note{background:var(--sage);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:.9rem;color:var(--green-dark)}
+
+/* TABLE */
+.tbl-wrap{overflow-x:auto;margin-top:24px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:560px}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line)}
+.sec-row td{background:var(--sage);font-weight:700;text-align:center;letter-spacing:.04em;color:var(--green-dark)}
+.head-row td{background:#efeee7;font-weight:600;color:#4a4a44}
+.total-row td{background:#eef2e6;font-weight:700}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+.days{margin-top:18px;border-top:1px solid var(--line)}
+.day{display:grid;grid-template-columns:148px 1fr;gap:22px;padding:16px 4px;border-bottom:1px solid var(--line)}
+.day:nth-child(odd){background:var(--cream)}
+.day .d{font-size:.78rem;font-weight:700;color:var(--ink);letter-spacing:.03em}
+.day .d span{display:block;margin-top:5px;font-size:.66rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+.day .tx{font-size:.92rem}
+.day .tx b{font-weight:600}
+.day .tx .pl{color:var(--terra);font-weight:600}
+.sug{display:inline-block;margin-left:10px;padding:4px 10px;border-radius:999px;background:var(--terra);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;vertical-align:middle}
+
+
+/* PAY */
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.pay h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
+.pay p{font-size:.9rem;margin-bottom:4px}
+.obs{margin-top:26px;font-size:.82rem;color:var(--muted)}
+.obs li{margin:6px 0 6px 18px}
+.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px}
+.flval{display:flex;justify-content:space-between;align-items:center;background:var(--green);color:#fff;border-radius:12px;padding:16px 24px;margin-top:16px;flex-wrap:wrap;gap:12px}
+.flval .lbl{font-weight:600;font-size:.9rem}
+.flval .amt{text-align:right}
+.flval .amt .t{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;line-height:1}
+.flval .amt .p{font-size:.74rem;opacity:.9;margin-top:3px}
+
+/* FOOTER */
+.footer{background:var(--green);color:#fff;padding:44px 56px}
+.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
+.footer .fnote{font-size:.8rem;opacity:.7;margin-top:16px}
+.sh .eyebrow{margin-bottom:10px;display:block}
+
+@media(max-width:720px){
+  .section,.hero,.footer,.brandbar{padding-left:24px;padding-right:24px}
+  .hero h1{font-size:2.2rem}
+  .hero-info{grid-template-columns:1fr}.hero-info .r{text-align:left}
+  .leg{grid-template-columns:1fr;gap:8px}
+  .day{grid-template-columns:1fr;gap:6px}
+  .air-head{flex-direction:column;align-items:flex-start;gap:2px}
+  .pay{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr;text-align:left}.svc .dt{text-align:left}
+}
+</style>
+<style>
+.optgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+.optcard{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);overflow:hidden}
+.optcard .oh{background:var(--green);color:#fff;padding:15px 20px}
+.optcard.b .oh{background:var(--green-soft)}
+.optcard .oh .k{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;opacity:.9}
+.optcard .oh .n{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.75rem;font-weight:700;line-height:1.1}
+.optcard .ob{padding:16px 20px}
+.optcard .ob p{font-size:.87rem;color:var(--muted);margin-bottom:6px}
+.optcard .ob p b{color:var(--ink);font-weight:600}
+.optcard .ob .tot{margin-top:13px;padding-top:13px;border-top:1px solid var(--line);font-size:1.4rem;font-weight:700;color:var(--green)}
+.optcard .ob .tot span{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.opthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;border-bottom:2px solid var(--green);padding-bottom:12px;margin-bottom:6px}
+.opthead h3{font-size:1.5rem;font-weight:700}
+.opthead .dates{color:var(--green-soft);font-weight:600;font-size:.9rem;letter-spacing:.04em}
+.onecol{display:grid;grid-template-columns:1fr;gap:16px;margin-top:20px}
+@media(max-width:760px){.optgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="brandbar"><img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel — travel agency"></div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="eyebrow">Cotação de hospedagem</div>
+    <h1>PARIS <span class="amp">·</span> RÉVEILLON</h1>
+    <div class="accent-line"></div>
+    <p class="hero-sub"><b>André Egoroff e família</b> · <b>29 de dezembro de 2026 a 03 de janeiro de 2027</b> — 5 noites</p>
+
+    <style>.hero-img{height:460px}.hero-img img{object-position:center 10%}@media(max-width:720px){.hero-img{height:230px}.hero-img img{object-position:center 30%}}</style>
+    <div class="hero-img">
+      <img src="img/capa.jpg" alt="Paris — a Torre Eiffel e o Sena" onerror="this.style.display='none'">
+      <div class="cap"><div class="k">29/12 a 03/01 · 5 noites</div><div class="t">Seis hotéis para o grupo todo</div></div>
+    </div>
+
+    <div class="hero-info">
+      <div>
+        <div class="lbl">Detalhes da cotação</div>
+        <p><b>5 quartos</b> — 4 duplos e 1 triplo · <b>11 viajantes</b> · todos com café da manhã</p>
+        <p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>05/10/2026</b> · valores em <b>BRL</b> · Dólar: <b>USD 1 = R$ 5,26</b></p>
+      </div>
+      <div class="r">
+        <div class="lbl">Contato</div>
+        <p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p>
+      </div>
+    </div>
+
+    <div class="gloss">
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><b>6</b>&nbsp;Hotéis</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3"/><path d="M21 3v5h-5"/></svg></span><b>5</b>&nbsp;Noites</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="16" cy="8" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 20c0-2 .8-3.4 2-4"/></svg></span><b>11</b>&nbsp;Viajantes</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V9l9-6 9 6v12"/><path d="M3 13h18M9 21v-5h6v5"/></svg></span><b>4 duplos</b>&nbsp;+ 1 triplo</div>
+    </div>
+  </header>
+
+  <!-- HOTÉIS -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Acomodações</span>
+    <h2>Os seis hotéis</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Em cada card, o valor em destaque é o <b>total do grupo</b> — 4 quartos duplos mais 1 triplo, as 5 noites. Logo abaixo, o valor de cada quarto separadamente.</p>
+
+    <div class="hgrid" style="margin-top:24px">
+      <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Crowne Plaza Paris Republique by IHG</span></div><div class="hotel-price"><div class="v">R$ 63.186</div><div class="u">4 duplos + 1 triplo</div></div></div><div class="hotel-room"><b>Duplo</b> · Premium Room City View — R$ 10.444<br><b>Triplo</b> · Standard Room with Two Double Bed — R$ 21.410</div><span class="bf">Café da manhã</span><div class="hgal"><img src="img/hoteis/crowne/1.jpg" alt="Crowne Plaza Paris Republique by IHG" loading="lazy"><img src="img/hoteis/crowne/2.jpg" alt="Crowne Plaza Paris Republique by IHG" loading="lazy"><img src="img/hoteis/crowne/3.jpg" alt="Crowne Plaza Paris Republique by IHG" loading="lazy"><img src="img/hoteis/crowne/4.jpg" alt="Crowne Plaza Paris Republique by IHG" loading="lazy"><img src="img/hoteis/crowne/5.jpg" alt="Crowne Plaza Paris Republique by IHG" loading="lazy"><img src="img/hoteis/crowne/6.jpg" alt="Crowne Plaza Paris Republique by IHG" loading="lazy"></div></div>
+
+      <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hôtel Pergolèse Paris Champs Elysées</span></div><div class="hotel-price"><div class="v">R$ 68.512</div><div class="u">4 duplos + 1 triplo</div></div></div><div class="hotel-room"><b>Duplo</b> · Double Room — R$ 12.833<br><b>Triplo</b> · Superior Triple Room, 1 Queen Bed and 1 Twin Bed — R$ 17.180</div><span class="bf">Café da manhã</span><div class="hgal"><img src="img/hoteis/pergolese/1.jpg" alt="Hôtel Pergolèse Paris Champs Elysées" loading="lazy"><img src="img/hoteis/pergolese/2.jpg" alt="Hôtel Pergolèse Paris Champs Elysées" loading="lazy"><img src="img/hoteis/pergolese/3.jpg" alt="Hôtel Pergolèse Paris Champs Elysées" loading="lazy"><img src="img/hoteis/pergolese/4.jpg" alt="Hôtel Pergolèse Paris Champs Elysées" loading="lazy"><img src="img/hoteis/pergolese/5.jpg" alt="Hôtel Pergolèse Paris Champs Elysées" loading="lazy"><img src="img/hoteis/pergolese/6.jpg" alt="Hôtel Pergolèse Paris Champs Elysées" loading="lazy"></div></div>
+
+      <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hotel Atmospheres</span></div><div class="hotel-price"><div class="v">R$ 73.386</div><div class="u">4 duplos + 1 triplo</div></div></div><div class="hotel-room"><b>Duplo</b> · Classic Double Room — R$ 13.940<br><b>Triplo</b> · Triple Room, 1 Double Bed and 1 Twin Sofa Bed — R$ 17.626</div><span class="bf">Café da manhã</span><div class="hgal"><img src="img/hoteis/atmospheres/1.jpg" alt="Hotel Atmospheres" loading="lazy"><img src="img/hoteis/atmospheres/2.jpg" alt="Hotel Atmospheres" loading="lazy"><img src="img/hoteis/atmospheres/3.jpg" alt="Hotel Atmospheres" loading="lazy"><img src="img/hoteis/atmospheres/4.jpg" alt="Hotel Atmospheres" loading="lazy"><img src="img/hoteis/atmospheres/5.jpg" alt="Hotel Atmospheres" loading="lazy"><img src="img/hoteis/atmospheres/6.jpg" alt="Hotel Atmospheres" loading="lazy"></div></div>
+
+      <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hyatt Regency Paris Etoile</span></div><div class="hotel-price"><div class="v">R$ 90.064</div><div class="u">4 duplos + 1 triplo</div></div></div><div class="hotel-room"><b>Duplo</b> · Deluxe Room with King Bed — R$ 13.748<br><b>Triplo</b> · Family Room, 1 King Bed and 2 Twin Beds — R$ 35.072</div><span class="bf">Café da manhã</span><div class="hgal"><img src="img/hoteis/hyatt/1.jpg" alt="Hyatt Regency Paris Etoile" loading="lazy"><img src="img/hoteis/hyatt/2.jpg" alt="Hyatt Regency Paris Etoile" loading="lazy"><img src="img/hoteis/hyatt/3.jpg" alt="Hyatt Regency Paris Etoile" loading="lazy"><img src="img/hoteis/hyatt/4.jpg" alt="Hyatt Regency Paris Etoile" loading="lazy"><img src="img/hoteis/hyatt/5.jpg" alt="Hyatt Regency Paris Etoile" loading="lazy"><img src="img/hoteis/hyatt/6.jpg" alt="Hyatt Regency Paris Etoile" loading="lazy"></div></div>
+
+      <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Renaissance Paris Nobel Tour Eiffel Hotel</span></div><div class="hotel-price"><div class="v">R$ 106.510</div><div class="u">4 duplos + 1 triplo</div></div></div><div class="hotel-room"><b>Duplo</b> · Classic Room — R$ 19.705<br><b>Triplo</b> · Junior Suite with King Bed, Sofa Bed — R$ 27.690</div><span class="bf">Café da manhã</span><div class="hgal"><img src="img/hoteis/renaissance/1.jpg" alt="Renaissance Paris Nobel Tour Eiffel Hotel" loading="lazy"><img src="img/hoteis/renaissance/2.jpg" alt="Renaissance Paris Nobel Tour Eiffel Hotel" loading="lazy"><img src="img/hoteis/renaissance/3.jpg" alt="Renaissance Paris Nobel Tour Eiffel Hotel" loading="lazy"><img src="img/hoteis/renaissance/4.jpg" alt="Renaissance Paris Nobel Tour Eiffel Hotel" loading="lazy"><img src="img/hoteis/renaissance/5.jpg" alt="Renaissance Paris Nobel Tour Eiffel Hotel" loading="lazy"><img src="img/hoteis/renaissance/6.jpg" alt="Renaissance Paris Nobel Tour Eiffel Hotel" loading="lazy"></div></div>
+
+      <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hôtel Edouard 7 Paris Opéra</span></div><div class="hotel-price"><div class="v">R$ 108.744</div><div class="u">4 duplos + 1 triplo</div></div></div><div class="hotel-room"><b>Duplo</b> · Superior Room — R$ 19.340<br><b>Triplo</b> · Suite Opera View, 1 Double Bed and 1 Twin Sofa Bed — R$ 31.384</div><span class="bf">Café da manhã</span><div class="hgal"><img src="img/hoteis/edouard/1.jpg" alt="Hôtel Edouard 7 Paris Opéra" loading="lazy"><img src="img/hoteis/edouard/2.jpg" alt="Hôtel Edouard 7 Paris Opéra" loading="lazy"><img src="img/hoteis/edouard/3.jpg" alt="Hôtel Edouard 7 Paris Opéra" loading="lazy"><img src="img/hoteis/edouard/4.jpg" alt="Hôtel Edouard 7 Paris Opéra" loading="lazy"><img src="img/hoteis/edouard/5.jpg" alt="Hôtel Edouard 7 Paris Opéra" loading="lazy"><img src="img/hoteis/edouard/6.jpg" alt="Hôtel Edouard 7 Paris Opéra" loading="lazy"></div></div>
+    </div>
+  </section>
+
+  <!-- TABELA COMPARATIVA -->
+  <section class="section sh">
+    <span class="eyebrow">Comparativo</span>
+    <h2>Valor por quarto e valor do grupo</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Cada hotel foi cotado em <b>duas categorias</b>: um <b>quarto duplo</b> (2 adultos) e um <b>quarto triplo</b> (3 adultos). Os valores abaixo são o <b>total das 5 noites por quarto</b>, com café da manhã.</p>
+    <p class="note" style="margin-top:10px">A coluna do grupo mostra o <b>valor combinado de 4 quartos duplos mais 1 quarto triplo no mesmo hotel</b> — ou seja, <b>4 × o duplo + 1 × o triplo</b>, acomodando os <b>11 viajantes</b>.</p>
+
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Hotel</td><td class="v">1 quarto duplo<br><span style="font-weight:400;font-size:.78rem">2 adultos</span></td><td class="v">1 quarto triplo<br><span style="font-weight:400;font-size:.78rem">3 adultos</span></td><td class="v">4 duplos + 1 triplo<br><span style="font-weight:400;font-size:.78rem">11 viajantes</span></td></tr>
+
+      <tr><td><b>Hyatt Regency Paris Etoile</b><div class="rm" style="font-size:.78rem;color:var(--muted)">Deluxe Room with King Bed · Family Room, 1 King Bed and 2 Twin Beds</div></td><td class="v">R$ 13.748</td><td class="v">R$ 35.072</td><td class="v"><b>R$ 90.064</b></td></tr>
+
+      <tr><td><b>Renaissance Paris Nobel Tour Eiffel Hotel</b><div class="rm" style="font-size:.78rem;color:var(--muted)">Classic Room · Junior Suite with King Bed, Sofa Bed</div></td><td class="v">R$ 19.705</td><td class="v">R$ 27.690</td><td class="v"><b>R$ 106.510</b></td></tr>
+
+      <tr><td><b>Hôtel Edouard 7 Paris Opéra</b><div class="rm" style="font-size:.78rem;color:var(--muted)">Superior Room · Suite Opera View, 1 Double Bed and 1 Twin Sofa Bed</div></td><td class="v">R$ 19.340</td><td class="v">R$ 31.384</td><td class="v"><b>R$ 108.744</b></td></tr>
+
+      <tr><td><b>Crowne Plaza Paris Republique by IHG</b><div class="rm" style="font-size:.78rem;color:var(--muted)">Premium Room City View · Standard Room with Two Double Bed</div></td><td class="v">R$ 10.444</td><td class="v">R$ 21.410</td><td class="v"><b>R$ 63.186</b></td></tr>
+
+      <tr><td><b>Hôtel Pergolèse Paris Champs Elysées</b><div class="rm" style="font-size:.78rem;color:var(--muted)">Double Room · Superior Triple Room, 1 Queen Bed and 1 Twin Bed</div></td><td class="v">R$ 12.833</td><td class="v">R$ 17.180</td><td class="v"><b>R$ 68.512</b></td></tr><tr><td><b>Hotel Atmospheres</b><div class="rm" style="font-size:.78rem;color:var(--muted)">Classic Double Room · Triple Room, 1 Double Bed and 1 Twin Sofa Bed</div></td><td class="v">R$ 13.940</td><td class="v">R$ 17.626</td><td class="v"><b>R$ 73.386</b></td></tr><tr class="total-row"><td>Faixa do grupo</td><td class="v">R$ 10.444 – 19.705</td><td class="v">R$ 17.180 – 35.072</td><td class="v">R$ 63.186 – 108.744</td></tr>
+    </table></div>
+
+    <p class="note" style="margin-top:14px">Todas as diárias <b>incluem café da manhã</b> e o período é o mesmo em todos os hotéis: <b>29/12 a 03/01</b>, 5 noites. <b>Escolher 1 hotel</b> — os valores não se somam.</p>
+  </section>
+
+  <!-- ASSENTOS -->
+  <section class="section sh">
+    <style>
+    .howbox{background:var(--sage);border-radius:12px;padding:18px 22px;margin-top:20px}
+    .howbox p{font-size:.9rem;color:var(--green-dark);line-height:1.65;margin-bottom:8px}
+    .howbox p:last-child{margin-bottom:0}
+    .grphead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;border-bottom:2px solid var(--green);padding-bottom:11px;margin:38px 0 4px}
+    .grphead h3{font-size:1.35rem;font-weight:700}
+    .grphead .gt{color:var(--green-soft);font-weight:600;font-size:.86rem;letter-spacing:.04em}
+    .trecho{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);overflow:hidden;margin-top:18px}
+    .trecho-head{background:var(--green);color:#fff;padding:13px 22px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .trecho-head .rt{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-weight:700;line-height:1.1}
+    .trecho-head .sub{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;opacity:.92;font-weight:600}
+    .tiers{display:grid;grid-template-columns:1fr 1fr}
+    .tier{display:grid;grid-template-columns:30px 1fr auto;gap:13px;align-items:start;padding:15px 22px;border-bottom:1px solid var(--line)}
+    .tier:nth-child(odd){border-right:1px solid var(--line)}
+    .tier .sw{width:26px;height:32px;border-radius:5px;border:1px solid rgba(0,0,0,.2);margin-top:2px}
+    .tier .nm{font-weight:600;font-size:.94rem;line-height:1.3}
+    .tier .bn{font-size:.8rem;color:var(--muted);margin-top:5px;line-height:1.55}
+    .tier .pr{text-align:right;white-space:nowrap}
+    .tier .pr .p{font-weight:700;color:var(--green);font-size:1.02rem}
+    .tier .pr .q{font-size:.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:2px}
+    .seatmap{padding:16px 22px 20px;background:var(--cream);border-top:1px solid var(--line)}
+    .tier .pr .ap{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.09em;font-weight:600;margin-bottom:1px}
+    .mapcrop{position:relative;overflow:hidden;border-radius:10px;border:1px solid var(--line);background:#fff;width:100%;max-width:360px;margin:0 auto}
+    .mapcrop img{position:absolute;top:0;display:block;max-width:none;height:auto}
+    .mapgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .seatmap .cap2{font-size:.78rem;color:var(--muted);margin-top:9px;line-height:1.5}
+    @media(max-width:760px){.tiers{grid-template-columns:1fr}.tier:nth-child(odd){border-right:none}.mapgrid{grid-template-columns:1fr}}
+    </style>
+
+    <span class="eyebrow">Aéreo · opcional</span>
+    <h2>Marcação de assentos</h2>
+    <div class="accent-line"></div>
+    <div class="grphead"><h3>Grupo 1</h3><span class="gt">São Paulo → Paris · Lyon → Amsterdã · Amsterdã → São Paulo</span></div>
+
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">GRU → CDG</div><div class="sub">São Paulo → Paris</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw" style="background:#16365c"></span><div><div class="nm">Espaço extra para as pernas</div><div class="bn">Mais espaço à frente do assento.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 658,99</div><div class="q">6 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#3f51b5"></span><div><div class="nm">Assento Duo</div><div class="bn">Fileira de 2 lugares — mais privacidade, só você e um acompanhante. Espaço padrão.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 270,99</div><div class="q">20 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#8ab0e8"></span><div><div class="nm">Assento na seção dianteira</div><div class="bn">Na frente do avião — um dos primeiros a desembarcar. Espaço padrão.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 205,99</div><div class="q">38 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#d6e6f7"></span><div><div class="nm">Assento Standard</div><div class="bn">Escolha o lugar que preferir, com espaço padrão. É a opção mais barata.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 158,99</div><div class="q">119 livres</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="mapcrop" style="aspect-ratio:502/683"><img src="img/assentos/g1-gru-cdg.png" alt="Mapa de assentos do trecho São Paulo – Paris" loading="lazy" style="width:216.5%;left:-116.5%"></div>
+        <div class="cap2">Mapa da cabine — <b>GRU → CDG</b>. As cores dos assentos correspondem aos tipos listados acima; os cinzas já estão ocupados.</div>
+      </div>
+    </div>
+
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">LYS → AMS</div><div class="sub">Lyon → Amsterdã</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw" style="background:#e8832a"></span><div><div class="nm">Economy Comfort</div><div class="bn">7,5 cm a mais de espaço e encosto que reclina 5 cm a mais. Fica logo atrás da Business e embarca antes.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 111,99</div><div class="q">6 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#f2d13b"></span><div><div class="nm">Espaço extra para as pernas</div><div class="bn">Até 15 cm a mais de espaço. Fica perto da saída de emergência.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 117,99</div><div class="q">2 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#7b4ea0"></span><div><div class="nm">Standard dianteiro</div><div class="bn">Na frente, logo atrás da Economy Comfort. Espaço padrão de 76 cm e desembarque mais rápido.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 111,99</div><div class="q">38 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#4aa3dd"></span><div><div class="nm">Assento Standard</div><div class="bn">Espaço padrão de 76 cm. Dá para escolher lugares lado a lado.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 111,99</div><div class="q">65 livres</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="mapgrid">
+          <div class="mapcrop" style="aspect-ratio:478/687"><img src="img/assentos/g1-lys-ams-1.png" alt="Mapa de assentos do trecho Lyon – Amsterdã, parte da frente" loading="lazy" style="width:221.3%;left:-121.3%"></div>
+          <div class="mapcrop" style="aspect-ratio:473/686"><img src="img/assentos/g1-lys-ams-2.png" alt="Mapa de assentos do trecho Lyon – Amsterdã, continuação" loading="lazy" style="width:221.6%;left:-121.6%"></div>
+        </div>
+        <div class="cap2">Mapa da cabine — <b>LYS → AMS</b>, em duas partes (frente e fundo). As cores correspondem aos tipos listados acima; os cinzas já estão ocupados.</div>
+      </div>
+    </div>
+
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">AMS → GRU</div><div class="sub">Amsterdã → São Paulo</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw" style="background:#e8832a"></span><div><div class="nm">Economy Comfort</div><div class="bn">10 cm a mais de espaço e encosto que reclina 5 cm a mais. Fica na frente da cabine Economy e embarca antes.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 705,99</div><div class="q">50 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#f2d13b"></span><div><div class="nm">Espaço extra para as pernas</div><div class="bn">Até 61 cm a mais de espaço — o mais folgado da Economy. Fica perto da saída de emergência.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 558,99</div><div class="q">10 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#7b4ea0"></span><div><div class="nm">Standard dianteiro</div><div class="bn">Na frente, logo atrás da Economy Comfort. Espaço padrão de 79 cm e desembarque mais rápido.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 376,99</div><div class="q">46 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#3f9e52"></span><div><div class="nm">Fileira de 2 lugares</div><div class="bn">Fileira sem o banco do meio — só você e um acompanhante. Espaço padrão de 79 cm.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 287,99</div><div class="q">4 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#4aa3dd"></span><div><div class="nm">Assento Standard</div><div class="bn">Espaço padrão de 79 cm. É a opção mais barata deste trecho.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 222,99</div><div class="q">167 livres</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="mapgrid">
+          <div class="mapcrop" style="aspect-ratio:489/685"><img src="img/assentos/g1-ams-gru-1.webp" alt="Mapa de assentos do trecho Amsterdã – São Paulo, parte da frente" loading="lazy" style="width:216.5%;left:-116.5%"></div>
+          <div class="mapcrop" style="aspect-ratio:495/687"><img src="img/assentos/g1-ams-gru-2.webp" alt="Mapa de assentos do trecho Amsterdã – São Paulo, continuação" loading="lazy" style="width:214.1%;left:-114.1%"></div>
+        </div>
+        <div class="cap2">Mapa da cabine — <b>AMS → GRU</b>, em duas partes (frente e fundo). As cores correspondem aos tipos listados acima; os cinzas já estão ocupados.</div>
+      </div>
+    </div>
+
+    <div class="grphead"><h3>Grupo 2</h3><span class="gt">Parte do grupo viaja em outro voo · São Paulo → Paris → São Paulo</span></div>
+
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">GRU → CDG</div><div class="sub">São Paulo → Paris</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw" style="background:#16365c"></span><div><div class="nm">Espaço extra para as pernas</div><div class="bn">Mais espaço à frente do assento.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 575,99</div><div class="q">4 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#8ab0e8"></span><div><div class="nm">Assento na seção dianteira</div><div class="bn">Na frente do avião — um dos primeiros a desembarcar. Espaço padrão.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 287,99</div><div class="q">31 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#3f51b5"></span><div><div class="nm">Assento Duo</div><div class="bn">Fileira de 2 lugares — mais privacidade, só você e um acompanhante. Espaço padrão.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 281,99</div><div class="q">2 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#d6e6f7"></span><div><div class="nm">Assento Standard</div><div class="bn">Escolha o lugar que preferir, com espaço padrão. É a opção mais barata.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 149,99</div><div class="q">122 livres</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="mapcrop" style="aspect-ratio:484/682"><img src="img/assentos/g2-gru-cdg.png" alt="Mapa de assentos do trecho São Paulo – Paris, voo do grupo 2" loading="lazy" style="width:224.0%;left:-124.0%"></div>
+        <div class="cap2">Mapa da cabine — <b>GRU → CDG</b>. As cores dos assentos correspondem aos tipos listados acima; os cinzas já estão ocupados.</div>
+      </div>
+    </div>
+
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">CDG → GRU</div><div class="sub">Paris → São Paulo</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw" style="background:#3f51b5"></span><div><div class="nm">Assento Duo</div><div class="bn">Fileira de 2 lugares — mais privacidade, só você e um acompanhante. Espaço padrão.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 281,99</div><div class="q">2 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#8ab0e8"></span><div><div class="nm">Assento na seção dianteira</div><div class="bn">Na frente do avião — um dos primeiros a desembarcar. Espaço padrão.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 205,99</div><div class="q">29 livres</div></div></div>
+        <div class="tier"><span class="sw" style="background:#d6e6f7"></span><div><div class="nm">Assento Standard</div><div class="bn">Escolha o lugar que preferir, com espaço padrão. É a opção mais barata.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 158,99</div><div class="q">128 livres</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="mapcrop" style="aspect-ratio:487/683"><img src="img/assentos/g2-cdg-gru.png" alt="Mapa de assentos do trecho Paris – São Paulo, voo do grupo 2" loading="lazy" style="width:225.3%;left:-125.3%"></div>
+        <div class="cap2">Mapa da cabine — <b>CDG → GRU</b>. As cores dos assentos correspondem aos tipos listados acima; os cinzas já estão ocupados.</div>
+      </div>
+    </div>
+
+    <p class="note" style="margin-top:18px">Valores por pessoa, por trecho, <b>“a partir de”</b> — informados pela companhia aérea e sujeitos a alteração até a marcação. A disponibilidade indicada é a do momento da consulta.</p>
+  </section>
+
+  <!-- CONDIÇÕES -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Condições</span>
+    <h2>Pagamento e condições</h2>
+    <div class="accent-line"></div>
+
+    <div class="pay" style="grid-template-columns:1fr 1fr 1fr">
+      <div class="box">
+        <h4>Condições de pagamento</h4>
+        <p><b>Hotéis</b> — em até <b>10x</b></p>
+      </div>
+      <div class="box">
+        <h4>Referência</h4>
+        <p>Dólar: USD 1 = R$ 5,26 · 05/10/2026</p>
+        <p class="muted" style="margin-top:8px;font-size:.82rem">Valores finais conforme disponibilidade e câmbio na data de fechamento.</p>
+      </div>
+      <div class="box">
+        <h4>O que está incluso</h4>
+        <p>Hospedagem de <b>29/12 a 03/01</b> · 5 noites</p>
+        <p><b>Café da manhã</b> em todos os hotéis</p>
+      </div>
+    </div>
+
+    <div class="obs">
+      <h4>Observações</h4>
+      <ul>
+        <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
+        <li>A confirmação está sujeita à disponibilidade no momento do pagamento.</li>
+        <li>Período de Réveillon: os hotéis costumam exigir estadia mínima e política de cancelamento mais rígida.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel">
+    <div class="contact">
+      atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>
+      Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR
+    </div>
+    <div class="fnote">*Nada reservado, apenas cotado.</div>
+  </footer>
+
+</div>
+</body>
+</html>
