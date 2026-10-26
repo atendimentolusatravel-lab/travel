@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=1140">
 <title>Luiz Gabriel Ladeia Scaburi | Marcação de Assentos — LusaTravel</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
@@ -106,6 +107,9 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .tl-pr b.free{ color:#2d5e3a; }
 .tl-pg{ font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; white-space:nowrap; margin-top:2mm; }
 .itn{ font-size:9pt; color:var(--mut); line-height:1.6; margin-top:4mm; }
+.dlbar{ position:sticky; top:0; z-index:50; background:var(--gold); color:var(--ink); font-family:var(--con); font-size:10pt; font-weight:600; display:flex; align-items:center; justify-content:center; gap:14px; padding:9px 16px; width:297mm; }
+.dlbar a{ color:var(--ink); background:#fff; text-decoration:none; padding:6px 14px; border-radius:4px; font-weight:700; }
+@media print{ .dlbar{ display:none; } }
 /* VALORES */
 .val-note{ font-size:9pt; color:var(--mut); margin-bottom:4mm; }
 table.val{ width:100%; border-collapse:collapse; }
