@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lusa Travel · Marcação de assentos — Luiz Gabriel Ladeia Scaburi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#404626; --green-dark:#363b1f; --green-soft:#5a6238;
+  --sage:#d9ead3; --sage-head:#c6d8b0;
+  --ink:#333131; --muted:#6f6f68; --line:#e7e7e0; --bg:#ffffff; --cream:#faf9f5;
+  --terra:#b4622f;
+  --shadow:0 10px 30px rgba(64,70,38,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{line-height:1.15}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:60px 56px}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+.muted{color:var(--muted)}
+a.q{color:inherit;text-decoration:none}
+
+.brandbar{display:flex;flex-direction:column;align-items:center;gap:8px;padding:38px 0 6px}
+.brandbar .brandlogo{width:210px;height:auto;display:block}
+.footlogo{width:190px;height:auto;display:block;margin-bottom:14px}
+
+/* HERO */
+.hero{padding:56px 56px 40px}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.hero h1 .amp{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-style:italic}
+.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
+.hero-img{margin:34px 0 0;height:330px;border-radius:14px;overflow:hidden;position:relative;
+  display:flex;align-items:flex-end;box-shadow:var(--shadow);
+  background:
+    radial-gradient(120% 130% at 12% 8%, rgba(70,120,150,.55), rgba(40,80,110,.15) 42%, transparent 60%),
+    radial-gradient(120% 130% at 92% 96%, rgba(150,170,120,.55), rgba(90,110,70,.2) 44%, transparent 64%),
+    linear-gradient(120deg, #3a5f80 0%, #5a7d92 30%, #8aa0a2 55%, #b0a878 80%, #7a6a3a 100%);}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-img::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top, rgba(20,26,32,.6), rgba(20,26,32,.05) 55%, transparent)}
+.hero-img .cap{position:relative;z-index:2;padding:22px 26px;color:#fff}
+.hero-img .cap .k{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;opacity:.92}
+.hero-img .cap .t{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:600;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
+.hero-info .r{text-align:right}
+.hero-info p{font-size:.95rem}
+.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
+.chip b{font-size:1.15rem;font-weight:700}
+.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
+.chip .ic svg{width:18px;height:18px}
+
+/* ROTA (SVG no hero) */
+.route{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.route .ln{fill:none;stroke:rgba(255,255,255,.75);stroke-width:1.6;stroke-dasharray:5 7}
+.route .dot{fill:#fff}
+.route .ring{fill:none;stroke:rgba(255,255,255,.55);stroke-width:1.4}
+.route .lb{font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;fill:#fff}
+.route .pl{fill:#fff;opacity:.95}
+
+/* AEREO */
+.air{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:18px;background:#fff;box-shadow:var(--shadow)}
+.air-head{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--green);color:#fff;padding:14px 22px}
+.air-head .dir{font-weight:700;letter-spacing:.14em;font-size:.78rem;text-transform:uppercase}
+.air-head .route-t{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;font-weight:600}
+.leg{display:grid;grid-template-columns:200px 1fr auto;gap:18px;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line)}
+.leg .fl{font-size:.78rem;color:var(--muted)}
+.leg .fl b{display:block;color:var(--ink);font-size:.92rem;font-weight:600}
+.leg .fl strong{color:var(--ink);font-weight:700}
+.leg .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.leg .pt .code{font-weight:700;font-size:1.05rem}
+.leg .pt .tm{font-size:.82rem;color:var(--muted)}
+.leg .arrow{color:var(--green-soft);flex:none}
+.leg .cls{text-align:right;font-size:.78rem}
+.leg .cls b{display:block;color:var(--green);font-size:.86rem}
+.cnx{display:flex;align-items:center;gap:8px;padding:9px 22px;background:#f4f5ef;font-size:.75rem;color:var(--muted);border-bottom:1px solid var(--line)}
+.cnx svg{width:14px;height:14px;flex:none;color:var(--green-soft)}
+.air-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;background:#f4f5ef}
+.air-foot .lbl{font-size:.78rem;color:var(--muted)}
+.air-foot .val{font-weight:700;font-size:1.3rem;color:var(--green)}
+
+/* ASSENTOS */
+.howbox{background:var(--sage);border-radius:12px;padding:18px 22px;margin-top:20px}
+.howbox p{font-size:.9rem;color:var(--green-dark);line-height:1.65;margin-bottom:8px}
+.howbox p:last-child{margin-bottom:0}
+.grphead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;border-bottom:2px solid var(--green);padding-bottom:11px;margin:38px 0 4px}
+.grphead h3{font-size:1.35rem;font-weight:700}
+.grphead .gt{color:var(--green-soft);font-weight:600;font-size:.86rem;letter-spacing:.04em}
+.trecho{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);overflow:hidden;margin-top:18px}
+.trecho-head{background:var(--green);color:#fff;padding:13px 22px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.trecho-head .rt{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-weight:700;line-height:1.1}
+.trecho-head .sub{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;opacity:.92;font-weight:600}
+.tiers{display:grid;grid-template-columns:1fr 1fr}
+.tier{display:grid;grid-template-columns:30px 1fr auto;gap:13px;align-items:start;padding:15px 22px;border-bottom:1px solid var(--line)}
+.tier:nth-child(odd){border-right:1px solid var(--line)}
+.tier .sw{width:26px;height:32px;border-radius:5px;border:1px solid rgba(0,0,0,.2);margin-top:2px;display:grid;place-items:center;font-size:.78rem;line-height:1;color:#fff}
+.tier .nm{font-weight:600;font-size:.94rem;line-height:1.3}
+.tier .bn{font-size:.8rem;color:var(--muted);margin-top:5px;line-height:1.55}
+.tier .pr{text-align:right;white-space:nowrap}
+.tier .pr .p{font-weight:700;color:var(--green);font-size:1.02rem}
+.tier .pr .q{font-size:.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:2px}
+.tier .pr .ap{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.09em;font-weight:600;margin-bottom:1px}
+.seatmap{padding:16px 22px 20px;background:var(--cream);border-top:1px solid var(--line)}
+.mapcrop{position:relative;overflow:hidden;border-radius:10px;border:1px solid var(--line);background:#fff;width:100%;margin:0 auto}
+.mapcrop img{width:100%;height:auto;display:block}
+.mapgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start}
+.mapgrid.wide{grid-template-columns:2.03fr 1fr}
+.mapgrid.latam{grid-template-columns:1fr 1fr;max-width:760px;margin:0 auto}
+.mapgrid.latam .side{display:grid;gap:10px;align-content:start}
+.seatmap .cap2{font-size:.78rem;color:var(--muted);margin-top:9px;line-height:1.5}
+.sw.ek-reg{background:#d6eff2;border-color:#4fb3bf}
+.sw.ek-pref{background:#1f6d87;border-color:#165266}
+.sw.ek-duo{background:linear-gradient(135deg,#d6eff2 52%,#f28a2a 52%);border-color:#4fb3bf}
+.sw.ek-leg{background:linear-gradient(135deg,#d6eff2 52%,#3fae5a 52%);border-color:#4fb3bf}
+.sw.ek-occ{background:#cfc8bf;border-color:#b5ada2}
+.sw.ek-wc{background:#d6eff2;border-color:#4fb3bf;color:#1f6d87}
+.sw.la-xl{background:#f6b4c3;border-color:#d97b93}
+.sw.la-fr{background:#c9b4e6;border-color:#9a7fc4}
+.sw.la-em{background:#b3dba5;border-color:#7fb86f}
+.sw.la-x{background:#fff;border-color:#c9c4bb;color:#8a847a}
+@media(max-width:760px){.tiers{grid-template-columns:1fr}.tier:nth-child(odd){border-right:none}.mapgrid,.mapgrid.wide,.mapgrid.latam{grid-template-columns:1fr}}
+
+/* TABLE */
+.tbl-wrap{overflow-x:auto;margin-top:24px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:560px}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:none}
+.sec-row td{background:var(--sage);font-weight:700;text-align:center;letter-spacing:.04em;color:var(--green-dark)}
+.head-row td{background:#efeee7;font-weight:600;color:#4a4a44}
+.total-row td{background:#eef2e6;font-weight:700}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+td .rm{font-size:.78rem;color:var(--muted)}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+.flval{display:flex;justify-content:space-between;align-items:center;background:var(--green);color:#fff;border-radius:12px;padding:16px 24px;margin-top:16px;flex-wrap:wrap;gap:12px}
+.flval .lbl{font-weight:600;font-size:.9rem}
+.flval .lbl span{display:block;font-weight:400;font-size:.78rem;opacity:.85}
+.flval .amt{text-align:right}
+.flval .amt .t{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;line-height:1}
+.flval .amt .p{font-size:.74rem;opacity:.9;margin-top:3px}
+
+/* PAY */
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.pay h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
+.pay p{font-size:.9rem;margin-bottom:4px}
+.obs{margin-top:26px;font-size:.82rem;color:var(--muted)}
+.obs li{margin:6px 0 6px 18px}
+.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px}
+
+/* FOOTER */
+.footer{background:var(--green);color:#fff;padding:44px 56px}
+.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
+.footer .fnote{font-size:.8rem;opacity:.7;margin-top:16px}
+.sh .eyebrow{margin-bottom:10px;display:block}
+
+@media(max-width:720px){
+  .section,.hero,.footer,.brandbar{padding-left:24px;padding-right:24px}
+  .hero h1{font-size:2.2rem}
+  .hero-img{height:230px}
+  .hero-info{grid-template-columns:1fr}.hero-info .r{text-align:left}
+  .leg{grid-template-columns:1fr;gap:8px}
+  .air-head{flex-direction:column;align-items:flex-start;gap:2px}
+  .pay{grid-template-columns:1fr !important}
+}
+
+/* PRINT / PDF */
+@media print{
+  @page{size:A4;margin:0}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff}
+  .page{max-width:none;box-shadow:none}
+  .section,.hero,.footer{padding-left:40px;padding-right:40px}
+  .section{padding-top:28px;padding-bottom:14px}
+  .section h2{font-size:1.8rem}
+  .hero{padding-top:30px}
+  .brandbar{padding-top:26px}
+  .section{break-before:page}
+  .section h2,.section .eyebrow,.accent-line,.grphead,.obs h4{break-after:avoid}
+  .hero-img,.air,.trecho,.tbl-wrap,.pay .box,.howbox,.flval,.grphead,.hero-info,.gloss,.footer{break-inside:avoid}
+  .trecho{box-shadow:none}
+  .air{box-shadow:none}
+  .leg{grid-template-columns:170px 1fr auto}
+  th,td{padding:8px 12px}
+  .tbl-wrap{margin-top:14px}
+  .howbox{margin-top:14px;padding:14px 18px}
+  .note{margin-top:8px}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="brandbar"><img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel — travel agency"></div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="eyebrow">Marcação de assentos</div>
+    <h1>EMIRATES <span class="amp">&amp;</span> LATAM</h1>
+    <div class="accent-line"></div>
+    <p class="hero-sub"><b>Luiz Gabriel Ladeia Scaburi</b> · <b>08 de abril a 01 de maio de 2027</b> — 3 voos · ida com Emirates, volta com LATAM</p>
+
+    <div class="hero-img">
+      <svg class="route" viewBox="0 0 1000 330" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path class="ln" d="M130 205 L505 118"/>
+        <path class="ln" d="M505 118 L880 52"/>
+        <path class="ln" d="M405 42 L600 212"/>
+        <g class="pl" transform="translate(310 163) rotate(-13)"><path d="M0-9l3 7 12 2v3l-12 1-1 8 4 2v2l-6-1-6 1v-2l4-2-1-8-12-1v-3l12-2z"/></g>
+        <g class="pl" transform="translate(700 84) rotate(-10)"><path d="M0-9l3 7 12 2v3l-12 1-1 8 4 2v2l-6-1-6 1v-2l4-2-1-8-12-1v-3l12-2z"/></g>
+        <g class="pl" transform="translate(500 125) rotate(49)"><path d="M0-9l3 7 12 2v3l-12 1-1 8 4 2v2l-6-1-6 1v-2l4-2-1-8-12-1v-3l12-2z"/></g>
+        <circle class="ring" cx="130" cy="205" r="8"/><circle class="dot" cx="130" cy="205" r="3.5"/>
+        <circle class="ring" cx="505" cy="118" r="8"/><circle class="dot" cx="505" cy="118" r="3.5"/>
+        <circle class="ring" cx="880" cy="52" r="8"/><circle class="dot" cx="880" cy="52" r="3.5"/>
+        <circle class="ring" cx="405" cy="42" r="8"/><circle class="dot" cx="405" cy="42" r="3.5"/>
+        <circle class="ring" cx="600" cy="212" r="8"/><circle class="dot" cx="600" cy="212" r="3.5"/>
+        <text class="lb" x="114" y="233">GIG</text>
+        <text class="lb" x="488" y="102">DXB</text>
+        <text class="lb" x="864" y="36">SZX</text>
+        <text class="lb" x="388" y="26">MXP</text>
+        <text class="lb" x="618" y="218">GRU</text>
+      </svg>
+      <div class="cap"><div class="k">08/04 a 01/05 · 3 voos · classe econômica</div><div class="t">Rio de Janeiro → Dubai → Shenzhen · Milão → São Paulo</div></div>
+    </div>
+
+    <div class="hero-info">
+      <div>
+        <div class="lbl">Detalhes da cotação</div>
+        <p><b>3 voos</b> — 2 na ida (Emirates) e 1 na volta (LATAM) · <b>classe econômica</b> · valores por passageiro e por trecho</p>
+        <p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>26/10/2026</b> · ida em <b>BRL</b> (Emirates) · volta em <b>USD</b>, “a partir de” (LATAM)</p>
+      </div>
+      <div class="r">
+        <div class="lbl">Contato</div>
+        <p><a class="q" href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br><a class="q" href="https://wa.me/5541991896076">+55 41 99189-6076</a></p>
+      </div>
+    </div>
+
+    <div class="gloss">
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16l20-6-2-3-7 2-6-6H5l3 7-4 1-2-2H1z"/></svg></span><b>3</b>&nbsp;Voos</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><b>2</b>&nbsp;Companhias</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><b>23</b>&nbsp;Dias de viagem</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 20V10a2 2 0 012-2h6a2 2 0 012 2v10"/><path d="M4 20h16M6 14h10"/></svg></span><b>Econômica</b>&nbsp;Classe</div>
+    </div>
+  </header>
+
+  <!-- RESUMO DOS VOOS -->
+  <section class="section sh">
+    <span class="eyebrow">Itinerário</span>
+    <h2>Resumo dos voos</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Os três voos abaixo são os trechos em que a marcação de assentos foi cotada. Os mapas de cabine, a legenda de cada categoria e os valores estão na seção seguinte.</p>
+
+    <div class="air">
+      <div class="air-head"><div class="dir">Ida · Emirates</div><div class="route-t">Rio de Janeiro → Dubai → Shenzhen</div></div>
+      <div class="leg">
+        <div class="fl"><b>EK248</b>Quinta-feira, 08 de abril de 2027<br>Boeing 777</div>
+        <div class="rt">
+          <div class="pt"><div class="code">GIG</div><div class="tm">Rio de Janeiro</div></div>
+          <svg class="arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <div class="pt"><div class="code">DXB</div><div class="tm">Dubai</div></div>
+        </div>
+        <div class="cls">Classe<b>Econômica</b></div>
+      </div>
+      <div class="cnx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Entre os dois voos: parada em Dubai de 08 a 11 de abril</div>
+      <div class="leg">
+        <div class="fl"><b>EK328</b>Domingo, 11 de abril de 2027<br>Boeing 777-300ER</div>
+        <div class="rt">
+          <div class="pt"><div class="code">DXB</div><div class="tm">Dubai</div></div>
+          <svg class="arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <div class="pt"><div class="code">SZX</div><div class="tm">Shenzhen</div></div>
+        </div>
+        <div class="cls">Classe<b>Econômica</b></div>
+      </div>
+      <div class="air-foot"><div class="lbl">Marcação de assento · por passageiro, por trecho</div><div class="val">Gratuito a BRL 755</div></div>
+    </div>
+
+    <div class="air">
+      <div class="air-head"><div class="dir">Volta · LATAM</div><div class="route-t">Milão → São Paulo</div></div>
+      <div class="leg">
+        <div class="fl"><b>LA8073</b>Sábado, 01 de maio de 2027<br>Boeing 777-300 · 12 h · operado por LATAM Airlines Brasil</div>
+        <div class="rt">
+          <div class="pt"><div class="code">MXP</div><div class="tm">Milão · 13:00</div></div>
+          <svg class="arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <div class="pt"><div class="code">GRU</div><div class="tm">São Paulo · 20:00</div></div>
+        </div>
+        <div class="cls">Classe<b>Econômica</b></div>
+      </div>
+      <div class="cnx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Conexão em São Paulo para Curitiba · o trecho GRU → CWB não consta neste mapa de assentos</div>
+      <div class="air-foot"><div class="lbl">Marcação de assento · por passageiro, por trecho · a partir de</div><div class="val">USD 103,74 a 149,10</div></div>
+    </div>
+  </section>
+
+  <!-- ASSENTOS -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Aéreo · marcação de assentos</span>
+    <h2>Mapas de cabine e valores</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Em cada trecho, as categorias listadas correspondem às cores do mapa logo abaixo. Valores <b>por passageiro e por trecho</b>: a mesma categoria pode ser escolhida em um voo e não no outro.</p>
+
+    <div class="grphead"><h3>Ida · Emirates</h3><span class="gt">Rio de Janeiro → Dubai → Shenzhen · valores em reais (BRL)</span></div>
+
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">GIG → DXB</div><div class="sub">EK248 · Rio de Janeiro → Dubai · 08 abr 2027 · Boeing 777</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw ek-reg"></span><div><div class="nm">Assento regular</div><div class="bn">Fileiras 24 a 46 · a maior parte do mapa.</div></div><div class="pr"><div class="p">Gratuito</div><div class="q">por trecho</div></div></div>
+        <div class="tier"><span class="sw ek-pref">★</span><div><div class="nm">Assento preferencial</div><div class="bn">Fileiras 18 a 21 · primeira seção da cabine, desembarque mais rápido.</div></div><div class="pr"><div class="p">BRL 206</div><div class="q">por trecho</div></div></div>
+        <div class="tier"><span class="sw ek-duo"></span><div><div class="nm">Assento duplo</div><div class="bn">Fileira 46 · par de assentos ao fundo da cabine (marcação laranja).</div></div><div class="pr"><div class="p">BRL 274</div><div class="q">por trecho</div></div></div>
+        <div class="tier"><span class="sw ek-leg"></span><div><div class="nm">Mais espaço para as pernas</div><div class="bn">Fileiras 24 e 37 · atrás das divisórias (marcação verde).</div></div><div class="pr"><div class="p">BRL 755</div><div class="q">por trecho</div></div></div>
+        <div class="tier"><span class="sw ek-occ"></span><div><div class="nm">Indisponível</div><div class="bn">Já ocupado ou bloqueado pela companhia.</div></div><div class="pr"><div class="p">—</div></div></div>
+        <div class="tier"><span class="sw ek-wc">♿</span><div><div class="nm">Ícone de cadeira de rodas</div><div class="bn">Fileiras 25 a 29 · prioridade para mobilidade reduzida; podem ser realocados pela companhia.</div></div><div class="pr"><div class="p">—</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="mapgrid wide">
+          <div class="mapcrop"><img src="img/assentos/ek248-1.png" alt="Mapa de assentos do EK248, fileiras 17 a 36" loading="lazy"></div>
+          <div class="mapcrop"><img src="img/assentos/ek248-2.png" alt="Mapa de assentos do EK248, fileiras 37 a 46" loading="lazy"></div>
+        </div>
+        <div class="cap2">Mapa da cabine — <b>GIG → DXB</b>, em duas partes: fileiras 17 a 36 e fileiras 37 a 46. Colunas A–C (janela/corredor esq.), D–G (centro), H–K (corredor/janela dir.). As cores correspondem às categorias acima; os cinzas já estão ocupados. Disponibilidade no momento da consulta.</div>
+      </div>
+    </div>
+
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">DXB → SZX</div><div class="sub">EK328 · Dubai → Shenzhen · 11 abr 2027 · Boeing 777-300ER</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw ek-reg"></span><div><div class="nm">Assento regular</div><div class="bn">Fileiras 28 a 50 · a maior parte do mapa.</div></div><div class="pr"><div class="p">Gratuito</div><div class="q">por trecho</div></div></div>
+        <div class="tier"><span class="sw ek-pref">★</span><div><div class="nm">Assento preferencial</div><div class="bn">Fileiras 24 a 27 · primeira seção da cabine, desembarque mais rápido.</div></div><div class="pr"><div class="p">BRL 137</div><div class="q">por trecho</div></div></div>
+        <div class="tier"><span class="sw ek-duo"></span><div><div class="nm">Assento duplo</div><div class="bn">Fileiras 46 a 50 (K/J) e 46 a 48 (A/B) · pares ao fundo da cabine (marcação laranja).</div></div><div class="pr"><div class="p">BRL 192</div><div class="q">por trecho</div></div></div>
+        <div class="tier"><span class="sw ek-leg"></span><div><div class="nm">Mais espaço para as pernas</div><div class="bn">Fileiras 24 e 37 · atrás das divisórias (marcação verde).</div></div><div class="pr"><div class="p">BRL 370</div><div class="q">por trecho</div></div></div>
+        <div class="tier"><span class="sw ek-occ"></span><div><div class="nm">Indisponível</div><div class="bn">Já ocupado ou bloqueado pela companhia.</div></div><div class="pr"><div class="p">—</div></div></div>
+        <div class="tier"><span class="sw ek-wc">♿</span><div><div class="nm">Ícone de cadeira de rodas</div><div class="bn">Fileiras 30 a 34 · prioridade para mobilidade reduzida; podem ser realocados pela companhia.</div></div><div class="pr"><div class="p">—</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="mapgrid">
+          <div class="mapcrop"><img src="img/assentos/ek328-1.png" alt="Mapa de assentos do EK328, fileiras 23 a 36" loading="lazy"></div>
+          <div class="mapcrop"><img src="img/assentos/ek328-2.png" alt="Mapa de assentos do EK328, fileiras 37 a 50" loading="lazy"></div>
+        </div>
+        <div class="cap2">Mapa da cabine — <b>DXB → SZX</b>, em duas partes: fileiras 23 a 36 e fileiras 37 a 50. Colunas A–C (janela/corredor esq.), D–G (centro), H–K (corredor/janela dir.). As cores correspondem às categorias acima; os cinzas já estão ocupados. Disponibilidade no momento da consulta.</div>
+      </div>
+    </div>
+
+    <div class="grphead"><h3>Volta · LATAM</h3><span class="gt">Milão → São Paulo · valores em dólar americano (USD), “a partir de”</span></div>
+
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">MXP → GRU</div><div class="sub">LA8073 · Milão → São Paulo · 01 mai 2027 · 13:00 → 20:00 · Boeing 777-300</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw la-xl" style="color:#7a2a40;font-size:.6rem;font-weight:700">XL</span><div><div class="nm">LATAM+ (XL)</div><div class="bn">Fileiras 12 a 16 · mais espaço para as pernas, nas primeiras fileiras da cabine.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">USD 149,10</div><div class="q">por trecho</div></div></div>
+        <div class="tier"><span class="sw la-fr"></span><div><div class="nm">Mais à frente</div><div class="bn">Fileiras 17 a 20 · desembarque mais rápido.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">USD 103,74</div><div class="q">por trecho</div></div></div>
+        <div class="tier"><span class="sw la-em"></span><div><div class="nm">Saída de emergência</div><div class="bn">Fileira 24 · fora do recorte exibido · exige passageiro apto conforme as regras da LATAM.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">USD 141,12</div><div class="q">por trecho</div></div></div>
+        <div class="tier"><span class="sw la-x">✕</span><div><div class="nm">Indisponível</div><div class="bn">Marcado com X · já ocupado ou bloqueado.</div></div><div class="pr"><div class="p">—</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="mapgrid latam">
+          <div class="mapcrop"><img src="img/assentos/la8073.png" alt="Mapa de assentos do LA8073, fileiras 12 a 20" loading="lazy"></div>
+          <div class="side">
+            <div class="mapcrop"><img src="img/assentos/la8073-itinerario.png" alt="Itinerário do voo LA8073 conforme a LATAM" loading="lazy"></div>
+            <div class="mapcrop"><img src="img/assentos/la8073-valores.png" alt="Valores das categorias de assento conforme a LATAM" loading="lazy"></div>
+          </div>
+        </div>
+        <div class="cap2">Mapa da cabine — <b>MXP → GRU</b>, fileiras 12 a 20. Colunas A–C (janela/corredor esq.), D–H (centro), J–L (corredor/janela dir.). À direita, as capturas da LATAM com o itinerário e os valores “desde” (a partir de) de cada categoria. Disponibilidade no momento da consulta.</div>
+      </div>
+    </div>
+
+    <p class="note" style="margin-top:18px">Valores por pessoa, por trecho — informados pelas companhias em <b>26/10/2026</b> e sujeitos a alteração até a marcação. Na LATAM, os valores são <b>“a partir de”</b>: o preço final depende da posição exata do assento. A disponibilidade indicada é a do momento da consulta.</p>
+  </section>
+
+  <!-- TABELA -->
+  <section class="section sh">
+    <span class="eyebrow">Comparativo</span>
+    <h2>Valores da marcação de assentos</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Ida em <b>reais</b> (Emirates) e volta em <b>dólar americano</b> (LATAM). A coluna “Ida completa” soma os dois trechos da Emirates na mesma categoria — mas é possível combinar categorias diferentes em cada voo.</p>
+
+    <div class="tbl-wrap"><table>
+      <tr class="sec-row"><td colspan="4">IDA · EMIRATES · EK248 + EK328 · valores em BRL, por passageiro</td></tr>
+      <tr class="head-row"><td>Categoria</td><td class="v">EK248<br><span style="font-weight:400;font-size:.78rem">GIG → DXB</span></td><td class="v">EK328<br><span style="font-weight:400;font-size:.78rem">DXB → SZX</span></td><td class="v">Ida completa<br><span style="font-weight:400;font-size:.78rem">2 trechos</span></td></tr>
+      <tr><td><b>Assento regular</b><div class="rm">Gratuito nos dois voos</div></td><td class="v">Gratuito</td><td class="v">Gratuito</td><td class="v"><b>Gratuito</b></td></tr>
+      <tr><td><b>Assento preferencial</b><div class="rm">Primeiras fileiras da cabine · desembarque mais rápido</div></td><td class="v">BRL 206</td><td class="v">BRL 137</td><td class="v"><b>BRL 343</b></td></tr>
+      <tr><td><b>Assento duplo</b><div class="rm">Par de assentos ao fundo da cabine</div></td><td class="v">BRL 274</td><td class="v">BRL 192</td><td class="v"><b>BRL 466</b></td></tr>
+      <tr><td><b>Mais espaço para as pernas</b><div class="rm">Fileiras 24 e 37 · atrás das divisórias (bulkhead)</div></td><td class="v">BRL 755</td><td class="v">BRL 370</td><td class="v"><b>BRL 1.125</b></td></tr>
+    </table></div>
+    <p class="note" style="margin-top:12px">Ida · valores informados pela Emirates em 26/10/2026. Os preços podem mudar de acordo com o passageiro e o destino.</p>
+
+    <div class="tbl-wrap"><table>
+      <tr class="sec-row"><td colspan="3">VOLTA · LATAM · LA8073 · MILÃO → SÃO PAULO · valores em USD, por passageiro</td></tr>
+      <tr class="head-row"><td>Categoria</td><td>Localização</td><td class="v">LA8073<br><span style="font-weight:400;font-size:.78rem">MXP → GRU · a partir de</span></td></tr>
+      <tr><td><b>LATAM+ (XL)</b><div class="rm">Mais espaço para as pernas</div></td><td>Fileiras 12 a 16</td><td class="v"><b>USD 149,10</b></td></tr>
+      <tr><td><b>Saída de emergência</b><div class="rm">Exige passageiro apto</div></td><td>Fileira 24 · A–C e J–L</td><td class="v"><b>USD 141,12</b></td></tr>
+      <tr><td><b>Mais à frente</b><div class="rm">Desembarque mais rápido</div></td><td>Fileiras 17 a 20</td><td class="v"><b>USD 103,74</b></td></tr>
+    </table></div>
+    <p class="note" style="margin-top:12px">Volta · valores informados pela LATAM em 26/10/2026, em dólar americano. A conversão para reais segue o câmbio do dia do pagamento.</p>
+
+    <div class="howbox">
+      <p><b>Como escolher.</b> Consulte os mapas acima e nos envie, para cada um dos três voos, a fileira e a letra do assento desejado. Indique uma segunda opção caso a primeira já não esteja disponível no momento da marcação.</p>
+      <p>Exemplo: <b>EK248</b> · 1ª opção 24K · 2ª opção 37A &nbsp;·&nbsp; <b>EK328</b> · 1ª opção 29K · 2ª opção 38A &nbsp;·&nbsp; <b>LA8073</b> · 1ª opção 17A · 2ª opção 19L</p>
+    </div>
+  </section>
+
+  <!-- CONDIÇÕES -->
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Condições</span>
+    <h2>Pagamento e condições</h2>
+    <div class="accent-line"></div>
+
+    <div class="pay" style="grid-template-columns:1fr 1fr 1fr">
+      <div class="box">
+        <h4>Confirmação</h4>
+        <p>A marcação paga é confirmada <b>somente após o pagamento à companhia aérea</b>.</p>
+        <p class="muted" style="margin-top:8px;font-size:.82rem">Em regra, não é reembolsável.</p>
+      </div>
+      <div class="box">
+        <h4>Referência</h4>
+        <p>Valores informados pela Emirates e pela LATAM em <b>26/10/2026</b></p>
+        <p class="muted" style="margin-top:8px;font-size:.82rem">LATAM em dólar e “a partir de”: confirmamos o preço exato do assento escolhido antes da cobrança.</p>
+      </div>
+      <div class="box">
+        <h4>O que está incluso</h4>
+        <p>Marcação de assento em <b>3 voos</b>: EK248, EK328 e LA8073</p>
+        <p><b>Classe econômica</b> · por passageiro, por trecho</p>
+      </div>
+    </div>
+
+    <div class="obs">
+      <h4>Observações</h4>
+      <ul>
+        <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
+        <li>Assentos gratuitos também devem ser marcados para garantir a posição escolhida.</li>
+        <li>Assentos com ícone de cadeira de rodas podem ser realocados pela companhia para passageiros com mobilidade reduzida.</li>
+        <li>Na Emirates, os assentos com mais espaço para as pernas ficam junto às divisórias (bulkhead): bagagem de mão vai no compartimento superior e a tela fica no braço da poltrona.</li>
+        <li>Na LATAM, a fileira de saída de emergência exige passageiro apto conforme as regras da companhia.</li>
+        <li>O trecho de conexão São Paulo → Curitiba não consta neste mapa.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel">
+    <div class="contact">
+      <a class="q" href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>&nbsp; · &nbsp;<a class="q" href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
+      Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR
+    </div>
+    <div class="fnote">*Nada reservado, apenas cotado.</div>
+  </footer>
+
+</div>
+</body>
+</html>
