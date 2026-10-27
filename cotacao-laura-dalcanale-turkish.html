@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Cotação Aérea Turkish · Laura Dalcanale · LusaTravel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+:root{
+  --gold:#da8d00;
+  --green:#1f4d2e;
+  --green-deep:#143621;
+  --green-soft:#eaf2ec;
+  --ink:#1a1510;
+  --char:#333131;
+  --muted:#6b6b68;
+  --line:#dfe6e0;
+  --sans:'Poppins',Arial,sans-serif;
+  --con:'Montserrat',Arial,sans-serif;
+}
+@page{ size:A4 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+.page{ width:210mm; height:297mm; display:flex; flex-direction:column; overflow:hidden; page-break-after:always; }
+
+.hd{ background:var(--green-deep); height:22mm; display:flex; align-items:center; justify-content:space-between; padding:0 14mm; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.10em; color:var(--gold); }
+.hd .tag{ font-family:var(--con); font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.75); }
+.goldbar{ height:2.4mm; background:var(--gold); flex-shrink:0; }
+
+.body{ padding:6mm 14mm 0; flex:1; display:flex; flex-direction:column; gap:3.6mm; }
+
+.title-row{ display:flex; justify-content:space-between; align-items:flex-end; }
+.eyebrow{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.client{ font-size:19pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; line-height:1.1; margin-top:1mm; }
+.sub{ font-size:9pt; color:var(--muted); margin-top:1mm; }
+.meta{ text-align:right; font-family:var(--con); font-size:7.6pt; color:var(--muted); line-height:1.6; min-width:62mm; white-space:nowrap; }
+.meta b{ color:var(--ink); font-weight:600; }
+
+.route{ display:flex; align-items:center; gap:4mm; background:var(--green); color:#fff; border-radius:3mm; padding:3mm 6mm; }
+.route .pt{ text-align:center; min-width:22mm; }
+.route .pt b{ display:block; font-size:16pt; font-weight:800; line-height:1; }
+.route .pt span{ display:block; font-size:7pt; letter-spacing:.12em; text-transform:uppercase; opacity:.8; margin-top:1mm; }
+.route .arrow{ flex:1; height:0; border-top:1.5px dashed rgba(255,255,255,.55); position:relative; }
+.route .arrow i{ position:absolute; top:-3.2mm; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--ink); font-style:normal; font-size:7pt; font-weight:700; padding:.8mm 2.5mm; border-radius:2mm; white-space:nowrap; }
+.route .stats{ margin-left:auto; display:flex; gap:5mm; border-left:1px solid rgba(255,255,255,.3); padding-left:5mm; }
+.route .st b{ display:block; font-size:14pt; font-weight:800; color:var(--gold); line-height:1; }
+.route .st span{ display:block; font-size:6.5pt; letter-spacing:.1em; text-transform:uppercase; opacity:.85; margin-top:1mm; }
+
+.sec{ font-size:8pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; border-bottom:1px solid var(--line); padding-bottom:1.2mm; margin-bottom:1.8mm; display:flex; justify-content:space-between; align-items:baseline; }
+.sec small{ font-family:var(--con); font-size:7pt; letter-spacing:0; text-transform:none; color:var(--muted); font-weight:500; }
+
+table.fl{ width:100%; border-collapse:collapse; font-size:8.5pt; }
+table.fl th{ font-family:var(--con); font-size:6.8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); text-align:left; padding:0 2mm 1.5mm; font-weight:600; }
+table.fl td{ padding:1.6mm 2mm; border-top:1px solid var(--line); vertical-align:middle; }
+table.fl tr.leg-h td{ border-top:none; padding:1.5mm 2mm .5mm; background:var(--green-soft); font-size:7pt; letter-spacing:.16em; text-transform:uppercase; font-weight:700; color:var(--green); }
+table.fl .fn{ font-weight:700; color:var(--ink); white-space:nowrap; }
+table.fl .fn small{ display:block; font-weight:400; color:var(--muted); font-size:7pt; }
+table.fl .ap b{ color:var(--ink); font-weight:600; }
+table.fl .ap span{ display:block; font-size:7pt; color:var(--muted); }
+table.fl .dt{ white-space:nowrap; }
+table.fl .dt b{ color:var(--ink); font-weight:600; }
+table.fl .dur{ font-family:var(--con); color:var(--muted); white-space:nowrap; }
+table.fl tr.stop td{ border-top:1px dashed var(--line); background:#fbf6ec; color:var(--char); font-size:7.8pt; padding:1.3mm 2mm; }
+table.fl tr.stop .pin{ color:var(--gold); font-weight:700; margin-right:1.5mm; }
+
+.cards{ display:grid; grid-template-columns:1fr 1fr; gap:5mm; }
+.card{ border:1px solid var(--line); border-radius:3mm; overflow:hidden; display:flex; flex-direction:column; }
+.card .ch{ background:var(--green); color:#fff; padding:3mm 5mm; display:flex; justify-content:space-between; align-items:center; }
+.card .ch b{ font-size:11pt; font-weight:700; }
+.card .ch span{ font-family:var(--con); font-size:7.5pt; opacity:.9; }
+.card .cb{ padding:2.6mm 5mm; display:flex; flex-direction:column; gap:1.1mm; font-size:8pt; }
+.card .cb .li{ display:flex; justify-content:space-between; gap:3mm; }
+.card .cb .li span:first-child{ color:var(--muted); }
+.card .cb .li span:last-child{ color:var(--ink); font-weight:500; text-align:right; }
+.card .tot{ margin-top:auto; background:var(--ink); color:#fff; padding:2.4mm 5mm; display:flex; justify-content:space-between; align-items:center; }
+.card .tot .lb{ font-size:7pt; letter-spacing:.14em; text-transform:uppercase; opacity:.8; }
+.card .tot .lb em{ display:block; font-style:normal; font-size:6.5pt; opacity:.7; letter-spacing:.05em; text-transform:none; margin-top:.5mm; }
+.card .tot .amt{ font-size:15pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; line-height:1; text-align:right; }
+.card .tot .amt small{ display:block; font-size:7pt; font-weight:500; color:rgba(255,255,255,.75); margin-top:1mm; }
+
+.grand{ display:flex; justify-content:space-between; align-items:center; gap:6mm; background:var(--green-deep); border-left:3mm solid var(--gold); color:#fff; padding:2.6mm 6mm; border-radius:2mm; }
+.grand .lb{ font-size:8pt; letter-spacing:.16em; text-transform:uppercase; }
+.grand .lb em{ display:block; font-style:normal; font-size:7pt; opacity:.75; text-transform:none; letter-spacing:.02em; margin-top:.6mm; }
+.grand .amt{ font-size:17pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right; }
+.grand .amt small{ font-size:8pt; font-weight:500; color:rgba(255,255,255,.8); margin-left:3mm; }
+
+.notes{ display:grid; grid-template-columns:1fr 1fr; gap:2mm 8mm; font-size:7.2pt; line-height:1.4; color:var(--char); }
+.notes ul{ list-style:none; }
+.notes li{ padding-left:3.5mm; position:relative; margin-bottom:.7mm; }
+.notes li::before{ content:""; position:absolute; left:0; top:1.6mm; width:1.6mm; height:1.6mm; background:var(--gold); border-radius:50%; }
+.notes b{ color:var(--ink); font-weight:600; }
+.cotado{ font-family:var(--con); font-size:8pt; font-weight:600; color:var(--gold); }
+
+.ft{ margin-top:auto; background:var(--green-deep); height:13mm; flex-shrink:0; display:flex; align-items:center; justify-content:space-between; padding:0 14mm; }
+.ft .brand{ font-size:10pt; font-weight:800; letter-spacing:.1em; color:var(--gold); }
+.ft .contact{ display:flex; gap:5mm; }
+.ft a{ font-family:var(--con); font-size:7.8pt; color:rgba(255,255,255,.85); text-decoration:none; }
+.ft .addr{ font-family:var(--con); font-size:6.8pt; color:rgba(255,255,255,.5); }
+
+table.fl tr.split td{ background:#fff7e6; }
+table.fl .cab{ display:inline-block; font-family:var(--con); font-size:6.3pt; letter-spacing:.1em; text-transform:uppercase; font-weight:700; color:#fff; background:var(--gold); padding:.5mm 1.6mm; border-radius:1.2mm; margin-bottom:.6mm; }
+table.fl .cab.ec{ background:var(--green); }
+.alert{ display:flex; gap:3mm; align-items:flex-start; border:1px solid var(--gold); background:#fff7e6; border-radius:2mm; padding:2mm 4mm; font-size:7.4pt; line-height:1.4; color:var(--char); }
+.alert b{ color:var(--ink); }
+.alert .ic{ color:var(--gold); font-weight:800; font-size:10pt; line-height:1; }
+
+.body{ gap:3mm; padding-top:5mm; }
+table.fl td{ padding:1.3mm 2mm; }
+table.fl tr.split td{ padding:1mm 2mm; }
+table.fl .cab{ margin-bottom:.3mm; }
+.card .cb{ padding:2mm 5mm; gap:.9mm; font-size:7.8pt; }
+.card .tot{ padding:2mm 5mm; }
+.grand{ padding:2.2mm 6mm; }
+.notes{ font-size:6.9pt; line-height:1.35; }
+.alert{ padding:1.6mm 4mm; font-size:7.1pt; }
+.route{ padding:2.6mm 6mm; }
+</style>
+</head>
+<body>
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Cotação aérea · Turkish Airlines</div></div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+    <div class="title-row">
+      <div>
+        <div class="eyebrow">Cotação de passagens aéreas</div>
+        <div class="client">SRA. LAURA DALCANALE</div>
+        <div class="sub">São Paulo → Tóquio com stopover em Istambul · Turkish Airlines · 5 passageiros (4 econômica + 1 executiva)</div>
+      </div>
+      <div class="meta">
+        Emitida em <b>27/10/2026</b><br>
+        Câmbio de referência <b>USD 1,00 = R$ 5,50</b><br>
+        Validade <b>sujeita à disponibilidade</b>
+      </div>
+    </div>
+
+    <div class="route">
+      <div class="pt"><b>GRU</b><span>São Paulo</span></div>
+      <div class="arrow"><i>27 dez</i></div>
+      <div class="pt"><b>IST</b><span>Istambul</span></div>
+      <div class="arrow"><i>29 dez</i></div>
+      <div class="pt"><b>NRT</b><span>Tóquio</span></div>
+      <div class="stats">
+        <div class="st"><b>25</b><span>noites Japão</span></div>
+        <div class="st"><b>2+1</b><span>noites Istambul</span></div>
+        <div class="st"><b>31</b><span>dias de viagem</span></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sec"><span>Voos · Turkish Airlines</span><small>Todos sem escala · primeiro trecho difere entre as categorias</small></div>
+      <table class="fl">
+        <thead><tr><th>Voo</th><th>Partida</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th></tr></thead>
+        <tbody>
+          <tr class="leg-h"><td colspan="6">Ida</td></tr>
+          <tr class="split">
+            <td class="fn"><span class="cab ec">Econômica</span><br>TK 16<small>Airbus A350-900</small></td>
+            <td class="dt"><b>27 dez</b> 04:10</td>
+            <td class="dt"><b>27 dez</b> 22:35</td>
+            <td class="ap"><b>GRU</b><span>São Paulo, Guarulhos</span></td>
+            <td class="ap"><b>IST</b><span>Istambul</span></td>
+            <td class="dur">12h25</td>
+          </tr>
+          <tr class="split">
+            <td class="fn"><span class="cab">Executiva</span><br>TK 216<small>Airbus A350-900</small></td>
+            <td class="dt"><b>27 dez</b> 17:10</td>
+            <td class="dt"><b>28 dez</b> 11:45</td>
+            <td class="ap"><b>GRU</b><span>São Paulo, Guarulhos</span></td>
+            <td class="ap"><b>IST</b><span>Istambul</span></td>
+            <td class="dur">12h35</td>
+          </tr>
+          <tr class="stop"><td colspan="6"><span class="pin">●</span>Stopover em Istambul · econômica 2 noites (27 e 28 dez) · executiva 1 noite (28 dez)</td></tr>
+          <tr>
+            <td class="fn">TK 50<small>Boeing 787-9 · todos juntos</small></td>
+            <td class="dt"><b>29 dez</b> 15:25</td>
+            <td class="dt"><b>30 dez</b> 08:40</td>
+            <td class="ap"><b>IST</b><span>Istambul</span></td>
+            <td class="ap"><b>NRT</b><span>Tóquio, Narita</span></td>
+            <td class="dur">11h15</td>
+          </tr>
+          <tr class="leg-h"><td colspan="6">Volta</td></tr>
+          <tr>
+            <td class="fn">TK 199<small>Boeing 777-300ER · todos juntos</small></td>
+            <td class="dt"><b>24 jan</b> 22:05</td>
+            <td class="dt"><b>25 jan</b> 05:45</td>
+            <td class="ap"><b>HND</b><span>Tóquio, Haneda</span></td>
+            <td class="ap"><b>IST</b><span>Istambul</span></td>
+            <td class="dur">13h40</td>
+          </tr>
+          <tr class="stop"><td colspan="6"><span class="pin">●</span>Stopover em Istambul · 1 noite (25 jan) · saída na noite do dia 26</td></tr>
+          <tr>
+            <td class="fn">TK 215<small>Airbus A350-900 · todos juntos</small></td>
+            <td class="dt"><b>26 jan</b> 20:35</td>
+            <td class="dt"><b>27 jan</b> 04:20</td>
+            <td class="ap"><b>IST</b><span>Istambul</span></td>
+            <td class="ap"><b>GRU</b><span>São Paulo, Guarulhos</span></td>
+            <td class="dur">13h45</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert"><div class="ic">!</div><div><b>Atenção ao trecho São Paulo → Istambul:</b> a executiva está cotada no TK 216 (sai 17:10) e a econômica no TK 16 (sai 04:10 do mesmo dia). O grupo só se reúne em Istambul. Os outros três voos são idênticos para todos. Podemos recotar para que os 5 embarquem juntos; o valor pode mudar.</div></div>
+
+    <div>
+      <div class="sec"><span>Valores</span><small>Tarifas e taxas incluídas · por categoria</small></div>
+      <div class="cards">
+        <div class="card">
+          <div class="ch"><b>Econômica</b><span>4 passageiros · tarifa EcoFly</span></div>
+          <div class="cb">
+            <div class="li"><span>Bagagem despachada</span><span>1 mala de 23 kg por pessoa</span></div>
+            <div class="li"><span>Bagagem de mão</span><span>1 peça de 8 kg</span></div>
+            <div class="li"><span>Stopover Istambul</span><span>1 noite em hotel 4★ cortesia*</span></div>
+            <div class="li"><span>Valor por pessoa</span><span>R$ 21.101,45</span></div>
+          </div>
+          <div class="tot"><div class="lb">Total 4 passageiros<em>USD 15.344,56</em></div><div class="amt">R$ 84.405,80</div></div>
+        </div>
+        <div class="card">
+          <div class="ch"><b>Executiva</b><span>1 passageiro · tarifa Business Fly</span></div>
+          <div class="cb">
+            <div class="li"><span>Bagagem despachada</span><span>2 malas de 32 kg</span></div>
+            <div class="li"><span>Bagagem de mão</span><span>2 peças de 8 kg</span></div>
+            <div class="li"><span>Poltrona</span><span>cama 180° · sala VIP incluída</span></div>
+            <div class="li"><span>Stopover Istambul</span><span>2 noites em hotel 5★ cortesia*</span></div>
+          </div>
+          <div class="tot"><div class="lb">Total 1 passageiro<em>USD 14.467,40</em></div><div class="amt">R$ 79.580,84</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grand">
+      <div class="lb">Total do grupo · 5 passageiros<em>Ida e volta, taxas de embarque incluídas<br><span class="cotado">*Nada reservado, apenas cotado</span></em></div>
+      <div class="amt">R$ 163.986,64 <small>USD 29.811,96</small></div>
+    </div>
+
+    <div>
+      <div class="sec"><span>Informações importantes</span></div>
+      <div class="notes">
+        <ul>
+          <li><b>Turquia:</b> brasileiros não precisam de visto para turismo de até 90 dias. <b>Japão:</b> isento de visto até 90 dias. Passaporte com validade mínima de 6 meses.</li>
+          <li><b>*Hotel de stopover</b> pelo programa Stopover in Istanbul: cortesia em um único sentido, hotel definido pela Turkish, pedido com 72 h de antecedência. Demais noites por conta do passageiro.</li>
+        </ul>
+        <ul>
+          <li><b>Chegada em Tóquio</b> por Narita (NRT) e saída por Haneda (HND), os dois aeroportos da cidade.</li>
+          <li><b>Valores</b> em reais convertidos ao câmbio do dia da emissão. Sujeitos a alteração até a emissão dos bilhetes.</li>
+          <li><b>Alteração e reembolso</b> conforme regras das tarifas EcoFly e Business Fly. Consulte antes de confirmar.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <div class="brand">LUSATRAVEL</div>
+    <div class="contact">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <div class="addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+  </div>
+</section>
+</body>
+</html>
