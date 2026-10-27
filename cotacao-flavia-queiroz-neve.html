@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>FLÁVIA QUEIROZ | Neve em Família — LusaTravel</title>
+<style>
+/* ══════════════════════════════════════════════════════════════
+   LUSATRAVEL — PROPOSTA (A3 Portrait, print-ready)
+   Cliente: Flávia Queiroz · 4 famílias · Neve em julho/2027
+   Opção 1 Bariloche (--dest-bar) · Opção 2 Ushuaia (--dest-ush)
+   ══════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap');
+
+:root{
+  --gold:#da8d00;        /* FIXO — nunca muda */
+  --dest:#24423a;        /* padrão: Verde Patagônico (Bariloche) */
+  --dest-bar:#24423a;    /* Bariloche — bosque de lengas e lagos andinos */
+  --dest-ush:#1d3347;    /* Ushuaia — Canal Beagle / gelo austral */
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#9a8d80;
+  --line:#e4ddd2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+}
+.opt-bar{ --dest:var(--dest-bar); }
+.opt-ush{ --dest:var(--dest-ush); }
+
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page{
+  width:297mm; height:420mm; position:relative; overflow:hidden;
+  background:#fff; page-break-after:always; display:flex; flex-direction:column;
+}
+.page:last-child{ page-break-after:auto; }
+
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center;
+     justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center;
+     justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.2); }
+
+.body{ padding:14mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:3mm 0 7mm; }
+.lead{ font-size:12pt; line-height:1.7; color:var(--char); margin-bottom:9mm; max-width:230mm; }
+
+/* ══ Ilustração de montanha (substitui foto) ══ */
+.scene{ position:absolute; inset:0; }
+.scene svg{ position:absolute; left:0; bottom:0; width:100%; height:100%; }
+
+/* ══ CAPA ══ */
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink);
+  display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0; background:linear-gradient(180deg,#2c4a5e 0%,#5d7f8f 38%,#c9d6dc 62%,#1d3347 100%); }
+.cover-scrim{ position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,.25) 0%, transparent 30%, rgba(10,14,18,.55) 60%, rgba(10,14,18,.9) 85%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:40mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.6); }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.65); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-name{ font-size:38pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:19pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.65); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:14mm; z-index:3;
+  font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.6); line-height:1.7; }
+.cover-sig a{ color:inherit; text-decoration:none; }
+
+/* ══ COMPARATIVO ══ */
+.cmp{ display:grid; grid-template-columns:1fr 1fr; gap:10mm; }
+.cmp-col{ border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; }
+.cmp-top{ background:var(--dest); color:#fff; padding:7mm 8mm; }
+.cmp-top .opt{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.cmp-top .name{ font-size:20pt; font-weight:800; margin-top:1mm; letter-spacing:.02em; }
+.cmp-top .sub{ font-size:10pt; color:rgba(255,255,255,.7); margin-top:1mm; }
+.cmp-body{ padding:7mm 8mm; flex:1; }
+.tl{ display:flex; flex-direction:column; margin-bottom:7mm; }
+.tl-item{ display:flex; align-items:flex-start; gap:5mm; }
+.tl-badge{ width:10mm; height:10mm; border-radius:50%; background:var(--dest); color:#fff;
+  font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tl-line{ width:2px; height:6mm; background:var(--line); margin-left:4.9mm; }
+.tl-city{ font-size:12.5pt; font-weight:700; color:var(--ink); }
+.tl-meta{ font-size:9.5pt; color:var(--mut); margin-top:.5mm; }
+.fit{ border-top:1px solid var(--line); padding-top:5mm; }
+.fit-row{ display:flex; justify-content:space-between; align-items:baseline; gap:4mm; padding:2.2mm 0; border-bottom:1px dashed var(--line); }
+.fit-row .k{ font-family:var(--lbl); font-size:8.5pt; letter-spacing:.06em; text-transform:uppercase; color:var(--mut); }
+.fit-row .v{ font-size:10pt; color:var(--ink); font-weight:500; text-align:right; }
+.fit-row .v.dots{ color:var(--gold); letter-spacing:2px; font-size:11pt; }
+.dots i{ color:var(--line); font-style:normal; }
+.cmp-tot{ background:var(--ink); color:#fff; padding:5mm 8mm; display:flex; justify-content:space-between; align-items:center; }
+.cmp-tot .l{ font-size:8.5pt; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.6); font-weight:600; }
+.cmp-tot .a{ font-size:15pt; font-weight:800; color:var(--gold); }
+.note-box{ margin-top:9mm; background:#faf7f2; border-left:3px solid var(--gold); padding:6mm 8mm; font-size:10.5pt; line-height:1.7; color:var(--char); }
+.note-box b{ color:var(--ink); }
+
+/* ══ DESTINO + HOTEL ══ */
+.dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center;
+  justify-content:space-between; flex-shrink:0; }
+.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); }
+.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9);
+  color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.dest-photo{ height:112mm; position:relative; flex-shrink:0; overflow:hidden; }
+.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:15pt; font-weight:800; z-index:2;
+  letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+.dest-photo .cap small{ display:block; font-size:9pt; font-weight:500; letter-spacing:.18em; color:var(--gold); text-shadow:none; }
+.dest-text{ font-size:11.5pt; font-weight:400; line-height:1.75; color:var(--char); }
+.dest-text + .dest-text{ margin-top:3.5mm; }
+.hotel-card{ margin-top:8mm; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.hotel-card + .hotel-card{ margin-top:5mm; }
+.hotel-card .top{ background:#faf7f2; padding:5mm 8mm; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; }
+.hotel-card .name{ font-size:14pt; font-weight:700; color:var(--ink); }
+.hotel-card .where{ font-family:var(--lbl); font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); }
+.hotel-card .stars{ font-size:14pt; color:var(--gold); letter-spacing:2px; }
+.hotel-card .rows{ padding:5mm 8mm; display:grid; grid-template-columns:1fr 1fr; gap:4mm 10mm; }
+.hotel-card .k{ font-family:var(--lbl); font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.hotel-card .v{ font-size:10.5pt; font-weight:300; color:var(--char); margin-top:1mm; }
+.why{ margin-top:7mm; display:grid; grid-template-columns:repeat(3,1fr); gap:5mm; }
+.why div{ background:#faf7f2; border-top:2px solid var(--dest); padding:4mm 5mm; font-size:9.5pt; line-height:1.55; }
+.why b{ display:block; font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--dest); margin-bottom:1mm; }
+
+/* ══ ROTEIRO ══ */
+.day{ margin-bottom:5.5mm; padding-left:6mm; border-left:2px solid var(--line); }
+.day-h{ font-size:10.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); }
+.day-h span{ color:var(--dest); }
+.day-t{ font-size:10.5pt; line-height:1.65; color:var(--char); margin-top:1mm; }
+
+/* ══ VALORES ══ */
+.val-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10mm; }
+.val-col h3{ font-size:13pt; font-weight:800; color:#fff; background:var(--dest); padding:4mm 6mm; border-radius:5px 5px 0 0; letter-spacing:.04em; }
+.val-col h3 small{ display:block; font-size:8pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); }
+.val-note{ font-size:9pt; color:var(--mut); margin-bottom:6mm; }
+.val-row{ display:flex; justify-content:space-between; gap:4mm; padding:3.4mm 0; border-bottom:1px solid var(--line); }
+.val-row .lbl{ font-size:10.5pt; color:var(--char); }
+.val-row .lbl small{ display:block; font-size:8.5pt; color:var(--mut); }
+.val-row .amt{ font-size:11pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink);
+  border-radius:5px; padding:5mm 6mm; margin-top:5mm; }
+.val-total .lbl{ font-size:9.5pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.val-total .amt{ font-size:16pt; font-weight:800; color:var(--gold); }
+.val-extra{ font-size:9.5pt; color:var(--char); margin-top:3mm; line-height:1.6; }
+.val-fx{ font-size:9.5pt; color:var(--mut); margin-top:8mm; line-height:1.7; }
+.val-fx b{ color:var(--ink); }
+
+/* ══ CONDIÇÕES ══ */
+.cond{ margin-bottom:6.5mm; }
+.cond-h{ font-size:10.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5mm; }
+.cond-t{ font-size:10.5pt; line-height:1.75; color:var(--char); }
+.cond-t b{ color:var(--ink); }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 01 · CAPA ══════════ -->
+<section class="page cover">
+  <div class="cover-hd"><div class="logo">LUSATRAVEL</div><div class="tag">Glossário</div></div>
+  <div class="cover-bar"></div>
+  <div class="cover-photo"></div>
+  <div class="scene">
+    <svg viewBox="0 0 1190 1684" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <polygon points="0,900 170,640 290,760 450,520 600,700 760,470 930,690 1060,580 1190,700 1190,1684 0,1684" fill="#8fa6b2"/>
+      <polygon points="450,520 410,585 440,575 470,600 500,570 525,590" fill="#f4f7f8"/>
+      <polygon points="760,470 715,540 750,528 780,556 812,524 838,548" fill="#f4f7f8"/>
+      <polygon points="170,640 140,690 170,682 195,700 215,676" fill="#f4f7f8"/>
+      <polygon points="0,1050 220,820 380,940 560,760 740,960 900,820 1190,1010 1190,1684 0,1684" fill="#4f6a78"/>
+      <polygon points="560,760 515,820 552,810 585,838 615,812" fill="#e6edf0"/>
+      <polygon points="900,820 860,870 895,862 925,885 950,862" fill="#e6edf0"/>
+      <polygon points="0,1180 260,1040 520,1150 800,1020 1190,1160 1190,1684 0,1684" fill="#2b4250"/>
+      <g fill="#1a2a24">
+        <polygon points="90,1260 120,1160 150,1260"/><polygon points="140,1280 175,1150 210,1280"/>
+        <polygon points="980,1250 1015,1130 1050,1250"/><polygon points="1040,1270 1080,1120 1120,1270"/>
+        <polygon points="880,1290 905,1200 930,1290"/>
+      </g>
+    </svg>
+  </div>
+  <div class="cover-scrim"></div>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em 4 famílias (2 adultos + 2 ou 3 crianças) · Julho de 2027 · 8 noites</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">Flávia Queiroz</div>
+    <div class="cover-dest">Neve em Família · Bariloche ou Ushuaia</div>
+    <div class="stats">
+      <div class="stat"><b>2</b><span>Opções</span></div>
+      <div class="stat"><b>8</b><span>Noites</span></div>
+      <div class="stat"><b>1–2</b><span>Hotéis</span></div>
+      <div class="stat"><b>✓</b><span>Seguro</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ══════════ 02 · COMPARATIVO / ITINERÁRIO ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Itinerário</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Duas formas de viver a neve</div>
+    <h2 class="h2">As duas opções lado a lado</h2>
+    <p class="lead">Desenhamos as duas propostas para quem nunca esquiou: escolinha para as crianças de 5 a 11 anos, aulas para os adultos e muito programa na neve além do ski. Nas duas, os adultos têm boa programação à noite, e as 4 famílias viajam juntas, com instrutor e transporte exclusivos para o grupo.</p>
+
+    <div class="cmp">
+      <div class="cmp-col opt-bar">
+        <div class="cmp-top"><div class="opt">Opção 1</div><div class="name">BARILOCHE</div><div class="sub">Cerro Catedral · Patagônia Argentina</div></div>
+        <div class="cmp-body">
+          <div class="tl">
+            <div class="tl-item"><div class="tl-badge">1</div><div><div class="tl-city">Belo Horizonte → Bariloche</div><div class="tl-meta">03 jul 2027 · via São Paulo</div></div></div>
+            <div class="tl-line"></div>
+            <div class="tl-item"><div class="tl-badge">8</div><div><div class="tl-city">Bariloche</div><div class="tl-meta">03 → 11 jul · 8 noites · 4 dias de ski</div></div></div>
+            <div class="tl-line"></div>
+            <div class="tl-item"><div class="tl-badge">✈</div><div><div class="tl-city">Bariloche → Belo Horizonte</div><div class="tl-meta">11 jul 2027</div></div></div>
+          </div>
+          <div class="fit">
+            <div class="fit-row"><span class="k">Ski para iniciantes</span><span class="v dots">●●●●●</span></div>
+            <div class="fit-row"><span class="k">Noite dos adultos</span><span class="v dots">●●●●●</span></div>
+            <div class="fit-row"><span class="k">Experiências além do ski</span><span class="v dots">●●●●<i>●</i></span></div>
+            <div class="fit-row"><span class="k">Facilidade de chegada</span><span class="v dots">●●●●<i>●</i></span></div>
+            <div class="fit-row"><span class="k">Luz do dia em julho</span><span class="v">~9h30</span></div>
+            <div class="fit-row"><span class="k">Hotel → pista</span><span class="v">~25 min</span></div>
+          </div>
+        </div>
+        <div class="cmp-tot"><span class="l">Estimativa / família 2A+2C</span><span class="a">R$ 52.700</span></div>
+      </div>
+
+      <div class="cmp-col opt-ush">
+        <div class="cmp-top"><div class="opt">Opção 2</div><div class="name">USHUAIA + BUENOS AIRES</div><div class="sub">Cerro Castor · Fim do Mundo</div></div>
+        <div class="cmp-body">
+          <div class="tl">
+            <div class="tl-item"><div class="tl-badge">1</div><div><div class="tl-city">Belo Horizonte → Ushuaia</div><div class="tl-meta">03 jul 2027 · via São Paulo e Buenos Aires</div></div></div>
+            <div class="tl-line"></div>
+            <div class="tl-item"><div class="tl-badge">6</div><div><div class="tl-city">Ushuaia</div><div class="tl-meta">03 → 09 jul · 6 noites · 3 dias de ski</div></div></div>
+            <div class="tl-line"></div>
+            <div class="tl-item"><div class="tl-badge">2</div><div><div class="tl-city">Buenos Aires</div><div class="tl-meta">09 → 11 jul · 2 noites</div></div></div>
+          </div>
+          <div class="fit">
+            <div class="fit-row"><span class="k">Ski para iniciantes</span><span class="v dots">●●●●<i>●</i></span></div>
+            <div class="fit-row"><span class="k">Noite dos adultos</span><span class="v dots">●●●●<i>●</i></span></div>
+            <div class="fit-row"><span class="k">Experiências além do ski</span><span class="v dots">●●●●●</span></div>
+            <div class="fit-row"><span class="k">Facilidade de chegada</span><span class="v dots">●●●<i>●●</i></span></div>
+            <div class="fit-row"><span class="k">Luz do dia em julho</span><span class="v">~7h30</span></div>
+            <div class="fit-row"><span class="k">Hotel → pista</span><span class="v">~30 min</span></div>
+          </div>
+        </div>
+        <div class="cmp-tot"><span class="l">Estimativa / família 2A+2C</span><span class="a">R$ 55.400</span></div>
+      </div>
+    </div>
+
+    <div class="note-box"><b>Por que começo de julho?</b> As datas fogem das férias escolares argentinas, que normalmente ocupam a segunda quinzena de julho, quando a neve fica mais cheia e mais cara. As datas são flexíveis entre a última semana de junho e a penúltima de julho, e ajustamos ao calendário escolar das crianças.</div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- ══════════ 03 · BARILOCHE · DESTINO + HOTEL ══════════ -->
+<section class="page opt-bar">
+  <div class="dest-hd"><div class="city">Opção 1 · Bariloche · Argentina</div><div class="no">1</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo">
+    <div class="scene">
+      <svg viewBox="0 0 1190 448" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="1190" height="448" fill="#9fbccb"/>
+        <rect y="0" width="1190" height="200" fill="#c7d9e2"/>
+        <polygon points="0,260 140,150 250,210 400,90 540,220 700,110 860,230 1000,140 1190,240 1190,448 0,448" fill="#6f8a99"/>
+        <polygon points="400,90 360,145 392,136 420,160 450,132 475,150" fill="#f6f9fa"/>
+        <polygon points="700,110 655,170 690,160 720,184 752,154 778,172" fill="#f6f9fa"/>
+        <polygon points="1000,140 965,185 995,178 1020,198 1045,174" fill="#f6f9fa"/>
+        <polygon points="0,320 200,240 380,300 600,230 820,310 1190,250 1190,448 0,448" fill="#24423a"/>
+        <rect y="340" width="1190" height="108" fill="#3e6a80"/>
+        <rect y="340" width="1190" height="6" fill="#88aabb" opacity=".6"/>
+      </svg>
+    </div>
+    <div class="cap"><small>Lago Nahuel Huapi · Cerro Catedral</small>Bariloche</div>
+  </div>
+  <div class="body">
+    <p class="dest-text">Bariloche no inverno é cenário de cartão-postal: o Lago Nahuel Huapi espelhando os Andes nevados, chalés de pedra e madeira, cheiro de chocolate quente nas ruas do centro. É o destino de neve mais completo da América do Sul para quem está começando. O Cerro Catedral tem uma das melhores escolas de ski infantil do continente, pistas verdes largas e áreas de aprendizado separadas, para as crianças ganharem confiança sem pressa.</p>
+    <p class="dest-text">E quando o sol se põe, a cidade acontece. Os adultos podem ir a cervejarias artesanais com vista para o lago, parrillas tradicionais, noites de fondue e o cassino. As crianças se divertem no trenó e no tubing do Cerro Otto, na rota do chocolate e nos passeios de neve que não exigem saber esquiar. É uma viagem em que pais e filhos voltam com histórias diferentes e igualmente boas.</p>
+
+    <div class="hotel-card">
+      <div class="top"><div><div class="where">Bariloche · Av. Bustillo</div><div class="name">Villa Huinid Bustillo Resort &amp; Spa</div></div><div class="stars">★★★★</div></div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Apartamento familiar · 2 adultos + 2 crianças</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã</div></div>
+        <div><div class="k">Endereço</div><div class="v">Av. Exequiel Bustillo, km 2,6 · Bariloche</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">03/07/2027 → 11/07/2027 · 8 noites</div></div>
+      </div>
+    </div>
+
+    <div class="why">
+      <div><b>Por que só café</b>O almoço acontece na montanha, entre as aulas. O jantar fica livre para explorar a gastronomia da cidade.</div>
+      <div><b>As 4 famílias juntas</b>Os apartamentos ficam no mesmo complexo, com piscina aquecida e spa para o fim do dia.</div>
+      <div><b>Noite dos adultos</b>Babá solicitada pelo hotel nas noites de programa dos casais.</div>
+    </div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- ══════════ 04 · BARILOCHE · ROTEIRO ══════════ -->
+<section class="page opt-bar">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Roteiro · Opção 1</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Dia a dia · Bariloche</div>
+    <h2 class="h2">Roteiro sugerido</h2>
+    <div class="day"><div class="day-h">DIA 01 | <span>Bariloche</span> | 03 JUL</div><div class="day-t">Voo de Belo Horizonte para Bariloche, com conexão em São Paulo. Traslado privativo do grupo até o hotel. À noite, primeiro jantar das 4 famílias juntas, com fondue de queijo e de chocolate.</div></div>
+    <div class="day"><div class="day-h">DIA 02 | <span>Bariloche</span> | 04 JUL</div><div class="day-t">Prova e retirada de roupas e equipamentos de neve no centro, sem fila na montanha. Circuito Chico pela manhã, com a vista do Cerro Campanario (teleférico). À tarde, a rota do chocolate na Calle Mitre.</div></div>
+    <div class="day"><div class="day-h">DIA 03 | <span>Cerro Catedral</span> | 05 JUL</div><div class="day-t">Primeiro dia de ski. Crianças na escolinha com instrutor exclusivo do grupo, em duas turmas: 5 a 7 anos e 8 a 11 anos. Adultos em aula para iniciantes. Almoço na montanha.</div></div>
+    <div class="day"><div class="day-h">DIA 04 | <span>Cerro Catedral</span> | 06 JUL</div><div class="day-t">Segundo dia de ski. À noite, programa só dos adultos: cervejaria artesanal Patagonia (km 24), com vista do Lago Moreno. As crianças ficam com babá no hotel.</div></div>
+    <div class="day"><div class="day-h">DIA 05 | <span>Cerro Otto</span> | 07 JUL</div><div class="day-t">Dia de descanso das pistas e o favorito dos pequenos: Piedras Blancas, com tobogã, trenó (culipatín) e tubing. Subida de teleférico ao Cerro Otto e confeitaria giratória no topo.</div></div>
+    <div class="day"><div class="day-h">DIA 06 | <span>Cerro Catedral</span> | 08 JUL</div><div class="day-t">Terceiro dia de ski, agora já descendo pistas verdes inteiras. À noite, jantar dos casais numa parrilla tradicional, seguido do cassino.</div></div>
+    <div class="day"><div class="day-h">DIA 07 | <span>Cerro Catedral</span> | 09 JUL</div><div class="day-t">Último dia de ski, com a "formatura" da escolinha das crianças. Fim de tarde no spa e na piscina aquecida do hotel.</div></div>
+    <div class="day"><div class="day-h">DIA 08 | <span>Bariloche</span> | 10 JUL</div><div class="day-t">Dia livre: Colonia Suiza, compras de chocolate e lembranças, ou passeio opcional de raquetes de neve no bosque. Jantar de despedida do grupo.</div></div>
+    <div class="day"><div class="day-h">DIA 09 | <span>Bariloche → BH</span> | 11 JUL</div><div class="day-t">Café da manhã, traslado ao aeroporto e voo de volta a Belo Horizonte.</div></div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- ══════════ 05 · USHUAIA · DESTINO + HOTEL ══════════ -->
+<section class="page opt-ush">
+  <div class="dest-hd"><div class="city">Opção 2 · Ushuaia + Buenos Aires · Argentina</div><div class="no">2</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo">
+    <div class="scene">
+      <svg viewBox="0 0 1190 448" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="1190" height="448" fill="#b9c8d6"/>
+        <rect width="1190" height="160" fill="#e3c9a8" opacity=".55"/>
+        <polygon points="0,230 120,120 230,190 330,80 450,200 560,110 700,210 840,100 980,200 1080,130 1190,210 1190,448 0,448" fill="#56708a"/>
+        <polygon points="330,80 295,130 322,122 345,145 372,118 392,134" fill="#f7fafc"/>
+        <polygon points="560,110 525,155 552,148 575,170 600,144" fill="#f7fafc"/>
+        <polygon points="840,100 800,155 830,147 856,170 885,140 905,158" fill="#f7fafc"/>
+        <polygon points="0,300 260,250 500,290 760,240 1190,290 1190,448 0,448" fill="#dfe8ee"/>
+        <rect y="330" width="1190" height="118" fill="#1d3347"/>
+        <g fill="#c94a3a"><rect x="180" y="300" width="26" height="22"/><rect x="215" y="306" width="22" height="16"/></g>
+        <g fill="#e9c46a"><rect x="250" y="304" width="24" height="18"/></g>
+        <polygon points="700,350 840,350 820,368 715,368" fill="#e8e1d6"/>
+        <rect x="755" y="335" width="30" height="15" fill="#e8e1d6"/>
+      </svg>
+    </div>
+    <div class="cap"><small>Canal Beagle · Cerro Castor</small>Ushuaia</div>
+  </div>
+  <div class="body">
+    <p class="dest-text">Ushuaia é a cidade mais austral do mundo, entre o Canal Beagle e montanhas que parecem nascer do mar. No inverno vira um pequeno reino de neve. O Cerro Castor tem a neve mais seca e confiável da América do Sul, pistas suaves para iniciantes e escola de ski bem preparada para crianças. E a viagem vai muito além do ski: trenó puxado por huskies no Vale dos Lobos, o Trem do Fim do Mundo atravessando o bosque nevado e lagos congelados no coração da Terra do Fogo.</p>
+    <p class="dest-text">Fechamos em Buenos Aires, com duas noites de cidade grande para os adultos: show de tango com jantar, os restaurantes de Palermo e um passeio por Caminito e pela Recoleta com as crianças. É a opção para quem quer, além de aprender a esquiar, viver uma aventura que as crianças vão contar por anos.</p>
+
+    <div class="hotel-card">
+      <div class="top"><div><div class="where">Ushuaia · Orla do Canal Beagle</div><div class="name">Albatros Hotel</div></div><div class="stars">★★★★</div></div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Quarto familiar · 2 adultos + 2 crianças</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã</div></div>
+        <div><div class="k">Endereço</div><div class="v">Av. Maipú 505 · centro de Ushuaia</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">03/07/2027 → 09/07/2027 · 6 noites</div></div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="top"><div><div class="where">Buenos Aires · Retiro</div><div class="name">Hotel Pulitzer Buenos Aires</div></div><div class="stars">★★★★</div></div>
+      <div class="rows">
+        <div><div class="k">Quarto</div><div class="v">Quarto familiar · 2 adultos + 2 crianças</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã</div></div>
+        <div><div class="k">Endereço</div><div class="v">Maipú 907 · Retiro · Buenos Aires</div></div>
+        <div><div class="k">Check-in / out</div><div class="v">09/07/2027 → 11/07/2027 · 2 noites</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- ══════════ 06 · USHUAIA · ROTEIRO ══════════ -->
+<section class="page opt-ush">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Roteiro · Opção 2</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Dia a dia · Ushuaia + Buenos Aires</div>
+    <h2 class="h2">Roteiro sugerido</h2>
+    <div class="day"><div class="day-h">DIA 01 | <span>Ushuaia</span> | 03 JUL</div><div class="day-t">Voo de Belo Horizonte para Ushuaia, com conexões em São Paulo e Buenos Aires. Traslado privativo do grupo até o hotel, na orla do Canal Beagle. Jantar de boas-vindas com centolla, o caranguejo-rei fueguino.</div></div>
+    <div class="day"><div class="day-h">DIA 02 | <span>Parque Tierra del Fuego</span> | 04 JUL</div><div class="day-t">Trem do Fim do Mundo pelo bosque nevado e visita ao Parque Nacional Tierra del Fuego, com a Baía Lapataia. À tarde, prova e retirada dos equipamentos de ski.</div></div>
+    <div class="day"><div class="day-h">DIA 03 | <span>Cerro Castor</span> | 05 JUL</div><div class="day-t">Primeiro dia de ski. Crianças na escolinha com instrutor exclusivo do grupo, em duas turmas por idade. Adultos em aula para iniciantes. Almoço na montanha.</div></div>
+    <div class="day"><div class="day-h">DIA 04 | <span>Vale dos Lobos</span> | 06 JUL</div><div class="day-t">O dia preferido das crianças: passeio de trenó puxado por huskies siberianos e chocolate quente no refúgio. À noite, jantar só dos adultos num restaurante de cordeiro fueguino, com babá no hotel.</div></div>
+    <div class="day"><div class="day-h">DIA 05 | <span>Cerro Castor</span> | 07 JUL</div><div class="day-t">Segundo dia de ski, com a neve seca e macia típica do Castor, ótima para quem está aprendendo.</div></div>
+    <div class="day"><div class="day-h">DIA 06 | <span>Lagos Escondido e Fagnano</span> | 08 JUL</div><div class="day-t">Excursão em 4x4 pela Cordilheira até os lagos congelados, com almoço de cordeiro na brasa. Se preferirem, a alternativa é uma navegação pelo Canal Beagle até a Ilha dos Lobos-Marinhos e o Farol Les Eclaireurs.</div></div>
+    <div class="day"><div class="day-h">DIA 07 | <span>Cerro Castor → Buenos Aires</span> | 09 JUL</div><div class="day-t">Último dia de ski pela manhã, com a "formatura" da escolinha. Voo de fim de tarde para Buenos Aires.</div></div>
+    <div class="day"><div class="day-h">DIA 08 | <span>Buenos Aires</span> | 10 JUL</div><div class="day-t">Passeio pela cidade em família: Caminito, Puerto Madero, Recoleta e o Jardim Japonês. À noite, show de tango com jantar para os adultos, com babá no hotel.</div></div>
+    <div class="day"><div class="day-h">DIA 09 | <span>Buenos Aires → BH</span> | 11 JUL</div><div class="day-t">Manhã livre em Palermo, traslado ao aeroporto e voo de volta a Belo Horizonte.</div></div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- ══════════ 07 · VALORES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Valores</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Investimento</div>
+    <h2 class="h2">Valores estimados por família</h2>
+    <div class="val-note">*Valores em R$ por família de 2 adultos + 2 crianças (5 a 11 anos), com saída de Belo Horizonte</div>
+
+    <div class="val-grid">
+      <div class="val-col opt-bar">
+        <h3><small>Opção 1</small>Bariloche · 8 noites</h3>
+        <div class="val-row"><span class="lbl">Hotelaria<small>Villa Huinid · 8 noites · café da manhã</small></span><span class="amt">R$ 14.000</span></div>
+        <div class="val-row"><span class="lbl">Aéreo<small>BH ⇄ Bariloche, via São Paulo · 4 pessoas</small></span><span class="amt">R$ 15.000</span></div>
+        <div class="val-row"><span class="lbl">Pacote de ski · 4 dias<small>Passes, escolinha infantil, aula adultos, equipamento e roupa</small></span><span class="amt">R$ 19.000</span></div>
+        <div class="val-row"><span class="lbl">Serviços<small>Traslados privativos, Circuito Chico, Cerro Otto</small></span><span class="amt">R$ 3.500</span></div>
+        <div class="val-row"><span class="lbl">Seguro de viagem<small>4 pessoas · cobertura para esportes de neve</small></span><span class="amt">R$ 1.200</span></div>
+        <div class="val-total"><span class="lbl">TOTAL / FAMÍLIA</span><span class="amt">R$ 52.700</span></div>
+        <div class="val-extra">Família com 3 filhos: acrescentar ~R$ 10.500</div>
+      </div>
+
+      <div class="val-col opt-ush">
+        <h3><small>Opção 2</small>Ushuaia + Buenos Aires · 8 noites</h3>
+        <div class="val-row"><span class="lbl">Hotelaria<small>Albatros 6 noites + Pulitzer 2 noites · café da manhã</small></span><span class="amt">R$ 10.000</span></div>
+        <div class="val-row"><span class="lbl">Aéreo<small>BH → Ushuaia → Buenos Aires → BH · 4 pessoas</small></span><span class="amt">R$ 19.500</span></div>
+        <div class="val-row"><span class="lbl">Pacote de ski · 3 dias<small>Passes, escolinha infantil, aula adultos, equipamento e roupa</small></span><span class="amt">R$ 12.500</span></div>
+        <div class="val-row"><span class="lbl">Passeios e serviços<small>Huskies, Trem do Fim do Mundo, Lagos 4x4, tango, traslados</small></span><span class="amt">R$ 12.200</span></div>
+        <div class="val-row"><span class="lbl">Seguro de viagem<small>4 pessoas · cobertura para esportes de neve</small></span><span class="amt">R$ 1.200</span></div>
+        <div class="val-total"><span class="lbl">TOTAL / FAMÍLIA</span><span class="amt">R$ 55.400</span></div>
+        <div class="val-extra">Família com 3 filhos: acrescentar ~R$ 11.500</div>
+      </div>
+    </div>
+
+    <div class="val-fx">
+      <b>Valores estimados para julho de 2027</b>, a confirmar com tarifas reais no momento da reserva. Aéreo em classe econômica.<br>
+      Cotação 27/10 · USD = R$ 5,50 (câmbio de referência)<br>
+      *Nada reservado, apenas cotado
+    </div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- ══════════ 08 · CONDIÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Condições</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Importante</div>
+    <h2 class="h2">Condições e Observações</h2>
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Hotelaria e pacote de neve: até 10x sem acréscimos · Aéreo: até 6x sem acréscimos · PIX: desconto de 5 a 13%</div></div>
+    <div class="cond"><div class="cond-h">Vantagens de grupo · 4 famílias</div><div class="cond-t">· Instrutor de ski exclusivo para as crianças do grupo, em duas turmas por idade<br>· Van privativa para todos os traslados e para a subida à montanha<br>· Tarifa de grupo negociada com o hotel<br>· Babá organizada pelo hotel nas noites de programa dos adultos (paga localmente)</div></div>
+    <div class="cond"><div class="cond-h">Por que reservar até dezembro</div><div class="cond-t">Julho é alta temporada de neve para brasileiros e argentinos. Os voos fretados e os quartos familiares costumam esgotar cedo. Reservando antes, as 4 famílias ficam no mesmo hotel e garantem as melhores tarifas.</div></div>
+    <div class="cond"><div class="cond-h">Documentação</div><div class="cond-t">Para a Argentina basta o RG, mas ele deve ter <b>menos de 10 anos de emissão</b> (vale também para as crianças), ou passaporte válido. Menores viajando sem um dos pais precisam de autorização judicial ou de autorização com firma reconhecida.</div></div>
+    <div class="cond"><div class="cond-h">Neve e clima</div><div class="cond-t">A abertura das pistas depende das condições de neve, que a natureza não garante. Os dois centros têm neve artificial de apoio. Em julho as temperaturas variam de −5 °C a 5 °C. Roupas de neve estão incluídas no aluguel.</div></div>
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Almoços e jantares (exceto quando indicado)<br>· Babá e despesas pessoais<br>· Passeios opcionais não listados<br>· Bagagem despachada além da franquia da tarifa</div></div>
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">Valores estimados, sujeitos a confirmação de tarifa, câmbio e disponibilidade no momento da reserva.</div></div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+</body>
+</html>
