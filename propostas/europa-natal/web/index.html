@@ -27,11 +27,13 @@
   body{ margin:0; }
   #sheets{ padding:16px 0 24px; }
   .page{ margin:0 auto 16px; box-shadow:0 8px 34px rgba(0,0,0,.5); }
-  .dl{ position:fixed; right:16px; bottom:16px; z-index:99;
+  .dl{ border:0; cursor:pointer; position:fixed; right:14px; bottom:14px; z-index:99;
+       max-width:calc(100vw - 28px); white-space:nowrap;
        background:#da8d00; color:#1a1510; font-family:'Montserrat',sans-serif;
        font-size:13px; font-weight:600; padding:11px 18px; border-radius:40px;
        text-decoration:none; box-shadow:0 4px 18px rgba(0,0,0,.45); }
 }
+@media screen and (max-width:430px){ .dl{ font-size:12px; padding:10px 14px; } }
 @media print{ .dl{ display:none; } #sheets{ padding:0; } }
 
 @page{ size:A3 portrait; margin:0; }
@@ -144,7 +146,6 @@ html,body{ font-family:var(--sans); color:var(--char); }
 .mini .r b{ font-size:10.5pt; font-weight:500; color:var(--char); }
 .mini .r span{ font-size:10.5pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; }
 
-
 /* OPÇÕES DE HOSPEDAGEM */
 .opts{ display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; margin-top:2mm; }
 .opt{ border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; }
@@ -179,7 +180,6 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
 </head>
 <body>
 
-<!-- ══════════ 1 · CAPA ══════════ -->
 <section class="page cover">
   <div class="cover-photo"></div>
   <div class="cover-scrim"></div>
@@ -205,7 +205,6 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   </div>
 </section>
 
-<!-- ══════════ 2 · ITINERÁRIO ══════════ -->
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Itinerário</span></div>
   <div class="goldbar"></div>
@@ -274,7 +273,6 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   </div>
 </section>
 
-<!-- ══════════ 3 · RACIONAL I ══════════ -->
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Como foi desenhada</span></div>
   <div class="goldbar"></div>
@@ -325,7 +323,7 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
     <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
   </div>
 </section>
-<!-- ══════════ 4 · RACIONAL II ══════════ -->
+
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Como foi desenhada</span></div>
   <div class="goldbar"></div>
@@ -411,7 +409,6 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   </div>
 </section>
 
-<!-- ══════════ 5 · ROTEIRO I ══════════ -->
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Roteiro</span></div>
   <div class="goldbar"></div>
@@ -462,7 +459,7 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
     <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
   </div>
 </section>
-<!-- ══════════ 6 · ROTEIRO II ══════════ -->
+
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Roteiro</span></div>
   <div class="goldbar"></div>
@@ -510,12 +507,11 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   </div>
 </section>
 
-<!-- ══════════ 7 · BADEN-BADEN ══════════ -->
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Destino 01</span></div>
   <div class="goldbar"></div>
   <div class="dest-hd"><span class="city">Baden-Baden · Alemanha</span><span class="no">1</span></div>
-  <!-- SUBSTITUIR por url('baden-baden.jpg') center/cover -->
+  
   <div class="dest-photo ph-bb"><span class="cap">Floresta Negra</span></div>
   <div class="body">
     <div class="dest-text">
@@ -551,8 +547,6 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   </div>
 </section>
 
-
-<!-- ══════════ 8 · OPÇÕES BADEN-BADEN ══════════ -->
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Hospedagem</span></div>
   <div class="goldbar"></div>
@@ -638,12 +632,11 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   </div>
 </section>
 
-<!-- ══════════ 9 · DISNEYLAND ══════════ -->
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Destino 02</span></div>
   <div class="goldbar"></div>
   <div class="dest-hd"><span class="city">Disneyland Paris · França</span><span class="no">2</span></div>
-  <!-- SUBSTITUIR por url('disneyland.jpg') center/cover -->
+  
   <div class="dest-photo ph-dz"><span class="cap">Natal no parque</span></div>
   <div class="body">
     <div class="dest-text">
@@ -677,12 +670,12 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
     <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
   </div>
 </section>
-<!-- ══════════ 10 · PARIS ══════════ -->
+
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Destino 03</span></div>
   <div class="goldbar"></div>
   <div class="dest-hd"><span class="city">Paris · França</span><span class="no">3</span></div>
-  <!-- SUBSTITUIR por url('paris.jpg') center/cover -->
+  
   <div class="dest-photo ph-pa"><span class="cap">Entre o Natal e o Ano Novo</span></div>
   <div class="body">
     <div class="dest-text">
@@ -720,7 +713,6 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   </div>
 </section>
 
-<!-- ══════════ 11 · SERVIÇOS ══════════ -->
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Serviços</span></div>
   <div class="goldbar"></div>
@@ -793,7 +785,6 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   </div>
 </section>
 
-<!-- ══════════ 12 · OBSERVAÇÕES ══════════ -->
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Observações</span></div>
   <div class="goldbar"></div>
@@ -858,8 +849,7 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   </div>
 </section>
 
-
-<a class="dl" href="proposta-europa-natal.pdf">Baixar em PDF</a>
+<button class="dl" onclick="print()">Salvar em PDF</button>
 <script>
 (function(){
   var A3 = 297 * 96 / 25.4;
