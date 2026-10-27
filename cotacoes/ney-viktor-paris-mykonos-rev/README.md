@@ -3,8 +3,8 @@
 - **Link novo:** https://cotacao-paris-mykonos-ago-rev.vercel.app (projeto Vercel `cotacao-paris-mykonos-ago-rev`)
 - **Link anterior (não alterado):** https://cotacao-paris-mykonos-ago.vercel.app
 - **Fonte:** `fonte/hoteis.png` (tabela de hotéis) e `fonte/aereos.png` (ITA/LATAM + Air France).
-- **Câmbio de referência:** USD 1 = R$ 5,46. Os valores do aéreo em BRL são os do sistema
-  (ITA R$ 26.258,96 = USD 5.212,52; Air France R$ 13.327,16 = EUR 2.360,96).
+- **Câmbio:** USD 1 = R$ 5,46 (definido pela agência). ITA = USD 5.212,52 × 5,46 = **R$ 28.460,36**,
+  em até 6x. Air France R$ 13.327,16 (valor do sistema), à vista. No aéreo a página mostra só BRL.
 
 ## Gerar
 
