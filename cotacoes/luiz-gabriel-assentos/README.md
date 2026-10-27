@@ -6,7 +6,7 @@ Publicada em https://cotacao-luiz-gabriel-assentos.vercel.app (projeto Vercel
 
 - `src/index.html` + `src/style.css` — página (CSS separado e enxuto para caber no upload por API).
 - `src/img/assentos/ek248.webp`, `ek328.webp` — prints dos mapas Emirates enviados pelo cliente
-  em 27/10/2026 (webp sem perdas), com os assentos 18K e 24K destacados em azul.
+  em 27/10/2026 (webp sem perdas; o contorno azul do cursor foi apagado).
 - `src/img/assentos/la8073.svg` — mapa LATAM LA8073 redesenhado em vetor a partir da imagem
   enviada pelo cliente; gerado por `gen_la8073.py`.
 - `fonte/emirates/` — prints originais (cabeçalhos, mapas e legenda de preços).
