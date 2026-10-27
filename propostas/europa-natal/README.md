@@ -65,3 +65,22 @@ LC_ALL=C.UTF-8 grep -c '[—–]' proposta.html   # tem que dar 0
 
 O `LC_ALL=C.UTF-8` é obrigatório: sem ele o grep casa bytes isolados de
 caracteres acentuados e dá falso positivo.
+
+## Publicação
+
+Projeto Vercel: `cotacao-aires-europa-natal`
+URL: https://cotacao-aires-europa-natal.vercel.app
+
+A versão web fica em `web/index.html`. Diferenças em relação ao `proposta.html`:
+fontes via Google Fonts em vez de base64, wrapper com zoom proporcional ao
+viewport (a folha tem 297 mm fixos e estouraria no celular) e botão de imprimir
+no lugar do download, já que o PDF não é publicado junto.
+
+Para republicar depois de editar o `proposta.html`, regere o `web/index.html`
+pelo mesmo caminho e faça novo deploy inline, porque a conta Vercel **não tem
+conexão com o GitHub** e não dá para ligar o projeto ao repositório.
+
+**Atenção:** o projeto nasce com `ssoProtection` ligado, que é o padrão da conta
+e vale para todos os projetos `cotacao-*`. Nesse estado a URL `.vercel.app` pede
+login da Vercel e o cliente não abre. Precisa desligar a proteção no painel ou
+via API para o link funcionar para terceiros.
