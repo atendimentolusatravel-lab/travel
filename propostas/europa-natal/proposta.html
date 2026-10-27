@@ -453,6 +453,28 @@ html,body{ font-family:var(--sans); color:var(--char); }
 .mini .r b{ font-size:10.5pt; font-weight:500; color:var(--char); }
 .mini .r span{ font-size:10.5pt; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; }
 
+
+/* OPÇÕES DE HOSPEDAGEM */
+.opts{ display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; margin-top:2mm; }
+.opt{ border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; }
+.opt.pick{ border-color:var(--gold); border-width:2px; }
+.opt-top{ background:#faf7f2; padding:5mm 5mm 4mm; border-bottom:1px solid var(--line); min-height:34mm; }
+.opt.pick .opt-top{ background:#fdf6e8; }
+.opt-flag{ font-family:var(--lbl); font-size:7pt; font-weight:700; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
+.opt-name{ font-size:11.5pt; font-weight:700; color:var(--ink); line-height:1.3; }
+.opt-stars{ font-size:11pt; color:var(--gold); letter-spacing:1.5px; margin-top:1.5mm; }
+.opt-rows{ padding:5mm; flex:1; }
+.opt-r{ margin-bottom:4mm; }
+.opt-r .k{ font-family:var(--lbl); font-size:7pt; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--mut); font-weight:700; }
+.opt-r .v{ font-size:10pt; font-weight:300; color:var(--char); margin-top:1mm; line-height:1.5; }
+.opt-r .v.hi{ font-weight:500; color:var(--ink); }
+.opt-foot{ background:var(--ink); padding:4mm 5mm; text-align:center; }
+.opt.pick .opt-foot{ background:var(--dest); }
+.opt-foot .lbl{ font-size:7.5pt; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.opt-foot .amt{ font-size:14pt; font-weight:800; color:var(--gold); margin-top:1mm; font-variant-numeric:tabular-nums; }
+
 /* SERVIÇOS / CONDIÇÕES */
 .cond{ margin-bottom:7mm; }
 .cond-h{ font-size:10.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2.5mm; }
@@ -474,14 +496,14 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   <div class="cover-bar"></div>
   <div class="cover-cnt">
     <div class="cover-kicker">Cotação para sua viagem</div>
-    <div class="cover-basis">Dezembro de 2026 · 10 noites · saída e retorno de São Paulo</div>
+    <div class="cover-basis">19 a 30 de dezembro de 2026 · 10 noites · saída e retorno de São Paulo</div>
     <div class="cover-to">Preparado para</div>
-    <div class="cover-name">{{FAMÍLIA}}</div>
+    <div class="cover-name">Família Aires</div>
     <div class="cover-dest">Natal na Alemanha, Disneyland Paris e Paris</div>
     <div class="stats">
-      <div class="stat"><b>3</b><span>DESTINOS</span></div>
+      <div class="stat"><b>5</b><span>VIAJANTES</span></div>
       <div class="stat"><b>10</b><span>NOITES</span></div>
-      <div class="stat"><b>3</b><span>HOTÉIS</span></div>
+      <div class="stat"><b>3</b><span>DESTINOS</span></div>
       <div class="stat"><b>2</b><span>PAÍSES</span></div>
     </div>
   </div>
@@ -516,9 +538,9 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
         <div class="tl-badge">1</div>
         <div>
           <div class="tl-city">Baden-Baden · Floresta Negra</div>
-          <div class="tl-meta">20 a 24 de dezembro · 4 noites · Alemanha</div>
+          <div class="tl-meta">20 a 25 de dezembro · 5 noites · Alemanha</div>
           <div class="tl-note">A semana dos mercados de Natal, com Estrasburgo, Colmar e o Europa-Park
-          todos ao alcance de uma manhã de carro.</div>
+          ao alcance de uma manhã de carro, e a ceia do dia 24 na data em que a Alemanha de fato a celebra.</div>
         </div>
       </div>
       <div class="tl-line"></div>
@@ -527,8 +549,9 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
         <div class="tl-badge">2</div>
         <div>
           <div class="tl-city">Disneyland Paris</div>
-          <div class="tl-meta">24 a 26 de dezembro · 2 noites · França</div>
-          <div class="tl-note">Véspera e dia de Natal dentro do complexo, hospedados a pé do parque.</div>
+          <div class="tl-meta">25 a 27 de dezembro · 2 noites · França</div>
+          <div class="tl-note">Hospedados dentro do complexo, a pé dos parques e com entrada antecipada
+          antes da abertura ao público.</div>
         </div>
       </div>
       <div class="tl-line"></div>
@@ -537,7 +560,7 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
         <div class="tl-badge">3</div>
         <div>
           <div class="tl-city">Paris</div>
-          <div class="tl-meta">26 a 30 de dezembro · 4 noites · França</div>
+          <div class="tl-meta">27 a 30 de dezembro · 3 noites · França</div>
           <div class="tl-note">A cidade já de volta ao ritmo normal, com lojas, museus e restaurantes
           abertos, e o aeroporto a quarenta minutos na manhã da volta.</div>
         </div>
@@ -579,10 +602,11 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
       último domingo do Advento, com as quatro velas da coroa acesas.</p>
       <div class="pull">Quem chega depois do Natal atrás de mercado de Natal encontra uma roda-gigante
       e uma pista de gelo. Quem chega antes encontra a coisa inteira.</div>
-      <p class="why-t">O dia 25 é então usado onde ele rende: dentro do complexo da Disney, que trata o
-      Natal como espetáculo em vez de fechar as portas. E Paris fica para o final, porque dias 28 e 29
-      são segunda e terça comuns, com tudo aberto, que é quando uma cidade vale a pena. De quebra,
-      vocês dormem perto do aeroporto na véspera do voo de volta.</p>
+      <p class="why-t">A ceia fica no dia 24 em Baden-Baden, que é quando os alemães de fato a fazem.
+      O dia 25, em que a Alemanha inteira e boa parte da França amanhecem fechadas, é usado para o
+      traslado até a Disney: é o único dia da viagem em que não se perde nada estando dentro de um
+      trem. E Paris fica para o final, porque 28 e 29 são segunda e terça comuns, com tudo aberto,
+      que é quando uma cidade vale a pena. De quebra, vocês dormem perto do aeroporto na véspera da volta.</p>
     </div>
 
     <div class="why">
@@ -629,11 +653,11 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
       E, o que mais importa com uma bebê de onze meses, dá para voltar ao quarto no meio da tarde
       para o sono dela e retornar ao parque depois. Quem está hospedado em Paris não tem essa opção
       e acaba atravessando o dia inteiro sem pausa.</p>
-      <p class="why-t">O terceiro é a data em si. A véspera e a manhã de Natal acontecem dentro de um
-      lugar que celebra o Natal, com decoração, programação e restaurantes funcionando. Fora dali,
-      nos dias 24 à noite e 25, boa parte da França e praticamente toda a Alemanha estão fechadas.</p>
-      <div class="pull">Duas noites no complexo rendem duas entradas antecipadas no parque: a do dia
-      25 inteiro e a da manhã do dia 26, antes de seguirem para Paris.</div>
+      <div class="pull">Duas noites no complexo rendem duas entradas antecipadas: o dia 26 inteiro e
+      a manhã do dia 27, antes de seguirem para Paris.</div>
+      <p class="why-t">Vale dizer o que a hospedagem dentro do complexo evita. No dia 25 a França
+      está fechada e quem está na cidade passa o Natal num hotel sem nada ao redor. Aqui, a chegada
+      já é dentro de um lugar decorado, com restaurantes funcionando e programação de fim de ano.</p>
     </div>
 
     <div class="why">
@@ -658,15 +682,16 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
       </div>
     </div>
     <div class="leg">
-      <div class="leg-d">24 dez</div>
+      <div class="leg-d">25 dez</div>
       <div class="leg-b">
         <div class="t">Baden-Baden para Disneyland Paris</div>
-        <div class="s">Manhã livre na cidade, quarenta e cinco minutos de carro até Estrasburgo e trem
-        direto até a estação da Disneyland. Sem passar por Paris.</div>
+        <div class="s">Quarenta e cinco minutos de carro até Estrasburgo e trem direto até a estação
+        da Disneyland, sem passar por Paris. É o dia em que tudo está fechado dos dois lados da
+        fronteira, de modo que nada se perde em estar a caminho.</div>
       </div>
     </div>
     <div class="leg">
-      <div class="leg-d">26 dez</div>
+      <div class="leg-d">27 dez</div>
       <div class="leg-b">
         <div class="t">Disneyland Paris para Paris</div>
         <div class="s">Transfer privativo de quarenta minutos, depois da manhã no parque.</div>
@@ -731,13 +756,14 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
       <div class="day-t">Cinquenta minutos até Rust, do lado alemão da fronteira. O Europa-Park é o
       maior parque temático da Alemanha e um dos mais bem avaliados do mundo, organizado em bairros
       que imitam países europeus. Na temporada Winter Magic ele ganha mercado de Natal próprio,
-      espetáculo no gelo e iluminação. Para uma criança de sete anos, é o dia que ela vai lembrar.</div></div>
+      espetáculo no gelo e iluminação. Para quem tem sete anos, é o dia que ele vai lembrar.</div></div>
 
-    <div class="day"><div class="day-h">Dia 06 | Disneyland Paris | Quinta, 24 de dezembro</div>
-      <div class="day-t">Manhã livre em Baden-Baden, porque na Alemanha o dia 24 fecha cedo: o
-      comércio encerra por volta do meio-dia e o mercado às três da tarde. Transfer até Estrasburgo
-      e trem direto até a estação da Disneyland. Véspera de Natal dentro do complexo, com a
-      decoração de fim de ano e jantar no hotel.</div></div>
+    <div class="day"><div class="day-h">Dia 06 | Baden-Baden | Quinta, 24 de dezembro</div>
+      <div class="day-t">Heiligabend, a véspera de Natal, que na Alemanha é a data principal e não o
+      dia seguinte. O comércio encerra por volta do meio-dia e o mercado às três da tarde, então a
+      manhã é a última chance de rua. A ceia é no hotel, como manda o costume local, e os presentes
+      são abertos nesta noite. Quem traz o presente no sul da Alemanha não é o Papai Noel, é o
+      Christkind, o Menino Jesus.</div></div>
   </div>
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
@@ -754,19 +780,24 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
     <h2 class="h2">Dias 07 a 12</h2>
 
     <div class="day"><div class="day-h">Dia 07 | Disneyland Paris | Sexta, 25 de dezembro</div>
-      <div class="day-t">Natal no parque, com entrada antecipada de hóspede antes da abertura ao
-      público. O dia inteiro à disposição, com a vantagem de poder voltar ao quarto no meio da tarde
-      e retornar para a parada noturna e a iluminação do castelo.</div></div>
+      <div class="day-t">Dia de Natal, e o único da viagem reservado para o caminho. Com a Alemanha
+      e a França fechadas, nada se perde: transfer até Estrasburgo e trem direto até a estação da
+      Disneyland, sem passar por Paris. Chegada no complexo à tarde, já decorado, com as luzes da
+      Main Street acesas e os restaurantes funcionando.</div></div>
 
-    <div class="day"><div class="day-h">Dia 08 | Disneyland Paris e Paris | Sábado, 26 de dezembro</div>
-      <div class="day-t">Segunda manhã de entrada antecipada, para fechar o que ficou de fora.
-      No meio do dia, transfer privativo de quarenta minutos até Paris e acomodação na cidade.</div></div>
+    <div class="day"><div class="day-h">Dia 08 | Disneyland Paris | Sábado, 26 de dezembro</div>
+      <div class="day-t">O dia inteiro no parque, começando com a entrada antecipada de hóspede antes
+      da abertura ao público. A temporada de Natal da Disneyland Paris é a mais elaborada do ano: a
+      árvore principal passa dos vinte metros, há parada própria da estação e um espetáculo de luz e
+      projeção no castelo ao anoitecer. Com a bebê, dá para voltar ao quarto no meio da tarde e
+      retornar depois.</div></div>
 
-    <div class="day"><div class="day-h">Dia 09 | Paris | Domingo, 27 de dezembro</div>
-      <div class="day-t">Primeiro dia de cidade, sem pressa. As grandes lojas de departamento do
-      bulevar Haussmann abrem aos domingos e é nesta época que elas montam a árvore sob a cúpula de
-      vitral das Galeries Lafayette e as vitrines mecânicas na calçada, que são um espetáculo por si
-      só e não custam nada.</div></div>
+    <div class="day"><div class="day-h">Dia 09 | Disneyland Paris e Paris | Domingo, 27 de dezembro</div>
+      <div class="day-t">Segunda manhã de entrada antecipada, para fechar o que ficou de fora. No meio
+      do dia, transfer privativo de quarenta minutos até Paris e acomodação na cidade. As grandes
+      lojas de departamento do bulevar Haussmann abrem aos domingos, então ainda dá tempo de ver a
+      árvore suspensa sob a cúpula de vitral das Galeries Lafayette e as vitrines mecânicas na
+      calçada, com degraus do lado de fora para as crianças enxergarem.</div></div>
 
     <div class="day"><div class="day-h">Dia 10 | Paris | Segunda, 28 de dezembro</div>
       <div class="day-t">Dia útil comum, com a cidade inteira funcionando. Reservado para o que a
@@ -814,11 +845,11 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
         <div class="stars">★★★★★</div>
       </div>
       <div class="rows">
-        <div><div class="k">Noites</div><div class="v">4 noites · 20 a 24 de dezembro</div></div>
+        <div><div class="k">Noites</div><div class="v">5 noites · 20 a 25 de dezembro</div></div>
         <div><div class="k">Plano</div><div class="v">Café da manhã incluído</div></div>
-        <div><div class="k">Estrutura</div><div class="v">Piscina coberta, spa, quartos família</div></div>
-        <div><div class="k">Crianças</div><div class="v">Babá sob consulta</div></div>
-        <div class="wide"><div class="k">Endereço</div><div class="v">Kaiserallee 2, Baden-Baden · cidade velha, a pé do Kurhaus e do mercado</div></div>
+        <div><div class="k">Acomodação</div><div class="v">Dois quartos · ver as três opções a seguir</div></div>
+        <div><div class="k">Estrutura</div><div class="v">Piscina coberta, spa, babá sob consulta</div></div>
+        <div class="wide"><div class="k">Endereço</div><div class="v">Kaiserallee 2, Baden-Baden · diante do Kurgarten, onde fica o mercado de Natal</div></div>
       </div>
     </div>
   </div>
@@ -829,7 +860,94 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   </div>
 </section>
 
-<!-- ══════════ 8 · DISNEYLAND ══════════ -->
+
+<!-- ══════════ 8 · OPÇÕES BADEN-BADEN ══════════ -->
+<section class="page">
+  <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Hospedagem</span></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Baden-Baden · 5 noites</div>
+    <h2 class="h2">Três opções para escolher</h2>
+    <p class="lede">As três estão cotadas para 20 a 25 de dezembro, em dois quartos e com café da
+    manhã: um triplo para dois adultos e o Felipe, e um duplo para um adulto e a bebê. O que muda
+    entre elas, além da categoria, é a distância até o mercado de Natal, que é o motivo de a viagem
+    começar em Baden-Baden.</p>
+
+    <div class="opts">
+      <div class="opt">
+        <div class="opt-top">
+          <div class="opt-flag">Opção 01</div>
+          <div class="opt-name">Leonardo Royal Hotel Baden-Baden</div>
+          <div class="opt-stars">★★★★</div>
+        </div>
+        <div class="opt-rows">
+          <div class="opt-r"><div class="k">Até o mercado</div><div class="v hi">1,1 km · cerca de 17 min a pé</div></div>
+          <div class="opt-r"><div class="k">Quartos</div><div class="v">Superior Room com cama de casal e sofá-cama duplo · Double Comfort Room</div></div>
+          <div class="opt-r"><div class="k">Estrutura</div><div class="v">Piscina coberta, spa e sauna</div></div>
+          <div class="opt-r"><div class="k">Endereço</div><div class="v">Falkenstraße 2</div></div>
+        </div>
+        <div class="opt-foot"><div class="lbl">Hospedagem, 5 noites</div><div class="amt">R$ 20.319</div></div>
+      </div>
+
+      <div class="opt pick">
+        <div class="opt-top">
+          <div class="opt-flag">Opção 02 · Sugestão da LusaTravel</div>
+          <div class="opt-name">Steigenberger Icon Europäischer Hof</div>
+          <div class="opt-stars">★★★★★</div>
+        </div>
+        <div class="opt-rows">
+          <div class="opt-r"><div class="k">Até o mercado</div><div class="v hi">130 m · diante do Kurgarten</div></div>
+          <div class="opt-r"><div class="k">Quartos</div><div class="v">Deluxe King Room · Deluxe Heritage Room</div></div>
+          <div class="opt-r"><div class="k">Estrutura</div><div class="v">Piscina coberta, spa, babá sob consulta</div></div>
+          <div class="opt-r"><div class="k">Endereço</div><div class="v">Kaiserallee 2</div></div>
+        </div>
+        <div class="opt-foot"><div class="lbl">Hospedagem, 5 noites</div><div class="amt">R$ 28.780</div></div>
+      </div>
+
+      <div class="opt">
+        <div class="opt-top">
+          <div class="opt-flag">Opção 03</div>
+          <div class="opt-name">Brenners Park-Hotel &amp; Spa</div>
+          <div class="opt-stars">★★★★★</div>
+        </div>
+        <div class="opt-rows">
+          <div class="opt-r"><div class="k">Até o mercado</div><div class="v hi">440 m · cerca de 6 min a pé</div></div>
+          <div class="opt-r"><div class="k">Quartos</div><div class="v">Deluxe Stephanie Room, dois quartos</div></div>
+          <div class="opt-r"><div class="k">Estrutura</div><div class="v">Piscina coberta, Villa Stéphanie, clube infantil</div></div>
+          <div class="opt-r"><div class="k">Endereço</div><div class="v">Schillerstraße 4-6, na Lichtentaler Allee</div></div>
+        </div>
+        <div class="opt-foot"><div class="lbl">Hospedagem, 5 noites</div><div class="amt">R$ 63.435</div></div>
+      </div>
+    </div>
+
+    <div class="cond" style="margin-top:11mm">
+      <div class="cond-h">Como ler a diferença</div>
+      <div class="cond-t">O <b>Europäischer Hof</b> é a sugestão porque está literalmente diante do
+      mercado: sair do hotel às sete da noite e já estar nele é o que justifica começar a viagem por
+      Baden-Baden, e em dezembro, no escuro e com carrinho de bebê, dezessete minutos de caminhada
+      mudam o quanto vocês vão de fato sair à noite.</div>
+    </div>
+
+    <div class="cond">
+      <div class="cond-h">Sobre o Brenners</div>
+      <div class="cond-t">É a casa mais célebre da cidade, da coleção Oetker, com um spa que é um
+      destino em si. Fica na Lichtentaler Allee, a alameda à beira do rio, que é o endereço mais
+      bonito de Baden-Baden mas não é a praça do mercado. Ele se justifica para quem quiser que o
+      hotel seja parte do passeio, e não apenas onde se dorme.</div>
+    </div>
+
+    <p class="cond-t" style="color:var(--mut); font-size:9.5pt; margin-top:6mm">
+    Valores de hospedagem para os dois quartos nas cinco noites, com café da manhã, já em reais.
+    Demais serviços em documento próprio. <b>Nada reservado, apenas cotado.</b></p>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 9 · DISNEYLAND ══════════ -->
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Destino 02</span></div>
   <div class="goldbar"></div>
@@ -845,20 +963,20 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
       público geral, o que nesta semana do ano muda completamente a experiência. E dão também a
       liberdade de voltar ao quarto no meio do dia, que com um bebê de onze meses deixa de ser
       conforto e vira a diferença entre o dia funcionar ou não.</p>
-      <p>Para quem tem sete anos, passar a véspera e a manhã de Natal aqui dentro é o tipo de coisa
-      que não se repete.</p>
+      <p>O Disneyland Hotel fica sobre a entrada do parque: a fachada que se vê do fim da Main Street
+      é a dele. Dormir ali é sair do quarto e estar dentro.</p>
     </div>
     <div class="hotel-card">
       <div class="top">
-        <div class="name">Disney Hotel New York · The Art of Marvel</div>
-        <div class="stars">★★★★</div>
+        <div class="name">Disneyland Hotel</div>
+        <div class="stars">★★★★★</div>
       </div>
       <div class="rows">
-        <div><div class="k">Noites</div><div class="v">2 noites · 24 a 26 de dezembro</div></div>
-        <div><div class="k">Benefício</div><div class="v">Entrada antecipada no parque</div></div>
-        <div><div class="k">Estrutura</div><div class="v">Piscina coberta e externa, clube infantil</div></div>
-        <div><div class="k">Crianças</div><div class="v">Babá e grade de proteção no quarto</div></div>
-        <div class="wide"><div class="k">Endereço</div><div class="v">Avenue René Goscinny, Chessy · dentro do complexo, a pé dos parques</div></div>
+        <div><div class="k">Noites</div><div class="v">2 noites · 25 a 27 de dezembro</div></div>
+        <div><div class="k">Plano</div><div class="v">Café da manhã e ingressos incluídos</div></div>
+        <div><div class="k">Acomodação</div><div class="v">Classic Room, dois quartos</div></div>
+        <div><div class="k">Benefício</div><div class="v">Entrada antecipada nos parques</div></div>
+        <div class="wide"><div class="k">Endereço</div><div class="v">Chessy · sobre a entrada do parque, dentro do complexo</div></div>
       </div>
     </div>
   </div>
@@ -868,7 +986,7 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
     <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
   </div>
 </section>
-<!-- ══════════ 9 · PARIS ══════════ -->
+<!-- ══════════ 10 · PARIS ══════════ -->
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Destino 03</span></div>
   <div class="goldbar"></div>
@@ -886,8 +1004,8 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
       do aeroporto, tira qualquer risco da manhã do voo de volta.</p>
       <p>Sob a cúpula de vitral das Galeries Lafayette monta-se todo ano a árvore suspensa, e nas
       vitrines da calçada ficam os bonecos mecânicos, com degraus do lado de fora para as crianças
-      enxergarem. É gratuito, fica a cinco minutos da Ópera e costuma ser a lembrança que os pequenos
-      levam de Paris.</p>
+      enxergarem. É gratuito, fica a cinco minutos da Ópera e costuma ser a lembrança que os
+      pequenos levam de Paris.</p>
     </div>
     <div class="hotel-card">
       <div class="top">
@@ -895,11 +1013,12 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
         <div class="stars">★★★★★</div>
       </div>
       <div class="rows">
-        <div><div class="k">Noites</div><div class="v">4 noites · 26 a 30 de dezembro</div></div>
+        <div><div class="k">Noites</div><div class="v">3 noites · 27 a 30 de dezembro</div></div>
         <div><div class="k">Plano</div><div class="v">Café da manhã incluído</div></div>
         <div><div class="k">Estrutura</div><div class="v">Piscina coberta aquecida e spa</div></div>
         <div><div class="k">Crianças</div><div class="v">Carrinho de bebê, menu infantil, babá</div></div>
         <div class="wide"><div class="k">Endereço</div><div class="v">23-25 rue du Pont Neuf, 1º arrondissement · a pé da Samaritaine, do Louvre e do Sena</div></div>
+        <div class="wide"><div class="k">Situação</div><div class="v">Sugestão em confirmação de disponibilidade</div></div>
       </div>
     </div>
   </div>
@@ -910,7 +1029,7 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   </div>
 </section>
 
-<!-- ══════════ 10 · SERVIÇOS ══════════ -->
+<!-- ══════════ 11 · SERVIÇOS ══════════ -->
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Serviços</span></div>
   <div class="goldbar"></div>
@@ -919,10 +1038,16 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
     <h2 class="h2">Serviços incluídos e opcionais</h2>
 
     <div class="cond">
+      <div class="cond-h">Acomodação</div>
+      <div class="cond-t">Dois quartos em todas as cidades, com café da manhã: um triplo para dois
+      adultos e o Felipe, e um duplo para um adulto e a bebê. <b>Berço solicitado nos três hotéis.</b></div>
+    </div>
+
+    <div class="cond">
       <div class="cond-h">Transporte terrestre</div>
       <div class="cond-t">Quatro transfers privativos com motorista: aeroporto para a estação em
-      Estrasburgo no desembarque, Baden-Baden para Estrasburgo no dia 24, Disneyland para Paris no
-      dia 26 e Paris para Charles de Gaulle no dia 30. Veículo dimensionado para o grupo e a
+      Estrasburgo no desembarque, Baden-Baden para Estrasburgo no dia 25, Disneyland para Paris no
+      dia 27 e Paris para Charles de Gaulle no dia 30. Veículo dimensionado para cinco pessoas e a
       bagagem, com <b>cadeirinha de bebê e assento de elevação</b> instalados, conforme exige a lei
       na França e na Alemanha.</div>
     </div>
@@ -930,7 +1055,7 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
     <div class="cond">
       <div class="cond-h">Trens</div>
       <div class="cond-t">Dois trechos de alta velocidade, ambos diretos e com assentos marcados:
-      Charles de Gaulle para Estrasburgo no dia 20 e Estrasburgo para Marne-la-Vallée Chessy no dia 24.</div>
+      Charles de Gaulle para Estrasburgo no dia 20 e Estrasburgo para Marne-la-Vallée Chessy no dia 25.</div>
     </div>
 
     <div class="cond">
@@ -942,22 +1067,28 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
 
     <div class="cond">
       <div class="cond-h">Ingressos</div>
-      <div class="cond-t">Disneyland Paris com data marcada para os dias 25 e 26, e Europa-Park para
-      o dia 23. Nas duas datas de Disney recomendamos incluir o <b>acesso prioritário às atrações</b>,
-      que nessa semana do ano deixa de ser conforto e passa a ser necessário.</div>
+      <div class="cond-t">Os ingressos da Disneyland Paris acompanham a hospedagem, com data marcada
+      para 26 e 27 de dezembro. Europa-Park para o dia 23. Nas datas de Disney recomendamos incluir
+      o <b>acesso prioritário às atrações</b>, que nessa semana do ano deixa de ser conforto e passa
+      a ser necessário.</div>
+    </div>
+
+    <div class="cond">
+      <div class="cond-h">Ceia de Natal</div>
+      <div class="cond-t">Jantar de Heiligabend no hotel em Baden-Baden, na noite do dia 24.
+      Restaurantes alemães fecham nessa data, então a ceia é reservada junto com a hospedagem.</div>
     </div>
 
     <div class="cond">
       <div class="cond-h">Seguro viagem</div>
-      <div class="cond-t">Cobertura internacional para todo o grupo, com apólice compatível com as
-      exigências do espaço Schengen e cobertura pediátrica para as duas crianças.</div>
+      <div class="cond-t">Cobertura internacional para os cinco viajantes, com apólice compatível com
+      as exigências do espaço Schengen e cobertura pediátrica para as duas crianças.</div>
     </div>
 
     <div class="cond">
       <div class="cond-h">Opcionais a avaliar</div>
       <ul class="cl">
-        <li>Upgrade para o Disneyland Hotel, na entrada do parque, no lugar do Art of Marvel</li>
-        <li>Jantar com personagens dentro do complexo, nas noites de 24 ou 25</li>
+        <li>Jantar com personagens dentro do complexo da Disney</li>
         <li>Visita a Colmar no lugar do Europa-Park, para quem preferir vilarejo a parque</li>
         <li>Guia em português em Estrasburgo e em Paris</li>
         <li>Passeio de barco pelo Sena ao anoitecer</li>
@@ -971,7 +1102,7 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   </div>
 </section>
 
-<!-- ══════════ 11 · OBSERVAÇÕES ══════════ -->
+<!-- ══════════ 12 · OBSERVAÇÕES ══════════ -->
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Observações</span></div>
   <div class="goldbar"></div>
@@ -984,15 +1115,15 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
       <div class="cond-t">Na Alemanha a ceia e a troca de presentes são na <b>noite do dia 24</b>, e
       não na manhã do 25. Quem traz o presente no sul do país é o Christkind, o Menino Jesus. Por
       isso o comércio fecha por volta do meio-dia e o mercado às três da tarde daquele dia, e é por
-      isso que a manhã do dia 24 ficou livre no roteiro e a partida para a França, marcada para
-      depois do almoço.</div>
+      isso que a ceia está marcada no hotel e a manhã, deixada livre.</div>
     </div>
 
     <div class="cond">
       <div class="cond-h">Dias 25 e 26 na Alemanha</div>
-      <div class="cond-t">São os dois feriados de Natal alemães, com praticamente tudo fechado. É mais
-      um motivo para esses dias acontecerem dentro do complexo da Disney, do lado francês, onde o
-      Natal é programação em vez de pausa.</div>
+      <div class="cond-t">São os dois feriados de Natal alemães, com praticamente tudo fechado. É por
+      isso que o dia 25 virou o dia de traslado: é o único da viagem em que estar a caminho não custa
+      nada. A partir da tarde do 25 vocês já estão do lado francês, dentro do complexo da Disney,
+      onde o Natal é programação em vez de pausa.</div>
     </div>
 
     <div class="cond">
@@ -1021,14 +1152,13 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
 
     <div class="cond">
       <div class="cond-h">O que ainda será confirmado</div>
-      <div class="cond-t">Número final de viajantes e distribuição dos quartos, horários exatos dos
-      trens de 20 e 24 de dezembro, datas dos ingressos de parque e as reservas de jantar das noites
-      de 24 e 25, que nessas datas precisam ser feitas com antecedência.</div>
+      <div class="cond-t">Hospedagem em Paris, horários exatos dos trens de 20 e 25 de dezembro, a
+      reserva da ceia de Heiligabend e as datas dos ingressos de parque.</div>
     </div>
 
     <p class="cond-t" style="margin-top:10mm; color:var(--mut); font-size:10pt">
     Esta apresentação descreve o desenho da viagem. Valores, formas de pagamento e condições
-    seguem em documento próprio.</p>
+    seguem em documento próprio. Nada reservado, apenas cotado.</p>
   </div>
   <div class="ft">
     <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>

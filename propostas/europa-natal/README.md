@@ -7,19 +7,38 @@ Voos já emitidos: AF459 GRU 19/12 20h40 · AF460 CDG 30/12 10h25, executiva.
 
 | Noites | Base |
 |---|---|
-| 20 a 24/12 (4) | Baden-Baden, Alemanha |
-| 24 a 26/12 (2) | Disneyland Paris |
-| 26 a 30/12 (4) | Paris |
+| 20 a 25/12 (5) | Baden-Baden, Alemanha |
+| 25 a 27/12 (2) | Disneyland Paris |
+| 27 a 30/12 (3) | Paris |
+
+Cliente: Família Aires, 5 viajantes (3 adultos, Felipe de 7 anos, bebê de 11 meses).
+Quartos: 1 triplo (2 adt + Felipe) e 1 duplo (1 adt + bebê).
+
+O dia 25, feriado dos dois lados da fronteira, é o dia de traslado.
+A ceia fica no dia 24 em Baden-Baden, que é o Heiligabend alemão.
 
 Quatro justificativas desenvolvidas nas páginas 3 e 4: ordem da viagem,
 escolha da Alemanha, hotel dentro do complexo Disney, deslocamentos.
 
 ## Pendências
 
-- `{{FAMÍLIA}}` na capa: substituir pelo nome do cliente
-- Número final de viajantes (5, 6 ou 9) e distribuição de quartos
+- Hotel de Paris, 27 a 30/12: ainda não cotado
 - 4 fotos: buscar `SUBSTITUIR por url(` no HTML
-- Sem tabela de valores, por decisão. Entra em documento separado.
+- Página de valores completa: depende da escolha do hotel de Baden-Baden e de Paris
+
+## Cotações recebidas (BRL, 2 quartos, com café)
+
+Baden-Baden, 5 noites:
+
+| Hotel | Total | Até o mercado |
+|---|---|---|
+| Leonardo Royal | 20.319 | 1,1 km |
+| Steigenberger Europäischer Hof | 28.780 | 130 m |
+| Brenners Park | 63.435 | 440 m |
+
+As três entram na apresentação, na página 8. Disneyland Hotel, 2 noites com
+ingressos: 67.550. Vale cotar o Hotel New York Art of Marvel nas mesmas datas,
+que tem a mesma entrada antecipada por cerca de metade.
 
 ## Regenerar o PDF
 
