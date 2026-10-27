@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lusa Travel · Paris &amp; Mykonos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#404626;--green-dark:#363b1f;--green-soft:#5a6238;--sage:#d9ead3;--ink:#333131;--muted:#6f6f68;--line:#e7e7e0;--bg:#fff;--cream:#faf9f5;--terra:#b4622f;--shadow:0 10px 30px rgba(64,70,38,.08)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3{line-height:1.15}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:56px}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+.lede{max-width:74ch;font-size:.95rem;color:var(--muted);margin-top:16px}
+.sh .eyebrow{margin-bottom:10px;display:block}
+.brandbar{display:flex;justify-content:center;padding:38px 0 6px}
+.brandbar img{width:210px}
+.footlogo{width:190px;margin-bottom:14px}
+.hero{padding:52px 56px 40px}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em}
+.hero h1 .amp{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-style:italic}
+.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-img{margin:32px 0 0;height:340px;border-radius:14px;overflow:hidden;position:relative;box-shadow:var(--shadow);display:flex;align-items:flex-end;background:radial-gradient(120% 130% at 10% 8%,rgba(70,120,170,.55),transparent 55%),radial-gradient(120% 130% at 92% 94%,rgba(200,180,140,.5),transparent 60%),linear-gradient(120deg,#3a5f80,#6d8fae 35%,#e6e2d6 62%,#b4622f 100%)}
+.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
+.hero-info .r{text-align:right}
+.hero-info p{font-size:.95rem}
+.sm{font-size:.86rem;color:var(--muted);margin-top:8px}
+.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
+.chip b{font-size:1.1rem;font-weight:700}
+.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
+.chip .ic svg{width:18px;height:18px}
+.air{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:20px;background:#fff;box-shadow:var(--shadow)}
+.air-head{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--green);color:#fff;padding:14px 22px}
+.air-head .dir{font-weight:700;letter-spacing:.14em;font-size:.76rem;text-transform:uppercase}
+.air-head .route{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;font-weight:600}
+.leg{display:grid;grid-template-columns:230px 1fr auto;gap:16px;align-items:center;padding:15px 22px;border-bottom:1px solid var(--line)}
+.leg .fl{font-size:.76rem;color:var(--muted)}
+.leg .fl b{display:block;color:var(--ink);font-size:.9rem;font-weight:600}
+.leg .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.leg .pt .code{font-weight:700;font-size:1rem}
+.leg .pt .tm{font-size:.8rem;color:var(--muted)}
+.leg .arrow{color:var(--green-soft);flex:none}
+.leg .cls{text-align:right;font-size:.74rem;color:var(--green-soft);font-weight:600}
+.cnx{padding:9px 22px;background:#f4f5ef;font-size:.74rem;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.02em}
+.air-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 22px;background:var(--green);color:#fff;flex-wrap:wrap}
+.air-foot .l{font-weight:600;font-size:.86rem}
+.air-foot .a{text-align:right}
+.air-foot .a .t{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;line-height:1}
+.air-foot .a .p{font-size:.72rem;opacity:.9;margin-top:2px}
+.city-block{margin-top:34px}
+.city-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--green);padding-bottom:10px;margin-bottom:18px}
+.city-head h3{font-size:1.4rem;font-weight:700}
+.city-head .dates{color:var(--green-soft);font-weight:600;font-size:.9rem;letter-spacing:.04em}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:720px){.hgrid{grid-template-columns:1fr}}
+.hcard{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:18px 20px}
+.hcard-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.hcard .hn{font-size:1.02rem;font-weight:600;color:var(--green-dark)}
+.hcard .hp{text-align:right;flex:none}
+.hcard .hp .v{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--green)}
+.hcard .hp .u{font-size:.64rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.hcard .hr{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:.84rem;color:var(--muted)}
+.hcard .hr b{color:var(--green-dark);font-weight:600}
+.bf{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-soft);background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:3px 9px;margin-top:8px}
+.hgal{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:12px}
+.hgal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px;background:#eceadf}
+.tbl-wrap{overflow-x:auto;margin-top:22px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:620px}
+td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.head-row td{background:#efeee7;font-weight:600;color:#4a4a44;font-size:.82rem}
+.sec-row td{background:var(--green);color:#fff;font-weight:700;letter-spacing:.04em;font-size:.9rem}
+.sec-row td span{font-weight:500;opacity:.85;font-size:.82rem}
+td .rm{color:var(--muted);font-size:.82rem;margin-top:2px}
+.total-row td{background:#eef2e6;font-weight:700}
+.pp td{background:#f6f7f1;font-weight:600;color:var(--green-soft)}
+.pp td.v{color:var(--green-dark)}
+tr:last-child td{border-bottom:none}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:700;color:var(--green-dark)}
+.note{font-size:.82rem;color:var(--muted);margin-top:14px}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.pay h4{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
+.pay p{font-size:.9rem;margin-bottom:4px}
+.obs{margin-top:26px;font-size:.82rem;color:var(--muted)}
+.obs li{margin:6px 0 6px 18px}
+.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px}
+.footer{background:var(--green);color:#fff;padding:44px 56px}
+.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
+.footer .fnote{font-size:.8rem;opacity:.7;margin-top:16px}
+@media(max-width:720px){.section,.hero,.footer{padding-left:24px;padding-right:24px}.hero h1{font-size:2.2rem}.hero-info{grid-template-columns:1fr}.hero-info .r{text-align:left}.leg{grid-template-columns:1fr;gap:8px}.air-head{flex-direction:column;align-items:flex-start;gap:2px}.pay{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="brandbar"><img src="img/logo-green.png" alt="Lusa Travel"></div>
+
+
+  <header class="hero">
+    <div class="eyebrow">Cotação para sua viagem</div>
+    <h1>PARIS <span class="amp">&amp;</span> MYKONOS</h1>
+    <div class="accent-line"></div>
+    <p class="hero-sub">França e Grécia — <b>10 a 25 de agosto de 2027</b> · saindo de Curitiba</p>
+    <div class="hero-img"><img src="img/capa.jpg" alt="Paris"></div>
+    <div class="hero-info">
+      <div>
+        <div class="lbl">Detalhes da viagem</div>
+        <p>4 adultos · 2 quartos · 14 noites · Paris (6n) + Mykonos (7n) + Paris CDG (1n)</p>
+        <p class="sm">Cotação emitida em <b>27/10/2026</b> · valores em <b>reais (BRL)</b> · dólar de referência <b>USD 1 = R$ 5,46</b></p>
+      </div>
+      <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
+    </div>
+    <div class="gloss">
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>2</b>&nbsp;Destinos</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><b>14</b>&nbsp;Noites</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="16.5" cy="8" r="2.5"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5M15.5 20c0-2 .7-3.4 2-4.2"/></svg></span><b>4</b>&nbsp;Adultos</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12l20-8-8 20-2-8z"/></svg></span><b>2</b>&nbsp;Aéreos</div>
+    </div>
+  </header>
+
+  <section class="section sh">
+    <span class="eyebrow">Passagens aéreas</span>
+    <h2>Aéreo</h2>
+    <div class="accent-line"></div>
+    <p class="lede">Dois aéreos: o internacional pela <b>ITA Airways</b> (Curitiba ⇄ Paris, via Rio de Janeiro e Roma na ida e via Roma e São&nbsp;Paulo na volta, com o trecho Curitiba–Rio pela LATAM) e o europeu pela <b>Air France</b> (Paris ⇄ Mykonos, voos diretos). Classe econômica com <b>bagagem despachada</b> · valores totais para <b>4 adultos</b>.</p>
+
+    <div class="air">
+      <div class="air-head"><div class="dir">Internacional · ITA Airways</div><div class="route">Curitiba ⇄ Paris</div></div>
+{{VOOS_INT}}
+      <div class="air-foot"><span class="l">ITA Airways · Curitiba ⇄ Paris · 4 adultos · tarifa USD 5.212,52</span><div class="a"><div class="t">R$ 26.258,96</div><div class="p">total para 4 adultos</div></div></div>
+    </div>
+
+    <div class="air">
+      <div class="air-head"><div class="dir">Europeu · Air France</div><div class="route">Paris ⇄ Mykonos</div></div>
+{{VOOS_EU}}
+      <div class="air-foot"><span class="l">Air France · Paris ⇄ Mykonos · 4 adultos · tarifa EUR 2.360,96</span><div class="a"><div class="t">R$ 13.327,16</div><div class="p">somente à vista</div></div></div>
+    </div>
+  </section>
+
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Acomodações</span>
+    <h2>Hotéis</h2>
+    <div class="accent-line"></div>
+    <p class="lede">Opções em cada etapa, todas com <b>café da manhã incluso</b>. Cada valor é o <b>total do período para 2 quartos</b> (4 adultos), em reais. <b>Escolher 1 opção por cidade.</b> Parcelável em <b>até 10x</b>.</p>
+
+{{HOTEIS}}
+  </section>
+
+  <section class="section sh">
+    <span class="eyebrow">Investimento</span>
+    <h2>Resumo de valores</h2>
+    <div class="accent-line"></div>
+    <p class="lede">Cada hotel com o seu valor exato, em <b>reais (BRL)</b> e total para <b>4 adultos</b>. Como há várias opções em cada etapa, o total da viagem aparece como faixa — da combinação mais econômica à mais completa. Os aéreos são fixos.</p>
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Hotel</td><td>Quarto &middot; regime</td><td class="v">Valor &middot; 4 ad</td></tr>
+      <tr class="sec-row"><td colspan="3">Paris <span>&middot; 11&ndash;17/08 &middot; 6 noites &middot; escolher 1</span></td></tr>
+{{ROWS_PARIS}}
+      <tr class="sec-row"><td colspan="3">Mykonos <span>&middot; 17&ndash;24/08 &middot; 7 noites &middot; escolher 1</span></td></tr>
+{{ROWS_MYKONOS}}
+      <tr class="sec-row"><td colspan="3">Paris &middot; aeroporto CDG <span>&middot; 24&ndash;25/08 &middot; 1 noite &middot; escolher 1</span></td></tr>
+{{ROWS_CDG}}
+      <tr class="sec-row"><td colspan="3">A&eacute;reo <span>&middot; classe econ&ocirc;mica &middot; 4 adultos</span></td></tr>
+      <tr><td><b>ITA Airways</b> &middot; internacional</td><td>Curitiba &#8644; Paris, via Rio de Janeiro e Roma<div class="rm">LATAM no trecho CWB&ndash;GIG na ida &middot; volta via Roma e S&atilde;o Paulo</div></td><td class="v">R$ 26.258,96</td></tr>
+      <tr><td><b>Air France</b> &middot; europeu</td><td>Paris &#8644; Mykonos<div class="rm">Voos diretos nos dois sentidos</div></td><td class="v">R$ 13.327,16</td></tr>
+      <tr class="total-row"><td>Total da viagem</td><td>4 adultos &middot; 14 noites &middot; 10 a 25 de agosto</td><td class="v">R$ 79.483,12 &ndash; 94.506,12</td></tr>
+    </table></div>
+
+    <p class="note"><b>Como chegamos ao total:</b> aéreos R$ 26.258,96 + R$ 13.327,16 = <b>R$ 39.586,12</b>, somados à hospedagem em Paris (R$ 11.210 – 18.770), em Mykonos (R$ 26.627 – 33.805) e à última noite no CDG (R$ 2.060 – 2.345). O valor final depende dos hotéis escolhidos.</p>
+
+    <div class="pay">
+      <div class="box">
+        <h4>Condições de pagamento</h4>
+        <p><b>Hotéis</b> — em até <b>10x</b></p>
+        <p><b>Aéreo ITA Airways</b> — parcelamento conforme a forma de pagamento escolhida</p>
+        <p><b>Aéreo Air France</b> — somente <b>à vista</b></p>
+      </div>
+      <div class="box">
+        <h4>Ocupação cotada</h4>
+        <p><b>Hotéis:</b> 2 quartos para 4 adultos</p>
+        <p><b>Aéreos:</b> 4 adultos em classe econômica, com bagagem despachada</p>
+        <p class="sm">Valores sujeitos a disponibilidade e ao câmbio na data de fechamento.</p>
+      </div>
+    </div>
+
+    <div class="obs">
+      <h4>Não inclui</h4>
+      <ul>
+        <li>Refeições e bebidas não descritas · gorjetas · despesas de caráter pessoal</li>
+        <li>Passeios, ingressos, traslados e qualquer serviço não listado nesta cotação</li>
+        <li>Seguro viagem · autorização ETIAS, quando aplicável</li>
+      </ul>
+      <h4>Observações</h4>
+      <ul>
+        <li>Este documento não constitui confirmação nem reserva dos serviços descritos.</li>
+        <li>A confirmação está sujeita à disponibilidade no momento do pagamento.</li>
+        <li>Horários de voo sujeitos a alteração pelas companhias aéreas.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel">
+    <div class="contact">atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR</div>
+    <div class="fnote">*Nada reservado, apenas cotado.</div>
+  </footer>
+</div>
+</body>
+</html>
