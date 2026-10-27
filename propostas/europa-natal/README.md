@@ -22,9 +22,9 @@ escolha da Alemanha, hotel dentro do complexo Disney, deslocamentos.
 
 ## Pendências
 
-- Hotel de Paris, 27 a 30/12: ainda não cotado
 - 4 fotos: buscar `SUBSTITUIR por url(` no HTML
-- Página de valores completa: depende da escolha do hotel de Baden-Baden e de Paris
+- Escolha do hotel em Baden-Baden (3 opções) e em Paris (2 opções)
+- Página de valores completa: falta cotar transfers, trens, seguro e ingressos
 
 ## Cotações recebidas (BRL, 2 quartos, com café)
 
@@ -36,9 +36,25 @@ Baden-Baden, 5 noites:
 | Steigenberger Europäischer Hof | 28.780 | 130 m |
 | Brenners Park | 63.435 | 440 m |
 
-As três entram na apresentação, na página 8. Disneyland Hotel, 2 noites com
-ingressos: 67.550. Vale cotar o Hotel New York Art of Marvel nas mesmas datas,
-que tem a mesma entrada antecipada por cerca de metade.
+Paris, 3 noites:
+
+| Hotel | Total | Piscina | Nota |
+|---|---|---|---|
+| Du Collectionneur | 26.080 | sim | 8.4 (2.192) |
+| InterContinental Champs Élysées Étoile | 32.550 | não | 7.8 (163) |
+
+Disneyland Hotel, 2 noites com ingressos: 67.550. O cliente decidiu não cotar
+o Art of Marvel como alternativa.
+
+Opções nas páginas 8 (Baden-Baden) e 11 (Paris).
+
+Subtotal de hospedagem, pelas combinações:
+
+| Combinação | Total |
+|---|---|
+| Leonardo + Disney + Collectionneur | 113.949 |
+| Europäischer Hof + Disney + Collectionneur (sugerida) | 122.410 |
+| Brenners + Disney + InterContinental | 163.535 |
 
 ## Regenerar o PDF
 

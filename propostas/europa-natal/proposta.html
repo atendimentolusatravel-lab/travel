@@ -456,6 +456,7 @@ html,body{ font-family:var(--sans); color:var(--char); }
 
 /* OPÇÕES DE HOSPEDAGEM */
 .opts{ display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; margin-top:2mm; }
+.opts.two{ grid-template-columns:repeat(2,1fr); }
 .opt{ border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; }
 .opt.pick{ border-color:var(--gold); border-width:2px; }
 .opt-top{ background:#faf7f2; padding:5mm 5mm 4mm; border-bottom:1px solid var(--line); min-height:34mm; }
@@ -1009,16 +1010,15 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
     </div>
     <div class="hotel-card">
       <div class="top">
-        <div class="name">Maison Albar Hotels · Le Pont-Neuf</div>
+        <div class="name">L'Hôtel du Collectionneur</div>
         <div class="stars">★★★★★</div>
       </div>
       <div class="rows">
         <div><div class="k">Noites</div><div class="v">3 noites · 27 a 30 de dezembro</div></div>
         <div><div class="k">Plano</div><div class="v">Café da manhã incluído</div></div>
-        <div><div class="k">Estrutura</div><div class="v">Piscina coberta aquecida e spa</div></div>
-        <div><div class="k">Crianças</div><div class="v">Carrinho de bebê, menu infantil, babá</div></div>
-        <div class="wide"><div class="k">Endereço</div><div class="v">23-25 rue du Pont Neuf, 1º arrondissement · a pé da Samaritaine, do Louvre e do Sena</div></div>
-        <div class="wide"><div class="k">Situação</div><div class="v">Sugestão em confirmação de disponibilidade</div></div>
+        <div><div class="k">Acomodação</div><div class="v">Dois quartos · ver as duas opções a seguir</div></div>
+        <div><div class="k">Estrutura</div><div class="v">Piscina coberta, spa, babá</div></div>
+        <div class="wide"><div class="k">Endereço</div><div class="v">51-57 rue de Courcelles, 8º arrondissement · junto ao Parc Monceau</div></div>
       </div>
     </div>
   </div>
@@ -1029,7 +1029,77 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   </div>
 </section>
 
-<!-- ══════════ 11 · SERVIÇOS ══════════ -->
+
+<section class="page">
+  <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Hospedagem</span></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Paris · 3 noites</div>
+    <h2 class="h2">Duas opções para escolher</h2>
+    <p class="lede">As duas estão cotadas para 27 a 30 de dezembro, em dois quartos e com café da
+    manhã, nos mesmos moldes de Baden-Baden: um triplo para dois adultos e o Felipe, e um duplo para
+    um adulto e a bebê. Ambas ficam no 8º arrondissement, mas apontam para lados diferentes da
+    cidade.</p>
+
+    <div class="opts two">
+      <div class="opt pick">
+        <div class="opt-top">
+          <div class="opt-flag">Opção 01 · Sugestão da LusaTravel</div>
+          <div class="opt-name">L'Hôtel du Collectionneur</div>
+          <div class="opt-stars">★★★★★</div>
+        </div>
+        <div class="opt-rows">
+          <div class="opt-r"><div class="k">Piscina coberta</div><div class="v hi">Sim, além de spa, sauna e hammam</div></div>
+          <div class="opt-r"><div class="k">Até as grandes lojas</div><div class="v hi">1,9 km das Galeries Lafayette e do Printemps</div></div>
+          <div class="opt-r"><div class="k">Quartos</div><div class="v">Deluxe King Room, dois quartos</div></div>
+          <div class="opt-r"><div class="k">Crianças</div><div class="v">Babá sob consulta, quartos família</div></div>
+          <div class="opt-r"><div class="k">Endereço</div><div class="v">51-57 rue de Courcelles, junto ao Parc Monceau</div></div>
+        </div>
+        <div class="opt-foot"><div class="lbl">Hospedagem, 3 noites</div><div class="amt">R$ 26.080</div></div>
+      </div>
+
+      <div class="opt">
+        <div class="opt-top">
+          <div class="opt-flag">Opção 02</div>
+          <div class="opt-name">InterContinental Paris Champs Élysées Étoile</div>
+          <div class="opt-stars">★★★★★</div>
+        </div>
+        <div class="opt-rows">
+          <div class="opt-r"><div class="k">Piscina coberta</div><div class="v hi">Não tem</div></div>
+          <div class="opt-r"><div class="k">Até as grandes lojas</div><div class="v hi">2,5 km, mas a 700 m da avenida Montaigne</div></div>
+          <div class="opt-r"><div class="k">Quartos</div><div class="v">King Junior Suite para o triplo · Queen Classic para o duplo</div></div>
+          <div class="opt-r"><div class="k">Crianças</div><div class="v">Babá sob consulta, refeições infantis</div></div>
+          <div class="opt-r"><div class="k">Endereço</div><div class="v">64 avenue Marceau, perto do Arco do Triunfo</div></div>
+        </div>
+        <div class="opt-foot"><div class="lbl">Hospedagem, 3 noites</div><div class="amt">R$ 32.550</div></div>
+      </div>
+    </div>
+
+    <div class="cond" style="margin-top:11mm">
+      <div class="cond-h">Como ler a diferença</div>
+      <div class="cond-t">A pergunta aqui é para que lado vocês querem andar. O
+      <b>Collectionneur</b> fica mais perto do bulevar Haussmann, que é onde estão as grandes lojas
+      de departamento, a árvore suspensa sob a cúpula de vitral e as vitrines mecânicas com degraus
+      para as crianças, tudo isso já previsto no roteiro do dia 27. O <b>InterContinental</b> fica a
+      setecentos metros da avenida Montaigne, que é o eixo das grifes.</div>
+    </div>
+
+    <div class="cond">
+      <div class="cond-h">O que mais pesa</div>
+      <div class="cond-t">Das duas, só o Collectionneur tem <b>piscina coberta</b>, e esta é a quarta
+      e última hospedagem de uma viagem de dez noites: é onde o cansaço aparece, e ter onde a criança
+      gastar energia no fim da tarde vale mais do que parece no papel. O InterContinental responde
+      com espaço, oferecendo uma junior suite no lugar do quarto triplo comum.</div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 12 · SERVIÇOS ══════════ -->
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Serviços</span></div>
   <div class="goldbar"></div>
@@ -1102,7 +1172,7 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
   </div>
 </section>
 
-<!-- ══════════ 12 · OBSERVAÇÕES ══════════ -->
+<!-- ══════════ 13 · OBSERVAÇÕES ══════════ -->
 <section class="page">
   <div class="hd"><span class="logo">LUSATRAVEL</span><span class="tag">Observações</span></div>
   <div class="goldbar"></div>
@@ -1152,8 +1222,8 @@ ul.cl li::before{ content:''; position:absolute; left:0; top:3.2mm; width:2.4mm;
 
     <div class="cond">
       <div class="cond-h">O que ainda será confirmado</div>
-      <div class="cond-t">Hospedagem em Paris, horários exatos dos trens de 20 e 25 de dezembro, a
-      reserva da ceia de Heiligabend e as datas dos ingressos de parque.</div>
+      <div class="cond-t">Escolha dos hotéis de Baden-Baden e de Paris, horários exatos dos trens de 20 e 25 de
+      dezembro, a reserva da ceia de Heiligabend e as datas dos ingressos de parque.</div>
     </div>
 
     <p class="cond-t" style="margin-top:10mm; color:var(--mut); font-size:10pt">
