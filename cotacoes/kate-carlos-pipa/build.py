@@ -22,13 +22,13 @@ CAPA = ("https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/"
 
 HOTEIS = [
     dict(nome="Resort Sombra e Água Fresca", loc="Praia do Amor · Pipa",
-         quarto="Casa luxuosa", unidade="1 casa", qtd="1×",
-         camas="2 quartos com 2 camas extragrandes", regime="Café da manhã", valor="91.093",
+         quarto="Premium Room", unidade="2 quartos", qtd="2×",
+         camas="2 camas king em cada quarto", regime="Café da manhã", valor="113.991,52",
          fotos=[SA + "MatejaLux_846A1699-640w.jpg",
-                SA + "Casa+L+-16-640w.JPG",
+                SA + "PREMIUM+%2825%29+-+Copia-640w.jpg",
                 SA + "PREMIUM+%2816%29+-+Copia-640w.jpg",
                 SA + "cafedamanha08-640w.jpg",
-                SA + "Casa+L+-30-640w.JPG",
+                SA + "PREMIUM+%2837%29-640w.jpg",
                 SA + "05_MateyaLux_846A4102-HDR-Edit-640w.jpg"]),
     dict(nome="Hotel Pipa Atlântico", loc="Centro de Pipa · Av. Baía dos Golfinhos",
          quarto="Quarto quádruplo família", unidade="2 quartos", qtd="2×",
@@ -106,7 +106,7 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Acomodações</span>
     <h2>Hospedagem</h2>
     <div class="accent-line"></div>
-    <p class="lede">Duas opções para a virada do ano em Pipa, as duas com <b>café da manhã incluso</b>: uma <b>casa luxuosa</b> com 2 quartos no Resort Sombra e Água Fresca, ou <b>2 quartos família</b> no Hotel Pipa Atlântico. Cada valor é o <b>total das 6 noites</b> para as duas famílias (2 adultos + 2 crianças em cada quarto), em reais. <b>Escolher 1 opção.</b> Parcelável em <b>até 10x</b>.</p>
+    <p class="lede">Duas opções para a virada do ano em Pipa, as duas com <b>café da manhã incluso</b>: <b>2 Premium Rooms</b> no Resort Sombra e Água Fresca, ou <b>2 quartos família</b> no Hotel Pipa Atlântico. Cada valor é o <b>total das 6 noites</b> para as duas famílias (2 adultos + 2 crianças em cada quarto), em reais. <b>Escolher 1 opção.</b> Parcelável em <b>até 10x</b>.</p>
 
     <div class="city-block">
       <div class="city-head"><h3>Praia da Pipa</h3><span class="dates">26 DEZ – 01 JAN · 6 NOITES</span></div>
@@ -126,10 +126,10 @@ html = f"""<!DOCTYPE html>
       <tr class="head-row"><td>Hotel</td><td>Acomodação &middot; regime</td><td class="v">Valor &middot; grupo</td></tr>
       <tr class="sec-row"><td colspan="3">Praia da Pipa <span>&middot; 26/12/2026&ndash;01/01/2027 &middot; 6 noites &middot; escolher 1</span></td></tr>
 {chr(10).join(row(h) for h in HOTEIS)}
-      <tr class="total-row"><td>Total da hospedagem</td><td>6 noites &middot; 26/12 a 01/01</td><td class="v">R$ 50.249,17 &ndash; 91.093,00</td></tr>
+      <tr class="total-row"><td>Total da hospedagem</td><td>6 noites &middot; 26/12 a 01/01</td><td class="v">R$ 50.249,17 &ndash; 113.991,52</td></tr>
     </table></div>
 
-    <p class="note"><b>Como chegamos ao total:</b> a faixa vai do Hotel Pipa Atlântico (R$ 50.249,17) ao Resort Sombra e Água Fresca (R$ 91.093,00). O valor final depende da opção escolhida. Aéreo e traslados não estão incluídos. Nada reservado, apenas cotado.</p>
+    <p class="note"><b>Como chegamos ao total:</b> a faixa vai do Hotel Pipa Atlântico (R$ 50.249,17) ao Resort Sombra e Água Fresca (R$ 113.991,52). O valor final depende da opção escolhida. Aéreo e traslados não estão incluídos. Nada reservado, apenas cotado.</p>
 
     <div class="pay">
       <div class="box">
@@ -140,7 +140,7 @@ html = f"""<!DOCTYPE html>
       <div class="box">
         <h4>Ocupação cotada</h4>
         <p><b>2 famílias</b>, cada uma com <b>2 adultos + 2 crianças</b></p>
-        <p class="sm">Sombra e Água Fresca: 1 casa com 2 quartos · Pipa Atlântico: 2 quartos. As idades das crianças são confirmadas na reserva.</p>
+        <p class="sm">Sombra e Água Fresca: 2 Premium Rooms · Pipa Atlântico: 2 quartos família. As idades das crianças são confirmadas na reserva.</p>
       </div>
     </div>
 
