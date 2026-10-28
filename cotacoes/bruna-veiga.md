@@ -169,14 +169,23 @@ Preços públicos do Booking.com para 12/01 → 14/01/2027 (2 noites), 2 adultos
 
 - Airbnb em NYC (com registro da cidade ou anfitrião presente).
 
-## Traslados (privativos, com cadeirinha)
+## Traslados privativos (valores estimados, a confirmar)
 
-- NYC: chegada, saída e Woodbury.
-- Bangkok: chegada e saída.
-- Chiang Mai: chegada.
-- **Chiang Mai → Triângulo Dourado em 03/01**, com parada no Templo Branco. Pedir ao Anantara Chiang Mai.
-- Phuket: chegada e saída.
-- Singapura: chegada e saída.
+Preço por veículo. **Cadeirinha:** a maioria dos fornecedores não garante (em NYC o Carmel não fornece). Recomendado levar o bebê-conforto, que as companhias aéreas aceitam como item do bebê.
+
+| Trecho | Fornecedor | Valor estimado |
+|---|---|---|
+| EWR → Manhattan (20/12, 05h30) | Welcome Pickups (tarifa fixa, pedágios incluídos) | € 116 |
+| Manhattan → JFK (25/12) | Welcome Pickups | € 76 a 95 |
+| Manhattan ↔ Woodbury, dia inteiro (22/12) | trvlogue (privativo, 2 pessoas) / GO Airlink (VIP, 8 h) | US$ 360 / a partir de US$ 995 |
+| BKK → hotel no rio (26/12) e volta (30/12) | Welcome Pickups / Suntransfers (minivan) | € 25 a 30 / € 47 a 51 por trecho |
+| CNX → hotel (30/12) | Klook (Thai Rhythm, cadeirinha sob pedido) | US$ 23 a € 29 |
+| Chiang Mai → Anantara Golden Triangle, com parada no Templo Branco (03/01) | Bookaway (carro privativo, sem parada) | US$ 181 a 200 (com parada, estimado US$ 180 a 300) |
+| Anantara → aeroporto de Chiang Rai (06/01) | Anantara | Incluído |
+| HKT → Bang Tao/Laguna (06/01) e volta (12/01) | Welcome Pickups / Suntransfers (minivan) | € 18 a 24 / € 38 por trecho |
+| Changi → Marina Bay (12/01) e volta (14/01) | Transfeero (+ cadeirinha SGD 15 via Klook) | US$ 46 a 56 por trecho |
+
+**Total estimado de traslados:** cerca de US$ 1.000 a 1.700, dependendo da opção de Woodbury.
 
 ## Fotógrafo (valores estimados, a confirmar na reserva)
 
@@ -208,6 +217,37 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 | Chef particular no Airbnb (Take a Chef / CozyMeal) | US$ 130 a 260 + gorjeta | 2025 |
 | Cruzeiro Bateaux Christmas Eve (3 h, não reembolsável) | a partir de US$ 304 | 2025 |
 | Cruzeiro Hudson's (Pier 81) | US$ 159 | 2025 |
+
+## Envio de bagagem NYC → Brasil (estimado)
+
+| Empresa | Valor | Observação |
+|---|---|---|
+| Send My Bag | a partir de US$ 269 por mala | Só aceita bens pessoais **usados**. Não serve para as compras novas do outlet. |
+| Luggage Forward | Brasil sob consulta (referência: US$ 524 a 679 por mala de 23 kg saindo de NY) | Impostos à parte |
+| LugLess | Brasil sob consulta | |
+
+**Estimativa:** US$ 525 a 700 por mala, mais impostos.
+
+**Tributação (Receita Federal):**
+- **Na mala, no voo:** isenção de US$ 1.000 por viajante. O excedente paga 50%.
+- **Bagagem desacompanhada:** só roupas e objetos **usados** entram isentos. Bens novos pagam 50%.
+- **Courier comum:** 60% de imposto de importação, mais ICMS.
+
+**Recomendação:** trazer as compras como mala extra na companhia aérea. Enviar por remessa só as roupas de inverno usadas.
+
+## Seguro viagem (estimado)
+
+3 pessoas, 28 dias (19/12 a 15/01), com EUA. O bebê paga o valor cheio. Referências: Hero US$ 150 mil (cerca de R$ 30 por dia por pessoa), Affinity 140 (R$ 21,48 por dia), Assist Card AC 35 (R$ 58 a 87 por dia).
+
+**Estimativa:** R$ 1.500 a 2.500 no total (cobertura de US$ 100 a 150 mil). A cobertura de cancelamento é adicional: confirmar o limite.
+
+## eSIM (estimado)
+
+| Destino | Opção | Valor |
+|---|---|---|
+| EUA, 5 a 7 dias | Holafly ilimitado | US$ 20,50 a 27,50 |
+| Tailândia + Singapura, ~20 dias | Holafly Ásia ilimitado | ~US$ 54 |
+| Tailândia + Singapura, 30 dias | Airalo Asialink 10 GB / Nomad Ásia 5 GB | US$ 37 / US$ 23,99 |
 
 ## Outros itens
 
