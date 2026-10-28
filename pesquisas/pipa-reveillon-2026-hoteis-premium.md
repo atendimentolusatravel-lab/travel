@@ -162,3 +162,52 @@ Aldeia do Madeiro Beach (Bangalô Família 60 m² é um só ambiente), Hotel Pip
 4. **Bupitanga** reapareceu no Booking (9,7 em 197 avaliações, R$ 29.728, refeições e buffet infantil, acesso à praia por escada na falésia). Excelente hotel, mas sem antessala: duas camas de casal no mesmo ambiente.
 
 **Confirmar com o hotel antes de propor:** no Resort, se o segundo quarto comporta berço + cama de solteiro ou se é preciso pedir cama extra; na casa de 3 quartos (209 m²), uma criança por quarto resolve tudo. No Beija Flor, se o sofá-cama pode ser substituído por berço e cama extra.
+
+---
+
+## 10. Mapa de disponibilidade — Réveillon 2026/27 (consulta em 28/10/2026)
+
+Configuração: 2 adultos + 2 crianças (2 e 4 anos), 1 acomodação. Booking em BRL; Tripadvisor via parceiro Vio em USD (converter pelo câmbio do dia). Testados três períodos: 26/12–01/01 (6 noites, pedido do cliente), 26/12–02/01 (7 noites) e 27/12–02/01.
+
+### A. Disponíveis para 26/12 a 01/01 (6 noites)
+
+| Hotel | Cat. | Nota | Preço 6 noites | Canal |
+|---|---|---|---|---|
+| Hotel Sombra e Água Fresca | 5★ | 9,6 | R$ 66.686 | Booking |
+| Sombra e Água Fresca Resort | 5★ | 9,5 | R$ 43.455 | Booking |
+| Sombra e Água Fresca Floresta | 5★ | 9,5 | R$ 42.992 | Booking |
+| Hotel da Pipa | 4★ | 9,2 | R$ 40.194 | Booking |
+| Bupitanga Hotel | 5★ | 9,7 / TA 4,8 | R$ 29.728 · US$ 3.863 | Booking · Vio |
+| Aldeia do Madeiro Beach | 5★ | 8,5 / TA 3,9 | R$ 26.738 | Booking |
+| Beija Flor Exclusive Hotel & Spa | 5★ | 9,2 | R$ 25.497 | Booking |
+| Hotel Pipa Atlântico | 4★ | 9,0 / TA 3,8 | R$ 17.641 · US$ 3.464 | Booking · Hotels.com |
+| Recanto da Mata | 4★ | 9,5 | R$ 16.558 | Booking |
+| Flor da Mata (apart-hotel) | 4★ | 9,4 | R$ 15.784 | Booking |
+| Pipa Park | 4★ | 8,8 | R$ 13.658 | Booking |
+| Pipas Bay | 3★ | 8,0 | R$ 13.523 | Booking |
+| Waikiki Boutique | 4★ | 9,1 / TA 4,0 | R$ 9.680 · US$ 1.726 | Booking |
+| Pousada Arriba Pipa | 3★ | 9,4 | R$ 9.296 | Booking |
+| **Toca da Coruja** | luxo | TA 4,8 (981) | US$ 13.457 | só Vio (Booking: sem vaga) |
+| **Oka da Mata** | 4★ | TA 4,8 (1.075), tag "Family" | US$ 2.233 | só Vio (Booking: sem vaga) |
+| Île de Pipa Resort (complexo do MGallery) | — | TA 4,4 (38) | US$ 2.752 | Vio/Booking (unidade do condomínio) |
+
+### B. Disponível só com 7 noites, 26/12 a 02/01 (pacote de réveillon fechado)
+
+| Hotel | Cat. | Nota | Preço 7 noites | Por que importa |
+|---|---|---|---|---|
+| **Pipa Lagoa Hotel** (Tibau do Sul, lagoa de Guaraíras) | 4★ | 9,1 (659) | R$ 25.376 | **Kids club com monitores, piscina infantil, tobogã, parquinho, espaço kids, shuttle para as praias.** Chalé Família Luxo 103 m² e Bangalô Família 127 m² (até 5). É o único hotel da região com o modelo de recreação do Clara. Não aparece para 26–01 nem 27–02: pacote com check-in fixo em 26/12. 7 min de carro do centro de Pipa, 990 m da praia de Tibau. |
+
+### C. Sem disponibilidade em nenhum dos três períodos (Booking)
+
+Kilombo Villas & Spa · Pipa Beleza Spa Resort · Hotel Marinas · Serhs Villas da Pipa · Pipa Privilege · Hotel Sun Bay · Pousada Tartaruga. Filha da Lua Eco Lodge e Sempre Vivo Hotel não constam no inventário do Booking. Para todos: cotar direto; pode ser esgotado, pacote fechado fora das OTAs ou venda só pelo site.
+
+### D. Île de Pipa MGallery: o que está acontecendo
+
+O endereço do MGallery (Av. Baía dos Golfinhos, 414) é o mesmo do "Île de Pipa Resort" no Tripadvisor (38 avaliações, 4,4) e do flat "Île de Pipa com Hidromassagem" no Booking (R$ 13.140, 8,3). É um condo-hotel: unidades de proprietários são vendidas nas OTAs sem o serviço completo da bandeira. O hotel operado pela Accor não aparece no Booking sob o nome MGallery. Cotar direto na Accor (all.com) e perguntar se a reserva é no inventário do hotel ou em unidade de terceiro.
+
+### E. Leitura comercial
+
+1. **Para 26/12–01/01 com padrão 5★ há oferta real:** as três unidades Sombra e Água Fresca, Bupitanga, Beija Flor e Aldeia do Madeiro. Não há urgência de mudar o destino por falta de vaga.
+2. **O Pipa Lagoa muda a conversa sobre o Clara.** É 4★, fica na lagoa e não na praia, mas é o único com kids club monitorado. Se o cliente aceitar 7 noites (26/12–02/01) e um padrão abaixo do 5★, resolve a lacuna de recreação que nenhum hotel de Pipa resolve. Vale apresentar como alternativa explícita, não como plano B.
+3. **Toca da Coruja e Oka da Mata só aparecem via Vio.** Reserva por intermediário em réveillon tem risco de cancelamento por overbooking do hotel. Preferir contato direto.
+4. **Preços de réveillon sobem semanalmente.** A janela de decisão é curta: o Sombra e Água Fresca Resort, que é a recomendação principal, tinha apenas 49 avaliações no Booking, ou seja, inventário pequeno.
