@@ -99,7 +99,7 @@ Opções cotadas para 30/12/2026 → 03/01/2027 (4 noites), 1 quarto para 2 adul
 | Hotel | Quarto | Regime | Cancelamento | Valor | Situação |
 |---|---|---|---|---|---|
 | Shangri-La Chiang Mai ⭐⭐⭐⭐⭐ | Deluxe King, 43 m², vista da cidade | Café da manhã. Criança com menos de 5 anos come de graça. | **Grátis até 27/12/2026** | **R$ 12.976,58** (USD 2.377,38), cerca de R$ 3.244 por noite | ✅ Melhor custo-benefício |
-| Chiang Mai Marriott ⭐⭐⭐⭐⭐ (97/100) | Deluxe King, 36 m² | Café da manhã buffet | **Não reembolsável** (tarifa de pacote) | R$ 14.992,69 (USD 2.746,74), cerca de R$ 3.748 por noite | ❌ Mais caro, quarto menor e sem reembolso |
+| Chiang Mai Marriott ⭐⭐⭐⭐⭐ (97/100) | Deluxe King, 36 m² | Café da manhã buffet | **Não reembolsável** (tarifa de pacote) | R$ 14.992,69 (USD 2.746,74), cerca de R$ 3.748 por noite | ⚠️ Incluída. Mais cara, quarto menor e sem reembolso. |
 
 Faltam o Anantara Chiang Mai (vista do rio, réveillon) e o 137 Pillars House (versão Executiva).
 - **Perguntar a cada hotel:**
@@ -115,7 +115,7 @@ Opções cotadas para 20/12 → 25/12/2026 (5 noites), 1 quarto para 2 adultos e
 |---|---|---|---|---|---|
 | Andaz 5th Avenue by Hyatt ⭐⭐⭐⭐ (92/100), 5ª Av. em frente ao Bryant Park | Deluxe King, 39 m², vista da cidade | Café da manhã | **Grátis até 18/12/2026** | **R$ 35.151,06** (USD 6.439,85), cerca de R$ 7.030 por noite | ✅ Melhor localização para o Natal. Versão Executiva. |
 | Crowne Plaza HY36 Midtown ⭐⭐⭐⭐ (93/100), W 36th St (Penn Station) | Suíte King, 42 m², quarto adaptado (roll-in shower) | Café da manhã para 2 | **Grátis até 17/12/2026** | R$ 25.600,67 (USD 4.690,17), cerca de R$ 5.120 por noite | ⚠️ Recotar em suíte comum. Tarifa de membro IHG. |
-| Courtyard Manhattan/Midtown East ⭐⭐⭐ (90/100), 3rd Ave | King com sofá-cama, quarto adaptado (roll-in shower) | Café da manhã | **Não reembolsável** | R$ 19.293,53 (USD 3.534,67), cerca de R$ 3.859 por noite | ❌ 3 estrelas, sem reembolso e quarto adaptado |
+| Courtyard Manhattan/Midtown East ⭐⭐⭐ (90/100), 3rd Ave | King com sofá-cama, quarto adaptado (roll-in shower) | Café da manhã | **Não reembolsável** | R$ 19.293,53 (USD 3.534,67), cerca de R$ 3.859 por noite | ⚠️ Incluída. Opção de menor preço. Recotar em quarto comum (sem roll-in shower). |
 
 **Pendências em NYC:**
 
