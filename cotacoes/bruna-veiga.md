@@ -156,7 +156,14 @@ Preços públicos do Booking.com para 26/12 → 30/12/2026 (4 noites), 2 adultos
 
 - **Região recomendada:** Marina Bay. Gardens by the Bay, Lau Pa Sat, Maxwell e Chinatown por perto. Tudo plano, ótimo para carrinho, e a 20 min do aeroporto.
 
-Preços públicos do Booking.com para 12/01 → 14/01/2027 (2 noites), 2 adultos e 1 bebê. **Validar no sistema** (regime e cancelamento).
+Opções cotadas pela agente (TBO) para **12/01 → 16/01/2027 (4 noites)**, 1 quarto para 2 adultos e 1 criança. ⚠️ O roteiro atual prevê 12 → 14/01 (2 noites, volta pela Turkish em 14/01). Confirmar as datas.
+
+| Hotel | Quarto | Regime | Cancelamento | Valor (4 noites) |
+|---|---|---|---|---|
+| Pullman Singapore Hill Street ⭐⭐⭐⭐⭐ (91/100, 7.587 avaliações), perto do MRT | Deluxe King (ou 2 camas de solteiro), chuveiro | Café da manhã | **Não reembolsável** | R$ 6.645,50 (USD 1.233,01), cerca de R$ 1.661 por noite |
+| Fairmont Singapore ⭐⭐⭐⭐⭐ (93/100, 11.523 avaliações), Bras Basah / City Hall | Deluxe King com varanda, 45 m², banheira | Café da manhã + 20% de desconto em A&B | **Não reembolsável** | R$ 9.927,01 (USD 1.841,86), cerca de R$ 2.482 por noite |
+
+Referência pesquisada: preços públicos do Booking.com para 12/01 → 14/01/2027 (2 noites), 2 adultos e 1 bebê. **Validar no sistema** (regime e cancelamento).
 
 | Hotel | Avaliação Booking | Valor (2 noites) | Versão |
 |---|---|---|---|
