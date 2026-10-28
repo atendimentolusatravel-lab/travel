@@ -364,7 +364,7 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 | Traslado de chegada em NYC (valor da agente) | 180,00 | 1.391,04 |
 | Traslado de saída em NYC (valor da agente) | 180,00 | 1.391,04 |
 | Carro para Woodbury, dia inteiro (valor da agente) | 600,00 | 4.636,80 |
-| **Total** | **6.913,95** | **53.430,98 (8x de 6.678,87)** |
+| **Total** | **6.913,95** | **53.431,01 (8x de 6.678,88)** |
 
 
 **Fora do total:** hotéis e aéreo (tratados à parte), seguro viagem (estimativa em R$ 1.500 a 2.500, a cotar) e envio de bagagem (não recomendado para as compras).
