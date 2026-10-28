@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lusa Travel · Nova York, Tailândia e Singapura — Bruna e Felipe</title>
+<meta name="description" content="Proposta de viagem LusaTravel para Bruna e Felipe: Natal em Nova York, réveillon em Chiang Mai, Triângulo Dourado, Phuket e Singapura.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#404626;--green-dark:#363b1f;--green-soft:#5a6238;--sage:#d9ead3;--ink:#333131;--muted:#6f6f68;--line:#e7e7e0;--bg:#fff;--cream:#faf9f5;--terra:#b4622f;--shadow:0 10px 30px rgba(64,70,38,.08)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3{line-height:1.15}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:56px}
+.section+.section{border-top:1px solid var(--line)}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em;color:var(--green-dark)}
+.lede{max-width:74ch;font-size:.95rem;color:var(--muted);margin-top:16px}
+
+/* HERO */
+.hero{background:var(--green);color:#fff;padding:56px 56px 48px;position:relative}
+.hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--terra)}
+.hero .logo{height:54px;width:auto}
+.hero .logo-txt{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;letter-spacing:.08em}
+.hero .kick{margin-top:40px;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.65);font-weight:600}
+.hero h1{margin-top:10px;font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,6vw,4.2rem);font-weight:600;letter-spacing:.01em}
+.hero .route{margin-top:8px;font-size:clamp(1rem,2.2vw,1.2rem);color:var(--sage);font-weight:500}
+.hero .sub{margin-top:18px;max-width:62ch;font-size:.95rem;font-weight:300;color:rgba(255,255,255,.78)}
+.stats{margin-top:34px;display:flex;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.18)}
+.stat{padding:18px 30px 2px 0;margin-right:30px;border-right:1px solid rgba(255,255,255,.15)}
+.stat:last-child{border-right:0}
+.stat .v{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;line-height:1}
+.stat .k{margin-top:6px;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+
+/* BASES */
+.bases{margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.base{background:var(--cream);border:1px solid var(--line);border-top:4px solid var(--green);padding:18px 16px;border-radius:4px}
+.base .n{display:inline-block;background:var(--green);color:#fff;font-weight:700;font-size:.8rem;padding:3px 10px;border-radius:3px}
+.base .c{margin-top:12px;font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:700;color:var(--green-dark);line-height:1.1}
+.base .d{margin-top:4px;font-size:.8rem;color:var(--muted)}
+
+/* TABELAS */
+.tbl{width:100%;border-collapse:collapse;margin-top:26px;font-size:.88rem}
+.tbl th{text-align:left;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--green-soft);font-weight:600;padding:10px 12px;border-bottom:2px solid var(--green)}
+.tbl td{padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl td b{color:var(--green-dark);font-weight:600}
+.tbl .muted{color:var(--muted);font-size:.8rem}
+
+/* HOTÉIS */
+.city{margin-top:34px}
+.city h3{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:700;color:var(--green-dark)}
+.city .when{font-size:.8rem;color:var(--muted);margin-top:2px}
+.hotels{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.hotel{border:1px solid var(--line);border-radius:6px;padding:18px 20px;background:#fff;box-shadow:var(--shadow)}
+.hotel .tag{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);font-weight:600}
+.hotel .name{margin-top:6px;font-weight:600;font-size:1rem;color:var(--green-dark)}
+.hotel .stars{color:#c9a227;font-size:.8rem;letter-spacing:.1em}
+.hotel ul{margin-top:10px;list-style:none;font-size:.84rem;color:var(--ink)}
+.hotel li{padding:3px 0 3px 16px;position:relative}
+.hotel li::before{content:'';position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--sage);border:1px solid var(--green-soft)}
+.note{margin-top:14px;background:#fbf3ec;border-left:4px solid var(--terra);padding:14px 18px;font-size:.86rem;border-radius:0 4px 4px 0}
+.note b{color:var(--terra)}
+
+/* DIA A DIA */
+.leg{margin-top:36px}
+.leg h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--green-dark);padding-bottom:8px;border-bottom:2px solid var(--green)}
+.day{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:15px 0;border-bottom:1px solid var(--line)}
+.day .dt{font-weight:700;color:var(--green);font-size:.86rem;font-variant-numeric:tabular-nums}
+.day .dt span{display:block;font-weight:500;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.day .tx{font-size:.9rem;font-weight:300}
+.day .tx b{font-weight:600;color:var(--green-dark)}
+.day.travel{background:var(--cream);margin:0 -14px;padding:13px 14px}
+
+/* INVESTIMENTO */
+.svc{margin-top:26px;columns:2;column-gap:36px;list-style:none}
+.svc li{break-inside:avoid;padding:9px 0 9px 26px;position:relative;font-size:.88rem;border-bottom:1px solid var(--line)}
+.svc li::before{content:'✓';position:absolute;left:0;top:8px;color:var(--green);font-weight:700}
+.price{margin-top:34px;background:var(--green);color:#fff;border-radius:8px;padding:30px 34px;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px}
+.price .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--sage);font-weight:600}
+.price .val{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,6vw,3.4rem);font-weight:700;line-height:1;margin-top:8px}
+.price .inst{font-size:1rem;color:rgba(255,255,255,.85)}
+.price .inst b{font-size:1.35rem;color:#fff}
+.fine{margin-top:14px;font-size:.78rem;color:var(--muted)}
+
+/* INFO */
+.info{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.info div{background:var(--cream);border:1px solid var(--line);border-radius:6px;padding:18px 20px;font-size:.85rem}
+.info h4{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green-soft);margin-bottom:8px}
+.info li{margin-left:16px;padding:2px 0}
+
+/* RODAPÉ */
+.ft{background:var(--green-dark);color:rgba(255,255,255,.8);padding:40px 56px;position:relative}
+.ft::before{content:'';position:absolute;left:0;right:0;top:0;height:4px;background:var(--terra)}
+.ft .logo{height:42px;width:auto}
+.ft .sig{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 30px;font-size:.86rem}
+.ft a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(217,234,211,.5)}
+.ft .addr{margin-top:10px;font-size:.78rem;color:rgba(255,255,255,.5)}
+
+@media (max-width:720px){
+  .section,.hero,.ft{padding-left:20px;padding-right:20px}
+  .section{padding-top:40px;padding-bottom:40px}
+  .day{grid-template-columns:1fr;gap:4px}
+  .svc{columns:1}
+  .stat{padding-right:18px;margin-right:18px}
+  .tbl{font-size:.8rem}
+  .tbl th,.tbl td{padding:9px 6px}
+  .tbl-wrap{overflow-x:auto}
+  .price{padding:24px 22px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="hero">
+  <img class="logo" src="img/logo-white.png" alt="LusaTravel" onerror="this.outerHTML='<div class=&quot;logo-txt&quot;>LusaTravel</div>'">
+  <div class="kick">Proposta de viagem</div>
+  <h1>Bruna &amp; Felipe</h1>
+  <div class="route">Nova York · Bangkok · Chiang Mai · Triângulo Dourado · Phuket · Singapura</div>
+  <p class="sub">Natal em Nova York, réveillon com as lanternas de Chiang Mai, elefantes no Triângulo Dourado, dias de descanso nas praias de Phuket e o fim da viagem em Singapura. Tudo em ritmo tranquilo, pensado para a primeira grande viagem com o bebê.</p>
+  <div class="stats">
+    <div class="stat"><div class="v">19/12 – 15/01</div><div class="k">Datas</div></div>
+    <div class="stat"><div class="v">6</div><div class="k">Destinos</div></div>
+    <div class="stat"><div class="v">2 + 1</div><div class="k">Adultos e bebê</div></div>
+  </div>
+</header>
+
+<section class="section">
+  <span class="eyebrow">Visão geral</span>
+  <h2 class="serif">O roteiro em seis paradas</h2>
+  <div class="accent-line"></div>
+  <div class="bases">
+    <div class="base"><span class="n">5 noites</span><div class="c">Nova York</div><div class="d">20 a 25/12</div></div>
+    <div class="base"><span class="n">4 noites</span><div class="c">Bangkok</div><div class="d">26 a 30/12</div></div>
+    <div class="base"><span class="n">4 noites</span><div class="c">Chiang Mai</div><div class="d">30/12 a 03/01</div></div>
+    <div class="base"><span class="n">3 noites</span><div class="c">Triângulo Dourado</div><div class="d">03 a 06/01</div></div>
+    <div class="base"><span class="n">6 noites</span><div class="c">Phuket</div><div class="d">06 a 12/01</div></div>
+    <div class="base"><span class="n">2 noites</span><div class="c">Singapura</div><div class="d">12 a 14/01</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <span class="eyebrow">Aéreo</span>
+  <h2 class="serif">Voos previstos</h2>
+  <div class="accent-line"></div>
+  <div class="tbl-wrap">
+  <table class="tbl">
+    <thead><tr><th>Data</th><th>Trecho</th><th>Voo</th><th>Horários</th></tr></thead>
+    <tbody>
+      <tr><td><b>19/12</b></td><td>São Paulo → Nova York (Newark)</td><td>United UA 148<div class="muted">Direto · 9h45</div></td><td>21h45 → 05h30 (20/12)</td></tr>
+      <tr><td><b>25/12</b></td><td>Nova York (JFK) → Bangkok</td><td>Qatar QR 704 + QR 826<div class="muted">Conexão em Doha</div></td><td>10h30 → 19h25 (26/12)</td></tr>
+      <tr><td><b>30/12</b></td><td>Bangkok → Chiang Mai</td><td>Voo 102<div class="muted">Direto · 1h25</div></td><td>10h25 → 11h50</td></tr>
+      <tr><td><b>06/01</b></td><td>Chiang Rai → Phuket</td><td>Voo 401<div class="muted">Direto · 2h15</div></td><td>11h10 → 13h25</td></tr>
+      <tr><td><b>12/01</b></td><td>Phuket → Singapura</td><td>Scoot TR 645<div class="muted">Direto · 2h15</div></td><td>13h55 → 17h10</td></tr>
+      <tr><td><b>14/01</b></td><td>Singapura → São Paulo</td><td>Turkish TK 209 + TK 215<div class="muted">Conexão em Istambul</div></td><td>10h25 → 04h20 (15/01)</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="fine">Horários locais. Classe econômica. Voos sujeitos a disponibilidade e tarifa no momento da emissão.</p>
+</section>
+
+<section class="section">
+  <span class="eyebrow">Hospedagem</span>
+  <h2 class="serif">Opções de hotéis</h2>
+  <div class="accent-line"></div>
+  <p class="lede">Duas ou três opções por cidade, todas com café da manhã e escolhidas pela localização e pela estrutura para o bebê.</p>
+
+  <div class="city"><h3>Nova York</h3><div class="when">20 a 25/12</div>
+    <div class="hotels">
+      <div class="hotel"><div class="tag">Opção 1</div><div class="name">Andaz 5th Avenue by Hyatt <span class="stars">★★★★</span></div><ul><li>Na 5ª Avenida, em frente ao Bryant Park</li><li>Quarto Deluxe King, 39 m²</li><li>Café da manhã · cancelamento grátis até 18/12</li></ul></div>
+      <div class="hotel"><div class="tag">Opção 2</div><div class="name">Crowne Plaza HY36 Midtown <span class="stars">★★★★</span></div><ul><li>Midtown, perto da Penn Station</li><li>Suíte King, 42 m²</li><li>Café da manhã · cancelamento grátis até 17/12</li></ul></div>
+      <div class="hotel"><div class="tag">Opção 3</div><div class="name">Courtyard Manhattan / Midtown East <span class="stars">★★★</span></div><ul><li>Midtown East, 3ª Avenida</li><li>Quarto King com sofá-cama</li><li>Café da manhã · tarifa não reembolsável</li></ul></div>
+    </div>
+  </div>
+
+  <div class="city"><h3>Bangkok</h3><div class="when">26 a 30/12</div>
+    <div class="hotels">
+      <div class="hotel"><div class="tag">Opção 1</div><div class="name">Bangkok Marriott Hotel The Surawongse <span class="stars">★★★★★</span></div><ul><li>Bang Rak, perto do rio Chao Phraya</li><li>Quarto King, 37 m², com banheira</li><li>Café da manhã · cancelamento grátis até 10/12</li></ul></div>
+      <div class="hotel"><div class="tag">Opção 2</div><div class="name">voco Bangkok Surawong by IHG <span class="stars">★★★★★</span></div><ul><li>Bang Rak, perto de Silom</li><li>Grand Room com cama super-king, 39 m²</li><li>Café da manhã · tarifa não reembolsável</li></ul></div>
+    </div>
+  </div>
+
+  <div class="city"><h3>Chiang Mai</h3><div class="when">30/12 a 03/01</div>
+    <div class="hotels">
+      <div class="hotel"><div class="tag">Opção 1</div><div class="name">Shangri-La Chiang Mai <span class="stars">★★★★★</span></div><ul><li>Centro, perto do Night Bazaar</li><li>Quarto Deluxe King, 43 m²</li><li>Café da manhã · criança até 5 anos come de graça</li><li>Cancelamento grátis até 27/12</li></ul></div>
+      <div class="hotel"><div class="tag">Opção 2</div><div class="name">Chiang Mai Marriott Hotel <span class="stars">★★★★★</span></div><ul><li>Centro, perto da Chinatown</li><li>Quarto Deluxe King, 36 m²</li><li>Café da manhã · tarifa não reembolsável</li></ul></div>
+    </div>
+  </div>
+
+  <div class="city"><h3>Triângulo Dourado</h3><div class="when">03 a 06/01</div>
+    <div class="hotels">
+      <div class="hotel"><div class="tag">All inclusive</div><div class="name">Anantara Golden Triangle Elephant Camp &amp; Resort <span class="stars">★★★★★</span></div><ul><li>Quarto Deluxe com vista para os três países</li><li>Pensão completa, bebidas e experiências com os elefantes</li><li>Traslado de saída ao aeroporto de Chiang Rai incluído</li><li>Sem idade mínima para hospedagem nem para as atividades com os elefantes</li></ul></div>
+    </div>
+    <div class="note"><b>Importante:</b> o jantar no Canopy, suspenso nas árvores, não será possível, porque a idade mínima para essa experiência é de 10 anos.</div>
+  </div>
+
+  <div class="city"><h3>Phuket</h3><div class="when">06 a 12/01</div>
+    <div class="hotels">
+      <div class="hotel"><div class="tag">Opção 1</div><div class="name">Dusit Thani Laguna Phuket <span class="stars">★★★★★</span></div><ul><li>Praia de Bang Tao, complexo Laguna</li><li>Quarto Premier King de frente para o mar</li><li>Café da manhã · cancelamento grátis até 06/12</li></ul></div>
+      <div class="hotel"><div class="tag">Opção 2</div><div class="name">Amora Beach Resort Phuket <span class="stars">★★★★★</span></div><ul><li>Praia de Bang Tao</li><li>Quarto Amora Ocean King</li><li>Café da manhã · tarifa não reembolsável</li></ul></div>
+    </div>
+  </div>
+
+  <div class="city"><h3>Singapura</h3><div class="when">12 a 14/01</div>
+    <div class="hotels">
+      <div class="hotel"><div class="tag">Opção 1</div><div class="name">Fairmont Singapore <span class="stars">★★★★★</span></div><ul><li>City Hall, a poucos minutos de Marina Bay</li><li>Quarto Deluxe King com varanda e banheira, 45 m²</li><li>Café da manhã e 20% de desconto em restaurantes do hotel</li></ul></div>
+      <div class="hotel"><div class="tag">Opção 2</div><div class="name">Pullman Singapore Hill Street <span class="stars">★★★★★</span></div><ul><li>Perto do metrô, entre Clarke Quay e City Hall</li><li>Quarto Deluxe King</li><li>Café da manhã</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <span class="eyebrow">Programação</span>
+  <h2 class="serif">Roteiro dia a dia</h2>
+  <div class="accent-line"></div>
+  <p class="lede">Os passeios em destaque estão inclusos na proposta. Nos demais dias, deixamos sugestões para aproveitar no ritmo de vocês.</p>
+
+  <div class="leg"><h3>Nova York</h3>
+    <div class="day travel"><div class="dt">19/12<span>Sábado</span></div><div class="tx">Saída de São Paulo à noite, em voo direto para Nova York.</div></div>
+    <div class="day"><div class="dt">20/12<span>Domingo</span></div><div class="tx">Chegada pela manhã e <b>traslado privativo ao hotel</b>. Dia livre para descansar. No fim da tarde, passeio pelo Upper West Side e pelo Central Park.</div></div>
+    <div class="day"><div class="dt">21/12<span>Segunda</span></div><div class="tx"><b>Tour gastronômico pelo Lower East Side.</b> À tarde, sugestão: árvore do Rockefeller Center, vitrines de Natal da 5ª Avenida, show de luzes da Saks e mercado de Natal do Bryant Park.</div></div>
+    <div class="day"><div class="dt">22/12<span>Terça</span></div><div class="tx"><b>Dia de compras no Woodbury Common Premium Outlets</b>, com carro privativo e motorista.</div></div>
+    <div class="day"><div class="dt">23/12<span>Quarta</span></div><div class="tx">Sugestão: High Line, Chelsea Market, Hudson Yards e o mirante Edge. À noite, <b>tour privativo pelas luzes de Natal de Dyker Heights</b>.</div></div>
+    <div class="day"><div class="dt">24/12<span>Quinta</span></div><div class="tx">De manhã cedo, <b>sessão com fotógrafo</b> no Rockefeller Center ou no Central Park. Tarde de descanso. À noite, <b>ceia de Natal no Tavern on the Green</b>.</div></div>
+    <div class="day travel"><div class="dt">25/12<span>Sexta</span></div><div class="tx"><b>Traslado privativo ao aeroporto</b> e voo para Bangkok, com conexão em Doha.</div></div>
+  </div>
+
+  <div class="leg"><h3>Bangkok</h3>
+    <div class="day travel"><div class="dt">26/12<span>Sábado</span></div><div class="tx">Chegada à noite e <b>traslado privativo ao hotel</b>.</div></div>
+    <div class="day"><div class="dt">27/12<span>Domingo</span></div><div class="tx">Dia para se adaptar ao fuso. Sugestão: barco pelo rio Chao Phraya, shopping Iconsiam e, à noite, o mercado Asiatique.</div></div>
+    <div class="day"><div class="dt">28/12<span>Segunda</span></div><div class="tx">De manhã, <b>tour privativo pelo Grande Palácio, Buda de Esmeralda, Wat Pho e Wat Arun</b>. Tarde de descanso.</div></div>
+    <div class="day"><div class="dt">29/12<span>Terça</span></div><div class="tx">Sugestão: Casa de Jim Thompson e Parque Lumpini. À noite, <b>tour privativo de tuk-tuk com comida de rua em Chinatown (Yaowarat)</b>.</div></div>
+  </div>
+
+  <div class="leg"><h3>Chiang Mai</h3>
+    <div class="day travel"><div class="dt">30/12<span>Quarta</span></div><div class="tx">Voo para Chiang Mai e <b>traslado privativo ao hotel</b>. À noite, sugestão: Night Bazaar.</div></div>
+    <div class="day"><div class="dt">31/12<span>Quinta</span></div><div class="tx">Sugestão para a manhã: templos da cidade antiga (Wat Phra Singh e Wat Chedi Luang). À noite, <b>réveillon com as lanternas sobre o rio Ping e sessão com fotógrafo</b>.</div></div>
+    <div class="day"><div class="dt">01/01<span>Sexta</span></div><div class="tx">Manhã de descanso. No fim da tarde, <b>tour privativo ao templo Doi Suthep</b>, com vista da cidade ao entardecer.</div></div>
+    <div class="day"><div class="dt">02/01<span>Sábado</span></div><div class="tx">De manhã, <b>aula de culinária tailandesa em fazenda orgânica</b>. À noite, <b>tour privativo de comida de rua</b> e a feira de sábado da Wualai Road.</div></div>
+  </div>
+
+  <div class="leg"><h3>Triângulo Dourado</h3>
+    <div class="day travel"><div class="dt">03/01<span>Domingo</span></div><div class="tx"><b>Traslado privativo até o Triângulo Dourado, com parada no Templo Branco</b> em Chiang Rai. Check-in no Anantara.</div></div>
+    <div class="day"><div class="dt">04/01<span>Segunda</span></div><div class="tx">Experiências com os elefantes e passeio de barco pelo rio Mekong, incluídos no hotel.</div></div>
+    <div class="day"><div class="dt">05/01<span>Terça</span></div><div class="tx">Spa e descanso. Sugestão: mirante do Triângulo Dourado e o museu Hall of Opium.</div></div>
+  </div>
+
+  <div class="leg"><h3>Phuket</h3>
+    <div class="day travel"><div class="dt">06/01<span>Quarta</span></div><div class="tx">Traslado ao aeroporto de Chiang Rai e voo direto para Phuket. <b>Traslado privativo ao hotel.</b></div></div>
+    <div class="day"><div class="dt">07/01<span>Quinta</span></div><div class="tx">Dia de descanso no resort e na praia de Bang Tao.</div></div>
+    <div class="day"><div class="dt">08/01<span>Sexta</span></div><div class="tx"><b>Catamarã privativo pela Baía de Phang Nga</b>, com a ilha de James Bond.</div></div>
+    <div class="day"><div class="dt">09/01<span>Sábado</span></div><div class="tx">Descanso. No pôr do sol, <b>sessão com fotógrafo</b> na praia.</div></div>
+    <div class="day"><div class="dt">10/01<span>Domingo</span></div><div class="tx">Sugestão: Old Town de Phuket e a feira de rua de domingo (Lard Yai).</div></div>
+    <div class="day"><div class="dt">11/01<span>Segunda</span></div><div class="tx">Dia livre. Sugestão: Big Buddha e o mirante de Promthep Cape.</div></div>
+  </div>
+
+  <div class="leg"><h3>Singapura</h3>
+    <div class="day travel"><div class="dt">12/01<span>Terça</span></div><div class="tx">Voo para Singapura e <b>traslado privativo ao hotel</b>. À noite, sugestão: show de luzes das Supertrees no Gardens by the Bay.</div></div>
+    <div class="day"><div class="dt">13/01<span>Quarta</span></div><div class="tx">De manhã, <b>Gardens by the Bay (Flower Dome e Cloud Forest)</b>. À tarde, sugestão: Marina Bay e Botanic Gardens. À noite, <b>tour privativo pelos hawker centers</b>.</div></div>
+    <div class="day travel"><div class="dt">14/01<span>Quinta</span></div><div class="tx"><b>Traslado privativo ao aeroporto</b> e voo de volta ao Brasil, com conexão em Istambul.</div></div>
+    <div class="day travel"><div class="dt">15/01<span>Sexta</span></div><div class="tx">Chegada a São Paulo de madrugada.</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <span class="eyebrow">Investimento</span>
+  <h2 class="serif">Serviços inclusos</h2>
+  <div class="accent-line"></div>
+  <ul class="svc">
+    <li>Traslados privativos (aeroporto ↔ hotel) em Nova York, Bangkok, Chiang Mai, Phuket e Singapura</li>
+    <li>Carro privativo com motorista para o Woodbury Common Premium Outlets (dia inteiro)</li>
+    <li>Traslado privativo de Chiang Mai ao Triângulo Dourado, com parada no Templo Branco</li>
+    <li>Tour gastronômico pelo Lower East Side, em Nova York</li>
+    <li>Tour privativo pelas luzes de Natal de Dyker Heights, em Nova York</li>
+    <li>Ceia de Natal no Tavern on the Green, em Nova York (24/12)</li>
+    <li>Tour privativo pelo Grande Palácio, Wat Pho e Wat Arun, em Bangkok</li>
+    <li>Tour privativo de tuk-tuk com comida de rua em Chinatown, em Bangkok</li>
+    <li>Aula de culinária tailandesa em fazenda orgânica, em Chiang Mai</li>
+    <li>Tour privativo de comida de rua, em Chiang Mai</li>
+    <li>Tour privativo ao templo Doi Suthep, em Chiang Mai</li>
+    <li>Catamarã privativo pela Baía de Phang Nga, em Phuket</li>
+    <li>Tour privativo pelos hawker centers, em Singapura</li>
+    <li>Ingressos do Gardens by the Bay (Flower Dome e Cloud Forest)</li>
+    <li>Sessões com fotógrafo profissional em Nova York, Chiang Mai e Phuket</li>
+    <li>Chip de internet (eSIM) para os EUA e a Ásia</li>
+  </ul>
+  <div class="price">
+    <div><div class="lbl">Valor total dos serviços</div><div class="val">R$ 50.314,20</div></div>
+    <div class="inst">ou em até <b>8x de R$ 6.289,27</b></div>
+  </div>
+  <p class="fine">Valores para 2 adultos e 1 bebê, sujeitos a disponibilidade e confirmação no momento da reserva. Aéreo e hospedagem são cotados conforme as opções escolhidas.</p>
+</section>
+
+<section class="section">
+  <span class="eyebrow">Opcionais</span>
+  <h2 class="serif">Passeios com guia</h2>
+  <div class="accent-line"></div>
+  <p class="lede">Para os dias livres, estes passeios guiados podem ser acrescentados à viagem.</p>
+  <div class="tbl-wrap">
+  <table class="tbl">
+    <thead><tr><th>Data</th><th>Passeio</th><th>Valor</th></tr></thead>
+    <tbody>
+      <tr><td><b>23/12</b></td><td>Nova York: tour gastronômico guiado por Chelsea Market, Meatpacking e High Line (3 h)</td><td>R$ 1.368,11<div class="muted">2 pessoas</div></td></tr>
+      <tr><td><b>27/12</b></td><td>Bangkok: passeio de barco pelos canais (khlongs) e Big Buddha (2 h)</td><td>R$ 250,63<div class="muted">por pessoa</div></td></tr>
+      <tr><td><b>29/12</b></td><td>Bangkok: dia inteiro com guia privativo (7 h)</td><td>R$ 2.179,41<div class="muted">por pessoa</div></td></tr>
+      <tr><td><b>01/01</b></td><td>Chiang Mai: tour privativo pelos templos (5 h)</td><td>R$ 2.395,72<div class="muted">por pessoa</div></td></tr>
+      <tr><td><b>10/01</b></td><td>Phuket: tour privativo pela ilha, com Old Town e Big Buddha (7 h)</td><td>R$ 1.830,71<div class="muted">por pessoa</div></td></tr>
+      <tr><td><b>13/01</b></td><td>Singapura: dia com guia privativo (8 h)</td><td>R$ 738,40<div class="muted">por pessoa</div></td></tr>
+      <tr><td><b>13/01</b></td><td>Singapura: visita guiada por Chinatown (3h30)</td><td>R$ 361,84<div class="muted">por pessoa</div></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section">
+  <span class="eyebrow">Antes de viajar</span>
+  <h2 class="serif">Informações importantes</h2>
+  <div class="accent-line"></div>
+  <div class="info">
+    <div><h4>Documentos</h4><ul><li>Passaporte válido dos três, incluindo o bebê</li><li>Visto americano válido</li><li>Cartão de chegada digital da Tailândia (TDAC)</li><li>SG Arrival Card de Singapura</li></ul></div>
+    <div><h4>Saúde</h4><ul><li>Certificado internacional de febre amarela dos adultos</li><li>Atestado de isenção do bebê, assinado pelo pediatra</li><li>Seguro viagem com cobertura nos EUA</li></ul></div>
+    <div><h4>Com o bebê</h4><ul><li>Recomendamos levar o bebê-conforto: as companhias aéreas aceitam sem custo e ele garante a segurança nos traslados</li><li>Berço solicitado em todos os hotéis</li></ul></div>
+  </div>
+</section>
+
+<footer class="ft">
+  <img class="logo" src="img/logo-white.png" alt="LusaTravel" onerror="this.outerHTML='<div class=&quot;logo-txt serif&quot; style=&quot;font-size:1.6rem;font-weight:600;color:#fff&quot;>LusaTravel</div>'">
+  <div class="sig">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+  <div class="addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+</footer>
+
+</div>
+</body>
+</html>
