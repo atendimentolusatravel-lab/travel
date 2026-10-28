@@ -342,7 +342,7 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 | Serviço | US$ | R$ final |
 |---|---|---|
 | Tour gastronômico Lower East Side, GYG (2 pessoas) | 158,00 | 1.149,80 |
-| Luzes de Natal em Dyker Heights | aguardando valor da agente | — |
+| Luzes de Natal em Dyker Heights, privativo (valor da agente) | 1.000,00 | 7.277,20 |
 | Ceia de Natal | retirada: a definir com o casal | — |
 | Fotógrafo NYC, 1 h (Flytographer) | 425,00 | 3.092,81 |
 | Grande Palácio + Wat Pho + Wat Arun, privativo, GYG (2 pessoas) | 264,00 | 1.921,18 |
@@ -364,7 +364,7 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 | Traslado de chegada em NYC (valor da agente) | 180,00 | 1.309,90 |
 | Traslado de saída em NYC (valor da agente) | 180,00 | 1.309,90 |
 | Carro para Woodbury, dia inteiro (valor da agente) | 600,00 | 4.366,32 |
-| **Total** | **5.994,95** | **43.626,45 (8x de 5.453,31)** |
+| **Total** | **6.994,95** | **50.903,65 (8x de 6.362,96)** |
 
 
 **Fora do total:** hotéis e aéreo (tratados à parte), seguro viagem (estimativa em R$ 1.500 a 2.500, a cotar) e envio de bagagem (não recomendado para as compras).

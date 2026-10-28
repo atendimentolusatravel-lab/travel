@@ -22,8 +22,8 @@
 | Sessões com fotógrafo profissional em Nova York, no réveillon em Chiang Mai e em Phuket |
 | Chip de internet (eSIM) para os EUA e a Ásia |
 
-**Valor total: R$ 43.626,45**
-**ou em até 8x de R$ 5.453,31**
+**Valor total: R$ 50.903,65**
+**ou em até 8x de R$ 6.362,96**
 
 ## Roteiro dia a dia
 
