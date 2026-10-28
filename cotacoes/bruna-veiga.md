@@ -333,7 +333,7 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 
 ## Cálculo do material da cliente (uso interno)
 
-**Regra:** valor em US$ × 6 × 1,15 × 1,12, o que dá um fator de **7,728**. O resultado já sai em R$, com o markup e o parcelamento em até 8x.
+**Regra:** valor em US$ × 5,65 × 1,15 × 1,12, o que dá um fator de **7,2772**. O resultado já sai em R$, com o markup e o parcelamento em até 8x.
 
 - Valores em euro: convertidos para US$ a 1,15 antes da regra.
 - Valores em SGD: convertidos a 0,74.
@@ -341,30 +341,30 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 
 | Serviço | US$ | R$ final |
 |---|---|---|
-| Tour gastronômico Lower East Side, GYG (2 pessoas) | 158,00 | 1.221,02 |
-| Luzes de Natal em Dyker Heights, privativo, GYG | 649,00 | 5.015,47 |
-| Ceia no Tavern on the Green (2 pessoas, preço de 2024) | 270,00 | 2.086,56 |
-| Fotógrafo NYC, 1 h (Flytographer) | 425,00 | 3.284,40 |
-| Grande Palácio + Wat Pho + Wat Arun, privativo, GYG (2 pessoas) | 264,00 | 2.040,19 |
-| Yaowarat de tuk-tuk, privativo, Viator (2 pessoas) | 140,80 | 1.088,10 |
-| Traslados BKK, chegada e saída (minivan, € 51 por trecho) | 117,30 | 906,49 |
-| Traslado de chegada em CNX (€ 29) | 33,35 | 257,73 |
-| Aula de culinária Smile Organic Farm, Viator (2 pessoas) | 56,00 | 432,77 |
-| Comida de rua, privativo, Withlocals/Viator (2 pessoas) | 154,00 | 1.190,11 |
-| Doi Suthep, privativo, GYG | 96,00 | 741,89 |
-| Fotógrafo Chiang Mai, réveillon, 1 h (Flytographer) | 425,00 | 3.284,40 |
-| Traslado Chiang Mai → Anantara, com parada no Templo Branco (estimado) | 300,00 | 2.318,40 |
-| Traslados HKT, chegada e saída (minivan, € 38,39 por trecho) | 88,30 | 682,36 |
-| Catamarã privativo em Phang Nga, GYG | 1.820,00 | 14.064,96 |
-| Fotógrafo Phuket, 1 h (Flytographer) | 425,00 | 3.284,40 |
-| Traslados SIN, chegada e saída, com cadeirinha | 134,20 | 1.037,10 |
-| Hawker centers, privativo, Viator | 135,00 | 1.043,28 |
-| Gardens by the Bay, GYG (2 pessoas) | 100,00 | 772,80 |
-| eSIM EUA + Ásia, Holafly (2 aparelhos) | 163,00 | 1.259,66 |
-| Traslado de chegada em NYC (valor da agente) | 180,00 | 1.391,04 |
-| Traslado de saída em NYC (valor da agente) | 180,00 | 1.391,04 |
-| Carro para Woodbury, dia inteiro (valor da agente) | 600,00 | 4.636,80 |
-| **Total** | **6.913,95** | **53.431,01 (8x de 6.678,88)** |
+| Tour gastronômico Lower East Side, GYG (2 pessoas) | 158,00 | 1.149,80 |
+| Luzes de Natal em Dyker Heights, privativo, GYG | 649,00 | 4.722,90 |
+| Ceia no Tavern on the Green (2 pessoas, preço de 2024) | 270,00 | 1.964,84 |
+| Fotógrafo NYC, 1 h (Flytographer) | 425,00 | 3.092,81 |
+| Grande Palácio + Wat Pho + Wat Arun, privativo, GYG (2 pessoas) | 264,00 | 1.921,18 |
+| Yaowarat de tuk-tuk, privativo, Viator (2 pessoas) | 140,80 | 1.024,63 |
+| Traslados BKK, chegada e saída (minivan, € 51 por trecho) | 117,30 | 853,62 |
+| Traslado de chegada em CNX (€ 29) | 33,35 | 242,69 |
+| Aula de culinária Smile Organic Farm, Viator (2 pessoas) | 56,00 | 407,52 |
+| Comida de rua, privativo, Withlocals/Viator (2 pessoas) | 154,00 | 1.120,69 |
+| Doi Suthep, privativo, GYG | 96,00 | 698,61 |
+| Fotógrafo Chiang Mai, réveillon, 1 h (Flytographer) | 425,00 | 3.092,81 |
+| Traslado Chiang Mai → Anantara, com parada no Templo Branco (estimado) | 300,00 | 2.183,16 |
+| Traslados HKT, chegada e saída (minivan, € 38,39 por trecho) | 88,30 | 642,58 |
+| Catamarã privativo em Phang Nga, GYG | 1.820,00 | 13.244,50 |
+| Fotógrafo Phuket, 1 h (Flytographer) | 425,00 | 3.092,81 |
+| Traslados SIN, chegada e saída, com cadeirinha | 134,20 | 976,60 |
+| Hawker centers, privativo, Viator | 135,00 | 982,42 |
+| Gardens by the Bay, GYG (2 pessoas) | 100,00 | 727,72 |
+| eSIM EUA + Ásia, Holafly (2 aparelhos) | 163,00 | 1.186,18 |
+| Traslado de chegada em NYC (valor da agente) | 180,00 | 1.309,90 |
+| Traslado de saída em NYC (valor da agente) | 180,00 | 1.309,90 |
+| Carro para Woodbury, dia inteiro (valor da agente) | 600,00 | 4.366,32 |
+| **Total** | **6.913,95** | **50.314,20 (8x de 6.289,27)** |
 
 
 **Fora do total:** hotéis e aéreo (tratados à parte), seguro viagem (estimativa em R$ 1.500 a 2.500, a cotar) e envio de bagagem (não recomendado para as compras).

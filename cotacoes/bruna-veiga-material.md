@@ -23,8 +23,8 @@
 | Sessões com fotógrafo profissional em Nova York, no réveillon em Chiang Mai e em Phuket |
 | Chip de internet (eSIM) para os EUA e a Ásia |
 
-**Valor total: R$ 53.431,01**
-**ou em até 8x de R$ 6.678,88**
+**Valor total: R$ 50.314,20**
+**ou em até 8x de R$ 6.289,27**
 
 ## Roteiro dia a dia
 
@@ -90,7 +90,7 @@
 
 | Data | Passeio | Valor |
 |---|---|---|
-| 23/12 | Nova York: tour gastronômico guiado por Chelsea Market, Meatpacking e High Line (3 h) | R$ 1.452,86 (2 pessoas) |
+| 23/12 | Nova York: tour gastronômico guiado por Chelsea Market, Meatpacking e High Line (3 h) | R$ 1.368,11 (2 pessoas) |
 | 27/12 | Bangkok: passeio de barco pelos canais (khlongs) e Big Buddha (2 h) | R$ 250,63 por pessoa |
 | 29/12 | Bangkok: dia inteiro com guia privativo (7 h) | R$ 2.179,41 por pessoa |
 | 01/01 | Chiang Mai: tour privativo pelos templos (5 h) | R$ 2.395,72 por pessoa |
