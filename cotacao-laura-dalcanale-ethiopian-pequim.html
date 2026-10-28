@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Cotação Aérea Ethiopian + Air China · Pequim · Laura Dalcanale · LusaTravel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+:root{
+  --gold:#da8d00;
+  --green:#1f4d2e;
+  --green-deep:#143621;
+  --green-soft:#eaf2ec;
+  --ink:#1a1510;
+  --char:#333131;
+  --muted:#6b6b68;
+  --line:#dfe6e0;
+  --sans:'Poppins',Arial,sans-serif;
+  --con:'Montserrat',Arial,sans-serif;
+}
+@page{ size:A4 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+.page{ width:210mm; height:297mm; display:flex; flex-direction:column; overflow:hidden; page-break-after:always; }
+
+.hd{ background:var(--green-deep); height:22mm; display:flex; align-items:center; justify-content:space-between; padding:0 14mm; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.10em; color:var(--gold); }
+.hd .tag{ font-family:var(--con); font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.75); }
+.goldbar{ height:2.4mm; background:var(--gold); flex-shrink:0; }
+
+.body{ padding:6mm 14mm 0; flex:1; display:flex; flex-direction:column; gap:3.6mm; }
+
+.title-row{ display:flex; justify-content:space-between; align-items:flex-end; }
+.eyebrow{ font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.client{ font-size:19pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; line-height:1.1; margin-top:1mm; }
+.sub{ font-size:9pt; color:var(--muted); margin-top:1mm; }
+.meta{ text-align:right; font-family:var(--con); font-size:7.6pt; color:var(--muted); line-height:1.6; min-width:62mm; white-space:nowrap; }
+.meta b{ color:var(--ink); font-weight:600; }
+
+.route{ display:flex; align-items:center; gap:4mm; background:var(--green); color:#fff; border-radius:3mm; padding:3mm 6mm; }
+.route .pt{ text-align:center; min-width:22mm; }
+.route .pt b{ display:block; font-size:16pt; font-weight:800; line-height:1; }
+.route .pt span{ display:block; font-size:7pt; letter-spacing:.12em; text-transform:uppercase; opacity:.8; margin-top:1mm; }
+.route .arrow{ flex:1; height:0; border-top:1.5px dashed rgba(255,255,255,.55); position:relative; }
+.route .arrow i{ position:absolute; top:-3.2mm; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--ink); font-style:normal; font-size:7pt; font-weight:700; padding:.8mm 2.5mm; border-radius:2mm; white-space:nowrap; }
+.route .stats{ margin-left:auto; display:flex; gap:5mm; border-left:1px solid rgba(255,255,255,.3); padding-left:5mm; }
+.route .st b{ display:block; font-size:14pt; font-weight:800; color:var(--gold); line-height:1; }
+.route .st span{ display:block; font-size:6.5pt; letter-spacing:.1em; text-transform:uppercase; opacity:.85; margin-top:1mm; }
+
+.sec{ font-size:8pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; border-bottom:1px solid var(--line); padding-bottom:1.2mm; margin-bottom:1.8mm; display:flex; justify-content:space-between; align-items:baseline; }
+.sec small{ font-family:var(--con); font-size:7pt; letter-spacing:0; text-transform:none; color:var(--muted); font-weight:500; }
+
+table.fl{ width:100%; border-collapse:collapse; font-size:8.5pt; }
+table.fl th{ font-family:var(--con); font-size:6.8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); text-align:left; padding:0 2mm 1.5mm; font-weight:600; }
+table.fl td{ padding:1.6mm 2mm; border-top:1px solid var(--line); vertical-align:middle; }
+table.fl tr.leg-h td{ border-top:none; padding:1.5mm 2mm .5mm; background:var(--green-soft); font-size:7pt; letter-spacing:.16em; text-transform:uppercase; font-weight:700; color:var(--green); }
+table.fl .fn{ font-weight:700; color:var(--ink); white-space:nowrap; }
+table.fl .fn small{ display:block; font-weight:400; color:var(--muted); font-size:7pt; }
+table.fl .ap b{ color:var(--ink); font-weight:600; }
+table.fl .ap span{ display:block; font-size:7pt; color:var(--muted); }
+table.fl .dt{ white-space:nowrap; }
+table.fl .dt b{ color:var(--ink); font-weight:600; }
+table.fl .dur{ font-family:var(--con); color:var(--muted); white-space:nowrap; }
+table.fl tr.stop td{ border-top:1px dashed var(--line); background:#fbf6ec; color:var(--char); font-size:7.8pt; padding:1.3mm 2mm; }
+table.fl tr.stop .pin{ color:var(--gold); font-weight:700; margin-right:1.5mm; }
+
+.cards{ display:grid; grid-template-columns:1fr 1fr; gap:5mm; }
+.card{ border:1px solid var(--line); border-radius:3mm; overflow:hidden; display:flex; flex-direction:column; }
+.card .ch{ background:var(--green); color:#fff; padding:3mm 5mm; display:flex; justify-content:space-between; align-items:center; }
+.card .ch b{ font-size:11pt; font-weight:700; }
+.card .ch span{ font-family:var(--con); font-size:7.5pt; opacity:.9; }
+.card .cb{ padding:2.6mm 5mm; display:flex; flex-direction:column; gap:1.1mm; font-size:8pt; }
+.card .cb .li{ display:flex; justify-content:space-between; gap:3mm; }
+.card .cb .li span:first-child{ color:var(--muted); }
+.card .cb .li span:last-child{ color:var(--ink); font-weight:500; text-align:right; }
+.card .tot{ margin-top:auto; background:var(--ink); color:#fff; padding:2.4mm 5mm; display:flex; justify-content:space-between; align-items:center; }
+.card .tot .lb{ font-size:7pt; letter-spacing:.14em; text-transform:uppercase; opacity:.8; }
+.card .tot .lb em{ display:block; font-style:normal; font-size:6.5pt; opacity:.7; letter-spacing:.05em; text-transform:none; margin-top:.5mm; }
+.card .tot .amt{ font-size:15pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; line-height:1; text-align:right; }
+.card .tot .amt small{ display:block; font-size:7pt; font-weight:500; color:rgba(255,255,255,.75); margin-top:1mm; }
+
+.grand{ display:flex; justify-content:space-between; align-items:center; gap:6mm; background:var(--green-deep); border-left:3mm solid var(--gold); color:#fff; padding:2.6mm 6mm; border-radius:2mm; }
+.grand .lb{ font-size:8pt; letter-spacing:.16em; text-transform:uppercase; }
+.grand .lb em{ display:block; font-style:normal; font-size:7pt; opacity:.75; text-transform:none; letter-spacing:.02em; margin-top:.6mm; }
+.grand .amt{ font-size:17pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right; }
+.grand .amt small{ font-size:8pt; font-weight:500; color:rgba(255,255,255,.8); margin-left:3mm; }
+
+.notes{ display:grid; grid-template-columns:1fr 1fr; gap:2mm 8mm; font-size:7.2pt; line-height:1.4; color:var(--char); }
+.notes ul{ list-style:none; }
+.notes li{ padding-left:3.5mm; position:relative; margin-bottom:.7mm; }
+.notes li::before{ content:""; position:absolute; left:0; top:1.6mm; width:1.6mm; height:1.6mm; background:var(--gold); border-radius:50%; }
+.notes b{ color:var(--ink); font-weight:600; }
+.cotado{ font-family:var(--con); font-size:8pt; font-weight:600; color:var(--gold); }
+
+.ft{ margin-top:auto; background:var(--green-deep); height:13mm; flex-shrink:0; display:flex; align-items:center; justify-content:space-between; padding:0 14mm; }
+.ft .brand{ font-size:10pt; font-weight:800; letter-spacing:.1em; color:var(--gold); }
+.ft .contact{ display:flex; gap:5mm; }
+.ft a{ font-family:var(--con); font-size:7.8pt; color:rgba(255,255,255,.85); text-decoration:none; }
+.ft .addr{ font-family:var(--con); font-size:6.8pt; color:rgba(255,255,255,.5); }
+
+table.fl tr.split td{ background:#fff7e6; }
+table.fl .cab{ display:inline-block; font-family:var(--con); font-size:6.3pt; letter-spacing:.1em; text-transform:uppercase; font-weight:700; color:#fff; background:var(--gold); padding:.5mm 1.6mm; border-radius:1.2mm; margin-bottom:.6mm; }
+table.fl .cab.ec{ background:var(--green); }
+.alert{ display:flex; gap:3mm; align-items:flex-start; border:1px solid var(--gold); background:#fff7e6; border-radius:2mm; padding:2mm 4mm; font-size:7.4pt; line-height:1.4; color:var(--char); }
+.alert b{ color:var(--ink); }
+.alert .ic{ color:var(--gold); font-weight:800; font-size:10pt; line-height:1; }
+
+.body{ gap:3mm; padding-top:5mm; }
+table.fl td{ padding:1.3mm 2mm; }
+table.fl tr.split td{ padding:1mm 2mm; }
+table.fl .cab{ margin-bottom:.3mm; }
+.card .cb{ padding:2mm 5mm; gap:.9mm; font-size:7.8pt; }
+.card .tot{ padding:2mm 5mm; }
+.grand{ padding:2.2mm 6mm; }
+.notes{ font-size:6.9pt; line-height:1.35; }
+.alert{ padding:1.6mm 4mm; font-size:7.1pt; }
+.route{ padding:2.6mm 6mm; }
+.cards.one{ grid-template-columns:1fr; }
+.card .cb.two{ display:grid; grid-template-columns:1fr 1fr; gap:.9mm 10mm; }
+.alert.usa{ border-color:#b3261e; background:#fdf1f0; }
+.alert.usa .ic{ color:#b3261e; }
+.route .pt{ min-width:17mm; }
+.route .stats{ gap:4mm; padding-left:4mm; }
+table.fl td{ padding:1.05mm 2mm; }
+table.fl tr.stop td{ padding:.9mm 2mm; }
+table.fl th{ padding-bottom:1mm; }
+.body{ gap:2.1mm; padding-top:4mm; }
+.route{ padding:2.2mm 6mm; }
+.client{ font-size:17pt; }
+.sub{ font-size:8.4pt; }
+.grand{ padding:1.8mm 6mm; }
+.card .tot{ padding:1.7mm 5mm; }
+.notes{ font-size:6.7pt; }
+.card .cb{ padding:1.6mm 5mm; }
+.alert{ padding:1.4mm 4mm; }
+</style>
+</head>
+<body>
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Cotação aérea · Ethiopian + Air China · Pequim</div></div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+    <div class="title-row">
+      <div>
+        <div class="eyebrow">Cotação de passagens aéreas</div>
+        <div class="client">SRA. LAURA DALCANALE</div>
+        <div class="sub">São Paulo → Pequim via Adis Abeba e Singapura · Ethiopian Airlines e Air China · 5 passageiros em executiva</div>
+      </div>
+      <div class="meta">
+        Emitida em <b>28/10/2026</b><br>
+        Câmbio de referência <b>USD 1,00 = R$ 5,50</b><br>
+        Validade <b>sujeita à disponibilidade</b>
+      </div>
+    </div>
+
+    <div class="route">
+      <div class="pt"><b>GRU</b><span>São Paulo</span></div>
+      <div class="arrow"><i>30 dez</i></div>
+      <div class="pt"><b>ADD</b><span>Adis Abeba</span></div>
+      <div class="arrow"><i>31 dez</i></div>
+      <div class="pt"><b>SIN</b><span>Singapura</span></div>
+      <div class="arrow"><i>31 dez</i></div>
+      <div class="pt"><b>PEK</b><span>Pequim</span></div>
+      <div class="stats">
+        <div class="st"><b>25</b><span>noites China</span></div>
+        <div class="st"><b>4</b><span>conexões</span></div>
+        <div class="st"><b>29</b><span>dias de viagem</span></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sec"><span>Voos · Ethiopian e Air China</span><small>Os 5 passageiros juntos nos seis voos · sem pernoite</small></div>
+      <table class="fl">
+        <thead><tr><th>Voo</th><th>Partida</th><th>Chegada</th><th>De</th><th>Para</th><th>Duração</th></tr></thead>
+        <tbody>
+          <tr class="leg-h"><td colspan="6">Ida</td></tr>
+          <tr>
+            <td class="fn">ET 507<small>Boeing 777-200LR · Ethiopian</small></td>
+            <td class="dt"><b>30 dez</b> 01:30</td>
+            <td class="dt"><b>30 dez</b> 19:30</td>
+            <td class="ap"><b>GRU</b><span>São Paulo, Guarulhos</span></td>
+            <td class="ap"><b>ADD</b><span>Adis Abeba, Bole</span></td>
+            <td class="dur">12h00</td>
+          </tr>
+          <tr class="stop"><td colspan="6"><span class="pin">●</span>Conexão em Adis Abeba · 4h40 · mesmo terminal</td></tr>
+          <tr>
+            <td class="fn">ET 638<small>Airbus A350-900 · Ethiopian</small></td>
+            <td class="dt"><b>31 dez</b> 00:10</td>
+            <td class="dt"><b>31 dez</b> 14:50</td>
+            <td class="ap"><b>ADD</b><span>Adis Abeba, Bole</span></td>
+            <td class="ap"><b>SIN</b><span>Singapura, Changi</span></td>
+            <td class="dur">9h40</td>
+          </tr>
+          <tr class="stop"><td colspan="6"><span class="pin">●</span>Conexão em Singapura · 2h55 · área de trânsito do Changi, troca de companhia</td></tr>
+          <tr>
+            <td class="fn">CA 890<small>Boeing 787-9 · Air China</small></td>
+            <td class="dt"><b>31 dez</b> 17:45</td>
+            <td class="dt"><b>1 jan</b> 00:15</td>
+            <td class="ap"><b>SIN</b><span>Singapura, Changi</span></td>
+            <td class="ap"><b>PEK</b><span>Pequim, Capital</span></td>
+            <td class="dur">6h30</td>
+          </tr>
+          <tr class="leg-h"><td colspan="6">Volta</td></tr>
+          <tr>
+            <td class="fn">CA 969<small>Airbus A330-300 · Air China</small></td>
+            <td class="dt"><b>26 jan</b> 15:35</td>
+            <td class="dt"><b>26 jan</b> 21:55</td>
+            <td class="ap"><b>PEK</b><span>Pequim, Capital</span></td>
+            <td class="ap"><b>SIN</b><span>Singapura, Changi</span></td>
+            <td class="dur">6h20</td>
+          </tr>
+          <tr class="stop"><td colspan="6"><span class="pin">●</span>Conexão em Singapura · 4h05 · área de trânsito do Changi, troca de companhia</td></tr>
+          <tr>
+            <td class="fn">ET 639<small>Airbus A350-900 · Ethiopian</small></td>
+            <td class="dt"><b>27 jan</b> 02:00</td>
+            <td class="dt"><b>27 jan</b> 06:05</td>
+            <td class="ap"><b>SIN</b><span>Singapura, Changi</span></td>
+            <td class="ap"><b>ADD</b><span>Adis Abeba, Bole</span></td>
+            <td class="dur">9h05</td>
+          </tr>
+          <tr class="stop"><td colspan="6"><span class="pin">●</span>Conexão em Adis Abeba · 3h35 · mesmo terminal</td></tr>
+          <tr>
+            <td class="fn">ET 506<small>Boeing 777-200LR · Ethiopian</small></td>
+            <td class="dt"><b>27 jan</b> 09:40</td>
+            <td class="dt"><b>27 jan</b> 16:00</td>
+            <td class="ap"><b>ADD</b><span>Adis Abeba, Bole</span></td>
+            <td class="ap"><b>GRU</b><span>São Paulo, Guarulhos</span></td>
+            <td class="dur">12h20</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert usa"><div class="ic">!</div><div><b>Atenção ao visto chinês:</b> a isenção de visto para brasileiros (até 30 dias) vale somente até <b>31/12/2026</b>. A chegada em Pequim é à <b>00:15 de 1º de janeiro de 2027</b>, já fora do prazo. Sem prorrogação oficial, os 5 passageiros precisam de visto chinês antes do embarque. Tempo total: 35h45 na ida e 35h25 na volta.</div></div>
+
+    <div>
+      <div class="sec"><span>Valores</span><small>Tarifas e taxas incluídas</small></div>
+      <div class="cards one">
+        <div class="card">
+          <div class="ch"><b>Executiva · Cloud Nine e Air China Business</b><span>5 passageiros · classes J e D</span></div>
+          <div class="cb two">
+            <div class="li"><span>Bagagem despachada</span><span>3 malas de 23 kg por pessoa</span></div>
+            <div class="li"><span>Bagagem de mão</span><span>2 peças + item pessoal</span></div>
+            <div class="li"><span>Poltrona</span><span>cama 180° nos voos longos</span></div>
+            <div class="li"><span>Sala VIP</span><span>Cloud Nine em Adis Abeba</span></div>
+            <div class="li"><span>Valor por pessoa</span><span>R$ 38.014,91</span></div>
+            <div class="li"><span>Valor por pessoa em dólar</span><span>USD 6.910,92</span></div>
+          </div>
+          <div class="tot"><div class="lb">Total 5 passageiros<em>USD 34.554,60</em></div><div class="amt">R$ 190.074,55</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grand">
+      <div class="lb">Total do grupo · 5 passageiros<em>Ida e volta, taxas de embarque incluídas<br><span class="cotado">*Nada reservado, apenas cotado</span></em></div>
+      <div class="amt">R$ 190.074,55 <small>USD 34.554,60</small></div>
+    </div>
+
+    <div>
+      <div class="sec"><span>Informações importantes</span></div>
+      <div class="notes">
+        <ul>
+          <li><b>China:</b> isenção de visto só até 31/12/2026; entrada em 1º/01/2027 exige prorrogação oficial ou visto para os 5. Passaporte com validade mínima de 6 meses.</li>
+          <li><b>Etiópia e Singapura:</b> conexões em trânsito internacional, sem necessidade de visto.</li>
+        </ul>
+        <ul>
+          <li><b>Réveillon em voo:</b> saída de Guarulhos às 01:30 de 30 dez (apresentação às 22:30 do dia 29); virada do ano no voo Singapura–Pequim.</li>
+          <li><b>Valores</b> em reais convertidos ao câmbio do dia da emissão. Sujeitos a alteração até a emissão dos bilhetes.</li>
+          <li><b>Alteração e reembolso</b> conforme regras da tarifa executiva. Consulte antes de confirmar.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <div class="brand">LUSATRAVEL</div>
+    <div class="contact">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <div class="addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+  </div>
+</section>
+</body>
+</html>
