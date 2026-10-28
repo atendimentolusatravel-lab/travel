@@ -141,11 +141,21 @@ A descrição do Amora no sistema diz "Patong Beach", mas o endereço é Bang Ta
 
 Para a versão Executiva, cotar villa com piscina: Anantara Layan, Trisara ou Banyan Tree.
 
+### Bangkok (a cotar)
+
+- **Região recomendada:** beira do rio Chao Phraya. Barco no lugar do trânsito, Grande Palácio e Yaowarat por perto, e o shopping Iconsiam (ar-condicionado e itens de bebê).
+- **Versão Econômica:** Shangri-La Bangkok ou Chatrium Riverside (quartos grandes).
+- **Versão Executiva:** Mandarin Oriental, Capella ou Four Seasons.
+
+### Singapura (a cotar)
+
+- **Região recomendada:** Marina Bay. Gardens by the Bay, Lau Pa Sat, Maxwell e Chinatown por perto. Tudo plano, ótimo para carrinho, e a 20 min do aeroporto.
+- **Versão Econômica:** Pan Pacific ou Parkroyal Collection Marina Bay.
+- **Versão Executiva:** Marina Bay Sands (piscina de borda infinita, boa para o fotógrafo) ou Fullerton Bay.
+
 ### A cotar
 
 - Airbnb em NYC (com registro da cidade ou anfitrião presente).
-- Hotel em Bangkok.
-- Hotel em Singapura.
 
 ## Traslados (privativos, com cadeirinha)
 
