@@ -89,10 +89,19 @@ Versões da proposta: **Econômica** e **Executiva**. Sem Premium Economy. Voos 
 
 **Observação para a cliente:** o **jantar no Canopy, suspenso nas árvores, não será possível**, porque a idade mínima para essa experiência é de **10 anos**.
 
-### Chiang Mai (a cotar)
+### Chiang Mai
 
 - **Região recomendada:** beira do rio Ping, por causa das lanternas do réveillon.
 - **Hotéis:** Anantara Chiang Mai (primeira opção), 137 Pillars House (versão Executiva) e Shangri-La.
+
+Opções cotadas para 30/12/2026 → 03/01/2027 (4 noites), 1 quarto para 2 adultos e 1 criança:
+
+| Hotel | Quarto | Regime | Cancelamento | Valor | Situação |
+|---|---|---|---|---|---|
+| Shangri-La Chiang Mai ⭐⭐⭐⭐⭐ | Deluxe King, 43 m², vista da cidade | Café da manhã. Criança com menos de 5 anos come de graça. | **Grátis até 27/12/2026** | **R$ 12.976,58** (USD 2.377,38), cerca de R$ 3.244 por noite | ✅ Melhor custo-benefício |
+| Chiang Mai Marriott ⭐⭐⭐⭐⭐ (97/100) | Deluxe King, 36 m² | Café da manhã buffet | **Não reembolsável** (tarifa de pacote) | R$ 14.992,69 (USD 2.746,74), cerca de R$ 3.748 por noite | ❌ Mais caro, quarto menor e sem reembolso |
+
+Faltam o Anantara Chiang Mai (vista do rio, réveillon) e o 137 Pillars House (versão Executiva).
 - **Perguntar a cada hotel:**
   - Réveillon: jantar de gala obrigatório, estadia mínima, vista do rio, regra das lanternas.
   - Bebê: suíte ou quarto com sala, berço, elevador, piscina aquecida.
