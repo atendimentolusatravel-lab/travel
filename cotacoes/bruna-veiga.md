@@ -187,6 +187,69 @@ Preço por veículo. **Cadeirinha:** a maioria dos fornecedores não garante (em
 
 **Total estimado de traslados:** cerca de US$ 1.000 a 1.700, dependendo da opção de Woodbury.
 
+## Passeios (valores estimados, a confirmar na reserva)
+
+Fontes: Civitatis (busca direta, em R$), GetYourGuide (GYG) e Viator (trechos indexados, em US$). Em nenhum caso a aceitação de bebê e carrinho foi confirmada. Confirmar na reserva.
+
+### Nova York
+
+| Passeio | Opção | Valor |
+|---|---|---|
+| Comida de rua | GYG: Lower East Side Food Tour (Intrepid), 3 h, nota 4,8 | US$ 79 por pessoa · privado a partir de US$ 438 |
+| Comida de rua | GYG: Chelsea Market + High Line Food Tour, 3 h, 4,7 | US$ 88 a 94 por pessoa |
+| Comida de rua | Viator: Chinatown Private Food Tour, 2h30 | US$ 265 por grupo |
+| Luzes de Natal em Dyker Heights | GYG: privado com busca no hotel, 3h30 | US$ 649 por grupo |
+| Luzes de Natal em Dyker Heights | Viator: tour de ônibus saindo de Manhattan, 4,4 | US$ 44 a 55 por pessoa (com bebê, preferir o privado) |
+| Woodbury (22/12) | Viator: SUV ou minivan privada, 6 a 8 h | US$ 749 a 780 por grupo |
+| Woodbury (22/12) | GYG: transfer privado, 8 h | US$ 889 por grupo (até 7) |
+
+### Bangkok
+
+| Passeio | Opção | Valor |
+|---|---|---|
+| Grande Palácio | GYG: Grand Palace + Wat Pho, privado, 4 h, nota 4,8 (585) | US$ 104 a 106 por grupo (ingresso de 500 THB por pessoa à parte) |
+| Grande Palácio | GYG: Grand Palace + Wat Pho + Wat Arun, privado, 4,8 (898) | a partir de US$ 132 por pessoa, ingressos incluídos |
+| Grande Palácio | Civitatis: tour pelo Grande Palácio e Buda de Esmeralda, 5 h | R$ 738,91 |
+| Yaowarat à noite | Viator: Michelin Street Food Tuk Tuk Tour, privado às 17h30, 3h30 | a partir de US$ 70,40 por pessoa |
+| Yaowarat à noite | Civitatis: tour noturno de tuk-tuk + street food em Chinatown, 4 h | R$ 211,51 |
+
+### Chiang Mai
+
+| Passeio | Opção | Valor |
+|---|---|---|
+| Aula de culinária | Viator: Smile Organic Farm, nota 5,0 (≈20.800) | US$ 27 a 28 por pessoa |
+| Aula de culinária | GYG: Mama Noi Organic Farm, 4 h, com ar-condicionado | US$ 30 a 32 por pessoa |
+| Aula de culinária | Civitatis: aula de cozinha tailandesa, 4h30 | R$ 201,35 |
+| Comida de rua | Viator: 10 Tastings, privado (Withlocals), 3 h, 4,9 | US$ 59 a 77 |
+| Comida de rua | GYG: Evening Street Food Market Tour, 2h30, 4,8 | US$ 40 por pessoa |
+| Comida de rua | Civitatis: tour gastronômico, 2h30 | R$ 211,51 |
+| Doi Suthep | GYG: Doi Suthep + Wat Umong + Wat Phalat, privado, 4 h | US$ 95 a 96 por grupo |
+| Doi Suthep | Civitatis: privado Doi Suthep + Wat Pha Lat, 4 h | R$ 858,94 |
+| Doi Suthep | Civitatis: Doi Suthep ao entardecer, 4h45 | R$ 211,51 |
+
+### Phuket: Baía de Phang Nga em barco privado
+
+| Opção | Valor (por grupo) |
+|---|---|
+| GYG: Phang Nga Bay Signature Private Longtail Boat, com piquenique | US$ 471 (até 4) |
+| Viator: James Bond Island, lancha privada + canoa | US$ 1.095,90 (até 12) |
+| GYG: barco privado para James Bond Island (V. Marine), 8 h, busca no hotel | US$ 1.207 a 1.241 (até 6) |
+| Viator: lancha privada para Phang Nga, almoço em Koh Panyi | a partir de US$ 1.490 (até 6) |
+| GYG: catamarã privado com refeição, 8 h | US$ 1.820 (até 10) |
+| Civitatis: excursão privada de lancha saindo de Phuket, 8 h | R$ 3.654,92 |
+
+Taxa do parque nacional à parte: 300 THB por adulto.
+
+### Singapura
+
+| Passeio | Opção | Valor |
+|---|---|---|
+| Hawker centers | Viator: Hawker Center Private Food Tour com local, 2h30 a 3 h | US$ 130 a 135 |
+| Hawker centers | GYG: Hawker Food Tour em Maxwell, 9 degustações, 4,7 | US$ 81 por pessoa |
+| Hawker centers | Civitatis: visita guiada por Chinatown, 3h30 | R$ 280,93 |
+| Gardens by the Bay | Civitatis: ingresso | R$ 176,48 |
+| Gardens by the Bay | GYG: Flower Dome + Cloud Forest | US$ 47 a 50 por pessoa |
+
 ## Fotógrafo (valores estimados, a confirmar na reserva)
 
 Fonte: trechos indexados das páginas de cada fornecedor. Confirmar no site antes de fechar.
@@ -249,10 +312,7 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 | Tailândia + Singapura, ~20 dias | Holafly Ásia ilimitado | ~US$ 54 |
 | Tailândia + Singapura, 30 dias | Airalo Asialink 10 GB / Nomad Ásia 5 GB | US$ 37 / US$ 23,99 |
 
-## Outros itens
+## Documentos
 
-- Fotógrafo: NYC (24/12), réveillon em Chiang Mai, elefantes, Phuket.
-- Envio de bagagem de NYC para o Brasil (coleta em 23/12), mais o imposto sobre as compras.
-- Seguro viagem com cobertura de cancelamento.
-- Documentos: TDAC, SG Arrival Card, certificado de febre amarela dos adultos e atestado de isenção do bebê.
-- eSIM.
+- TDAC (Tailândia) e SG Arrival Card (Singapura).
+- Certificado de febre amarela dos adultos e atestado de isenção do bebê.
