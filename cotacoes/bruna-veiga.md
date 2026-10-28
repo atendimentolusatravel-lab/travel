@@ -107,11 +107,26 @@ Faltam o Anantara Chiang Mai (vista do rio, réveillon) e o 137 Pillars House (v
   - Bebê: suíte ou quarto com sala, berço, elevador, piscina aquecida.
   - Cancelamento.
 
+### Phuket
+
+- **Região recomendada:** noroeste da ilha (Layan, Bang Tao e Laguna). Fica a 20 ou 30 min do aeroporto e o mar é calmo em janeiro.
+- **Perguntar a cada hotel:** cerca na piscina (se for villa), se o terreno é plano ou tem buggy, berço e cancelamento.
+
+Opções cotadas para 06/01 → 12/01/2027 (6 noites), 1 quarto para 2 adultos e 1 criança:
+
+| Hotel | Quarto | Regime | Cancelamento | Valor | Situação |
+|---|---|---|---|---|---|
+| Dusit Thani Laguna Phuket ⭐⭐⭐⭐⭐ (96/100), Bang Tao | Premier King de frente para o mar, 32 m² | Café da manhã | **Grátis até 06/12/2026** | **R$ 28.042,74** (USD 5.137,57), cerca de R$ 4.674 por noite | ✅ Recomendado |
+| Amora Beach Resort Phuket ⭐⭐⭐⭐⭐ (93/100), Bang Tao | Amora Ocean King/Twin (área não informada) | Café da manhã | **Não reembolsável** | R$ 24.647,85 (USD 4.515,61), cerca de R$ 4.108 por noite | ⚠️ Mais barato, sem reembolso |
+
+A descrição do Amora no sistema diz "Patong Beach", mas o endereço é Bang Tao. Confirmar.
+
+Para a versão Executiva, cotar villa com piscina: Anantara Layan, Trisara ou Banyan Tree.
+
 ### A cotar
 
 - Airbnb em NYC (com registro da cidade ou anfitrião presente).
 - Hotel em Bangkok.
-- Villa em Phuket.
 - Hotel em Singapura.
 
 ## Traslados (privativos, com cadeirinha)
