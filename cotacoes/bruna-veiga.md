@@ -107,6 +107,24 @@ Faltam o Anantara Chiang Mai (vista do rio, réveillon) e o 137 Pillars House (v
   - Bebê: suíte ou quarto com sala, berço, elevador, piscina aquecida.
   - Cancelamento.
 
+### Nova York
+
+Opções cotadas para 20/12 → 25/12/2026 (5 noites), 1 quarto para 2 adultos e 1 criança:
+
+| Hotel | Quarto | Regime | Cancelamento | Valor | Situação |
+|---|---|---|---|---|---|
+| Andaz 5th Avenue by Hyatt ⭐⭐⭐⭐ (92/100), 5ª Av. em frente ao Bryant Park | Deluxe King, 39 m², vista da cidade | Café da manhã | **Grátis até 18/12/2026** | **R$ 35.151,06** (USD 6.439,85), cerca de R$ 7.030 por noite | ✅ Melhor localização para o Natal. Versão Executiva. |
+| Crowne Plaza HY36 Midtown ⭐⭐⭐⭐ (93/100), W 36th St (Penn Station) | Suíte King, 42 m², quarto adaptado (roll-in shower) | Café da manhã para 2 | **Grátis até 17/12/2026** | R$ 25.600,67 (USD 4.690,17), cerca de R$ 5.120 por noite | ⚠️ Recotar em suíte comum. Tarifa de membro IHG. |
+| Courtyard Manhattan/Midtown East ⭐⭐⭐ (90/100), 3rd Ave | King com sofá-cama, quarto adaptado (roll-in shower) | Café da manhã | **Não reembolsável** | R$ 19.293,53 (USD 3.534,67), cerca de R$ 3.859 por noite | ❌ 3 estrelas, sem reembolso e quarto adaptado |
+
+**Pendências em NYC:**
+
+- Chegada às 05h30 em 20/12: recotar a partir de **19/12 (6 noites)** ou garantir check-in antecipado.
+- Evitar quarto adaptado (roll-in shower). Esses quartos são destinados a hóspedes com deficiência e não têm banheira, que é útil para dar banho no bebê.
+- Confirmar se o valor inclui os impostos de NYC e a taxa diária do hotel (*destination fee*).
+- Confirmar o berço.
+- Definir com a cliente: hotel ou Airbnb.
+
 ### Phuket
 
 - **Região recomendada:** noroeste da ilha (Layan, Bang Tao e Laguna). Fica a 20 ou 30 min do aeroporto e o mar é calmo em janeiro.
