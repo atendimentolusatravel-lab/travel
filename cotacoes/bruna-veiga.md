@@ -70,11 +70,9 @@ Versões da proposta: **Econômica** e **Executiva**. Sem Premium Economy. Voos 
 | United UA 7934 + 882 + 845 | SIN 15/01 06h35 → GRU 16/01 07h15 | 35h40 | Executiva | 2 | R$ 65.235,00 | ❌ Troca de aeroporto em Tóquio (Narita → Haneda) |
 | United UA 2 + 1259 + 62 | SIN 16/01 10h10 → GRU 17/01 09h30 | 34h20 | Executiva | 2 | R$ 67.912,10 | ❌ Chega no dia 17, com um trecho em Econômica |
 
-### Pendências do aéreo
+### Aéreo: confirmar com a cliente
 
-- Executiva Brasil → NYC saindo em 19 ou 20/12.
-- Qatar Executiva NYC → Bangkok.
-- Executiva Singapura → Brasil chegando até 15/01.
+- As opções acima são as cotadas até agora. Novas cotações aguardam a confirmação da cliente.
 - Confirmar se os valores são por pessoa ou da família (2 adultos e 1 bebê).
 
 ## Hotéis
