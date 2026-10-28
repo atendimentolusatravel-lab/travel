@@ -21,9 +21,9 @@ Documento de trabalho da cotação. Base para a proposta em PDF no padrão LusaT
 
 | Base | Datas | Noites | Observações |
 |---|---|---|---|
-| Nova York (Airbnb, Upper West Side ou Financial District) | 20 → 25/12 | 5 | Woodbury, Natal no Midtown, fotógrafo em 24/12, ceia em 24/12, envio de bagagem para o Brasil em 23/12 |
-| Bangkok (beira do rio) | 26 → 29 ou 30/12 | 3 a 4 | Grande Palácio, comida de rua em Yaowarat |
-| Chiang Mai (beira do rio) | 29 ou 30/12 → 03/01 | 4 a 5 | Réveillon com lanternas, aula de culinária, Doi Suthep, feira de rua de sábado (02/01) |
+| Nova York (Airbnb, Upper West Side ou Financial District) | 20 → 25/12 (chegada em 20/12 às 05h30 em Newark) | 5 (6 se reservar a partir de 19/12) | Woodbury, Natal no Midtown, fotógrafo em 24/12, ceia em 24/12, envio de bagagem para o Brasil em 23/12 |
+| Bangkok (beira do rio) | 26 → 30/12 | 4 | Grande Palácio, comida de rua em Yaowarat |
+| Chiang Mai (beira do rio) | 30/12 → 03/01 | 4 | Réveillon com lanternas, aula de culinária, Doi Suthep, feira de rua de sábado (02/01) |
 | Triângulo Dourado (Anantara) | 03 → 06/01 | 3 | All inclusive, elefantes, Mekong |
 | Phuket (villa com piscina) | 06 → 12/01 | 6 | Descanso, catamarã privativo para Phang Nga, feira de domingo (10/01) |
 | Singapura | 12 → 14/01 | 2 | Hawker centers, Gardens by the Bay |
@@ -55,7 +55,7 @@ Versões da proposta: **Econômica** e **Executiva**. Sem Premium Economy. Voos 
 
 | Trecho | Voo | Saída → chegada | Bagagem | Valor | Observação |
 |---|---|---|---|---|---|
-| Bangkok → Chiang Mai | 102 | BKK 30/12 10h25 → CNX 11h50 | 20 kg | R$ 2.993,32 | Cotar também em 29/12. Confirmar a companhia. |
+| Bangkok → Chiang Mai | 102 | BKK 30/12 10h25 → CNX 11h50 | 20 kg | R$ 2.993,32 | **Data definida: 30/12.** Confirmar a companhia. |
 | Chiang Rai → Phuket | 401 | CEI 06/01 11h10 → HKT 13h25, direto | 20 kg | R$ 3.237,28 | Restavam 3 lugares. Confirmar a companhia. |
 | Phuket → Singapura | Scoot TR 645 | HKT 12/01 13h55 → SIN 17h10 | 30 kg | R$ 2.442,49 | Low-cost: confirmar a tarifa do bebê e o carrinho |
 
