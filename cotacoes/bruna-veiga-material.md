@@ -6,7 +6,8 @@
 
 | Serviço |
 |---|
-| Traslados privativos (aeroporto ↔ hotel) em Bangkok, Chiang Mai, Phuket e Singapura |
+| Traslados privativos (aeroporto ↔ hotel) em Nova York, Bangkok, Chiang Mai, Phuket e Singapura |
+| Carro privativo com motorista para o Woodbury Common Premium Outlets (dia inteiro) |
 | Traslado privativo de Chiang Mai ao Triângulo Dourado, com parada no Templo Branco (Chiang Rai) |
 | Tour gastronômico pelo Lower East Side, em Nova York |
 | Tour privativo das luzes de Natal em Dyker Heights, em Nova York |
@@ -22,8 +23,8 @@
 | Sessões com fotógrafo profissional em Nova York, no réveillon em Chiang Mai e em Phuket |
 | Chip de internet (eSIM) para os EUA e a Ásia |
 
-**Valor total: R$ 46.012,10**
-**ou em até 8x de R$ 5.751,51**
+**Valor total: R$ 53.430,98**
+**ou em até 8x de R$ 6.678,87**
 
 ## Roteiro dia a dia
 

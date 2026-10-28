@@ -361,10 +361,10 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 | Hawker centers, privativo, Viator | 135,00 | 1.043,28 |
 | Gardens by the Bay, GYG (2 pessoas) | 100,00 | 772,80 |
 | eSIM EUA + Ásia, Holafly (2 aparelhos) | 163,00 | 1.259,66 |
-| **Total** | **5.953,95** | **46.012,10 (8x de 5.751,51)** |
+| Traslado de chegada em NYC (valor da agente) | 180,00 | 1.391,04 |
+| Traslado de saída em NYC (valor da agente) | 180,00 | 1.391,04 |
+| Carro para Woodbury, dia inteiro (valor da agente) | 600,00 | 4.636,80 |
+| **Total** | **6.913,95** | **53.430,98 (8x de 6.678,87)** |
 
-**Aguardando valores:**
-- Traslados de chegada e saída em NYC (vêm da agente; aplicar a mesma regra e somar ao total).
-- Carro para Woodbury (idem).
 
 **Fora do total:** hotéis e aéreo (tratados à parte), seguro viagem (estimativa em R$ 1.500 a 2.500, a cotar) e envio de bagagem (não recomendado para as compras).
