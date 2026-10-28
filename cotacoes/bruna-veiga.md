@@ -143,7 +143,14 @@ Para a versão Executiva, cotar villa com piscina: Anantara Layan, Trisara ou Ba
 
 - **Região recomendada:** beira do rio Chao Phraya. Barco no lugar do trânsito, Grande Palácio e Yaowarat por perto, e o shopping Iconsiam (ar-condicionado e itens de bebê).
 
-Preços públicos do Booking.com para 26/12 → 30/12/2026 (4 noites), 2 adultos e 1 bebê. **Validar no sistema** (regime e cancelamento).
+Opções cotadas pela agente (TBO) para 26/12 → 30/12/2026 (4 noites), 1 quarto para 2 adultos e 1 criança:
+
+| Hotel | Quarto | Regime | Cancelamento | Valor (4 noites) |
+|---|---|---|---|---|
+| Bangkok Marriott Hotel The Surawongse ⭐⭐⭐⭐⭐ (95/100, 2.557 avaliações), Bang Rak (Surawong Rd, ~1,5 km do rio) | King, 37 m², com banheira | Café da manhã buffet | **Grátis até 10/12/2026** | R$ 11.018,69 (USD 2.044,41), cerca de R$ 2.755 por noite |
+| ⚠️ Nome do hotel não aparece no print | Grand Room, cama super-king, 39 m² | Café da manhã para 2 | **Não reembolsável** | R$ 6.463,31 (USD 1.199,21), cerca de R$ 1.616 por noite |
+
+Referência pesquisada: preços públicos do Booking.com para 26/12 → 30/12/2026 (4 noites), 2 adultos e 1 bebê. **Validar no sistema** (regime e cancelamento).
 
 | Hotel | Avaliação Booking | Valor (4 noites) | Versão |
 |---|---|---|---|
