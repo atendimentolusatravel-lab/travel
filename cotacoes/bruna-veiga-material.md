@@ -1,6 +1,6 @@
 # Bruna & Felipe — Nova York, Tailândia e Singapura
 
-**19/12/2026 a 15/01/2027** · 2 adultos e 1 bebê
+**19/12/2026 a 17/01/2027** · 2 adultos e 1 bebê
 
 ## Serviços inclusos
 
@@ -11,7 +11,6 @@
 | Traslado privativo de Chiang Mai ao Triângulo Dourado, com parada no Templo Branco (Chiang Rai) |
 | Tour gastronômico pelo Lower East Side, em Nova York |
 | Tour privativo das luzes de Natal em Dyker Heights, em Nova York |
-| Ceia de Natal no Tavern on the Green, em Nova York (24/12) |
 | Tour privativo pelo Grande Palácio, Wat Pho e Wat Arun, em Bangkok |
 | Tour privativo de tuk-tuk com comida de rua em Chinatown (Yaowarat), em Bangkok |
 | Aula de culinária tailandesa em fazenda orgânica, em Chiang Mai |
@@ -23,8 +22,8 @@
 | Sessões com fotógrafo profissional em Nova York, no réveillon em Chiang Mai e em Phuket |
 | Chip de internet (eSIM) para os EUA e a Ásia |
 
-**Valor total: R$ 50.314,20**
-**ou em até 8x de R$ 6.289,27**
+**Valor total: R$ 43.626,45**
+**ou em até 8x de R$ 5.453,31**
 
 ## Roteiro dia a dia
 
@@ -37,7 +36,7 @@
 | **21/12 (seg)** | **Tour gastronômico pelo Lower East Side.** À tarde, sugestão: árvore do Rockefeller Center, vitrines de Natal da 5ª Avenida, show de luzes da Saks e mercado de Natal do Bryant Park. |
 | **22/12 (ter)** | **Dia de compras no Woodbury Common Premium Outlets**, com carro privativo. |
 | **23/12 (qua)** | Sugestão: High Line, Chelsea Market, Hudson Yards e o mirante Edge. À noite, **tour privativo das luzes de Natal em Dyker Heights**. |
-| **24/12 (qui)** | De manhã cedo, **sessão de fotos** no Rockefeller Center ou no Central Park. À tarde, descanso. À noite, **ceia de Natal no Tavern on the Green**. |
+| **24/12 (qui)** | De manhã cedo, **sessão de fotos** no Rockefeller Center ou no Central Park. À tarde, descanso. À noite, ceia de Natal: **a definir com o casal** (sugestões: Tavern on the Green, chef particular ou Feast of the Seven Fishes). |
 | **25/12 (sex)** | Traslado ao aeroporto e voo para Bangkok (conexão em Doha). |
 
 ### Bangkok
@@ -54,7 +53,7 @@
 | Dia | Programação |
 |---|---|
 | **30/12 (qua)** | Voo para Chiang Mai e **traslado ao hotel**. À noite, sugestão: Night Bazaar. |
-| **31/12 (qui)** | Sugestão para a manhã: templos da cidade antiga (Wat Phra Singh e Wat Chedi Luang). À noite, **réveillon com as lanternas sobre o rio Ping e sessão de fotos**. |
+| **31/12 (qui)** | Sugestão para a manhã: templos da cidade antiga (Wat Phra Singh e Wat Chedi Luang). No fim da tarde, **sessão de fotos**. À noite, réveillon com as lanternas sobre o rio Ping: **a definir com o casal**. |
 | **01/01 (sex)** | Manhã de descanso. No fim da tarde, **tour privativo ao templo Doi Suthep**, com vista da cidade ao entardecer. |
 | **02/01 (sáb)** | De manhã, **aula de culinária tailandesa em fazenda orgânica**. À noite, **tour privativo de comida de rua** e feira de sábado na Wualai Road. |
 
@@ -83,19 +82,21 @@
 |---|---|
 | **12/01 (ter)** | Voo para Singapura e **traslado ao hotel**. À noite, sugestão: show de luzes das Supertrees no Gardens by the Bay. |
 | **13/01 (qua)** | De manhã, **Gardens by the Bay (Flower Dome e Cloud Forest)**. À tarde, sugestão: Marina Bay e Botanic Gardens. À noite, **tour privativo pelos hawker centers**. |
-| **14/01 (qui)** | **Traslado ao aeroporto** e voo de volta ao Brasil (conexão em Istambul). |
-| **15/01 (sex)** | Chegada a São Paulo de madrugada. |
+| **14/01 (qui)** | Sugestão: Sentosa, com o S.E.A. Aquarium e a praia de Palawan. |
+| **15/01 (sex)** | Sugestão: Chinatown, Little India e Kampong Glam. À noite, Clarke Quay. |
+| **16/01 (sáb)** | **Traslado ao aeroporto** e voo de volta ao Brasil (conexão em Istambul). |
+| **17/01 (dom)** | Chegada a São Paulo de madrugada. |
 
 ## Passeios opcionais com guia
 
 | Data | Passeio | Valor |
 |---|---|---|
-| 23/12 | Nova York: tour gastronômico guiado por Chelsea Market, Meatpacking e High Line (3 h) | R$ 1.368,11 (2 pessoas) |
-| 27/12 | Bangkok: passeio de barco pelos canais (khlongs) e Big Buddha (2 h) | R$ 250,63 por pessoa |
-| 29/12 | Bangkok: dia inteiro com guia privativo (7 h) | R$ 2.179,41 por pessoa |
-| 01/01 | Chiang Mai: tour privativo pelos templos (5 h) | R$ 2.395,72 por pessoa |
-| 10/01 | Phuket: tour privativo pela ilha, com Old Town e Big Buddha (7 h) | R$ 1.830,71 por pessoa |
-| 13/01 | Singapura: dia com guia privativo (8 h) | R$ 738,40 por pessoa |
-| 13/01 | Singapura: visita guiada por Chinatown (3h30) | R$ 361,84 por pessoa |
+| 23/12 | Nova York: tour gastronômico guiado por Chelsea Market, Meatpacking e High Line (3 h) | Consulte-nos |
+| 27/12 | Bangkok: passeio de barco pelos canais (khlongs) e Big Buddha (2 h) | Consulte-nos |
+| 29/12 | Bangkok: dia inteiro com guia privativo (7 h) | Consulte-nos |
+| 01/01 | Chiang Mai: tour privativo pelos templos (5 h) | Consulte-nos |
+| 10/01 | Phuket: tour privativo pela ilha, com Old Town e Big Buddha (7 h) | Consulte-nos |
+| 13/01 | Singapura: dia com guia privativo (8 h) | Consulte-nos |
+| 13/01 | Singapura: visita guiada por Chinatown (3h30) | Consulte-nos |
 
-Valores sujeitos a confirmação de disponibilidade no momento da reserva.
+Valores sob consulta.

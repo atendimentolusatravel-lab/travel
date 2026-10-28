@@ -26,8 +26,8 @@ Documento de trabalho da cotação. Base para a proposta em PDF no padrão LusaT
 | Chiang Mai (beira do rio) | 30/12 → 03/01 | 4 | Réveillon com lanternas, aula de culinária, Doi Suthep, feira de rua de sábado (02/01) |
 | Triângulo Dourado (Anantara) | 03 → 06/01 | 3 | All inclusive, elefantes, Mekong |
 | Phuket (villa com piscina) | 06 → 12/01 | 6 | Descanso, catamarã privativo para Phang Nga, feira de domingo (10/01) |
-| Singapura | 12 → 14/01 | 2 | Hawker centers, Gardens by the Bay |
-| Chegada no Brasil | 15/01 às 04h20 | | |
+| Singapura | 12 → 16/01 | 4 | Hawker centers, Gardens by the Bay, Sentosa |
+| Chegada no Brasil | 17/01 às 04h20 (Turkish de 16/01) | | |
 
 Fora do roteiro, a pedido da cliente: Broadway e voo de balão.
 
@@ -342,8 +342,8 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 | Serviço | US$ | R$ final |
 |---|---|---|
 | Tour gastronômico Lower East Side, GYG (2 pessoas) | 158,00 | 1.149,80 |
-| Luzes de Natal em Dyker Heights, privativo, GYG | 649,00 | 4.722,90 |
-| Ceia no Tavern on the Green (2 pessoas, preço de 2024) | 270,00 | 1.964,84 |
+| Luzes de Natal em Dyker Heights | aguardando valor da agente | — |
+| Ceia de Natal | retirada: a definir com o casal | — |
 | Fotógrafo NYC, 1 h (Flytographer) | 425,00 | 3.092,81 |
 | Grande Palácio + Wat Pho + Wat Arun, privativo, GYG (2 pessoas) | 264,00 | 1.921,18 |
 | Yaowarat de tuk-tuk, privativo, Viator (2 pessoas) | 140,80 | 1.024,63 |
@@ -364,7 +364,7 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 | Traslado de chegada em NYC (valor da agente) | 180,00 | 1.309,90 |
 | Traslado de saída em NYC (valor da agente) | 180,00 | 1.309,90 |
 | Carro para Woodbury, dia inteiro (valor da agente) | 600,00 | 4.366,32 |
-| **Total** | **6.913,95** | **50.314,20 (8x de 6.289,27)** |
+| **Total** | **5.994,95** | **43.626,45 (8x de 5.453,31)** |
 
 
 **Fora do total:** hotéis e aéreo (tratados à parte), seguro viagem (estimativa em R$ 1.500 a 2.500, a cotar) e envio de bagagem (não recomendado para as compras).
