@@ -316,3 +316,41 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 
 - TDAC (Tailândia) e SG Arrival Card (Singapura).
 - Certificado de febre amarela dos adultos e atestado de isenção do bebê.
+
+## Cálculo do material da cliente (uso interno)
+
+**Regra:** valor em US$ × 6 × 1,15 × 1,12, o que dá um fator de **7,728**. O resultado já sai em R$, com o markup e o parcelamento em até 8x.
+
+- Valores em euro: convertidos para US$ a 1,15 antes da regra.
+- Valores em SGD: convertidos a 0,74.
+- Valores do Civitatis, que já estão em R$ (só nos opcionais): aplicados apenas os 15% e os 12% (fator 1,288).
+
+| Serviço | US$ | R$ final |
+|---|---|---|
+| Tour gastronômico Lower East Side, GYG (2 pessoas) | 158,00 | 1.221,02 |
+| Luzes de Natal em Dyker Heights, privativo, GYG | 649,00 | 5.015,47 |
+| Ceia no Tavern on the Green (2 pessoas, preço de 2024) | 270,00 | 2.086,56 |
+| Fotógrafo NYC, 1 h (Flytographer) | 425,00 | 3.284,40 |
+| Grande Palácio + Wat Pho + Wat Arun, privativo, GYG (2 pessoas) | 264,00 | 2.040,19 |
+| Yaowarat de tuk-tuk, privativo, Viator (2 pessoas) | 140,80 | 1.088,10 |
+| Traslados BKK, chegada e saída (minivan, € 51 por trecho) | 117,30 | 906,49 |
+| Traslado de chegada em CNX (€ 29) | 33,35 | 257,73 |
+| Aula de culinária Smile Organic Farm, Viator (2 pessoas) | 56,00 | 432,77 |
+| Comida de rua, privativo, Withlocals/Viator (2 pessoas) | 154,00 | 1.190,11 |
+| Doi Suthep, privativo, GYG | 96,00 | 741,89 |
+| Fotógrafo Chiang Mai, réveillon, 1 h (Flytographer) | 425,00 | 3.284,40 |
+| Traslado Chiang Mai → Anantara, com parada no Templo Branco (estimado) | 300,00 | 2.318,40 |
+| Traslados HKT, chegada e saída (minivan, € 38,39 por trecho) | 88,30 | 682,36 |
+| Catamarã privativo em Phang Nga, GYG | 1.820,00 | 14.064,96 |
+| Fotógrafo Phuket, 1 h (Flytographer) | 425,00 | 3.284,40 |
+| Traslados SIN, chegada e saída, com cadeirinha | 134,20 | 1.037,10 |
+| Hawker centers, privativo, Viator | 135,00 | 1.043,28 |
+| Gardens by the Bay, GYG (2 pessoas) | 100,00 | 772,80 |
+| eSIM EUA + Ásia, Holafly (2 aparelhos) | 163,00 | 1.259,66 |
+| **Total** | **5.953,95** | **46.012,10 (8x de 5.751,51)** |
+
+**Aguardando valores:**
+- Traslados de chegada e saída em NYC (vêm da agente; aplicar a mesma regra e somar ao total).
+- Carro para Woodbury (idem).
+
+**Fora do total:** hotéis e aéreo (tratados à parte), seguro viagem (estimativa em R$ 1.500 a 2.500, a cotar) e envio de bagagem (não recomendado para as compras).
