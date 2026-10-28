@@ -51,6 +51,8 @@ h1,h2,h3{line-height:1.15}
 .tbl td{padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 .tbl td b{color:var(--green-dark);font-weight:600}
 .tbl .muted{color:var(--muted);font-size:.8rem}
+.legt{margin-top:30px;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--green-dark)}
+.legt+.tbl-wrap .tbl{margin-top:8px}
 
 /* HOTÉIS */
 .city{margin-top:34px}
@@ -149,22 +151,73 @@ h1,h2,h3{line-height:1.15}
 
 <section class="section">
   <span class="eyebrow">Aéreo</span>
-  <h2 class="serif">Voos previstos</h2>
+  <h2 class="serif">Aéreos sugeridos</h2>
   <div class="accent-line"></div>
+  <p class="lede">Todas as opções cotadas, trecho a trecho, para vocês compararem horários, classes e valores.</p>
+  <h3 class="legt">São Paulo → Nova York</h3>
   <div class="tbl-wrap">
   <table class="tbl">
-    <thead><tr><th>Data</th><th>Trecho</th><th>Voo</th><th>Horários</th></tr></thead>
+    <thead><tr><th>Companhia e voo</th><th>Saída → chegada</th><th>Duração</th><th>Classe</th><th>Bagagem</th><th>Valor</th></tr></thead>
     <tbody>
-      <tr><td><b>19/12</b></td><td>São Paulo → Nova York (Newark)</td><td>United UA 148<div class="muted">Direto · 9h45</div></td><td>21h45 → 05h30 (20/12)</td></tr>
-      <tr><td><b>25/12</b></td><td>Nova York (JFK) → Bangkok</td><td>Qatar QR 704 + QR 826<div class="muted">Conexão em Doha</div></td><td>10h30 → 19h25 (26/12)</td></tr>
-      <tr><td><b>30/12</b></td><td>Bangkok → Chiang Mai</td><td>Voo 102<div class="muted">Direto · 1h25</div></td><td>10h25 → 11h50</td></tr>
-      <tr><td><b>06/01</b></td><td>Chiang Rai → Phuket</td><td>Voo 401<div class="muted">Direto · 2h15</div></td><td>11h10 → 13h25</td></tr>
-      <tr><td><b>12/01</b></td><td>Phuket → Singapura</td><td>Scoot TR 645<div class="muted">Direto · 2h15</div></td><td>13h55 → 17h10</td></tr>
-      <tr><td><b>16/01</b></td><td>Singapura → São Paulo</td><td>Turkish TK 209 + TK 215<div class="muted">Conexão em Istambul</div></td><td>10h25 → 04h20 (17/01)</td></tr>
+      <tr><td><b>United</b><div class="muted">UA 148</div></td><td>19/12 21h45 (GRU) → 20/12 05h30 (EWR)</td><td>9h45 · direto</td><td>Econômica</td><td>1 mala</td><td><b>R$ 11.477,44</b></td></tr>
+      <tr><td><b>LATAM</b><div class="muted">LA 8180</div></td><td>18/12 22h50 (GRU) → 19/12 06h45 (JFK)</td><td>9h55 · direto</td><td>Premium Business</td><td>1 mala</td><td><b>R$ 44.264,30</b></td></tr>
+      <tr><td><b>Copa Airlines</b><div class="muted">CM 841 + CM 813</div></td><td>18/12 01h30 (GRU) → 18/12 17h17 (JFK)<div class="muted">Saída na madrugada de 17 para 18/12</div></td><td>17h47 · conexão no Panamá</td><td>Executiva</td><td>2 malas</td><td><b>R$ 26.181,30</b></td></tr>
     </tbody>
   </table>
   </div>
-  <p class="fine">Horários locais. Classe econômica. Voos sujeitos a disponibilidade e tarifa no momento da emissão.</p>
+  <h3 class="legt">Nova York → Bangkok</h3>
+  <div class="tbl-wrap">
+  <table class="tbl">
+    <thead><tr><th>Companhia e voo</th><th>Saída → chegada</th><th>Duração</th><th>Classe</th><th>Bagagem</th><th>Valor</th></tr></thead>
+    <tbody>
+      <tr><td><b>Qatar Airways</b><div class="muted">QR 704 + QR 826</div></td><td>25/12 10h30 (JFK) → 26/12 19h25 (BKK)</td><td>20h55 · conexão em Doha</td><td>Econômica</td><td>2 malas</td><td><b>R$ 13.106,84</b></td></tr>
+      <tr><td><b>ANA</b><div class="muted">NH 7569 + NH 111 + NH 877</div></td><td>25/12 12h40 (EWR) → 27/12 06h30 (BKK)</td><td>29h50 · conexões em Chicago e Tóquio</td><td>Executiva</td><td>1 mala</td><td><b>R$ 50.367,41</b></td></tr>
+      <tr><td><b>Etihad</b><div class="muted">EY 2 + EY 402</div></td><td>25/12 15h00 (JFK) → 27/12 06h35 (BKK)</td><td>Conexão de 8h50 em Abu Dhabi</td><td>Executiva</td><td>2 malas</td><td><b>R$ 63.187,64</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3 class="legt">Bangkok → Chiang Mai</h3>
+  <div class="tbl-wrap">
+  <table class="tbl">
+    <thead><tr><th>Companhia e voo</th><th>Saída → chegada</th><th>Duração</th><th>Classe</th><th>Bagagem</th><th>Valor</th></tr></thead>
+    <tbody>
+      <tr><td><b>Voo 102</b><div class="muted"></div></td><td>30/12 10h25 (BKK) → 11h50 (CNX)</td><td>1h25 · direto</td><td>Econômica</td><td>20 kg</td><td><b>R$ 2.993,32</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3 class="legt">Chiang Rai → Phuket</h3>
+  <div class="tbl-wrap">
+  <table class="tbl">
+    <thead><tr><th>Companhia e voo</th><th>Saída → chegada</th><th>Duração</th><th>Classe</th><th>Bagagem</th><th>Valor</th></tr></thead>
+    <tbody>
+      <tr><td><b>Voo 401</b><div class="muted"></div></td><td>06/01 11h10 (CEI) → 13h25 (HKT)</td><td>2h15 · direto</td><td>Econômica</td><td>20 kg</td><td><b>R$ 3.237,28</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3 class="legt">Phuket → Singapura</h3>
+  <div class="tbl-wrap">
+  <table class="tbl">
+    <thead><tr><th>Companhia e voo</th><th>Saída → chegada</th><th>Duração</th><th>Classe</th><th>Bagagem</th><th>Valor</th></tr></thead>
+    <tbody>
+      <tr><td><b>Scoot</b><div class="muted">TR 645</div></td><td>12/01 13h55 (HKT) → 17h10 (SIN)</td><td>2h15 · direto</td><td>Econômica</td><td>30 kg</td><td><b>R$ 2.442,49</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3 class="legt">Singapura → São Paulo</h3>
+  <div class="tbl-wrap">
+  <table class="tbl">
+    <thead><tr><th>Companhia e voo</th><th>Saída → chegada</th><th>Duração</th><th>Classe</th><th>Bagagem</th><th>Valor</th></tr></thead>
+    <tbody>
+      <tr><td><b>Turkish Airlines</b><div class="muted">TK 209 + TK 215</div></td><td>16/01 10h25 (SIN) → 17/01 04h20 (GRU)</td><td>28h55 · conexão em Istambul</td><td>Econômica</td><td>1 mala</td><td><b>R$ 20.846,87</b></td></tr>
+      <tr><td><b>Turkish Airlines</b><div class="muted">TK 209 + TK 215</div></td><td>14/01 10h25 (SIN) → 15/01 04h20 (GRU)<div class="muted">Volta antecipada: Singapura com 2 noites</div></td><td>28h55 · conexão em Istambul</td><td>Econômica</td><td>1 mala</td><td><b>R$ 20.846,87</b></td></tr>
+      <tr><td><b>Ethiopian Airlines</b><div class="muted">ET 639 + ET 506</div></td><td>16/01 02h00 (SIN) → 16/01 16h00 (GRU)<div class="muted">Saída na madrugada de 15 para 16/01</div></td><td>25h00 · conexão em Adis Abeba</td><td>Executiva</td><td>3 malas</td><td><b>R$ 65.376,81</b></td></tr>
+      <tr><td><b>Air France</b><div class="muted">AF 181 + AF 454</div></td><td>15/01 11h00 (SIN) → 16/01 07h20 (GRU)</td><td>31h20 · conexão em Paris</td><td>Executiva</td><td>1 mala</td><td><b>R$ 69.425,77</b></td></tr>
+      <tr><td><b>United</b><div class="muted">UA 7934 + UA 882 + UA 845</div></td><td>15/01 06h35 (SIN) → 16/01 07h15 (GRU)<div class="muted">Troca de aeroporto em Tóquio (Narita → Haneda)</div></td><td>35h40 · conexões em Tóquio e Chicago</td><td>Executiva</td><td>2 malas</td><td><b>R$ 65.235,00</b></td></tr>
+      <tr><td><b>United</b><div class="muted">UA 2 + UA 1259 + UA 62</div></td><td>16/01 10h10 (SIN) → 17/01 09h30 (GRU)</td><td>34h20 · conexões em São Francisco e Houston</td><td>Executiva (trecho SFO–IAH em Econômica)</td><td>2 malas</td><td><b>R$ 67.912,10</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="fine">Horários locais. Valores sujeitos a disponibilidade e alteração de tarifa até a emissão.</p>
 </section>
 
 <section class="section">
@@ -326,8 +379,8 @@ h1,h2,h3{line-height:1.15}
   <h2 class="serif">Informações importantes</h2>
   <div class="accent-line"></div>
   <div class="info">
-    <div><h4>Documentos</h4><ul><li>Passaporte válido dos três, incluindo o bebê</li><li>Visto americano válido</li><li>Cartão de chegada digital da Tailândia (TDAC)</li><li>SG Arrival Card de Singapura</li></ul></div>
-    <div><h4>Saúde</h4><ul><li>Certificado internacional de febre amarela dos adultos</li><li>Atestado de isenção do bebê, assinado pelo pediatra</li><li>Seguro viagem com cobertura nos EUA</li></ul></div>
+    <div><h4>Documentos</h4><ul><li>Passaporte válido dos três, incluindo o bebê</li><li>Visto americano válido</li><li>Cartão de chegada digital da Tailândia (TDAC)</li><li>SG Arrival Card de Singapura</li><li>Estados Unidos: declaração de que não estiveram na República Democrática do Congo nos 21 dias anteriores à viagem (exigência sanitária por causa do surto de ebola)</li></ul></div>
+    <div><h4>Saúde</h4><ul><li>Certificado internacional de febre amarela dos adultos</li><li>Bebê: atestado de isenção, se cabível, ou certificado de vacinação contra febre amarela</li><li>Seguro viagem com cobertura nos EUA</li></ul></div>
     <div><h4>Com o bebê</h4><ul><li>Recomendamos levar o bebê-conforto: as companhias aéreas aceitam sem custo e ele garante a segurança nos traslados</li><li>Berço solicitado em todos os hotéis</li></ul></div>
   </div>
 </section>
