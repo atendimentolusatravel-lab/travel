@@ -139,17 +139,31 @@ A descrição do Amora no sistema diz "Patong Beach", mas o endereço é Bang Ta
 
 Para a versão Executiva, cotar villa com piscina: Anantara Layan, Trisara ou Banyan Tree.
 
-### Bangkok (a cotar)
+### Bangkok
 
 - **Região recomendada:** beira do rio Chao Phraya. Barco no lugar do trânsito, Grande Palácio e Yaowarat por perto, e o shopping Iconsiam (ar-condicionado e itens de bebê).
-- **Versão Econômica:** Shangri-La Bangkok ou Chatrium Riverside (quartos grandes).
-- **Versão Executiva:** Mandarin Oriental, Capella ou Four Seasons.
 
-### Singapura (a cotar)
+Preços públicos do Booking.com para 26/12 → 30/12/2026 (4 noites), 2 adultos e 1 bebê. **Validar no sistema** (regime e cancelamento).
+
+| Hotel | Avaliação Booking | Valor (4 noites) | Versão |
+|---|---|---|---|
+| Chatrium Hotel Riverside Bangkok ⭐⭐⭐⭐⭐ | 9,3 (4.628) | R$ 7.368,03 | Econômica |
+| Shangri-La Bangkok ⭐⭐⭐⭐⭐ | 8,8 (3.720) | R$ 10.575,09 | Econômica |
+| Mandarin Oriental Bangkok ⭐⭐⭐⭐⭐ | 9,6 (507) | R$ 32.860,97 | Executiva |
+| Capella Bangkok ⭐⭐⭐⭐⭐ | 8,4 (53) | R$ 46.049,28 | Executiva |
+
+### Singapura
 
 - **Região recomendada:** Marina Bay. Gardens by the Bay, Lau Pa Sat, Maxwell e Chinatown por perto. Tudo plano, ótimo para carrinho, e a 20 min do aeroporto.
-- **Versão Econômica:** Pan Pacific ou Parkroyal Collection Marina Bay.
-- **Versão Executiva:** Marina Bay Sands (piscina de borda infinita, boa para o fotógrafo) ou Fullerton Bay.
+
+Preços públicos do Booking.com para 12/01 → 14/01/2027 (2 noites), 2 adultos e 1 bebê. **Validar no sistema** (regime e cancelamento).
+
+| Hotel | Avaliação Booking | Valor (2 noites) | Versão |
+|---|---|---|---|
+| PARKROYAL COLLECTION Marina Bay ⭐⭐⭐⭐⭐ | 9,1 (6.441) | R$ 3.419,23 | Econômica |
+| Pan Pacific Singapore ⭐⭐⭐⭐⭐ | 9,0 (5.301) | R$ 3.869,57 | Econômica |
+| The Fullerton Bay Hotel ⭐⭐⭐⭐⭐ | 9,4 (727) | R$ 5.999,49 | Executiva |
+| Marina Bay Sands ⭐⭐⭐⭐⭐ | 9,6 (14.940) | R$ 7.130,34 | Executiva |
 
 ### A cotar
 
