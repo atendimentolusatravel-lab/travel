@@ -178,6 +178,37 @@ Preços públicos do Booking.com para 12/01 → 14/01/2027 (2 noites), 2 adultos
 - Phuket: chegada e saída.
 - Singapura: chegada e saída.
 
+## Fotógrafo (valores estimados, a confirmar na reserva)
+
+Fonte: trechos indexados das páginas de cada fornecedor. Confirmar no site antes de fechar.
+
+| Local / data | Opção | Valor estimado | Inclui |
+|---|---|---|---|
+| Todos os destinos | Flytographer (tabela padrão) | 30 min US$ 325 · 1 h US$ 425 · 1h30 US$ 590 · 2 h US$ 715 | 20 / 35 / 50 / 65 fotos editadas, entrega em até 5 dias úteis. Vídeo sob consulta. |
+| NYC, 24/12 (Rockefeller) | Airbnb "New York Christmas Photo Shoot by Veronika" | 30 min US$ 150 · 1 h US$ 250 · 2 h US$ 400 (por pessoa) | Fotos. Vídeo sob consulta. |
+| Chiang Mai, 31/12 | Airbnb "Chiang Mai chic photos by Birdy & friends" | 1 h US$ 92 por grupo | 70 a 100 fotos editadas |
+| Chiang Mai, 31/12 | Airbnb, serviço 416980 | 1 h US$ 65 por grupo | Foto **ou** vídeo |
+| Triângulo Dourado | Anantara | Sem fotógrafo oficial. Os mahouts fotografam e filmam nas atividades. | Confirmar: goldentriangle@anantara.com |
+| Phuket (Bang Tao) | Airbnb "Editorial-style photography and video by Alesia" | 1 h família US$ 223 por grupo | **Foto + vídeo**. Drone à parte. |
+| Phuket | Airbnb "Photo, Video, Drone..." | 1h30 US$ 297 · 2 h US$ 386 (com barco) | Foto + vídeo, 50 fotos |
+
+**Faixa para a proposta:** Flytographer nos 4 destinos, 1 h cada, cerca de US$ 1.700. Fotógrafos locais (Airbnb), cerca de US$ 650 a 900 no total.
+
+## Ceia de Natal em NYC, 24/12 (valores estimados, a confirmar)
+
+Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cadeirão e espaço para carrinho na reserva.
+
+| Opção | Valor por pessoa | Ano do preço |
+|---|---|---|
+| Tavern on the Green (Central Park West), 4 tempos | US$ 135 | 2024 |
+| Lincoln Ristorante (Lincoln Center), Feast of the Seven Fishes | US$ 125 | 2021 |
+| Union Square Cafe, Feast of the Seven Fishes | US$ 195 | 2025 |
+| Ai Fiori (5ª Av.), Seven Fishes, 7 tempos | US$ 245 (+ US$ 175 vinhos) | 2025 |
+| Bazaar Meat by José Andrés (NoMad) | US$ 250 | 2025 |
+| Chef particular no Airbnb (Take a Chef / CozyMeal) | US$ 130 a 260 + gorjeta | 2025 |
+| Cruzeiro Bateaux Christmas Eve (3 h, não reembolsável) | a partir de US$ 304 | 2025 |
+| Cruzeiro Hudson's (Pier 81) | US$ 159 | 2025 |
+
 ## Outros itens
 
 - Fotógrafo: NYC (24/12), réveillon em Chiang Mai, elefantes, Phuket.
