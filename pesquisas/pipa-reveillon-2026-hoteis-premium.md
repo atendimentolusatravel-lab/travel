@@ -101,3 +101,30 @@ Alternativa se o cliente priorizar mar calmo acima de serviço: **Aldeia do Made
 5. Toca da Coruja, Kilombo, Bupitanga — 1/5. Luxo para adultos.
 
 **Implicação comercial:** se o cliente escolheu o Clara pela recreação monitorada (pais descansam enquanto as crianças estão no kids club), Pipa vai frustrar. Nesse caso, duas rotas: (a) vender Pipa como "boutique + praia + golfinhos" com expectativa ajustada e babá contratada; (b) propor o equivalente real no Nordeste: Vila Galé Touros (RN, all inclusive com kids club, ~100 km de Natal) ou, fora do RN, Nannai (PE), Tivoli Praia do Forte (BA), Salinas Maragogi (AL). A confirmar disponibilidade e pacote de réveillon.
+
+---
+
+## 8. Recorte: crianças de até 4 anos + acomodação para 4 pessoas
+
+Cotação refeita em 28/10 para 2 adultos + 2 crianças (2 e 4 anos), 26/12/2026 a 01/01/2027. Dados de quarto, berço e política vêm do Booking (respostas automáticas sobre a ficha do hotel), portanto são indicativos: confirmar com o hotel antes de propor. Em todos os listados, crianças até 4 anos não pagam e berço é gratuito.
+
+**O que muda com criança de até 4 anos:** (1) a criança precisa de quarto ou ambiente separado para dormir cedo; (2) piscina com parte rasa pesa mais que praia; (3) escadas e encostas pesam contra (Pipa é toda em ladeira); (4) barulho do Let's Pipa entre 27 e 31/12 atrapalha o sono.
+
+| # | Hotel | Acomodação para 4 | Estrutura para bebê/criança | Preço 6 noites | Veredito |
+|---|---|---|---|---|---|
+| 1 | **Sombra e Água Fresca Resort** (5★, Booking 9,5) | Casas de 2 quartos: Luxo 120 m², Super Luxo 135 m², Premium 191 m², Master 228 m² (até 5 pessoas) | Berço grátis, babá paga, piscinas com área infantil, spa | R$ 43.455 | **Melhor opção.** Único premium com quarto separado de verdade para as crianças. Mesmo preço do Floresta com o dobro de espaço. |
+| 2 | **Sombra e Água Fresca Floresta** (5★, Booking 9,5) | Suíte Premium 45 m² (super-king + solteiro) | Berço grátis, piscina climatizada com parte rasa, babá paga, refeições infantis | R$ 42.992 | Boa, mas é ambiente único: criança dorme no mesmo quarto. Só escolher se o Resort estiver esgotado. |
+| 3 | **Beija Flor Exclusive Hotel & Spa** (5★, Booking 9,2) | Suíte Duplex 90 m² com sofá-cama (até 5) ou Deluxe 75 m² (até 4) | Berço grátis, piscina com parte rasa, buffet infantil, área de piquenique, Praia do Giz calma a 30 m | R$ 25.497 | **Melhor custo-benefício.** Duplex dá separação entre pais e crianças. Longe da festa. Precisa de carro (7 km). |
+| 4 | **Aldeia do Madeiro Beach** (5★, Booking 8,5 / TA 3,9) | Bangalô Família 60 m² (máx. 4) | Berço grátis, parquinho, parte rasa, brinquedos de piscina, recreação interna; pé na areia na Praia do Madeiro (mar calmo) | R$ 26.738 | Estrutura e praia perfeitas para a idade. Risco: serviço e restaurante irregulares. Vender com expectativa ajustada. |
+| 5 | **Hotel Sombra e Água Fresca** (5★, Booking 9,6) | Sombra Villas 100 m² ou Master Garden View 60 m² | Grades de segurança para bebê, refeições infantis, piscina infantil, salão de jogos, babá | R$ 66.686 | Melhor serviço de Pipa, mas custa 54% a mais que o Resort do mesmo grupo por menos espaço. Só se o cliente quiser a unidade principal. |
+
+**Opção valor (4★, não premium):** Pipa Park (Booking 8,8), apartamento 2 quartos 112 m² ou villa 3 quartos 150 m², piscina infantil, parquinho, espaço kids, babá, berço grátis. R$ 13.658. Formato apart-hotel com cozinha, útil para papinha e rotina de bebê. Fica perto do centro: checar ruído.
+
+**Cotar direto (sem dados no Booking):**
+- Île de Pipa MGallery: confirmar se há suíte família ou quartos conjugados e se a piscina-lagoa tem área rasa. Localização central é o ponto fraco com bebê.
+- Filha da Lua Eco Lodge (TA 4,9, 258 avaliações, tags "Luxury" e "Family"): quartos amplos, piscinas, cadeirões. Fica na Praia das Minas, deserta e de mar forte: só piscina. Preço não encontrado.
+- Kilombo Villas (TA 4,9): villa com piscina privativa. Com criança de 2 anos, piscina privativa sem cerca é risco, não vantagem. Confirmar proteção.
+
+**Excluídos neste recorte:** Hotel da Pipa (quartos de 23 a 28 m², pequenos para 4), Pipas Bay (máximo 3 pessoas por quarto), Toca da Coruja (palafitas, lagos e passarelas com criança de 2 anos; preço fora da curva), Pipa Atlântico (centro).
+
+**Pontos a confirmar com o hotel escolhido:** número de escadas até a acomodação e até a piscina (o complexo Sombra e Água Fresca fica em encosta); cadeirão e menu infantil no restaurante; horário da ceia de réveillon e se há opção de jantar cedo para as crianças; mínimo de noites.
