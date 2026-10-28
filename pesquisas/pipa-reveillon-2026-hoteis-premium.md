@@ -74,3 +74,30 @@ Alternativa se o cliente priorizar mar calmo acima de serviço: **Aldeia do Made
 - [Hoteis.com — Toca da Coruja](https://www.hoteis.com/de1732118/hoteis-proximos-a-praia-da-pipa-pipa-brasil/)
 - [Booking — Beija Flor Exclusive Hotel & Spa](https://m.booking.com/hotel/br/beija-flor-spa-amp-resort.en-gb.html)
 - [Hotels.com — Pipa Privilege Suítes](https://ca.hotels.com/ho406720/pipa-privilege-suites-tibau-do-sul-brazil)
+
+---
+
+## 7. Comparativo com o Clara Resort (referência do cliente)
+
+**Perfil do Clara (Ibiúna/Dourado):** resort de grande porte (161 quartos), pensão completa, kids club com monitores por faixa etária (Clubinho 3–5, Kids 6–8, Clube 9–13, Teens), BabyClub, babysitter, 3 piscinas (1 coberta), Spa L'Occitane, recreação intensa em contato com a natureza (represa, trilhas, arvorismo, caiaque).
+
+**Conclusão direta:** Pipa não tem um equivalente ao Clara. Nenhum hotel da praia combina pensão completa + kids club monitorado + escala de resort. O modelo de Pipa é boutique de luxo com café da manhã e natureza, não resort de recreação.
+
+| Dimensão do Clara | Mais próximo em Pipa | Lacuna |
+|---|---|---|
+| Padrão de serviço e qualidade | Sombra e Água Fresca (9,6) | Nenhuma relevante |
+| Natureza integrada, trilhas, spa | Sombra e Água Fresca (mata atlântica, Spa) / Île de Pipa MGallery (Spa L'Occitane, mesma marca do Clara) | Sem represa/esportes náuticos; mar do Amor é de surf |
+| Kids club com monitores | Nenhum | Lacuna total. Sombra e Hotel da Pipa têm babá sob pedido e refeições infantis, não recreação organizada |
+| Infraestrutura física para criança | Aldeia do Madeiro Beach (parquinho, salão de jogos, recreação interna, brinquedos de piscina) | Serviço irregular (TA 3,9), muito abaixo do Clara |
+| Pensão completa | Nenhum | Todos operam com café da manhã; refeições à parte |
+| Escala de resort, piscina grande | Île de Pipa MGallery (77 quartos, piscina-lagoa com praia artificial) | Sem kids club; no centro (ruído do Let's Pipa) |
+| Conceito "resort familiar" no papel | Pipa Beleza Spa Resort | Qualidade e manutenção não sustentam a comparação |
+
+**Ranking de similaridade (0 a 5):**
+1. **Hotel Sombra e Água Fresca** — 3/5. Entrega o que o Clara entrega em qualidade, natureza, spa e cuidado com a família (grades para bebê, refeições infantis, babá, salão de jogos). Não entrega recreação monitorada nem pensão completa.
+2. **Île de Pipa MGallery** — 2,5/5. Mais próximo em escala, padrão de rede e spa L'Occitane; piscina-lagoa é o melhor "parque aquático natural" de Pipa. Zero programação infantil.
+3. **Aldeia do Madeiro Beach** — 2,5/5. Mais próximo em estrutura kids e praia calma; mais distante em serviço.
+4. **Beija Flor Exclusive** — 2/5. Natureza, tranquilidade, 2 piscinas, buffet infantil. Pequeno, sem recreação.
+5. Toca da Coruja, Kilombo, Bupitanga — 1/5. Luxo para adultos.
+
+**Implicação comercial:** se o cliente escolheu o Clara pela recreação monitorada (pais descansam enquanto as crianças estão no kids club), Pipa vai frustrar. Nesse caso, duas rotas: (a) vender Pipa como "boutique + praia + golfinhos" com expectativa ajustada e babá contratada; (b) propor o equivalente real no Nordeste: Vila Galé Touros (RN, all inclusive com kids club, ~100 km de Natal) ou, fora do RN, Nannai (PE), Tivoli Praia do Forte (BA), Salinas Maragogi (AL). A confirmar disponibilidade e pacote de réveillon.
