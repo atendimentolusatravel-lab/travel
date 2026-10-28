@@ -128,3 +128,37 @@ Cotação refeita em 28/10 para 2 adultos + 2 crianças (2 e 4 anos), 26/12/2026
 **Excluídos neste recorte:** Hotel da Pipa (quartos de 23 a 28 m², pequenos para 4), Pipas Bay (máximo 3 pessoas por quarto), Toca da Coruja (palafitas, lagos e passarelas com criança de 2 anos; preço fora da curva), Pipa Atlântico (centro).
 
 **Pontos a confirmar com o hotel escolhido:** número de escadas até a acomodação e até a piscina (o complexo Sombra e Água Fresca fica em encosta); cadeirão e menu infantil no restaurante; horário da ceia de réveillon e se há opção de jantar cedo para as crianças; mínimo de noites.
+
+---
+
+## 9. Privacidade do casal: acomodações com antessala ou segundo quarto com cama
+
+Pergunta do cliente: existe hotel em Pipa com antessala (sala separada) com cama ou sofá-cama, de modo que as crianças durmam fora do quarto do casal? Fonte: ficha de quartos no Booking para 26/12/2026 a 01/01/2027, 2 adultos + crianças de 2 e 4 anos. Preços para 6 noites, quarto mais barato disponível (a acomodação citada pode custar mais).
+
+### Sim, com separação física real (parede ou andar)
+
+| Hotel | Acomodação | Layout | Camas | Preço ref. 6 noites |
+|---|---|---|---|---|
+| **Sombra e Água Fresca Resort** (5★, 9,5) | Casa 2 Quartos Luxo 120 m² · Super Luxo 135 m² · Premium 191 m² · Master 228 m² · Casa 3 Quartos 209 m² | 2 ou 3 quartos fechados + sala | Super-king no quarto do casal + solteiro no segundo quarto (pedir cama extra ou berço para a segunda criança) | R$ 43.455 |
+| **Beija Flor Exclusive** (5★, 9,2) | Suíte Duplex 90 m² | Dois andares: quarto em cima, sala com sofá-cama embaixo (até 5 pessoas) | King + sofá-cama | R$ 25.497 |
+| **Pipa Park** (4★, 8,8) | Apartamento 2 Quartos 112 m² · Villa 3 Quartos 150 m² | Quartos fechados + sala + cozinha | A confirmar camas do 2º quarto | R$ 13.658 |
+| **Recanto da Mata** (4★, 9,5) | Apartamento Classic 42 m² | Quarto + sala separada com 2 camas de solteiro | Casal + 2 solteiros na sala | R$ 16.558 |
+
+### Parcial: tem sala separada, mas a ocupação máxima é 3
+
+- **Hotel Sombra e Água Fresca**: Master Suíte Vista Mar com Spa Bath, 80 m², quarto + sala, máximo 3 pessoas. Não serve para 4.
+- **Sombra e Água Fresca Floresta**: Suíte Executiva 35 m², quarto + sala, super-king + solteiro, máximo 3. A Suíte Premium 45 m² aceita 4, mas é ambiente único.
+- **Pipas Bay**: Suíte Tripla Deluxe 37 m², quarto + sala, máximo 3.
+
+### Não tem (ambiente único)
+
+Aldeia do Madeiro Beach (Bangalô Família 60 m² é um só ambiente), Hotel Pipa Atlântico, Hotel da Pipa (23 a 28 m²), Bupitanga (Bangalô Jardim 50 m² com duas camas de casal no mesmo ambiente).
+
+### Leitura
+
+1. **Para privacidade do casal com padrão premium, a resposta é o Sombra e Água Fresca Resort.** É o único 5★ com quarto fechado para as crianças. A sala das casas ainda permite o casal ficar acordado sem acordar os filhos.
+2. **Beija Flor Duplex** é a alternativa de valor: a separação por andar funciona bem com crianças pequenas, mas sofá-cama em sala é menos confortável que quarto fechado, e há escada interna, ponto de atenção com criança de 2 anos.
+3. **Pipa Park e Recanto da Mata** resolvem a planta, não o padrão. São 4★ sem a hotelaria dos 5★. Entram só se o orçamento mandar.
+4. **Bupitanga** reapareceu no Booking (9,7 em 197 avaliações, R$ 29.728, refeições e buffet infantil, acesso à praia por escada na falésia). Excelente hotel, mas sem antessala: duas camas de casal no mesmo ambiente.
+
+**Confirmar com o hotel antes de propor:** no Resort, se o segundo quarto comporta berço + cama de solteiro ou se é preciso pedir cama extra; na casa de 3 quartos (209 m²), uma criança por quarto resolve tudo. No Beija Flor, se o sofá-cama pode ser substituído por berço e cama extra.
