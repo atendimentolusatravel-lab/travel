@@ -11,7 +11,7 @@
 | Natal | Ocean Palace All Inclusive Premium | 2× Suíte Júnior Família – Frente do Mar com Hidro e antessala · All inclusive | R$ 62.717,69 |
 | Natal | Wish Natal | 2× Premium Family Sea View · All inclusive | R$ 76.818,36 |
 | Touros | Vila Galé Resort Touros | 2× Family Suite · All inclusive | R$ 59.175,00 |
-| Pipa | Resort Sombra e Água Fresca | 2× Chalé Premium (casa de 2 pavimentos, 2 suítes cada) · Café da manhã | R$ 112.631,00 |
+| Pipa | Resort Sombra e Água Fresca | 2× Casa Premium (2 pavimentos, 2 suítes cada) · Café da manhã | R$ 112.631,00 |
 
 Faixa: R$ 59.175,00 – 112.631,00.
 
@@ -30,5 +30,5 @@ banheiro, café da manhã, livre, livre. Substituições (regra das fotos):
 - **Wish Natal:** o site oficial mostra a categoria família só como "Family Room" (vista mar, até 4
   hóspedes, foto com 2 camas de casal). A configuração cotada (1 casal + 2 solteiro ou 4 solteiro) não
   aparece em foto; o banheiro é de outra categoria do hotel.
-- **Sombra e Água Fresca:** fotos da categoria Premium (casa de 2 pavimentos com 2 suítes; cotados 2
-  chalés); cada foto mostra uma suíte.
+- **Sombra e Água Fresca:** fotos da categoria Premium (casa de 2 pavimentos com 2 suítes; cotadas 2
+  casas); cada foto mostra uma suíte.
