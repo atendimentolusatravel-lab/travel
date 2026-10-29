@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Laura Dalcanale | Cotação Aérea — LusaTravel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+  --gold:#da8d00;
+  --dest:#2d5e3a;        /* Verde Tropical */
+  --dest-soft:#eef3ef;
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#8a7e72;
+  --line:#e4ddd2;
+  --paper:#faf7f2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff;
+  display:flex; flex-direction:column; }
+
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center;
+  justify-content:space-between; padding:0 20mm; flex-shrink:0; }
+.hd .logo{ font-family:var(--con); font-size:15pt; font-weight:600; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.45); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center;
+  justify-content:center; gap:14px; flex-shrink:0; }
+.ft a,.ft span{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.55); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.25); }
+
+.body{ padding:11mm 20mm 8mm; flex:1; display:flex; flex-direction:column; }
+
+/* Intro */
+.intro{ display:flex; justify-content:space-between; align-items:flex-end; gap:10mm; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.client{ font-size:24pt; font-weight:800; color:var(--ink); text-transform:uppercase; letter-spacing:.02em; line-height:1.1; margin-top:2mm; }
+.sub{ font-size:11pt; font-weight:300; color:var(--char); margin-top:2mm; }
+.meta{ display:flex; gap:9mm; text-align:right; }
+.meta b{ display:block; font-size:17pt; font-weight:800; color:var(--dest); line-height:1; }
+.meta span{ white-space:nowrap; font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); }
+
+/* Resumo comparativo */
+.cmp{ display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-top:8mm; }
+.cmp-card{ border:1px solid var(--line); border-radius:5px; overflow:hidden; }
+.cmp-card .top{ background:var(--dest); color:#fff; padding:4mm 6mm; display:flex; align-items:center; gap:4mm; }
+.cmp-card .no{ width:9mm; height:9mm; border-radius:50%; border:2px solid var(--gold); color:var(--gold);
+  font-weight:800; font-size:11pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.cmp-card .t1{ font-size:12pt; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.cmp-card .t2{ font-size:8.5pt; color:rgba(255,255,255,.7); }
+.cmp-card .mid{ padding:4mm 6mm; display:flex; justify-content:space-between; align-items:baseline; background:var(--paper); }
+.cmp-card .mid .k{ font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.cmp-card .mid .v{ font-size:17pt; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; }
+.cmp-card .mid .v small{ font-size:9pt; color:var(--gold); font-weight:700; margin-right:1.5mm; }
+.cmp-card .pts{ padding:3mm 6mm 4mm; font-size:9pt; line-height:1.65; color:var(--char); }
+.cmp-card .pts b{ color:var(--dest); font-weight:600; }
+
+/* Opção */
+.opt{ margin-top:8mm; }
+.opt-hd{ display:flex; align-items:center; justify-content:space-between; border-bottom:2px solid var(--dest); padding-bottom:2mm; }
+.opt-hd h2{ font-size:15pt; font-weight:700; color:var(--ink); }
+.opt-hd h2 em{ font-style:normal; color:var(--gold); }
+.opt-hd .air{ font-size:9pt; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--dest); }
+
+table.fl{ width:100%; border-collapse:collapse; margin-top:3mm; font-size:9.5pt; }
+table.fl th{ font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700;
+  text-align:left; padding:1.5mm 2mm; }
+table.fl td{ padding:2.4mm 2mm; border-top:1px solid var(--line); vertical-align:middle; }
+table.fl td.fn{ font-weight:700; color:var(--ink); white-space:nowrap; }
+table.fl td.dt{ color:var(--gold); font-weight:700; white-space:nowrap; }
+table.fl td.rt b{ font-weight:600; color:var(--ink); }
+table.fl td.tm{ font-variant-numeric:tabular-nums; white-space:nowrap; }
+table.fl td.mu{ color:var(--mut); font-size:8.5pt; white-space:nowrap; }
+tr.stop td{ background:#fbf3e3; border-top:1px dashed var(--gold); font-size:8.5pt; color:#8a5a00; padding:1.6mm 2mm; }
+
+.fares{ display:grid; grid-template-columns:1fr 1fr 1.1fr; gap:4mm; margin-top:4mm; }
+.fare{ border:1px solid var(--line); border-radius:5px; padding:3.5mm 5mm; background:var(--dest-soft); }
+.fare .cab{ font-size:8pt; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--dest); }
+.fare .pax{ font-size:8.5pt; color:var(--mut); margin-top:.5mm; }
+.fare .amt{ font-size:14pt; font-weight:800; color:var(--ink); margin-top:1.5mm; font-variant-numeric:tabular-nums; }
+.fare .usd{ font-size:8.5pt; color:var(--mut); font-variant-numeric:tabular-nums; }
+.fare .inc{ font-size:8pt; color:var(--char); margin-top:1.5mm; line-height:1.5; }
+.total{ background:var(--ink); border-radius:5px; padding:3.5mm 5mm; color:#fff; display:flex; flex-direction:column; justify-content:center; }
+.total .lbl{ font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.65); font-weight:700; }
+.total .amt{ font-size:18pt; font-weight:800; color:var(--gold); margin-top:1mm; font-variant-numeric:tabular-nums; }
+.total .usd{ font-size:8.5pt; color:rgba(255,255,255,.6); font-variant-numeric:tabular-nums; }
+
+.notes{ margin-top:auto; padding-top:6mm; border-top:1px solid var(--line); display:grid; grid-template-columns:1.4fr 1fr; gap:10mm; }
+.notes h3{ font-size:8.5pt; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5mm; }
+.notes p, .notes li{ font-size:8.5pt; line-height:1.65; color:var(--char); }
+.notes ul{ list-style:none; }
+.notes li::before{ content:'· '; color:var(--gold); font-weight:800; }
+.fx{ font-size:8.5pt; color:var(--mut); line-height:1.7; }
+.fx b{ color:var(--ink); }
+</style>
+</head>
+<body>
+
+<section class="page">
+  <div class="hd"><div class="logo">LusaTravel</div><div class="tag">Cotação Aérea</div></div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+    <div class="intro">
+      <div>
+        <div class="eyebrow">Cotação preparada para</div>
+        <div class="client">Sra. Laura Dalcanale</div>
+        <div class="sub">Duas opções de aéreo para o período de dezembro a janeiro, saindo de São Paulo (GRU).</div>
+      </div>
+      <div class="meta">
+        <div><b>5</b><span>Passageiros</span></div>
+        <div><b>2</b><span>Opções</span></div>
+        <div><b>29/10</b><span>Data cotação</span></div>
+      </div>
+    </div>
+
+    <!-- Resumo -->
+    <div class="cmp">
+      <div class="cmp-card">
+        <div class="top"><div class="no">1</div><div><div class="t1">Singapura</div><div class="t2">Ethiopian Airlines · via Adis Abeba</div></div></div>
+        <div class="mid"><span class="k">Total 5 pax</span><span class="v"><small>R$</small>98.824,12</span></div>
+        <div class="pts">31 Dez → 28 Jan · <b>1 executiva + 4 econômica</b><br>Conexão longa em Adis Abeba na ida e na volta</div>
+      </div>
+      <div class="cmp-card">
+        <div class="top"><div class="no">2</div><div><div class="t1">Amsterdã</div><div class="t2">LATAM · voo direto</div></div></div>
+        <div class="mid"><span class="k">Total 5 pax</span><span class="v"><small>R$</small>52.897,54</span></div>
+        <div class="pts">29 Dez → 28 Jan · <b>1 premium business + 4 econômica</b><br>Sem conexões · Boeing 787-9</div>
+      </div>
+    </div>
+
+    <!-- Opção 1 -->
+    <div class="opt">
+      <div class="opt-hd"><h2>Opção 1 · São Paulo <em>⇄</em> Singapura</h2><span class="air">Ethiopian Airlines</span></div>
+      <table class="fl">
+        <thead><tr><th>Voo</th><th>Data</th><th>Trecho</th><th>Partida</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr></thead>
+        <tbody>
+          <tr><td class="fn">ET 507</td><td class="dt">31 Dez</td><td class="rt"><b>GRU</b> São Paulo → <b>ADD</b> Adis Abeba</td><td class="tm">01:30</td><td class="tm">19:30</td><td class="mu">12h00</td><td class="mu">Boeing 777-200LR</td></tr>
+          <tr class="stop"><td colspan="7">Conexão em Adis Abeba: aprox. 28h40 · pernoite de 31 Dez para 02 Jan</td></tr>
+          <tr><td class="fn">ET 638</td><td class="dt">02 Jan</td><td class="rt"><b>ADD</b> Adis Abeba → <b>SIN</b> Singapura</td><td class="tm">00:10</td><td class="tm">14:50</td><td class="mu">09h40</td><td class="mu">Airbus A350</td></tr>
+          <tr><td class="fn">ET 639</td><td class="dt">27 Jan</td><td class="rt"><b>SIN</b> Singapura → <b>ADD</b> Adis Abeba</td><td class="tm">02:00</td><td class="tm">06:05</td><td class="mu">09h05</td><td class="mu">Airbus A350</td></tr>
+          <tr class="stop"><td colspan="7">Conexão em Adis Abeba: aprox. 27h35 · pernoite de 27 para 28 Jan</td></tr>
+          <tr><td class="fn">ET 506</td><td class="dt">28 Jan</td><td class="rt"><b>ADD</b> Adis Abeba → <b>GRU</b> São Paulo</td><td class="tm">09:40</td><td class="tm">16:00</td><td class="mu">12h20</td><td class="mu">Boeing 777-200LR</td></tr>
+        </tbody>
+      </table>
+      <div class="fares">
+        <div class="fare">
+          <div class="cab">Executiva · Classe J</div>
+          <div class="pax">1 passageiro</div>
+          <div class="amt">R$ 51.227,48</div>
+          <div class="usd">USD 9.589,57</div>
+          <div class="inc">3 bagagens despachadas + bagagem de mão</div>
+        </div>
+        <div class="fare">
+          <div class="cab">Econômica · Classes L/V</div>
+          <div class="pax">4 passageiros · R$ 11.899,16 por pessoa</div>
+          <div class="amt">R$ 47.596,64</div>
+          <div class="usd">USD 8.909,88</div>
+          <div class="inc">2 bagagens despachadas + bagagem de mão</div>
+        </div>
+        <div class="total">
+          <div class="lbl">Total · 5 passageiros</div>
+          <div class="amt">R$ 98.824,12</div>
+          <div class="usd">USD 18.499,45</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Opção 2 -->
+    <div class="opt">
+      <div class="opt-hd"><h2>Opção 2 · São Paulo <em>⇄</em> Amsterdã</h2><span class="air">LATAM Airlines</span></div>
+      <table class="fl">
+        <thead><tr><th>Voo</th><th>Data</th><th>Trecho</th><th>Partida</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr></thead>
+        <tbody>
+          <tr><td class="fn">LA 8078</td><td class="dt">29 Dez</td><td class="rt"><b>GRU</b> São Paulo → <b>AMS</b> Amsterdã</td><td class="tm">22:55</td><td class="tm">14:55 <span class="mu">(30 Dez)</span></td><td class="mu">12h00 · direto</td><td class="mu">Boeing 787-9</td></tr>
+          <tr><td class="fn">LA 8079</td><td class="dt">27 Jan</td><td class="rt"><b>AMS</b> Amsterdã → <b>GRU</b> São Paulo</td><td class="tm">20:35</td><td class="tm">04:45 <span class="mu">(28 Jan)</span></td><td class="mu">12h10 · direto</td><td class="mu">Boeing 787-9</td></tr>
+        </tbody>
+      </table>
+      <div class="fares">
+        <div class="fare">
+          <div class="cab">Premium Business · Classe Z</div>
+          <div class="pax">1 passageiro</div>
+          <div class="amt">R$ 21.375,78</div>
+          <div class="usd">USD 4.001,46</div>
+          <div class="inc">Tarifa NDC · 1 bagagem despachada + bagagem de mão</div>
+        </div>
+        <div class="fare">
+          <div class="cab">Econômica Standard · V/O</div>
+          <div class="pax">4 passageiros · R$ 7.880,44 por pessoa</div>
+          <div class="amt">R$ 31.521,76</div>
+          <div class="usd">USD 5.900,76</div>
+          <div class="inc">1 bagagem despachada + bagagem de mão</div>
+        </div>
+        <div class="total">
+          <div class="lbl">Total · 5 passageiros</div>
+          <div class="amt">R$ 52.897,54</div>
+          <div class="usd">USD 9.902,22</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notes">
+      <div>
+        <h3>Observações</h3>
+        <ul>
+          <li>Opção 1: as conexões em Adis Abeba passam de 24h. É preciso hospedagem local e visto eletrônico da Etiópia, não incluídos.</li>
+          <li>Horários em hora local de cada cidade.</li>
+          <li>Tarifas sujeitas a disponibilidade e alteração até a emissão.</li>
+        </ul>
+      </div>
+      <div class="fx">
+        <h3>Valores</h3>
+        Cotação 29/10 · <b>USD 1 = R$ 5,34</b><br>
+        Valores totais por cabine, conforme indicado<br>
+        <b>*Nada reservado, apenas cotado</b>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    <span class="sep">·</span>
+    <span>Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+</body>
+</html>
