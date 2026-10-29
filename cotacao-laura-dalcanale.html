@@ -25,10 +25,10 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .page{ page-break-after:always; width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff;
   display:flex; flex-direction:column; }
 
-.hd{ background:var(--ink); height:26mm; display:flex; align-items:center;
+.hd{ background:var(--dest); height:38mm; display:flex; align-items:center;
   justify-content:space-between; padding:0 20mm; flex-shrink:0; }
-.hd .logo{ font-family:var(--con); font-size:15pt; font-weight:600; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
-.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.45); }
+.hd .logo{ height:27mm; width:auto; display:block; }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.75); }
 .goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
 
 .ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center;
@@ -110,7 +110,7 @@ tr.grp td{ background:var(--dest-soft); color:var(--dest); font-size:7.5pt; font
 <body>
 
 <section class="page">
-  <div class="hd"><div class="logo">LusaTravel</div><div class="tag">Cotação Aérea</div></div>
+  <div class="hd"><img class="logo" src="assets/lusatravel-logo-dourada.png" alt="LusaTravel"><div class="tag">Cotação Aérea</div></div>
   <div class="goldbar"></div>
 
   <div class="body">
@@ -190,7 +190,7 @@ tr.grp td{ background:var(--dest-soft); color:var(--dest); font-size:7.5pt; font
 </section>
 
 <section class="page">
-  <div class="hd"><div class="logo">LusaTravel</div><div class="tag">Cotação Aérea · Opção 2</div></div>
+  <div class="hd"><img class="logo" src="assets/lusatravel-logo-dourada.png" alt="LusaTravel"><div class="tag">Cotação Aérea · Opção 2</div></div>
   <div class="goldbar"></div>
 
   <div class="body">
