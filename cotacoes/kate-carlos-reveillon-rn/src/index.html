@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lusa Travel · Réveillon no RN — Kate e Carlos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#404626;--green-dark:#363b1f;--green-soft:#5a6238;--sage:#d9ead3;--ink:#333131;--muted:#6f6f68;--line:#e7e7e0;--bg:#fff;--cream:#faf9f5;--terra:#b4622f;--shadow:0 10px 30px rgba(64,70,38,.08)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3{line-height:1.15}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:56px}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+.lede{max-width:74ch;font-size:.95rem;color:var(--muted);margin-top:16px}
+.sh .eyebrow{margin-bottom:10px;display:block}
+.brandbar{display:flex;justify-content:center;padding:38px 0 6px}
+.brandbar img{width:210px}
+.footlogo{width:190px;margin-bottom:14px}
+.hero{padding:52px 56px 40px}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em}
+.hero h1 .amp{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-style:italic}
+.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-img{margin:32px 0 0;height:340px;border-radius:14px;overflow:hidden;position:relative;box-shadow:var(--shadow);display:flex;align-items:flex-end;background:radial-gradient(120% 130% at 10% 8%,rgba(70,120,170,.55),transparent 55%),radial-gradient(120% 130% at 92% 94%,rgba(200,180,140,.5),transparent 60%),linear-gradient(120deg,#3a5f80,#6d8fae 35%,#e6e2d6 62%,#b4622f 100%)}
+.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
+.hero-info .r{text-align:right}
+.hero-info p{font-size:.95rem}
+.sm{font-size:.86rem;color:var(--muted);margin-top:8px}
+.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
+.chip b{font-size:1.1rem;font-weight:700}
+.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
+.chip .ic svg{width:18px;height:18px}
+.air{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:20px;background:#fff;box-shadow:var(--shadow)}
+.air-head{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--green);color:#fff;padding:14px 22px}
+.air-head .dir{font-weight:700;letter-spacing:.14em;font-size:.76rem;text-transform:uppercase}
+.air-head .route{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;font-weight:600}
+.leg{display:grid;grid-template-columns:230px 1fr auto;gap:16px;align-items:center;padding:15px 22px;border-bottom:1px solid var(--line)}
+.leg .fl{font-size:.76rem;color:var(--muted)}
+.leg .fl b{display:block;color:var(--ink);font-size:.9rem;font-weight:600}
+.leg .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.leg .pt .code{font-weight:700;font-size:1rem}
+.leg .pt .tm{font-size:.8rem;color:var(--muted)}
+.leg .arrow{color:var(--green-soft);flex:none}
+.leg .cls{text-align:right;font-size:.74rem;color:var(--green-soft);font-weight:600}
+.cnx{padding:9px 22px;background:#f4f5ef;font-size:.74rem;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.02em}
+.air-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 22px;background:var(--green);color:#fff;flex-wrap:wrap}
+.air-foot .l{font-weight:600;font-size:.86rem}
+.air-foot .a{text-align:right}
+.air-foot .a .t{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;line-height:1}
+.air-foot .a .p{font-size:.72rem;opacity:.9;margin-top:2px}
+.city-block{margin-top:34px}
+.city-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--green);padding-bottom:10px;margin-bottom:18px}
+.city-head h3{font-size:1.4rem;font-weight:700}
+.city-head .dates{color:var(--green-soft);font-weight:600;font-size:.9rem;letter-spacing:.04em}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:720px){.hgrid{grid-template-columns:1fr}}
+.hcard{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:18px 20px}
+.hcard-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.hcard .hn{font-size:1.02rem;font-weight:600;color:var(--green-dark)}
+.hcard .hp{text-align:right;flex:none}
+.hcard .hp .v{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--green)}
+.hcard .hp .u{font-size:.64rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.hcard .hr{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:.84rem;color:var(--muted)}
+.hcard .hr b{color:var(--green-dark);font-weight:600}
+.bf{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-soft);background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:3px 9px;margin-top:8px}
+.hgal{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:12px}
+.hgal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px;background:#eceadf}
+.tbl-wrap{overflow-x:auto;margin-top:22px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:620px}
+td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.head-row td{background:#efeee7;font-weight:600;color:#4a4a44;font-size:.82rem}
+.sec-row td{background:var(--green);color:#fff;font-weight:700;letter-spacing:.04em;font-size:.9rem}
+.sec-row td span{font-weight:500;opacity:.85;font-size:.82rem}
+td .rm{color:var(--muted);font-size:.82rem;margin-top:2px}
+.total-row td{background:#eef2e6;font-weight:700}
+.pp td{background:#f6f7f1;font-weight:600;color:var(--green-soft)}
+.pp td.v{color:var(--green-dark)}
+tr:last-child td{border-bottom:none}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:700;color:var(--green-dark)}
+.note{font-size:.82rem;color:var(--muted);margin-top:14px}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.pay h4{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
+.pay p{font-size:.9rem;margin-bottom:4px}
+.obs{margin-top:26px;font-size:.82rem;color:var(--muted)}
+.obs li{margin:6px 0 6px 18px}
+.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px}
+.footer{background:var(--green);color:#fff;padding:44px 56px}
+.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
+.footer .fnote{font-size:.8rem;opacity:.7;margin-top:16px}
+@media(max-width:720px){.section,.hero,.footer{padding-left:24px;padding-right:24px}.hero h1{font-size:2.2rem}.hero-info{grid-template-columns:1fr}.hero-info .r{text-align:left}.leg{grid-template-columns:1fr;gap:8px}.air-head{flex-direction:column;align-items:flex-start;gap:2px}.pay{grid-template-columns:1fr}}
+.loc{font-size:.78rem;color:var(--muted);margin-top:2px}
+.hgrid>*{min-width:0}.hcard-top>div:first-child{min-width:0}.hgal img{min-width:0}
+.avail{margin-top:22px;background:#fff;border-left:4px solid var(--green);border-radius:6px;padding:14px 18px;font-size:.92rem}
+.credit{font-size:.7rem;opacity:.6;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="brandbar"><img src="img/logo-green.png" alt="Lusa Travel"></div>
+
+  <header class="hero">
+    <div class="eyebrow">Cotação para sua viagem · Réveillon</div>
+    <h1>RÉVEILLON <span class="amp">no</span> RIO GRANDE DO NORTE</h1>
+    <div class="accent-line"></div>
+    <p class="hero-sub">Natal, Touros e Praia da Pipa — <b>Kate e Carlos</b> · <b>26 de dezembro de 2026 a 1º de janeiro de 2027</b></p>
+    <div class="hero-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Alex_Regis_Morro_do_Careca_Ponta_Negra_Natal_RN_%2839161823760%29.jpg/1920px-Alex_Regis_Morro_do_Careca_Ponta_Negra_Natal_RN_%2839161823760%29.jpg" alt="Morro do Careca, Ponta Negra, Natal (RN)" referrerpolicy="no-referrer"></div>
+    <div class="hero-info">
+      <div>
+        <div class="lbl">Detalhes da viagem</div>
+        <p>4 adultos + 4 crianças (2 adultos + 2 crianças por quarto) · 6 noites</p>
+        <p class="sm">Cotação emitida em <b>29/10/2026</b> · valores em <b>reais (BRL)</b>, total do período para o grupo</p>
+      </div>
+      <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
+    </div>
+    <div class="gloss">
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>3</b>&nbsp;Destinos no RN</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><b>6</b>&nbsp;Noites</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="16.5" cy="8" r="2.5"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5M15.5 20c0-2 .7-3.4 2-4.2"/></svg></span><b>4</b>&nbsp;Adultos + 4 crianças</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg></span><b>4</b>&nbsp;Opções de hospedagem</div>
+    </div>
+  </header>
+
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Acomodações</span>
+    <h2>Hospedagem</h2>
+    <div class="accent-line"></div>
+    <p class="lede">Quatro opções para a virada do ano no Rio Grande do Norte: dois resorts all inclusive em Natal, um all inclusive em Touros e um chalé com café da manhã em Pipa. Cada valor é o <b>total das 6 noites</b> para as duas famílias (2 adultos + 2 crianças em cada quarto), em reais. <b>Escolher 1 opção.</b> Parcelável em <b>até 10x</b>.</p>
+    <div class="avail"><b>Estas são as opções ainda disponíveis para o Réveillon.</b> A procura pela virada do ano é alta e a disponibilidade muda a cada dia. Os valores e quartos só ficam garantidos com a reserva.</div>
+
+    <div class="city-block">
+      <div class="city-head"><h3>Natal</h3><span class="dates">26 DEZ – 01 JAN · 6 NOITES</span></div>
+      <div class="hgrid">
+        <div class="hcard"><div class="hcard-top"><div><div class="hn">Ocean Palace All Inclusive Premium</div><div class="loc">Via Costeira · Natal</div></div><div class="hp"><div class="v">R$ 62.717,69</div><div class="u">2 quartos · 6 noites</div></div></div><div class="hgal"><img src="https://www.oceanpalace.com.br/storage/sections/gallery/01KMS1D1DQRXT282G9MXQ4TD59.jpeg" alt="Ocean Palace All Inclusive Premium" loading="lazy" referrerpolicy="no-referrer"><img src="https://www.oceanpalace.com.br/storage/231/01KQ8XGEPGPKHBR3A6X0Y5YVYB.jpg" alt="Ocean Palace All Inclusive Premium" loading="lazy" referrerpolicy="no-referrer"><img src="https://www.oceanpalace.com.br/storage/240/01KQ8XGEQPMYY49V0AJQE2A2YK.jpg" alt="Ocean Palace All Inclusive Premium" loading="lazy" referrerpolicy="no-referrer"><img src="https://www.oceanpalace.com.br/storage/01KYT7XZQYH0P2FZ5GPM41WZJP.jpg" alt="Ocean Palace All Inclusive Premium" loading="lazy" referrerpolicy="no-referrer"><img src="https://www.oceanpalace.com.br/storage/239/01KQ8XGEQK20GTKMWQBXT6ZJKP.jpg" alt="Ocean Palace All Inclusive Premium" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/16/f2/69/55/ocean-palace-beach-resort.jpg" alt="Ocean Palace All Inclusive Premium" loading="lazy" referrerpolicy="no-referrer"></div><div class="hr"><b>2× Suíte Júnior Família – Frente do Mar com Hidro e antessala</b><br>1 cama de casal + 1 cama de solteiro + 1 sofá-cama</div><span class="bf">All inclusive</span></div>
+        <div class="hcard"><div class="hcard-top"><div><div class="hn">Wish Natal</div><div class="loc">Via Costeira · Natal</div></div><div class="hp"><div class="v">R$ 76.818,36</div><div class="u">2 quartos · 6 noites</div></div></div><div class="hgal"><img src="https://media-cdn.tripadvisor.com/media/photo-s/12/84/25/76/wish-natal-by-gjp.jpg" alt="Wish Natal" loading="lazy" referrerpolicy="no-referrer"><img src="https://irp.cdn-website.com/0a2802d5/dms3rep/multi/194492012.webp" alt="Wish Natal" loading="lazy" referrerpolicy="no-referrer"><img src="https://irp.cdn-website.com/0a2802d5/dms3rep/multi/_FCH8746Wish.Natal.by.GJP18.webp" alt="Wish Natal" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/12/8c/38/df/wish-natal-by-gjp.jpg" alt="Wish Natal" loading="lazy" referrerpolicy="no-referrer"><img src="https://irp.cdn-website.com/0a2802d5/dms3rep/multi/344797.webp" alt="Wish Natal" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/11/c6/16/59/img-20180114-151423-largejpg.jpg" alt="Wish Natal" loading="lazy" referrerpolicy="no-referrer"></div><div class="hr"><b>2× Premium Family Sea View</b><br>1 cama de casal + 2 de solteiro, ou 4 camas de solteiro</div><span class="bf">All inclusive</span></div>
+      </div>
+      <p class="note">Os dois resorts ficam na Via Costeira, entre as praias de Areia Preta e Ponta Negra, a cerca de 30 minutos do aeroporto.</p>
+    </div>
+    <div class="city-block">
+      <div class="city-head"><h3>Touros</h3><span class="dates">26 DEZ – 01 JAN · 6 NOITES</span></div>
+      <div class="hgrid">
+        <div class="hcard"><div class="hcard-top"><div><div class="hn">Vila Galé Resort Touros – All Inclusive</div><div class="loc">Touros · litoral norte, cerca de 90 km de Natal</div></div><div class="hp"><div class="v">R$ 59.175,00</div><div class="u">2 quartos · 6 noites</div></div></div><div class="hgal"><img src="https://d2h50f2ee3zau3.cloudfront.net/app/uploads/2026/03/11161912/vg-touros-aerea-1_baixa.jpg" alt="Vila Galé Resort Touros – All Inclusive" loading="lazy" referrerpolicy="no-referrer"><img src="https://d2h50f2ee3zau3.cloudfront.net/app/uploads/2026/03/11152549/vg-touros-quarto-suite-familiar-1_baixa.jpg" alt="Vila Galé Resort Touros – All Inclusive" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/16/43/ee/73/piscina.jpg" alt="Vila Galé Resort Touros – All Inclusive" loading="lazy" referrerpolicy="no-referrer"><img src="https://d2h50f2ee3zau3.cloudfront.net/app/uploads/2026/03/11145423/VG_TOUROS-restaurante-versatil-768x513.webp" alt="Vila Galé Resort Touros – All Inclusive" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/17/ce/52/64/acesso-a-praia.jpg" alt="Vila Galé Resort Touros – All Inclusive" loading="lazy" referrerpolicy="no-referrer"><img src="https://d2h50f2ee3zau3.cloudfront.net/app/uploads/2026/03/11145426/VG-Touros-Clube-NEP-1_Baixa-768x512.webp" alt="Vila Galé Resort Touros – All Inclusive" loading="lazy" referrerpolicy="no-referrer"></div><div class="hr"><b>2× Family Suite</b><br>1 cama de casal no quarto + 2 camas de solteiro na sala de estar</div><span class="bf">All inclusive</span></div>
+      </div>
+      <p class="note">Touros fica no litoral norte do estado, a cerca de 90 km de Natal (1h30 de carro do aeroporto).</p>
+    </div>
+    <div class="city-block">
+      <div class="city-head"><h3>Praia da Pipa</h3><span class="dates">26 DEZ – 01 JAN · 6 NOITES</span></div>
+      <div class="hgrid">
+        <div class="hcard"><div class="hcard-top"><div><div class="hn">Resort Sombra e Água Fresca</div><div class="loc">Praia do Amor · Pipa</div></div><div class="hp"><div class="v">R$ 112.631,00</div><div class="u">1 chalé · 2 suítes · 6 noites</div></div></div><div class="hgal"><img src="https://irp.cdn-website.com/9157196a/dms3rep/multi/opt/MatejaLux_846A1699-640w.jpg" alt="Resort Sombra e Água Fresca" loading="lazy" referrerpolicy="no-referrer"><img src="https://irp.cdn-website.com/9157196a/dms3rep/multi/opt/PREMIUM+%2825%29+-+Copia-640w.jpg" alt="Resort Sombra e Água Fresca" loading="lazy" referrerpolicy="no-referrer"><img src="https://irp.cdn-website.com/9157196a/dms3rep/multi/opt/PREMIUM+%2816%29+-+Copia-640w.jpg" alt="Resort Sombra e Água Fresca" loading="lazy" referrerpolicy="no-referrer"><img src="https://irp.cdn-website.com/9157196a/dms3rep/multi/opt/cafedamanha08-640w.jpg" alt="Resort Sombra e Água Fresca" loading="lazy" referrerpolicy="no-referrer"><img src="https://irp.cdn-website.com/9157196a/dms3rep/multi/opt/PREMIUM+%2837%29-640w.jpg" alt="Resort Sombra e Água Fresca" loading="lazy" referrerpolicy="no-referrer"><img src="https://irp.cdn-website.com/9157196a/dms3rep/multi/opt/05_MateyaLux_846A4102-HDR-Edit-640w.jpg" alt="Resort Sombra e Água Fresca" loading="lazy" referrerpolicy="no-referrer"></div><div class="hr"><b>1× Chalé Premium</b><br>2 suítes (uma para cada família)</div><span class="bf">Café da manhã</span></div>
+      </div>
+      <p class="note">Pipa fica em Tibau do Sul, no litoral sul, a cerca de 1h30 de carro do aeroporto de Natal. O Sombra e Água Fresca fica no alto da Praia do Amor.</p>
+    </div>
+  </section>
+
+  <section class="section sh">
+    <span class="eyebrow">Investimento</span>
+    <h2>Resumo de valores</h2>
+    <div class="accent-line"></div>
+    <p class="lede">Cada opção com o seu valor exato, em <b>reais (BRL)</b>, para o grupo (4 adultos + 4 crianças) nas 6 noites. Como há quatro opções, o total aparece como faixa.</p>
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Hotel</td><td>Acomodação &middot; regime</td><td class="v">Valor &middot; grupo</td></tr>
+      <tr class="sec-row"><td colspan="3">Rio Grande do Norte <span>&middot; 26/12/2026&ndash;01/01/2027 &middot; 6 noites &middot; escolher 1</span></td></tr>
+      <tr><td><b>Ocean Palace All Inclusive Premium</b><div class="rm">Via Costeira · Natal</div></td><td>2&times; Suíte Júnior Família – Frente do Mar com Hidro e antessala<div class="rm">1 cama de casal + 1 cama de solteiro + 1 sofá-cama &middot; All inclusive</div></td><td class="v">R$ 62.717,69</td></tr>
+      <tr><td><b>Wish Natal</b><div class="rm">Via Costeira · Natal</div></td><td>2&times; Premium Family Sea View<div class="rm">1 cama de casal + 2 de solteiro, ou 4 camas de solteiro &middot; All inclusive</div></td><td class="v">R$ 76.818,36</td></tr>
+      <tr><td><b>Vila Galé Resort Touros – All Inclusive</b><div class="rm">Touros · litoral norte, cerca de 90 km de Natal</div></td><td>2&times; Family Suite<div class="rm">1 cama de casal no quarto + 2 camas de solteiro na sala de estar &middot; All inclusive</div></td><td class="v">R$ 59.175,00</td></tr>
+      <tr><td><b>Resort Sombra e Água Fresca</b><div class="rm">Praia do Amor · Pipa</div></td><td>1&times; Chalé Premium<div class="rm">2 suítes (uma para cada família) &middot; Café da manhã</div></td><td class="v">R$ 112.631,00</td></tr>
+      <tr class="total-row"><td>Total da hospedagem</td><td>6 noites &middot; 26/12 a 01/01</td><td class="v">R$ 59.175,00 &ndash; 112.631,00</td></tr>
+    </table></div>
+
+    <p class="note"><b>Como chegamos ao total:</b> a faixa vai do Vila Galé Resort Touros (R$ 59.175,00) ao Resort Sombra e Água Fresca (R$ 112.631,00). O valor final depende da opção escolhida. Aéreo e traslados não estão incluídos. Nada reservado, apenas cotado.</p>
+
+    <div class="pay">
+      <div class="box">
+        <h4>Condições de pagamento</h4>
+        <p><b>Hospedagem</b> — em até <b>10x</b></p>
+        <p class="sm">Valores sujeitos a disponibilidade no momento do fechamento.</p>
+      </div>
+      <div class="box">
+        <h4>Ocupação cotada</h4>
+        <p><b>2 famílias</b>, cada uma com <b>2 adultos + 2 crianças</b></p>
+        <p class="sm">Ocean Palace, Wish e Vila Galé: 2 quartos · Sombra e Água Fresca: 1 Chalé Premium com 2 suítes. As idades das crianças são confirmadas na reserva.</p>
+      </div>
+    </div>
+
+    <div class="obs">
+      <h4>Não inclui</h4>
+      <ul>
+        <li>Passagens aéreas e traslados aeroporto de Natal ⇄ hotel</li>
+        <li>Sombra e Água Fresca: almoço, jantar e bebidas (o regime é café da manhã)</li>
+        <li>Passeios, ingressos e qualquer serviço não listado nesta cotação · seguro viagem</li>
+      </ul>
+      <h4>Observações</h4>
+      <ul>
+        <li><b>Estas são as opções ainda disponíveis para o Réveillon</b> no momento da cotação.</li>
+        <li>Réveillon: confirmamos com o hotel escolhido se há ceia ou festa da virada e se é cobrada à parte.</li>
+        <li>Este documento não constitui confirmação nem reserva dos serviços descritos.</li>
+        <li>A confirmação está sujeita à disponibilidade no momento do pagamento.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel">
+    <div class="contact">atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR</div>
+    <div class="fnote">*Nada reservado, apenas cotado.</div>
+    <div class="credit">Foto de capa: Morro do Careca, Ponta Negra, Natal (RN), Alex Regis, Wikimedia Commons, domínio público.</div>
+  </footer>
+</div>
+</body>
+</html>
