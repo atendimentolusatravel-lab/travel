@@ -36,7 +36,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .ft a,.ft span{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.55); text-decoration:none; }
 .ft .sep{ color:rgba(255,255,255,.25); }
 
-.body{ padding:11mm 20mm 8mm; flex:1; display:flex; flex-direction:column; }
+.body{ padding:9mm 20mm 7mm; flex:1; display:flex; flex-direction:column; }
 
 /* Intro */
 .intro{ display:flex; justify-content:space-between; align-items:flex-end; gap:10mm; }
@@ -63,16 +63,16 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .cmp-card .pts b{ color:var(--dest); font-weight:600; }
 
 /* Opção */
-.opt{ margin-top:6mm; }
+.opt{ margin-top:4.5mm; }
 .opt-hd{ display:flex; align-items:center; justify-content:space-between; border-bottom:2px solid var(--dest); padding-bottom:2mm; }
 .opt-hd h2{ font-size:15pt; font-weight:700; color:var(--ink); }
 .opt-hd h2 em{ font-style:normal; color:var(--gold); }
 .opt-hd .air{ font-size:9pt; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--dest); }
 
-table.fl{ width:100%; border-collapse:collapse; margin-top:3mm; font-size:9.5pt; }
+table.fl{ width:100%; border-collapse:collapse; margin-top:2mm; font-size:9.5pt; }
 table.fl th{ font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700;
   text-align:left; padding:1.5mm 2mm; }
-table.fl td{ padding:2mm 2mm; border-top:1px solid var(--line); vertical-align:middle; }
+table.fl td{ padding:1.6mm 2mm; border-top:1px solid var(--line); vertical-align:middle; }
 table.fl td.fn{ font-weight:700; color:var(--ink); white-space:nowrap; }
 table.fl td.dt{ color:var(--gold); font-weight:700; white-space:nowrap; }
 table.fl td.rt b{ font-weight:600; color:var(--ink); }
@@ -95,9 +95,18 @@ tr.stop td{ background:#fbf3e3; border-top:1px dashed var(--gold); font-size:8.5
 tr.grp td{ background:var(--dest-soft); color:var(--dest); font-size:7.5pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; padding:1.6mm 2mm; border-top:1px solid var(--line); }
 .fare .brk{ display:flex; justify-content:space-between; font-size:8.5pt; color:var(--char); margin-top:1.2mm; font-variant-numeric:tabular-nums; }
 .fare .brk span:first-child{ color:var(--mut); }
+tr.alt-grp td{ background:#fbf3e3; color:#8a5a00; }
+.band{ margin-top:3mm; display:grid; grid-template-columns:1.1fr 1.3fr 1.6fr 1.1fr; align-items:center; gap:4mm; border:1px solid var(--line); border-radius:5px; padding:3mm 5mm; background:#fbf3e3; }
+.band .bt{ font-size:8pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--dest); }
+.band .bt span{ display:block; font-size:7.5pt; font-weight:400; letter-spacing:0; text-transform:none; color:var(--mut); margin-top:.5mm; }
+.band .bc span{ display:block; font-size:7pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.band .bc b{ display:block; font-size:12pt; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; }
+.band .bc em{ display:block; font-style:normal; font-size:7pt; color:var(--mut); line-height:1.4; }
+.band .tot{ background:var(--ink); border-radius:4px; padding:2mm 3mm; }
+.band .tot b{ color:var(--gold); }
 .alt{ margin-top:3mm; font-size:8.5pt; color:var(--char); line-height:1.6; }
 .alt b{ color:var(--dest); font-weight:600; }
-.notes{ margin-top:8mm; padding-top:6mm; border-top:1px solid var(--line); display:grid; grid-template-columns:1.4fr 1fr; gap:10mm; }
+.notes{ margin-top:3.5mm; padding-top:4mm; border-top:1px solid var(--line); display:grid; grid-template-columns:1.4fr 1fr; gap:10mm; }
 .notes h3{ font-size:8.5pt; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5mm; }
 .notes p, .notes li{ font-size:8.5pt; line-height:1.65; color:var(--char); }
 .notes ul{ list-style:none; }
@@ -140,9 +149,9 @@ tr.grp td{ background:var(--dest-soft); color:var(--dest); font-size:7.5pt; font
         <div class="pts">30 Dez → 27 Jan · <b>1 executiva + 4 econômica</b><br>Todos nos mesmos voos · Réveillon em Amsterdã</div>
       </div>
       <div class="cmp-card">
-        <div class="top"><div class="no">3</div><div><div class="t1">Pequim via Amsterdã</div><div class="t2">KLM + LATAM · bilhetes separados</div></div></div>
-        <div class="mid"><span class="k">Total 5 pax</span><span class="v"><small>R$</small>108.411,22</span></div>
-        <div class="pts">28/29 Dez → 28 Jan · <b>1 executiva + 4 econômica</b><br>KLM + LATAM · Réveillon em Amsterdã</div>
+        <div class="top"><div class="no">3</div><div><div class="t1">Pequim via Amsterdã</div><div class="t2">KLM (+ LATAM na 3A)</div></div></div>
+        <div class="mid"><span class="k">Total 5 pax · 3A / 3B</span><span class="v"><small>R$</small>108.411,22</span><span class="k" style="letter-spacing:.04em;text-transform:none">3B, todos na KLM: R$ 114.147,24</span></div>
+        <div class="pts">28/29 Dez → 28 Jan · <b>1 executiva + 4 econômica</b><br>Réveillon em Amsterdã</div>
       </div>
       <div class="cmp-card">
         <div class="top"><div class="no">4</div><div><div class="t1">Tóquio via Frankfurt</div><div class="t2">Lufthansa · bilhete único</div></div></div>
@@ -247,40 +256,33 @@ tr.grp td{ background:var(--dest-soft); color:var(--dest); font-size:7.5pt; font
       <table class="fl">
         <thead><tr><th>Voo</th><th>Data</th><th>Trecho</th><th>Partida</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr></thead>
         <tbody>
-          <tr class="grp"><td colspan="7">São Paulo ⇄ Amsterdã · Executiva (1 pax) · KLM</td></tr>
+          <tr class="grp"><td colspan="7">Variante 3A · São Paulo ⇄ Amsterdã · Executiva (1 pax) · KLM</td></tr>
           <tr><td class="fn">KL 792</td><td class="dt">28 Dez</td><td class="rt"><b>GRU</b> São Paulo → <b>AMS</b> Amsterdã</td><td class="tm">20:59</td><td class="tm">12:20 <span class="mu">(29 Dez)</span></td><td class="mu">11h21 · direto</td><td class="mu">Boeing 777-300ER</td></tr>
           <tr><td class="fn">KL 793</td><td class="dt">27 Jan</td><td class="rt"><b>AMS</b> Amsterdã → <b>GRU</b> São Paulo</td><td class="tm">20:55</td><td class="tm">04:55 <span class="mu">(28 Jan)</span></td><td class="mu">12h00 · direto</td><td class="mu">Boeing 777-200</td></tr>
-          <tr class="grp"><td colspan="7">São Paulo ⇄ Amsterdã · Econômica (4 pax) · LATAM</td></tr>
+          <tr class="grp"><td colspan="7">Variante 3A · São Paulo ⇄ Amsterdã · Econômica (4 pax) · LATAM</td></tr>
           <tr><td class="fn">LA 8078</td><td class="dt">29 Dez</td><td class="rt"><b>GRU</b> São Paulo → <b>AMS</b> Amsterdã</td><td class="tm">22:55</td><td class="tm">14:55 <span class="mu">(30 Dez)</span></td><td class="mu">12h00 · direto</td><td class="mu">Boeing 787-9</td></tr>
           <tr><td class="fn">LA 8079</td><td class="dt">27 Jan</td><td class="rt"><b>AMS</b> Amsterdã → <b>GRU</b> São Paulo</td><td class="tm">20:35</td><td class="tm">04:45 <span class="mu">(28 Jan)</span></td><td class="mu">12h10 · direto</td><td class="mu">Boeing 787-9</td></tr>
-          <tr class="grp"><td colspan="7">Amsterdã ⇄ Pequim · todos os passageiros · KLM</td></tr>
+          <tr class="grp alt-grp"><td colspan="7">Variante 3B · São Paulo ⇄ Amsterdã · todos os passageiros na KLM</td></tr>
+          <tr><td class="fn">KL 792</td><td class="dt">28 Dez</td><td class="rt"><b>GRU</b> São Paulo → <b>AMS</b> Amsterdã</td><td class="tm">20:59</td><td class="tm">12:20 <span class="mu">(29 Dez)</span></td><td class="mu">11h21 · direto</td><td class="mu">Boeing 777-300ER</td></tr>
+          <tr><td class="fn">KL 793</td><td class="dt">27 Jan</td><td class="rt"><b>AMS</b> Amsterdã → <b>GRU</b> São Paulo</td><td class="tm">20:55</td><td class="tm">04:55 <span class="mu">(28 Jan)</span></td><td class="mu">12h00 · direto</td><td class="mu">Boeing 777-200</td></tr>
+          <tr class="grp"><td colspan="7">Amsterdã ⇄ Pequim · todos os passageiros · KLM (3A e 3B)</td></tr>
           <tr><td class="fn">KL 897</td><td class="dt">01 Jan</td><td class="rt"><b>AMS</b> Amsterdã → <b>PEK</b> Pequim</td><td class="tm">15:55</td><td class="tm">09:55 <span class="mu">(02 Jan)</span></td><td class="mu">11h00 · direto</td><td class="mu">Boeing 787-9</td></tr>
           <tr><td class="fn">KL 898</td><td class="dt">26 Jan</td><td class="rt"><b>PEK</b> Pequim → <b>AMS</b> Amsterdã</td><td class="tm">11:50</td><td class="tm">17:20</td><td class="mu">12h30 · direto</td><td class="mu">Boeing 787-9</td></tr>
-          <tr class="stop"><td colspan="7">Parada em Amsterdã: Réveillon na ida (chegada 29/30 Dez, embarque 01 Jan) e pernoite na volta (26 para 27 Jan)</td></tr>
+          <tr class="stop"><td colspan="7">Parada em Amsterdã: Réveillon na ida (embarque para Pequim em 01 Jan) e pernoite na volta (26 para 27 Jan)</td></tr>
         </tbody>
       </table>
-      <div class="fares">
-        <div class="fare">
-          <div class="cab">Executiva · 1 passageiro</div>
-          <div class="brk"><span>GRU ⇄ AMS · KLM</span><span>R$ 17.701,31</span></div>
-          <div class="brk"><span>AMS ⇄ PEK · KLM</span><span>R$ 30.532,35</span></div>
-          <div class="amt">R$ 48.233,66</div>
-          <div class="inc">2 malas no trecho Pequim · franquia GRU ⇄ AMS a confirmar</div>
-        </div>
-        <div class="fare">
-          <div class="cab">Econômica · 4 passageiros</div>
-          <div class="brk"><span>GRU ⇄ AMS · LATAM</span><span>R$ 31.521,76</span></div>
-          <div class="brk"><span>AMS ⇄ PEK · KLM</span><span>R$ 28.655,80</span></div>
-          <div class="amt">R$ 60.177,56</div>
-          <div class="inc">R$ 15.044,39 por pessoa · 1 mala despachada por trecho</div>
-        </div>
-        <div class="total">
-          <div class="lbl">Total · 5 passageiros</div>
-          <div class="amt">R$ 108.411,22</div>
-          <div class="usd">Aéreo completo São Paulo ⇄ Pequim</div>
-        </div>
+      <div class="band">
+        <div class="bt">3A · KLM + LATAM<span>executiva KLM, econômica LATAM até Amsterdã</span></div>
+        <div class="bc"><span>Executiva · 1 pax</span><b>R$ 48.233,66</b><em>GRU⇄AMS R$ 17.701,31 + AMS⇄PEK R$ 30.532,35</em></div>
+        <div class="bc"><span>Econômica · 4 pax</span><b>R$ 60.177,56</b><em>GRU⇄AMS R$ 31.521,76 + AMS⇄PEK R$ 28.655,80 · R$ 15.044,39/pessoa</em></div>
+        <div class="bc tot"><span>Total 3A · 5 pax</span><b>R$ 108.411,22</b></div>
       </div>
-      <div class="alt"><b>Alternativas para a executiva no trecho GRU ⇄ AMS:</b> KLM saindo 29 Dez com o grupo e voltando 27 Jan 10:45, R$ 19.870,09 · LATAM Premium Business nos mesmos voos do grupo, R$ 21.375,78</div>
+      <div class="band">
+        <div class="bt">3B · todos na KLM<span>mesmos voos para os 5 passageiros</span></div>
+        <div class="bc"><span>Executiva · 1 pax</span><b>R$ 48.446,12</b><em>GRU⇄AMS R$ 17.913,77 + AMS⇄PEK R$ 30.532,35</em></div>
+        <div class="bc"><span>Econômica · 4 pax</span><b>R$ 65.701,12</b><em>GRU⇄AMS R$ 37.045,32 + AMS⇄PEK R$ 28.655,80 · R$ 16.425,28/pessoa</em></div>
+        <div class="bc tot"><span>Total 3B · 5 pax</span><b>R$ 114.147,24</b></div>
+      </div>
     </div>
 
     <!-- Opção 4 -->
@@ -325,7 +327,7 @@ tr.grp td{ background:var(--dest-soft); color:var(--dest); font-size:7.5pt; font
         <h3>Observações</h3>
         <ul>
           <li>Opção 1: as conexões em Adis Abeba passam de 24h. É preciso hospedagem local e visto eletrônico da Etiópia, não incluídos.</li>
-          <li>Opções 2 e 3: hospedagem em Amsterdã não incluída. Opção 4: hospedagem em Frankfurt não incluída; o voo LH 4948 é compartilhado, operadora a confirmar. Na Opção 3, a passageira da executiva embarca em 28 Dez, um dia antes do grupo.</li>
+          <li>Opções 2 e 3: hospedagem em Amsterdã não incluída. Opção 4: hospedagem em Frankfurt não incluída; o voo LH 4948 é compartilhado, operadora a confirmar. Na Opção 3A, a passageira da executiva embarca em 28 Dez, um dia antes do grupo; na 3B todos viajam juntos.</li>
           <li>Verificar exigência de visto para a China na data da viagem.</li>
           <li>Horários em hora local de cada cidade.</li>
           <li>Tarifas sujeitas a disponibilidade e alteração até a emissão.</li>
