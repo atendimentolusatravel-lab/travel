@@ -56,8 +56,8 @@ VILA = dict(nome="Vila Galé Resort Touros – All Inclusive", loc="Touros · li
                    TA + "17/ce/52/64/acesso-a-praia.jpg",
                    VG + "11145426/VG-Touros-Clube-NEP-1_Baixa-768x512.webp"])
 SOMBRA = dict(nome="Resort Sombra e Água Fresca", loc="Praia do Amor · Pipa",
-              quarto="Chalé Premium", unidade="1 chalé · 2 suítes", qtd="1×",
-              camas="2 suítes (uma para cada família)", regime="Café da manhã", valor="112.631,00",
+              quarto="Chalé Premium", unidade="2 chalés", qtd="2×",
+              camas="cada chalé é uma casa de 2 pavimentos com 2 suítes (um chalé por família)", regime="Café da manhã", valor="112.631,00",
               fotos=[SA + "MatejaLux_846A1699-640w.jpg",
                      SA + "PREMIUM+%2825%29+-+Copia-640w.jpg",
                      SA + "PREMIUM+%2816%29+-+Copia-640w.jpg",
@@ -146,7 +146,7 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Acomodações</span>
     <h2>Hospedagem</h2>
     <div class="accent-line"></div>
-    <p class="lede">Quatro opções para a virada do ano no Rio Grande do Norte: dois resorts all inclusive em Natal, um all inclusive em Touros e um chalé com café da manhã em Pipa. Cada valor é o <b>total das 6 noites</b> para as duas famílias (2 adultos + 2 crianças em cada quarto), em reais. <b>Escolher 1 opção.</b> Parcelável em <b>até 10x</b>.</p>
+    <p class="lede">Quatro opções para a virada do ano no Rio Grande do Norte: dois resorts all inclusive em Natal, um all inclusive em Touros e dois chalés com café da manhã em Pipa. Cada valor é o <b>total das 6 noites</b> para as duas famílias (2 adultos + 2 crianças em cada quarto), em reais. <b>Escolher 1 opção.</b> Parcelável em <b>até 10x</b>.</p>
     <div class="avail"><b>Estas são as opções ainda disponíveis para o Réveillon.</b> A procura pela virada do ano é alta e a disponibilidade muda a cada dia. Os valores e quartos só ficam garantidos com a reserva.</div>
 
 {chr(10).join(bloco(*c) for c in CIDADES)}
@@ -175,7 +175,7 @@ html = f"""<!DOCTYPE html>
       <div class="box">
         <h4>Ocupação cotada</h4>
         <p><b>2 famílias</b>, cada uma com <b>2 adultos + 2 crianças</b></p>
-        <p class="sm">Ocean Palace, Wish e Vila Galé: 2 quartos · Sombra e Água Fresca: 1 Chalé Premium com 2 suítes. As idades das crianças são confirmadas na reserva.</p>
+        <p class="sm">Ocean Palace, Wish e Vila Galé: 2 quartos · Sombra e Água Fresca: 2 Chalés Premium, cada um uma casa de 2 pavimentos com 2 suítes. As idades das crianças são confirmadas na reserva.</p>
       </div>
     </div>
 
