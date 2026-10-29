@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="LusaTravel — roteiro de voos de Luanna Alves Silva: São Paulo, Nairóbi, Arusha, Seychelles, de 30 de novembro a 11 de dezembro de 2026.">
+<title>Roteiro de Voos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
+<style>
+/* ─── LUSATRAVEL · DESIGN SYSTEM TOKENS ─────────────────── */
+:root{
+  --gold:#da8d00; --gold-hi:#f0a010;
+  --ink:#1a1510; --char:#333131; --mut:#8a7d70;
+  --line:#e4ddd2; --paper:#faf7f2; --surf:#fff; --surf2:#f2ece3;
+  --onink:#f0e8de;
+  --dest:#404525;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+  --mx:1080px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#f0e8de; --char:#d9cec1; --mut:#9a8d80;
+    --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+    --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+    --dest:#7d8750;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#f0e8de; --char:#d9cec1; --mut:#9a8d80;
+  --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+  --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+  --dest:#7d8750;
+}
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  background:var(--paper); color:var(--char);
+  font-family:var(--sans); font-weight:400;
+  font-size:15px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+
+.wrap{ max-width:var(--mx); margin:0 auto; padding:0 28px; }
+
+/* ─── MASTHEAD / CAPA ────────────────────────────────────── */
+.mh{ background:#1a1510; padding:56px 0 44px; position:relative; }
+.mh::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.mh-logo{ font-family:var(--con); font-weight:600; font-size:13px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.mh-kick{ margin-top:26px; font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+.mh-name{ margin-top:10px; font-weight:700; font-size:clamp(28px,5.2vw,46px); line-height:1.06; letter-spacing:.01em; color:#fff; text-transform:uppercase; text-wrap:balance; }
+.mh-dest{ margin-top:8px; font-weight:600; font-size:clamp(17px,2.4vw,22px); color:var(--gold); letter-spacing:.02em; }
+.mh-sub{ margin-top:16px; max-width:60ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.62); }
+.mh-sub strong{ font-weight:500; color:rgba(240,232,222,.88); }
+.mh-stats{ margin-top:34px; display:flex; flex-wrap:wrap; border-top:1px solid rgba(240,232,222,.14); }
+.mh-stat{ padding:18px 34px 4px 0; margin-right:34px; border-right:1px solid rgba(240,232,222,.12); }
+.mh-stat:last-child{ border-right:0; }
+.mh-stat .v{ font-weight:700; font-size:24px; color:#fff; line-height:1; font-variant-numeric:tabular-nums; }
+.mh-stat .k{ margin-top:7px; font-size:9.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.45); }
+
+/* ─── SEÇÕES ─────────────────────────────────────────────── */
+.sec{ padding:56px 0; }
+.sec + .sec{ border-top:1px solid var(--line); }
+.eyebrow{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; letter-spacing:-.01em; text-wrap:balance; }
+.lead{ margin-top:12px; max-width:66ch; font-weight:300; font-size:15px; color:var(--char); }
+
+/* ─── TIMELINE ───────────────────────────────────────────── */
+.tl{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+.tl-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--dest); padding:16px 16px 14px; }
+.tl-badge{ display:inline-flex; align-items:center; justify-content:center; min-width:30px; height:30px; padding:0 9px; background:var(--dest); color:#fff; font-weight:700; font-size:12.5px; font-variant-numeric:tabular-nums; }
+.tl-city{ margin-top:12px; font-weight:600; font-size:16px; color:var(--ink); line-height:1.25; }
+.tl-meta{ margin-top:5px; font-size:12px; font-weight:300; color:var(--mut); }
+
+/* ─── DIAS DE VOO ────────────────────────────────────────── */
+.day{ margin-top:40px; }
+.day:first-of-type{ margin-top:30px; }
+.day-h{ display:flex; align-items:baseline; gap:14px; padding-bottom:10px; border-bottom:2px solid var(--gold); }
+.day-d{ font-family:var(--lbl); font-weight:700; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.day-t{ font-weight:600; font-size:17px; color:var(--ink); }
+
+.fl{ margin-top:14px; background:var(--surf); border:1px solid var(--line); border-left:4px solid var(--dest); break-inside:avoid; }
+.fl-top{ display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; padding:12px 18px; border-bottom:1px solid var(--line); }
+.fl-num{ display:inline-flex; align-items:center; justify-content:center; min-width:28px; height:26px; padding:0 7px; background:var(--dest); color:#fff; font-weight:700; font-size:12px; font-variant-numeric:tabular-nums; }
+.fl-air{ font-weight:600; font-size:14px; color:var(--ink); }
+.fl-air small{ font-weight:300; font-size:12.5px; color:var(--mut); }
+.fl-loc{ margin-left:auto; font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mut); }
+.fl-loc b{ color:var(--ink); font-size:13px; letter-spacing:.08em; margin-left:4px; }
+
+.fl-route{ display:grid; grid-template-columns:1fr minmax(90px,150px) 1fr; align-items:center; gap:14px; padding:18px 18px 16px; }
+.pt .t{ font-weight:700; font-size:28px; color:var(--ink); line-height:1; font-variant-numeric:tabular-nums; }
+.pt .t sup{ font-size:11px; font-weight:600; color:var(--gold); margin-left:3px; vertical-align:top; position:relative; top:2px; }
+.pt .c{ margin-top:6px; font-family:var(--lbl); font-weight:700; font-size:13px; letter-spacing:.12em; color:var(--dest); }
+.pt .n{ margin-top:2px; font-size:12.5px; font-weight:300; color:var(--char); line-height:1.45; }
+.pt.r{ text-align:right; }
+.mid{ text-align:center; }
+.mid .dur{ font-weight:600; font-size:13px; color:var(--ink); font-variant-numeric:tabular-nums; }
+.mid .line{ position:relative; height:2px; background:var(--line); margin:7px 0; }
+.mid .line::before,.mid .line::after{ content:''; position:absolute; top:-3px; width:8px; height:8px; border-radius:50%; background:var(--dest); }
+.mid .line::before{ left:0; } .mid .line::after{ right:0; }
+.mid .d{ font-size:10.5px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--mut); }
+
+.fl-meta{ display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); }
+.fl-meta div{ padding:10px 18px 11px; border-right:1px solid var(--line); }
+.fl-meta div:last-child{ border-right:0; }
+.fl-meta dt{ font-size:9.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--mut); }
+.fl-meta dd{ margin-top:2px; font-size:13px; font-weight:500; color:var(--ink); }
+
+.gn{ margin-top:12px; padding:12px 18px; background:var(--surf2); border-left:4px solid var(--gold); font-size:13.5px; font-weight:300; color:var(--char); break-inside:avoid; }
+.gn b{ font-weight:600; color:var(--ink); }
+.gn.warn{ border-left-color:#b3261e; }
+
+/* ─── TABELA DE RESERVAS ─────────────────────────────────── */
+.tbl-wrap{ margin-top:24px; overflow-x:auto; }
+table{ width:100%; border-collapse:collapse; font-size:13.5px; min-width:620px; }
+th{ text-align:left; font-size:9.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#fff; background:#1a1510; padding:11px 14px; }
+td{ padding:12px 14px; border-bottom:1px solid var(--line); background:var(--surf); vertical-align:top; color:var(--char); }
+td b{ font-weight:600; color:var(--ink); }
+td .mono{ font-variant-numeric:tabular-nums; letter-spacing:.02em; }
+td small{ display:block; color:var(--mut); font-size:11.5px; font-weight:300; }
+
+/* ─── CHECKLIST ──────────────────────────────────────────── */
+.chk{ margin-top:24px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:12px; }
+.chk-i{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--gold); padding:16px 18px; break-inside:avoid; }
+.chk-i h3{ font-weight:600; font-size:14.5px; color:var(--ink); }
+.chk-i p{ margin-top:6px; font-size:13.5px; font-weight:300; color:var(--char); }
+.chk-i p b{ font-weight:600; color:var(--ink); }
+
+/* ─── RODAPÉ / ASSINATURA ────────────────────────────────── */
+.ft{ background:#1a1510; padding:44px 0 40px; position:relative; }
+.ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
+.ft-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.ft-sig{ margin-top:18px; display:flex; flex-wrap:wrap; gap:10px 34px; font-family:var(--con); font-size:13px; color:rgba(240,232,222,.72); }
+.ft-sig a{ color:rgba(240,232,222,.72); text-decoration:none; border-bottom:1px solid rgba(218,141,0,.5); }
+.ft-sig a:hover{ color:var(--gold); }
+.ft-addr{ margin-top:16px; font-family:var(--con); font-size:11.5px; color:rgba(240,232,222,.38); }
+.ft-note{ margin-top:14px; font-family:var(--con); font-size:11px; color:rgba(240,232,222,.38); max-width:80ch; }
+
+@media (max-width:640px){
+  .wrap{ padding:0 16px; }
+  .mh-stat{ padding-right:18px; margin-right:18px; }
+  .fl-route{ grid-template-columns:1fr 1fr; }
+  .mid{ grid-column:1 / -1; grid-row:2; }
+  .pt .t{ font-size:24px; }
+  .fl-meta{ grid-template-columns:1fr 1fr; }
+  .fl-meta div:nth-child(2){ border-right:0; }
+  .fl-meta div:nth-child(-n+2){ border-bottom:1px solid var(--line); }
+  .fl-loc{ margin-left:0; width:100%; }
+}
+
+@page{ size:A4 portrait; margin:12mm 0; }
+@media print{
+  :root{ --ink:#1a1510; --char:#333131; --mut:#8a7d70; --line:#e4ddd2; --paper:#fff; --surf:#fff; --surf2:#f5f0e8; --gold:#da8d00; --dest:#404525; }
+  body{ font-size:13px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .wrap{ padding:0 14mm; }
+  .mh{ padding:34px 0 30px; }
+  .sec{ padding:30px 0; }
+  .day{ margin-top:24px; }
+  .day-h{ break-after:avoid; }
+  .pb{ break-before:page; }
+  .tl{ grid-template-columns:repeat(5,1fr); }
+}
+</style>
+</head>
+<body>
+
+<header class="mh">
+  <div class="wrap">
+    <div class="mh-logo">LusaTravel</div>
+    <div class="mh-kick">Roteiro de voos</div>
+    <h1 class="mh-name">Luanna Alves Silva</h1>
+    <div class="mh-dest">Quênia · Tanzânia · Seychelles</div>
+    <p class="mh-sub">Viajando com <strong>Eduardo Henrique de Prospero Amui</strong>. Todos os horários estão em hora local de cada aeroporto. Todos os bilhetes estão emitidos.</p>
+    <div class="mh-stats">
+      <div class="mh-stat"><div class="v">30/11 – 11/12</div><div class="k">Período</div></div>
+      <div class="mh-stat"><div class="v">7</div><div class="k">Voos</div></div>
+      <div class="mh-stat"><div class="v">2</div><div class="k">Adultos</div></div>
+      <div class="mh-stat"><div class="v">Executiva</div><div class="k">Voos de longa distância</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Visão geral</div>
+    <h2 class="h2">De São Paulo à savana e às ilhas</h2>
+    <div class="tl">
+      <div class="tl-item"><span class="tl-badge">1</span><div class="tl-city">Nairóbi</div><div class="tl-meta">Chegada 02/12 · 00:05<br>Pernoite no aeroporto</div></div>
+      <div class="tl-item"><span class="tl-badge">3</span><div class="tl-city">Arusha</div><div class="tl-meta">02/12 a 05/12 · 3 noites</div></div>
+      <div class="tl-item"><span class="tl-badge">1</span><div class="tl-city">Nairóbi</div><div class="tl-meta">05/12 a 06/12 · 1 noite</div></div>
+      <div class="tl-item"><span class="tl-badge">4</span><div class="tl-city">Seychelles</div><div class="tl-meta">06/12 a 10/12 · 4 noites</div></div>
+      <div class="tl-item"><span class="tl-badge">✈</span><div class="tl-city">São Paulo</div><div class="tl-meta">Chegada 11/12 · 10:40</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec pb">
+  <div class="wrap">
+    <div class="eyebrow">Voos</div>
+    <h2 class="h2">Trecho a trecho</h2>
+
+    <!-- 30/11 -->
+    <div class="day">
+      <div class="day-h"><span class="day-d">Seg · 30 Nov</span><span class="day-t">São Paulo → Doha → Nairóbi</span></div>
+
+      <article class="fl">
+        <div class="fl-top"><span class="fl-num">01</span><span class="fl-air">Qatar Airways · QR 780 <small>Airbus A350-1000</small></span><span class="fl-loc">Localizador<b>C2SHUU</b></span></div>
+        <div class="fl-route">
+          <div class="pt"><div class="t">20:25</div><div class="c">GRU</div><div class="n">São Paulo · Guarulhos<br>Terminal 3</div></div>
+          <div class="mid"><div class="dur">13h35</div><div class="line"></div><div class="d">Direto</div></div>
+          <div class="pt r"><div class="t">16:00<sup>+1</sup></div><div class="c">DOH</div><div class="n">Doha · Hamad International</div></div>
+        </div>
+        <dl class="fl-meta">
+          <div><dt>Cabine</dt><dd>Executiva</dd></div>
+          <div><dt>Assentos</dt><dd>1F · 1E</dd></div>
+          <div><dt>Bagagem</dt><dd>2 peças por pessoa</dd></div>
+          <div><dt>Apresentação</dt><dd>Até 17:25</dd></div>
+        </dl>
+      </article>
+
+      <div class="gn"><b>Conexão em Doha · 3h00.</b> Mesma reserva Qatar: a bagagem segue despachada direto até Nairóbi.</div>
+
+      <article class="fl">
+        <div class="fl-top"><span class="fl-num">02</span><span class="fl-air">Qatar Airways · QR 1341 <small>Boeing 777-300ER</small></span><span class="fl-loc">Localizador<b>C2SHUU</b></span></div>
+        <div class="fl-route">
+          <div class="pt"><div class="t">19:00</div><div class="c">DOH</div><div class="n">Doha · Hamad International<br>Ter 01/12</div></div>
+          <div class="mid"><div class="dur">5h05</div><div class="line"></div><div class="d">Direto</div></div>
+          <div class="pt r"><div class="t">00:05<sup>+1</sup></div><div class="c">NBO</div><div class="n">Nairóbi · Jomo Kenyatta<br>Terminal 1A · Qua 02/12</div></div>
+        </div>
+        <dl class="fl-meta">
+          <div><dt>Cabine</dt><dd>Executiva</dd></div>
+          <div><dt>Assentos</dt><dd>3E · 3F</dd></div>
+          <div><dt>Bagagem</dt><dd>2 peças por pessoa</dd></div>
+          <div><dt>Conexão</dt><dd>3h00 em Doha</dd></div>
+        </dl>
+      </article>
+
+      <div class="gn"><b>Pernoite em Nairóbi.</b> Hilton Garden Inn Nairobi Airport (Mombasa Road), quarto King com café da manhã, confirmação 3116443086. A noite de 01/12 já está reservada, então o quarto fica garantido para a chegada logo após a meia-noite.</div>
+    </div>
+
+    <!-- 02/12 -->
+    <div class="day">
+      <div class="day-h"><span class="day-d">Qua · 02 Dez</span><span class="day-t">Nairóbi → Arusha</span></div>
+
+      <div class="gn warn"><b>Atenção: este voo sai do Aeroporto Wilson (WIL), não do aeroporto de chegada.</b> Sugerimos sair do hotel às 05:30 e estar no balcão até 06:15. Como a saída é antes do café da manhã, peça ao hotel na chegada um café para viagem.</div>
+
+      <article class="fl">
+        <div class="fl-top"><span class="fl-num">03</span><span class="fl-air">Safarilink · H1 6425 <small>Dash 8 · operado por Safarilink (F2)</small></span><span class="fl-loc">Localizador<b>BB41ZD</b></span></div>
+        <div class="fl-route">
+          <div class="pt"><div class="t">07:15</div><div class="c">WIL</div><div class="n">Nairóbi · Aeroporto Wilson</div></div>
+          <div class="mid"><div class="dur">1h00</div><div class="line"></div><div class="d">Direto</div></div>
+          <div class="pt r"><div class="t">08:15</div><div class="c">ARK</div><div class="n">Arusha · Tanzânia</div></div>
+        </div>
+        <dl class="fl-meta">
+          <div><dt>Cabine</dt><dd>Econômica</dd></div>
+          <div><dt>Assentos</dt><dd>Livres no embarque</dd></div>
+          <div><dt>Bagagem</dt><dd>15 kg por pessoa</dd></div>
+          <div><dt>Apresentação</dt><dd>Até 06:15</dd></div>
+        </dl>
+      </article>
+
+      <div class="gn warn"><b>Bagagem limitada a 15 kg por pessoa, incluindo a de mão, em malas macias.</b> A franquia da Qatar não vale neste trecho. Leve para Arusha só uma mala macia de safári por pessoa e deixe as malas grandes guardadas em Nairóbi. O Aeroporto Wilson oferece guarda-volumes no balcão da Safarilink.</div>
+    </div>
+
+    <!-- 05/12 -->
+    <div class="day">
+      <div class="day-h"><span class="day-d">Sáb · 05 Dez</span><span class="day-t">Arusha → Nairóbi</span></div>
+
+      <article class="fl">
+        <div class="fl-top"><span class="fl-num">04</span><span class="fl-air">Safarilink · H1 6427 <small>Dash 8 · operado por Safarilink (F2)</small></span><span class="fl-loc">Localizador<b>BB41ZD</b></span></div>
+        <div class="fl-route">
+          <div class="pt"><div class="t">14:40</div><div class="c">ARK</div><div class="n">Arusha · Tanzânia</div></div>
+          <div class="mid"><div class="dur">1h00</div><div class="line"></div><div class="d">Direto</div></div>
+          <div class="pt r"><div class="t">15:40</div><div class="c">WIL</div><div class="n">Nairóbi · Aeroporto Wilson</div></div>
+        </div>
+        <dl class="fl-meta">
+          <div><dt>Cabine</dt><dd>Econômica</dd></div>
+          <div><dt>Assentos</dt><dd>Livres no embarque</dd></div>
+          <div><dt>Bagagem</dt><dd>15 kg por pessoa</dd></div>
+          <div><dt>Apresentação</dt><dd>Até 13:40</dd></div>
+        </dl>
+      </article>
+
+      <div class="gn"><b>Pernoite em Nairóbi.</b> Retire as malas guardadas antes de seguir para o hotel. O voo do dia seguinte sai cedo do aeroporto internacional (NBO).</div>
+    </div>
+
+    <!-- 06/12 -->
+    <div class="day">
+      <div class="day-h"><span class="day-d">Dom · 06 Dez</span><span class="day-t">Nairóbi → Seychelles</span></div>
+
+      <article class="fl">
+        <div class="fl-top"><span class="fl-num">05</span><span class="fl-air">Kenya Airways · KQ 250 <small>Boeing 737-800</small></span><span class="fl-loc">Localizador<b>BCAX3T</b></span></div>
+        <div class="fl-route">
+          <div class="pt"><div class="t">08:40</div><div class="c">NBO</div><div class="n">Nairóbi · Jomo Kenyatta<br>Terminal 1A</div></div>
+          <div class="mid"><div class="dur">3h15</div><div class="line"></div><div class="d">Direto</div></div>
+          <div class="pt r"><div class="t">12:55</div><div class="c">SEZ</div><div class="n">Mahé · Seychelles International</div></div>
+        </div>
+        <dl class="fl-meta">
+          <div><dt>Cabine</dt><dd>Econômica</dd></div>
+          <div><dt>Assentos</dt><dd>Marcar no check-in online</dd></div>
+          <div><dt>Bagagem</dt><dd>2 peças por pessoa</dd></div>
+          <div><dt>Apresentação</dt><dd>Até 05:40</dd></div>
+        </dl>
+      </article>
+    </div>
+
+    <!-- 10/12 -->
+    <div class="day">
+      <div class="day-h"><span class="day-d">Qui · 10 Dez</span><span class="day-t">Seychelles → Doha → São Paulo</span></div>
+
+      <article class="fl">
+        <div class="fl-top"><span class="fl-num">06</span><span class="fl-air">Qatar Airways · QR 679 <small>Boeing 777-200LR</small></span><span class="fl-loc">Localizador<b>C2SHUU</b></span></div>
+        <div class="fl-route">
+          <div class="pt"><div class="t">18:10</div><div class="c">SEZ</div><div class="n">Mahé · Seychelles International<br>Terminal Internacional</div></div>
+          <div class="mid"><div class="dur">4h45</div><div class="line"></div><div class="d">Direto</div></div>
+          <div class="pt r"><div class="t">21:55</div><div class="c">DOH</div><div class="n">Doha · Hamad International</div></div>
+        </div>
+        <dl class="fl-meta">
+          <div><dt>Cabine</dt><dd>Executiva</dd></div>
+          <div><dt>Assentos</dt><dd>3E · 3F</dd></div>
+          <div><dt>Bagagem</dt><dd>2 peças por pessoa</dd></div>
+          <div><dt>Apresentação</dt><dd>Até 15:10</dd></div>
+        </dl>
+      </article>
+
+      <div class="gn"><b>Conexão em Doha · 3h40.</b> Mesma reserva Qatar: a bagagem segue despachada direto até São Paulo.</div>
+
+      <article class="fl">
+        <div class="fl-top"><span class="fl-num">07</span><span class="fl-air">Qatar Airways · QR 779 <small>Airbus A350-1000</small></span><span class="fl-loc">Localizador<b>C2SHUU</b></span></div>
+        <div class="fl-route">
+          <div class="pt"><div class="t">01:35</div><div class="c">DOH</div><div class="n">Doha · Hamad International<br>Sex 11/12</div></div>
+          <div class="mid"><div class="dur">15h05</div><div class="line"></div><div class="d">Direto</div></div>
+          <div class="pt r"><div class="t">10:40</div><div class="c">GRU</div><div class="n">São Paulo · Guarulhos<br>Terminal 3 · Sex 11/12</div></div>
+        </div>
+        <dl class="fl-meta">
+          <div><dt>Cabine</dt><dd>Executiva</dd></div>
+          <div><dt>Assentos</dt><dd>3A · 4B</dd></div>
+          <div><dt>Bagagem</dt><dd>2 peças por pessoa</dd></div>
+          <div><dt>Conexão</dt><dd>3h40 em Doha</dd></div>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec pb">
+  <div class="wrap">
+    <div class="eyebrow">Reservas e bilhetes</div>
+    <h2 class="h2">Três reservas separadas</h2>
+    <p class="lead">Use o localizador da companhia para fazer check-in online e consultar a reserva no site de cada empresa. Como as reservas são independentes, um atraso num trecho não protege a conexão com o trecho seguinte de outra reserva.</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Companhia</th><th>Voos</th><th>Localizador</th><th>Luanna</th><th>Eduardo</th></tr></thead>
+        <tbody>
+          <tr><td><b>Qatar Airways</b><small>Executiva</small></td><td>QR 780 · 1341<br>QR 679 · 779</td><td><b class="mono">C2SHUU</b><small>Reserva YAMHBQ</small></td><td class="mono">157-3996565525<small>conj. 157-3996565526</small></td><td class="mono">157-3996565523<small>conj. 157-3996565524</small></td></tr>
+          <tr><td><b>Safarilink</b><small>Bilhete Hahn Air (H1)</small></td><td>H1 6425 · 6427</td><td><b class="mono">BB41ZD</b><small>Reserva JDFW5X</small></td><td class="mono">169-5860070910</td><td class="mono">169-5860070911</td></tr>
+          <tr><td><b>Kenya Airways</b><small>Bilhete Hahn Air (H1)</small></td><td>KQ 250</td><td><b class="mono">BCAX3T</b><small>Reserva JDFX2R</small></td><td class="mono">169-5860070835</td><td class="mono">169-5860070836</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Antes de embarcar</div>
+    <h2 class="h2">Documentos e preparativos</h2>
+    <p class="lead">Confira cada item com antecedência. Vistos e autorizações eletrônicas são pedidos online e podem levar alguns dias úteis para serem aprovados.</p>
+    <div class="chk">
+      <div class="chk-i"><h3>Passaporte</h3><p>Válido por pelo menos <b>6 meses após o retorno</b>, ou seja, até junho de 2027, com páginas em branco para os carimbos.</p></div>
+      <div class="chk-i"><h3>Vacina contra febre amarela</h3><p>Leve o <b>Certificado Internacional de Vacinação (CIVP)</b>, que é exigido de quem chega do Brasil ao Quênia, à Tanzânia e às Seychelles. A vacina precisa ser tomada pelo menos <b>10 dias antes do embarque</b>, até 20/11.</p></div>
+      <div class="chk-i"><h3>Quênia · eTA</h3><p>Autorização eletrônica obrigatória, emitida apenas no portal oficial <b>etakenya.go.ke</b>. Há duas entradas no país, em 02/12 e em 05/12: confirme se a autorização cobre as duas.</p></div>
+      <div class="chk-i"><h3>Tanzânia · visto</h3><p>Visto eletrônico obrigatório para entrar em Arusha, solicitado no portal oficial de imigração da Tanzânia antes da viagem.</p></div>
+      <div class="chk-i"><h3>Seychelles · autorização</h3><p><b>Travel Authorisation</b> obrigatória, solicitada no portal oficial do governo de Seychelles poucos dias antes do embarque, com a reserva de hospedagem em mãos.</p></div>
+      <div class="chk-i"><h3>Antecedência no aeroporto</h3><p><b>3 horas</b> nos voos internacionais da Qatar e da Kenya Airways. <b>1 hora</b> no Aeroporto Wilson para os voos da Safarilink.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-logo">LusaTravel</div>
+    <div class="ft-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <div class="ft-addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+    <p class="ft-note">Horários sujeitos a alteração pelas companhias aéreas. Confirme os voos no site de cada companhia 24 horas antes do embarque. O não comparecimento em um trecho cancela os trechos seguintes da mesma reserva.</p>
+  </div>
+</footer>
+
+</body>
+</html>
