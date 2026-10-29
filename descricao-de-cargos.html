@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descrição de Cargos — LusaTravel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1f2117; --ink2: #4a4d3d; --ink3: #85887a;
+  --olive: #3d4328; --olive2: #5f6b3c; --leaf: #eef1e5; --leaf2: #e2e8d2;
+  --line: #d7dcc9; --paper: #ffffff; --warn: #8a5a12; --warnbg: #fbf4e6;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Jost', 'Segoe UI', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', 'Courier New', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: #f3f3ee; }
+body { font-family: var(--sans); color: var(--ink); font-size: 10.5pt; line-height: 1.5; background: var(--paper);
+  max-width: 210mm; margin: 0 auto; padding: 18mm 18mm 24mm; }
+@page { size: A4; margin: 16mm 16mm 18mm; }
+@media print { html, body { background: #fff; } body { max-width: none; padding: 0; } }
+@media (max-width: 640px) { body { padding: 24px 16px; } .f-cols, .ladders, .cards { grid-template-columns: 1fr !important; } .scroll { overflow-x: auto; } }
+
+/* capa */
+.cover { min-height: 255mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
+.brand { font-family: var(--serif); font-size: 26pt; letter-spacing: .14em; color: var(--olive); }
+.brand-sub { font-size: 7pt; letter-spacing: .4em; color: var(--ink3); margin-top: 2px; text-transform: uppercase; }
+.cover hr { border: 0; border-top: 1.5px solid var(--olive); margin: 46px 0 30px; }
+.cover h1 { font-family: var(--serif); font-weight: 600; font-size: 38pt; line-height: 1.05; }
+.cover .sub { font-family: var(--serif); font-style: italic; color: var(--olive2); font-size: 15pt; margin-top: 8px; }
+.cover .lead { margin-top: 26px; max-width: 135mm; color: var(--ink2); }
+.cover .meta { margin-top: 40px; font-size: 9pt; color: var(--ink2); line-height: 1.8; }
+.cover .meta b { color: var(--ink); }
+
+/* sumário */
+.toc { page-break-after: always; }
+.toc h2 { font-family: var(--serif); font-size: 22pt; font-weight: 600; margin-bottom: 16px; }
+.toc ol { list-style: none; }
+.toc li { border-bottom: 1px solid var(--line); padding: 7px 0; display: flex; gap: 14px; }
+.toc li span { font-family: var(--mono); color: var(--olive2); font-size: 9pt; padding-top: 2px; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc .sub { margin: 18px 0 0; columns: 2; column-gap: 24px; font-size: 9pt; }
+.toc .sub a { display: block; padding: 3px 0; color: var(--ink2); break-inside: avoid; }
+.toc .sub b { font-family: var(--mono); color: var(--olive); font-weight: 500; margin-right: 8px; }
+
+/* seções */
+.sec { margin-bottom: 26px; }
+.sec.brk { page-break-before: always; }
+.sec h2 { font-family: var(--serif); font-weight: 600; font-size: 21pt; margin-bottom: 12px; display: flex; align-items: baseline; gap: 12px; }
+.sec h2 span { font-family: var(--mono); font-size: 9pt; color: var(--olive2); }
+.sec > p { margin-bottom: 10px; color: var(--ink2); }
+.sec > p b { color: var(--ink); }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0; }
+.card { border: 1px solid var(--line); padding: 12px 14px; border-radius: 3px; }
+.card .k { font-family: var(--mono); font-size: 15pt; color: var(--olive); }
+.card b { display: block; margin: 2px 0 4px; }
+.card p { font-size: 9pt; color: var(--ink2); }
+.note { border-left: 3px solid var(--olive2); background: var(--leaf); padding: 12px 16px; margin: 14px 0; font-size: 9.5pt; color: var(--ink2); }
+.note b { color: var(--ink); }
+.anat { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin-top: 8px; }
+.anat th { text-align: left; width: 42mm; padding: 6px 10px; background: var(--leaf); border: 1px solid var(--line); font-weight: 600; }
+.anat td { padding: 6px 10px; border: 1px solid var(--line); color: var(--ink2); }
+
+/* mapa */
+.d1 { display: block; text-align: center; background: var(--olive); color: #fff; padding: 10px; border-radius: 3px; text-decoration: none; margin-bottom: 10px; }
+.d1 b { font-family: var(--mono); margin-right: 8px; color: #d9e0c6; }
+.ladders { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.ladder-h { font-size: 8pt; letter-spacing: .2em; text-transform: uppercase; color: var(--olive2); font-weight: 600; margin-bottom: 6px; }
+.rung { display: flex; gap: 10px; align-items: center; border: 1px solid var(--line); border-left: 3px solid var(--olive2); padding: 4px 10px; margin-bottom: 4px; color: var(--ink); text-decoration: none; font-size: 9.5pt; }
+.rung b { font-family: var(--mono); color: var(--olive); font-weight: 500; width: 22px; }
+.rung.opt { border-style: dashed; border-left-style: solid; color: var(--ink3); }
+.legend { font-size: 8.5pt; color: var(--ink3); margin-top: 6px; }
+
+.comum { list-style: none; }
+.comum li { display: grid; grid-template-columns: 40mm 1fr; gap: 12px; padding: 5px 0; border-bottom: 1px solid var(--line); font-size: 9.8pt; }
+.comum b { color: var(--olive); }
+.comum span { color: var(--ink2); }
+
+/* ficha */
+.ficha { page-break-before: always; }
+.sec.intro { margin-bottom: 8px; } .sec.intro h2 { font-size: 16pt; margin-bottom: 4px; } .sec.intro p { font-size: 9pt; margin-bottom: 6px; }
+.sec.intro + .ficha { page-break-before: avoid; }
+.f-head { display: flex; gap: 16px; align-items: center; border-bottom: 1.5px solid var(--olive); padding-bottom: 10px; }
+.f-code { font-family: var(--mono); font-size: 18pt; background: var(--olive); color: #fff; padding: 6px 12px; border-radius: 3px; }
+.ficha.opt .f-code { background: var(--olive2); }
+.f-trilha { font-size: 7.5pt; letter-spacing: .2em; text-transform: uppercase; color: var(--olive2); font-weight: 600; }
+.f-title { font-family: var(--serif); font-size: 21pt; font-weight: 600; line-height: 1.1; }
+.f-meta { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 0; border: 1px solid var(--line); margin: 10px 0; }
+.f-meta div { padding: 6px 10px; border-right: 1px solid var(--line); }
+.f-meta div:last-child { border-right: 0; }
+.f-meta dt { font-size: 7pt; letter-spacing: .15em; text-transform: uppercase; color: var(--ink3); }
+.f-meta dd { font-size: 8.8pt; line-height: 1.35; }
+.f-missao { background: var(--leaf); padding: 9px 14px; font-family: var(--serif); font-size: 12.5pt; font-style: italic; line-height: 1.35; margin-bottom: 4px; }
+.f-missao span, .f-next span { display: block; font-family: var(--sans); font-style: normal; font-size: 7pt; letter-spacing: .2em; text-transform: uppercase; color: var(--olive2); font-weight: 600; margin-bottom: 2px; }
+.ficha h4 { font-size: 7.5pt; letter-spacing: .18em; text-transform: uppercase; color: var(--olive); font-weight: 600; margin: 10px 0 4px; }
+.f-resp { padding-left: 18px; font-size: 9.3pt; line-height: 1.42; }
+.f-resp li { margin-bottom: 2.5px; padding-left: 2px; }
+.f-resp li::marker { font-family: var(--mono); color: var(--olive2); font-size: 8pt; }
+.f-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.f-box { border: 1px solid var(--line); padding: 2px 12px 8px; margin-top: 8px; }
+.f-box.esc { background: var(--warnbg); border-color: #ead9b8; }
+.f-box.esc h4 { color: var(--warn); }
+.ficha ul { padding-left: 14px; font-size: 8.8pt; line-height: 1.4; }
+.ficha ul li { margin-bottom: 1.5px; }
+.f-req { border-collapse: collapse; width: 100%; font-size: 8.4pt; line-height: 1.35; }
+.f-req th { text-align: left; vertical-align: top; width: 26mm; padding: 3px 6px 3px 0; color: var(--ink3); font-weight: 500; }
+.f-req td { padding: 3px 0; border-bottom: 1px dotted var(--line); }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { font-size: 8pt; border: 1px solid var(--line); background: var(--leaf); padding: 1px 8px; border-radius: 20px; }
+.f-next { margin-top: 10px; border-left: 3px solid var(--olive); padding: 6px 12px; font-size: 9pt; background: #f7f8f2; }
+
+/* tabelas finais */
+table.matriz, table.fluxo { width: 100%; border-collapse: collapse; font-size: 8.6pt; }
+.matriz thead th, .fluxo thead th { background: var(--olive); color: #fff; font-weight: 500; padding: 6px; text-align: center; font-size: 7.8pt; line-height: 1.25; }
+.matriz thead th:first-child, .fluxo thead th { text-align: left; }
+.matriz tbody th { text-align: left; font-weight: 500; padding: 6px 8px; border: 1px solid var(--line); width: 52mm; }
+.matriz td { text-align: center; border: 1px solid var(--line); padding: 5px 3px; font-family: var(--mono); font-size: 7.8pt; }
+.matriz td.m-x { color: var(--line); }
+.matriz td.m-a { background: var(--olive2); color: #fff; }
+.matriz td.m-e { background: var(--leaf2); }
+.matriz td.m-p { background: var(--warnbg); color: var(--warn); }
+.matriz td.m-i { color: var(--ink3); }
+.matriz tbody tr:nth-child(even) th { background: #fafbf6; }
+.fluxo td, .fluxo tbody th { border: 1px solid var(--line); padding: 6px 8px; vertical-align: top; text-align: left; }
+.fluxo tbody th { font-weight: 600; }
+.fluxo td.n { font-family: var(--mono); color: var(--olive2); width: 9mm; }
+.fluxo tr { break-inside: avoid; }
+.key { display: flex; flex-wrap: wrap; gap: 14px; font-size: 8.5pt; margin: 10px 0; color: var(--ink2); }
+.key i { font-style: normal; font-family: var(--mono); padding: 1px 6px; margin-right: 4px; }
+.foot { font-size: 8pt; color: var(--ink3); margin-top: 8px; line-height: 1.5; }
+.valid { list-style: none; counter-reset: v; }
+.valid li { counter-increment: v; padding: 9px 0 9px 34px; border-bottom: 1px solid var(--line); position: relative; font-size: 9.6pt; color: var(--ink2); }
+.valid li::before { content: counter(v, decimal-leading-zero); position: absolute; left: 0; top: 10px; font-family: var(--mono); color: var(--olive2); font-size: 9pt; }
+.valid b { color: var(--ink); display: block; }
+.sign { margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; font-size: 8.5pt; color: var(--ink3); }
+.sign div { border-top: 1px solid var(--ink); padding-top: 6px; }
+.end { margin-top: 24px; font-family: var(--mono); font-size: 7.5pt; color: var(--ink3); border-top: 1px solid var(--line); padding-top: 8px; }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="brand">LUSATRAVEL</div>
+  <div class="brand-sub">Travel agency</div>
+  <hr>
+  <h1>Descrição de Cargos</h1>
+  <div class="sub">Anexo III do Programa de Cargos e Salários</div>
+  <p class="lead">Funções, responsabilidades, alçadas, indicadores e requisitos de cada cargo das trilhas Comercial (C1 a C8) e Administrativo-Financeira (A1 a A8), e da Direção-Geral (D1).</p>
+  <div class="meta">
+    <b>Versão 1.0</b> · Outubro de 2026<br>
+    Curitiba / PR · Documento interno de circulação restrita<br>
+    Complementa o Programa de Cargos e Salários v1.0 · Aprovação: Direção-Geral
+  </div>
+</section>
+
+<section class="toc">
+  <h2>Sumário</h2>
+  <ol><li><span>01</span><a href="#s1">Como ler este documento</a></li><li><span>02</span><a href="#s2">Mapa dos cargos</a></li><li><span>03</span><a href="#s3">Responsabilidades comuns a todos</a></li><li><span>04</span><a href="#s4">Trilha comercial — C1 a C8</a></li><li><span>05</span><a href="#s5">Trilha administrativo-financeira — A1 a A8</a></li><li><span>06</span><a href="#s6">Direção-Geral — D1</a></li><li><span>07</span><a href="#s7">Fluxo da venda entre as áreas</a></li><li><span>08</span><a href="#s8">Matriz de alçadas</a></li><li><span>09</span><a href="#s9">O que validar antes de publicar</a></li></ol>
+  <div class="sub"><a href="#c1"><b>C1</b>Assistente de Vendas</a><a href="#c2"><b>C2</b>Assistente Comercial</a><a href="#c3"><b>C3</b>Consultor de Viagens Júnior</a><a href="#c4"><b>C4</b>Consultor de Viagens Pleno</a><a href="#c5"><b>C5</b>Consultor Sênior / Especialista de Destino</a><a href="#c6"><b>C6</b>Supervisor / Coordenador Comercial</a><a href="#c7"><b>C7</b>Gerente Comercial</a><a href="#c8"><b>C8</b>Diretor Comercial (CCO)</a><a href="#a1"><b>A1</b>Auxiliar Administrativo</a><a href="#a2"><b>A2</b>Assistente Administrativo-Financeiro</a><a href="#a3"><b>A3</b>Analista Financeiro Júnior</a><a href="#a4"><b>A4</b>Analista Financeiro Pleno</a><a href="#a5"><b>A5</b>Analista Financeiro Sênior</a><a href="#a6"><b>A6</b>Coordenador Administrativo-Financeiro</a><a href="#a7"><b>A7</b>Gerente Administrativo-Financeiro / Controller</a><a href="#a8"><b>A8</b>Diretor Financeiro (CFO)</a><a href="#d1"><b>D1</b>CEO / Diretor-Geral</a></div>
+</section>
+
+<section class="sec " id="s1"><h2><span>01</span>Como ler este documento</h2>
+<p>Este anexo cumpre a primeira etapa da implantação prevista no Plano de Cargos e Salários — <b>descrever cada cargo antes de enquadrar as pessoas</b>. A tabela salarial diz quanto cada cargo paga; este documento diz <b>o que cada cargo entrega</b>, até onde decide sozinho e o que precisa demonstrar para subir de faixa.</p>
+<p>Três princípios orientam a leitura:</p>
+<div class="cards">
+  <div class="card"><div class="k">1</div><b>Descreve o cargo, não a pessoa</b><p>A ficha vale para qualquer ocupante. Diferenças de desempenho entre pessoas no mesmo cargo se resolvem pelo degrau, não reescrevendo a ficha.</p></div>
+  <div class="card"><div class="k">2</div><b>Os degraus usam a mesma ficha</b><p>No degrau A a pessoa executa o escopo com supervisão; no B entrega o escopo completo com autonomia; no C é referência e forma quem chega.</p></div>
+  <div class="card"><div class="k">3</div><b>Promoção exige escopo já exercido</b><p>O campo “Próxima faixa” traduz em sinais concretos o requisito da seção 12.2 do Programa: exercício prévio e demonstrado do escopo do cargo superior.</p></div>
+</div>
+<p>Cada ficha tem a mesma anatomia:</p>
+<table class="anat">
+  <tr><th>Missão</th><td>A razão de o cargo existir, em uma frase.</td></tr>
+  <tr><th>Responsabilidades</th><td>As entregas recorrentes do cargo, em ordem de importância.</td></tr>
+  <tr><th>Decide / escala</th><td>O limite da autonomia. O detalhamento por decisão está na Matriz de alçadas (seção 08).</td></tr>
+  <tr><th>Indicadores</th><td>Como o desempenho é medido. Nos cargos comerciais, os indicadores de margem são a base da remuneração variável (seção 10 do Programa).</td></tr>
+  <tr><th>Requisitos e competências</th><td>Referência para recrutamento e para avaliação de desempenho.</td></tr>
+  <tr><th>Próxima faixa</th><td>Os sinais objetivos de prontidão para a movimentação vertical (janela de janeiro).</td></tr>
+</table>
+<div class="note"><b>Valores salariais não constam deste anexo.</b> Faixas, degraus e percentuais de variável estão no Programa de Cargos e Salários, que prevalece em caso de divergência. Os cargos C8 e A8 são facultativos e aparecem destacados.</div>
+</section>
+
+<section class="sec brk" id="s2"><h2><span>02</span>Mapa dos cargos</h2>
+<p>Duas trilhas paralelas, de igual dignidade e igual teto, convergem na Direção-Geral. O eixo da trilha comercial é a <b>autonomia sobre o cliente</b>; o da administrativo-financeira, a <b>responsabilidade sobre o dinheiro e os controles</b>.</p>
+<a class="d1" href="#d1"><b>D1</b>CEO / Diretor-Geral</a>
+<div class="ladders"><div class="ladder"><div class="ladder-h">Trilha comercial</div><a class="rung opt" href="#c8"><b>C8</b>Diretor Comercial (CCO)</a><a class="rung" href="#c7"><b>C7</b>Gerente Comercial</a><a class="rung" href="#c6"><b>C6</b>Supervisor / Coordenador Comercial</a><a class="rung" href="#c5"><b>C5</b>Consultor Sênior / Especialista de Destino</a><a class="rung" href="#c4"><b>C4</b>Consultor de Viagens Pleno</a><a class="rung" href="#c3"><b>C3</b>Consultor de Viagens Júnior</a><a class="rung" href="#c2"><b>C2</b>Assistente Comercial</a><a class="rung" href="#c1"><b>C1</b>Assistente de Vendas</a></div><div class="ladder"><div class="ladder-h">Trilha administrativo-financeira</div><a class="rung opt" href="#a8"><b>A8</b>Diretor Financeiro (CFO)</a><a class="rung" href="#a7"><b>A7</b>Gerente Administrativo-Financeiro / Controller</a><a class="rung" href="#a6"><b>A6</b>Coordenador Administrativo-Financeiro</a><a class="rung" href="#a5"><b>A5</b>Analista Financeiro Sênior</a><a class="rung" href="#a4"><b>A4</b>Analista Financeiro Pleno</a><a class="rung" href="#a3"><b>A3</b>Analista Financeiro Júnior</a><a class="rung" href="#a2"><b>A2</b>Assistente Administrativo-Financeiro</a><a class="rung" href="#a1"><b>A1</b>Auxiliar Administrativo</a></div></div>
+<p class="legend">Contorno tracejado: cargo facultativo, criado apenas quando as condições previstas no Programa estiverem presentes.</p>
+</section>
+
+<section class="sec " id="s3"><h2><span>03</span>Responsabilidades comuns a todos</h2>
+<p>Valem para todos os cargos, de C1 a D1, e não se repetem nas fichas.</p>
+<ul class="comum"><li><b>Registro</b><span>O que não está no sistema não aconteceu. Toda venda, reserva, pagamento e ocorrência é registrada no CRM ou no sistema de gestão — é a base da comissão, da PLR e da defesa da agência em qualquer disputa.</span></li><li><b>Dados pessoais</b><span>Passaportes, documentos, cartões e dados de saúde de clientes são tratados conforme a LGPD: só em canais e pastas corporativos, nunca em aparelhos ou contas pessoais.</span></li><li><b>Sigilo</b><span>Tarifas de agente, condições comerciais com fornecedores e a remuneração individual de cada colaborador são confidenciais.</span></li><li><b>Conflito de interesse</b><span>Vantagens oferecidas por fornecedores — viagens, brindes, incentivos pessoais — só são aceitas conforme a política da Direção e com registro.</span></li><li><b>Alçadas</b><span>Quem não tem alçada para uma decisão escala. Decidir fora da alçada, mesmo com boa intenção, é falta de conduta.</span></li><li><b>Marca</b><span>Toda comunicação com o cliente segue o padrão visual e de linguagem da LusaTravel.</span></li><li><b>Viagem como benefício</b><span>Viagens de familiarização e tarifas de agente seguem a política da Direção; o aprendizado de cada famtour é documentado e compartilhado com o time.</span></li></ul>
+</section>
+
+<section class="sec brk intro" id="s4"><h2><span>04</span>Trilha comercial — C1 a C8</h2><p>Do apoio à venda até a direção comercial. Quem depende de roteiro pronto, quem monta o roteiro, quem desenha a viagem inteira, quem forma quem desenha.</p></section>
+
+<section class="ficha" id="c1">
+  <header class="f-head">
+    <div class="f-code">C1</div>
+    <div>
+      <div class="f-trilha">Trilha Comercial</div>
+      <h3 class="f-title">Assistente de Vendas</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Supervisor Comercial (C6) — na ausência, Gerente Comercial (C7)</dd></div>
+    <div><dt>Equipe</dt><dd>Não lidera. Não é titular de carteira.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>Bônus sobre a meta coletiva do time comercial</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Dar suporte operacional aos consultores, para que o tempo deles seja dedicado à venda consultiva. Executa; não decide preço nem condição.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Atender o primeiro contato (telefone, WhatsApp, e-mail, Instagram), qualificar a demanda e encaminhar o lead ao consultor conforme a regra de distribuição vigente.</li><li>Elaborar cotações simples — aéreo, hotelaria, seguro viagem, transfers — a pedido do consultor, apenas em fornecedores homologados.</li><li>Efetuar reservas, emissões e confirmações somente com autorização registrada do consultor responsável pela venda.</li><li>Organizar e conferir a documentação de viagem: bilhetes, vouchers, apólice de seguro, roteiro final e checklist de passaporte, vistos, autorizações eletrônicas e vacinas.</li><li>Acompanhar pagamentos pendentes e prazos de tarifa (time limit), alertando o consultor antes do vencimento.</li><li>Reconfirmar serviços com fornecedores antes do embarque e enviar o kit de pré-viagem ao cliente.</li><li>Registrar no CRM/sistema de gestão cada interação, reserva e mudança de status do processo.</li><li>Apoiar o pós-venda: envio da pesquisa de satisfação e pedido de avaliação.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Organização da própria fila de tarefas</li><li>Envio de documentos e comunicações padronizadas</li><li>Ordem de reconfirmação com fornecedores</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Qualquer preço, desconto ou condição de pagamento</li><li>Alteração ou cancelamento de reserva</li><li>Reclamação de cliente</li><li>Divergência entre cotação e emissão</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Erros de reserva/emissão (meta: zero)</li><li>Prazo de retorno às solicitações dos consultores</li><li>Processos com documentação completa até 7 dias antes do embarque</li><li>Atingimento da meta coletiva (base do bônus)</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Ensino médio completo; curso de Turismo em andamento é diferencial</td></tr>
+        <tr><th>Experiência</th><td>Até 1 ano; primeira experiência aceita</td></tr>
+        <tr><th>Conhecimentos</th><td>Pacote Office, e-mail corporativo, redes sociais; noções de reserva aérea</td></tr>
+        <tr><th>Idiomas</th><td>Inglês ou espanhol básico (desejável)</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Atenção a detalhe</span><span class="chip">Organização</span><span class="chip">Comunicação escrita clara</span><span class="chip">Senso de urgência</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>C2 (perfil operacional) ou C3 (perfil de venda). Sinal de prontidão: cota e reserva sem retrabalho, domina o CRM e já monta propostas simples completas que o consultor envia sem correção.</div>
+</section>
+<section class="ficha" id="c2">
+  <header class="f-head">
+    <div class="f-code">C2</div>
+    <div>
+      <div class="f-trilha">Trilha Comercial</div>
+      <h3 class="f-title">Assistente Comercial</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Supervisor Comercial (C6) — na ausência, Gerente Comercial (C7)</dd></div>
+    <div><dt>Equipe</dt><dd>Orienta tecnicamente os Assistentes de Vendas (C1) no processo operacional, sem gestão formal.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>Bônus sobre a meta coletiva e o SLA de emissão</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Fazer a máquina comercial girar: CRM, funil, fornecedores, prazos de emissão, relatórios e pós-venda estruturado.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Administrar o CRM: cadastro e higiene de leads e clientes, etapas do funil e distribuição de leads conforme regra definida pelo supervisor.</li><li>Manter o cadastro de fornecedores (operadoras, consolidadoras, hotéis, receptivos) com contatos, condições comerciais, comissionamento e prazos de pagamento atualizados.</li><li>Controlar os prazos de emissão, sinal e quitação de todas as vendas em andamento e cumprir o SLA de emissão, sinalizando riscos com antecedência.</li><li>Executar reservas e emissões de maior complexidade, sempre com autorização do consultor da venda.</li><li>Formatar as propostas no padrão visual da LusaTravel a partir do roteiro e dos preços definidos pelo consultor.</li><li>Enviar ao administrativo-financeiro os dados completos de cada venda fechada (custo, preço, fornecedor, forma de pagamento) para faturamento e conciliação.</li><li>Produzir o relatório semanal: conversão por etapa, propostas em aberto, vendas e margem por consultor, cancelamentos.</li><li>Conduzir o pós-venda estruturado: contato no retorno, NPS, pedido de avaliação e registro inicial de reclamações.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Prioridade da fila operacional</li><li>Distribuição de leads dentro da regra definida</li><li>Cobrança de documentos e dados de clientes e consultores</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Risco de perda de tarifa ou de lugar</li><li>Exceções e divergências com fornecedor</li><li>Reclamação com pedido de reembolso</li><li>Venda fechada sem margem registrada</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Cumprimento do SLA de emissão</li><li>% de leads com status atualizado no CRM</li><li>Vendas enviadas ao financeiro completas e no prazo</li><li>Taxa de resposta e nota do NPS</li><li>Atingimento da meta coletiva</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Ensino médio completo; superior em Turismo ou Administração em andamento é diferencial</td></tr>
+        <tr><th>Experiência</th><td>1 a 2 anos em agência, operadora ou consolidadora</td></tr>
+        <tr><th>Conhecimentos</th><td>CRM, Excel intermediário; GDS (Amadeus, Sabre ou Galileo) desejável</td></tr>
+        <tr><th>Idiomas</th><td>Inglês ou espanhol intermediário (desejável)</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Método</span><span class="chip">Visão de processo</span><span class="chip">Organização</span><span class="chip">Comunicação com fornecedores</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>C3. Sinal de prontidão: atende clientes com autonomia em roteiros simples e já fecha vendas com revisão de um consultor.</div>
+</section>
+<section class="ficha" id="c3">
+  <header class="f-head">
+    <div class="f-code">C3</div>
+    <div>
+      <div class="f-trilha">Trilha Comercial</div>
+      <h3 class="f-title">Consultor de Viagens Júnior</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Supervisor Comercial (C6)</dd></div>
+    <div><dt>Equipe</dt><dd>Não lidera. Primeira posição com carteira própria.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>Comissão sobre a margem da carteira própria</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Atender e converter a demanda de entrada e os roteiros de menor complexidade, construindo uma carteira própria com margem saudável.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Atender os leads distribuídos e os próprios, conduzir o briefing (perfil, orçamento, datas, expectativas, restrições) e registrá-lo no CRM.</li><li>Montar propostas de menor complexidade — América do Sul, Caribe, pacotes de operadora, aéreo simples, hotelaria nacional —, submetendo-as à revisão de um consultor sênior ou do supervisor conforme o critério vigente.</li><li>Negociar e fechar a venda dentro da política de preço e do piso de margem, registrando custo, preço e margem de cada venda.</li><li>Orientar o cliente sobre documentação, vistos, vacinas, seguro viagem e regras de cancelamento, com registro de ciência do cliente.</li><li>Fazer o follow-up de propostas em aberto e manter o relacionamento da carteira (recompra, datas especiais, indicações).</li><li>Prospectar ativamente nos canais definidos pela gestão.</li><li>Ser o primeiro ponto de contato do cliente durante a viagem e escalar imprevistos que não consiga resolver.</li><li>Participar dos treinamentos de produto de operadoras e das viagens de familiarização indicadas.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Roteiro e fornecedores, dentro do portfólio homologado, para destinos de entrada</li><li>Desconto que mantenha a venda acima do piso de margem</li><li>Agenda de follow-up da própria carteira</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Venda abaixo do piso de margem</li><li>Destino de longo curso, grupo ou roteiro multidestino</li><li>Exceção à regra de cancelamento ou reembolso</li><li>Ocorrência grave em viagem</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Margem de contribuição da carteira × meta (base da comissão)</li><li>Taxa de conversão de propostas</li><li>Margem média por venda</li><li>Tempo de resposta ao lead</li><li>Retrabalho nas propostas revisadas</li><li>NPS da carteira</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Superior em Turismo, Hotelaria ou Administração completo ou em andamento (desejável)</td></tr>
+        <tr><th>Experiência</th><td>1 a 2 anos em vendas de turismo ou atendimento consultivo</td></tr>
+        <tr><th>Conhecimentos</th><td>CRM, ferramentas de reserva de operadoras; GDS desejável</td></tr>
+        <tr><th>Idiomas</th><td>Inglês ou espanhol intermediário</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Escuta ativa</span><span class="chip">Negociação</span><span class="chip">Orientação a resultado</span><span class="chip">Disciplina de follow-up</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>C4. Sinal de prontidão: propostas aprovadas sem revisão por dois ciclos seguidos, ao menos um roteiro de longo curso conduzido com autonomia e carteira com margem acima da meta.</div>
+</section>
+<section class="ficha" id="c4">
+  <header class="f-head">
+    <div class="f-code">C4</div>
+    <div>
+      <div class="f-trilha">Trilha Comercial</div>
+      <h3 class="f-title">Consultor de Viagens Pleno</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Supervisor Comercial (C6)</dd></div>
+    <div><dt>Equipe</dt><dd>Não lidera. Pode apoiar pontualmente os juniores.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>Comissão sobre a margem da carteira própria</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Conduzir o roteiro sob medida do briefing ao pós-viagem, sem revisão, com domínio de ao menos um destino de longo curso.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Conduzir briefings aprofundados e desenhar roteiros sob medida: aéreo, hotelaria, transfers, passeios, trens, locação de veículos e seguro.</li><li>Negociar diretamente com receptivos, hotéis e operadoras tarifas, condições e serviços adicionais.</li><li>Precificar cada roteiro a partir do custo e da margem-alvo, respeitando a política de preço, e registrar a composição no sistema.</li><li>Fechar a venda e acompanhá-la até o pós-viagem, incluindo contrato, condições de pagamento e regras de cancelamento.</li><li>Resolver imprevistos em viagem sem escalar — remarcações, perda de conexão, overbooking, extravio de bagagem — acionando seguro e fornecedores.</li><li>Ser referência interna em ao menos um destino ou bloco de longo curso (por exemplo, Europa).</li><li>Desenvolver a carteira própria por recompra e indicação, com registro no CRM.</li><li>Contribuir com conteúdo de produto para o marketing (destinos, roteiros, depoimentos).</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Desenho e fornecedores do roteiro sob medida</li><li>Negociação de tarifas e condições com fornecedores</li><li>Desconto até o piso de margem</li><li>Solução de imprevistos em viagem dentro da política</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Venda abaixo do piso de margem</li><li>Grupos e eventos</li><li>Reembolso ou crédito fora da política do fornecedor</li><li>Acordo com fornecedor que envolva volume ou exclusividade</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Margem de contribuição da carteira × meta</li><li>Margem média por venda</li><li>Taxa de recompra e de indicação</li><li>Ocorrências em viagem resolvidas sem escalar</li><li>NPS da carteira</li><li>Cancelamentos da carteira</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Superior completo (desejável)</td></tr>
+        <tr><th>Experiência</th><td>3 anos ou mais em vendas de turismo de lazer</td></tr>
+        <tr><th>Conhecimentos</th><td>Roteirização, tarifas aéreas, ferramentas de operadoras; GDS desejável; vivência em destino de longo curso</td></tr>
+        <tr><th>Idiomas</th><td>Inglês ou espanhol fluente</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Consultoria</span><span class="chip">Negociação</span><span class="chip">Resolução de problemas</span><span class="chip">Autonomia</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>C5. Sinal de prontidão: conduz viagens complexas (multidestino, grupos, alto padrão) com bom resultado, já revisa o trabalho de colegas e tem especialização de destino reconhecida.</div>
+</section>
+<section class="ficha" id="c5">
+  <header class="f-head">
+    <div class="f-code">C5</div>
+    <div>
+      <div class="f-trilha">Trilha Comercial</div>
+      <h3 class="f-title">Consultor Sênior / Especialista de Destino</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Supervisor Comercial (C6) ou Gerente Comercial (C7)</dd></div>
+    <div><dt>Equipe</dt><dd>Não tem gestão formal. Revisa propostas e forma consultores juniores e plenos.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>Comissão sobre a margem própria, com acelerador acima da meta</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Atender os clientes de maior ticket e as viagens complexas, e ser a referência técnica de um bloco de destinos, elevando a qualidade de todo o time.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Atender viagens complexas: multidestino, trens europeus, cruzeiros, grupos, lua de mel e alto padrão.</li><li>Fazer a curadoria do seu bloco de destinos: fornecedores recomendados, roteiros-modelo e fichas de destino para uso do time.</li><li>Revisar as propostas de consultores juniores conforme o critério vigente e devolvê-las com orientação.</li><li>Formar novos consultores: acompanhamento de atendimentos, treinamentos internos e mentoria.</li><li>Negociar condições com receptivos e fornecedores do seu bloco, alinhado ao Gerente Comercial.</li><li>Cuidar da carteira de clientes estratégicos e recorrentes de alto valor.</li><li>Representar a agência em viagens de familiarização, feiras e eventos de operadoras, trazendo o aprendizado documentado para o time.</li><li>Propor produtos e roteiros exclusivos de margem superior.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Precificação de roteiros complexos dentro da política</li><li>Aprovação das propostas que revisa</li><li>Condições negociadas com fornecedores do seu bloco, sem compromisso de volume</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Venda abaixo do piso de margem</li><li>Acordos com volume mínimo garantido ou exclusividade</li><li>Grupos que exijam pagamento antecipado relevante a fornecedor</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Margem da carteira × meta (com acelerador)</li><li>Margem média por venda</li><li>Retrabalho nas propostas dos juniores que revisa</li><li>Roteiros-modelo e fichas de destino entregues</li><li>Retenção da carteira estratégica</li><li>NPS</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Superior completo; especialização de destino reconhecida por órgão de turismo é diferencial (gera adicional)</td></tr>
+        <tr><th>Experiência</th><td>5 anos ou mais em turismo de lazer consultivo</td></tr>
+        <tr><th>Conhecimentos</th><td>Conhecimento profundo de um bloco de destinos (viagens próprias e famtours); GDS desejável</td></tr>
+        <tr><th>Idiomas</th><td>Inglês fluente; segundo idioma estrangeiro desejável</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Referência técnica</span><span class="chip">Didática</span><span class="chip">Visão de produto</span><span class="chip">Relacionamento de alto padrão</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>C6, se houver vocação para gestão de pessoas. Permanecer em C5 até o degrau C é carreira legítima de especialista — nem todo sênior deve virar supervisor.</div>
+</section>
+<section class="ficha" id="c6">
+  <header class="f-head">
+    <div class="f-code">C6</div>
+    <div>
+      <div class="f-trilha">Trilha Comercial</div>
+      <h3 class="f-title">Supervisor / Coordenador Comercial</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Gerente Comercial (C7) — na ausência, Direção-Geral (D1)</dd></div>
+    <div><dt>Equipe</dt><dd>Time de 3 a 8 pessoas (C1 a C5).</dd></div>
+    <div><dt>Remuneração variável</dt><dd>Variável sobre a margem agregada do time</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Garantir a meta e a margem do time, o padrão de atendimento e o desenvolvimento das pessoas.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Desdobrar a meta comercial em metas individuais e acompanhar o atingimento semanalmente.</li><li>Distribuir leads segundo regra escrita e transparente (rodízio, especialidade, desempenho).</li><li>Conduzir a reunião semanal de pipeline e as conversas individuais periódicas com cada pessoa do time.</li><li>Garantir o padrão de atendimento: tempo de resposta, qualidade das propostas, checklist de documentação, uso correto do CRM.</li><li>Aprovar descontos dentro da sua alçada e zelar pela margem por venda — não apenas pelo faturamento.</li><li>Tratar reclamações escaladas e ocorrências graves com clientes em viagem.</li><li>Conduzir a avaliação de desempenho, o feedback e o plano de desenvolvimento do time; participar do recrutamento e da seleção.</li><li>Validar, com o financeiro, a apuração da remuneração variável do time.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Distribuição de leads e escalas de atendimento</li><li>Descontos abaixo do piso de margem, dentro da alçada definida</li><li>Exceções operacionais do dia a dia</li><li>Feedback e plano de desenvolvimento</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Contratação e desligamento (propõe)</li><li>Movimentação salarial (propõe)</li><li>Desconto ou exceção acima da alçada</li><li>Mudança na política de preço ou de comissão</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Margem de contribuição do time × meta</li><li>Margem média por venda do time</li><li>Taxa de conversão do time</li><li>% do time acima do gatilho de 70% da meta</li><li>Turnover do time</li><li>NPS do time</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Superior completo</td></tr>
+        <tr><th>Experiência</th><td>5 anos ou mais em vendas de turismo, com ao menos 1 ano liderando pessoas ou atuando como referência do time</td></tr>
+        <tr><th>Conhecimentos</th><td>CRM, gestão por indicadores, Excel intermediário</td></tr>
+        <tr><th>Idiomas</th><td>Inglês ou espanhol fluente</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Liderança</span><span class="chip">Gestão por indicadores</span><span class="chip">Feedback</span><span class="chip">Equilíbrio entre meta e margem</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>C7. Sinal de prontidão: já responde por política, fornecedores e resultado consolidado, e há sucessor identificado para a supervisão.</div>
+</section>
+<section class="ficha" id="c7">
+  <header class="f-head">
+    <div class="f-code">C7</div>
+    <div>
+      <div class="f-trilha">Trilha Comercial</div>
+      <h3 class="f-title">Gerente Comercial</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Direção-Geral (D1)</dd></div>
+    <div><dt>Equipe</dt><dd>Toda a área comercial.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>Variável sobre a margem total, o mix e a retenção</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Ser o dono do resultado comercial da agência: margem, mix de produtos e destinos, crescimento e retenção.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Elaborar o plano comercial anual: metas, orçamento da área, mix de produto e destino, canais de venda.</li><li>Propor à Direção a política de preço, desconto e piso de margem, e as alçadas de aprovação.</li><li>Negociar contratos e acordos com operadoras, consolidadoras, companhias aéreas e redes hoteleiras, incluindo incentivos e bonificações.</li><li>Dimensionar o time, conduzir as contratações com a Direção e propor a estrutura de metas e de remuneração variável.</li><li>Definir destinos-foco, produtos próprios e o calendário de sazonalidade junto com o marketing.</li><li>Analisar, com o financeiro, a margem por produto, destino e consultor, e entregar a previsão de vendas mensal.</li><li>Coordenar a resposta a crises que afetem clientes em viagem (falência de fornecedor, eventos climáticos ou geopolíticos).</li><li>Desenvolver os supervisores e preparar a sucessão da área.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Acordos com fornecedores dentro do orçamento aprovado</li><li>Exceções de margem dentro do limite fixado pela Direção</li><li>Estrutura e escalas do time dentro do orçamento</li><li>Campanhas e ações comerciais</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Alteração do orçamento ou do quadro aprovado</li><li>Contratos com volume mínimo garantido ou exclusividade de longo prazo</li><li>Abertura de nova frente de negócio</li><li>Mudança da política de preço</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Margem de contribuição total × meta</li><li>Mix de produto e destino</li><li>Taxa de retenção de clientes</li><li>Crescimento da margem ano a ano</li><li>Acurácia da previsão de vendas</li><li>Turnover da área</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Superior completo; pós-graduação em gestão ou marketing é diferencial</td></tr>
+        <tr><th>Experiência</th><td>8 anos ou mais em turismo, com ao menos 3 em gestão comercial</td></tr>
+        <tr><th>Conhecimentos</th><td>Gestão de resultado (DRE da área), negociação com fornecedores, CRM e indicadores</td></tr>
+        <tr><th>Idiomas</th><td>Inglês fluente</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Visão de negócio</span><span class="chip">Negociação estratégica</span><span class="chip">Liderança de líderes</span><span class="chip">Disciplina de margem</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>C8 (se criado) ou Direção-Geral (D1).</div>
+</section>
+<section class="ficha opt" id="c8">
+  <header class="f-head">
+    <div class="f-code">C8</div>
+    <div>
+      <div class="f-trilha">Trilha Comercial · cargo facultativo</div>
+      <h3 class="f-title">Diretor Comercial (CCO)</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Direção-Geral (D1)</dd></div>
+    <div><dt>Equipe</dt><dd>Gerentes comerciais das unidades ou frentes de negócio.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>Bônus anual e participação</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Responder pelo crescimento, pelos canais e pelas parcerias estratégicas quando a agência opera em mais de uma unidade ou frente (por exemplo, lazer e corporativo).</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Definir a estratégia comercial integrada das unidades ou frentes de negócio.</li><li>Abrir e desenvolver novos canais (corporativo, B2B, digital, parcerias com empresas).</li><li>Negociar parcerias estratégicas e acordos de grande volume com fornecedores.</li><li>Garantir governança comercial comum: política de preço, alçadas, CRM e indicadores únicos entre as frentes.</li><li>Integrar o comitê de direção e participar do planejamento estratégico e orçamentário.</li><li>Desenvolver e avaliar os gerentes comerciais; conduzir a sucessão da área.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Estratégia comercial aprovada no planejamento</li><li>Alocação do orçamento comercial entre as frentes</li><li>Parcerias dentro do orçamento</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Investimentos e novas unidades</li><li>Mudanças estruturais no quadro</li><li>Contratos de longo prazo com compromisso financeiro relevante</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Margem consolidada × meta</li><li>Participação de novos canais na margem</li><li>Rentabilidade por frente</li><li>Retenção dos líderes comerciais</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Superior completo e pós-graduação</td></tr>
+        <tr><th>Experiência</th><td>10 anos ou mais, com gestão de múltiplas equipes ou unidades</td></tr>
+        <tr><th>Conhecimentos</th><td>Estratégia comercial, P&amp;L, parcerias B2B</td></tr>
+        <tr><th>Idiomas</th><td>Inglês fluente</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Visão estratégica</span><span class="chip">Construção de parcerias</span><span class="chip">Liderança de líderes</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>Direção-Geral (D1). Criação justificada a partir de duas unidades ou frentes de negócio distintas.</div>
+</section>
+
+<section class="sec brk intro" id="s5"><h2><span>05</span>Trilha administrativo-financeira — A1 a A8</h2><p>Quem registra, quem concilia, quem analisa, quem decide. Nesta trilha a remuneração se concentra no fixo, e as fichas dão peso maior a precisão, prazo e controle.</p></section>
+
+<section class="ficha" id="a1">
+  <header class="f-head">
+    <div class="f-code">A1</div>
+    <div>
+      <div class="f-trilha">Trilha Administrativo-Financeira</div>
+      <h3 class="f-title">Auxiliar Administrativo</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Coordenador Administrativo-Financeiro (A6) — em quadro enxuto, a quem a Direção designar</dd></div>
+    <div><dt>Equipe</dt><dd>Não lidera.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>PLR anual sobre o resultado da empresa</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Manter a rotina de escritório funcionando, com documentos organizados e localizáveis.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Protocolar, digitalizar e arquivar documentos (contratos, notas, comprovantes) no padrão de pastas e nomenclatura definido.</li><li>Fazer a recepção presencial e telefônica e direcionar cada demanda à pessoa certa.</li><li>Apoiar compras: cotar materiais e serviços de escritório e controlar o estoque de suprimentos.</li><li>Conferir notas fiscais de entrada e fazer lançamentos simples no sistema.</li><li>Controlar correspondências, malotes e serviços de entrega.</li><li>Apoiar as rotinas de pessoal: controle de ponto e envio de documentos de admissão e desligamento à contabilidade.</li><li>Acionar fornecedores de limpeza, manutenção, internet e TI.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Organização do arquivo e da agenda da recepção</li><li>Compras de suprimentos até o valor de alçada definido</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Qualquer pagamento</li><li>Documento com divergência</li><li>Dados pessoais de clientes ou colaboradores fora do padrão de guarda</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Documentos arquivados no prazo e localizáveis</li><li>Erros de lançamento</li><li>Tempo de atendimento às demandas internas</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Ensino médio completo</td></tr>
+        <tr><th>Experiência</th><td>Até 1 ano</td></tr>
+        <tr><th>Conhecimentos</th><td>Pacote Office e organização de arquivos digitais</td></tr>
+        <tr><th>Idiomas</th><td>Não exigido</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Organização</span><span class="chip">Cordialidade</span><span class="chip">Confiabilidade</span><span class="chip">Atenção a detalhe</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>A2. Sinal de prontidão: já executa rotinas de contas a pagar e a receber sob supervisão, sem erro.</div>
+</section>
+<section class="ficha" id="a2">
+  <header class="f-head">
+    <div class="f-code">A2</div>
+    <div>
+      <div class="f-trilha">Trilha Administrativo-Financeira</div>
+      <h3 class="f-title">Assistente Administrativo-Financeiro</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Coordenador Administrativo-Financeiro (A6) ou Analista Financeiro designado</dd></div>
+    <div><dt>Equipe</dt><dd>Não lidera. Pode orientar o Auxiliar Administrativo.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>PLR anual sobre o resultado da empresa</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Executar o ciclo financeiro operacional — pagar, receber, faturar e cobrar — com precisão e no prazo.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Lançar e programar o contas a pagar e efetuar os pagamentos a fornecedores (operadoras, consolidadoras, hotéis, receptivos) somente após aprovação na alçada.</li><li>Registrar recebimentos, dar baixa nos recebíveis e controlar as parcelas de clientes.</li><li>Emitir notas fiscais conforme o regime de faturamento definido com a contabilidade (receita de intermediação × receita própria).</li><li>Conciliar vendas em cartão, gateways e links de pagamento, conferindo taxas, parcelamentos e antecipações.</li><li>Executar a régua de cobrança de clientes em atraso.</li><li>Conferir as faturas de operadoras e consolidadoras contra as vendas registradas (tarifa, taxas, comissão).</li><li>Organizar a documentação do mês para o fechamento contábil.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Execução de pagamentos já aprovados</li><li>Contato de cobrança dentro da régua</li><li>Correção de lançamentos operacionais</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Pagamento sem aprovação ou fora do vencimento</li><li>Divergência em fatura de fornecedor</li><li>Acordo de parcelamento fora da política de crédito</li><li>Nota fiscal com regra de tributação duvidosa</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Pagamentos no prazo (zero juros e multas)</li><li>Divergências identificadas nas faturas de fornecedores</li><li>Índice de inadimplência</li><li>Prazo de baixa dos recebimentos</li><li>Notas emitidas sem erro</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Ensino médio completo; técnico ou superior em Administração ou Ciências Contábeis em andamento</td></tr>
+        <tr><th>Experiência</th><td>1 a 2 anos em rotinas financeiras</td></tr>
+        <tr><th>Conhecimentos</th><td>Excel intermediário, internet banking, sistema de gestão (ERP ou sistema de agência)</td></tr>
+        <tr><th>Idiomas</th><td>Não exigido</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Precisão</span><span class="chip">Confiabilidade</span><span class="chip">Organização</span><span class="chip">Firmeza cordial na cobrança</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>A3. Sinal de prontidão: domina as conciliações e já monta o fluxo de caixa diário com supervisão.</div>
+</section>
+<section class="ficha" id="a3">
+  <header class="f-head">
+    <div class="f-code">A3</div>
+    <div>
+      <div class="f-trilha">Trilha Administrativo-Financeira</div>
+      <h3 class="f-title">Analista Financeiro Júnior</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Coordenador Administrativo-Financeiro (A6) ou Controller (A7)</dd></div>
+    <div><dt>Equipe</dt><dd>Não lidera. Revisa o trabalho de A1 e A2 quando designado.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>PLR anual sobre o resultado da empresa</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Garantir que o caixa e os registros financeiros reflitam a realidade, todos os dias.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Montar o fluxo de caixa diário (realizado e próximos 30 dias) e informar a posição de saldos.</li><li>Fazer a conciliação bancária completa de todas as contas e meios de pagamento.</li><li>Controlar os adiantamentos de clientes — valores recebidos por viagens futuras — contra os pagamentos devidos a fornecedores.</li><li>Controlar e cobrar as comissões, incentivos e bonificações a receber de operadoras e fornecedores.</li><li>Conduzir o fechamento mensal com a contabilidade: envio de documentos, conferência de lançamentos e provisões.</li><li>Fornecer os dados de margem por venda para a apuração da remuneração variável.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Classificação de lançamentos e conciliações</li><li>Ajustes de registro dentro do plano de contas</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Divergência de saldo não explicada</li><li>Ajustes contábeis</li><li>Comissão de fornecedor em atraso relevante</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Conciliação em dia (até D+2)</li><li>Fechamento mensal no prazo combinado com a contabilidade</li><li>Comissões de fornecedores em atraso</li><li>Precisão do fluxo previsto × realizado</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Superior em Ciências Contábeis, Administração ou Economia, completo ou em andamento</td></tr>
+        <tr><th>Experiência</th><td>2 anos ou mais na área financeira</td></tr>
+        <tr><th>Conhecimentos</th><td>Excel avançado, conciliação bancária, noções de contabilidade</td></tr>
+        <tr><th>Idiomas</th><td>Não exigido</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Rigor analítico</span><span class="chip">Organização</span><span class="chip">Proatividade na cobrança</span><span class="chip">Sigilo</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>A4. Sinal de prontidão: projeta o caixa com cenários e já analisa margem por venda sem apoio.</div>
+</section>
+<section class="ficha" id="a4">
+  <header class="f-head">
+    <div class="f-code">A4</div>
+    <div>
+      <div class="f-trilha">Trilha Administrativo-Financeira</div>
+      <h3 class="f-title">Analista Financeiro Pleno</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Coordenador Administrativo-Financeiro (A6) ou Controller (A7)</dd></div>
+    <div><dt>Equipe</dt><dd>Não lidera.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>PLR anual sobre o resultado da empresa (faixa ampliada)</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Transformar os números da operação em informação que a direção usa para decidir.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Projetar o fluxo de caixa de 90 dias com cenários e efeito da sazonalidade.</li><li>Apurar a margem de contribuição por venda, consultor, produto e destino.</li><li>Apurar as comissões dos consultores conforme o Programa: gatilho de 70%, acelerador, pagamento após embarque ou recebimento integral e estornos.</li><li>Controlar o câmbio e a exposição cambial — vendas e compromissos em moeda estrangeira — e recomendar à gestão o momento de fechamento.</li><li>Elaborar o relatório gerencial mensal (DRE gerencial e indicadores) para a direção.</li><li>Analisar o custo dos meios de pagamento e propor otimizações.</li><li>Apoiar a contabilidade nas questões tributárias do faturamento.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Metodologia de apuração e de relatório, dentro do padrão aprovado</li><li>Ajustes analíticos nos relatórios</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Fechamento de câmbio (decisão da gestão)</li><li>Contestação ou exceção na comissão</li><li>Indício de venda sistematicamente abaixo do piso de margem</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Relatório gerencial entregue no prazo</li><li>Acurácia da projeção de caixa</li><li>Comissões apuradas sem contestação procedente</li><li>Resultado cambial × orçamento</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Superior completo em Ciências Contábeis, Administração ou Economia</td></tr>
+        <tr><th>Experiência</th><td>3 a 5 anos na área financeira</td></tr>
+        <tr><th>Conhecimentos</th><td>Excel avançado; BI desejável; câmbio e meios de pagamento</td></tr>
+        <tr><th>Idiomas</th><td>Inglês intermediário (desejável)</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Análise</span><span class="chip">Comunicação de números</span><span class="chip">Rigor</span><span class="chip">Visão de negócio</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>A5. Sinal de prontidão: já participa do orçamento e da discussão de preço com o comercial.</div>
+</section>
+<section class="ficha" id="a5">
+  <header class="f-head">
+    <div class="f-code">A5</div>
+    <div>
+      <div class="f-trilha">Trilha Administrativo-Financeira</div>
+      <h3 class="f-title">Analista Financeiro Sênior</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Controller (A7) — na ausência, Direção-Geral (D1)</dd></div>
+    <div><dt>Equipe</dt><dd>Não tem gestão formal. Revisa o trabalho de A3 e A4.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>PLR anual sobre o resultado da empresa (faixa ampliada)</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Dar à empresa planejamento e política financeira: orçamento, preço, rentabilidade e relação com bancos.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Elaborar o orçamento anual e acompanhar o orçado × realizado.</li><li>Construir, com o comercial, a precificação e a política de margem (piso de margem, markups por produto).</li><li>Analisar a rentabilidade por produto, destino e canal.</li><li>Cuidar do relacionamento bancário: limites, tarifas, aplicações e antecipação de recebíveis, com análise de custo.</li><li>Avaliar o risco de crédito das vendas parceladas e propor ajustes à política.</li><li>Revisar o trabalho técnico de A3 e A4.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Proposições técnicas de orçamento e preço</li><li>Negociações bancárias rotineiras dentro de parâmetros aprovados</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Contratação de crédito</li><li>Antecipação de recebíveis acima do limite</li><li>Mudança de política de preço ou de crédito</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Desvio orçado × realizado</li><li>Custo financeiro sobre a margem</li><li>Margem por produto × piso</li><li>Custo de antecipação de recebíveis</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Superior completo; pós-graduação em finanças ou controladoria desejável</td></tr>
+        <tr><th>Experiência</th><td>5 anos ou mais na área financeira</td></tr>
+        <tr><th>Conhecimentos</th><td>Modelagem financeira, orçamento, Excel avançado e BI</td></tr>
+        <tr><th>Idiomas</th><td>Inglês intermediário (desejável)</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Pensamento estratégico</span><span class="chip">Negociação</span><span class="chip">Rigor técnico</span><span class="chip">Influência</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>A6 (gestão do back-office) ou A7 (controladoria).</div>
+</section>
+<section class="ficha" id="a6">
+  <header class="f-head">
+    <div class="f-code">A6</div>
+    <div>
+      <div class="f-trilha">Trilha Administrativo-Financeira</div>
+      <h3 class="f-title">Coordenador Administrativo-Financeiro</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Controller (A7) — na ausência, Direção-Geral (D1)</dd></div>
+    <div><dt>Equipe</dt><dd>Equipe administrativo-financeira (A1 a A5).</dd></div>
+    <div><dt>Remuneração variável</dt><dd>PLR anual sobre o resultado da empresa (faixa ampliada)</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Responder pela rotina inteira do back-office, com conformidade legal e controles internos.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Gerir a equipe administrativo-financeira: distribuição de tarefas, prazos, avaliação e desenvolvimento.</li><li>Garantir a conformidade da agência: Cadastur ativo, seguros, alvarás, certidões e obrigações acessórias, com apoio da contabilidade.</li><li>Conduzir a proteção de dados (LGPD) de clientes e colaboradores — passaportes, documentos, cartões —, com apoio jurídico.</li><li>Controlar os contratos com fornecedores e prestadores: vigência, renovação e guarda.</li><li>Conduzir o departamento pessoal com a contabilidade: folha, admissões, desligamentos, férias, benefícios e aplicação da Convenção Coletiva.</li><li>Ser a interface com a contabilidade e o jurídico externos.</li><li>Garantir os controles internos, especialmente a segregação de funções: quem lança o pagamento não é quem o aprova.</li><li>Operar o Programa de Cargos e Salários: enquadramentos, janelas de movimentação e custo do quadro.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Rotina da área e escalas</li><li>Aprovação de pagamentos dentro da alçada</li><li>Compras e contratos de serviço dentro do orçamento</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Contratações e desligamentos</li><li>Pagamentos ou contratos acima da alçada</li><li>Mudança de política interna</li><li>Risco trabalhista ou regulatório identificado</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Obrigações em dia (zero multas)</li><li>Fechamento mensal no prazo</li><li>Pendências de conformidade em aberto</li><li>Achados da revisão de controles internos</li><li>Turnover da equipe</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Superior completo em Administração ou Ciências Contábeis</td></tr>
+        <tr><th>Experiência</th><td>6 anos ou mais, com ao menos 2 em coordenação</td></tr>
+        <tr><th>Conhecimentos</th><td>Rotinas financeiras, departamento pessoal, legislação trabalhista e regulatória básica do turismo</td></tr>
+        <tr><th>Idiomas</th><td>Não exigido</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Liderança</span><span class="chip">Conformidade</span><span class="chip">Organização de processos</span><span class="chip">Firmeza</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>A7. Sinal de prontidão: já entrega planejamento e análise para a direção, e há sucessor identificado na coordenação.</div>
+</section>
+<section class="ficha" id="a7">
+  <header class="f-head">
+    <div class="f-code">A7</div>
+    <div>
+      <div class="f-trilha">Trilha Administrativo-Financeira</div>
+      <h3 class="f-title">Gerente Administrativo-Financeiro / Controller</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Direção-Geral (D1)</dd></div>
+    <div><dt>Equipe</dt><dd>Toda a área administrativo-financeira.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>Bônus sobre metas financeiras: margem líquida, inadimplência e prazo de fechamento</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Ser o dono do resultado financeiro e levar à direção o número com que ela decide.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Conduzir o planejamento financeiro e o orçamento anual da empresa.</li><li>Responder pela controladoria: DRE gerencial, indicadores e fechamento no prazo.</li><li>Definir a política de crédito e de cobrança: sinal mínimo, parcelamento ao cliente, prazos e garantias.</li><li>Definir, com o contador, a estrutura tributária: regime, anexo do Simples, Fator R e regras de faturamento.</li><li>Gerir caixa e câmbio, incluindo o fechamento de câmbio dentro da política aprovada.</li><li>Avaliar a viabilidade financeira de novos produtos, unidades e investimentos.</li><li>Orçar o custo do quadro (multiplicador de encargos) e validar o impacto de movimentações salariais.</li><li>Gerir riscos e controles internos e liderar a equipe administrativo-financeira.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Pagamentos e contratações dentro do orçamento</li><li>Política de cobrança</li><li>Fechamento de câmbio dentro da política</li><li>Prioridades da área</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Investimentos e endividamento</li><li>Mudança de regime tributário</li><li>Distribuição de lucros</li><li>Mudança no orçamento aprovado</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Margem líquida</li><li>Inadimplência</li><li>Prazo de fechamento mensal</li><li>Caixa mínimo de segurança</li><li>Resultado cambial</li><li>Acurácia da previsão de resultado</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Superior em Ciências Contábeis, Administração ou Economia, com pós-graduação; CRC desejável</td></tr>
+        <tr><th>Experiência</th><td>8 anos ou mais, com ao menos 3 em gestão</td></tr>
+        <tr><th>Conhecimentos</th><td>Controladoria, tributação de agências de turismo, câmbio, planejamento financeiro</td></tr>
+        <tr><th>Idiomas</th><td>Inglês intermediário (desejável)</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Visão de negócio</span><span class="chip">Rigor</span><span class="chip">Liderança</span><span class="chip">Comunicação com a direção</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>A8 (se criado) ou Direção-Geral (D1).</div>
+</section>
+<section class="ficha opt" id="a8">
+  <header class="f-head">
+    <div class="f-code">A8</div>
+    <div>
+      <div class="f-trilha">Trilha Administrativo-Financeira · cargo facultativo</div>
+      <h3 class="f-title">Diretor Financeiro (CFO)</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Direção-Geral (D1) e, quando houver, conselho ou sócios</dd></div>
+    <div><dt>Equipe</dt><dd>Controller e área administrativo-financeira.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>Bônus anual e participação</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Responder pela estrutura de capital, pela captação e pela governança quando a empresa ganha sócios externos, várias empresas no grupo ou exigência formal de governança.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Definir a estrutura de capital e conduzir captações e financiamentos.</li><li>Cuidar da relação com sócios, investidores, bancos e auditoria externa.</li><li>Implantar a governança: conselho, comitês, políticas e auditoria.</li><li>Conduzir o planejamento tributário e societário do grupo.</li><li>Avaliar aquisições, novas unidades e reorganizações societárias.</li><li>Integrar o comitê de direção e o planejamento estratégico.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Política financeira aprovada pelo conselho ou pelos sócios</li><li>Estrutura da área financeira</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Captação e endividamento relevantes</li><li>Operações societárias</li><li>Distribuição de resultados</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Custo de capital</li><li>Geração de caixa</li><li>Conformidade de governança</li><li>Resultado consolidado do grupo</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Superior e pós-graduação em finanças</td></tr>
+        <tr><th>Experiência</th><td>10 anos ou mais, com gestão financeira de empresa ou grupo</td></tr>
+        <tr><th>Conhecimentos</th><td>Captação, governança, planejamento tributário e societário</td></tr>
+        <tr><th>Idiomas</th><td>Inglês fluente</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Visão estratégica</span><span class="chip">Governança</span><span class="chip">Negociação com investidores</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>Direção-Geral (D1). Antes de existirem as condições que justificam o cargo, o Controller resolve.</div>
+</section>
+
+<section class="sec brk intro" id="s6"><h2><span>06</span>Direção-Geral — D1</h2><p>Ponto de convergência das duas trilhas. Por ser cargo ocupado por sócio, a remuneração segue a seção 9 do Programa.</p></section>
+
+<section class="ficha" id="d1">
+  <header class="f-head">
+    <div class="f-code">D1</div>
+    <div>
+      <div class="f-trilha">Trilha Direção</div>
+      <h3 class="f-title">CEO / Diretor-Geral</h3>
+    </div>
+  </header>
+  <dl class="f-meta">
+    <div><dt>Reporta a</dt><dd>Sócios</dd></div>
+    <div><dt>Equipe</dt><dd>Gerente Comercial (C7) e Controller (A7), ou diretores C8 e A8 quando existirem.</dd></div>
+    <div><dt>Remuneração variável</dt><dd>Pró-labore e distribuição de lucros</dd></div>
+  </dl>
+  <p class="f-missao"><span>Missão</span>Definir a estratégia, alocar o capital e proteger a marca e a reputação da LusaTravel — e tomar as decisões que ninguém mais pode tomar.</p>
+  <h4>Responsabilidades principais</h4>
+  <ol class="f-resp"><li>Definir o posicionamento: em que destinos a agência se especializa, que cliente atende e qual deixa de atender.</li><li>Aprovar o planejamento estratégico, o orçamento anual e o quadro de pessoal.</li><li>Decidir a abertura e o fechamento de frentes de negócio, unidades e produtos.</li><li>Proteger a marca e a reputação, incluindo a gestão de crises de grande impacto.</li><li>Nomear, avaliar e desenvolver os gestores diretos; garantir a sucessão das posições-chave.</li><li>Aprovar o Programa de Cargos e Salários, suas revisões e as movimentações salariais.</li><li>Aprovar a política de preço, o piso de margem e as alçadas de toda a empresa.</li><li>Representar a agência junto a fornecedores estratégicos, entidades do setor e parceiros.</li><li>Na ausência de A6/A7, aprovar os pagamentos, para preservar a segregação de funções.</li></ol>
+  <div class="f-cols">
+    <div class="f-box"><h4>Decide com autonomia</h4><ul class=""><li>Estratégia, orçamento e quadro</li><li>Política de preço, margem e alçadas</li><li>Contratações de gestão</li><li>Casos omissos do Programa de Cargos e Salários</li></ul></div>
+    <div class="f-box esc"><h4>Escala ao gestor</h4><ul class=""><li>Alteração de pró-labore e distribuição de lucros (deliberação dos sócios)</li><li>Operações societárias e endividamento relevante (sócios)</li></ul></div>
+  </div>
+  <div class="f-cols">
+    <div><h4>Indicadores de desempenho</h4><ul class=""><li>Resultado líquido</li><li>Crescimento da margem</li><li>Caixa e solvência</li><li>NPS e reputação da marca</li><li>Retenção das pessoas-chave</li></ul></div>
+    <div>
+      <h4>Requisitos</h4>
+      <table class="f-req">
+        <tr><th>Formação</th><td>Não se aplica — cargo de sócio</td></tr>
+        <tr><th>Experiência</th><td>—</td></tr>
+        <tr><th>Conhecimentos</th><td>Visão integrada de comercial, finanças e pessoas</td></tr>
+        <tr><th>Idiomas</th><td>—</td></tr>
+      </table>
+      <h4>Competências</h4><div class="chips"><span class="chip">Visão estratégica</span><span class="chip">Decisão</span><span class="chip">Liderança</span><span class="chip">Guarda da cultura</span></div>
+    </div>
+  </div>
+  <div class="f-next"><span>Próxima faixa</span>Ponto de convergência das duas trilhas, acessível a partir de C7, C8, A7 ou A8.</div>
+</section>
+
+<section class="sec brk" id="s7"><h2><span>07</span>Fluxo da venda entre as áreas</h2>
+<p>A maior parte dos conflitos em agência acontece na passagem da venda para o financeiro. Esta tabela fixa quem responde por cada etapa — da entrada do lead até a comissão.</p>
+<div class="scroll"><table class="fluxo"><thead><tr><th></th><th>Etapa</th><th>Responsável</th><th>Apoio</th><th>Entrega / registro</th></tr></thead><tbody><tr><td class='n'>01</td><th>Captação e qualificação do lead</th><td><b>C1 / C2</b></td><td>C3–C5</td><td>Lead registrado no CRM e distribuído pela regra</td></tr><tr><td class='n'>02</td><th>Briefing e proposta</th><td><b>C3–C5</b></td><td>C2 (formatação)</td><td>Proposta no padrão LusaTravel, com custo e margem calculados</td></tr><tr><td class='n'>03</td><th>Fechamento</th><td><b>C3–C5</b></td><td>C6 (alçada de margem)</td><td>Contrato, condições de pagamento e regras de cancelamento com ciência do cliente</td></tr><tr><td class='n'>04</td><th>Dados da venda ao financeiro</th><td><b>C2</b></td><td>Consultor da venda</td><td>Custo, preço, fornecedor e forma de pagamento completos</td></tr><tr><td class='n'>05</td><th>Recebimento de sinal e quitação</th><td><b>A2</b></td><td>Consultor acompanha</td><td>Baixa no sistema e conciliação do meio de pagamento</td></tr><tr><td class='n'>06</td><th>Emissão e confirmação</th><td><b>C1 / C2</b></td><td>Consultor autoriza</td><td>Bilhetes e vouchers emitidos dentro do time limit</td></tr><tr><td class='n'>07</td><th>Faturamento</th><td><b>A2</b></td><td>A3–A4 (regra tributária)</td><td>Nota fiscal no regime de faturamento definido com a contabilidade</td></tr><tr><td class='n'>08</td><th>Pagamento ao fornecedor</th><td><b>A2 executa</b></td><td>A6 / A7 / D1 aprovam</td><td>Pagamento aprovado na alçada — quem lança não aprova</td></tr><tr><td class='n'>09</td><th>Embarque e acompanhamento</th><td><b>Consultor da venda</b></td><td>C5 / C6 nas escalações</td><td>Ocorrências registradas no CRM</td></tr><tr><td class='n'>10</td><th>Pós-venda</th><td><b>C2</b></td><td>Consultor da venda</td><td>NPS, avaliação e registro de reclamações</td></tr><tr><td class='n'>11</td><th>Apuração da comissão</th><td><b>A4</b></td><td>C6 valida</td><td>Comissão sobre margem, após embarque ou recebimento integral</td></tr><tr><td class='n'>12</td><th>Conciliação e comissões de fornecedores</th><td><b>A3</b></td><td>A2</td><td>Incentivos e bonificações cobrados e conciliados</td></tr></tbody></table></div>
+</section>
+
+<section class="sec brk" id="s8"><h2><span>08</span>Matriz de alçadas</h2>
+<p>Quem executa, propõe, aprova ou apenas é informado em cada decisão recorrente. Onde aparece “alçada”, o limite numérico (percentual de margem ou valor em reais) é fixado pela Direção e divulgado à parte.</p>
+<div class="key"><span><i class="m-e" style="background:var(--leaf2)">E</i>Executa</span><span><i style="background:var(--warnbg);color:var(--warn)">P</i>Propõe</span><span><i style="background:var(--olive2);color:#fff">A</i>Aprova</span><span><i style="color:var(--ink3)">I</i>É informado</span></div>
+<div class="scroll"><table class="matriz"><thead><tr><th>Decisão</th><th>Consultor<br>C3–C5</th><th>Supervisor<br>C6</th><th>Gerente Com.<br>C7</th><th>Financeiro<br>A2–A5</th><th>Coordenador<br>A6</th><th>Controller<br>A7</th><th>Direção<br>D1</th></tr></thead><tbody><tr><th>Desconto que mantém a venda acima do piso de margem</th><td class="m-e">E</td><td class="m-i">I</td><td class="m-x">·</td><td class="m-x">·</td><td class="m-x">·</td><td class="m-x">·</td><td class="m-x">·</td></tr><tr><th>Venda abaixo do piso de margem</th><td class="m-p">P</td><td class="m-a">A ≤ alçada</td><td class="m-a">A &gt; alçada</td><td class="m-i">I</td><td class="m-x">·</td><td class="m-x">·</td><td class="m-x">·</td></tr><tr><th>Emissão ou confirmação de reserva paga¹</th><td class="m-a">A</td><td class="m-x">·</td><td class="m-x">·</td><td class="m-i">I</td><td class="m-x">·</td><td class="m-x">·</td><td class="m-x">·</td></tr><tr><th>Reembolso ou crédito fora da política do fornecedor</th><td class="m-p">P</td><td class="m-a">A ≤ alçada</td><td class="m-a">A &gt; alçada</td><td class="m-i">I</td><td class="m-i">I</td><td class="m-x">·</td><td class="m-x">·</td></tr><tr><th>Parcelamento ou sinal fora da política de crédito</th><td class="m-p">P</td><td class="m-p">P</td><td class="m-i">I</td><td class="m-x">·</td><td class="m-x">·</td><td class="m-a">A</td><td class="m-x">·</td></tr><tr><th>Pagamento a fornecedor²</th><td class="m-x">·</td><td class="m-x">·</td><td class="m-x">·</td><td class="m-e">E</td><td class="m-a">A ≤ alçada</td><td class="m-a">A &gt; alçada</td><td class="m-a">A³</td></tr><tr><th>Fechamento de câmbio</th><td class="m-x">·</td><td class="m-x">·</td><td class="m-i">I</td><td class="m-p">P</td><td class="m-x">·</td><td class="m-a">A</td><td class="m-i">I</td></tr><tr><th>Política de preço e piso de margem</th><td class="m-x">·</td><td class="m-i">I</td><td class="m-p">P</td><td class="m-p">P</td><td class="m-x">·</td><td class="m-p">P</td><td class="m-a">A</td></tr><tr><th>Acordo com fornecedor com volume mínimo ou exclusividade</th><td class="m-p">P</td><td class="m-x">·</td><td class="m-p">P</td><td class="m-x">·</td><td class="m-x">·</td><td class="m-i">I</td><td class="m-a">A</td></tr><tr><th>Contratação e desligamento</th><td class="m-x">·</td><td class="m-p">P</td><td class="m-a">A</td><td class="m-x">·</td><td class="m-p">P</td><td class="m-a">A</td><td class="m-a">A</td></tr><tr><th>Movimentação salarial (janelas de julho e janeiro)</th><td class="m-x">·</td><td class="m-p">P</td><td class="m-p">P</td><td class="m-x">·</td><td class="m-e">E</td><td class="m-i">I</td><td class="m-a">A</td></tr><tr><th>Orçamento anual</th><td class="m-x">·</td><td class="m-x">·</td><td class="m-p">P</td><td class="m-e">E</td><td class="m-x">·</td><td class="m-p">P</td><td class="m-a">A</td></tr></tbody></table></div>
+<p class="foot">¹ A emissão é executada por C1 ou C2, sempre com autorização registrada do consultor responsável pela venda.<br>
+² Quem lança o pagamento nunca é quem o aprova.<br>
+³ Enquanto não houver A6 ou A7 no quadro, a aprovação de pagamentos é da Direção-Geral.</p>
+</section>
+
+<section class="sec " id="s9"><h2><span>09</span>O que validar antes de publicar</h2>
+<p>Pontos que, se ignorados, transformam um bom documento em passivo trabalhista ou em promessa que não se cumpre.</p>
+<ol class="valid"><li><b>Ative só os cargos que existem hoje.</b>O documento descreve 17 cargos para dar caminho de carreira, não para preencher. Em quadro enxuto, a maior parte das fichas fica latente até a vaga existir — o próprio Programa veda criar posição para acomodar promoção.</li><li><b>Acúmulo de funções precisa de regra escrita.</b>Se uma pessoa cobre duas fichas (por exemplo, A2 e A3), enquadre-a pelo cargo predominante e registre o escopo adicional. Duas pessoas fazendo o mesmo trabalho com cargos ou salários diferentes geram risco de equiparação salarial (art. 461 da CLT).</li><li><b>Defina os números das alçadas.</b>As fichas trazem a regra (quem propõe, quem aprova), não os valores. A Direção precisa fixar o piso de margem, a alçada de desconto do Supervisor, a alçada de reembolso e o limite de aprovação de pagamentos do Coordenador.</li><li><b>Segregação de funções em quadro enxuto.</b>Sem A6 ou A7, quem lança o pagamento não pode aprová-lo: a aprovação sobe para a Direção. É o controle mais barato contra fraude e erro.</li><li><b>Supervisor com carteira própria.</b>Se o C6 também vende, a distribuição de leads precisa de regra escrita e auditável — senão o supervisor compete com o próprio time pelos melhores leads.</li><li><b>CBO e registro.</b>Peça à contabilidade a associação de cada cargo a um código CBO, para que o título na carteira de trabalho e no eSocial seja coerente com a ficha.</li><li><b>Ciência individual.</b>Entregue a ficha a cada titular em conversa individual, antes de qualquer divulgação coletiva, e colha ciência por escrito — na mesma sequência de comunicação do Programa.</li></ol>
+<div class="sign"><div>Direção-Geral · LusaTravel</div><div>Data de aprovação</div></div>
+<p class="end">LusaTravel · Descrição de Cargos · Anexo III do Programa de Cargos e Salários · v1.0 · outubro de 2026</p>
+</section>
+
+</body>
+</html>
