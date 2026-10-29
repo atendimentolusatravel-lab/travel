@@ -48,22 +48,22 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .meta span{ white-space:nowrap; font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); }
 
 /* Resumo comparativo */
-.cmp{ display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-top:8mm; }
+.cmp{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:5mm; margin-top:6mm; }
 .cmp-card{ border:1px solid var(--line); border-radius:5px; overflow:hidden; }
 .cmp-card .top{ background:var(--dest); color:#fff; padding:4mm 6mm; display:flex; align-items:center; gap:4mm; }
 .cmp-card .no{ width:9mm; height:9mm; border-radius:50%; border:2px solid var(--gold); color:var(--gold);
   font-weight:800; font-size:11pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-.cmp-card .t1{ font-size:12pt; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.cmp-card .t1{ font-size:11pt; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
 .cmp-card .t2{ font-size:8.5pt; color:rgba(255,255,255,.7); }
-.cmp-card .mid{ padding:4mm 6mm; display:flex; justify-content:space-between; align-items:baseline; background:var(--paper); }
+.cmp-card .mid{ padding:4mm 6mm; display:flex; flex-direction:column; gap:1mm; background:var(--paper); }
 .cmp-card .mid .k{ font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; }
-.cmp-card .mid .v{ font-size:17pt; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; }
+.cmp-card .mid .v{ font-size:15pt; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; }
 .cmp-card .mid .v small{ font-size:9pt; color:var(--gold); font-weight:700; margin-right:1.5mm; }
-.cmp-card .pts{ padding:3mm 6mm 4mm; font-size:9pt; line-height:1.65; color:var(--char); }
+.cmp-card .pts{ padding:3mm 6mm 4mm; font-size:8.5pt; line-height:1.65; color:var(--char); }
 .cmp-card .pts b{ color:var(--dest); font-weight:600; }
 
 /* Opção */
-.opt{ margin-top:8mm; }
+.opt{ margin-top:6mm; }
 .opt-hd{ display:flex; align-items:center; justify-content:space-between; border-bottom:2px solid var(--dest); padding-bottom:2mm; }
 .opt-hd h2{ font-size:15pt; font-weight:700; color:var(--ink); }
 .opt-hd h2 em{ font-style:normal; color:var(--gold); }
@@ -72,7 +72,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 table.fl{ width:100%; border-collapse:collapse; margin-top:3mm; font-size:9.5pt; }
 table.fl th{ font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700;
   text-align:left; padding:1.5mm 2mm; }
-table.fl td{ padding:2.4mm 2mm; border-top:1px solid var(--line); vertical-align:middle; }
+table.fl td{ padding:2mm 2mm; border-top:1px solid var(--line); vertical-align:middle; }
 table.fl td.fn{ font-weight:700; color:var(--ink); white-space:nowrap; }
 table.fl td.dt{ color:var(--gold); font-weight:700; white-space:nowrap; }
 table.fl td.rt b{ font-weight:600; color:var(--ink); }
@@ -118,11 +118,11 @@ tr.grp td{ background:var(--dest-soft); color:var(--dest); font-size:7.5pt; font
       <div>
         <div class="eyebrow">Cotação preparada para</div>
         <div class="client">Sra. Laura Dalcanale</div>
-        <div class="sub">Duas opções de aéreo com destino final na Ásia, Singapura ou Pequim, saindo de São Paulo (GRU) entre dezembro e janeiro.</div>
+        <div class="sub">Três opções de aéreo com destino final na Ásia: Singapura, Xangai ou Pequim, saindo de São Paulo (GRU) entre dezembro e janeiro.</div>
       </div>
       <div class="meta">
         <div><b>5</b><span>Passageiros</span></div>
-        <div><b>2</b><span>Opções</span></div>
+        <div><b>3</b><span>Opções</span></div>
         <div><b>29/10</b><span>Data cotação</span></div>
       </div>
     </div>
@@ -132,12 +132,17 @@ tr.grp td{ background:var(--dest-soft); color:var(--dest); font-size:7.5pt; font
       <div class="cmp-card">
         <div class="top"><div class="no">1</div><div><div class="t1">Singapura</div><div class="t2">Ethiopian Airlines · via Adis Abeba</div></div></div>
         <div class="mid"><span class="k">Total 5 pax</span><span class="v"><small>R$</small>98.824,12</span></div>
-        <div class="pts">31 Dez → 28 Jan · <b>1 executiva + 4 econômica</b><br>Conexão longa em Adis Abeba na ida e na volta</div>
+        <div class="pts">31 Dez → 28 Jan · <b>1 executiva + 4 econômica</b><br>Esperas de ~28h em Adis Abeba</div>
       </div>
       <div class="cmp-card">
-        <div class="top"><div class="no">2</div><div><div class="t1">Pequim via Amsterdã</div><div class="t2">KLM + LATAM · todos os voos diretos</div></div></div>
+        <div class="top"><div class="no">2</div><div><div class="t1">Xangai via Amsterdã</div><div class="t2">KLM · bilhete único · voos diretos</div></div></div>
+        <div class="mid"><span class="k">Total 5 pax</span><span class="v"><small>R$</small>108.505,67</span></div>
+        <div class="pts">30 Dez → 27 Jan · <b>1 executiva + 4 econômica</b><br>Todos nos mesmos voos · Réveillon em Amsterdã</div>
+      </div>
+      <div class="cmp-card">
+        <div class="top"><div class="no">3</div><div><div class="t1">Pequim via Amsterdã</div><div class="t2">KLM + LATAM · bilhetes separados</div></div></div>
         <div class="mid"><span class="k">Total 5 pax</span><span class="v"><small>R$</small>108.411,22</span></div>
-        <div class="pts">28/29 Dez → 28 Jan · <b>1 executiva + 4 econômica</b><br>Réveillon em Amsterdã · sem conexões longas em aeroporto</div>
+        <div class="pts">28/29 Dez → 28 Jan · <b>1 executiva + 4 econômica</b><br>KLM + LATAM · Réveillon em Amsterdã</div>
       </div>
     </div>
 
@@ -178,6 +183,43 @@ tr.grp td{ background:var(--dest-soft); color:var(--dest); font-size:7.5pt; font
       </div>
     </div>
 
+    <!-- Opção 2 -->
+    <div class="opt">
+      <div class="opt-hd"><h2>Opção 2 · São Paulo <em>⇄</em> Xangai, via Amsterdã</h2><span class="air">KLM · bilhete único</span></div>
+      <table class="fl">
+        <thead><tr><th>Voo</th><th>Data</th><th>Trecho</th><th>Partida</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr></thead>
+        <tbody>
+          <tr><td class="fn">KL 792</td><td class="dt">30 Dez</td><td class="rt"><b>GRU</b> São Paulo → <b>AMS</b> Amsterdã</td><td class="tm">20:59</td><td class="tm">12:20 <span class="mu">(31 Dez)</span></td><td class="mu">11h21</td><td class="mu">Boeing 777-300ER</td></tr>
+          <tr class="stop"><td colspan="7">Parada em Amsterdã: Réveillon · de 31 Dez 12:20 a 01 Jan 13:50</td></tr>
+          <tr><td class="fn">KL 895</td><td class="dt">01 Jan</td><td class="rt"><b>AMS</b> Amsterdã → <b>PVG</b> Xangai</td><td class="tm">13:50</td><td class="tm">09:10 <span class="mu">(02 Jan)</span></td><td class="mu">12h20</td><td class="mu">Boeing 787-9</td></tr>
+          <tr><td class="fn">KL 896</td><td class="dt">25 Jan</td><td class="rt"><b>PVG</b> Xangai → <b>AMS</b> Amsterdã</td><td class="tm">11:10</td><td class="tm">18:25</td><td class="mu">14h15</td><td class="mu">Boeing 787-9</td></tr>
+          <tr class="stop"><td colspan="7">Parada em Amsterdã: 2 noites · de 25 Jan 18:25 a 27 Jan 10:45</td></tr>
+          <tr><td class="fn">KL 791</td><td class="dt">27 Jan</td><td class="rt"><b>AMS</b> Amsterdã → <b>GRU</b> São Paulo</td><td class="tm">10:45</td><td class="tm">18:50</td><td class="mu">12h05</td><td class="mu">Boeing 777-300ER</td></tr>
+        </tbody>
+      </table>
+      <div class="fares">
+        <div class="fare">
+          <div class="cab">Executiva · Classes I/Z</div>
+          <div class="pax">1 passageiro · tarifa NDC</div>
+          <div class="amt">R$ 46.860,63</div>
+          <div class="usd">USD 8.772,12</div>
+          <div class="inc">2 malas na ida, 1 mala na volta + bagagem de mão</div>
+        </div>
+        <div class="fare">
+          <div class="cab">Econômica · Classes Q/E</div>
+          <div class="pax">4 passageiros · R$ 15.411,26 por pessoa</div>
+          <div class="amt">R$ 61.645,04</div>
+          <div class="usd">USD 11.539,64</div>
+          <div class="inc">1 bagagem despachada + bagagem de mão</div>
+        </div>
+        <div class="total">
+          <div class="lbl">Total · 5 passageiros</div>
+          <div class="amt">R$ 108.505,67</div>
+          <div class="usd">USD 20.311,76</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <div class="ft">
@@ -190,13 +232,13 @@ tr.grp td{ background:var(--dest-soft); color:var(--dest); font-size:7.5pt; font
 </section>
 
 <section class="page">
-  <div class="hd"><img class="logo" src="assets/lusatravel-logo-dourada.png" alt="LusaTravel"><div class="tag">Cotação Aérea · Opção 2</div></div>
+  <div class="hd"><img class="logo" src="assets/lusatravel-logo-dourada.png" alt="LusaTravel"><div class="tag">Cotação Aérea · Opção 3</div></div>
   <div class="goldbar"></div>
 
   <div class="body">
-    <!-- Opção 2 -->
+    <!-- Opção 3 -->
     <div class="opt" style="margin-top:0">
-      <div class="opt-hd"><h2>Opção 2 · São Paulo <em>⇄</em> Pequim, via Amsterdã</h2><span class="air">KLM · LATAM</span></div>
+      <div class="opt-hd"><h2>Opção 3 · São Paulo <em>⇄</em> Pequim, via Amsterdã</h2><span class="air">KLM · LATAM</span></div>
       <table class="fl">
         <thead><tr><th>Voo</th><th>Data</th><th>Trecho</th><th>Partida</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr></thead>
         <tbody>
@@ -241,7 +283,7 @@ tr.grp td{ background:var(--dest-soft); color:var(--dest); font-size:7.5pt; font
         <h3>Observações</h3>
         <ul>
           <li>Opção 1: as conexões em Adis Abeba passam de 24h. É preciso hospedagem local e visto eletrônico da Etiópia, não incluídos.</li>
-          <li>Opção 2: hospedagem em Amsterdã não incluída. A passageira da executiva embarca em 28 Dez, um dia antes do grupo.</li>
+          <li>Opções 2 e 3: hospedagem em Amsterdã não incluída. Na Opção 3, a passageira da executiva embarca em 28 Dez, um dia antes do grupo.</li>
           <li>Verificar exigência de visto para a China na data da viagem.</li>
           <li>Horários em hora local de cada cidade.</li>
           <li>Tarifas sujeitas a disponibilidade e alteração até a emissão.</li>
