@@ -1,0 +1,2949 @@
+{
+"janeiro": [
+{
+"src": "hotel",
+"path": "16/ef/c4/99/pool-180-andar.jpg",
+"cap": "POOL | 18º ANDAR",
+"w": 5858,
+"h": 3905
+},
+{
+"src": "hotel",
+"path": "16/ef/a4/69/oceanfront-suite.jpg",
+"cap": "OCEANFRONT SUITE",
+"w": 3543,
+"h": 2362
+},
+{
+"src": "hotel",
+"path": "16/ef/a4/79/oceanfront-suite.jpg",
+"cap": "OCEANFRONT SUITE",
+"w": 3543,
+"h": 2362
+},
+{
+"src": "hotel",
+"path": "16/ef/a4/98/oceanfront-suite.jpg",
+"cap": "OCEANFRONT SUITE",
+"w": 3543,
+"h": 2368
+},
+{
+"src": "hotel",
+"path": "16/ef/ad/40/ocean-sideview-deluxe.jpg",
+"cap": "OCEAN SIDEVIEW DELUXE",
+"w": 5623,
+"h": 3791
+},
+{
+"src": "hotel",
+"path": "16/ef/ad/e3/ocean-sideview-deluxe.jpg",
+"cap": "OCEAN SIDEVIEW DELUXE",
+"w": 3543,
+"h": 2373
+},
+{
+"src": "hotel",
+"path": "16/ef/b6/08/ocean-sideview-standard.jpg",
+"cap": "OCEAN SIDEVIEW STANDARD",
+"w": 3543,
+"h": 2362
+},
+{
+"src": "hotel",
+"path": "16/ef/ba/f5/entrada-hotel.jpg",
+"cap": "ENTRADA HOTEL",
+"w": 5536,
+"h": 3691
+},
+{
+"src": "hotel",
+"path": "16/ef/c1/24/recepcao.jpg",
+"cap": "RECEPÇÃO",
+"w": 3543,
+"h": 2362
+},
+{
+"src": "hotel",
+"path": "16/ef/c0/bc/recepcao.jpg",
+"cap": "RECEPÇÃO",
+"w": 6016,
+"h": 4016
+},
+{
+"src": "trav",
+"path": "15/fe/7f/09/breakfast.jpg",
+"cap": "breakfast",
+"w": 640,
+"h": 480
+},
+{
+"src": "trav",
+"path": "16/f6/6a/4f/janeiro-hotel.jpg",
+"cap": "",
+"w": 3024,
+"h": 4032
+},
+{
+"src": "trav",
+"path": "16/11/01/11/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "15/71/9a/ec/photo7jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "17/7d/a8/f5/photo1jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/11/01/17/photo6jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/98/9d/92/janeiro-hotel.jpg",
+"cap": "",
+"w": 3264,
+"h": 2448
+},
+{
+"src": "trav",
+"path": "17/be/36/88/janeiro-hotel.jpg",
+"cap": "",
+"w": 3024,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "15/98/9d/ba/janeiro-hotel.jpg",
+"cap": "",
+"w": 2448,
+"h": 3264
+},
+{
+"src": "trav",
+"path": "16/6f/1d/ab/vista-desde-la-piscina.jpg",
+"cap": "Vista desde la piscina",
+"w": 2448,
+"h": 3255
+},
+{
+"src": "trav",
+"path": "15/8d/9a/aa/ambiente-do-restaurante.jpg",
+"cap": "Ambiente do restaurante",
+"w": 3024,
+"h": 4032
+},
+{
+"src": "trav",
+"path": "16/11/01/0e/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "15/8d/9a/1d/polvo-grelhado-com-batatas.jpg",
+"cap": "Polvo grelhado com batatas e tomatinhos assados",
+"w": 3024,
+"h": 4032
+},
+{
+"src": "trav",
+"path": "16/11/01/13/photo4jpg.jpg",
+"cap": "",
+"w": 1924,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "17/be/25/a7/janeiro-hotel.jpg",
+"cap": "",
+"w": 4032,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "15/71/9a/e7/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/fb/dd/f0/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/11/01/0d/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "17/22/4d/b5/janeiro-hotel.jpg",
+"cap": "",
+"w": 4032,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "15/71/9a/e9/photo4jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/71/9a/e5/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/fb/dd/ef/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/98/9e/c1/janeiro-hotel.jpg",
+"cap": "",
+"w": 2448,
+"h": 3264
+},
+{
+"src": "trav",
+"path": "15/9f/8a/f5/foto-do-bar-no-180-andar.jpg",
+"cap": "Foto do bar no 180. andar",
+"w": 2448,
+"h": 3264
+},
+{
+"src": "trav",
+"path": "17/22/4d/aa/janeiro-hotel.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/f6/6a/52/janeiro-hotel.jpg",
+"cap": "",
+"w": 3024,
+"h": 4032
+},
+{
+"src": "trav",
+"path": "15/8d/99/96/steak-tartar-com-fritas.jpg",
+"cap": "Steak tartar com fritas",
+"w": 3024,
+"h": 4032
+},
+{
+"src": "trav",
+"path": "15/98/9e/ab/janeiro-hotel.jpg",
+"cap": "",
+"w": 3264,
+"h": 2448
+},
+{
+"src": "trav",
+"path": "15/98/9e/9e/janeiro-hotel.jpg",
+"cap": "",
+"w": 3264,
+"h": 2448
+},
+{
+"src": "trav",
+"path": "17/be/28/cc/janeiro-hotel.jpg",
+"cap": "",
+"w": 4032,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "17/be/2c/62/view-from-the-shower.jpg",
+"cap": "View from the shower",
+"w": 3018,
+"h": 3018
+},
+{
+"src": "trav",
+"path": "16/6f/1d/c5/desayuno.jpg",
+"cap": "Desayuno",
+"w": 3264,
+"h": 2448
+},
+{
+"src": "trav",
+"path": "15/98/9c/63/janeiro-hotel.jpg",
+"cap": "",
+"w": 2448,
+"h": 2807
+},
+{
+"src": "trav",
+"path": "17/be/17/7b/janeiro-hotel.jpg",
+"cap": "",
+"w": 4032,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "17/7d/a8/f6/photo2jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/f6/6a/6d/janeiro-hotel.jpg",
+"cap": "",
+"w": 3024,
+"h": 4032
+},
+{
+"src": "trav",
+"path": "15/98/9d/1e/janeiro-hotel.jpg",
+"cap": "",
+"w": 2448,
+"h": 3264
+},
+{
+"src": "trav",
+"path": "16/f6/6a/5b/janeiro-hotel.jpg",
+"cap": "",
+"w": 3024,
+"h": 4032
+},
+{
+"src": "trav",
+"path": "15/98/9c/b6/janeiro-hotel.jpg",
+"cap": "",
+"w": 2448,
+"h": 3264
+},
+{
+"src": "trav",
+"path": "17/be/2d/9c/janeiro-hotel.jpg",
+"cap": "",
+"w": 1440,
+"h": 1440
+},
+{
+"src": "trav",
+"path": "15/98/9e/29/janeiro-hotel.jpg",
+"cap": "",
+"w": 2448,
+"h": 3264
+},
+{
+"src": "trav",
+"path": "16/f6/6a/6f/janeiro-hotel.jpg",
+"cap": "",
+"w": 3024,
+"h": 4032
+},
+{
+"src": "trav",
+"path": "17/be/31/bf/janeiro-hotel.jpg",
+"cap": "",
+"w": 3024,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "15/98/9d/62/janeiro-hotel.jpg",
+"cap": "",
+"w": 3264,
+"h": 2448
+},
+{
+"src": "trav",
+"path": "15/d4/8a/bd/finalmente-conheci-o.jpg",
+"cap": "Finalmente conheci o restaurante Janeiro, localizado no Hotel Janeiro, no Leblon. Atendimento, decoração, comida e bebidas perfeitos.",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/71/9a/e6/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/71/9a/ed/photo8jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/11/01/12/photo3jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/98/9e/71/janeiro-hotel.jpg",
+"cap": "",
+"w": 3264,
+"h": 2448
+},
+{
+"src": "trav",
+"path": "15/fe/80/11/sunset-views-on-rooftop.jpg",
+"cap": "sunset views on rooftop bar",
+"w": 480,
+"h": 640
+}
+],
+"sol-ipanema": [
+{
+"src": "hotel",
+"path": "16/e4/e2/d5/salao-de-beleza-beauty.jpg",
+"cap": "Salão de Beleza | Beauty Saloon",
+"w": 1070,
+"h": 713
+},
+{
+"src": "hotel",
+"path": "0b/87/c1/22/lobby-bar.jpg",
+"cap": "Bar da recepção | Lobby Bar",
+"w": 1960,
+"h": 1306
+},
+{
+"src": "hotel",
+"path": "0a/81/67/aa/piscina.jpg",
+"cap": "Piscina | Pool ",
+"w": 1280,
+"h": 853
+},
+{
+"src": "hotel",
+"path": "16/e4/db/93/vista-do-apartamento.jpg",
+"cap": "Vista do Apartamento Luxo | Deluxe Oceanfront room view",
+"w": 683,
+"h": 1024
+},
+{
+"src": "hotel",
+"path": "16/e4/ca/0c/sol-ipanema-hotel.jpg",
+"cap": "Nespresso exclusivo no minibar em Apartamento Deluxe Frente Mar | Nespresso exclusive in Deluxe ",
+"w": 2400,
+"h": 1600
+},
+{
+"src": "hotel",
+"path": "0a/81/6f/11/fachada.jpg",
+"cap": "Fachada | Hotel view",
+"w": 825,
+"h": 1280
+},
+{
+"src": "hotel",
+"path": "16/e4/c2/79/sol-ipanema-hotel.jpg",
+"cap": "Benefícios do serviço para uso na praia | Benefits for guests use at the beach.",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "hotel",
+"path": "16/e4/c8/d6/sol-ipanema-hotel.jpg",
+"cap": "Roupão exclusivo no Apartamento Luxo Frente Mar | Bathrobe exclusive in Deluxe Oceanfront Rooms ",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "hotel",
+"path": "16/e4/de/ca/sol-ipanema-hotel.jpg",
+"cap": "Nespresso exclusivo no minibar em Apartamento Deluxe Frente Mar | Nespresso exclusive in Deluxe ",
+"w": 1070,
+"h": 713
+},
+{
+"src": "hotel",
+"path": "16/e4/c4/fe/sol-ipanema-hotel.jpg",
+"cap": "Business Center ",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "trav",
+"path": "18/2b/a4/a3/photo2jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "18/2b/a4/a4/photo3jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "17/35/34/18/sol-ipanema-hotel.jpg",
+"cap": "",
+"w": 4032,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "17/e2/3d/af/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "14/6f/e0/56/photo5jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/42/37/94/img-20190124-wa0006-largejpg.jpg",
+"cap": "",
+"w": 720,
+"h": 1280
+},
+{
+"src": "trav",
+"path": "17/e2/b9/b2/photo0jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "17/02/fc/b6/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "17/e2/3d/ad/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "14/59/d4/c7/vista-desde-habitacion.jpg",
+"cap": "Vista desde habitación",
+"w": 3264,
+"h": 2448
+},
+{
+"src": "trav",
+"path": "14/c9/16/97/20180916-110114-largejpg.jpg",
+"cap": "",
+"w": 1008,
+"h": 756
+},
+{
+"src": "trav",
+"path": "17/35/33/f2/pool-view.jpg",
+"cap": "Pool view",
+"w": 4032,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "17/e2/b9/b4/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "14/c9/16/96/20180918-171752-largejpg.jpg",
+"cap": "",
+"w": 756,
+"h": 1008
+},
+{
+"src": "trav",
+"path": "14/6f/e0/55/photo4jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "17/e2/3d/b1/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "17/02/fc/b5/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "14/6f/e0/54/photo3jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "14/59/d5/08/sol-ipanema-hotel.jpg",
+"cap": "",
+"w": 3264,
+"h": 2448
+},
+{
+"src": "trav",
+"path": "0d/ff/30/5f/atardecer-desde-la-pileta.jpg",
+"cap": "Atardecer desde la pileta",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "trav",
+"path": "11/bd/98/72/ipanema-sunset-from-my.jpg",
+"cap": "Ipanema sunset from my ocean sea vew room",
+"w": 3724,
+"h": 2096
+},
+{
+"src": "trav",
+"path": "0e/31/c2/15/photo4jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "08/cb/3a/bb/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "07/aa/e9/ab/best-western-plus-sol.jpg",
+"cap": "Piscina",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "06/0c/d4/1a/caption.jpg",
+"cap": "Номер с видом на океан",
+"w": 4000,
+"h": 3000
+},
+{
+"src": "trav",
+"path": "11/25/f3/f8/sol-ipanema-hotel.jpg",
+"cap": "",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "05/da/c8/f5/best-western-plus-sol.jpg",
+"cap": "Apartamento maravilhosa",
+"w": 1000,
+"h": 667
+},
+{
+"src": "trav",
+"path": "12/89/33/a5/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "0f/4a/44/e9/photo4jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "11/ad/3b/c6/sol-ipanema-hotel.jpg",
+"cap": "",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "09/7b/bb/42/best-western-plus-sol.jpg",
+"cap": "Hall do quarto",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "0e/8b/f4/9c/photo1jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "03/f0/8f/c0/best-western-plus-sol.jpg",
+"cap": "The buffet of sweets & delights at breakfast",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "03/f0/90/37/best-western-plus-sol.jpg",
+"cap": "view from the 7th floor at 7.00am on a Monday",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "03/b2/8f/8f/best-western-plus-sol.jpg",
+"cap": "Habitación #804 amplia con cama king size",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "04/20/eb/a0/adicionar-uma-legenda.jpg",
+"cap": "Adicionar uma legenda",
+"w": 550,
+"h": 412
+},
+{
+"src": "trav",
+"path": "07/aa/ea/08/best-western-plus-sol.jpg",
+"cap": "Vista da Piscina",
+"w": 1500,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "03/2b/d7/d1/best-western-plus-sol.jpg",
+"cap": "Vista do Quarto\r\n",
+"w": 550,
+"h": 309
+},
+{
+"src": "trav",
+"path": "02/9c/5a/50/filename-img-20120707.jpg",
+"cap": "Sleep Room\r\n",
+"w": 550,
+"h": 412
+},
+{
+"src": "trav",
+"path": "09/a7/1a/fd/best-western-plus-sol.jpg",
+"cap": "Sol Ipanema",
+"w": 852,
+"h": 640
+},
+{
+"src": "trav",
+"path": "0f/84/98/29/photo4jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "0d/ff/2f/d5/vista-desde-la-pileta.jpg",
+"cap": "Vista desde la pileta",
+"w": 2000,
+"h": 1123
+},
+{
+"src": "trav",
+"path": "0b/c4/ad/f0/omelete-servico-de-quarto.jpg",
+"cap": "Omelete, serviço de quarto",
+"w": 2000,
+"h": 1125
+},
+{
+"src": "trav",
+"path": "0f/4a/44/e7/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "0e/31/c2/18/photo7jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "07/e7/e9/5e/best-western-plus-sol.jpg",
+"cap": "View of Ipanema and Leblon toward Dos Irmaos",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "07/c4/40/d7/best-western-plus-sol.jpg",
+"cap": "Love Rio",
+"w": 2848,
+"h": 2136
+},
+{
+"src": "main",
+"path": "30/11/09/0e/caption.jpg",
+"cap": "",
+"w": 5617,
+"h": 3656
+}
+],
+"windsor-california": [
+{
+"src": "hotel",
+"path": "12/64/39/62/apartamento-luxo-do-windsor.jpg",
+"cap": "Apartamento Luxo do Windsor California",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "hotel",
+"path": "17/df/81/3e/windsor-california-hotel.jpg",
+"cap": "",
+"w": 5760,
+"h": 3840
+},
+{
+"src": "hotel",
+"path": "17/df/80/ce/windsor-california-hotel.jpg",
+"cap": "",
+"w": 5760,
+"h": 3840
+},
+{
+"src": "hotel",
+"path": "11/e7/fd/aa/windsor-california-hotel.jpg",
+"cap": "",
+"w": 2000,
+"h": 1303
+},
+{
+"src": "hotel",
+"path": "12/64/39/68/restaurante-do-windsor.jpg",
+"cap": "Restaurante do Windsor California",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "hotel",
+"path": "12/64/38/ec/lobby-do-windsor-california.jpg",
+"cap": "Lobby do Windsor California",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "hotel",
+"path": "11/e7/fd/dc/windsor-california-hotel.jpg",
+"cap": "",
+"w": 2000,
+"h": 1345
+},
+{
+"src": "hotel",
+"path": "11/e7/fd/f4/windsor-california-hotel.jpg",
+"cap": "",
+"w": 2000,
+"h": 1297
+},
+{
+"src": "hotel",
+"path": "12/64/38/df/piscina-do-windsor-california.jpg",
+"cap": "Piscina do Windsor California",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "hotel",
+"path": "12/64/38/e8/lobby-do-windsor-california.jpg",
+"cap": "Lobby do Windsor California",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "trav",
+"path": "18/1e/04/aa/windsor-california-hotel.jpg",
+"cap": "Windsor California Hotel",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "18/1e/05/72/windsor-california-hotel.jpg",
+"cap": "Windsor California Hotel",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "18/4a/bc/3d/photo1jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "18/3a/fe/e6/photo2jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "18/3a/fe/e7/photo3jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "18/1e/05/75/windsor-california-hotel.jpg",
+"cap": "Windsor California Hotel",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "18/1e/05/6e/windsor-california-hotel.jpg",
+"cap": "Windsor California Hotel",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "18/3a/fe/e5/photo1jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "18/4a/bc/3c/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "14/1a/fa/23/photo3jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/31/47/7c/vista-da-piscina.jpg",
+"cap": "Vista da piscina",
+"w": 727,
+"h": 969
+},
+{
+"src": "trav",
+"path": "17/41/e1/e5/img-20190422-185011-565.jpg",
+"cap": "",
+"w": 1080,
+"h": 1080
+},
+{
+"src": "trav",
+"path": "16/7b/15/f4/20190214-103049-01-largejpg.jpg",
+"cap": "",
+"w": 844,
+"h": 899
+},
+{
+"src": "trav",
+"path": "14/6f/bd/e8/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "17/11/3a/5e/photo4jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/71/1c/c2/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "16/83/71/9a/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 749
+},
+{
+"src": "trav",
+"path": "16/71/1c/c1/photo1jpg.jpg",
+"cap": "",
+"w": 1080,
+"h": 1080
+},
+{
+"src": "trav",
+"path": "16/9a/c6/7c/photo8jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "13/c4/14/52/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/9a/c6/76/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "16/59/94/bf/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "15/93/14/7f/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "17/57/85/51/photo0jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "14/77/3f/1f/20180902-154546-largejpg.jpg",
+"cap": "",
+"w": 756,
+"h": 1008
+},
+{
+"src": "trav",
+"path": "13/c4/14/53/photo3jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/d8/ed/ca/photo3jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "13/cf/10/8a/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/71/1c/c4/photo4jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "16/83/71/9b/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "15/93/14/80/photo3jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/7b/15/f3/20190213-145503-largejpg.jpg",
+"cap": "",
+"w": 691,
+"h": 921
+},
+{
+"src": "trav",
+"path": "17/11/3a/5b/photo3jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "17/57/2a/a8/img-20190427-080022-largejpg.jpg",
+"cap": "",
+"w": 1216,
+"h": 608
+},
+{
+"src": "trav",
+"path": "13/c4/14/57/photo7jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/93/14/7e/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/dc/ce/15/photo4jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "17/57/85/52/photo1jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "13/c4/14/55/photo5jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "17/a4/35/84/photo0jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/47/5a/42/photo2jpg.jpg",
+"cap": "",
+"w": 1280,
+"h": 960
+},
+{
+"src": "trav",
+"path": "15/fd/ad/ba/20190106-101928-largejpg.jpg",
+"cap": "",
+"w": 756,
+"h": 1008
+},
+{
+"src": "trav",
+"path": "15/6b/d9/fe/p-20181021-124124-largejpg.jpg",
+"cap": "",
+"w": 921,
+"h": 691
+},
+{
+"src": "trav",
+"path": "16/7b/15/f5/20190214-103557-01-largejpg.jpg",
+"cap": "",
+"w": 691,
+"h": 921
+},
+{
+"src": "trav",
+"path": "14/1a/fa/20/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "17/37/58/a2/photo1jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/fd/aa/50/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "16/9a/c6/75/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "15/6b/d9/fb/p-20181019-222849-vhdr.jpg",
+"cap": "",
+"w": 1152,
+"h": 648
+},
+{
+"src": "trav",
+"path": "14/45/65/d9/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+}
+],
+"premier-copacabana": [
+{
+"src": "hotel",
+"path": "0c/40/71/60/apartamento.jpg",
+"cap": "Apartamento",
+"w": 1920,
+"h": 999
+},
+{
+"src": "hotel",
+"path": "0c/40/71/6c/academia.jpg",
+"cap": "Academia",
+"w": 992,
+"h": 750
+},
+{
+"src": "hotel",
+"path": "0c/40/71/61/apartamento.jpg",
+"cap": "Apartamento",
+"w": 1765,
+"h": 1080
+},
+{
+"src": "hotel",
+"path": "0c/40/71/69/academia.jpg",
+"cap": "Academia",
+"w": 1774,
+"h": 1080
+},
+{
+"src": "hotel",
+"path": "0c/40/71/65/piscina.jpg",
+"cap": "Piscina",
+"w": 1948,
+"h": 1050
+},
+{
+"src": "hotel",
+"path": "0c/40/71/63/suite.jpg",
+"cap": "Suite",
+"w": 1797,
+"h": 1080
+},
+{
+"src": "hotel",
+"path": "0c/40/71/66/sauna.jpg",
+"cap": "Sauna",
+"w": 1676,
+"h": 1080
+},
+{
+"src": "hotel",
+"path": "0c/40/71/67/sauna.jpg",
+"cap": "Sauna",
+"w": 1810,
+"h": 1080
+},
+{
+"src": "hotel",
+"path": "07/92/27/c6/lobby--v5649877.jpg",
+"cap": "Lobby at the Hotel Premier Copacabana",
+"w": 2600,
+"h": 1733
+},
+{
+"src": "hotel",
+"path": "07/92/27/dc/entrance--v5650019.jpg",
+"cap": "Entrance at the Hotel Premier Copacabana",
+"w": 2600,
+"h": 1733
+},
+{
+"src": "trav",
+"path": "18/34/b7/8c/premier-copacabana-hotel.jpg",
+"cap": "Vue sur le Christ depuis la piscine de l'hôtel Premier Copacabana Hotel",
+"w": 3018,
+"h": 3018
+},
+{
+"src": "trav",
+"path": "18/44/0c/d7/premier-copacabana-hotel.jpg",
+"cap": "",
+"w": 1080,
+"h": 810
+},
+{
+"src": "trav",
+"path": "14/16/cb/7b/premier-copacabana-hotel.jpg",
+"cap": "",
+"w": 4160,
+"h": 3120
+},
+{
+"src": "trav",
+"path": "17/de/be/a9/photo0jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "17/a7/3c/2f/photo0jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "17/a7/3c/32/photo2jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "14/16/cc/47/premier-copacabana-hotel.jpg",
+"cap": "",
+"w": 4160,
+"h": 2336
+},
+{
+"src": "trav",
+"path": "14/b8/48/28/premier-copacabana-hotel.jpg",
+"cap": "",
+"w": 1280,
+"h": 960
+},
+{
+"src": "trav",
+"path": "0f/f5/18/6e/vista-para-rua-tonelero.jpg",
+"cap": "Vista para rua Tonelero",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "13/32/46/f2/premier-copacabana-hotel.jpg",
+"cap": "",
+"w": 4128,
+"h": 3096
+},
+{
+"src": "trav",
+"path": "0d/d6/17/55/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "0c/4b/c1/6b/lobby.jpg",
+"cap": "Lobby",
+"w": 2000,
+"h": 1125
+},
+{
+"src": "trav",
+"path": "09/5c/20/c0/20151024-092846-largejpg.jpg",
+"cap": "",
+"w": 1632,
+"h": 918
+},
+{
+"src": "trav",
+"path": "0c/4b/c2/11/terraza.jpg",
+"cap": "Terraza",
+"w": 2000,
+"h": 1125
+},
+{
+"src": "trav",
+"path": "02/8a/60/eb/filename-img-1111-jpg.jpg",
+"cap": "room\r\n",
+"w": 550,
+"h": 412
+},
+{
+"src": "trav",
+"path": "0d/9b/4a/ed/hotel-premier-copacabana.jpg",
+"cap": "",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "0d/9b/4a/be/hotel-premier-copacabana.jpg",
+"cap": "",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "11/ad/72/b6/premier-copacabana-hotel.jpg",
+"cap": "",
+"w": 2000,
+"h": 1125
+},
+{
+"src": "trav",
+"path": "0b/52/af/a7/cafe-da-manha.jpg",
+"cap": "Café da manhã.",
+"w": 2000,
+"h": 1125
+},
+{
+"src": "trav",
+"path": "09/ec/83/39/hotel-premier-copacabana.jpg",
+"cap": "comedor",
+"w": 960,
+"h": 717
+},
+{
+"src": "trav",
+"path": "0d/9b/49/cf/hotel-premier-copacabana.jpg",
+"cap": "",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "0d/6b/8f/88/hotel-premier-copacabana.jpg",
+"cap": "",
+"w": 1125,
+"h": 2000
+},
+{
+"src": "trav",
+"path": "08/af/d9/05/hotel-premier-copacabana.jpg",
+"cap": "Rooftop",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "0d/a1/fe/9e/hotel-premier-copacabana.jpg",
+"cap": "",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "09/ec/83/20/hotel-premier-copacabana.jpg",
+"cap": "comedor",
+"w": 960,
+"h": 717
+},
+{
+"src": "trav",
+"path": "0f/2f/30/e7/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "0e/7a/b6/80/view-from-room-1402.jpg",
+"cap": "View from room 1402",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "11/03/64/22/premier-copacabana-hotel.jpg",
+"cap": "",
+"w": 1600,
+"h": 901
+},
+{
+"src": "trav",
+"path": "0c/d5/58/da/hotel-premier-copacabana.jpg",
+"cap": "",
+"w": 1032,
+"h": 581
+},
+{
+"src": "trav",
+"path": "07/b0/6e/de/terraco.jpg",
+"cap": "Terraço",
+"w": 918,
+"h": 1632
+},
+{
+"src": "trav",
+"path": "09/ec/83/42/hotel-premier-copacabana.jpg",
+"cap": "Vista desde la terraza",
+"w": 717,
+"h": 960
+},
+{
+"src": "trav",
+"path": "07/23/f8/e0/habitcion.jpg",
+"cap": "habitación",
+"w": 1920,
+"h": 2560
+},
+{
+"src": "trav",
+"path": "0e/7a/b6/23/view-from-room-1402.jpg",
+"cap": "View from room 1402",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "0b/52/b0/71/piscina-na-cobertura.jpg",
+"cap": "Piscina na cobertura, com excelente visão do bairro.",
+"w": 2000,
+"h": 1125
+},
+{
+"src": "trav",
+"path": "09/f1/fd/e2/hotel-premier-copacabana.jpg",
+"cap": "foto desde piscina en azotea con vista al cristo",
+"w": 640,
+"h": 640
+},
+{
+"src": "trav",
+"path": "07/b0/6e/af/suite.jpg",
+"cap": "Suíte",
+"w": 2048,
+"h": 1152
+},
+{
+"src": "trav",
+"path": "07/ab/70/62/hotel-premier-copacabana.jpg",
+"cap": "Azotea con piscina, bar y gimnacio",
+"w": 960,
+"h": 720
+},
+{
+"src": "trav",
+"path": "0f/f5/16/39/piscina.jpg",
+"cap": "Piscina",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "07/ab/70/57/hotel-premier-copacabana.jpg",
+"cap": "Desayuno",
+"w": 960,
+"h": 720
+},
+{
+"src": "trav",
+"path": "0a/00/20/2e/hotel-premier-copacabana.jpg",
+"cap": "excelente vista",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "0a/3f/40/d6/buena-cama.jpg",
+"cap": "buena cama",
+"w": 2000,
+"h": 1125
+},
+{
+"src": "trav",
+"path": "0f/f5/14/32/bar-do-terraco.jpg",
+"cap": "Bar do Terraço",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "09/e7/4e/03/hotel-premier-copacabana.jpg",
+"cap": "Piscina",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "0f/2f/30/e9/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "09/e2/45/7e/hotel-premier-copacabana.jpg",
+"cap": "vista desde la piscina",
+"w": 2000,
+"h": 1125
+},
+{
+"src": "trav",
+"path": "0a/00/20/84/hotel-premier-copacabana.jpg",
+"cap": "muy lindo",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "09/5c/20/ba/img-20151022-wa0020-largejpg.jpg",
+"cap": "",
+"w": 1600,
+"h": 1200
+},
+{
+"src": "trav",
+"path": "05/a3/e7/de/premier-hotel.jpg",
+"cap": "Premier Hotel",
+"w": 3264,
+"h": 2448
+},
+{
+"src": "trav",
+"path": "02/8a/60/e1/filename-img-1113-jpg.jpg",
+"cap": "roof top\r\n",
+"w": 550,
+"h": 412
+},
+{
+"src": "trav",
+"path": "07/57/35/ad/hotel-premier-copacabana.jpg",
+"cap": "Piscina na Cobertura",
+"w": 2000,
+"h": 1500
+}
+],
+"grand-mercure": [
+{
+"src": "hotel",
+"path": "35/12/ca/63/exterior.jpg",
+"cap": "Exterior",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "hotel",
+"path": "35/12/ca/64/exterior.jpg",
+"cap": "Exterior",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "hotel",
+"path": "35/0f/fe/2d/exterior.jpg",
+"cap": "Exterior",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "hotel",
+"path": "35/0c/89/f7/barlounge.jpg",
+"cap": "BarLounge",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "hotel",
+"path": "35/0c/89/f8/barlounge.jpg",
+"cap": "BarLounge",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "hotel",
+"path": "35/0c/89/f9/miscellaneous.jpg",
+"cap": "Miscellaneous",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "hotel",
+"path": "35/0c/89/fa/barlounge.jpg",
+"cap": "BarLounge",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "hotel",
+"path": "35/0c/89/fb/barlounge.jpg",
+"cap": "BarLounge",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "hotel",
+"path": "35/0c/89/ef/meeting-room.jpg",
+"cap": "Meeting room",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "hotel",
+"path": "35/0c/89/f0/meeting-room.jpg",
+"cap": "Meeting room",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "14/ba/9e/c0/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 3024,
+"h": 4032
+},
+{
+"src": "trav",
+"path": "15/0a/14/5a/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 4032,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "16/48/df/77/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 774,
+"h": 1032
+},
+{
+"src": "trav",
+"path": "15/ef/74/16/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/91/10/bb/photo0jpg.jpg",
+"cap": "",
+"w": 1150,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "14/01/a5/34/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "16/37/7d/a8/vista-desde-la-pileta.jpg",
+"cap": "Vista desde la pileta",
+"w": 1280,
+"h": 853
+},
+{
+"src": "trav",
+"path": "14/99/78/dd/rooftop-pool-night-view.jpg",
+"cap": "Rooftop pool night view",
+"w": 800,
+"h": 450
+},
+{
+"src": "trav",
+"path": "15/0a/0f/e7/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 2016,
+"h": 1512
+},
+{
+"src": "trav",
+"path": "16/9e/01/b7/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 4032,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "14/e0/97/ef/view-from-room-808.jpg",
+"cap": "View from Room 808",
+"w": 3456,
+"h": 2592
+},
+{
+"src": "trav",
+"path": "14/13/58/48/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/64/9c/91/img-20181022-wa0021-largejpg.jpg",
+"cap": "",
+"w": 960,
+"h": 1280
+},
+{
+"src": "trav",
+"path": "14/d1/e2/16/20180921-173952-largejpg.jpg",
+"cap": "",
+"w": 756,
+"h": 1008
+},
+{
+"src": "trav",
+"path": "14/13/58/4c/photo5jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/22/d4/85/quarto-standard-com-vista.jpg",
+"cap": "Quarto standard com vista lateral",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/56/c2/aa/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/39/5a/f2/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 3264,
+"h": 2448
+},
+{
+"src": "trav",
+"path": "14/74/56/42/20180830-104705-largejpg.jpg",
+"cap": "",
+"w": 1032,
+"h": 774
+},
+{
+"src": "trav",
+"path": "16/37/7d/b5/vista-desde-la-pileta.jpg",
+"cap": "Vista desde la pileta",
+"w": 1280,
+"h": 853
+},
+{
+"src": "trav",
+"path": "16/48/df/52/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 2448,
+"h": 3264
+},
+{
+"src": "trav",
+"path": "16/41/1a/72/20190124-103856-largejpg.jpg",
+"cap": "",
+"w": 756,
+"h": 1008
+},
+{
+"src": "trav",
+"path": "15/ef/74/17/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/0a/0f/ad/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 2016,
+"h": 1512
+},
+{
+"src": "trav",
+"path": "13/ec/85/e0/photo7jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/d8/2b/43/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/16/20/56/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 4032,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "14/fa/47/04/chambre.jpg",
+"cap": "Chambre",
+"w": 4000,
+"h": 3000
+},
+{
+"src": "trav",
+"path": "15/8d/cb/d9/cenario-visto-do-hotel.jpg",
+"cap": "Cenário visto do Hotel",
+"w": 4128,
+"h": 2322
+},
+{
+"src": "trav",
+"path": "15/d8/2b/44/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/d6/15/59/photo0jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "14/e6/e6/b4/grand-mercure-rio-de.jpg",
+"cap": "Grand Mercure Rio de Janeiro Copacabana",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/0a/10/88/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 4032,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "16/48/e4/43/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 3264,
+"h": 2448
+},
+{
+"src": "trav",
+"path": "14/74/56/41/20180830-140404-largejpg.jpg",
+"cap": "",
+"w": 1032,
+"h": 774
+},
+{
+"src": "trav",
+"path": "14/13/58/4b/photo4jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/64/9c/8e/img-20181020-wa0022-largejpg.jpg",
+"cap": "",
+"w": 1280,
+"h": 590
+},
+{
+"src": "trav",
+"path": "14/d7/6a/83/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/fd/8e/b5/tremenda-vista-del-piso.jpg",
+"cap": "Tremenda vista del piso 12",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "14/13/58/4d/photo6jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/05/b0/a4/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 9112,
+"h": 3732
+},
+{
+"src": "trav",
+"path": "14/b3/65/f7/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 2405,
+"h": 2500
+},
+{
+"src": "trav",
+"path": "16/1d/bb/d9/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "14/d1/e2/1f/20180921-180012-largejpg.jpg",
+"cap": "",
+"w": 1008,
+"h": 756
+},
+{
+"src": "trav",
+"path": "14/e0/98/01/view-from-room-808.jpg",
+"cap": "View from Room 808",
+"w": 3456,
+"h": 2592
+},
+{
+"src": "trav",
+"path": "15/50/a6/21/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 4032,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "16/84/c2/da/photo0jpg.jpg",
+"cap": "",
+"w": 1080,
+"h": 809
+},
+{
+"src": "trav",
+"path": "16/14/65/51/img-20190112-wa0051-largejpg.jpg",
+"cap": "",
+"w": 1158,
+"h": 869
+},
+{
+"src": "trav",
+"path": "15/0a/11/67/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 4032,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "15/0a/0f/aa/grand-mercure-rio-de.jpg",
+"cap": "",
+"w": 2016,
+"h": 1512
+}
+],
+"windsor-excelsior": [
+{
+"src": "hotel",
+"path": "06/db/e0/6e/windsor-excelsior-hotel.jpg",
+"cap": "Superior",
+"w": 2000,
+"h": 1214
+},
+{
+"src": "hotel",
+"path": "14/cb/24/bb/fachada.jpg",
+"cap": "Fachada",
+"w": 1213,
+"h": 2362
+},
+{
+"src": "hotel",
+"path": "14/cb/25/2b/banheiro-luxo-twin.jpg",
+"cap": "Banheira com hidromassagem - Quarto Luxo",
+"w": 1000,
+"h": 667
+},
+{
+"src": "hotel",
+"path": "14/cb/25/23/lobby.jpg",
+"cap": "Lobby",
+"w": 3200,
+"h": 2310
+},
+{
+"src": "hotel",
+"path": "14/cb/24/db/praia-de-copacabana.jpg",
+"cap": "Vista da Cobertura",
+"w": 2248,
+"h": 2008
+},
+{
+"src": "hotel",
+"path": "14/cb/2b/0e/restaurante.jpg",
+"cap": "Restaurante",
+"w": 3543,
+"h": 2362
+},
+{
+"src": "hotel",
+"path": "14/cb/24/f5/fitness-center.jpg",
+"cap": "Fitness Center",
+"w": 3000,
+"h": 1992
+},
+{
+"src": "hotel",
+"path": "14/cb/2f/82/apartamento-windsor-excelsior.jpg",
+"cap": "Superior Executivo",
+"w": 3543,
+"h": 2362
+},
+{
+"src": "hotel",
+"path": "14/cb/2c/d3/apartamento-windsor-excelsior.jpg",
+"cap": "Standard",
+"w": 3543,
+"h": 2351
+},
+{
+"src": "hotel",
+"path": "14/cb/2c/f0/apartamento-windsor-excelsior.jpg",
+"cap": "Superior",
+"w": 3543,
+"h": 2346
+},
+{
+"src": "trav",
+"path": "18/19/7c/95/photo1jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "14/3b/cd/b0/img-20180818-225303032.jpg",
+"cap": "",
+"w": 1040,
+"h": 780
+},
+{
+"src": "trav",
+"path": "15/31/ca/24/windsor-excelsior-hotel.jpg",
+"cap": "",
+"w": 3492,
+"h": 4656
+},
+{
+"src": "trav",
+"path": "16/55/f7/a8/photo2jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "14/a2/02/a2/blick-von-der-suite-auf.jpg",
+"cap": "Blick von der Suite auf die Copa",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "14/3b/cd/ae/img-20180818-225318247.jpg",
+"cap": "",
+"w": 1040,
+"h": 780
+},
+{
+"src": "trav",
+"path": "17/66/94/e0/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "16/ab/20/52/windsor-excelsior-hotel.jpg",
+"cap": "",
+"w": 1600,
+"h": 1200
+},
+{
+"src": "trav",
+"path": "16/7a/cb/3b/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "15/a5/ac/b3/view-from-the-top-deck.jpg",
+"cap": "View from the top deck area",
+"w": 5184,
+"h": 3888
+},
+{
+"src": "trav",
+"path": "16/1c/c7/be/20190113-102229-largejpg.jpg",
+"cap": "",
+"w": 1344,
+"h": 653
+},
+{
+"src": "trav",
+"path": "13/c5/af/af/windsor-excelsior-hotel.jpg",
+"cap": "",
+"w": 4128,
+"h": 3096
+},
+{
+"src": "trav",
+"path": "13/c3/7f/db/img-20180718-wa0078-largejpg.jpg",
+"cap": "",
+"w": 1200,
+"h": 1600
+},
+{
+"src": "trav",
+"path": "14/3b/cd/af/img-20180818-225307220.jpg",
+"cap": "",
+"w": 1040,
+"h": 780
+},
+{
+"src": "trav",
+"path": "15/31/cc/27/windsor-excelsior-hotel.jpg",
+"cap": "",
+"w": 4656,
+"h": 3492
+},
+{
+"src": "trav",
+"path": "16/1c/c7/c0/20190113-102216-largejpg.jpg",
+"cap": "",
+"w": 1344,
+"h": 653
+},
+{
+"src": "trav",
+"path": "14/69/e4/b2/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/7a/cb/3a/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "15/7e/33/98/windsor-excelsior-hotel.jpg",
+"cap": "",
+"w": 4032,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "16/55/f7/a6/photo0jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "15/ba/62/ae/20181209-152920-largejpg.jpg",
+"cap": "",
+"w": 1344,
+"h": 653
+},
+{
+"src": "trav",
+"path": "13/c5/af/c3/windsor-excelsior-hotel.jpg",
+"cap": "",
+"w": 4128,
+"h": 3096
+},
+{
+"src": "trav",
+"path": "15/7e/33/88/windsor-excelsior-hotel.jpg",
+"cap": "",
+"w": 4032,
+"h": 3024
+},
+{
+"src": "trav",
+"path": "16/1c/c7/bf/20190113-102222-largejpg.jpg",
+"cap": "",
+"w": 1344,
+"h": 653
+},
+{
+"src": "trav",
+"path": "16/1c/c7/bb/img-20190114-wa0008-largejpg.jpg",
+"cap": "",
+"w": 1280,
+"h": 622
+},
+{
+"src": "trav",
+"path": "14/a2/00/c8/blick-von-der-copa-mit.jpg",
+"cap": "Blick von der Copa mit den Hotelstühlen aufs Hotel",
+"w": 2000,
+"h": 2667
+},
+{
+"src": "trav",
+"path": "14/3b/cd/ad/img-20180818-230849807.jpg",
+"cap": "",
+"w": 1040,
+"h": 780
+},
+{
+"src": "trav",
+"path": "14/e4/b5/af/img-20180923-091335997.jpg",
+"cap": "",
+"w": 1386,
+"h": 780
+},
+{
+"src": "trav",
+"path": "0c/90/94/7b/ostras-maravilhosas.jpg",
+"cap": "Ostras Maravilhosas",
+"w": 1125,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "0f/9c/cd/0b/img-20170528-wa0029-largejpg.jpg",
+"cap": "",
+"w": 1024,
+"h": 576
+},
+{
+"src": "trav",
+"path": "12/29/ae/20/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "12/86/ce/6f/view-from-roofdeck-3.jpg",
+"cap": "view from roofdeck 3",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "trav",
+"path": "0b/d0/cc/ce/20160626-122438-largejpg.jpg",
+"cap": "",
+"w": 1328,
+"h": 747
+},
+{
+"src": "trav",
+"path": "0d/67/4d/42/photo5jpg.jpg",
+"cap": "",
+"w": 1092,
+"h": 802
+},
+{
+"src": "trav",
+"path": "09/43/dd/bd/windsor-excelsior-hotel.jpg",
+"cap": "Quarto",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "02/34/11/78/bedroom.jpg",
+"cap": "Bedroom",
+"w": 550,
+"h": 412
+},
+{
+"src": "trav",
+"path": "02/6b/22/28/filename-p3100373-jpg.jpg",
+"cap": "Swimming pool on the roof",
+"w": 550,
+"h": 412
+},
+{
+"src": "trav",
+"path": "0e/08/e5/32/photo0jpg.jpg",
+"cap": "",
+"w": 1280,
+"h": 790
+},
+{
+"src": "trav",
+"path": "0d/e8/d6/a2/windsor-excelsior-hotel.jpg",
+"cap": "",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "12/c7/f1/46/photo5jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "09/9f/93/14/windsor-excelsior-hotel.jpg",
+"cap": "Вид с крыши отеля",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "0e/f0/4d/b0/vista-da-cobertura.jpg",
+"cap": "Vista da cobertura",
+"w": 2000,
+"h": 1125
+},
+{
+"src": "trav",
+"path": "0d/2e/75/99/area-de-piscina.jpg",
+"cap": "Área de piscina",
+"w": 1024,
+"h": 768
+},
+{
+"src": "trav",
+"path": "02/fa/95/93/windsor-excelsior-hotel.jpg",
+"cap": "Windsor Excelsior Copacabana, la vue sur Copacabana. Rio de Janeiro\r\n",
+"w": 550,
+"h": 412
+},
+{
+"src": "trav",
+"path": "10/20/8e/6e/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "0e/89/db/4c/fra-takterasse.jpg",
+"cap": "Fra takterasse",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "12/c7/f1/42/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "0a/b8/8c/ae/view-of-copacabana-beach.jpg",
+"cap": "view of Copacabana beach from rooftop terrace",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "trav",
+"path": "0a/b8/8c/c9/pool-area-with-view-of.jpg",
+"cap": "pool area with view of Christ the Redeemer in the distance",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "trav",
+"path": "0d/67/4d/41/photo4jpg.jpg",
+"cap": "",
+"w": 1366,
+"h": 768
+},
+{
+"src": "main",
+"path": "07/12/9c/41/pool--v4660155.jpg",
+"cap": "",
+"w": 2600,
+"h": 1733
+}
+],
+"samba-bossa-nova": [
+{
+"src": "hotel",
+"path": "10/c6/f3/70/reception-perillo-chair.jpg",
+"cap": "Reception - Perillo Chair - Martin Ballendat ",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "hotel",
+"path": "10/c6/e4/f9/room.jpg",
+"cap": "Room",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "hotel",
+"path": "10/c6/f3/01/reception.jpg",
+"cap": "Reception",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "hotel",
+"path": "10/c6/e5/53/super-deluxe-toilet.jpg",
+"cap": "Super Deluxe Toilet",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "hotel",
+"path": "0b/fc/12/20/room.jpg",
+"cap": "Room",
+"w": 6480,
+"h": 4320
+},
+{
+"src": "hotel",
+"path": "10/c6/e5/db/spa-tree-way-wellness.jpg",
+"cap": "SPA TREE WAY WELLNESS ",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "hotel",
+"path": "10/c6/e4/d4/room.jpg",
+"cap": "Room",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "hotel",
+"path": "10/c6/e5/05/best-western-premier.jpg",
+"cap": "",
+"w": 2000,
+"h": 1333
+},
+{
+"src": "hotel",
+"path": "10/c6/e5/75/superior-toilet.jpg",
+"cap": "Superior Toilet",
+"w": 1000,
+"h": 1500
+},
+{
+"src": "hotel",
+"path": "10/c6/e5/34/deluxe-toilet.jpg",
+"cap": "Deluxe Toilet",
+"w": 1000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "17/1c/9e/9c/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "15/ee/e8/14/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "16/69/20/b4/img-20190205-060936-largejpg.jpg",
+"cap": "",
+"w": 992,
+"h": 744
+},
+{
+"src": "trav",
+"path": "16/69/20/b8/img-20190206-074715-largejpg.jpg",
+"cap": "",
+"w": 992,
+"h": 744
+},
+{
+"src": "trav",
+"path": "16/69/20/b7/img-20190206-074710-largejpg.jpg",
+"cap": "",
+"w": 992,
+"h": 744
+},
+{
+"src": "trav",
+"path": "16/69/20/b9/img-20190206-075009-largejpg.jpg",
+"cap": "",
+"w": 992,
+"h": 744
+},
+{
+"src": "trav",
+"path": "16/69/20/b3/img-20190205-060821-largejpg.jpg",
+"cap": "",
+"w": 744,
+"h": 992
+},
+{
+"src": "trav",
+"path": "17/84/b7/4e/best-western-premier.jpg",
+"cap": "",
+"w": 3096,
+"h": 4128
+},
+{
+"src": "trav",
+"path": "17/34/27/60/photo6jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "14/3c/f3/c9/img-20180820-wa0011-largejpg.jpg",
+"cap": "",
+"w": 1600,
+"h": 1200
+},
+{
+"src": "trav",
+"path": "17/34/27/5e/photo5jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "16/69/20/b5/img-20190205-060952-largejpg.jpg",
+"cap": "",
+"w": 992,
+"h": 744
+},
+{
+"src": "trav",
+"path": "16/60/d4/3c/img-20190204-154329-largejpg.jpg",
+"cap": "",
+"w": 744,
+"h": 992
+},
+{
+"src": "trav",
+"path": "0d/b6/86/31/best-western-premier.jpg",
+"cap": "",
+"w": 840,
+"h": 460
+},
+{
+"src": "trav",
+"path": "11/41/40/21/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "0d/8c/94/8f/photo9jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "10/df/7d/35/vista-da-mesa-do-cafe.jpg",
+"cap": "Vista da mesa do café da manhã",
+"w": 1280,
+"h": 960
+},
+{
+"src": "trav",
+"path": "0d/f9/ac/cf/un-hotel-impecable-hermoso.jpg",
+"cap": "Un hotel impecable. Hermoso diseño de interiores",
+"w": 1151,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "10/df/7d/36/munguza-banana-da-terra.jpg",
+"cap": "Munguzá, banana da terra, abóbora c ricota, milho...",
+"w": 1280,
+"h": 960
+},
+{
+"src": "trav",
+"path": "13/70/16/0a/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "0e/4b/09/38/panqueca-de-banana-com.jpg",
+"cap": "Panqueca de banana com frutas vermelhas.",
+"w": 1500,
+"h": 2000
+},
+{
+"src": "trav",
+"path": "0e/66/5e/a1/best-western-premier.jpg",
+"cap": "",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "11/d8/28/c2/cafe-da-manha.jpg",
+"cap": "Café da Manhã",
+"w": 480,
+"h": 360
+},
+{
+"src": "trav",
+"path": "0e/66/62/65/best-western-premier.jpg",
+"cap": "",
+"w": 338,
+"h": 450
+},
+{
+"src": "trav",
+"path": "11/e0/66/64/20170814-070534-largejpg.jpg",
+"cap": "",
+"w": 1008,
+"h": 756
+},
+{
+"src": "trav",
+"path": "0e/aa/61/cf/photo1jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "11/e0/66/65/20170814-070526-largejpg.jpg",
+"cap": "",
+"w": 1008,
+"h": 756
+},
+{
+"src": "trav",
+"path": "11/d8/28/b4/apartamento-604.jpg",
+"cap": "Apartamento 604",
+"w": 640,
+"h": 480
+},
+{
+"src": "trav",
+"path": "11/54/f5/f4/best-western-premier.jpg",
+"cap": "",
+"w": 1500,
+"h": 2000
+},
+{
+"src": "trav",
+"path": "0d/f9/ac/ce/un-hotel-impecable-hermoso.jpg",
+"cap": "Un hotel impecable. Hermoso diseño de interiores",
+"w": 1151,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "10/df/7d/3a/frutas-quejos-e-rosbife.jpg",
+"cap": "Frutas, quejos e rosbife",
+"w": 1280,
+"h": 960
+},
+{
+"src": "trav",
+"path": "0e/66/62/e9/relax.jpg",
+"cap": "Relax",
+"w": 550,
+"h": 367
+},
+{
+"src": "trav",
+"path": "0d/dd/79/90/cafe-across-from-the.jpg",
+"cap": "Cafe across from the hotel",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "12/ab/c7/50/img-20180417-wa0003-largejpg.jpg",
+"cap": "",
+"w": 918,
+"h": 1632
+},
+{
+"src": "trav",
+"path": "11/4b/32/06/photo2jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "11/4b/32/04/photo0jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "0e/35/45/78/best-western-premier.jpg",
+"cap": "",
+"w": 2000,
+"h": 1125
+},
+{
+"src": "trav",
+"path": "0f/33/b3/08/photo1jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "13/70/16/10/photo5jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "0e/66/62/d4/best-western-premier.jpg",
+"cap": "",
+"w": 1024,
+"h": 683
+},
+{
+"src": "trav",
+"path": "0e/4b/08/72/servico-de-quarto-restaurante.jpg",
+"cap": "Serviço de quarto. Restaurante da Bela. Sanduíche de salpicão de frango.",
+"w": 2000,
+"h": 1500
+},
+{
+"src": "trav",
+"path": "11/78/c6/99/best-western-premier.jpg",
+"cap": "",
+"w": 1500,
+"h": 2000
+},
+{
+"src": "trav",
+"path": "11/41/40/22/photo1jpg.jpg",
+"cap": "",
+"w": 1536,
+"h": 2048
+},
+{
+"src": "trav",
+"path": "0f/53/de/7e/photo0jpg.jpg",
+"cap": "",
+"w": 2048,
+"h": 1536
+},
+{
+"src": "trav",
+"path": "11/e0/66/63/20170814-070605-largejpg.jpg",
+"cap": "",
+"w": 1008,
+"h": 756
+},
+{
+"src": "trav",
+"path": "0e/4c/76/af/best-western-premier.jpg",
+"cap": "",
+"w": 2000,
+"h": 1125
+},
+{
+"src": "trav",
+"path": "11/d8/28/c8/cafe-da-manha.jpg",
+"cap": "Café da Manhã",
+"w": 352,
+"h": 480
+},
+{
+"src": "trav",
+"path": "11/d8/28/c6/cafe-da-manha.jpg",
+"cap": "Café da Manhã",
+"w": 480,
+"h": 360
+},
+{
+"src": "trav",
+"path": "0d/b6/87/11/best-western-premier.jpg",
+"cap": "",
+"w": 840,
+"h": 460
+},
+{
+"src": "trav",
+"path": "11/e0/66/66/20170814-070510-largejpg.jpg",
+"cap": "",
+"w": 1008,
+"h": 756
+}
+]
+}

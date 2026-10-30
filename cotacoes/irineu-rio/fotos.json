@@ -1,0 +1,77 @@
+{
+ "_ordem": "quarto da categoria, piscina, vista, hall/recepção, fachada (ou substituta), café da manhã",
+ "_capa": {
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Enseada_Botafogo.jpg/1920px-Enseada_Botafogo.jpg",
+  "credito": "Foto de capa: “Panorama da enseada de Botafogo”, Leandro Ciuffo, Wikimedia Commons, CC BY 2.0."
+ },
+ "sol-ipanema": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/06/0c/d4/1a/caption.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/0a/81/67/aa/piscina.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/18/2b/a4/a4/photo3jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/0b/87/c1/22/lobby-bar.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/0a/81/6f/11/fachada.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/17/02/fc/b5/photo0jpg.jpg"
+  ]
+ },
+ "janeiro": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/16/ef/b6/08/ocean-sideview-standard.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/16/ef/c4/99/pool-180-andar.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/17/be/31/bf/janeiro-hotel.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/16/ef/c1/24/recepcao.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/16/ef/ba/f5/entrada-hotel.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/16/6f/1d/c5/desayuno.jpg"
+  ]
+ },
+ "samba-bossa-nova": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/0b/fc/12/20/room.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/10/c6/e5/db/spa-tree-way-wellness.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/17/1c/9e/9c/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/10/c6/f3/70/reception-perillo-chair.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/10/c6/e5/53/super-deluxe-toilet.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/16/69/20/b4/img-20190205-060936-largejpg.jpg"
+  ]
+ },
+ "windsor-california": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/11/e7/fd/aa/windsor-california-hotel.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/12/64/38/df/piscina-do-windsor-california.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/16/9a/c6/76/photo2jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/12/64/38/ec/lobby-do-windsor-california.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/18/4a/bc/3c/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/18/1e/05/6e/windsor-california-hotel.jpg"
+  ]
+ },
+ "windsor-excelsior": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/14/cb/2c/d3/apartamento-windsor-excelsior.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/07/12/9c/41/pool--v4660155.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/14/cb/24/db/praia-de-copacabana.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/14/cb/25/23/lobby.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/14/cb/24/bb/fachada.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/0f/9c/cd/0b/img-20170528-wa0029-largejpg.jpg"
+  ]
+ },
+ "grand-mercure": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/16/22/d4/85/quarto-standard-com-vista.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/35/12/ca/63/exterior.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/35/12/ca/64/exterior.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/15/0a/14/5a/grand-mercure-rio-de.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/35/0c/89/fb/barlounge.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/14/13/58/4c/photo5jpg.jpg"
+  ]
+ },
+ "premier-copacabana": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/02/8a/60/eb/filename-img-1111-jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/14/b8/48/28/premier-copacabana-hotel.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/14/16/cc/47/premier-copacabana-hotel.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/07/92/27/c6/lobby--v5649877.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/07/92/27/dc/entrance--v5650019.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/0f/2f/30/e7/photo0jpg.jpg"
+  ]
+ }
+}
