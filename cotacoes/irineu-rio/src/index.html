@@ -80,21 +80,6 @@ h1,h2,h3,h4{line-height:1.15}
 .bf{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-soft);background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:3px 9px;margin-top:10px}
 .hgal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin-top:14px}
 .hgal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px;display:block;background:#eceadf}
-.dayrow{display:grid;grid-template-columns:92px 1fr;gap:22px;padding:22px 0;border-bottom:1px solid var(--line)}
-.dayrow:last-of-type{border-bottom:none}
-.daynum{text-align:right}
-.daynum .d{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;font-weight:700;color:var(--green);line-height:1}
-.daynum .m{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green-soft);font-weight:700;margin-top:2px}
-.daynum .w{font-size:.7rem;color:var(--muted);margin-top:2px}
-.daybody .city{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--green);border-radius:12px;padding:3px 11px;display:inline-block;margin-bottom:9px}
-.daybody h4{font-size:1.06rem;font-weight:600;margin-bottom:5px;color:var(--green-dark)}
-.daybody p{font-size:.88rem;color:var(--muted)}
-.daybody ul{margin:9px 0 0 18px;font-size:.88rem;color:var(--muted)}
-.daybody li{margin:5px 0}
-.tag-q,.tag-s{display:inline-block;font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:10px;padding:2px 8px;margin-left:5px;white-space:nowrap}
-.tag-q{color:var(--terra);background:#fdf3ec;border:1px solid #f0dccd}
-.tag-s{color:var(--green-dark);background:#eef2e6;border:1px solid #dde5cf}
-@media(max-width:720px){.dayrow{grid-template-columns:64px 1fr;gap:14px}.daynum .d{font-size:1.5rem}}
 .tbl-wrap{overflow-x:auto;margin-top:24px;border:1px solid var(--line);border-radius:12px}
 table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:560px}
 th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line)}
@@ -121,7 +106,6 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 .opt-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:26px;margin-bottom:2px}
 .opt-head h3{font-size:1.25rem;font-weight:700}
 .opt-head .badge{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;background:var(--sage);color:var(--green-dark);padding:5px 12px;border-radius:20px}
-.daybody .hl{background:var(--sage);border-radius:9px;padding:10px 13px;margin-top:10px;font-size:.85rem;color:var(--green-dark)}
 .rm{font-size:.78rem;color:var(--muted);font-weight:400;margin-top:2px}
 .brandtext{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:.3em;color:var(--green);text-transform:uppercase}
 .footer .brandtext{color:#fff;margin-bottom:14px}
@@ -238,70 +222,6 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
   </section>
 
   <section class="section sh" style="background:var(--cream)">
-    <span class="eyebrow">Dia a dia</span>
-    <h2>Roteiro</h2>
-    <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">O que já está cotado, com horário marcado, aparece como <span class="tag-q">cotado</span>. O restante é <span class="tag-s">sugestão</span> nossa e pode ser trocado livremente.</p>
-
-    <div class="dayrow">
-      <div class="daynum"><div class="d">26</div><div class="m">Mai</div><div class="w">quarta</div></div>
-      <div class="daybody"><span class="city">Curitiba → Rio de Janeiro</span>
-        <h4>Chegada ao Rio</h4>
-        <ul>
-          <li>Voo GOL de Curitiba ao Galeão: <b>09:55</b> (chega 11:15), <b>18:35</b> (chega 20:00) ou <b>08:55</b> com conexão em Congonhas (chega 12:00) <span class="tag-q">cotado</span></li>
-          <li>Check-in no hotel escolhido · 4 noites com café da manhã <span class="tag-q">cotado</span></li>
-          <li>Fim de tarde na Pedra do Arpoador para ver o pôr do sol <span class="tag-s">sugestão</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="dayrow">
-      <div class="daynum"><div class="d">27</div><div class="m">Mai</div><div class="w">quinta</div></div>
-      <div class="daybody"><span class="city">Rio de Janeiro</span>
-        <h4>Cristo Redentor e Santa Teresa</h4>
-        <ul>
-          <li>Cristo Redentor pelo Trem do Corcovado, no primeiro horário da manhã <span class="tag-s">sugestão</span></li>
-          <li>Almoço e passeio por Santa Teresa e a Escadaria Selarón <span class="tag-s">sugestão</span></li>
-        </ul>
-        <div class="hl">Quinta-feira, 27/05, é <b>Corpus Christi</b>. Feriado prolongado: Cristo e Pão de Açúcar ficam cheios. Vale comprar os ingressos com antecedência.</div>
-      </div>
-    </div>
-
-    <div class="dayrow">
-      <div class="daynum"><div class="d">28</div><div class="m">Mai</div><div class="w">sexta</div></div>
-      <div class="daybody"><span class="city">Rio de Janeiro</span>
-        <h4>Pão de Açúcar e Urca</h4>
-        <ul>
-          <li>Bondinho do Pão de Açúcar no fim da tarde, para ver o pôr do sol do alto <span class="tag-s">sugestão</span></li>
-          <li>Mureta da Urca antes ou depois do bondinho <span class="tag-s">sugestão</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="dayrow">
-      <div class="daynum"><div class="d">29</div><div class="m">Mai</div><div class="w">sábado</div></div>
-      <div class="daybody"><span class="city">Rio de Janeiro</span>
-        <h4>Praia, Lagoa e Jardim Botânico</h4>
-        <ul>
-          <li>Manhã de praia em Ipanema ou Leblon <span class="tag-s">sugestão</span></li>
-          <li>Jardim Botânico e volta pela Lagoa Rodrigo de Freitas, a pé ou de bicicleta <span class="tag-s">sugestão</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="dayrow">
-      <div class="daynum"><div class="d">30</div><div class="m">Mai</div><div class="w">domingo</div></div>
-      <div class="daybody"><span class="city">Rio de Janeiro → Curitiba</span>
-        <h4>Volta para casa</h4>
-        <ul>
-          <li>Voo GOL do Galeão para Curitiba: <b>07:30</b> (chega 09:00) ou <b>21:25</b> (chega 22:55) <span class="tag-q">cotado</span></li>
-          <li>Com o voo da noite: check-out até o meio-dia, malas guardadas no hotel e o domingo livre — Museu do Amanhã e Boulevard Olímpico, no Centro <span class="tag-s">sugestão</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section sh">
     <span class="eyebrow">Investimento</span>
     <h2>Resumo de valores</h2>
     <div class="accent-line"></div>
@@ -347,7 +267,7 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
       <ul>
         <li>Bagagem despachada (a tarifa Light inclui só mochila e mala de mão) · marcação de assento</li>
         <li>Traslados aeroporto ⇄ hotel</li>
-        <li>Refeições além do café da manhã · ingressos do Cristo Redentor e do Pão de Açúcar</li>
+        <li>Refeições além do café da manhã</li>
         <li>Seguro viagem · despesas pessoais</li>
       </ul>
       <h4>Observações</h4>

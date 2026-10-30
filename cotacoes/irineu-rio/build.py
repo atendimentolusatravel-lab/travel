@@ -145,40 +145,6 @@ chips = "\n      ".join(CHIP.format(**c) for c in [
 ])
 
 
-def day(d, w, city, h4, items, hl=""):
-    li = "\n".join(f"          <li>{x}</li>" for x in items)
-    hl = f'\n        <div class="hl">{hl}</div>' if hl else ""
-    return (f'    <div class="dayrow">\n      <div class="daynum"><div class="d">{d}</div><div class="m">Mai</div><div class="w">{w}</div></div>\n'
-            f'      <div class="daybody"><span class="city">{city}</span>\n        <h4>{h4}</h4>\n        <ul>\n{li}\n        </ul>{hl}\n      </div>\n    </div>')
-
-
-Q, S = '<span class="tag-q">cotado</span>', '<span class="tag-s">sugestão</span>'
-roteiro = "\n\n".join([
-    day(26, "quarta", "Curitiba → Rio de Janeiro", "Chegada ao Rio", [
-        f"Voo GOL de Curitiba ao Galeão: <b>09:55</b> (chega 11:15), <b>18:35</b> (chega 20:00) ou <b>08:55</b> com conexão em Congonhas (chega 12:00) {Q}",
-        f"Check-in no hotel escolhido · 4 noites com café da manhã {Q}",
-        f"Fim de tarde na Pedra do Arpoador para ver o pôr do sol {S}",
-    ]),
-    day(27, "quinta", "Rio de Janeiro", "Cristo Redentor e Santa Teresa", [
-        f"Cristo Redentor pelo Trem do Corcovado, no primeiro horário da manhã {S}",
-        f"Almoço e passeio por Santa Teresa e a Escadaria Selarón {S}",
-    ], "Quinta-feira, 27/05, é <b>Corpus Christi</b>. Feriado prolongado: Cristo e Pão de Açúcar ficam cheios. "
-       "Vale comprar os ingressos com antecedência."),
-    day(28, "sexta", "Rio de Janeiro", "Pão de Açúcar e Urca", [
-        f"Bondinho do Pão de Açúcar no fim da tarde, para ver o pôr do sol do alto {S}",
-        f"Mureta da Urca antes ou depois do bondinho {S}",
-    ]),
-    day(29, "sábado", "Rio de Janeiro", "Praia, Lagoa e Jardim Botânico", [
-        f"Manhã de praia em Ipanema ou Leblon {S}",
-        f"Jardim Botânico e volta pela Lagoa Rodrigo de Freitas, a pé ou de bicicleta {S}",
-    ]),
-    day(30, "domingo", "Rio de Janeiro → Curitiba", "Volta para casa", [
-        f"Voo GOL do Galeão para Curitiba: <b>07:30</b> (chega 09:00) ou <b>21:25</b> (chega 22:55) {Q}",
-        f"Com o voo da noite: check-out até o meio-dia, malas guardadas no hotel e o domingo livre — "
-        f"Museu do Amanhã e Boulevard Olímpico, no Centro {S}",
-    ]),
-])
-
 html = f"""<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -251,15 +217,6 @@ html = f"""<!DOCTYPE html>
   </section>
 
   <section class="section sh" style="background:var(--cream)">
-    <span class="eyebrow">Dia a dia</span>
-    <h2>Roteiro</h2>
-    <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">O que já está cotado, com horário marcado, aparece como <span class="tag-q">cotado</span>. O restante é <span class="tag-s">sugestão</span> nossa e pode ser trocado livremente.</p>
-
-{roteiro}
-  </section>
-
-  <section class="section sh">
     <span class="eyebrow">Investimento</span>
     <h2>Resumo de valores</h2>
     <div class="accent-line"></div>
@@ -296,7 +253,7 @@ html = f"""<!DOCTYPE html>
       <ul>
         <li>Bagagem despachada (a tarifa Light inclui só mochila e mala de mão) · marcação de assento</li>
         <li>Traslados aeroporto ⇄ hotel</li>
-        <li>Refeições além do café da manhã · ingressos do Cristo Redentor e do Pão de Açúcar</li>
+        <li>Refeições além do café da manhã</li>
         <li>Seguro viagem · despesas pessoais</li>
       </ul>
       <h4>Observações</h4>
