@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Laura Dalcanale | Reserva Tóquio — LusaTravel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+  --gold:#da8d00;
+  --dest:#2d5e3a;
+  --dest-soft:#eef3ef;
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#8a7e72;
+  --line:#e4ddd2;
+  --paper:#faf7f2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; display:flex; flex-direction:column; }
+
+.hd{ background:var(--dest); height:38mm; display:flex; align-items:center; justify-content:space-between; padding:0 20mm; flex-shrink:0; }
+.hd .logo{ height:27mm; width:auto; display:block; }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.75); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
+.ft a,.ft span{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.55); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.25); }
+
+.body{ padding:11mm 20mm 8mm; flex:1; display:flex; flex-direction:column; }
+
+.intro{ display:flex; justify-content:space-between; align-items:flex-end; gap:10mm; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.client{ font-size:24pt; font-weight:800; color:var(--ink); text-transform:uppercase; letter-spacing:.02em; line-height:1.1; margin-top:2mm; }
+.sub{ font-size:11pt; font-weight:300; color:var(--char); margin-top:2mm; }
+.meta{ display:flex; gap:9mm; text-align:right; }
+.meta b{ white-space:nowrap; display:block; font-size:17pt; font-weight:800; color:var(--dest); line-height:1; }
+.meta span{ white-space:nowrap; font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); }
+
+h2.sec{ font-size:13pt; font-weight:700; color:var(--ink); margin-top:9mm; padding-bottom:2mm; border-bottom:2px solid var(--dest); display:flex; justify-content:space-between; align-items:baseline; }
+h2.sec span{ font-size:8pt; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--dest); }
+
+/* Passageiros */
+.pax{ display:grid; grid-template-columns:repeat(5,1fr); gap:3mm; margin-top:4mm; }
+.p{ border:1px solid var(--line); border-radius:5px; padding:3.5mm 4mm; background:var(--paper); }
+.p .n{ font-size:9.5pt; font-weight:700; color:var(--ink); line-height:1.3; }
+.p .s{ font-size:7.5pt; color:var(--mut); margin-top:1mm; line-height:1.4; }
+.p .c{ display:inline-block; margin-top:2mm; font-size:7pt; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:.8mm 2mm; border-radius:3px; background:var(--dest-soft); color:var(--dest); }
+.p .c.x{ background:var(--ink); color:var(--gold); }
+
+/* Voos */
+table.fl{ width:100%; border-collapse:collapse; margin-top:3mm; font-size:9.5pt; }
+table.fl th{ font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; text-align:left; padding:1.5mm 2mm; }
+table.fl td{ padding:2.4mm 2mm; border-top:1px solid var(--line); vertical-align:middle; }
+td.fn{ font-weight:700; color:var(--ink); white-space:nowrap; }
+td.dt{ color:var(--gold); font-weight:700; white-space:nowrap; }
+td.rt b{ font-weight:600; color:var(--ink); }
+td.tm{ font-variant-numeric:tabular-nums; white-space:nowrap; }
+td.mu, span.mu{ color:var(--mut); font-size:8.5pt; white-space:nowrap; }
+td.cab{ font-size:8.5pt; line-height:1.45; }
+td.loc{ font-family:var(--con); font-weight:600; font-size:9pt; color:var(--dest); letter-spacing:.04em; white-space:nowrap; }
+tr.grp td{ background:var(--dest-soft); color:var(--dest); font-size:7.5pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; padding:1.6mm 2mm; }
+tr.stop td{ background:#fbf3e3; border-top:1px dashed var(--gold); font-size:8.5pt; color:#8a5a00; padding:1.8mm 2mm; }
+
+/* Reservas e valores */
+.res{ display:grid; grid-template-columns:1fr 1fr 1fr 1.15fr; gap:4mm; margin-top:4mm; }
+.r{ border:1px solid var(--line); border-radius:5px; padding:4mm 5mm; background:var(--dest-soft); display:flex; flex-direction:column; }
+.r .k{ font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:var(--dest); font-weight:700; }
+.r .loc{ font-family:var(--con); font-size:17pt; font-weight:600; color:var(--ink); letter-spacing:.06em; margin-top:1.5mm; }
+.r .loc2{ font-size:8pt; color:var(--mut); margin-top:.5mm; }
+.r .d{ font-size:8.5pt; color:var(--char); margin-top:2mm; line-height:1.5; }
+.r .amt{ margin-top:auto; padding-top:3mm; font-size:14pt; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; }
+.total{ background:var(--ink); border-radius:5px; padding:5mm 6mm; color:#fff; display:flex; flex-direction:column; justify-content:center; }
+.total .lbl{ font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.65); font-weight:700; }
+.total .amt{ font-size:21pt; font-weight:800; color:var(--gold); margin-top:1.5mm; font-variant-numeric:tabular-nums; }
+.total .sm{ font-size:8.5pt; color:rgba(255,255,255,.6); margin-top:1mm; }
+
+.notes{ margin-top:auto; padding-top:5mm; border-top:1px solid var(--line); display:grid; grid-template-columns:1.5fr 1fr; gap:10mm; }
+.notes h3{ font-size:8.5pt; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5mm; }
+.notes li{ font-size:8.5pt; line-height:1.65; color:var(--char); list-style:none; }
+.notes li::before{ content:'· '; color:var(--gold); font-weight:800; }
+.fx{ font-size:8.5pt; color:var(--mut); line-height:1.7; }
+.fx b{ color:var(--ink); }
+</style>
+</head>
+<body>
+
+<section class="page">
+  <div class="hd"><img class="logo" src="assets/lusatravel-logo-dourada.png" alt="LusaTravel"><div class="tag">Reserva Aérea · São Paulo ⇄ Tóquio</div></div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+    <div class="intro">
+      <div>
+        <div class="eyebrow">Reserva preparada para</div>
+        <div class="client">Sra. Laura Dalcanale</div>
+        <div class="sub">São Paulo ⇄ Tóquio, com parada em Frankfurt na ida e na volta. Todos os passageiros nos mesmos voos.</div>
+      </div>
+      <div class="meta">
+        <div><b>5</b><span>Passageiros</span></div>
+        <div><b>3</b><span>Reservas</span></div>
+        <div><b>28/12 – 28/01</b><span>Período</span></div>
+      </div>
+    </div>
+
+    <h2 class="sec">Passageiros<span>Conforme reservas</span></h2>
+    <div class="pax">
+      <div class="p"><div class="n">Laura Dias Dalcanale Pereira Alves</div><div class="s">Nasc. 21/03/1965</div><span class="c x">Executiva</span></div>
+      <div class="p"><div class="n">Artur Dalcanale Pereira Alves</div><div class="s">Nasc. 24/01/2001</div><span class="c">Econ. + Executiva Ásia</span></div>
+      <div class="p"><div class="n">Adriano Dalcanale Pereira Alves</div><div class="s">Nasc. 06/04/2004</div><span class="c">Econ. + Executiva Ásia</span></div>
+      <div class="p"><div class="n">Amanda Lidia Barbosa de Moura</div><div class="s">Nasc. 13/03/2000</div><span class="c">Econ. + Executiva Ásia</span></div>
+      <div class="p"><div class="n">Priscila Taques Spina</div><div class="s">Nasc. 05/01/2001</div><span class="c">Econ. + Executiva Ásia</span></div>
+    </div>
+
+    <h2 class="sec">Itinerário<span>LATAM · ANA</span></h2>
+    <table class="fl">
+      <thead><tr><th>Voo</th><th>Data</th><th>Trecho</th><th>Partida</th><th>Chegada</th><th>Cabine</th><th>Localizador</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="7">Ida</td></tr>
+        <tr><td class="fn">LA 8070</td><td class="dt">28 Dez</td><td class="rt"><b>GRU</b> São Paulo → <b>FRA</b> Frankfurt</td><td class="tm">23:10</td><td class="tm">14:55 <span class="mu">(29 Dez)</span></td><td class="cab">Laura: Premium Business<br><span class="mu">Demais: Econômica</span></td><td class="loc">MGRQZW<br>JTMKRL</td></tr>
+        <tr class="stop"><td colspan="7">Pernoite em Frankfurt · chegada 29 Dez 14:55 · embarque 30 Dez 11:35</td></tr>
+        <tr><td class="fn">NH 204</td><td class="dt">30 Dez</td><td class="rt"><b>FRA</b> Frankfurt → <b>HND</b> Tóquio Haneda</td><td class="tm">11:35</td><td class="tm">08:45 <span class="mu">(31 Dez)</span></td><td class="cab">Todos: Executiva</td><td class="loc">NJUYIX</td></tr>
+        <tr class="grp"><td colspan="7">Volta</td></tr>
+        <tr><td class="fn">NH 203</td><td class="dt">25 Jan</td><td class="rt"><b>HND</b> Tóquio Haneda → <b>FRA</b> Frankfurt</td><td class="tm">22:45</td><td class="tm">05:30 <span class="mu">(26 Jan)</span></td><td class="cab">Todos: Executiva</td><td class="loc">NJUYIX</td></tr>
+        <tr class="stop"><td colspan="7">Parada em Frankfurt · chegada 26 Jan 05:30 · embarque 27 Jan 20:50</td></tr>
+        <tr><td class="fn">LA 8071</td><td class="dt">27 Jan</td><td class="rt"><b>FRA</b> Frankfurt → <b>GRU</b> São Paulo</td><td class="tm">20:50</td><td class="tm">05:05 <span class="mu">(28 Jan)</span></td><td class="cab">Laura: Premium Business<br><span class="mu">Demais: Econômica</span></td><td class="loc">MGRQZW<br>JTMKRL</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="sec">Reservas e valores<span>Valor final por reserva</span></h2>
+    <div class="res">
+      <div class="r">
+        <div class="k">LATAM · Premium Business</div>
+        <div class="loc">MGRQZW</div>
+        <div class="d">Laura · São Paulo ⇄ Frankfurt<br>1 mala na ida, 2 malas na volta</div>
+        <div class="amt">R$ 23.991,27</div>
+      </div>
+      <div class="r">
+        <div class="k">LATAM · Econômica</div>
+        <div class="loc">JTMKRL</div>
+        <div class="loc2">Pedido NDC LA9570528QQLG</div>
+        <div class="d">Artur, Adriano, Amanda, Priscila · São Paulo ⇄ Frankfurt · 1 mala de 23 kg</div>
+        <div class="amt">R$ 29.396,08</div>
+      </div>
+      <div class="r">
+        <div class="k">ANA · Executiva</div>
+        <div class="loc">NJUYIX</div>
+        <div class="loc2">Localizador ANA 2E6OQT</div>
+        <div class="d">5 passageiros · Frankfurt ⇄ Tóquio · 2 malas</div>
+        <div class="amt">R$ 85.861,25</div>
+      </div>
+      <div class="total">
+        <div class="lbl">Total · 5 passageiros</div>
+        <div class="amt">R$ 139.248,60</div>
+        <div class="sm">Aéreo completo São Paulo ⇄ Tóquio</div>
+      </div>
+    </div>
+
+    <div class="notes">
+      <div>
+        <h3>Observações</h3>
+        <ul>
+          <li>Reservas em bilhetes separados (LATAM e ANA), com pernoite em Frankfurt na ida e na volta. Hospedagem em Frankfurt não incluída.</li>
+          <li>Na volta, a LATAM permite 1 mala de 23 kg na econômica, enquanto a ANA permite 2. Malas extras no trecho Frankfurt → São Paulo serão cobradas.</li>
+          <li>Horários em hora local de cada cidade. Passaporte com validade mínima de 6 meses.</li>
+        </ul>
+      </div>
+      <div class="fx">
+        <h3>Prazo</h3>
+        Reservas não emitidas. A tarifa só é garantida após a emissão.<br>
+        <b>Prazos: NJUYIX 30/10 22:37 · JTMKRL 30/10 23:59 · MGRQZW 31/10 10:56</b><br>
+        Cotação 30/10 · USD 1 = R$ 5,37 · EUR 1 = R$ 5,95
+      </div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    <span class="sep">·</span>
+    <span>Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+</body>
+</html>
