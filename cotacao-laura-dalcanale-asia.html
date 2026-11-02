@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Laura Dalcanale | Ásia em 2 etapas — LusaTravel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+  --gold:#da8d00;
+  --dest:#2d5e3a;
+  --dest-dk:#1f4a2e;
+  --dest-soft:#eef3ef;
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#8a7e72;
+  --line:#e4ddd2;
+  --paper:#faf7f2;
+  --warm:#fbf3e3;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page{ page-break-after:always; width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; display:flex; flex-direction:column; }
+.page:last-child{ page-break-after:auto; }
+
+.hd{ background:var(--dest); height:38mm; display:flex; align-items:center; justify-content:space-between; padding:0 20mm; flex-shrink:0; }
+.hd .logo{ height:27mm; width:auto; display:block; }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.8); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+.ft{ margin-top:auto; background:var(--dest-dk); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
+.ft a,.ft span{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.75); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.35); }
+
+.body{ padding:10mm 20mm 7mm; flex:1; display:flex; flex-direction:column; }
+
+.intro{ display:flex; justify-content:space-between; align-items:flex-end; gap:10mm; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.client{ font-size:24pt; font-weight:800; color:var(--dest-dk); text-transform:uppercase; letter-spacing:.02em; line-height:1.1; margin-top:2mm; }
+.sub{ font-size:11pt; font-weight:300; color:var(--char); margin-top:2mm; max-width:170mm; }
+.meta{ display:flex; gap:9mm; text-align:right; }
+.meta b{ display:block; white-space:nowrap; font-size:17pt; font-weight:800; color:var(--dest); line-height:1; }
+.meta span{ white-space:nowrap; font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); }
+
+h2.sec{ font-size:14pt; font-weight:700; color:var(--dest-dk); margin-top:8mm; padding-bottom:2mm; border-bottom:2px solid var(--dest); display:flex; justify-content:space-between; align-items:baseline; }
+h2.sec b.h{ font-weight:700; }
+h2.sec em{ font-style:normal; color:var(--gold); }
+h2.sec span{ font-size:8pt; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--dest); }
+h2.sec.first{ margin-top:0; }
+
+/* Comparativo */
+table.cmp{ width:100%; border-collapse:collapse; margin-top:3mm; font-size:9.5pt; }
+table.cmp th{ font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; text-align:left; padding:1.8mm 2.5mm; }
+table.cmp td{ padding:3mm 2.5mm; border-top:1px solid var(--line); vertical-align:middle; }
+table.cmp td.no{ width:9mm; }
+table.cmp .bd{ display:inline-flex; width:7.5mm; height:7.5mm; border-radius:50%; background:var(--dest); color:var(--gold); font-weight:800; font-size:9.5pt; align-items:center; justify-content:center; }
+table.cmp td.ds b{ display:block; font-weight:700; color:var(--ink); }
+table.cmp td.ds span{ font-size:8.5pt; color:var(--mut); }
+table.cmp td.amt{ text-align:right; font-weight:800; font-size:12pt; color:var(--ink); white-space:nowrap; font-variant-numeric:tabular-nums; }
+table.cmp tr.best td{ background:var(--dest-soft); }
+table.cmp tr.best td.amt{ color:var(--dest-dk); }
+.pill{ display:inline-block; font-size:7pt; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:.8mm 2mm; border-radius:3px; background:var(--dest-soft); color:var(--dest); white-space:nowrap; }
+.pill.ex{ background:var(--dest); color:#fff; }
+.pill.wr{ background:var(--warm); color:#8a5a00; }
+
+/* Etapas / opções */
+.op{ margin-top:5mm; border:1px solid var(--line); border-radius:5px; overflow:hidden; }
+.op-hd{ background:var(--dest); color:#fff; padding:2.6mm 5mm; display:flex; justify-content:space-between; align-items:center; }
+.op-hd .t{ font-size:10.5pt; font-weight:700; letter-spacing:.04em; }
+.op-hd .t i{ font-style:normal; display:inline-flex; width:8mm; height:8mm; border-radius:50%; border:2px solid var(--gold); color:var(--gold); font-weight:800; font-size:9pt; align-items:center; justify-content:center; margin-right:3mm; }
+.op-hd .r{ font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.8); }
+table.fl{ width:100%; border-collapse:collapse; font-size:9pt; }
+table.fl th{ font-size:6.8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; text-align:left; padding:1.5mm 3mm; background:var(--paper); }
+table.fl td{ padding:1.8mm 3mm; border-top:1px solid var(--line); vertical-align:middle; }
+td.fn{ font-weight:700; color:var(--ink); white-space:nowrap; }
+td.dt{ color:var(--gold); font-weight:700; white-space:nowrap; }
+td.rt b{ font-weight:600; color:var(--ink); }
+td.tm{ font-variant-numeric:tabular-nums; white-space:nowrap; }
+td.mu, span.mu{ color:var(--mut); font-size:8pt; white-space:nowrap; }
+tr.stop td{ background:var(--warm); border-top:1px dashed var(--gold); font-size:8pt; color:#8a5a00; padding:1.4mm 3mm; }
+.fares{ display:flex; gap:3mm; padding:3mm 5mm; border-top:1px solid var(--line); background:var(--dest-soft); flex-wrap:wrap; }
+.fare{ flex:1; min-width:52mm; background:#fff; border:1px solid var(--line); border-radius:4px; padding:2.4mm 3.5mm; }
+.fare .k{ font-size:7pt; letter-spacing:.12em; text-transform:uppercase; color:var(--dest); font-weight:700; }
+.fare .v{ font-size:12.5pt; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; margin-top:.5mm; }
+.fare .s{ font-size:7.5pt; color:var(--mut); line-height:1.4; }
+.fare.na .v{ font-size:9pt; font-weight:500; color:var(--mut); }
+
+.e1{ display:grid; grid-template-columns:1fr 1fr; gap:5mm; }
+
+/* Total combinações (rodapé de página) */
+.tot{ margin-top:5mm; display:grid; grid-template-columns:repeat(4,1fr); gap:3mm; }
+.tot > div{ background:var(--dest-dk); border-radius:5px; padding:3.5mm 4.5mm; color:#fff; }
+.tot .l{ font-size:7pt; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.75); font-weight:700; line-height:1.4; }
+.tot .a{ font-size:14pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; margin-top:1mm; }
+
+.notes{ margin-top:auto; padding-top:5mm; border-top:1px solid var(--line); display:grid; grid-template-columns:1.6fr 1fr; gap:10mm; }
+.notes h3{ font-size:8.5pt; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5mm; }
+.notes li{ font-size:8.5pt; line-height:1.65; color:var(--char); list-style:none; }
+.notes li::before{ content:'· '; color:var(--gold); font-weight:800; }
+.fx{ font-size:8.5pt; color:var(--mut); line-height:1.7; }
+.fx b{ color:var(--dest-dk); }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ PÁGINA 1 · RESUMO ═══════════ -->
+<section class="page">
+  <div class="hd"><img class="logo" src="assets/lusatravel-logo-branca.png" alt="LusaTravel"><div class="tag">Cotação Aérea · Ásia em 2 etapas</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="intro">
+      <div>
+        <div class="eyebrow">Cotação preparada para</div>
+        <div class="client">Sra. Laura Dalcanale</div>
+        <div class="sub">Viagem à Ásia em duas etapas: São Paulo ⇄ Europa (Amsterdã ou Paris) e Europa ⇄ Xangai, Pequim ou Tóquio.</div>
+      </div>
+      <div class="meta">
+        <div><b>5</b><span>Passageiros</span></div>
+        <div><b>2</b><span>Roteiros</span></div>
+        <div><b>3</b><span>Destinos</span></div>
+      </div>
+    </div>
+
+    <h2 class="sec"><b class="h">Comparativo das combinações</b><span>Total para 5 passageiros</span></h2>
+    <table class="cmp">
+      <thead><tr><th></th><th>Destino e companhias</th><th>Roteiro e datas</th><th>Cabines</th><th style="text-align:right">Total</th></tr></thead>
+      <tbody>
+        <tr class="best"><td class="no"><span class="bd">1</span></td><td class="ds"><b>Xangai · China Eastern</b><span>Etapa 1 KLM · Etapa 2 voo direto</span></td><td class="ds"><b>Via Amsterdã</b><span>28/12 → 28/01</span></td><td><span class="pill">1 executiva + 4 econômica</span></td><td class="amt">R$ 106.529,65</td></tr>
+        <tr><td class="no"><span class="bd">2</span></td><td class="ds"><b>Xangai · KLM</b><span>Etapa 1 KLM · Etapa 2 voo direto</span></td><td class="ds"><b>Via Amsterdã</b><span>28/12 → 28/01</span></td><td><span class="pill">1 executiva + 4 econômica</span></td><td class="amt">R$ 111.623,90</td></tr>
+        <tr><td class="no"><span class="bd">3</span></td><td class="ds"><b>Tóquio · ANA</b><span>Etapa 1 Air France · Etapa 2 voo direto</span></td><td class="ds"><b>Via Paris</b><span>27/12 → 21/01</span></td><td><span class="pill">1 executiva + 4 econômica</span></td><td class="amt">R$ 112.037,89</td></tr>
+        <tr><td class="no"><span class="bd">4</span></td><td class="ds"><b>Pequim · KLM</b><span>Etapa 1 KLM · Etapa 2 voo direto</span></td><td class="ds"><b>Via Amsterdã</b><span>28/12 → 28/01</span></td><td><span class="pill">1 executiva + 4 econômica</span></td><td class="amt">R$ 138.493,73</td></tr>
+        <tr><td class="no"><span class="bd">5</span></td><td class="ds"><b>Pequim Daxing · British Airways + China Southern</b><span>Etapa 2 com conexão em Londres na ida</span></td><td class="ds"><b>Via Amsterdã</b><span>28/12 → 28/01</span></td><td><span class="pill ex">5 executiva na Ásia</span></td><td class="amt">R$ 150.543,44</td></tr>
+        <tr><td class="no"><span class="bd">6</span></td><td class="ds"><b>Xangai · KLM + China Eastern</b><span>Etapa 2 com conexão em Paris na ida</span></td><td class="ds"><b>Via Amsterdã</b><span>28/12 → 28/01</span></td><td><span class="pill ex">5 executiva na Ásia</span></td><td class="amt">R$ 161.990,49</td></tr>
+        <tr><td class="no"><span class="bd">7</span></td><td class="ds"><b>Tóquio · ANA</b><span>Etapa 1 Air France · Etapa 2 voo direto</span></td><td class="ds"><b>Via Paris</b><span>27/12 → 21/01</span></td><td><span class="pill ex">5 executiva na Ásia</span></td><td class="amt">R$ 185.077,77</td></tr>
+        <tr><td class="no"><span class="bd">8</span></td><td class="ds"><b>Xangai · China Eastern</b><span>Etapa 1 KLM · Etapa 2 voo direto</span></td><td class="ds"><b>Via Amsterdã</b><span>28/12 → 28/01</span></td><td><span class="pill ex">5 executiva na Ásia</span></td><td class="amt">R$ 185.446,89</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="sec"><b class="h">Como ler as combinações</b><span>Composição</span></h2>
+    <div class="e1" style="margin-top:4mm">
+      <div class="fare"><div class="k">1 executiva + 4 econômica</div><div class="s" style="font-size:9pt;margin-top:1.5mm;color:var(--char)">Uma pessoa em executiva e quatro em econômica nas duas etapas, nos mesmos voos.</div></div>
+      <div class="fare"><div class="k">5 executiva na Ásia</div><div class="s" style="font-size:9pt;margin-top:1.5mm;color:var(--char)">Na etapa São Paulo ⇄ Europa, uma pessoa em executiva e quatro em econômica. Na etapa Europa ⇄ Ásia, os cinco em executiva.</div></div>
+    </div>
+
+    <div class="notes">
+      <div>
+        <h3>Observações</h3>
+        <ul>
+          <li>Cada etapa é um bilhete separado, com pernoite na Europa na ida e na volta. Hospedagem na Europa não incluída.</li>
+          <li>Via Amsterdã: 1 noite na ida (29 → 30/12) e 2 noites na volta (26 → 28/01). Via Paris: 1 noite na ida (28 → 29/12) e 2 noites na volta (19 → 21/01).</li>
+          <li>Econômica com 1 mala por pessoa. Executiva da etapa 1 com 1 mala; executiva da etapa 2 com 2 malas.</li>
+          <li>Japão: brasileiros isentos de visto para turismo até 90 dias. China: verificar a exigência de visto na data da viagem.</li>
+        </ul>
+      </div>
+      <div class="fx">
+        <h3>Valores</h3>
+        Cotação 02/11 · <b>USD 1 = R$ 5,42 · EUR 1 = R$ 5,99</b><br>
+        Valores totais com taxas, por cabine e quantidade de passageiros indicadas<br>
+        Tarifas sujeitas a disponibilidade até a emissão<br>
+        <b>*Nada reservado, apenas cotado</b>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><span class="sep">·</span>
+    <span>Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ═══════════ PÁGINA 2 · ROTEIRO VIA AMSTERDÃ ═══════════ -->
+<section class="page">
+  <div class="hd"><img class="logo" src="assets/lusatravel-logo-branca.png" alt="LusaTravel"><div class="tag">Roteiro via Amsterdã · 28/12 → 28/01</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <h2 class="sec first"><b class="h">Etapa 1 · São Paulo <em>⇄</em> Amsterdã</b><span>KLM · voo direto</span></h2>
+    <div class="op" style="margin-top:3mm">
+      <table class="fl">
+        <thead><tr><th>Voo</th><th>Data</th><th>Trecho</th><th>Partida</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr></thead>
+        <tbody>
+          <tr><td class="fn">KL 792</td><td class="dt">28 Dez</td><td class="rt"><b>GRU</b> São Paulo → <b>AMS</b> Amsterdã</td><td class="tm">20:59</td><td class="tm">12:20 <span class="mu">(29 Dez)</span></td><td class="mu">11h21</td><td class="mu">Boeing 777-300ER</td></tr>
+          <tr><td class="fn">KL 791</td><td class="dt">28 Jan</td><td class="rt"><b>AMS</b> Amsterdã → <b>GRU</b> São Paulo</td><td class="tm">10:45</td><td class="tm">18:50</td><td class="mu">12h05</td><td class="mu">Boeing 777-300ER</td></tr>
+        </tbody>
+      </table>
+      <div class="fares">
+        <div class="fare"><div class="k">Executiva · 1 passageiro</div><div class="v">R$ 17.957,50</div><div class="s">1 mala</div></div>
+        <div class="fare"><div class="k">Econômica · 4 passageiros</div><div class="v">R$ 39.714,24</div><div class="s">R$ 9.928,56 por pessoa · 1 mala</div></div>
+        <div class="fare" style="background:var(--dest-dk);border-color:var(--dest-dk)"><div class="k" style="color:rgba(255,255,255,.75)">Etapa 1 · 5 passageiros</div><div class="v" style="color:var(--gold)">R$ 57.671,74</div><div class="s" style="color:rgba(255,255,255,.6)">1 executiva + 4 econômica</div></div>
+      </div>
+    </div>
+
+    <h2 class="sec"><b class="h">Etapa 2 · Amsterdã <em>⇄</em> Ásia</b><span>Escolha uma opção</span></h2>
+
+    <div class="op">
+      <div class="op-hd"><div class="t"><i>A</i>Xangai (PVG) · China Eastern</div><div class="r">Voo direto</div></div>
+      <table class="fl"><tbody>
+        <tr><td class="fn">MU 230</td><td class="dt">30 Dez</td><td class="rt"><b>AMS</b> Amsterdã → <b>PVG</b> Xangai</td><td class="tm">17:05</td><td class="tm">11:30 <span class="mu">(31 Dez)</span></td><td class="mu">11h25</td><td class="mu">Airbus A330-200</td></tr>
+        <tr><td class="fn">MU 771</td><td class="dt">26 Jan</td><td class="rt"><b>PVG</b> Xangai → <b>AMS</b> Amsterdã</td><td class="tm">12:40</td><td class="tm">17:45</td><td class="mu">12h05</td><td class="mu">Boeing 777-300ER</td></tr>
+      </tbody></table>
+      <div class="fares">
+        <div class="fare"><div class="k">Econômica · 4 pax</div><div class="v">R$ 23.302,88</div><div class="s">R$ 5.825,72 por pessoa · 1 mala</div></div>
+        <div class="fare"><div class="k">Executiva · 1 pax</div><div class="v">R$ 25.555,03</div><div class="s">2 malas</div></div>
+        <div class="fare"><div class="k">Executiva · 5 pax</div><div class="v">R$ 127.775,15</div><div class="s">R$ 25.555,03 por pessoa · 2 malas</div></div>
+      </div>
+    </div>
+
+    <div class="op">
+      <div class="op-hd"><div class="t"><i>B</i>Xangai (PVG) · KLM</div><div class="r">Voo direto</div></div>
+      <table class="fl"><tbody>
+        <tr><td class="fn">KL 895</td><td class="dt">30 Dez</td><td class="rt"><b>AMS</b> Amsterdã → <b>PVG</b> Xangai</td><td class="tm">13:50</td><td class="tm">09:10 <span class="mu">(31 Dez)</span></td><td class="mu">12h20</td><td class="mu">Boeing 777-200</td></tr>
+        <tr><td class="fn">KL 896</td><td class="dt">26 Jan</td><td class="rt"><b>PVG</b> Xangai → <b>AMS</b> Amsterdã</td><td class="tm">11:10</td><td class="tm">18:25</td><td class="mu">14h15</td><td class="mu">Boeing 787-9</td></tr>
+      </tbody></table>
+      <div class="fares">
+        <div class="fare"><div class="k">Econômica · 4 pax</div><div class="v">R$ 28.412,60</div><div class="s">R$ 7.103,15 por pessoa · 1 mala</div></div>
+        <div class="fare"><div class="k">Executiva · 1 pax</div><div class="v">R$ 25.539,56</div><div class="s">2 malas</div></div>
+      </div>
+    </div>
+
+    <div class="op">
+      <div class="op-hd"><div class="t"><i>C</i>Xangai (PVG) · KLM + China Eastern</div><div class="r">Conexão em Paris na ida</div></div>
+      <table class="fl"><tbody>
+        <tr><td class="fn">KL 1403</td><td class="dt">30 Dez</td><td class="rt"><b>AMS</b> Amsterdã → <b>CDG</b> Paris</td><td class="tm">07:25</td><td class="tm">08:50</td><td class="mu">1h25</td><td class="mu">Airbus A321neo</td></tr>
+        <tr><td class="fn">MU 554</td><td class="dt">30 Dez</td><td class="rt"><b>CDG</b> Paris → <b>PVG</b> Xangai</td><td class="tm">12:25</td><td class="tm">07:00 <span class="mu">(31 Dez)</span></td><td class="mu">11h35</td><td class="mu">Boeing 777-300ER</td></tr>
+        <tr><td class="fn">MU 771</td><td class="dt">26 Jan</td><td class="rt"><b>PVG</b> Xangai → <b>AMS</b> Amsterdã</td><td class="tm">12:40</td><td class="tm">17:45</td><td class="mu">12h05</td><td class="mu">Boeing 777-300ER</td></tr>
+      </tbody></table>
+      <div class="fares">
+        <div class="fare"><div class="k">Executiva · 5 pax</div><div class="v">R$ 104.318,75</div><div class="s">R$ 20.863,75 por pessoa · 2 malas</div></div>
+        <div class="fare na"><div class="k">Econômica</div><div class="v">Não cotada</div></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><span class="sep">·</span>
+    <span>Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ═══════════ PÁGINA 3 · ROTEIRO VIA AMSTERDÃ (cont.) ═══════════ -->
+<section class="page">
+  <div class="hd"><img class="logo" src="assets/lusatravel-logo-branca.png" alt="LusaTravel"><div class="tag">Roteiro via Amsterdã · 28/12 → 28/01</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <h2 class="sec first"><b class="h">Etapa 2 · Amsterdã <em>⇄</em> Ásia</b><span>Continuação</span></h2>
+
+    <div class="op">
+      <div class="op-hd"><div class="t"><i>D</i>Pequim (PEK) · KLM</div><div class="r">Voo direto</div></div>
+      <table class="fl"><tbody>
+        <tr><td class="fn">KL 897</td><td class="dt">30 Dez</td><td class="rt"><b>AMS</b> Amsterdã → <b>PEK</b> Pequim Capital</td><td class="tm">15:55</td><td class="tm">09:55 <span class="mu">(31 Dez)</span></td><td class="mu">11h00</td><td class="mu">Boeing 787-9</td></tr>
+        <tr><td class="fn">KL 898</td><td class="dt">26 Jan</td><td class="rt"><b>PEK</b> Pequim Capital → <b>AMS</b> Amsterdã</td><td class="tm">11:50</td><td class="tm">17:20</td><td class="mu">12h30</td><td class="mu">Boeing 787-9</td></tr>
+      </tbody></table>
+      <div class="fares">
+        <div class="fare"><div class="k">Econômica · 4 pax</div><div class="v">R$ 38.434,44</div><div class="s">R$ 9.608,61 por pessoa · 1 mala</div></div>
+        <div class="fare"><div class="k">Executiva · 1 pax</div><div class="v">R$ 42.387,55</div><div class="s">2 malas · 4 lugares na ida</div></div>
+      </div>
+    </div>
+
+    <div class="op">
+      <div class="op-hd"><div class="t"><i>E</i>Pequim Daxing (PKX) · British Airways + China Southern</div><div class="r">Conexão em Londres na ida</div></div>
+      <table class="fl"><tbody>
+        <tr><td class="fn">BA 443</td><td class="dt">30 Dez</td><td class="rt"><b>AMS</b> Amsterdã → <b>LHR</b> Londres <span class="mu">(econômica)</span></td><td class="tm">18:30</td><td class="tm">18:45</td><td class="mu">1h15</td><td class="mu">Airbus A320neo</td></tr>
+        <tr><td class="fn">CZ 674</td><td class="dt">30 Dez</td><td class="rt"><b>LHR</b> Londres → <b>PKX</b> Pequim Daxing</td><td class="tm">21:30</td><td class="tm">15:30 <span class="mu">(31 Dez)</span></td><td class="mu">10h00</td><td class="mu">Airbus A350</td></tr>
+        <tr><td class="fn">CZ 345</td><td class="dt">26 Jan</td><td class="rt"><b>PKX</b> Pequim Daxing → <b>AMS</b> Amsterdã</td><td class="tm">14:40</td><td class="tm">18:35</td><td class="mu">10h55</td><td class="mu">Airbus A350</td></tr>
+      </tbody></table>
+      <div class="fares">
+        <div class="fare"><div class="k">Executiva · 5 pax</div><div class="v">R$ 92.871,70</div><div class="s">R$ 18.574,34 por pessoa · 2 malas</div></div>
+        <div class="fare na"><div class="k">Econômica</div><div class="v">Não cotada</div></div>
+      </div>
+    </div>
+
+    <div class="op">
+      <div class="op-hd"><div class="t"><i>F</i>Tóquio Narita (NRT) · KLM</div><div class="r">Voo direto</div></div>
+      <table class="fl"><tbody>
+        <tr><td class="fn">KL 861</td><td class="dt">30 Dez</td><td class="rt"><b>AMS</b> Amsterdã → <b>NRT</b> Tóquio Narita</td><td class="tm">14:15</td><td class="tm">11:45 <span class="mu">(31 Dez)</span></td><td class="mu">13h30</td><td class="mu">Boeing 777-200</td></tr>
+        <tr><td class="fn">KL 862</td><td class="dt">26 Jan</td><td class="rt"><b>NRT</b> Tóquio Narita → <b>AMS</b> Amsterdã</td><td class="tm">13:35</td><td class="tm">19:40</td><td class="mu">14h05</td><td class="mu">Boeing 777-200</td></tr>
+      </tbody></table>
+      <div class="fares">
+        <div class="fare"><div class="k">Executiva · 1 pax</div><div class="v">R$ 32.776,50</div><div class="s">Business Light · 1 mala</div></div>
+        <div class="fare na"><div class="k">Econômica</div><div class="v">Não cotada</div></div>
+      </div>
+    </div>
+    <h2 class="sec"><b class="h">Totais do roteiro via Amsterdã</b><span>5 passageiros</span></h2>
+    <div class="tot">
+      <div><div class="l">A · Xangai · 1 exec + 4 econ</div><div class="a">R$ 106.529,65</div></div>
+      <div><div class="l">B · Xangai · 1 exec + 4 econ</div><div class="a">R$ 111.623,90</div></div>
+      <div><div class="l">D · Pequim · 1 exec + 4 econ</div><div class="a">R$ 138.493,73</div></div>
+      <div><div class="l">E · Pequim Daxing · 5 exec na Ásia</div><div class="a">R$ 150.543,44</div></div>
+      <div><div class="l">C · Xangai · 5 exec na Ásia</div><div class="a">R$ 161.990,49</div></div>
+      <div><div class="l">A · Xangai · 5 exec na Ásia</div><div class="a">R$ 185.446,89</div></div>
+    </div>
+
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><span class="sep">·</span>
+    <span>Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ═══════════ PÁGINA 4 · ROTEIRO VIA PARIS ═══════════ -->
+<section class="page">
+  <div class="hd"><img class="logo" src="assets/lusatravel-logo-branca.png" alt="LusaTravel"><div class="tag">Roteiro via Paris · 27/12 → 21/01</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <h2 class="sec first"><b class="h">Etapa 1 · São Paulo <em>⇄</em> Paris</b><span>Air France · voo direto</span></h2>
+    <div class="op" style="margin-top:3mm">
+      <table class="fl">
+        <thead><tr><th>Voo</th><th>Data</th><th>Trecho</th><th>Partida</th><th>Chegada</th><th>Duração</th><th>Aeronave</th></tr></thead>
+        <tbody>
+          <tr><td class="fn">AF 459</td><td class="dt">27 Dez</td><td class="rt"><b>GRU</b> São Paulo → <b>CDG</b> Paris</td><td class="tm">20:40</td><td class="tm">11:50 <span class="mu">(28 Dez)</span></td><td class="mu">11h10</td><td class="mu">Airbus A350-900</td></tr>
+          <tr><td class="fn">AF 460</td><td class="dt">21 Jan</td><td class="rt"><b>CDG</b> Paris → <b>GRU</b> São Paulo</td><td class="tm">10:25</td><td class="tm">18:25</td><td class="mu">12h00</td><td class="mu">Airbus A350-900</td></tr>
+        </tbody>
+      </table>
+      <div class="fares">
+        <div class="fare"><div class="k">Executiva · 1 passageiro</div><div class="v">R$ 18.498,20</div><div class="s">1 mala</div></div>
+        <div class="fare"><div class="k">Econômica · 4 passageiros</div><div class="v">R$ 39.917,32</div><div class="s">R$ 9.979,33 por pessoa · 1 mala</div></div>
+        <div class="fare" style="background:var(--dest-dk);border-color:var(--dest-dk)"><div class="k" style="color:rgba(255,255,255,.75)">Etapa 1 · 5 passageiros</div><div class="v" style="color:var(--gold)">R$ 58.415,52</div><div class="s" style="color:rgba(255,255,255,.6)">1 executiva + 4 econômica</div></div>
+      </div>
+    </div>
+
+    <h2 class="sec"><b class="h">Etapa 2 · Paris <em>⇄</em> Tóquio</b><span>ANA · voo direto</span></h2>
+    <div class="op">
+      <div class="op-hd"><div class="t"><i>G</i>Tóquio Haneda (HND) · ANA</div><div class="r">Voo direto</div></div>
+      <table class="fl"><tbody>
+        <tr><td class="fn">NH 216</td><td class="dt">29 Dez</td><td class="rt"><b>CDG</b> Paris → <b>HND</b> Tóquio Haneda</td><td class="tm">18:40</td><td class="tm">16:10 <span class="mu">(30 Dez)</span></td><td class="mu">13h30</td><td class="mu">Boeing 787-9</td></tr>
+        <tr class="stop"><td colspan="7">Chegada a Tóquio em 30/12, a tempo do Réveillon</td></tr>
+        <tr><td class="fn">NH 215</td><td class="dt">19 Jan</td><td class="rt"><b>HND</b> Tóquio Haneda → <b>CDG</b> Paris</td><td class="tm">09:50</td><td class="tm">16:30</td><td class="mu">14h40</td><td class="mu">Boeing 787-9</td></tr>
+      </tbody></table>
+      <div class="fares">
+        <div class="fare"><div class="k">Econômica · 4 pax</div><div class="v">R$ 29.733,16</div><div class="s">R$ 7.433,29 por pessoa · 1 mala</div></div>
+        <div class="fare"><div class="k">Executiva · 1 pax</div><div class="v">R$ 23.889,21</div><div class="s">2 malas</div></div>
+        <div class="fare"><div class="k">Executiva · 5 pax</div><div class="v">R$ 126.662,25</div><div class="s">R$ 25.332,45 por pessoa · 2 malas</div></div>
+      </div>
+    </div>
+
+    <h2 class="sec"><b class="h">Totais do roteiro via Paris</b><span>5 passageiros</span></h2>
+    <div class="tot" style="grid-template-columns:1fr 1fr">
+      <div><div class="l">Tóquio · 1 executiva + 4 econômica</div><div class="a">R$ 112.037,89</div></div>
+      <div><div class="l">Tóquio · 5 executiva na Ásia</div><div class="a">R$ 185.077,77</div></div>
+    </div>
+
+    <div class="notes">
+      <div>
+        <h3>Observações</h3>
+        <ul>
+          <li>Opções C e E têm conexão na ida (Paris e Londres). Na opção E, o trecho Amsterdã → Londres é em econômica.</li>
+          <li>Pequim tem dois aeroportos: Capital (PEK, opção D) e Daxing (PKX, opção E).</li>
+          <li>Opção F (Tóquio pela KLM) foi cotada apenas em executiva para 1 passageiro.</li>
+          <li>Executiva KLM Amsterdã ⇄ Pequim com apenas 4 lugares disponíveis na ida.</li>
+        </ul>
+      </div>
+      <div class="fx">
+        <h3>Valores</h3>
+        Cotação 02/11 · <b>USD 1 = R$ 5,42 · EUR 1 = R$ 5,99</b><br>
+        Tarifas sujeitas a disponibilidade até a emissão<br>
+        <b>*Nada reservado, apenas cotado</b>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><span class="sep">·</span>
+    <span>Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+</body>
+</html>

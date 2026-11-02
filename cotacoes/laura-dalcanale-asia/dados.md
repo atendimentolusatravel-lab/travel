@@ -32,3 +32,10 @@ Total previsto: 17 cotações, enviadas em lotes de 5.
 | 13 | GRU⇄CDG | Air France | AF459 / AF460 | 27 Dez 20:40 GRU → 28 Dez 11:50 CDG (359) | 21 Jan 10:25 CDG → 21 Jan 18:25 GRU (359) | Exec O/O (1 pax) | 1 mala | 18.498,20 | USD 3.412,20 |
 | 14 | GRU⇄CDG | Air France | AF459 / AF460 | idem 13 | idem 13 | Econ Q/R (4 ADT) | STA, 1 mala, NDC | 39.917,32 | USD 7.363,20 |
 | 15 | CDG⇄HND | ANA | NH216 / NH215 | 29 Dez 18:40 CDG → 30 Dez 16:10 HND (789) | 19 Jan 09:50 HND → 19 Jan 16:30 CDG (789) | Econ K/K (4 ADT), 9 lug. | ECO, 1 mala | 29.733,16 | EUR 4.959,88 |
+
+## Lote 4 (02/11)
+
+| # | Etapa | Cia | Voos | Ida | Volta | Cabine/Classe | Família/Bag | R$ | Moeda |
+|---|---|---|---|---|---|---|---|---|---|
+| 16 | CDG⇄HND | ANA | NH216 / NH215 | 29 Dez 18:40 CDG → 30 Dez 16:10 HND (789) | 19 Jan 09:50 HND → 19 Jan 16:30 CDG (789) | Exec Z/P (5 pax = 25.332,45/pax), 9/9 lug. | BIZ, 2 malas | 126.662,25 | EUR 21.128,85 |
+| 17 | CDG⇄HND | ANA | NH216 / NH215 | idem 16 | idem 16 | Exec P/P (1 pax), 3 lug. ida / 9 volta | BIZ, 2 malas | 23.889,21 | EUR 3.985,02 |
