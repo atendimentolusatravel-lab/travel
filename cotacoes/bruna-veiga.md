@@ -377,3 +377,7 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 |---|---|---|---|---|
 | InterContinental New York Barclay by IHG | Midtown East, perto da Grand Central | Clássico | Café da manhã | R$ 17.300,00 |
 | Courtyard by Marriott Manhattan/Midtown East | Midtown East, 3rd Ave | King com sofá-cama | Café da manhã | R$ 15.575,00 |
+
+### Krabi (03 → 08/01, 5 noites)
+
+- Escolhido pela agente: **Aonang Villa Resort** (Ao Nang, de frente para a praia). Aguardando quarto, regime, cancelamento e valor.
