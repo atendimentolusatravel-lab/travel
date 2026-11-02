@@ -368,3 +368,12 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 
 
 **Fora do total:** hotéis e aéreo (tratados à parte), seguro viagem (estimativa em R$ 1.500 a 2.500, a cotar) e envio de bagagem (não recomendado para as compras).
+
+## Recotação (roteiro novo, 02/11)
+
+### Nova York (21 → 25/12, confirmar 4 ou 5 noites)
+
+| Hotel | Região | Quarto | Regime | Valor |
+|---|---|---|---|---|
+| InterContinental New York Barclay by IHG | Midtown East, perto da Grand Central | Clássico | Café da manhã | R$ 17.300,00 |
+| Courtyard by Marriott Manhattan/Midtown East | Midtown East, 3rd Ave | King com sofá-cama | Café da manhã | R$ 15.575,00 |
