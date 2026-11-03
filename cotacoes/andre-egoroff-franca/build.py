@@ -177,14 +177,14 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Transporte</span>
     <h2>Carro</h2>
     <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">Retirada em Lyon e devolução no aeroporto Charles de Gaulle. Valor em <b>BRL</b>, total da locação. Parcelável em <b>até 5x</b>.</p>
+    <p class="note" style="margin-top:16px">Retirada em Lyon em <b>11/01</b> e devolução no aeroporto Charles de Gaulle em <b>16/01</b>. Valor em <b>BRL</b>, total da locação. Parcelável em <b>até 5x</b>.</p>
     <div class="svc">
       <div class="ic">{CAR}</div>
       <div><div class="t">Europcar · Peugeot 5008 ou similar · 7 lugares (5+2)</div>
         <div class="d">
           <ul class="incl">
             <li>Câmbio <b>automático</b>, ar-condicionado, 5 portas · categoria Standard (SVAR)</li>
-            <li>Retirada em <b>Lyon</b> · devolução no <b>aeroporto Paris Charles de Gaulle</b></li>
+            <li>Retirada em <b>Lyon</b> em <b>11/01/2027</b> · devolução no <b>aeroporto Paris Charles de Gaulle</b> em <b>16/01/2027</b> · 5 diárias</li>
             <li>Inclui proteção contra roubo (THW) e contra colisão (CDW)</li>
             <li>Cancelamento grátis até <b>07/01/2027</b></li>
           </ul>
@@ -206,8 +206,8 @@ html = f"""<!DOCTYPE html>
       <tr class="sec-row"><td colspan="3">Chegada · 10/01–11/01/2027 · 1 noite</td></tr>
       <tr><td><b>{LYON["nome"]}</b><div class="rm">€ {LYON["euros"]} × 6,45</div></td><td>{LYON["quartos"]} · café da manhã</td><td class="v">R$ {LYON["valor"]}</td></tr>
 {tabela}
-      <tr class="sec-row"><td colspan="3">Carro · Lyon → aeroporto CDG</td></tr>
-      <tr><td><b>Europcar · Peugeot 5008</b><div class="rm">7 lugares · automático</div></td><td>Proteção contra roubo e colisão · cancelamento grátis até 07/01/2027</td><td class="v">R$ {CARRO["valor"]}</td></tr>
+      <tr class="sec-row"><td colspan="3">Carro · Lyon → aeroporto CDG · 11/01–16/01/2027</td></tr>
+      <tr><td><b>Europcar · Peugeot 5008</b><div class="rm">7 lugares · automático</div></td><td>Retirada 11/01 em Lyon · devolução 16/01 no aeroporto CDG · proteção contra roubo e colisão · cancelamento grátis até 07/01/2027</td><td class="v">R$ {CARRO["valor"]}</td></tr>
     </table></div>
 
     <div class="flval"><span class="lbl">Total estimado (2 quartos + carro)</span><div class="amt"><div class="t">R$ {brl(TMIN)} – {brl(TMAX)}</div><div class="p">hospedagem em 4 cidades + carro</div></div></div>
