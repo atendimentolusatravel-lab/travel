@@ -548,3 +548,12 @@ Regra do material: não colocar "reserve agora, pague depois" nos passeios.
 | **Total dos traslados** | | | **R$ 3.965,29** |
 
 Traslado ao Nopparat Café (05/01): curto, por conta (Grab).
+
+
+### Opcional: caiaque em Krabi (print da agente, ×1,15 ×1,12)
+
+| Data | Passeio | Detalhes | Valor print | Valor final |
+|---|---|---|---|---|
+| 07/01 | Krabi, Railay e Phra Nang: Caiaque na Praia e Plâncton Luminoso | 17h00, 3 h, guia em inglês, busca em Krabi/Ao Nang, cancelamento grátis até 06/01. 2 adultos | R$ 972,44 | R$ 1.252,50 (6x 208,75 / Pix 1.127,25) |
+
+Atenção: confirmar se o bebê pode ir no caiaque (normalmente não aceitam bebê de 7 meses). Se não puder, alguém fica com ele ou o passeio é para um dos dois.
