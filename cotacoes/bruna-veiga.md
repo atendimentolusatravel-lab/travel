@@ -476,3 +476,11 @@ Duas opções no material: **Tavern on the Green** e **The Russian Tea Room**. V
 ### Fora da cotação
 
 - eSIM (retirado a pedido da agente).
+
+### Barcos
+
+| Data | Trecho | Horário | Valor |
+|---|---|---|---|
+| 08/01 | Píer de Klong Jilad (Krabi) → praia de Laem Tong (Phi Phi) | 12h30 → 14h00 | US$ 84 × 5,67 = R$ 476,28 · +15% · +12% = **R$ 613,45** (6x de R$ 102,24 ou R$ 552,10 no Pix) |
+
+Atenção: o píer de Klong Jilad fica na cidade de Krabi, a cerca de 30 a 40 min de Ao Nang (precisa de traslado). O barco desembarca em Laem Tong, no norte de Phi Phi: confirmar se o hotel escolhido em Phi Phi fica em Laem Tong ou em Tonsai.
