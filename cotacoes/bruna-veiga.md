@@ -375,7 +375,7 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 
 | Hotel | Região | Quarto | Regime | Valor |
 |---|---|---|---|---|
-| InterContinental New York Barclay by IHG | Midtown East, perto da Grand Central | Clássico | Café da manhã | R$ 17.300,00 |
+| Park South Hotel, part of JdV by Hyatt | NoMad / Gramercy (East 28th St) | 2 camas de casal | Café da manhã | R$ 15.082,00 |
 | Courtyard by Marriott Manhattan/Midtown East | Midtown East, 3rd Ave | Standard com cama extra | Café da manhã | R$ 15.037,00 |
 
 ### Krabi (03 → 08/01, 5 noites)
