@@ -489,3 +489,20 @@ Duas opções no material: **Tavern on the Green** e **The Russian Tea Room**. V
 Atenção: o píer de Klong Jilad fica na cidade de Krabi, a cerca de 30 a 40 min de Ao Nang (precisa de traslado).
 
 **Trocar o desembarque para o píer de Tonsai.** Os dois hotéis de Phi Phi ficam perto de Tonsai: o Chaokoh fica a uns 300 a 500 m do píer (cerca de 5 min a pé) e o CoCo Beach na baía de Tonsai, a oeste do píer. Laem Tong fica no norte da ilha, a 30 a 40 min de barco. A volta (10/01) também sai de Tonsai.
+
+### Fotógrafos (pesquisa online, valor final = US$ × 5,67 + 15% + 12%)
+
+| Local | Opção | Preço | Valor final |
+|---|---|---|---|
+| NYC (24/12) | Flytographer 1 h (35 fotos, até 5 dias úteis) | US$ 425 | R$ 3.103,76 |
+| NYC | Flytographer 30 min (20 fotos) | US$ 325 | R$ 2.373,46 |
+| NYC | Airbnb Veronika 30 min (Rockefeller) | US$ 300 o casal | R$ 2.190,89 |
+| NYC | Airbnb Veronika 1 h | US$ 500 o casal | R$ 3.651,48 |
+| Chiang Mai (fim da tarde 31/12, na cidade) | Airbnb Birdy & friends 1 h (70 a 100 fotos) | US$ 92 o grupo | R$ 671,87 |
+| Chiang Mai | Airbnb 416980 1 h (foto ou vídeo) | US$ 65 o grupo | R$ 474,69 |
+| Chiang Mai | Flytographer 1 h | US$ 425 | R$ 3.103,76 |
+| Krabi | Pelago Holiday Travel Photoshoot 2 h (até 120 fotos, 7 a 14 dias) | US$ 325,46 | R$ 2.376,82 |
+| Krabi | Pelago pôr do sol Ao Nang / Klong Muang | US$ 228,98 | R$ 1.672,23 |
+| Phi Phi | Lokalee, fotos no barco de cauda longa | US$ 707 | R$ 5.163,19 |
+
+Fotógrafo no CAD exigiria ingresso extra e transporte: sessão recomendada na cidade, antes do evento.
