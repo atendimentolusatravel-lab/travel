@@ -530,3 +530,21 @@ Fotógrafo no CAD exigiria ingresso extra e transporte: sessão recomendada na c
 | 05/01 | Krabi: Viagem de 1 Dia de Barco de Cauda Longa a 4 Ilhas (passeio particular, até 12 pessoas) | Saída às 12h30 do Nopparat Café, 6 h. Ilha Hong, Koh Lao Lading, Ilha Pakbia e Lagoa Hong, com paradas opcionais em Railay, Phra Nang, Thale Waek, Poda e Ilha da Galinha. Cancelamento grátis até 04/01. Não inclui traslado de ida e volta do hotel | R$ 1.171,96 | R$ 1.509,48 |
 
 Regra do material: não colocar "reserve agora, pague depois" nos passeios.
+
+### Pesquisa online: passeios e traslados que faltavam (valor final = US$ × 5,67 + 15% + 12%; euro convertido a 1,15; estimativas marcadas)
+
+| Item | Fonte / referência | Base | Valor final |
+|---|---|---|---|
+| Phi Phi (09/01): barco privativo de cauda longa, Maya Bay, Pileh Lagoon e Viking Cave, ~4 h, saída de Tonsai | Expedia / Musement | ~US$ 115 por pessoa (2 adultos) | R$ 1.679,68 |
+| Krabi: caiaque transparente (única opção achada: noturno, bioluminescência, Railay, 2 h) | AAA / Viator | US$ 36,50 por pessoa | R$ 533,12 |
+| Traslado Doha, chegada e saída | Lokalee (cadeirinha disponível) | US$ 46,86 por trecho | R$ 684,43 |
+| Traslado Bangkok, chegada e saída (minivan) | Suntransfers | € 51 por trecho | R$ 856,64 |
+| Traslado Chiang Mai, chegada e saída | Klook / Headout | € 29 por trecho | R$ 487,11 |
+| Traslado aeroporto de Krabi → Ao Nang (03/01) | JamTransfer | € 27 | R$ 226,76 |
+| Traslado Ao Nang → píer de Klong Jilad (08/01) | estimativa | ~US$ 25 | R$ 182,57 |
+| Traslado píer de Rassada → Kata (10/01) | estimativa | ~US$ 30 | R$ 219,09 |
+| Traslado Kata → aeroporto de Phuket (11/01) | estimativa | ~US$ 45 | R$ 328,63 |
+| Traslado Singapura, chegada e saída, com cadeirinha | Transfeero + Klook | US$ 56 por trecho + SGD 15 por cadeirinha | R$ 980,06 |
+| **Total dos traslados** | | | **R$ 3.965,29** |
+
+Traslado ao Nopparat Café (05/01): curto, por conta (Grab).
