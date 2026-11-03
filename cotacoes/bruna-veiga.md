@@ -563,3 +563,11 @@ Atenção: confirmar se o bebê pode ir no caiaque (normalmente não aceitam beb
 | Data | Passeio | Detalhes | Valor print | Valor final |
 |---|---|---|---|---|
 | 11/01 | Singapura: Supertree, OCBC Skyway, Cúpula das Flores e Floresta das Nuvens | 9h às 21h, inclui Garden Rhapsody; não inclui Floral Fantasy e Teatro IMBA. Bebê R$ 0. Cancelamento grátis até 10/01 | R$ 797,32 | R$ 1.026,95 (6x 171,16 / Pix 924,26) |
+
+### Phi Phi 09/01: barco privativo (print da agente, ×1,15 ×1,12) — substitui a estimativa de R$ 1.679,68
+
+| Data | Passeio | Detalhes | Valor print | Valor final |
+|---|---|---|---|---|
+| 09/01 | Passeio privativo de barco tailandês em Phi Phi: Maya Bay, Lagoa de Pileh e snorkel (4 h) | Saída 06h15 ou 15h00 do The Coffee Club (Tonsai). Maya Bay 1 h, Pileh, Monkey Bay, Loh Samah, Viking Cave. Inclui capitão, snorkel, coletes, água, frutas. Não inclui taxa do parque (400 THB/adulto) nem traslado. Cancelamento grátis até 08/01 | R$ 752,80 | R$ 969,61 (6x 161,60 / Pix 872,65) |
+
+Novo total de serviços: R$ 35.748,39 (6x 5.958,06 / Pix 32.173,55).
