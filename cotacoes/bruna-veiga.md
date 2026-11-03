@@ -451,3 +451,12 @@ Confirmar se o valor é das 2 noites e como fica o quarto até a saída de madru
 | Phuket | 1.955,00 | 1.985,00 |
 | Singapura | 1.204,00 | 2.075,00 |
 | **Total** | **47.816,00** | **59.369,00** |
+
+### Seguro viagem (datas novas: 20/12 → 14/01)
+
+Cobertura mundial, cancelamento por 21 motivos, 2 adultos e 1 bebê. Substitui as opções anteriores (Diamante e Max).
+
+| Plano | Despesas médicas e hospitalares (DMH) | Valor |
+|---|---|---|
+| Plano Max · mundial | US$ 80.000 | R$ 2.804,26 (US$ 513,60) |
+| Plano Full · mundial | US$ 100.000 | R$ 3.289,10 (US$ 602,40) |
