@@ -382,3 +382,4 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 
 - **Aonang Villa Resort** (Ao Nang, de frente para a praia): Grand Superior Sea View, café da manhã, **R$ 20.235,00** (cerca de R$ 4.047 por noite). Confirmar cancelamento e berço.
 - **Avani Ao Nang Cliff Krabi Resort** (Ao Nang, na encosta do morro no fim da praia): Avani Sea View Room, café da manhã, **R$ 14.800,00** (cerca de R$ 2.960 por noite). Confirmar cancelamento e berço.
+  - **Observação para a cliente:** o hotel fica na encosta do morro, no fim da praia de Ao Nang. A vista do alto é bonita, mas a ida até a areia e até os barcos é um pouco maior e o terreno tem ladeira. Confirmar se há elevador ou carrinho elétrico até os quartos e se dá para circular com carrinho de bebê.
