@@ -428,3 +428,26 @@ Confirmar com os dois: distância do píer de Tonsai e como é o traslado (a ilh
 | Sugar Marina Hotel – POP – Kata Beach | Kata | Premier quádruplo | Café da manhã | R$ 1.955,00 |
 
 Kata fica no sul da ilha: cerca de 45 min do píer de Rassada (chegada do barco de Phi Phi) e cerca de 1h a 1h15 do aeroporto. Perto do Big Buddha e do Promthep Cape. Conferir o horário do voo para Singapura em 11/01.
+
+### Singapura (11 → 13/01, 2 noites, quarto até a noite do dia 13)
+
+| Hotel | Região | Quarto | Regime | Valor |
+|---|---|---|---|---|
+| Novotel Singapore Robertson Quay | Robertson Quay, beira do rio | Superior, 1 cama de casal | Café da manhã | R$ 1.204,00 |
+| 21 Carpenter, a Member of Design Hotels | Clarke Quay / Boat Quay | Urban Luxe, cama king | Café da manhã | R$ 2.075,00 |
+
+Confirmar se o valor é das 2 noites e como fica o quarto até a saída de madrugada (late checkout, diária de uso ou noite extra de 13/01).
+
+### Resumo dos hotéis (roteiro novo)
+
+| Cidade | Opção mais barata | Opção mais cara |
+|---|---|---|
+| Nova York | 15.037,00 | 15.082,00 |
+| Doha | 2.445,00 | 3.085,00 |
+| Bangkok | 5.750,00 | 5.850,00 |
+| Chiang Mai | 4.325,00 | 5.857,00 |
+| Krabi | 14.800,00 | 20.235,00 |
+| Phi Phi | 2.300,00 | 5.200,00 |
+| Phuket | 1.955,00 | 1.985,00 |
+| Singapura | 1.204,00 | 2.075,00 |
+| **Total** | **47.816,00** | **59.369,00** |
