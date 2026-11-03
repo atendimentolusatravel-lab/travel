@@ -392,3 +392,12 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 | Banyan Tree Doha at La Cigale Mushaireb | Msheireb | Urban Retreat | Café da manhã | R$ 2.445,00 |
 
 Chegada às 06h40 de 26/12: pedir check-in antecipado.
+
+### Bangkok (28 → 31/12, 3 noites)
+
+| Hotel | Região | Quarto | Regime | Valor |
+|---|---|---|---|---|
+| Novotel Bangkok On Siam Square | Siam, ao lado do metrô de superfície (BTS Siam) | Superior Queen | Café da manhã | R$ 5.850,00 |
+| Sindhorn Midtown Hotel Bangkok, Vignette Collection by IHG | Lang Suan / Ploenchit, perto do Parque Lumpini | Standard King | Café da manhã | R$ 5.750,00 |
+
+Os dois ficam no centro comercial (Siam e Ratchaprasong), não na beira do rio. Funciona para o roteiro novo, que não tem mais o Grande Palácio. Chinatown fica a cerca de 20 a 30 min de táxi. Confirmar tamanho do quarto e berço.
