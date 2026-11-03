@@ -460,3 +460,9 @@ Cobertura mundial, cancelamento por 21 motivos, 2 adultos e 1 bebê. Substitui a
 |---|---|---|
 | Plano Max · mundial | US$ 80.000 | R$ 2.804,26 (US$ 513,60) |
 | Plano Full · mundial | US$ 100.000 | R$ 3.289,10 (US$ 602,40) |
+
+### Voos internos (roteiro novo)
+
+| Data | Trecho | Voo | Horário | Bagagem | Valor (família) |
+|---|---|---|---|---|---|
+| 31/12 | Bangkok (BKK) → Chiang Mai (CNX) | Thai VietJet Air VZ 102 (A320) | 10h25 → 11h50 (1h25) | 30 kg incluída | R$ 3.942,00 (6x de R$ 657,00 ou R$ 3.547,80 no Pix) |
