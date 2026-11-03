@@ -465,4 +465,4 @@ Cobertura mundial, cancelamento por 21 motivos, 2 adultos e 1 bebê. Substitui a
 
 | Data | Trecho | Voo | Horário | Bagagem | Valor (família) |
 |---|---|---|---|---|---|
-| 31/12 | Bangkok (BKK) → Chiang Mai (CNX) | Thai VietJet Air VZ 102 (A320) | 10h25 → 11h50 (1h25) | 30 kg incluída | R$ 3.942,00 (6x de R$ 657,00 ou R$ 3.547,80 no Pix) |
+| 31/12 | Bangkok (BKK) → Chiang Mai (CNX) | Thai VietJet Air VZ 102 (A320) | 10h25 → 11h50 (1h25) | 30 kg incluída | R$ 3.942,00 já com 15% · **final com +12%: R$ 4.415,04** (6x de R$ 735,84 ou R$ 3.973,54 no Pix) |
