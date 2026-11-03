@@ -419,3 +419,12 @@ Perguntar aos dois: jantar de réveillon obrigatório (eles estarão no CAD), ch
 | Phi Phi CoCo Beach Resort | Garden Double Villa | Café da manhã | R$ 5.200,00 |
 
 Confirmar com os dois: distância do píer de Tonsai e como é o traslado (a ilha não tem carros: a pé com carregador ou de barco), berço e cancelamento.
+
+### Phuket (10 → 11/01, 1 noite)
+
+| Hotel | Região | Quarto | Regime | Valor |
+|---|---|---|---|---|
+| Katathani Phuket Beach Resort | Kata Noi, de frente para a praia | Grand Deluxe (Bhuri Wing) | Café da manhã | R$ 1.985,00 |
+| Sugar Marina Hotel – POP – Kata Beach | Kata | Premier quádruplo | Café da manhã | R$ 1.955,00 |
+
+Kata fica no sul da ilha: cerca de 45 min do píer de Rassada (chegada do barco de Phi Phi) e cerca de 1h a 1h15 do aeroporto. Perto do Big Buddha e do Promthep Cape. Conferir o horário do voo para Singapura em 11/01.
