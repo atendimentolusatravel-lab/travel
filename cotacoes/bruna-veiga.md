@@ -467,3 +467,4 @@ Cobertura mundial, cancelamento por 21 motivos, 2 adultos e 1 bebê. Substitui a
 |---|---|---|---|---|---|
 | 31/12 | Bangkok (BKK) → Chiang Mai (CNX) | Thai VietJet Air VZ 102 (A320) | 10h25 → 11h50 (1h25) | 30 kg incluída | R$ 3.942,00 já com 15% · **final com +12%: R$ 4.415,04** (6x de R$ 735,84 ou R$ 3.973,54 no Pix) |
 | 03/01 | Chiang Mai (CNX) → Krabi (KBV) | AirAsia | 17h05 → 19h05, direto | Confirmar (30 kg?) | R$ 5.850,00 já com 15% · **final com +12%: R$ 6.552,00** (6x de R$ 1.092,00 ou R$ 5.896,80 no Pix) |
+| 11/01 | Phuket (HKT) → Singapura (SIN) | Scoot TR 659 (B787-8) | 10h40 → 13h50 (2h10) | 30 kg por adulto | R$ 1.907,00 + R$ 600,00 = 2.507,00 · +15% · +12% = **R$ 3.229,02** (6x de R$ 538,17 ou R$ 2.906,11 no Pix) |
