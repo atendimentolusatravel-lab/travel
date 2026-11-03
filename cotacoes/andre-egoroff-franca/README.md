@@ -1,4 +1,4 @@
-# André Egoroff · Borgonha & Champagne (10 a 16/01/2027)
+# André Egoroff · Lyon, Borgonha & Champagne (10 a 16/01/2027)
 
 - **Publicado:** https://cotacao-andre-egoroff-franca.vercel.app (projeto Vercel `cotacao-andre-egoroff-franca`, 03/11/2026).
 - **Fontes (03/11/2026):** `fonte/hoteis.png` (hotéis em BRL, 2 quartos: 1 duplo + 1 triplo; Beaune 11–13/01/2027 confirmado),

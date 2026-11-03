@@ -126,7 +126,7 @@ html = f"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lusa Travel · Borgonha &amp; Champagne — André Egoroff</title>
+<title>Lusa Travel · Lyon, Borgonha &amp; Champagne — André Egoroff</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -139,7 +139,7 @@ html = f"""<!DOCTYPE html>
 
   <header class="hero">
     <div class="eyebrow">Cotação para sua viagem</div>
-    <h1>BORGONHA <span class="amp">&amp;</span> CHAMPAGNE</h1>
+    <h1>LYON, BORGONHA <span class="amp">&amp;</span> CHAMPAGNE</h1>
     <div class="accent-line"></div>
     <p class="hero-sub"><b>André Egoroff</b> · Lyon · Beaune · Reims · Paris — <b>10 a 16 de janeiro de 2027</b></p>
 
@@ -175,7 +175,7 @@ html = f"""<!DOCTYPE html>
     <p class="note" style="margin-top:16px">Na ordem da viagem, valores em reais pelo <b>total da estada</b>. Em <b>Lyon</b>, cotação para o <b>grupo de 11 hóspedes</b> (5 quartos); em <b>Beaune, Reims e Paris</b>, para os <b>2 quartos</b> da família (1 duplo + 1 triplo), todos com café da manhã. <b>Escolher 1 opção por cidade.</b> Parcelável em <b>até 10x</b>.</p>
 
     <div class="city-block">
-      <div class="city-head"><h3>Chegada</h3><span class="dates">{LYON["loc"].upper()}</span></div>
+      <div class="city-head"><h3>Chegada em Lyon</h3><span class="dates">{LYON["loc"].upper()}</span></div>
       <div class="hgrid">
         <div class="hotel"><div class="hotel-top"><div class="hotel-name">{BLDG}<span>{LYON["nome"]} <span class="loc2">· noite de 10 de janeiro</span></span></div><div class="hotel-price"><div class="v">R$ {LYON["valor"]}</div><div class="u">€ {LYON["euros"]} · 5 quartos · 11 hóspedes</div></div></div><div class="hotel-room"><b>Grupo de 11 hóspedes · 5 quartos</b><ul style="margin:6px 0 0 18px">{lyon_lista}</ul></div><span class="bf">Café nos quartos 1 e 5</span></div>
       </div>
@@ -215,7 +215,7 @@ html = f"""<!DOCTYPE html>
 
     <div class="tbl-wrap"><table>
       <tr class="head-row"><td>Item</td><td>Detalhe</td><td class="v">Valor</td></tr>
-      <tr class="sec-row"><td colspan="3">Chegada · 10/01–11/01/2027 · 1 noite · grupo de 11 hóspedes · € {LYON["euros"]} = R$ {LYON["valor"]}</td></tr>
+      <tr class="sec-row"><td colspan="3">Chegada em Lyon · 10/01–11/01/2027 · 1 noite · grupo de 11 hóspedes · € {LYON["euros"]} = R$ {LYON["valor"]}</td></tr>
 {lyon_rows}
 {tabela}
       <tr class="sec-row"><td colspan="3">Carro · Lyon → aeroporto CDG · 11/01–16/01/2027</td></tr>
@@ -223,7 +223,7 @@ html = f"""<!DOCTYPE html>
     </table></div>
 
     <div class="flval"><span class="lbl">Total estimado (hospedagem + carro)</span><div class="amt"><div class="t">R$ {brl(TMIN)} – {brl(TMAX)}</div><div class="p">hospedagem em 4 cidades + carro</div></div></div>
-    <p class="note"><b>Como é calculado:</b> chegada, grupo de 11 (R$ {LYON["valor"]}) + {calc} + carro (R$ {CARRO["valor"]}). O valor final depende dos hotéis escolhidos.</p>
+    <p class="note"><b>Como é calculado:</b> chegada em Lyon, grupo de 11 (R$ {LYON["valor"]}) + {calc} + carro (R$ {CARRO["valor"]}). O valor final depende dos hotéis escolhidos.</p>
 
     <div class="pay">
       <div class="box">
