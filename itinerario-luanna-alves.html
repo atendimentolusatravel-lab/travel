@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="LusaTravel — itinerário de voos de Luanna Alves: Brasil, Catar, Quênia, Tanzânia e Seicheles, de 30 de novembro a 11 de dezembro de 2026.">
+<title>Itinerário Luanna Alves</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
+<style>
+/* ─── LUSATRAVEL · DESIGN SYSTEM TOKENS ─────────────────── */
+:root{
+  --gold:#da8d00; --gold-hi:#f0a010;
+  --ink:#1a1510; --char:#333131; --mut:#8a7d70;
+  --line:#e4ddd2; --paper:#faf7f2; --surf:#fff; --surf2:#f2ece3;
+  --dest:#7a3410;            /* terracota · savana africana */
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+  --mx:1080px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#f0e8de; --char:#d9cec1; --mut:#9a8b7c;
+    --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+    --gold:#e8a210; --gold-hi:#ffc030; --dest:#d0763f;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#f0e8de; --char:#d9cec1; --mut:#9a8b7c;
+  --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+  --gold:#e8a210; --gold-hi:#ffc030; --dest:#d0763f;
+}
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  background:var(--paper); color:var(--char);
+  font-family:var(--sans); font-weight:400;
+  font-size:15px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+.wrap{ max-width:var(--mx); margin:0 auto; padding:0 28px; }
+
+/* ─── CAPA ───────────────────────────────────────────────── */
+.mh{ background:#1a1510; padding:56px 0 44px; position:relative; }
+.mh::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.mh-logo{ font-family:var(--con); font-weight:600; font-size:13px; letter-spacing:.34em; text-transform:uppercase; color:#da8d00; }
+.mh-kick{ margin-top:26px; font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:rgba(240,232,222,.55); }
+.mh-name{ margin-top:10px; font-weight:700; font-size:clamp(28px,5.2vw,46px); line-height:1.06; color:#fff; text-transform:uppercase; text-wrap:balance; }
+.mh-dest{ margin-top:8px; font-weight:600; font-size:clamp(16px,2.3vw,21px); color:#f0a010; }
+.mh-sub{ margin-top:14px; max-width:60ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.68); }
+.mh-stats{ margin-top:32px; display:flex; flex-wrap:wrap; border-top:1px solid rgba(240,232,222,.14); }
+.mh-stat{ padding:18px 30px 4px 0; margin-right:30px; border-right:1px solid rgba(240,232,222,.12); }
+.mh-stat:last-child{ border-right:0; }
+.mh-stat .v{ font-weight:700; font-size:24px; color:#fff; line-height:1; font-variant-numeric:tabular-nums; }
+.mh-stat .k{ margin-top:7px; font-size:9.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+
+/* ─── SEÇÕES ─────────────────────────────────────────────── */
+.sec{ padding:52px 0; }
+.sec + .sec{ border-top:1px solid var(--line); }
+.eyebrow{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; text-wrap:balance; }
+.lead{ margin-top:10px; max-width:68ch; font-weight:300; font-size:15px; }
+
+/* ─── ROTA ───────────────────────────────────────────────── */
+.route{ margin-top:26px; display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+@media (max-width:820px){ .route{ grid-template-columns:repeat(2,1fr); } }
+.stop{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--dest); padding:15px 16px 14px; }
+.stop.cx{ border-top-color:var(--mut); background:var(--surf2); }
+.stop-n{ font-family:var(--lbl); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); }
+.stop-city{ margin-top:6px; font-weight:600; font-size:16.5px; color:var(--ink); line-height:1.2; }
+.stop-ctry{ font-size:12.5px; color:var(--dest); font-weight:500; }
+.stop-meta{ margin-top:8px; font-size:12px; font-weight:300; color:var(--char); }
+
+/* ─── VOOS ───────────────────────────────────────────────── */
+.legs{ margin-top:28px; display:flex; flex-direction:column; gap:16px; }
+.leg{ background:var(--surf); border:1px solid var(--line); }
+.leg-hd{ display:flex; flex-wrap:wrap; align-items:center; gap:8px 16px; padding:13px 20px; border-bottom:1px solid var(--line); background:var(--surf2); }
+.leg-no{ display:inline-flex; align-items:center; justify-content:center; min-width:28px; height:28px; padding:0 8px; background:var(--dest); color:#fff; font-weight:700; font-size:12.5px; }
+.leg-date{ font-family:var(--lbl); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink); }
+.leg-fl{ margin-left:auto; font-size:13px; color:var(--char); }
+.leg-fl b{ font-weight:600; color:var(--ink); }
+.leg-body{ display:grid; grid-template-columns:1fr 92px 1fr; gap:14px; padding:18px 20px 16px; align-items:start; }
+.pt-tag{ font-size:9.5px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); }
+.pt-time{ margin-top:4px; font-weight:700; font-size:26px; line-height:1; color:var(--ink); font-variant-numeric:tabular-nums; }
+.pt-time small{ font-size:12px; font-weight:500; color:var(--mut); margin-left:4px; }
+.pt-iata{ display:inline-block; margin-top:8px; font-family:var(--lbl); font-size:11px; letter-spacing:.08em; padding:2px 7px; border:1px solid var(--line); color:var(--dest); }
+.pt-city{ margin-top:6px; font-weight:600; font-size:15px; color:var(--ink); line-height:1.25; }
+.pt-air{ font-size:12.5px; font-weight:300; color:var(--char); }
+.pt-term{ font-size:12px; color:var(--mut); }
+.mid{ text-align:center; padding-top:20px; }
+.mid .dur{ font-size:12px; font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums; }
+.mid .ln{ margin:6px auto; height:1px; background:var(--line); position:relative; }
+.mid .ln::after{ content:''; position:absolute; right:-1px; top:-3px; border:3.5px solid transparent; border-left:6px solid var(--mut); }
+.mid .ac{ font-size:10.5px; color:var(--mut); }
+.leg-ft{ display:flex; flex-wrap:wrap; gap:6px 22px; padding:10px 20px 12px; border-top:1px dashed var(--line); font-size:12px; color:var(--char); }
+.leg-ft span b{ font-weight:600; color:var(--ink); }
+
+.gap{ display:flex; gap:12px; align-items:flex-start; padding:12px 18px; border-left:3px solid var(--gold); background:var(--surf2); font-size:13px; color:var(--char); }
+.gap b{ color:var(--ink); font-weight:600; }
+.gap.stay{ border-left-color:var(--dest); }
+
+/* ─── TABELA RESUMO ──────────────────────────────────────── */
+.tbl-wrap{ margin-top:24px; overflow-x:auto; border:1px solid var(--line); background:var(--surf); }
+table{ width:100%; border-collapse:collapse; font-size:13px; min-width:760px; }
+th{ text-align:left; font-size:9.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--mut); padding:11px 12px; border-bottom:1px solid var(--line); background:var(--surf2); }
+td{ padding:11px 12px; border-bottom:1px solid var(--line); vertical-align:top; color:var(--char); }
+tr:last-child td{ border-bottom:0; }
+td b{ color:var(--ink); font-weight:600; }
+td .s{ display:block; font-size:11.5px; color:var(--mut); }
+.num{ font-variant-numeric:tabular-nums; white-space:nowrap; }
+
+/* ─── ORIENTAÇÕES ────────────────────────────────────────── */
+.tips{ margin-top:24px; display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+@media (max-width:720px){ .tips{ grid-template-columns:1fr; } }
+.tip{ background:var(--surf); border:1px solid var(--line); padding:18px 20px; }
+.tip h3{ font-size:14.5px; font-weight:600; color:var(--ink); }
+.tip p, .tip li{ margin-top:6px; font-size:13.5px; font-weight:300; }
+.tip ul{ padding-left:18px; }
+.tip b{ font-weight:600; color:var(--ink); }
+.tip.warn{ border-top:3px solid var(--gold); }
+
+/* ─── RODAPÉ ─────────────────────────────────────────────── */
+.ft{ background:#1a1510; padding:42px 0 38px; position:relative; }
+.ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
+.ft-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#da8d00; }
+.ft-sig{ margin-top:16px; display:flex; flex-wrap:wrap; gap:10px 34px; font-family:var(--con); font-size:13px; }
+.ft-sig a{ color:rgba(240,232,222,.75); text-decoration:none; border-bottom:1px solid rgba(218,141,0,.5); }
+.ft-sig a:hover{ color:#da8d00; }
+.ft-addr{ margin-top:14px; font-family:var(--con); font-size:11.5px; color:rgba(240,232,222,.42); }
+.ft-note{ margin-top:10px; font-size:11px; color:rgba(240,232,222,.42); max-width:80ch; }
+
+@media (max-width:640px){
+  .wrap{ padding:0 16px; }
+  .leg-body{ grid-template-columns:1fr; gap:10px; }
+  .mid{ text-align:left; padding-top:0; display:flex; gap:10px; align-items:center; }
+  .mid .ln{ display:none; }
+  .leg-fl{ margin-left:0; width:100%; }
+  .mh-stat{ padding-right:18px; margin-right:18px; }
+}
+@media print{
+  body{ background:#fff; font-size:12px; }
+  .leg, .stop, .tip{ break-inside:avoid; }
+  .sec{ padding:28px 0; }
+}
+</style>
+</head>
+<body>
+
+<header class="mh">
+  <div class="wrap">
+    <div class="mh-logo">LusaTravel</div>
+    <div class="mh-kick">Itinerário de voos</div>
+    <h1 class="mh-name">Luanna Alves</h1>
+    <div class="mh-dest">Catar · Quênia · Tanzânia · Seicheles</div>
+    <p class="mh-sub">Saídas e chegadas em cada aeroporto, com cidade, país, terminal e horário local. Viagem com Eduardo Henrique de Prospero Amui.</p>
+    <div class="mh-stats">
+      <div class="mh-stat"><div class="v">30/11 – 11/12</div><div class="k">2026</div></div>
+      <div class="mh-stat"><div class="v">7</div><div class="k">Voos</div></div>
+      <div class="mh-stat"><div class="v">5</div><div class="k">Países</div></div>
+      <div class="mh-stat"><div class="v">2</div><div class="k">Viajantes</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════ ROTA ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Rota</div>
+    <h2 class="h2">De São Paulo a Seicheles, com conexões em Doha</h2>
+    <div class="route">
+      <div class="stop"><div class="stop-n">Partida · 30 nov</div><div class="stop-city">São Paulo</div><div class="stop-ctry">Brasil</div><div class="stop-meta">Guarulhos (GRU)</div></div>
+      <div class="stop cx"><div class="stop-n">Conexão · 01 dez</div><div class="stop-city">Doha</div><div class="stop-ctry">Catar</div><div class="stop-meta">Hamad (DOH) · 3h00</div></div>
+      <div class="stop"><div class="stop-n">02 dez</div><div class="stop-city">Nairóbi</div><div class="stop-ctry">Quênia</div><div class="stop-meta">Chegada de madrugada · 1 noite</div></div>
+      <div class="stop"><div class="stop-n">02 a 05 dez</div><div class="stop-city">Arusha</div><div class="stop-ctry">Tanzânia</div><div class="stop-meta">3 noites</div></div>
+      <div class="stop"><div class="stop-n">05 a 06 dez</div><div class="stop-city">Nairóbi</div><div class="stop-ctry">Quênia</div><div class="stop-meta">1 noite</div></div>
+      <div class="stop"><div class="stop-n">06 a 10 dez</div><div class="stop-city">Mahé</div><div class="stop-ctry">Seicheles</div><div class="stop-meta">4 noites</div></div>
+      <div class="stop cx"><div class="stop-n">Conexão · 10–11 dez</div><div class="stop-city">Doha</div><div class="stop-ctry">Catar</div><div class="stop-meta">Hamad (DOH) · 3h40</div></div>
+      <div class="stop"><div class="stop-n">Chegada · 11 dez</div><div class="stop-city">São Paulo</div><div class="stop-ctry">Brasil</div><div class="stop-meta">Guarulhos (GRU)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ VOO A VOO ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Voo a voo</div>
+    <h2 class="h2">Saídas e chegadas</h2>
+    <p class="lead">Todos os horários estão no <b>horário local</b> de cada aeroporto. A duração considera a diferença de fuso.</p>
+
+    <div class="legs">
+
+      <!-- 1 -->
+      <article class="leg">
+        <div class="leg-hd"><span class="leg-no">1</span><span class="leg-date">Seg, 30 nov 2026</span><span class="leg-fl"><b>Qatar Airways QR 780</b> · Executiva · Airbus A350-1000</span></div>
+        <div class="leg-body">
+          <div><div class="pt-tag">Saída</div><div class="pt-time">20:25</div><span class="pt-iata">GRU</span><div class="pt-city">São Paulo · Brasil</div><div class="pt-air">Aeroporto Internacional de Guarulhos</div><div class="pt-term">Terminal 3</div></div>
+          <div class="mid"><div class="dur">13h35</div><div class="ln"></div><div class="ac">direto</div></div>
+          <div><div class="pt-tag">Chegada</div><div class="pt-time">16:00<small>01 dez</small></div><span class="pt-iata">DOH</span><div class="pt-city">Doha · Catar</div><div class="pt-air">Aeroporto Internacional Hamad</div></div>
+        </div>
+        <div class="leg-ft"><span>Assento Luanna <b>1F</b></span><span>Bagagem <b>2 peças despachadas</b></span></div>
+      </article>
+
+      <div class="gap"><span>⏱</span><span><b>Conexão em Doha (Catar) · 3h00.</b> Permanecer na área de trânsito do Aeroporto Hamad e seguir as placas “Transfer”.</span></div>
+
+      <!-- 2 -->
+      <article class="leg">
+        <div class="leg-hd"><span class="leg-no">2</span><span class="leg-date">Ter, 01 dez 2026</span><span class="leg-fl"><b>Qatar Airways QR 1341</b> · Executiva · Boeing 777-300ER</span></div>
+        <div class="leg-body">
+          <div><div class="pt-tag">Saída</div><div class="pt-time">19:00</div><span class="pt-iata">DOH</span><div class="pt-city">Doha · Catar</div><div class="pt-air">Aeroporto Internacional Hamad</div></div>
+          <div class="mid"><div class="dur">5h05</div><div class="ln"></div><div class="ac">direto</div></div>
+          <div><div class="pt-tag">Chegada</div><div class="pt-time">00:05<small>02 dez</small></div><span class="pt-iata">NBO</span><div class="pt-city">Nairóbi · Quênia</div><div class="pt-air">Aeroporto Internacional Jomo Kenyatta</div><div class="pt-term">Terminal 1A</div></div>
+        </div>
+        <div class="leg-ft"><span>Assento Luanna <b>3E</b></span><span>Bagagem <b>2 peças despachadas</b></span></div>
+      </article>
+
+      <div class="gap stay"><span>🛏</span><span><b>Pernoite em Nairóbi · Hilton Garden Inn Nairobi Airport</b> (Mombasa Road) · quarto King com café da manhã. Pela manhã, traslado para o <b>Aeroporto Wilson (WIL)</b> — é um aeroporto diferente do de chegada.</span></div>
+
+      <!-- 3 -->
+      <article class="leg">
+        <div class="leg-hd"><span class="leg-no">3</span><span class="leg-date">Qua, 02 dez 2026</span><span class="leg-fl"><b>H1 6425</b>, operado por Safarilink · Econômica · Dash 8</span></div>
+        <div class="leg-body">
+          <div><div class="pt-tag">Saída</div><div class="pt-time">07:15</div><span class="pt-iata">WIL</span><div class="pt-city">Nairóbi · Quênia</div><div class="pt-air">Aeroporto Wilson</div></div>
+          <div class="mid"><div class="dur">1h00</div><div class="ln"></div><div class="ac">direto</div></div>
+          <div><div class="pt-tag">Chegada</div><div class="pt-time">08:15</div><span class="pt-iata">ARK</span><div class="pt-city">Arusha · Tanzânia</div><div class="pt-air">Aeroporto de Arusha</div></div>
+        </div>
+        <div class="leg-ft"><span>Bagagem <b>15 kg despachados</b> (bolsa macia)</span></div>
+      </article>
+
+      <div class="gap stay"><span>🌿</span><span><b>Arusha · Tanzânia</b> — 3 noites, de 02 a 05 de dezembro.</span></div>
+
+      <!-- 4 -->
+      <article class="leg">
+        <div class="leg-hd"><span class="leg-no">4</span><span class="leg-date">Sáb, 05 dez 2026</span><span class="leg-fl"><b>H1 6427</b>, operado por Safarilink · Econômica · Dash 8</span></div>
+        <div class="leg-body">
+          <div><div class="pt-tag">Saída</div><div class="pt-time">14:40</div><span class="pt-iata">ARK</span><div class="pt-city">Arusha · Tanzânia</div><div class="pt-air">Aeroporto de Arusha</div></div>
+          <div class="mid"><div class="dur">1h00</div><div class="ln"></div><div class="ac">direto</div></div>
+          <div><div class="pt-tag">Chegada</div><div class="pt-time">15:40</div><span class="pt-iata">WIL</span><div class="pt-city">Nairóbi · Quênia</div><div class="pt-air">Aeroporto Wilson</div></div>
+        </div>
+        <div class="leg-ft"><span>Bagagem <b>15 kg despachados</b> (bolsa macia)</span></div>
+      </article>
+
+      <div class="gap stay"><span>🛏</span><span><b>Pernoite em Nairóbi</b> — 1 noite. Na manhã seguinte, embarque pelo <b>Aeroporto Jomo Kenyatta (NBO)</b>, Terminal 1A: chegar às 05:40.</span></div>
+
+      <!-- 5 -->
+      <article class="leg">
+        <div class="leg-hd"><span class="leg-no">5</span><span class="leg-date">Dom, 06 dez 2026</span><span class="leg-fl"><b>Kenya Airways KQ 250</b> · Econômica · Boeing 737-800</span></div>
+        <div class="leg-body">
+          <div><div class="pt-tag">Saída</div><div class="pt-time">08:40</div><span class="pt-iata">NBO</span><div class="pt-city">Nairóbi · Quênia</div><div class="pt-air">Aeroporto Internacional Jomo Kenyatta</div><div class="pt-term">Terminal 1A</div></div>
+          <div class="mid"><div class="dur">3h15</div><div class="ln"></div><div class="ac">direto</div></div>
+          <div><div class="pt-tag">Chegada</div><div class="pt-time">12:55</div><span class="pt-iata">SEZ</span><div class="pt-city">Mahé · Seicheles</div><div class="pt-air">Aeroporto Internacional de Seychelles</div><div class="pt-term">Terminal Internacional</div></div>
+        </div>
+        <div class="leg-ft"><span>Bagagem <b>2 peças despachadas</b></span></div>
+      </article>
+
+      <div class="gap stay"><span>🏝</span><span><b>Mahé · Seicheles</b> — 4 noites, de 06 a 10 de dezembro.</span></div>
+
+      <!-- 6 -->
+      <article class="leg">
+        <div class="leg-hd"><span class="leg-no">6</span><span class="leg-date">Qui, 10 dez 2026</span><span class="leg-fl"><b>Qatar Airways QR 679</b> · Executiva · Boeing 777-200LR</span></div>
+        <div class="leg-body">
+          <div><div class="pt-tag">Saída</div><div class="pt-time">18:10</div><span class="pt-iata">SEZ</span><div class="pt-city">Mahé · Seicheles</div><div class="pt-air">Aeroporto Internacional de Seychelles</div><div class="pt-term">Terminal Internacional</div></div>
+          <div class="mid"><div class="dur">4h45</div><div class="ln"></div><div class="ac">direto</div></div>
+          <div><div class="pt-tag">Chegada</div><div class="pt-time">21:55</div><span class="pt-iata">DOH</span><div class="pt-city">Doha · Catar</div><div class="pt-air">Aeroporto Internacional Hamad</div></div>
+        </div>
+        <div class="leg-ft"><span>Assento Luanna <b>3E</b></span><span>Bagagem <b>2 peças despachadas</b></span></div>
+      </article>
+
+      <div class="gap"><span>⏱</span><span><b>Conexão em Doha (Catar) · 3h40.</b> Permanecer na área de trânsito do Aeroporto Hamad.</span></div>
+
+      <!-- 7 -->
+      <article class="leg">
+        <div class="leg-hd"><span class="leg-no">7</span><span class="leg-date">Sex, 11 dez 2026</span><span class="leg-fl"><b>Qatar Airways QR 779</b> · Executiva · Airbus A350-1000</span></div>
+        <div class="leg-body">
+          <div><div class="pt-tag">Saída</div><div class="pt-time">01:35</div><span class="pt-iata">DOH</span><div class="pt-city">Doha · Catar</div><div class="pt-air">Aeroporto Internacional Hamad</div></div>
+          <div class="mid"><div class="dur">15h05</div><div class="ln"></div><div class="ac">direto</div></div>
+          <div><div class="pt-tag">Chegada</div><div class="pt-time">10:40</div><span class="pt-iata">GRU</span><div class="pt-city">São Paulo · Brasil</div><div class="pt-air">Aeroporto Internacional de Guarulhos</div><div class="pt-term">Terminal 3</div></div>
+        </div>
+        <div class="leg-ft"><span>Assento Luanna <b>3A</b></span><span>Bagagem <b>2 peças despachadas</b></span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════ RESUMO ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Resumo</div>
+    <h2 class="h2">Tabela de voos</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Voo</th><th>Saída</th><th>Data · hora</th><th>Chegada</th><th>Data · hora</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td><b>QR 780</b><span class="s">Qatar Airways</span></td><td><b>São Paulo, Brasil</b><span class="s">Guarulhos (GRU) · T3</span></td><td class="num">30/11 · 20:25</td><td><b>Doha, Catar</b><span class="s">Hamad (DOH)</span></td><td class="num">01/12 · 16:00</td></tr>
+          <tr><td class="num">2</td><td><b>QR 1341</b><span class="s">Qatar Airways</span></td><td><b>Doha, Catar</b><span class="s">Hamad (DOH)</span></td><td class="num">01/12 · 19:00</td><td><b>Nairóbi, Quênia</b><span class="s">Jomo Kenyatta (NBO) · T1A</span></td><td class="num">02/12 · 00:05</td></tr>
+          <tr><td class="num">3</td><td><b>H1 6425</b><span class="s">Safarilink</span></td><td><b>Nairóbi, Quênia</b><span class="s">Wilson (WIL)</span></td><td class="num">02/12 · 07:15</td><td><b>Arusha, Tanzânia</b><span class="s">Arusha (ARK)</span></td><td class="num">02/12 · 08:15</td></tr>
+          <tr><td class="num">4</td><td><b>H1 6427</b><span class="s">Safarilink</span></td><td><b>Arusha, Tanzânia</b><span class="s">Arusha (ARK)</span></td><td class="num">05/12 · 14:40</td><td><b>Nairóbi, Quênia</b><span class="s">Wilson (WIL)</span></td><td class="num">05/12 · 15:40</td></tr>
+          <tr><td class="num">5</td><td><b>KQ 250</b><span class="s">Kenya Airways</span></td><td><b>Nairóbi, Quênia</b><span class="s">Jomo Kenyatta (NBO) · T1A</span></td><td class="num">06/12 · 08:40</td><td><b>Mahé, Seicheles</b><span class="s">Seychelles Intl. (SEZ)</span></td><td class="num">06/12 · 12:55</td></tr>
+          <tr><td class="num">6</td><td><b>QR 679</b><span class="s">Qatar Airways</span></td><td><b>Mahé, Seicheles</b><span class="s">Seychelles Intl. (SEZ)</span></td><td class="num">10/12 · 18:10</td><td><b>Doha, Catar</b><span class="s">Hamad (DOH)</span></td><td class="num">10/12 · 21:55</td></tr>
+          <tr><td class="num">7</td><td><b>QR 779</b><span class="s">Qatar Airways</span></td><td><b>Doha, Catar</b><span class="s">Hamad (DOH)</span></td><td class="num">11/12 · 01:35</td><td><b>São Paulo, Brasil</b><span class="s">Guarulhos (GRU) · T3</span></td><td class="num">11/12 · 10:40</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ ORIENTAÇÕES ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Antes de embarcar</div>
+    <h2 class="h2">Orientações importantes</h2>
+    <div class="tips">
+      <div class="tip warn">
+        <h3>Bagagem nos voos para Arusha</h3>
+        <p>Os voos 3 e 4 (Safarilink) permitem <b>15 kg despachados por pessoa, em bolsa macia</b> — malas rígidas não são aceitas. Nos voos da Qatar Airways são 2 peças. Planeje a mala pelo limite menor.</p>
+      </div>
+      <div class="tip warn">
+        <h3>Dois aeroportos em Nairóbi</h3>
+        <p>Chegada internacional e embarque para Seicheles pelo <b>Jomo Kenyatta (NBO)</b>. Voos para Arusha pelo <b>Wilson (WIL)</b>. Reserve de 40 a 60 minutos de traslado entre eles.</p>
+      </div>
+      <div class="tip">
+        <h3>Documentos</h3>
+        <ul>
+          <li><b>Passaporte</b> com validade mínima de 6 meses após o retorno.</li>
+          <li><b>Certificado Internacional de Vacinação contra febre amarela</b> (CIVP), exigido na entrada no Quênia, na Tanzânia e em Seicheles para quem sai do Brasil.</li>
+          <li>Autorizações eletrônicas de entrada: <b>eTA do Quênia</b>, <b>visto eletrônico da Tanzânia</b> e <b>Travel Authorisation de Seicheles</b>. Confirme as regras vigentes antes do embarque.</li>
+        </ul>
+      </div>
+      <div class="tip">
+        <h3>Check-in e apresentação</h3>
+        <p>Chegue ao aeroporto com <b>3 horas de antecedência</b> nos voos internacionais. O não comparecimento a um voo cancela os trechos seguintes do mesmo bilhete.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-logo">LusaTravel</div>
+    <div class="ft-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <div class="ft-addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+    <p class="ft-note">Horários sujeitos a alteração pelas companhias aéreas. Confira o status dos voos 24 horas antes de cada embarque.</p>
+  </div>
+</footer>
+
+</body>
+</html>
