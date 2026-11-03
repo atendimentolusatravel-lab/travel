@@ -1,6 +1,6 @@
 # André Egoroff · Borgonha & Champagne (10 a 16/01/2027)
 
-- **Projeto Vercel previsto:** `cotacao-andre-egoroff-franca` — ainda não publicado: a conta está no limite de 200 projetos do plano Hobby (03/11/2026).
+- **Publicado:** https://cotacao-andre-egoroff-franca.vercel.app (projeto Vercel `cotacao-andre-egoroff-franca`, 03/11/2026).
 - **Fontes (03/11/2026):** `fonte/hoteis.png` (hotéis em BRL, 2 quartos: 1 duplo + 1 triplo; Beaune 11–13/01/2027 confirmado),
   `fonte/carro.png` (Europcar Peugeot 5008, Lyon 11/01 → CDG 16/01/2027, USD 895,72 = R$ 4.818,77),
   `fonte/hotel-10jan-email.png` (noite de 10/01, cotação de grupo de 11; usados os quartos 1 e 5 = € 144,62 + € 213,78 = € 358,40).
