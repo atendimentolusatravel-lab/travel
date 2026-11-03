@@ -401,3 +401,12 @@ Chegada às 06h40 de 26/12: pedir check-in antecipado.
 | Sindhorn Midtown Hotel Bangkok, Vignette Collection by IHG | Lang Suan / Ploenchit, perto do Parque Lumpini | Standard King | Café da manhã | R$ 5.750,00 |
 
 Os dois ficam no centro comercial (Siam e Ratchaprasong), não na beira do rio. Funciona para o roteiro novo, que não tem mais o Grande Palácio. Chinatown fica a cerca de 20 a 30 min de táxi. Confirmar tamanho do quarto e berço.
+
+### Chiang Mai (31/12 → 03/01, 3 noites)
+
+| Hotel | Região | Quarto | Regime | Valor |
+|---|---|---|---|---|
+| Dusit Princess Chiang Mai | Centro, perto do Night Bazaar | Deluxe King | Café da manhã | R$ 4.325,00 |
+| De Chai Colonial Hotel & Spa | Centro, perto do Tha Phae Gate | Grand Deluxe | Café da manhã | R$ 5.857,00 |
+
+Perguntar aos dois: jantar de réveillon obrigatório (eles estarão no CAD), check-in antecipado em 31/12, berço e cancelamento.
