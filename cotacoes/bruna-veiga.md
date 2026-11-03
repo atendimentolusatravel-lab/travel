@@ -506,3 +506,12 @@ Atenção: o píer de Klong Jilad fica na cidade de Krabi, a cerca de 30 a 40 mi
 | Phi Phi | Lokalee, fotos no barco de cauda longa | US$ 707 | R$ 5.163,19 |
 
 Fotógrafo no CAD exigiria ingresso extra e transporte: sessão recomendada na cidade, antes do evento.
+
+**Fotógrafos escolhidos:**
+
+| Local | Opção | Valor final |
+|---|---|---|
+| NYC (24/12, de manhã) | Flytographer 1 h, 35 fotos editadas, até 5 dias úteis | R$ 3.103,76 |
+| Chiang Mai (31/12, fim da tarde, cidade antiga) | Airbnb Birdy & friends 1 h, 70 a 100 fotos editadas | R$ 671,87 |
+| Krabi | Pelago Holiday Travel Photoshoot 2 h, até 120 fotos, 7 a 14 dias | R$ 2.376,82 |
+| **Total** | | **R$ 6.152,45** |
