@@ -381,3 +381,4 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 ### Krabi (03 → 08/01, 5 noites)
 
 - **Aonang Villa Resort** (Ao Nang, de frente para a praia): Grand Superior Sea View, café da manhã, **R$ 20.235,00** (cerca de R$ 4.047 por noite). Confirmar cancelamento e berço.
+- **Avani Ao Nang Cliff Krabi Resort** (Ao Nang, na encosta do morro no fim da praia): Avani Sea View Room, café da manhã, **R$ 14.800,00** (cerca de R$ 2.960 por noite). Confirmar cancelamento e berço.
