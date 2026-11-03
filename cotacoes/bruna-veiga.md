@@ -483,9 +483,9 @@ Duas opções no material: **Tavern on the Green** e **The Russian Tea Room**. V
 
 | Data | Trecho | Horário | Valor |
 |---|---|---|---|
-| 08/01 | Píer de Klong Jilad (Krabi) → praia de Laem Tong (Phi Phi) | 12h30 → 14h00 | US$ 84 × 5,67 = R$ 476,28 · +15% · +12% = **R$ 613,45** (6x de R$ 102,24 ou R$ 552,10 no Pix) |
+| 08/01 | Píer de Klong Jilad (Krabi) → píer de Tonsai (Phi Phi) | 12h30 → 14h00 | US$ 84 × 5,67 = R$ 476,28 · +15% · +12% = **R$ 613,45** (6x de R$ 102,24 ou R$ 552,10 no Pix) |
 | 10/01 | Píer de Tonsai (Phi Phi) → píer de Rassada (Phuket), speed boat | 10h40 → 11h40 | US$ 55 × 5,67 = R$ 311,85 · +15% · +12% = **R$ 401,66** (6x de R$ 66,94 ou R$ 361,50 no Pix) |
 
 Atenção: o píer de Klong Jilad fica na cidade de Krabi, a cerca de 30 a 40 min de Ao Nang (precisa de traslado).
 
-**Trocar o desembarque para o píer de Tonsai.** Os dois hotéis de Phi Phi ficam perto de Tonsai: o Chaokoh fica a uns 300 a 500 m do píer (cerca de 5 min a pé) e o CoCo Beach na baía de Tonsai, a oeste do píer. Laem Tong fica no norte da ilha, a 30 a 40 min de barco. A volta (10/01) também sai de Tonsai. Recotar o barco Krabi → Tonsai em 08/01; o valor acima (Laem Tong) é só referência.
+**Trocar o desembarque para o píer de Tonsai.** Os dois hotéis de Phi Phi ficam perto de Tonsai: o Chaokoh fica a uns 300 a 500 m do píer (cerca de 5 min a pé) e o CoCo Beach na baía de Tonsai, a oeste do píer. Laem Tong fica no norte da ilha, a 30 a 40 min de barco. A volta (10/01) também sai de Tonsai.
