@@ -85,5 +85,34 @@
    "https://media-cdn.tripadvisor.com/media/photo-s/11/ec/4b/91/holiday-inn-express-paris.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/11/ec/4b/97/holiday-inn-express-paris.jpg"
   ]
+ },
+ "fort-st-laurent-lyon": {
+  "nota": "Fotos copiadas da cotação cotacao-egoroff-lyon (deployment dpl_DGJRGNudZoUQKU7bFmF891fa2fAT), servidas em img/hoteis/fort/N.jpg. Ordem: fachada, quarto, banheiro, café, terraço, restaurante.",
+  "arquivos": {
+   "img/hoteis/fort/1.jpg": [
+    "d2b784ce0ebac941954907e6be2432bab8e90864",
+    124360
+   ],
+   "img/hoteis/fort/2.jpg": [
+    "642e5c808ac3b41a340b20da381c8d3f7395d7f0",
+    69916
+   ],
+   "img/hoteis/fort/3.jpg": [
+    "1f7969ad77ac176946f6fbd0a4908fce7d20bcbc",
+    108180
+   ],
+   "img/hoteis/fort/4.jpg": [
+    "ae4e83bdb17f6dca493b30f1c21d0f9af9769d00",
+    68382
+   ],
+   "img/hoteis/fort/5.jpg": [
+    "d67f868a23616306fdb14e38244f4134bebb7a63",
+    115143
+   ],
+   "img/hoteis/fort/6.jpg": [
+    "ca5cde62144c5eb29dd576335513452c6d5007e6",
+    138947
+   ]
+  }
  }
 }

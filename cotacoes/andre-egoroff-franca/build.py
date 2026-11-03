@@ -26,7 +26,7 @@ CAR = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=
        '<circle cx="7.5" cy="17" r="1.8"/><circle cx="16.5" cy="17" r="1.8"/></svg>')
 CAFE = "Café da manhã"
 
-LYON = dict(nome="Hotel de chegada", loc="10 – 11 JAN · 1 noite", euros="633,86", regime=CAFE)
+LYON = dict(nome="Hôtel Fort St Laurent Lyon – Handwritten Collection", loc="10 – 11 JAN · 1 noite", euros="633,86", regime=CAFE)
 LYON_QUARTOS = [  # (descrição, qtd, € por quarto, regime)
     ("Quarto 1 · Superior Room com cama de casal · 2 hóspedes", 1, "144,62", "café da manhã"),
     ("Quartos 2, 3 e 4 · Superior Room com cama de casal · 2 hóspedes cada", 3, "91,82", "sem café da manhã"),
@@ -97,6 +97,9 @@ car = num(CARRO["valor"])
 LYON["valor"] = brl(round(num(LYON["euros"]) * EURO, 2))
 lyon_lin = [(d, q, e, r, brl(round(q * num(e) * EURO, 2))) for d, q, e, r in LYON_QUARTOS]
 assert abs(sum(q * num(e) for _, q, e, _ in LYON_QUARTOS) - num(LYON["euros"])) < 0.005
+LYON_FOTOS = [("img/hoteis/fort/%d.jpg" % k, a) for k, a in enumerate(
+    ["Fachada", "Quarto", "Banheiro", "Café da manhã", "Terraço com vista", "Restaurante"], 1)]
+lyon_gal = "".join(f'<img src="{u}" alt="{LYON["nome"]} · {a}" loading="lazy">' for u, a in LYON_FOTOS)
 lyon_lista = "".join(f'<li>{d} · {r} · € {e}{" cada" if q > 1 else ""} → <b>R$ {v}</b></li>' for d, q, e, r, v in lyon_lin)
 lyon_rows = "\n".join(f'      <tr><td><b>{d.split(" · ")[0]}</b><div class="rm">{q} × € {e} × 6,45</div></td><td>{" · ".join(d.split(" · ")[1:])} · {r}</td><td class="v">R$ {v}</td></tr>' for d, q, e, r, v in lyon_lin)
 fixo = car + num(LYON["valor"])
@@ -177,7 +180,7 @@ html = f"""<!DOCTYPE html>
     <div class="city-block">
       <div class="city-head"><h3>Chegada em Lyon</h3><span class="dates">{LYON["loc"].upper()}</span></div>
       <div class="hgrid">
-        <div class="hotel"><div class="hotel-top"><div class="hotel-name">{BLDG}<span>{LYON["nome"]} <span class="loc2">· noite de 10 de janeiro</span></span></div><div class="hotel-price"><div class="v">R$ {LYON["valor"]}</div><div class="u">€ {LYON["euros"]} · 5 quartos · 11 hóspedes</div></div></div><div class="hotel-room"><b>Grupo de 11 hóspedes · 5 quartos</b><ul style="margin:6px 0 0 18px">{lyon_lista}</ul></div><span class="bf">Café nos quartos 1 e 5</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name">{BLDG}<span>{LYON["nome"]} <span class="loc2">· Lyon · noite de 10 de janeiro</span></span></div><div class="hotel-price"><div class="v">R$ {LYON["valor"]}</div><div class="u">€ {LYON["euros"]} · 5 quartos · 11 hóspedes</div></div></div><div class="hgal">{lyon_gal}</div><div class="hotel-room"><b>Grupo de 11 hóspedes · 5 quartos</b><ul style="margin:6px 0 0 18px">{lyon_lista}</ul></div><span class="bf">Café nos quartos 1 e 5</span></div>
       </div>
       <p class="note">Cotação direta com o hotel, em euros (€ {LYON["euros"]}, taxa de turismo incluída), convertida a R$ 6,45. Cotação para o grupo de 11 hóspedes (5 quartos). Os quartos 1 e 5 (5 hóspedes, com café) somam € 358,40, R$ 2.311,68.</p>
     </div>
