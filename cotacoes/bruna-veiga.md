@@ -515,3 +515,9 @@ Fotógrafo no CAD exigiria ingresso extra e transporte: sessão recomendada na c
 | Chiang Mai (31/12, fim da tarde, cidade antiga) | Airbnb Birdy & friends 1 h, 70 a 100 fotos editadas | R$ 671,87 |
 | Krabi | Pelago Holiday Travel Photoshoot 2 h, até 120 fotos, 7 a 14 dias | R$ 2.376,82 |
 | **Total** | | **R$ 6.152,45** |
+
+### Passeios (regra: valor do print + 15% + 12%)
+
+| Data | Passeio | Detalhes | Valor do print | Valor final |
+|---|---|---|---|---|
+| 29/12 | Bangkok: passeio particular ao mercado do trem de Maeklong e ao mercado flutuante | 7h30 de duração, guia em inglês, saída do hotel às 09h00, bebê incluso, cancelamento grátis até 28/12 | R$ 1.173,63 | R$ 1.511,64 |
