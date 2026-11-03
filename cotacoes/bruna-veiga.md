@@ -371,7 +371,7 @@ Os preços de 2026 ainda não saíram. Abaixo, os últimos publicados. Pedir cad
 
 ## Recotação (roteiro novo, 02/11)
 
-### Nova York (21 → 25/12, confirmar 4 ou 5 noites)
+### Nova York (21 → 25/12, 4 noites)
 
 | Hotel | Região | Quarto | Regime | Valor |
 |---|---|---|---|---|
@@ -436,7 +436,7 @@ Kata fica no sul da ilha: cerca de 45 min do píer de Rassada (chegada do barco 
 | Novotel Singapore Robertson Quay | Robertson Quay, beira do rio | Superior, 1 cama de casal | Café da manhã | R$ 1.204,00 |
 | 21 Carpenter, a Member of Design Hotels | Clarke Quay / Boat Quay | Urban Luxe, cama king | Café da manhã | R$ 2.075,00 |
 
-Confirmar se o valor é das 2 noites e como fica o quarto até a saída de madrugada (late checkout, diária de uso ou noite extra de 13/01).
+Check-out em 13/01, com late checkout sujeito à disponibilidade do hotel.
 
 ### Resumo dos hotéis (roteiro novo)
 
@@ -466,5 +466,13 @@ Cobertura mundial, cancelamento por 21 motivos, 2 adultos e 1 bebê. Substitui a
 | Data | Trecho | Voo | Horário | Bagagem | Valor (família) |
 |---|---|---|---|---|---|
 | 31/12 | Bangkok (BKK) → Chiang Mai (CNX) | Thai VietJet Air VZ 102 (A320) | 10h25 → 11h50 (1h25) | 30 kg incluída | R$ 3.942,00 já com 15% · **final com +12%: R$ 4.415,04** (6x de R$ 735,84 ou R$ 3.973,54 no Pix) |
-| 03/01 | Chiang Mai (CNX) → Krabi (KBV) | AirAsia | 17h05 → 19h05, direto | Confirmar (30 kg?) | R$ 5.850,00 já com 15% · **final com +12%: R$ 6.552,00** (6x de R$ 1.092,00 ou R$ 5.896,80 no Pix) |
+| 03/01 | Chiang Mai (CNX) → Krabi (KBV) | AirAsia | 17h05 → 19h05, direto | 30 kg incluída | R$ 5.850,00 já com 15% · **final com +12%: R$ 6.552,00** (6x de R$ 1.092,00 ou R$ 5.896,80 no Pix) |
 | 11/01 | Phuket (HKT) → Singapura (SIN) | Scoot TR 659 (B787-8) | 10h40 → 13h50 (2h10) | 30 kg por adulto | R$ 1.907,00 + R$ 600,00 = 2.507,00 · +15% · +12% = **R$ 3.229,02** (6x de R$ 538,17 ou R$ 2.906,11 no Pix) |
+
+### Ceia de Natal (24/12)
+
+Duas opções no material: **Tavern on the Green** e **The Russian Tea Room**. Valores em consulta.
+
+### Fora da cotação
+
+- eSIM (retirado a pedido da agente).
