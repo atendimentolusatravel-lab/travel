@@ -410,3 +410,12 @@ Os dois ficam no centro comercial (Siam e Ratchaprasong), não na beira do rio. 
 | De Chai Colonial Hotel & Spa | Centro, perto do Tha Phae Gate | Grand Deluxe | Café da manhã | R$ 5.857,00 |
 
 Perguntar aos dois: jantar de réveillon obrigatório (eles estarão no CAD), check-in antecipado em 31/12, berço e cancelamento.
+
+### Phi Phi (08 → 10/01, 2 noites)
+
+| Hotel | Quarto | Regime | Valor |
+|---|---|---|---|
+| Chaokoh Phi Phi Hotel & Resort | Garden Room, cama de casal | Café da manhã | R$ 2.300,00 |
+| Phi Phi CoCo Beach Resort | Garden Double Villa | Café da manhã | R$ 5.200,00 |
+
+Confirmar com os dois: distância do píer de Tonsai e como é o traslado (a ilha não tem carros: a pé com carregador ou de barco), berço e cancelamento.
