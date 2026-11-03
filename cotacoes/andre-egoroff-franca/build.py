@@ -41,8 +41,13 @@ CIDADES = [
         dict(slug="le-cep", nome="Hôtel Le Cep", loc="Rua Maufoux · centro histórico",
              quartos="1 Classic com 2 camas de solteiro e sofá + 1 Classic com cama de casal e sofá-cama de solteiro",
              valor="13.714,00"),
+        dict(slug="alfred-beaune", nome="Alfred Hotels Beaune La Madeleine", loc="Rue du Faubourg Madeleine · centro",
+             quartos="1 Comfort Double Room (anexo) com cama de casal + 1 Triple Room com cama king e cama de solteiro",
+             valor="4.631,00"),
     ], nota="O <b>Le Cep</b> é um hotel histórico dentro das muralhas, a poucos passos do Hôtel-Dieu (Hospices de Beaune). "
-            "O <b>Novotel</b> fica na entrada da cidade, a cerca de 1,5 km do centro, com estacionamento fácil."),
+            "O <b>Novotel</b> fica na entrada da cidade, a cerca de 1,5 km do centro, com estacionamento fácil. "
+            "O <b>Alfred Hotels La Madeleine</b> fica a cerca de 10 minutos a pé do centro; o quarto duplo cotado fica no anexo, "
+            "um prédio separado a poucos passos da recepção, e a garagem precisa de reserva antecipada."),
     dict(nome="Reims", datas="13 – 15 JAN · 2 noites", per="13/01–15/01/2027 · 2 noites", noites=2, hoteis=[
         dict(slug="hyatt-reims", nome="Hyatt Centric Reims", loc="Bd Paul Doumer · perto da catedral",
              quartos="1 quarto com cama king + 1 Suite com cama king", valor="8.446,00"),
