@@ -571,3 +571,15 @@ Atenção: confirmar se o bebê pode ir no caiaque (normalmente não aceitam beb
 | 09/01 | Passeio privativo de barco tailandês em Phi Phi: Maya Bay, Lagoa de Pileh e snorkel (4 h) | Saída 06h15 ou 15h00 do The Coffee Club (Tonsai). Maya Bay 1 h, Pileh, Monkey Bay, Loh Samah, Viking Cave. Inclui capitão, snorkel, coletes, água, frutas. Não inclui taxa do parque (400 THB/adulto) nem traslado. Cancelamento grátis até 08/01 | R$ 752,80 | R$ 969,61 (6x 161,60 / Pix 872,65) |
 
 Novo total de serviços: R$ 35.748,39 (6x 5.958,06 / Pix 32.173,55).
+
+### Aéreo internacional (roteiro novo) — todas as opções enviadas
+
+| Trecho | Voo | Horários | Classe | Valor |
+|---|---|---|---|---|
+| Bilhete único: AA 950 + QR 704 + QR 826 + QR 945 + QR 773 | American/Qatar | 20/12 → 14/01 16h55 | Econômica | R$ 46.380,72 |
+| SP → NYC avulso | Delta (LA 6349) | 20/12 21h15 → 21/12 05h15 | Econômica | R$ 11.424,87 |
+| NYC → Doha → BKK | Qatar QR 704 + QR 832 | 25/12 10h30 → 28/12 18h50 | Executiva | R$ 84.172,43 |
+| SIN → GRU | Ethiopian ET 639 + ET 506 | 13/01 02h00 → 13/01 16h00 (25h) | Executiva | R$ 64.096,38 |
+| SIN → GRU | Air China CA 970 + CA 897 | 12/01 23h55 → 14/01 05h25 (40h30) | Executiva | R$ 56.284,08 |
+
+Combinações: Econômica R$ 46.380,72 · Delta + Qatar exec + Ethiopian R$ 159.693,68 · Delta + Qatar exec + Air China R$ 151.881,38.
