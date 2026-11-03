@@ -438,6 +438,8 @@ Kata fica no sul da ilha: cerca de 45 min do píer de Rassada (chegada do barco 
 
 Check-out em 13/01, com late checkout sujeito à disponibilidade do hotel.
 
+**Observação para a cliente:** o voo de volta sai às 03h15 do dia 14, então a saída do hotel é por volta das 23h30 do dia 13. O late checkout costuma ir só até 16h ou 18h. Para garantir o quarto até a saída para o aeroporto, existe a opção de reservar também a noite de 13/01 (no Novotel, cerca de R$ 600). Decisão da cliente.
+
 ### Resumo dos hotéis (roteiro novo)
 
 | Cidade | Opção mais barata | Opção mais cara |
