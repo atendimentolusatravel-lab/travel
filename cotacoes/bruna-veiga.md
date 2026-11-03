@@ -522,3 +522,4 @@ Fotógrafo no CAD exigiria ingresso extra e transporte: sessão recomendada na c
 |---|---|---|---|---|
 | 29/12 | Bangkok: passeio particular ao mercado do trem de Maeklong e ao mercado flutuante | 7h30 de duração, guia em inglês, saída do hotel às 09h00, bebê incluso, cancelamento grátis até 28/12 | R$ 1.173,63 | R$ 1.511,64 |
 | 30/12 | Bangkok: tuk-tuk à noite com refeição de comida de rua em Chinatown (grupo pequeno) | Saída às 17h30, ponto de encontro, guia em inglês, bebê grátis. Print com data de 28/12: confirmar disponibilidade em 30/12 | R$ 419,16 | R$ 539,88 |
+| 30/12 | Bangkok: tour particular pelo Grande Palácio, Wat Arun e Wat Pho | Saída às 09h00, ponto de encontro, guia em inglês (audioguia em português), bebê grátis, cancelamento grátis até 29/12. Não inclui ingressos, pagos no local: Grande Palácio 500 THB, Wat Arun 200 THB e Wat Pho 300 THB por pessoa | R$ 726,30 | R$ 935,47 |
