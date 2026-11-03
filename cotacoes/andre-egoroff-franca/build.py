@@ -59,6 +59,7 @@ CIDADES = [
             "do aeroporto. O carro é devolvido no próprio aeroporto."),
 ]
 CARRO = dict(valor="4.818,77", usd="895,72")
+EURO = 6.45  # câmbio informado pela agência em 03/11/2026
 
 
 def num(v):
@@ -85,7 +86,9 @@ def row(h):
 
 faixas = [(min(num(h["valor"]) for h in c["hoteis"]), max(num(h["valor"]) for h in c["hoteis"])) for c in CIDADES]
 car = num(CARRO["valor"])
-TMIN, TMAX = sum(a for a, _ in faixas) + car, sum(b for _, b in faixas) + car
+LYON["valor"] = brl(round(num(LYON["euros"]) * EURO, 2))
+fixo = car + num(LYON["valor"])
+TMIN, TMAX = sum(a for a, _ in faixas) + fixo, sum(b for _, b in faixas) + fixo
 
 hoteis_html = "\n".join(
     f'    <div class="city-block">\n      <div class="city-head"><h3>{c["nome"]}</h3><span class="dates">{c["datas"]}</span></div>\n'
@@ -140,7 +143,7 @@ html = f"""<!DOCTYPE html>
       <div>
         <div class="lbl">Detalhes da viagem</div>
         <p>5 viajantes · 2 quartos (1 duplo + 1 triplo) · 6 noites · carro de 7 lugares</p>
-        <p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>03/11/2026</b> · valores em <b>reais (BRL)</b>, exceto o hotel de 10/01, cotado em <b>euros</b></p>
+        <p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>03/11/2026</b> · valores em <b>reais (BRL)</b> · Euro: <b>EUR 1 = R$ 6,45</b></p>
       </div>
       <div class="r">
         <div class="lbl">Contato</div>
@@ -162,9 +165,9 @@ html = f"""<!DOCTYPE html>
     <div class="city-block">
       <div class="city-head"><h3>Chegada</h3><span class="dates">{LYON["loc"].upper()}</span></div>
       <div class="hgrid">
-        <div class="hotel"><div class="hotel-top"><div class="hotel-name">{BLDG}<span>{LYON["nome"]} <span class="loc2">· noite de 10 de janeiro</span></span></div><div class="hotel-price"><div class="v">€ {LYON["euros"]}</div><div class="u">2 quartos · 1 noite</div></div></div><div class="hotel-room"><b>2 quartos</b> · {LYON["quartos"]}</div><span class="bf">{CAFE}</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name">{BLDG}<span>{LYON["nome"]} <span class="loc2">· noite de 10 de janeiro</span></span></div><div class="hotel-price"><div class="v">R$ {LYON["valor"]}</div><div class="u">€ {LYON["euros"]} · 2 quartos · 1 noite</div></div></div><div class="hotel-room"><b>2 quartos</b> · {LYON["quartos"]}</div><span class="bf">{CAFE}</span></div>
       </div>
-      <p class="note">Valor em euros, com a taxa de turismo incluída. É cotação direta com o hotel, para um grupo de 11 hóspedes; aqui estão só os 2 quartos da família.</p>
+      <p class="note">Cotação direta com o hotel, em euros (€ {LYON["euros"]}, taxa de turismo incluída), convertida a R$ 6,45. A cotação do hotel é para um grupo de 11 hóspedes; aqui estão só os 2 quartos da família.</p>
     </div>
 
 {hoteis_html}
@@ -201,14 +204,14 @@ html = f"""<!DOCTYPE html>
     <div class="tbl-wrap"><table>
       <tr class="head-row"><td>Item</td><td>Detalhe</td><td class="v">Valor</td></tr>
       <tr class="sec-row"><td colspan="3">Chegada · 10/01–11/01/2027 · 1 noite</td></tr>
-      <tr><td><b>{LYON["nome"]}</b><div class="rm">cotação em euros</div></td><td>{LYON["quartos"]} · café da manhã</td><td class="v">€ {LYON["euros"]}</td></tr>
+      <tr><td><b>{LYON["nome"]}</b><div class="rm">€ {LYON["euros"]} × 6,45</div></td><td>{LYON["quartos"]} · café da manhã</td><td class="v">R$ {LYON["valor"]}</td></tr>
 {tabela}
       <tr class="sec-row"><td colspan="3">Carro · Lyon → aeroporto CDG</td></tr>
       <tr><td><b>Europcar · Peugeot 5008</b><div class="rm">7 lugares · automático</div></td><td>Proteção contra roubo e colisão · cancelamento grátis até 07/01/2027</td><td class="v">R$ {CARRO["valor"]}</td></tr>
     </table></div>
 
-    <div class="flval"><span class="lbl">Total em reais (hotéis de Beaune, Reims e Paris + carro)</span><div class="amt"><div class="t">R$ {brl(TMIN)} – {brl(TMAX)}</div><div class="p">+ € {LYON["euros"]} do hotel de chegada, em euros</div></div></div>
-    <p class="note"><b>Como é calculado:</b> {calc} + carro (R$ {CARRO["valor"]}). O hotel de chegada (€ {LYON["euros"]}) fica à parte, em euros. O valor final depende dos hotéis escolhidos.</p>
+    <div class="flval"><span class="lbl">Total estimado (2 quartos + carro)</span><div class="amt"><div class="t">R$ {brl(TMIN)} – {brl(TMAX)}</div><div class="p">hospedagem em 4 cidades + carro</div></div></div>
+    <p class="note"><b>Como é calculado:</b> chegada (R$ {LYON["valor"]}) + {calc} + carro (R$ {CARRO["valor"]}). O valor final depende dos hotéis escolhidos.</p>
 
     <div class="pay">
       <div class="box">
@@ -218,8 +221,9 @@ html = f"""<!DOCTYPE html>
       </div>
       <div class="box">
         <h4>Referência</h4>
-        <p>Valores consultados em 03/11/2026 · carro USD {CARRO["usd"]} = R$ {CARRO["valor"]} na cotação da locadora</p>
-        <p class="muted" style="margin-top:8px;font-size:.82rem">Hotel de chegada em euros, convertido no câmbio da data do pagamento. Valores finais conforme disponibilidade na data de fechamento.</p>
+        <p>Euro: EUR 1 = R$ 6,45 · 03/11/2026</p>
+        <p>Carro: USD {CARRO["usd"]} = R$ {CARRO["valor"]} na cotação da locadora</p>
+        <p class="muted" style="margin-top:8px;font-size:.82rem">O hotel de chegada é cobrado em euros; o valor em reais acompanha o câmbio da data do pagamento. Valores finais conforme disponibilidade na data de fechamento.</p>
       </div>
     </div>
 
