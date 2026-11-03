@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Gera src/index.html da cotação Borgonha & Champagne — André Egoroff (11 a 16/01/2027).
+"""Gera src/index.html da cotação Borgonha & Champagne — André Egoroff (10 a 16/01/2027).
 
 Fontes (enviadas em 03/11/2026):
 - fonte/hoteis.png: Beaune 11–13/01 (a tabela diz "13/01/0207"; data confirmada pela agência: 13/01/2027), Reims 13–15/01 e
   Paris CDG 15–16/01; valores em BRL para 2 quartos (1 duplo + 1 triplo).
-- fonte/carro.png: Europcar Peugeot 5008 (7 lugares), retirada em Lyon em 11/01 e devolução no aeroporto CDG em 16/01.
+- fonte/hotel-10jan-email.png: hotel de 10–11/01 (nome e cidade não vêm no e-mail). Cotação de grupo de
+  11 hóspedes; aqui entram só os quartos 1 (duplo, com café) e 5 (Junior Suite tripla, com café), em euros.
+- fonte/carro.png: Europcar Peugeot 5008 (7 lugares), retirada em Lyon e devolução no aeroporto CDG.
 CSS: style.part.html = <style> do template oficial; as regras não usadas são removidas no build.
 Fotos: Tripadvisor (fonte/cand2.json), em fotos.json. Ordem (regra): fachada, quarto, banheiro,
 café da manhã, livre, livre.
@@ -23,6 +25,10 @@ BLDG = ('<span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="current
 CAR = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17h14M3 17v-4l2-5h14l2 5v4"/>'
        '<circle cx="7.5" cy="17" r="1.8"/><circle cx="16.5" cy="17" r="1.8"/></svg>')
 CAFE = "Café da manhã"
+
+LYON = dict(nome="Hotel de chegada", loc="10 – 11 JAN · 1 noite", euros="358,40",
+            quartos="1 Superior Room com cama de casal (2 hóspedes) + 1 Junior Superior Suite com cama de casal, "
+                    "sofá e sofá-cama (3 hóspedes)", regime=CAFE)
 
 CIDADES = [
     dict(nome="Beaune", datas="11 – 13 JAN · 2 noites", per="11/01–13/01/2027 · 2 noites", noites=2, hoteis=[
@@ -80,7 +86,8 @@ def row(h):
 
 faixas = [(min(num(h["valor"]) for h in c["hoteis"]), max(num(h["valor"]) for h in c["hoteis"])) for c in CIDADES]
 car = num(CARRO["valor"])
-fixo = car
+LYON["valor"] = brl(round(num(LYON["euros"]) * EURO, 2))
+fixo = car + num(LYON["valor"])
 TMIN, TMAX = sum(a for a, _ in faixas) + fixo, sum(b for _, b in faixas) + fixo
 
 hoteis_html = "\n".join(
@@ -95,8 +102,8 @@ calc = " + ".join(f'{c["nome"].split(" ·")[0]} (R$ {brl(a)} – {brl(b)})' for 
 CHIP = ('<div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
         'stroke-width="2">{svg}</svg></span><b>{n}</b>&nbsp;{t}</div>')
 chips = "\n      ".join(CHIP.format(**c) for c in [
-    dict(svg='<path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>', n="3", t="Cidades"),
-    dict(svg='<path d="M21 12.8A9 9 0 1111.2 3"/><path d="M21 3v5h-5"/>', n="5", t="Noites"),
+    dict(svg='<path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>', n="4", t="Cidades"),
+    dict(svg='<path d="M21 12.8A9 9 0 1111.2 3"/><path d="M21 3v5h-5"/>', n="6", t="Noites"),
     dict(svg='<circle cx="9" cy="7" r="3"/><circle cx="16" cy="8" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 20c0-2 .8-3.4 2-4"/>', n="5", t="Viajantes"),
     dict(svg='<path d="M3 18v-6a2 2 0 012-2h14a2 2 0 012 2v6M3 18h18M5 10V7a2 2 0 012-2h10a2 2 0 012 2v3"/>', n="2", t="Quartos · duplo + triplo"),
     dict(svg='<path d="M5 17h14M3 17v-4l2-5h14l2 5v4"/><circle cx="7.5" cy="17" r="1.8"/><circle cx="16.5" cy="17" r="1.8"/>', n="7", t="Lugares no carro"),
@@ -122,7 +129,7 @@ html = f"""<!DOCTYPE html>
     <div class="eyebrow">Cotação para sua viagem</div>
     <h1>BORGONHA <span class="amp">&amp;</span> CHAMPAGNE</h1>
     <div class="accent-line"></div>
-    <p class="hero-sub"><b>André Egoroff</b> · Beaune · Reims · Paris — <b>11 a 16 de janeiro de 2027</b></p>
+    <p class="hero-sub"><b>André Egoroff</b> · Lyon · Beaune · Reims · Paris — <b>10 a 16 de janeiro de 2027</b></p>
 
     <div class="hero-img">
       <img src="{CAPA["url"]}" alt="{CAPA["alt"]}" referrerpolicy="no-referrer" onerror="this.style.display='none'">
@@ -135,7 +142,7 @@ html = f"""<!DOCTYPE html>
     <div class="hero-info">
       <div>
         <div class="lbl">Detalhes da viagem</div>
-        <p>5 viajantes · 2 quartos (1 duplo + 1 triplo) · 5 noites · carro de 7 lugares, retirado em Lyon</p>
+        <p>5 viajantes · 2 quartos (1 duplo + 1 triplo) · 6 noites · carro de 7 lugares</p>
         <p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>03/11/2026</b> · valores em <b>reais (BRL)</b> · Euro: <b>EUR 1 = R$ 6,45</b></p>
       </div>
       <div class="r">
@@ -154,6 +161,14 @@ html = f"""<!DOCTYPE html>
     <h2>Hotéis</h2>
     <div class="accent-line"></div>
     <p class="note" style="margin-top:16px">Na ordem da viagem, todos com <b>café da manhã</b>. Cada valor é o <b>total da estada para os 2 quartos</b> (1 duplo + 1 triplo), em reais. <b>Escolher 1 opção por cidade.</b> Parcelável em <b>até 10x</b>.</p>
+
+    <div class="city-block">
+      <div class="city-head"><h3>Chegada</h3><span class="dates">{LYON["loc"].upper()}</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name">{BLDG}<span>{LYON["nome"]} <span class="loc2">· noite de 10 de janeiro</span></span></div><div class="hotel-price"><div class="v">R$ {LYON["valor"]}</div><div class="u">€ {LYON["euros"]} · 2 quartos · 1 noite</div></div></div><div class="hotel-room"><b>2 quartos</b> · {LYON["quartos"]}</div><span class="bf">{CAFE}</span></div>
+      </div>
+      <p class="note">Cotação direta com o hotel, em euros (€ {LYON["euros"]}, taxa de turismo incluída), convertida a R$ 6,45. A cotação do hotel é para um grupo de 11 hóspedes; aqui estão só os 2 quartos da família.</p>
+    </div>
 
 {hoteis_html}
   </section>
@@ -188,13 +203,15 @@ html = f"""<!DOCTYPE html>
 
     <div class="tbl-wrap"><table>
       <tr class="head-row"><td>Item</td><td>Detalhe</td><td class="v">Valor</td></tr>
+      <tr class="sec-row"><td colspan="3">Chegada · 10/01–11/01/2027 · 1 noite</td></tr>
+      <tr><td><b>{LYON["nome"]}</b><div class="rm">€ {LYON["euros"]} × 6,45</div></td><td>{LYON["quartos"]} · café da manhã</td><td class="v">R$ {LYON["valor"]}</td></tr>
 {tabela}
       <tr class="sec-row"><td colspan="3">Carro · Lyon → aeroporto CDG · 11/01–16/01/2027</td></tr>
       <tr><td><b>Europcar · Peugeot 5008</b><div class="rm">7 lugares · automático</div></td><td>Retirada 11/01 em Lyon · devolução 16/01 no aeroporto CDG · proteção contra roubo e colisão · cancelamento grátis até 07/01/2027</td><td class="v">R$ {CARRO["valor"]}</td></tr>
     </table></div>
 
-    <div class="flval"><span class="lbl">Total estimado (2 quartos + carro)</span><div class="amt"><div class="t">R$ {brl(TMIN)} – {brl(TMAX)}</div><div class="p">hospedagem em 3 cidades + carro</div></div></div>
-    <p class="note"><b>Como é calculado:</b> {calc} + carro (R$ {CARRO["valor"]}). O valor final depende dos hotéis escolhidos.</p>
+    <div class="flval"><span class="lbl">Total estimado (2 quartos + carro)</span><div class="amt"><div class="t">R$ {brl(TMIN)} – {brl(TMAX)}</div><div class="p">hospedagem em 4 cidades + carro</div></div></div>
+    <p class="note"><b>Como é calculado:</b> chegada (R$ {LYON["valor"]}) + {calc} + carro (R$ {CARRO["valor"]}). O valor final depende dos hotéis escolhidos.</p>
 
     <div class="pay">
       <div class="box">
@@ -206,7 +223,7 @@ html = f"""<!DOCTYPE html>
         <h4>Referência</h4>
         <p>Euro: EUR 1 = R$ 6,45 · 03/11/2026</p>
         <p>Carro: USD {CARRO["usd"]} = R$ {CARRO["valor"]} na cotação da locadora</p>
-        <p class="muted" style="margin-top:8px;font-size:.82rem">A caução do carro é em euros, no cartão do condutor. Valores finais conforme disponibilidade na data de fechamento.</p>
+        <p class="muted" style="margin-top:8px;font-size:.82rem">O hotel de chegada é cobrado em euros e a caução do carro também; o valor em reais acompanha o câmbio da data do pagamento. Valores finais conforme disponibilidade na data de fechamento.</p>
       </div>
     </div>
 
