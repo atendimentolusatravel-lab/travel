@@ -2,7 +2,7 @@
 """Gera src/index.html da cotação Borgonha & Champagne — André Egoroff (11 a 16/01/2027).
 
 Fontes (enviadas em 03/11/2026):
-- fonte/hoteis.png: Beaune 11–13/01 (a tabela diz "13/01/0207", lido como 2027), Reims 13–15/01 e
+- fonte/hoteis.png: Beaune 11–13/01 (a tabela diz "13/01/0207"; data confirmada pela agência: 13/01/2027), Reims 13–15/01 e
   Paris CDG 15–16/01; valores em BRL para 2 quartos (1 duplo + 1 triplo).
 - fonte/carro.png: Europcar Peugeot 5008 (7 lugares), retirada em Lyon em 11/01 e devolução no aeroporto CDG em 16/01.
 CSS: style.part.html = <style> do template oficial; as regras não usadas são removidas no build.
