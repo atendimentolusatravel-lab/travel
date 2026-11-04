@@ -1,0 +1,70 @@
+{
+ "_ordem": "fachada, quarto com cama king, banheiro, café da manhã, livre, livre (classificação CLIP, Tripadvisor)",
+ "_capa": {
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miami_Skyline.jpg?width=1600",
+  "alt": "Skyline de Miami visto da baía",
+  "credito": "Foto de capa: skyline de Miami, John Spade, Wikimedia Commons, CC BY 2.0."
+ },
+ "marriott": {
+  "ta": 530147,
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/07/8b/00/42/miami-airport-marriott.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/15/43/3a/11/miami-airport-marriott.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/15/43/39/be/miami-airport-marriott.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/15/3b/0c/2f/miami-airport-marriott.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/15/3b/0c/e6/miami-airport-marriott.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/07/8b/01/27/miami-airport-marriott.jpg"
+  ],
+  "livres": "piscina, lobby"
+ },
+ "hampton": {
+  "ta": 224248,
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/04/65/95/cc/blue-lagoon.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/15/19/25/7a/blue-lagoon.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/04/65/97/48/blue-lagoon.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/04/65/93/c3/blue-lagoon.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/04/65/98/d1/blue-lagoon.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/0d/c7/c2/53/blue-lagoon.jpg"
+  ],
+  "livres": "piscina, restaurante",
+  "substituicao": "sem foto de banheiro entre 52 fotos: 3ª = lobby"
+ },
+ "holiday": {
+  "ta": 223252,
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/01/8e/00/30/exterior.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/04/16/e5/61/holiday-inn-miami-internationa.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/04/88/f2/fe/holiday-inn-miami-internationa.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/15/7a/44/30/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/34/83/51/b1/have-fun-in-the-sun-at.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/04/16/e5/65/holiday-inn-miami-internationa.jpg"
+  ],
+  "livres": "piscina, lobby"
+ },
+ "bestwestern": {
+  "ta": 3782458,
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/33/7d/2b/37/exterior.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/33/7d/2b/29/snk-two.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/33/7d/2b/30/snk-two.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/33/7d/2b/2b/breakfast-area.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/33/7d/2b/36/indoor-pool.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/33/7d/2b/31/lobby.jpg"
+  ],
+  "livres": "piscina coberta, lobby"
+ },
+ "mia-hotel": {
+  "ta": 87084,
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/06/ce/46/41/devant-l-entree-de-l.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/15/b3/95/a5/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/07/64/8d/d6/miami-international-airport.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/07/64/8d/9b/miami-international-airport.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/17/4d/a0/f6/miami-international-airport.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/15/27/24/fe/photo2jpg.jpg"
+  ],
+  "livres": "piscina, outro quarto",
+  "substituicao": "fachada = entrada dentro do terminal; sem café da manhã na tarifa: 4ª = lobby"
+ }
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lusa Travel · Miami — Luiz de Oliveira Alencastro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#404626; --green-dark:#363b1f; --green-soft:#5a6238;--sage:#d9ead3; --sage-head:#c6d8b0;--ink:#333131; --muted:#6f6f68; --line:#e7e7e0; --bg:#ffffff; --cream:#faf9f5;--terra:#b4622f;--shadow:0 10px 30px rgba(64,70,38,.08);}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{line-height:1.15}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:60px 56px}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+.muted{color:var(--muted)}
+.brandbar{display:flex;flex-direction:column;align-items:center;gap:8px;padding:38px 0 6px}
+.brandbar .brandlogo{width:210px;height:auto;display:block}
+.footlogo{width:190px;height:auto;display:block;margin-bottom:14px}
+.hero{padding:56px 56px 40px}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
+.hero-img{margin:34px 0 0;height:330px;border-radius:14px;overflow:hidden;position:relative;display:flex;align-items:flex-end;box-shadow:var(--shadow);background:radial-gradient(120% 130% at 12% 8%, rgba(70,120,150,.55), rgba(40,80,110,.15) 42%, transparent 60%),radial-gradient(120% 130% at 92% 96%, rgba(150,170,120,.55), rgba(90,110,70,.2) 44%, transparent 64%),linear-gradient(120deg, #3a5f80 0%, #5a7d92 30%, #8aa0a2 55%, #b0a878 80%, #7a6a3a 100%);}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-img::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to top, rgba(20,26,32,.6), rgba(20,26,32,.05) 55%, transparent)}
+.hero-img .cap{position:relative;z-index:2;padding:22px 26px;color:#fff}
+.hero-img .cap .k{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;opacity:.92}
+.hero-img .cap .t{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:600;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
+.hero-info .r{text-align:right}
+.hero-info p{font-size:.95rem}
+.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
+.chip b{font-size:1.15rem;font-weight:700}
+.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
+.chip .ic svg{width:18px;height:18px}
+.city-block{margin-top:34px}
+.city-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--green);padding-bottom:10px;margin-bottom:22px}
+.city-head h3{font-size:1.4rem;font-weight:700}
+.city-head .dates{color:var(--green-soft);font-weight:600;font-size:.9rem;letter-spacing:.04em}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hgrid>.hotel{min-width:0}
+@media(max-width:720px){.hgrid{grid-template-columns:1fr}}
+.hotel{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:20px 22px}
+.hotel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.hotel-name{font-size:1.06rem;font-weight:600;display:flex;align-items:center;gap:12px}
+.hotel-name .bldg{width:34px;height:34px;flex:none;border:1.6px solid var(--ink);border-radius:50%;display:grid;place-items:center}
+.hotel-name .bldg svg{width:17px;height:17px}
+.hotel-price{text-align:right;flex:none}
+.hotel-price .v{font-size:1.3rem;font-weight:700;color:var(--green);white-space:nowrap}
+.hotel-price .u{font-size:.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.hotel-room{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
+.hotel-room b{color:var(--green-dark);font-weight:600}
+.bf{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-soft);background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:3px 9px;margin-top:10px}
+.hgal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin-top:14px}
+.hgal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px;display:block;background:#eceadf}
+.tbl-wrap{overflow-x:auto;margin-top:24px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:560px}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line)}
+.sec-row td{background:var(--sage);font-weight:700;text-align:center;letter-spacing:.04em;color:var(--green-dark)}
+.head-row td{background:#efeee7;font-weight:600;color:#4a4a44}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.pay h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
+.pay p{font-size:.9rem;margin-bottom:4px}
+.obs{margin-top:26px;font-size:.82rem;color:var(--muted)}
+.obs li{margin:6px 0 6px 18px}
+.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px}
+.flval{display:flex;justify-content:space-between;align-items:center;background:var(--green);color:#fff;border-radius:12px;padding:16px 24px;margin-top:16px;flex-wrap:wrap;gap:12px}
+.flval .lbl{font-weight:600;font-size:.9rem}
+.flval .amt{text-align:right}
+.flval .amt .t{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;line-height:1}
+.flval .amt .p{font-size:.74rem;opacity:.9;margin-top:3px}
+.footer{background:var(--green);color:#fff;padding:44px 56px}
+.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
+.footer .fnote{font-size:.8rem;opacity:.7;margin-top:16px}
+.sh .eyebrow{margin-bottom:10px;display:block}
+.rm{font-size:.78rem;color:var(--muted);font-weight:400;margin-top:2px}
+.brandtext{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:.3em;color:var(--green);text-transform:uppercase}
+.footer .brandtext{color:#fff;margin-bottom:14px}
+@media(max-width:720px){.section,.hero,.footer,.brandbar{padding-left:24px;padding-right:24px}.hero h1{font-size:2.2rem}.hero-info{grid-template-columns:1fr}.hero-info .r{text-align:left}.pay{grid-template-columns:1fr}.hotel-top{flex-direction:column}.hotel-price{text-align:left}}
+.hgal img{min-width:0}
+.credit{font-size:.7rem;opacity:.6;margin-top:8px}
+.hotel-name .loc2{font-weight:400;color:var(--muted);font-size:.86rem}
+.tnote{margin-top:10px;background:#fdf3ec;border:1px solid #f0dccd;border-left:3px solid var(--terra);border-radius:8px;padding:8px 12px;font-size:.8rem;color:#7a3f1c}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="brandbar"><img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel — travel agency" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'"></div>
+
+  <header class="hero">
+    <div class="eyebrow">Cotação para sua viagem</div>
+    <h1>MIAMI</h1>
+    <div class="accent-line"></div>
+    <p class="hero-sub"><b>Luiz de Oliveira Alencastro</b> · hotéis na região do aeroporto — <b>16 a 17 de janeiro de 2027</b></p>
+
+    <div class="hero-img">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Miami_Skyline.jpg?width=1600" alt="Skyline de Miami visto da baía" referrerpolicy="no-referrer" onerror="this.style.display='none'">
+      <div class="cap">
+        <div class="k">16 – 17 de janeiro · 1 noite</div>
+        <div class="t">Cinco opções perto do aeroporto</div>
+      </div>
+    </div>
+
+    <div class="hero-info">
+      <div>
+        <div class="lbl">Detalhes da cotação</div>
+        <p>1 quarto para 2 pessoas · 1 diária · check-in 16/01 e check-out 17/01/2027</p>
+        <p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>04/11/2026</b> · valores em <b>reais (BRL)</b>, total da estada</p>
+      </div>
+      <div class="r">
+        <div class="lbl">Contato</div>
+        <p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p>
+      </div>
+    </div>
+
+    <div class="gloss">
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><b>5</b>&nbsp;Opções de hotel</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3"/><path d="M21 3v5h-5"/></svg></span><b>1</b>&nbsp;Noite</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="16" cy="8" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 20c0-2 .8-3.4 2-4"/></svg></span><b>2</b>&nbsp;Hóspedes</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a2 2 0 012-2h14a2 2 0 012 2v6M3 18h18M5 10V7a2 2 0 012-2h10a2 2 0 012 2v3"/></svg></span><b>1</b>&nbsp;Quarto · cama king</div>
+    </div>
+  </header>
+
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Acomodações</span>
+    <h2>Hotéis</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Valor <b>total da estada</b>, 1 quarto para 2 pessoas, 1 noite, em reais. <b>Escolher 1 opção.</b> Parcelável em <b>até 10x</b>.</p>
+
+    <div class="city-block">
+      <div class="city-head"><h3>Miami · região do aeroporto</h3><span class="dates">16 – 17 JAN · 1 NOITE</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Miami Airport Marriott <span class="loc2">· NW Le Jeune Rd · a cerca de 2 km do aeroporto</span></span></div><div class="hotel-price"><div class="v">R$ 2.577,00</div><div class="u">1 quarto · 1 noite</div></div></div><div class="hgal"><img src="https://media-cdn.tripadvisor.com/media/photo-s/07/8b/00/42/miami-airport-marriott.jpg" alt="Miami Airport Marriott" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/43/3a/11/miami-airport-marriott.jpg" alt="Miami Airport Marriott" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/43/39/be/miami-airport-marriott.jpg" alt="Miami Airport Marriott" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/3b/0c/2f/miami-airport-marriott.jpg" alt="Miami Airport Marriott" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/3b/0c/e6/miami-airport-marriott.jpg" alt="Miami Airport Marriott" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/07/8b/01/27/miami-airport-marriott.jpg" alt="Miami Airport Marriott" loading="lazy" referrerpolicy="no-referrer"></div><div class="hotel-room"><b>1 quarto com 1 cama king</b> · 2 hóspedes</div><span class="bf">Café da manhã · transfer do aeroporto</span></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Hampton Inn &amp; Suites Miami-Airport South-Blue Lagoon <span class="loc2">· NW 57th Ave · Blue Lagoon, ao sul do aeroporto</span></span></div><div class="hotel-price"><div class="v">R$ 1.502,00</div><div class="u">1 quarto · 1 noite</div></div></div><div class="hgal"><img src="https://media-cdn.tripadvisor.com/media/photo-s/04/65/95/cc/blue-lagoon.jpg" alt="Hampton Inn &amp; Suites Miami-Airport South-Blue Lagoon" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/19/25/7a/blue-lagoon.jpg" alt="Hampton Inn &amp; Suites Miami-Airport South-Blue Lagoon" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/04/65/97/48/blue-lagoon.jpg" alt="Hampton Inn &amp; Suites Miami-Airport South-Blue Lagoon" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/04/65/93/c3/blue-lagoon.jpg" alt="Hampton Inn &amp; Suites Miami-Airport South-Blue Lagoon" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/04/65/98/d1/blue-lagoon.jpg" alt="Hampton Inn &amp; Suites Miami-Airport South-Blue Lagoon" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/c7/c2/53/blue-lagoon.jpg" alt="Hampton Inn &amp; Suites Miami-Airport South-Blue Lagoon" loading="lazy" referrerpolicy="no-referrer"></div><div class="hotel-room"><b>1 quarto com cama king</b> · 2 hóspedes</div><span class="bf">Café da manhã · transfer do aeroporto</span><div class="tnote"><b>Transfer do Porto de Miami para o hotel: pago à parte</b>, não incluído no valor. O transfer do aeroporto consta na tarifa.</div></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Holiday Inn Miami – International Airport by IHG <span class="loc2">· Miami Springs · ao norte do aeroporto</span></span></div><div class="hotel-price"><div class="v">R$ 2.055,00</div><div class="u">1 quarto · 1 noite</div></div></div><div class="hgal"><img src="https://media-cdn.tripadvisor.com/media/photo-s/01/8e/00/30/exterior.jpg" alt="Holiday Inn Miami – International Airport by IHG" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/04/16/e5/61/holiday-inn-miami-internationa.jpg" alt="Holiday Inn Miami – International Airport by IHG" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/04/88/f2/fe/holiday-inn-miami-internationa.jpg" alt="Holiday Inn Miami – International Airport by IHG" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/7a/44/30/photo0jpg.jpg" alt="Holiday Inn Miami – International Airport by IHG" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/34/83/51/b1/have-fun-in-the-sun-at.jpg" alt="Holiday Inn Miami – International Airport by IHG" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/04/16/e5/65/holiday-inn-miami-internationa.jpg" alt="Holiday Inn Miami – International Airport by IHG" loading="lazy" referrerpolicy="no-referrer"></div><div class="hotel-room"><b>1 Standard Room com 1 cama king</b> · 2 hóspedes</div><span class="bf">Café da manhã · transfer do aeroporto</span><div class="tnote"><b>Transfer do Porto de Miami para o hotel: pago à parte</b>, não incluído no valor. O transfer do aeroporto consta na tarifa.</div></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Best Western Plus Miami Airport North Hotel &amp; Suites <span class="loc2">· Fairway Dr · Miami Springs, ao norte do aeroporto</span></span></div><div class="hotel-price"><div class="v">R$ 1.574,00</div><div class="u">1 quarto · 1 noite</div></div></div><div class="hgal"><img src="https://media-cdn.tripadvisor.com/media/photo-s/33/7d/2b/37/exterior.jpg" alt="Best Western Plus Miami Airport North Hotel &amp; Suites" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/33/7d/2b/29/snk-two.jpg" alt="Best Western Plus Miami Airport North Hotel &amp; Suites" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/33/7d/2b/30/snk-two.jpg" alt="Best Western Plus Miami Airport North Hotel &amp; Suites" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/33/7d/2b/2b/breakfast-area.jpg" alt="Best Western Plus Miami Airport North Hotel &amp; Suites" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/33/7d/2b/36/indoor-pool.jpg" alt="Best Western Plus Miami Airport North Hotel &amp; Suites" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/33/7d/2b/31/lobby.jpg" alt="Best Western Plus Miami Airport North Hotel &amp; Suites" loading="lazy" referrerpolicy="no-referrer"></div><div class="hotel-room"><b>1 quarto com cama king</b> · 2 hóspedes</div><span class="bf">Café da manhã · transfer do aeroporto</span><div class="tnote"><b>Transfer do Porto de Miami para o hotel: pago à parte</b>, não incluído no valor. O transfer do aeroporto consta na tarifa.</div></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>Miami International Airport Hotel <span class="loc2">· Dentro do aeroporto · Concourse E</span></span></div><div class="hotel-price"><div class="v">R$ 1.337,00</div><div class="u">1 quarto · 1 noite</div></div></div><div class="hgal"><img src="https://media-cdn.tripadvisor.com/media/photo-s/06/ce/46/41/devant-l-entree-de-l.jpg" alt="Miami International Airport Hotel" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/b3/95/a5/photo0jpg.jpg" alt="Miami International Airport Hotel" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/07/64/8d/d6/miami-international-airport.jpg" alt="Miami International Airport Hotel" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/07/64/8d/9b/miami-international-airport.jpg" alt="Miami International Airport Hotel" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/17/4d/a0/f6/miami-international-airport.jpg" alt="Miami International Airport Hotel" loading="lazy" referrerpolicy="no-referrer"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/27/24/fe/photo2jpg.jpg" alt="Miami International Airport Hotel" loading="lazy" referrerpolicy="no-referrer"></div><div class="hotel-room"><b>1 Standard Room com cama king</b> · 2 hóspedes</div><span class="bf">Sem café da manhã · dentro do aeroporto</span></div>
+      </div>
+      <p class="note">Nos hotéis <b>Hampton Inn</b>, <b>Holiday Inn</b> e <b>Best Western</b>, o <b>transfer do Porto de Miami para o hotel é pago à parte</b>. O <b>Miami International Airport Hotel</b> fica dentro do terminal do aeroporto e não inclui café da manhã.</p>
+    </div>
+  </section>
+
+  <section class="section sh">
+    <span class="eyebrow">Investimento</span>
+    <h2>Resumo de valores</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">*Cada hotel com o seu valor exato, para 1 quarto e 2 pessoas. Escolher 1 hotel — por isso o total é uma faixa. Nada reservado, apenas cotado.</p>
+
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Hotel</td><td>Quarto e inclusões</td><td class="v">Valor</td></tr>
+      <tr class="sec-row"><td colspan="3">Miami · 16/01–17/01/2027 · 1 noite · escolher 1</td></tr>
+      <tr><td><b>Miami Airport Marriott</b></td><td>1 quarto com 1 cama king · café da manhã · transfer do aeroporto</td><td class="v">R$ 2.577,00</td></tr>
+      <tr><td><b>Hampton Inn &amp; Suites Miami-Airport South-Blue Lagoon</b><div class="rm">Transfer do porto pago à parte</div></td><td>1 quarto com cama king · café da manhã · transfer do aeroporto</td><td class="v">R$ 1.502,00</td></tr>
+      <tr><td><b>Holiday Inn Miami – International Airport by IHG</b><div class="rm">Transfer do porto pago à parte</div></td><td>1 Standard Room com 1 cama king · café da manhã · transfer do aeroporto</td><td class="v">R$ 2.055,00</td></tr>
+      <tr><td><b>Best Western Plus Miami Airport North Hotel &amp; Suites</b><div class="rm">Transfer do porto pago à parte</div></td><td>1 quarto com cama king · café da manhã · transfer do aeroporto</td><td class="v">R$ 1.574,00</td></tr>
+      <tr><td><b>Miami International Airport Hotel</b></td><td>1 Standard Room com cama king · sem café da manhã · dentro do aeroporto</td><td class="v">R$ 1.337,00</td></tr>
+    </table></div>
+
+    <div class="flval"><span class="lbl">Total estimado (1 quarto · 2 pessoas · 1 noite)</span><div class="amt"><div class="t">R$ 1.337,00 – 2.577,00</div><div class="p">conforme o hotel escolhido</div></div></div>
+
+    <div class="pay">
+      <div class="box">
+        <h4>Condições de pagamento</h4>
+        <p><b>Hotel</b> — em até <b>10x</b></p>
+      </div>
+      <div class="box">
+        <h4>Referência</h4>
+        <p>Cotação emitida em 04/11/2026 · valores em <b>BRL</b></p>
+        <p class="muted" style="margin-top:8px;font-size:.82rem">Valores finais conforme disponibilidade na data de fechamento.</p>
+      </div>
+    </div>
+
+    <div class="obs">
+      <h4>Não inclui</h4>
+      <ul>
+        <li>Passagens aéreas</li>
+        <li>Transfer do Porto de Miami para o hotel no Hampton Inn, no Holiday Inn e no Best Western (pago à parte)</li>
+        <li>Café da manhã no Miami International Airport Hotel</li>
+        <li>Resort fee, estacionamento e despesas pessoais, se cobrados pelo hotel</li>
+        <li>Seguro viagem</li>
+      </ul>
+      <h4>Observações</h4>
+      <ul>
+        <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
+        <li>A confirmação está sujeita à disponibilidade no momento do pagamento.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'">
+    <div class="contact">
+      atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>
+      Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR
+    </div>
+    <div class="fnote">*Nada reservado, apenas cotado.</div>
+    <div class="credit">Foto de capa: skyline de Miami, John Spade, Wikimedia Commons, CC BY 2.0.</div>
+  </footer>
+
+</div>
+</body>
+</html>
