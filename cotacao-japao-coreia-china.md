@@ -22,7 +22,7 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 | Seul | 23–27/05 | 4 | 02 | L’Escape, a Luxury Collection Hotel, Seoul Myeongdong | Classic King City View | Café da manhã | 8.690 |
 | Seul | 23–27/05 | 4 | 03 | HOTEL THE BOTANIK SEWOON MYEONGDONG | Premier Double | Café da manhã | 6.300 |
 | Jeju | 27–30/05 | 3 | 01 | Grand Hyatt Jeju | King Bed Room City View | Café da manhã | 6.900 |
-| Jeju | 27–30/05 | 3 | 02 | Sheraton Jeju | King, vista para o oceano | A confirmar | 5.820 |
+| Jeju | 27–30/05 | 3 | 02 | Sheraton Jeju | King, vista para o oceano | Café da manhã | 5.820 |
 
 ## Navio
 
