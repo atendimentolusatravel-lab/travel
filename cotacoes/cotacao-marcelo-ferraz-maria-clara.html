@@ -72,8 +72,8 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
   font-size:18pt; font-weight:800; }
 .opt-main{ padding:4.5mm 8mm 4.5mm 8mm; min-width:0; }
 .opt-head{ display:flex; align-items:center; gap:4mm; margin-bottom:2.5mm; }
-.airline{ font-size:13pt; font-weight:700; color:var(--ink); letter-spacing:.01em; }
-.chip{ font-family:var(--con); font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; font-weight:600;
+.airline{ font-size:13pt; font-weight:700; color:var(--ink); letter-spacing:.01em; white-space:nowrap; }
+.chip{ white-space:nowrap; font-family:var(--con); font-size:7.5pt; letter-spacing:.14em; text-transform:uppercase; font-weight:600;
   padding:1.2mm 3mm; border-radius:10mm; border:1px solid var(--line); color:var(--mut); }
 .chip.best{ background:var(--gold); border-color:var(--gold); color:#fff; }
 .chip.note{ border-color:var(--dest-2); color:var(--dest-2); }
@@ -104,6 +104,20 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .opt-price .val{ font-size:24pt; font-weight:800; color:var(--dest); line-height:1.05; margin:2mm 0 1.5mm; letter-spacing:-.01em; }
 .opt-price .val small{ font-size:12pt; font-weight:600; color:var(--gold); margin-right:1.5mm; vertical-align:baseline; }
 .opt-price .sub{ font-size:8pt; color:var(--mut); line-height:1.4; }
+
+/* ── Bloco agrupado (mesmo valor, vários horários) ── */
+.opt-main.group{ padding:5.5mm 8mm 5mm; }
+.combo{ display:grid; grid-template-columns: 11mm 1fr 1fr; align-items:center; column-gap:5mm;
+  padding:3mm 0; border-top:1px dashed var(--line); }
+.combo:first-of-type{ border-top:0; }
+.combo .id{ font-size:12pt; font-weight:800; color:var(--dest); }
+.combo .cl small{ display:block; font-size:7.5pt; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:.6mm; }
+.combo .cl b{ font-size:12.5pt; font-weight:700; color:var(--ink); }
+.combo .cl b i{ font-style:normal; color:var(--gold); margin:0 1.2mm; }
+.combo .cl span{ font-family:var(--con); font-size:8.5pt; color:var(--mut); margin-left:2.5mm; }
+.combo .cl span em{ font-style:normal; color:var(--dest-2); }
+.group-note{ margin-top:3mm; font-size:8pt; color:var(--mut); font-weight:300; }
+.group-note em{ font-style:normal; color:var(--dest-2); font-weight:500; }
 
 /* ── Condições ── */
 .cond{ margin-top:auto; padding:6mm 0 7mm; border-top:1px solid var(--line); display:grid;
@@ -143,11 +157,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         <div class="name">Marcelo Ferraz de Almeida</div>
         <div class="pax">Passageira: <b>Maria Clara</b> · 1 adulto · Classe Econômica</div>
         <div class="route">Londres <span class="arrow">⇄</span> Madri
-          <small>Ida 20 de dezembro · Volta 26 de dezembro de 2026 · Voos diretos</small>
+          <small>Ida 20 de dezembro · Volta 26 de dezembro de 2026 · Voos diretos pela manhã</small>
         </div>
       </div>
       <div class="stats">
-        <div class="stat"><b>4</b><span>Opções</span></div>
+        <div class="stat"><b>6</b><span>Opções</span></div>
         <div class="stat"><b>0</b><span>Escalas</span></div>
         <div class="stat"><b>6</b><span>Noites</span></div>
       </div>
@@ -155,7 +169,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
     <div class="sec-title">
       <h2>Opções de voo</h2>
-      <span>Valores finais · ida e volta · por passageira</span>
+      <span>Valores finais · ida e volta · por passageira · saídas pela manhã</span>
     </div>
 
     <!-- OPÇÃO 1 — Air Europa -->
@@ -163,39 +177,6 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       <div class="opt-no">1</div>
       <div class="opt-main">
         <div class="opt-head"><span class="airline">Air Europa</span><span class="chip">Gatwick · Gatwick</span><span class="chip best">Menor valor</span></div>
-        <div class="legs">
-          <div class="leg">
-            <div><span class="dir">Ida</span><span class="fl">UX 1016</span></div>
-            <div class="seg">
-              <div class="pt"><b>17:25</b><span>Londres Gatwick · LGW</span></div>
-              <div class="mid"><div class="ln"></div><small>Direto</small></div>
-              <div class="pt"><b>20:55</b><span>Madri · MAD</span></div>
-            </div>
-            <div class="when"><span class="date">20 dez · dom</span><span class="dur">Voo direto · 2h30</span></div>
-          </div>
-          <div class="leg">
-            <div><span class="dir">Volta</span><span class="fl">UX 1015</span></div>
-            <div class="seg">
-              <div class="pt"><b>15:00</b><span>Madri · MAD</span></div>
-              <div class="mid"><div class="ln"></div><small>Direto</small></div>
-              <div class="pt"><b>16:25</b><span>Londres Gatwick · LGW</span></div>
-            </div>
-            <div class="when"><span class="date">26 dez · sáb</span><span class="dur">Voo direto · 2h25</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="opt-price">
-        <div class="lbl">Valor final</div>
-        <div class="val"><small>R$</small>3.371,42</div>
-        <div class="sub">ida e volta · taxas inclusas</div>
-      </div>
-    </div>
-
-    <!-- OPÇÃO 2 — Air Europa -->
-    <div class="opt">
-      <div class="opt-no">2</div>
-      <div class="opt-main">
-        <div class="opt-head"><span class="airline">Air Europa</span><span class="chip">Gatwick · Gatwick</span></div>
         <div class="legs">
           <div class="leg">
             <div><span class="dir">Ida</span><span class="fl">UX 1014</span></div>
@@ -224,69 +205,24 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       </div>
     </div>
 
-    <!-- OPÇÃO 3 — British Airways -->
+    <!-- OPÇÃO 2 — British Airways / Iberia (mesmo valor) -->
     <div class="opt">
-      <div class="opt-no">3</div>
-      <div class="opt-main">
-        <div class="opt-head"><span class="airline">British Airways</span><span class="chip note">Ida por London City · Volta por Heathrow</span></div>
+      <div class="opt-no">2</div>
+      <div class="opt-main group">
+        <div class="opt-head"><span class="airline">British Airways · Iberia</span><span class="chip">Heathrow · Heathrow</span><span class="chip note">Mesmo valor · 2A a 2E</span></div>
         <div class="legs">
-          <div class="leg">
-            <div><span class="dir">Ida</span><span class="fl">BA 3270</span></div>
-            <div class="seg">
-              <div class="pt"><b>19:15</b><span>London City · LCY</span></div>
-              <div class="mid"><div class="ln"></div><small>Direto</small></div>
-              <div class="pt"><b>22:35</b><span>Madri · MAD</span></div>
-            </div>
-            <div class="when"><span class="date">20 dez · dom</span><span class="dur">Voo direto · 2h20</span></div>
-          </div>
-          <div class="leg">
-            <div><span class="dir">Volta</span><span class="fl">BA 7068</span></div>
-            <div class="seg">
-              <div class="pt"><b>15:50</b><span>Madri · MAD</span></div>
-              <div class="mid"><div class="ln"></div><small>Direto</small></div>
-              <div class="pt"><b>17:15</b><span>Londres Heathrow · LHR</span></div>
-            </div>
-            <div class="when"><span class="date">26 dez · sáb</span><span class="dur">Voo direto · 2h25</span></div>
-          </div>
+          <div class="combo"><div class="id">2A</div><div class="cl"><small>Ida · 20 dez · LHR → MAD</small><b>06:10<i>→</i>09:40</b><span>BA 456</span></div><div class="cl"><small>Volta · 26 dez · MAD → LHR</small><b>14:00<i>→</i>15:25</b><span>BA 461</span></div></div>
+          <div class="combo"><div class="id">2B</div><div class="cl"><small>Ida · 20 dez · LHR → MAD</small><b>07:30<i>→</i>11:00</b><span>IB 3643<em>*</em></span></div><div class="cl"><small>Volta · 26 dez · MAD → LHR</small><b>15:50<i>→</i>17:15</b><span>IB 721</span></div></div>
+          <div class="combo"><div class="id">2C</div><div class="cl"><small>Ida · 20 dez · LHR → MAD</small><b>08:45<i>→</i>12:15</b><span>BA 460</span></div><div class="cl"><small>Volta · 26 dez · MAD → LHR</small><b>15:50<i>→</i>17:15</b><span>BA 7068<em>*</em></span></div></div>
+          <div class="combo"><div class="id">2D</div><div class="cl"><small>Ida · 20 dez · LHR → MAD</small><b>10:05<i>→</i>13:35</b><span>BA 462</span></div><div class="cl"><small>Volta · 26 dez · MAD → LHR</small><b>15:50<i>→</i>17:15</b><span>BA 7068<em>*</em></span></div></div>
+          <div class="combo"><div class="id">2E</div><div class="cl"><small>Ida · 20 dez · LHR → MAD</small><b>10:05<i>→</i>13:35</b><span>BA 462</span></div><div class="cl"><small>Volta · 26 dez · MAD → LHR</small><b>14:00<i>→</i>15:25</b><span>BA 461</span></div></div>
         </div>
+        <div class="group-note">Todos os voos diretos, 2h30 na ida e 2h25 na volta. <em>*</em> Voo em parceria (codeshare): operado pela companhia parceira, com bilhete emitido pela companhia indicada.</div>
       </div>
       <div class="opt-price">
         <div class="lbl">Valor final</div>
-        <div class="val"><small>R$</small>3.715,72</div>
-        <div class="sub">ida e volta · taxas inclusas</div>
-      </div>
-    </div>
-
-    <!-- OPÇÃO 4 — Iberia -->
-    <div class="opt">
-      <div class="opt-no">4</div>
-      <div class="opt-main">
-        <div class="opt-head"><span class="airline">Iberia</span><span class="chip">Heathrow · Heathrow</span></div>
-        <div class="legs">
-          <div class="leg">
-            <div><span class="dir">Ida</span><span class="fl">IB 722</span></div>
-            <div class="seg">
-              <div class="pt"><b>18:45</b><span>Londres Heathrow · LHR</span></div>
-              <div class="mid"><div class="ln"></div><small>Direto</small></div>
-              <div class="pt"><b>22:10</b><span>Madri · MAD</span></div>
-            </div>
-            <div class="when"><span class="date">20 dez · dom</span><span class="dur">Voo direto · 2h25</span></div>
-          </div>
-          <div class="leg">
-            <div><span class="dir">Volta</span><span class="fl">IB 721</span></div>
-            <div class="seg">
-              <div class="pt"><b>15:50</b><span>Madri · MAD</span></div>
-              <div class="mid"><div class="ln"></div><small>Direto</small></div>
-              <div class="pt"><b>17:15</b><span>Londres Heathrow · LHR</span></div>
-            </div>
-            <div class="when"><span class="date">26 dez · sáb</span><span class="dur">Voo direto · 2h25</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="opt-price">
-        <div class="lbl">Valor final</div>
-        <div class="val"><small>R$</small>3.892,22</div>
-        <div class="sub">ida e volta · taxas inclusas</div>
+        <div class="val"><small>R$</small>4.404,78</div>
+        <div class="sub">ida e volta · taxas inclusas<br>qualquer combinação 2A a 2E</div>
       </div>
     </div>
 
