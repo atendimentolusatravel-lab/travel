@@ -18,6 +18,7 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 | Osaka | 18–21/05 | 3 | 02 | Courtyard by Marriott Osaka Honmachi | Run of house, King | Café da manhã | 3.875 |
 | Busan | 22–23/05 | 1 | 01 | Park Hyatt Busan | Deluxe King Ocean View (vista da ponte) | A confirmar | 4.700 |
 | Busan | 22–23/05 | 1 | 02 | Grand Josun Busan | Premier King City View | A confirmar | 2.900 |
+| Busan | 22–23/05 | 1 | 03 | Shilla Stay Busan Haeundae | Standard Double Ocean View | A confirmar | 2.720 |
 
 ## Navio
 
