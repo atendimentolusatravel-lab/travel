@@ -18,6 +18,9 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 | Osaka | 18–21/05 | 3 | 02 | Courtyard by Marriott Osaka Honmachi | Run of house, King | Café da manhã | 3.875 |
 | Busan | 22–23/05 | 1 | 01 | Park Hyatt Busan | Deluxe King Ocean View (vista da ponte — show de drones visível do quarto) | Café da manhã | 4.700 |
 | Busan | 22–23/05 | 1 | 02 | Shilla Stay Busan Haeundae | Standard Double Ocean View | Café da manhã | 2.720 |
+| Seul | 23–27/05 | 4 | 01 | voco Seoul Myeongdong by IHG | Deluxe City View King | Café da manhã | 7.400 |
+| Seul | 23–27/05 | 4 | 02 | L’Escape, a Luxury Collection Hotel, Seoul Myeongdong | Classic King City View | Café da manhã | 8.690 |
+| Seul | 23–27/05 | 4 | 03 | HOTEL THE BOTANIK SEWOON MYEONGDONG | Premier Double | Café da manhã | 6.300 |
 
 ## Navio
 
@@ -32,6 +35,6 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 
 ## Pendentes
 
-- Hotelaria: Seul, Jeju, Xangai, Pequim, Chengdu, Hong Kong
+- Hotelaria: Jeju, Xangai, Pequim, Chengdu, Hong Kong
 - Voos internos: Gimpo–Jeju (27/05), Jeju–Xangai (29/05), Pequim–Chengdu (05/06), Chengdu–Hong Kong (08/06)
 - Trens, transfers, guias, ingressos, seguro
