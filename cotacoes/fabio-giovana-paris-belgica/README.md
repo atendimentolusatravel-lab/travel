@@ -1,8 +1,8 @@
 # Fabio e Giovana · Paris & Bélgica (20 a 30/12/2026)
 
 - **Publicado:** https://cotacao-fabio-giovana-paris-belgica.vercel.app (05/11/2026, 3ª versão: trens em 3x e passeios em 8x).
-- **Fontes:** `fonte/hoteis.png` (hotéis, BRL, 3 quartos) e `fonte/trens-passeios.png` (6 trens e 4 passeios, à vista e parcelado em 6x).
-- Pagamento: hotéis em até 10x sem juros; trens e passeios à vista ou em 6x (valor parcelado próprio, da planilha).
+- **Fontes:** `fonte/hoteis.png` (hotéis, BRL, 3 quartos) `fonte/trens.png` (6 trens, à vista e 3x) e `fonte/passeios.png` (4 passeios, à vista e 8x).
+- Pagamento: hotéis em até 10x sem juros; trens à vista ou em até 3x; passeios à vista ou em até 8x (valor parcelado próprio, da planilha).
 - Hotel Amigo = Rocco Forte de Bruxelas (Tripadvisor 196130). O Hotel de la Ville (Roma) não entra.
 - Disney em 21/12 (passeio fixo, a pedido da agência). Em 23/12, Vaux-le-Vicomte (opção 1) ou Honfleur/Deauville (opção 2): escolher 1.
 - 3ª versão (planilha refeita em 05/11): trens 2.399/2.580, 1.023/1.100, 969/1.043, 515/554, 515/554, 4.259/4.581 (à vista / 3x); passeios Disney 1.848/2.132, Versalhes 1.628/1.878, Vaux 3.698/4.266, Honfleur 4.806/5.544 (à vista / 8x). Hotéis iguais; todos em BRL.
