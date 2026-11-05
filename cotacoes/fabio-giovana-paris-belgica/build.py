@@ -79,8 +79,8 @@ TRENS = [  # data, trecho, horário, à vista, parcelado 6x
     ("29/12", "Bruxelas → Paris", "10:13 Bruxelas-Midi → 11:35 Paris Gare du Nord", 4444, 4977),
 ]
 PASSEIOS = [  # data, nome, descrição, à vista, 6x, grupo
+    ("21/12", "Disneyland Paris", "Passeio privativo de ida e volta à Disneyland Paris. Não inclui o ingresso.", 1848, 2070, None),
     ("22/12", "Palácio de Versalhes", "Passeio privativo de ida e volta ao Palácio de Versalhes. Não inclui o ingresso.", 1628, 1823, None),
-    ("23/12", "Disneyland Paris", "Passeio privativo de ida e volta à Disneyland Paris. Não inclui o ingresso.", 1848, 2070, "23"),
     ("23/12", "Natal no Castelo de Vaux-le-Vicomte · opção 1",
      "Passeio privativo de ida e volta, de meio dia, ao Castelo de Vaux-le-Vicomte, decorado para o Natal. Não inclui o ingresso.", 3698, 4142, "23"),
     ("23/12", "Honfleur e Deauville · opção 2",
@@ -160,10 +160,9 @@ DIAS = ["segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo"]
 Q, S = '<span class="tag-q">cotado</span>', '<span class="tag-s">sugestão</span>'
 ROTEIRO = [
     (20, "Paris", "Chegada a Paris", [f"Check-in no hotel escolhido em Paris {Q}"]),
-    (21, "Paris", "Paris", [f"Dia livre: Champs-Élysées e mercados de Natal {S}"]),
+    (21, "Paris", "Disneyland Paris", [f"Passeio privativo de ida e volta à Disneyland Paris {Q}", f"Ingresso do parque, comprado à parte {S}"]),
     (22, "Paris", "Palácio de Versalhes", [f"Passeio privativo de ida e volta a Versalhes {Q}", f"Ingresso do palácio, comprado à parte {S}"]),
-    (23, "Paris", "Passeio do dia · escolher 1", [f"Disneyland Paris, passeio privativo {Q}",
-     f"ou Natal no Castelo de Vaux-le-Vicomte, passeio privativo de meio dia (opção 1) {Q}",
+    (23, "Paris", "Passeio do dia · escolher 1", [f"Natal no Castelo de Vaux-le-Vicomte, passeio privativo de meio dia (opção 1) {Q}",
      f"ou Honfleur e Deauville, passeio privativo (opção 2) {Q}"]),
     (24, "Paris", "Véspera de Natal em Paris", [f"Ceia de Natal: reservar com antecedência {S}"]),
     (25, "Paris → Bruxelas", "Trem para Bruxelas", [f"Check-out em Paris · trem direto 14:23 Gare du Nord → 15:47 Bruxelas-Midi {Q}",
@@ -264,7 +263,7 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Experiências</span>
     <h2>Passeios</h2>
     <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">Passeios privativos a partir de Paris. Pagamento <b>à vista</b> ou <b>parcelado em até 6x</b>. Os três passeios de <b>23/12</b> são alternativos: <b>escolher 1</b>.</p>
+    <p class="note" style="margin-top:16px">Passeios privativos a partir de Paris. Pagamento <b>à vista</b> ou <b>parcelado em até 6x</b>. Os dois passeios de <b>23/12</b> (opções 1 e 2) são alternativos: <b>escolher 1</b>.</p>
 {pass_html}
     <div class="tnote">Os ingressos de Versalhes, da Disneyland e de Vaux-le-Vicomte <b>não estão incluídos</b>: compramos à parte, conforme a data escolhida.</div>
   </section>
@@ -281,7 +280,7 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Investimento</span>
     <h2>Resumo de valores</h2>
     <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">*Cada item com o seu valor exato, para os <b>3 quartos</b>. Escolher 1 hotel por cidade e 1 passeio para 23/12 — por isso o total é uma faixa. Nada reservado, apenas cotado.</p>
+    <p class="note" style="margin-top:16px">*Cada item com o seu valor exato, para os <b>3 quartos</b>. Escolher 1 hotel por cidade e 1 das opções de passeio de 23/12 — por isso o total é uma faixa. Nada reservado, apenas cotado.</p>
 
     <div class="tbl-wrap"><table>
       <tr class="head-row"><td>Hotel</td><td>Quartos</td><td class="v">Valor · até 10x sem juros</td></tr>
@@ -298,7 +297,7 @@ html = f"""<!DOCTYPE html>
 
     <div class="flval"><span class="lbl">Total estimado · à vista</span><div class="amt"><div class="t">R$ {brl(TOT_V[0])} – {brl(TOT_V[1])}</div><div class="p">hotéis + trens + passeios, trens e passeios à vista</div></div></div>
     <div class="flval" style="background:var(--green-soft)"><span class="lbl">Total estimado · parcelado</span><div class="amt"><div class="t">R$ {brl(TOT_P[0])} – {brl(TOT_P[1])}</div><div class="p">hotéis em 10x sem juros + trens e passeios em 6x</div></div></div>
-    <p class="note"><b>Como é calculado:</b> {calc} + trens (R$ {brl(TV, False)} à vista ou R$ {brl(TP, False)} em 6x) + Versalhes + 1 passeio de 23/12 (de R$ {brl(PV_MIN, False)} a R$ {brl(PV_MAX, False)} à vista; de R$ {brl(PP_MIN, False)} a R$ {brl(PP_MAX, False)} em 6x). O valor final depende dos hotéis e do passeio escolhidos.</p>
+    <p class="note"><b>Como é calculado:</b> {calc} + trens (R$ {brl(TV, False)} à vista ou R$ {brl(TP, False)} em 6x) + Disney + Versalhes + 1 passeio de 23/12 (de R$ {brl(PV_MIN, False)} a R$ {brl(PV_MAX, False)} à vista; de R$ {brl(PP_MIN, False)} a R$ {brl(PP_MAX, False)} em 6x). O valor final depende dos hotéis e do passeio escolhidos.</p>
 
     <div class="pay">
       <div class="box">
