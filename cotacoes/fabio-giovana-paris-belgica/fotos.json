@@ -3,11 +3,11 @@
  "_substituicoes": {
   "park-hyatt": "sem foto de banheiro: 3ª = suíte",
   "regina": "sem banheiro nem café: 3ª = vista, 4ª = lobby",
-  "amigo": "sem banheiro: 3ª = sala da suíte",
+  "amigo": "sem banheiro: 3ª = sala da suíte; 5ª = terraço; 6ª = corredor dos quartos (foto enviada pela agência)",
   "sofitel": "sem fachada: 1ª = vista do bar do 7º andar (cobertura) para a Place Jourdan; 4ª = hall de entrada (átrio); 5ª = restaurante",
   "george-v": "1ª = hall de entrada (a pedido, no lugar da entrada pela rua); 5ª = vista do quarto com a Torre Eiffel",
   "crillon-ultima": "mesmas fotos do Crillon, com outra foto de quarto (2ª)",
-  "crillon": "4ª = terraço com a Torre Eiffel (foto enviada pela agência, no lugar do café da manhã)"
+  "crillon": "4ª = terraço com a Torre Eiffel e 6ª = pátio (fotos enviadas pela agência, no lugar do café da manhã e do bar)"
  },
  "_capa": {
   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg/1280px-Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg",
@@ -41,7 +41,7 @@
    "https://media-cdn.tripadvisor.com/media/photo-s/12/64/42/e7/photo3jpg.jpg",
    "img/crillon-terraco.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/16/95/a7/7b/photo0jpg.jpg",
-   "https://media-cdn.tripadvisor.com/media/photo-s/11/85/3b/f0/the-bar.jpg"
+   "img/crillon-patio.jpg"
   ]
  },
  "regina": {
@@ -61,7 +61,7 @@
    "https://media-cdn.tripadvisor.com/media/photo-s/0f/a0/61/23/hotel-amigo.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/17/b0/5a/30/caption.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/0f/a0/61/54/hotel-amigo.jpg",
-   "https://media-cdn.tripadvisor.com/media/photo-s/16/88/3a/56/photo0jpg.jpg"
+   "img/amigo-corredor.jpg"
   ]
  },
  "radisson": {
@@ -78,7 +78,7 @@
   "fotos": [
    "https://media-cdn.tripadvisor.com/media/photo-s/31/46/fa/85/caption.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/32/ce/a1/33/caption.jpg",
-   "https://media-cdn.tripadvisor.com/media/photo-s/32/3c/4f/23/caption.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/18/21/87/08/photo3jpg.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/32/3c/4f/21/caption.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/18/49/2c/25/sofitel-brussels-europe.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/18/49/2c/3b/sofitel-brussels-europe.jpg"
@@ -91,7 +91,7 @@
    "https://media-cdn.tripadvisor.com/media/photo-s/12/64/42/e7/photo3jpg.jpg",
    "img/crillon-terraco.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/16/95/a7/7b/photo0jpg.jpg",
-   "https://media-cdn.tripadvisor.com/media/photo-s/11/85/3b/f0/the-bar.jpg"
+   "img/crillon-patio.jpg"
   ]
  }
 }

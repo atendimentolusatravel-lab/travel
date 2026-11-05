@@ -17,7 +17,10 @@
 - Sofitel: vista do bar do 7º andar (cobertura) para a Place Jourdan, hall de entrada (átrio) no lugar do criado-mudo, restaurante. Sem foto da área da cobertura em si.
 - Crillon última noite: outra foto de quarto (`crillon-ultima` em fotos.json).
 - Crillon: terraço com a Torre Eiffel à noite (foto enviada pela agência, `src/img/crillon-terraco.jpg`, original em `fonte/`) no lugar do café da manhã, nos dois cartões; quarto das 5 noites trocado por foto profissional.
-- Pendente (fotos mandadas no chat durante o trabalho não chegam como arquivo): pátio do Crillon, terraço do Park Hyatt com a coluna Vendôme, quarto do Sofitel, foto do Amigo.
+- Crillon: pátio (foto da agência, `src/img/crillon-patio.jpg`) no lugar do bar, nos dois cartões.
+- Amigo: corredor dos quartos (foto da agência, `src/img/amigo-corredor.jpg`) como 6ª foto, no lugar do quarto Classic.
+- Sofitel: banheiro trocado por foto mais nítida (bancada com espelho iluminado).
+- Pendente: terraço do Park Hyatt com a coluna Vendôme e quarto do Sofitel (fotos não chegaram como arquivo).
 
 ## Gerar
 
