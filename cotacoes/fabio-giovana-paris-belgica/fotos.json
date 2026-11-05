@@ -6,7 +6,8 @@
   "amigo": "sem banheiro: 3ª = sala da suíte",
   "sofitel": "sem fachada: 1ª = vista do bar do 7º andar (cobertura) para a Place Jourdan; 4ª = hall de entrada (átrio); 5ª = restaurante",
   "george-v": "1ª = hall de entrada (a pedido, no lugar da entrada pela rua); 5ª = vista do quarto com a Torre Eiffel",
-  "crillon-ultima": "mesmas fotos do Crillon, com outra foto de quarto (2ª)"
+  "crillon-ultima": "mesmas fotos do Crillon, com outra foto de quarto (2ª)",
+  "crillon": "4ª = terraço com a Torre Eiffel (foto enviada pela agência, no lugar do café da manhã)"
  },
  "_capa": {
   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg/1280px-Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg",
@@ -36,9 +37,9 @@
  "crillon": {
   "fotos": [
    "https://media-cdn.tripadvisor.com/media/photo-s/18/4b/4f/ab/photo0jpg.jpg",
-   "https://media-cdn.tripadvisor.com/media/photo-s/14/f9/66/9b/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/2c/1b/3f/84/grands-appartements-choupette.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/12/64/42/e7/photo3jpg.jpg",
-   "https://media-cdn.tripadvisor.com/media/photo-s/17/c1/27/0c/photo0jpg.jpg",
+   "img/crillon-terraco.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/16/95/a7/7b/photo0jpg.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/11/85/3b/f0/the-bar.jpg"
   ]
@@ -88,7 +89,7 @@
    "https://media-cdn.tripadvisor.com/media/photo-s/18/4b/4f/ab/photo0jpg.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/2c/1b/3f/81/grands-appartements-bedroom.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/12/64/42/e7/photo3jpg.jpg",
-   "https://media-cdn.tripadvisor.com/media/photo-s/17/c1/27/0c/photo0jpg.jpg",
+   "img/crillon-terraco.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/16/95/a7/7b/photo0jpg.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/11/85/3b/f0/the-bar.jpg"
   ]

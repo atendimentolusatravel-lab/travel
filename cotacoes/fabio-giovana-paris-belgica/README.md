@@ -16,7 +16,8 @@
 - Amigo: terraço com a torre da Prefeitura no lugar dos telhados. Radisson: restaurante do átrio no lugar do corredor.
 - Sofitel: vista do bar do 7º andar (cobertura) para a Place Jourdan, hall de entrada (átrio) no lugar do criado-mudo, restaurante. Sem foto da área da cobertura em si.
 - Crillon última noite: outra foto de quarto (`crillon-ultima` em fotos.json).
-- Pendente: 2 fotos do Crillon enviadas no chat (pátio e terraço com a Torre Eiffel) não chegaram como arquivo.
+- Crillon: terraço com a Torre Eiffel à noite (foto enviada pela agência, `src/img/crillon-terraco.jpg`, original em `fonte/`) no lugar do café da manhã, nos dois cartões; quarto das 5 noites trocado por foto profissional.
+- Pendente (fotos mandadas no chat durante o trabalho não chegam como arquivo): pátio do Crillon, terraço do Park Hyatt com a coluna Vendôme, quarto do Sofitel, foto do Amigo.
 
 ## Gerar
 
