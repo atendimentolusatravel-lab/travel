@@ -6,7 +6,7 @@ Fontes (reenviadas em 05/11/2026, 3ª versão):
 - fonte/trens.png: 6 trens, "preço à vista" e "preço para parcelamento em 03 vezes".
 - fonte/passeios.png: 4 passeios, "preço à vista" e "preço para parcelamento em 08 vezes".
 Pagamento (agência): hotéis em até 10x sem juros; trens à vista ou em até 3x; passeios à vista ou em até 8x.
-Crillon na última noite veio sem valor na planilha de 05/11 (refeita): mantido R$ 64.575,97 da planilha anterior, a confirmar.
+Crillon na última noite: R$ 64.333,00 (informado pela agência em 05/11, fora da planilha).
 Ano não consta: dezembro de 2026. O Hotel Amigo é o de Bruxelas (Tripadvisor 196130).
 CSS: style.part.html (template oficial) com poda das regras não usadas (prune.part.py).
 Fotos: Tripadvisor, classificação automática (fonte/cand.json, fotos.json).
@@ -66,7 +66,7 @@ CIDADES = [
     dict(nome="Paris · última noite", datas="29 – 30 DEZ · 1 noite", per="29/12–30/12 · 1 noite", noites=1, hoteis=[
         dict(slug="park-hyatt", quartos="3 Deluxe King, com cama extra-large super-king", regime=CAFE, valor="52.358,00"),
         dict(slug="crillon", quartos="2 Grand Premier King + 1 Paris Eiffel Tower Room com cama super-king", regime=CAFE,
-             valor="64.575,97"),
+             valor="64.333,00"),
         dict(slug="regina", quartos="2 Junior Suites com cama super-king e sofá-cama + 1 Prestige com cama super-king",
              regime=CAFE, valor="25.271,00"),
     ], nota="Volta de Bruxelas na manhã de 29/12 e uma noite em Paris antes do embarque."),

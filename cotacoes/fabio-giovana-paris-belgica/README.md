@@ -6,8 +6,8 @@
 - Hotel Amigo = Rocco Forte de Bruxelas (Tripadvisor 196130). O Hotel de la Ville (Roma) não entra.
 - Disney em 21/12 (passeio fixo, a pedido da agência). Em 23/12, Vaux-le-Vicomte (opção 1) ou Honfleur/Deauville (opção 2): escolher 1.
 - 3ª versão (planilha refeita em 05/11): trens 2.399/2.580, 1.023/1.100, 969/1.043, 515/554, 515/554, 4.259/4.581 (à vista / 3x); passeios Disney 1.848/2.132, Versalhes 1.628/1.878, Vaux 3.698/4.266, Honfleur 4.806/5.544 (à vista / 8x). Hotéis iguais; todos em BRL.
-- Crillon na última noite (29–30/12) veio sem valor na planilha nova: mantido R$ 64.575,97 da planilha anterior, a confirmar com a agência.
-- Faixa à vista R$ 156.342,00 – 596.703,17 · parcelado R$ 158.176,00 – 598.707,17.
+- Crillon na última noite (29–30/12): R$ 64.333,00, informado pela agência (a planilha nova veio sem esse valor).
+- Faixa à vista R$ 156.342,00 – 596.460,20 · parcelado R$ 158.176,00 – 598.464,20.
 
 ## Gerar
 
