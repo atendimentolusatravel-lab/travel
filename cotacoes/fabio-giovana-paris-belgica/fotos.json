@@ -1,0 +1,84 @@
+{
+ "_ordem": "fachada, quarto com cama, banheiro, café da manhã, livre, livre (classificação CLIP, Tripadvisor)",
+ "_substituicoes": {
+  "park-hyatt": "sem foto de banheiro: 3ª = suíte",
+  "regina": "sem banheiro nem café: 3ª = vista, 4ª = lobby",
+  "amigo": "sem banheiro: 3ª = sala da suíte",
+  "sofitel": "sem foto clara de fachada: 1ª = vista externa (classificação incerta), 5ª = lobby"
+ },
+ "_capa": {
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand-Place_(Bruxelles)_en_d%C3%A9cembre_2019.jpg?width=1600",
+  "alt": "Grand-Place de Bruxelas em dezembro",
+  "credito": "Foto de capa: Grand-Place de Bruxelas em dezembro, Benoît Prieur, Wikimedia Commons, CC0."
+ },
+ "park-hyatt": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/14/ae/12/65/photo4jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/05/f6/55/da/our-room.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/2d/e6/49/a6/suite.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/15/dd/24/c9/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/02/f0/c4/ad/park-hyatt-paris-vendome.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/2d/e0/09/e4/restaurant.jpg"
+  ]
+ },
+ "george-v": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/16/bd/cf/79/entrance-to-lobby.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/14/33/a3/f0/big-comfy-bed-with-blackout.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/0f/5e/54/8c/presidential-suite-bathroom.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/15/2c/f2/54/buffet.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/18/3b/97/c4/photo3jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/0f/5e/57/4b/le-cinq-restaurant-3.jpg"
+  ]
+ },
+ "crillon": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/18/4b/4f/ab/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/14/f9/66/9b/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/12/64/42/e7/photo3jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/17/c1/27/0c/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/16/95/a7/7b/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/11/85/3b/f0/the-bar.jpg"
+  ]
+ },
+ "regina": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/18/53/a0/25/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/17/b1/1b/c8/room-305.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/15/ed/c1/90/photo5jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/2a/74/db/34/lobby.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/0b/d0/98/9e/regina-hotel.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/14/ff/ae/c8/photo1jpg.jpg"
+  ]
+ },
+ "amigo": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/34/5b/56/18/rfh-hotel-amigo-facade.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/17/b0/5a/54/caption.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/0f/a0/61/23/hotel-amigo.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/17/b0/5a/30/caption.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/17/99/7e/bc/hotel-amigo.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/16/88/3a/56/photo0jpg.jpg"
+  ]
+ },
+ "radisson": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/35/20/b7/a0/exterior.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/32/2b/25/dd/caption.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/32/17/4d/ad/caption.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/31/7e/32/0b/breakfast.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/32/17/4d/a9/caption.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/21/81/3c/75/radisson-collection-hotel.jpg"
+  ]
+ },
+ "sofitel": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/17/d5/88/51/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/32/ce/a1/33/caption.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/32/3c/4f/23/caption.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/17/c0/8b/df/sofitel-brussels-europe.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/18/49/2c/47/sofitel-brussels-europe.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/18/49/2c/3b/sofitel-brussels-europe.jpg"
+  ]
+ }
+}
