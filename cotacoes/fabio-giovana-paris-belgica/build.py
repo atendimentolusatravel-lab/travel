@@ -65,7 +65,7 @@ CIDADES = [
             "bairro europeu, a cerca de 10 minutos de táxi do centro."),
     dict(nome="Paris · última noite", datas="29 – 30 DEZ · 1 noite", per="29/12–30/12 · 1 noite", noites=1, hoteis=[
         dict(slug="park-hyatt", quartos="3 Deluxe King, com cama extra-large super-king", regime=CAFE, valor="52.358,00"),
-        dict(slug="crillon", quartos="2 Grand Premier King + 1 Paris Eiffel Tower Room com cama super-king", regime=CAFE,
+        dict(slug="crillon", fotos="crillon-ultima", quartos="2 Grand Premier King + 1 Paris Eiffel Tower Room com cama super-king", regime=CAFE,
              valor="64.333,00"),
         dict(slug="regina", quartos="2 Junior Suites com cama super-king e sofá-cama + 1 Prestige com cama super-king",
              regime=CAFE, valor="25.271,00"),
@@ -106,8 +106,11 @@ def parc(total, n):
 
 def card(h, noites):
     info = H[h["slug"]]
-    imgs = "".join(f'<img src="{u}" alt="{info["nome"]}" loading="lazy" referrerpolicy="no-referrer">'
-                   for u in FOTOS[h["slug"]]["fotos"])
+    def img(u):  # "url|top" ancora o recorte no alto da foto
+        u, _, pos = u.partition("|")
+        st = ' style="object-position:center top"' if pos == "top" else ""
+        return f'<img src="{u}" alt="{info["nome"]}" loading="lazy" referrerpolicy="no-referrer"{st}>'
+    imgs = "".join(img(u) for u in FOTOS[h.get("fotos", h["slug"])]["fotos"])
     bf = f'<span class="bf">{h["regime"]}</span>' if h["regime"] else '<span class="bf">Café da manhã não informado</span>'
     return (f'        <div class="hotel"><div class="hotel-top"><div class="hotel-name">{BLDG}<span>{info["nome"]} '
             f'<span class="loc2">· {info["loc"]}</span></span></div><div class="hotel-price"><div class="v">R$ {h["valor"]}</div>'
@@ -266,7 +269,7 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Experiências</span>
     <h2>Passeios</h2>
     <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">Passeios privativos a partir de Paris. Pagamento <b>à vista</b> ou <b>parcelado em até 8x</b>; o parcelado tem valor próprio. Os dois passeios de <b>23/12</b> (opções 1 e 2) são alternativos: <b>escolher 1</b>.</p>
+    <p class="note" style="margin-top:16px">Passeios privativos a partir de Paris. Pagamento <b>à vista</b> ou <b>parcelado em até 8x</b>. Os dois passeios de <b>23/12</b> (opções 1 e 2) são alternativos: <b>escolher 1</b>.</p>
 {pass_html}
     <div class="tnote">Os ingressos de Versalhes, da Disneyland e de Vaux-le-Vicomte <b>não estão incluídos</b>: compramos à parte, conforme a data escolhida.</div>
   </section>
@@ -307,7 +310,7 @@ html = f"""<!DOCTYPE html>
         <h4>Condições de pagamento</h4>
         <p><b>Hotéis</b> — em até <b>10x sem juros</b></p>
         <p><b>Trens</b> — à vista ou em até <b>3x</b> (valor parcelado próprio)</p>
-        <p><b>Passeios</b> — à vista ou em até <b>8x</b> (valor parcelado próprio)</p>
+        <p><b>Passeios</b> — à vista ou em até <b>8x</b></p>
       </div>
       <div class="box">
         <h4>Referência</h4>

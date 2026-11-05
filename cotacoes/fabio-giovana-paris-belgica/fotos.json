@@ -4,12 +4,14 @@
   "park-hyatt": "sem foto de banheiro: 3ª = suíte",
   "regina": "sem banheiro nem café: 3ª = vista, 4ª = lobby",
   "amigo": "sem banheiro: 3ª = sala da suíte",
-  "sofitel": "sem foto clara de fachada: 1ª = vista externa (classificação incerta), 5ª = lobby"
+  "sofitel": "sem fachada: 1ª = vista do bar do 7º andar (cobertura) para a Place Jourdan; 4ª = hall de entrada (átrio); 5ª = restaurante",
+  "george-v": "1ª = hall de entrada (a pedido, no lugar da entrada pela rua); 5ª = vista do quarto com a Torre Eiffel",
+  "crillon-ultima": "mesmas fotos do Crillon, com outra foto de quarto (2ª)"
  },
  "_capa": {
-  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand-Place_(Bruxelles)_en_d%C3%A9cembre_2019.jpg?width=1600",
-  "alt": "Grand-Place de Bruxelas em dezembro",
-  "credito": "Foto de capa: Grand-Place de Bruxelas em dezembro, Benoît Prieur, Wikimedia Commons, CC0."
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg/1280px-Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg",
+  "alt": "Torre Eiffel e Ponte Alexandre III à noite, em Paris",
+  "credito": "Foto de capa: Torre Eiffel e Ponte Alexandre III à noite, Getfunky Paris (Flickr), Wikimedia Commons, CC BY 2.0."
  },
  "park-hyatt": {
   "fotos": [
@@ -23,11 +25,11 @@
  },
  "george-v": {
   "fotos": [
-   "https://media-cdn.tripadvisor.com/media/photo-s/16/bd/cf/79/entrance-to-lobby.jpg",
-   "https://media-cdn.tripadvisor.com/media/photo-s/14/33/a3/f0/big-comfy-bed-with-blackout.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/15/2c/f1/d4/beautiful-lobby.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/0f/5e/54/2f/royal-suite-room.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/0f/5e/54/8c/presidential-suite-bathroom.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/15/2c/f2/54/buffet.jpg",
-   "https://media-cdn.tripadvisor.com/media/photo-s/18/3b/97/c4/photo3jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/13/d7/ea/6c/my-room-s-viewgo-for.jpg|top",
    "https://media-cdn.tripadvisor.com/media/photo-s/0f/5e/57/4b/le-cinq-restaurant-3.jpg"
   ]
  },
@@ -57,7 +59,7 @@
    "https://media-cdn.tripadvisor.com/media/photo-s/17/b0/5a/54/caption.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/0f/a0/61/23/hotel-amigo.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/17/b0/5a/30/caption.jpg",
-   "https://media-cdn.tripadvisor.com/media/photo-s/17/99/7e/bc/hotel-amigo.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/0f/a0/61/54/hotel-amigo.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/16/88/3a/56/photo0jpg.jpg"
   ]
  },
@@ -67,18 +69,28 @@
    "https://media-cdn.tripadvisor.com/media/photo-s/32/2b/25/dd/caption.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/32/17/4d/ad/caption.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/31/7e/32/0b/breakfast.jpg",
-   "https://media-cdn.tripadvisor.com/media/photo-s/32/17/4d/a9/caption.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/34/66/a1/c2/caption.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/21/81/3c/75/radisson-collection-hotel.jpg"
   ]
  },
  "sofitel": {
   "fotos": [
-   "https://media-cdn.tripadvisor.com/media/photo-s/17/d5/88/51/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/31/46/fa/85/caption.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/32/ce/a1/33/caption.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/32/3c/4f/23/caption.jpg",
-   "https://media-cdn.tripadvisor.com/media/photo-s/17/c0/8b/df/sofitel-brussels-europe.jpg",
-   "https://media-cdn.tripadvisor.com/media/photo-s/18/49/2c/47/sofitel-brussels-europe.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/32/3c/4f/21/caption.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/18/49/2c/25/sofitel-brussels-europe.jpg",
    "https://media-cdn.tripadvisor.com/media/photo-s/18/49/2c/3b/sofitel-brussels-europe.jpg"
+  ]
+ },
+ "crillon-ultima": {
+  "fotos": [
+   "https://media-cdn.tripadvisor.com/media/photo-s/18/4b/4f/ab/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/2c/1b/3f/81/grands-appartements-bedroom.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/12/64/42/e7/photo3jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/17/c1/27/0c/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/16/95/a7/7b/photo0jpg.jpg",
+   "https://media-cdn.tripadvisor.com/media/photo-s/11/85/3b/f0/the-bar.jpg"
   ]
  }
 }
