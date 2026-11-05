@@ -35,6 +35,6 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 
 ## Pendentes
 
-- Hotelaria: Jeju, Xangai, Pequim, Chengdu, Hong Kong
-- Voos internos: Gimpo–Jeju (27/05), Jeju–Xangai (29/05), Pequim–Chengdu (05/06), Chengdu–Hong Kong (08/06)
+- Hotelaria: Jeju (27–30/05, 3 noites), Xangai (30/05–02/06, 3 noites), Pequim, Chengdu, Hong Kong
+- Voos internos: Gimpo–Jeju (27/05), Jeju–Xangai (30/05), Pequim–Chengdu (05/06), Chengdu–Hong Kong (08/06)
 - Trens, transfers, guias, ingressos, seguro
