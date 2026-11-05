@@ -13,6 +13,7 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 | Kawaguchiko (Fuji) | 12–14/05 | 2 | Upgrade | Ryokan com onsen privativo, vista do Fuji e kaiseki (ex.: Fufu Kawaguchiko) | Quarto com onsen privativo | Meia pensão | Sujeito a disponibilidade — vendas de maio/2027 ainda não abertas |
 | Kyoto | 14–18/05 | 4 | 01 | The Gate Hotel Kyoto Takasegawa by Hulic | Casal standard | Café da manhã | 8.750 |
 | Kyoto | 14–18/05 | 4 | 02 | The Royal Park Hotel Iconic Kyoto | Casal superior | Café da manhã | 6.850 |
+| Kyoto | 14–18/05 | 4 | 03 | HOTEL THE MITSUI KYOTO, a Luxury Collection Hotel & Spa (5★) | Luxo King | Café da manhã | 27.533 |
 
 ## Pendentes
 
