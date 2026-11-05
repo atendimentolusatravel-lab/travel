@@ -1,12 +1,13 @@
 # Fabio e Giovana · Paris & Bélgica (20 a 30/12/2026)
 
-- **Publicado:** https://cotacao-fabio-giovana-paris-belgica.vercel.app (05/11/2026, versão revista; Disney movida para 21/12).
+- **Publicado:** https://cotacao-fabio-giovana-paris-belgica.vercel.app (05/11/2026, 3ª versão: trens em 3x e passeios em 8x).
 - **Fontes:** `fonte/hoteis.png` (hotéis, BRL, 3 quartos) e `fonte/trens-passeios.png` (6 trens e 4 passeios, à vista e parcelado em 6x).
 - Pagamento: hotéis em até 10x sem juros; trens e passeios à vista ou em 6x (valor parcelado próprio, da planilha).
 - Hotel Amigo = Rocco Forte de Bruxelas (Tripadvisor 196130). O Hotel de la Ville (Roma) não entra.
 - Disney em 21/12 (passeio fixo, a pedido da agência). Em 23/12, Vaux-le-Vicomte (opção 1) ou Honfleur/Deauville (opção 2): escolher 1.
-- Versão revista: Sofitel R$ 26.067,00 com café; passeios Versalhes 1.628/1.823, Disney 1.848/2.070, Vaux 3.698/4.142, Honfleur 4.806/5.384 (todos em BRL, confirmado pela agência).
-- Faixa à vista R$ 156.762,00 – 597.123,17 · parcelado R$ 158.838,00 – 599.333,17.
+- 3ª versão (planilha refeita em 05/11): trens 2.399/2.580, 1.023/1.100, 969/1.043, 515/554, 515/554, 4.259/4.581 (à vista / 3x); passeios Disney 1.848/2.132, Versalhes 1.628/1.878, Vaux 3.698/4.266, Honfleur 4.806/5.544 (à vista / 8x). Hotéis iguais; todos em BRL.
+- Crillon na última noite (29–30/12) veio sem valor na planilha nova: mantido R$ 64.575,97 da planilha anterior, a confirmar com a agência.
+- Faixa à vista R$ 156.342,00 – 596.703,17 · parcelado R$ 158.176,00 – 598.707,17.
 
 ## Gerar
 

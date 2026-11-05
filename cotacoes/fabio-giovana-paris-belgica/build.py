@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Gera src/index.html da cotação Paris & Bélgica — Fabio e Giovana (20 a 30/12/2026).
 
-Fontes (reenviadas em 05/11/2026, versão revista):
+Fontes (reenviadas em 05/11/2026, 3ª versão):
 - fonte/hoteis.png: Paris 20–25/12, Bruxelas 25–29/12, Paris 29–30/12; valores em BRL para 3 quartos.
-- fonte/trens-passeios.png: 6 trens e 4 passeios, com "preço à vista" e "preço para parcelamento em 06 vezes".
-Pagamento (agência): hotéis em até 10x sem juros; trens e passeios à vista ou parcelado em até 6x.
+- fonte/trens.png: 6 trens, "preço à vista" e "preço para parcelamento em 03 vezes".
+- fonte/passeios.png: 4 passeios, "preço à vista" e "preço para parcelamento em 08 vezes".
+Pagamento (agência): hotéis em até 10x sem juros; trens à vista ou em até 3x; passeios à vista ou em até 8x.
+Crillon na última noite veio sem valor na planilha de 05/11 (refeita): mantido R$ 64.575,97 da planilha anterior, a confirmar.
 Ano não consta: dezembro de 2026. O Hotel Amigo é o de Bruxelas (Tripadvisor 196130).
 CSS: style.part.html (template oficial) com poda das regras não usadas (prune.part.py).
 Fotos: Tripadvisor, classificação automática (fonte/cand.json, fotos.json).
@@ -70,21 +72,22 @@ CIDADES = [
     ], nota="Volta de Bruxelas na manhã de 29/12 e uma noite em Paris antes do embarque."),
 ]
 
-TRENS = [  # data, trecho, horário, à vista, parcelado 6x
-    ("25/12", "Paris → Bruxelas", "14:23 Paris Gare du Nord → 15:47 Bruxelas-Midi", 2504, 2805),
-    ("26/12", "Bruxelas → Bruges", "08:20 Bruxelas-Central → 09:26 Bruges", 1067, 1196),
-    ("26/12", "Bruges → Bruxelas", "16:59 Bruges → 18:00 Bruxelas-Central", 1011, 1133),
-    ("27/12", "Bruxelas → Antuérpia", "08:49 Bruxelas-Central → 09:42 Antuérpia-Central", 537, 602),
-    ("27/12", "Antuérpia → Bruxelas", "17:07 Antuérpia-Central → 17:58 Bruxelas-Central", 537, 602),
-    ("29/12", "Bruxelas → Paris", "10:13 Bruxelas-Midi → 11:35 Paris Gare du Nord", 4444, 4977),
+NT, NP = 3, 8  # parcelas: trens em até 3x, passeios em até 8x
+TRENS = [  # data, trecho, horário, à vista, parcelado 3x
+    ("25/12", "Paris → Bruxelas", "14:23 Paris Gare du Nord → 15:47 Bruxelas-Midi", 2399, 2580),
+    ("26/12", "Bruxelas → Bruges", "08:20 Bruxelas-Central → 09:26 Bruges", 1023, 1100),
+    ("26/12", "Bruges → Bruxelas", "16:59 Bruges → 18:00 Bruxelas-Central", 969, 1043),
+    ("27/12", "Bruxelas → Antuérpia", "08:49 Bruxelas-Central → 09:42 Antuérpia-Central", 515, 554),
+    ("27/12", "Antuérpia → Bruxelas", "17:07 Antuérpia-Central → 17:58 Bruxelas-Central", 515, 554),
+    ("29/12", "Bruxelas → Paris", "10:13 Bruxelas-Midi → 11:35 Paris Gare du Nord", 4259, 4581),
 ]
-PASSEIOS = [  # data, nome, descrição, à vista, 6x, grupo
-    ("21/12", "Disneyland Paris", "Passeio privativo de ida e volta à Disneyland Paris. Não inclui o ingresso.", 1848, 2070, None),
-    ("22/12", "Palácio de Versalhes", "Passeio privativo de ida e volta ao Palácio de Versalhes. Não inclui o ingresso.", 1628, 1823, None),
+PASSEIOS = [  # data, nome, descrição, à vista, parcelado 8x, grupo
+    ("21/12", "Disneyland Paris", "Passeio privativo de ida e volta à Disneyland Paris. Não inclui o ingresso.", 1848, 2132, None),
+    ("22/12", "Palácio de Versalhes", "Passeio privativo de ida e volta ao Palácio de Versalhes. Não inclui o ingresso.", 1628, 1878, None),
     ("23/12", "Natal no Castelo de Vaux-le-Vicomte · opção 1",
-     "Passeio privativo de ida e volta, de meio dia, ao Castelo de Vaux-le-Vicomte, decorado para o Natal. Não inclui o ingresso.", 3698, 4142, "23"),
+     "Passeio privativo de ida e volta, de meio dia, ao Castelo de Vaux-le-Vicomte, decorado para o Natal. Não inclui o ingresso.", 3698, 4266, "23"),
     ("23/12", "Honfleur e Deauville · opção 2",
-     "Passeio privativo de ida e volta à Normandia, combinando o porto de Honfleur e a cidade balneária de Deauville.", 4806, 5384, "23"),
+     "Passeio privativo de ida e volta à Normandia, combinando o porto de Honfleur e a cidade balneária de Deauville.", 4806, 5544, "23"),
 ]
 
 
@@ -132,19 +135,19 @@ hoteis_html = "\n".join(
 
 trens_rows = "\n".join(
     f'      <tr><td><b>{t[1]}</b><span class="sub">{t[0]} · direto · tarifa promocional</span></td><td>{t[2]}</td>'
-    f'<td class="v">R$ {brl(t[3], False)}</td><td class="v">R$ {brl(t[4], False)}<span class="sub">{parc(t[4], 6)}</span></td></tr>'
+    f'<td class="v">R$ {brl(t[3], False)}</td><td class="v">R$ {brl(t[4], False)}<span class="sub">{parc(t[4], NT)}</span></td></tr>'
     for t in TRENS)
 trens_rows += (f'\n      <tr class="total-row"><td colspan="2"><b>Total dos 6 trens</b></td><td class="v">R$ {brl(TV, False)}</td>'
-               f'<td class="v">R$ {brl(TP, False)}<span class="sub">{parc(TP, 6)}</span></td></tr>')
+               f'<td class="v">R$ {brl(TP, False)}<span class="sub">{parc(TP, NT)}</span></td></tr>')
 
 pass_html = "\n".join(
     f'    <div class="svc"><div class="ic">{STAR}</div><div><div class="t">{p[1]}</div><div class="d">{p[2]}</div></div>'
     f'<div class="dt">{p[0]}<br><span style="color:var(--green)">R$ {brl(p[3], False)} à vista</span><br>'
-    f'<span style="font-weight:500;font-size:.74rem">ou R$ {brl(p[4], False)} em 6x ({parc(p[4], 6)})</span></div></div>'
+    f'<span style="font-weight:500;font-size:.74rem">ou R$ {brl(p[4], False)} em {NP}x ({parc(p[4], NP)})</span></div></div>'
     for p in PASSEIOS)
 pass_rows = "\n".join(
     f'      <tr><td><b>{p[1]}</b><span class="sub">{p[0]}{" · escolher 1 para 23/12" if p[5] else ""}</span></td>'
-    f'<td class="v">R$ {brl(p[3], False)}</td><td class="v">R$ {brl(p[4], False)}<span class="sub">{parc(p[4], 6)}</span></td></tr>'
+    f'<td class="v">R$ {brl(p[3], False)}</td><td class="v">R$ {brl(p[4], False)}<span class="sub">{parc(p[4], NP)}</span></td></tr>'
     for p in PASSEIOS)
 
 hotel_rows = "\n".join(
@@ -252,9 +255,9 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Transporte</span>
     <h2>Trens</h2>
     <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">Trens diretos, tarifa promocional (<i>discounted price</i>). Pagamento <b>à vista</b> ou <b>parcelado em até 6x</b>; o parcelado tem valor próprio, informado ao lado.</p>
+    <p class="note" style="margin-top:16px">Trens diretos, tarifa promocional (<i>discounted price</i>). Pagamento <b>à vista</b> ou <b>parcelado em até 3x</b>; o parcelado tem valor próprio, informado ao lado.</p>
     <div class="tbl-wrap"><table>
-      <tr class="head-row"><td>Trecho</td><td>Horário</td><td class="v">À vista</td><td class="v">Parcelado em 6x</td></tr>
+      <tr class="head-row"><td>Trecho</td><td>Horário</td><td class="v">À vista</td><td class="v">Parcelado em 3x</td></tr>
 {trens_rows}
     </table></div>
   </section>
@@ -263,7 +266,7 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Experiências</span>
     <h2>Passeios</h2>
     <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">Passeios privativos a partir de Paris. Pagamento <b>à vista</b> ou <b>parcelado em até 6x</b>. Os dois passeios de <b>23/12</b> (opções 1 e 2) são alternativos: <b>escolher 1</b>.</p>
+    <p class="note" style="margin-top:16px">Passeios privativos a partir de Paris. Pagamento <b>à vista</b> ou <b>parcelado em até 8x</b>; o parcelado tem valor próprio. Os dois passeios de <b>23/12</b> (opções 1 e 2) são alternativos: <b>escolher 1</b>.</p>
 {pass_html}
     <div class="tnote">Os ingressos de Versalhes, da Disneyland e de Vaux-le-Vicomte <b>não estão incluídos</b>: compramos à parte, conforme a data escolhida.</div>
   </section>
@@ -288,23 +291,23 @@ html = f"""<!DOCTYPE html>
     </table></div>
 
     <div class="tbl-wrap"><table>
-      <tr class="head-row"><td>Trens e passeios</td><td class="v">À vista</td><td class="v">Parcelado em 6x</td></tr>
+      <tr class="head-row"><td>Trens e passeios</td><td class="v">À vista</td><td class="v">Parcelado</td></tr>
       <tr class="sec-row"><td colspan="3">Trens · 6 trechos</td></tr>
-      <tr><td><b>Paris ⇄ Bruxelas, Bruges e Antuérpia</b><span class="sub">25/12 a 29/12</span></td><td class="v">R$ {brl(TV, False)}</td><td class="v">R$ {brl(TP, False)}<span class="sub">{parc(TP, 6)}</span></td></tr>
+      <tr><td><b>Paris ⇄ Bruxelas, Bruges e Antuérpia</b><span class="sub">25/12 a 29/12</span></td><td class="v">R$ {brl(TV, False)}</td><td class="v">R$ {brl(TP, False)}<span class="sub">{parc(TP, NT)}</span></td></tr>
       <tr class="sec-row"><td colspan="3">Passeios</td></tr>
 {pass_rows}
     </table></div>
 
     <div class="flval"><span class="lbl">Total estimado · à vista</span><div class="amt"><div class="t">R$ {brl(TOT_V[0])} – {brl(TOT_V[1])}</div><div class="p">hotéis + trens + passeios, trens e passeios à vista</div></div></div>
-    <div class="flval" style="background:var(--green-soft)"><span class="lbl">Total estimado · parcelado</span><div class="amt"><div class="t">R$ {brl(TOT_P[0])} – {brl(TOT_P[1])}</div><div class="p">hotéis em 10x sem juros + trens e passeios em 6x</div></div></div>
-    <p class="note"><b>Como é calculado:</b> {calc} + trens (R$ {brl(TV, False)} à vista ou R$ {brl(TP, False)} em 6x) + Disney + Versalhes + 1 passeio de 23/12 (de R$ {brl(PV_MIN, False)} a R$ {brl(PV_MAX, False)} à vista; de R$ {brl(PP_MIN, False)} a R$ {brl(PP_MAX, False)} em 6x). O valor final depende dos hotéis e do passeio escolhidos.</p>
+    <div class="flval" style="background:var(--green-soft)"><span class="lbl">Total estimado · parcelado</span><div class="amt"><div class="t">R$ {brl(TOT_P[0])} – {brl(TOT_P[1])}</div><div class="p">hotéis em 10x sem juros + trens em 3x + passeios em 8x</div></div></div>
+    <p class="note"><b>Como é calculado:</b> {calc} + trens (R$ {brl(TV, False)} à vista ou R$ {brl(TP, False)} em 3x) + Disney + Versalhes + 1 passeio de 23/12 (de R$ {brl(PV_MIN, False)} a R$ {brl(PV_MAX, False)} à vista; de R$ {brl(PP_MIN, False)} a R$ {brl(PP_MAX, False)} em 8x). O valor final depende dos hotéis e do passeio escolhidos.</p>
 
     <div class="pay">
       <div class="box">
         <h4>Condições de pagamento</h4>
         <p><b>Hotéis</b> — em até <b>10x sem juros</b></p>
-        <p><b>Trens</b> — à vista ou em até <b>6x</b> (valor parcelado próprio)</p>
-        <p><b>Passeios</b> — à vista ou em até <b>6x</b> (valor parcelado próprio)</p>
+        <p><b>Trens</b> — à vista ou em até <b>3x</b> (valor parcelado próprio)</p>
+        <p><b>Passeios</b> — à vista ou em até <b>8x</b> (valor parcelado próprio)</p>
       </div>
       <div class="box">
         <h4>Referência</h4>
