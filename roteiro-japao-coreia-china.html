@@ -114,6 +114,16 @@ body{
 .tl-move{ margin-top:11px; padding-top:11px; border-top:1px solid var(--line); font-size:11.5px; font-weight:400; color:var(--char); }
 .tl-item.ship{ border-top-style:dashed; background:var(--surf2); }
 
+/* ─── POR QUE CADA CIDADE ────────────────────────────────── */
+.why{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; }
+.why-item{ background:var(--surf); border:1px solid var(--line); border-left:3px solid var(--dest); padding:20px 22px; }
+.why-k{ font-family:var(--lbl); font-weight:700; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--dest); }
+.why-t{ margin-top:6px; font-weight:600; font-size:16px; color:var(--ink); line-height:1.35; }
+.why-l{ margin-top:10px; list-style:none; }
+.why-l li{ position:relative; padding-left:16px; font-size:13.5px; font-weight:300; color:var(--char); margin-top:5px; }
+.why-l li::before{ content:''; position:absolute; left:0; top:.62em; width:6px; height:6px; background:var(--gold); }
+.why-l b{ font-weight:600; color:var(--ink); }
+
 /* ─── HOTELARIA ──────────────────────────────────────────── */
 .ht{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
 .ht-card{ background:var(--surf); border:1px solid var(--line); padding:20px 20px 18px; }
@@ -235,6 +245,61 @@ body{
       <div class="tl-item c-cn"><span class="tl-badge">3</span><span class="tl-ctry">China</span><div class="tl-city">Pequim</div><div class="tl-meta">02 a 05/06 · 3 noites</div><div class="tl-move">Trem-bala · 4h30</div></div>
       <div class="tl-item c-cn"><span class="tl-badge">3</span><span class="tl-ctry">China</span><div class="tl-city">Chengdu</div><div class="tl-meta">05 a 08/06 · 3 noites</div><div class="tl-move">Voo Pequim–Chengdu · 3h</div></div>
       <div class="tl-item c-cn"><span class="tl-badge">4</span><span class="tl-ctry">China</span><div class="tl-city">Hong Kong</div><div class="tl-meta">08 a 12/06 · 4 noites</div><div class="tl-move">Voo Chengdu–HK · 2h30 · saída 12/06, 19:40</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ POR QUE CADA CIDADE ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Por que cada cidade</div>
+    <h2 class="h2">Os destaques de cada parada</h2>
+    <p class="lead">Cada cidade entrou no roteiro por uma razão ligada ao que vocês gostam: <b>gastronomia</b>, vida noturna, cultura com roupas tradicionais, doramas e <b>tecnologia e imersão</b>.</p>
+    <div class="why">
+      <div class="why-item c-jp"><div class="why-k">Japão · 5 noites</div><div class="why-t">Tóquio</div><ul class="why-l">
+        <li><b>Tokyo DisneySea</b>, o parque que vocês pediram, com a área nova Fantasy Springs.</li>
+        <li>A Tóquio futurista: <b>teamLab Borderless</b>, Akihabara e Shibuya Sky.</li>
+        <li>Mercado de Tsukiji, omakase de sushi e os bares minúsculos do Golden Gai.</li></ul></div>
+      <div class="why-item c-jp"><div class="why-k">Japão · 2 noites</div><div class="why-t">Monte Fuji · Kawaguchiko</div><ul class="why-l">
+        <li>O <b>Monte Fuji</b> visto do quarto, como vocês pediram.</li>
+        <li>Pagode Chureito, o cartão-postal do Japão, e a 5ª estação do Fuji.</li>
+        <li>Duas noites aumentam a chance de ver a montanha sem nuvens.</li></ul></div>
+      <div class="why-item c-jp"><div class="why-k">Japão · 4 noites</div><div class="why-t">Kyoto</div><ul class="why-l">
+        <li><b>Aoi Matsuri</b> no sábado 15/05: desfile em trajes da corte imperial.</li>
+        <li>Passeio de <b>quimono</b> por Kiyomizu-dera e Sannenzaka, e cerimônia do chá.</li>
+        <li>Fushimi Inari, Arashiyama, Nara e o saquê de Fushimi.</li></ul></div>
+      <div class="why-item c-jp"><div class="why-k">Japão · 3 noites</div><div class="why-t">Osaka</div><ul class="why-l">
+        <li>A capital da <b>comida de rua</b> do Japão, com tour guiado por Dotonbori.</li>
+        <li>A noite mais animada do país, em Ura-Namba, e a carne de Kobe.</li>
+        <li>Bate-volta a <b>Hiroshima e Miyajima</b> e embarque no navio para a Coreia.</li></ul></div>
+      <div class="why-item c-kr"><div class="why-k">Coreia · 1 noite</div><div class="why-t">Busan</div><ul class="why-l">
+        <li>Chegada de navio, como vocês imaginaram a travessia.</li>
+        <li><b>Show de drones</b> de sábado sobre a ponte Gwangan.</li>
+        <li>Mercado de peixes Jagalchi e a vila colorida de Gamcheon.</li></ul></div>
+      <div class="why-item c-kr"><div class="why-k">Coreia · 4 noites</div><div class="why-t">Seul</div><ul class="why-l">
+        <li><b>Hanbok</b> no Palácio Gyeongbokgung e os cenários de <b>dorama</b> com guia.</li>
+        <li><b>Degustação de soju</b> e a Seul futurista de COEX, DDP e Seoul Sky.</li>
+        <li>Mercado Gwangjang, Seongsu-dong e a noite de Hongdae e Itaewon.</li></ul></div>
+      <div class="why-item c-kr"><div class="why-k">Coreia · 3 noites</div><div class="why-t">Ilha de Jeju</div><ul class="why-l">
+        <li>A ilha que vocês mais queriam conhecer, cenário de doramas.</li>
+        <li>Vulcões, as mergulhadoras <b>haenyeo</b> e as falésias de Jusangjeolli.</li>
+        <li>Arte Museum, de arte digital imersiva, e o porco preto de Jeju.</li></ul></div>
+      <div class="why-item c-cn"><div class="why-k">China · 3 noites</div><div class="why-t">Xangai</div><ul class="why-l">
+        <li>O <b>skyline de Pudong</b> visto do Bund e do rio Huangpu.</li>
+        <li><b>Maglev</b>, Shanghai Tower e teamLab: a China mais futurista.</li>
+        <li>Xiaolongbao, a Concessão Francesa e speakeasies entre os melhores da Ásia.</li></ul></div>
+      <div class="why-item c-cn"><div class="why-k">China · 3 noites</div><div class="why-t">Pequim</div><ul class="why-l">
+        <li><b>Grande Muralha</b> em Mutianyu, o trecho mais bonito e menos lotado.</li>
+        <li><b>Cidade Proibida</b> e Templo do Céu, com guia.</li>
+        <li>Hutongs, pato laqueado e a noite de Sanlitun.</li></ul></div>
+      <div class="why-item c-cn"><div class="why-k">China · 3 noites</div><div class="why-t">Chengdu e Chongqing</div><ul class="why-l">
+        <li>Os <b>pandas</b> e a culinária de Sichuan, com aula de cozinha e hot pot.</li>
+        <li><b>Chongqing</b>, a cidade "cyberpunk", a uma hora de trem-bala.</li>
+        <li>Ópera com troca de máscaras e os bares de Jiuyanqiao.</li></ul></div>
+      <div class="why-item c-cn"><div class="why-k">China · 4 noites</div><div class="why-t">Hong Kong e Shenzhen</div><ul class="why-l">
+        <li>Corridas do <b>Dragon Boat</b> em 09/06 e o show de luzes sobre o porto.</li>
+        <li><b>Shenzhen</b>, a capital mundial do hardware, a 15 minutos de trem.</li>
+        <li>Dim sum, Victoria Peak, Macau e um jantar de despedida com estrela Michelin.</li></ul></div>
     </div>
   </div>
 </section>
