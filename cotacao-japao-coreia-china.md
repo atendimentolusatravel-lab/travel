@@ -21,6 +21,8 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 | Seul | 23–27/05 | 4 | 01 | voco Seoul Myeongdong by IHG | Deluxe City View King | Café da manhã | 7.400 |
 | Seul | 23–27/05 | 4 | 02 | L’Escape, a Luxury Collection Hotel, Seoul Myeongdong | Classic King City View | Café da manhã | 8.690 |
 | Seul | 23–27/05 | 4 | 03 | HOTEL THE BOTANIK SEWOON MYEONGDONG | Premier Double | Café da manhã | 6.300 |
+| Jeju | 27–30/05 | 3 | 01 | Grand Hyatt Jeju | King Bed Room City View | Café da manhã | 6.900 |
+| Jeju | 27–30/05 | 3 | 02 | Sheraton Jeju | King, vista para o oceano | A confirmar | 5.820 |
 
 ## Navio
 
@@ -35,6 +37,6 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 
 ## Pendentes
 
-- Hotelaria: Jeju (27–30/05, 3 noites), Xangai (30/05–02/06, 3 noites), Pequim, Chengdu, Hong Kong
+- Hotelaria: Xangai (30/05–02/06, 3 noites), Pequim, Chengdu, Hong Kong
 - Voos internos: Gimpo–Jeju (27/05), Jeju–Xangai (30/05), Pequim–Chengdu (05/06), Chengdu–Hong Kong (08/06)
 - Trens, transfers, guias, ingressos, seguro
