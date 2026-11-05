@@ -23,11 +23,15 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 
 | Trecho | Data | Categoria | Valor (R$) |
 |---|---|---|---|
-| Panstar Cruise Osaka → Busan | 21/05 | Suíte | A confirmar |
+| Panstar Cruise Osaka → Busan | 21/05 (sex), saída 17:00 · chegada 22/05 às 10:00 | Balcony Suite, jantar e café da manhã inclusos | 5.390 |
+
+## Condições de pagamento
+
+- Panstar, passeios e serviços: parcelamento em até 6x
+- 10% de desconto no PIX
 
 ## Pendentes
 
 - Hotelaria: Seul, Jeju, Xangai, Pequim, Chengdu, Hong Kong
-- Panstar: valor da suíte
 - Voos internos: Gimpo–Jeju (27/05), Jeju–Xangai (29/05), Pequim–Chengdu (05/06), Chengdu–Hong Kong (08/06)
 - Trens, transfers, guias, ingressos, seguro
