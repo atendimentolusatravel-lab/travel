@@ -1,0 +1,17 @@
+# Cotação — Giovanna e Davi · Japão, Coreia e China (07/05–12/06/2027)
+
+Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem locais não incluídas (pagas no hotel). Duas opções por cidade, apresentadas como Opção 01 e Opção 02, sem diferencial.
+
+## Hotelaria
+
+| Cidade | Datas | Noites | Opção | Hotel | Quarto | Regime | Valor (R$) |
+|---|---|---|---|---|---|---|---|
+| Kyoto | 14–18/05 | 4 | 01 | The Gate Hotel Kyoto Takasegawa by Hulic | Casal standard | Café da manhã | 8.750 |
+| Kyoto | 14–18/05 | 4 | 02 | The Royal Park Hotel Iconic Kyoto | Casal superior | Café da manhã | 6.850 |
+
+## Pendentes
+
+- Hotelaria: Tóquio, Kawaguchiko, Osaka, Busan, Seul, Jeju, Xangai, Pequim, Chengdu, Hong Kong
+- Panstar Cruise Osaka → Busan, 21/05, suíte
+- Voos internos: Gimpo–Jeju (27/05), Jeju–Xangai (29/05), Pequim–Chengdu (05/06), Chengdu–Hong Kong (08/06)
+- Trens, transfers, guias, ingressos, seguro
