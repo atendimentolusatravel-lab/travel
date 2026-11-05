@@ -27,8 +27,8 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 
 ## Condições de pagamento
 
-- Panstar, passeios e serviços: parcelamento em até 6x
-- 10% de desconto no PIX
+- Hotelaria: parcelamento em até 10x · 5% de desconto no PIX
+- Panstar, passeios e serviços: parcelamento em até 6x · 10% de desconto no PIX
 
 ## Pendentes
 
