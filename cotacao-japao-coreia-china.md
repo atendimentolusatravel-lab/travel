@@ -56,7 +56,7 @@ Observação: franquia de 20 kg de bagagem despachada por pessoa em todos os voo
 | # | Data | Trecho | Trem | Duração | Classe sugerida | Valor (R$) |
 |---|---|---|---|---|---|---|
 | 1 | 12/05 (qua) | Shinjuku → Kawaguchiko | Fuji Excursion (direto, só classe comum reservada) | ~2h | Assento reservado | ¥4.200 × 2 = ¥8.400 → R$ 319,20 (câmbio ¥1 = R$ 0,038) → +15% = R$ 367,08 → +12% = **R$ 411,13** |
-| 2 | 14/05 (sex) | Mishima → Kyoto | Shinkansen Hikari | ~2h | Green Car | A cotar |
+| 2 | 14/05 (sex) | Mishima → Kyoto | JR Central Kodama 815, direto | 10:54 → 13:34 (2h40) | Green Car, assento reservado | R$ 1.223,09 → +15% = R$ 1.406,55 → +12% = **R$ 1.575,34** |
 | 3 | 18/05 (ter) | Kyoto → Shin-Osaka | Shinkansen | ~15 min | Reservado | A cotar |
 | 4 | 20/05 (qui) | Shin-Osaka ⇄ Hiroshima (ida e volta) | Shinkansen Nozomi | ~1h25 cada | Green Car | A cotar |
 | 5 | 23/05 (dom) | Busan → Seul | KTX | ~2h30 | First Class (특실) | A cotar |
