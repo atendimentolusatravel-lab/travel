@@ -1,13 +1,15 @@
 ---
 name: proposta-lusa
-description: Gera propostas de viagem em PDF seguindo exatamente o Design System da LusaTravel (formato A3 Portrait, paleta ouro + cor de destino, tipografia Poppins, capa com glossário, páginas de destino/hotel, roteiro dia a dia, tabela de valores e condições). Use sempre que precisar montar uma apresentação/orçamento de viagem para um cliente da LusaTravel.
+description: Gera propostas de viagem em PDF seguindo exatamente o Design System da Lusatravel (formato A3 Portrait, paleta ouro + cor de destino, tipografia Poppins, capa com glossário, páginas de destino/hotel, roteiro dia a dia, tabela de valores e condições). Use sempre que precisar montar uma apresentação/orçamento de viagem para um cliente da Lusatravel.
 ---
 
-# Proposta LusaTravel — Gerador de PDF
+# Proposta Lusatravel — Gerador de PDF
 
 Esta skill produz uma proposta de viagem **pronta para exportar em PDF** seguindo o
-Design System oficial da LusaTravel. O documento de referência completo está em
+Design System oficial da Lusatravel. O documento de referência completo está em
 `design-system.html` na raiz do repositório. Esta skill é a versão executável dele.
+
+> **Grafia da marca (regra fixa):** sempre **Lusatravel**, com o "t" minúsculo, sem espaço. Nunca "LusaTravel" nem "Lusa Travel". Em caixa alta, use LUSATRAVEL. Em handles e domínios, use lusatravel.
 
 ## Fluxo de trabalho
 
