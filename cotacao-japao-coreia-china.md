@@ -57,7 +57,7 @@ Observação: franquia de 20 kg de bagagem despachada por pessoa em todos os voo
 |---|---|---|---|---|---|---|
 | 1 | 12/05 (qua) | Shinjuku → Kawaguchiko | Fuji Excursion (direto, só classe comum reservada) | ~2h | Assento reservado | ¥4.200 × 2 = ¥8.400 → R$ 319,20 (câmbio ¥1 = R$ 0,038) → +15% = R$ 367,08 → +12% = **R$ 411,13** |
 | 2 | 14/05 (sex) | Mishima → Kyoto | JR Central Kodama 815, direto | 10:54 → 13:34 (2h40) | Green Car, assento reservado | R$ 1.223,09 → +15% = R$ 1.406,55 → +12% = **R$ 1.575,34** |
-| 3 | 18/05 (ter) | Kyoto → Shin-Osaka | Shinkansen | ~15 min | Reservado | A cotar |
+| 3 | 18/05 (ter) | Kyoto → Shin-Osaka | JR Central Nozomi 15, direto | 10:25 → 10:39 (14 min) | Green Car, assento reservado | R$ 314,56 → +15% = R$ 361,74 → +12% = **R$ 405,15** |
 | 4 | 20/05 (qui) | Shin-Osaka ⇄ Hiroshima (ida e volta) | Shinkansen Nozomi | ~1h25 cada | Green Car | A cotar |
 | 5 | 23/05 (dom) | Busan → Seul | KTX | ~2h30 | First Class (특실) | A cotar |
 | 6 | 02/06 (qua) | Xangai Hongqiao → Pequim Sul | Trem-bala Fuxing (G) | ~4h30 | Business ou First Class | A cotar |
@@ -81,7 +81,7 @@ Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão);
 
 ## Pendentes
 
-- Trens: Kyoto → Shin-Osaka (18/05), Shin-Osaka ⇄ Hiroshima (20/05), KTX Busan → Seul (23/05), Xangai → Pequim (02/06), Chengdu ⇄ Chongqing (07/06), Hong Kong ⇄ Shenzhen (10/06)
+- Trens: Shin-Osaka ⇄ Hiroshima (20/05), KTX Busan → Seul (23/05), Xangai → Pequim (02/06), Chengdu ⇄ Chongqing (07/06), Hong Kong ⇄ Shenzhen (10/06)
 - Transfers privativos e guias
 - Ingressos a cotar: Tokyo DisneySea (10/05), degustação de saquê em Fushimi (17/05), show das haenyeo em Jeju (27/05)
 - Demais ingressos: só como lista de sugestões na proposta (não cotados)
