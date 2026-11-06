@@ -80,6 +80,7 @@ Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão);
 - Hotelaria: parcelamento em até 10x · 5% de desconto no PIX
 - Panstar, passeios e serviços: parcelamento em até 6x · 10% de desconto no PIX
 - Voos internos: PIX ou até 2x no cartão
+- Trens: parcelamento em até 6x · 10% de desconto no PIX
 
 ## Pendentes
 
