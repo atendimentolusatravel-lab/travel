@@ -43,6 +43,7 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 | Trecho | Data | Voo | Horário | Classe / bagagem | Valor (R$, 2 adultos) |
 |---|---|---|---|---|---|
 | Seul (GMP) → Jeju (CJU) | 27/05 (qui) | Korean Air KE1113, direto, A321 | 11:20 → 12:35 (1h15) | Econômica, 20 kg despachada | 1.909,04 |
+| Jeju (CJU) → Xangai Pudong (PVG) | 30/05 (dom) | Juneyao Air HO1376, direto | 11:45 → 12:15 hora local (1h30) | Econômica, bagagem despachada a confirmar | 4.185,02 (USD 764,00) |
 
 ## Condições de pagamento
 
@@ -52,5 +53,5 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 ## Pendentes
 
 - Hong Kong: solicitar late check-out no dia 12/06 (voo às 19:40)
-- Voos internos: Jeju–Xangai (30/05), Pequim–Chengdu (05/06), Chengdu–Hong Kong (08/06)
+- Voos internos: Pequim–Chengdu (05/06), Chengdu–Hong Kong (08/06)
 - Trens, transfers, guias, ingressos, seguro
