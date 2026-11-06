@@ -77,9 +77,12 @@ Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão);
 
 - Hotelaria: parcelamento em até 10x · 5% de desconto no PIX
 - Panstar, passeios e serviços: parcelamento em até 6x · 10% de desconto no PIX
+- Voos internos: PIX ou até 2x no cartão
 
 ## Pendentes
 
-- Hong Kong: solicitar late check-out no dia 12/06 (voo às 19:40)
-- Voos internos: condições de pagamento a confirmar
-- Trens, transfers, guias, ingressos, seguro
+- Trens: Kyoto → Shin-Osaka (18/05), Shin-Osaka ⇄ Hiroshima (20/05), KTX Busan → Seul (23/05), Xangai → Pequim (02/06), Chengdu ⇄ Chongqing (07/06), Hong Kong ⇄ Shenzhen (10/06)
+- Transfers privativos e guias
+- Ingressos a cotar: Tokyo DisneySea (10/05), degustação de saquê em Fushimi (17/05), show das haenyeo em Jeju (27/05)
+- Demais ingressos: só como lista de sugestões na proposta (não cotados)
+- Serviços: apenas seguro viagem (36 dias, 2 adultos)
