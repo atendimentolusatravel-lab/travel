@@ -73,22 +73,23 @@ Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão);
 
 ## Transfers privativos (a cotar · 2 adultos)
 
-| # | Data | Trecho | Tempo aprox. | Valor (R$) |
+| # | Data | Trecho | Tempo aprox. | Valor |
 |---|---|---|---|---|
-| 1 | 07/05 | Aeroporto de Tóquio → hotel (chegada 23:55) | Haneda 30–40 min · Narita 1h15–1h30 | A cotar |
-| 2 | 14/05 | Hotel em Kawaguchiko → estação de Mishima (saída 9h15) | 1h–1h15 | A cotar |
-| 3 | 21/05 | Hotel em Osaka → porto de Osaka Nanko (Panstar, apresentação 15h) | 25–35 min | A cotar |
-| 4 | 22/05 | Porto de Busan → hotel | 25–35 min | A cotar |
-| 5 | 30/05 | Aeroporto de Pudong → hotel em Xangai (chegada 12:15) | 50 min–1h | A cotar |
-| 6 | 02/06 | Hotel em Xangai → estação Hongqiao (trem 11:00) | 30–40 min | A cotar |
-| 7 | 02/06 | Estação Pequim Sul → hotel (chegada 15:31) | 25–35 min | A cotar |
-| 8 | 05/06 | Hotel em Pequim → aeroporto PEK (voo 11:00) | 40–50 min | A cotar |
-| 9 | 05/06 | Aeroporto CTU → hotel em Chengdu (chegada 14:00) | 30–40 min | A cotar |
-| 10 | 08/06 | Hotel em Chengdu → aeroporto CTU (voo 13:15) | 30–40 min | A cotar |
-| 11 | 08/06 | Aeroporto de Hong Kong → hotel (chegada 15:55) | 35–45 min | A cotar |
-| 12 | 12/06 | Hotel em Hong Kong → aeroporto (voo 19:40) | 35–45 min | A cotar |
+| 1 | 07/05 | Aeroporto de Tóquio → hotel (chegada 23:55) | Haneda 30–40 min · Narita 1h15–1h30 | Haneda: Business MPV 460 · Narita: Business MPV 790 (moeda a confirmar) |
+| 2 | 14/05 | Hotel em Kawaguchiko → estação de Mishima (saída 9h15) | 1h–1h15 | Sem fornecedor — buscar alternativa |
+| 3 | 21/05 | Hotel em Osaka → porto de Osaka Nanko (Panstar, apresentação 15h) | 25–35 min | Premium SUV 725 (moeda a confirmar) |
+| 4 | 22/05 | Porto de Busan → hotel | 25–35 min | Premium Sedan 790 (moeda a confirmar) |
+| 5 | 30/05 | Aeroporto de Pudong → hotel em Xangai (chegada 12:15) | 50 min–1h | Premium Sedan 200 (moeda a confirmar) |
+| 6 | 02/06 | Hotel em Xangai → estação Hongqiao (trem 11:00) | 30–40 min | Business Sedan 165 (moeda a confirmar) |
+| 7 | 02/06 | Estação Pequim Sul → hotel (chegada 15:31) | 25–35 min | Economy Sedan 200 (moeda a confirmar) |
+| 8 | 05/06 | Hotel em Pequim → aeroporto PEK (voo 11:00) | 40–50 min | Economy Sedan 140 (moeda a confirmar) |
+| 9 | 05/06 | Aeroporto CTU → hotel em Chengdu (chegada 14:00) | 30–40 min | Economy Sedan 170 (moeda a confirmar) |
+| 10 | 08/06 | Hotel em Chengdu → aeroporto CTU (voo 13:15) | 30–40 min | Economy Sedan 170 (moeda a confirmar) |
+| 11 | 08/06 | Aeroporto de Hong Kong → hotel (chegada 15:55) | 35–45 min | Business Sedan 290 (moeda a confirmar) |
+| 12 | 12/06 | Hotel em Hong Kong → aeroporto (voo 19:40) | 35–45 min | Business Sedan 275 (moeda a confirmar) |
 
 Sem transfer: hotel em Jeju → aeroporto (30/05).
+Todos os transfers: privativos, por trajeto, com meet and greet.
 
 ## Seguro viagem (36 dias · 2 adultos · cobertura mundial/Ásia)
 
