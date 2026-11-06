@@ -55,7 +55,7 @@ Observação: franquia de 20 kg de bagagem despachada por pessoa em todos os voo
 
 | # | Data | Trecho | Trem | Duração | Classe sugerida | Valor (R$) |
 |---|---|---|---|---|---|---|
-| 1 | 12/05 (qua) | Shinjuku → Kawaguchiko | Fuji Excursion (direto, só classe comum reservada) | ~2h | Assento reservado | Ref. ¥4.130–4.200 por adulto (≈ ¥8.400 o casal) — confirmar |
+| 1 | 12/05 (qua) | Shinjuku → Kawaguchiko | Fuji Excursion (direto, só classe comum reservada) | ~2h | Assento reservado | ¥4.200 × 2 = ¥8.400 → R$ 319,20 (câmbio ¥1 = R$ 0,038) → +15% = R$ 367,08 → +12% = **R$ 411,13** |
 | 2 | 14/05 (sex) | Mishima → Kyoto | Shinkansen Hikari | ~2h | Green Car | A cotar |
 | 3 | 18/05 (ter) | Kyoto → Shin-Osaka | Shinkansen | ~15 min | Reservado | A cotar |
 | 4 | 20/05 (qui) | Shin-Osaka ⇄ Hiroshima (ida e volta) | Shinkansen Nozomi | ~1h25 cada | Green Car | A cotar |
@@ -67,6 +67,11 @@ Observação: franquia de 20 kg de bagagem despachada por pessoa em todos os voo
 Observação: sugestão de enviar as malas grandes de Tóquio para Kyoto por takkyubin em 12/05 (≈ ¥2.000–3.000 por mala), viajando leves ao Fuji.
 
 Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão); comparar com bilhetes avulsos.
+
+## Câmbio
+
+- Cotação 06/11 · ¥1 (iene) = R$ 0,038
+- Regra de preço para serviços em moeda local: valor convertido + 15%, e sobre esse resultado + 12%
 
 ## Condições de pagamento
 
