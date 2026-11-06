@@ -97,6 +97,7 @@ Total transfers: R$ 3.585 (chegada por Haneda) ou R$ 3.915 (chegada por Narita).
 
 | Data | Experiência | Detalhes | Valor |
 |---|---|---|---|
+| 10/05 (seg) | Tokyo DisneySea — ingresso de 1 dia | Premier Access não incluído (comprado no app, no dia, ~¥2.000/pessoa/atração) | R$ 1.410 (margens a confirmar) |
 | 24/05 (seg) | Degustação de soju em destilaria — "A história dos 3 porquinhos" (Hongdae, Seul) | 17:00 · 80 min · guia em inglês · mín. 7 amostras (soju, makgeolli/cheongju) · cancelamento grátis até a véspera | R$ 597,88 → +15% = R$ 687,56 → +12% = **R$ 770,07** |
 
 ## Seguro viagem (36 dias · 2 adultos · cobertura mundial/Ásia)
@@ -127,5 +128,5 @@ Observação: seguro com 21 coberturas ("21 motivos de cobertura"). Valores para
 - Data de volta confirmada: 12/06, voo às 19:40 de Hong Kong
 
 - Guias e motoristas
-- Ingressos a cotar: Tokyo DisneySea (10/05), show das haenyeo em Jeju (27/05), aula de culinária sichuanesa em Chengdu (06/06)
+- Ingressos a cotar: show das haenyeo em Jeju (27/05), aula de culinária sichuanesa em Chengdu (06/06)
 - Demais ingressos (inclusive degustação de saquê em Fushimi): só como lista de sugestões na proposta (não cotados)
