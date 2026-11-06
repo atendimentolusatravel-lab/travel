@@ -99,7 +99,7 @@ Total transfers: R$ 3.585 (chegada por Haneda) ou R$ 3.915 (chegada por Narita).
 |---|---|---|---|
 | 10/05 (seg) | Tokyo DisneySea — ingresso de 1 dia | Premier Access não incluído (comprado no app, no dia, ~¥2.000/pessoa/atração) | R$ 1.410 (margens a confirmar) |
 | 24/05 (seg) | Degustação de soju em destilaria — "A história dos 3 porquinhos" (Hongdae, Seul) | 17:00 · 80 min · guia em inglês · mín. 7 amostras (soju, makgeolli/cheongju) · cancelamento grátis até a véspera | R$ 597,88 → +15% = R$ 687,56 → +12% = **R$ 770,07** |
-| Jeju (data a definir: 28 ou 29/05) | Excursão de 1 dia pelo leste de Jeju (UNESCO) com show das haenyeo — em grupo | 10h · guia em inglês · busca 8h30–9h10 (Shilla/Lotte Duty Free, aeroporto, Ocean Suites) · Seongeup, Seopjikoji, Seongsan Ilchulbong, Museu e show Haenyeo, caverna Manjanggul · entrada Seongsan paga no local (KRW 5.000 por pessoa) · almoço não incluso | R$ 505,24 → +15% = R$ 581,03 → +12% = **R$ 650,75** |
+| 28/05 (sex) | Excursão de 1 dia pelo leste de Jeju (UNESCO) com show das haenyeo — em grupo | 10h · guia em inglês · busca 8h30–9h10 (Shilla/Lotte Duty Free, aeroporto, Ocean Suites) · Seongeup, Seopjikoji, Seongsan Ilchulbong, Museu e show Haenyeo, caverna Manjanggul · entrada Seongsan paga no local (KRW 5.000 por pessoa) · almoço não incluso | R$ 505,24 → +15% = R$ 581,03 → +12% = **R$ 650,75** |
 
 ## Seguro viagem (36 dias · 2 adultos · cobertura mundial/Ásia)
 
