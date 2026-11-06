@@ -143,5 +143,5 @@ Observação: seguro com 21 coberturas ("21 motivos de cobertura"). Valores para
 - Vistos (Japão, China; K-ETA Coreia): confirmar no início de 2027
 - Data de volta confirmada: 12/06, voo às 19:40 de Hong Kong
 
-- Guias e motoristas: Seul (24/05), motorista em Jeju (29/05), Xangai (31/05), Pequim (03 e 04/06)
+- Guias e motoristas: Seul (24/05), motorista em Jeju (29/05), Xangai (31/05), Pequim (03 e 04/06), Hong Kong (valor a enviar)
 - Demais ingressos (inclusive degustação de saquê em Fushimi): só como lista de sugestões na proposta (não cotados)
