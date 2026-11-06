@@ -110,7 +110,7 @@ Total transfers: R$ 3.585 (chegada por Haneda) ou R$ 3.915 (chegada por Narita).
 | 11/05 (ter) | Tóquio | teamLab, Akihabara e Odaiba | US$ 450 |
 | 15/05 (sáb) | Kyoto | Aoi Matsuri, Kiyomizu-dera e Sannenzaka | US$ 450 |
 | 16/05 (dom) | Kyoto | Fushimi Inari, Arashiyama e cerimônia do chá | US$ 450 |
-| 19/05 (qua) | Osaka | Kuromon, Shinsekai, Den Den Town e tour noturno de comida de rua | US$ 450 |
+| 19/05 (qua) | Osaka | Kuromon, Shinsekai, Den Den Town e Umeda Sky (comida de rua à noite por conta própria) | US$ 450 |
 | **Total** | | 5 dias × US$ 450 = US$ 2.250 × 5,71 | **R$ 12.847,50** |
 
 Valores já com taxas incluídas (sem margens). Pagamento: até 6x · 10% de desconto no PIX.
