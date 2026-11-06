@@ -127,6 +127,14 @@ Valores já com taxas incluídas (sem margens). Pagamento: até 6x · 10% de des
 
 Valores com taxas incluídas (sem margens). Pagamento: até 6x · 10% de desconto no PIX. Confirmar se o guia de Mutianyu inclui carro/motorista.
 
+## Motorista em Jeju
+
+| Data | Programa | Valor |
+|---|---|---|
+| 29/05 (sáb) | Motorista particular, dia inteiro: oeste e sul (Arte Museum, Osulloc, Jusangjeolli, Cheonjiyeon) | R$ 1.679,95 → +15% = R$ 1.931,94 → +12% = **R$ 2.163,78** |
+
+Pagamento: até 6x · 10% de desconto no PIX.
+
 ## Guia em Hong Kong
 
 | Data | Programa | Valor |
@@ -164,5 +172,4 @@ Observação: seguro com 21 coberturas ("21 motivos de cobertura"). Valores para
 - Data de volta confirmada: 12/06, voo às 19:40 de Hong Kong
 
 - Opcional: guia particular em Seul para os cenários de dorama (24/05, manhã)
-- Motorista em Jeju (29/05)
 - Demais ingressos (inclusive degustação de saquê em Fushimi): só como lista de sugestões na proposta (não cotados)
