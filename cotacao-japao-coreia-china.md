@@ -61,7 +61,7 @@ Observação: franquia de 20 kg de bagagem despachada por pessoa em todos os voo
 | 4 | 20/05 (qui) | Shin-Osaka ⇄ Hiroshima (ida e volta) | Ida JR West Nozomi 1 (8:24 → 9:49) · Volta JR West Sakura 762 (17:33 → 18:59) | 1h25 cada | Ordinary (2ª classe), assento reservado — conferir reserva na volta | R$ 1.810,61 → +15% = R$ 2.082,20 → +12% = **R$ 2.332,07** |
 | 5 | 23/05 (dom) | Busan → Seul | KTX #032 | 10:54 → 13:48 (2h54) | First Class, assento marcado | USD 208 × 5,71 = R$ 1.187,68 → +15% = R$ 1.365,83 → +12% = **R$ 1.529,73** |
 | 6 | 02/06 (qua) | Xangai Hongqiao → Pequim Sul | Trem-bala G14 | 11:00 → 15:31 (4h31) | Classe executiva (Business) | USD 852 × 5,71 = R$ 4.864,92 → +15% = R$ 5.594,66 → +12% = **R$ 6.266,02** |
-| 7 | 07/06 (seg) | Chengdu Leste ⇄ Chongqing (ida e volta) | Trem-bala (G/D) | ~1h–1h20 cada | First Class | A cotar |
+| 7 | 07/06 (seg) | Chengdu Leste ⇄ Chongqing Oeste (ida e volta) | Ida G3581 (9:30 → 11:01) · Volta G1756 (17:54 → 19:18) | 1h31 / 1h24 | Primeira classe | USD 268 × 5,71 = R$ 1.530,28 → +15% = R$ 1.759,82 → +12% = **R$ 1.971,00** |
 | 8 | 10/06 (qui) | Hong Kong West Kowloon ⇄ Shenzhen Futian (ida e volta) | XRL | ~15 min cada | First Class | A cotar |
 
 Observação: sugestão de enviar as malas grandes de Tóquio para Kyoto por takkyubin em 12/05 (≈ ¥2.000–3.000 por mala), viajando leves ao Fuji.
@@ -85,7 +85,7 @@ Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão);
 
 ## Pendentes
 
-- Trens: Chengdu ⇄ Chongqing (07/06), Hong Kong ⇄ Shenzhen (10/06)
+- Trens: Hong Kong ⇄ Shenzhen (10/06)
 - Transfers privativos e guias
 - Ingressos a cotar: Tokyo DisneySea (10/05), degustação de soju em Seul (24/05), show das haenyeo em Jeju (27/05), aula de culinária sichuanesa em Chengdu (06/06)
 - Demais ingressos (inclusive degustação de saquê em Fushimi): só como lista de sugestões na proposta (não cotados)
