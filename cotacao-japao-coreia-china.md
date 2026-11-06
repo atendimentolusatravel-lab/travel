@@ -78,7 +78,7 @@ Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão);
 | 01 | Diamante | US$ 45.000 | US$ 326,40 · R$ 1.785,41 |
 | 02 | Euro Max | US$ 80.000 | US$ 435,20 · R$ 2.380,54 |
 
-Observação: seguro com 21 coberturas ("21 motivos de cobertura").
+Observação: seguro com 21 coberturas ("21 motivos de cobertura"). Valores para os 2 adultos, sem aplicação de margens (+15% e +12% não se aplicam ao seguro).
 
 ## Câmbio
 
