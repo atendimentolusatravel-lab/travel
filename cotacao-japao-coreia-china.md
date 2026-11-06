@@ -71,6 +71,15 @@ Observação: trens locais, metrô e barcos curtos (Kyoto→Nara, barco de Miyaj
 
 Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão); comparar com bilhetes avulsos.
 
+## Seguro viagem (36 dias · 2 adultos · cobertura mundial/Ásia)
+
+| Opção | Plano | Despesas médicas (DMH) | Valor |
+|---|---|---|---|
+| 01 | Diamante | US$ 45.000 | US$ 326,40 · R$ 1.785,41 |
+| 02 | Euro Max | US$ 80.000 | US$ 435,20 · R$ 2.380,54 |
+
+Observação informada: "21 motivos" (confirmar se é o cancelamento por 21 motivos).
+
 ## Câmbio
 
 - Cotação 06/11 · ¥1 (iene) = R$ 0,038
@@ -92,4 +101,3 @@ Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão);
 - Transfers privativos e guias
 - Ingressos a cotar: Tokyo DisneySea (10/05), degustação de soju em Seul (24/05), show das haenyeo em Jeju (27/05), aula de culinária sichuanesa em Chengdu (06/06)
 - Demais ingressos (inclusive degustação de saquê em Fushimi): só como lista de sugestões na proposta (não cotados)
-- Serviços: apenas seguro viagem (36 dias, 2 adultos)
