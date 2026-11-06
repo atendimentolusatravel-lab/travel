@@ -2,8 +2,8 @@
 """Gera src/index.html — Beaune & Reims · visitas a vinícolas e maisons de champagne · André Egoroff (11 a 15/01/2027).
 
 Fonte: fonte/visitas.png (tabela enviada em 06/11/2026: opção, descrição, datas disponíveis e valor por pessoa).
-A coluna da tabela diz "VALOR BRL por pessoa", mas todos os valores estão em euros ("60 euros", "94€ per person"):
-tratados como € por pessoa e convertidos ao câmbio informado pela agência na cotação da viagem (EUR 1 = R$ 6,45, 03/11/2026).
+Valores: fonte/valores-brl.png (06/11/2026) traz o preço final em BRL por pessoa de cada visita, já para pagamento
+em até 6x; no PIX, 10% de desconto. A página não mostra euros nem câmbio (a tabela em euros fica só em fonte/visitas.png).
 Grupo: 5 viajantes e datas das bases (Beaune 11–13/01, Reims 13–15/01/2027) da cotação cotacoes/andre-egoroff-franca.
 CSS: style.part.html (template oficial) com poda das regras não usadas (prune.part.py).
 """
@@ -24,7 +24,7 @@ CSS = (ROOT / "style.part.html").read_text().replace(
     ".fechado td{color:var(--muted)}\n</style>")
 exec((ROOT / "prune.part.py").read_text())
 
-EURO = 6.45  # informado pela agência em 03/11/2026 (cotação da viagem)
+PIX = 0.90  # 10% de desconto no PIX; o valor da tabela é o preço final em até 6x
 PAX = 5
 EMISSAO = "06/11/2026"
 CAPA = dict(  # foto enviada pela agência em 06/11/2026 (fonte/capa.png), servida pelo jsDelivr a partir do commit 28c32e2 (deploy direto sem upload binário)
@@ -48,35 +48,35 @@ def svg(p):
     return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{p}</svg>'
 
 
-# id, base, maison, título, descrição, quando (texto), datas possíveis no roteiro, € por pessoa, ícone, grupo "escolher 1", obs
+# id, base, maison, título, descrição, quando (texto), R$ por pessoa (preço final em até 6x), ícone, grupo "escolher 1", obs
 VISITAS = [
     ("meursault-1", "Beaune", "Château de Meursault", "Opção 1 · Tour Prestige",
      "Experiência privada: visita guiada ao château e às adegas e degustação de 8 vinhos prestigiados em sala privativa.",
-     "11, 12 e 13/01 · 10:00, 14:00 ou 15:30", 105, CAVE, "meursault", ""),
+     "11, 12 e 13/01 · 10:00, 14:00 ou 15:30", 830, CAVE, "meursault", ""),
     ("meursault-2", "Beaune", "Château de Meursault", "Opção 2 · Grands Terroirs",
      "Visita guiada ao château e às adegas e degustação de 7 vinhos, tintos e brancos, incluindo alguns dos mais renomados da propriedade. Grupo de até 12 pessoas.",
-     "11 e 12/01 · 10:30 ou 15:00 · 13/01 · 14:00 ou 15:00", 59, CAVE, "meursault", ""),
+     "11 e 12/01 · 10:30 ou 15:00 · 13/01 · 14:00 ou 15:00", 466, CAVE, "meursault", ""),
     ("drouhin", "Beaune", "Maison Joseph Drouhin", "Visita guiada e degustação",
      "Visita guiada a 2,5 acres das adegas mais antigas de Beaune e degustação de 8 vinhos prestigiados, Village, Premier Cru e Grand Cru, com um dos especialistas da casa.",
-     "11, 12 e 13/01 · 10:00, 14:00 ou 15:45", 120, BOTTLE, "", ""),
+     "11, 12 e 13/01 · 10:00, 14:00 ou 15:45", 947, BOTTLE, "", ""),
     ("pommard-1", "Beaune", "Château de Pommard", "Opção 1 · Degustação personalizada",
      "Degustação privada e personalizada: os consultores conhecem o gosto de vocês e conduzem pelo terroir, com seis dos vinhos mais procurados da casa.",
-     "13/01 · 1 hora · horário a confirmar com o château", 94, GLASS, "pommard", ""),
+     "13/01 · 1 hora · horário a confirmar com o château", 741, GLASS, "pommard", ""),
     ("pommard-2", "Beaune", "Château de Pommard", "Opção 2 · Clos Marey-Monge",
      "Degustação exclusiva de seis vinhos tintos da denominação Château de Pommard: três vinhos de parcelas vizinhas do Clos Marey-Monge, de cultivo biodinâmico, em três safras.",
-     "13/01 · 1 hora · horário a confirmar com o château", 41, GLASS, "pommard", ""),
+     "13/01 · 1 hora · horário a confirmar com o château", 325, GLASS, "pommard", ""),
     ("taittinger", "Reims", "Maison Taittinger", "Visita guiada e degustação harmonizada",
      "Visita guiada às pedreiras e adegas galo-romanas do século IV, Patrimônio Mundial da UNESCO, e às ruínas da Abadia de Saint-Nicaise, do século XIII. Explicação da elaboração e degustação do Prestige Rosé e do Brut Millésimé em sala privativa, com canapés do chef residente.",
-     "14 e 15/01 · 11:00", 80, CAVE, "", ""),
+     "14 e 15/01 · 11:00", 633, CAVE, "", ""),
     ("mumm", "Reims", "Champagne G.H. Mumm", "Visita e degustação",
      "O savoir-faire tradicional da Maison Mumm, com visita e degustações exclusivas nas adegas.",
-     "14/01 · 14:00 às 15:30", 60, GLASS, "", ""),
+     "14/01 · 14:00 às 15:30", 474, GLASS, "", ""),
     ("pommery-1", "Reims", "Maison Pommery", "Opção 1 · Visita gastronômica",
      "Visita guiada às adegas galo-romanas e à exposição de arte contemporânea Expérience Pommery, seguida de uma refeição no Le Réfectoire, o restaurante da propriedade, harmonizada com os champagnes da casa.",
-     "14 e 15/01 · 11:30, 12:00 ou 18:00", 150, FORK, "pommery", ""),
+     "14 e 15/01 · 11:30, 12:00 ou 18:00", 1185, FORK, "pommery", ""),
     ("pommery-2", "Reims", "Maison Pommery", "Opção 2 · Champagne e patrimônio",
      "Visita com guia pela história de duas grandes casas, Pommery e Vranken, pelas caves centenárias e pelo patrimônio subterrâneo, terminando com a degustação de duas safras.",
-     "14 e 15/01 · 11:15 ou 15:00", 65, CAVE, "pommery", ""),
+     "14 e 15/01 · 11:15 ou 15:00", 514, CAVE, "pommery", ""),
 ]
 V = {v[0]: v for v in VISITAS}
 
@@ -86,24 +86,29 @@ FECHADAS = [
     ("Reims", "Maison Ruinart", "Fechamento anual de inverno até 21/01/2027"),
     ("Reims", "Maison Champagne Mercier", "Fechamento anual de dezembro ao início de fevereiro"),
     ("Beaune", "Domaine Comte Senard · Aloxe-Corton", "Fecha em 12/12/2026 e reabre em 20/01/2027"),
-    ("Beaune", "Olivier Leflaive", "Ainda sem agenda aberta para janeiro; aguardamos retorno por e-mail"),
+    ("Beaune", "Olivier Leflaive", "Fecha em 19/12/2026 e reabre em 03/02/2027"),
 ]
 
 # programa sugerido: 1 visita por linha; tuplas = escolher 1
 PROGRAMA = [("meursault-1", "meursault-2"), ("drouhin",), ("pommard-1", "pommard-2"), ("taittinger",), ("mumm",), ("pommery-1", "pommery-2")]
 PP_MIN = sum(min(V[i][6] for i in g) for g in PROGRAMA)
 PP_MAX = sum(max(V[i][6] for i in g) for g in PROGRAMA)
-assert (PP_MIN, PP_MAX) == (425, 609), (PP_MIN, PP_MAX)
-G_MIN, G_MAX = PP_MIN * PAX * EURO, PP_MAX * PAX * EURO
+assert (PP_MIN, PP_MAX) == (3359, 4810), (PP_MIN, PP_MAX)
+G_MIN, G_MAX = PP_MIN * PAX, PP_MAX * PAX
+
+
+def rs(x):
+    """R$ sem centavos quando o valor é inteiro; com centavos caso contrário."""
+    return "R$ " + brl(x, cents=abs(x - round(x)) > 0.004)
 
 
 def card(v):
-    vid, base, maison, tit, desc, quando, eur, ico, grupo, obs = v
+    vid, base, maison, tit, desc, quando, val, ico, grupo, obs = v
     nota = f'<div class="tnote">{obs}</div>' if obs else ""
     return (f'    <div class="svc"><div class="ic">{svg(ico)}</div><div><div class="t">{maison}</div>'
             f'<div class="d"><b>{tit}</b> · {desc}<span class="quando">Datas disponíveis: {quando}</span>{nota}</div></div>'
-            f'<div class="dt"><span class="eur">€ {eur} por pessoa</span><span class="brl">R$ {brl(eur * EURO)} por pessoa</span>'
-            f'<span class="brl">R$ {brl(eur * EURO * PAX)} para {PAX}</span></div></div>')
+            f'<div class="dt"><span class="eur">{rs(val)} por pessoa</span><span class="brl">{rs(val * PAX)} para {PAX} · até 6x</span>'
+            f'<span class="brl">{rs(val * PAX * PIX)} no PIX</span></div></div>')
 
 
 def bloco(base):
@@ -142,9 +147,9 @@ rot_html = "\n".join(
 
 def row(v, extra=""):
     vid, base, maison, tit, *_ = v
-    eur = v[6]
-    return (f'      <tr><td><b>{maison}</b><span class="sub">{tit}{extra}</span></td><td class="v">€ {eur}</td>'
-            f'<td class="v">R$ {brl(eur * EURO)}</td><td class="v">R$ {brl(eur * EURO * PAX)}</td></tr>')
+    val = v[6]
+    return (f'      <tr><td><b>{maison}</b><span class="sub">{tit}{extra}</span></td><td class="v">{rs(val)}</td>'
+            f'<td class="v">{rs(val * PAX)}<span class="sub">6x de {rs(val * PAX / 6)}</span></td><td class="v">{rs(val * PAX * PIX)}</td></tr>')
 
 
 tab = ""
@@ -156,9 +161,9 @@ for base in ("Beaune", "Reims"):
         extra = " · escolher 1 opção" if v[8] else ""
         tab += row(v, extra) + "\n"
 
-calc = (f"1 visita no Château de Meursault (€ 59 ou € 105) + Joseph Drouhin (€ 120) + 1 visita no Château de Pommard (€ 41 ou € 94) "
-        f"+ Taittinger (€ 80) + Mumm (€ 60) + 1 visita na Pommery (€ 65 ou € 150) = € {PP_MIN} a € {PP_MAX} por pessoa, "
-        f"× {PAX} viajantes = € {brl(PP_MIN * PAX, False)} a € {brl(PP_MAX * PAX, False)}, × R$ 6,45")
+calc = (f"1 visita no Château de Meursault (R$ 466 ou R$ 830) + Joseph Drouhin (R$ 947) + 1 visita no Château de Pommard (R$ 325 ou R$ 741) "
+        f"+ Taittinger (R$ 633) + Mumm (R$ 474) + 1 visita na Pommery (R$ 514 ou R$ 1.185) = {rs(PP_MIN)} a {rs(PP_MAX)} por pessoa, "
+        f"× {PAX} viajantes = {rs(G_MIN)} a {rs(G_MAX)} em até 6x; no PIX, 10% de desconto")
 
 CHIP = ('<div class="chip"><span class="ic">{svg}</span><b>{n}</b>&nbsp;{t}</div>')
 chips = "\n      ".join(CHIP.format(svg=svg(s), n=n, t=t) for s, n, t in [
@@ -200,7 +205,7 @@ html = f"""<!DOCTYPE html>
 <div>
 <div class="lbl">Detalhes</div>
 <p>{PAX} viajantes · base em Beaune de 11 a 13/01 e em Reims de 13 a 15/01 · visitas guiadas com degustação</p>
-<p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>{EMISSAO}</b> · valores das maisons em euros por pessoa, convertidos a <b>EUR 1 = R$ 6,45</b> (03/11/2026)</p>
+<p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>{EMISSAO}</b> · valores em reais, por pessoa · em até <b>6x</b> ou <b>10% de desconto no PIX</b></p>
 </div>
 <div class="r">
 <div class="lbl">Contato</div>
@@ -225,14 +230,14 @@ html = f"""<!DOCTYPE html>
 <span class="eyebrow">Passeios · Borgonha</span>
 <h2>Base Beaune · 11 a 13 de janeiro</h2>
 <div class="accent-line"></div>
-<p class="note" style="margin-top:16px">Valores por pessoa, em euros, com a conversão em reais e o total para os <b>{PAX} viajantes</b>. No Château de Meursault e no Château de Pommard, <b>escolher 1 das 2 opções</b> em cada.</p>
+<p class="note" style="margin-top:16px">Valores por pessoa e total para os <b>{PAX} viajantes</b>, em até 6x ou com 10% de desconto no PIX. No Château de Meursault e no Château de Pommard, <b>escolher 1 das 2 opções</b> em cada.</p>
 {bloco("Beaune")}
 </section>
 <section class="section sh">
 <span class="eyebrow">Passeios · Champagne</span>
 <h2>Base Reims · 13 a 15 de janeiro</h2>
 <div class="accent-line"></div>
-<p class="note" style="margin-top:16px">Valores por pessoa, em euros, com a conversão em reais e o total para os <b>{PAX} viajantes</b>. Na Maison Pommery, <b>escolher 1 das 2 opções</b>.</p>
+<p class="note" style="margin-top:16px">Valores por pessoa e total para os <b>{PAX} viajantes</b>, em até 6x ou com 10% de desconto no PIX. Na Maison Pommery, <b>escolher 1 das 2 opções</b>.</p>
 {bloco("Reims")}
 </section>
 <section class="section sh" style="background:var(--cream)">
@@ -246,22 +251,22 @@ html = f"""<!DOCTYPE html>
 <span class="eyebrow">Investimento</span>
 <h2>Resumo de valores</h2>
 <div class="accent-line"></div>
-<p class="note" style="margin-top:16px">*Valores das maisons em <b>euros por pessoa</b>, convertidos a R$ 6,45, e o total para os <b>{PAX} viajantes</b>. Hotéis, carro e aéreo estão na cotação da viagem. Nada reservado, apenas cotado.</p>
+<p class="note" style="margin-top:16px">*Valores finais em reais, por pessoa e para os <b>{PAX} viajantes</b>, em até <b>6x</b> ou com <b>10% de desconto no PIX</b>. Hotéis, carro e aéreo estão na cotação da viagem. Nada reservado, apenas cotado.</p>
 <div class="tbl-wrap"><table>
-<tr class="head-row"><td>Visita</td><td class="v">€ por pessoa</td><td class="v">R$ por pessoa</td><td class="v">R$ · {PAX} viajantes</td></tr>
+<tr class="head-row"><td>Visita</td><td class="v">Por pessoa</td><td class="v">{PAX} viajantes · até 6x</td><td class="v">{PAX} viajantes · PIX</td></tr>
 {tab}</table></div>
-<div class="flval"><span class="lbl">Programa sugerido · 6 visitas</span><div class="amt"><div class="t">R$ {brl(G_MIN)} – {brl(G_MAX)}</div><div class="p">para os {PAX} viajantes · € {brl(PP_MIN * PAX, False)} a € {brl(PP_MAX * PAX, False)}</div></div></div>
+<div class="flval"><span class="lbl">Programa sugerido · 6 visitas</span><div class="amt"><div class="t">{rs(G_MIN)} – {rs(G_MAX)[3:]}</div><div class="p">para os {PAX} viajantes · em até 6x</div></div></div>
+<div class="flval" style="background:var(--green-soft)"><span class="lbl">No PIX · 10% de desconto</span><div class="amt"><div class="t">{rs(G_MIN * PIX)} – {rs(G_MAX * PIX)[3:]}</div><div class="p">para os {PAX} viajantes · pagamento à vista</div></div></div>
 <p class="note"><b>Como é calculado:</b> {calc}. O valor final depende das opções escolhidas no Château de Meursault, no Château de Pommard e na Maison Pommery; dá para fazer menos visitas, cada uma pelo valor da tabela.</p>
 <div class="pay">
 <div class="box">
 <h4>Condições de pagamento</h4>
-<p><b>Visitas e degustações</b>: à vista ou em até <b>6x</b></p>
-<p class="muted" style="margin-top:8px;font-size:.82rem">As maisons cobram em euros; o valor em reais acompanha o câmbio da data do pagamento.</p>
+<p><b>Visitas e degustações</b>: em até <b>6x</b> ou com <b>10% de desconto no PIX</b></p>
+<p class="muted" style="margin-top:8px;font-size:.82rem">Os valores da tabela já são o preço final para pagamento em até 6x.</p>
 </div>
 <div class="box">
 <h4>Referência</h4>
-<p>Cotação emitida em {EMISSAO} · valores em <b>EUR</b> e <b>BRL</b></p>
-<p>Euro: EUR 1 = R$ 6,45 · 03/11/2026</p>
+<p>Cotação emitida em {EMISSAO} · valores em <b>reais (BRL)</b>, por pessoa</p>
 </div>
 </div>
 <div class="obs">
@@ -297,4 +302,4 @@ html = prune_css(html)
 html = "\n".join(l.strip() for l in html.split("\n") if l.strip()) + "\n"
 (ROOT / "src").mkdir(exist_ok=True)
 (ROOT / "src" / "index.html").write_text(html)
-print("ok", len(html.encode()), f"faixa R$ {brl(G_MIN)} – {brl(G_MAX)}")
+print("ok", len(html.encode()), f"faixa {rs(G_MIN)} – {rs(G_MAX)} · PIX {rs(G_MIN * PIX)} – {rs(G_MAX * PIX)}")
