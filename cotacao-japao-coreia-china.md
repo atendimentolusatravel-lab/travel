@@ -51,6 +51,21 @@ Total voos internos (2 adultos): R$ 16.728,56
 
 Observação: franquia de 20 kg de bagagem despachada por pessoa em todos os voos internos. A compra de bagagem extra pode ser feita, se necessário.
 
+## Trens (a cotar · 2 adultos)
+
+| # | Data | Trecho | Trem | Duração | Classe sugerida | Valor (R$) |
+|---|---|---|---|---|---|---|
+| 1 | 12/05 (qua) | Shinjuku → Kawaguchiko | Fuji Excursion (se não for transfer) | ~2h | Assento reservado | A cotar |
+| 2 | 14/05 (sex) | Mishima → Kyoto | Shinkansen Hikari | ~2h | Green Car | A cotar |
+| 3 | 18/05 (ter) | Kyoto → Shin-Osaka | Shinkansen | ~15 min | Reservado | A cotar |
+| 4 | 20/05 (qui) | Shin-Osaka ⇄ Hiroshima (ida e volta) | Shinkansen Nozomi | ~1h25 cada | Green Car | A cotar |
+| 5 | 23/05 (dom) | Busan → Seul | KTX | ~2h30 | First Class (특실) | A cotar |
+| 6 | 02/06 (qua) | Xangai Hongqiao → Pequim Sul | Trem-bala Fuxing (G) | ~4h30 | Business ou First Class | A cotar |
+| 7 | 07/06 (seg) | Chengdu Leste ⇄ Chongqing (ida e volta) | Trem-bala (G/D) | ~1h–1h20 cada | First Class | A cotar |
+| 8 | 10/06 (qui) | Hong Kong West Kowloon ⇄ Shenzhen Futian (ida e volta) | XRL | ~15 min cada | First Class | A cotar |
+
+Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão); comparar com bilhetes avulsos.
+
 ## Condições de pagamento
 
 - Hotelaria: parcelamento em até 10x · 5% de desconto no PIX
