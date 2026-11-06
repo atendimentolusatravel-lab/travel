@@ -27,10 +27,10 @@ exec((ROOT / "prune.part.py").read_text())
 EURO = 6.45  # informado pela agência em 03/11/2026 (cotação da viagem)
 PAX = 5
 EMISSAO = "06/11/2026"
-CAPA = dict(
-    url="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Ch%C3%A2teau_de_Pommard_with_Pommard_Hills.jpg/1280px-Ch%C3%A2teau_de_Pommard_with_Pommard_Hills.jpg",
-    alt="Château de Pommard e as colinas de vinhas de Pommard",
-    credito="Foto de capa: Château de Pommard e seus vinhedos, MalcolmCroft, Wikimedia Commons, CC BY-SA 4.0.")
+CAPA = dict(  # foto enviada pela agência em 06/11/2026 (fonte/capa.png), servida pelo jsDelivr a partir do commit 28c32e2 (deploy direto sem upload binário)
+    url="https://cdn.jsdelivr.net/gh/atendimentolusatravel-lab/travel@28c32e2b41b0d2955ee8cda7a7d8cf9b89701c4b/cotacoes/andre-egoroff-beaune-reims/src/img/capa.jpg",
+    alt="Château entre os vinhedos da Côte de Beaune",
+    credito="")
 
 
 def brl(x, cents=True):
@@ -287,7 +287,7 @@ atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>
 Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR
 </div>
 <div class="fnote">*Nada reservado, apenas cotado.</div>
-<div class="credit">{CAPA["credito"]}</div>
+{f'<div class="credit">{CAPA["credito"]}</div>' if CAPA["credito"] else ""}
 </footer>
 </div>
 </body>
