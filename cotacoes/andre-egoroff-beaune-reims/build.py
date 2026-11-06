@@ -28,9 +28,9 @@ EURO = 6.45  # informado pela agência em 03/11/2026 (cotação da viagem)
 PAX = 5
 EMISSAO = "06/11/2026"
 CAPA = dict(
-    url="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Hospices_beaune_toits1.jpg/1920px-Hospices_beaune_toits1.jpg",
-    alt="Telhados do Hôtel-Dieu, Hospices de Beaune",
-    credito="Foto de capa: telhados do Hôtel-Dieu de Beaune, Jebulon, Wikimedia Commons, domínio público.")
+    url="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Ch%C3%A2teau_de_Pommard_with_Pommard_Hills.jpg/1280px-Ch%C3%A2teau_de_Pommard_with_Pommard_Hills.jpg",
+    alt="Château de Pommard e as colinas de vinhas de Pommard",
+    credito="Foto de capa: Château de Pommard e seus vinhedos, MalcolmCroft, Wikimedia Commons, CC BY-SA 4.0.")
 
 
 def brl(x, cents=True):
@@ -61,11 +61,10 @@ VISITAS = [
      "11, 12 e 13/01 · 10:00, 14:00 ou 15:45", 120, BOTTLE, "", ""),
     ("pommard-1", "Beaune", "Château de Pommard", "Opção 1 · Degustação personalizada",
      "Degustação privada e personalizada: os consultores conhecem o gosto de vocês e conduzem pelo terroir, com seis dos vinhos mais procurados da casa.",
-     "13/01 · 1 hora · horário a confirmar com o château", 94, GLASS, "", ""),
+     "13/01 · 1 hora · horário a confirmar com o château", 94, GLASS, "pommard", ""),
     ("pommard-2", "Beaune", "Château de Pommard", "Opção 2 · Clos Marey-Monge",
      "Degustação exclusiva de seis vinhos tintos da denominação Château de Pommard: três vinhos de parcelas vizinhas do Clos Marey-Monge, de cultivo biodinâmico, em três safras.",
-     "14/01 · 1 hora · horário a confirmar com o château", 41, GLASS, "",
-     "Só há data em 14/01, quando vocês já estarão em Reims: fica fora do roteiro e do total. Pedimos outra data se fizer sentido."),
+     "13/01 · 1 hora · horário a confirmar com o château", 41, GLASS, "pommard", ""),
     ("taittinger", "Reims", "Maison Taittinger", "Visita guiada e degustação harmonizada",
      "Visita guiada às pedreiras e adegas galo-romanas do século IV, Patrimônio Mundial da UNESCO, e às ruínas da Abadia de Saint-Nicaise, do século XIII. Explicação da elaboração e degustação do Prestige Rosé e do Brut Millésimé em sala privativa, com canapés do chef residente.",
      "14 e 15/01 · 11:00", 80, CAVE, "", ""),
@@ -91,10 +90,10 @@ FECHADAS = [
 ]
 
 # programa sugerido: 1 visita por linha; tuplas = escolher 1
-PROGRAMA = [("meursault-1", "meursault-2"), ("drouhin",), ("pommard-1",), ("taittinger",), ("mumm",), ("pommery-1", "pommery-2")]
+PROGRAMA = [("meursault-1", "meursault-2"), ("drouhin",), ("pommard-1", "pommard-2"), ("taittinger",), ("mumm",), ("pommery-1", "pommery-2")]
 PP_MIN = sum(min(V[i][6] for i in g) for g in PROGRAMA)
 PP_MAX = sum(max(V[i][6] for i in g) for g in PROGRAMA)
-assert (PP_MIN, PP_MAX) == (478, 609), (PP_MIN, PP_MAX)
+assert (PP_MIN, PP_MAX) == (425, 609), (PP_MIN, PP_MAX)
 G_MIN, G_MAX = PP_MIN * PAX * EURO, PP_MAX * PAX * EURO
 
 
@@ -123,7 +122,7 @@ ROTEIRO = [
         f"Às 10:00, Maison Joseph Drouhin · visita às adegas mais antigas de Beaune e 8 vinhos {Q}",
         f"Tarde no Hôtel-Dieu (Hospices de Beaune) e nas caves do centro histórico {S}"]),
     (13, "Beaune → Reims", "Pommard e estrada para a Champagne", [
-        f"Pela manhã, Château de Pommard · degustação personalizada, horário a confirmar com o château {Q}",
+        f"Pela manhã, Château de Pommard · degustação personalizada (opção 1) ou Clos Marey-Monge (opção 2), horário a confirmar com o château {Q}",
         f"Estrada de Beaune a Reims, cerca de 3h30 {S}",
         f"Jantar no centro de Reims {S}"]),
     (14, "Reims", "Taittinger e Mumm", [
@@ -155,11 +154,9 @@ for base in ("Beaune", "Reims"):
         if v[1] != base:
             continue
         extra = " · escolher 1 opção" if v[8] else ""
-        if v[0] == "pommard-2":
-            extra = " · só em 14/01 · fora do roteiro e do total"
         tab += row(v, extra) + "\n"
 
-calc = (f"1 visita no Château de Meursault (€ 59 ou € 105) + Joseph Drouhin (€ 120) + Château de Pommard opção 1 (€ 94) "
+calc = (f"1 visita no Château de Meursault (€ 59 ou € 105) + Joseph Drouhin (€ 120) + 1 visita no Château de Pommard (€ 41 ou € 94) "
         f"+ Taittinger (€ 80) + Mumm (€ 60) + 1 visita na Pommery (€ 65 ou € 150) = € {PP_MIN} a € {PP_MAX} por pessoa, "
         f"× {PAX} viajantes = € {brl(PP_MIN * PAX, False)} a € {brl(PP_MAX * PAX, False)}, × R$ 6,45")
 
@@ -228,7 +225,7 @@ html = f"""<!DOCTYPE html>
 <span class="eyebrow">Passeios · Borgonha</span>
 <h2>Base Beaune · 11 a 13 de janeiro</h2>
 <div class="accent-line"></div>
-<p class="note" style="margin-top:16px">Valores por pessoa, em euros, com a conversão em reais e o total para os <b>{PAX} viajantes</b>. No Château de Meursault, <b>escolher 1 das 2 opções</b>.</p>
+<p class="note" style="margin-top:16px">Valores por pessoa, em euros, com a conversão em reais e o total para os <b>{PAX} viajantes</b>. No Château de Meursault e no Château de Pommard, <b>escolher 1 das 2 opções</b> em cada.</p>
 {bloco("Beaune")}
 </section>
 <section class="section sh">
@@ -254,7 +251,7 @@ html = f"""<!DOCTYPE html>
 <tr class="head-row"><td>Visita</td><td class="v">€ por pessoa</td><td class="v">R$ por pessoa</td><td class="v">R$ · {PAX} viajantes</td></tr>
 {tab}</table></div>
 <div class="flval"><span class="lbl">Programa sugerido · 6 visitas</span><div class="amt"><div class="t">R$ {brl(G_MIN)} – {brl(G_MAX)}</div><div class="p">para os {PAX} viajantes · € {brl(PP_MIN * PAX, False)} a € {brl(PP_MAX * PAX, False)}</div></div></div>
-<p class="note"><b>Como é calculado:</b> {calc}. O valor final depende das opções escolhidas no Château de Meursault e na Maison Pommery; dá para fazer menos visitas, cada uma pelo valor da tabela.</p>
+<p class="note"><b>Como é calculado:</b> {calc}. O valor final depende das opções escolhidas no Château de Meursault, no Château de Pommard e na Maison Pommery; dá para fazer menos visitas, cada uma pelo valor da tabela.</p>
 <div class="pay">
 <div class="box">
 <h4>Condições de pagamento</h4>
