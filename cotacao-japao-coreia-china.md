@@ -102,6 +102,19 @@ Total transfers: R$ 3.585 (chegada por Haneda) ou R$ 3.915 (chegada por Narita).
 | 28/05 (sex) | Excursão de 1 dia pelo leste de Jeju (UNESCO) com show das haenyeo — em grupo | 10h · guia em inglês · busca 8h30–9h10 (Shilla/Lotte Duty Free, aeroporto, Ocean Suites) · Seongeup, Seopjikoji, Seongsan Ilchulbong, Museu e show Haenyeo, caverna Manjanggul · entrada Seongsan paga no local (KRW 5.000 por pessoa) · almoço não incluso | R$ 505,24 → +15% = R$ 581,03 → +12% = **R$ 650,75** |
 | 06/06 (dom) | Aula de culinária de macarrão Dan Dan e tour no mercado (Chengdu) | 14:00 · 4h · instrutor em inglês · encontro no metrô Liangjiaxiang · inclui ingredientes, lanches/frutas, chá, 1 bebida, lembrança e receitas · transporte até o ponto de encontro não incluso | R$ 1.029,66 → +15% = R$ 1.184,11 → +12% = **R$ 1.326,20** |
 
+## Guias (Japão · privativos, dia inteiro)
+
+| Data | Cidade | Programa | Valor |
+|---|---|---|---|
+| 09/05 (dom) | Tóquio | Asakusa, Tsukiji e Ginza | US$ 450 |
+| 11/05 (ter) | Tóquio | teamLab, Akihabara e Odaiba | US$ 450 |
+| 15/05 (sáb) | Kyoto | Aoi Matsuri, Kiyomizu-dera e Sannenzaka | US$ 450 |
+| 16/05 (dom) | Kyoto | Fushimi Inari, Arashiyama e cerimônia do chá | US$ 450 |
+| 19/05 (qua) | Osaka | Kuromon, Shinsekai, Den Den Town e tour noturno de comida de rua | US$ 450 |
+| **Total** | | 5 dias × US$ 450 = US$ 2.250 × 5,71 | **R$ 12.847,50** |
+
+Valores já com taxas incluídas (sem margens). Pagamento: até 6x · 10% de desconto no PIX.
+
 ## Seguro viagem (36 dias · 2 adultos · cobertura mundial/Ásia)
 
 | Opção | Plano | Despesas médicas (DMH) | Valor |
@@ -123,11 +136,12 @@ Observação: seguro com 21 coberturas ("21 motivos de cobertura"). Valores para
 - Panstar, passeios e serviços: parcelamento em até 6x · 10% de desconto no PIX
 - Voos internos: PIX ou até 2x no cartão
 - Trens: parcelamento em até 6x · 10% de desconto no PIX
+- Guias: parcelamento em até 6x · 10% de desconto no PIX
 
 ## Pendentes
 
 - Vistos (Japão, China; K-ETA Coreia): confirmar no início de 2027
 - Data de volta confirmada: 12/06, voo às 19:40 de Hong Kong
 
-- Guias e motoristas
+- Guias e motoristas: Seul (24/05), motorista em Jeju (29/05), Xangai (31/05), Pequim (03 e 04/06)
 - Demais ingressos (inclusive degustação de saquê em Fushimi): só como lista de sugestões na proposta (não cotados)
