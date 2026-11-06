@@ -98,6 +98,7 @@ Total transfers: R$ 3.585 (chegada por Haneda) ou R$ 3.915 (chegada por Narita).
 | Data | Experiência | Detalhes | Valor |
 |---|---|---|---|
 | 10/05 (seg) | Tokyo DisneySea — ingresso de 1 dia | Premier Access não incluído (comprado no app, no dia, ~¥2.000/pessoa/atração) | R$ 1.410 → +12% = **R$ 1.579,20** |
+| 24/05 (seg) | Passeio particular com traslado e aluguel de hanbok (Seul) | 10:00 · guia em inglês · hanbok (K-star Hanbok), Gyeongbokgung e Troca da Guarda, Museu Nacional do Palácio, chá e yakgwa no Bukchon Oriental Culture Museum, Aldeia Hanok de Bukchon (Casa de Baek In-je fecha às segundas) · entradas, bebida e traslado palácio–Bukchon inclusos | R$ 2.116,53 → +15% = R$ 2.434,01 → +12% = **R$ 2.726,09** |
 | 24/05 (seg) | Degustação de soju em destilaria — "A história dos 3 porquinhos" (Hongdae, Seul) | 17:00 · 80 min · guia em inglês · mín. 7 amostras (soju, makgeolli/cheongju) · cancelamento grátis até a véspera | R$ 597,88 → +15% = R$ 687,56 → +12% = **R$ 770,07** |
 | 28/05 (sex) | Excursão de 1 dia pelo leste de Jeju (UNESCO) com show das haenyeo — em grupo | 10h · guia em inglês · busca 8h30–9h10 (Shilla/Lotte Duty Free, aeroporto, Ocean Suites) · Seongeup, Seopjikoji, Seongsan Ilchulbong, Museu e show Haenyeo, caverna Manjanggul · entrada Seongsan paga no local (KRW 5.000 por pessoa) · almoço não incluso | R$ 505,24 → +15% = R$ 581,03 → +12% = **R$ 650,75** |
 | 06/06 (dom) | Aula de culinária de macarrão Dan Dan e tour no mercado (Chengdu) | 14:00 · 4h · instrutor em inglês · encontro no metrô Liangjiaxiang · inclui ingredientes, lanches/frutas, chá, 1 bebida, lembrança e receitas · transporte até o ponto de encontro não incluso | R$ 1.029,66 → +15% = R$ 1.184,11 → +12% = **R$ 1.326,20** |
@@ -143,5 +144,5 @@ Observação: seguro com 21 coberturas ("21 motivos de cobertura"). Valores para
 - Vistos (Japão, China; K-ETA Coreia): confirmar no início de 2027
 - Data de volta confirmada: 12/06, voo às 19:40 de Hong Kong
 
-- Guias e motoristas: Seul (24/05), motorista em Jeju (29/05), Xangai (31/05), Pequim (03 e 04/06), Hong Kong (valor a enviar)
+- Guias e motoristas: motorista em Jeju (29/05), Xangai (31/05), Pequim (03 e 04/06), Hong Kong (valor a enviar)
 - Demais ingressos (inclusive degustação de saquê em Fushimi): só como lista de sugestões na proposta (não cotados)
