@@ -168,6 +168,27 @@ body{
 .ship-photo img{ display:block; width:100%; height:auto; border-top:3px solid var(--gold); }
 .ship-photo figcaption{ margin-top:8px; font-size:11.5px; font-weight:300; color:var(--mut); }
 
+/* ─── TABELA DE VALORES ──────────────────────────────────── */
+.vt-blk{ margin-top:34px; }
+.vt-h{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:6px 18px; align-items:baseline; padding-bottom:8px; border-bottom:2px solid var(--ink); }
+.vt-h h3{ font-weight:600; font-size:17px; color:var(--ink); }
+.vt-cond{ font-size:12px; font-weight:500; color:var(--gold); }
+.vt-scroll{ overflow-x:auto; }
+.vt{ width:100%; border-collapse:collapse; font-size:13.5px; }
+.vt th{ text-align:left; font-family:var(--lbl); font-weight:700; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); padding:10px 10px 8px 0; border-bottom:1px solid var(--line); }
+.vt td{ padding:10px 10px 10px 0; border-bottom:1px solid var(--line); font-weight:300; color:var(--char); vertical-align:top; }
+.vt td.n, .vt th.n{ text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
+.vt td b{ font-weight:600; color:var(--ink); }
+.vt td small{ display:block; font-size:11.5px; color:var(--mut); }
+.vt tr.tot td{ font-weight:600; color:var(--ink); border-bottom:0; }
+.vt-tot{ margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
+.vt-card{ background:#1a1510; color:#f0e8de; padding:22px 24px; border-top:3px solid var(--gold); }
+.vt-card .k{ font-size:10px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); }
+.vt-card .v{ margin-top:8px; font-weight:700; font-size:26px; color:#fff; font-variant-numeric:tabular-nums; }
+.vt-card .d{ margin-top:8px; font-size:12.5px; font-weight:300; color:rgba(240,232,222,.7); }
+.vt-notes{ margin-top:26px; font-size:12.5px; font-weight:300; color:var(--char); }
+.vt-notes li{ margin-top:4px; margin-left:18px; }
+
 /* ─── RODAPÉ / ASSINATURA ────────────────────────────────── */
 .ft{ background:#1a1510; padding:44px 0 40px; position:relative; margin-top:0; }
 .ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
@@ -449,6 +470,117 @@ body{
     </div>
   </section>
 </div>
+
+<!-- ══════ VALORES ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Investimento</div>
+    <h2 class="h2">Tabela de valores</h2>
+    <p class="lead">Valores totais em reais para <b>2 adultos</b>, por categoria. Na hotelaria, escolham uma opção por cidade; os totais abaixo mostram a combinação mais econômica e a mais completa.</p>
+
+    <div class="vt-blk">
+      <div class="vt-h"><h3>Hotelaria · 35 noites</h3><span class="vt-cond">Até 10x ou 5% de desconto no PIX</span></div>
+      <div class="vt-scroll"><table class="vt">
+        <thead><tr><th>Cidade</th><th class="n">Opção 01</th><th class="n">Opção 02</th><th class="n">Opção 03</th></tr></thead>
+        <tbody>
+        <tr><td><b>Tóquio</b><small>5 noites · 07–12/05</small></td><td class="n">R$ 8.540<small>Mercure Hibiya</small></td><td class="n">R$ 9.200<small>Mitsui Garden Kyobashi</small></td><td class="n">—</td></tr>
+        <tr><td><b>Monte Fuji</b><small>2 noites · 12–14/05</small></td><td class="n">R$ 3.450<small>Fuji View Hotel</small></td><td class="n">R$ 7.180<small>HOSHINOYA Fuji · sem café</small></td><td class="n">—</td></tr>
+        <tr><td><b>Kyoto</b><small>4 noites · 14–18/05</small></td><td class="n">R$ 8.750<small>The Gate Takasegawa</small></td><td class="n">R$ 6.850<small>Royal Park Iconic</small></td><td class="n">R$ 27.533<small>The Mitsui Kyoto ★★★★★</small></td></tr>
+        <tr><td><b>Osaka</b><small>3 noites · 18–21/05</small></td><td class="n">R$ 4.780<small>Mercure Namba</small></td><td class="n">R$ 3.875<small>Courtyard Honmachi</small></td><td class="n">—</td></tr>
+        <tr><td><b>Busan</b><small>1 noite · 22–23/05</small></td><td class="n">R$ 4.700<small>Park Hyatt · vista da ponte</small></td><td class="n">R$ 2.720<small>Shilla Stay Haeundae</small></td><td class="n">—</td></tr>
+        <tr><td><b>Seul</b><small>4 noites · 23–27/05</small></td><td class="n">R$ 7.400<small>voco Myeongdong</small></td><td class="n">R$ 8.690<small>L’Escape</small></td><td class="n">R$ 6.300<small>The Botanik Sewoon</small></td></tr>
+        <tr><td><b>Jeju</b><small>3 noites · 27–30/05</small></td><td class="n">R$ 6.900<small>Grand Hyatt</small></td><td class="n">R$ 5.820<small>Sheraton</small></td><td class="n">—</td></tr>
+        <tr><td><b>Xangai</b><small>3 noites · 30/05–02/06</small></td><td class="n">R$ 4.735<small>Westin Bund Center</small></td><td class="n">R$ 4.820<small>Holiday Inn Nanjing Road</small></td><td class="n">—</td></tr>
+        <tr><td><b>Pequim</b><small>3 noites · 02–05/06</small></td><td class="n">R$ 4.775<small>Regent Beijing</small></td><td class="n">R$ 2.960<small>Sunworld Dynasty</small></td><td class="n">—</td></tr>
+        <tr><td><b>Chengdu</b><small>3 noites · 05–08/06</small></td><td class="n">R$ 2.585<small>Canopy by Hilton</small></td><td class="n">R$ 2.795<small>voco Chunxi Road</small></td><td class="n">—</td></tr>
+        <tr><td><b>Hong Kong</b><small>4 noites · 08–12/06</small></td><td class="n">R$ 6.045<small>InterContinental Grand Stanford</small></td><td class="n">R$ 6.950<small>Mondrian</small></td><td class="n">—</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="vt-blk">
+      <div class="vt-h"><h3>Navio · Panstar Cruise</h3><span class="vt-cond">Até 6x ou 10% de desconto no PIX</span></div>
+      <table class="vt"><tbody>
+        <tr><td><b>Osaka → Busan · Balcony Suite</b><small>21/05 · jantar e café da manhã a bordo</small></td><td class="n">R$ 5.390,00</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="vt-blk">
+      <div class="vt-h"><h3>Voos internos · 20 kg por pessoa</h3><span class="vt-cond">PIX ou até 2x no cartão</span></div>
+      <table class="vt"><tbody>
+        <tr><td><b>Seul (Gimpo) → Jeju</b><small>27/05 · Korean Air KE1113</small></td><td class="n">R$ 1.909,04</td></tr>
+        <tr><td><b>Jeju → Xangai (Pudong)</b><small>30/05 · Juneyao Air HO1376</small></td><td class="n">R$ 4.185,02</td></tr>
+        <tr><td><b>Pequim → Chengdu</b><small>05/06 · Air China CA4120</small></td><td class="n">R$ 5.957,12</td></tr>
+        <tr><td><b>Chengdu → Hong Kong</b><small>08/06 · Air China CA427</small></td><td class="n">R$ 4.677,38</td></tr>
+        <tr class="tot"><td>Total</td><td class="n">R$ 16.728,56</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="vt-blk">
+      <div class="vt-h"><h3>Trens</h3><span class="vt-cond">Até 6x ou 10% de desconto no PIX</span></div>
+      <table class="vt"><tbody>
+        <tr><td><b>Fuji Excursion · Shinjuku → Kawaguchiko</b><small>12/05 · assento reservado</small></td><td class="n">R$ 411,13</td></tr>
+        <tr><td><b>Shinkansen · Mishima → Kyoto</b><small>14/05 · Green Car</small></td><td class="n">R$ 1.575,34</td></tr>
+        <tr><td><b>Shinkansen · Kyoto → Osaka</b><small>18/05 · Green Car</small></td><td class="n">R$ 405,15</td></tr>
+        <tr><td><b>Shinkansen · Osaka ⇄ Hiroshima</b><small>20/05 · ida e volta</small></td><td class="n">R$ 2.332,07</td></tr>
+        <tr><td><b>KTX · Busan → Seul</b><small>23/05 · primeira classe</small></td><td class="n">R$ 1.529,73</td></tr>
+        <tr><td><b>Trem-bala · Xangai → Pequim</b><small>02/06 · primeira classe ou classe executiva</small></td><td class="n">R$ 3.309,52<small>executiva: R$ 6.266,02</small></td></tr>
+        <tr><td><b>Trem-bala · Chengdu ⇄ Chongqing</b><small>07/06 · primeira classe, ida e volta</small></td><td class="n">R$ 2.059,25</td></tr>
+        <tr><td><b>Trem-bala · Hong Kong ⇄ Shenzhen</b><small>11/06 · primeira classe, ida e volta</small></td><td class="n">R$ 1.441,48</td></tr>
+        <tr class="tot"><td>Total</td><td class="n">R$ 13.063,67<small>com executiva: R$ 16.020,17</small></td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="vt-blk">
+      <div class="vt-h"><h3>Transfers privativos com recepção</h3><span class="vt-cond">Até 6x ou 10% de desconto no PIX</span></div>
+      <table class="vt"><tbody>
+        <tr><td><b>Tóquio</b><small>07/05 · aeroporto → hotel</small></td><td class="n">R$ 460,00<small>chegando por Narita: R$ 790,00</small></td></tr>
+        <tr><td><b>Osaka</b><small>21/05 · hotel → porto da Panstar</small></td><td class="n">R$ 725,00</td></tr>
+        <tr><td><b>Busan</b><small>22/05 · porto → hotel</small></td><td class="n">R$ 790,00</td></tr>
+        <tr><td><b>Xangai</b><small>30/05 aeroporto → hotel · 02/06 hotel → estação</small></td><td class="n">R$ 365,00</td></tr>
+        <tr><td><b>Pequim</b><small>02/06 estação → hotel · 05/06 hotel → aeroporto</small></td><td class="n">R$ 340,00</td></tr>
+        <tr><td><b>Chengdu</b><small>05/06 aeroporto → hotel · 08/06 hotel → aeroporto</small></td><td class="n">R$ 340,00</td></tr>
+        <tr><td><b>Hong Kong</b><small>08/06 aeroporto → hotel · 12/06 hotel → aeroporto</small></td><td class="n">R$ 565,00</td></tr>
+        <tr class="tot"><td>Total</td><td class="n">R$ 3.585,00</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="vt-blk">
+      <div class="vt-h"><h3>Guias, motorista e experiências</h3><span class="vt-cond">Até 6x ou 10% de desconto no PIX</span></div>
+      <table class="vt"><tbody>
+        <tr><td><b>Guia particular no Japão · 5 dias</b><small>Tóquio 09 e 11/05 · Kyoto 15 e 16/05 · Osaka 19/05</small></td><td class="n">R$ 12.847,50</td></tr>
+        <tr><td><b>Guia particular na China · 3 dias</b><small>Xangai 31/05 · Pequim 03 e 04/06</small></td><td class="n">R$ 7.708,50</td></tr>
+        <tr><td><b>Guia particular em Hong Kong · 1 dia</b><small>09/06 · Dragon Boat e Victoria Peak</small></td><td class="n">R$ 3.997,00</td></tr>
+        <tr><td><b>Motorista particular em Jeju · 9 horas</b><small>29/05 · oeste e sul da ilha</small></td><td class="n">R$ 2.163,78</td></tr>
+        <tr><td><b>Tokyo DisneySea · ingresso de 1 dia</b><small>10/05 · Premier Access à parte</small></td><td class="n">R$ 1.579,20</td></tr>
+        <tr><td><b>Degustação de soju em destilaria</b><small>24/05 · Hongdae, Seul</small></td><td class="n">R$ 770,07</td></tr>
+        <tr><td><b>Passeio particular com hanbok</b><small>26/05 · Gyeongbokgung e Bukchon</small></td><td class="n">R$ 2.726,09</td></tr>
+        <tr><td><b>Excursão leste de Jeju com show das haenyeo</b><small>28/05 · em grupo</small></td><td class="n">R$ 650,75</td></tr>
+        <tr><td><b>Aula de culinária sichuanesa</b><small>06/06 · macarrão Dan Dan e mercado</small></td><td class="n">R$ 1.326,20</td></tr>
+        <tr class="tot"><td>Total</td><td class="n">R$ 33.769,09</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="vt-blk">
+      <div class="vt-h"><h3>Seguro viagem · 36 dias · 21 coberturas</h3><span class="vt-cond">Até 6x ou 10% de desconto no PIX</span></div>
+      <table class="vt"><tbody>
+        <tr><td><b>Opção 01 · Diamante</b><small>despesas médicas de US$ 45.000</small></td><td class="n">R$ 1.785,41</td></tr>
+        <tr><td><b>Opção 02 · Euro Max</b><small>despesas médicas de US$ 80.000</small></td><td class="n">R$ 2.380,54</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="vt-tot">
+      <div class="vt-card"><div class="k">Total da viagem · opções econômicas</div><div class="v">R$ 128.201,73</div><div class="d">Opção mais econômica de hotel em cada cidade, trem Xangai–Pequim em primeira classe e seguro Diamante.</div></div>
+      <div class="vt-card"><div class="k">Total da viagem · opções completas</div><div class="v">R$ 147.413,36</div><div class="d">Opção de hotel de maior valor em cada cidade (sem o Mitsui Kyoto), trem em classe executiva e seguro Euro Max. Com o Mitsui Kyoto: R$ 166.196,36.</div></div>
+    </div>
+
+    <ul class="vt-notes">
+      <li><b>Não incluso:</b> aéreo internacional (já reservado por vocês), taxas de hospedagem locais pagas no hotel, Premier Access da Disney, refeições não indicadas, táxi Kawaguchiko → Mishima, entrada de Seongsan Ilchulbong (KRW 5.000 por pessoa), transporte local (metrô, trens e barcos curtos), bagagem extra e vistos.</li>
+      <li>Cotação 06/11 · US$ 1 = R$ 5,71 · ¥1 = R$ 0,038.</li>
+      <li>*Nada reservado, apenas cotado. Valores sujeitos a disponibilidade e alteração até a confirmação da reserva.</li>
+    </ul>
+  </div>
+</section>
 
 <!-- ══════ ANTES DE EMBARCAR ══════ -->
 <section class="sec">
