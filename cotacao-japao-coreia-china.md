@@ -63,7 +63,7 @@ Observação: franquia de 20 kg de bagagem despachada por pessoa em todos os voo
 | 6 | 02/06 (qua) | Xangai Hongqiao → Pequim Sul | Trem-bala G14 (opção 01) | 11:00 → 15:31 (4h31) | Classe executiva (Business) | USD 852 × 5,71 = R$ 4.864,92 → +15% = R$ 5.594,66 → +12% = **R$ 6.266,02** |
 | 6b | 02/06 (qua) | Xangai Hongqiao → Pequim Sul | Trem-bala G14 (opção 02, mais em conta) | 11:00 → 15:31 (4h31) | Primeira classe | USD 450 × 5,71 = R$ 2.569,50 → +15% = R$ 2.954,92 → +12% = **R$ 3.309,52** |
 | 7 | 07/06 (seg) | Chengdu Leste ⇄ Chongqing Oeste (ida e volta) | Ida G3433 (13:16 → 14:31) · Volta G1984 (21:14 → 22:36) | 1h15 / 1h22 | Primeira classe | USD 280 × 5,71 = R$ 1.598,80 → +15% = R$ 1.838,62 → +12% = **R$ 2.059,25** |
-| 8 | 11/06 (sex) | Hong Kong West Kowloon ⇄ Shenzhen Norte (ida e volta) | Ida G6554 (9:28 → 9:46) · Volta G5651 (18:30 → 18:48) | 18 min cada | Classe a confirmar | USD 196 × 5,71 = R$ 1.119,16 → +15% = R$ 1.287,03 → +12% = **R$ 1.441,48** |
+| 8 | 11/06 (sex) | Hong Kong West Kowloon ⇄ Shenzhen Norte (ida e volta) | Ida G6554 (9:28 → 9:46) · Volta G5651 (18:30 → 18:48) | 18 min cada | Primeira classe | USD 196 × 5,71 = R$ 1.119,16 → +15% = R$ 1.287,03 → +12% = **R$ 1.441,48** |
 
 Observação: sugestão de enviar as malas grandes de Tóquio para Kyoto por takkyubin em 12/05 (≈ ¥2.000–3.000 por mala), viajando leves ao Fuji.
 
@@ -85,6 +85,9 @@ Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão);
 - Trens: parcelamento em até 6x · 10% de desconto no PIX
 
 ## Pendentes
+
+- Vistos (Japão, China; K-ETA Coreia): confirmar no início de 2027
+- Data de volta confirmada: 12/06, voo às 19:40 de Hong Kong
 
 - Transfers privativos e guias
 - Ingressos a cotar: Tokyo DisneySea (10/05), degustação de soju em Seul (24/05), show das haenyeo em Jeju (27/05), aula de culinária sichuanesa em Chengdu (06/06)
