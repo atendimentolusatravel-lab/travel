@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="LusaTravel — roteiro dia a dia de 36 noites por Japão, Coreia do Sul e China para Giovanna e Davi.">
+<title>Japão, Coreia e China</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
+<style>
+:root{
+  --gold:#da8d00; --gold-hi:#f0a010;
+  --ink:#1a1510; --char:#333131; --mut:#9a8d80;
+  --line:#e4ddd2; --paper:#faf7f2; --surf:#fff; --surf2:#f2ece3;
+  --onink:#f0e8de;
+  --dest:#5a2d0a;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+  --mx:1080px;
+  --jp:#7a1420; --kr:#1b3a63; --cn:#5a2d0a;
+}
+.c-jp{ --dest:var(--jp); }
+.c-kr{ --dest:var(--kr); }
+.c-cn{ --dest:var(--cn); }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+    --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+    --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+    --jp:#c2404f; --kr:#3d78b8; --cn:#b8703a;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#f0e8de; --char:#d9cec1; --mut:#8f8173;
+  --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+  --gold:#e8a210; --gold-hi:#ffc030; --onink:#f0e8de;
+  --jp:#c2404f; --kr:#3d78b8; --cn:#b8703a;
+}
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+body{ background:var(--paper); color:var(--char); font-family:var(--sans); font-weight:400; font-size:15px; line-height:1.65; -webkit-font-smoothing:antialiased; }
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+@media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } }
+.wrap{ max-width:var(--mx); margin:0 auto; padding:0 28px; }
+.mh{ background:#1a1510; padding:56px 0 44px; position:relative; }
+.mh::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.mh-logo{ font-family:var(--con); font-weight:600; font-size:13px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.mh-kick{ margin-top:26px; font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+.mh-name{ margin-top:10px; font-weight:700; font-size:clamp(28px,5.2vw,46px); line-height:1.06; letter-spacing:.01em; color:#fff; text-transform:uppercase; text-wrap:balance; }
+.mh-dest{ margin-top:8px; font-weight:600; font-size:clamp(17px,2.4vw,22px); color:var(--gold); letter-spacing:.02em; }
+.mh-sub strong{ font-weight:600; color:var(--gold); }
+.mh-sub{ margin-top:16px; max-width:60ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.62); }
+.mh-stats{ margin-top:34px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid rgba(240,232,222,.14); }
+.mh-stat{ padding:18px 34px 4px 0; margin-right:34px; border-right:1px solid rgba(240,232,222,.12); }
+.mh-stat:last-child{ border-right:0; }
+.mh-stat .v{ font-weight:700; font-size:24px; color:#fff; line-height:1; font-variant-numeric:tabular-nums; }
+.mh-stat .k{ margin-top:7px; font-size:9.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.45); }
+.sec{ padding:56px 0; }
+.sec + .sec{ border-top:1px solid var(--line); }
+.eyebrow{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; letter-spacing:-.01em; text-wrap:balance; }
+.lead{ margin-top:12px; max-width:66ch; font-weight:300; font-size:15.5px; color:var(--char); }
+.lead b{ font-weight:600; color:var(--ink); }
+.dec{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; }
+.dec-item{ background:var(--surf); border:1px solid var(--line); border-left:3px solid var(--gold); padding:20px 22px; }
+.dec-k{ font-family:var(--lbl); font-weight:700; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); }
+.dec-t{ margin-top:7px; font-weight:600; font-size:16px; color:var(--ink); line-height:1.35; }
+.dec-d{ margin-top:8px; font-size:13.5px; font-weight:300; color:var(--char); }
+.tl{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:14px; }
+.tl-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--dest); padding:18px 18px 16px; }
+.tl-badge{ display:inline-flex; align-items:center; justify-content:center; min-width:30px; height:30px; padding:0 9px; background:var(--dest); color:#fff; font-weight:700; font-size:12.5px; font-variant-numeric:tabular-nums; }
+.tl-ctry{ margin-left:9px; font-size:9.5px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--mut); }
+.tl-city{ margin-top:13px; font-weight:600; font-size:17px; color:var(--ink); }
+.tl-meta{ margin-top:5px; font-size:12.5px; font-weight:300; color:var(--mut); }
+.tl-move{ margin-top:11px; padding-top:11px; border-top:1px solid var(--line); font-size:11.5px; font-weight:400; color:var(--char); }
+.tl-item.ship{ border-top-style:dashed; background:var(--surf2); }
+.why{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; }
+.why-item{ background:var(--surf); border:1px solid var(--line); border-left:3px solid var(--dest); padding:20px 22px; }
+.why-k{ font-family:var(--lbl); font-weight:700; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--dest); }
+.why-t{ margin-top:6px; font-weight:600; font-size:16px; color:var(--ink); line-height:1.35; }
+.why-l{ margin-top:10px; list-style:none; }
+.why-l li{ position:relative; padding-left:16px; font-size:13.5px; font-weight:300; color:var(--char); margin-top:5px; }
+.why-l li::before{ content:''; position:absolute; left:0; top:.62em; width:6px; height:6px; background:var(--gold); }
+.why-l b{ font-weight:600; color:var(--ink); }
+.ht{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
+.ht-card{ background:var(--surf); border:1px solid var(--line); padding:20px 20px 18px; }
+.ht-city{ font-family:var(--lbl); font-weight:700; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--dest); }
+.ht-name{ margin-top:8px; font-weight:600; font-size:16px; color:var(--ink); line-height:1.3; }
+.ht-stars{ margin-top:4px; color:var(--gold); letter-spacing:.12em; font-size:13px; }
+.ht-why{ margin-top:9px; font-size:13px; font-weight:300; color:var(--char); }
+.ht-alt{ margin-top:10px; padding-top:10px; border-top:1px solid var(--line); font-size:12px; font-weight:300; color:var(--mut); }
+.note{ margin-top:22px; font-size:12px; font-weight:500; color:var(--mut); }
+.opt-hd{ background:var(--dest); padding:34px 0; position:relative; }
+.opt-hd::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.opt-tag{ font-size:9.5px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.7); }
+.opt-title{ margin-top:9px; font-weight:700; font-size:clamp(22px,3.4vw,32px); color:#fff; line-height:1.14; text-wrap:balance; }
+.days{ margin-top:26px; border-top:1px solid var(--line); }
+.day{ display:grid; grid-template-columns:140px 1fr; gap:22px; padding:19px 0; border-bottom:1px solid var(--line); }
+.day-h{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--dest); line-height:1.5; font-variant-numeric:tabular-nums; }
+.day-h .cty{ display:block; color:var(--mut); font-size:10.5px; letter-spacing:.14em; margin-top:3px; }
+.day-t{ font-size:14.5px; font-weight:300; color:var(--char); }
+.day-t b{ font-weight:600; color:var(--ink); }
+.day-t .fair{ color:var(--gold); font-weight:600; }
+.tag{ display:inline-block; margin:0 6px 6px 0; padding:2px 8px; font-size:9.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; border:1px solid var(--gold); color:var(--gold); vertical-align:1px; }
+.day.travel{ background:var(--surf2); margin:0 -14px; padding:15px 14px; }
+.day.travel .day-t{ font-size:13.5px; }
+.pre{ margin-top:26px; border-top:1px solid var(--line); }
+.pre-row{ display:grid; grid-template-columns:200px 1fr; gap:22px; padding:17px 0; border-bottom:1px solid var(--line); }
+.pre-k{ font-weight:600; font-size:14px; color:var(--ink); }
+.pre-v{ font-size:14px; font-weight:300; color:var(--char); }
+.vpn-l{ margin-top:8px; padding-left:18px; }
+.vpn-l li{ margin-top:5px; }
+.vpn-l a{ color:var(--ink); text-decoration:underline; text-decoration-color:var(--gold); }
+.ship-photo{ margin-top:26px; max-width:560px; }
+.ship-photo img{ display:block; width:100%; height:auto; border-top:3px solid var(--gold); }
+.ship-photo figcaption{ margin-top:8px; font-size:11.5px; font-weight:300; color:var(--mut); }
+.ft{ background:#1a1510; padding:44px 0 40px; position:relative; margin-top:0; }
+.ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
+.ft-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.ft-sig{ margin-top:18px; display:flex; flex-wrap:wrap; gap:10px 34px; font-family:var(--con); font-size:13px; color:rgba(240,232,222,.72); }
+.ft-sig a{ color:rgba(240,232,222,.72); text-decoration:none; border-bottom:1px solid rgba(218,141,0,.5); }
+.ft-sig a:hover{ color:var(--gold); }
+.ft-addr{ margin-top:16px; font-family:var(--con); font-size:11.5px; color:rgba(240,232,222,.38); }
+@media (max-width:640px){
+  .wrap{ padding:0 16px; }
+  .day, .pre-row{ grid-template-columns:1fr; gap:7px; }
+  .mh-stat{ padding-right:20px; margin-right:20px; }
+}
+</style>
+</head>
+<body>
+<header class="mh">
+  <div class="wrap">
+    <div class="mh-logo">LusaTravel</div>
+    <div class="mh-kick">Cotação para sua viagem</div>
+    <h1 class="mh-name">Giovanna e Davi</h1>
+    <div class="mh-dest">Japão · Coreia do Sul · China</div>
+    <p class="mh-sub">Trinta e seis noites cruzando a Ásia de leste a oeste: chegada por Tóquio, travessia de navio noturno até a Coreia e saída por Hong Kong. O roteiro equilibra <strong>gastronomia</strong>, vida noturna, cultura com roupas tradicionais e uma camada forte de <strong>tecnologia e imersão</strong>.</p>
+    <div class="mh-stats">
+      <div class="mh-stat"><div class="v">3</div><div class="k">Países</div></div>
+      <div class="mh-stat"><div class="v">11</div><div class="k">Hotéis</div></div>
+      <div class="mh-stat"><div class="v">36</div><div class="k">Noites</div></div>
+      <div class="mh-stat"><div class="v">07/05–12/06</div><div class="k">2027</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Como pensamos a logística</div>
+    <h2 class="h2">As escolhas que dão forma à viagem</h2>
+    <p class="lead">Com chegada em Tóquio e saída por Hong Kong já definidas, a rota natural segue sempre para o oeste, <b>sem voltar pelo mesmo caminho</b>. Cada deslocamento foi escolhido pela experiência e pelo tempo que poupa.</p>
+    <div class="dec">
+      <div class="dec-item">
+        <div class="dec-k">Japão → Coreia</div>
+        <div class="dec-t">Navio noturno Osaka–Busan, Panstar Cruise</div>
+        <div class="dec-d">Embarque à tarde no porto de Osaka, em suíte, navegando pelo Mar Interior de Seto ao pôr do sol. Chegada a Busan na manhã de sábado, a tempo do show de drones sobre a ponte Gwangan. A noite de hotel vira travessia.</div>
+      </div>
+      <div class="dec-item">
+        <div class="dec-k">Coreia → China</div>
+        <div class="dec-t">Voo direto Jeju–Xangai, não navio</div>
+        <div class="dec-d">Os navios para a China saem de Incheon, perto de Seul, levam de 16 a 24 horas e chegam a cidades fora do roteiro. Isso custaria um dia e meio e obrigaria a deixar Jeju fora de ordem. O voo leva cerca de 1h30 e permite encerrar a Coreia em Jeju.</div>
+      </div>
+      <div class="dec-item">
+        <div class="dec-k">Hotelaria</div>
+        <div class="dec-t">Duas ou três opções de hotel em cada cidade</div>
+        <div class="dec-d">Uma mistura de 4★ e 5★ bem localizados, todos com café da manhã (exceto quando indicado), para vocês escolherem onde investir: a vista do Fuji, a ponte de Busan ou o luxo em Kyoto.</div>
+      </div>
+      <div class="dec-item">
+        <div class="dec-k">Calendário</div>
+        <div class="dec-t">Dois festivais no caminho</div>
+        <div class="dec-d">Em Kyoto, o <b>Aoi Matsuri</b> no sábado 15/05 — uma procissão em trajes da corte imperial que passa pelas ruas da cidade. Em Hong Kong, as corridas do <b>Dragon Boat</b>, previstas para 09/06.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Itinerário</div>
+    <h2 class="h2">Doze paradas, 36 noites</h2>
+    <div class="tl">
+      <div class="tl-item c-jp"><span class="tl-badge">5</span><span class="tl-ctry">Japão</span><div class="tl-city">Tóquio</div><div class="tl-meta">07 a 12/05 · 5 noites</div><div class="tl-move">Chegada às 23:55 · aéreo internacional já reservado</div></div>
+      <div class="tl-item c-jp"><span class="tl-badge">2</span><span class="tl-ctry">Japão</span><div class="tl-city">Monte Fuji · Kawaguchiko</div><div class="tl-meta">12 a 14/05 · 2 noites</div><div class="tl-move">Trem Fuji Excursion · 2h</div></div>
+      <div class="tl-item c-jp"><span class="tl-badge">4</span><span class="tl-ctry">Japão</span><div class="tl-city">Kyoto</div><div class="tl-meta">14 a 18/05 · 4 noites</div><div class="tl-move">Shinkansen · 2h</div></div>
+      <div class="tl-item c-jp"><span class="tl-badge">3</span><span class="tl-ctry">Japão</span><div class="tl-city">Osaka</div><div class="tl-meta">18 a 21/05 · 3 noites</div><div class="tl-move">Trem · 15 min</div></div>
+      <div class="tl-item c-jp ship"><span class="tl-badge">1</span><span class="tl-ctry">A bordo</span><div class="tl-city">Panstar Cruise</div><div class="tl-meta">21 a 22/05 · 1 noite</div><div class="tl-move">Osaka → Busan · Balcony Suite · saída 17:00, chegada 10:00</div></div>
+      <div class="tl-item c-kr"><span class="tl-badge">1</span><span class="tl-ctry">Coreia</span><div class="tl-city">Busan</div><div class="tl-meta">22 a 23/05 · 1 noite</div><div class="tl-move">Desembarque às 10:00</div></div>
+      <div class="tl-item c-kr"><span class="tl-badge">4</span><span class="tl-ctry">Coreia</span><div class="tl-city">Seul</div><div class="tl-meta">23 a 27/05 · 4 noites</div><div class="tl-move">Trem KTX · 3h</div></div>
+      <div class="tl-item c-kr"><span class="tl-badge">3</span><span class="tl-ctry">Coreia</span><div class="tl-city">Ilha de Jeju</div><div class="tl-meta">27 a 30/05 · 3 noites</div><div class="tl-move">Voo Seul–Jeju · 1h</div></div>
+      <div class="tl-item c-cn"><span class="tl-badge">3</span><span class="tl-ctry">China</span><div class="tl-city">Xangai</div><div class="tl-meta">30/05 a 02/06 · 3 noites</div><div class="tl-move">Voo Jeju–Xangai · 1h30</div></div>
+      <div class="tl-item c-cn"><span class="tl-badge">3</span><span class="tl-ctry">China</span><div class="tl-city">Pequim</div><div class="tl-meta">02 a 05/06 · 3 noites</div><div class="tl-move">Trem-bala · 4h30</div></div>
+      <div class="tl-item c-cn"><span class="tl-badge">3</span><span class="tl-ctry">China</span><div class="tl-city">Chengdu</div><div class="tl-meta">05 a 08/06 · 3 noites</div><div class="tl-move">Voo Pequim–Chengdu · 3h</div></div>
+      <div class="tl-item c-cn"><span class="tl-badge">4</span><span class="tl-ctry">China</span><div class="tl-city">Hong Kong</div><div class="tl-meta">08 a 12/06 · 4 noites</div><div class="tl-move">Voo Chengdu–HK · 2h30 · saída 12/06, 19:40</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Por que cada cidade</div>
+    <h2 class="h2">Os destaques de cada parada</h2>
+    <p class="lead">Cada cidade entrou no roteiro por uma razão ligada ao que vocês gostam: <b>gastronomia</b>, vida noturna, cultura com roupas tradicionais, doramas e <b>tecnologia e imersão</b>.</p>
+    <div class="why">
+      <div class="why-item c-jp"><div class="why-k">Japão · 5 noites</div><div class="why-t">Tóquio</div><ul class="why-l">
+        <li><b>Tokyo DisneySea</b>, o parque que vocês pediram, com a área nova Fantasy Springs.</li>
+        <li>A Tóquio futurista: <b>teamLab Borderless</b>, Akihabara e Shibuya Sky.</li>
+        <li>Mercado de Tsukiji, omakase de sushi e os bares minúsculos do Golden Gai.</li></ul></div>
+      <div class="why-item c-jp"><div class="why-k">Japão · 2 noites</div><div class="why-t">Monte Fuji · Kawaguchiko</div><ul class="why-l">
+        <li>O <b>Monte Fuji</b> visto do quarto, como vocês pediram.</li>
+        <li>Pagode Chureito, o cartão-postal do Japão, e a 5ª estação do Fuji.</li>
+        <li>Duas noites aumentam a chance de ver a montanha sem nuvens.</li></ul></div>
+      <div class="why-item c-jp"><div class="why-k">Japão · 4 noites</div><div class="why-t">Kyoto</div><ul class="why-l">
+        <li><b>Aoi Matsuri</b> no sábado 15/05: desfile em trajes da corte imperial.</li>
+        <li>Passeio de <b>quimono</b> por Kiyomizu-dera e Sannenzaka, e cerimônia do chá.</li>
+        <li>Fushimi Inari, Arashiyama, Nara e o saquê de Fushimi.</li></ul></div>
+      <div class="why-item c-jp"><div class="why-k">Japão · 3 noites</div><div class="why-t">Osaka</div><ul class="why-l">
+        <li>A capital da <b>comida de rua</b> do Japão, em Dotonbori e Ura-Namba.</li>
+        <li>A noite mais animada do país, em Ura-Namba, e a carne de Kobe.</li>
+        <li>Bate-volta a <b>Hiroshima e Miyajima</b> e embarque no navio para a Coreia.</li></ul></div>
+      <div class="why-item c-kr"><div class="why-k">Coreia · 1 noite</div><div class="why-t">Busan</div><ul class="why-l">
+        <li>Chegada de navio, como vocês imaginaram a travessia.</li>
+        <li><b>Show de drones</b> de sábado sobre a ponte Gwangan.</li>
+        <li>Mercado de peixes Jagalchi e a vila colorida de Gamcheon.</li></ul></div>
+      <div class="why-item c-kr"><div class="why-k">Coreia · 4 noites</div><div class="why-t">Seul</div><ul class="why-l">
+        <li><b>Hanbok</b> no Palácio Gyeongbokgung com guia e os cenários de <b>dorama</b>.</li>
+        <li><b>Degustação de soju</b> e a Seul futurista de COEX, DDP e Seoul Sky.</li>
+        <li>Mercado Gwangjang, Seongsu-dong e a noite de Hongdae e Itaewon.</li></ul></div>
+      <div class="why-item c-kr"><div class="why-k">Coreia · 3 noites</div><div class="why-t">Ilha de Jeju</div><ul class="why-l">
+        <li>A ilha que vocês mais queriam conhecer, cenário de doramas.</li>
+        <li>Vulcões, as mergulhadoras <b>haenyeo</b> e as falésias de Jusangjeolli.</li>
+        <li>Arte Museum, de arte digital imersiva, e o porco preto de Jeju.</li></ul></div>
+      <div class="why-item c-cn"><div class="why-k">China · 3 noites</div><div class="why-t">Xangai</div><ul class="why-l">
+        <li>O <b>skyline de Pudong</b> visto do Bund e do rio Huangpu.</li>
+        <li><b>Maglev</b>, Shanghai Tower e teamLab: a China mais futurista.</li>
+        <li>Xiaolongbao, a Concessão Francesa e speakeasies entre os melhores da Ásia.</li></ul></div>
+      <div class="why-item c-cn"><div class="why-k">China · 3 noites</div><div class="why-t">Pequim</div><ul class="why-l">
+        <li><b>Grande Muralha</b> em Mutianyu, o trecho mais bonito e menos lotado.</li>
+        <li><b>Cidade Proibida</b> e Templo do Céu, com guia.</li>
+        <li>Hutongs, pato laqueado e a noite de Sanlitun.</li></ul></div>
+      <div class="why-item c-cn"><div class="why-k">China · 3 noites</div><div class="why-t">Chengdu e Chongqing</div><ul class="why-l">
+        <li>Os <b>pandas</b> e a culinária de Sichuan, com aula de cozinha e hot pot.</li>
+        <li><b>Chongqing</b>, a cidade "cyberpunk", a uma hora de trem-bala.</li>
+        <li>Ópera com troca de máscaras e os bares de Jiuyanqiao.</li></ul></div>
+      <div class="why-item c-cn"><div class="why-k">China · 4 noites</div><div class="why-t">Hong Kong e Shenzhen</div><ul class="why-l">
+        <li>Corridas do <b>Dragon Boat</b> em 09/06 e o show de luzes sobre o porto.</li>
+        <li><b>Shenzhen</b>, a capital mundial do hardware, a 15 minutos de trem.</li>
+        <li>Dim sum, Victoria Peak, Macau e um jantar de despedida com estrela Michelin.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Hotelaria sugerida</div>
+    <h2 class="h2">Onde vale investir e onde vale economizar</h2>
+    <p class="lead">Opções selecionadas em cada cidade para vocês escolherem. Disponibilidade e tarifas são confirmadas no momento da reserva.</p>
+    <div class="ht">
+      <div class="ht-card c-jp"><div class="ht-city">Tóquio · 5 noites</div><div class="ht-name">Opção 01: Mercure Tokyo Hibiya<br>Opção 02: Mitsui Garden Hotel Kyobashi Tokyo Station</div><div class="ht-stars">★★★★</div><div class="ht-why">No centro de Tóquio, entre Ginza e a Estação de Tóquio, com café da manhã. Base prática para o metrô e para o Shinkansen.</div><div class="ht-alt">5 noites · 07 a 12/05</div></div>
+      <div class="ht-card c-jp"><div class="ht-city">Kawaguchiko · 2 noites</div><div class="ht-name">Opção 01: Fuji View Hotel<br>Opção 02: HOSHINOYA Fuji</div><div class="ht-stars">★★★★★</div><div class="ht-why">Quartos com vista para o Monte Fuji à beira do lago Kawaguchi. Opção 01 com café da manhã; na Opção 02, o café é pago à parte no restaurante do hotel. Duas noites aumentam a chance de ver o Fuji sem nuvens.</div><div class="ht-alt">Upgrade sujeito a disponibilidade: ryokan com onsen privativo, vista do Fuji e jantar kaiseki (ex.: Fufu Kawaguchiko), reservado assim que as vendas para maio de 2027 abrirem</div></div>
+      <div class="ht-card c-jp"><div class="ht-city">Kyoto · 4 noites</div><div class="ht-name">Opção 01: The Gate Hotel Kyoto Takasegawa by Hulic<br>Opção 02: The Royal Park Hotel Iconic Kyoto<br>Opção 03: HOTEL THE MITSUI KYOTO ★★★★★</div><div class="ht-stars">★★★★</div><div class="ht-why">No centro de Kyoto, com café da manhã, perto de Gion, Pontocho e do mercado Nishiki.</div><div class="ht-alt">4 noites · 14 a 18/05</div></div>
+      <div class="ht-card c-jp"><div class="ht-city">Osaka · 3 noites</div><div class="ht-name">Opção 01: Mercure Tokyu Stay Osaka Namba<br>Opção 02: Courtyard by Marriott Osaka Honmachi</div><div class="ht-stars">★★★★</div><div class="ht-why">Bases práticas no centro de Osaka, com café da manhã, para três noites de comida e vida noturna.</div><div class="ht-alt">3 noites · 18 a 21/05</div></div>
+      <div class="ht-card c-jp"><div class="ht-city">Osaka → Busan · 1 noite</div><div class="ht-name">Balcony Suite · Panstar Cruise</div><div class="ht-stars">★★★★</div><div class="ht-why">Navio de cruzeiro em linha regular entre Osaka e Busan. A travessia faz parte da viagem, com o Mar Interior de Seto ao entardecer. Jantar e café da manhã a bordo inclusos.</div><div class="ht-alt">Saída de Osaka às 17:00 (embarque até 2h antes) · chegada a Busan às 10:00 · embarque e desembarque prioritários</div></div>
+      <div class="ht-card c-kr"><div class="ht-city">Busan · 1 noite</div><div class="ht-name">Opção 01: Park Hyatt Busan<br>Opção 02: Shilla Stay Busan Haeundae</div><div class="ht-stars">★★★★★</div><div class="ht-why">Com café da manhã. O sábado da chegada é a noite do show de drones sobre a ponte Gwangan.</div><div class="ht-alt">Opção 01: o quarto tem vista para a ponte, e o show de drones pode ser visto do próprio quarto. Opção 02: vista para o mar aberto; o show é visto da praia de Gwangalli, a cerca de 15 minutos de táxi.</div><div class="ht-alt">1 noite · 22 a 23/05</div></div>
+      <div class="ht-card c-kr"><div class="ht-city">Seul · 4 noites</div><div class="ht-name">Opção 01: voco Seoul Myeongdong by IHG<br>Opção 02: L’Escape, a Luxury Collection Hotel, Seoul Myeongdong<br>Opção 03: Hotel The Botanik Sewoon Myeongdong</div><div class="ht-stars">★★★★</div><div class="ht-why">Em Myeongdong, no centro de Seul, com café da manhã. Perto dos palácios, de Insadong e do mercado Gwangjang, com metrô para Gangnam e Hongdae.</div><div class="ht-alt">4 noites · 23 a 27/05</div></div>
+      <div class="ht-card c-kr"><div class="ht-city">Jeju · 3 noites</div><div class="ht-name">Opção 01: Grand Hyatt Jeju<br>Opção 02: Sheraton Jeju</div><div class="ht-stars">★★★★★</div><div class="ht-why">Opção 01 na Dream Tower, com rooftop e piscina com vista da ilha. Opção 02 com quarto voltado para o oceano. Ambas com café da manhã.</div><div class="ht-alt">3 noites · 27 a 30/05</div></div>
+      <div class="ht-card c-cn"><div class="ht-city">Xangai · 3 noites</div><div class="ht-name">Opção 01: The Westin Bund Center, Shanghai<br>Opção 02: Holiday Inn Shanghai Nanjing Road by IHG</div><div class="ht-stars">★★★★</div><div class="ht-why">No centro de Xangai, com café da manhã, perto do Bund e da Nanjing Road.</div><div class="ht-alt">3 noites · 30/05 a 02/06</div></div>
+      <div class="ht-card c-cn"><div class="ht-city">Pequim · 3 noites</div><div class="ht-name">Opção 01: Regent Beijing by IHG<br>Opção 02: Sunworld Dynasty Hotel Beijing Wangfujing</div><div class="ht-stars">★★★★</div><div class="ht-why">Em Wangfujing, no centro de Pequim, com café da manhã, perto da Cidade Proibida e dos hutongs.</div><div class="ht-alt">3 noites · 02 a 05/06</div></div>
+      <div class="ht-card c-cn"><div class="ht-city">Chengdu · 3 noites</div><div class="ht-name">Opção 01: Canopy by Hilton Chengdu City Centre<br>Opção 02: voco Chengdu Chunxi Road by IHG</div><div class="ht-stars">★★★★</div><div class="ht-why">No centro de Chengdu, com café da manhã, perto da Chunxi Road e do Taikoo Li, o centro gastronômico e noturno da cidade.</div><div class="ht-alt">3 noites · 05 a 08/06</div></div>
+      <div class="ht-card c-cn"><div class="ht-city">Hong Kong · 4 noites</div><div class="ht-name">Opção 01: InterContinental Grand Stanford Hong Kong by IHG<br>Opção 02: Mondrian Hong Kong</div><div class="ht-stars">★★★★★</div><div class="ht-why">Em Kowloon, com café da manhã, perto do Star Ferry e do trem de alta velocidade para Shenzhen.</div><div class="ht-alt">4 noites · 08 a 12/06 · late check-out no dia 12, voo às 19:40</div></div>
+    </div>
+    <p class="note">*Nada reservado, apenas cotado</p>
+  </div>
+</section>
+
+<div class="c-jp">
+  <div class="opt-hd">
+    <div class="wrap">
+      <div class="opt-tag">Parte 1 · 14 noites</div>
+      <h2 class="opt-title">Japão</h2>
+    </div>
+  </div>
+  <section class="sec">
+    <div class="wrap">
+      <div class="eyebrow">Roteiro dia a dia</div>
+      <h2 class="h2">De Tóquio a Osaka, e de navio até a Coreia</h2>
+      <p class="lead">Vocês chegam logo depois da Golden Week e antes da estação de chuvas — uma das melhores janelas do ano para o Japão.</p>
+      <div class="days">
+        <div class="day travel"><div class="day-h">Dia 01–02<span class="cty">05 e 06/05</span></div><div class="day-t">Voos internacionais para Tóquio, já reservados por vocês.</div></div>
+        <div class="day travel"><div class="day-h">Dia 03<span class="cty">Tóquio · 07/05</span></div><div class="day-t">Chegada às 23:55 e check-in garantido para a madrugada.</div></div>
+        <div class="day"><div class="day-h">Dia 04<span class="cty">Tóquio · 08/05</span></div><div class="day-t">Manhã livre para o fuso. Santuário <b>Meiji Jingu</b>, Harajuku e Omotesando. Pôr do sol no <b>Shibuya Sky</b>, sobre o cruzamento mais famoso do mundo, e noite nos bares minúsculos do Nonbei Yokocho.</div></div>
+        <div class="day"><div class="day-h">Dia 05<span class="cty">Tóquio · 09/05</span></div><div class="day-t"><span class="tag">Guia</span>Dia de orientação com guia: <b>Senso-ji</b> em Asakusa, tour gastronômico no mercado externo de <b>Tsukiji</b> e Ginza. À noite, <b>Golden Gai</b> e Omoide Yokocho em Shinjuku — duzentos bares de seis lugares cada.</div></div>
+        <div class="day"><div class="day-h">Dia 06<span class="cty">Tóquio · 10/05</span></div><div class="day-t"><span class="tag">Parque</span><b>Tokyo DisneySea</b> numa segunda-feira, o dia de menor fila da semana, com acesso à área nova Fantasy Springs. O ingresso de 1 dia já vai garantido. As filas rápidas são pagas à parte: o <b>Disney Premier Access</b> dá entrada com horário marcado em uma atração específica e custa cerca de ¥2.000 por pessoa por atração (cerca de ¥2.500 nos shows). Ele só pode ser comprado no aplicativo da Tokyo Disney Resort, no próprio dia e depois de entrar no parque, e pode esgotar. Nossa sugestão é comprar logo cedo para as três atrações de Fantasy Springs (Frozen Journey, Peter Pan e Rapunzel), que sem ele podem ter de 1 a 2 horas de fila.</div></div>
+        <div class="day"><div class="day-h">Dia 07<span class="cty">Tóquio · 11/05</span></div><div class="day-t"><span class="tag">Guia</span><span class="tag">Tecnologia</span>O dia do Davi, com guia: <b>teamLab Borderless</b>, o museu de arte digital imersiva, e depois <b>Akihabara</b> e Odaiba, com o Gundam em tamanho real. Jantar de <b>omakase</b> de sushi no balcão.</div></div>
+        <div class="day travel"><div class="day-h">Dia 08<span class="cty">Fuji · 12/05</span></div><div class="day-t">As malas grandes seguem de Tóquio direto para o hotel em Kyoto. Vocês vão para Kawaguchiko leves, no trem <b>Fuji Excursion</b>, direto de Shinjuku, em cerca de 2h. Pagode <b>Chureito</b>, o cartão-postal do Fuji, e beira do lago. Fim de tarde com vista para a montanha direto do hotel.</div></div>
+        <div class="day"><div class="day-h">Dia 09<span class="cty">Fuji · 13/05</span></div><div class="day-t">Nascer do sol sobre o Fuji. Subida pela estrada Subaru até a <b>5ª estação</b>, a 2.300 metros, e as nascentes de Oshino Hakkai. Tarde de descanso no hotel.</div></div>
+        <div class="day travel"><div class="day-h">Dia 10<span class="cty">Kyoto · 14/05</span></div><div class="day-t">Táxi local, reservado pelo hotel, até a estação de Mishima (cerca de 1h, pago no local) e Shinkansen em Green Car (primeira classe) às 10:54, com chegada a Kyoto às 13:34. Fim de tarde em <b>Gion</b> na hora em que as gueixas saem para os compromissos. Jantar em Pontocho, à beira do rio Kamo.</div></div>
+        <div class="day"><div class="day-h">Dia 11<span class="cty">Kyoto · 15/05</span></div><div class="day-t"><span class="tag">Guia</span><span class="tag">Quimono</span><span class="fair">Aoi Matsuri</span>: mais de 500 pessoas em trajes da corte do período Heian desfilam do Palácio Imperial até os santuários Kamo. Vocês assistem à passagem pela manhã e, à tarde, vestem <b>quimono</b> para o passeio com o guia por Kiyomizu-dera e as ladeiras de Sannenzaka.</div></div>
+        <div class="day"><div class="day-h">Dia 12<span class="cty">Kyoto · 16/05</span></div><div class="day-t"><span class="tag">Guia</span>Com guia: <b>Fushimi Inari</b> às 7h, antes das multidões, e floresta de bambu de <b>Arashiyama</b>. Cerimônia do chá à tarde com mestre. Mercado Nishiki para petiscar.</div></div>
+        <div class="day"><div class="day-h">Dia 13<span class="cty">Nara · 17/05</span></div><div class="day-t"><b>Nara</b>: o Grande Buda do Todai-ji e os cervos soltos no parque. Sugestão opcional na volta: degustação de saquê nas destilarias centenárias do distrito de Fushimi.</div></div>
+        <div class="day travel"><div class="day-h">Dia 14<span class="cty">Osaka · 18/05</span></div><div class="day-t">Shinkansen Nozomi em Green Car às 10:25, com chegada a Shin-Osaka às 10:39. Tarde livre e primeira noite pelas luzes de <b>Dotonbori</b>.</div></div>
+        <div class="day"><div class="day-h">Dia 15<span class="cty">Osaka · 19/05</span></div><div class="day-t"><span class="tag">Guia</span>Dia com guia: mercado <b>Kuromon</b>, Shinsekai e <b>Den Den Town</b>, o bairro de eletrônicos e games de Osaka, com almoço de <b>carne de Kobe</b> em teppanyaki e pôr do sol no Umeda Sky Building. À noite, por conta própria, comida de rua por Dotonbori e Ura-Namba: takoyaki, okonomiyaki, kushikatsu e os bares escondidos das vielas — deixamos uma lista de sugestões.</div></div>
+        <div class="day"><div class="day-h">Dia 16<span class="cty">Hiroshima · 20/05</span></div><div class="day-t">Bate-volta de Shinkansen a <b>Hiroshima</b>: ida às 8:24, com chegada às 9:49, e volta às 17:33, com chegada a Shin-Osaka às 18:59. <b>Parque e Museu Memorial da Paz</b>, okonomiyaki ao estilo local e barco até <b>Miyajima</b>, com o torii flutuante. Volta para Osaka à noite.</div></div>
+        <div class="day travel"><div class="day-h">Dia 17<span class="cty">Osaka · 21/05</span></div><div class="day-t">Manhã livre em Shinsaibashi. À tarde, embarque na <b>Panstar Cruise</b> em <b>Balcony Suite</b>, com saída às 17:00: jantar a bordo e o Mar Interior de Seto ao pôr do sol, rumo a Busan.</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="sec c-jp">
+  <div class="wrap">
+    <div class="eyebrow">A travessia</div>
+    <h2 class="h2">Panstar Cruise · Osaka → Busan em Balcony Suite</h2>
+    <p class="lead">Uma noite navegando do Japão para a Coreia pelo Mar Interior de Seto, com jantar e café da manhã a bordo. A noite de hotel vira parte da viagem.</p>
+    <figure class="ship-photo">
+      <img src="img/panstar-balcony-suite.jpg" alt="Balcony Suite do navio PanStar Miracle, com camas, TV e porta de vidro para a varanda com vista do mar" width="384" height="218">
+      <figcaption>Balcony Suite · PanStar Miracle. Foto: PanStar.</figcaption>
+    </figure>
+    <div class="pre">
+      <div class="pre-row"><div class="pre-k">Data</div><div class="pre-v">Sexta-feira, 21/05 → sábado, 22/05</div></div>
+      <div class="pre-row"><div class="pre-k">Horários</div><div class="pre-v">Saída do porto de Osaka Nanko às 17:00, com apresentação até 2 horas antes. Chegada ao porto de Busan às 10:00.</div></div>
+      <div class="pre-row"><div class="pre-k">Cabine</div><div class="pre-v"><b>Balcony Suite</b> para o casal: cerca de 12,6 m², com varanda privativa de 4,1 m² voltada para o mar.</div></div>
+      <div class="pre-row"><div class="pre-k">Refeições</div><div class="pre-v">Jantar e café da manhã em buffet a bordo, inclusos. O café é servido a partir das 6:30.</div></div>
+      <div class="pre-row"><div class="pre-k">Vantagens da suíte</div><div class="pre-v">Embarque e desembarque prioritários, para começar o dia em Busan mais cedo.</div></div>
+      <div class="pre-row"><div class="pre-k">Chegada a Busan</div><div class="pre-v">Desembarque às 10h, depois do café da manhã. À noite, o show de drones de sábado sobre a ponte Gwangan.</div></div>
+    </div>
+    <p class="note">*Nada reservado, apenas cotado. Horários sujeitos a confirmação da operadora.</p>
+  </div>
+</section>
+
+<div class="c-kr">
+  <div class="opt-hd">
+    <div class="wrap">
+      <div class="opt-tag">Parte 2 · 8 noites</div>
+      <h2 class="opt-title">Coreia do Sul</h2>
+    </div>
+  </div>
+  <section class="sec">
+    <div class="wrap">
+      <div class="eyebrow">Roteiro dia a dia</div>
+      <h2 class="h2">Busan, Seul e Jeju — a Coreia dos doramas</h2>
+      <p class="lead">Entrar pelo sul e sair por Jeju cobre as três Coreias em oito noites: a portuária, a metrópole e a ilha.</p>
+      <div class="days">
+        <div class="day"><div class="day-h">Dia 18<span class="cty">Busan · 22/05</span></div><div class="day-t">Desembarque às 10h, depois do café da manhã a bordo. Vila colorida de <b>Gamcheon</b>, mercado de peixes <b>Jagalchi</b> e a cápsula panorâmica do Blueline Park sobre o mar. À noite, o <span class="fair">show de drones</span> de sábado sobre a ponte Gwangan — do quarto, na Opção 01, ou da praia de Gwangalli.</div></div>
+        <div class="day travel"><div class="day-h">Dia 19<span class="cty">Seul · 23/05</span></div><div class="day-t">Trem-bala KTX em primeira classe às 10:54, com chegada a Seul às 13:48. Tarde em Insadong, a rua das galerias e casas de chá. Jantar e drinks nas vielas de Ikseon-dong.</div></div>
+        <div class="day"><div class="day-h">Dia 20<span class="cty">Seul · 24/05</span></div><div class="day-t"><span class="tag">Sugestão</span>Manhã pelos <b>cenários de dorama</b>: o Muro de Pedra de Deoksugung, a vila de murais de Ihwa e a Torre Namsan. Pode ser feita por conta própria ou com guia particular, que podemos incluir. Almoço no mercado <b>Gwangjang</b>, da série <i>Street Food</i> da Netflix, de banca em banca. Às 17h, <span class="fair">degustação de soju</span> em uma destilaria de Hongdae ("A história dos 3 porquinhos"): 80 minutos com um especialista que fala inglês, explicando as três famílias de bebidas coreanas (makgeolli, cheongju e soju) e servindo pelo menos 7 amostras, a maioria de soju artesanal destilado de arroz. Depois, a noite de Hongdae.</div></div>
+        <div class="day"><div class="day-h">Dia 21<span class="cty">Seul · 25/05</span></div><div class="day-t"><span class="tag">Tecnologia</span>A Seul futurista: <b>COEX</b> e a Biblioteca Starfield, o painel de LED em 3D de Gangnam, o <b>DDP</b> de Zaha Hadid e o mirante Seoul Sky, até o 123º andar. À noite, os bares de Euljiro, o bairro industrial que virou point.</div></div>
+        <div class="day"><div class="day-h">Dia 22<span class="cty">Seul · 26/05</span></div><div class="day-t"><span class="tag">Guia</span><span class="tag">Hanbok</span>Às 10h, passeio particular com guia e <b>hanbok</b>: vocês se vestem com o traje tradicional numa loja local e entram no <b>Palácio Gyeongbokgung</b> para a cerimônia da Troca da Guarda e as fotos com o palácio ao fundo. Depois, parada no Museu Nacional do Palácio, chá coreano com <i>yakgwa</i> (biscoito de mel) com vista para os telhados de Bukchon, caminhada pela <b>Aldeia Hanok de Bukchon</b>, cenário de doramas, e visita à Casa de Baek In-je, residência do início do século XX. Translado entre o palácio e Bukchon, entradas e bebida inclusos. À tarde, <b>Seongsu-dong</b>, o bairro das pop-ups, cafés-conceito e lojas de K-beauty. Churrasco coreano e noite em Itaewon.</div></div>
+        <div class="day travel"><div class="day-h">Dia 23<span class="cty">Jeju · 27/05</span></div><div class="day-t">Voo Korean Air de Gimpo às 11:20, com chegada a Jeju às 12:35. Tarde leve perto de Jeju City: a praia de Hamdeok, de água azul-turquesa, e o mercado tradicional de Dongmun. Jantar de porco preto de Jeju.</div></div>
+        <div class="day"><div class="day-h">Dia 24<span class="cty">Jeju · 28/05</span></div><div class="day-t"><span class="tag">Guia</span>Excursão de dia inteiro pelo leste da ilha, patrimônio da UNESCO, com guia em inglês (em grupo, cerca de 10h): vila folclórica de <b>Seongeup</b>, o cabo de <b>Seopjikoji</b>, almoço em Seogwipo, a cratera <b>Seongsan Ilchulbong</b>, o <span class="fair">show das haenyeo</span> — mergulhadoras que pescam sem oxigênio — e a caverna de lava de <b>Manjanggul</b>. Busca pela manhã e retorno no fim da tarde. A entrada em Seongsan Ilchulbong (KRW 5.000 por pessoa) e o almoço são pagos no local.</div></div>
+        <div class="day"><div class="day-h">Dia 25<span class="cty">Jeju · 29/05</span></div><div class="day-t"><span class="tag">Imersão</span>Oeste e sul da ilha com motorista particular por 9 horas: <b>Arte Museum</b>, galeria de arte digital imersiva, plantações de chá verde da Osulloc e pomares de tangerina, cenário de <i>Se a Vida Te Der Tangerinas</i>. À tarde, as falésias de basalto de <b>Jusangjeolli</b> e a cachoeira Cheonjiyeon. Para quem gosta de trilha, este dia pode ser a subida ao <b>Monte Hallasan</b>, com reserva antecipada.</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="c-cn">
+  <div class="opt-hd">
+    <div class="wrap">
+      <div class="opt-tag">Parte 3 · 13 noites</div>
+      <h2 class="opt-title">China e Hong Kong</h2>
+    </div>
+  </div>
+  <section class="sec">
+    <div class="wrap">
+      <div class="eyebrow">Roteiro dia a dia</div>
+      <h2 class="h2">O futuro, a história e a mesa mais picante do mundo</h2>
+      <p class="lead">Na China, a tecnologia está em tudo: trens a 350 km/h, pagamentos pelo celular e cidades que parecem cenário de ficção científica. Sem parques temáticos, como pediram.</p>
+      <div class="days">
+        <div class="day travel"><div class="day-h">Dia 26<span class="cty">Xangai · 30/05</span></div><div class="day-t">Voo direto Juneyao Air de Jeju às 11:45, com chegada a Xangai (Pudong) às 12:15, hora local. Transfer privativo ao hotel e tarde livre. À noite, <b>Bund</b> iluminado e cruzeiro pelo rio Huangpu de frente para Pudong.</div></div>
+        <div class="day"><div class="day-h">Dia 27<span class="cty">Xangai · 31/05</span></div><div class="day-t"><span class="tag">Guia</span>Jardim Yu e a cidade antiga, xiaolongbao no lugar certo e caminhada pela <b>Concessão Francesa</b>. À noite, os speakeasies de Xangai, entre os melhores bares da Ásia.</div></div>
+        <div class="day"><div class="day-h">Dia 28<span class="cty">Xangai · 01/06</span></div><div class="day-t"><span class="tag">Tecnologia</span>Trem <b>Maglev</b> de levitação magnética até o aeroporto, a 300 km/h. <b>Shanghai Tower</b>, o prédio mais alto da China, e <b>teamLab Borderless Shanghai</b>.</div></div>
+        <div class="day travel"><div class="day-h">Dia 29<span class="cty">Pequim · 02/06</span></div><div class="day-t">Trem-bala G14, em classe executiva ou primeira classe, de Xangai Hongqiao às 11:00, com chegada à estação Pequim Sul às 15:31. Fim de tarde nos <b>hutongs</b> de bicicleta e lago Houhai. Jantar de <b>pato laqueado</b>.</div></div>
+        <div class="day"><div class="day-h">Dia 30<span class="cty">Pequim · 03/06</span></div><div class="day-t"><span class="tag">Guia</span><b>Grande Muralha em Mutianyu</b>, o trecho mais bonito e menos lotado, com teleférico na subida e tobogã na descida. À noite, Sanlitun.</div></div>
+        <div class="day"><div class="day-h">Dia 31<span class="cty">Pequim · 04/06</span></div><div class="day-t"><span class="tag">Guia</span><b>Cidade Proibida</b> e Praça da Paz Celestial, com ingresso nominal reservado antes, Templo do Céu e o pôr do sol sobre os telhados dourados visto do Parque Jingshan.</div></div>
+        <div class="day travel"><div class="day-h">Dia 32<span class="cty">Chengdu · 05/06</span></div><div class="day-t">Voo direto Air China de Pequim (Capital) às 11:00, com chegada a Chengdu (Shuangliu) às 14:00. No fim da tarde, vielas de Kuanzhai Xiangzi, ópera de Sichuan com a troca de máscaras e o primeiro <b>hot pot</b> sichuanês.</div></div>
+        <div class="day"><div class="day-h">Dia 33<span class="cty">Chengdu · 06/06</span></div><div class="day-t"><b>Base dos pandas</b> logo na abertura, quando estão ativos. Às 14h, <b>aula de culinária sichuanesa</b> de 4 horas, com instrutor em inglês: encontro na estação de metrô Liangjiaxiang, visita a um mercado de especiarias para conhecer e comprar os ingredientes, pausa para o chá e preparo do <b>macarrão Dan Dan</b> com um chef, em cozinha profissional. Vocês comem o que prepararam, com uma cerveja ou outra bebida, e levam as receitas e uma lembrança. À noite, a rua de bares de Jiuyanqiao, à beira do rio.</div></div>
+        <div class="day"><div class="day-h">Dia 34<span class="cty">Chongqing · 07/06</span></div><div class="day-t"><span class="tag">Futurista</span>Bate-volta a <b>Chongqing</b>, a cidade "cyberpunk" de 30 milhões de pessoas, construída em camadas sobre as montanhas. Manhã livre em Chengdu. Trem-bala em primeira classe saindo de Chengdu Leste às 13:16, com chegada a Chongqing Oeste às 14:31. À tarde, o monotrilho que atravessa um prédio residencial na estação Liziba e os mirantes sobre os rios Yangtzé e Jialing. Jantar de hot pot original de Chongqing e, ao anoitecer, o complexo <b>Hongyadong iluminado</b> e os prédios em neon. A volta é de propósito às 21:14, com chegada a Chengdu às 22:36: em junho escurece por volta das 19h30, e é à noite que Chongqing mostra o visual "cyberpunk" que a tornou famosa.</div></div>
+        <div class="day travel"><div class="day-h">Dia 35<span class="cty">Hong Kong · 08/06</span></div><div class="day-t">Voo direto Air China de Chengdu (Shuangliu) às 13:15, com chegada a Hong Kong às 15:55. No fim da tarde, travessia no <b>Star Ferry</b> e o show de luzes <i>Symphony of Lights</i> às 20h sobre o porto.</div></div>
+        <div class="day"><div class="day-h">Dia 36<span class="cty">Hong Kong · 09/06</span></div><div class="day-t"><span class="tag">Guia</span>Dia com guia. <span class="fair">Dragon Boat</span>: corridas de barcos-dragão em Stanley. Almoço de dim sum, Victoria Peak no fim da tarde e noite no Soho e em Lan Kwai Fong.</div></div>
+        <div class="day"><div class="day-h">Dia 37<span class="cty">Hong Kong · 10/06</span></div><div class="day-t">Dia livre para compras ou bate-volta a <b>Macau</b> pela ponte sobre o mar.</div></div>
+        <div class="day"><div class="day-h">Dia 38<span class="cty">Shenzhen · 11/06</span></div><div class="day-t"><span class="tag">Tecnologia</span>Bate-volta a <b>Shenzhen</b>, a capital mundial do hardware. Trem-bala em primeira classe da estação Hong Kong West Kowloon às 9:28, com chegada à estação Shenzhen Norte às 9:46, e volta às 18:30, com chegada a Hong Kong às 18:48. Na cidade: o mercado de eletrônicos Huaqiangbei, a loja-conceito da DJI e os showrooms de carros elétricos chineses. Shenzhen fica na China continental: na ida, vocês passam pela imigração, e isso conta como uma nova entrada no país. Levem o passaporte. De volta a Hong Kong, jantar de despedida em restaurante com estrela Michelin.</div></div>
+        <div class="day travel"><div class="day-h">Dia 39<span class="cty">Retorno · 12/06</span></div><div class="day-t">Manhã livre, late check-out e transfer para o aeroporto. Voo às 19:40.</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Antes de embarcar</div>
+    <h2 class="h2">O que deixamos pronto para vocês</h2>
+    <div class="pre">
+      <div class="pre-row"><div class="pre-k">Documentação</div><div class="pre-v">Hoje, brasileiros entram sem visto no Japão, na Coreia — com autorização eletrônica K-ETA — e na China continental. Como esses acordos são renovados periodicamente, confirmamos no início de 2027 as regras válidas para a viagem e cuidamos dos registros. Passaporte eletrônico com validade mínima de 6 meses.</div></div>
+      <div class="pre-row"><div class="pre-k">Internet na China</div><div class="pre-v">Google, WhatsApp e Instagram são bloqueados na China continental (em Hong Kong funcionam normalmente). Para continuar usando, é preciso uma VPN:<ul class="vpn-l"><li><b>Instale antes de viajar:</b> baixe e configure os aplicativos ainda no Brasil, porque as lojas de aplicativos e os sites de VPN são bloqueados dentro da China.</li><li><b>Tenha mais de uma opção:</b> como os bloqueios mudam o tempo todo, vale ter 2 ou 3 aplicativos diferentes instalados.</li><li><b>Opções mais usadas:</b> Astrill VPN, <a href="https://surfshark.com/pt-br/blog/vpn-china">Surfshark</a>, <a href="https://protonvpn.com/pt-br/support/does-protonvpn-work-in-china">Proton VPN</a> e <a href="https://nordvpn.com/blog/vpn-for-china/">NordVPN</a>.</li></ul></div></div>
+      <div class="pre-row"><div class="pre-k">Transporte local</div><div class="pre-v">Trens locais, metrô e barcos de curta distância, como Kyoto → Nara e o barco para Miyajima, são pagos na hora com o cartão de transporte (Suica ou ICOCA no Japão, T-money na Coreia), que pode ficar no celular. Não precisam de reserva e não estão incluídos na cotação. Os trens de longa distância (Shinkansen, KTX e trens-bala da China) já vão reservados.</div></div>
+      <div class="pre-row"><div class="pre-k">Envio de malas no Japão</div><div class="pre-v">Nossa sugestão é enviar as malas de Tóquio para Kyoto pelo <i>takkyubin</i>, o serviço japonês de entrega de bagagem. O hotel em Tóquio despacha as malas grandes no dia 12/05 e elas chegam ao hotel de Kyoto em 1 a 2 dias, por cerca de ¥2.000 a ¥3.000 por mala. Vocês levam só uma mala pequena para as 2 noites no Fuji, e o trem e o trajeto até Kyoto ficam muito mais fáceis.</div></div>
+      <div class="pre-row"><div class="pre-k">Bagagem nos voos internos</div><div class="pre-v">Os quatro voos internos incluem 20 kg de bagagem despachada por pessoa. Se precisarem de mais espaço para as compras da viagem, a bagagem extra pode ser comprada.</div></div>
+      <div class="pre-row"><div class="pre-k">Pagamentos</div><div class="pre-v">Na China quase tudo é pago por Alipay ou WeChat Pay. Deixamos as duas contas ativadas com o cartão de vocês antes do embarque.</div></div>
+      <div class="pre-row"><div class="pre-k">Reservas antecipadas</div><div class="pre-v">DisneySea, teamLab, omakase, Cidade Proibida e cabine do navio esgotam com semanas de antecedência. Garantimos tudo assim que o roteiro for aprovado.</div></div>
+      <div class="pre-row"><div class="pre-k">Clima</div><div class="pre-v">Maio é ameno no Japão e na Coreia, entre 15 e 25 °C. No sul da China e em Hong Kong, junho é quente e úmido, com pancadas de chuva — o roteiro alterna dias ao ar livre e em ambientes fechados.</div></div>
+    </div>
+    <p class="note">*Nada reservado, apenas cotado</p>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-logo">LusaTravel</div>
+    <div class="ft-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <div class="ft-addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+  </div>
+</footer>
+</body>
+</html>
