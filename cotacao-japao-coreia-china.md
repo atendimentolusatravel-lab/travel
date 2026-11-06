@@ -38,6 +38,12 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 |---|---|---|---|
 | Panstar Cruise Osaka → Busan | 21/05 (sex), saída 17:00 · chegada 22/05 às 10:00 | Balcony Suite, jantar e café da manhã inclusos | 5.390 |
 
+## Voos internos
+
+| Trecho | Data | Voo | Horário | Classe / bagagem | Valor (R$, 2 adultos) |
+|---|---|---|---|---|---|
+| Seul (GMP) → Jeju (CJU) | 27/05 (qui) | Korean Air KE1113, direto, A321 | 11:20 → 12:35 (1h15) | Econômica, 20 kg despachada | 1.909,04 |
+
 ## Condições de pagamento
 
 - Hotelaria: parcelamento em até 10x · 5% de desconto no PIX
@@ -46,5 +52,5 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 ## Pendentes
 
 - Hong Kong: solicitar late check-out no dia 12/06 (voo às 19:40)
-- Voos internos: Gimpo–Jeju (27/05), Jeju–Xangai (30/05), Pequim–Chengdu (05/06), Chengdu–Hong Kong (08/06)
+- Voos internos: Jeju–Xangai (30/05), Pequim–Chengdu (05/06), Chengdu–Hong Kong (08/06)
 - Trens, transfers, guias, ingressos, seguro
