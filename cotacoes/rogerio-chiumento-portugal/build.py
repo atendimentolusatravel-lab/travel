@@ -528,6 +528,25 @@ Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR
 </html>
 """
 html = prune_css(html)
+
+
+def compacta(h):
+    """Ícones SVG repetidos viram <use> de um sprite único (deploy direto mais leve)."""
+    import re
+    padrao = re.compile(r'(<svg (?:width="\d+" height="\d+" )?viewBox="([^"]+)" fill="none" stroke="currentColor" stroke-width="([\d.]+)">)(.*?)</svg>')
+    achados = padrao.findall(h)
+    cont = {}
+    for _, vb, sw, corpo in achados:
+        cont[(vb, corpo)] = cont.get((vb, corpo), 0) + 1
+    ids = {k: f"i{n}" for n, k in enumerate(k for k, c in cont.items() if c >= 2)}
+    simb = "".join(f'<symbol id="{ids[k]}" viewBox="{k[0]}">{k[1]}</symbol>' for k in ids)
+    h = padrao.sub(lambda m: f'{m.group(1)}<use href="#{ids[(m.group(2), m.group(4))]}"/></svg>'
+                   if (m.group(2), m.group(4)) in ids else m.group(0), h)
+    return h.replace('<div class="page">', '<svg width="0" height="0" style="position:absolute" aria-hidden="true">'
+                     + simb + '</svg>\n<div class="page">', 1)
+
+
+html = compacta(html)
 html = "\n".join(l.strip() for l in html.split("\n") if l.strip()) + "\n"
 (ROOT / "src").mkdir(exist_ok=True)
 (ROOT / "src" / "index.html").write_text(html)
