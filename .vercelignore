@@ -1,0 +1,5 @@
+# Arquivos internos: nunca publicar (custos, margens e documentação interna)
+cotacao-*.md
+design-system.html
+padrao-visual.html
+.claude
