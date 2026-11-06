@@ -71,25 +71,27 @@ Observação: trens locais, metrô e barcos curtos (Kyoto→Nara, barco de Miyaj
 
 Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão); comparar com bilhetes avulsos.
 
-## Transfers privativos (a cotar · 2 adultos)
+## Transfers privativos (2 adultos · valores em R$, sem margens)
 
 | # | Data | Trecho | Tempo aprox. | Valor |
 |---|---|---|---|---|
-| 1 | 07/05 | Aeroporto de Tóquio → hotel (chegada 23:55) | Haneda 30–40 min · Narita 1h15–1h30 | Haneda: Business MPV 460 · Narita: Business MPV 790 (moeda a confirmar) |
-| 2 | 14/05 | Hotel em Kawaguchiko → estação de Mishima (saída 9h15) | 1h–1h15 | Sem fornecedor — buscar alternativa |
-| 3 | 21/05 | Hotel em Osaka → porto de Osaka Nanko (Panstar, apresentação 15h) | 25–35 min | Premium SUV 725 (moeda a confirmar) |
-| 4 | 22/05 | Porto de Busan → hotel | 25–35 min | Premium Sedan 790 (moeda a confirmar) |
-| 5 | 30/05 | Aeroporto de Pudong → hotel em Xangai (chegada 12:15) | 50 min–1h | Premium Sedan 200 (moeda a confirmar) |
-| 6 | 02/06 | Hotel em Xangai → estação Hongqiao (trem 11:00) | 30–40 min | Business Sedan 165 (moeda a confirmar) |
-| 7 | 02/06 | Estação Pequim Sul → hotel (chegada 15:31) | 25–35 min | Economy Sedan 200 (moeda a confirmar) |
-| 8 | 05/06 | Hotel em Pequim → aeroporto PEK (voo 11:00) | 40–50 min | Economy Sedan 140 (moeda a confirmar) |
-| 9 | 05/06 | Aeroporto CTU → hotel em Chengdu (chegada 14:00) | 30–40 min | Economy Sedan 170 (moeda a confirmar) |
-| 10 | 08/06 | Hotel em Chengdu → aeroporto CTU (voo 13:15) | 30–40 min | Economy Sedan 170 (moeda a confirmar) |
-| 11 | 08/06 | Aeroporto de Hong Kong → hotel (chegada 15:55) | 35–45 min | Business Sedan 290 (moeda a confirmar) |
-| 12 | 12/06 | Hotel em Hong Kong → aeroporto (voo 19:40) | 35–45 min | Business Sedan 275 (moeda a confirmar) |
+| 1 | 07/05 | Aeroporto de Tóquio → hotel (chegada 23:55) | Haneda 30–40 min · Narita 1h15–1h30 | Haneda: Business MPV R$ 460 · Narita: Business MPV R$ 790 |
+| 2 | 14/05 | Hotel em Kawaguchiko → estação de Mishima (saída 9h15) | 1h–1h15 | Táxi local reservado pelo hotel — pago no local, não incluído |
+| 3 | 21/05 | Hotel em Osaka → porto de Osaka Nanko (Panstar, apresentação 15h) | 25–35 min | Premium SUV · R$ 725 |
+| 4 | 22/05 | Porto de Busan → hotel | 25–35 min | Premium Sedan · R$ 790 |
+| 5 | 30/05 | Aeroporto de Pudong → hotel em Xangai (chegada 12:15) | 50 min–1h | Premium Sedan · R$ 200 |
+| 6 | 02/06 | Hotel em Xangai → estação Hongqiao (trem 11:00) | 30–40 min | Business Sedan · R$ 165 |
+| 7 | 02/06 | Estação Pequim Sul → hotel (chegada 15:31) | 25–35 min | Economy Sedan · R$ 200 |
+| 8 | 05/06 | Hotel em Pequim → aeroporto PEK (voo 11:00) | 40–50 min | Economy Sedan · R$ 140 |
+| 9 | 05/06 | Aeroporto CTU → hotel em Chengdu (chegada 14:00) | 30–40 min | Economy Sedan · R$ 170 |
+| 10 | 08/06 | Hotel em Chengdu → aeroporto CTU (voo 13:15) | 30–40 min | Economy Sedan · R$ 170 |
+| 11 | 08/06 | Aeroporto de Hong Kong → hotel (chegada 15:55) | 35–45 min | Business Sedan · R$ 290 |
+| 12 | 12/06 | Hotel em Hong Kong → aeroporto (voo 19:40) | 35–45 min | Business Sedan · R$ 275 |
 
 Sem transfer: hotel em Jeju → aeroporto (30/05).
 Todos os transfers: privativos, por trajeto, com meet and greet.
+
+Total transfers: R$ 3.585 (chegada por Haneda) ou R$ 3.915 (chegada por Narita).
 
 ## Seguro viagem (36 dias · 2 adultos · cobertura mundial/Ásia)
 
@@ -118,6 +120,6 @@ Observação: seguro com 21 coberturas ("21 motivos de cobertura"). Valores para
 - Vistos (Japão, China; K-ETA Coreia): confirmar no início de 2027
 - Data de volta confirmada: 12/06, voo às 19:40 de Hong Kong
 
-- Transfers privativos e guias
+- Guias e motoristas
 - Ingressos a cotar: Tokyo DisneySea (10/05), degustação de soju em Seul (24/05), show das haenyeo em Jeju (27/05), aula de culinária sichuanesa em Chengdu (06/06)
 - Demais ingressos (inclusive degustação de saquê em Fushimi): só como lista de sugestões na proposta (não cotados)
