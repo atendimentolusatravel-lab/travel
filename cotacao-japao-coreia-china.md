@@ -27,6 +27,8 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 | Xangai | 30/05–02/06 | 3 | 02 | Holiday Inn Shanghai Nanjing Road by IHG | Superior King | Café da manhã | 4.820 |
 | Pequim | 02–05/06 | 3 | 01 | Regent Beijing by IHG | King Classic | Café da manhã | 4.775 |
 | Pequim | 02–05/06 | 3 | 02 | Sunworld Dynasty Hotel Beijing Wangfujing | Superior King | Café da manhã | 2.960 |
+| Chengdu | 05–08/06 | 3 | 01 | Canopy by Hilton Chengdu City Centre | King Room | Café da manhã | 2.585 |
+| Chengdu | 05–08/06 | 3 | 02 | voco Chengdu Chunxi Road by IHG | Standard King | Café da manhã | 2.795 |
 
 ## Navio
 
@@ -41,6 +43,6 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 
 ## Pendentes
 
-- Hotelaria: Chengdu, Hong Kong
+- Hotelaria: Hong Kong (08–12/06, 4 noites, late check-out no dia 12)
 - Voos internos: Gimpo–Jeju (27/05), Jeju–Xangai (30/05), Pequim–Chengdu (05/06), Chengdu–Hong Kong (08/06)
 - Trens, transfers, guias, ingressos, seguro
