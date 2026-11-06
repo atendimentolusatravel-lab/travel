@@ -131,7 +131,7 @@ Valores com taxas incluídas (sem margens). Pagamento: até 6x · 10% de descont
 
 | Data | Programa | Valor |
 |---|---|---|
-| 29/05 (sáb) | Motorista particular, dia inteiro: oeste e sul (Arte Museum, Osulloc, Jusangjeolli, Cheonjiyeon) | R$ 1.679,95 → +15% = R$ 1.931,94 → +12% = **R$ 2.163,78** |
+| 29/05 (sáb) | Motorista particular, 9 horas: oeste e sul (Arte Museum, Osulloc, Jusangjeolli, Cheonjiyeon) | R$ 1.679,95 → +15% = R$ 1.931,94 → +12% = **R$ 2.163,78** |
 
 Pagamento: até 6x · 10% de desconto no PIX.
 
