@@ -100,6 +100,7 @@ Total transfers: R$ 3.585 (chegada por Haneda) ou R$ 3.915 (chegada por Narita).
 | 10/05 (seg) | Tokyo DisneySea — ingresso de 1 dia | Premier Access não incluído (comprado no app, no dia, ~¥2.000/pessoa/atração) | R$ 1.410 (margens a confirmar) |
 | 24/05 (seg) | Degustação de soju em destilaria — "A história dos 3 porquinhos" (Hongdae, Seul) | 17:00 · 80 min · guia em inglês · mín. 7 amostras (soju, makgeolli/cheongju) · cancelamento grátis até a véspera | R$ 597,88 → +15% = R$ 687,56 → +12% = **R$ 770,07** |
 | 28/05 (sex) | Excursão de 1 dia pelo leste de Jeju (UNESCO) com show das haenyeo — em grupo | 10h · guia em inglês · busca 8h30–9h10 (Shilla/Lotte Duty Free, aeroporto, Ocean Suites) · Seongeup, Seopjikoji, Seongsan Ilchulbong, Museu e show Haenyeo, caverna Manjanggul · entrada Seongsan paga no local (KRW 5.000 por pessoa) · almoço não incluso | R$ 505,24 → +15% = R$ 581,03 → +12% = **R$ 650,75** |
+| 06/06 (dom) | Aula de culinária de macarrão Dan Dan e tour no mercado (Chengdu) | 14:00 · 4h · instrutor em inglês · encontro no metrô Liangjiaxiang · inclui ingredientes, lanches/frutas, chá, 1 bebida, lembrança e receitas · transporte até o ponto de encontro não incluso | R$ 1.029,66 → +15% = R$ 1.184,11 → +12% = **R$ 1.326,20** |
 
 ## Seguro viagem (36 dias · 2 adultos · cobertura mundial/Ásia)
 
@@ -129,5 +130,4 @@ Observação: seguro com 21 coberturas ("21 motivos de cobertura"). Valores para
 - Data de volta confirmada: 12/06, voo às 19:40 de Hong Kong
 
 - Guias e motoristas
-- Ingressos a cotar: aula de culinária sichuanesa em Chengdu (06/06)
 - Demais ingressos (inclusive degustação de saquê em Fushimi): só como lista de sugestões na proposta (não cotados)
