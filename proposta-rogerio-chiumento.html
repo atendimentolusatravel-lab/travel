@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Rogério Chiumento | Portugal e Espanha — Lusatravel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap');
+:root{
+  --gold:#da8d00; --dest:#730505; --ink:#1a1510; --char:#333131; --mut:#9a8d80; --line:#e4ddd2; --soft:#faf7f2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif; --con:'Montserrat',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); }
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff; page-break-after:always; display:flex; flex-direction:column; }
+.page:last-child{ page-break-after:auto; }
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.2); }
+.body{ padding:14mm 22mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:3mm 0 7mm; }
+.h3{ font-size:13pt; font-weight:700; color:var(--ink); margin:8mm 0 3mm; }
+.lead{ font-size:11pt; line-height:1.7; color:var(--char); margin-bottom:6mm; }
+
+/* CAPA */
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink); display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0; background:radial-gradient(ellipse at 70% 30%, #b0412a 0%, #730505 45%, #2a0a06 100%); }
+.cover-scrim{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, transparent 30%, rgba(0,0,0,.78) 78%); z-index:2; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:34mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:14mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3; font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+
+/* ITINERÁRIO */
+.tl{ display:flex; flex-direction:column; }
+.tl-item{ display:flex; align-items:flex-start; gap:6mm; }
+.tl-badge{ width:11mm; height:11mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:13pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tl-line{ width:2px; height:8mm; background:var(--line); margin-left:5.4mm; }
+.tl-city{ font-size:14pt; font-weight:700; color:var(--ink); }
+.tl-meta{ font-size:10pt; color:var(--mut); margin-top:1mm; }
+.tl-meta b{ color:var(--gold); font-weight:700; }
+
+/* DESTINO */
+.dest-hd{ background:var(--dest); padding:5mm 22mm; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
+.dest-hd .city{ font-size:12pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); }
+.dest-hd .no{ width:12mm; height:12mm; border-radius:50%; border:2px solid rgba(218,141,0,.9); color:var(--gold); font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; }
+.dest-photo{ height:78mm; position:relative; flex-shrink:0; }
+.dest-photo .cap{ position:absolute; bottom:6mm; left:22mm; font-size:20pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+.dest-photo .sub{ position:absolute; bottom:17mm; left:22mm; font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.dest-text{ font-size:11.5pt; font-weight:400; line-height:1.7; color:var(--char); }
+.cards{ display:flex; flex-direction:column; gap:5mm; margin-top:8mm; }
+.hotel-card{ border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.hotel-card .top{ background:var(--soft); padding:4.5mm 7mm; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; gap:6mm; }
+.hotel-card .name{ font-size:13.5pt; font-weight:700; color:var(--ink); }
+.hotel-card .stars{ font-size:11pt; color:var(--gold); letter-spacing:2px; }
+.hotel-card .badge{ font-size:7.5pt; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#fff; background:var(--dest); border-radius:3px; padding:1mm 2.5mm; margin-left:3mm; vertical-align:middle; }
+.hotel-card .badge.gold{ background:var(--gold); }
+.hotel-card .price{ font-size:14pt; font-weight:800; color:var(--ink); white-space:nowrap; }
+.hotel-card .rows{ padding:4mm 7mm; display:grid; grid-template-columns:1fr 1fr 1fr; gap:3mm 8mm; }
+.hotel-card .k{ font-family:Arimo,Arial,sans-serif; font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; }
+.hotel-card .v{ font-size:10pt; font-weight:300; color:var(--char); margin-top:.8mm; }
+.hotel-card .obs{ padding:0 7mm 4mm; font-size:9.5pt; font-weight:300; line-height:1.6; color:var(--char); }
+.hotel-card .obs b{ font-weight:600; }
+.pending{ border:1.5px dashed var(--gold); border-radius:6px; padding:5mm 7mm; font-size:10.5pt; color:var(--char); background:#fffaf0; }
+
+/* ROTEIRO */
+.day{ display:grid; grid-template-columns:30mm 1fr; gap:6mm; padding:4.2mm 0; border-bottom:1px solid var(--line); }
+.day:last-child{ border-bottom:0; }
+.day-n{ font-size:9pt; font-weight:800; letter-spacing:.1em; color:var(--gold); text-transform:uppercase; }
+.day-d{ font-size:10pt; color:var(--mut); margin-top:.5mm; }
+.day-h{ font-size:12.5pt; font-weight:700; color:var(--ink); }
+.day-t{ font-size:10.3pt; line-height:1.62; color:var(--char); margin-top:1.2mm; }
+.day-t b{ font-weight:600; color:var(--ink); }
+.tip{ display:inline-block; font-size:8pt; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--dest); margin-top:1.5mm; }
+
+/* TABELAS */
+table.t{ width:100%; border-collapse:collapse; font-size:9.6pt; margin-bottom:3mm; }
+table.t th{ text-align:left; font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; padding:2mm 2mm; border-bottom:1.5px solid var(--ink); }
+table.t td{ padding:2mm 2mm; border-bottom:1px solid var(--line); vertical-align:top; }
+table.t td.n{ text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
+table.t th.n{ text-align:right; }
+.opt{ border:1px solid var(--line); border-radius:6px; margin-bottom:4.5mm; overflow:hidden; break-inside:avoid; }
+.opt-h{ display:flex; justify-content:space-between; align-items:center; background:var(--soft); padding:3mm 6mm; border-bottom:1px solid var(--line); }
+.opt-h .t1{ font-size:11.5pt; font-weight:700; color:var(--ink); }
+.opt-h .t1 span{ display:inline-block; background:var(--dest); color:#fff; border-radius:3px; font-size:8.5pt; font-weight:800; padding:.6mm 2.2mm; margin-right:3mm; }
+.opt-h .t2{ text-align:right; }
+.opt-h .pp{ font-size:12.5pt; font-weight:800; color:var(--ink); }
+.opt-h .tt{ font-size:8.5pt; color:var(--mut); }
+.opt .in{ padding:2mm 6mm 3mm; }
+.opt .in table.t{ font-size:9pt; margin:0; }
+.opt .in table.t td{ padding:1.4mm 2mm; }
+.opt .meta{ font-size:8.8pt; color:var(--char); padding-top:1.5mm; }
+.opt .meta b{ color:var(--dest); }
+.fit{ font-size:7.5pt; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:.6mm 2mm; border-radius:3px; margin-left:2mm; vertical-align:middle; }
+.fit.ok{ background:#e8f1e4; color:#2d5e3a; }
+.fit.no{ background:#fbeee0; color:#8a4a00; }
+
+/* VALORES */
+.val-sec{ font-size:9pt; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin:6mm 0 1.5mm; }
+.val-row{ display:flex; justify-content:space-between; padding:2.3mm 0; border-bottom:1px solid var(--line); font-size:10.3pt; }
+.val-row .amt{ font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.val-row.sub .lbl{ color:var(--mut); }
+.pk{ display:grid; grid-template-columns:1fr 1fr; gap:8mm; margin-top:4mm; }
+.pkc{ border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+.pkc .ph{ background:var(--dest); color:#fff; padding:4mm 6mm; }
+.pkc .ph b{ display:block; font-size:13pt; }
+.pkc .ph span{ font-size:9pt; opacity:.75; }
+.pkc .pb{ padding:3mm 6mm 2mm; }
+.pkc .val-row{ font-size:9.8pt; padding:2mm 0; }
+.val-total{ display:flex; justify-content:space-between; align-items:center; background:var(--ink); padding:5mm 6mm; }
+.val-total .lbl{ font-size:10pt; font-weight:700; letter-spacing:.08em; color:rgba(255,255,255,.7); }
+.val-total .amt{ font-size:15pt; font-weight:800; color:var(--gold); }
+.val-pp{ display:flex; justify-content:space-between; padding:2.5mm 6mm 4mm; font-size:10pt; }
+.val-pp b{ color:var(--ink); }
+.val-fx{ font-size:9pt; color:var(--mut); margin-top:5mm; line-height:1.7; }
+.note{ font-size:9.5pt; line-height:1.6; color:var(--char); background:var(--soft); border-left:3px solid var(--gold); padding:3mm 5mm; margin-top:4mm; }
+
+.cond{ margin-bottom:6mm; }
+.cond-h{ font-size:11pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:2mm; }
+.cond-t{ font-size:10.8pt; line-height:1.8; color:var(--char); }
+</style>
+</head>
+<body>
+
+<!-- 01 · CAPA -->
+<section class="page cover">
+  <div class="cover-hd"><div class="logo">LUSATRAVEL</div><div class="tag">Glossário</div></div>
+  <div class="cover-bar"></div>
+  <div class="cover-photo"></div>
+  <div class="cover-scrim"></div>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em 3 adultos · 22/12/2026 a 04/01/2027</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">Rogério Chiumento</div>
+    <div class="cover-dest">Portugal e Espanha · Natal no Porto e Réveillon em Gibraltar</div>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>Destinos</span></div>
+      <div class="stat"><b>12</b><span>Noites</span></div>
+      <div class="stat"><b>5</b><span>Hotéis</span></div>
+      <div class="stat"><b>Sim</b><span>Seguro</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com" style="color:inherit;text-decoration:none">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076" style="color:inherit;text-decoration:none">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- 02 · ITINERÁRIO -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Itinerário</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Sua rota</div>
+    <h2 class="h2">Do Douro ao Duero</h2>
+    <p class="lead">O Douro português e o Duero espanhol são o mesmo rio. A viagem começa em Lisboa, passa o Natal no Porto e segue o rio até a Ribera del Duero, terra do Tempranillo. De lá desce para o réveillon em Gibraltar e termina em Sevilha, sem voltar por nenhum trecho.</p>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-badge">1</div><div><div class="tl-city">Lisboa · Portugal</div><div class="tl-meta"><b>23/12</b> · 1 noite · chegada da viagem</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge">2</div><div><div class="tl-city">Porto e Vale do Douro · Portugal</div><div class="tl-meta"><b>24 a 27/12</b> · 3 noites · Natal e vinhos do Douro</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge">3</div><div><div class="tl-city">Ribera del Duero · Espanha</div><div class="tl-meta"><b>27 a 30/12</b> · 3 noites · bodegas de Tempranillo, com parada em Toro</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge">4</div><div><div class="tl-city">Gibraltar</div><div class="tl-meta"><b>30/12 a 02/01</b> · 3 noites · réveillon na marina</div></div></div>
+      <div class="tl-line"></div>
+      <div class="tl-item"><div class="tl-badge">5</div><div><div class="tl-city">Sevilha · Espanha</div><div class="tl-meta"><b>02 a 04/01</b> · 2 noites · Andaluzia e despedida</div></div></div>
+    </div>
+    <h3 class="h3">Como se deslocar</h3>
+    <p class="lead">Apresentamos duas formas de fazer a viagem, para você escolher:</p>
+    <table class="t">
+      <tr><th>Opção</th><th>Como funciona</th></tr>
+      <tr><td><b>Carro</b></td><td>Retirada no aeroporto de Lisboa em 23/12 e devolução no aeroporto de Sevilha em 04/01. Liberdade total de horários e paradas.</td></tr>
+      <tr><td><b>Trem e transfers</b></td><td>Trem de Lisboa ao Porto, transfer privativo do Porto à Ribera del Duero, e trem de alta velocidade (AVE) de Madrid a Málaga para descer até Gibraltar. Ninguém precisa dirigir.</td></tr>
+    </table>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- 03 · ROTEIRO DIA A DIA (1/2) -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Roteiro</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Dia a dia · sugestão Lusatravel</div>
+    <h2 class="h2">Roteiro sugerido</h2>
+    <div class="day"><div><div class="day-n">Dia 01</div><div class="day-d">Ter · 22/12</div></div><div><div class="day-h">Curitiba → Lisboa</div><div class="day-t">Embarque à noite em Curitiba com destino a Lisboa.</div></div></div>
+    <div class="day"><div><div class="day-n">Dia 02</div><div class="day-d">Qua · 23/12</div></div><div><div class="day-h">Chegada a Lisboa</div><div class="day-t">Chegada às 12:45. Retirada do carro no aeroporto, ou transfer até o hotel. Tarde leve para descansar do voo: passeio pela Baixa e pelo Chiado e a Praça do Comércio iluminada para o Natal. À noite, jantar com fado em Alfama.</div></div></div>
+    <div class="day"><div><div class="day-n">Dia 03</div><div class="day-d">Qui · 24/12</div></div><div><div class="day-h">Lisboa → Porto · Véspera de Natal</div><div class="day-t">Subida para o Porto de carro (cerca de 3h) ou de trem (saída às 09:30, chegada às 12:54). À tarde, passeio pela Avenida dos Aliados e pelas luzes de Natal do centro. À noite, <b>ceia de Natal (Consoada) no hotel</b>. Se quiserem, Missa do Galo na Sé à meia-noite.<br><span class="tip">Em Portugal quase tudo fecha na noite de 24. A ceia precisa ser reservada com antecedência.</span></div></div></div>
+    <div class="day"><div><div class="day-n">Dia 04</div><div class="day-d">Sex · 25/12</div></div><div><div class="day-h">Natal no Porto</div><div class="day-t">Dia tranquilo, com a cidade em clima de festa. Almoço de Natal, caminhada pela Ribeira e pela Ponte Luís I, e pôr do sol no Jardim do Morro, em Gaia, com vista para o rio e a cidade.</div></div></div>
+    <div class="day"><div><div class="day-n">Dia 05</div><div class="day-d">Sáb · 26/12</div></div><div><div class="day-h">Vale do Douro</div><div class="day-t">Dia inteiro no Douro, uma das regiões de vinho mais bonitas do mundo. Visita a quintas na região do Pinhão, degustação de vinho do Porto e de tintos do Douro feitos com Tinta Roriz, o nome português do Tempranillo. Almoço em quinta com vista para os vinhedos.<br><span class="tip">Passeio a cotar após a sua aprovação</span></div></div></div>
+    <div class="day"><div><div class="day-n">Dia 06</div><div class="day-d">Dom · 27/12</div></div><div><div class="day-h">Porto → Toro → Ribera del Duero</div><div class="day-t">A viagem segue o curso do rio até a Espanha. Parada em <b>Toro</b>, cidade medieval e região de vinho onde o Tempranillo se chama Tinta de Toro, para almoço e visita a uma bodega. No fim da tarde, chegada à Ribera del Duero.</div></div></div>
+    <div class="day"><div><div class="day-n">Dia 07</div><div class="day-d">Seg · 28/12</div></div><div><div class="day-h">Ribera del Duero · Dia do Tempranillo</div><div class="day-t">Dia dedicado às bodegas da <b>"Milla de Oro"</b>, o trecho onde estão as vinícolas mais famosas da região. Sugestões: Protos, em Peñafiel, com visita ao castelo que abriga o Museu do Vinho; Emilio Moro; e almoço no Pago de Carraovejas.<br><span class="tip">Passeio a cotar após a sua aprovação · recomendamos motorista nos dias de degustação</span></div></div></div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- 04 · ROTEIRO DIA A DIA (2/2) -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Roteiro</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Dia a dia · sugestão Lusatravel</div>
+    <h2 class="h2">Roteiro sugerido</h2>
+    <div class="day"><div><div class="day-n">Dia 08</div><div class="day-d">Ter · 29/12</div></div><div><div class="day-h">Ribera del Duero</div><div class="day-t">Manhã com mais uma bodega. Tarde livre para aproveitar o hotel e o spa. À noite, jantar harmonizado com os vinhos da região.</div></div></div>
+    <div class="day"><div><div class="day-n">Dia 09</div><div class="day-d">Qua · 30/12</div></div><div><div class="day-h">Ribera del Duero → Gibraltar</div><div class="day-t">Dia de viagem para o sul. <b>De carro:</b> cerca de 8h de estrada, com parada para almoço no caminho. <b>De trem:</b> transfer até a estação de Madrid, trem de alta velocidade (AVE) até Málaga (cerca de 2h45) e transfer até Gibraltar (cerca de 1h30), num total aproximado de 7h. Chegada e check-in em Gibraltar.</div></div></div>
+    <div class="day"><div><div class="day-n">Dia 10</div><div class="day-d">Qui · 31/12</div></div><div><div class="day-h">Gibraltar · Réveillon</div><div class="day-t">Pela manhã, tour pelo <b>Rochedo de Gibraltar</b>: Upper Rock, os famosos macacos, a caverna de St. Michael e os túneis do Grande Cerco. À noite, <b>réveillon na marina Ocean Village</b>.<br><span class="tip">Tour a cotar após a sua aprovação · jantar de réveillon não incluído na hospedagem</span></div></div></div>
+    <div class="day"><div><div class="day-n">Dia 11</div><div class="day-d">Sex · 01/01</div></div><div><div class="day-h">Gibraltar · Ano-Novo</div><div class="day-t">Dia livre para descansar. Passeio pela Main Street e pela marina. É feriado, e a maior parte do comércio fica fechada.</div></div></div>
+    <div class="day"><div><div class="day-n">Dia 12</div><div class="day-d">Sáb · 02/01</div></div><div><div class="day-h">Gibraltar → Sevilha</div><div class="day-t">Viagem até Sevilha (cerca de 2h15). À tarde, passeio pelo bairro de Santa Cruz, com suas ruelas e pátios, e tapas pelo centro. À noite, espetáculo de flamenco.</div></div></div>
+    <div class="day"><div><div class="day-n">Dia 13</div><div class="day-d">Dom · 03/01</div></div><div><div class="day-h">Sevilha</div><div class="day-t">Visita ao Real Alcázar, à Catedral e à Giralda, e à Plaza de España. Pôr do sol no Metropol Parasol. Jantar de despedida e noite cedo, porque o voo de volta é de madrugada.<br><span class="tip">City tour a cotar após a sua aprovação</span></div></div></div>
+    <div class="day"><div><div class="day-n">Dia 14</div><div class="day-d">Seg · 04/01</div></div><div><div class="day-h">Sevilha → Curitiba</div><div class="day-t">Saída do hotel por volta das 04:30. Devolução do carro no aeroporto às 05:00 e voo às 06:30, com conexão em Lisboa e chegada a Curitiba no mesmo dia.</div></div></div>
+    <div class="note">Os passeios acima são uma sugestão da Lusatravel. Com a sua aprovação, cotamos cada um deles.</div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- 05 · LISBOA -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Lisboa · Portugal</div><div class="no">1</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo" style="background:linear-gradient(160deg,#c9a46a 0%,#8a5a3a 45%,#3a1a10 100%)"><div class="sub">23/12 · 1 noite</div><div class="cap">Lisboa</div></div>
+  <div class="body">
+    <p class="dest-text">Lisboa recebe vocês com a luz dourada de inverno sobre o Tejo e as ruas do centro todas enfeitadas para o Natal. É a primeira noite da viagem, pensada para descansar do voo sem abrir mão da cidade: uma caminhada pela Baixa e pelo Chiado, a Praça do Comércio iluminada à beira do rio e, à noite, um jantar com fado nas vielas de Alfama, onde a música portuguesa nasceu. Na manhã seguinte, a viagem segue para o norte.</p>
+    <div class="cards">
+      <div class="hotel-card"><div class="top"><div><span class="name">Avani Avenida Liberdade</span></div><div class="price">R$ 1.880</div></div>
+        <div class="rows"><div><div class="k">Quarto duplo</div><div class="v">Avani Room · R$ 975</div></div><div><div class="k">Quarto single</div><div class="v">Avani Room · R$ 905</div></div><div><div class="k">Plano</div><div class="v">Café da manhã</div></div></div></div>
+      <div class="hotel-card"><div class="top"><div><span class="name">Sofitel Lisbon Liberdade</span><div class="stars">★★★★★</div></div><div class="price">R$ 3.050</div></div>
+        <div class="rows"><div><div class="k">Quarto duplo</div><div class="v">Superior King Room · R$ 1.730</div></div><div><div class="k">Quarto single</div><div class="v">Superior Twin · R$ 1.320</div></div><div><div class="k">Plano</div><div class="v">Café da manhã</div></div></div></div>
+    </div>
+    <div class="note">Valores para 1 noite (check-in 23/12, check-out 24/12), com 1 quarto duplo e 1 single. Os dois hotéis ficam na Avenida da Liberdade, a principal avenida de Lisboa, a poucos minutos da Baixa.</div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- 06 · PORTO -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Porto · Portugal</div><div class="no">2</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo" style="background:linear-gradient(160deg,#5a7a9a 0%,#3a3a5a 45%,#1a1020 100%)"><div class="sub">24 a 27/12 · 3 noites</div><div class="cap">Porto</div></div>
+  <div class="body">
+    <p class="dest-text">O Porto é a cidade ideal para o Natal: compacta, iluminada e acolhedora. As casas coloridas da Ribeira se refletem no rio, os barcos rabelos lembram a história do vinho do Porto e, do outro lado da ponte, as caves de Gaia guardam séculos de tradição. A ceia de Natal à portuguesa, a Consoada, é o momento central da estadia. Depois, um dia inteiro no Vale do Douro abre o capítulo do vinho, que continua na Espanha.</p>
+    <div class="cards">
+      <div class="hotel-card"><div class="top"><div><span class="name">PortoBay Teatro</span></div><div class="price">R$ 6.035</div></div>
+        <div class="rows"><div><div class="k">Quarto duplo</div><div class="v">Gallery Room · R$ 3.185</div></div><div><div class="k">Quarto single</div><div class="v">Standard · R$ 2.850</div></div><div><div class="k">Plano</div><div class="v">Café da manhã</div></div></div></div>
+      <div class="hotel-card"><div class="top"><div><span class="name">Eurostars Aliados</span></div><div class="price">R$ 6.510</div></div>
+        <div class="rows"><div><div class="k">Quarto duplo</div><div class="v">Double Standard · R$ 3.410</div></div><div><div class="k">Quarto single</div><div class="v">Standard · R$ 3.100</div></div><div><div class="k">Plano</div><div class="v">Café da manhã</div></div></div></div>
+      <div class="hotel-card"><div class="top"><div><span class="name">Pestana Vintage Porto</span><span class="badge">Na Ribeira</span><div class="stars">★★★★★</div></div><div class="price">R$ 9.030</div></div>
+        <div class="rows"><div><div class="k">Quarto duplo</div><div class="v">Classic Room · R$ 4.680</div></div><div><div class="k">Quarto single</div><div class="v">Classic Room · R$ 4.350</div></div><div><div class="k">Plano</div><div class="v">Café da manhã</div></div></div>
+        <div class="obs">O único dos três à beira do rio, na Praça da Ribeira.</div></div>
+    </div>
+    <div class="note">Valores para as 3 noites (check-in 24/12, check-out 27/12), com 1 quarto duplo e 1 single. A <b>ceia de Natal (24/12)</b> não está incluída e será cotada no hotel escolhido.</div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- 07 · RIBERA DEL DUERO -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Ribera del Duero · Espanha</div><div class="no">3</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo" style="background:linear-gradient(160deg,#9a7a4a 0%,#6a2a1a 50%,#2a0a06 100%)"><div class="sub">27 a 30/12 · 3 noites</div><div class="cap">Ribera del Duero</div></div>
+  <div class="body">
+    <p class="dest-text">A Ribera del Duero é a terra do Tempranillo, que aqui ganha o nome de Tinto Fino e produz alguns dos tintos mais respeitados da Espanha. Os vinhedos se espalham pelo planalto de Castela, entre castelos medievais e mosteiros. Em torno de Peñafiel fica a "Milla de Oro", onde as bodegas mais famosas estão a poucos minutos umas das outras. São três noites para provar o Tempranillo onde ele é rei, sem pressa.</p>
+    <div class="cards">
+      <div class="hotel-card"><div class="top"><div><span class="name">Castilla Termal Monasterio de Valbuena</span><div class="stars">★★★★★ <span style="font-size:8.5pt;color:var(--mut);letter-spacing:0">Small Luxury Hotels of the World</span></div></div><div class="price">R$ 12.925</div></div>
+        <div class="rows"><div><div class="k">Quarto duplo</div><div class="v">Superior · R$ 7.065</div></div><div><div class="k">Quarto single</div><div class="v">Superior · R$ 5.860</div></div><div><div class="k">Plano</div><div class="v">Café da manhã</div></div></div>
+        <div class="obs">Mosteiro do século XII transformado em hotel, com spa de águas termais.</div></div>
+      <div class="hotel-card"><div class="top"><div><span class="name">AF Pesquera</span></div><div class="price">R$ 6.834</div></div>
+        <div class="rows"><div><div class="k">Quarto duplo</div><div class="v">Superior Queen · R$ 3.417</div></div><div><div class="k">Quarto single</div><div class="v">Superior Queen · R$ 3.417</div></div><div><div class="k">Plano</div><div class="v">Café da manhã</div></div></div>
+        <div class="obs">Hotel ligado à bodega Pesquera, de uma das famílias mais tradicionais da Ribera del Duero.</div></div>
+    </div>
+    <div class="note">Valores para as 3 noites (check-in 27/12, check-out 30/12), com 1 quarto duplo e 1 single.</div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- 08 · GIBRALTAR -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Gibraltar</div><div class="no">4</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo" style="background:linear-gradient(160deg,#4a7a9a 0%,#1a3a5c 50%,#0a1420 100%)"><div class="sub">30/12 a 02/01 · 3 noites</div><div class="cap">Gibraltar</div></div>
+  <div class="body">
+    <p class="dest-text">Gibraltar é um pedaço britânico no extremo sul da Europa, de frente para a África. O Rochedo domina a paisagem e guarda cavernas, túneis históricos e os famosos macacos-de-gibraltar. Aos pés dele fica a marina Ocean Village, cheia de iates, restaurantes e bares à beira da água: o cenário escolhido para receber 2027.</p>
+    <div class="cards">
+      <div class="hotel-card"><div class="top"><div><span class="name">Luxury Yacht Hotel</span><span class="badge">Opção do cliente</span></div><div class="price">R$ 10.489,44</div></div>
+        <div class="rows"><div><div class="k">Acomodação</div><div class="v">Iate particular com 2 cabines (casal + single)</div></div><div><div class="k">Local</div><div class="v">Ocean Village Marina</div></div><div><div class="k">Avaliação</div><div class="v">9,9 pelos hóspedes</div></div></div>
+        <div class="obs">Valor de R$ 10.256,44 + R$ 233 de taxas.<br>
+          · Tem cozinha, mas <b>não inclui café da manhã</b>, que precisa ser comprado à parte.<br>
+          · Os anfitriões indicam os restaurantes da própria marina para as refeições, inclusive o jantar de réveillon.<br>
+          · <b>O anúncio não deixa claro se o iate sai para navegar ou fica só atracado.</b><br>
+          · <b>A reserva deste iate fica por conta do cliente.</b></div></div>
+      <div class="hotel-card"><div class="top"><div><span class="name">Sunborn Gibraltar</span><span class="badge gold">Sugestão Lusatravel</span><div class="stars">★★★★★</div></div><div class="price">R$ 15.885</div></div>
+        <div class="rows"><div><div class="k">Quarto duplo</div><div class="v">Super Yacht King Room · R$ 8.830</div></div><div><div class="k">Quarto single</div><div class="v">Super Yacht King Room · R$ 7.055</div></div><div><div class="k">Plano</div><div class="v">Café da manhã</div></div></div>
+        <div class="obs">Hotel 5 estrelas montado dentro de um superiate atracado na mesma marina, com restaurante, bar, spa e piscina no deck. <b>O jantar de réveillon não está incluído.</b></div></div>
+    </div>
+    <div class="note">Valores para as 3 noites (check-in 30/12, check-out 02/01). Nas duas opções, o <b>jantar de réveillon (31/12) é à parte</b>.</div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- 09 · SEVILHA -->
+<section class="page">
+  <div class="dest-hd"><div class="city">Sevilha · Espanha</div><div class="no">5</div></div>
+  <div class="goldbar"></div>
+  <div class="dest-photo" style="background:linear-gradient(160deg,#e0a050 0%,#a04a20 50%,#3a1008 100%)"><div class="sub">02 a 04/01 · 2 noites</div><div class="cap">Sevilha</div></div>
+  <div class="body">
+    <p class="dest-text">Sevilha é o coração da Andaluzia: pátios cobertos de azulejos, laranjeiras nas praças e o som do flamenco nas noites do bairro de Santa Cruz. O Real Alcázar, a Catedral com a Giralda e a monumental Plaza de España contam séculos de história árabe e cristã. É o fechamento perfeito da viagem, entre tapas, arte e o clima ameno do inverno andaluz.</p>
+    <div class="cards">
+      <div class="hotel-card"><div class="top"><div><span class="name">Meliá Sevilla</span></div><div class="price">R$ 4.785</div></div>
+        <div class="rows"><div><div class="k">Quarto duplo</div><div class="v">Double Room com varanda · R$ 2.540</div></div><div><div class="k">Quarto single</div><div class="v">Double Room · R$ 2.245</div></div><div><div class="k">Plano</div><div class="v">Café da manhã</div></div></div></div>
+      <div class="hotel-card"><div class="top"><div><span class="name">Intelier Casa de Indias</span></div><div class="price">R$ 7.275</div></div>
+        <div class="rows"><div><div class="k">Quarto duplo</div><div class="v">Standard Double · R$ 3.780</div></div><div><div class="k">Quarto single</div><div class="v">Standard Double · R$ 3.495</div></div><div><div class="k">Plano</div><div class="v">Café da manhã</div></div></div></div>
+    </div>
+    <div class="note">Valores para as 2 noites (check-in 02/01, check-out 04/01), com 1 quarto duplo e 1 single.</div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- 10 · AÉREO ECONÔMICA -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Aéreo</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Passagens · classe econômica</div>
+    <h2 class="h2">Aéreo · Econômica</h2>
+    <p class="lead" style="margin-bottom:4mm">Valores por pessoa. O roteiro termina em Sevilha, e as opções marcadas como <b>"encaixa no roteiro"</b> já voltam de lá.</p>
+
+    <div class="opt"><div class="opt-h"><div class="t1"><span>E1</span>TAP · volta de Sevilha<span class="fit ok">Encaixa no roteiro</span></div><div class="t2"><div class="pp">R$ 11.436,46 /pessoa</div><div class="tt">R$ 34.309,38 para 3</div></div></div>
+      <div class="in"><table class="t"><tr><th>Trecho</th><th>Voo</th><th>Saída</th><th>Chegada</th></tr>
+        <tr><td>Curitiba → Lisboa (1 parada)</td><td>TP 67</td><td>22/12 21:25</td><td>23/12 12:45</td></tr>
+        <tr><td>Sevilha → Lisboa</td><td>TP 1107</td><td>04/01 06:30</td><td>04/01 06:35</td></tr>
+        <tr><td>Lisboa → Brasília</td><td>TP 57</td><td>04/01 09:55</td><td>04/01 16:45</td></tr>
+        <tr><td>Brasília → Curitiba</td><td>TP 5726</td><td>04/01 20:30</td><td>04/01 22:30</td></tr></table>
+        <div class="meta">1 mala despachada · tarifa básica</div></div></div>
+
+    <div class="opt"><div class="opt-h"><div class="t1"><span>E4</span>TAP · chegada no Porto, volta de Sevilha<span class="fit no">Sem a noite em Lisboa</span></div><div class="t2"><div class="pp">R$ 11.194,89 /pessoa</div><div class="tt">R$ 33.584,67 para 3</div></div></div>
+      <div class="in"><table class="t"><tr><th>Trecho</th><th>Voo</th><th>Saída</th><th>Chegada</th></tr>
+        <tr><td>Curitiba → Lisboa (1 parada)</td><td>TP 67</td><td>22/12 21:25</td><td>23/12 12:45</td></tr>
+        <tr><td>Lisboa → Porto</td><td>TP 1934</td><td>23/12 18:00</td><td>23/12 19:00</td></tr>
+        <tr><td>Sevilha → Lisboa</td><td>TP 1107</td><td>04/01 06:30</td><td>04/01 06:35</td></tr>
+        <tr><td>Lisboa → Brasília</td><td>TP 57</td><td>04/01 09:55</td><td>04/01 16:45</td></tr>
+        <tr><td>Brasília → Curitiba</td><td>TP 4077</td><td>04/01 21:30</td><td>04/01 23:30</td></tr></table>
+        <div class="meta">1 mala despachada · tarifa básica na ida, Classic na volta</div></div></div>
+
+    <div class="opt"><div class="opt-h"><div class="t1"><span>E2</span>TAP · volta de Lisboa<span class="fit no">Exige trecho Sevilha → Lisboa</span></div><div class="t2"><div class="pp">R$ 12.005,22 /pessoa</div><div class="tt">R$ 36.015,66 para 3</div></div></div>
+      <div class="in"><table class="t"><tr><th>Trecho</th><th>Voo</th><th>Saída</th><th>Chegada</th></tr>
+        <tr><td>Curitiba → Lisboa (1 parada)</td><td>TP 67</td><td>22/12 21:25</td><td>23/12 12:45</td></tr>
+        <tr><td>Lisboa → Brasília</td><td>TP 57</td><td>04/01 09:55</td><td>04/01 16:45</td></tr>
+        <tr><td>Brasília → Curitiba</td><td>TP 5726</td><td>04/01 20:30</td><td>04/01 22:30</td></tr></table>
+        <div class="meta">1 mala despachada · tarifa básica</div></div></div>
+
+    <div class="opt"><div class="opt-h"><div class="t1"><span>E3</span>Azul · volta do Porto<span class="fit no">Exige trecho Sevilha → Porto</span></div><div class="t2"><div class="pp">R$ 9.696,53 /pessoa</div><div class="tt">R$ 29.089,59 para 3</div></div></div>
+      <div class="in"><table class="t"><tr><th>Trecho</th><th>Voo</th><th>Saída</th><th>Chegada</th></tr>
+        <tr><td>Curitiba → Campinas</td><td>AD 2753</td><td>22/12 11:20</td><td>22/12 12:20</td></tr>
+        <tr><td>Campinas → Lisboa</td><td>AD 8750</td><td>22/12 18:10</td><td>23/12 07:15</td></tr>
+        <tr><td>Porto → Campinas</td><td>AD 8803</td><td>04/01 11:40</td><td>04/01 19:10</td></tr>
+        <tr><td>Campinas → Curitiba</td><td>AD 2621</td><td>04/01 21:20</td><td>04/01 22:20</td></tr></table>
+        <div class="meta">1 mala na ida, 2 na volta</div></div></div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- 11 · AÉREO EXECUTIVA -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Aéreo</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Passagens · classe executiva</div>
+    <h2 class="h2">Aéreo · Executiva</h2>
+    <p class="lead" style="margin-bottom:4mm">Valores por pessoa.</p>
+
+    <div class="opt"><div class="opt-h"><div class="t1"><span>X1</span>TAP · volta de Sevilha via Brasília<span class="fit ok">Encaixa no roteiro</span></div><div class="t2"><div class="pp">R$ 27.133,35 /pessoa</div><div class="tt">R$ 81.400,05 para 3</div></div></div>
+      <div class="in"><table class="t"><tr><th>Trecho</th><th>Voo</th><th>Saída</th><th>Chegada</th></tr>
+        <tr><td>Curitiba → Lisboa (1 parada)</td><td>TP 67</td><td>22/12 21:25</td><td>23/12 12:45</td></tr>
+        <tr><td>Sevilha → Lisboa</td><td>TP 1107</td><td>04/01 06:30</td><td>04/01 06:35</td></tr>
+        <tr><td>Lisboa → Brasília</td><td>TP 57</td><td>04/01 09:55</td><td>04/01 16:45</td></tr>
+        <tr><td>Brasília → Curitiba</td><td>TP 5726</td><td>04/01 20:30</td><td>04/01 22:30</td></tr></table>
+        <div class="meta">2 malas despachadas</div></div></div>
+
+    <div class="opt"><div class="opt-h"><div class="t1"><span>X2</span>TAP · volta de Sevilha via São Paulo<span class="fit ok">Encaixa no roteiro</span></div><div class="t2"><div class="pp">R$ 32.587,20 /pessoa</div><div class="tt">R$ 97.761,60 para 3</div></div></div>
+      <div class="in"><table class="t"><tr><th>Trecho</th><th>Voo</th><th>Saída</th><th>Chegada</th></tr>
+        <tr><td>Curitiba → Lisboa (1 parada)</td><td>TP 67</td><td>22/12 21:25</td><td>23/12 12:45</td></tr>
+        <tr><td>Sevilha → Lisboa</td><td>TP 1107</td><td>04/01 06:30</td><td>04/01 06:35</td></tr>
+        <tr><td>Lisboa → São Paulo</td><td>TP 89</td><td>04/01 12:30</td><td>04/01 19:55</td></tr>
+        <tr><td>São Paulo → Curitiba</td><td>TP 8149</td><td>04/01 22:40</td><td>04/01 23:45</td></tr></table>
+        <div class="meta">2 malas despachadas · tarifa TOP, a mais flexível</div></div></div>
+
+    <div class="opt"><div class="opt-h"><div class="t1"><span>X5</span>TAP · chegada no Porto, volta de Sevilha<span class="fit no">Sem a noite em Lisboa</span></div><div class="t2"><div class="pp">R$ 21.050,97 /pessoa</div><div class="tt">R$ 63.152,91 para 3</div></div></div>
+      <div class="in"><table class="t"><tr><th>Trecho</th><th>Voo</th><th>Saída</th><th>Chegada</th></tr>
+        <tr><td>Curitiba → Brasília (econômica)</td><td>TP 5798</td><td>22/12 06:00</td><td>22/12 07:55</td></tr>
+        <tr><td>Brasília → Lisboa</td><td>TP 58</td><td>22/12 18:30</td><td>23/12 06:40</td></tr>
+        <tr><td>Lisboa → Porto</td><td>TP 1924</td><td>23/12 10:00</td><td>23/12 11:00</td></tr>
+        <tr><td>Sevilha → Lisboa</td><td>TP 1107</td><td>04/01 06:30</td><td>04/01 06:35</td></tr>
+        <tr><td>Lisboa → Brasília</td><td>TP 57</td><td>04/01 09:55</td><td>04/01 16:45</td></tr>
+        <tr><td>Brasília → Curitiba (econômica)</td><td>TP 4077</td><td>04/01 21:30</td><td>04/01 23:30</td></tr></table>
+        <div class="meta">2 malas despachadas · os trechos dentro do Brasil são em classe econômica</div></div></div>
+
+    <div class="opt"><div class="opt-h"><div class="t1"><span>X3</span>TAP · volta de Lisboa<span class="fit no">Exige trecho Sevilha → Lisboa</span></div><div class="t2"><div class="pp">R$ 27.074,03 /pessoa</div><div class="tt">R$ 81.222,09 para 3</div></div></div>
+      <div class="in"><table class="t"><tr><th>Trecho</th><th>Voo</th><th>Saída</th><th>Chegada</th></tr>
+        <tr><td>Curitiba → Lisboa (1 parada)</td><td>TP 67</td><td>22/12 21:25</td><td>23/12 12:45</td></tr>
+        <tr><td>Lisboa → Brasília</td><td>TP 57</td><td>04/01 09:55</td><td>04/01 16:45</td></tr>
+        <tr><td>Brasília → Curitiba</td><td>TP 5726</td><td>04/01 20:30</td><td>04/01 22:30</td></tr></table>
+        <div class="meta">2 malas despachadas</div></div></div>
+
+    <div class="opt"><div class="opt-h"><div class="t1"><span>X4</span>Azul · volta do Porto<span class="fit no">Exige trecho Sevilha → Porto</span></div><div class="t2"><div class="pp">R$ 19.930,16 /pessoa</div><div class="tt">R$ 59.790,48 para 3</div></div></div>
+      <div class="in"><table class="t"><tr><th>Trecho</th><th>Voo</th><th>Saída</th><th>Chegada</th></tr>
+        <tr><td>Curitiba → Campinas</td><td>AD 2753</td><td>22/12 11:20</td><td>22/12 12:20</td></tr>
+        <tr><td>Campinas → Lisboa</td><td>AD 8750</td><td>22/12 18:10</td><td>23/12 07:15</td></tr>
+        <tr><td>Porto → Campinas</td><td>AD 8803</td><td>04/01 11:40</td><td>04/01 19:10</td></tr>
+        <tr><td>Campinas → Curitiba</td><td>AD 2621</td><td>04/01 21:20</td><td>04/01 22:20</td></tr></table>
+        <div class="meta">3 malas despachadas</div></div></div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- 12 · TRANSPORTE E SEGURO -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Serviços</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Serviços adicionais</div>
+    <h2 class="h2">Transporte e seguro</h2>
+
+    <h3 class="h3" style="margin-top:0">Opção 1 · Locação de carro (Sixt)</h3>
+    <table class="t">
+      <tr><th></th><th>Local</th><th>Data e horário</th></tr>
+      <tr><td><b>Retirada</b></td><td>Aeroporto de Lisboa (LIS), no terminal</td><td>23/12/2026 · 14:00</td></tr>
+      <tr><td><b>Devolução</b></td><td>Aeroporto de Sevilha (SVQ)</td><td>04/01/2027 · 05:00</td></tr>
+    </table>
+    <table class="t">
+      <tr><th>Carro</th><th>Malas</th><th class="n">Valor</th></tr>
+      <tr><td>SUV pequeno · VW Taigo ou similar · automático · 5 lugares</td><td>2</td><td class="n">US$ 2.460 · <b>R$ 14.046,60</b></td></tr>
+      <tr><td>SUV intermediário · Omoda 5 ou similar · automático · 5 lugares</td><td>3</td><td class="n">US$ 3.347 · <b>R$ 19.111,37</b></td></tr>
+    </table>
+    <div class="note">12 diárias com proteção total. <b>Por que o valor é alto:</b> o carro é retirado em Portugal e devolvido na Espanha, e por isso a locadora cobra a <b>taxa one way</b> (devolução em outro país), já incluída nos valores. Para 3 pessoas com bagagem, recomendamos o SUV intermediário.</div>
+
+    <h3 class="h3">Opção 2 · Trem e transfers</h3>
+    <table class="t">
+      <tr><th>Data</th><th>Trecho</th><th>Como</th><th class="n">Valor para 3</th></tr>
+      <tr><td>24/12</td><td>Lisboa (Santa Apolónia) → Porto (Campanhã)</td><td>Trem CP Intercidades IC 721, direto · 09:30 → 12:54 · R$ 221 por pessoa</td><td class="n"><b>R$ 663,00</b></td></tr>
+      <tr><td>27/12</td><td>Porto → Toro → Ribera del Duero</td><td>Transfer privativo, sedan econômico · € 890 (não há trem direto)</td><td class="n"><b>R$ 5.696,00</b></td></tr>
+      <tr><td>30/12</td><td>Ribera → Madrid · Madrid → Málaga · Málaga → Gibraltar</td><td>Transfer + trem AVE + transfer</td><td class="n">Em cotação</td></tr>
+      <tr><td>02/01</td><td>Gibraltar → Sevilha</td><td>Transfer privativo</td><td class="n">Em cotação</td></tr>
+      <tr><td>04/01</td><td>Hotel em Sevilha → aeroporto</td><td>Transfer privativo, às 04:30</td><td class="n">Em cotação</td></tr>
+    </table>
+
+    <h3 class="h3">Seguro viagem · Europa</h3>
+    <table class="t">
+      <tr><th>Plano</th><th>Despesas médicas e hospitalares</th><th class="n">Por pessoa</th><th class="n">Total para 3</th></tr>
+      <tr><td>Opção 1</td><td>€ 84.000</td><td class="n">R$ 410,00</td><td class="n"><b>R$ 1.230,00</b></td></tr>
+      <tr><td>Opção 2 <span class="fit ok">Recomendado</span></td><td>€ 150.000</td><td class="n">R$ 512,00</td><td class="n"><b>R$ 1.536,00</b></td></tr>
+    </table>
+    <div class="note">Cobertura de cancelamento por 21 motivos. O seguro viagem é obrigatório para entrar na Europa (Espaço Schengen).</div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- 13 · VALORES -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Valores</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Investimento</div>
+    <h2 class="h2">Valores</h2>
+    <p class="lead" style="margin-bottom:2mm">Todos os itens podem ser combinados livremente. Abaixo, dois exemplos de pacote completo, para 3 pessoas, com transporte de carro.</p>
+
+    <div class="pk">
+      <div class="pkc"><div class="ph"><b>Pacote Essencial</b><span>Econômica + hotéis de entrada</span></div>
+        <div class="pb">
+          <div class="val-row"><span class="lbl">Aéreo · E1 TAP econômica (3 ×)</span><span class="amt">R$ 34.309,38</span></div>
+          <div class="val-row"><span class="lbl">Lisboa · Avani Avenida Liberdade</span><span class="amt">R$ 1.880,00</span></div>
+          <div class="val-row"><span class="lbl">Porto · PortoBay Teatro</span><span class="amt">R$ 6.035,00</span></div>
+          <div class="val-row"><span class="lbl">Ribera · AF Pesquera</span><span class="amt">R$ 6.834,00</span></div>
+          <div class="val-row"><span class="lbl">Gibraltar · Sunborn</span><span class="amt">R$ 15.885,00</span></div>
+          <div class="val-row"><span class="lbl">Sevilha · Meliá Sevilla</span><span class="amt">R$ 4.785,00</span></div>
+          <div class="val-row"><span class="lbl">Carro · SUV intermediário</span><span class="amt">R$ 19.111,37</span></div>
+          <div class="val-row"><span class="lbl">Seguro · € 150 mil (3 ×)</span><span class="amt">R$ 1.536,00</span></div>
+        </div>
+        <div class="val-total"><span class="lbl">TOTAL · 3 PESSOAS</span><span class="amt">R$ 90.375,75</span></div>
+        <div class="val-pp"><span>Por pessoa</span><b>R$ 30.125,25</b></div></div>
+
+      <div class="pkc"><div class="ph"><b>Pacote Superior</b><span>Executiva + hotéis superiores</span></div>
+        <div class="pb">
+          <div class="val-row"><span class="lbl">Aéreo · X1 TAP executiva (3 ×)</span><span class="amt">R$ 81.400,05</span></div>
+          <div class="val-row"><span class="lbl">Lisboa · Sofitel Liberdade</span><span class="amt">R$ 3.050,00</span></div>
+          <div class="val-row"><span class="lbl">Porto · Pestana Vintage</span><span class="amt">R$ 9.030,00</span></div>
+          <div class="val-row"><span class="lbl">Ribera · Monasterio de Valbuena</span><span class="amt">R$ 12.925,00</span></div>
+          <div class="val-row"><span class="lbl">Gibraltar · Sunborn</span><span class="amt">R$ 15.885,00</span></div>
+          <div class="val-row"><span class="lbl">Sevilha · Intelier Casa de Indias</span><span class="amt">R$ 7.275,00</span></div>
+          <div class="val-row"><span class="lbl">Carro · SUV intermediário</span><span class="amt">R$ 19.111,37</span></div>
+          <div class="val-row"><span class="lbl">Seguro · € 150 mil (3 ×)</span><span class="amt">R$ 1.536,00</span></div>
+        </div>
+        <div class="val-total"><span class="lbl">TOTAL · 3 PESSOAS</span><span class="amt">R$ 150.212,42</span></div>
+        <div class="val-pp"><span>Por pessoa</span><b>R$ 50.070,81</b></div></div>
+    </div>
+
+    <div class="val-sec">Ainda não incluído nos totais</div>
+    <div class="val-row sub"><span class="lbl">Ceia de Natal · 24/12, no hotel do Porto</span><span class="amt">Em cotação</span></div>
+    <div class="val-row sub"><span class="lbl">Jantar de réveillon · 31/12</span><span class="amt">À parte</span></div>
+    <div class="val-row sub"><span class="lbl">Transfers da opção trem (30/12, 02/01 e 04/01)</span><span class="amt">Em cotação</span></div>
+    <div class="val-row sub"><span class="lbl">Passeios sugeridos no roteiro</span><span class="amt">Após aprovação</span></div>
+    <div class="val-row sub"><span class="lbl">Iate em Gibraltar (opção do cliente, reserva por conta do cliente)</span><span class="amt">R$ 10.489,44</span></div>
+
+    <div class="val-fx">Cotação 06/11/2026 · US$ 1 = R$ 5,71 · € 1 = R$ 6,40<br>Hospedagem para 1 quarto duplo + 1 single, com café da manhã. Passagens: valores por pessoa.<br><b>*Nada reservado, apenas cotado</b></div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+<!-- 14 · CONDIÇÕES -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Condições</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Importante</div>
+    <h2 class="h2">Condições e Observações</h2>
+    <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Hotelaria: até 10x sem acréscimos · Aéreo: até 6x sem acréscimos · PIX: desconto de 5–13%</div></div>
+    <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Ceia de Natal e jantar de réveillon<br>· Passeios (cotados após aprovação do roteiro)<br>· Café da manhã no iate em Gibraltar<br>· Combustível, pedágios e estacionamentos do carro<br>· City taxes (pagas no hotel)<br>· Despesas pessoais</div></div>
+    <div class="cond"><div class="cond-h">Datas de festa</div><div class="cond-t">Nos dias 24, 25 e 31/12 e 01/01, muitos restaurantes, bodegas e atrações fecham ou funcionam em horário reduzido. Recomendamos reservar com antecedência a ceia de Natal, o jantar de réveillon e as visitas às bodegas.</div></div>
+    <div class="cond"><div class="cond-h">Documentação</div><div class="cond-t">Passaporte com validade mínima de 3 meses após a data de volta. Seguro viagem obrigatório para o Espaço Schengen. Gibraltar tem controle de fronteira próprio.</div></div>
+    <div class="cond"><div class="cond-h">Lembre-se</div><div class="cond-t">A taxa de estadia (city tax) pode ser cobrada localmente pelo hotel. Valores sujeitos a confirmação e disponibilidade no momento da reserva.</div></div>
+  </div>
+  <div class="ft"><a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a></div>
+</section>
+
+</body>
+</html>
