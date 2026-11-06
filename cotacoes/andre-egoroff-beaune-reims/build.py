@@ -108,7 +108,7 @@ def card(v):
     return (f'    <div class="svc"><div class="ic">{svg(ico)}</div><div><div class="t">{maison}</div>'
             f'<div class="d"><b>{tit}</b> · {desc}<span class="quando">Datas disponíveis: {quando}</span>{nota}</div></div>'
             f'<div class="dt"><span class="eur">{rs(val)} por pessoa</span><span class="brl">{rs(val * PAX)} para {PAX} · até 6x</span>'
-            f'<span class="brl">{rs(val * PAX * PIX)} no PIX</span></div></div>')
+            f'<span class="brl">{rs(val * PAX * PIX)} no PIX · 10% de desconto</span></div></div>')
 
 
 def bloco(base):
@@ -253,7 +253,7 @@ html = f"""<!DOCTYPE html>
 <div class="accent-line"></div>
 <p class="note" style="margin-top:16px">*Valores finais em reais, por pessoa e para os <b>{PAX} viajantes</b>, em até <b>6x</b> ou com <b>10% de desconto no PIX</b>. Hotéis, carro e aéreo estão na cotação da viagem. Nada reservado, apenas cotado.</p>
 <div class="tbl-wrap"><table>
-<tr class="head-row"><td>Visita</td><td class="v">Por pessoa</td><td class="v">{PAX} viajantes · até 6x</td><td class="v">{PAX} viajantes · PIX</td></tr>
+<tr class="head-row"><td>Visita</td><td class="v">Por pessoa</td><td class="v">{PAX} viajantes · até 6x</td><td class="v">{PAX} viajantes · PIX com 10% de desconto</td></tr>
 {tab}</table></div>
 <div class="flval"><span class="lbl">Programa sugerido · 6 visitas</span><div class="amt"><div class="t">{rs(G_MIN)} – {rs(G_MAX)[3:]}</div><div class="p">para os {PAX} viajantes · em até 6x</div></div></div>
 <div class="flval" style="background:var(--green-soft)"><span class="lbl">No PIX · 10% de desconto</span><div class="amt"><div class="t">{rs(G_MIN * PIX)} – {rs(G_MAX * PIX)[3:]}</div><div class="p">para os {PAX} viajantes · pagamento à vista</div></div></div>
