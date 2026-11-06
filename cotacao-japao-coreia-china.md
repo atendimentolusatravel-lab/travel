@@ -116,6 +116,17 @@ Total transfers: R$ 3.585 (chegada por Haneda) ou R$ 3.915 (chegada por Narita).
 
 Valores já com taxas incluídas (sem margens). Pagamento: até 6x · 10% de desconto no PIX.
 
+## Guias na China (privativos, dia inteiro)
+
+| Data | Cidade | Programa | Valor |
+|---|---|---|---|
+| 31/05 (seg) | Xangai | Jardim Yu, cidade antiga e Concessão Francesa | US$ 450 |
+| 03/06 (qui) | Pequim | Grande Muralha em Mutianyu | US$ 450 |
+| 04/06 (sex) | Pequim | Cidade Proibida, Praça da Paz Celestial e Templo do Céu | US$ 450 |
+| **Total** | | 3 dias × US$ 450 = US$ 1.350 × 5,71 | **R$ 7.708,50** |
+
+Valores com taxas incluídas (sem margens). Pagamento: até 6x · 10% de desconto no PIX. Confirmar se o guia de Mutianyu inclui carro/motorista.
+
 ## Guia em Hong Kong
 
 | Data | Programa | Valor |
@@ -153,5 +164,5 @@ Observação: seguro com 21 coberturas ("21 motivos de cobertura"). Valores para
 - Data de volta confirmada: 12/06, voo às 19:40 de Hong Kong
 
 - Opcional: guia particular em Seul para os cenários de dorama (24/05, manhã)
-- Guias e motoristas: motorista em Jeju (29/05), Xangai (31/05), Pequim (03 e 04/06)
+- Motorista em Jeju (29/05)
 - Demais ingressos (inclusive degustação de saquê em Fushimi): só como lista de sugestões na proposta (não cotados)
