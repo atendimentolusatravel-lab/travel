@@ -2,8 +2,11 @@
 
 - **Fonte:** https://cotacao-rogerio-chiumento-portugal.vercel.app (layout A3 dourado, legado), cópia em `fonte/original.html`.
 - **Publicado (padrão oficial):** https://cotacao-rogerio-chiumento-portugal-rev.vercel.app (projeto Vercel `cotacao-rogerio-chiumento-portugal-rev`).
-  O deploy tem só `vercel.json` + logos: a raiz é reescrita para o `src/index.html` deste repositório servido pelo jsDelivr,
-  fixado num commit (`travel@<sha>`). Para publicar uma mudança: commit + push, depois novo deploy trocando o sha no `vercel.json`.
+  O deploy (pasta `vercel/`) tem as logos, `vercel.json` e a função `api/page.js`, que busca o `src/index.html`
+  deste repositório pelo jsDelivr, fixado num commit, e devolve como `text/html` com cache de borda.
+  Não usar rewrite direto para o jsDelivr: ele entrega HTML como `text/plain` + `nosniff` e o navegador mostra o código.
+  O domínio `-rev` foi adicionado ao projeto como domínio de produção (alias avulso pede login do Vercel ao cliente).
+  Para publicar uma mudança: commit + push, trocar o sha em `vercel/api/page.js` e fazer novo deploy.
 - O link antigo (https://cotacao-rogerio-chiumento-portugal.vercel.app) é do projeto `cotacao-rogerio-chiumento-portugal-espanha`
   e continua com a proposta original (rollback para dpl_3P1bjuo1UWLgZN1hA4qE4ZojULHi em 06/11/2026).
 - 3 adultos, 1 quarto duplo + 1 single; 12 noites: Lisboa 1, Porto 3, Ribera del Duero 3, Gibraltar 3, Sevilha 2.
