@@ -3,8 +3,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/giovanna-davi", "destination": "/roteiro-japao-coreia-china.html" },
-    { "source": "/lucas-europa", "destination": "/roteiro-europa-familia.html" }
+    { "source": "/giovanna-davi", "destination": "/roteiro-japao-coreia-china" },
+    { "source": "/lucas-europa", "destination": "/roteiro-europa-familia" }
   ],
   "headers": [
     {
