@@ -59,7 +59,7 @@ Observação: franquia de 20 kg de bagagem despachada por pessoa em todos os voo
 | 2 | 14/05 (sex) | Mishima → Kyoto | JR Central Kodama 815, direto | 10:54 → 13:34 (2h40) | Green Car, assento reservado | R$ 1.223,09 → +15% = R$ 1.406,55 → +12% = **R$ 1.575,34** |
 | 3 | 18/05 (ter) | Kyoto → Shin-Osaka | JR Central Nozomi 15, direto | 10:25 → 10:39 (14 min) | Green Car, assento reservado | R$ 314,56 → +15% = R$ 361,74 → +12% = **R$ 405,15** |
 | 4 | 20/05 (qui) | Shin-Osaka ⇄ Hiroshima (ida e volta) | Ida JR West Nozomi 1 (8:24 → 9:49) · Volta JR West Sakura 762 (17:33 → 18:59) | 1h25 cada | Ordinary (2ª classe), assento reservado — conferir reserva na volta | R$ 1.810,61 → +15% = R$ 2.082,20 → +12% = **R$ 2.332,07** |
-| 5 | 23/05 (dom) | Busan → Seul | KTX | ~2h30 | First Class (특실) | A cotar |
+| 5 | 23/05 (dom) | Busan → Seul | KTX #032 | 10:54 → 13:48 (2h54) | First Class, assento marcado | USD 208 × 5,71 = R$ 1.187,68 → +15% = R$ 1.365,83 → +12% = **R$ 1.529,73** |
 | 6 | 02/06 (qua) | Xangai Hongqiao → Pequim Sul | Trem-bala Fuxing (G) | ~4h30 | Business ou First Class | A cotar |
 | 7 | 07/06 (seg) | Chengdu Leste ⇄ Chongqing (ida e volta) | Trem-bala (G/D) | ~1h–1h20 cada | First Class | A cotar |
 | 8 | 10/06 (qui) | Hong Kong West Kowloon ⇄ Shenzhen Futian (ida e volta) | XRL | ~15 min cada | First Class | A cotar |
@@ -73,6 +73,7 @@ Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão);
 ## Câmbio
 
 - Cotação 06/11 · ¥1 (iene) = R$ 0,038
+- Cotação 06/11 · US$ 1 = R$ 5,71
 - Regra de preço para serviços em moeda local: valor convertido + 15%, e sobre esse resultado + 12%
 
 ## Condições de pagamento
@@ -84,7 +85,7 @@ Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão);
 
 ## Pendentes
 
-- Trens: KTX Busan → Seul (23/05), Xangai → Pequim (02/06), Chengdu ⇄ Chongqing (07/06), Hong Kong ⇄ Shenzhen (10/06)
+- Trens: Xangai → Pequim (02/06), Chengdu ⇄ Chongqing (07/06), Hong Kong ⇄ Shenzhen (10/06)
 - Transfers privativos e guias
 - Ingressos a cotar: Tokyo DisneySea (10/05), degustação de soju em Seul (24/05), show das haenyeo em Jeju (27/05), aula de culinária sichuanesa em Chengdu (06/06)
 - Demais ingressos (inclusive degustação de saquê em Fushimi): só como lista de sugestões na proposta (não cotados)
