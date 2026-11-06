@@ -116,6 +116,14 @@ Total transfers: R$ 3.585 (chegada por Haneda) ou R$ 3.915 (chegada por Narita).
 
 Valores já com taxas incluídas (sem margens). Pagamento: até 6x · 10% de desconto no PIX.
 
+## Guia em Hong Kong
+
+| Data | Programa | Valor |
+|---|---|---|
+| 09/06 (qua) | Dragon Boat em Stanley, dim sum, Victoria Peak e Lan Kwai Fong | US$ 700 × 5,71 = **R$ 3.997,00** |
+
+Valor já com taxas incluídas (sem margens). Pagamento: até 6x · 10% de desconto no PIX.
+
 ## Seguro viagem (36 dias · 2 adultos · cobertura mundial/Ásia)
 
 | Opção | Plano | Despesas médicas (DMH) | Valor |
@@ -145,5 +153,5 @@ Observação: seguro com 21 coberturas ("21 motivos de cobertura"). Valores para
 - Data de volta confirmada: 12/06, voo às 19:40 de Hong Kong
 
 - Opcional: guia particular em Seul para os cenários de dorama (24/05, manhã)
-- Guias e motoristas: motorista em Jeju (29/05), Xangai (31/05), Pequim (03 e 04/06), Hong Kong (valor a enviar)
+- Guias e motoristas: motorista em Jeju (29/05), Xangai (31/05), Pequim (03 e 04/06)
 - Demais ingressos (inclusive degustação de saquê em Fushimi): só como lista de sugestões na proposta (não cotados)
