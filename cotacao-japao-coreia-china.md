@@ -71,6 +71,25 @@ Observação: trens locais, metrô e barcos curtos (Kyoto→Nara, barco de Miyaj
 
 Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão); comparar com bilhetes avulsos.
 
+## Transfers privativos (a cotar · 2 adultos)
+
+| # | Data | Trecho | Tempo aprox. | Valor (R$) |
+|---|---|---|---|---|
+| 1 | 07/05 | Aeroporto de Tóquio → hotel (chegada 23:55) | Haneda 30–40 min · Narita 1h15–1h30 | A cotar |
+| 2 | 14/05 | Hotel em Kawaguchiko → estação de Mishima (saída 9h15) | 1h–1h15 | A cotar |
+| 3 | 21/05 | Hotel em Osaka → porto de Osaka Nanko (Panstar, apresentação 15h) | 25–35 min | A cotar |
+| 4 | 22/05 | Porto de Busan → hotel | 25–35 min | A cotar |
+| 5 | 30/05 | Aeroporto de Pudong → hotel em Xangai (chegada 12:15) | 50 min–1h | A cotar |
+| 6 | 02/06 | Hotel em Xangai → estação Hongqiao (trem 11:00) | 30–40 min | A cotar |
+| 7 | 02/06 | Estação Pequim Sul → hotel (chegada 15:31) | 25–35 min | A cotar |
+| 8 | 05/06 | Hotel em Pequim → aeroporto PEK (voo 11:00) | 40–50 min | A cotar |
+| 9 | 05/06 | Aeroporto CTU → hotel em Chengdu (chegada 14:00) | 30–40 min | A cotar |
+| 10 | 08/06 | Hotel em Chengdu → aeroporto CTU (voo 13:15) | 30–40 min | A cotar |
+| 11 | 08/06 | Aeroporto de Hong Kong → hotel (chegada 15:55) | 35–45 min | A cotar |
+| 12 | 12/06 | Hotel em Hong Kong → aeroporto (voo 19:40) | 35–45 min | A cotar |
+
+Sem transfer: hotel em Jeju → aeroporto (30/05).
+
 ## Seguro viagem (36 dias · 2 adultos · cobertura mundial/Ásia)
 
 | Opção | Plano | Despesas médicas (DMH) | Valor |
