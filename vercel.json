@@ -1,7 +1,15 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
-    { "source": "/", "destination": "/roteiro-europa-familia.html" }
+    { "source": "/giovanna-davi", "destination": "/roteiro-japao-coreia-china.html" },
+    { "source": "/lucas-europa", "destination": "/roteiro-europa-familia.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    }
   ]
 }
