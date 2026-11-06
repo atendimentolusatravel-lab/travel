@@ -66,6 +66,8 @@ Observação: franquia de 20 kg de bagagem despachada por pessoa em todos os voo
 
 Observação: sugestão de enviar as malas grandes de Tóquio para Kyoto por takkyubin em 12/05 (≈ ¥2.000–3.000 por mala), viajando leves ao Fuji.
 
+Observação: trens locais, metrô e barcos curtos (Kyoto→Nara, barco de Miyajima) pagos com cartão IC (Suica/ICOCA, T-money) — não incluídos.
+
 Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão); comparar com bilhetes avulsos.
 
 ## Câmbio
