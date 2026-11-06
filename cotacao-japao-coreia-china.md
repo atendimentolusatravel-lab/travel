@@ -8,7 +8,7 @@ Regras: valores em R$, total do período, para 2 adultos. Taxas de hospedagem lo
 |---|---|---|---|---|---|---|---|
 | Tóquio | 07–12/05 | 5 | 01 | Mercure Tokyo Hibiya | Superior King | Café da manhã | 8.540 |
 | Tóquio | 07–12/05 | 5 | 02 | Mitsui Garden Hotel Kyobashi Tokyo Station | Standard Double | Café da manhã | 9.200 |
-| Kawaguchiko (Fuji) | 12–14/05 | 2 | 01 | Fuji View Hotel | Standard Double, vista jardim e montanha | A confirmar | 3.450 |
+| Kawaguchiko (Fuji) | 12–14/05 | 2 | 01 | Fuji View Hotel | Standard Double, vista jardim e montanha | Café da manhã | 3.450 |
 | Kawaguchiko (Fuji) | 12–14/05 | 2 | 02 | HOSHINOYA Fuji | King Room Mountain View | Sem café da manhã (restaurante no hotel, café pago à parte) | 7.180 |
 | Kawaguchiko (Fuji) | 12–14/05 | 2 | Upgrade | Ryokan com onsen privativo, vista do Fuji e kaiseki (ex.: Fufu Kawaguchiko) | Quarto com onsen privativo | Meia pensão | Sujeito a disponibilidade — vendas de maio/2027 ainda não abertas |
 | Kyoto | 14–18/05 | 4 | 01 | The Gate Hotel Kyoto Takasegawa by Hulic | Casal standard | Café da manhã | 8.750 |
