@@ -55,7 +55,7 @@ Observação: franquia de 20 kg de bagagem despachada por pessoa em todos os voo
 
 | # | Data | Trecho | Trem | Duração | Classe sugerida | Valor (R$) |
 |---|---|---|---|---|---|---|
-| 1 | 12/05 (qua) | Shinjuku → Kawaguchiko | Fuji Excursion (se não for transfer) | ~2h | Assento reservado | A cotar |
+| 1 | 12/05 (qua) | Shinjuku → Kawaguchiko | Fuji Excursion (direto, só classe comum reservada) | ~2h | Assento reservado | Ref. ¥4.130–4.200 por adulto (≈ ¥8.400 o casal) — confirmar |
 | 2 | 14/05 (sex) | Mishima → Kyoto | Shinkansen Hikari | ~2h | Green Car | A cotar |
 | 3 | 18/05 (ter) | Kyoto → Shin-Osaka | Shinkansen | ~15 min | Reservado | A cotar |
 | 4 | 20/05 (qui) | Shin-Osaka ⇄ Hiroshima (ida e volta) | Shinkansen Nozomi | ~1h25 cada | Green Car | A cotar |
@@ -63,6 +63,8 @@ Observação: franquia de 20 kg de bagagem despachada por pessoa em todos os voo
 | 6 | 02/06 (qua) | Xangai Hongqiao → Pequim Sul | Trem-bala Fuxing (G) | ~4h30 | Business ou First Class | A cotar |
 | 7 | 07/06 (seg) | Chengdu Leste ⇄ Chongqing (ida e volta) | Trem-bala (G/D) | ~1h–1h20 cada | First Class | A cotar |
 | 8 | 10/06 (qui) | Hong Kong West Kowloon ⇄ Shenzhen Futian (ida e volta) | XRL | ~15 min cada | First Class | A cotar |
+
+Observação: sugestão de enviar as malas grandes de Tóquio para Kyoto por takkyubin em 12/05 (≈ ¥2.000–3.000 por mala), viajando leves ao Fuji.
 
 Observação: JR Pass provavelmente não compensa (poucos trechos JR no Japão); comparar com bilhetes avulsos.
 
