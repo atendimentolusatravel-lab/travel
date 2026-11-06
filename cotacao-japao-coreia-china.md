@@ -93,6 +93,12 @@ Todos os transfers: privativos, por trajeto, com meet and greet.
 
 Total transfers: R$ 3.585 (chegada por Haneda) ou R$ 3.915 (chegada por Narita).
 
+## Experiências (2 adultos)
+
+| Data | Experiência | Detalhes | Valor |
+|---|---|---|---|
+| 24/05 (seg) | Degustação de soju em destilaria — "A história dos 3 porquinhos" (Hongdae, Seul) | 17:00 · 80 min · guia em inglês · mín. 7 amostras (soju, makgeolli/cheongju) · cancelamento grátis até a véspera | R$ 597,88 → +15% = R$ 687,56 → +12% = **R$ 770,07** |
+
 ## Seguro viagem (36 dias · 2 adultos · cobertura mundial/Ásia)
 
 | Opção | Plano | Despesas médicas (DMH) | Valor |
@@ -121,5 +127,5 @@ Observação: seguro com 21 coberturas ("21 motivos de cobertura"). Valores para
 - Data de volta confirmada: 12/06, voo às 19:40 de Hong Kong
 
 - Guias e motoristas
-- Ingressos a cotar: Tokyo DisneySea (10/05), degustação de soju em Seul (24/05), show das haenyeo em Jeju (27/05), aula de culinária sichuanesa em Chengdu (06/06)
+- Ingressos a cotar: Tokyo DisneySea (10/05), show das haenyeo em Jeju (27/05), aula de culinária sichuanesa em Chengdu (06/06)
 - Demais ingressos (inclusive degustação de saquê em Fushimi): só como lista de sugestões na proposta (não cotados)
