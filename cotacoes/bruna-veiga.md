@@ -680,3 +680,11 @@ Data a definir (08 ou 09/01). Atenção: também vai às ilhas Hong, como o pass
 | R$ 1.022,00 | R$ 1.316,34 (6x 219,39 / Pix 1.184,71) |
 
 ATENÇÃO: sai de Phuket (píer de Chalong), não de Krabi. Saída ~07h, ~10 h de duração; busca só em Phuket (Patong, Kata, Karon, Rawai, Chalong). De Ao Nang até Chalong são ~2h30 de carro — precisaria traslado privado saindo ~04h30 e volta ~19h30. Pendente decisão.
+
+### Krabi: excursão de barco particular às ilhas Phi Phi, 8 h (print da agente, ×1,15 ×1,12)
+
+| Detalhes | Valor print | Valor final |
+|---|---|---|
+| Barco particular; Phi Phi incluindo Ilha Bamboo e Gruta Viking (ver se inclui Maya Bay e Pileh); 08h00 → 16h00; busca no hotel (área de busca); anfitrião em inglês; cancelamento grátis até 3 dias antes. Print com data de 05/01 — usar 08/01 | R$ 3.634,27 (3 participantes × R$ 1.211,42) | R$ 4.680,94 (6x 780,16 / Pix 4.212,85) |
+
+Atenção: o print cobra o bebê como participante. Com 2 participantes seria R$ 2.422,84 → R$ 3.120,62 final. Conferir se bebê de colo pode ir sem pagar e se a taxa do parque (Maya Bay) está inclusa.
