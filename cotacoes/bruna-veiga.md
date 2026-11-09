@@ -672,3 +672,11 @@ Atenção: roteiro igual ao da "4 Ilhas" de 05/01 (Hong, Lagoa Hong, Lao Lading,
 | R$ 2.550,00 | R$ 3.284,40 (6x 547,40 / Pix 2.955,96) |
 
 Data a definir (08 ou 09/01). Atenção: também vai às ilhas Hong, como o passeio de 05/01.
+
+### Mergulho para o Felipe: Racha Yai/Noi, 3 mergulhos para não certificados (GetYourGuide t630019)
+
+| Valor print (1 adulto) | Valor final |
+|---|---|
+| R$ 1.022,00 | R$ 1.316,34 (6x 219,39 / Pix 1.184,71) |
+
+ATENÇÃO: sai de Phuket (píer de Chalong), não de Krabi. Saída ~07h, ~10 h de duração; busca só em Phuket (Patong, Kata, Karon, Rawai, Chalong). De Ao Nang até Chalong são ~2h30 de carro — precisaria traslado privado saindo ~04h30 e volta ~19h30. Pendente decisão.
