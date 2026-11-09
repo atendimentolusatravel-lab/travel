@@ -692,3 +692,6 @@ Atenção: o print cobra o bebê como participante. Com 2 participantes seria R$
 **Phi Phi — confirmado com a agente:** o valor é pelo barco (tour), não por pessoa. Final R$ 4.680,94 (6x 780,16 / Pix 4.212,85). Data: **08/01**. A lancha às ilhas Hong (R$ 3.284,40) fica em **09/01**.
 
 **Phi Phi 08/01 — inclusões (print da agente):** barco particular com equipe a bordo; almoço, lanches leves, frutas da estação, cocos, sucos, refrigerantes, água e caixa térmica com gelo; máscaras de snorkel e coletes salva-vidas; câmera GoPro HERO10; caixa de som JBL; adereços para fotos; kit de primeiros socorros; seguro a bordo; traslado de ida e volta das acomodações em Ao Nang. Saída do píer de Nopparat Thara (Ao Nang). **Não inclui:** taxas do parque nacional (pagas à parte).
+
+### Doha 27/12: opção 3 — guia brasileira particular, 6 h
+US$ 600 × 5,72 = R$ 3.432,00 (sem acréscimo). Com +15% +12% seria R$ 4.420,42. Confirmar com a agente qual vai para a proposta.
