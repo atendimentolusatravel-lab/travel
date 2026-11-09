@@ -663,3 +663,4 @@ Pendente: definir a data (Bangkok 29 e 30/12 já ocupados), se é privativo, e p
 | R$ 3.220,00 | R$ 4.147,36 (6x 691,23 / Pix 3.732,62) |
 
 Atenção: roteiro igual ao da "4 Ilhas" de 05/01 (Hong, Lagoa Hong, Lao Lading, Pakbia — R$ 1.509,48). Definir se substitui ou se fica como alternativa.
+**Decisão da agente:** manter o passeio atual de 05/01 (R$ 1.509,48). O barco particular a Lao Lading e Hong (R$ 4.147,36) fica descartado.
