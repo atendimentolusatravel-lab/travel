@@ -688,3 +688,4 @@ ATENÇÃO: sai de Phuket (píer de Chalong), não de Krabi. Saída ~07h, ~10 h d
 | Barco particular; Phi Phi incluindo Ilha Bamboo e Gruta Viking (ver se inclui Maya Bay e Pileh); 08h00 → 16h00; busca no hotel (área de busca); anfitrião em inglês; cancelamento grátis até 3 dias antes. Print com data de 05/01 — usar 08/01 | R$ 3.634,27 (3 participantes × R$ 1.211,42) | R$ 4.680,94 (6x 780,16 / Pix 4.212,85) |
 
 Atenção: o print cobra o bebê como participante. Com 2 participantes seria R$ 2.422,84 → R$ 3.120,62 final. Conferir se bebê de colo pode ir sem pagar e se a taxa do parque (Maya Bay) está inclusa.
+**Decisão da agente:** mergulho de Racha Yai/Noi (sai de Phuket) descartado. Buscar batismo de mergulho saindo de Ao Nang/Krabi.
