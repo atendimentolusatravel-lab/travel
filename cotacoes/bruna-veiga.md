@@ -596,3 +596,11 @@ Combinações: Econômica R$ 46.380,72 · Delta + Qatar exec + Ethiopian R$ 159.
 | Krabi | Aonang Villa Resort | 03 → 08/01 (5 noites) | Grand Superior Sea View, café da manhã | R$ 19.650,00 |
 | Singapura | The Fullerton Hotel | 11 → 13/01 (+ noite de 13/01) | a cotar | — |
 | Phi Phi / Phuket | cliente ainda vai definir | | | |
+
+### Voo novo Krabi → Singapura (valor final de venda, 2 adultos + 1 bebê)
+
+| Data | Voo | Trecho | Horário | Bagagem | Valor |
+|---|---|---|---|---|---|
+| 10/01 | Scoot TR 683 | Krabi (KBV) → Singapura (SIN) | 12h20 → 15h20, direto, 2h | 30 kg | R$ 4.823,89 (6x 803,98 / Pix 4.341,50) |
+
+Substitui o Scoot TR 659 Phuket → Singapura de 11/01 (R$ 3.229,02). Pendente: definir com a cliente como ficam Phi Phi e Phuket.
