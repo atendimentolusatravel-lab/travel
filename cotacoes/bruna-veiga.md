@@ -593,6 +593,6 @@ Combinações: Econômica R$ 46.380,72 · Delta + Qatar exec + Ethiopian R$ 159.
 | Doha | Park Hyatt Doha | 26 → 28/12 (2 noites) | King City View, café da manhã | R$ 3.120,00 |
 | Bangkok | Sindhorn Midtown | 28 → 31/12 (3 noites) | Standard King, café da manhã | R$ 5.890,00 |
 | Chiang Mai | Dusit Princess | 31/12 → 03/01 (3 noites) | Deluxe King, café da manhã | R$ 4.600,00 |
-| Krabi | Aonang Villa Resort | 03 → 08/01 | a recotar | — |
+| Krabi | Aonang Villa Resort | 03 → 08/01 (5 noites) | Grand Superior Sea View, café da manhã | R$ 19.650,00 |
 | Singapura | The Fullerton Hotel | 11 → 13/01 (+ noite de 13/01) | a cotar | — |
 | Phi Phi / Phuket | cliente ainda vai definir | | | |
