@@ -11,11 +11,12 @@ Rascunho interno, sem valores e sem disponibilidade verificada.
 
 ## Ter 17/11 — Chegada em Milão (só pernoite)
 - Chegada do voo (GRU/VCP, executiva) e transfer ao hotel.
-- Eles já conhecem Milão: sem passeios. Só descanso, jantar leve e uma noite de sono depois do voo.
+- Eles já conhecem Milão, então a noite é de descanso depois do voo.
+- Sugestão para esticar as pernas: caminhada até a Piazza del Duomo e a Galleria Vittorio Emanuele II, iluminadas à noite, com jantar leve perto dali. A Via Torino liga o Missori ao Duomo a pé (~10 min).
 - Check-in costuma ser a partir das 14h; pedir early check-in ou guarda-malas.
 
 ## Qua 18/11 — Milão → Lago di Como
-- Manhã: café e saída tranquila (sem passeio em Milão).
+- Manhã livre.
 - Trem Milão Centrale → Como San Giovanni (~40 min) e transfer ao hotel; deixar as malas se o quarto não estiver pronto.
 - Tarde: caminhada na orla de Como, Duomo de Como e funicular até Brunate para ver o lago ao pôr do sol.
 
