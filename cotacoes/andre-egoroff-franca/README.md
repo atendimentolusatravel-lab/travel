@@ -1,6 +1,8 @@
 # André Egoroff · Lyon, Borgonha & Champagne (10 a 16/01/2027)
 
 - **Publicado:** https://cotacao-andre-egoroff-franca.vercel.app (projeto Vercel `cotacao-andre-egoroff-franca`, 03/11/2026).
+  Desde 09/11/2026: deploy direto na raiz (rootDirectory nulo) com `api/page.js` (Edge) servindo `src/index.html` pelo jsDelivr fixado no commit,
+  `vercel.json` com rewrite de `/` para `/api/page`, e logos + `img/hoteis/fort/1-6.jpg` referenciados por sha.
 - **Fontes (03/11/2026):** `fonte/hoteis.png` (hotéis em BRL, 2 quartos: 1 duplo + 1 triplo; Beaune 11–13/01/2027 confirmado),
   `fonte/carro.png` (Europcar Peugeot 5008, Lyon 11/01 → CDG 16/01/2027, USD 895,72 = R$ 4.818,77),
   `fonte/hotel-10jan-email.png` (noite de 10/01, cotação de grupo de 11; grupo de 11 hóspedes, 5 quartos, € 633,86; incluída completa).
