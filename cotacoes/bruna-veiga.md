@@ -583,3 +583,16 @@ Novo total de serviços: R$ 35.748,39 (6x 5.958,06 / Pix 32.173,55).
 | SIN → GRU | Air China CA 970 + CA 897 | 12/01 23h55 → 14/01 05h25 (40h30) | Executiva | R$ 56.284,08 |
 
 Combinações: Econômica R$ 46.380,72 · Delta + Qatar exec + Ethiopian R$ 159.693,68 · Delta + Qatar exec + Air China R$ 151.881,38.
+
+## Recotação de hotéis (escolhas da cliente, 09/11)
+
+| Cidade | Hotel | Datas | Quarto | Valor |
+|---|---|---|---|---|
+| Nova York | Residence Inn by Marriott Times Square | 21 → 25/12 (4 noites) | Double Studio Suite, Studio, 2 camas de casal, café da manhã | R$ 22.900,00 |
+| Nova York | Courtyard Manhattan / Midtown East | 21 → 25/12 | a recotar | — |
+| Doha | Park Hyatt Doha | 26 → 28/12 | a recotar | — |
+| Bangkok | Sindhorn Midtown | 28 → 31/12 | a recotar | — |
+| Chiang Mai | Dusit Princess | 31/12 → 03/01 | a recotar | — |
+| Krabi | Aonang Villa Resort | 03 → 08/01 | a recotar | — |
+| Singapura | The Fullerton Hotel | 11 → 13/01 (+ noite de 13/01) | a cotar | — |
+| Phi Phi / Phuket | cliente ainda vai definir | | | |
