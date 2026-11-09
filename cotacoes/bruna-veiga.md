@@ -697,3 +697,4 @@ Atenção: o print cobra o bebê como participante. Com 2 participantes seria R$
 US$ 600 × 5,72 = R$ 3.432,00 (sem acréscimo). Com +15% +12% seria R$ 4.420,42. Confirmar com a agente qual vai para a proposta.
 
 **Decisão:** guia brasileira entra como Opção 3 em Doha por R$ 3.432,00 (sem acréscimo).
+**Doha 27/12 — confirmado com a agente (3 opções na proposta):** 1) guia em inglês, particular, R$ 1.114,35 (print da agente); 2) Civitatis, tour privado com guia fluente em português, 4 h, US$ 377,98 → R$ 2.760,43; 3) guia brasileira, privativo, 6 h, US$ 600 × 5,72 → R$ 3.432,00 (sem acréscimo).
