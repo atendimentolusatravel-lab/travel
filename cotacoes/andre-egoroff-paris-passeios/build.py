@@ -22,6 +22,8 @@ CSS = (ROOT / "style.part.html").read_text().replace(
 exec((ROOT / "prune.part.py").read_text())
 
 PARC = 3  # passeios em até 3x
+# Locação de carro (fonte/carro-vito.png, 09/11/2026): R$ 4.660,56 arredondado para R$ 4.661,00 a pedido da agência; carro em até 10x
+CARRO = dict(valor=4661.00, parc=10)
 EMISSAO = "09/11/2026"
 CAPA = dict(  # Wikimedia Commons "La Tour Eiffel vue de la Tour Saint-Jacques, Paris août 2014 (2).jpg", servida pelo jsDelivr fixado no commit f0bd3b4
     url="https://cdn.jsdelivr.net/gh/atendimentolusatravel-lab/travel@f0bd3b4a1276181d7de81a5723f6d7f58189b516/cotacoes/andre-egoroff-paris-passeios/src/img/capa.jpg",
@@ -49,6 +51,7 @@ TORRE = '<path d="M12 2v3M9 21l3-16 3 16M7 21h10M10 13h4M9.5 17h5"/>'
 BARCO = '<path d="M3 17l2 3h14l2-3H3zM5 17V12h14v5M8 12V8h8v4"/><path d="M2 21c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1"/>'
 CASTELO = '<path d="M3 21V9l3-2 3 2v12M15 21V9l3-2 3 2v12M9 13h6v8H9z"/>'
 IGREJA = '<path d="M12 2v4M10 4h4M6 21V11l6-5 6 5v10M10 21v-5h4v5"/>'
+CARRO_IC = '<path d="M5 17h14M3 17v-4l2-5h14l2 5v4"/><circle cx="7.5" cy="17" r="1.8"/><circle cx="16.5" cy="17" r="1.8"/>'
 ESTRELA = '<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/>'
 
 # id, nome, título, descrição, valor R$ por pessoa (None = sem custo), ícone, grupo "escolher 1", observação
@@ -220,6 +223,19 @@ html = f"""<!DOCTYPE html>
       {chips}
 </div>
 </header>
+<section class="section sh" style="background:var(--cream)">
+<span class="eyebrow">Transporte</span>
+<h2>Locação de carro</h2>
+<div class="accent-line"></div>
+<p class="note" style="margin-top:16px">Retirada em Lyon em <b>11/01/2027</b> e devolução no aeroporto Charles de Gaulle em <b>16/01/2027</b>. Valor em reais, <b>total da locação</b>. Parcelável em <b>até {CARRO["parc"]}x</b>.</p>
+<div class="svc"><div class="ic">{svg(CARRO_IC)}</div><div><div class="t">Mercedes-Benz Vito Tourer · 9 lugares</div><div class="d">
+<ul class="incl">
+<li>Capacidade para <b>9 pessoas</b> · bagageiro para <b>4 malas</b> · câmbio <b>automático</b></li>
+<li>Retirada em <b>Lyon</b> em <b>11/01/2027</b> · devolução no <b>aeroporto Paris Charles de Gaulle</b> em <b>16/01/2027</b> · 5 diárias</li>
+</ul>
+<div class="fine">Bagageiro para 4 malas grandes: conferir a bagagem do grupo antes de reservar. Caução, seguros e taxa de devolução em outra cidade (one way) confirmados com a locadora antes da reserva.</div>
+</div></div><div class="dt"><span class="eur">{rs(CARRO["valor"])}</span><span class="brl">ou {CARRO["parc"]}x de {rs(CARRO["valor"] / CARRO["parc"])}</span></div></div>
+</section>
 <section class="section sh">
 <span class="eyebrow">Passeios · Paris</span>
 <h2>Ingressos e experiências</h2>
@@ -237,17 +253,21 @@ html = f"""<!DOCTYPE html>
 <span class="eyebrow">Investimento</span>
 <h2>Resumo de valores</h2>
 <div class="accent-line"></div>
-<p class="note" style="margin-top:16px">*Valores finais em reais, <b>por pessoa</b>, com pagamento em até <b>{PARC}x</b>. Hospedagem e aéreo estão na cotação da viagem. Nada reservado, apenas cotado.</p>
+<p class="note" style="margin-top:16px">*Valores finais em reais: passeios <b>por pessoa</b>, em até <b>{PARC}x</b>; carro pelo <b>total da locação</b>, em até <b>{CARRO["parc"]}x</b>. Hospedagem e aéreo estão na cotação da viagem. Nada reservado, apenas cotado.</p>
 <div class="tbl-wrap"><table>
-<tr class="head-row"><td>Passeio</td><td class="v">Por pessoa</td><td class="v">Em até {PARC}x</td></tr>
-{tab}</table></div>
+<tr class="head-row"><td>Item</td><td class="v">Valor</td><td class="v">Em até {PARC}x</td></tr>
+{tab}      <tr class="sec-row"><td colspan="3">Locação de carro · Lyon → aeroporto CDG · 11/01–16/01/2027</td></tr>
+      <tr><td><b>Mercedes-Benz Vito Tourer</b><span class="sub">9 lugares · 4 malas · automático · total da locação</span></td><td class="v">{rs(CARRO["valor"])}</td><td class="v">{CARRO["parc"]}x de {rs(CARRO["valor"] / CARRO["parc"])}</td></tr>
+</table></div>
 <div class="flval"><span class="lbl">Todos os passeios · por pessoa</span><div class="amt"><div class="t">{rs(PP_MIN)} – {rs(PP_MAX)[3:]}</div><div class="p">em até {PARC}x de {rs(PP_MIN / PARC)} a {rs(PP_MAX / PARC)}</div></div></div>
+<div class="flval" style="background:var(--green-soft)"><span class="lbl">Locação de carro · total</span><div class="amt"><div class="t">{rs(CARRO["valor"])}</div><div class="p">em até {CARRO["parc"]}x de {rs(CARRO["valor"] / CARRO["parc"])}</div></div></div>
 <p class="note"><b>Como é calculado:</b> {calc}. O valor final depende da opção escolhida em Versalhes e de quais passeios vocês quiserem fazer; cada um pode ser contratado pelo valor da tabela.</p>
 <div class="pay">
 <div class="box">
 <h4>Condições de pagamento</h4>
 <p><b>Passeios e ingressos</b>: em até <b>{PARC}x</b></p>
-<p class="muted" style="margin-top:8px;font-size:.82rem">Os valores da tabela já são o preço final, por pessoa.</p>
+<p><b>Locação de carro</b>: em até <b>{CARRO["parc"]}x</b></p>
+<p class="muted" style="margin-top:8px;font-size:.82rem">Os valores da tabela já são o preço final: passeios por pessoa, carro pelo total da locação.</p>
 </div>
 <div class="box">
 <h4>Referência</h4>
@@ -259,6 +279,7 @@ html = f"""<!DOCTYPE html>
 <ul>
 <li>Hospedagem e aéreo (na cotação da viagem)</li>
 <li>Transporte até os passeios (Disneyland e Versalhes ficam fora de Paris) · refeições</li>
+<li>Combustível, pedágios e estacionamento do carro · taxa de devolução em outra cidade, se houver</li>
 <li>Gorjetas · despesas pessoais · passeios não listados · seguro viagem</li>
 </ul>
 <h4>Observações</h4>

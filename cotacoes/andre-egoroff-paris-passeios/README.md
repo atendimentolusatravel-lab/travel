@@ -3,6 +3,7 @@
 - **Fonte:** `fonte/passeios.png` (tabela enviada pela agência em 09/11/2026): valor final em BRL por pessoa, passeios em até 3x.
 - **Datas:** da cotação de hospedagem de Paris (`referencias/cotacoes/2026-10-paris-andre-hospedagem-assentos.html`). Valores mostrados por pessoa (grupo com menores; museus têm tarifa reduzida/gratuita).
 - **Faixa (todos os passeios, Versalhes escolher 1):** R$ 2.551 – 2.931 por pessoa · 3x de R$ 850,33 a R$ 977.
+- **Carro:** `fonte/carro-vito.png` (09/11/2026), Mercedes-Benz Vito Tourer, Lyon 11/01 → CDG 16/01/2027, R$ 4.660,56 arredondado para R$ 4.661,00; em até 10x.
 - **Capa:** Wikimedia Commons, "La Tour Eiffel vue de la Tour Saint-Jacques, Paris août 2014 (2).jpg", Yann Caradec, CC BY-SA 2.0 (crédito no rodapé). Servida pelo jsDelivr fixado no commit f0bd3b4.
 - **Publicação:** projeto Vercel `cotacao-andre-egoroff-paris` (deploy direto; logos por sha).
 
