@@ -6,7 +6,7 @@ Rascunho interno, sem valores e sem disponibilidade verificada.
 |---|---|---|
 | Milão (só pernoite) | 17–18/11 (1) | Max Brown Hotel Missori · Hotel Brunelleschi |
 | Lago di Como | 18–21/11 (3) | Hilton Lake Como · Albergo Terminus |
-| Florença | 21–23/11 (2) | Hotel Kraft · Mercure Firenze Centro |
+| Florença (dia inteiro em 22/11) | 21–23/11 (2) | Hotel Kraft · Mercure Firenze Centro |
 | Roma | 23–26/11 (3) | 9Hotel Cesari · Hotel Raffaello (Best Western) |
 
 ## Ter 17/11 — Chegada em Milão (só pernoite)
@@ -30,14 +30,15 @@ Rascunho interno, sem valores e sem disponibilidade verificada.
 - Novembro: horários de barco reduzidos e algumas villas fechadas para visita (Balbianello, por exemplo). Conferir antes.
 
 ## Sáb 21/11 — Como → Florença
-- Manhã livre. Trem Como → Milão → Florença (alta velocidade, ~4h30 com conexão).
-- Noite livre. Já conhecem Florença, então o foco é jantar e descanso.
+- Manhã livre em Como. Trem Como → Milão → Florença (alta velocidade, ~4h30 com conexão).
+- Fim de tarde: passeio a pé pelo centro, Ponte Vecchio e Piazza della Signoria. Jantar de bistecca alla fiorentina.
 
-## Dom 22/11 — Veneza (bate-volta) ou dia livre
-- Veneza é uma das cidades que eles não conhecem e não está no roteiro de hotéis. Trem Florença → Veneza (~2h05), saída cedo e volta à noite.
-- Dia: Piazza San Marco, Basílica, Rialto, passeio de gôndola ou vaporetto.
-- Alternativa se preferirem algo mais leve: dia livre em Florença ou na Toscana (Chianti), já que a Itália está decidida.
-- Atenção: domingo, e o Uffizi não abre às segundas.
+## Dom 22/11 — Florença: dia inteiro (primeira vez dele)
+- A Stella já conhece Florença; ele não. Dia pensado para ele conhecer os grandes ícones, com a Stella em modo "favoritos".
+- Manhã: Duomo, Batistério e Campanile (subir a cúpula exige reserva de horário). Depois Galleria dell'Accademia (David), aberta aos domingos.
+- Almoço no Mercato Centrale ou em trattoria local.
+- Tarde: Uffizi, com ingresso de horário marcado, ou Palazzo Pitti e Jardim de Boboli. Fechamento do Uffizi é às segundas, então este é o único dia possível.
+- Pôr do sol na Piazzale Michelangelo e jantar de despedida.
 
 ## Seg 23/11 — Florença → Roma
 - Trem de alta velocidade Florença → Roma (~1h30).
@@ -57,7 +58,7 @@ Rascunho interno, sem valores e sem disponibilidade verificada.
 ## Pontos a validar antes de apresentar
 1. **9 noites, e não 7 dias:** o briefing inicial falava em cerca de 7 dias. Confirmar com a cliente.
 2. **Voo:** de ida chegando em 17/11 e volta saindo de Roma em 26/11 (gaveta aberta). Confirmar se é open jaw.
-3. **Veneza** ficou de fora do plano de hotéis. O bate-volta de 22/11 é uma sugestão a validar.
+3. **Florença:** confirmar com a Stella o que ela já viu e quer repetir, para não cansá-la com o que já conhece.
 4. **Café da manhã:** briefing diz "hotéis sem café da manhã"; confirmar.
 5. **Rinite:** pedir quartos sem carpete, andar alto e conferir a política de alérgenos de cada hotel.
 6. **Hospitais próximos:** mapear por hotel depois da escolha.
