@@ -589,7 +589,7 @@ Combinações: Econômica R$ 46.380,72 · Delta + Qatar exec + Ethiopian R$ 159.
 | Cidade | Hotel | Datas | Quarto | Valor |
 |---|---|---|---|---|
 | Nova York | Residence Inn by Marriott Times Square | 21 → 25/12 (4 noites) | Double Studio Suite, Studio, 2 camas de casal, café da manhã | R$ 22.900,00 |
-| Nova York | Courtyard Manhattan / Midtown East | 21 → 25/12 | a recotar | — |
+| Nova York | Courtyard Manhattan / Midtown East | 21 → 25/12 (4 noites) | 1 cama king + sofá-cama, café da manhã | R$ 16.606,00 |
 | Doha | Park Hyatt Doha | 26 → 28/12 | a recotar | — |
 | Bangkok | Sindhorn Midtown | 28 → 31/12 | a recotar | — |
 | Chiang Mai | Dusit Princess | 31/12 → 03/01 | a recotar | — |
