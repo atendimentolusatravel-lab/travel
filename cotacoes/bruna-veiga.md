@@ -640,8 +640,8 @@ Substitui o Scoot TR 659 Phuket → Singapura de 11/01 (R$ 3.229,02). Pendente: 
 
 ### Traslados Krabi (in e out)
 
-| Item | Valor base | Valor final (+15% +12%) |
-|---|---|---|
-| Aeroporto de Krabi → hotel (03/01) e hotel → aeroporto (10/01) | R$ 410,00 | R$ 528,08 (6x 88,01 / Pix 475,27) |
+| Item | Valor final (sem acréscimo) |
+|---|---|
+| Aeroporto de Krabi → hotel (03/01) e hotel → aeroporto (10/01) | R$ 410,00 (6x 68,33 / Pix 369,00) |
 
 Substitui a estimativa anterior de Krabi (R$ 409,33, que era aeroporto → hotel e hotel → píer de Klong Jilad).
