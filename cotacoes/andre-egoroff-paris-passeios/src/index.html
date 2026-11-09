@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Lusa Travel · Paris — André Egoroff</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#404626; --green-dark:#363b1f; --green-soft:#5a6238;--sage:#d9ead3; --sage-head:#c6d8b0;--ink:#333131; --muted:#6f6f68; --line:#e7e7e0; --bg:#ffffff; --cream:#faf9f5;--terra:#b4622f;--shadow:0 10px 30px rgba(64,70,38,.08);}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{line-height:1.15}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:60px 56px}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+.muted{color:var(--muted)}
+.brandbar{display:flex;flex-direction:column;align-items:center;gap:8px;padding:38px 0 6px}
+.brandbar .brandlogo{width:210px;height:auto;display:block}
+.footlogo{width:190px;height:auto;display:block;margin-bottom:14px}
+.hero{padding:56px 56px 40px}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
+.hero-img{margin:34px 0 0;height:330px;border-radius:14px;overflow:hidden;position:relative;display:flex;align-items:flex-end;box-shadow:var(--shadow);background:radial-gradient(120% 130% at 12% 8%, rgba(70,120,150,.55), rgba(40,80,110,.15) 42%, transparent 60%),radial-gradient(120% 130% at 92% 96%, rgba(150,170,120,.55), rgba(90,110,70,.2) 44%, transparent 64%),linear-gradient(120deg, #3a5f80 0%, #5a7d92 30%, #8aa0a2 55%, #b0a878 80%, #7a6a3a 100%);}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-img::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to top, rgba(20,26,32,.6), rgba(20,26,32,.05) 55%, transparent)}
+.hero-img .cap{position:relative;z-index:2;padding:22px 26px;color:#fff}
+.hero-img .cap .k{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;opacity:.92}
+.hero-img .cap .t{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:600;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
+.hero-info .r{text-align:right}
+.hero-info p{font-size:.95rem}
+.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
+.chip b{font-size:1.15rem;font-weight:700}
+.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
+.chip .ic svg{width:18px;height:18px}
+.svc{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:start;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-top:14px;background:#fff;box-shadow:var(--shadow)}
+.svc .ic{width:52px;height:52px;background:var(--green);border-radius:12px;display:grid;place-items:center;color:#fff;flex:none}
+.svc .ic svg{width:24px;height:24px}
+.svc .t{font-weight:600;font-size:1.02rem}
+.svc .d{color:var(--muted);font-size:.86rem;margin-top:2px}
+.svc .dt{text-align:right;font-weight:700;font-size:.9rem;color:var(--green-soft);white-space:nowrap}
+.dayrow{display:grid;grid-template-columns:92px 1fr;gap:22px;padding:22px 0;border-bottom:1px solid var(--line)}
+.dayrow:last-of-type{border-bottom:none}
+.daynum{text-align:right}
+.daynum .d{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;font-weight:700;color:var(--green);line-height:1}
+.daynum .m{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green-soft);font-weight:700;margin-top:2px}
+.daynum .w{font-size:.7rem;color:var(--muted);margin-top:2px}
+.daybody .city{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--green);border-radius:12px;padding:3px 11px;display:inline-block;margin-bottom:9px}
+.daybody h4{font-size:1.06rem;font-weight:600;margin-bottom:5px;color:var(--green-dark)}
+.daybody p{font-size:.88rem;color:var(--muted)}
+.daybody ul{margin:9px 0 0 18px;font-size:.88rem;color:var(--muted)}
+.daybody li{margin:5px 0}
+.tag-q,.tag-s{display:inline-block;font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:10px;padding:2px 8px;margin-left:5px;white-space:nowrap}
+.tag-q{color:var(--terra);background:#fdf3ec;border:1px solid #f0dccd}
+.tag-s{color:var(--green-dark);background:#eef2e6;border:1px solid #dde5cf}
+@media(max-width:720px){.dayrow{grid-template-columns:64px 1fr;gap:14px}.daynum .d{font-size:1.5rem}}
+.svc .d .sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.12rem;font-weight:600;color:var(--green-dark);margin:6px 0 8px;line-height:1.3}
+.svc .d p{margin-bottom:8px;font-size:.86rem;line-height:1.6}
+.subh{font-size:1.15rem;font-weight:700;color:var(--green-dark);margin:30px 0 4px}
+.tbl-wrap{overflow-x:auto;margin-top:24px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:560px}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line)}
+.sec-row td{background:var(--sage);font-weight:700;text-align:center;letter-spacing:.04em;color:var(--green-dark)}
+.head-row td{background:#efeee7;font-weight:600;color:#4a4a44}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.pay h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
+.pay p{font-size:.9rem;margin-bottom:4px}
+.obs{margin-top:26px;font-size:.82rem;color:var(--muted)}
+.obs li{margin:6px 0 6px 18px}
+.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px}
+.flval{display:flex;justify-content:space-between;align-items:center;background:var(--green);color:#fff;border-radius:12px;padding:16px 24px;margin-top:16px;flex-wrap:wrap;gap:12px}
+.flval .lbl{font-weight:600;font-size:.9rem}
+.flval .amt{text-align:right}
+.flval .amt .t{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;line-height:1}
+.flval .amt .p{font-size:.74rem;opacity:.9;margin-top:3px}
+.footer{background:var(--green);color:#fff;padding:44px 56px}
+.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
+.footer .fnote{font-size:.8rem;opacity:.7;margin-top:16px}
+.sh .eyebrow{margin-bottom:10px;display:block}
+.brandtext{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:.3em;color:var(--green);text-transform:uppercase}
+.footer .brandtext{color:#fff;margin-bottom:14px}
+@media(max-width:720px){.section,.hero,.footer,.brandbar{padding-left:24px;padding-right:24px}.hero h1{font-size:2.2rem}.hero-info{grid-template-columns:1fr}.hero-info .r{text-align:left}.pay{grid-template-columns:1fr}.svc{grid-template-columns:1fr;text-align:left}.svc .dt{text-align:left}}
+.tnote{margin-top:10px;background:#fdf3ec;border:1px solid #f0dccd;border-left:3px solid var(--terra);border-radius:8px;padding:8px 12px;font-size:.8rem;color:#7a3f1c}
+td .sub{display:block;font-size:.74rem;color:var(--muted);font-weight:400}
+.svc .dt .eur{display:block;color:var(--green);font-size:1.05rem}
+.svc .dt .brl{display:block;font-weight:500;font-size:.74rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="brandbar"><img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel — travel agency" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'"></div>
+<header class="hero">
+<div class="eyebrow">Cotação para sua viagem</div>
+<h1>PARIS</h1>
+<div class="accent-line"></div>
+<p class="hero-sub"><b>André Egoroff e família</b> · passeios e ingressos no réveillon — <b>29 de dezembro de 2026 a 03 de janeiro de 2027</b></p>
+<div class="hero-img">
+<img src="img/capa.jpg" alt="Paris" onerror="this.style.display='none'">
+<div class="cap">
+<div class="k">Passeios e ingressos</div>
+<div class="t">Do Louvre a Versalhes, da Torre Eiffel à Disney</div>
+</div>
+</div>
+<div class="hero-info">
+<div>
+<div class="lbl">Detalhes</div>
+<p>11 opções de passeios e ingressos em Paris e arredores · escolham os que quiserem fazer</p>
+<p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>09/11/2026</b> · valores em reais, por pessoa · passeios em até <b>3x</b></p>
+</div>
+<div class="r">
+<div class="lbl">Contato</div>
+<p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p>
+</div>
+</div>
+<div class="gloss">
+<div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a2 2 0 002-2h14a2 2 0 002 2v2a2 2 0 000 4v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2a2 2 0 000-4V8z"/><path d="M13 6v12" stroke-dasharray="2 2"/></svg></span><b>11</b>&nbsp;Opções de passeios</div>
+<div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M4 10h16M12 3l8 5H4l8-5zM6 10v8M10 10v8M14 10v8M18 10v8"/></svg></span><b>4</b>&nbsp;Museus</div>
+<div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M10 4h4M6 21V11l6-5 6 5v10M10 21v-5h4v5"/></svg></span><b>2</b>&nbsp;Visitas gratuitas</div>
+<div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg></span><b>3x</b>&nbsp;Parcelamento</div>
+</div>
+</header>
+<section class="section sh">
+<span class="eyebrow">Passeios · Paris</span>
+<h2>Ingressos e experiências</h2>
+<div class="accent-line"></div>
+<p class="note" style="margin-top:16px">Valores em reais, <b>por pessoa</b>, com pagamento em até <b>3x</b>. Cada passeio pode ser contratado separadamente. No Palácio de Versalhes, <b>escolher 1 das 2 opções</b>.</p>
+<h3 class="subh">Museus e monumentos</h3>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M4 10h16M12 3l8 5H4l8-5zM6 10v8M10 10v8M14 10v8M18 10v8"/></svg></div><div><div class="t">Museu do Louvre</div><div class="d"><b>Entrada para o museu</b> · O maior museu do mundo: Mona Lisa, Vênus de Milo, Vitória de Samotrácia e as salas dos reis da França.<div class="tnote">O Louvre fecha às terças-feiras.</div></div></div><div class="dt"><span class="eur">R$ 345 por pessoa</span><span class="brl">ou 3x de R$ 115</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M4 10h16M12 3l8 5H4l8-5zM6 10v8M10 10v8M14 10v8M18 10v8"/></svg></div><div><div class="t">Musée d'Orsay</div><div class="d"><b>Entrada para o museu</b> · Numa antiga estação de trem, a maior coleção impressionista do mundo: Monet, Renoir, Degas e Van Gogh.</div></div><div class="dt"><span class="eur">R$ 126 por pessoa</span><span class="brl">ou 3x de R$ 42</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M4 10h16M12 3l8 5H4l8-5zM6 10v8M10 10v8M14 10v8M18 10v8"/></svg></div><div><div class="t">Bourse de Commerce</div><div class="d"><b>Coleção Pinault · bilhete de 1 dia</b> · Bilhete de um dia para a Bolsa de Comércio, com a Coleção Pinault, sem filas.<div class="tnote">Fechado às terças-feiras.</div></div></div><div class="dt"><span class="eur">R$ 177 por pessoa</span><span class="brl">ou 3x de R$ 59</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a2 2 0 002-2h14a2 2 0 002 2v2a2 2 0 000 4v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2a2 2 0 000-4V8z"/><path d="M13 6v12" stroke-dasharray="2 2"/></svg></div><div><div class="t">Opéra Garnier</div><div class="d"><b>Entrada para visitação</b> · A grande escadaria de mármore, o Grand Foyer dourado e, quando não há ensaio, a sala com o teto pintado por Chagall.</div></div><div class="dt"><span class="eur">R$ 189 por pessoa</span><span class="brl">ou 3x de R$ 63</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v3M9 21l3-16 3 16M7 21h10M10 13h4M9.5 17h5"/></svg></div><div><div class="t">Torre Eiffel</div><div class="d"><b>Topo da torre com elevador</b> · Subida de elevador até o topo, a 276 metros, com Paris inteira lá embaixo.</div></div><div class="dt"><span class="eur">R$ 288 por pessoa</span><span class="brl">ou 3x de R$ 96</span></div></div>
+<h3 class="subh">Fora do centro</h3>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V9l3-2 3 2v12M15 21V9l3-2 3 2v12M9 13h6v8H9z"/></svg></div><div><div class="t">Palácio de Versalhes</div><div class="d"><b>Opção 1 · Palácio e jardins</b> · Versailles Palace and Gardens Full Access Ticket: acesso ao palácio e aos jardins.</div></div><div class="dt"><span class="eur">R$ 180 por pessoa</span><span class="brl">ou 3x de R$ 60</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V9l3-2 3 2v12M15 21V9l3-2 3 2v12M9 13h6v8H9z"/></svg></div><div><div class="t">Palácio de Versalhes</div><div class="d"><b>Opção 2 · Visita guiada sem fila</b> · Skip-the-Line Guided Palace Tour and Full Access: visita guiada ao palácio, sem fila, com acesso completo.</div></div><div class="dt"><span class="eur">R$ 560 por pessoa</span><span class="brl">ou 3x de R$ 186,67</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg></div><div><div class="t">Disneyland Paris</div><div class="d"><b>Ingresso 1 dia · 2 parques</b> · Diversão sem fim com um ingresso para o Disneyland® Park e o Disney Adventure World® na mesma data reservada.<div class="tnote">Fica em Marne-la-Vallée, a cerca de 40 minutos do centro de Paris (RER A). Programa de dia inteiro.</div></div></div><div class="dt"><span class="eur">R$ 1.104 por pessoa</span><span class="brl">ou 3x de R$ 368</span></div></div>
+<h3 class="subh">No Sena e nas igrejas</h3>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l2 3h14l2-3H3zM5 17V12h14v5M8 12V8h8v4"/><path d="M2 21c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1"/></svg></div><div><div class="t">Bateau Mouche</div><div class="d"><b>Cruzeiro guiado no Sena</b> · Entrada no cruzeiro guiado pelo rio Sena.</div></div><div class="dt"><span class="eur">R$ 142 por pessoa</span><span class="brl">ou 3x de R$ 47,33</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M10 4h4M6 21V11l6-5 6 5v10M10 21v-5h4v5"/></svg></div><div><div class="t">Catedral de Notre-Dame</div><div class="d"><b>Visita · precisa de reserva</b> · Entrada gratuita, com reserva de horário.<div class="tnote">Gratuito, mas precisa reservar o horário.</div></div></div><div class="dt"><span class="eur">Gratuito</span><span class="brl">reserva de horário</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M10 4h4M6 21V11l6-5 6 5v10M10 21v-5h4v5"/></svg></div><div><div class="t">Basílica de Sacré-Cœur</div><div class="d"><b>Visita · gratuita</b> · Entrada gratuita na basílica, no alto de Montmartre.<div class="tnote">Gratuito.</div></div></div><div class="dt"><span class="eur">Gratuito</span></div></div>
+</section>
+<section class="section sh" style="background:var(--cream)">
+<span class="eyebrow">Roteiro</span>
+<h2>Dia a dia sugerido</h2>
+<div class="accent-line"></div>
+<p class="note" style="margin-top:16px">Uma forma de encaixar os passeios nos dias da viagem, respeitando os dias de fechamento. <span class="tag-q">cotado</span> está nesta cotação · <span class="tag-s">sugestão</span> é ideia de programa, fora dos valores.</p>
+<div class="dayrow"><div class="daynum"><div class="d">29</div><div class="m">Dez</div><div class="w">terça</div></div><div class="daybody"><span class="city">Paris</span><h4>Chegada</h4><ul><li>Check-in e passeio a pé pelo bairro <span class="tag-s">sugestão</span></li><li>Terça-feira: o Louvre e a Bourse de Commerce estão fechados, por isso ficam para outros dias</li><li>Fim de tarde: cruzeiro guiado no Sena com o Bateau Mouche <span class="tag-q">cotado</span></li></ul></div></div>
+<div class="dayrow"><div class="daynum"><div class="d">30</div><div class="m">Dez</div><div class="w">quarta</div></div><div class="daybody"><span class="city">Paris</span><h4>Louvre e Paris clássica</h4><ul><li>Manhã no Museu do Louvre <span class="tag-q">cotado</span></li><li>Tarde na Bourse de Commerce · Coleção Pinault, a poucos minutos a pé do Louvre <span class="tag-q">cotado</span></li><li>Fim do dia: topo da Torre Eiffel, de elevador, com a cidade iluminada <span class="tag-q">cotado</span></li></ul></div></div>
+<div class="dayrow"><div class="daynum"><div class="d">31</div><div class="m">Dez</div><div class="w">quinta</div></div><div class="daybody"><span class="city">Paris</span><h4>Orsay, Opéra e réveillon</h4><ul><li>Manhã no Musée d'Orsay <span class="tag-q">cotado</span></li><li>Tarde na Opéra Garnier <span class="tag-q">cotado</span></li><li>Noite de réveillon <span class="tag-s">sugestão</span></li></ul></div></div>
+<div class="dayrow"><div class="daynum"><div class="d">01</div><div class="m">Jan</div><div class="w">sexta</div></div><div class="daybody"><span class="city">Marne-la-Vallée</span><h4>Ano-novo na Disney</h4><ul><li>Disneyland Paris · 2 parques no mesmo dia <span class="tag-q">cotado</span></li><li>Os parques abrem no feriado; boa parte dos museus de Paris fecha em 1º de janeiro</li></ul></div></div>
+<div class="dayrow"><div class="daynum"><div class="d">02</div><div class="m">Jan</div><div class="w">sábado</div></div><div class="daybody"><span class="city">Versalhes</span><h4>Palácio de Versalhes</h4><ul><li>Palácio e jardins (opção 1) ou visita guiada sem fila (opção 2) <span class="tag-q">cotado</span></li><li>Fim de tarde: Notre-Dame, com horário reservado <span class="tag-q">cotado</span></li></ul></div></div>
+<div class="dayrow"><div class="daynum"><div class="d">03</div><div class="m">Jan</div><div class="w">domingo</div></div><div class="daybody"><span class="city">Paris</span><h4>Montmartre e partida</h4><ul><li>Manhã na Basílica de Sacré-Cœur e em Montmartre <span class="tag-q">cotado</span></li><li>Saída para o aeroporto <span class="tag-s">sugestão</span></li></ul></div></div>
+</section>
+<section class="section sh">
+<span class="eyebrow">Investimento</span>
+<h2>Resumo de valores</h2>
+<div class="accent-line"></div>
+<p class="note" style="margin-top:16px">*Valores finais em reais, <b>por pessoa</b>, com pagamento em até <b>3x</b>. Hospedagem e aéreo estão na cotação da viagem. Nada reservado, apenas cotado.</p>
+<div class="tbl-wrap"><table>
+<tr class="head-row"><td>Passeio</td><td class="v">Por pessoa</td><td class="v">Em até 3x</td></tr>
+<tr class="sec-row"><td colspan="3">Museus e monumentos</td></tr>
+<tr><td><b>Museu do Louvre</b><span class="sub">Entrada para o museu</span></td><td class="v">R$ 345</td><td class="v">3x de R$ 115</td></tr>
+<tr><td><b>Musée d'Orsay</b><span class="sub">Entrada para o museu</span></td><td class="v">R$ 126</td><td class="v">3x de R$ 42</td></tr>
+<tr><td><b>Bourse de Commerce</b><span class="sub">Coleção Pinault · bilhete de 1 dia</span></td><td class="v">R$ 177</td><td class="v">3x de R$ 59</td></tr>
+<tr><td><b>Opéra Garnier</b><span class="sub">Entrada para visitação</span></td><td class="v">R$ 189</td><td class="v">3x de R$ 63</td></tr>
+<tr><td><b>Torre Eiffel</b><span class="sub">Topo da torre com elevador</span></td><td class="v">R$ 288</td><td class="v">3x de R$ 96</td></tr>
+<tr class="sec-row"><td colspan="3">Fora do centro</td></tr>
+<tr><td><b>Palácio de Versalhes</b><span class="sub">Opção 1 · Palácio e jardins · escolher 1 opção</span></td><td class="v">R$ 180</td><td class="v">3x de R$ 60</td></tr>
+<tr><td><b>Palácio de Versalhes</b><span class="sub">Opção 2 · Visita guiada sem fila · escolher 1 opção</span></td><td class="v">R$ 560</td><td class="v">3x de R$ 186,67</td></tr>
+<tr><td><b>Disneyland Paris</b><span class="sub">Ingresso 1 dia · 2 parques</span></td><td class="v">R$ 1.104</td><td class="v">3x de R$ 368</td></tr>
+<tr class="sec-row"><td colspan="3">No Sena e nas igrejas</td></tr>
+<tr><td><b>Bateau Mouche</b><span class="sub">Cruzeiro guiado no Sena</span></td><td class="v">R$ 142</td><td class="v">3x de R$ 47,33</td></tr>
+<tr><td><b>Catedral de Notre-Dame</b><span class="sub">Visita · precisa de reserva</span></td><td class="v">Gratuito</td><td class="v">—</td></tr>
+<tr><td><b>Basílica de Sacré-Cœur</b><span class="sub">Visita · gratuita</span></td><td class="v">Gratuito</td><td class="v">—</td></tr>
+</table></div>
+<div class="flval"><span class="lbl">Todos os passeios · por pessoa</span><div class="amt"><div class="t">R$ 2.551 – 2.931</div><div class="p">em até 3x de R$ 850,33 a R$ 977</div></div></div>
+<p class="note"><b>Como é calculado:</b> Disneyland (R$ 1.104) + Versalhes (R$ 180 ou R$ 560) + Torre Eiffel (R$ 288) + Louvre (R$ 345) + Orsay (R$ 126) + Bourse de Commerce (R$ 177) + Opéra Garnier (R$ 189) + Bateau Mouche (R$ 142) = R$ 2.551 a R$ 2.931 por pessoa, em até 3x. Notre-Dame e Sacré-Cœur são gratuitos. O valor final depende da opção escolhida em Versalhes e de quais passeios vocês quiserem fazer; cada um pode ser contratado pelo valor da tabela.</p>
+<div class="pay">
+<div class="box">
+<h4>Condições de pagamento</h4>
+<p><b>Passeios e ingressos</b>: em até <b>3x</b></p>
+<p class="muted" style="margin-top:8px;font-size:.82rem">Os valores da tabela já são o preço final, por pessoa.</p>
+</div>
+<div class="box">
+<h4>Referência</h4>
+<p>Cotação emitida em 09/11/2026 · valores em <b>reais (BRL)</b>, por pessoa</p>
+</div>
+</div>
+<div class="obs">
+<h4>Não inclui</h4>
+<ul>
+<li>Hospedagem e aéreo (na cotação da viagem)</li>
+<li>Transporte até os passeios (Disneyland e Versalhes ficam fora de Paris) · refeições</li>
+<li>Gorjetas · despesas pessoais · passeios não listados · seguro viagem</li>
+</ul>
+<h4>Observações</h4>
+<ul>
+<li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
+<li>A confirmação está sujeita à disponibilidade no momento do pagamento; no réveillon os ingressos esgotam rápido.</li>
+<li>O Louvre e a Bourse de Commerce fecham às terças-feiras. Em 31/12 e 01/01 vários museus fecham ou mudam de horário; confirmamos na reserva.</li>
+<li>Notre-Dame e Sacré-Cœur são gratuitos; em Notre-Dame é preciso reservar o horário.</li>
+<li>Menores de idade podem ter entrada reduzida ou gratuita em alguns museus; confirmamos na reserva.</li>
+</ul>
+</div>
+</section>
+<footer class="footer">
+<img class="footlogo" src="img/logo-white.png" alt="Lusa Travel" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'">
+<div class="contact">
+atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>
+Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR
+</div>
+<div class="fnote">*Nada reservado, apenas cotado.</div>
+</footer>
+</div>
+</body>
+</html>
