@@ -604,3 +604,11 @@ Combinações: Econômica R$ 46.380,72 · Delta + Qatar exec + Ethiopian R$ 159.
 | 10/01 | Scoot TR 683 | Krabi (KBV) → Singapura (SIN) | 12h20 → 15h20, direto, 2h | 30 kg | R$ 4.823,89 (6x 803,98 / Pix 4.341,50) |
 
 Substitui o Scoot TR 659 Phuket → Singapura de 11/01 (R$ 3.229,02). Pendente: definir com a cliente como ficam Phi Phi e Phuket.
+
+### Novo trecho final (definido em 09/11)
+
+- **Krabi 03 → 10/01 (7 noites)**, depois voo direto Krabi → Singapura em 10/01 (Scoot TR 683, 12h20).
+- **Singapura 10 → 13/01 (3 noites)**, com a opção da noite de 13/01 (voo 03h15 do dia 14).
+- **Saem:** hotéis de Phi Phi e Phuket, barco Klong Jilad → Tonsai (R$ 613,45), speed boat Tonsai → Rassada (R$ 401,66), voo Scoot TR 659 Phuket → Singapura (R$ 3.229,02), traslados de Phuket (R$ 547,72) e traslado hotel → píer de Klong Jilad.
+- **Recotar:** Aonang Villa para 7 noites (03 → 10/01); Fullerton para 10 → 13/01 (+ noite de 13/01); traslado hotel em Ao Nang → aeroporto de Krabi em 10/01.
+- **Phi Phi (Maya Bay, Pileh, Viking):** vira bate-volta saindo de Ao Nang. O barco privativo de cauda longa saindo de Tonsai (R$ 969,61) não serve mais.
