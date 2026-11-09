@@ -645,3 +645,11 @@ Substitui o Scoot TR 659 Phuket → Singapura de 11/01 (R$ 3.229,02). Pendente: 
 | Aeroporto de Krabi → hotel (03/01) e hotel → aeroporto (10/01) | R$ 410,00 (6x 68,33 / Pix 369,00) |
 
 Substitui a estimativa anterior de Krabi (R$ 409,33, que era aeroporto → hotel e hotel → píer de Klong Jilad).
+
+### Safari Park Kanchanaburi (print da agente, ×1,15 ×1,12)
+
+| Passeio | Detalhes | Valor print | Valor final |
+|---|---|---|---|
+| Kanchanaburi: Ponte do Rio Kwai + Safari Park Open Zoo, saindo de Bangkok | Ponto de encontro: lobby do Adagio Bangkok (Sukhumvit 39, Phrom Phong), chegar 20 min antes; saída 08h00 em ponto; termina no ponto de encontro | R$ 2.260,00 | R$ 2.910,88 (6x 485,15 / Pix 2.619,79) |
+
+Pendente: definir a data (Bangkok 29 e 30/12 já ocupados), se é privativo, e preço/regras para o bebê no parque.
