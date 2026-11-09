@@ -7,6 +7,8 @@ Fontes (enviadas em 03/11/2026):
 - fonte/hotel-10jan-email.png: hotel de 10–11/01 (nome e cidade não vêm no e-mail). Cotação do grupo de
   11 hóspedes, 5 quartos, € 633,86 (taxa de turismo incluída); entra completa, a pedido da agência.
 - fonte/carro.png: Europcar Peugeot 5008 (7 lugares), retirada em Lyon e devolução no aeroporto CDG.
+- fonte/carro-vito.png (09/11/2026): Mercedes-Benz Vito Tourer (9 lugares, 4 malas, automático), mesmo trajeto e datas,
+  R$ 4.660,56. Entra como 2ª opção de carro (escolher 1). Carro parcelável em até 10x (informado pela agência).
 CSS: style.part.html = <style> do template oficial; as regras não usadas são removidas no build.
 Fotos: Tripadvisor (fonte/cand2.json), em fotos.json. Ordem (regra): fachada, quarto, banheiro,
 café da manhã, livre, livre.
@@ -67,6 +69,8 @@ CIDADES = [
             "do aeroporto. O carro é devolvido no próprio aeroporto."),
 ]
 CARRO = dict(valor="4.818,77", usd="895,72")
+VITO = dict(valor="4.660,56")
+CARRO_PARC = 10  # carro em até 10x (agência, 09/11/2026)
 EURO = 6.45  # câmbio informado pela agência em 03/11/2026
 
 
@@ -93,7 +97,7 @@ def row(h):
 
 
 faixas = [(min(num(h["valor"]) for h in c["hoteis"]), max(num(h["valor"]) for h in c["hoteis"])) for c in CIDADES]
-car = num(CARRO["valor"])
+cars = (num(CARRO["valor"]), num(VITO["valor"]))
 LYON["valor"] = brl(round(num(LYON["euros"]) * EURO, 2))
 lyon_lin = [(d, q, e, r, brl(round(q * num(e) * EURO, 2))) for d, q, e, r in LYON_QUARTOS]
 assert abs(sum(q * num(e) for _, q, e, _ in LYON_QUARTOS) - num(LYON["euros"])) < 0.005
@@ -102,8 +106,10 @@ LYON_FOTOS = [("img/hoteis/fort/%d.jpg" % k, a) for k, a in enumerate(
 lyon_gal = "".join(f'<img src="{u}" alt="{LYON["nome"]} · {a}" loading="lazy">' for u, a in LYON_FOTOS)
 lyon_lista = "".join(f'<li>{d} · {r} · € {e}{" cada" if q > 1 else ""} → <b>R$ {v}</b></li>' for d, q, e, r, v in lyon_lin)
 lyon_rows = "\n".join(f'      <tr><td><b>{d.split(" · ")[0]}</b><div class="rm">{q} × € {e} × 6,45</div></td><td>{" · ".join(d.split(" · ")[1:])} · {r}</td><td class="v">R$ {v}</td></tr>' for d, q, e, r, v in lyon_lin)
-fixo = car + num(LYON["valor"])
-TMIN, TMAX = sum(a for a, _ in faixas) + fixo, sum(b for _, b in faixas) + fixo
+fixo = num(LYON["valor"])
+TMIN = sum(a for a, _ in faixas) + fixo + min(cars)
+TMAX = sum(b for _, b in faixas) + fixo + max(cars)
+assert (brl(TMIN), brl(TMAX)) == ("18.930,96", "33.634,17"), (brl(TMIN), brl(TMAX))
 
 hoteis_html = "\n".join(
     f'    <div class="city-block">\n      <div class="city-head"><h3>{c["nome"]}</h3><span class="dates">{c["datas"]}</span></div>\n'
@@ -121,7 +127,7 @@ chips = "\n      ".join(CHIP.format(**c) for c in [
     dict(svg='<path d="M21 12.8A9 9 0 1111.2 3"/><path d="M21 3v5h-5"/>', n="6", t="Noites"),
     dict(svg='<circle cx="9" cy="7" r="3"/><circle cx="16" cy="8" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 20c0-2 .8-3.4 2-4"/>', n="5", t="Viajantes"),
     dict(svg='<path d="M3 18v-6a2 2 0 012-2h14a2 2 0 012 2v6M3 18h18M5 10V7a2 2 0 012-2h10a2 2 0 012 2v3"/>', n="2", t="Quartos · duplo + triplo"),
-    dict(svg='<path d="M5 17h14M3 17v-4l2-5h14l2 5v4"/><circle cx="7.5" cy="17" r="1.8"/><circle cx="16.5" cy="17" r="1.8"/>', n="7", t="Lugares no carro"),
+    dict(svg='<path d="M5 17h14M3 17v-4l2-5h14l2 5v4"/><circle cx="7.5" cy="17" r="1.8"/><circle cx="16.5" cy="17" r="1.8"/>', n="2", t="Opções de carro"),
 ])
 
 html = f"""<!DOCTYPE html>
@@ -157,7 +163,7 @@ html = f"""<!DOCTYPE html>
     <div class="hero-info">
       <div>
         <div class="lbl">Detalhes da viagem</div>
-        <p>5 viajantes · 2 quartos (1 duplo + 1 triplo) · 6 noites · carro de 7 lugares</p>
+        <p>5 viajantes · 2 quartos (1 duplo + 1 triplo) · 6 noites · carro de 7 ou 9 lugares</p>
         <p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>03/11/2026</b> · valores em <b>reais (BRL)</b> · Euro: <b>EUR 1 = R$ 6,45</b></p>
       </div>
       <div class="r">
@@ -192,10 +198,10 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Transporte</span>
     <h2>Carro</h2>
     <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">Retirada em Lyon em <b>11/01</b> e devolução no aeroporto Charles de Gaulle em <b>16/01</b>. Valor em <b>BRL</b>, total da locação. Parcelável em <b>até 5x</b>.</p>
+    <p class="note" style="margin-top:16px">Retirada em Lyon em <b>11/01</b> e devolução no aeroporto Charles de Gaulle em <b>16/01</b>. Valor em <b>BRL</b>, total da locação. <b>Escolher 1 opção.</b> Parcelável em <b>até {CARRO_PARC}x</b>.</p>
     <div class="svc">
       <div class="ic">{CAR}</div>
-      <div><div class="t">Europcar · Peugeot 5008 ou similar · 7 lugares (5+2)</div>
+      <div><div class="t">Opção 1 · Europcar · Peugeot 5008 ou similar · 7 lugares (5+2)</div>
         <div class="d">
           <ul class="incl">
             <li>Câmbio <b>automático</b>, ar-condicionado, 5 portas · categoria Standard (SVAR)</li>
@@ -206,7 +212,20 @@ html = f"""<!DOCTYPE html>
           <div class="fine">Caução de <b>€ 800</b> (cerca de R$ 5.160,00 a R$ 6,45) bloqueada no cartão de crédito na retirada e liberada na devolução. Por ser devolução em outra cidade (one way), a locadora pode cobrar taxa adicional; confirmamos antes da reserva. Distâncias aproximadas: Lyon → Beaune 2h, Beaune → Reims 3h30, Reims → aeroporto CDG 1h45.</div>
         </div>
       </div>
-      <div class="dt">R$ {CARRO["valor"]}<br><span style="font-weight:500;font-size:.74rem">USD {CARRO["usd"]}</span></div>
+      <div class="dt">R$ {CARRO["valor"]}<br><span style="font-weight:500;font-size:.74rem">USD {CARRO["usd"]}</span><br><span style="font-weight:500;font-size:.74rem">ou {CARRO_PARC}x de R$ {brl(num(CARRO["valor"]) / CARRO_PARC)}</span></div>
+    </div>
+    <div class="svc">
+      <div class="ic">{CAR}</div>
+      <div><div class="t">Opção 2 · Mercedes-Benz Vito Tourer · 9 lugares</div>
+        <div class="d">
+          <ul class="incl">
+            <li>Capacidade para <b>9 pessoas</b> · bagageiro para <b>4 malas</b> · câmbio <b>automático</b></li>
+            <li>Retirada em <b>Lyon</b> em <b>11/01/2027</b> · devolução no <b>aeroporto Paris Charles de Gaulle</b> em <b>16/01/2027</b> · 5 diárias</li>
+          </ul>
+          <div class="fine">Bagageiro para 4 malas grandes: com 5 viajantes, conferir a bagagem antes de escolher. Caução, seguros e taxa de devolução em outra cidade (one way) confirmados com a locadora antes da reserva.</div>
+        </div>
+      </div>
+      <div class="dt">R$ {VITO["valor"]}<br><span style="font-weight:500;font-size:.74rem">ou {CARRO_PARC}x de R$ {brl(num(VITO["valor"]) / CARRO_PARC)}</span></div>
     </div>
   </section>
 
@@ -221,23 +240,24 @@ html = f"""<!DOCTYPE html>
       <tr class="sec-row"><td colspan="3">Chegada em Lyon · 10/01–11/01/2027 · 1 noite · grupo de 11 hóspedes · € {LYON["euros"]} = R$ {LYON["valor"]}</td></tr>
 {lyon_rows}
 {tabela}
-      <tr class="sec-row"><td colspan="3">Carro · Lyon → aeroporto CDG · 11/01–16/01/2027</td></tr>
+      <tr class="sec-row"><td colspan="3">Carro · Lyon → aeroporto CDG · 11/01–16/01/2027 · escolher 1</td></tr>
       <tr><td><b>Europcar · Peugeot 5008</b><div class="rm">7 lugares · automático</div></td><td>Retirada 11/01 em Lyon · devolução 16/01 no aeroporto CDG · proteção contra roubo e colisão · cancelamento grátis até 07/01/2027</td><td class="v">R$ {CARRO["valor"]}</td></tr>
+      <tr><td><b>Mercedes-Benz Vito Tourer</b><div class="rm">9 lugares · 4 malas · automático</div></td><td>Retirada 11/01 em Lyon · devolução 16/01 no aeroporto CDG</td><td class="v">R$ {VITO["valor"]}</td></tr>
     </table></div>
 
     <div class="flval"><span class="lbl">Total estimado (hospedagem + carro)</span><div class="amt"><div class="t">R$ {brl(TMIN)} – {brl(TMAX)}</div><div class="p">hospedagem em 4 cidades + carro</div></div></div>
-    <p class="note"><b>Como é calculado:</b> chegada em Lyon, grupo de 11 (R$ {LYON["valor"]}) + {calc} + carro (R$ {CARRO["valor"]}). O valor final depende dos hotéis escolhidos.</p>
+    <p class="note"><b>Como é calculado:</b> chegada em Lyon, grupo de 11 (R$ {LYON["valor"]}) + {calc} + carro (Vito R$ {VITO["valor"]} ou Peugeot R$ {CARRO["valor"]}). O valor final depende dos hotéis e do carro escolhidos.</p>
 
     <div class="pay">
       <div class="box">
         <h4>Condições de pagamento</h4>
         <p><b>Hotéis</b> — em até <b>10x</b></p>
-        <p><b>Carro</b> — em até <b>5x</b></p>
+        <p><b>Carro</b> — em até <b>{CARRO_PARC}x</b></p>
       </div>
       <div class="box">
         <h4>Referência</h4>
         <p>Euro: EUR 1 = R$ 6,45 · 03/11/2026</p>
-        <p>Carro: USD {CARRO["usd"]} = R$ {CARRO["valor"]} na cotação da locadora</p>
+        <p>Carro Peugeot: USD {CARRO["usd"]} = R$ {CARRO["valor"]} na cotação da locadora · Vito: R$ {VITO["valor"]}</p>
         <p class="muted" style="margin-top:8px;font-size:.82rem">O hotel de chegada é cobrado em euros e a caução do carro também; o valor em reais acompanha o câmbio da data do pagamento. Valores finais conforme disponibilidade na data de fechamento.</p>
       </div>
     </div>

@@ -7,7 +7,8 @@
 - `fonte/hotel-alfred-beaune.png`: 3ª opção em Beaune, Alfred Hotels Beaune La Madeleine, R$ 4.631,00 (fotos: Tripadvisor 33749895).
 - Hotel de 10/01 em Lyon: Hôtel Fort St Laurent – Handwritten Collection (confirmado pela agência). Fotos copiadas da cotação cotacao-egoroff-lyon (sha em fotos.json); publicar img/hoteis/fort/1-6.jpg por sha.
 - Euro: EUR 1 = R$ 6,45 (informado pela agência) → hotel de chegada € 633,86 = R$ 4.088,40 (quartos 1 e 5 da família: € 358,40 = R$ 2.311,68); caução do carro € 800 ≈ R$ 5.160,00.
-- Faixa: R$ 19.089,17 – 33.634,17 (chegada + Beaune + Reims + Paris CDG + carro).
+- `fonte/carro-vito.png` (09/11/2026): 2ª opção de carro, Mercedes-Benz Vito Tourer (9 lugares, 4 malas, automático), R$ 4.660,56. Carro em até 10x.
+- Faixa: R$ 18.930,96 – 33.634,17 (chegada + Beaune + Reims + Paris CDG + carro, Vito no mínimo e Peugeot no máximo).
 
 ## Gerar
 
