@@ -695,3 +695,5 @@ Atenção: o print cobra o bebê como participante. Com 2 participantes seria R$
 
 ### Doha 27/12: opção 3 — guia brasileira particular, 6 h
 US$ 600 × 5,72 = R$ 3.432,00 (sem acréscimo). Com +15% +12% seria R$ 4.420,42. Confirmar com a agente qual vai para a proposta.
+
+**Decisão:** guia brasileira entra como Opção 3 em Doha por R$ 3.432,00 (sem acréscimo).
