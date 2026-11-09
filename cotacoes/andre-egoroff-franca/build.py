@@ -8,7 +8,7 @@ Fontes (enviadas em 03/11/2026):
   11 hóspedes, 5 quartos, € 633,86 (taxa de turismo incluída); entra completa, a pedido da agência.
 - fonte/carro.png: Europcar Peugeot 5008 (7 lugares), retirada em Lyon e devolução no aeroporto CDG.
 - fonte/carro-vito.png (09/11/2026): Mercedes-Benz Vito Tourer (9 lugares, 4 malas, automático), mesmo trajeto e datas,
-  R$ 4.660,56. Entra como 2ª opção de carro (escolher 1). Carro parcelável em até 10x (informado pela agência).
+  R$ 4.660,56, arredondado para R$ 4.661,00 a pedido da agência. Entra como 2ª opção de carro (escolher 1). Carro parcelável em até 10x (informado pela agência).
 CSS: style.part.html = <style> do template oficial; as regras não usadas são removidas no build.
 Fotos: Tripadvisor (fonte/cand2.json), em fotos.json. Ordem (regra): fachada, quarto, banheiro,
 café da manhã, livre, livre.
@@ -69,7 +69,7 @@ CIDADES = [
             "do aeroporto. O carro é devolvido no próprio aeroporto."),
 ]
 CARRO = dict(valor="4.818,77", usd="895,72")
-VITO = dict(valor="4.660,56")
+VITO = dict(valor="4.661,00")
 CARRO_PARC = 10  # carro em até 10x (agência, 09/11/2026)
 EURO = 6.45  # câmbio informado pela agência em 03/11/2026
 
@@ -109,7 +109,7 @@ lyon_rows = "\n".join(f'      <tr><td><b>{d.split(" · ")[0]}</b><div class="rm"
 fixo = num(LYON["valor"])
 TMIN = sum(a for a, _ in faixas) + fixo + min(cars)
 TMAX = sum(b for _, b in faixas) + fixo + max(cars)
-assert (brl(TMIN), brl(TMAX)) == ("18.930,96", "33.634,17"), (brl(TMIN), brl(TMAX))
+assert (brl(TMIN), brl(TMAX)) == ("18.931,40", "33.634,17"), (brl(TMIN), brl(TMAX))
 
 hoteis_html = "\n".join(
     f'    <div class="city-block">\n      <div class="city-head"><h3>{c["nome"]}</h3><span class="dates">{c["datas"]}</span></div>\n'
