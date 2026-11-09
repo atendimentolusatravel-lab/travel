@@ -689,3 +689,4 @@ ATENÇÃO: sai de Phuket (píer de Chalong), não de Krabi. Saída ~07h, ~10 h d
 
 Atenção: o print cobra o bebê como participante. Com 2 participantes seria R$ 2.422,84 → R$ 3.120,62 final. Conferir se bebê de colo pode ir sem pagar e se a taxa do parque (Maya Bay) está inclusa.
 **Decisão da agente:** mergulho de Racha Yai/Noi (sai de Phuket) descartado. Buscar batismo de mergulho saindo de Ao Nang/Krabi.
+**Phi Phi — confirmado com a agente:** o valor é pelo barco (tour), não por pessoa. Final R$ 4.680,94 (6x 780,16 / Pix 4.212,85). Data: **08/01**. A lancha às ilhas Hong (R$ 3.284,40) fica em **09/01**.
