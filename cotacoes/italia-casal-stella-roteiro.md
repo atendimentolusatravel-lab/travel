@@ -4,20 +4,20 @@ Rascunho interno, sem valores e sem disponibilidade verificada.
 
 | Cidade | Noites | Hotéis em estudo |
 |---|---|---|
-| Milão | 17–18/11 (1) | Max Brown Hotel Missori · Hotel Brunelleschi |
+| Milão (só pernoite) | 17–18/11 (1) | Max Brown Hotel Missori · Hotel Brunelleschi |
 | Lago di Como | 18–21/11 (3) | Hilton Lake Como · Albergo Terminus |
 | Florença | 21–23/11 (2) | Hotel Kraft · Mercure Firenze Centro |
 | Roma | 23–26/11 (3) | 9Hotel Cesari · Hotel Raffaello (Best Western) |
 
-## Ter 17/11 — Chegada em Milão
+## Ter 17/11 — Chegada em Milão (só pernoite)
 - Chegada do voo (GRU/VCP, executiva) e transfer ao hotel.
+- Eles já conhecem Milão: sem passeios. Só descanso, jantar leve e uma noite de sono depois do voo.
 - Check-in costuma ser a partir das 14h; pedir early check-in ou guarda-malas.
-- Tarde leve: Duomo, Galleria Vittorio Emanuele II, jantar tranquilo.
 
-## Qua 18/11 — Milão (1 dia) → Lago di Como
-- Manhã: Castello Sforzesco e Quadrilátero da Moda. Última Ceia (Da Vinci) só se houver ingresso; esgota com semanas de antecedência.
-- Início da tarde: trem Milão Centrale → Como San Giovanni (~40 min) e transfer ao hotel.
-- Fim de tarde: caminhada na orla de Como e funicular até Brunate para ver o lago.
+## Qua 18/11 — Milão → Lago di Como
+- Manhã: café e saída tranquila (sem passeio em Milão).
+- Trem Milão Centrale → Como San Giovanni (~40 min) e transfer ao hotel; deixar as malas se o quarto não estiver pronto.
+- Tarde: caminhada na orla de Como, Duomo de Como e funicular até Brunate para ver o lago ao pôr do sol.
 
 ## Qui 19/11 — Lago di Como: dia do carro de luxo
 - Aluguel do carro esportivo (Lamborghini ou similar) por um dia, retirando em Como ou Milão (a confirmar com fornecedor).
