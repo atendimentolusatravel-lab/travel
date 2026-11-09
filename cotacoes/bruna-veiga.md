@@ -631,3 +631,9 @@ Substitui o Scoot TR 659 Phuket → Singapura de 11/01 (R$ 3.229,02). Pendente: 
 | 08/01 | Livre (mergulho ou Phi Phi) |
 | 09/01 | Livre (mergulho ou Phi Phi) |
 | 10/01 | Traslado ao aeroporto; voo 12h20 para Singapura |
+
+### Carro para o réveillon no CAD (31/12)
+
+| Item | Valor base | Valor final |
+|---|---|---|
+| Motorista particular à disposição por 8 h (ida e volta ao CAD, com espera) | R$ 1.500,00 | R$ 1.932,00 (6x 322,00 / Pix 1.738,80) |
