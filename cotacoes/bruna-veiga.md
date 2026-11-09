@@ -653,3 +653,5 @@ Substitui a estimativa anterior de Krabi (R$ 409,33, que era aeroporto → hotel
 | Kanchanaburi: Ponte do Rio Kwai + Safari Park Open Zoo, saindo de Bangkok | Ponto de encontro: lobby do Adagio Bangkok (Sukhumvit 39, Phrom Phong), chegar 20 min antes; saída 08h00 em ponto; termina no ponto de encontro | R$ 2.260,00 | R$ 2.910,88 (6x 485,15 / Pix 2.619,79) |
 
 Pendente: definir a data (Bangkok 29 e 30/12 já ocupados), se é privativo, e preço/regras para o bebê no parque.
+
+**Safari Kanchanaburi — confirmado com a agente:** passeio em grupo, bebê incluso no valor, cerca de 7 h, saída 08h00 (volta ao Adagio por volta das 15h). Fica como **alternativa ao Grande Palácio no dia 30/12**, com os dois valores na proposta para a cliente escolher: Grande Palácio R$ 935,47 ou Safari R$ 2.910,88. O tuk-tuk das 17h30 cabe nas duas opções. No total da proposta entra o Grande Palácio; se ela escolher o safari, soma R$ 1.975,41.
