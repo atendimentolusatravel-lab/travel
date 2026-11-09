@@ -613,3 +613,21 @@ Substitui o Scoot TR 659 Phuket → Singapura de 11/01 (R$ 3.229,02). Pendente: 
 - **Saem:** hotéis de Phi Phi e Phuket, barco Klong Jilad → Tonsai (R$ 613,45), speed boat Tonsai → Rassada (R$ 401,66), voo Scoot TR 659 Phuket → Singapura (R$ 3.229,02), traslados de Phuket (R$ 547,72) e traslado hotel → píer de Klong Jilad.
 - **Recotar:** Aonang Villa para 7 noites (03 → 10/01); Fullerton para 10 → 13/01 (+ noite de 13/01); traslado hotel em Ao Nang → aeroporto de Krabi em 10/01.
 - **Phi Phi (Maya Bay, Pileh, Viking):** vira bate-volta saindo de Ao Nang. O barco privativo de cauda longa saindo de Tonsai (R$ 969,61) não serve mais.
+
+### Observações para a proposta (09/11)
+
+- **Ceia de Natal (24/12):** "A haver". Tavern on the Green ou The Russian Tea Room; valor entra depois.
+- **The Grotto (Rayavadee, Phra Nang):** aceita hóspedes de fora (confirmado pela agente). Almoço em 07/01. Reserva **pendente**, a fazer assim que tudo estiver fechado.
+
+### Krabi dia a dia (03 → 10/01)
+
+| Data | Programa |
+|---|---|
+| 03/01 | Chegada 19h05, traslado ao hotel |
+| 04/01 | Descanso |
+| 05/01 | 4 Ilhas, barco de cauda longa particular, 12h30 |
+| 06/01 | Descanso; fotógrafo na praia no fim da tarde |
+| 07/01 | Railay e Phra Nang; almoço no The Grotto (reserva pendente). Opcional: caiaque com plâncton às 17h |
+| 08/01 | Livre (mergulho ou Phi Phi) |
+| 09/01 | Livre (mergulho ou Phi Phi) |
+| 10/01 | Traslado ao aeroporto; voo 12h20 para Singapura |
