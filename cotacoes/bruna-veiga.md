@@ -664,3 +664,11 @@ Pendente: definir a data (Bangkok 29 e 30/12 já ocupados), se é privativo, e p
 
 Atenção: roteiro igual ao da "4 Ilhas" de 05/01 (Hong, Lagoa Hong, Lao Lading, Pakbia — R$ 1.509,48). Definir se substitui ou se fica como alternativa.
 **Decisão da agente:** manter o passeio atual de 05/01 (R$ 1.509,48). O barco particular a Lao Lading e Hong (R$ 4.147,36) fica descartado.
+
+### Krabi: passeio de lancha às ilhas Hong com almoço e snorkel (GetYourGuide t1267851)
+
+| Valor print | Valor final |
+|---|---|
+| R$ 2.550,00 | R$ 3.284,40 (6x 547,40 / Pix 2.955,96) |
+
+Data a definir (08 ou 09/01). Atenção: também vai às ilhas Hong, como o passeio de 05/01.
