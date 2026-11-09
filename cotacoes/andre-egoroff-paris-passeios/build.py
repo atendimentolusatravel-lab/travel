@@ -17,12 +17,17 @@ CSS = (ROOT / "style.part.html").read_text().replace(
     "td .sub{display:block;font-size:.74rem;color:var(--muted);font-weight:400}\n"
     ".svc .dt .eur{display:block;color:var(--green);font-size:1.05rem}\n"
     ".svc .dt .brl{display:block;font-weight:500;font-size:.74rem;color:var(--muted)}\n"
+    ".credit{font-size:.7rem;opacity:.6;margin-top:8px}\n"
     ".svc .d .quando{display:block;margin-top:6px;color:var(--green-dark);font-weight:600;font-size:.8rem}\n</style>")
 exec((ROOT / "prune.part.py").read_text())
 
 PARC = 3  # passeios em até 3x
 EMISSAO = "09/11/2026"
-CAPA = dict(url="img/capa.jpg", alt="Paris", credito="")  # foto a ser enviada pela agência
+CAPA = dict(  # Wikimedia Commons "La Tour Eiffel vue de la Tour Saint-Jacques, Paris août 2014 (2).jpg", servida pelo jsDelivr fixado no commit f0bd3b4
+    url="https://cdn.jsdelivr.net/gh/atendimentolusatravel-lab/travel@f0bd3b4a1276181d7de81a5723f6d7f58189b516/cotacoes/andre-egoroff-paris-passeios/src/img/capa.jpg",
+    local="img/capa.jpg",
+    alt="Paris vista do alto, com a Torre Eiffel, o rio Sena e o Musée d'Orsay",
+    credito="Foto da capa: Yann Caradec, CC BY-SA 2.0, via Wikimedia Commons")
 
 
 def brl(x, cents=True):
@@ -194,7 +199,7 @@ html = f"""<!DOCTYPE html>
 <div class="accent-line"></div>
 <p class="hero-sub"><b>André Egoroff e família</b> · passeios e ingressos no réveillon — <b>29 de dezembro de 2026 a 03 de janeiro de 2027</b></p>
 <div class="hero-img">
-<img src="{CAPA["url"]}" alt="{CAPA["alt"]}" onerror="this.style.display='none'">
+<img src="{CAPA["url"]}" alt="{CAPA["alt"]}" style="object-position:30% 15%" onerror="this.style.display='none'">
 <div class="cap">
 <div class="k">Passeios e ingressos</div>
 <div class="t">Do Louvre a Versalhes, da Torre Eiffel à Disney</div>
@@ -273,6 +278,7 @@ atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>
 Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR
 </div>
 <div class="fnote">*Nada reservado, apenas cotado.</div>
+<div class="credit">{CAPA["credito"]}</div>
 </footer>
 </div>
 </body>
