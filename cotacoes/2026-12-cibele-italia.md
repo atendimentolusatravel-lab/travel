@@ -1,19 +1,19 @@
 # Cotação — Cibele e marido · Itália · Dezembro/2026
 
-> Status: **briefing registrado — ainda não cotado**
+> Status: **briefing registrado e datas/orçamento confirmados — ainda não cotado**
 > Fonte: observações do CRM (SS-Comercial em 04/11/2026; Maria Victoria em 05/11/2026)
 
 ## Viajantes
 - Cibele + marido (casal, 2 adultos)
 - Marido tem **cidadania italiana** (tirou recentemente)
-- **Não conhecem a Itália**
+- **Primeira vez na Itália** (confirmado em 10/11)
 - Ambos trabalham muito, com **cansaço mental**
 
 ## Datas
 - **Ida:** 12/12/2026 (sábado)
 - **Volta:** 23/12/2026 — precisam estar em casa **no máximo na manhã de 24/12**
 - 10 dias de férias, **sem flexibilidade de datas**
-- ⚠️ Divergência: a primeira anotação (04/11, SS-Comercial) dizia **14/12 a 23/12**. A anotação mais recente (05/11) fixa **12/12**. Confirmar com a cliente antes de cotar.
+- ✅ Confirmado (10/11): ida em **12/12** (a anotação de 04/11 com 14/12 está superada)
 
 ## Perfil e objetivo da viagem
 - Viagem para **descansar** e **romântica**, "como se fosse uma lua de mel" / viagem de conexão do casal
@@ -47,11 +47,12 @@
 - Programações românticas / de conexão do casal
 
 ## Orçamento
-- **~R$ 30.000** (Cibele consultou o marido)
-- ⚠️ Confirmar: valor **total para o casal** e se **inclui o aéreo**
+- **~R$ 30.000 total, aéreo incluído** (confirmado em 10/11)
+- Esse valor tem que cobrir: aéreo SSA/GRU ⇄ Itália para 2 em alta temporada + ~11 noites de hotel com café + trens + passeios/experiências
+- Implicação: o aéreo é a maior variável — fechar o voo primeiro e montar hotéis/experiências com o saldo; "café com vista" é o primeiro item a sacrificar
 
-## Pontos a confirmar antes de cotar
-1. Data de ida: 12/12 ou 14/12?
-2. R$ 30 mil é total do casal, com aéreo incluído?
-3. Classe do aéreo (econômica presumida) e bagagem despachada.
-4. Treviso: alguma ligação familiar específica (comune de origem dos antepassados) que justifique visita mais pessoal?
+## Pontos a confirmar
+- ~~Data de ida: 12/12 ou 14/12?~~ → **12/12**
+- ~~R$ 30 mil é total, com aéreo?~~ → **Sim, total com aéreo**
+- Classe do aéreo (econômica presumida) e bagagem despachada.
+- Treviso: alguma ligação familiar específica (comune de origem dos antepassados) que justifique visita mais pessoal?
