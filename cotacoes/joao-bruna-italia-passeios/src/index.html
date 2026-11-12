@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Lusa Travel · Itália — João e Bruna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#404626; --green-dark:#363b1f; --green-soft:#5a6238;--sage:#d9ead3; --sage-head:#c6d8b0;--ink:#333131; --muted:#6f6f68; --line:#e7e7e0; --bg:#ffffff; --cream:#faf9f5;--terra:#b4622f;--shadow:0 10px 30px rgba(64,70,38,.08);}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{line-height:1.15}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:60px 56px}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+.muted{color:var(--muted)}
+.brandbar{display:flex;flex-direction:column;align-items:center;gap:8px;padding:38px 0 6px}
+.brandbar .brandlogo{width:210px;height:auto;display:block}
+.footlogo{width:190px;height:auto;display:block;margin-bottom:14px}
+.hero{padding:56px 56px 40px}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
+.hero-img{margin:34px 0 0;height:330px;border-radius:14px;overflow:hidden;position:relative;display:flex;align-items:flex-end;box-shadow:var(--shadow);background:radial-gradient(120% 130% at 12% 8%, rgba(70,120,150,.55), rgba(40,80,110,.15) 42%, transparent 60%),radial-gradient(120% 130% at 92% 96%, rgba(150,170,120,.55), rgba(90,110,70,.2) 44%, transparent 64%),linear-gradient(120deg, #3a5f80 0%, #5a7d92 30%, #8aa0a2 55%, #b0a878 80%, #7a6a3a 100%);}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-img::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to top, rgba(20,26,32,.6), rgba(20,26,32,.05) 55%, transparent)}
+.hero-img .cap{position:relative;z-index:2;padding:22px 26px;color:#fff}
+.hero-img .cap .k{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;opacity:.92}
+.hero-img .cap .t{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:600;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
+.hero-info .r{text-align:right}
+.hero-info p{font-size:.95rem}
+.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
+.chip b{font-size:1.15rem;font-weight:700}
+.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
+.chip .ic svg{width:18px;height:18px}
+.svc{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:start;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-top:14px;background:#fff;box-shadow:var(--shadow)}
+.svc .ic{width:52px;height:52px;background:var(--green);border-radius:12px;display:grid;place-items:center;color:#fff;flex:none}
+.svc .ic svg{width:24px;height:24px}
+.svc .t{font-weight:600;font-size:1.02rem}
+.svc .d{color:var(--muted);font-size:.86rem;margin-top:2px}
+.svc .dt{text-align:right;font-weight:700;font-size:.9rem;color:var(--green-soft);white-space:nowrap}
+.svc .d .sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.12rem;font-weight:600;color:var(--green-dark);margin:6px 0 8px;line-height:1.3}
+.svc .d p{margin-bottom:8px;font-size:.86rem;line-height:1.6}
+.subh{font-size:1.15rem;font-weight:700;color:var(--green-dark);margin:30px 0 4px}
+.tbl-wrap{overflow-x:auto;margin-top:24px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:560px}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line)}
+.sec-row td{background:var(--sage);font-weight:700;text-align:center;letter-spacing:.04em;color:var(--green-dark)}
+.head-row td{background:#efeee7;font-weight:600;color:#4a4a44}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.pay h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
+.pay p{font-size:.9rem;margin-bottom:4px}
+.obs{margin-top:26px;font-size:.82rem;color:var(--muted)}
+.obs li{margin:6px 0 6px 18px}
+.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px}
+.flval{display:flex;justify-content:space-between;align-items:center;background:var(--green);color:#fff;border-radius:12px;padding:16px 24px;margin-top:16px;flex-wrap:wrap;gap:12px}
+.flval .lbl{font-weight:600;font-size:.9rem}
+.flval .amt{text-align:right}
+.flval .amt .t{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;line-height:1}
+.flval .amt .p{font-size:.74rem;opacity:.9;margin-top:3px}
+.footer{background:var(--green);color:#fff;padding:44px 56px}
+.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
+.footer .fnote{font-size:.8rem;opacity:.7;margin-top:16px}
+.sh .eyebrow{margin-bottom:10px;display:block}
+.brandtext{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:.3em;color:var(--green);text-transform:uppercase}
+.footer .brandtext{color:#fff;margin-bottom:14px}
+@media(max-width:720px){.section,.hero,.footer,.brandbar{padding-left:24px;padding-right:24px}.hero h1{font-size:2.2rem}.hero-info{grid-template-columns:1fr}.hero-info .r{text-align:left}.pay{grid-template-columns:1fr}.svc{grid-template-columns:1fr;text-align:left}.svc .dt{text-align:left}}
+.tnote{margin-top:10px;background:#fdf3ec;border:1px solid #f0dccd;border-left:3px solid var(--terra);border-radius:8px;padding:8px 12px;font-size:.8rem;color:#7a3f1c}
+td .sub{display:block;font-size:.74rem;color:var(--muted);font-weight:400}
+.svc .dt .eur{display:block;color:var(--green);font-size:1.05rem}
+.svc .dt .brl{display:block;font-weight:500;font-size:.74rem;color:var(--muted)}
+.credit{font-size:.7rem;opacity:.6;margin-top:8px}
+.st{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:10px;padding:2px 9px;margin-bottom:6px}
+.st.ok{color:#fff;background:var(--green)}
+.st.wait{color:var(--muted);background:#efeee7;border:1px solid var(--line)}
+.st.free{color:var(--green-dark);background:#eef2e6;border:1px solid #dde5cf}
+.base{border:1px dashed var(--line);border-radius:14px;padding:14px 22px;margin-top:14px;color:var(--muted);font-size:.88rem;background:#fff}
+td.wait{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="brandbar"><img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel — travel agency" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'"></div>
+<header class="hero">
+<div class="eyebrow">Cotação para sua viagem</div>
+<h1>ITÁLIA</h1>
+<div class="accent-line"></div>
+<p class="hero-sub"><b>João e Bruna</b> · ingressos dos passeios — <b>13 a 28 de abril de 2027</b></p>
+<div class="hero-img">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/1280px-Colosseo_2020.jpg" alt="O Coliseu, em Roma" style="object-position:50% 55%" onerror="this.style.display='none'">
+<div class="cap">
+<div class="k">Ingressos e passeios</div>
+<div class="t">De Florença a Milão, passando pelo Coliseu e pela Capela Sistina</div>
+</div>
+</div>
+<div class="hero-info">
+<div>
+<div class="lbl">Detalhes</div>
+<p>2 viajantes · Santa Margherita, Florença, Sorrento, Roma e Milão · 11 passeios, 2 com ingresso disponível agora</p>
+<p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>12/11/2026</b> · valores em reais, por pessoa · em até <b>3x</b> ou <b>7% de desconto no PIX</b></p>
+</div>
+<div class="r">
+<div class="lbl">Contato</div>
+<p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p>
+</div>
+</div>
+<div class="gloss">
+<div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>5</b>&nbsp;Cidades</div>
+<div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a2 2 0 002-2h14a2 2 0 002 2v2a2 2 0 000 4v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2a2 2 0 000-4V8z"/></svg></span><b>11</b>&nbsp;Passeios</div>
+<div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span><b>2</b>&nbsp;Disponíveis agora</div>
+<div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg></span><b>3x</b>&nbsp;ou 7% no PIX</div>
+</div>
+</header>
+<section class="section sh">
+<span class="eyebrow">Disponíveis agora</span>
+<h2>Ingressos à venda</h2>
+<div class="accent-line"></div>
+<p class="note" style="margin-top:16px">No momento, só estes dois ingressos estão disponíveis para compra. Os dois são em <b>Roma, de 22 a 25 de abril</b>. Valores por pessoa e para o casal, em até <b>3x</b> ou com <b>7% de desconto no PIX</b>.</p>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="9" rx="9" ry="4"/><path d="M3 9v7c0 2.2 4 4 9 4s9-1.8 9-4V9M7 12v6M12 13v7M17 12v6"/></svg></div><div><span class="st ok">Disponível para compra</span><div class="t">Coliseu, Fórum Romano e Monte Palatino</div><div class="d">O anfiteatro e o coração da Roma antiga, no mesmo ingresso.</div></div><div class="dt"><span class="eur">R$ 622 por pessoa</span><span class="brl">R$ 1.244 para o casal</span><span class="brl">até 3x · PIX R$ 1.156,92</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M4 10h16M12 3l8 5H4l8-5zM6 10v8M10 10v8M14 10v8M18 10v8"/></svg></div><div><span class="st ok">Disponível para compra</span><div class="t">Museus Vaticanos e Capela Sistina</div><div class="d">As coleções dos papas e o teto de Michelangelo na Capela Sistina.</div></div><div class="dt"><span class="eur">R$ 1.141 por pessoa</span><span class="brl">R$ 2.282 para o casal</span><span class="brl">até 3x · PIX R$ 2.122,26</span></div></div>
+</section>
+<section class="section sh" style="background:var(--cream)">
+<span class="eyebrow">Passeios · cidade a cidade</span>
+<h2>Todos os ingressos da viagem</h2>
+<div class="accent-line"></div>
+<p class="note" style="margin-top:16px">Os ingressos marcados como <b>em breve</b> ainda não estão à venda. Avisamos assim que abrirem.</p>
+<h3 class="subh">Santa Margherita Ligure · 13 a 16 de abril</h3>
+<div class="base">Sem ingressos cotados nesta etapa.</div>
+<h3 class="subh">Florença · 16 a 19 de abril</h3>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg></div><div><span class="st free">Gratuito</span><div class="t">The Mall Luxury Outlets</div><div class="d">Outlet de grifes nos arredores de Florença.<div class="tnote">Entrada gratuita.</div></div></div><div class="dt"><span class="eur">Gratuito</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M4 10h16M12 3l8 5H4l8-5zM6 10v8M10 10v8M14 10v8M18 10v8"/></svg></div><div><span class="st wait">Em breve</span><div class="t">Galleria degli Uffizi</div><div class="d">A grande coleção do Renascimento: Botticelli, Leonardo, Michelangelo e Rafael.</div></div><div class="dt"><span class="eur">R$ 234 por pessoa</span><span class="brl">R$ 468 para o casal</span><span class="brl">até 3x · PIX R$ 435,24</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16h20M4 16V9M20 16V9M4 9c2.5 3 13.5 3 16 0M8 16v-3M12 16v-2M16 16v-3"/></svg></div><div><span class="st wait">Em breve</span><div class="t">Corridoio Vasariano + Galleria degli Uffizi</div><div class="d">O corredor elevado dos Médici, sobre a Ponte Vecchio, que liga os Uffizi ao Palazzo Pitti, combinado com a entrada na Galleria degli Uffizi.<div class="tnote">Valor informado em euros: <b>€ 379</b>, já com a Galleria degli Uffizi. Substitui o ingresso simples dos Uffizi.</div></div></div><div class="dt"><span class="eur">€ 379</span><span class="brl">com a Galleria degli Uffizi</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20c3 0 5-2 5-5l2-2 3 3-2 2c0 3-2 5-5 5H4v-3z"/><path d="M13 11l7-7"/></svg></div><div><span class="st wait">Em breve</span><div class="t">Galleria dell'Accademia</div><div class="d">Onde está o Davi original de Michelangelo.</div></div><div class="dt"><span class="eur">R$ 194 por pessoa</span><span class="brl">R$ 388 para o casal</span><span class="brl">até 3x · PIX R$ 360,84</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M10 4h4M6 21V11l6-5 6 5v10M10 21v-5h4v5"/></svg></div><div><span class="st wait">Em breve</span><div class="t">Duomo · Santa Maria del Fiore</div><div class="d">A catedral de Florença e a cúpula de Brunelleschi.</div></div><div class="dt"><span class="eur">R$ 242 por pessoa</span><span class="brl">R$ 484 para o casal</span><span class="brl">até 3x · PIX R$ 450,12</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V9l3-2 3 2v12M15 21V9l3-2 3 2v12M9 13h6v8H9z"/></svg></div><div><span class="st wait">Em breve</span><div class="t">Palazzo Pitti e Jardim de Boboli</div><div class="d">O palácio dos Médici e seus jardins renascentistas.</div></div><div class="dt"><span class="eur">R$ 202 por pessoa</span><span class="brl">R$ 404 para o casal</span><span class="brl">até 3x · PIX R$ 375,72</span></div></div>
+<h3 class="subh">Sorrento · 19 a 22 de abril</h3>
+<div class="base">Sem ingressos cotados nesta etapa.</div>
+<h3 class="subh">Roma · 22 a 25 de abril</h3>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="9" rx="9" ry="4"/><path d="M3 9v7c0 2.2 4 4 9 4s9-1.8 9-4V9M7 12v6M12 13v7M17 12v6"/></svg></div><div><span class="st ok">Disponível para compra</span><div class="t">Coliseu, Fórum Romano e Monte Palatino</div><div class="d">O anfiteatro e o coração da Roma antiga, no mesmo ingresso.</div></div><div class="dt"><span class="eur">R$ 622 por pessoa</span><span class="brl">R$ 1.244 para o casal</span><span class="brl">até 3x · PIX R$ 1.156,92</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M10 4h4M6 21V11l6-5 6 5v10M10 21v-5h4v5"/></svg></div><div><span class="st wait">Em breve</span><div class="t">Panteão</div><div class="d">O templo romano mais bem conservado, com a cúpula aberta para o céu.</div></div><div class="dt"><span class="eur">R$ 57 por pessoa</span><span class="brl">R$ 114 para o casal</span><span class="brl">até 3x · PIX R$ 106,02</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M4 10h16M12 3l8 5H4l8-5zM6 10v8M10 10v8M14 10v8M18 10v8"/></svg></div><div><span class="st ok">Disponível para compra</span><div class="t">Museus Vaticanos e Capela Sistina</div><div class="d">As coleções dos papas e o teto de Michelangelo na Capela Sistina.</div></div><div class="dt"><span class="eur">R$ 1.141 por pessoa</span><span class="brl">R$ 2.282 para o casal</span><span class="brl">até 3x · PIX R$ 2.122,26</span></div></div>
+<h3 class="subh">Milão · 25 a 28 de abril</h3>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M10 4h4M6 21V11l6-5 6 5v10M10 21v-5h4v5"/></svg></div><div><span class="st wait">Em breve</span><div class="t">Duomo di Milano</div><div class="d">A catedral gótica de Milão.</div></div><div class="dt"><span class="eur">R$ 258 por pessoa</span><span class="brl">R$ 516 para o casal</span><span class="brl">até 3x · PIX R$ 479,88</span></div></div>
+<div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20c3 0 5-2 5-5l2-2 3 3-2 2c0 3-2 5-5 5H4v-3z"/><path d="M13 11l7-7"/></svg></div><div><span class="st wait">Em breve</span><div class="t">A Última Ceia · Santa Maria delle Grazie</div><div class="d">O afresco de Leonardo da Vinci, com visitas em horário marcado e grupos pequenos.<div class="tnote">Os ingressos da Última Ceia são <b>comprados com 3 meses de antecedência</b>, dependendo da disponibilidade.</div></div></div><div class="dt"><span class="eur">R$ 121 por pessoa</span><span class="brl">R$ 242 para o casal</span><span class="brl">até 3x · PIX R$ 225,06</span></div></div>
+</section>
+<section class="section sh">
+<span class="eyebrow">Investimento</span>
+<h2>Resumo de valores</h2>
+<div class="accent-line"></div>
+<p class="note" style="margin-top:16px">*Valores finais em reais, por pessoa e para o casal, em até <b>3x</b> ou com <b>7% de desconto no PIX</b>. Hospedagem, transporte e aéreo não estão nesta cotação. Nada reservado, apenas cotado.</p>
+<div class="tbl-wrap"><table>
+<tr class="head-row"><td>Passeio</td><td class="v">Por pessoa</td><td class="v">Casal · até 3x</td><td class="v">Casal · PIX 7% off</td></tr>
+<tr class="sec-row"><td colspan="4">Florença · 16 a 19 de abril</td></tr>
+<tr><td class="wait"><b>The Mall Luxury Outlets</b><span class="sub">Gratuito</span></td><td class="v">Gratuito</td><td class="v">—</td><td class="v">—</td></tr>
+<tr><td class="wait"><b>Galleria degli Uffizi</b><span class="sub">Em breve</span></td><td class="v">R$ 234</td><td class="v">R$ 468</td><td class="v">R$ 435,24</td></tr>
+<tr><td class="wait"><b>Corridoio Vasariano + Galleria degli Uffizi</b><span class="sub">Em breve</span></td><td class="v">€ 379 · com os Uffizi</td><td class="v">—</td><td class="v">—</td></tr>
+<tr><td class="wait"><b>Galleria dell'Accademia</b><span class="sub">Em breve</span></td><td class="v">R$ 194</td><td class="v">R$ 388</td><td class="v">R$ 360,84</td></tr>
+<tr><td class="wait"><b>Duomo · Santa Maria del Fiore</b><span class="sub">Em breve</span></td><td class="v">R$ 242</td><td class="v">R$ 484</td><td class="v">R$ 450,12</td></tr>
+<tr><td class="wait"><b>Palazzo Pitti e Jardim de Boboli</b><span class="sub">Em breve</span></td><td class="v">R$ 202</td><td class="v">R$ 404</td><td class="v">R$ 375,72</td></tr>
+<tr class="sec-row"><td colspan="4">Roma · 22 a 25 de abril</td></tr>
+<tr><td><b>Coliseu, Fórum Romano e Monte Palatino</b><span class="sub">Disponível para compra</span></td><td class="v">R$ 622</td><td class="v">R$ 1.244</td><td class="v">R$ 1.156,92</td></tr>
+<tr><td class="wait"><b>Panteão</b><span class="sub">Em breve</span></td><td class="v">R$ 57</td><td class="v">R$ 114</td><td class="v">R$ 106,02</td></tr>
+<tr><td><b>Museus Vaticanos e Capela Sistina</b><span class="sub">Disponível para compra</span></td><td class="v">R$ 1.141</td><td class="v">R$ 2.282</td><td class="v">R$ 2.122,26</td></tr>
+<tr class="sec-row"><td colspan="4">Milão · 25 a 28 de abril</td></tr>
+<tr><td class="wait"><b>Duomo di Milano</b><span class="sub">Em breve</span></td><td class="v">R$ 258</td><td class="v">R$ 516</td><td class="v">R$ 479,88</td></tr>
+<tr><td class="wait"><b>A Última Ceia · Santa Maria delle Grazie</b><span class="sub">Em breve</span></td><td class="v">R$ 121</td><td class="v">R$ 242</td><td class="v">R$ 225,06</td></tr>
+</table></div>
+<div class="flval"><span class="lbl">Disponíveis agora · Coliseu e Vaticano</span><div class="amt"><div class="t">R$ 3.526</div><div class="p">para o casal · em até 3x de R$ 1.175,33</div></div></div>
+<div class="flval" style="background:var(--green-soft)"><span class="lbl">No PIX · 7% de desconto</span><div class="amt"><div class="t">R$ 3.279,18</div><div class="p">para o casal · pagamento à vista</div></div></div>
+<p class="note"><b>Como é calculado:</b> Coliseu, Fórum Romano e Monte Palatino (R$ 622) + Museus Vaticanos e Capela Sistina (R$ 1.141) = R$ 1.763 por pessoa × 2 = R$ 3.526; no PIX, R$ 3.279,18. Com todos os passeios em reais da tabela, o programa completo fica em R$ 3.071 por pessoa (R$ 6.142 para o casal), sem o Corridoio Vasariano, cotado em euros.</p>
+<div class="pay">
+<div class="box">
+<h4>Condições de pagamento</h4>
+<p><b>Ingressos</b>: em até <b>3x</b></p>
+<p><b>PIX</b>: <b>7% de desconto</b></p>
+</div>
+<div class="box">
+<h4>Referência</h4>
+<p>Cotação emitida em 12/11/2026 · valores em <b>reais (BRL)</b>, por pessoa</p>
+<p class="muted" style="margin-top:8px;font-size:.82rem">Corridoio Vasariano informado em euros (€ 379, com a Galleria degli Uffizi).</p>
+</div>
+</div>
+<div class="obs">
+<h4>Não inclui</h4>
+<ul>
+<li>Hospedagem, transporte entre cidades e aéreo</li>
+<li>Transporte até os passeios · refeições · gorjetas · despesas pessoais · seguro viagem</li>
+</ul>
+<h4>Observações</h4>
+<ul>
+<li><b>A Última Ceia:</b> os ingressos são comprados com 3 meses de antecedência, dependendo da disponibilidade. As vagas são poucas e esgotam rápido.</li>
+<li>Por enquanto, só o Coliseu e os Museus Vaticanos estão à venda. Os demais ingressos abrem mais perto da data, e os valores podem mudar até a compra.</li>
+<li>Este documento não constitui confirmação ou reserva firme dos serviços descritos. A confirmação está sujeita à disponibilidade no momento do pagamento.</li>
+<li>Horários e dias de funcionamento confirmados na compra de cada ingresso.</li>
+</ul>
+</div>
+</section>
+<footer class="footer">
+<img class="footlogo" src="img/logo-white.png" alt="Lusa Travel" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'">
+<div class="contact">
+atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>
+Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR
+</div>
+<div class="fnote">*Nada reservado, apenas cotado.</div>
+<div class="credit">Foto da capa: FeaturedPics, CC BY-SA 4.0, via Wikimedia Commons</div>
+</footer>
+</div>
+</body>
+</html>
