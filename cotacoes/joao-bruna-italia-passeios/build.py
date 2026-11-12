@@ -2,7 +2,7 @@
 """Gera src/index.html — Itália · ingressos dos passeios · João e Bruna (13 a 28/04/2027).
 
 Fonte: fonte/passeios.png (tabela enviada pela agência em 12/11/2026: cidade, item, datas, valor).
-Valores: BRL por pessoa (como na tabela), exceto o Corridoio Vasariano, informado em euros (€ 379, com a Galleria degli Uffizi).
+Valores: BRL por pessoa. Corridoio Vasariano: R$ 379 com a Galleria degli Uffizi (a tabela dizia "euros"; a agência corrigiu para reais em 12/11/2026).
 Agência (12/11/2026): só Coliseu/Fórum/Palatino e Museus Vaticanos/Capela Sistina estão disponíveis para compra agora;
 ingressos da Última Ceia são comprados com 3 meses de antecedência, conforme disponibilidade; até 3x ou 7% de desconto no PIX.
 CSS: style.part.html (template oficial) com poda das regras não usadas (prune.part.py).
@@ -65,7 +65,7 @@ ITENS = [
     ("uffizi", "Florença", "Galleria degli Uffizi", "A grande coleção do Renascimento: Botticelli, Leonardo, Michelangelo e Rafael.", 234, MUSEU, WAIT, ""),
     ("vasariano", "Florença", "Corridoio Vasariano + Galleria degli Uffizi",
      "O corredor elevado dos Médici, sobre a Ponte Vecchio, que liga os Uffizi ao Palazzo Pitti, combinado com a entrada na Galleria degli Uffizi.",
-     None, PONTE, WAIT, "Valor informado em euros: <b>€ 379</b>, já com a Galleria degli Uffizi. Substitui o ingresso simples dos Uffizi."),
+     379, PONTE, WAIT, "Já inclui a Galleria degli Uffizi: <b>escolher este ou o ingresso simples dos Uffizi</b>."),
     ("accademia", "Florença", "Galleria dell'Accademia", "Onde está o Davi original de Michelangelo.", 194, PINCEL, WAIT, ""),
     ("duomo-fi", "Florença", "Duomo · Santa Maria del Fiore", "A catedral de Florença e a cúpula de Brunelleschi.", 242, IGREJA, WAIT, ""),
     ("pitti", "Florença", "Palazzo Pitti e Jardim de Boboli", "O palácio dos Médici e seus jardins renascentistas.", 202, PALACIO, WAIT, ""),
@@ -88,15 +88,16 @@ CIDADES = [
 
 AGORA = [i for i in ITENS if i[6] == OK]
 AG_PP = sum(i[4] for i in AGORA)
-TOTAL_PP = sum(i[4] for i in ITENS if i[4] is not None)
+TOTAL_MIN = sum(i[4] for i in ITENS if i[4] is not None and i[0] != "vasariano")
+TOTAL_MAX = TOTAL_MIN - I["uffizi"][4] + I["vasariano"][4]
 assert AG_PP == 1763, AG_PP
-assert TOTAL_PP == 3071, TOTAL_PP
+assert (TOTAL_MIN, TOTAL_MAX) == (3071, 3216), (TOTAL_MIN, TOTAL_MAX)
 STLBL = {OK: "Disponível para compra", WAIT: "Em breve", FREE: "Gratuito"}
 
 
 def valor(v, st):
     if v is None:
-        return '<span class="eur">€ 379</span><span class="brl">com a Galleria degli Uffizi</span>' if st == WAIT else '<span class="eur">Gratuito</span>'
+        return '<span class="eur">Gratuito</span>'
     return (f'<span class="eur">{rs(v)} por pessoa</span><span class="brl">{rs(v * PAX)} para o casal</span>'
             f'<span class="brl">até {PARC}x · PIX {rs(v * PAX * PIX)}</span>')
 
@@ -127,7 +128,7 @@ for cid, datas, ids in CIDADES:
         iid, _, nome, _, v, _, st, _ = I[x]
         cls = "" if st == OK else ' class="wait"'
         if v is None:
-            val = "€ 379 · com os Uffizi" if iid == "vasariano" else "Gratuito"
+            val = "Gratuito"
             tab += f'      <tr><td{cls}><b>{nome}</b><span class="sub">{STLBL[st]}</span></td><td class="v">{val}</td><td class="v">—</td><td class="v">—</td></tr>\n'
         else:
             tab += (f'      <tr><td{cls}><b>{nome}</b><span class="sub">{STLBL[st]}</span></td><td class="v">{rs(v)}</td>'
@@ -207,7 +208,7 @@ html = f"""<!DOCTYPE html>
 {tab}</table></div>
 <div class="flval"><span class="lbl">Disponíveis agora · Coliseu e Vaticano</span><div class="amt"><div class="t">{rs(AG_PP * PAX)}</div><div class="p">para o casal · em até {PARC}x de {rs(AG_PP * PAX / PARC)}</div></div></div>
 <div class="flval" style="background:var(--green-soft)"><span class="lbl">No PIX · 7% de desconto</span><div class="amt"><div class="t">{rs(AG_PP * PAX * PIX)}</div><div class="p">para o casal · pagamento à vista</div></div></div>
-<p class="note"><b>Como é calculado:</b> Coliseu, Fórum Romano e Monte Palatino ({rs(I["coliseu"][4])}) + Museus Vaticanos e Capela Sistina ({rs(I["vaticano"][4])}) = {rs(AG_PP)} por pessoa × {PAX} = {rs(AG_PP * PAX)}; no PIX, {rs(AG_PP * PAX * PIX)}. Com todos os passeios em reais da tabela, o programa completo fica em {rs(TOTAL_PP)} por pessoa ({rs(TOTAL_PP * PAX)} para o casal), sem o Corridoio Vasariano, cotado em euros.</p>
+<p class="note"><b>Como é calculado:</b> Coliseu, Fórum Romano e Monte Palatino ({rs(I["coliseu"][4])}) + Museus Vaticanos e Capela Sistina ({rs(I["vaticano"][4])}) = {rs(AG_PP)} por pessoa × {PAX} = {rs(AG_PP * PAX)}; no PIX, {rs(AG_PP * PAX * PIX)}. Com todos os passeios, o programa completo fica entre {rs(TOTAL_MIN)} e {rs(TOTAL_MAX)} por pessoa ({rs(TOTAL_MIN * PAX)} a {rs(TOTAL_MAX * PAX)} para o casal), conforme a escolha em Florença: Galleria degli Uffizi ({rs(I["uffizi"][4])}) ou Corridoio Vasariano com os Uffizi ({rs(I["vasariano"][4])}).</p>
 <div class="pay">
 <div class="box">
 <h4>Condições de pagamento</h4>
@@ -217,7 +218,6 @@ html = f"""<!DOCTYPE html>
 <div class="box">
 <h4>Referência</h4>
 <p>Cotação emitida em {EMISSAO} · valores em <b>reais (BRL)</b>, por pessoa</p>
-<p class="muted" style="margin-top:8px;font-size:.82rem">Corridoio Vasariano informado em euros (€ 379, com a Galleria degli Uffizi).</p>
 </div>
 </div>
 <div class="obs">
@@ -252,4 +252,4 @@ html = prune_css(html)
 html = "\n".join(l.strip() for l in html.split("\n") if l.strip()) + "\n"
 (ROOT / "src").mkdir(exist_ok=True)
 (ROOT / "src" / "index.html").write_text(html)
-print("ok", len(html.encode()), f"agora {rs(AG_PP)} pp · casal {rs(AG_PP * PAX)} · PIX {rs(AG_PP * PAX * PIX)} · completo {rs(TOTAL_PP)} pp")
+print("ok", len(html.encode()), f"agora {rs(AG_PP)} pp · casal {rs(AG_PP * PAX)} · PIX {rs(AG_PP * PAX * PIX)} · completo {rs(TOTAL_MIN)}–{rs(TOTAL_MAX)} pp")
