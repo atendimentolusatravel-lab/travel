@@ -15,6 +15,13 @@ Publicação: projeto Vercel `cotacao-<cliente>-<destino>`.
 Fotos de hotel (regra fixa): fachada, quarto da categoria cotada com a cama, banheiro e
 ambiente do café da manhã; as outras duas livres. Faltou uma, substitua e avise.
 
+## Documentos oficiais (vistos, eTA, vouchers, bilhetes)
+
+Documentos oficiais **não podem ser alterados**: entram no caderno exatamente como foram emitidos (o PDF original, página
+por página). Não redigitar, não resumir em cards, não mascarar, não recortar. O que a LusaTravel acrescenta fica em
+páginas próprias (capa, índice, orientações), separadas dos documentos. Dados pessoais (passaporte, nascimento, foto)
+não vão para este repositório, que é público: o caderno é entregue como arquivo.
+
 ## Legado (não usar para cotações)
 
 `design-system.html`, `padrao-visual.html` e `roteiro-europa-familia.html` descrevem o
