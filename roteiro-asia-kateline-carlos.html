@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="LusaTravel — roteiro de 38 noites pela Tailândia e Japão para Kateline e Carlos, com duas crianças e babá.">
+<title>Tailândia e Japão</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
+<style>
+/* ─── LUSATRAVEL · DESIGN SYSTEM TOKENS ─────────────────── */
+:root{
+  --gold:#da8d00; --gold-hi:#f0a010;
+  --ink:#1a1510; --char:#333131; --mut:#8a7d70;
+  --line:#e4ddd2; --paper:#faf7f2; --surf:#fff; --surf2:#f2ece3;
+  --dest:#730505;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+  --mx:1080px;
+}
+.th{ --dest:#0f5a52; }
+.jp{ --dest:#8c1d1d; }
+
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#f0e8de; --char:#d9cec1; --mut:#9a8c7e;
+    --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+    --gold:#e8a210; --gold-hi:#ffc030;
+  }
+  :root:not([data-theme="light"]) .th{ --dest:#2b9a8c; }
+  :root:not([data-theme="light"]) .jp{ --dest:#cf4a45; }
+}
+:root[data-theme="dark"]{
+  --ink:#f0e8de; --char:#d9cec1; --mut:#9a8c7e;
+  --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+  --gold:#e8a210; --gold-hi:#ffc030;
+}
+:root[data-theme="dark"] .th{ --dest:#2b9a8c; }
+:root[data-theme="dark"] .jp{ --dest:#cf4a45; }
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  background:var(--paper); color:var(--char);
+  font-family:var(--sans); font-weight:400;
+  font-size:15px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+@media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } }
+.wrap{ max-width:var(--mx); margin:0 auto; padding:0 28px; }
+b,strong{ font-weight:600; color:var(--ink); }
+
+/* ─── CAPA ───────────────────────────────────────────────── */
+.mh{ background:#1a1510; padding:56px 0 44px; position:relative; }
+.mh::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.mh-logo{ font-family:var(--con); font-weight:600; font-size:13px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.mh-kick{ margin-top:26px; font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+.mh-name{ margin-top:10px; font-weight:700; font-size:clamp(28px,5.2vw,46px); line-height:1.06; color:#fff; text-transform:uppercase; text-wrap:balance; }
+.mh-dest{ margin-top:8px; font-weight:600; font-size:clamp(17px,2.4vw,22px); color:var(--gold); }
+.mh-sub{ margin-top:16px; max-width:60ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.68); }
+.mh-stats{ margin-top:34px; display:flex; flex-wrap:wrap; border-top:1px solid rgba(240,232,222,.14); }
+.mh-stat{ padding:18px 30px 4px 0; margin-right:30px; border-right:1px solid rgba(240,232,222,.12); }
+.mh-stat:last-child{ border-right:0; }
+.mh-stat .v{ font-weight:700; font-size:24px; color:#fff; line-height:1; font-variant-numeric:tabular-nums; }
+.mh-stat .k{ margin-top:7px; font-size:9.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+
+/* ─── SEÇÕES ─────────────────────────────────────────────── */
+.sec{ padding:56px 0; }
+.sec + .sec{ border-top:1px solid var(--line); }
+.eyebrow{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; letter-spacing:-.01em; text-wrap:balance; }
+.lead{ margin-top:12px; max-width:66ch; font-weight:300; font-size:15.5px; }
+
+/* ─── POR QUE ESTE DESENHO ──────────────────────────────── */
+.why{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
+.why-c{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--gold); padding:22px 22px 20px; }
+.why-n{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.14em; color:var(--gold); }
+.why-t{ margin-top:8px; font-weight:600; font-size:17px; color:var(--ink); line-height:1.3; }
+.why-p{ margin-top:10px; font-size:14px; font-weight:300; }
+
+/* ─── LINHA DO TEMPO ────────────────────────────────────── */
+.ctry{ margin-top:34px; }
+.ctry-h{ display:flex; align-items:baseline; gap:12px; padding-bottom:10px; border-bottom:2px solid var(--dest); }
+.ctry-h .nm{ font-weight:700; font-size:18px; color:var(--dest); }
+.ctry-h .nt{ font-size:12.5px; color:var(--mut); }
+.tl{ margin-top:16px; display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:14px; }
+.tl-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--dest); padding:18px 18px 16px; }
+.tl-badge{ display:inline-flex; align-items:center; justify-content:center; min-width:30px; height:30px; padding:0 9px; background:var(--dest); color:#fff; font-weight:700; font-size:12.5px; }
+.tl-city{ margin-top:13px; font-weight:600; font-size:17px; color:var(--ink); }
+.tl-meta{ margin-top:4px; font-size:12.5px; font-weight:400; color:var(--mut); font-variant-numeric:tabular-nums; }
+.tl-move{ margin-top:11px; padding-top:11px; border-top:1px solid var(--line); font-size:12px; }
+.legs{ margin-top:22px; display:grid; gap:10px; }
+.leg{ display:grid; grid-template-columns:110px 1fr; gap:16px; background:var(--surf2); padding:14px 16px; font-size:13.5px; }
+.leg-d{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); padding-top:2px; }
+
+/* ─── BANDA DE PAÍS ─────────────────────────────────────── */
+.band{ background:var(--dest); padding:34px 0; position:relative; }
+.band::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.band-tag{ font-size:9.5px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.72); }
+.band-t{ margin-top:8px; font-weight:700; font-size:clamp(22px,3.4vw,32px); color:#fff; line-height:1.14; }
+
+/* ─── BASES ─────────────────────────────────────────────── */
+.base{ padding:40px 0; border-bottom:1px solid var(--line); }
+.base:last-child{ border-bottom:0; }
+.base-hd{ display:flex; align-items:center; gap:16px; }
+.base-hd .tl-badge{ min-width:38px; height:38px; font-size:15px; }
+.base-name{ font-weight:700; font-size:clamp(20px,2.6vw,25px); color:var(--ink); line-height:1.15; }
+.base-meta{ margin-top:2px; font-size:13px; color:var(--mut); font-variant-numeric:tabular-nums; }
+.base-grid{ margin-top:22px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.6fr); gap:28px; }
+.lbl{ font-family:var(--lbl); font-weight:700; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--dest); margin-bottom:6px; }
+.side p{ font-size:14px; font-weight:300; }
+.side p + .lbl{ margin-top:18px; }
+.list{ list-style:none; border-top:1px solid var(--line); }
+.list li{ padding:11px 0 11px 20px; border-bottom:1px solid var(--line); font-size:14.5px; font-weight:300; position:relative; }
+.list li::before{ content:''; position:absolute; left:2px; top:20px; width:7px; height:7px; background:var(--dest); }
+.list li.opt::before{ background:transparent; border:1.5px solid var(--dest); }
+.list .tag{ font-size:10px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-right:6px; }
+.note{ margin-top:16px; padding:14px 16px; background:var(--surf2); border-left:3px solid var(--gold); font-size:13.5px; font-weight:300; }
+
+/* ─── LOGÍSTICA ─────────────────────────────────────────── */
+.faq{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; }
+.faq-c{ background:var(--surf); border:1px solid var(--line); padding:22px; }
+.faq-t{ font-weight:600; font-size:16px; color:var(--ink); line-height:1.3; }
+.faq-t::before{ content:''; display:block; width:28px; height:3px; background:var(--gold); margin-bottom:12px; }
+.faq-p{ margin-top:8px; font-size:14px; font-weight:300; }
+
+/* ─── CALENDÁRIO ────────────────────────────────────────── */
+.cal{ margin-top:26px; border-top:1px solid var(--line); }
+.ev{ display:grid; grid-template-columns:130px 1fr; gap:22px; padding:18px 0; border-bottom:1px solid var(--line); }
+.ev-d{ font-family:var(--lbl); font-weight:700; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--dest); font-variant-numeric:tabular-nums; }
+.ev-d span{ display:block; margin-top:3px; font-size:10.5px; letter-spacing:.14em; color:var(--mut); }
+.ev-t{ font-weight:600; font-size:15.5px; color:var(--ink); }
+.ev-p{ margin-top:3px; font-size:14px; font-weight:300; }
+
+/* ─── RODAPÉ ────────────────────────────────────────────── */
+.ft{ background:#1a1510; padding:44px 0 40px; position:relative; }
+.ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
+.ft-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.ft-sig{ margin-top:18px; display:flex; flex-wrap:wrap; gap:10px 34px; font-family:var(--con); font-size:13px; }
+.ft-sig a{ color:rgba(240,232,222,.75); text-decoration:none; border-bottom:1px solid rgba(218,141,0,.5); }
+.ft-sig a:hover{ color:var(--gold); }
+.ft-addr{ margin-top:16px; font-family:var(--con); font-size:11.5px; color:rgba(240,232,222,.45); }
+
+@media (max-width:760px){
+  .wrap{ padding:0 16px; }
+  .base-grid{ grid-template-columns:1fr; gap:20px; }
+  .ev{ grid-template-columns:1fr; gap:6px; }
+  .leg{ grid-template-columns:1fr; gap:4px; }
+  .mh-stat{ padding-right:18px; margin-right:18px; }
+  .why,.faq{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="mh">
+  <div class="wrap">
+    <div class="mh-logo">LusaTravel</div>
+    <div class="mh-kick">Roteiro para sua viagem</div>
+    <h1 class="mh-name">Kateline e Carlos</h1>
+    <div class="mh-dest">Tailândia e Japão · janeiro e fevereiro de 2027</div>
+    <p class="mh-sub">Uma viagem com jeito de morar: bases longas, apartamento com cozinha nas estadias maiores, uma atividade principal por dia e tempo livre para as crianças. Praia, templos, animais, neve e muita comida boa, sem correria.</p>
+    <div class="mh-stats">
+      <div class="mh-stat"><div class="v">38</div><div class="k">Noites</div></div>
+      <div class="mh-stat"><div class="v">7</div><div class="k">Bases</div></div>
+      <div class="mh-stat"><div class="v">2+2+1</div><div class="k">Adultos, crianças e babá</div></div>
+      <div class="mh-stat"><div class="v">04/01 – 14/02</div><div class="k">Datas</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════ POR QUE ESTE DESENHO ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Como pensamos o roteiro</div>
+    <h2 class="h2">Três decisões que deixam a viagem mais leve</h2>
+    <div class="why">
+      <div class="why-c">
+        <div class="why-n">01</div>
+        <div class="why-t">Começar pela Tailândia e terminar no Japão</div>
+        <p class="why-p">Nos primeiros dias de janeiro, o Japão ainda está no feriado de Ano Novo, com preços altos e muitos lugares fechados. Da segunda quinzena de janeiro ao início de fevereiro é a baixa temporada mais barata do ano no Japão e também o auge do inverno, com mais chance de neve. Na ordem inversa, a praia na Tailândia cairia no Ano Novo Chinês (6 de fevereiro), com preços e lotação no pico. E começar pela praia ajuda as crianças a se adaptarem ao fuso.</p>
+      </div>
+      <div class="why-c">
+        <div class="why-n">02</div>
+        <div class="why-t">No Sudeste Asiático, só a Tailândia</div>
+        <p class="why-p">Com 13 dias e duas crianças pequenas, cada país a mais significa mais voos, mais vistos e mais correria. Em janeiro, o centro e o norte do Vietnã estão frios e chuvosos, e Angkor, no Camboja, pede muito calor e muita caminhada. Chiang Mai e Bangkok entregam templos, cultura e o santuário de elefantes; Phuket entrega a praia, sem passeios longos de barco.</p>
+      </div>
+      <div class="why-c">
+        <div class="why-n">03</div>
+        <div class="why-t">Neve em Nagano, e não em Hokkaido</div>
+        <p class="why-p">Nagano fica a 1h20 de Tóquio de trem-bala e tem vilarejo, onsen, chalé e os macacos-da-neve: neve e animais no mesmo lugar. Hokkaido exigiria um voo a mais e encareceria a viagem, com hotéis no pico se coincidir com o Festival da Neve de Sapporo, no início de fevereiro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ VISÃO GERAL ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Itinerário</div>
+    <h2 class="h2">Sete bases, 38 noites</h2>
+    <p class="lead">Nenhum deslocamento passa de cerca de 2h30. Os voos internacionais conectam pelo Oriente Médio (Doha ou Dubai), sem necessidade de visto na conexão.</p>
+
+    <div class="legs">
+      <div class="leg"><div class="leg-d">04/01 · Ida</div><div>Voo noturno do Brasil com conexão em Doha ou Dubai. Chegada a Phuket em 06/01.</div></div>
+    </div>
+
+    <div class="ctry th">
+      <div class="ctry-h"><span class="nm">Tailândia</span><span class="nt">13 noites</span></div>
+      <div class="tl">
+        <div class="tl-item"><span class="tl-badge">6</span><div class="tl-city">Phuket</div><div class="tl-meta">06 a 12/01 · 6 noites</div><div class="tl-move">Voo do Brasil via Oriente Médio</div></div>
+        <div class="tl-item"><span class="tl-badge">5</span><div class="tl-city">Chiang Mai</div><div class="tl-meta">12 a 17/01 · 5 noites</div><div class="tl-move">Voo direto · 2h</div></div>
+        <div class="tl-item"><span class="tl-badge">2</span><div class="tl-city">Bangkok</div><div class="tl-meta">17 a 19/01 · 2 noites</div><div class="tl-move">Voo · 1h10</div></div>
+      </div>
+    </div>
+
+    <div class="ctry jp">
+      <div class="ctry-h"><span class="nm">Japão</span><span class="nt">25 noites</span></div>
+      <div class="tl">
+        <div class="tl-item"><span class="tl-badge">8</span><div class="tl-city">Kyoto</div><div class="tl-meta">19 a 27/01 · 8 noites</div><div class="tl-move">Voo Bangkok–Osaka + trem 1h15</div></div>
+        <div class="tl-item"><span class="tl-badge">5</span><div class="tl-city">Nagano</div><div class="tl-meta">27/01 a 01/02 · 5 noites</div><div class="tl-move">Trem com parada em Kanazawa</div></div>
+        <div class="tl-item"><span class="tl-badge">10</span><div class="tl-city">Tóquio</div><div class="tl-meta">01 a 11/02 · 10 noites</div><div class="tl-move">Trem-bala · 1h20</div></div>
+        <div class="tl-item"><span class="tl-badge">2</span><div class="tl-city">Kawaguchiko · Fuji</div><div class="tl-meta">11 a 13/02 · 2 noites</div><div class="tl-move">Trem direto de Shinjuku · 2h</div></div>
+      </div>
+    </div>
+
+    <div class="legs">
+      <div class="leg"><div class="leg-d">13/02 · Volta</div><div>Ônibus direto de Kawaguchiko ao aeroporto de Tóquio e voo com conexão em Doha ou Dubai. Chegada ao Brasil em 14/02.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ TAILÂNDIA ══════ -->
+<div class="th">
+  <div class="band"><div class="wrap"><div class="band-tag">Parte 1 · 13 noites</div><h2 class="band-t">Tailândia</h2></div></div>
+  <div class="wrap">
+
+    <article class="base">
+      <div class="base-hd"><span class="tl-badge">6</span><div><h3 class="base-name">Phuket</h3><div class="base-meta">06 a 12 de janeiro · 6 noites</div></div></div>
+      <div class="base-grid">
+        <div class="side">
+          <div class="lbl">Hospedagem</div>
+          <p>Resort para famílias nas praias de Kata ou Karon, com quartos conectados ou suíte para cinco e kids club.</p>
+          <div class="lbl">Ritmo</div>
+          <p>Primeiros dias de praia e piscina para descansar do voo e ajustar o fuso. Em janeiro o mar fica calmo, bom para as crianças.</p>
+        </div>
+        <ul class="list">
+          <li><b>Praia e piscina</b> sem programação nos dois primeiros dias.</li>
+          <li><b>Old Phuket Town</b>: casarões sino-portugueses coloridos, cafés e o mercado de rua de domingo (10/01).</li>
+          <li><b>Big Buddha e Wat Chalong</b>, os principais templos da ilha.</li>
+          <li><b>Pôr do sol no Cabo Promthep</b>, o mirante mais bonito da ilha.</li>
+          <li><b>Dia das Crianças tailandês</b> (09/01), com atividades gratuitas para os pequenos.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="base">
+      <div class="base-hd"><span class="tl-badge">5</span><div><h3 class="base-name">Chiang Mai</h3><div class="base-meta">12 a 17 de janeiro · 5 noites</div></div></div>
+      <div class="base-grid">
+        <div class="side">
+          <div class="lbl">Hospedagem</div>
+          <p>Hotel ou apartamento na Cidade Antiga ou no bairro de Nimman.</p>
+          <div class="lbl">Clima</div>
+          <p>Dias agradáveis e noites frescas em janeiro, a melhor época para a cidade.</p>
+        </div>
+        <ul class="list">
+          <li><b>Santuário de elefantes ético</b>, sem montaria: alimentar e acompanhar os elefantes de perto. Reserva antecipada.</li>
+          <li><b>Templos da Cidade Antiga</b>: Wat Chedi Luang e Wat Phra Singh.</li>
+          <li><b>Doi Suthep</b>, o templo dourado na montanha com vista da cidade.</li>
+          <li><b>Festival das Sombrinhas de Bo Sang</b> (data estimada de 15 a 17/01).</li>
+          <li><b>Mercados</b>: mercado de rua de sábado na Wualai (16/01) e o Night Bazaar.</li>
+          <li class="opt"><span class="tag">Opcional</span>Night Safari, zoológico noturno com passeio de trenzinho.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="base">
+      <div class="base-hd"><span class="tl-badge">2</span><div><h3 class="base-name">Bangkok</h3><div class="base-meta">17 a 19 de janeiro · 2 noites</div></div></div>
+      <div class="base-grid">
+        <div class="side">
+          <div class="lbl">Hospedagem</div>
+          <p>Hotel à beira do rio Chao Phraya, perto dos templos principais.</p>
+          <div class="lbl">Dica</div>
+          <p>Nos templos, ombros e joelhos precisam estar cobertos.</p>
+        </div>
+        <ul class="list">
+          <li><b>Grand Palace e Wat Phra Kaew</b>, o templo do Buda de Esmeralda.</li>
+          <li><b>Wat Pho</b> e o Buda reclinado de 46 metros.</li>
+          <li><b>Travessia curta pelo rio</b>, de poucos minutos, entre os templos.</li>
+          <li><b>Chinatown (Yaowarat)</b> à noite, para comer comida de rua.</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<!-- ══════ JAPÃO ══════ -->
+<div class="jp">
+  <div class="band"><div class="wrap"><div class="band-tag">Parte 2 · 25 noites</div><h2 class="band-t">Japão</h2></div></div>
+  <div class="wrap">
+
+    <article class="base">
+      <div class="base-hd"><span class="tl-badge">8</span><div><h3 class="base-name">Kyoto</h3><div class="base-meta">19 a 27 de janeiro · 8 noites</div></div></div>
+      <div class="base-grid">
+        <div class="side">
+          <div class="lbl">Hospedagem</div>
+          <p>Apartamento ou apart-hotel com cozinha, dois quartos e máquina de lavar.</p>
+          <div class="lbl">Chegada</div>
+          <p>Voo Bangkok–Osaka (cerca de 6h) e trem expresso do aeroporto até Kyoto (1h15).</p>
+        </div>
+        <ul class="list">
+          <li><b>Fushimi Inari</b>, os milhares de portais vermelhos, pela manhã, antes da lotação.</li>
+          <li><b>Kiyomizu-dera</b> e as ruelas de Higashiyama; Gion ao entardecer.</li>
+          <li><b>Arashiyama</b>: bosque de bambu e o Parque dos Macacos de Iwatayama.</li>
+          <li><b>Kinkaku-ji</b>, o Pavilhão Dourado, ainda mais bonito com neve.</li>
+          <li><b>Mercado Nishiki</b>, para provar a comida local.</li>
+          <li><b>Museu Ferroviário de Kyoto</b>, um sucesso com crianças.</li>
+          <li><span class="tag">Bate-volta</span><b>Nara</b> (45 min): cervos soltos no parque e o Grande Buda do Todai-ji.</li>
+          <li><span class="tag">Bate-volta</span><b>Osaka</b> (30 min): Aquário Kaiyukan, com tubarão-baleia, e Dotonbori para comer.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="base">
+      <div class="base-hd"><span class="tl-badge">5</span><div><h3 class="base-name">Nagano · vilarejo na neve</h3><div class="base-meta">27 de janeiro a 1º de fevereiro · 5 noites</div></div></div>
+      <div class="base-grid">
+        <div class="side">
+          <div class="lbl">Hospedagem</div>
+          <p>Chalé ou pousada pequena na região de Yamanouchi (Shibu Onsen e Yudanaka), vilarejo de águas termais coberto de neve.</p>
+          <div class="lbl">Chegada com parada em Kanazawa</div>
+          <p>Kanazawa fica no caminho natural entre Kyoto e Nagano. O trajeto é feito em duas partes: Kyoto–Kanazawa (2h10), algumas horas na cidade e Kanazawa–Nagano (1h). As malas grandes seguem por takkyubin.</p>
+        </div>
+        <ul class="list">
+          <li><span class="tag">No caminho</span><b>Kanazawa</b>: Jardim Kenroku-en com neve, almoço de frutos do mar no Mercado Omicho e o antigo bairro das gueixas, Higashi Chaya.</li>
+          <li><b>Macacos-da-neve de Jigokudani</b>, banhando-se nas fontes termais. Trilha plana de cerca de 30 min na neve, melhor com canguru do que com carrinho.</li>
+          <li><b>Shibu Onsen</b>: ruas de madeira, lanternas e casas de banho tradicionais.</li>
+          <li><b>Brincar na neve</b> com as crianças, sem esqui.</li>
+          <li><span class="tag">Bate-volta</span><b>Templo Zenko-ji</b>, em Nagano, com cerca de 1.400 anos de história.</li>
+          <li class="opt"><span class="tag">Opcional</span><b>Obuse</b>, no caminho de Nagano: Museu Hokusai e doces de castanha.</li>
+          <li class="opt"><span class="tag">Opcional</span><b>Castelo de Matsumoto</b> (cerca de 1h de Nagano), um dos castelos originais mais bonitos do Japão.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="base">
+      <div class="base-hd"><span class="tl-badge">10</span><div><h3 class="base-name">Tóquio</h3><div class="base-meta">1º a 11 de fevereiro · 10 noites</div></div></div>
+      <div class="base-grid">
+        <div class="side">
+          <div class="lbl">Hospedagem</div>
+          <p>Apartamento ou apart-hotel com cozinha, perto de uma estação de metrô.</p>
+          <div class="lbl">Aniversário</div>
+          <p>Assim que tivermos a data, encaixamos a comemoração. Se cair em Tóquio, a Disney é uma ótima opção.</p>
+        </div>
+        <ul class="list">
+          <li><b>Tokyo Disneyland</b>, o parque mais indicado para crianças pequenas.</li>
+          <li><b>Asakusa e o templo Senso-ji</b>, com o Setsubun em 03/02.</li>
+          <li><b>Santuário Meiji</b>, Harajuku e o cruzamento de Shibuya.</li>
+          <li><b>teamLab</b>, museu de arte digital imersiva que encanta as crianças.</li>
+          <li><b>Zoológico de Ueno</b> ou <b>Aquário Sumida</b>.</li>
+          <li><b>Mercado externo de Tsukiji</b>, para comer.</li>
+          <li class="opt"><span class="tag">Opcional</span><b>Museu Ghibli</b>: os ingressos de fevereiro abrem em 10/01 e esgotam rápido.</li>
+          <li><span class="tag">Bate-volta</span><b>Yokohama</b> (30 min): Chinatown no Ano Novo Chinês (06/02).</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="base">
+      <div class="base-hd"><span class="tl-badge">2</span><div><h3 class="base-name">Kawaguchiko · Monte Fuji</h3><div class="base-meta">11 a 13 de fevereiro · 2 noites</div></div></div>
+      <div class="base-grid">
+        <div class="side">
+          <div class="lbl">Hospedagem</div>
+          <p>Ryokan com jantar kaiseki e café da manhã japonês, quarto com futons para a família e banho termal privativo.</p>
+          <div class="lbl">Saída</div>
+          <p>Ônibus direto ao aeroporto (cerca de 2h30). As malas grandes vão de Tóquio direto para o aeroporto por takkyubin.</p>
+        </div>
+        <ul class="list">
+          <li><b>Fuji visto do lago Kawaguchi</b>. O inverno tem o céu mais limpo do ano, a melhor época para ver a montanha.</li>
+          <li><b>Teleférico Kachi Kachi</b>, com mirante do Fuji.</li>
+          <li><b>Pagode Chureito</b>, a vista clássica do Fuji (são 398 degraus).</li>
+          <li><b>Iyashi no Sato Nenba</b>, vilarejo de casas com telhado de palha e vista do Fuji.</li>
+          <li><b>Tempo no ryokan</b>: banho termal, jantar tradicional e descanso antes da volta.</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<!-- ══════ LOGÍSTICA ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Logística</div>
+    <h2 class="h2">Respostas às dúvidas de vocês</h2>
+    <div class="faq">
+      <div class="faq-c">
+        <div class="faq-t">Takkyubin: as malas viajam sozinhas</div>
+        <p class="faq-p">Serviço de entrega de bagagem entre cidades, normalmente no dia seguinte, por cerca de ¥2.500 a ¥3.500 por mala, conforme o tamanho. Hotel sempre recebe; em apartamento, depende de o anfitrião aceitar receber, e confirmamos isso em cada reserva. No roteiro, usamos duas vezes: de Kyoto para Tóquio, para fazer Kanazawa e Nagano com bagagem leve, e de Tóquio direto para o aeroporto, para ir ao Fuji sem as malas grandes.</p>
+      </div>
+      <div class="faq-c">
+        <div class="faq-t">Lavanderia é tranquilo</div>
+        <p class="faq-p">No Japão há lavanderias self-service em todo bairro, com lavar e secar em cerca de uma hora. Nas estadias longas, priorizamos apartamentos com máquina de lavar. Na Tailândia, a lavanderia cobra por quilo, é barata e devolve a roupa no mesmo dia ou no seguinte.</p>
+      </div>
+      <div class="faq-c">
+        <div class="faq-t">Mandar uma mala para o Brasil</div>
+        <p class="faq-p">É possível pelo correio japonês (EMS, até 30 kg), mas é caro e a chegada no Brasil passa pela Receita Federal, com declaração e possível tributação. Na prática, comprar uma bagagem extra no voo de volta costuma sair mais barato e sem burocracia.</p>
+      </div>
+      <div class="faq-c">
+        <div class="faq-t">Crianças não pagam trem no Japão</div>
+        <p class="faq-p">Menores de 6 anos viajam de graça nos trens, inclusive no trem-bala, acompanhados de um adulto (até duas crianças por adulto, sem assento reservado próprio). Os dois filhos viajam de graça em todos os trechos.</p>
+      </div>
+      <div class="faq-c">
+        <div class="faq-t">Mala de verão e mala de inverno</div>
+        <p class="faq-p">A viagem vai de cerca de 30 °C na praia a temperaturas abaixo de zero na neve. Em vez de levar roupa de neve para cinco pessoas desde o Brasil, a sugestão é levar um casaco por pessoa e comprar o resto no Japão (segunda pele, luvas, gorros e botas) na Uniqlo, GU ou Muji, com bons preços e todos os tamanhos infantis.</p>
+      </div>
+      <div class="faq-c">
+        <div class="faq-t">Disney: até 3 anos não paga</div>
+        <p class="faq-p">Na Tokyo Disney, crianças de até 3 anos não pagam ingresso. A partir dos 4 anos, paga-se o ingresso infantil, então vale conferir se o aniversário cai antes do dia do parque. Os ingressos têm data marcada e são comprados online com antecedência.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CALENDÁRIO ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">No calendário da viagem</div>
+    <h2 class="h2">Festivais e eventos que vocês vão pegar</h2>
+    <div class="cal">
+      <div class="ev th"><div class="ev-d">09/01<span>Phuket</span></div><div><div class="ev-t">Dia das Crianças na Tailândia</div><p class="ev-p">Comemorado no segundo sábado de janeiro, com atividades e entradas gratuitas para crianças em parques e espaços públicos.</p></div></div>
+      <div class="ev th"><div class="ev-d">10/01<span>Phuket</span></div><div><div class="ev-t">Mercado de domingo de Old Phuket Town</div><p class="ev-p">A rua principal da cidade antiga vira feira, com comida de rua, artesanato e apresentações.</p></div></div>
+      <div class="ev th"><div class="ev-d">15 a 17/01<span>Chiang Mai</span></div><div><div class="ev-t">Festival das Sombrinhas de Bo Sang</div><p class="ev-p">Desfile e vila decorada com sombrinhas de papel pintadas à mão, a 20 min da cidade. Data estimada; a confirmação oficial sai perto do evento.</p></div></div>
+      <div class="ev th"><div class="ev-d">16/01<span>Chiang Mai</span></div><div><div class="ev-t">Mercado de sábado da Wualai</div><p class="ev-p">Feira de rua noturna no bairro dos ourives de prata, com artesanato e comida do norte da Tailândia.</p></div></div>
+      <div class="ev jp"><div class="ev-d">03/02<span>Tóquio</span></div><div><div class="ev-t">Setsubun</div><p class="ev-p">Nos templos, joga-se feijão para espantar os demônios (oni) e chamar a sorte para o ano. As crianças adoram.</p></div></div>
+      <div class="ev jp"><div class="ev-d">06/02<span>Yokohama</span></div><div><div class="ev-t">Ano Novo Chinês</div><p class="ev-p">Dança do leão, lanternas e comida no bairro chinês de Yokohama, a 30 min de Tóquio.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-logo">LusaTravel</div>
+    <div class="ft-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <div class="ft-addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+  </div>
+</footer>
+
+</body>
+</html>
