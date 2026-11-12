@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Gera src/index.html — Itália · ingressos dos passeios · João e Bruna (13 a 28/04/2027).
 
-Fonte: fonte/passeios.png (tabela enviada pela agência em 12/11/2026: cidade, item, datas, valor).
+Fonte: fonte/passeios-v2.png (valores novos enviados pela agência em 12/11/2026, coluna "valores em reais"; inclui a Pinacoteca di Brera).
+Versão anterior: fonte/passeios.png.
 Valores: BRL por pessoa. Corridoio Vasariano: R$ 379 com a Galleria degli Uffizi (a tabela dizia "euros"; a agência corrigiu para reais em 12/11/2026).
 Agência (12/11/2026): só Coliseu/Fórum/Palatino e Museus Vaticanos/Capela Sistina estão disponíveis para compra agora;
 ingressos da Última Ceia são comprados com 3 meses de antecedência, conforme disponibilidade; até 3x ou 7% de desconto no PIX.
@@ -55,6 +56,7 @@ ARENA = '<ellipse cx="12" cy="9" rx="9" ry="4"/><path d="M3 9v7c0 2.2 4 4 9 4s9-
 PALACIO = '<path d="M3 21V9l3-2 3 2v12M15 21V9l3-2 3 2v12M9 13h6v8H9z"/>'
 SACOLA = '<path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/>'
 PINCEL = '<path d="M4 20c3 0 5-2 5-5l2-2 3 3-2 2c0 3-2 5-5 5H4v-3z"/><path d="M13 11l7-7"/>'
+QUADRO = '<path d="M4 4h16v13H4z"/><path d="M8 21h8M12 17v4M7 13l3-4 3 3 2-2 3 3"/>'
 PONTE = '<path d="M2 16h20M4 16V9M20 16V9M4 9c2.5 3 13.5 3 16 0M8 16v-3M12 16v-2M16 16v-3"/>'
 
 OK, WAIT, FREE = "ok", "wait", "free"
@@ -62,19 +64,20 @@ OK, WAIT, FREE = "ok", "wait", "free"
 ITENS = [
     ("mall", "Florença", "The Mall Luxury Outlets", "Outlet de grifes nos arredores de Florença.", None, SACOLA, FREE,
      "Entrada gratuita."),
-    ("uffizi", "Florença", "Galleria degli Uffizi", "A grande coleção do Renascimento: Botticelli, Leonardo, Michelangelo e Rafael.", 234, MUSEU, WAIT, ""),
+    ("uffizi", "Florença", "Galleria degli Uffizi", "A grande coleção do Renascimento: Botticelli, Leonardo, Michelangelo e Rafael.", 230, MUSEU, WAIT, ""),
     ("vasariano", "Florença", "Corridoio Vasariano + Galleria degli Uffizi",
      "O corredor elevado dos Médici, sobre a Ponte Vecchio, que liga os Uffizi ao Palazzo Pitti, combinado com a entrada na Galleria degli Uffizi.",
-     379, PONTE, WAIT, "Já inclui a Galleria degli Uffizi: <b>escolher este ou o ingresso simples dos Uffizi</b>."),
-    ("accademia", "Florença", "Galleria dell'Accademia", "Onde está o Davi original de Michelangelo.", 194, PINCEL, WAIT, ""),
-    ("duomo-fi", "Florença", "Duomo · Santa Maria del Fiore", "A catedral de Florença e a cúpula de Brunelleschi.", 242, IGREJA, WAIT, ""),
-    ("pitti", "Florença", "Palazzo Pitti e Jardim de Boboli", "O palácio dos Médici e seus jardins renascentistas.", 202, PALACIO, WAIT, ""),
-    ("coliseu", "Roma", "Coliseu, Fórum Romano e Monte Palatino · sem fila", "Ingresso <b>sem fila</b>. O anfiteatro e o coração da Roma antiga, no mesmo ingresso.", 622, ARENA, OK, ""),
-    ("panteao", "Roma", "Panteão", "O templo romano mais bem conservado, com a cúpula aberta para o céu.", 57, IGREJA, WAIT, ""),
-    ("vaticano", "Roma", "Museus Vaticanos e Capela Sistina · sem fila", "Ingresso <b>sem fila</b>. As coleções dos papas e o teto de Michelangelo na Capela Sistina.", 1141, MUSEU, OK, ""),
-    ("duomo-mi", "Milão", "Duomo di Milano", "A catedral gótica de Milão.", 258, IGREJA, WAIT, ""),
-    ("ceia", "Milão", "A Última Ceia · Santa Maria delle Grazie", "O afresco de Leonardo da Vinci, com visitas em horário marcado e grupos pequenos.", 121, PINCEL, WAIT,
+     372, PONTE, WAIT, "Já inclui a Galleria degli Uffizi: <b>escolher este ou o ingresso simples dos Uffizi</b>."),
+    ("accademia", "Florença", "Galleria dell'Accademia", "Onde está o Davi original de Michelangelo.", 190, PINCEL, WAIT, ""),
+    ("duomo-fi", "Florença", "Duomo · Santa Maria del Fiore", "A catedral de Florença e a cúpula de Brunelleschi.", 238, IGREJA, WAIT, ""),
+    ("pitti", "Florença", "Palazzo Pitti e Jardim de Boboli", "O palácio dos Médici e seus jardins renascentistas.", 198, PALACIO, WAIT, ""),
+    ("coliseu", "Roma", "Coliseu, Fórum Romano e Monte Palatino · sem fila", "Ingresso <b>sem fila</b>. O anfiteatro e o coração da Roma antiga, no mesmo ingresso.", 610, ARENA, OK, ""),
+    ("panteao", "Roma", "Panteão", "O templo romano mais bem conservado, com a cúpula aberta para o céu.", 55, IGREJA, WAIT, ""),
+    ("vaticano", "Roma", "Museus Vaticanos e Capela Sistina · sem fila", "Ingresso <b>sem fila</b>. As coleções dos papas e o teto de Michelangelo na Capela Sistina.", 944, MUSEU, OK, ""),
+    ("duomo-mi", "Milão", "Duomo di Milano", "A catedral gótica de Milão.", 253, IGREJA, WAIT, ""),
+    ("ceia", "Milão", "A Última Ceia · Santa Maria delle Grazie", "O afresco de Leonardo da Vinci, com visitas em horário marcado e grupos pequenos.", 119, PINCEL, WAIT,
      "Os ingressos da Última Ceia são <b>comprados com 3 meses de antecedência</b>, dependendo da disponibilidade."),
+    ("brera", "Milão", "Pinacoteca di Brera", "A grande galeria de pintura de Milão: Mantegna, Rafael, Caravaggio e os mestres venezianos.", 158, QUADRO, WAIT, ""),
 ]
 I = {i[0]: i for i in ITENS}
 
@@ -83,15 +86,15 @@ CIDADES = [
     ("Florença", "16 a 19 de abril", ["mall", "uffizi", "vasariano", "accademia", "duomo-fi", "pitti"]),
     ("Sorrento", "19 a 22 de abril", []),
     ("Roma", "22 a 25 de abril", ["coliseu", "panteao", "vaticano"]),
-    ("Milão", "25 a 28 de abril", ["duomo-mi", "ceia"]),
+    ("Milão", "25 a 28 de abril", ["duomo-mi", "ceia", "brera"]),
 ]
 
 AGORA = [i for i in ITENS if i[6] == OK]
 AG_PP = sum(i[4] for i in AGORA)
 TOTAL_MIN = sum(i[4] for i in ITENS if i[4] is not None and i[0] != "vasariano")
 TOTAL_MAX = TOTAL_MIN - I["uffizi"][4] + I["vasariano"][4]
-assert AG_PP == 1763, AG_PP
-assert (TOTAL_MIN, TOTAL_MAX) == (3071, 3216), (TOTAL_MIN, TOTAL_MAX)
+assert AG_PP == 1554, AG_PP
+assert (TOTAL_MIN, TOTAL_MAX) == (2995, 3137), (TOTAL_MIN, TOTAL_MAX)
 STLBL = {OK: "Disponível para compra", WAIT: "Em breve", FREE: "Gratuito"}
 
 
