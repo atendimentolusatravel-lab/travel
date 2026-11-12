@@ -69,9 +69,9 @@ ITENS = [
     ("accademia", "Florença", "Galleria dell'Accademia", "Onde está o Davi original de Michelangelo.", 194, PINCEL, WAIT, ""),
     ("duomo-fi", "Florença", "Duomo · Santa Maria del Fiore", "A catedral de Florença e a cúpula de Brunelleschi.", 242, IGREJA, WAIT, ""),
     ("pitti", "Florença", "Palazzo Pitti e Jardim de Boboli", "O palácio dos Médici e seus jardins renascentistas.", 202, PALACIO, WAIT, ""),
-    ("coliseu", "Roma", "Coliseu, Fórum Romano e Monte Palatino", "O anfiteatro e o coração da Roma antiga, no mesmo ingresso.", 622, ARENA, OK, ""),
+    ("coliseu", "Roma", "Coliseu, Fórum Romano e Monte Palatino · sem fila", "Ingresso <b>sem fila</b>. O anfiteatro e o coração da Roma antiga, no mesmo ingresso.", 622, ARENA, OK, ""),
     ("panteao", "Roma", "Panteão", "O templo romano mais bem conservado, com a cúpula aberta para o céu.", 57, IGREJA, WAIT, ""),
-    ("vaticano", "Roma", "Museus Vaticanos e Capela Sistina", "As coleções dos papas e o teto de Michelangelo na Capela Sistina.", 1141, MUSEU, OK, ""),
+    ("vaticano", "Roma", "Museus Vaticanos e Capela Sistina · sem fila", "Ingresso <b>sem fila</b>. As coleções dos papas e o teto de Michelangelo na Capela Sistina.", 1141, MUSEU, OK, ""),
     ("duomo-mi", "Milão", "Duomo di Milano", "A catedral gótica de Milão.", 258, IGREJA, WAIT, ""),
     ("ceia", "Milão", "A Última Ceia · Santa Maria delle Grazie", "O afresco de Leonardo da Vinci, com visitas em horário marcado e grupos pequenos.", 121, PINCEL, WAIT,
      "Os ingressos da Última Ceia são <b>comprados com 3 meses de antecedência</b>, dependendo da disponibilidade."),
@@ -189,7 +189,7 @@ html = f"""<!DOCTYPE html>
 <span class="eyebrow">Disponíveis agora</span>
 <h2>Ingressos à venda</h2>
 <div class="accent-line"></div>
-<p class="note" style="margin-top:16px">No momento, só estes dois ingressos estão disponíveis para compra. Os dois são em <b>Roma, de 22 a 25 de abril</b>. Valores por pessoa e para o casal, em até <b>{PARC}x</b> ou com <b>7% de desconto no PIX</b>.</p>
+<p class="note" style="margin-top:16px">No momento, só estes dois ingressos estão disponíveis para compra, os dois <b>sem fila</b>, em <b>Roma, de 22 a 25 de abril</b>. Valores por pessoa e para o casal, em até <b>{PARC}x</b> ou com <b>7% de desconto no PIX</b>.</p>
 {agora_html}
 </section>
 <section class="section sh" style="background:var(--cream)">
