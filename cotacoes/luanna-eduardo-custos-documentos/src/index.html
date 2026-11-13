@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Lusa Travel · Vistos, seguros e eTAs — Luanna e Eduardo</title>
+
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: demonstrativo LusaTravel — capa verde-oliva/creme, tabela de custos por documento, total em faixa e o cartão bancário da agência. Visual único (claro), como os cadernos da agência. */
+:root{
+  --green:#404626; --green-dark:#363b1f; --green-soft:#5a6238;
+  --cream:#faf9f5; --paper:#ffffff; --ink:#333131; --muted:#6f6f68; --line:#e7e7e0; --sage:#d9ead3;
+  --display:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --body:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding-block:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.sheet{background:var(--paper);box-shadow:0 0 50px rgba(64,70,38,.07)}
+.brand{text-align:center;font-family:var(--display);font-weight:700;font-size:1.7rem;letter-spacing:.32em;color:var(--green);padding-block:34px 4px}
+.hero{padding:36px clamp(4px,5vw,52px) 30px}
+.eyebrow{margin:0;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+h1{margin:12px 0 0;font-size:clamp(1.9rem,5.5vw,2.8rem);font-weight:700;letter-spacing:-.02em;line-height:1.08;text-wrap:balance}
+.bar{width:64px;height:4px;background:var(--green);border-radius:2px;margin-top:14px}
+.lede{margin:12px 0 0;color:var(--muted);max-width:62ch}
+.lede b{color:var(--ink)}
+.block{padding:40px clamp(4px,5vw,52px)}
+.block.alt{background:var(--cream)}
+h2{margin:8px 0 0;font-size:1.7rem;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
+.tw{overflow-x:auto;margin-top:22px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:420px}
+td{padding:13px 18px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr.h td{background:#efeee7;font-weight:600;color:#4a4a44;font-size:.82rem}
+tr.sec td{background:var(--sage);font-weight:700;color:var(--green-dark);text-align:center;letter-spacing:.04em;font-size:.84rem}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
+.rm{display:block;font-size:.76rem;color:var(--muted);font-weight:400}
+.total{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:var(--green);color:#fff;border-radius:12px;padding:18px 24px;margin-top:18px}
+.total .lbl{font-weight:600;font-size:.95rem}
+.total .t{font-family:var(--display);font-size:2rem;font-weight:700;line-height:1;font-variant-numeric:lining-nums}
+.total .p{font-size:.76rem;opacity:.9;text-align:right;margin-top:4px}
+.note{margin-top:14px;font-size:.84rem;color:var(--muted)}
+.card{margin-top:22px}
+.card img{display:block;width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(64,70,38,.10)}
+.pix{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.pix .k{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.pix .n{font-size:1.15rem;font-weight:700;color:var(--green-dark);font-variant-numeric:tabular-nums;user-select:all}
+.pix button{font:600 .85rem var(--body);color:#fff;background:var(--green);border:0;border-radius:10px;padding:10px 16px;cursor:pointer}
+.pix button:focus-visible{outline:3px solid var(--green-soft);outline-offset:2px}
+@media (max-width:520px){.pix{grid-template-columns:1fr}.total .p{text-align:left}}
+</style>
+</head>
+<body>
+<div class="wrap"><div class="sheet">
+<div class="brand">LUSA TRAVEL</div>
+<header class="hero">
+  <p class="eyebrow">Quênia, Tanzânia &amp; Seicheles · dezembro de 2026</p>
+  <h1>Vistos, seguros e eTAs</h1>
+  <div class="bar"></div>
+  <p class="lede">Custos das liberações de entrada da viagem de <b>Luanna Alves Silva</b> e <b>Eduardo Henrique de Prospero Amui</b>. Valores em reais, para os dois viajantes.</p>
+</header>
+<section class="block alt">
+  <p class="eyebrow">Demonstrativo</p>
+  <h2>Custos pagos</h2>
+  <div class="tw"><table>
+    <tr class="h"><td>Item</td><td class="v">Valor</td></tr>
+    <tr class="sec"><td colspan="2">Tanzânia</td></tr>
+    <tr><td>Visto da Tanzânia<span class="rm">Ordinary Visa A1 · Luanna e Eduardo</span></td><td class="v">R$ 672,00</td></tr>
+    <tr><td>Seguro viagem da Tanzânia<span class="rm">NIC · obrigatório na entrada · Luanna e Eduardo</span></td><td class="v">R$ 600,00</td></tr>
+    <tr class="sec"><td colspan="2">Quênia</td></tr>
+    <tr><td>eTA do Quênia<span class="rm">Autorizações Eletrônicas de Viagem · chegada (02/12) e volta de Arusha (05/12)</span></td><td class="v">R$ 927,00</td></tr>
+    <tr><td>Seguro do Quênia<span class="rm">Luanna e Eduardo</span></td><td class="v">R$ 630,00</td></tr>
+    <tr class="sec"><td colspan="2">Seicheles</td></tr>
+    <tr><td>Travel Authorisation e seguro das Seicheles<span class="rm">Luanna e Eduardo</span></td><td class="v">R$ 167,00</td></tr>
+  </table></div>
+  <div class="total"><span class="lbl">Total a pagar</span><div><div class="t">R$ 2.996,00</div><div class="p">vistos, seguros e eTAs · Luanna e Eduardo</div></div></div>
+  <p class="note">Visto da Tanzânia R$ 672,00 + seguro da Tanzânia R$ 600,00 + eTA do Quênia R$ 927,00 + seguro do Quênia R$ 630,00 + eTA e seguro das Seicheles R$ 167,00 = R$ 2.996,00.</p>
+</section>
+<section class="block">
+  <p class="eyebrow">Pagamento</p>
+  <h2>Dados bancários da LusaTravel</h2>
+  <div class="card"><img src="img/cartao.png" alt="Cartão bancário da LusaTravel Viagens e Turismo Ltda: CNPJ e chave PIX 45.824.599/0001-16, Banco Itaú, agência 1538, conta corrente 99669-3" width="1400" height="812"></div>
+  <div class="pix">
+    <div><div class="k">Chave PIX · CNPJ</div><div class="n" id="pix">45.824.599/0001-16</div></div>
+    <button type="button" id="copiar">Copiar chave PIX</button>
+  </div>
+  <p class="note">Depois do pagamento, enviar o comprovante para atendimentolusatravel@gmail.com.</p>
+</section>
+</div></div>
+<script>
+(function(){
+  var b=document.getElementById('copiar'), n=document.getElementById('pix');
+  b.addEventListener('click',function(){
+    var t=n.textContent.trim();
+    function sel(){var r=document.createRange();r.selectNodeContents(n);var s=window.getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Chave selecionada';}
+    try{navigator.clipboard.writeText(t).then(function(){b.textContent='Chave copiada';},sel);}catch(e){sel();}
+  });
+})();
+</script>
+</body>
+</html>
