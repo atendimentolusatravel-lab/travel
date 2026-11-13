@@ -42,7 +42,7 @@ BANDEIRA = '<path d="M5 21V4M5 4h13l-2 4 2 4H5"/><path d="M9 4v8M13 4v8"/>'
 # id, nome, subtítulo, dias, selos, descrição (itens), valor (texto principal), valor (linha 2), status
 OPCOES = [
     dict(id="f1x", nome="Champions Club · Trackside Yacht", sub="F1® Experiences · fornecedor oficial da Fórmula 1",
-         dias="Sábado e domingo", selos=[("ok", "Fornecedor oficial da F1"), ("day", "2 dias")],
+         dias="Sábado e domingo · 05 e 06/06/2027", selos=[("ok", "Fornecedor oficial da F1"), ("day", "2 dias")],
          intro="Uma experiência monegasca a bordo de um superiate à beira da pista, com a vista das corridas a partir do Porto de Mônaco e hospitalidade inclusa.",
          inclui=["Petiscos e canapés servidos ao longo dos dois dias",
                  "Bebidas: cerveja, vinho e refrigerantes",
@@ -50,7 +50,7 @@ OPCOES = [
                  "Telões com transmissão ao vivo da pista e atividades exclusivas da F1®"],
          v1="R$ 47.635,21", v2="por pessoa · valor em reais", status="ok"),
     dict(id="senate", nome="Senate Grand Prix · iate de 44 metros", sub="Porto de Mônaco",
-         dias="Domingo", selos=[("wait", "Sob consulta"), ("day", "Dia da corrida")],
+         dias="Domingo · 06/06/2027", selos=[("wait", "Sob consulta"), ("day", "Dia da corrida")],
          intro="O Grande Prêmio a bordo de um iate de três decks, com vista privilegiada do circuito do porto: os carros saindo do túnel, freando na chicane e acelerando para a curva do Tabac.",
          inclui=["Serviço VIP de lancha",
                  "Champanhe à vontade e menu dos fornecedores oficiais do Hôtel de Paris",
@@ -58,7 +58,7 @@ OPCOES = [
                  "Open bar com DJ"],
          v1="€ 5.600", v2="por pessoa · valor em euros", status="wait"),
     dict(id="ahoy", nome="Ahoy Club · superiate na Zona 1", sub="Porto Hércules",
-         dias="Domingo", selos=[("wait", "Sob consulta"), ("day", "Dia da corrida")],
+         dias="Domingo · 06/06/2027", selos=[("wait", "Sob consulta"), ("day", "Dia da corrida")],
          intro="O Grande Prêmio a bordo do superiate principal do Ahoy Club, ancorado na Zona 1 do Porto Hércules, com os carros passando a poucos metros e vista da corrida sem obstruções.",
          inclui=["Hospitalidade de alto padrão e vista privilegiada da corrida",
                  "Cardápios elaborados pelos chefs do Ahoy Club",
@@ -86,7 +86,7 @@ tab = "\n".join(
 CHIP = '<div class="chip"><span class="ic">{svg}</span><b>{n}</b>&nbsp;{t}</div>'
 chips = "\n      ".join(CHIP.format(svg=svg(s), n=n, t=t) for s, n, t in [
     (IATE, "3", "Opções de iate"),
-    (BANDEIRA, "F1", "GP de Mônaco 2027"),
+    (BANDEIRA, "05–06", "jun 2027"),
     ('<circle cx="9" cy="7" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/>', "1", "Viajante"),
 ])
 
@@ -110,7 +110,7 @@ html = f"""<!DOCTYPE html>
 <div class="eyebrow">Cotação para sua viagem</div>
 <h1>MÔNACO</h1>
 <div class="accent-line"></div>
-<p class="hero-sub"><b>Ronaldo Moreira dos Santos</b> · Grande Prêmio de Mônaco de Fórmula 1 — <b>2027</b></p>
+<p class="hero-sub"><b>Ronaldo Moreira dos Santos</b> · Grande Prêmio de Mônaco de Fórmula 1 — <b>05 e 06 de junho de 2027</b></p>
 <div class="hero-img">
 <img src="{CAPA["url"]}" alt="{CAPA["alt"]}" style="object-position:50% 60%" onerror="this.style.display='none'">
 <div class="cap">
@@ -121,7 +121,7 @@ html = f"""<!DOCTYPE html>
 <div class="hero-info">
 <div>
 <div class="lbl">Detalhes</div>
-<p>1 viajante · 3 opções de hospitalidade em iate durante o GP de Mônaco · escolher 1 opção</p>
+<p>1 viajante · 3 opções de hospitalidade em iate no GP de Mônaco, sábado 05/06 e domingo 06/06/2027 · escolher 1 opção</p>
 <p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>{EMISSAO}</b> · valores por pessoa, na moeda de cada fornecedor</p>
 </div>
 <div class="r">
@@ -137,7 +137,7 @@ html = f"""<!DOCTYPE html>
 <span class="eyebrow">Ingressos · Fórmula 1</span>
 <h2>Experiências nos iates</h2>
 <div class="accent-line"></div>
-<p class="note" style="margin-top:16px">Valores <b>por pessoa</b>. A opção 1 é do fornecedor oficial da Fórmula 1 e cobre sábado e domingo; as opções 2 e 3 são no domingo da corrida e dependem de confirmação do fornecedor. <b>Escolher 1 opção.</b></p>
+<p class="note" style="margin-top:16px">Valores <b>por pessoa</b>. A opção 1 é do fornecedor oficial da Fórmula 1 e cobre sábado (05/06) e domingo (06/06/2027); as opções 2 e 3 são no domingo da corrida (06/06/2027) e dependem de confirmação do fornecedor. <b>Escolher 1 opção.</b></p>
 {cards}
 </section>
 <section class="section sh" style="background:var(--cream)">

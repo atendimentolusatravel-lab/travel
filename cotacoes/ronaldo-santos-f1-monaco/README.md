@@ -1,6 +1,6 @@
 # Ronaldo Moreira dos Santos · GP de Mônaco de F1 2027 · experiências nos iates
 
-- **Fonte:** `fonte/opcoes.png` (tabela enviada pela agência em 13/11/2026). 1 viajante; valores por pessoa.
+- **Fonte:** `fonte/opcoes.png` (tabela enviada pela agência em 13/11/2026). 1 viajante; valores por pessoa. Datas: sábado 05/06 e domingo 06/06/2027 (informadas pela agência).
 - Opção 1: F1 Experiences, Champions Club Trackside Yacht, sábado + domingo, R$ 47.635,21.
 - Opção 2: Senate Grand Prix, iate de 44 m, domingo, € 5.600 (sob consulta).
 - Opção 3: Ahoy Club, superiate Zona 1 Porto Hércules, domingo, € 5.950 (sob consulta).
