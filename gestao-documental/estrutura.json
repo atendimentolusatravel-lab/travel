@@ -1,0 +1,387 @@
+{
+  "empresa": "LusaTravel",
+  "versao": "1.0",
+  "atualizado_em": "2026-11-14",
+  "aviso": "Prazos de validade e de guarda são referências de mercado para ME/EPP de turismo no Brasil. Valide com o contador e o advogado da empresa antes de eliminar qualquer documento.",
+  "niveis_acesso": {
+    "interno": { "rotulo": "Interno", "descricao": "Todos os colaboradores podem ler. Edição apenas pelo setor dono." },
+    "restrito": { "rotulo": "Restrito", "descricao": "Somente o setor dono e a Diretoria." },
+    "confidencial": { "rotulo": "Confidencial", "descricao": "Somente a Diretoria e o responsável nominal. Contém dados pessoais ou estratégicos." }
+  },
+  "modelos": {
+    "colaborador": {
+      "pasta": "_MODELO_NOME-SOBRENOME_MATRICULA",
+      "descricao": "Duplique esta pasta para cada colaborador. Ao desligar, mova a pasta inteira para 02_Colaboradores_Desligados.",
+      "subpastas": ["01_Admissao", "02_Documentos_Pessoais", "03_Contrato_e_Aditivos", "04_ASO_e_Exames", "05_Ferias", "06_Ponto", "07_Holerites", "08_Beneficios", "09_Treinamentos", "10_Advertencias_e_Ocorrencias", "11_Rescisao"]
+    },
+    "viagem": {
+      "pasta": "_MODELO_AAAA-MM_SOBRENOME-Nome_Destino",
+      "descricao": "Duplique esta pasta para cada viagem vendida, dentro da pasta do ano de embarque. Ex.: 2026/2026-11_SILVA-Lucas_Portugal-Espanha",
+      "subpastas": ["01_Proposta_e_Contrato", "02_Pagamentos", "03_Aereo", "04_Hospedagem", "05_Servicos_e_Passeios", "06_Seguro_Viagem", "07_Documentos_Passageiros", "08_Vouchers_e_Roteiro_Final", "09_Pos_Venda"]
+    }
+  },
+  "setores": [
+    {
+      "codigo": "00",
+      "pasta": "00_DIRETORIA",
+      "nome": "Diretoria",
+      "responsavel": "Sócios-diretores",
+      "acesso": "confidencial",
+      "descricao": "Documentos dos sócios e diretores, decisões societárias, planejamento e indicadores da empresa.",
+      "subpastas": [
+        { "pasta": "01_Atas_e_Deliberacoes", "descricao": "Atas de reunião de sócios e deliberações assinadas." },
+        { "pasta": "02_Acordo_de_Socios", "descricao": "Acordo de quotistas e aditivos." },
+        { "pasta": "03_Documentos_dos_Socios", "descricao": "Uma subpasta por sócio: RG/CNH, CPF, comprovante de residência, IRPF." },
+        { "pasta": "04_Procuracoes_Outorgadas", "descricao": "Procurações que a empresa concedeu a terceiros." },
+        { "pasta": "05_Planejamento_Estrategico", "descricao": "Plano anual, orçamento, metas e projetos." },
+        { "pasta": "06_Relatorios_Gerenciais", "descricao": "DRE gerencial e indicadores mensais (AAAA-MM)." },
+        { "pasta": "07_Reunioes_de_Diretoria", "descricao": "Pautas e atas das reuniões de gestão." }
+      ],
+      "documentos": [
+        { "id": "dir-01", "nome": "Documentos pessoais dos sócios (RG/CNH, CPF, comprovante de residência)", "subpasta": "03_Documentos_dos_Socios", "obrigatorio": true, "validade_dias": null, "temporalidade": "Enquanto sócio + 5 anos", "acesso": "confidencial" },
+        { "id": "dir-02", "nome": "Atas de reunião e deliberações de sócios", "subpasta": "01_Atas_e_Deliberacoes", "obrigatorio": true, "validade_dias": null, "temporalidade": "Permanente", "acesso": "confidencial", "base": "Código Civil, arts. 1.071–1.080" },
+        { "id": "dir-03", "nome": "Acordo de sócios / quotistas", "subpasta": "02_Acordo_de_Socios", "obrigatorio": false, "validade_dias": null, "temporalidade": "Permanente", "acesso": "confidencial", "nota": "Fortemente recomendado: regras de saída, sucessão e não concorrência." },
+        { "id": "dir-04", "nome": "Procurações outorgadas pela empresa", "subpasta": "04_Procuracoes_Outorgadas", "obrigatorio": false, "validade_dias": 365, "temporalidade": "Vigência + 5 anos", "acesso": "confidencial", "nota": "Prefira procurações com prazo de 1 ano e poderes específicos." },
+        { "id": "dir-05", "nome": "Planejamento estratégico e orçamento anual", "subpasta": "05_Planejamento_Estrategico", "obrigatorio": true, "validade_dias": 365, "temporalidade": "5 anos", "acesso": "confidencial" },
+        { "id": "dir-06", "nome": "Relatório gerencial mensal (DRE gerencial e indicadores)", "subpasta": "06_Relatorios_Gerenciais", "obrigatorio": true, "validade_dias": 30, "temporalidade": "5 anos", "acesso": "confidencial" },
+        { "id": "dir-07", "nome": "Declarações de IRPF dos sócios", "subpasta": "03_Documentos_dos_Socios", "obrigatorio": false, "validade_dias": 365, "temporalidade": "5 anos", "acesso": "confidencial" }
+      ]
+    },
+    {
+      "codigo": "01",
+      "pasta": "01_INSTITUCIONAL",
+      "nome": "Institucional e Societário",
+      "responsavel": "Diretoria + Administrativo",
+      "acesso": "restrito",
+      "descricao": "Documentos básicos da empresa: constituição, cadastros, licenças, certidões e registros. É a pasta pedida em bancos, licitações, credenciamentos com operadoras e fiscalizações.",
+      "subpastas": [
+        { "pasta": "01_Atos_Constitutivos", "descricao": "Contrato social, alterações e certidões da Junta Comercial." },
+        { "pasta": "02_Cadastros_Fiscais", "descricao": "Cartão CNPJ, inscrição municipal, enquadramento tributário." },
+        { "pasta": "03_Licencas_e_Alvaras", "descricao": "Alvará, CADASTUR, Corpo de Bombeiros." },
+        { "pasta": "04_Certidoes_Negativas", "descricao": "CNDs federal, estadual, municipal, FGTS e trabalhista. Uma subpasta por ano." },
+        { "pasta": "05_Certificado_Digital", "descricao": "Somente o comprovante de emissão. O arquivo .pfx NÃO fica aqui." },
+        { "pasta": "06_Registros_e_Credenciamentos", "descricao": "IATA, consolidadoras, ABAV e associações." },
+        { "pasta": "07_Seguros_Empresariais", "descricao": "Apólices de seguro do escritório e de responsabilidade civil." },
+        { "pasta": "08_Marca_e_Dominio", "descricao": "Registro no INPI, domínio e redes sociais oficiais." }
+      ],
+      "documentos": [
+        { "id": "ins-01", "nome": "Contrato social e alterações (versão consolidada)", "subpasta": "01_Atos_Constitutivos", "obrigatorio": true, "validade_dias": null, "temporalidade": "Permanente", "acesso": "restrito", "base": "Código Civil / Lei 8.934/1994" },
+        { "id": "ins-02", "nome": "Certidão simplificada da Junta Comercial", "subpasta": "01_Atos_Constitutivos", "obrigatorio": true, "validade_dias": 90, "temporalidade": "Até nova emissão", "acesso": "restrito", "nota": "Bancos e operadoras costumam exigir emissão com até 30–90 dias." },
+        { "id": "ins-03", "nome": "Cartão CNPJ atualizado", "subpasta": "02_Cadastros_Fiscais", "obrigatorio": true, "validade_dias": 90, "temporalidade": "Até nova emissão", "acesso": "interno" },
+        { "id": "ins-04", "nome": "Inscrição municipal", "subpasta": "02_Cadastros_Fiscais", "obrigatorio": true, "validade_dias": null, "temporalidade": "Permanente", "acesso": "interno" },
+        { "id": "ins-05", "nome": "Termo de opção pelo Simples Nacional / enquadramento tributário", "subpasta": "02_Cadastros_Fiscais", "obrigatorio": true, "validade_dias": null, "temporalidade": "Permanente", "acesso": "restrito" },
+        { "id": "ins-06", "nome": "Alvará de licença de funcionamento", "subpasta": "03_Licencas_e_Alvaras", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Vigência + 5 anos", "acesso": "interno", "nota": "Validade e renovação variam por município. Confira na prefeitura." },
+        { "id": "ins-07", "nome": "Certificado CADASTUR (Ministério do Turismo)", "subpasta": "03_Licencas_e_Alvaras", "obrigatorio": true, "validade_dias": 730, "temporalidade": "Vigência + 5 anos", "acesso": "interno", "base": "Lei 11.771/2008 (Lei Geral do Turismo)", "nota": "Obrigatório para agências de turismo. Sem ele a agência fica irregular e não pode se credenciar em vários fornecedores." },
+        { "id": "ins-08", "nome": "Licença / certificado do Corpo de Bombeiros", "subpasta": "03_Licencas_e_Alvaras", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Vigência + 5 anos", "acesso": "interno", "nota": "Em salas comerciais, normalmente fica com o condomínio. Guarde uma cópia." },
+        { "id": "ins-09", "nome": "CND federal (Receita Federal / PGFN)", "subpasta": "04_Certidoes_Negativas", "obrigatorio": true, "validade_dias": 180, "temporalidade": "5 anos", "acesso": "restrito" },
+        { "id": "ins-10", "nome": "CRF: Certificado de Regularidade do FGTS", "subpasta": "04_Certidoes_Negativas", "obrigatorio": true, "validade_dias": 30, "temporalidade": "5 anos", "acesso": "restrito" },
+        { "id": "ins-11", "nome": "CNDT: Certidão Negativa de Débitos Trabalhistas", "subpasta": "04_Certidoes_Negativas", "obrigatorio": true, "validade_dias": 180, "temporalidade": "5 anos", "acesso": "restrito" },
+        { "id": "ins-12", "nome": "CND estadual", "subpasta": "04_Certidoes_Negativas", "obrigatorio": true, "validade_dias": 90, "temporalidade": "5 anos", "acesso": "restrito", "nota": "A validade varia por estado." },
+        { "id": "ins-13", "nome": "CND municipal", "subpasta": "04_Certidoes_Negativas", "obrigatorio": true, "validade_dias": 90, "temporalidade": "5 anos", "acesso": "restrito", "nota": "A validade varia por município." },
+        { "id": "ins-14", "nome": "Certidão de falência e recuperação judicial", "subpasta": "04_Certidoes_Negativas", "obrigatorio": false, "validade_dias": 90, "temporalidade": "5 anos", "acesso": "restrito" },
+        { "id": "ins-15", "nome": "Certificado digital e-CNPJ (comprovante e validade)", "subpasta": "05_Certificado_Digital", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Até expirar", "acesso": "confidencial", "nota": "Nunca guarde o arquivo .pfx ou a senha em pasta compartilhada. Use um gerenciador de senhas." },
+        { "id": "ins-16", "nome": "Credenciamento IATA / consolidadoras aéreas", "subpasta": "06_Registros_e_Credenciamentos", "obrigatorio": false, "validade_dias": 365, "temporalidade": "Vigência + 5 anos", "acesso": "restrito" },
+        { "id": "ins-17", "nome": "Filiação à ABAV / associações do setor", "subpasta": "06_Registros_e_Credenciamentos", "obrigatorio": false, "validade_dias": 365, "temporalidade": "Vigência", "acesso": "interno" },
+        { "id": "ins-18", "nome": "Apólice de seguro empresarial / responsabilidade civil", "subpasta": "07_Seguros_Empresariais", "obrigatorio": false, "validade_dias": 365, "temporalidade": "Vigência + 5 anos", "acesso": "restrito", "nota": "Recomendado: o seguro de responsabilidade civil profissional protege a agência em falhas de fornecedores." },
+        { "id": "ins-19", "nome": "Registro da marca no INPI", "subpasta": "08_Marca_e_Dominio", "obrigatorio": false, "validade_dias": 3650, "temporalidade": "Permanente", "acesso": "restrito", "base": "Lei 9.279/1996", "nota": "Recomendado: sem o registro, terceiros podem registrar a marca LusaTravel." },
+        { "id": "ins-20", "nome": "Registro de domínio (registro.br) e titularidade das redes sociais", "subpasta": "08_Marca_e_Dominio", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Vigência", "acesso": "restrito", "nota": "Domínio e redes sociais devem estar no CNPJ, não no CPF de colaborador." }
+      ]
+    },
+    {
+      "codigo": "02",
+      "pasta": "02_ADMINISTRATIVO",
+      "nome": "Administrativo",
+      "responsavel": "Gerência administrativa",
+      "acesso": "interno",
+      "descricao": "Infraestrutura e funcionamento do escritório: imóvel, contratos de serviço, patrimônio, contas de consumo e procedimentos internos.",
+      "subpastas": [
+        { "pasta": "01_Imovel_e_Locacao", "descricao": "Contrato de locação, IPTU, condomínio, laudos de vistoria." },
+        { "pasta": "02_Contratos_de_Servicos", "descricao": "Contabilidade, internet, telefonia, limpeza e softwares." },
+        { "pasta": "03_Compras_e_Patrimonio", "descricao": "Notas de compra de bens, garantias e inventário." },
+        { "pasta": "04_Contas_de_Consumo", "descricao": "Energia, água, internet e telefone (AAAA-MM)." },
+        { "pasta": "05_Correspondencias_e_Oficios", "descricao": "Correspondências recebidas e enviadas." },
+        { "pasta": "06_Procedimentos_e_Politicas", "descricao": "POPs, fluxos internos e políticas administrativas." },
+        { "pasta": "07_Atas_de_Reunioes_Internas", "descricao": "Reuniões de equipe e decisões operacionais." }
+      ],
+      "documentos": [
+        { "id": "adm-01", "nome": "Contrato de locação do imóvel", "subpasta": "01_Imovel_e_Locacao", "obrigatorio": true, "validade_dias": null, "temporalidade": "Vigência + 5 anos", "acesso": "restrito", "nota": "Informe a data de término do contrato no campo Vencimento." },
+        { "id": "adm-02", "nome": "Laudo de vistoria de entrada do imóvel", "subpasta": "01_Imovel_e_Locacao", "obrigatorio": true, "validade_dias": null, "temporalidade": "Fim da locação + 5 anos", "acesso": "interno", "nota": "Sem ele, a agência paga reparos que não causou na devolução." },
+        { "id": "adm-03", "nome": "IPTU e taxas do imóvel", "subpasta": "01_Imovel_e_Locacao", "obrigatorio": true, "validade_dias": 365, "temporalidade": "5 anos", "acesso": "interno" },
+        { "id": "adm-04", "nome": "Contrato com o escritório de contabilidade", "subpasta": "02_Contratos_de_Servicos", "obrigatorio": true, "validade_dias": null, "temporalidade": "Vigência + 10 anos", "acesso": "restrito" },
+        { "id": "adm-05", "nome": "Contratos de internet, telefonia e softwares (SaaS)", "subpasta": "02_Contratos_de_Servicos", "obrigatorio": true, "validade_dias": null, "temporalidade": "Vigência + 5 anos", "acesso": "interno" },
+        { "id": "adm-06", "nome": "Inventário de bens e equipamentos (patrimônio)", "subpasta": "03_Compras_e_Patrimonio", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Permanente (versão atual)", "acesso": "interno" },
+        { "id": "adm-07", "nome": "Notas fiscais de compra de bens e termos de garantia", "subpasta": "03_Compras_e_Patrimonio", "obrigatorio": true, "validade_dias": null, "temporalidade": "Vida útil do bem + 5 anos", "acesso": "interno" },
+        { "id": "adm-08", "nome": "Manual de procedimentos internos (POPs)", "subpasta": "06_Procedimentos_e_Politicas", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Versão vigente + anteriores por 5 anos", "acesso": "interno" }
+      ]
+    },
+    {
+      "codigo": "03",
+      "pasta": "03_FINANCEIRO",
+      "nome": "Financeiro",
+      "responsavel": "Financeiro",
+      "acesso": "restrito",
+      "descricao": "Movimentação financeira do dia a dia: pagar, receber, bancos, câmbio e repasses a fornecedores. Em agência de turismo, a maior parte do dinheiro que entra é do fornecedor, e o repasse precisa ser rastreável.",
+      "subpastas": [
+        { "pasta": "01_Contas_a_Pagar", "descricao": "Boletos e comprovantes, por AAAA/AAAA-MM." },
+        { "pasta": "02_Contas_a_Receber", "descricao": "Cobranças e recebimentos de clientes, por AAAA/AAAA-MM." },
+        { "pasta": "03_Extratos_Bancarios", "descricao": "Uma subpasta por banco; um PDF por mês." },
+        { "pasta": "04_Conciliacoes_Bancarias", "descricao": "Planilha de conciliação mensal fechada." },
+        { "pasta": "05_Notas_Fiscais_Emitidas", "descricao": "NFS-e emitidas, por AAAA-MM." },
+        { "pasta": "06_Notas_Fiscais_Recebidas", "descricao": "Notas e faturas de fornecedores, por AAAA-MM." },
+        { "pasta": "07_Cambio_e_Remessas", "descricao": "Contratos de câmbio e comprovantes de remessa ao exterior." },
+        { "pasta": "08_Repasses_a_Fornecedores", "descricao": "Pagamentos a operadoras, consolidadoras, hotéis e receptivos." },
+        { "pasta": "09_Cartoes_e_Adquirentes", "descricao": "Relatórios de maquininha, link de pagamento e chargebacks." },
+        { "pasta": "10_Fluxo_de_Caixa_e_Orcamento", "descricao": "Fluxo de caixa projetado e realizado." },
+        { "pasta": "11_Contratos_Bancarios", "descricao": "Contas, empréstimos, financiamentos e tarifas." }
+      ],
+      "documentos": [
+        { "id": "fin-01", "nome": "Extratos bancários mensais (todas as contas)", "subpasta": "03_Extratos_Bancarios", "obrigatorio": true, "validade_dias": 30, "temporalidade": "5 anos", "acesso": "restrito", "base": "CTN, arts. 173 e 174" },
+        { "id": "fin-02", "nome": "Conciliação bancária mensal", "subpasta": "04_Conciliacoes_Bancarias", "obrigatorio": true, "validade_dias": 30, "temporalidade": "5 anos", "acesso": "restrito" },
+        { "id": "fin-03", "nome": "NFS-e emitidas no mês", "subpasta": "05_Notas_Fiscais_Emitidas", "obrigatorio": true, "validade_dias": 30, "temporalidade": "5 anos", "acesso": "restrito", "nota": "Confirme com o contador a base de cálculo: comissão/intermediação ou valor total." },
+        { "id": "fin-04", "nome": "Notas fiscais e faturas recebidas no mês", "subpasta": "06_Notas_Fiscais_Recebidas", "obrigatorio": true, "validade_dias": 30, "temporalidade": "5 anos", "acesso": "restrito" },
+        { "id": "fin-05", "nome": "Contratos de câmbio e comprovantes de remessa ao exterior", "subpasta": "07_Cambio_e_Remessas", "obrigatorio": true, "validade_dias": null, "temporalidade": "5 anos", "acesso": "restrito", "base": "Regulamentação cambial do Banco Central / IOF" },
+        { "id": "fin-06", "nome": "Comprovantes de repasse a fornecedores (por viagem)", "subpasta": "08_Repasses_a_Fornecedores", "obrigatorio": true, "validade_dias": 30, "temporalidade": "5 anos", "acesso": "restrito" },
+        { "id": "fin-07", "nome": "Relatórios de adquirente e contestações (chargeback)", "subpasta": "09_Cartoes_e_Adquirentes", "obrigatorio": true, "validade_dias": 30, "temporalidade": "5 anos", "acesso": "restrito" },
+        { "id": "fin-08", "nome": "Fluxo de caixa (projetado x realizado)", "subpasta": "10_Fluxo_de_Caixa_e_Orcamento", "obrigatorio": true, "validade_dias": 30, "temporalidade": "5 anos", "acesso": "restrito" },
+        { "id": "fin-09", "nome": "Contratos bancários, empréstimos e financiamentos", "subpasta": "11_Contratos_Bancarios", "obrigatorio": false, "validade_dias": null, "temporalidade": "Quitação + 5 anos", "acesso": "restrito" }
+      ]
+    },
+    {
+      "codigo": "04",
+      "pasta": "04_CONTABIL_FISCAL",
+      "nome": "Contábil e Fiscal",
+      "responsavel": "Financeiro + contador externo",
+      "acesso": "restrito",
+      "descricao": "Tudo o que o contador produz ou pede: demonstrações, impostos, obrigações acessórias e livros. A empresa deve ter cópia própria, não só no portal do contador.",
+      "subpastas": [
+        { "pasta": "01_Balancos_e_DRE", "descricao": "Balanço anual, DRE e balancetes mensais." },
+        { "pasta": "02_Guias_de_Impostos", "descricao": "Guia + comprovante de pagamento, por AAAA-MM." },
+        { "pasta": "03_Obrigacoes_Acessorias", "descricao": "DEFIS, ECD, ECF, DCTFWeb, EFD-Reinf e recibos de entrega." },
+        { "pasta": "04_Livros_Contabeis", "descricao": "Livro Diário e Razão." },
+        { "pasta": "05_Parcelamentos", "descricao": "Termos de parcelamento e recibos." },
+        { "pasta": "06_Comunicacao_com_Contador", "descricao": "Solicitações e pendências importantes." }
+      ],
+      "documentos": [
+        { "id": "con-01", "nome": "Balanço patrimonial e DRE anuais", "subpasta": "01_Balancos_e_DRE", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Permanente", "acesso": "restrito" },
+        { "id": "con-02", "nome": "Balancetes mensais", "subpasta": "01_Balancos_e_DRE", "obrigatorio": true, "validade_dias": 30, "temporalidade": "10 anos", "acesso": "restrito" },
+        { "id": "con-03", "nome": "Guias de impostos com comprovantes (DAS, ISS, IRPJ/CSLL…)", "subpasta": "02_Guias_de_Impostos", "obrigatorio": true, "validade_dias": 30, "temporalidade": "5 anos (recomendado 10)", "acesso": "restrito", "base": "CTN, arts. 173 e 174" },
+        { "id": "con-04", "nome": "DEFIS / ECD / ECF e recibos de entrega (conforme o regime)", "subpasta": "03_Obrigacoes_Acessorias", "obrigatorio": true, "validade_dias": 365, "temporalidade": "5 anos (recomendado 10)", "acesso": "restrito" },
+        { "id": "con-05", "nome": "DCTFWeb e EFD-Reinf e recibos de entrega", "subpasta": "03_Obrigacoes_Acessorias", "obrigatorio": true, "validade_dias": 30, "temporalidade": "5 anos (recomendado 10)", "acesso": "restrito" },
+        { "id": "con-06", "nome": "Livro Diário e Razão", "subpasta": "04_Livros_Contabeis", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Permanente", "acesso": "restrito" },
+        { "id": "con-07", "nome": "Parcelamentos fiscais (termos e recibos)", "subpasta": "05_Parcelamentos", "obrigatorio": false, "validade_dias": null, "temporalidade": "Quitação + 5 anos", "acesso": "restrito" }
+      ]
+    },
+    {
+      "codigo": "05",
+      "pasta": "05_RH_DEPARTAMENTO_PESSOAL",
+      "nome": "RH e Departamento Pessoal",
+      "responsavel": "RH / DP",
+      "acesso": "confidencial",
+      "descricao": "Vida funcional dos colaboradores, da admissão à rescisão, mais folha, encargos, saúde e segurança do trabalho. Contém dados pessoais sensíveis (LGPD): acesso mínimo necessário.",
+      "subpastas": [
+        { "pasta": "01_Colaboradores_Ativos", "descricao": "Uma pasta por colaborador, criada a partir do modelo.", "modelo": "colaborador" },
+        { "pasta": "02_Colaboradores_Desligados", "descricao": "Pastas movidas de Ativos após a rescisão (não apague)." },
+        { "pasta": "03_Folha_de_Pagamento", "descricao": "Folha fechada e holerites, por AAAA-MM." },
+        { "pasta": "04_Encargos_FGTS_INSS", "descricao": "Guias FGTS Digital e DCTFWeb com comprovantes." },
+        { "pasta": "05_Controle_de_Ponto", "descricao": "Espelhos de ponto mensais assinados." },
+        { "pasta": "06_Beneficios", "descricao": "Vale-transporte, vale-refeição, plano de saúde." },
+        { "pasta": "07_SST_Saude_e_Seguranca", "descricao": "PGR, PCMSO e ASOs consolidados." },
+        { "pasta": "08_Recrutamento_e_Selecao", "descricao": "Vagas abertas e currículos (prazo de descarte curto)." },
+        { "pasta": "09_Treinamento_e_Desenvolvimento", "descricao": "Listas de presença, certificados e avaliações." },
+        { "pasta": "10_Politicas_e_Regulamento_Interno", "descricao": "Regulamento interno, código de conduta e termos assinados." },
+        { "pasta": "11_Estagiarios_e_Prestadores_PJ", "descricao": "Termos de estágio e contratos de prestadores." },
+        { "pasta": "12_Convencao_Coletiva", "descricao": "Convenção coletiva vigente do sindicato da categoria." }
+      ],
+      "documentos": [
+        { "id": "rh-01", "nome": "Registro de empregados (eSocial / ficha de registro)", "subpasta": "01_Colaboradores_Ativos", "obrigatorio": true, "validade_dias": null, "temporalidade": "Permanente", "acesso": "confidencial", "base": "CLT, art. 41" },
+        { "id": "rh-02", "nome": "Contratos de trabalho e aditivos assinados", "subpasta": "01_Colaboradores_Ativos", "obrigatorio": true, "validade_dias": null, "temporalidade": "Permanente (recomendado)", "acesso": "confidencial" },
+        { "id": "rh-03", "nome": "ASOs: admissional, periódico, mudança de função e demissional", "subpasta": "07_SST_Saude_e_Seguranca", "obrigatorio": true, "validade_dias": 730, "temporalidade": "20 anos após o desligamento", "acesso": "confidencial", "base": "NR-7", "nota": "O periódico costuma ser bienal para atividade sem riscos. Confirme com a medicina do trabalho." },
+        { "id": "rh-04", "nome": "PGR ou declaração de dispensa (ME/EPP com grau de risco 1–2)", "subpasta": "07_SST_Saude_e_Seguranca", "obrigatorio": true, "validade_dias": 730, "temporalidade": "20 anos", "acesso": "restrito", "base": "NR-1, item 1.8" },
+        { "id": "rh-05", "nome": "PCMSO (quando não houver dispensa)", "subpasta": "07_SST_Saude_e_Seguranca", "obrigatorio": false, "validade_dias": 365, "temporalidade": "20 anos", "acesso": "restrito", "base": "NR-7" },
+        { "id": "rh-06", "nome": "Folha de pagamento e holerites assinados", "subpasta": "03_Folha_de_Pagamento", "obrigatorio": true, "validade_dias": 30, "temporalidade": "10 anos (recomendado)", "acesso": "confidencial" },
+        { "id": "rh-07", "nome": "Guias FGTS Digital e DCTFWeb (INSS) com comprovantes", "subpasta": "04_Encargos_FGTS_INSS", "obrigatorio": true, "validade_dias": 30, "temporalidade": "5 anos (recomendado 10)", "acesso": "restrito", "base": "STF, ARE 709.212 (prescrição quinquenal do FGTS)" },
+        { "id": "rh-08", "nome": "Espelhos de ponto mensais", "subpasta": "05_Controle_de_Ponto", "obrigatorio": true, "validade_dias": 30, "temporalidade": "5 anos", "acesso": "confidencial", "base": "CLT, art. 74 / CF, art. 7º, XXIX" },
+        { "id": "rh-09", "nome": "Avisos e recibos de férias", "subpasta": "01_Colaboradores_Ativos", "obrigatorio": true, "validade_dias": null, "temporalidade": "5 anos", "acesso": "confidencial" },
+        { "id": "rh-10", "nome": "Opção de vale-transporte e termos de benefícios", "subpasta": "06_Beneficios", "obrigatorio": true, "validade_dias": 365, "temporalidade": "5 anos", "acesso": "confidencial" },
+        { "id": "rh-11", "nome": "Termos de rescisão (TRCT) e comprovantes de quitação", "subpasta": "02_Colaboradores_Desligados", "obrigatorio": true, "validade_dias": null, "temporalidade": "Permanente (recomendado)", "acesso": "confidencial" },
+        { "id": "rh-12", "nome": "Convenção coletiva vigente", "subpasta": "12_Convencao_Coletiva", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Vigência + 5 anos", "acesso": "interno", "nota": "Define piso, reajuste e benefícios obrigatórios da categoria." },
+        { "id": "rh-13", "nome": "Regulamento interno / código de conduta assinado", "subpasta": "10_Politicas_e_Regulamento_Interno", "obrigatorio": false, "validade_dias": 365, "temporalidade": "Vigência + 5 anos", "acesso": "interno" },
+        { "id": "rh-14", "nome": "Termos de compromisso de estágio (TCE)", "subpasta": "11_Estagiarios_e_Prestadores_PJ", "obrigatorio": false, "validade_dias": null, "temporalidade": "Fim do estágio + 5 anos", "acesso": "confidencial", "base": "Lei 11.788/2008" },
+        { "id": "rh-15", "nome": "Contratos com prestadores PJ", "subpasta": "11_Estagiarios_e_Prestadores_PJ", "obrigatorio": false, "validade_dias": null, "temporalidade": "Vigência + 10 anos", "acesso": "restrito", "nota": "Atenção ao risco de vínculo empregatício: PJ com subordinação e horário fixo é empregado." },
+        { "id": "rh-16", "nome": "Currículos de candidatos não contratados", "subpasta": "08_Recrutamento_e_Selecao", "obrigatorio": false, "validade_dias": 180, "temporalidade": "Eliminar em até 6 meses", "acesso": "restrito", "base": "LGPD, art. 15 (minimização)" },
+        { "id": "rh-17", "nome": "Registros de treinamentos (presença e certificados)", "subpasta": "09_Treinamento_e_Desenvolvimento", "obrigatorio": false, "validade_dias": null, "temporalidade": "5 anos", "acesso": "interno" }
+      ]
+    },
+    {
+      "codigo": "06",
+      "pasta": "06_JURIDICO",
+      "nome": "Jurídico",
+      "responsavel": "Diretoria + assessoria jurídica",
+      "acesso": "restrito",
+      "descricao": "Contratos, modelos, processos e reclamações de consumidores. A agência responde solidariamente por falhas de fornecedores (CDC): contratos bem guardados são a principal defesa.",
+      "subpastas": [
+        { "pasta": "01_Contratos_com_Clientes_Modelos", "descricao": "Modelo vigente do contrato de intermediação e termos de venda." },
+        { "pasta": "02_Contratos_com_Fornecedores", "descricao": "Uma subpasta por fornecedor: operadoras, consolidadoras, hotéis, receptivos, seguradoras." },
+        { "pasta": "03_Contratos_de_Parceria", "descricao": "Afiliados, influenciadores, indicações." },
+        { "pasta": "04_Processos_Judiciais", "descricao": "Uma subpasta por número de processo." },
+        { "pasta": "05_Procon_e_Reclamacoes", "descricao": "Procon, consumidor.gov.br e Reclame Aqui." },
+        { "pasta": "06_Notificacoes_Extrajudiciais", "descricao": "Enviadas e recebidas." },
+        { "pasta": "07_Procuracoes_e_Assessoria", "descricao": "Procurações a advogados e contrato de assessoria." },
+        { "pasta": "08_Modelos_e_Minutas", "descricao": "Minutas aprovadas pelo jurídico para reutilização." },
+        { "pasta": "09_Pareceres", "descricao": "Opiniões jurídicas sobre temas da empresa." }
+      ],
+      "documentos": [
+        { "id": "jur-01", "nome": "Contrato padrão de intermediação de serviços turísticos", "subpasta": "01_Contratos_com_Clientes_Modelos", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Versão vigente + anteriores por 5 anos", "acesso": "interno", "base": "CDC (Lei 8.078/1990) / Lei 11.771/2008", "nota": "Revisar anualmente e sempre que mudar a política de cancelamento." },
+        { "id": "jur-02", "nome": "Termos e condições gerais de venda e política de cancelamento", "subpasta": "01_Contratos_com_Clientes_Modelos", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Versão vigente + anteriores por 5 anos", "acesso": "interno" },
+        { "id": "jur-03", "nome": "Contratos com operadoras, consolidadoras, hotéis e receptivos", "subpasta": "02_Contratos_com_Fornecedores", "obrigatorio": true, "validade_dias": null, "temporalidade": "Vigência + 10 anos", "acesso": "restrito", "base": "Código Civil, art. 205" },
+        { "id": "jur-04", "nome": "Contratos com seguradoras de viagem", "subpasta": "02_Contratos_com_Fornecedores", "obrigatorio": false, "validade_dias": null, "temporalidade": "Vigência + 10 anos", "acesso": "restrito" },
+        { "id": "jur-05", "nome": "Contratos de parceria, afiliados e influenciadores", "subpasta": "03_Contratos_de_Parceria", "obrigatorio": false, "validade_dias": null, "temporalidade": "Vigência + 5 anos", "acesso": "restrito" },
+        { "id": "jur-06", "nome": "Processos judiciais em andamento", "subpasta": "04_Processos_Judiciais", "obrigatorio": false, "validade_dias": null, "temporalidade": "Trânsito em julgado + 5 anos", "acesso": "restrito" },
+        { "id": "jur-07", "nome": "Reclamações de consumidores (Procon / consumidor.gov / Reclame Aqui)", "subpasta": "05_Procon_e_Reclamacoes", "obrigatorio": false, "validade_dias": null, "temporalidade": "Encerramento + 5 anos", "acesso": "restrito" },
+        { "id": "jur-08", "nome": "Contrato de assessoria jurídica e procurações", "subpasta": "07_Procuracoes_e_Assessoria", "obrigatorio": false, "validade_dias": null, "temporalidade": "Vigência + 5 anos", "acesso": "restrito" }
+      ]
+    },
+    {
+      "codigo": "07",
+      "pasta": "07_COMPLIANCE_LGPD",
+      "nome": "Compliance e LGPD",
+      "responsavel": "Encarregado de dados (DPO)",
+      "acesso": "restrito",
+      "descricao": "Proteção de dados pessoais. Agências tratam passaporte, CPF, data de nascimento, dados de menores e de saúde (seguro), por isso o risco de sanção da ANPD é real.",
+      "subpastas": [
+        { "pasta": "01_Politicas_de_Privacidade", "descricao": "Política de privacidade e de cookies (versões)." },
+        { "pasta": "02_Inventario_de_Dados_ROPA", "descricao": "Registro das operações de tratamento." },
+        { "pasta": "03_Termos_e_Avisos", "descricao": "Avisos de privacidade e termos de confidencialidade." },
+        { "pasta": "04_Contratos_com_Operadores_DPA", "descricao": "Cláusulas de proteção de dados com fornecedores." },
+        { "pasta": "05_Solicitacoes_de_Titulares", "descricao": "Pedidos de acesso, correção e exclusão e as respostas dadas." },
+        { "pasta": "06_Incidentes_de_Seguranca", "descricao": "Registro de incidentes e comunicações à ANPD." },
+        { "pasta": "07_Encarregado_DPO", "descricao": "Ato de nomeação e canal de contato." },
+        { "pasta": "08_Treinamentos_LGPD", "descricao": "Treinamentos da equipe e listas de presença." }
+      ],
+      "documentos": [
+        { "id": "lgpd-01", "nome": "Política de privacidade (site e atendimento)", "subpasta": "01_Politicas_de_Privacidade", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Versões + 5 anos", "acesso": "interno", "base": "LGPD, art. 9º" },
+        { "id": "lgpd-02", "nome": "Registro das operações de tratamento (ROPA)", "subpasta": "02_Inventario_de_Dados_ROPA", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Permanente (versão atual)", "acesso": "restrito", "base": "LGPD, art. 37" },
+        { "id": "lgpd-03", "nome": "Nomeação do encarregado (DPO) ou canal de comunicação", "subpasta": "07_Encarregado_DPO", "obrigatorio": true, "validade_dias": null, "temporalidade": "Vigência", "acesso": "interno", "base": "LGPD, art. 41 / Res. CD/ANPD 2/2022", "nota": "O agente de pequeno porte pode ser dispensado do DPO, mas precisa manter um canal de comunicação com os titulares." },
+        { "id": "lgpd-04", "nome": "Termos de confidencialidade assinados pelos colaboradores", "subpasta": "03_Termos_e_Avisos", "obrigatorio": true, "validade_dias": null, "temporalidade": "Desligamento + 5 anos", "acesso": "restrito" },
+        { "id": "lgpd-05", "nome": "Cláusulas de proteção de dados com fornecedores (DPA)", "subpasta": "04_Contratos_com_Operadores_DPA", "obrigatorio": true, "validade_dias": null, "temporalidade": "Vigência + 5 anos", "acesso": "restrito" },
+        { "id": "lgpd-06", "nome": "Registro de solicitações de titulares", "subpasta": "05_Solicitacoes_de_Titulares", "obrigatorio": true, "validade_dias": null, "temporalidade": "5 anos", "acesso": "restrito" },
+        { "id": "lgpd-07", "nome": "Registro de incidentes de segurança", "subpasta": "06_Incidentes_de_Seguranca", "obrigatorio": true, "validade_dias": null, "temporalidade": "5 anos", "acesso": "restrito", "base": "Res. CD/ANPD 15/2024" },
+        { "id": "lgpd-08", "nome": "Treinamento anual de LGPD da equipe", "subpasta": "08_Treinamentos_LGPD", "obrigatorio": false, "validade_dias": 365, "temporalidade": "5 anos", "acesso": "interno" }
+      ]
+    },
+    {
+      "codigo": "08",
+      "pasta": "08_COMERCIAL_VENDAS",
+      "nome": "Comercial e Vendas",
+      "responsavel": "Gerência comercial",
+      "acesso": "interno",
+      "descricao": "Propostas, cotações, tarifários e política comercial. A proposta aprovada migra para a pasta da viagem em Operações.",
+      "subpastas": [
+        { "pasta": "01_Propostas_e_Cotacoes", "descricao": "Por AAAA/; arquivo AAAA-MM-DD_PROPOSTA_SOBRENOME-Destino_vNN.pdf" },
+        { "pasta": "02_Tarifarios_de_Fornecedores", "descricao": "Tarifários e acordos comerciais vigentes, por fornecedor." },
+        { "pasta": "03_Politica_Comercial", "descricao": "Comissões, descontos, formas de pagamento e alçadas." },
+        { "pasta": "04_Metas_e_Relatorios_de_Vendas", "descricao": "Metas e fechamento mensal." },
+        { "pasta": "05_Clientes_Corporativos", "descricao": "Contratos e políticas de viagem de empresas clientes." },
+        { "pasta": "06_Grupos_e_Eventos", "descricao": "Viagens em grupo, eventos e incentivos." }
+      ],
+      "documentos": [
+        { "id": "com-01", "nome": "Política comercial (descontos, formas de pagamento e alçadas)", "subpasta": "03_Politica_Comercial", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Versões + 5 anos", "acesso": "interno" },
+        { "id": "com-02", "nome": "Tabela de comissionamento da equipe", "subpasta": "03_Politica_Comercial", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Versões + 5 anos", "acesso": "restrito" },
+        { "id": "com-03", "nome": "Tarifários e acordos comerciais com fornecedores", "subpasta": "02_Tarifarios_de_Fornecedores", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Vigência + 2 anos", "acesso": "interno" },
+        { "id": "com-04", "nome": "Relatório mensal de vendas x metas", "subpasta": "04_Metas_e_Relatorios_de_Vendas", "obrigatorio": true, "validade_dias": 30, "temporalidade": "5 anos", "acesso": "restrito" },
+        { "id": "com-05", "nome": "Contratos com clientes corporativos", "subpasta": "05_Clientes_Corporativos", "obrigatorio": false, "validade_dias": null, "temporalidade": "Vigência + 10 anos", "acesso": "restrito" }
+      ]
+    },
+    {
+      "codigo": "09",
+      "pasta": "09_OPERACOES_RESERVAS",
+      "nome": "Operações e Reservas",
+      "responsavel": "Coordenação de operações",
+      "acesso": "restrito",
+      "descricao": "O núcleo da agência: uma pasta por viagem, com contrato, pagamentos, emissões, vouchers e documentos dos passageiros, além do cadastro de fornecedores e do pós-venda.",
+      "subpastas": [
+        { "pasta": "01_Viagens_de_Clientes", "descricao": "Por ano de embarque (AAAA/). Uma pasta por viagem, criada a partir do modelo.", "modelo": "viagem" },
+        { "pasta": "02_Cadastro_de_Fornecedores", "descricao": "Ficha cadastral, dados bancários e contatos de emergência por fornecedor." },
+        { "pasta": "03_Seguro_Viagem_Condicoes_Gerais", "descricao": "Condições gerais vigentes das seguradoras parceiras." },
+        { "pasta": "04_Vistos_e_Exigencias_por_Pais", "descricao": "Guias de documentação de entrada por destino." },
+        { "pasta": "05_Modelos_de_Voucher_e_Roteiro", "descricao": "Modelos no padrão LusaTravel." },
+        { "pasta": "06_Ocorrencias_Cancelamentos_Reembolsos", "descricao": "Registro de ocorrências em viagem, cancelamentos e reembolsos." },
+        { "pasta": "07_Checklists_Operacionais", "descricao": "Checklists de emissão, pré-embarque e retorno." }
+      ],
+      "documentos": [
+        { "id": "ope-01", "nome": "Contrato assinado do cliente (em cada viagem)", "subpasta": "01_Viagens_de_Clientes", "obrigatorio": true, "validade_dias": null, "temporalidade": "5 anos após a viagem", "acesso": "restrito", "base": "CDC, art. 27" },
+        { "id": "ope-02", "nome": "Comprovantes de pagamento do cliente (em cada viagem)", "subpasta": "01_Viagens_de_Clientes", "obrigatorio": true, "validade_dias": null, "temporalidade": "5 anos após a viagem", "acesso": "restrito" },
+        { "id": "ope-03", "nome": "Bilhetes, vouchers e roteiro final (em cada viagem)", "subpasta": "01_Viagens_de_Clientes", "obrigatorio": true, "validade_dias": null, "temporalidade": "5 anos após a viagem", "acesso": "restrito" },
+        { "id": "ope-04", "nome": "Apólice de seguro viagem emitida (em cada viagem)", "subpasta": "01_Viagens_de_Clientes", "obrigatorio": true, "validade_dias": null, "temporalidade": "5 anos após a viagem", "acesso": "restrito" },
+        { "id": "ope-05", "nome": "Cópias de documentos dos passageiros (passaporte, vistos)", "subpasta": "01_Viagens_de_Clientes", "obrigatorio": true, "validade_dias": null, "temporalidade": "Eliminar 90 dias após o retorno", "acesso": "confidencial", "base": "LGPD, arts. 6º, III e 15", "nota": "É o dado mais sensível da agência. Guardar além do necessário só aumenta o risco." },
+        { "id": "ope-06", "nome": "Autorização de viagem de menores (quando aplicável)", "subpasta": "01_Viagens_de_Clientes", "obrigatorio": false, "validade_dias": null, "temporalidade": "5 anos após a viagem", "acesso": "confidencial", "base": "ECA / Res. CNJ 295/2019" },
+        { "id": "ope-07", "nome": "Ficha cadastral e credenciamento de fornecedores", "subpasta": "02_Cadastro_de_Fornecedores", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Fim da relação + 5 anos", "acesso": "restrito" },
+        { "id": "ope-08", "nome": "Condições gerais das seguradoras parceiras", "subpasta": "03_Seguro_Viagem_Condicoes_Gerais", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Versões + 5 anos", "acesso": "interno" },
+        { "id": "ope-09", "nome": "Registro de ocorrências, cancelamentos e reembolsos", "subpasta": "06_Ocorrencias_Cancelamentos_Reembolsos", "obrigatorio": true, "validade_dias": null, "temporalidade": "5 anos", "acesso": "restrito" },
+        { "id": "ope-10", "nome": "Checklist operacional (emissão, pré-embarque e retorno)", "subpasta": "07_Checklists_Operacionais", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Versão vigente", "acesso": "interno" }
+      ]
+    },
+    {
+      "codigo": "10",
+      "pasta": "10_MARKETING",
+      "nome": "Marketing",
+      "responsavel": "Marketing",
+      "acesso": "interno",
+      "descricao": "Marca, campanhas, redes sociais e imagens. O ponto crítico é o direito de uso: imagem sem licença ou sem autorização gera processo.",
+      "subpastas": [
+        { "pasta": "01_Identidade_Visual_e_Design_System", "descricao": "Logos, Design System LusaTravel e modelos de apresentação." },
+        { "pasta": "02_Campanhas", "descricao": "Por AAAA/AAAA-MM_NomeCampanha." },
+        { "pasta": "03_Redes_Sociais", "descricao": "Calendário editorial e peças publicadas." },
+        { "pasta": "04_Banco_de_Imagens_Licenciadas", "descricao": "Somente imagens com licença comprovada (licença na mesma pasta)." },
+        { "pasta": "05_Site_e_Landing_Pages", "descricao": "Conteúdos e documentação do site." },
+        { "pasta": "06_Autorizacoes_de_Uso_de_Imagem", "descricao": "Termos assinados por clientes e modelos." },
+        { "pasta": "07_Parcerias_e_Influenciadores", "descricao": "Briefings e entregas (contratos ficam no Jurídico)." }
+      ],
+      "documentos": [
+        { "id": "mkt-01", "nome": "Manual de marca / Design System LusaTravel", "subpasta": "01_Identidade_Visual_e_Design_System", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Versões vigentes", "acesso": "interno" },
+        { "id": "mkt-02", "nome": "Licenças de imagens, fontes e músicas", "subpasta": "04_Banco_de_Imagens_Licenciadas", "obrigatorio": true, "validade_dias": null, "temporalidade": "Enquanto usar + 5 anos", "acesso": "interno", "base": "Lei 9.610/1998 (direitos autorais)" },
+        { "id": "mkt-03", "nome": "Autorizações de uso de imagem de clientes", "subpasta": "06_Autorizacoes_de_Uso_de_Imagem", "obrigatorio": true, "validade_dias": null, "temporalidade": "Fim do uso + 5 anos", "acesso": "restrito", "base": "Código Civil, art. 20 / LGPD" },
+        { "id": "mkt-04", "nome": "Calendário editorial e relatórios de campanha", "subpasta": "02_Campanhas", "obrigatorio": false, "validade_dias": 30, "temporalidade": "2 anos", "acesso": "interno" }
+      ]
+    },
+    {
+      "codigo": "11",
+      "pasta": "11_TI_SISTEMAS",
+      "nome": "TI e Sistemas",
+      "responsavel": "Responsável de TI (interno ou terceirizado)",
+      "acesso": "restrito",
+      "descricao": "Equipamentos, licenças, acessos e backup. Senhas nunca ficam em arquivos: use um gerenciador de senhas corporativo.",
+      "subpastas": [
+        { "pasta": "01_Inventario_de_Equipamentos", "descricao": "Computadores, celulares e periféricos, com o responsável por cada um." },
+        { "pasta": "02_Licencas_de_Software", "descricao": "Assinaturas, renovações e titularidade." },
+        { "pasta": "03_Controle_de_Acessos", "descricao": "Matriz de quem acessa qual sistema e pasta (sem senhas)." },
+        { "pasta": "04_Backup_e_Seguranca", "descricao": "Política e registros de teste de backup." },
+        { "pasta": "05_Contratos_de_Sistemas", "descricao": "Sistema de gestão da agência, GDS, CRM e e-mail." },
+        { "pasta": "06_Manuais_e_Tutoriais", "descricao": "Como usar os sistemas internos." }
+      ],
+      "documentos": [
+        { "id": "ti-01", "nome": "Inventário de equipamentos e responsáveis", "subpasta": "01_Inventario_de_Equipamentos", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Versão atual", "acesso": "interno" },
+        { "id": "ti-02", "nome": "Licenças e assinaturas de software", "subpasta": "02_Licencas_de_Software", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Vigência + 5 anos", "acesso": "restrito" },
+        { "id": "ti-03", "nome": "Matriz de acessos por cargo (revisão semestral)", "subpasta": "03_Controle_de_Acessos", "obrigatorio": true, "validade_dias": 180, "temporalidade": "Versões + 5 anos", "acesso": "restrito", "nota": "Na saída de um colaborador, revogue os acessos no mesmo dia." },
+        { "id": "ti-04", "nome": "Política de backup e registro de teste de restauração", "subpasta": "04_Backup_e_Seguranca", "obrigatorio": true, "validade_dias": 90, "temporalidade": "2 anos", "acesso": "restrito", "nota": "Backup que nunca foi testado não serve como backup." },
+        { "id": "ti-05", "nome": "Contratos dos sistemas (gestão, GDS, CRM, e-mail)", "subpasta": "05_Contratos_de_Sistemas", "obrigatorio": true, "validade_dias": null, "temporalidade": "Vigência + 5 anos", "acesso": "restrito" }
+      ]
+    },
+    {
+      "codigo": "99",
+      "pasta": "99_ARQUIVO_MORTO",
+      "nome": "Arquivo Morto",
+      "responsavel": "Administrativo",
+      "acesso": "restrito",
+      "descricao": "Documentos encerrados que ainda estão no prazo de guarda. Organize por AAAA/SETOR. Nada é eliminado sem termo de eliminação aprovado pela Diretoria.",
+      "subpastas": [
+        { "pasta": "01_Termos_de_Eliminacao", "descricao": "Registro do que foi eliminado, quando, por quem e com qual autorização." },
+        { "pasta": "02_Documentos_Encerrados", "descricao": "Por AAAA/ e dentro do ano pelo código do setor de origem." }
+      ],
+      "documentos": [
+        { "id": "arq-01", "nome": "Termo de eliminação de documentos (a cada descarte)", "subpasta": "01_Termos_de_Eliminacao", "obrigatorio": true, "validade_dias": null, "temporalidade": "Permanente", "acesso": "restrito" },
+        { "id": "arq-02", "nome": "Revisão anual da temporalidade (o que pode ser eliminado)", "subpasta": "01_Termos_de_Eliminacao", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Permanente", "acesso": "restrito" }
+      ]
+    }
+  ]
+}
