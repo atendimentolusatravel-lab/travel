@@ -773,6 +773,10 @@ function importarBackup(file){
   r.onload = () => {
     try {
       const j = JSON.parse(r.result); const d = j.dados || j;
+      if (j.perfil && !d.docs){
+        if (!confirm('Carregar este perfil (empresa, setores e itens cadastrados)? As datas e links já registrados são mantidos.')) return;
+        S.perfil = Object.assign({}, E.perfil_padrao, j.perfil); salvar(); render(); toast('Perfil carregado.'); return;
+      }
       if (!d || typeof d.docs !== 'object') throw 0;
       if (!confirm('Substituir os dados atuais deste navegador pelo backup selecionado?')) return;
       S = Object.assign(vazio(), d); salvar(); render(); toast('Backup restaurado.');
