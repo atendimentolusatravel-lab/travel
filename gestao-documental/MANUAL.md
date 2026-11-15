@@ -56,6 +56,8 @@ Exemplos com o catálogo atual:
 | `12_OPERACOES_E_PRODUCAO` | Operações e Produção | opcional | Interno | Atividade-fim (renomeie: Produção, Serviços, Projetos, Obras…), qualidade, manutenção |
 | `13_MARKETING_E_COMUNICACAO` | Marketing e Comunicação | opcional | Interno | Marca, campanhas, canais digitais, licenças e autorizações de imagem |
 | `14_TI_E_SEGURANCA_DA_INFORMACAO` | TI e Segurança | opcional | Restrito | Inventário, licenças, acessos, **backup**, contratos de sistemas |
+| `15_PATRIMONIO_IMOBILIARIO` | Patrimônio Imobiliário | opcional | Confidencial | Imóveis de patrimônio e renda: urbanos (U01…), rurais (R01…), no exterior (E01…), heranças (H01…), planilha mestra da carteira |
+| `16_FAMILIA_E_PESSOAL` | Família e Pessoal | opcional | Confidencial | Documentos pessoais, pets, notas de compra e garantias, saúde e seguros pessoais, mantidos separados da empresa |
 | `99_ARQUIVO_MORTO` | Arquivo Morto | essencial | Restrito | Documentos encerrados ainda no prazo de guarda e termos de eliminação |
 
 ### Decisões tomadas na revisão contábil
@@ -79,7 +81,19 @@ Exemplos com o catálogo atual:
 8. **Reforma Tributária (IBS/CBS):** pasta própria para o plano de adequação durante a
    transição de 2026 a 2033.
 
-### Modelos de pasta
+### Modelos de pasta e itens cadastrados
+
+Subpastas com modelo recebem **itens cadastrados** no painel (botão *Adicionar* na página do
+setor) ou no perfil (`instancias`). Cada item vira uma pasta com as subpastas do modelo.
+Quando a subpasta tem prefixo, o código é gerado automaticamente e **nunca é reaproveitado**.
+
+| Modelo | Onde | Código | Subpastas de cada item |
+|---|---|---|---|
+| Imóvel urbano | `15/01_Imoveis_Urbanos` | U01, U02… | Matrícula/escritura/ITBI · IPTU · condomínio · locação · seguros · plantas/habite-se · reformas · manutenção · avaliações · fotos · processos |
+| Imóvel rural | `15/02_Imoveis_Rurais` | R01, R02… | Matrícula · CCIR/CIB/georreferenciamento · ITR · CAR/ambiental · arrendamento · benfeitorias · caseiros · seguros · energia/água/outorgas · mapas · processos |
+| Imóvel no exterior | `15/03_Imoveis_no_Exterior` | E01, E02… | Título/title insurance · titularidade (LLC) · property tax · HOA · locação · impostos locais · IRPF/CBE · seguros · câmbio · manutenção · fotos |
+| Herança | `15/04_Herancas_e_Inventarios` | H01, H02… | Documentos do autor da herança · inventário · ITCMD · bens do espólio · despesas · partilha · acordos entre herdeiros |
+| Pet | `16/02_Pets` | — | Identificação/microchip · vacinas · atestados e carta ESA · viagens/CVI · veterinário · plano/seguro |
 
 **Colaborador** (`06_DEPARTAMENTO_PESSOAL/01_Colaboradores_Ativos/NOME-SOBRENOME_MATRICULA`):
 `01_Admissao` · `02_Documentos_Pessoais` · `03_Contrato_e_Aditivos` · `04_ASO_e_Exames` ·

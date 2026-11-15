@@ -69,6 +69,8 @@ def validar(e):
             checa_se(f"{s['pasta']}/{p['pasta']}", p.get("se"))
             if p.get("modelo") and p["modelo"] not in e["modelos"]:
                 erros.append(f"{s['pasta']}/{p['pasta']}: modelo inexistente '{p['modelo']}'")
+            if p.get("prefixo") and not p.get("modelo"):
+                erros.append(f"{s['pasta']}/{p['pasta']}: 'prefixo' exige 'modelo'")
             if p.get("periodo") not in (None, "mensal", "anual"):
                 erros.append(f"{s['pasta']}/{p['pasta']}: período inválido '{p['periodo']}'")
         for d in s["documentos"]:
@@ -102,6 +104,12 @@ def carregar_perfil(e, caminho):
             j = json.load(f)
         p = (j.get("dados") or {}).get("perfil") or j.get("perfil") or j
         perfil.update({k: v for k, v in p.items() if k in perfil})
+    validas = {f"{s['codigo']}/{x['pasta']}" for s in e["setores"] for x in s["subpastas"] if x.get("modelo")}
+    for chave, itens in (perfil.get("instancias") or {}).items():
+        if chave not in validas:
+            sys.exit(f"Perfil: '{chave}' não é uma subpasta com modelo.")
+        if len(set(itens)) != len(itens) or any(not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", n) for n in itens):
+            sys.exit(f"Perfil: nomes inválidos ou repetidos em '{chave}': {itens}")
     return perfil
 
 
@@ -118,6 +126,13 @@ def aplica(item, perfil):
 
 def setor_ativo(s, perfil):
     return s.get("fixo") or s["codigo"] not in perfil["setores_inativos"]
+
+
+def instancias(perfil, s, p):
+    """Itens cadastrados (ex.: um imóvel, um colaborador) de uma subpasta com modelo."""
+    if not p.get("modelo"):
+        return []
+    return list((perfil.get("instancias") or {}).get(f"{s['codigo']}/{p['pasta']}", []))
 
 
 def slug_raiz(nome):
@@ -152,6 +167,9 @@ def leia_me_setor(e, s, perfil):
     for p in s["subpastas"]:
         if aplica(p, perfil):
             l.append(f"  {p['pasta']}: {p['descricao']}{org_txt(p)}")
+            itens = instancias(perfil, s, p)
+            if itens:
+                l.append(f"      cadastrados: {', '.join(itens)}")
     l += ["", "DOCUMENTOS CONTROLADOS ([*] = obrigatório)", "-" * 60]
     for d in s["documentos"]:
         if not aplica(d, perfil):
@@ -224,6 +242,9 @@ def arvore(e, perfil, ano=None, com_meses=None):
                 mod = f"{sub}/{m['pasta']}"
                 it += [(mod, None), (f"{mod}/_COMO-USAR.txt", m["descricao"] + "\n")]
                 it += [(f"{mod}/{x}", None) for x in m["subpastas"]]
+                for nome in instancias(perfil, s, p):
+                    it.append((f"{sub}/{nome}", None))
+                    it += [(f"{sub}/{nome}/{x}", None) for x in m["subpastas"]]
     return it
 
 

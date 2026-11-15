@@ -8,7 +8,8 @@
     "atividades": ["servicos"],
     "empregados": true,
     "pastas_mensais": true,
-    "setores_inativos": []
+    "setores_inativos": ["15", "16"],
+    "instancias": {}
   },
   "opcoes_perfil": {
     "regime": { "mei": "MEI", "simples": "Simples Nacional", "presumido": "Lucro Presumido", "real": "Lucro Real" },
@@ -29,6 +30,31 @@
       "pasta": "_MODELO_AAAA_CLIENTE_Nome-do-Projeto",
       "descricao": "Duplique esta pasta para cada projeto, pedido ou ordem relevante. Ex.: 2026_ACME_Implantacao-ERP",
       "subpastas": ["01_Escopo_e_Contrato", "02_Planejamento", "03_Execucao", "04_Entregas_e_Aceites", "05_Faturamento", "06_Encerramento"]
+    },
+    "imovel_urbano": {
+      "pasta": "_MODELO_U00_Nome-do-Imovel",
+      "descricao": "Duplique esta pasta para cada imóvel urbano, com o próximo código livre (U01, U02…). O código nunca é reaproveitado: imóvel vendido vai para 99_ARQUIVO_MORTO com o mesmo código.",
+      "subpastas": ["01_Matricula_Escritura_e_ITBI", "02_IPTU_e_Taxas", "03_Condominio", "04_Locacao_e_Recebimentos", "05_Seguros", "06_Projetos_Plantas_e_Habite-se", "07_Reformas_e_Benfeitorias", "08_Manutencao_e_Contas_de_Consumo", "09_Avaliacoes_e_Laudos", "10_Fotos_e_Vistorias", "11_Notificacoes_e_Processos"]
+    },
+    "imovel_rural": {
+      "pasta": "_MODELO_R00_Nome-do-Imovel",
+      "descricao": "Duplique esta pasta para cada imóvel rural, com o próximo código livre (R01, R02…).",
+      "subpastas": ["01_Matricula_Escritura_e_ITBI", "02_CCIR_CIB_e_Georreferenciamento", "03_ITR", "04_CAR_e_Licencas_Ambientais", "05_Arrendamento_e_Parceria_Rural", "06_Benfeitorias_e_Manutencao", "07_Caseiros_e_Prestadores", "08_Seguros", "09_Energia_Agua_e_Outorgas", "10_Mapas_e_Fotos", "11_Notificacoes_e_Processos"]
+    },
+    "imovel_exterior": {
+      "pasta": "_MODELO_E00_Cidade_Nome-do-Imovel",
+      "descricao": "Duplique esta pasta para cada imóvel fora do Brasil, com o próximo código livre (E01, E02…).",
+      "subpastas": ["01_Titulo_Escritura_e_Title_Insurance", "02_Estrutura_de_Titularidade", "03_Imposto_Predial_Property_Tax", "04_Condominio_HOA", "05_Locacao_e_Administradora", "06_Impostos_no_Pais_do_Imovel", "07_Declaracoes_no_Brasil_IRPF_e_CBE", "08_Seguros", "09_Cambio_e_Remessas", "10_Manutencao_e_Reformas", "11_Fotos_e_Vistorias"]
+    },
+    "inventario": {
+      "pasta": "_MODELO_H00_Heranca-Nome",
+      "descricao": "Duplique esta pasta para cada herança ou inventário, com o próximo código livre (H01, H02…). Depois da partilha registrada, cada imóvel recebido passa para Urbanos ou Rurais com código próprio.",
+      "subpastas": ["01_Documentos_do_Autor_da_Heranca", "02_Processo_ou_Escritura_de_Inventario", "03_ITCMD", "04_Bens_do_Espolio", "05_Despesas_e_Impostos_do_Espolio", "06_Partilha_e_Formal", "07_Acordos_entre_Herdeiros"]
+    },
+    "pet": {
+      "pasta": "_MODELO_Nome-do-Pet",
+      "descricao": "Duplique esta pasta para cada animal.",
+      "subpastas": ["01_Identificacao_e_Microchip", "02_Vacinas_e_Exames", "03_Atestados_e_Cartas_ESA", "04_Viagens_e_Certificados_CVI", "05_Veterinario_e_Tratamentos", "06_Plano_de_Saude_e_Seguro"]
     }
   },
   "setores": [
@@ -115,7 +141,7 @@
       "fixo": false,
       "descricao": "Infraestrutura e funcionamento da empresa: imóveis, contratos de serviços, consumo, frota, despesas e procedimentos internos.",
       "subpastas": [
-        { "pasta": "01_Imoveis", "descricao": "Locação ou propriedade, IPTU, condomínio e laudos de vistoria." },
+        { "pasta": "01_Imoveis", "descricao": "Somente o imóvel onde a empresa funciona (sede, filiais). Imóveis de patrimônio ou renda ficam no setor 15." },
         { "pasta": "02_Contratos_de_Servicos_de_Terceiros", "descricao": "Contabilidade, limpeza, segurança, internet, telefonia." },
         { "pasta": "03_Contas_de_Consumo", "descricao": "Energia, água, internet e telefone.", "periodo": "mensal" },
         { "pasta": "04_Frota_e_Veiculos", "descricao": "Uma subpasta por placa: CRLV, IPVA, seguro, multas e manutenção." },
@@ -506,6 +532,63 @@
         { "id": "ti-03", "nome": "Matriz de acessos por cargo (revisão semestral)", "subpasta": "03_Controle_de_Acessos", "obrigatorio": false, "validade_dias": 180, "temporalidade": "Versões + 5 anos", "acesso": "restrito", "nota": "Na saída de um colaborador, revogue os acessos no mesmo dia." },
         { "id": "ti-04", "nome": "Política de backup e registro de teste de restauração", "subpasta": "04_Backup_e_Continuidade", "obrigatorio": true, "validade_dias": 90, "temporalidade": "2 anos", "acesso": "restrito", "nota": "Backup que nunca foi testado não serve como backup. XMLs fiscais e escrituração devem estar no backup." },
         { "id": "ti-05", "nome": "Contratos dos sistemas (ERP, emissor de NF, folha)", "subpasta": "05_Contratos_de_Sistemas", "obrigatorio": false, "validade_dias": null, "temporalidade": "Vigência + 5 anos", "acesso": "restrito", "nota": "Garanta no contrato a exportação dos dados (XML, SPED) ao trocar de sistema." }
+      ]
+    },
+    {
+      "codigo": "15",
+      "pasta": "15_PATRIMONIO_IMOBILIARIO",
+      "nome": "Patrimônio Imobiliário",
+      "responsavel": "Diretoria / gestão patrimonial",
+      "acesso": "confidencial",
+      "fixo": false,
+      "descricao": "Imóveis de patrimônio e renda (urbanos, rurais, no exterior e recebidos por herança). Cada imóvel tem um código permanente (U01, R01, E01, H01) e uma pasta com subpastas padronizadas. A sede da empresa fica em 02_ADMINISTRATIVO.",
+      "subpastas": [
+        { "pasta": "01_Imoveis_Urbanos", "descricao": "Um imóvel por pasta: U01, U02…", "modelo": "imovel_urbano", "prefixo": "U" },
+        { "pasta": "02_Imoveis_Rurais", "descricao": "Um imóvel por pasta: R01, R02…", "modelo": "imovel_rural", "prefixo": "R" },
+        { "pasta": "03_Imoveis_no_Exterior", "descricao": "Um imóvel por pasta: E01, E02…", "modelo": "imovel_exterior", "prefixo": "E" },
+        { "pasta": "04_Herancas_e_Inventarios", "descricao": "Uma herança por pasta: H01, H02…", "modelo": "inventario", "prefixo": "H" },
+        { "pasta": "05_Controle_da_Carteira", "descricao": "Planilha mestra, calendário de vencimentos, informes de aluguel e posição para o IRPF." },
+        { "pasta": "06_Aquisicoes_e_Vendas_em_Andamento", "descricao": "Diligência, certidões, propostas e contratos de compra ou venda ainda não concluídas." }
+      ],
+      "documentos": [
+        { "id": "pat-01", "nome": "Planilha mestra da carteira (código, matrícula, cartório, inscrição, titular, custo, valor no IRPF, situação, locatário)", "subpasta": "05_Controle_da_Carteira", "obrigatorio": true, "validade_dias": 90, "temporalidade": "Permanente (versão atual)", "acesso": "confidencial", "nota": "É o índice da carteira. Revise a cada trimestre e sempre que houver compra, venda, locação ou partilha." },
+        { "id": "pat-02", "nome": "Certidões de matrícula atualizadas (inteiro teor) de todos os imóveis", "subpasta": "01_Imoveis_Urbanos", "obrigatorio": true, "validade_dias": 365, "temporalidade": "Até nova emissão", "acesso": "confidencial", "nota": "Revisão anual revela penhoras, indisponibilidades ou averbações indevidas. Para venda, financiamento ou garantia, exige-se emissão com até 30 dias." },
+        { "id": "pat-03", "nome": "IPTU pago de todos os imóveis urbanos", "subpasta": "01_Imoveis_Urbanos", "obrigatorio": true, "validade_dias": 365, "temporalidade": "6 anos", "acesso": "restrito" },
+        { "id": "pat-04", "nome": "Contratos de locação vigentes, garantias e reajustes", "subpasta": "01_Imoveis_Urbanos", "obrigatorio": false, "validade_dias": null, "temporalidade": "Vigência + 10 anos", "acesso": "confidencial", "base": "Lei 8.245/1991", "nota": "Informe o fim do contrato no Vencimento. Aluguel recebido por pessoa física de outra pessoa física exige carnê-leão mensal." },
+        { "id": "pat-05", "nome": "Informes anuais de aluguéis (administradoras / DIMOB) e recibos", "subpasta": "05_Controle_da_Carteira", "obrigatorio": true, "validade_dias": 365, "temporalidade": "6 anos", "acesso": "confidencial" },
+        { "id": "pat-06", "nome": "Apólices de seguro dos imóveis", "subpasta": "01_Imoveis_Urbanos", "obrigatorio": false, "validade_dias": 365, "temporalidade": "Vigência + 5 anos", "acesso": "restrito" },
+        { "id": "pat-07", "nome": "Notas e contratos de reformas e benfeitorias (em cada imóvel)", "subpasta": "01_Imoveis_Urbanos", "obrigatorio": true, "validade_dias": null, "temporalidade": "Até a venda do imóvel + 6 anos", "acesso": "restrito", "nota": "Benfeitorias comprovadas por nota fiscal somam-se ao custo do imóvel e reduzem o imposto sobre ganho de capital na venda." },
+        { "id": "pat-08", "nome": "Licença ambiental e laudos de passivo ambiental de imóvel com atividade poluidora (ex.: posto de combustível)", "subpasta": "01_Imoveis_Urbanos", "obrigatorio": false, "validade_dias": 365, "temporalidade": "Permanente", "acesso": "confidencial", "base": "Resolução CONAMA 273/2000 / STJ, Súmula 623", "nota": "Obrigação ambiental acompanha o imóvel: o proprietário pode ser cobrado pela contaminação do solo causada pelo locatário. Exija a licença de operação vigente e os laudos de investigação." },
+        { "id": "pat-09", "nome": "ITR: declaração (DITR) e DARF de cada imóvel rural", "subpasta": "02_Imoveis_Rurais", "obrigatorio": true, "validade_dias": 365, "temporalidade": "6 anos", "acesso": "restrito", "base": "Lei 9.393/1996", "nota": "Prazo usual: setembro." },
+        { "id": "pat-10", "nome": "CCIR (INCRA) quitado de cada imóvel rural", "subpasta": "02_Imoveis_Rurais", "obrigatorio": true, "validade_dias": 365, "temporalidade": "6 anos", "acesso": "restrito", "base": "Lei 5.868/1972", "nota": "Sem CCIR válido, não é possível vender, arrendar, hipotecar ou desmembrar o imóvel." },
+        { "id": "pat-11", "nome": "CAR (Cadastro Ambiental Rural) de cada imóvel rural", "subpasta": "02_Imoveis_Rurais", "obrigatorio": true, "validade_dias": null, "temporalidade": "Permanente", "acesso": "restrito", "base": "Lei 12.651/2012 (Código Florestal)" },
+        { "id": "pat-12", "nome": "Georreferenciamento certificado (SIGEF)", "subpasta": "02_Imoveis_Rurais", "obrigatorio": false, "validade_dias": null, "temporalidade": "Permanente", "acesso": "restrito", "base": "Lei 10.267/2001", "nota": "Exigido para transferir, desmembrar ou remembrar o imóvel, conforme o prazo da faixa de área." },
+        { "id": "pat-13", "nome": "Título de propriedade no exterior (deed) e title insurance", "subpasta": "03_Imoveis_no_Exterior", "obrigatorio": true, "validade_dias": null, "temporalidade": "Permanente", "acesso": "confidencial" },
+        { "id": "pat-14", "nome": "Imposto predial no exterior (property tax) pago", "subpasta": "03_Imoveis_no_Exterior", "obrigatorio": true, "validade_dias": 365, "temporalidade": "6 anos", "acesso": "restrito" },
+        { "id": "pat-15", "nome": "Comprovantes de câmbio e remessa da aquisição", "subpasta": "03_Imoveis_no_Exterior", "obrigatorio": true, "validade_dias": null, "temporalidade": "Até a venda + 6 anos", "acesso": "confidencial", "nota": "Comprovam o custo em moeda estrangeira e a origem dos recursos, que entram no cálculo do ganho de capital na venda." },
+        { "id": "pat-16", "nome": "Declaração CBE ao Banco Central (bens no exterior)", "subpasta": "03_Imoveis_no_Exterior", "obrigatorio": false, "validade_dias": 365, "temporalidade": "6 anos", "acesso": "confidencial", "nota": "Obrigatória quando o total de bens e direitos no exterior em 31/12 atinge US$ 1 milhão. O imóvel também deve constar no IRPF ou na contabilidade do titular." },
+        { "id": "pat-17", "nome": "Inventário: formal de partilha ou escritura, e ITCMD pago", "subpasta": "04_Herancas_e_Inventarios", "obrigatorio": true, "validade_dias": null, "temporalidade": "Permanente", "acesso": "confidencial", "nota": "Até a partilha ser registrada na matrícula, o imóvel continua em nome do espólio. Depois do registro, mova o imóvel para Urbanos ou Rurais com código próprio." }
+      ]
+    },
+    {
+      "codigo": "16",
+      "pasta": "16_FAMILIA_E_PESSOAL",
+      "nome": "Família e Pessoal",
+      "responsavel": "Titular / família",
+      "acesso": "confidencial",
+      "fixo": false,
+      "descricao": "Documentos pessoais da família, mantidos separados dos documentos da empresa. Misturar despesas e bens pessoais com os da empresa é risco jurídico (confusão patrimonial, CC art. 50) e fiscal.",
+      "subpastas": [
+        { "pasta": "01_Documentos_Pessoais", "descricao": "Uma subpasta por membro da família: identidade, passaporte, vistos, certidões." },
+        { "pasta": "02_Pets", "descricao": "Uma pasta por animal.", "modelo": "pet" },
+        { "pasta": "03_Notas_de_Compra_e_Garantias", "descricao": "Por ano da compra. Nome: AAAA-MM-DD_NF_Loja-Produto_GARANTIA-ATE-AAAA-MM-DD.pdf", "periodo": "anual" },
+        { "pasta": "04_Saude_e_Seguros_Pessoais", "descricao": "Planos de saúde, seguros de vida e de viagem." }
+      ],
+      "documentos": [
+        { "id": "fam-01", "nome": "Passaportes e vistos (controle de validade)", "subpasta": "01_Documentos_Pessoais", "obrigatorio": false, "validade_dias": null, "temporalidade": "Enquanto válidos", "acesso": "confidencial", "nota": "Informe a data de vencimento. Muitos países exigem passaporte com 6 meses de validade restante." },
+        { "id": "fam-02", "nome": "Carteira de vacinação do pet (antirrábica)", "subpasta": "02_Pets", "obrigatorio": false, "validade_dias": 365, "temporalidade": "Vida do animal", "acesso": "confidencial" },
+        { "id": "fam-03", "nome": "Carta ESA (Emotional Support Animal)", "subpasta": "02_Pets", "obrigatorio": false, "validade_dias": 365, "temporalidade": "Enquanto vigente", "acesso": "confidencial", "nota": "Em geral, só é aceita se emitida há menos de 12 meses. Nos EUA, vale principalmente para moradia (Fair Housing Act). Desde 2021 as companhias aéreas não são obrigadas a aceitá-la na cabine." },
+        { "id": "fam-04", "nome": "Notas fiscais de compra com garantia vigente", "subpasta": "03_Notas_de_Compra_e_Garantias", "obrigatorio": false, "validade_dias": null, "temporalidade": "Fim da garantia; bens de alto valor: enquanto possuir o bem", "acesso": "confidencial", "base": "CDC, arts. 26 e 50", "nota": "Garantia legal de 90 dias para bens duráveis, somada à garantia do fabricante. A nota de bens de alto valor comprova propriedade e custo no IRPF." }
       ]
     },
     {
