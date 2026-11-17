@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Cotação Aérea Chede</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap');
+
+:root{
+  --gold:#da8d00;
+  --dest:#2d5e3a;        /* Verde Tropical — Brasil */
+  --ink:#1a1510;
+  --char:#333131;
+  --mut:#9a8d80;
+  --line:#e4ddd2;
+  --soft:#faf7f2;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
+
+.page{ width:297mm; height:420mm; position:relative; overflow:hidden; background:#fff;
+  page-break-after:always; display:flex; flex-direction:column; }
+.page:last-child{ page-break-after:auto; }
+
+.hd{ background:var(--ink); height:26mm; display:flex; align-items:center; justify-content:space-between; padding:0 22mm; flex-shrink:0; }
+.hd .logo{ font-size:15pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
+
+.ft{ margin-top:auto; background:var(--ink); height:14mm; display:flex; align-items:center; justify-content:center; gap:14px; flex-shrink:0; }
+.ft a{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.45); text-decoration:none; }
+.ft .sep{ color:rgba(255,255,255,.2); }
+
+.body{ padding:16mm 22mm 12mm; flex:1; }
+.eyebrow{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.h2{ font-size:22pt; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin:3mm 0 7mm; }
+.lead{ font-size:11.5pt; line-height:1.7; color:var(--char); max-width:220mm; }
+
+/* ══ CAPA ══ */
+.cover-hd{ position:absolute; top:0; left:0; right:0; height:26mm; background:var(--ink);
+  display:flex; align-items:center; justify-content:space-between; padding:0 22mm; z-index:3; }
+.cover-hd .logo{ font-size:16pt; font-weight:800; letter-spacing:.08em; color:var(--gold); }
+.cover-hd .tag{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.cover-bar{ position:absolute; top:26mm; left:0; right:0; height:2.6mm; background:var(--gold); z-index:3; }
+.cover-photo{ position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 90% 60% at 80% 18%, rgba(218,141,0,.16), transparent 60%),
+    linear-gradient(165deg,#3d7a4e 0%, #2d5e3a 38%, #16301d 72%, #0d1a11 100%); }
+.cover-route{ position:absolute; left:0; right:0; top:62mm; height:150mm; z-index:2; }
+.cover-scrim{ position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,.25) 0%, transparent 30%, rgba(0,0,0,.72) 82%); z-index:1; }
+.cover-cnt{ position:absolute; left:22mm; right:22mm; bottom:40mm; z-index:3; color:#fff; }
+.cover-kicker{ font-size:9pt; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.cover-basis{ font-size:10pt; color:rgba(255,255,255,.6); margin:2mm 0 9mm; }
+.cover-to{ font-size:9pt; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.cover-name{ font-size:34pt; font-weight:800; letter-spacing:.02em; text-transform:uppercase; line-height:1.1; margin-top:1mm; }
+.cover-dest{ font-size:18pt; font-weight:600; color:var(--gold); margin-top:2mm; letter-spacing:.04em; }
+.stats{ display:flex; gap:16mm; margin-top:11mm; }
+.stat b{ display:block; font-size:26pt; font-weight:800; color:var(--gold); line-height:1; }
+.stat span{ font-size:8.5pt; color:rgba(255,255,255,.6); letter-spacing:.06em; }
+.cover-sig{ position:absolute; left:22mm; right:22mm; bottom:16mm; z-index:3;
+  font-family:var(--con); font-size:9pt; color:rgba(255,255,255,.55); line-height:1.7; }
+.cover-sig a{ color:inherit; text-decoration:none; }
+
+/* ══ TRECHOS ══ */
+.leg{ margin-bottom:11mm; }
+.leg-hd{ display:flex; align-items:center; gap:6mm; background:var(--dest); color:#fff; border-radius:5px 5px 0 0; padding:5mm 7mm; }
+.leg-no{ width:11mm; height:11mm; border-radius:50%; border:2px solid rgba(218,141,0,.9); color:var(--gold);
+  font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.leg-t{ font-size:13pt; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+.leg-d{ font-size:10pt; color:rgba(255,255,255,.7); margin-top:.5mm; }
+.leg-date{ margin-left:auto; text-align:right; }
+.leg-date b{ display:block; font-size:16pt; font-weight:800; color:var(--gold); line-height:1; }
+.leg-date span{ font-size:8.5pt; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.65); }
+
+table.fl{ width:100%; border-collapse:collapse; border:1px solid var(--line); border-top:none; }
+.fl th{ font-family:'Arimo',var(--sans); font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut);
+  text-align:left; padding:3.5mm 4mm; background:var(--soft); border-bottom:1px solid var(--line); font-weight:700; }
+.fl th.r, .fl td.r{ text-align:right; }
+.fl td{ padding:4.5mm 4mm; border-bottom:1px solid var(--line); font-size:11pt; vertical-align:middle; }
+.fl tr:last-child td{ border-bottom:none; }
+.cia{ font-weight:800; letter-spacing:.04em; color:var(--ink); }
+.cia small{ display:block; font-weight:300; font-size:8.5pt; color:var(--mut); letter-spacing:0; }
+.time{ font-weight:700; font-size:13pt; color:var(--ink); font-variant-numeric:tabular-nums; }
+.time small{ display:block; font-weight:300; font-size:8.5pt; color:var(--mut); }
+.dur{ font-weight:300; }
+.dur small{ display:block; font-size:8.5pt; color:var(--dest); font-weight:600; letter-spacing:.06em; text-transform:uppercase; }
+.price{ font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.price small{ display:block; font-weight:300; font-size:8pt; color:var(--mut); }
+
+/* ══ TARIFAS ══ */
+.fam{ display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-top:2mm; }
+.fam-card{ border:1px solid var(--line); border-radius:6px; padding:6mm 7mm; }
+.fam-card .k{ font-family:'Arimo',var(--sans); font-size:8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.fam-card .n{ font-size:13pt; font-weight:700; color:var(--ink); margin:1.5mm 0 2.5mm; }
+.fam-card ul{ list-style:none; font-size:10.5pt; font-weight:300; line-height:1.85; }
+.fam-card li::before{ content:'—  '; color:var(--gold); font-weight:700; }
+
+/* ══ VALORES ══ */
+.opt{ border:1px solid var(--line); border-radius:6px; margin-bottom:3.5mm; overflow:hidden; }
+.opt.best{ border:2px solid var(--gold); }
+.opt-hd{ display:flex; align-items:center; gap:5mm; padding:3.5mm 7mm; background:var(--soft); border-bottom:1px solid var(--line); }
+.opt-no{ width:10mm; height:10mm; border-radius:50%; background:var(--dest); color:#fff; font-weight:800; font-size:12pt;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.opt-t{ font-size:13pt; font-weight:700; color:var(--ink); }
+.opt-s{ font-size:9.5pt; font-weight:300; color:var(--mut); margin-top:.5mm; }
+.badge{ margin-left:auto; font-size:7.5pt; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+  background:var(--gold); color:#fff; padding:1.6mm 3.5mm; border-radius:20px; white-space:nowrap; }
+.badge.alt{ background:transparent; color:var(--dest); border:1px solid var(--dest); }
+.opt-bd{ display:grid; grid-template-columns:1fr auto; gap:8mm; padding:3.5mm 7mm; align-items:center; }
+.opt-legs{ font-size:10.5pt; line-height:1.85; font-weight:300; }
+.opt-legs b{ font-weight:600; color:var(--ink); }
+.opt-legs .row{ display:flex; justify-content:space-between; gap:8mm; }
+.opt-legs .row span:last-child{ font-variant-numeric:tabular-nums; white-space:nowrap; }
+.opt-tot{ background:var(--ink); border-radius:5px; padding:3.5mm 6mm; text-align:right; min-width:68mm; }
+.opt-tot .l{ font-size:7.5pt; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.6); }
+.opt-tot .a{ font-size:18pt; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums; line-height:1.25; }
+.opt-tot .p{ font-size:9pt; color:rgba(255,255,255,.65); font-variant-numeric:tabular-nums; }
+
+.val-fx{ font-size:9.5pt; color:var(--mut); margin-top:2mm; line-height:1.7; }
+.val-fx b{ color:var(--char); font-weight:600; }
+
+.cond{ margin-bottom:3mm; }
+.cond-h{ font-size:10.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5mm; }
+.cond-t{ font-size:10.5pt; line-height:1.75; color:var(--char); }
+.cols{ display:grid; grid-template-columns:1fr 1fr; gap:4mm 12mm; }
+.divider{ height:1px; background:var(--line); margin:5mm 0 4mm; }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 01 · CAPA ══════════ -->
+<section class="page cover">
+  <div class="cover-hd"><div class="logo">LUSATRAVEL</div><div class="tag">Glossário</div></div>
+  <div class="cover-bar"></div>
+  <div class="cover-photo"></div>
+  <div class="cover-scrim"></div>
+  <svg class="cover-route" viewBox="0 0 842 425" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <defs>
+      <linearGradient id="arc" x1="0" x2="1">
+        <stop offset="0" stop-color="#da8d00" stop-opacity=".25"/>
+        <stop offset=".5" stop-color="#da8d00" stop-opacity="1"/>
+        <stop offset="1" stop-color="#da8d00" stop-opacity=".25"/>
+      </linearGradient>
+    </defs>
+    <path d="M150 300 Q421 40 692 300" fill="none" stroke="url(#arc)" stroke-width="2.4" stroke-dasharray="2 9" stroke-linecap="round"/>
+    <circle cx="150" cy="300" r="9" fill="#da8d00"/><circle cx="150" cy="300" r="20" fill="none" stroke="#da8d00" stroke-opacity=".4"/>
+    <circle cx="692" cy="300" r="9" fill="#da8d00"/><circle cx="692" cy="300" r="20" fill="none" stroke="#da8d00" stroke-opacity=".4"/>
+    <g transform="translate(421 170) rotate(0)">
+      <path d="M-20 0 L20 0 M4 0 L-6 -14 L-1 -14 L12 0 L-1 14 L-6 14 L4 0 M-16 0 L-20 -7 L-17 -7 L-12 0 L-17 7 L-20 7 Z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+    </g>
+    <text x="150" y="358" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="800" font-size="46" fill="#fff" letter-spacing="3">FLN</text>
+    <text x="150" y="385" text-anchor="middle" font-family="Poppins,sans-serif" font-size="13" fill="#fff" fill-opacity=".6" letter-spacing="3">FLORIANÓPOLIS</text>
+    <text x="692" y="358" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="800" font-size="46" fill="#fff" letter-spacing="3">CGH</text>
+    <text x="692" y="385" text-anchor="middle" font-family="Poppins,sans-serif" font-size="13" fill="#fff" fill-opacity=".6" letter-spacing="3">SÃO PAULO · CONGONHAS</text>
+    <text x="421" y="225" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="600" font-size="13" fill="#da8d00" letter-spacing="4">VOO DIRETO · 1H15</text>
+  </svg>
+  <div class="cover-cnt">
+    <div class="cover-kicker">Cotação para sua viagem</div>
+    <div class="cover-basis">Baseado em 2 adultos · 26 a 29 de novembro de 2026</div>
+    <div class="cover-to">Sua viagem para:</div>
+    <div class="cover-name">Antonio Cesar Chede</div>
+    <div class="cover-dest">São Paulo · Congonhas</div>
+    <div class="stats">
+      <div class="stat"><b>02</b><span>Passageiros</span></div>
+      <div class="stat"><b>03</b><span>Noites</span></div>
+      <div class="stat"><b>04</b><span>Opções</span></div>
+      <div class="stat"><b>0</b><span>Conexões</span></div>
+    </div>
+  </div>
+  <div class="cover-sig">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><br>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a><br>
+    <span style="opacity:.7">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+  </div>
+</section>
+
+<!-- ══════════ 02 · VOOS ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Aéreo</div></div>
+  <div class="goldbar"></div>
+  <div class="body">
+    <div class="eyebrow">Voos disponíveis</div>
+    <h2 class="h2">Florianópolis ⇄ São Paulo</h2>
+    <p class="lead" style="margin-bottom:10mm">Selecionamos apenas voos diretos, sem escalas, chegando e partindo de Congonhas — o aeroporto central de São Paulo, a poucos minutos da Avenida Paulista, Itaim e Jardins. Valores por trecho, já para os 2 passageiros.</p>
+
+    <div class="leg">
+      <div class="leg-hd">
+        <div class="leg-no">1</div>
+        <div><div class="leg-t">Ida · FLN → CGH</div><div class="leg-d">Florianópolis (Hercílio Luz) → São Paulo (Congonhas)</div></div>
+        <div class="leg-date"><b>26 NOV</b><span>Quinta-feira</span></div>
+      </div>
+      <table class="fl">
+        <thead><tr><th>Cia · Voo</th><th>Partida</th><th>Chegada</th><th>Duração</th><th class="r">Tarifa Light</th><th class="r">Com bagagem</th></tr></thead>
+        <tbody>
+          <tr><td class="cia">GOL 1255<small>Boeing 737-700</small></td><td class="time">07:55<small>FLN</small></td><td class="time">09:10<small>CGH</small></td><td class="dur">1h15<small>Direto</small></td><td class="r price">R$ 3.660,14<small>Light</small></td><td class="r price">R$ 3.887,26<small>Classic</small></td></tr>
+          <tr><td class="cia">GOL 1257<small>Boeing 737-800</small></td><td class="time">10:00<small>FLN</small></td><td class="time">11:15<small>CGH</small></td><td class="dur">1h15<small>Direto</small></td><td class="r price">R$ 3.660,14<small>Light</small></td><td class="r price">R$ 3.887,26<small>Classic</small></td></tr>
+          <tr><td class="cia">LATAM 3091<small>Airbus A320</small></td><td class="time">08:30<small>FLN</small></td><td class="time">09:40<small>CGH</small></td><td class="dur">1h10<small>Direto</small></td><td class="r price">R$ 4.052,72<small>Light</small></td><td class="r price">R$ 4.290,46<small>Standard</small></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="leg">
+      <div class="leg-hd">
+        <div class="leg-no">2</div>
+        <div><div class="leg-t">Volta · CGH → FLN</div><div class="leg-d">São Paulo (Congonhas) → Florianópolis (Hercílio Luz)</div></div>
+        <div class="leg-date"><b>29 NOV</b><span>Domingo</span></div>
+      </div>
+      <table class="fl">
+        <thead><tr><th>Cia · Voo</th><th>Partida</th><th>Chegada</th><th>Duração</th><th class="r">Tarifa Light</th><th class="r">Com bagagem</th></tr></thead>
+        <tbody>
+          <tr><td class="cia">LATAM 3064<small>Airbus A320</small></td><td class="time">18:55<small>CGH</small></td><td class="time">20:05<small>FLN</small></td><td class="dur">1h10<small>Direto</small></td><td class="r price">R$ 3.101,32<small>Light</small></td><td class="r price">R$ 3.339,08<small>Standard</small></td></tr>
+          <tr><td class="cia">GOL 1260<small>Boeing 737 MAX 8</small></td><td class="time">19:40<small>CGH</small></td><td class="time">20:55<small>FLN</small></td><td class="dur">1h15<small>Direto</small></td><td class="r price">R$ 2.802,58<small>Light</small></td><td class="r price">R$ 3.029,74<small>Classic</small></td></tr>
+          <tr><td class="cia">LATAM 3074<small>Airbus A320</small></td><td class="time">20:30<small>CGH</small></td><td class="time">21:40<small>FLN</small></td><td class="dur">1h10<small>Direto</small></td><td class="r price">R$ 3.101,32<small>Light</small></td><td class="r price">R$ 3.339,08<small>Standard</small></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="eyebrow" style="margin-top:2mm">O que cada tarifa inclui</div>
+    <div class="fam" style="margin-top:4mm">
+      <div class="fam-card">
+        <div class="k">GOL Light · LATAM Light</div>
+        <div class="n">Só bagagem de mão</div>
+        <ul><li>1 item pessoal (bolsa ou mochila)</li><li>1 bagagem de mão de até 10 kg</li><li>Sem bagagem despachada</li></ul>
+      </div>
+      <div class="fam-card">
+        <div class="k">GOL Classic · LATAM Standard</div>
+        <div class="n">Com 1 mala despachada</div>
+        <ul><li>1 item pessoal (bolsa ou mochila)</li><li>1 bagagem de mão de até 10 kg</li><li>1 bagagem despachada de até 23 kg por passageiro</li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+<!-- ══════════ 03 · VALORES + CONDIÇÕES ══════════ -->
+<section class="page">
+  <div class="hd"><div class="logo">LUSATRAVEL</div><div class="tag">Valores</div></div>
+  <div class="goldbar"></div>
+  <div class="body" style="padding-top:11mm">
+    <div class="eyebrow">Investimento</div>
+    <h2 class="h2">Opções de ida e volta</h2>
+    <p class="val-fx" style="margin:-3mm 0 6mm">*Valores em R$ para 2 adultos, ida e volta, conforme tarifário consultado em 17/11/2026.</p>
+
+    <div class="opt best">
+      <div class="opt-hd">
+        <div class="opt-no">1</div>
+        <div><div class="opt-t">GOL · Tarifa Light</div><div class="opt-s">Só bagagem de mão · ideal para uma viagem curta de 3 noites</div></div>
+        <div class="badge">Melhor preço</div>
+      </div>
+      <div class="opt-bd">
+        <div class="opt-legs">
+          <div class="row"><span><b>Ida 26/11</b> · GOL 1255 às 07:55 <i>ou</i> GOL 1257 às 10:00</span><span>R$ 3.660,14</span></div>
+          <div class="row"><span><b>Volta 29/11</b> · GOL 1260 às 19:40</span><span>R$ 2.802,58</span></div>
+        </div>
+        <div class="opt-tot"><div class="l">Total · 2 adultos</div><div class="a">R$ 6.462,72</div><div class="p">R$ 3.231,36 por pessoa</div></div>
+      </div>
+    </div>
+
+    <div class="opt">
+      <div class="opt-hd">
+        <div class="opt-no">2</div>
+        <div><div class="opt-t">GOL · Tarifa Classic</div><div class="opt-s">Inclui 1 mala de 23 kg por passageiro</div></div>
+        <div class="badge alt">Com bagagem</div>
+      </div>
+      <div class="opt-bd">
+        <div class="opt-legs">
+          <div class="row"><span><b>Ida 26/11</b> · GOL 1255 às 07:55 <i>ou</i> GOL 1257 às 10:00</span><span>R$ 3.887,26</span></div>
+          <div class="row"><span><b>Volta 29/11</b> · GOL 1260 às 19:40</span><span>R$ 3.029,74</span></div>
+        </div>
+        <div class="opt-tot"><div class="l">Total · 2 adultos</div><div class="a">R$ 6.917,00</div><div class="p">R$ 3.458,50 por pessoa</div></div>
+      </div>
+    </div>
+
+    <div class="opt">
+      <div class="opt-hd">
+        <div class="opt-no">3</div>
+        <div><div class="opt-t">LATAM · Tarifa Light</div><div class="opt-s">Só bagagem de mão · duas opções de horário na volta</div></div>
+      </div>
+      <div class="opt-bd">
+        <div class="opt-legs">
+          <div class="row"><span><b>Ida 26/11</b> · LATAM 3091 às 08:30</span><span>R$ 4.052,72</span></div>
+          <div class="row"><span><b>Volta 29/11</b> · LATAM 3064 às 18:55 <i>ou</i> LATAM 3074 às 20:30</span><span>R$ 3.101,32</span></div>
+        </div>
+        <div class="opt-tot"><div class="l">Total · 2 adultos</div><div class="a">R$ 7.154,04</div><div class="p">R$ 3.577,02 por pessoa</div></div>
+      </div>
+    </div>
+
+    <div class="opt">
+      <div class="opt-hd">
+        <div class="opt-no">4</div>
+        <div><div class="opt-t">LATAM · Tarifa Standard</div><div class="opt-s">Inclui 1 mala de 23 kg por passageiro</div></div>
+      </div>
+      <div class="opt-bd">
+        <div class="opt-legs">
+          <div class="row"><span><b>Ida 26/11</b> · LATAM 3091 às 08:30</span><span>R$ 4.290,46</span></div>
+          <div class="row"><span><b>Volta 29/11</b> · LATAM 3064 às 18:55 <i>ou</i> LATAM 3074 às 20:30</span><span>R$ 3.339,08</span></div>
+        </div>
+        <div class="opt-tot"><div class="l">Total · 2 adultos</div><div class="a">R$ 7.629,54</div><div class="p">R$ 3.814,77 por pessoa</div></div>
+      </div>
+    </div>
+
+    <div class="val-fx">Cotação 17/11/2026 · Valores em Real (R$), sem conversão cambial<br><b>*Nada reservado, apenas cotado</b></div>
+
+    <div class="divider"></div>
+
+    <div class="eyebrow">Importante</div>
+    <h2 class="h2" style="font-size:16pt;margin:2mm 0 5mm">Condições</h2>
+    <div class="cols">
+      <div class="cond"><div class="cond-h">Parcelamento</div><div class="cond-t">Aéreo em até 6x sem acréscimos no cartão · PIX com desconto — consulte</div></div>
+      <div class="cond"><div class="cond-h">Validade</div><div class="cond-t">Tarifas aéreas mudam a todo momento. Os valores só são garantidos após a emissão dos bilhetes.</div></div>
+      <div class="cond"><div class="cond-h">Para emitir</div><div class="cond-t">Nome completo (igual ao documento), CPF e data de nascimento dos 2 passageiros.</div></div>
+      <div class="cond"><div class="cond-h">Não inclui</div><div class="cond-t">· Marcação de assento<br>· Bagagem extra além da tarifa escolhida<br>· Hospedagem e traslados</div></div>
+    </div>
+  </div>
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">·</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+  </div>
+</section>
+
+</body>
+</html>
