@@ -116,25 +116,22 @@
     footer .in{flex-direction:column;gap:6px;text-align:center}
   }
 
-  /* ajuste de densidade: 12 trechos em 1 página A4 */
-  .leg{grid-template-columns:58px 112px 1fr 150px 92px;padding:2px 0}
-  .date small{display:inline;margin-left:5px}
-  .meta{white-space:nowrap}
-  .meta br{display:none}
-  .meta .s{margin:0 3px;color:var(--line)}
-  .opt-h{padding:5px 16px}
-  .grp{margin-top:11px}
-  .grp-h{margin-bottom:8px}
-  .opts{gap:8px}
-  .incl{margin-top:12px}
-  header{padding:14px 40px 12px}
-  main{padding-top:14px}
-  .note{margin-top:7px}
-  .grp{margin-top:10px}
-  .price{display:grid;grid-template-columns:auto auto;column-gap:10px;align-items:baseline}
-  .price .lbl{grid-column:1 / 3}
-  .price .pp{order:-1;grid-row:2;grid-column:1}
-  .box{padding:8px 16px;line-height:1.5}
+  /* combinações ida x volta */
+  .air{font-size:15px}
+  .cnt{font-size:9.5px;color:var(--muted);font-weight:500;letter-spacing:.04em}
+  .trechos{padding:7px 16px 2px;font-size:10px;color:var(--muted)}
+  .trechos b{color:var(--text);font-weight:600}
+  .chead,.crow{display:grid;grid-template-columns:30px 1fr 1fr 104px;gap:12px;align-items:center;padding:0 16px}
+  .chead{padding-top:6px;padding-bottom:4px;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-2);font-weight:700;border-bottom:1px solid var(--line)}
+  .chead .r,.ct{text-align:right}
+  .crow{padding-top:3px;padding-bottom:3px}
+  .crow + .crow{border-top:1px dashed var(--line)}
+  .cn{font-size:11px;font-weight:700;color:var(--gold)}
+  .cleg .times b{font-size:13px}
+  .cleg .meta{text-align:left;font-size:9px;margin-top:1px}
+  .ct{font-weight:700;color:var(--ink);font-size:12px}
+  .ct span{color:var(--gold);font-size:9.5px;margin-right:2px}
+  .opts{gap:10px}
 </style>
 </head>
 <body>
@@ -164,95 +161,28 @@
     <div class="eyebrow">Cotação para sua viagem</div>
     <h1>SR. ANTONIO CESAR CHEDE</h1>
     <div class="route">Florianópolis (FLN) <span class="arr">⇄</span> São Paulo · Congonhas (CGH) <span style="color:var(--muted);font-weight:400">· Novembro de 2026 · Voos diretos</span></div>
-    <p class="intro">Opções de voo ida e volta, todas diretas e em classe econômica. Valores totais por companhia aérea, já com taxas.</p>
+    <p class="intro">Todas as combinações de ida e volta de cada companhia, em voos diretos, classe econômica, tarifa Light (sem bagagem despachada). Valores totais para 2 passageiros, já com taxas.</p>
 
   <div class="grp">
-    <div class="grp-h"><div class="n">1ª OPÇÃO</div><div class="d">Tarifa Light · Ida <b>26 nov</b> · Volta <b>29 nov</b></div><div class="pax">2 passageiros</div></div>
+    <div class="grp-h"><div class="n">TARIFA LIGHT</div><div class="d">Ida <b>26 nov</b> · Volta <b>29 nov</b></div><div class="pax">2 passageiros</div></div>
     <div class="opts">
       <div class="opt">
         <div class="opt-h">
-          <div class="l"><div class="air">GOL</div><span class="badge gold">Menor preço</span></div>
+          <div class="l"><div class="air">GOL</div><span class="badge gold">Menor preço</span><span class="cnt">4 combinações</span></div>
           <div class="price"><div class="lbl">Total ida e volta · 2 passageiros</div><div class="val"><small>R$</small>6.462,72</div><div class="pp">R$ 3.231,36 por pessoa</div></div>
         </div>
-        <div class="legs">
-          <div class="leg"><div class="dir">Ida</div><div class="date">26 nov<small>quinta-feira</small></div>
-            <div class="times"><b>07:55</b><span class="ap">FLN</span><span class="line"></span><b>09:10</b><span class="ap">CGH</span></div>
-            <div class="meta">Voo <b>G3 1255</b><br><span class="s">·</span>1h15 · direto</div>
-            <div class="lp"><small>Trecho</small><span>R$</span>3.660,14</div></div>
-          <div class="leg"><div class="dir">ou Ida</div><div class="date">26 nov<small>quinta-feira</small></div>
-            <div class="times"><b>10:00</b><span class="ap">FLN</span><span class="line"></span><b>11:15</b><span class="ap">CGH</span></div>
-            <div class="meta">Voo <b>G3 1257</b><br><span class="s">·</span>1h15 · direto</div>
-            <div class="lp"><small>Trecho</small><span>R$</span>3.660,14</div></div>
-          <div class="leg"><div class="dir">Volta</div><div class="date">29 nov<small>domingo</small></div>
-            <div class="times"><b>19:40</b><span class="ap">CGH</span><span class="line"></span><b>20:55</b><span class="ap">FLN</span></div>
-            <div class="meta">Voo <b>G3 1260</b><br><span class="s">·</span>1h15 · direto</div>
-            <div class="lp"><small>Trecho</small><span>R$</span>2.802,58</div></div>
-        </div>
+        <div class="trechos">Por trecho (2 passageiros): <b>Ida R$ 3.660,14</b> + <b>Volta R$ 2.802,58</b> · mesmo valor em qualquer combinação</div>
+        <div class="chead"><div>Nº</div><div>Ida · qui, 26 nov · FLN → CGH</div><div>Volta · dom, 29 nov · CGH → FLN</div><div class="r">Total 2 pax</div></div>
+        <div class="crow"><div class="cn">01</div><div class="cleg"><div class="times"><b>07:55</b><span class="ap">FLN</span><span class="line"></span><b>09:10</b><span class="ap">CGH</span></div><div class="meta">Voo <b>G3 1255</b> · 1h15 · direto</div></div><div class="cleg"><div class="times"><b>19:40</b><span class="ap">CGH</span><span class="line"></span><b>20:55</b><span class="ap">FLN</span></div><div class="meta">Voo <b>G3 1260</b> · 1h15 · direto</div></div><div class="ct"><span>R$</span>6.462,72</div></div><div class="crow"><div class="cn">02</div><div class="cleg"><div class="times"><b>10:00</b><span class="ap">FLN</span><span class="line"></span><b>11:15</b><span class="ap">CGH</span></div><div class="meta">Voo <b>G3 1257</b> · 1h15 · direto</div></div><div class="cleg"><div class="times"><b>19:40</b><span class="ap">CGH</span><span class="line"></span><b>20:55</b><span class="ap">FLN</span></div><div class="meta">Voo <b>G3 1260</b> · 1h15 · direto</div></div><div class="ct"><span>R$</span>6.462,72</div></div><div class="crow"><div class="cn">03</div><div class="cleg"><div class="times"><b>12:15</b><span class="ap">FLN</span><span class="line"></span><b>13:30</b><span class="ap">CGH</span></div><div class="meta">Voo <b>G3 1259</b> · 1h15 · direto</div></div><div class="cleg"><div class="times"><b>19:40</b><span class="ap">CGH</span><span class="line"></span><b>20:55</b><span class="ap">FLN</span></div><div class="meta">Voo <b>G3 1260</b> · 1h15 · direto</div></div><div class="ct"><span>R$</span>6.462,72</div></div><div class="crow"><div class="cn">04</div><div class="cleg"><div class="times"><b>16:20</b><span class="ap">FLN</span><span class="line"></span><b>17:35</b><span class="ap">CGH</span></div><div class="meta">Voo <b>G3 1261</b> · 1h15 · direto</div></div><div class="cleg"><div class="times"><b>19:40</b><span class="ap">CGH</span><span class="line"></span><b>20:55</b><span class="ap">FLN</span></div><div class="meta">Voo <b>G3 1260</b> · 1h15 · direto</div></div><div class="ct"><span>R$</span>6.462,72</div></div>
       </div>
       <div class="opt">
         <div class="opt-h">
-          <div class="l"><div class="air">LATAM</div></div>
-          <div class="price"><div class="lbl">Total ida e volta · 2 passageiros</div><div class="val"><small>R$</small>7.154,04</div><div class="pp">R$ 3.577,02 por pessoa</div></div>
+          <div class="l"><div class="air">LATAM</div><span class="cnt">6 combinações</span></div>
+          <div class="price"><div class="lbl">Total ida e volta · 2 passageiros</div><div class="val"><small>R$</small>7.154,02</div><div class="pp">R$ 3.577,01 por pessoa</div></div>
         </div>
-        <div class="legs">
-          <div class="leg"><div class="dir">Ida</div><div class="date">26 nov<small>quinta-feira</small></div>
-            <div class="times"><b>08:30</b><span class="ap">FLN</span><span class="line"></span><b>09:40</b><span class="ap">CGH</span></div>
-            <div class="meta">Voo <b>LA 3091</b><br><span class="s">·</span>1h10 · direto</div>
-            <div class="lp"><small>Trecho</small><span>R$</span>4.052,72</div></div>
-          <div class="leg"><div class="dir">Volta</div><div class="date">29 nov<small>domingo</small></div>
-            <div class="times"><b>18:55</b><span class="ap">CGH</span><span class="line"></span><b>20:05</b><span class="ap">FLN</span></div>
-            <div class="meta">Voo <b>LA 3064</b><br><span class="s">·</span>1h10 · direto</div>
-            <div class="lp"><small>Trecho</small><span>R$</span>3.101,32</div></div>
-          <div class="leg"><div class="dir">ou Volta</div><div class="date">29 nov<small>domingo</small></div>
-            <div class="times"><b>20:30</b><span class="ap">CGH</span><span class="line"></span><b>21:40</b><span class="ap">FLN</span></div>
-            <div class="meta">Voo <b>LA 3074</b><br><span class="s">·</span>1h10 · direto</div>
-            <div class="lp"><small>Trecho</small><span>R$</span>3.101,32</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="grp">
-    <div class="grp-h"><div class="n">2ª OPÇÃO</div><div class="d">Com bagagem · Ida <b>26 nov</b> · Volta <b>29 nov</b></div><div class="pax">2 passageiros</div></div>
-    <div class="opts">
-      <div class="opt">
-        <div class="opt-h">
-          <div class="l"><div class="air">GOL</div><span class="badge gold">Menor preço</span></div>
-          <div class="price"><div class="lbl">Total ida e volta · 2 passageiros</div><div class="val"><small>R$</small>6.917,00</div><div class="pp">R$ 3.458,50 por pessoa</div></div>
-        </div>
-        <div class="legs">
-          <div class="leg"><div class="dir">Ida</div><div class="date">26 nov<small>quinta-feira</small></div>
-            <div class="times"><b>07:55</b><span class="ap">FLN</span><span class="line"></span><b>09:10</b><span class="ap">CGH</span></div>
-            <div class="meta">Voo <b>G3 1255</b><br><span class="s">·</span>1h15 · direto</div>
-            <div class="lp"><small>Trecho</small><span>R$</span>3.887,26</div></div>
-          <div class="leg"><div class="dir">ou Ida</div><div class="date">26 nov<small>quinta-feira</small></div>
-            <div class="times"><b>10:00</b><span class="ap">FLN</span><span class="line"></span><b>11:15</b><span class="ap">CGH</span></div>
-            <div class="meta">Voo <b>G3 1257</b><br><span class="s">·</span>1h15 · direto</div>
-            <div class="lp"><small>Trecho</small><span>R$</span>3.887,26</div></div>
-          <div class="leg"><div class="dir">Volta</div><div class="date">29 nov<small>domingo</small></div>
-            <div class="times"><b>19:40</b><span class="ap">CGH</span><span class="line"></span><b>20:55</b><span class="ap">FLN</span></div>
-            <div class="meta">Voo <b>G3 1260</b><br><span class="s">·</span>1h15 · direto</div>
-            <div class="lp"><small>Trecho</small><span>R$</span>3.029,74</div></div>
-        </div>
-      </div>
-      <div class="opt">
-        <div class="opt-h">
-          <div class="l"><div class="air">LATAM</div></div>
-          <div class="price"><div class="lbl">Total ida e volta · 2 passageiros</div><div class="val"><small>R$</small>7.629,54</div><div class="pp">R$ 3.814,77 por pessoa</div></div>
-        </div>
-        <div class="legs">
-          <div class="leg"><div class="dir">Ida</div><div class="date">26 nov<small>quinta-feira</small></div>
-            <div class="times"><b>08:30</b><span class="ap">FLN</span><span class="line"></span><b>09:40</b><span class="ap">CGH</span></div>
-            <div class="meta">Voo <b>LA 3091</b><br><span class="s">·</span>1h10 · direto</div>
-            <div class="lp"><small>Trecho</small><span>R$</span>4.290,46</div></div>
-          <div class="leg"><div class="dir">Volta</div><div class="date">29 nov<small>domingo</small></div>
-            <div class="times"><b>18:55</b><span class="ap">CGH</span><span class="line"></span><b>20:05</b><span class="ap">FLN</span></div>
-            <div class="meta">Voo <b>LA 3064</b><br><span class="s">·</span>1h10 · direto</div>
-            <div class="lp"><small>Trecho</small><span>R$</span>3.339,08</div></div>
-          <div class="leg"><div class="dir">ou Volta</div><div class="date">29 nov<small>domingo</small></div>
-            <div class="times"><b>20:30</b><span class="ap">CGH</span><span class="line"></span><b>21:40</b><span class="ap">FLN</span></div>
-            <div class="meta">Voo <b>LA 3074</b><br><span class="s">·</span>1h10 · direto</div>
-            <div class="lp"><small>Trecho</small><span>R$</span>3.339,08</div></div>
-        </div>
+        <div class="trechos">Por trecho (2 passageiros): <b>Ida R$ 4.052,72</b> + <b>Volta R$ 3.101,30</b> · mesmo valor em qualquer combinação</div>
+        <div class="chead"><div>Nº</div><div>Ida · qui, 26 nov · FLN → CGH</div><div>Volta · dom, 29 nov · CGH → FLN</div><div class="r">Total 2 pax</div></div>
+        <div class="crow"><div class="cn">05</div><div class="cleg"><div class="times"><b>11:25</b><span class="ap">FLN</span><span class="line"></span><b>12:35</b><span class="ap">CGH</span></div><div class="meta">Voo <b>LA 3035</b> · 1h10 · direto</div></div><div class="cleg"><div class="times"><b>17:30</b><span class="ap">CGH</span><span class="line"></span><b>18:40</b><span class="ap">FLN</span></div><div class="meta">Voo <b>LA 3088</b> · 1h10 · direto</div></div><div class="ct"><span>R$</span>7.154,02</div></div><div class="crow"><div class="cn">06</div><div class="cleg"><div class="times"><b>11:25</b><span class="ap">FLN</span><span class="line"></span><b>12:35</b><span class="ap">CGH</span></div><div class="meta">Voo <b>LA 3035</b> · 1h10 · direto</div></div><div class="cleg"><div class="times"><b>18:55</b><span class="ap">CGH</span><span class="line"></span><b>20:05</b><span class="ap">FLN</span></div><div class="meta">Voo <b>LA 3064</b> · 1h10 · direto</div></div><div class="ct"><span>R$</span>7.154,02</div></div><div class="crow"><div class="cn">07</div><div class="cleg"><div class="times"><b>11:25</b><span class="ap">FLN</span><span class="line"></span><b>12:35</b><span class="ap">CGH</span></div><div class="meta">Voo <b>LA 3035</b> · 1h10 · direto</div></div><div class="cleg"><div class="times"><b>20:30</b><span class="ap">CGH</span><span class="line"></span><b>21:40</b><span class="ap">FLN</span></div><div class="meta">Voo <b>LA 3074</b> · 1h10 · direto</div></div><div class="ct"><span>R$</span>7.154,02</div></div><div class="crow"><div class="cn">08</div><div class="cleg"><div class="times"><b>20:45</b><span class="ap">FLN</span><span class="line"></span><b>21:55</b><span class="ap">CGH</span></div><div class="meta">Voo <b>LA 3079</b> · 1h10 · direto</div></div><div class="cleg"><div class="times"><b>17:30</b><span class="ap">CGH</span><span class="line"></span><b>18:40</b><span class="ap">FLN</span></div><div class="meta">Voo <b>LA 3088</b> · 1h10 · direto</div></div><div class="ct"><span>R$</span>7.154,02</div></div><div class="crow"><div class="cn">09</div><div class="cleg"><div class="times"><b>20:45</b><span class="ap">FLN</span><span class="line"></span><b>21:55</b><span class="ap">CGH</span></div><div class="meta">Voo <b>LA 3079</b> · 1h10 · direto</div></div><div class="cleg"><div class="times"><b>18:55</b><span class="ap">CGH</span><span class="line"></span><b>20:05</b><span class="ap">FLN</span></div><div class="meta">Voo <b>LA 3064</b> · 1h10 · direto</div></div><div class="ct"><span>R$</span>7.154,02</div></div><div class="crow"><div class="cn">10</div><div class="cleg"><div class="times"><b>20:45</b><span class="ap">FLN</span><span class="line"></span><b>21:55</b><span class="ap">CGH</span></div><div class="meta">Voo <b>LA 3079</b> · 1h10 · direto</div></div><div class="cleg"><div class="times"><b>20:30</b><span class="ap">CGH</span><span class="line"></span><b>21:40</b><span class="ap">FLN</span></div><div class="meta">Voo <b>LA 3074</b> · 1h10 · direto</div></div><div class="ct"><span>R$</span>7.154,02</div></div>
       </div>
     </div>
   </div>
@@ -261,17 +191,17 @@
       <div class="box g">
         <h3>Incluso</h3>
         <ul>
-          <li>Passagem aérea ida e volta, classe econômica, com taxas de embarque</li>
-          <li>Bagagem de mão 10 kg + item pessoal</li>
-          <li>2ª opção: + 1 mala despachada de 23 kg por pessoa</li>
+          <li>Passagem aérea ida e volta, classe econômica</li>
+          <li>Taxas de embarque</li>
+          <li>Bagagem de mão 10 kg + item pessoal por passageiro</li>
         </ul>
       </div>
       <div class="box o">
         <h3>Importante</h3>
         <ul>
+          <li>Tarifa Light: não inclui bagagem despachada</li>
           <li>Valores sujeitos a alteração até a emissão</li>
-          <li>Disponibilidade confirmada somente na reserva</li>
-          <li>1ª opção (Light) não inclui bagagem despachada</li>
+          <li>Marcação de assento conforme regra da tarifa</li>
         </ul>
       </div>
     </div>
