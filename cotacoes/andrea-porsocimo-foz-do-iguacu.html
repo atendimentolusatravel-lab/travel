@@ -35,7 +35,7 @@
   .doc .v{font-size:11px;color:rgba(255,255,255,.75);margin-top:3px}
   .goldbar{height:3px;background:var(--gold)}
 
-  main{padding:22px 40px 8px;flex:1}
+  main{padding:18px 40px 6px;flex:1}
   .eyebrow{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:700}
   h1{font-size:25px;font-weight:700;color:var(--ink);margin-top:6px;letter-spacing:.01em}
   .route{display:flex;align-items:center;gap:10px;margin-top:8px;font-size:13.5px;color:var(--green-2);font-weight:600}
@@ -43,44 +43,46 @@
   .intro{font-size:11.5px;color:var(--muted);margin-top:10px;font-weight:300;line-height:1.6}
 
   /* Opções */
-  .opts{margin-top:20px;display:flex;flex-direction:column;gap:16px}
+  .grp{margin-top:13px}
+  .grp-h{display:flex;align-items:baseline;gap:12px;padding-bottom:7px;border-bottom:2px solid var(--gold);margin-bottom:10px}
+  .grp-h .n{font-size:15px;font-weight:800;color:var(--green);letter-spacing:.04em}
+  .grp-h .d{font-size:11.5px;color:var(--text);font-weight:500}
+  .grp-h .d b{color:var(--gold);font-weight:700}
+  .pax{margin-left:auto;font-size:9px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;background:var(--green-2);color:#fff;padding:4px 10px;border-radius:20px;white-space:nowrap}
+  .opts{display:flex;flex-direction:column;gap:9px}
   .opt{border:1px solid var(--line);border-radius:8px;overflow:hidden;break-inside:avoid}
-  .opt-h{display:flex;align-items:center;justify-content:space-between;padding:8px 16px;background:var(--green-soft);border-bottom:1px solid var(--line)}
+  .opt-h{display:flex;align-items:center;justify-content:space-between;padding:7px 16px;background:var(--green-soft);border-bottom:1px solid var(--line)}
   .opt-h .l{display:flex;align-items:center;gap:10px}
-  .num{width:24px;height:24px;border-radius:50%;background:var(--green-2);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
-  .air{font-weight:700;font-size:13px;color:var(--ink);letter-spacing:.02em}
-  .badge{font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:4px 9px;border-radius:20px}
+  .air{font-weight:700;font-size:13.5px;color:var(--ink);letter-spacing:.03em}
+  .badge{font-size:8px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:3px 9px;border-radius:20px}
   .badge.gold{background:var(--gold);color:#fff}
   .badge.green{background:var(--green-2);color:#fff}
   .price{text-align:right}
-  .price .lbl{font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
-  .price .val{font-size:18px;font-weight:700;color:var(--ink);line-height:1.1}
+  .price .lbl{font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .price .val{font-size:18px;font-weight:700;color:var(--ink);line-height:1.15}
   .price .val small{font-size:11px;font-weight:600;color:var(--gold);margin-right:3px}
+  .price .pp{font-size:9.5px;color:var(--green-2);font-weight:500}
 
-  .legs{padding:4px 16px 6px}
-  .leg{display:grid;grid-template-columns:56px 108px 1fr 84px 104px;align-items:center;gap:10px;padding:10px 0;font-size:11.5px}
-  .lp{text-align:right;font-weight:600;color:var(--ink);font-size:12.5px}
-  .lp small{display:block;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
-  .lp span{color:var(--gold);font-size:10px;margin-right:2px}
-  .tot{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:var(--green);color:#fff}
-  .tot .t{font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.8)}
-  .tot .v{font-size:20px;font-weight:700}
-  .tot .v small{font-size:11px;color:var(--gold);margin-right:4px;font-weight:600}
+  .legs{padding:2px 16px 4px}
+  .leg{display:grid;grid-template-columns:50px 96px 1fr 84px 92px;align-items:center;gap:10px;padding:4px 0;font-size:11px}
   .leg + .leg{border-top:1px dashed var(--line)}
   .dir{font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--green-2)}
   .date{font-weight:600;color:var(--gold)}
-  .date small{display:block;font-weight:400;color:var(--muted);font-size:9.5px}
+  .date small{display:block;font-weight:400;color:var(--muted);font-size:9px;line-height:1.2}
   .times{display:flex;align-items:center;gap:8px;color:var(--ink)}
-  .times b{font-size:14px;font-weight:700}
-  .times .ap{font-size:9.5px;color:var(--muted);font-weight:500;letter-spacing:.04em}
-  .times .line{flex:0 0 52px;height:1px;background:var(--line);position:relative}
+  .times b{font-size:13.5px;font-weight:700}
+  .times .ap{font-size:9px;color:var(--muted);font-weight:500;letter-spacing:.04em}
+  .times .line{flex:0 0 46px;height:1px;background:var(--line);position:relative}
   .times .line::after{content:"✈";position:absolute;left:50%;top:-8px;transform:translateX(-50%);font-size:10px;color:var(--gold);background:#fff;padding:0 2px}
-  .meta{text-align:right;font-size:10px;color:var(--muted);line-height:1.4}
+  .meta{text-align:right;font-size:9.5px;color:var(--muted);line-height:1.35}
   .meta b{color:var(--text);font-weight:600}
+  .lp{text-align:right;font-weight:600;color:var(--ink);font-size:11.5px}
+  .lp small{display:block;font-size:7.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .lp span{color:var(--gold);font-size:9.5px;margin-right:2px}
 
   /* Inclui */
   .incl{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .box{border-radius:8px;padding:14px 16px;font-size:10.8px;line-height:1.65}
+  .box{border-radius:8px;padding:10px 16px;font-size:10.5px;line-height:1.6}
   .box.g{background:var(--green-soft)}
   .box.o{background:var(--gold-soft)}
   .box h3{font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-bottom:6px}
@@ -108,6 +110,7 @@
     header,main,footer .in{padding-left:16px;padding-right:16px}
     .leg{grid-template-columns:1fr 1fr;row-gap:4px}
     .lp{text-align:left}
+    .grp-h{flex-wrap:wrap}
     .meta{text-align:left}
     .incl{grid-template-columns:1fr}
     footer .in{flex-direction:column;gap:6px;text-align:center}
@@ -140,46 +143,83 @@
   <main>
     <div class="eyebrow">Cotação para sua viagem</div>
     <h1>SRA. ANDREA PORSOCIMO</h1>
-    <div class="route">Curitiba (CWB) <span class="arr">⇄</span> Foz do Iguaçu (IGU) <span style="color:var(--muted);font-weight:400">· 10 a 14 de janeiro de 2027 · Voos diretos</span></div>
-    <p class="intro">Confira abaixo as opções de voo ida e volta para a sua viagem, de 10 a 14 de janeiro. Todos os voos são diretos, com cerca de 1h10 de duração, em classe econômica.</p>
+    <div class="route">Curitiba (CWB) <span class="arr">⇄</span> Foz do Iguaçu (IGU) <span style="color:var(--muted);font-weight:400">· Janeiro de 2027 · Voos diretos</span></div>
+    <p class="intro">Opções de voo ida e volta, todas diretas e em classe econômica. Valores totais por companhia aérea, já com taxas.</p>
 
+  <div class="grp">
+    <div class="grp-h"><div class="n">1ª OPÇÃO</div><div class="d">Ida <b>10 jan</b> · Volta <b>15 jan</b></div><div class="pax">5 passageiros</div></div>
     <div class="opts">
-
       <div class="opt">
         <div class="opt-h">
-          <div class="l"><div class="num">1</div><div class="air">AZUL</div><span class="badge gold">Menor preço</span></div>
+          <div class="l"><div class="air">AZUL</div><span class="badge gold">Menor preço</span></div>
+          <div class="price"><div class="lbl">Total ida e volta · 5 passageiros</div><div class="val"><small>R$</small>9.701,15</div><div class="pp">R$ 1.940,23 por pessoa</div></div>
         </div>
         <div class="legs">
           <div class="leg"><div class="dir">Ida</div><div class="date">10 jan<small>domingo</small></div>
             <div class="times"><b>10:50</b><span class="ap">CWB</span><span class="line"></span><b>12:05</b><span class="ap">IGU</span></div>
             <div class="meta">Voo <b>AD 4233</b><br>1h15 · direto</div>
             <div class="lp"><small>Trecho</small><span>R$</span>4.849,20</div></div>
-          <div class="leg"><div class="dir">Volta</div><div class="date">14 jan<small>quinta-feira</small></div>
-            <div class="times"><b>12:45</b><span class="ap">IGU</span><span class="line"></span><b>13:50</b><span class="ap">CWB</span></div>
-            <div class="meta">Voo <b>AD 4130</b><br>1h05 · direto</div>
-            <div class="lp"><small>Trecho</small><span>R$</span>5.404,70</div></div>
+          <div class="leg"><div class="dir">Volta</div><div class="date">15 jan<small>sexta-feira</small></div>
+            <div class="times"><b>21:20</b><span class="ap">IGU</span><span class="line"></span><b>22:30</b><span class="ap">CWB</span></div>
+            <div class="meta">Voo <b>AD 4581</b><br>1h10 · direto</div>
+            <div class="lp"><small>Trecho</small><span>R$</span>4.851,95</div></div>
         </div>
-        <div class="tot"><div class="t">Total ida e volta · Azul</div><div class="v"><small>R$</small>10.253,90</div></div>
       </div>
-
       <div class="opt">
         <div class="opt-h">
-          <div class="l"><div class="num">2</div><div class="air">LATAM</div></div>
+          <div class="l"><div class="air">LATAM</div></div>
+          <div class="price"><div class="lbl">Total ida e volta · 5 passageiros</div><div class="val"><small>R$</small>10.286,20</div><div class="pp">R$ 2.057,24 por pessoa</div></div>
         </div>
         <div class="legs">
           <div class="leg"><div class="dir">Ida</div><div class="date">10 jan<small>domingo</small></div>
             <div class="times"><b>15:05</b><span class="ap">CWB</span><span class="line"></span><b>16:20</b><span class="ap">IGU</span></div>
             <div class="meta">Voo <b>LA 3481</b><br>1h15 · direto</div>
             <div class="lp"><small>Trecho</small><span>R$</span>5.167,35</div></div>
-          <div class="leg"><div class="dir">Volta</div><div class="date">14 jan<small>quinta-feira</small></div>
+          <div class="leg"><div class="dir">Volta</div><div class="date">15 jan<small>sexta-feira</small></div>
             <div class="times"><b>13:15</b><span class="ap">IGU</span><span class="line"></span><b>14:25</b><span class="ap">CWB</span></div>
             <div class="meta">Voo <b>LA 3482</b><br>1h10 · direto</div>
             <div class="lp"><small>Trecho</small><span>R$</span>5.118,85</div></div>
         </div>
-        <div class="tot"><div class="t">Total ida e volta · Latam</div><div class="v"><small>R$</small>10.286,20</div></div>
       </div>
-
     </div>
+  </div>
+  <div class="grp">
+    <div class="grp-h"><div class="n">2ª OPÇÃO</div><div class="d">Ida <b>11 jan</b> · Volta <b>15 jan</b></div><div class="pax">2 passageiros</div></div>
+    <div class="opts">
+      <div class="opt">
+        <div class="opt-h">
+          <div class="l"><div class="air">AZUL</div><span class="badge gold">Menor preço</span></div>
+          <div class="price"><div class="lbl">Total ida e volta · 2 passageiros</div><div class="val"><small>R$</small>3.880,46</div><div class="pp">R$ 1.940,23 por pessoa</div></div>
+        </div>
+        <div class="legs">
+          <div class="leg"><div class="dir">Ida</div><div class="date">11 jan<small>segunda-feira</small></div>
+            <div class="times"><b>05:30</b><span class="ap">CWB</span><span class="line"></span><b>07:15</b><span class="ap">IGU</span></div>
+            <div class="meta">Voo <b>AD 4643</b><br>1h45 · direto</div>
+            <div class="lp"><small>Trecho</small><span>R$</span>1.939,68</div></div>
+          <div class="leg"><div class="dir">Volta</div><div class="date">15 jan<small>sexta-feira</small></div>
+            <div class="times"><b>21:20</b><span class="ap">IGU</span><span class="line"></span><b>22:30</b><span class="ap">CWB</span></div>
+            <div class="meta">Voo <b>AD 4581</b><br>1h10 · direto</div>
+            <div class="lp"><small>Trecho</small><span>R$</span>1.940,78</div></div>
+        </div>
+      </div>
+      <div class="opt">
+        <div class="opt-h">
+          <div class="l"><div class="air">LATAM</div><span class="badge green">Melhores horários</span></div>
+          <div class="price"><div class="lbl">Total ida e volta · 2 passageiros</div><div class="val"><small>R$</small>4.093,98</div><div class="pp">R$ 2.046,99 por pessoa</div></div>
+        </div>
+        <div class="legs">
+          <div class="leg"><div class="dir">Ida</div><div class="date">11 jan<small>segunda-feira</small></div>
+            <div class="times"><b>15:05</b><span class="ap">CWB</span><span class="line"></span><b>16:20</b><span class="ap">IGU</span></div>
+            <div class="meta">Voo <b>LA 3481</b><br>1h15 · direto</div>
+            <div class="lp"><small>Trecho</small><span>R$</span>2.046,44</div></div>
+          <div class="leg"><div class="dir">Volta</div><div class="date">15 jan<small>sexta-feira</small></div>
+            <div class="times"><b>13:15</b><span class="ap">IGU</span><span class="line"></span><b>14:25</b><span class="ap">CWB</span></div>
+            <div class="meta">Voo <b>LA 3482</b><br>1h10 · direto</div>
+            <div class="lp"><small>Trecho</small><span>R$</span>2.047,54</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <div class="incl">
       <div class="box g">
