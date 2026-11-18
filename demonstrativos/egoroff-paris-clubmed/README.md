@@ -9,6 +9,6 @@
   - Aéreo 86.885,44 (André e Carolina 25.101,60 cada; Helena, Lara, João e Pedro 9.170,56 cada)
   - Carro 4.503,38 · Equipamentos de snow João e Pedro 2.060,00
 - **A confirmar (fora do total):** Club Med transfers e equipamentos; marcação de assentos.
-- **Publicação:** projeto Vercel `demonstrativo-egoroff-paris-clubmed` (deploy direto: `index.html` + `vercel.json`).
+- **Publicado:** https://demonstrativo-egoroff-paris-clubmed.vercel.app (projeto Vercel `demonstrativo-egoroff-paris-clubmed`, 18/11/2026). Edge `api/page.js` serve `index.html` pelo jsDelivr fixado no commit 72334cd; `X-Robots-Tag: noindex`. A cada revisão: gerar, commitar e republicar apontando para o novo commit.
 
 Gerar: `cd demonstrativos && python3 build.py egoroff-paris-clubmed`
