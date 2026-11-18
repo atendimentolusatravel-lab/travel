@@ -44,11 +44,17 @@ Total: **R$ 19.517,28** (USD 3.373,72) — confirmar se é o valor do casal e se
   inteiros (28 e 29/12), pois chegam à noite do dia 27.
 - **Paris**: Réveillon com os amigos. Versalhes 31/12 de manhã · Louvre 30/12 à noite
   (quarta, horário estendido) ou 02/01. Ambos fechados em 01/01.
-- **Suíça (base Lucerna) — sem trem panorâmico (decidido 18/11)**:
-  03/01 TGV Lyria Paris → Basileia + trem → Lucerna (~4h15) · 04/01 e 05/01 em
-  Lucerna, com o **pedido de noivado** (ver seção de sigilo) · 05/01 à noite trem
-  Lucerna → aeroporto de Zurique (~1h). Swiss Travel Pass de 3 dias cobre trens, barcos
-  do Lago de Lucerna e o Rigi.
+- **Suíça (base Lucerna) — sem trem panorâmico (decidido 18/11)**. Roteiro como aparece
+  para o cliente (sem menção ao pedido):
+
+  | Dia | Roteiro |
+  |---|---|
+  | 03/01 (dom) | TGV Lyria Paris → Basileia + trem → Lucerna (~4h15) · centro antigo e Ponte da Capela |
+  | 04/01 (seg) | Barco pelo lago + banho termal em Rigi Kaltbad (ou Museu Suíço dos Transportes) · **Jantar a dois no Château Gütsch** |
+  | 05/01 (ter) | Bürgenstock (barco + funicular), compras e chocolate · à noite trem Lucerna → aeroporto de Zurique (~1h) |
+  | 06/01 (qua) | Voo ZRH 06h50 |
+
+  Swiss Travel Pass de 3 dias cobre trens, barcos do Lago de Lucerna e o Rigi.
 - **Zurique**: dormir **no aeroporto ou ao lado dele** — o voo das 06h50 exige estar no
   aeroporto por volta das 05h. Dormir em Lucerna ou Interlaken não funciona.
 
@@ -176,8 +182,8 @@ barco pelo lago + banho termal de Rigi Kaltbad (35 °C, vista dos Alpes, aberto 
 todo), Museu Suíço dos Transportes, Bürgenstock (barco + funicular), compras de relógios
 e chocolate.
 
-Na proposta e em qualquer mensagem com a Vitória: chamar de "passeio ao Rigi + jantar
-especial", sem mencionar pedido.
+Na proposta, no roteiro e em qualquer mensagem com a Vitória: chamar de **"Jantar a
+dois no Château Gütsch"**, sem mencionar pedido.
 
 ---
 
