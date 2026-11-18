@@ -52,6 +52,23 @@ Total: **R$ 19.517,28** (USD 3.373,72) — confirmar se é o valor do casal e se
 
 > As seções "Logística sugerida" e "Cenário B" abaixo foram superadas por esta estrutura.
 
+### Londres — bairro e hotéis (pesquisa Booking 18/11, 27–30/12, 2 adultos)
+
+Bairro: **Marylebone** — o "Batel de Londres" (nobre, arborizado, gastronômico, a pé).
+Heathrow → Bond Street direto pela Elizabeth line (~30 min); St Pancras (Eurostar)
+a ~15–20 min; Hyde Park (Winter Wonderland) e luzes de Oxford/Regent St a pé.
+
+| Hotel | Cat. | Nota | 3 noites (casal) |
+|---|---|---|---|
+| The Mandeville | 4★ | 8,4 (4.579 aval.) | R$ 6.796,54 |
+| Ten Manchester Street | 4★ | 8,4 | R$ 6.991,71 |
+| Nottingham Place | 4★ | 8,0 | R$ 6.237,82 |
+| Holmes Hotel (upgrade, Chiltern St) | 4★ | 8,8 | R$ 9.988,16 |
+| The Marylebone (luxo) | 5★ | 8,7 | R$ 12.846,84 |
+
+*Nada reservado, apenas cotado.* Confirmar tarifa com e sem café da manhã e política de
+cancelamento.
+
 ---
 
 ## ⚠️ SIGILO — pedido de noivado
