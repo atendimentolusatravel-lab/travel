@@ -1,4 +1,4 @@
-# Cibele e Thiago Titonel — Roma e Veneza (dezembro 2026)
+# Cibele e Thiago Titonel — Roma, Veneza e Milão (dezembro 2026)
 
 > Ficha de cliente LusaTravel. Aberta em 18/11/2026 a partir dos vouchers GetYourGuide.
 > Ainda não temos briefing da viagem: completar com os demais serviços.
@@ -7,8 +7,8 @@
 |---|---|
 | Clientes | Cibele Andrade Pessoa de Freitas Titonel · Thiago Titonel Abreu |
 | Passageiros | 2 adultos (supõe-se que sejam os dois — confirmar) |
-| Destino | Itália — Roma e Veneza |
-| Status | Vaticano (15/12), aula de culinária (16/12) e gôndola em Veneza (17/12) **comprados** · resto da viagem sem registro |
+| Destino | Itália — Roma, Veneza e Milão |
+| Status | Vaticano (15/12), aula de culinária (16/12), gôndola em Veneza (17/12) e Duomo de Milão (21/12) **comprados** · resto da viagem sem registro |
 
 ### Agenda confirmada
 
@@ -17,6 +17,8 @@
 | Ter 15/12 | 14h30 (chegar 14h15) | Museus Vaticanos e Capela Sistina | GYGWZAGYZ8H4 |
 | Qua 16/12 | 16h00 (chegar 15h55) | Aula de massas e tiramisù com vinho | GYG2Q87MFAAF |
 | Qui 17/12 | 15h00 (chegar 14h45) | **Veneza** — gôndola semiprivativa sob a Ponte dos Suspiros | GYGN6BQ8K38K |
+| 18–20/12 | — | **Sem registro** (Veneza? outra cidade?) | — |
+| Seg 21/12 | 10h00 (chegar 9h40) | **Milão** — Catedral e terraços do Duomo (elevador) | GYG32LVHXMHM |
 
 > ⚠️ **Roma → Veneza no dia 17/12 sem trem registrado.** A aula em Roma termina por
 > volta das 19h do dia 16, e às 14h45 do dia 17 eles precisam estar em Veneza. O
@@ -140,16 +142,68 @@ Marcos.
   momento romântico a dois, a versão privativa custa mais, mas é outra experiência.
   Confirmar a expectativa do casal.
 
+### 4. Catedral e Terraços do Duomo de Milão (elevador) — CONFIRMADO
+
+| Campo | Valor |
+|---|---|
+| Plataforma | GetYourGuide |
+| Código da reserva | **GYG32LVHXMHM** |
+| Produto | Milão: ingresso de entrada para a Catedral e os Terraços do Duomo |
+| Opção comprada | DTLift — Catedral e Terraços **de elevador** |
+| Data e horário | **Segunda, 21/12/2026, 10h00** (horário de subida aos terraços) |
+| Chegar ao ponto de encontro | **9h40** (20 min antes) |
+| Validade | 1 dia, uma entrada em cada atração |
+| Participantes | 2 adultos (19–99 anos) |
+| Viajante nos vouchers | Thiago Titonel Abreu (1/2 e 2/2) |
+| Data da compra | Quarta, 18/11/2026 |
+| Valor pago | Pendente |
+| Política de cancelamento | Pendente — confirmar no GetYourGuide |
+| Vouchers | 2 páginas com QR code (1/2 e 2/2) + instruções |
+
+**Ponto de encontro:** Piazza del Duomo, 22, 20122 Milano. A visita **começa pelos
+terraços**: ir direto à entrada do elevador, **do lado esquerdo da catedral**, e escanear o
+ingresso. Depois descem e entram na catedral.
+
+**Término:** no próprio local.
+
+**O que está incluído:** terraços (com acesso prioritário), catedral, sítio
+arqueológico e cripta (ficam dentro da catedral). O museu pode ser visitado no mesmo dia ou
+no dia seguinte.
+
+**Horários do complexo:** todos os dias das 9h às 19h, última entrada às 18h. Museu:
+10h às 18h, fechado às quartas. Cripta de São Carlos: seg–sex 10h–16h40, sáb 10h–15h40,
+dom 13h30–15h10.
+
+**Regras para repassar ao casal:**
+- **Levar passaporte ou carteira de identidade.** É obrigatório para alugar o
+  áudio-guia.
+- Mesmo com elevador, **há escadas para subir e descer** até o 2º nível do terraço.
+- Revista de segurança: tirar objetos de metal dos bolsos e abrir bolsas e mochilas.
+- Roupa adequada: **sem bermuda, short, minissaia, camiseta regata nem roupa
+  transparente**. Também não é permitido salto alto.
+- **Não entram malas nem bolsas grandes**, nem comida, bebida, objetos de vidro,
+  sprays, objetos cortantes ou drones.
+- Áudio-guia (opcional, pago à parte): bilheteria na Piazza Duomo 14/a, 9h às 16h30;
+  balcão da catedral seg–sex 9h30–16h30, sáb 9h30–15h, dom 12h30–14h30.
+
+**Pontos de atenção:**
+- Se 21/12 for dia de troca de cidade, eles **não podem chegar com as malas**:
+  precisam deixá-las no hotel ou num guarda-volumes antes das 9h40.
+- Em dezembro faz frio no terraço, e às 10h pode haver neblina e pouca vista.
+- Os 4 dias entre Veneza (17/12) e Milão (21/12) não têm nada registrado.
+
 ---
 
 ## Pendências
 
 - [ ] Confirmar que Cibele e Thiago são os 2 viajantes das duas reservas (no voucher do Vaticano, o nome do 1/2 aparece cortado).
-- [ ] Valor pago das três reservas e quem fez a compra (agência ou cliente).
-- [ ] Política de cancelamento das três reservas.
+- [ ] Valor pago das quatro reservas e quem fez a compra (agência ou cliente).
+- [ ] Política de cancelamento das quatro reservas.
 - [ ] Restrições alimentares para a aula de culinária.
 - [ ] Trem Roma → Veneza em 17/12 (manhã cedo) e hotel em Veneza.
 - [ ] Política em caso de acqua alta no passeio de gôndola.
-- [ ] Briefing da viagem: datas, voos, hotéis em Roma e Veneza, outras cidades.
+- [ ] Roteiro de 18 a 20/12 e como chegam a Milão (trem Veneza → Milão ~2h30), além do hotel em Milão.
+- [ ] Lembrar o casal: documento de identidade e roupa adequada no Duomo.
+- [ ] Briefing da viagem: datas, voos, hotéis em Roma, Veneza e Milão, outras cidades.
 - [ ] Oferecer guia em português no Vaticano e Basílica de São Pedro + cúpula na manhã de 16/12.
 - [ ] Enviar à cliente as regras de horário e de roupa.
