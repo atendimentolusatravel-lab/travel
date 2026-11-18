@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="LusaTravel — roteiro de 27 noites pelo Japão para Kateline e Carlos, com duas crianças e babá.">
+<title>Lusa Travel · Japão — Kateline e Carlos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#404626; --green-dark:#363b1f; --green-soft:#5a6238;
+  --sage:#d9ead3; --sage-head:#c6d8b0;
+  --ink:#333131; --muted:#6f6f68; --line:#e7e7e0; --bg:#ffffff; --cream:#faf9f5;
+  --terra:#b4622f;
+  --shadow:0 10px 30px rgba(64,70,38,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{line-height:1.15}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:60px 56px}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+.muted{color:var(--muted)}
+
+.brandbar{display:flex;flex-direction:column;align-items:center;gap:8px;padding:38px 0 6px}
+.brandbar .brandlogo{width:210px;height:auto;display:block}
+.footlogo{width:190px;height:auto;display:block;margin-bottom:14px}
+
+/* HERO */
+.hero{padding:56px 56px 40px}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.hero h1 .amp{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-style:italic}
+.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
+.hero-img{margin:34px 0 0;height:330px;border-radius:14px;overflow:hidden;position:relative;
+  display:flex;align-items:flex-end;box-shadow:var(--shadow);
+  background:
+    radial-gradient(120% 130% at 12% 8%, rgba(70,120,150,.55), rgba(40,80,110,.15) 42%, transparent 60%),
+    radial-gradient(120% 130% at 92% 96%, rgba(150,170,120,.55), rgba(90,110,70,.2) 44%, transparent 64%),
+    linear-gradient(120deg, #3a5f80 0%, #5a7d92 30%, #8aa0a2 55%, #b0a878 80%, #7a6a3a 100%);}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-img::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top, rgba(20,26,32,.6), rgba(20,26,32,.05) 55%, transparent)}
+.hero-img .cap{position:relative;z-index:2;padding:22px 26px;color:#fff}
+.hero-img .cap .k{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;opacity:.92}
+.hero-img .cap .t{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:600;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
+.hero-info .r{text-align:right}
+.hero-info p{font-size:.95rem}
+.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
+.chip b{font-size:1.15rem;font-weight:700}
+.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
+.chip .ic svg{width:18px;height:18px}
+
+/* AEREO */
+.air{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:18px;background:#fff;box-shadow:var(--shadow)}
+.air-head{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--green);color:#fff;padding:14px 22px}
+.air-head .dir{font-weight:700;letter-spacing:.14em;font-size:.78rem;text-transform:uppercase}
+.air-head .route{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;font-weight:600}
+.leg{display:grid;grid-template-columns:200px 1fr auto;gap:18px;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line)}
+.leg .fl{font-size:.78rem;color:var(--muted)}
+.leg .fl b{display:block;color:var(--ink);font-size:.92rem;font-weight:600}
+.leg .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.leg .pt .code{font-weight:700;font-size:1.05rem}
+.leg .pt .tm{font-size:.82rem;color:var(--muted)}
+.leg .arrow{color:var(--green-soft);flex:none}
+.leg .cls{text-align:right;font-size:.78rem}
+.leg .cls b{display:block;color:var(--green);font-size:.86rem}
+.cnx{display:flex;align-items:center;gap:8px;padding:9px 22px;background:#f4f5ef;font-size:.75rem;color:var(--muted);border-bottom:1px solid var(--line)}
+.cnx svg{width:14px;height:14px;flex:none;color:var(--green-soft)}
+.air-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;background:#f4f5ef}
+.air-foot .lbl{font-size:.78rem;color:var(--muted)}
+.air-foot .val{font-weight:700;font-size:1.3rem;color:var(--green)}
+
+/* HOTELS */
+.city-block{margin-top:34px}
+.city-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--green);padding-bottom:10px;margin-bottom:22px}
+.city-head h3{font-size:1.4rem;font-weight:700}
+.city-head .dates{color:var(--green-soft);font-weight:600;font-size:.9rem;letter-spacing:.04em}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hgrid>.hotel{min-width:0}
+@media(max-width:720px){.hgrid{grid-template-columns:1fr}}
+.hotel{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:20px 22px}
+.hotel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.hotel-name{font-size:1.06rem;font-weight:600;display:flex;align-items:center;gap:12px}
+.hotel-name .bldg{width:34px;height:34px;flex:none;border:1.6px solid var(--ink);border-radius:50%;display:grid;place-items:center}
+.hotel-name .bldg svg{width:17px;height:17px}
+.hotel-price{text-align:right;flex:none}
+.hotel-price .v{font-size:1.3rem;font-weight:700;color:var(--green);white-space:nowrap}
+.hotel-price .u{font-size:.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.hotel-room{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
+.hotel-room b{color:var(--green-dark);font-weight:600}
+.bf{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-soft);background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:3px 9px;margin-top:10px}
+.hgal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin-top:14px}
+.hgal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px;display:block;background:#eceadf}
+
+/* experience card */
+.svc{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:start;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-top:14px;background:#fff;box-shadow:var(--shadow)}
+.svc .ic{width:52px;height:52px;background:var(--green);border-radius:12px;display:grid;place-items:center;color:#fff;flex:none}
+.svc .ic svg{width:24px;height:24px}
+.svc .t{font-weight:600;font-size:1.02rem}
+.svc .d{color:var(--muted);font-size:.86rem;margin-top:2px}
+.svc .dt{text-align:right;font-weight:700;font-size:.9rem;color:var(--green-soft);white-space:nowrap}
+.dayrow{display:grid;grid-template-columns:92px 1fr;gap:22px;padding:22px 0;border-bottom:1px solid var(--line)}
+.dayrow:last-of-type{border-bottom:none}
+.daynum{text-align:right}
+.daynum .d{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;font-weight:700;color:var(--green);line-height:1}
+.daynum .m{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green-soft);font-weight:700;margin-top:2px}
+.daynum .w{font-size:.7rem;color:var(--muted);margin-top:2px}
+.daybody .city{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--green);border-radius:12px;padding:3px 11px;display:inline-block;margin-bottom:9px}
+.daybody h4{font-size:1.06rem;font-weight:600;margin-bottom:5px;color:var(--green-dark)}
+.daybody p{font-size:.88rem;color:var(--muted)}
+.daybody ul{margin:9px 0 0 18px;font-size:.88rem;color:var(--muted)}
+.daybody li{margin:5px 0}
+.tag-q,.tag-s{display:inline-block;font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:10px;padding:2px 8px;margin-left:5px;white-space:nowrap}
+.tag-q{color:var(--terra);background:#fdf3ec;border:1px solid #f0dccd}
+.tag-s{color:var(--green-dark);background:#eef2e6;border:1px solid #dde5cf}
+@media(max-width:720px){.dayrow{grid-template-columns:64px 1fr;gap:14px}.daynum .d{font-size:1.5rem}}
+
+.svc .d ul.incl{margin:8px 0 0 18px;padding:0}
+.svc .d ul.incl li{margin:5px 0;font-size:.86rem;line-height:1.55}
+.svc .d .fine{margin-top:10px;padding-top:9px;border-top:1px solid var(--line);font-size:.78rem;line-height:1.55}
+.svc .d .upg{margin-top:9px;background:var(--sage);border-radius:8px;padding:9px 12px;font-size:.8rem;color:var(--green-dark)}
+
+.svc .d .sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.12rem;font-weight:600;color:var(--green-dark);margin:6px 0 8px;line-height:1.3}
+.svc .d p{margin-bottom:8px;font-size:.86rem;line-height:1.6}
+
+
+.svc .d .carimg{margin-top:12px;max-width:320px}
+.svc .d .carimg img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;display:block;background:#eceadf}
+
+.subh{font-size:1.15rem;font-weight:700;color:var(--green-dark);margin:30px 0 4px}
+.shipbox{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:22px 26px;margin-top:20px}
+.shipbox .shipname{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.8rem;font-weight:700;color:var(--green-dark)}
+.shipstats{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.shipstats div{text-align:center}
+.shipstats b{display:block;font-size:1.15rem;font-weight:700;color:var(--green)}
+.shipstats span{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.cabgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.cab{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.cabhd{background:var(--green);color:#fff;padding:16px 22px}
+.cabcat{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;opacity:.8}
+.cabname{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-weight:700;margin-top:2px}
+.shipgal{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.shipgal img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;display:block;background:#eceadf}
+.cabimg img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;background:#eceadf}
+@media(max-width:720px){.shipgal{grid-template-columns:1fr}}
+
+.cabbody{padding:20px 22px}
+.cabprice .v{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--green-dark);line-height:1}
+.cabprice .u{font-size:.76rem;color:var(--muted);margin-top:3px}
+.cabinc{margin:14px 0 0 18px;font-size:.86rem;color:var(--muted)}
+.cabinc li{margin:5px 0}
+@media(max-width:720px){.shipstats{grid-template-columns:repeat(3,1fr)}.cabgrid{grid-template-columns:1fr}}
+.pkg-note{background:var(--sage);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:.9rem;color:var(--green-dark)}
+
+/* TABLE */
+.tbl-wrap{overflow-x:auto;margin-top:24px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:560px}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line)}
+.sec-row td{background:var(--sage);font-weight:700;text-align:center;letter-spacing:.04em;color:var(--green-dark)}
+.head-row td{background:#efeee7;font-weight:600;color:#4a4a44}
+.total-row td{background:#eef2e6;font-weight:700}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+
+/* PAY */
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.pay h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
+.pay p{font-size:.9rem;margin-bottom:4px}
+.obs{margin-top:26px;font-size:.82rem;color:var(--muted)}
+.obs li{margin:6px 0 6px 18px}
+.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px}
+.flval{display:flex;justify-content:space-between;align-items:center;background:var(--green);color:#fff;border-radius:12px;padding:16px 24px;margin-top:16px;flex-wrap:wrap;gap:12px}
+.flval .lbl{font-weight:600;font-size:.9rem}
+.flval .amt{text-align:right}
+.flval .amt .t{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;line-height:1}
+.flval .amt .p{font-size:.74rem;opacity:.9;margin-top:3px}
+
+/* FOOTER */
+.footer{background:var(--green);color:#fff;padding:44px 56px}
+.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
+.footer .fnote{font-size:.8rem;opacity:.7;margin-top:16px}
+.sh .eyebrow{margin-bottom:10px;display:block}
+
+/* ---------- COMPONENTES OPCIONAIS (herdados da cotação Canadá & NY) ---------- */
+/* Timeline-resumo do roteiro (1 linha por cidade) */
+.tl{margin-top:34px;border-left:2px solid var(--line);padding-left:0}
+.tl-item{display:grid;grid-template-columns:56px 1fr auto;gap:20px;padding:22px 0 22px 26px;position:relative;border-bottom:1px solid var(--line)}
+.tl-item:last-child{border-bottom:none}
+.tl-num{width:40px;height:40px;background:var(--green);color:#fff;border-radius:9px;display:grid;place-items:center;font-weight:700;font-size:1.05rem;margin-left:-27px}
+.tl-city{font-weight:600;font-size:1.12rem}
+.tl-country{color:var(--muted);font-size:.9rem}
+.tl-meta{color:var(--muted);font-size:.9rem;margin-top:4px}
+.tl-nights{text-align:right;font-weight:700;font-size:1.4rem;line-height:1}
+.tl-nights span{display:block;font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:2px}
+
+/* Cabeçalho de opção dentro de uma seção (ex.: 2 blocos de aéreo) */
+.opt-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:26px;margin-bottom:2px}
+.opt-head h3{font-size:1.25rem;font-weight:700}
+.opt-head .badge{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;background:var(--sage);color:var(--green-dark);padding:5px 12px;border-radius:20px}
+
+/* Etiqueta de rede/bandeira ao lado do nome do hotel */
+.opt-tag{display:inline-block;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:4px 9px;border-radius:20px;margin-left:2px;vertical-align:middle;background:#efe7d6;color:#8a6d2f}
+
+/* Hotel com mais de uma tarifa: linhas .rate dentro do card */
+.rate{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line);margin-top:10px}
+.rate .rt{font-size:.88rem}
+.rate .rt b{font-weight:600;color:var(--green-dark)}
+.rate .rv{font-weight:700;font-size:1rem;color:var(--green);white-space:nowrap}
+
+/* Aviso âmbar (ex.: item fora da cotação) */
+.flag-note{background:#fbf3e6;border:1px solid #e9d7b3;border-left:4px solid #c9a227;border-radius:8px;padding:12px 16px;margin-top:14px;font-size:.85rem;color:#6b5a2e}
+
+/* Destaque verde dentro de um dia do roteiro (data especial, aviso) */
+.daybody .hl{background:var(--sage);border-radius:9px;padding:10px 13px;margin-top:10px;font-size:.85rem;color:var(--green-dark)}
+
+/* Localidade do hotel na tabela de valores (usado nas cotações, faltava no CSS) */
+.rm{font-size:.78rem;color:var(--muted);font-weight:400;margin-top:2px}
+
+/* Fallback de marca em texto, quando img/logo-*.png não existir */
+.brandtext{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:.3em;color:var(--green);text-transform:uppercase}
+.footer .brandtext{color:#fff;margin-bottom:14px}
+
+@media(max-width:720px){
+  .section,.hero,.footer,.brandbar{padding-left:24px;padding-right:24px}
+  .hero h1{font-size:2.2rem}
+  .hero-info{grid-template-columns:1fr}.hero-info .r{text-align:left}
+  .leg{grid-template-columns:1fr;gap:8px}
+  .air-head{flex-direction:column;align-items:flex-start;gap:2px}
+  .pay{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr;text-align:left}.svc .dt{text-align:left}
+  .tl-item{grid-template-columns:40px 1fr auto;gap:12px}
+  .hotel-top{flex-direction:column}.hotel-price{text-align:left}
+}
+
+.brandtext{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:.3em;color:var(--green)}
+.credit{font-size:.7rem;opacity:.6;margin-top:8px}
+.lede{margin-top:16px;color:var(--muted);max-width:68ch}
+.lede b{color:var(--ink)}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.why .c{background:var(--bg);border:1px solid var(--line);border-top:4px solid var(--green);border-radius:12px;padding:22px}
+.why .n{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;font-weight:700;color:var(--green);line-height:1}
+.why h3{font-size:1.02rem;font-weight:600;margin-top:10px;color:var(--green-dark)}
+.why p{font-size:.86rem;color:var(--muted);margin-top:8px}
+.legrow{display:grid;grid-template-columns:120px 1fr;gap:16px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-top:16px;font-size:.9rem}
+.legrow .k{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--green-soft);padding-top:3px}
+.tl-move{color:var(--green-soft);font-size:.8rem;font-weight:500;margin-top:4px}
+.base{padding:34px 0;border-bottom:1px solid var(--line)}
+.base:last-child{border-bottom:none;padding-bottom:0}
+.base-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:28px}
+.side .lbl{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--green-soft);margin:16px 0 4px}
+.side .lbl:first-child{margin-top:0}
+.side p{font-size:.88rem;color:var(--muted)}
+.todo{list-style:none;border-top:1px solid var(--line)}
+.todo li{padding:11px 0 11px 22px;border-bottom:1px solid var(--line);font-size:.9rem;color:var(--muted);position:relative}
+.todo li b{color:var(--ink)}
+.todo li::before{content:"";position:absolute;left:3px;top:19px;width:8px;height:8px;border-radius:2px;background:var(--green)}
+.todo li.opt::before{background:transparent;border:1.5px solid var(--green)}
+.todo .k{font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:10px;padding:2px 8px;margin-right:6px;
+  color:var(--green-dark);background:#eef2e6;border:1px solid #dde5cf;white-space:nowrap}
+.todo li.opt .k{color:var(--terra);background:#fdf3ec;border-color:#f0dccd}
+.faq{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:26px}
+.faq .box{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.faq h4{font-size:.98rem;font-weight:600;color:var(--green-dark)}
+.faq h4::before{content:"";display:block;width:28px;height:3px;background:var(--green);border-radius:2px;margin-bottom:10px}
+.faq p{font-size:.86rem;color:var(--muted);margin-top:6px}
+.daynum .d.rg{font-size:1.45rem}
+@media(max-width:720px){
+  .why,.faq{grid-template-columns:1fr}
+  .base-grid{grid-template-columns:1fr;gap:18px}
+  .legrow{grid-template-columns:1fr;gap:4px}
+  .daynum .d.rg{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="brandbar"><img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'"></div>
+
+  <header class="hero">
+    <div class="eyebrow">Roteiro para sua viagem</div>
+    <h1>JAPÃO</h1>
+    <div class="accent-line"></div>
+    <p class="hero-sub"><b>Kateline e Carlos</b> · com as duas crianças e a babá — <b>4 de janeiro a 3 de fevereiro de 2027</b></p>
+    <div class="hero-img">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/View_towards_Mount_Fuji_from_Arakurayama_Sengen_Park_in_Fujiyoshida%2C_Yamanashi%2C_Japan%2C_2024_May_-_2.jpg/1920px-View_towards_Mount_Fuji_from_Arakurayama_Sengen_Park_in_Fujiyoshida%2C_Yamanashi%2C_Japan%2C_2024_May_-_2.jpg" alt="Pagode Chureito e o Monte Fuji, em Fujiyoshida" onerror="this.style.display='none'">
+      <div class="cap">
+        <div class="k">Rota da viagem</div>
+        <div class="t">Brasil → Osaka · Kyoto → Nagano → Tóquio → Monte Fuji → Tóquio → Brasil</div>
+      </div>
+    </div>
+    <div class="hero-info">
+      <div>
+        <div class="lbl">Detalhes da viagem</div>
+        <p>Uma viagem com jeito de morar: bases longas, apartamento com cozinha nas estadias maiores, uma atividade principal por dia e tempo livre para as crianças. Templos, animais, neve, vista do Fuji e muita comida japonesa, sem correria.</p>
+      </div>
+      <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
+    </div>
+    <div class="gloss">
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg></span><b>27</b>&nbsp;Noites no Japão</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>4</b>&nbsp;Destinos</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="16" cy="8" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 20c0-2 .8-3.4 2-4"/></svg></span><b>2+2+1</b>&nbsp;Adultos, crianças e babá</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><b>04/01 – 03/02</b>&nbsp;</div>
+    </div>
+  </header>
+
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Como pensamos o roteiro</span>
+    <h2>Três decisões que deixam a viagem mais leve</h2>
+    <div class="accent-line"></div>
+    <div class="why">
+      <div class="c"><div class="n">01</div><h3>Começar em Kyoto e terminar em Tóquio</h3><p>Com Tóquio no fim, no dia do voo de volta o aeroporto fica a menos de uma hora de trem do apart-hotel. O Monte Fuji entra no meio da estadia em Tóquio, com ida e volta em trem direto, e as malas grandes ficam guardadas no apart-hotel enquanto vocês vão só com uma mala pequena.</p></div>
+      <div class="c"><div class="n">02</div><h3>Neve em Nagano, e não em Hokkaido</h3><p>Nagano fica a 1h20 de Tóquio de trem-bala e tem vilarejo, onsen, chalé e os macacos-da-neve: neve e animais no mesmo lugar. Hokkaido exigiria um voo a mais e encareceria a viagem, com hotéis no pico se coincidir com o Festival da Neve de Sapporo, no início de fevereiro.</p></div>
+      <div class="c"><div class="n">03</div><h3>Volta antes do aniversário do Joca</h3><p>As companhias aéreas consideram a idade na data de cada voo. Voltando em 2 de fevereiro, o Joca ainda tem menos de 2 anos e viaja no colo também na volta, sem pagar assento. A viagem fica com 30 dias fora do Brasil.</p></div>
+    </div>
+  </section>
+
+  <section class="section sh">
+    <span class="eyebrow">Itinerário</span>
+    <h2>Quatro destinos, 27 noites</h2>
+    <div class="accent-line"></div>
+    <p class="lede">Nenhum deslocamento passa de cerca de 2 horas. Os voos internacionais conectam pelo Oriente Médio (Doha ou Dubai), sem necessidade de visto na conexão.</p>
+    <div class="legrow"><div class="k">04/01 · Ida</div><div>Voo noturno do Brasil com conexão em Doha ou Dubai. Chegada a Osaka em 06/01 e trem expresso direto até Kyoto (cerca de 1h15).</div></div>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-num">1</div><div><div class="tl-city">Kyoto</div><div class="tl-meta">06 a 15/01</div><div class="tl-move">Trem expresso do aeroporto de Osaka · 1h15</div></div><div class="tl-nights">9<span>Noites</span></div></div>
+      <div class="tl-item"><div class="tl-num">2</div><div><div class="tl-city">Nagano</div><div class="tl-meta">15 a 20/01</div><div class="tl-move">Trem com parada em Kanazawa</div></div><div class="tl-nights">5<span>Noites</span></div></div>
+      <div class="tl-item"><div class="tl-num">3</div><div><div class="tl-city">Tóquio · parte 1</div><div class="tl-meta">20 a 24/01</div><div class="tl-move">Trem-bala · 1h20</div></div><div class="tl-nights">4<span>Noites</span></div></div>
+      <div class="tl-item"><div class="tl-num">4</div><div><div class="tl-city">Kawaguchiko · Monte Fuji</div><div class="tl-meta">24 a 26/01</div><div class="tl-move">Trem direto de Shinjuku · 2h</div></div><div class="tl-nights">2<span>Noites</span></div></div>
+      <div class="tl-item"><div class="tl-num">5</div><div><div class="tl-city">Tóquio · parte 2</div><div class="tl-meta">26/01 a 02/02</div><div class="tl-move">Trem direto para Shinjuku · 2h</div></div><div class="tl-nights">7<span>Noites</span></div></div>
+    </div>
+    <div class="legrow"><div class="k">02/02 · Volta</div><div>Do apart-hotel ao aeroporto de Tóquio de trem, em menos de uma hora, e voo noturno com conexão em Doha ou Dubai. Chegada ao Brasil em 03/02.</div></div>
+    <div class="pkg-note"><b>O formato final será definido pelo preço da passagem.</b> Vamos cotar dois formatos de voo e fechar o que tiver melhor preço e horário: chegada por Osaka e volta por Tóquio, como neste roteiro, ou chegada e volta por Tóquio. Na segunda opção, vocês descansam 2 noites em Tóquio na chegada e seguem de trem-bala para Kyoto (2h15); o restante do roteiro se mantém, com uma troca de hospedagem a mais. Nas duas versões, o Toka Ebisu em Kyoto, a neve em Nagano, o Fuji e a volta antes de 7/02 continuam garantidos.</div>
+  </section>
+
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Base a base</span>
+    <h2>O que fazer em cada lugar</h2>
+    <div class="accent-line"></div>
+    <p class="lede">Os itens marcados como <b>bate-volta</b> saem da base e voltam no mesmo dia. Os <b>opcionais</b> entram se o ritmo das crianças permitir.</p>
+    <div class="base">
+      <div class="city-head"><h3>Kyoto</h3><span class="dates">06 a 15 de janeiro · 9 noites</span></div>
+      <div class="base-grid">
+        <div class="side">
+          <div class="lbl">Hospedagem</div><p>Apartamento ou apart-hotel com cozinha, dois quartos e máquina de lavar.</p>
+          <div class="lbl">Chegada</div><p>Voo até Osaka e trem expresso Haruka direto do aeroporto até a estação de Kyoto, sem baldeação.</p>
+          <div class="lbl">Ritmo</div><p>Primeiros dias leves para ajustar o fuso. Com 9 noites, sobra espaço para dias livres.</p>
+        </div>
+        <ul class="todo">
+          <li><b>Fushimi Inari</b>, os milhares de portais vermelhos, pela manhã, antes da lotação.</li>
+          <li><b>Kiyomizu-dera</b> e as ruelas de Higashiyama; Gion ao entardecer.</li>
+          <li><b>Arashiyama</b>: bosque de bambu e o Parque dos Macacos de Iwatayama.</li>
+          <li><b>Kinkaku-ji</b>, o Pavilhão Dourado, ainda mais bonito com neve.</li>
+          <li><b>Mercado Nishiki</b>, para provar a comida local.</li>
+          <li><b>Museu Ferroviário de Kyoto</b>, um sucesso com crianças.</li>
+          <li><b>Toka Ebisu</b> (08 a 12/01), festival de Ano Novo com barracas e ramos de bambu da sorte.</li>
+          <li><span class="k">Bate-volta</span><b>Nara</b> (45 min): cervos soltos no parque e o Grande Buda do Todai-ji.</li>
+          <li><span class="k">Bate-volta</span><b>Osaka</b> (30 min): Aquário Kaiyukan, com tubarão-baleia, e Dotonbori para comer.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <div class="city-head"><h3>Nagano · vilarejo na neve</h3><span class="dates">15 a 20 de janeiro · 5 noites</span></div>
+      <div class="base-grid">
+        <div class="side">
+          <div class="lbl">Hospedagem</div><p>Chalé ou pousada pequena na região de Yamanouchi (Shibu Onsen e Yudanaka), vilarejo de águas termais coberto de neve.</p>
+          <div class="lbl">Chegada com parada em Kanazawa</div><p>Kanazawa fica no caminho natural entre Kyoto e Nagano. O trajeto é feito em duas partes: Kyoto–Kanazawa (2h10), algumas horas na cidade e Kanazawa–Nagano (1h). As malas grandes seguem por takkyubin direto para Tóquio.</p>
+        </div>
+        <ul class="todo">
+          <li><span class="k">No caminho</span><b>Kanazawa</b>: Jardim Kenroku-en com neve, almoço de frutos do mar no Mercado Omicho e o antigo bairro das gueixas, Higashi Chaya.</li>
+          <li><b>Macacos-da-neve de Jigokudani</b>, banhando-se nas fontes termais. Trilha plana de cerca de 30 min na neve, melhor com canguru do que com carrinho.</li>
+          <li><b>Shibu Onsen</b>: ruas de madeira, lanternas e casas de banho tradicionais.</li>
+          <li><b>Brincar na neve</b> com as crianças, sem esqui.</li>
+          <li><span class="k">Bate-volta</span><b>Templo Zenko-ji</b>, em Nagano, com cerca de 1.400 anos de história.</li>
+          <li class=opt><span class="k">Opcional</span><b>Obuse</b>, no caminho de Nagano: Museu Hokusai e doces de castanha.</li>
+          <li class=opt><span class="k">Opcional</span><b>Castelo de Matsumoto</b> (cerca de 1h de Nagano), um dos castelos originais mais bonitos do Japão.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <div class="city-head"><h3>Tóquio · parte 1</h3><span class="dates">20 a 24 de janeiro · 4 noites</span></div>
+      <div class="base-grid">
+        <div class="side">
+          <div class="lbl">Hospedagem</div><p>Apart-hotel com cozinha, perto de uma estação de metrô. É o mesmo da parte 2: as malas grandes ficam guardadas na recepção durante as duas noites no Fuji.</p>
+        </div>
+        <ul class="todo">
+          <li><b>Asakusa e o templo Senso-ji</b>, o mais antigo de Tóquio.</li>
+          <li><b>Torneio de Sumô de Janeiro</b>, em Ryogoku, que vai até 24/01. As lutas principais são no fim da tarde.</li>
+          <li><b>Santuário Meiji</b>, Harajuku e o cruzamento de Shibuya.</li>
+          <li><b>Mercado externo de Tsukiji</b>, para comer.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <div class="city-head"><h3>Kawaguchiko · Monte Fuji</h3><span class="dates">24 a 26 de janeiro · 2 noites</span></div>
+      <div class="base-grid">
+        <div class="side">
+          <div class="lbl">Hospedagem</div><p>Ryokan com jantar kaiseki e café da manhã japonês, quarto com futons para a família e banho termal privativo. Noites de domingo e segunda, com tarifa de dia de semana.</p>
+          <div class="lbl">Ida e volta</div><p>Trem direto de Shinjuku (cerca de 2h), só com uma mala pequena.</p>
+        </div>
+        <ul class="todo">
+          <li><b>Fuji visto do lago Kawaguchi</b>. O inverno tem o céu mais limpo do ano, a melhor época para ver a montanha.</li>
+          <li><b>Teleférico Kachi Kachi</b>, com mirante do Fuji.</li>
+          <li><b>Pagode Chureito</b>, a vista clássica do Fuji (são 398 degraus).</li>
+          <li><b>Iyashi no Sato Nenba</b>, vilarejo de casas com telhado de palha e vista do Fuji.</li>
+          <li><b>Tempo no ryokan</b>: banho termal e jantar tradicional.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <div class="city-head"><h3>Tóquio · parte 2</h3><span class="dates">26 de janeiro a 2 de fevereiro · 7 noites</span></div>
+      <div class="base-grid">
+        <div class="side">
+          <div class="lbl">Hospedagem</div><p>O mesmo apart-hotel da parte 1, com cozinha e máquina de lavar.</p>
+          <div class="lbl">Ritmo</div><p>Último dia sem passeios, para arrumar as malas e descansar antes dos voos de volta.</p>
+        </div>
+        <ul class="todo">
+          <li><b>Tokyo Disneyland</b>, o parque mais indicado para crianças pequenas, num dia de semana, com menos fila.</li>
+          <li><b>teamLab</b>, museu de arte digital imersiva que encanta as crianças.</li>
+          <li><b>Zoológico de Ueno</b> ou <b>Aquário Sumida</b>.</li>
+          <li><b>Odaiba</b>, à beira da baía, com vista de Tóquio e espaços para as crianças.</li>
+          <li class=opt><span class="k">Opcional</span><b>Museu Ghibli</b>: os ingressos abrem no dia 10 do mês anterior e esgotam rápido.</li>
+          <li><span class="k">Bate-volta</span><b>Yokohama</b> (30 min): Chinatown e o Museu do Cup Noodles, onde as crianças montam o próprio lámen.</li>
+          <li class=opt><span class="k">Opcional</span><b>Kamakura</b> (1h): o Grande Buda e templos à beira-mar.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sh">
+    <span class="eyebrow">Logística</span>
+    <h2>Respostas às dúvidas de vocês</h2>
+    <div class="accent-line"></div>
+    <div class="faq">
+      <div class="box"><h4>Takkyubin: as malas viajam sozinhas</h4><p>Serviço de entrega de bagagem entre cidades, normalmente no dia seguinte ou na data escolhida, por cerca de ¥2.500 a ¥3.500 por mala, conforme o tamanho. Hotel sempre recebe; em apartamento, depende de o anfitrião aceitar receber, e confirmamos isso em cada reserva. No roteiro, as malas grandes vão de Kyoto direto para o apart-hotel em Tóquio, e vocês fazem Kanazawa e Nagano com bagagem leve.</p></div>
+      <div class="box"><h4>Lavanderia é tranquilo</h4><p>No Japão há lavanderias self-service em todo bairro, com lavar e secar em cerca de uma hora. Nas estadias longas, priorizamos apartamentos com máquina de lavar.</p></div>
+      <div class="box"><h4>Mandar uma mala para o Brasil</h4><p>É possível pelo correio japonês (EMS, até 30 kg), mas é caro e a chegada no Brasil passa pela Receita Federal, com declaração e possível tributação. Na prática, comprar uma bagagem extra no voo de volta costuma sair mais barato e sem burocracia.</p></div>
+      <div class="box"><h4>Crianças não pagam trem no Japão</h4><p>Menores de 6 anos viajam de graça nos trens, inclusive no trem-bala, acompanhados de um adulto (até duas crianças por adulto, sem assento reservado próprio). Os dois filhos viajam de graça em todos os trechos.</p></div>
+      <div class="box"><h4>Roupa de inverno: comprar lá</h4><p>Vocês saem do verão brasileiro para temperaturas abaixo de zero na neve. Em vez de levar roupa de neve para cinco pessoas, a sugestão é levar um casaco por pessoa para a chegada e comprar o resto no Japão (segunda pele, luvas, gorros e botas) na Uniqlo, GU ou Muji, com bons preços e todos os tamanhos infantis.</p></div>
+      <div class="box"><h4>Disney: até 3 anos não paga</h4><p>Na Tokyo Disney, crianças de até 3 anos não pagam ingresso, então as duas crianças entram de graça. Os ingressos têm data marcada e são comprados online com antecedência.</p></div>
+    </div>
+  </section>
+
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">No calendário da viagem</span>
+    <h2>Festivais e eventos que vocês vão pegar</h2>
+    <div class="accent-line"></div>
+    <div class="dayrow">
+      <div class="daynum"><div class="d rg">08–12</div><div class="m">Jan</div><div class="w">Kyoto</div></div>
+      <div class="daybody"><span class="city">Kyoto</span>
+        <h4>Toka Ebisu</h4>
+        <p>Primeiro grande festival do ano em Kyoto, no santuário Kyoto Ebisu, com barracas de comida e ramos de bambu da sorte. No dia 11 costuma haver maiko distribuindo os ramos.</p>
+      </div>
+    </div>
+    <div class="dayrow">
+      <div class="daynum"><div class="d rg">10–24</div><div class="m">Jan</div><div class="w">Tóquio</div></div>
+      <div class="daybody"><span class="city">Tóquio</span>
+        <h4>Torneio de Sumô de Janeiro</h4>
+        <p>Um dos seis grandes torneios do ano, em Ryogoku. Vocês estarão em Tóquio nos últimos dias, os mais disputados. Os ingressos abrem no início de dezembro e esgotam rápido.</p>
+      </div>
+    </div>
+    <div class="obs">
+      <h4>Observações</h4>
+      <ul>
+        <li>Roteiro sugerido: hospedagens, voos e ingressos serão cotados à parte.</li>
+        <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'">
+    <div class="contact">atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR</div>
+    <div class="fnote">*Nada reservado, apenas cotado.</div>
+    <div class="credit">Foto da capa: Ximonic (Simo Räsänen), CC BY-SA 4.0, via Wikimedia Commons</div>
+  </footer>
+</div>
+</body>
+</html>
