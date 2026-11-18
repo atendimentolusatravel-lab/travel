@@ -1,6 +1,6 @@
 # Família Egoroff · Paris e Club Med · demonstrativo de despesas
 
-- **Código:** DEM-2026-EGO-01 · rev. 3 · emitido em 18/11/2026 (rev. 1 e 2 publicadas no mesmo dia).
+- **Código:** DEM-2026-EGO-01 · rev. 4 · emitido em 18/11/2026 (rev. 1 a 3 publicadas no mesmo dia). Nome da viagem: "Viagem de final de ano".
 - **Fonte:** valores informados pela agência em 18/11/2026 (chat).
 - **Passageiros:** André, Carolina, Helena, Lara, João e Pedro (6).
 - **Total (rev. 3, sem pendências):** R$ 308.701,59
