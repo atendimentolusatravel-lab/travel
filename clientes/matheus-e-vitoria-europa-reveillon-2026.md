@@ -8,12 +8,49 @@
 | Clientes | Matheus e Vitória (casal) — nomes completos pendentes |
 | Passageiros | 2 adultos |
 | Origem | GIG — Rio de Janeiro (Galeão) |
-| Período | Ida 26/12/2026 (sáb, à noite) → chegada 27/12 (dom) · volta com Vitória no Brasil até o almoço de 07/01/2027 (qui) |
-| Destinos | Suíça → Paris → Londres |
+| Período | 26/12/2026 (sáb) GIG 20h45 → 06/01/2027 (qua) chegada GIG 18h40 · Vitória precisa estar no BR no almoço de 07/01 ✅ |
+| Destinos | Londres → Paris → Suíça (Interlaken · Zurique) — definido em 18/11 |
 | Orçamento | ~35 mil pelo casal (moeda e escopo a confirmar — ver pendências) |
 | Atendimento | SS-COMERCIAL (10/11) · Maria Victoria (12/11) |
 | Perfil | "Cliente mais delicado" — tratar com atenção redobrada |
-| Status | Briefing coletado · aguardando endereço do apartamento em Paris · cotação não iniciada |
+| Status | Aéreo KLM cotado (R$ 19.517,28) · aguardando endereço em Paris · cotar hotéis, trens e guias |
+
+---
+
+## ✈️ Aéreo cotado (KLM, econômica) — 18/11
+
+| Voo | Data | Trecho | Horário | Duração |
+|---|---|---|---|---|
+| KL 706 | 26/12 (sáb) | GIG → AMS | 20h45 → 12h10 (27/12) | 11h25 |
+| KL 1015 | 27/12 (dom) | AMS → LHR | 18h50 → 19h15 | 1h25 · conexão de 6h40 em AMS |
+| KL 1916 | 06/01 (qua) | ZRH → AMS | 06h50 → 08h25 | 1h35 |
+| KL 705 | 06/01 (qua) | AMS → GIG | 10h40 → 18h40 | 12h00 · conexão de 2h15 em AMS |
+
+Total: **R$ 19.517,28** (USD 3.373,72) — confirmar se é o valor do casal e se inclui
+1 mala despachada por pessoa. *Nada reservado, apenas cotado.*
+
+## 🗺️ Estrutura definida — cidades e noites
+
+| Cidade | Entrada | Saída | Noites | Hospedagem |
+|---|---|---|---|---|
+| Londres | 27/12 (dom) — chega LHR 19h15 | 30/12 (qua) — Eurostar | 3 | Hotel (cotar) |
+| Paris | 30/12 (qua) | 03/01 (dom) — TGV Lyria | 4 | Apartamento do amigo |
+| Interlaken | 03/01 (dom) | 05/01 (ter) | 2 | Hotel (cotar) |
+| Zurique | 05/01 (ter) | 06/01 (qua) — voo 06h50 | 1 | Hotel no aeroporto (cotar) |
+
+**Total: 10 noites · hotel a cotar em 6 noites** (Londres 3 · Interlaken 2 · Zurique 1).
+
+- **Londres**: mercados de Natal confirmados abertos pela agência. Na prática, 2 dias
+  inteiros (28 e 29/12), pois chegam à noite do dia 27.
+- **Paris**: Réveillon com os amigos. Versalhes 31/12 de manhã · Louvre 30/12 à noite
+  (quarta, horário estendido) ou 02/01. Ambos fechados em 01/01.
+- **Suíça**: 03/01 Paris → Interlaken (Lyria via Basileia, ~5h30) · 04/01 montanha
+  (Jungfraujoch) · 05/01 trem panorâmico Luzern–Interlaken Express no sentido
+  Interlaken → Lucerna, tarde em Lucerna, à noite trem para Zurique.
+- **Zurique**: dormir **no aeroporto ou ao lado dele** — o voo das 06h50 exige estar no
+  aeroporto por volta das 05h. Dormir em Lucerna ou Interlaken não funciona.
+
+> As seções "Logística sugerida" e "Cenário B" abaixo foram superadas por esta estrutura.
 
 ---
 
