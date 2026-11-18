@@ -107,6 +107,26 @@
       ]
     },
     {
+      "nome": "Vinícolas · Borgonha e Champagne",
+      "itens": [
+        {
+          "servico": "Maison Taittinger",
+          "detalhe": "Reims",
+          "valor": 3446.69
+        },
+        {
+          "servico": "Château de Pommard",
+          "detalhe": "Beaune",
+          "valor": 1766.43
+        },
+        {
+          "servico": "Maison Pommery",
+          "detalhe": "Reims",
+          "valor": 2800.43
+        }
+      ]
+    },
+    {
       "nome": "Carro",
       "itens": [
         {
