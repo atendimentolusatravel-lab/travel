@@ -9,7 +9,7 @@
 | Passageiros | 2 adultos |
 | Origem | GIG — Rio de Janeiro (Galeão) |
 | Período | 26/12/2026 (sáb) GIG 20h45 → 06/01/2027 (qua) chegada GIG 18h40 · Vitória precisa estar no BR no almoço de 07/01 ✅ |
-| Destinos | Londres → Paris → Suíça (Interlaken · Zurique) — definido em 18/11 |
+| Destinos | Londres → Paris → Suíça (Lucerna · Zurique) — definido em 18/11 |
 | Orçamento | ~35 mil pelo casal (moeda e escopo a confirmar — ver pendências) |
 | Atendimento | SS-COMERCIAL (10/11) · Maria Victoria (12/11) |
 | Perfil | "Cliente mais delicado" — tratar com atenção redobrada |
@@ -35,18 +35,20 @@ Total: **R$ 19.517,28** (USD 3.373,72) — confirmar se é o valor do casal e se
 |---|---|---|---|---|
 | Londres | 27/12 (dom) — chega LHR 19h15 | 30/12 (qua) — Eurostar | 3 | Hotel (cotar) |
 | Paris | 30/12 (qua) | 03/01 (dom) — TGV Lyria | 4 | Apartamento do amigo |
-| Interlaken | 03/01 (dom) | 05/01 (ter) | 2 | Hotel (cotar) |
+| Lucerna | 03/01 (dom) | 05/01 (ter) | 2 | Hotel (cotar) |
 | Zurique | 05/01 (ter) | 06/01 (qua) — voo 06h50 | 1 | Hotel no aeroporto (cotar) |
 
-**Total: 10 noites · hotel a cotar em 6 noites** (Londres 3 · Interlaken 2 · Zurique 1).
+**Total: 10 noites · hotel a cotar em 6 noites** (Londres 3 · Lucerna 2 · Zurique 1).
 
 - **Londres**: mercados de Natal confirmados abertos pela agência. Na prática, 2 dias
   inteiros (28 e 29/12), pois chegam à noite do dia 27.
 - **Paris**: Réveillon com os amigos. Versalhes 31/12 de manhã · Louvre 30/12 à noite
   (quarta, horário estendido) ou 02/01. Ambos fechados em 01/01.
-- **Suíça**: 03/01 Paris → Interlaken (Lyria via Basileia, ~5h30) · 04/01 montanha
-  (Jungfraujoch) · 05/01 trem panorâmico Luzern–Interlaken Express no sentido
-  Interlaken → Lucerna, tarde em Lucerna, à noite trem para Zurique.
+- **Suíça (base Lucerna, 18/11)**: 03/01 TGV Lyria Paris → Basileia + trem → Lucerna
+  (~4h15) · 04/01 bate-volta Interlaken/Grindelwald pelo Luzern–Interlaken Express
+  (~2h cada trecho; voltar até ~15h para pegar luz) · 05/01 Rigi de manhã, à noite
+  trem Lucerna → aeroporto de Zurique (~1h). Jungfraujoch sai do roteiro (não cabe no
+  bate-volta e alivia o orçamento). Avaliar Swiss Travel Pass de 3 dias (03–05/01).
 - **Zurique**: dormir **no aeroporto ou ao lado dele** — o voo das 06h50 exige estar no
   aeroporto por volta das 05h. Dormir em Lucerna ou Interlaken não funciona.
 
@@ -68,6 +70,17 @@ a ~15–20 min; Hyde Park (Winter Wonderland) e luzes de Oxford/Regent St a pé.
 
 *Nada reservado, apenas cotado.* Confirmar tarifa com e sem café da manhã e política de
 cancelamento.
+
+### Lucerna — 2 noites (03→05/01) — pesquisa Booking 18/11
+
+| Hotel | Local | Cat. | Nota | 2 noites (casal) |
+|---|---|---|---|---|
+| **Hotel Des Alpes** (recomendado) | Beira do rio, ao lado da Ponte da Capela | 3★ | 8,7 | R$ 2.362,25 |
+| Altstadt Hotel Krone | Centro histórico | 3★ | 8,4 | R$ 1.793,37 |
+| Hotel Monopol | Em frente à estação | 4★ | 8,0 | R$ 2.355,69 |
+| Hotel des Balances (upgrade/pedido) | Beira do rio, centro histórico | 4★ | 9,1 | R$ 3.322,34 |
+
+*Nada reservado, apenas cotado.*
 
 ### Zurique — 1 noite (05→06/01, voo 06h50) — pesquisa Booking 18/11
 
