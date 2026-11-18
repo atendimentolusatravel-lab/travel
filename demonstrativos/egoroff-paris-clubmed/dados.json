@@ -1,0 +1,111 @@
+{
+  "codigo": "DEM-2026-EGO-01",
+  "revisao": 1,
+  "emissao": "18/11/2026",
+  "titulo_pagina": "Demonstrativo · Família Egoroff",
+  "cliente": "Família Egoroff",
+  "titular": "Sr. André Egoroff",
+  "viagem": "Paris e Club Med",
+  "periodo": "Temporada de inverno 2026/27",
+  "passageiros": [
+    "André",
+    "Carolina",
+    "Helena",
+    "Lara",
+    "João",
+    "Pedro"
+  ],
+  "grupos": [
+    {
+      "nome": "Club Med",
+      "itens": [
+        {
+          "servico": "Club Med · hospedagem",
+          "pax": "6 passageiros",
+          "valor": 141714.0
+        },
+        {
+          "servico": "Club Med · transfers e equipamentos",
+          "pax": "6 passageiros",
+          "valor": null
+        }
+      ]
+    },
+    {
+      "nome": "Paris",
+      "itens": [
+        {
+          "servico": "Hotel em Paris",
+          "pax": "6 passageiros",
+          "valor": 46738.0
+        },
+        {
+          "servico": "Transfer em Paris",
+          "pax": "6 passageiros",
+          "valor": 1044.0
+        }
+      ]
+    },
+    {
+      "nome": "Aéreo",
+      "itens": [
+        {
+          "servico": "Passagens aéreas",
+          "detalhe": "6 bilhetes · valor por passageiro abaixo",
+          "pax": "6 passageiros",
+          "por_passageiro": [
+            [
+              "André",
+              25101.6
+            ],
+            [
+              "Carolina",
+              25101.6
+            ],
+            [
+              "Helena",
+              9170.56
+            ],
+            [
+              "Lara",
+              9170.56
+            ],
+            [
+              "João",
+              9170.56
+            ],
+            [
+              "Pedro",
+              9170.56
+            ]
+          ]
+        },
+        {
+          "servico": "Marcação de assentos",
+          "pax": "6 passageiros",
+          "valor": null
+        }
+      ]
+    },
+    {
+      "nome": "Transporte e equipamentos",
+      "itens": [
+        {
+          "servico": "Aluguel de carro",
+          "pax": "Família",
+          "valor": 4503.38
+        },
+        {
+          "servico": "Aluguel de equipamentos de snow",
+          "pax": "João e Pedro",
+          "valor": 2060.0
+        }
+      ]
+    }
+  ],
+  "observacoes": [
+    "Valores em reais (R$), conforme valores finais de venda informados pela LusaTravel.",
+    "Os itens marcados como <b>a confirmar</b> ainda não têm valor fechado e <b>não estão somados</b> no total. Eles entram na próxima revisão deste documento.",
+    "Não estão incluídas despesas pagas diretamente no destino, como taxas turísticas municipais, cauções, combustível, pedágios e consumo pessoal."
+  ]
+}
