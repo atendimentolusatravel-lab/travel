@@ -191,6 +191,25 @@ com e sem café da manhã. Aéreo econômica saindo de GIG com bagagem.
 
 ---
 
+## Cenário B — sem Suíça (em avaliação, 18/11)
+
+Trecho a substituir: 27–30/12 (3 noites), mantendo Paris 30/12–03/01 e Londres 03–06/01.
+
+| Opção | Mercado de Natal 27–29/12 | Paisagem / montanha | Pedido de noivado | Logística até Paris | Custo vs. Suíça |
+|---|---|---|---|---|---|
+| **Bruges + Gante (Bélgica)** — recomendada | Costumam ir até o início de jan. | Não | Minnewater ("Lago do Amor") | Bruges → Bruxelas → Paris, ~2 h30 | Bem menor |
+| Colmar (Alsácia) | Costuma ir até 29–30/12 (risco) | Vinhedos, vilas | Petite Venise iluminada | TGV direto, ~2 h20 | Menor |
+| Chamonix (Alpes franceses) | Pouco relevante | Sim (Mont Blanc) | Aiguille du Midi (depende do tempo) | Ônibus a GVA + Lyria, ~5 h | Parecido (semana de pico do esqui) |
+
+Rascunho Bruges: GIG → CDG (voo direto) · 27/12 TGV CDG → Bruxelas → Bruges ·
+28/12 Bruges (Minnewater ao entardecer) · 29/12 bate-volta Gante ou Bruxelas ·
+30/12 manhã trem para Paris, chegada cedo → Louvre à noite (quarta, horário estendido).
+
+Aéreo vira GIG → CDG / LHR → GIG. Economia estimada de R$ 2,5 a 5 mil (hotel + trens),
+**sem cotação**. Perde-se a montanha e o trem panorâmico.
+
+---
+
 ## Pendências com o cliente
 
 - [ ] Endereço do apartamento do amigo em Paris (Vitória vai enviar).
