@@ -1,6 +1,6 @@
 {
   "codigo": "DEM-2026-EGO-01",
-  "revisao": 1,
+  "revisao": 2,
   "emissao": "18/11/2026",
   "titulo_pagina": "Demonstrativo · Família Egoroff",
   "cliente": "Família Egoroff",
@@ -73,22 +73,36 @@
             ],
             [
               "Lara",
-              9170.56
+              9350.0
             ],
             [
               "João",
-              9170.56
+              9350.0
             ],
             [
               "Pedro",
-              9170.56
+              9350.0
             ]
           ]
         },
         {
           "servico": "Marcação de assentos",
           "pax": "6 passageiros",
-          "valor": null
+          "detalhe": "3 reservas · valor por reserva abaixo",
+          "por_passageiro": [
+            [
+              "André e Carolina",
+              3359.96
+            ],
+            [
+              "Helena",
+              543.0
+            ],
+            [
+              "Lara, João e Pedro",
+              1043.94
+            ]
+          ]
         }
       ]
     },
