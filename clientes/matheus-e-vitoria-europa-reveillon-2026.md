@@ -69,6 +69,21 @@ a ~15–20 min; Hyde Park (Winter Wonderland) e luzes de Oxford/Regent St a pé.
 *Nada reservado, apenas cotado.* Confirmar tarifa com e sem café da manhã e política de
 cancelamento.
 
+### Zurique — 1 noite (05→06/01, voo 06h50) — pesquisa Booking 18/11
+
+O "Batel de Zurique" é **Seefeld** (beira do lago); Niederdorf seria o "Largo da Ordem".
+Mas com check-in à noite e saída às ~05h, a prioridade é o **aeroporto**.
+
+| Hotel | Local | Cat. | Nota | 1 noite (casal) |
+|---|---|---|---|---|
+| **Radisson Blu Zurich Airport** (recomendado) | Em frente ao terminal, a pé | 4★ | 8,4 (7.767 aval.) | R$ 1.381,43 |
+| IntercityHotel Zürich Airport | Rümlang, precisa de shuttle/táxi | 4★ | 8,4 | R$ 712,82 |
+| Mövenpick Zurich Airport | Glattbrugg, shuttle gratuito | 4★ | 7,4 | R$ 875,14 |
+| Central Plaza (se quiserem a cidade) | Em frente à estação central | 4★ | 8,8 | R$ 2.134,31 |
+
+Nos hotéis com shuttle, confirmar o horário do primeiro traslado (precisa chegar ao
+terminal até ~05h15). *Nada reservado, apenas cotado.*
+
 ---
 
 ## ⚠️ SIGILO — pedido de noivado
