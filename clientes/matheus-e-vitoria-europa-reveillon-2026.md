@@ -49,6 +49,8 @@ Total: **R$ 19.517,28** (USD 3.373,72) — confirmar se é o valor do casal e se
   (~2h cada trecho; voltar até ~15h para pegar luz) · 05/01 Rigi de manhã, à noite
   trem Lucerna → aeroporto de Zurique (~1h). Jungfraujoch sai do roteiro (não cabe no
   bate-volta e alivia o orçamento). Avaliar Swiss Travel Pass de 3 dias (03–05/01).
+  - Ida 04/01: **Luzern–Interlaken Express PE 2928** (Zentralbahn), Luzern 08h06 →
+    Interlaken Ost 09h54, direto. Volta: saída de Interlaken Ost por volta das 15h.
 - **Zurique**: dormir **no aeroporto ou ao lado dele** — o voo das 06h50 exige estar no
   aeroporto por volta das 05h. Dormir em Lucerna ou Interlaken não funciona.
 
