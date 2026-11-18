@@ -9,7 +9,7 @@
 | Passageiros | 2 adultos |
 | Origem | GIG — Rio de Janeiro (Galeão) |
 | Período | 26/12/2026 (sáb) GIG 20h45 → 06/01/2027 (qua) chegada GIG 18h40 · Vitória precisa estar no BR no almoço de 07/01 ✅ |
-| Destinos | Londres → Paris → Suíça (Lucerna · Zurique) — definido em 18/11 |
+| Destinos | Londres → Paris → Suíça (proposta: Montreux + saída por Genebra — pendente troca do aéreo) |
 | Orçamento | ~35 mil pelo casal (moeda e escopo a confirmar — ver pendências) |
 | Atendimento | SS-COMERCIAL (10/11) · Maria Victoria (12/11) |
 | Perfil | "Cliente mais delicado" — tratar com atenção redobrada |
@@ -53,6 +53,33 @@ Total: **R$ 19.517,28** (USD 3.373,72) — confirmar se é o valor do casal e se
   aeroporto por volta das 05h. Dormir em Lucerna ou Interlaken não funciona.
 
 > As seções "Logística sugerida" e "Cenário B" abaixo foram superadas por esta estrutura.
+
+### Suíça — PROPOSTA REVISADA (18/11): Montreux, saída por Genebra
+
+Motivo: pedido de noivado sem frio de montanha. Montreux (Riviera do Lago Léman) é das
+regiões mais amenas da Suíça ao norte dos Alpes; neve fica na paisagem (Alpes do outro
+lado do lago), não sob os pés. Depende de trocar o trecho ZRH→AMS por **GVA→AMS em 06/01
+conectando no KL705 (10h40)** — pedir à KLM valor da alteração.
+
+| Dia | Programa |
+|---|---|
+| 03/01 (dom) | TGV Lyria Paris → Lausanne (direto, ~3h40) + trem até Montreux (~20 min) |
+| 04/01 (seg) | Caminhada pela beira do lago até o Castelo de Chillon; visita (aberto o ano todo exceto 25/12 e 01/01; inverno até ~17h) e **pedido na margem do lago ao pôr do sol (~16h55)**, com o castelo e os Alpes ao fundo · jantar de comemoração |
+| 05/01 (ter) | Plano B de clima / vinhedos de Lavaux (UNESCO) · à tarde trem para Genebra (~1h10) |
+| 06/01 (qua) | Voo GVA → AMS → GIG |
+
+Hotéis Montreux (Booking 18/11, 03–05/01, 2 noites, casal): Royal Plaza 5★ 8,1
+R$ 2.465,85 · Grand Hotel Suisse Majestic 4★ 8,8 R$ 3.282,28 · Eden Palace au Lac 4★ 8,4
+R$ 2.078,78 · La Rouvenaz 3★ 8,7 R$ 2.212,92 · Fairmont Le Montreux Palace 5★ 9,0
+R$ 8.323,12. Genebra (05/01): a cotar perto da estação/aeroporto.
+Jantar: Stéphane Décotterd (Michelin, vista do lago — risco de nuvem baixa) ou La Rouvenaz
+(jardim de inverno à beira do lago). Atenção: o terraço do Fairmont fica fechado até a
+primavera de 2027. *Nada reservado, apenas cotado.*
+
+Alternativas avaliadas: Lucerna (Château Gütsch / cabanas de fondue aquecidas do Seehotel
+Kastanienbaum, temporada nov–jan) — mantida como plano B, saída por ZRH sem trocar aéreo;
+Cataratas do Reno (iluminação de inverno vai só até 03/01/2027) — descartada; Lugano/
+Morcote (mais quente, mas longe de Paris e baixa temporada) — descartada.
 
 ### Londres — bairro e hotéis (pesquisa Booking 18/11, 27–30/12, 2 adultos)
 
