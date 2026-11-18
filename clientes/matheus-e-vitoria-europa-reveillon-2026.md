@@ -150,6 +150,16 @@ Plano revisado em 18/11 (sem pedido em montanha com neve — frio):
    Seehotel Kastanienbaum (temporada nov–jan; confirmar início de janeiro; 10 min de
    carro de Lucerna).
 3. **Plano C**: Ponte da Capela iluminada + jantar.
+   Outras opções de jantar pesquisadas (18/11), todas com vista do lago:
+   - Art Deco Hotel Montana — Scala (15 pts Gault&Millau; funicular próprio desde a
+     beira do lago — confirmar), no centro.
+   - Bürgenstock — Spices Kitchen & Terrace (Michelin Plate 2025; pacote "Panorama
+     Dining – Window Seating") ou RitzCoffier (Belle Époque, janelas panorâmicas). Barco +
+     funicular; confirmar horário de volta à noite. Mais caro.
+   - Park Hotel Vitznau — focus ATELIER (2 estrelas Michelin, menu de 6 ou 9 tempos).
+     Muito caro; confirmar se abre na segunda 04/01.
+   - Barco de fondue no lago: sem datas confirmadas para janeiro e mesa compartilhada —
+     não recomendado para o pedido.
 4. **Fotógrafo** discreto (cotar à parte, só com Matheus).
 5. Hospedagem: Des Alpes (R$ 2.362,25) ou upgrade Hotel des Balances (R$ 3.322,34);
    dormir no Château Gütsch custa R$ 5.347,87 (2 noites) — só se o orçamento permitir.
