@@ -28,6 +28,11 @@
           "servico": "Club Med · transfers e equipamentos",
           "pax": "6 passageiros",
           "valor": null
+        },
+        {
+          "servico": "Aluguel de equipamentos de snow",
+          "pax": "João e Pedro",
+          "valor": 2060.0
         }
       ]
     },
@@ -88,17 +93,12 @@
       ]
     },
     {
-      "nome": "Transporte e equipamentos",
+      "nome": "Carro",
       "itens": [
         {
           "servico": "Aluguel de carro",
           "pax": "Família",
           "valor": 4503.38
-        },
-        {
-          "servico": "Aluguel de equipamentos de snow",
-          "pax": "João e Pedro",
-          "valor": 2060.0
         }
       ]
     }
