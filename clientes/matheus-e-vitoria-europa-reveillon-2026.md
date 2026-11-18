@@ -44,13 +44,11 @@ Total: **R$ 19.517,28** (USD 3.373,72) — confirmar se é o valor do casal e se
   inteiros (28 e 29/12), pois chegam à noite do dia 27.
 - **Paris**: Réveillon com os amigos. Versalhes 31/12 de manhã · Louvre 30/12 à noite
   (quarta, horário estendido) ou 02/01. Ambos fechados em 01/01.
-- **Suíça (base Lucerna, 18/11)**: 03/01 TGV Lyria Paris → Basileia + trem → Lucerna
-  (~4h15) · 04/01 bate-volta Interlaken/Grindelwald pelo Luzern–Interlaken Express
-  (~2h cada trecho; voltar até ~15h para pegar luz) · 05/01 Rigi de manhã, à noite
-  trem Lucerna → aeroporto de Zurique (~1h). Jungfraujoch sai do roteiro (não cabe no
-  bate-volta e alivia o orçamento). Avaliar Swiss Travel Pass de 3 dias (03–05/01).
-  - Ida 04/01: **Luzern–Interlaken Express PE 2928** (Zentralbahn), Luzern 08h06 →
-    Interlaken Ost 09h54, direto. Volta: saída de Interlaken Ost por volta das 15h.
+- **Suíça (base Lucerna) — sem trem panorâmico (decidido 18/11)**:
+  03/01 TGV Lyria Paris → Basileia + trem → Lucerna (~4h15) · 04/01 e 05/01 em
+  Lucerna, com o **pedido de noivado** (ver seção de sigilo) · 05/01 à noite trem
+  Lucerna → aeroporto de Zurique (~1h). Swiss Travel Pass de 3 dias cobre trens, barcos
+  do Lago de Lucerna e o Rigi.
 - **Zurique**: dormir **no aeroporto ou ao lado dele** — o voo das 06h50 exige estar no
   aeroporto por volta das 05h. Dormir em Lucerna ou Interlaken não funciona.
 
@@ -113,16 +111,23 @@ terminal até ~05h15). *Nada reservado, apenas cotado.*
 - Itens ligados ao pedido (jantar, fotógrafo, reserva especial) devem aparecer na
   proposta com nome neutro ou ser cotados à parte só para ele.
 
-Ideias para levar ao Matheus (todas a validar — operação de inverno):
+**Definido em 18/11: o pedido será na Suíça (Lucerna, 03–06/01).**
 
-1. **Suíça, antes de encontrar os amigos** (recomendado): é o único trecho só do
-   casal. Opções: mirante com vista para os Alpes (Jungfraujoch e Rigi operam o ano
-   todo; Harder Kulm, em Interlaken, costuma fechar no inverno — confirmar), beira do
-   Lago de Lucerna/Ponte da Capela ao entardecer, ou o próprio trem panorâmico.
-2. **Paris sem ser a Torre**: Pont Alexandre III, Montmartre ao amanhecer, jardim do
-   Musée Rodin, jantar em barco no Sena. Atenção: em Paris eles estarão com os amigos
-   (os amigos podem ajudar ou atrapalhar a surpresa — perguntar ao Matheus).
-3. **Fotógrafo** discreto no local escolhido (cotar à parte).
+Plano proposto (validar operação de inverno e reservar):
+
+1. **Pedido — Rigi Kulm ao pôr do sol (~16h50)**, em 04/01. Vista dos lagos e dos Alpes,
+   muitas vezes acima do "mar de nuvens" no inverno. Acesso a partir de Lucerna em
+   ~1h–1h15 (barco até Vitznau + trem de cremalheira, ou trem via Arth-Goldau). Coberto
+   pelo Swiss Travel Pass. **Plano B de clima: 05/01** (há dois dias para tentar).
+2. **Jantar de comemoração com vista** — opções a confirmar: Château Gütsch (restaurante
+   no morro sobre Lucerna, acesso por funicular) ou Art Deco Hotel Montana (vista do
+   lago). Alternativa de luxo: Bürgenstock Resort (barco + funicular, penhasco sobre o lago).
+3. **Plano à prova de chuva**: Ponte da Capela / beira do rio Reuss à noite + jantar com vista.
+4. **Fotógrafo** discreto (cotar à parte, só com Matheus).
+5. Hospedagem: considerar upgrade para o Hotel des Balances (beira do rio) na noite do pedido.
+
+Na proposta e em qualquer mensagem com a Vitória: chamar de "passeio ao Rigi + jantar
+especial", sem mencionar pedido.
 
 ---
 
