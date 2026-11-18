@@ -142,7 +142,7 @@ terminal até ~05h15). *Nada reservado, apenas cotado.*
 
 Plano revisado em 18/11 (sem pedido em montanha com neve — frio):
 
-1. **Pedido — jantar no Château Gütsch (04/01)**: castelo no morro sobre Lucerna, acesso
+1. ✅ **CONFIRMADO (18/11) — Pedido no jantar do Château Gütsch (04/01)**: castelo no morro sobre Lucerna, acesso
    por funicular; no inverno o salão vira ambiente fechado à luz de velas, com vista da
    cidade iluminada e do lago (Michelin cita como boa escolha romântica). Jantar 18h–22h.
    Pedir mesa na janela e combinar o pedido com o restaurante. Confirmar funicular.
@@ -163,6 +163,13 @@ Plano revisado em 18/11 (sem pedido em montanha com neve — frio):
 4. **Fotógrafo** discreto (cotar à parte, só com Matheus).
 5. Hospedagem: Des Alpes (R$ 2.362,25) ou upgrade Hotel des Balances (R$ 3.322,34);
    dormir no Château Gütsch custa R$ 5.347,87 (2 noites) — só se o orçamento permitir.
+
+Checklist Château Gütsch:
+- [ ] Reservar jantar 04/01 (plano B: 05/01, antes do trem para Zurique) — mesa de canto na janela
+- [ ] Avisar o restaurante do pedido (champanhe / sobremesa especial), sem anel na comida
+- [ ] Confirmar funcionamento do funicular à noite em janeiro (senão, táxi ~5 min)
+- [ ] Pedir valor do menu/jantar → cotação à parte, só para Matheus
+- [ ] Fotógrafo (perguntar se o hotel indica alguém)
 
 O que fazer em Lucerna (03–05/01): centro antigo, Ponte da Capela, Monumento do Leão,
 barco pelo lago + banho termal de Rigi Kaltbad (35 °C, vista dos Alpes, aberto o ano
