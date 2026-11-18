@@ -9,7 +9,7 @@
 | Passageiros | 2 adultos |
 | Origem | GIG — Rio de Janeiro (Galeão) |
 | Período | 26/12/2026 (sáb) GIG 20h45 → 06/01/2027 (qua) chegada GIG 18h40 · Vitória precisa estar no BR no almoço de 07/01 ✅ |
-| Destinos | Londres → Paris → Suíça (proposta: Montreux + saída por Genebra — pendente troca do aéreo) |
+| Destinos | Londres → Paris → Suíça (Lucerna · Zurique) — Lucerna confirmada para o pedido em 18/11 |
 | Orçamento | ~35 mil pelo casal (moeda e escopo a confirmar — ver pendências) |
 | Atendimento | SS-COMERCIAL (10/11) · Maria Victoria (12/11) |
 | Perfil | "Cliente mais delicado" — tratar com atenção redobrada |
@@ -54,7 +54,7 @@ Total: **R$ 19.517,28** (USD 3.373,72) — confirmar se é o valor do casal e se
 
 > As seções "Logística sugerida" e "Cenário B" abaixo foram superadas por esta estrutura.
 
-### Suíça — PROPOSTA REVISADA (18/11): Montreux, saída por Genebra
+### Suíça — Montreux (DESCARTADA em 18/11: agência quer destino com mais o que fazer; mantida Lucerna, sem trocar aéreo)
 
 Motivo: pedido de noivado sem frio de montanha. Montreux (Riviera do Lago Léman) é das
 regiões mais amenas da Suíça ao norte dos Alpes; neve fica na paisagem (Alpes do outro
@@ -140,18 +140,24 @@ terminal até ~05h15). *Nada reservado, apenas cotado.*
 
 **Definido em 18/11: o pedido será na Suíça (Lucerna, 03–06/01).**
 
-Plano proposto (validar operação de inverno e reservar):
+Plano revisado em 18/11 (sem pedido em montanha com neve — frio):
 
-1. **Pedido — Rigi Kulm ao pôr do sol (~16h50)**, em 04/01. Vista dos lagos e dos Alpes,
-   muitas vezes acima do "mar de nuvens" no inverno. Acesso a partir de Lucerna em
-   ~1h–1h15 (barco até Vitznau + trem de cremalheira, ou trem via Arth-Goldau). Coberto
-   pelo Swiss Travel Pass. **Plano B de clima: 05/01** (há dois dias para tentar).
-2. **Jantar de comemoração com vista** — opções a confirmar: Château Gütsch (restaurante
-   no morro sobre Lucerna, acesso por funicular) ou Art Deco Hotel Montana (vista do
-   lago). Alternativa de luxo: Bürgenstock Resort (barco + funicular, penhasco sobre o lago).
-3. **Plano à prova de chuva**: Ponte da Capela / beira do rio Reuss à noite + jantar com vista.
+1. **Pedido — jantar no Château Gütsch (04/01)**: castelo no morro sobre Lucerna, acesso
+   por funicular; no inverno o salão vira ambiente fechado à luz de velas, com vista da
+   cidade iluminada e do lago (Michelin cita como boa escolha romântica). Jantar 18h–22h.
+   Pedir mesa na janela e combinar o pedido com o restaurante. Confirmar funicular.
+2. **Alternativa íntima**: cabana de fondue aquecida e privativa à beira do lago no
+   Seehotel Kastanienbaum (temporada nov–jan; confirmar início de janeiro; 10 min de
+   carro de Lucerna).
+3. **Plano C**: Ponte da Capela iluminada + jantar.
 4. **Fotógrafo** discreto (cotar à parte, só com Matheus).
-5. Hospedagem: considerar upgrade para o Hotel des Balances (beira do rio) na noite do pedido.
+5. Hospedagem: Des Alpes (R$ 2.362,25) ou upgrade Hotel des Balances (R$ 3.322,34);
+   dormir no Château Gütsch custa R$ 5.347,87 (2 noites) — só se o orçamento permitir.
+
+O que fazer em Lucerna (03–05/01): centro antigo, Ponte da Capela, Monumento do Leão,
+barco pelo lago + banho termal de Rigi Kaltbad (35 °C, vista dos Alpes, aberto o ano
+todo), Museu Suíço dos Transportes, Bürgenstock (barco + funicular), compras de relógios
+e chocolate.
 
 Na proposta e em qualquer mensagem com a Vitória: chamar de "passeio ao Rigi + jantar
 especial", sem mencionar pedido.
