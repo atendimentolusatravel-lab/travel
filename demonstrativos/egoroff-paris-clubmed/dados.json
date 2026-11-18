@@ -1,11 +1,11 @@
 {
   "codigo": "DEM-2026-EGO-01",
-  "revisao": 2,
+  "revisao": 3,
   "emissao": "18/11/2026",
   "titulo_pagina": "Demonstrativo · Família Egoroff",
   "cliente": "Família Egoroff",
   "titular": "Sr. André Egoroff",
-  "viagem": "Paris e Club Med",
+  "viagem": "Paris, Club Med, Borgonha e Champagne",
   "periodo": "Temporada de inverno 2026/27",
   "passageiros": [
     "André",
@@ -25,9 +25,33 @@
           "valor": 141714.0
         },
         {
-          "servico": "Club Med · transfers e equipamentos",
+          "servico": "Club Med · transfers",
           "pax": "6 passageiros",
-          "valor": null
+          "unitario": 929.0,
+          "qtd": 6
+        },
+        {
+          "servico": "Club Med · aluguel de equipamentos",
+          "detalhe": "4 passageiros · valor por passageiro abaixo",
+          "pax": "André, Carolina, Helena e Lara",
+          "por_passageiro": [
+            [
+              "André",
+              1544.0
+            ],
+            [
+              "Carolina",
+              1798.0
+            ],
+            [
+              "Helena",
+              1544.0
+            ],
+            [
+              "Lara",
+              1798.0
+            ]
+          ]
         },
         {
           "servico": "Aluguel de equipamentos de snow",
@@ -139,7 +163,6 @@
   ],
   "observacoes": [
     "Valores em reais (R$), conforme valores finais de venda informados pela LusaTravel.",
-    "Os itens marcados como <b>a confirmar</b> ainda não têm valor fechado e <b>não estão somados</b> no total. Eles entram na próxima revisão deste documento.",
     "Não estão incluídas despesas pagas diretamente no destino, como taxas turísticas municipais, cauções, combustível, pedágios e consumo pessoal."
   ]
 }

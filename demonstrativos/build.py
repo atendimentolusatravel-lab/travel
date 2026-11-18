@@ -48,6 +48,8 @@ def data_uri(nome: str) -> str:
 def valor_item(item) -> Decimal | None:
     if "por_passageiro" in item:
         return sum((Decimal(str(v)) for _, v in item["por_passageiro"]), Decimal("0"))
+    if "unitario" in item:
+        return Decimal(str(item["unitario"])) * int(item["qtd"])
     if item.get("valor") is None:
         return None
     return Decimal(str(item["valor"]))
@@ -93,6 +95,8 @@ def build(pasta: str) -> Path:
     for nome, sub, itens in grupos:
         linhas.append(f'<tr class="grp"><td colspan="3">{esc(nome)}</td></tr>')
         for num, it, v in itens:
+            if "unitario" in it and not it.get("detalhe"):
+                it["detalhe"] = f'{it["qtd"]} × {brl(Decimal(str(it["unitario"])))} por pessoa'
             det = f'<span class="det">{esc(it.get("detalhe", ""))}</span>' if it.get("detalhe") else ""
             pax = f'<span class="pax">{esc(it["pax"])}</span>' if it.get("pax") else ""
             if v is None:
@@ -266,7 +270,7 @@ tr.total td.val{{color:#fff;font-size:1.15rem;vertical-align:middle}}
     <div class="meta">
       <div><p class="k">Titular</p><p class="v">{esc(d["titular"])}</p></div>
       <div><p class="k">Passageiros</p><p class="v">{len(d["passageiros"])}</p><p class="d">{esc(pax_lista)}</p></div>
-      <div><p class="k">Serviços</p><p class="v">{n_itens}</p><p class="d">{n_pend} a confirmar</p></div>
+      <div><p class="k">Serviços</p><p class="v">{n_itens}</p><p class="d">{f"{n_pend} a confirmar" if n_pend else "todos com valor fechado"}</p></div>
       <div><p class="k">Emissão</p><p class="v">{esc(d["emissao"])}</p><p class="d">Revisão {d["revisao"]}</p></div>
     </div>
 
