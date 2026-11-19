@@ -123,7 +123,7 @@
   .air{font-size:15px}
   .cnt{font-size:9.5px;color:var(--muted);font-weight:500;letter-spacing:.04em}
   .trechos{padding:7px 16px 2px;font-size:10px;color:var(--muted)}
-  .trechos b{color:var(--text);font-weight:600}
+  .trechos b{color:var(--text);font-weight:600;white-space:nowrap}
   .chead,.crow{display:grid;grid-template-columns:30px 1fr 1fr 112px;gap:12px;align-items:center;padding:0 16px}
   .chead{padding-top:6px;padding-bottom:4px;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-2);font-weight:700;border-bottom:1px solid var(--line)}
   .chead .r,.ct{text-align:right}
@@ -165,7 +165,7 @@
     <div class="eyebrow">Cotação para sua viagem · 1ª opção</div>
     <h1>SR. ANTONIO CESAR CHEDE</h1>
     <div class="route">Florianópolis (FLN) <span class="arr">⇄</span> São Paulo · Congonhas (CGH) <span style="color:var(--muted);font-weight:400">· Novembro de 2026 · Voos diretos</span></div>
-    <p class="intro">Combinações de ida e volta de cada companhia saindo de Florianópolis, em voos diretos, classe econômica, tarifa Light (sem bagagem despachada). Valores totais para 2 passageiros, já com taxas.</p>
+    <p class="intro">Combinações de ida e volta de cada companhia saindo de Florianópolis (ida em 26 nov), em voos diretos, classe econômica, tarifa Light (sem bagagem despachada). Valores totais para 2 passageiros, já com taxas.</p>
 
   <div class="grp">
     <div class="grp-h"><div class="n">1ª OPÇÃO</div><div class="d">Saindo de <b>Florianópolis</b> · Ida <b>26 nov</b> · Volta <b>29 nov</b></div><div class="pax">2 passageiros</div></div>
@@ -251,7 +251,7 @@
     <div class="eyebrow">Cotação para sua viagem · 2ª opção</div>
     <h1>SR. ANTONIO CESAR CHEDE</h1>
     <div class="route">Curitiba (CWB) <span class="arr">⇄</span> São Paulo · Congonhas (CGH) <span style="color:var(--muted);font-weight:400">· Novembro de 2026 · Voos diretos</span></div>
-    <p class="intro">Combinações de ida e volta de cada companhia saindo de Curitiba, em voos diretos, classe econômica, tarifa Light (sem bagagem despachada). Valores totais para 2 passageiros, já com taxas.</p>
+    <p class="intro">Combinações de ida e volta de cada companhia saindo de Curitiba (ida em 26 nov), em voos diretos, classe econômica, tarifa Light (sem bagagem despachada). Valores totais para 2 passageiros, já com taxas.</p>
 
   <div class="grp">
     <div class="grp-h"><div class="n">2ª OPÇÃO</div><div class="d">Saindo de <b>Curitiba</b> · Ida <b>26 nov</b> · Volta <b>29 nov</b></div><div class="pax">2 passageiros</div></div>
@@ -273,6 +273,92 @@
         <div class="trechos">Por trecho (2 passageiros): <b>Ida R$ 2.973,62</b> · <b>Volta</b> LA 3820 <b>R$ 2.983,50</b> / LA 3072 <b>R$ 3.056,34</b></div>
         <div class="chead"><div>Nº</div><div>Ida · qui, 26 nov · CWB → CGH</div><div>Volta · dom, 29 nov · CGH → CWB</div><div class="r">Total 2 pax</div></div>
         <div class="crow"><div class="cn">17</div><div class="cleg"><div class="times"><b>07:50</b><span class="ap">CWB</span><span class="line"></span><b>08:55</b><span class="ap">CGH</span></div><div class="meta">Voo <b>LA 3059</b> · 1h05 · direto</div></div><div class="cleg"><div class="times"><b>17:15</b><span class="ap">CGH</span><span class="line"></span><b>18:15</b><span class="ap">CWB</span></div><div class="meta">Voo <b>LA 3820</b> · 1h00 · direto</div></div><div class="ct"><div><span>R$</span>5.957,12</div><small>R$ 2.978,56 por pessoa</small></div></div><div class="crow"><div class="cn">18</div><div class="cleg"><div class="times"><b>07:50</b><span class="ap">CWB</span><span class="line"></span><b>08:55</b><span class="ap">CGH</span></div><div class="meta">Voo <b>LA 3059</b> · 1h05 · direto</div></div><div class="cleg"><div class="times"><b>19:25</b><span class="ap">CGH</span><span class="line"></span><b>20:25</b><span class="ap">CWB</span></div><div class="meta">Voo <b>LA 3072</b> · 1h00 · direto</div></div><div class="ct"><div><span>R$</span>6.029,96</div><small>R$ 3.014,98 por pessoa</small></div></div><div class="crow"><div class="cn">19</div><div class="cleg"><div class="times"><b>09:20</b><span class="ap">CWB</span><span class="line"></span><b>10:25</b><span class="ap">CGH</span></div><div class="meta">Voo <b>LA 3061</b> · 1h05 · direto</div></div><div class="cleg"><div class="times"><b>17:15</b><span class="ap">CGH</span><span class="line"></span><b>18:15</b><span class="ap">CWB</span></div><div class="meta">Voo <b>LA 3820</b> · 1h00 · direto</div></div><div class="ct"><div><span>R$</span>5.957,12</div><small>R$ 2.978,56 por pessoa</small></div></div><div class="crow"><div class="cn">20</div><div class="cleg"><div class="times"><b>09:20</b><span class="ap">CWB</span><span class="line"></span><b>10:25</b><span class="ap">CGH</span></div><div class="meta">Voo <b>LA 3061</b> · 1h05 · direto</div></div><div class="cleg"><div class="times"><b>19:25</b><span class="ap">CGH</span><span class="line"></span><b>20:25</b><span class="ap">CWB</span></div><div class="meta">Voo <b>LA 3072</b> · 1h00 · direto</div></div><div class="ct"><div><span>R$</span>6.029,96</div><small>R$ 3.014,98 por pessoa</small></div></div>
+      </div>
+    </div>
+  </div>
+
+    <div class="incl">
+      <div class="box g">
+        <h3>Incluso</h3>
+        <ul>
+          <li>Passagem aérea ida e volta, classe econômica</li>
+          <li>Taxas de embarque</li>
+          <li>Bagagem de mão 10 kg + item pessoal por passageiro</li>
+        </ul>
+      </div>
+      <div class="box o">
+        <h3>Importante</h3>
+        <ul>
+          <li>Tarifa Light: não inclui bagagem despachada</li>
+          <li>Valores sujeitos a alteração até a emissão</li>
+          <li>Marcação de assento conforme regra da tarifa</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="note">*Nada reservado, apenas cotado.</p>
+  </main>
+
+  <footer>
+    <div class="goldbar"></div>
+    <div class="in">
+      <div class="brand">LUSA<span>TRAVEL</span></div>
+      <div>
+        <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<div class="page">
+
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" fill="none" stroke="#da8d00" stroke-width="1.6"/>
+        <path d="M20 6 L23.2 20 L20 34 L16.8 20 Z" fill="#da8d00"/>
+        <path d="M6 20 L20 17.6 L34 20 L20 22.4 Z" fill="#fff" opacity=".85"/>
+        <circle cx="20" cy="20" r="2.2" fill="#1f4a2c" stroke="#fff" stroke-width="1"/>
+      </svg>
+      <div>
+        <div class="word">LUSA<span>TRAVEL</span></div>
+        <div class="tag">Agência de Viagens</div>
+      </div>
+    </div>
+    <div class="doc">
+      <div class="k">Cotação Aérea</div>
+      <div class="v">Emitida em 19/11/2026</div>
+    </div>
+  </header>
+  <div class="goldbar"></div>
+
+  <main>
+    <div class="eyebrow">Cotação para sua viagem · 3ª opção</div>
+    <h1>SR. ANTONIO CESAR CHEDE</h1>
+    <div class="route">Curitiba (CWB) <span class="arr">⇄</span> São Paulo · Congonhas (CGH) <span style="color:var(--muted);font-weight:400">· Novembro de 2026 · Voos diretos</span></div>
+    <p class="intro">Combinações de ida e volta de cada companhia saindo de Curitiba (ida em 27 nov), em voos diretos, classe econômica, tarifa Light (sem bagagem despachada). Valores totais para 2 passageiros, já com taxas.</p>
+
+  <div class="grp">
+    <div class="grp-h"><div class="n">3ª OPÇÃO</div><div class="d">Saindo de <b>Curitiba</b> · Ida <b>27 nov</b> · Volta <b>29 nov</b></div><div class="pax">2 passageiros</div></div>
+    <div class="opts">
+      <div class="opt">
+        <div class="opt-h">
+          <div class="l"><div class="air">GOL</div><span class="badge gold">Menor preço</span><span class="cnt">6 combinações</span></div>
+          <div class="price"><div class="lbl">A partir de · ida e volta · 2 passageiros</div><div class="val"><small>R$</small>4.122,98</div><div class="pp">R$ 2.061,49 por pessoa</div></div>
+        </div>
+        <div class="trechos">Por trecho (2 passageiros): <b>Ida</b> G3 1107 <b>R$ 2.240,08</b> / G3 1109 <b>R$ 2.896,10</b> / G3 1111 <b>R$ 2.488,96</b> · <b>Volta</b> G3 1152 <b>R$ 1.882,90</b> / G3 1118 <b>R$ 2.324,64</b></div>
+        <div class="chead"><div>Nº</div><div>Ida · sex, 27 nov · CWB → CGH</div><div>Volta · dom, 29 nov · CGH → CWB</div><div class="r">Total 2 pax</div></div>
+        <div class="crow"><div class="cn">21</div><div class="cleg"><div class="times"><b>08:45</b><span class="ap">CWB</span><span class="line"></span><b>09:50</b><span class="ap">CGH</span></div><div class="meta">Voo <b>G3 1107</b> · 1h05 · direto</div></div><div class="cleg"><div class="times"><b>17:55</b><span class="ap">CGH</span><span class="line"></span><b>18:55</b><span class="ap">CWB</span></div><div class="meta">Voo <b>G3 1152</b> · 1h00 · direto</div></div><div class="ct"><div><span>R$</span>4.122,98</div><small>R$ 2.061,49 por pessoa</small></div></div><div class="crow"><div class="cn">22</div><div class="cleg"><div class="times"><b>08:45</b><span class="ap">CWB</span><span class="line"></span><b>09:50</b><span class="ap">CGH</span></div><div class="meta">Voo <b>G3 1107</b> · 1h05 · direto</div></div><div class="cleg"><div class="times"><b>20:35</b><span class="ap">CGH</span><span class="line"></span><b>21:35</b><span class="ap">CWB</span></div><div class="meta">Voo <b>G3 1118</b> · 1h00 · direto</div></div><div class="ct"><div><span>R$</span>4.564,72</div><small>R$ 2.282,36 por pessoa</small></div></div><div class="crow"><div class="cn">23</div><div class="cleg"><div class="times"><b>10:45</b><span class="ap">CWB</span><span class="line"></span><b>11:55</b><span class="ap">CGH</span></div><div class="meta">Voo <b>G3 1109</b> · 1h10 · direto</div></div><div class="cleg"><div class="times"><b>17:55</b><span class="ap">CGH</span><span class="line"></span><b>18:55</b><span class="ap">CWB</span></div><div class="meta">Voo <b>G3 1152</b> · 1h00 · direto</div></div><div class="ct"><div><span>R$</span>4.779,00</div><small>R$ 2.389,50 por pessoa</small></div></div><div class="crow"><div class="cn">24</div><div class="cleg"><div class="times"><b>10:45</b><span class="ap">CWB</span><span class="line"></span><b>11:55</b><span class="ap">CGH</span></div><div class="meta">Voo <b>G3 1109</b> · 1h10 · direto</div></div><div class="cleg"><div class="times"><b>20:35</b><span class="ap">CGH</span><span class="line"></span><b>21:35</b><span class="ap">CWB</span></div><div class="meta">Voo <b>G3 1118</b> · 1h00 · direto</div></div><div class="ct"><div><span>R$</span>5.220,74</div><small>R$ 2.610,37 por pessoa</small></div></div><div class="crow"><div class="cn">25</div><div class="cleg"><div class="times"><b>12:20</b><span class="ap">CWB</span><span class="line"></span><b>13:30</b><span class="ap">CGH</span></div><div class="meta">Voo <b>G3 1111</b> · 1h10 · direto</div></div><div class="cleg"><div class="times"><b>17:55</b><span class="ap">CGH</span><span class="line"></span><b>18:55</b><span class="ap">CWB</span></div><div class="meta">Voo <b>G3 1152</b> · 1h00 · direto</div></div><div class="ct"><div><span>R$</span>4.371,86</div><small>R$ 2.185,93 por pessoa</small></div></div><div class="crow"><div class="cn">26</div><div class="cleg"><div class="times"><b>12:20</b><span class="ap">CWB</span><span class="line"></span><b>13:30</b><span class="ap">CGH</span></div><div class="meta">Voo <b>G3 1111</b> · 1h10 · direto</div></div><div class="cleg"><div class="times"><b>20:35</b><span class="ap">CGH</span><span class="line"></span><b>21:35</b><span class="ap">CWB</span></div><div class="meta">Voo <b>G3 1118</b> · 1h00 · direto</div></div><div class="ct"><div><span>R$</span>4.813,60</div><small>R$ 2.406,80 por pessoa</small></div></div>
+      </div>
+      <div class="opt">
+        <div class="opt-h">
+          <div class="l"><div class="air">LATAM</div><span class="cnt">2 combinações</span></div>
+          <div class="price"><div class="lbl">A partir de · ida e volta · 2 passageiros</div><div class="val"><small>R$</small>6.524,72</div><div class="pp">R$ 3.262,36 por pessoa</div></div>
+        </div>
+        <div class="trechos">Por trecho (2 passageiros): <b>Ida R$ 3.541,22</b> · <b>Volta</b> LA 3820 <b>R$ 2.983,50</b> / LA 3072 <b>R$ 3.056,34</b></div>
+        <div class="chead"><div>Nº</div><div>Ida · sex, 27 nov · CWB → CGH</div><div>Volta · dom, 29 nov · CGH → CWB</div><div class="r">Total 2 pax</div></div>
+        <div class="crow"><div class="cn">27</div><div class="cleg"><div class="times"><b>09:20</b><span class="ap">CWB</span><span class="line"></span><b>10:25</b><span class="ap">CGH</span></div><div class="meta">Voo <b>LA 3061</b> · 1h05 · direto</div></div><div class="cleg"><div class="times"><b>17:15</b><span class="ap">CGH</span><span class="line"></span><b>18:15</b><span class="ap">CWB</span></div><div class="meta">Voo <b>LA 3820</b> · 1h00 · direto</div></div><div class="ct"><div><span>R$</span>6.524,72</div><small>R$ 3.262,36 por pessoa</small></div></div><div class="crow"><div class="cn">28</div><div class="cleg"><div class="times"><b>09:20</b><span class="ap">CWB</span><span class="line"></span><b>10:25</b><span class="ap">CGH</span></div><div class="meta">Voo <b>LA 3061</b> · 1h05 · direto</div></div><div class="cleg"><div class="times"><b>19:25</b><span class="ap">CGH</span><span class="line"></span><b>20:25</b><span class="ap">CWB</span></div><div class="meta">Voo <b>LA 3072</b> · 1h00 · direto</div></div><div class="ct"><div><span>R$</span>6.597,56</div><small>R$ 3.298,78 por pessoa</small></div></div>
       </div>
     </div>
   </div>
