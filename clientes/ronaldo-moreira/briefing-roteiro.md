@@ -25,6 +25,8 @@
 
 ## 2. Bases e destaques (transcrição da tela 1)
 
+![Roteiro final · Família Ronaldo · França e GP de Mônaco — Bases e destaques](img/bases-e-destaques.png)
+
 | Datas | Noites | Base | Destaques |
 |---|---|---|---|
 | Sex 14/05 | — | Brasil → Paris | Voo direto Air France em executiva |
