@@ -89,14 +89,10 @@
 - Soma de noites: 4 + 4 + 3 + 3 + 4 + 5 = **23** ✅. Soma de direção ≈ **19h50** ✅.
 - Feiras nos dias certos: Arles (sábado 22/05), L'Isle-sur-la-Sorgue (domingo 23/05), Place des Lices (sábado 29/05), Antibes (domingo 30/05), Cours Saleya flores (terça 01/06; segunda é só antiguidades).
 - Museus: Louvre abre segunda (fecha às terças) ✅ · Orsay abre terça (fecha às segundas) ✅ · Versalhes abre domingo (fecha às segundas) ✅.
-- **Pentecostes 2027 (revisado em 19/11/2026):** Páscoa em 28/03/2027 + 49 dias = **Dom 16/05/2027**, e a segunda de Pentecostes cai em **Seg 17/05/2027** (cálculo do computus [F1]). A *Lundi de Pentecôte* consta na lista de feriados legais do Código do Trabalho francês (art. L3133-1, 6°) e, na falta de acordo coletivo, é também a "journée de solidarité" (art. L3133-8) [F2]: muita gente trabalha, mas a cidade fica com movimento de feriado prolongado.
-- **Louvre na Seg 17/05/2027 (feriado): abre.** O museu fecha às terças e só fecha em 3 feriados: 1º/01, 1º/05 e 25/12 [F3]. Ressalva: o regulamento de visita deixa a direção fixar todo ano os feriados de fechamento, e o calendário de 2027 ainda não saiu. Reconfirmar quando ele for publicado.
-- **Versalhes no Dom 16/05/2027: abre.** O Palácio fecha às segundas e nos dias 1º/01, 1º/05 e 25/12, e abre nos demais feriados [F4].
 
 **Atenção ⚠️**
-- **16/05/2027 é Domingo de Pentecostes e 17/05 é feriado na França (Lundi de Pentecôte)** (confirmado [F1][F2]). Versalhes no domingo + Louvre no feriado = lotação máxima. Ingressos com horário e guia particular desde já; considerar Versalhes com acesso antes da abertura ao público.
-- **Feria de Nîmes (Feria de Pentecôte) 2027: provavelmente de Qui 13 a Seg 17/05/2027**, a cerca de 25 min do Pont du Gard. **Não há confirmação oficial:** as datas aparecem em sites especializados [F5], mas a Prefeitura de Nîmes e as Arènes ainda não publicaram o programa de 2027. As datas são coerentes com o padrão da festa, que termina na segunda de Pentecostes (em 2026 foi de 21 a 25/05, com a abertura infantil em 20/05 [F6]). Se confirmadas, a feria **termina antes da chegada à Provence (19/05)**: não há conflito de agenda, só possível pressão de tarifas na região até 17/05.
-- 🔴 **Baumanière fecha às quintas (jantar de Qui 20/05/2027).** O site oficial informa que, desde 17/11/2026, o L'Oustau de Baumanière fecha às **terças, quartas e quintas**. Outras páginas do mesmo site falam em fechamento às quartas e quintas. **Nas duas versões, a quinta está fechada** [F7]. O jantar de aniversário do filho (Qui 20/05, seções 2 e 3) cai em dia de fechamento. **Ação:** confirmar por telefone (+33 4 90 54 33 07) o calendário de maio de 2027. Se a quinta continuar fechada, levar o jantar para Sex 21/05 ou Sáb 22/05, ou fazer a comemoração do dia 20 em outro restaurante. O restaurante também tem fechamento anual de 24/01 a 05/03/2027 [F7].
+- **16/05/2027 é Domingo de Pentecostes e 17/05 é feriado na França (Lundi de Pentecôte).** Versalhes no domingo + Louvre no feriado = lotação máxima. Ingressos com horário e guia particular desde já; considerar Versalhes com acesso antes da abertura ao público.
+- Pentecostes = **Feria de Nîmes**, a 25 min do Pont du Gard. Termina antes da chegada à Provence (19/05), mas deve ser checado o impacto em tarifas.
 - **Lavanda:** em maio a Sénanque e o Luberon **ainda não estão floridos** (floração do fim de junho a julho). Alinhar a expectativa do cliente para não frustrar as fotos.
 
 ---
@@ -138,27 +134,10 @@
 |---|---|---|
 | **Iate GP de Mônaco** | **Imediato** | Pacotes 2027 já em venda; 1ª sprint em Mônaco aumenta a demanda |
 | **Hotel em Mônaco/Beaulieu** | **Imediato** | Estadia mínima + inventário esgotando |
-| Aéreo executiva (open-jaw) | **Agora: as vendas já estão abertas** | Executiva para 4 no mesmo voo (inventário de executiva é limitado). *A janela de "~330 dias" não foi confirmada em fonte oficial da Air France; sites de terceiros falam em ~11 meses [F8]. Para este caso não muda nada: a ida (14/05/27) e a volta (07/06/27) estão a 176 e 200 dias de hoje, bem dentro de qualquer uma das duas janelas. Conferir a disponibilidade no GDS.* |
+| Aéreo executiva (open-jaw) | Agora (abertura ~330 dias antes) | Executiva para 4 no mesmo voo (inventário de executiva é limitado) |
 | Hotéis Saint-Tropez / Paris | Até jan/2027 | Fim de maio já é alta temporada |
-| Jules Verne (16/05) | **90 dias antes: a agenda abre por volta de Seg 15/02/2027** (confirmado [F9]) | Domingo + Pentecostes. Horários de pôr do sol e de fim de semana esgotam rápido. O restaurante abre todos os dias, 12h–13h30 e 19h–21h [F9] |
-| Baumanière (20/05) | **Agora, por telefone ou e-mail.** *O "~3 meses antes" não foi confirmado: o site oficial não publica prazo de abertura da agenda* | 🔴 **Quinta é dia de fechamento** (ver seção 4) [F7]. O restaurante fica fechado de 24/01 a 05/03/2027, então é melhor garantir a data antes disso |
-| Versalhes / Louvre com guia | Assim que os horários abrirem | Domingo de Pentecostes e feriado (os dois abrem nessas datas [F3][F4]) |
-| TGV 1ª classe | **Agora: já está à venda** (vendas abertas em 12/11/2026 para viagens de 07/01 a 02/07/2027) [F10]. *Corrigido: o "~4 meses antes" estava errado para estas datas* | Tarifa e 4 assentos juntos em 1ª classe no Paris → Avignon de 19/05 |
+| Jules Verne (16/05) | Abertura da agenda (~3 meses antes) | Domingo + Pentecostes |
+| Baumanière (20/05) | Abertura da agenda | Restaurante estrelado, poucas mesas |
+| Versalhes / Louvre com guia | Assim que os horários abrirem | Domingo de Pentecostes e feriado |
+| TGV 1ª classe | Abertura de venda (~4 meses antes) | Tarifa e assentos juntos |
 | Carro (Avignon → Nice, devolução em outra cidade) | Até fev/2027 | Taxa de devolução em outra cidade; carro grande automático |
-
----
-
-## 8. Fontes da checagem (19/11/2026)
-
-> Consultadas por busca na web. As páginas da SNCF (sncf-connect.com e sncf-voyageurs.com) não puderam ser abertas diretamente no ambiente da checagem. Por isso, o dado do TGV vem de veículos que reproduzem o comunicado da SNCF Voyageurs de 10/11/2026. Vale abrir a página oficial para conferir antes de enviar ao cliente.
-
-- **[F1] Páscoa/Pentecostes 2027:** cálculo do computus gregoriano (`dateutil.easter`, 2027 → 28/03/2027; +49 dias = Dom 16/05/2027; +50 = Seg 17/05/2027).
-- **[F2] Lundi de Pentecôte, feriado legal:** Code du travail, arts. L3133-1 e L3133-8 — [Légifrance, Chapitre III : Jours fériés](https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006178007/) · [Art. L3133-8](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006902618/2008-04-30)
-- **[F3] Louvre, horários e fechamentos:** [louvre.fr — Hours & admission](https://www.louvre.fr/en/visit/hours-admission) · [Regulamento de visita (2025)](https://api-www.louvre.fr/sites/default/files/2025-07/2025_07_07_Reglement%20de%20visite.pdf)
-- **[F4] Versalhes, horários e fechamentos:** [chateauversailles.fr — Practical information](https://en.chateauversailles.fr/plan-your-visit/practical-information) · [FAQ](https://en.chateauversailles.fr/plan-your-visit/faq)
-- **[F5] Feria de Nîmes 2027 (13 a 17/05, sem confirmação oficial):** [nimes-evasion.fr](https://nimes-evasion.fr/feria-nimes-dates-2026-2027-pentecote-vendanges/) · [feriadenimes.com](https://www.feriadenimes.com/annuaire/nimes-pentecote/). Em sentido contrário, [festivalenfrance.com](https://www.festivalenfrance.com/festival/feria-de-pentecote) diz que as datas ainda não foram anunciadas.
-- **[F6] Feria de Pentecôte 2026 (padrão das datas):** [nimes.fr — balanço de público da Feria de Pentecôte 2026](https://www.nimes.fr/fileadmin/mediatheque/nimes/espace-presse/communique-presse/2026/05-mai/Bilan-frequentation-FeriaPentecote.pdf) · [Objectif Gard, 20/05/2026](https://www.objectifgard.com/actualites/nimes-en-feria-les-enfants-lancent-les-festivites-de-pentecote-dans-les-arenes-164194.php)
-- **[F7] L'Oustau de Baumanière (fechamento semanal e anual):** [baumaniere.com — L'Oustau de Baumanière](https://www.baumaniere.com/gastronomie/loustau-de-baumaniere/) · [Escapade provençale (fechamento às quartas e quintas)](https://www.baumaniere.com/offres/offres-gastronomie/escapade-provencale/)
-- **[F8] Janela de venda da Air France:** não foi encontrada fonte oficial. Os "~11 meses" vêm de terceiros, como [alternativeairlines.com](https://www.alternativeairlines.com/how-far-in-advance-can-you-book-flights).
-- **[F9] Le Jules Verne, reserva 90 dias antes:** site oficial da Torre Eiffel, [toureiffel.paris — Restaurant dinner or lunch at the Eiffel Tower](https://www.toureiffel.paris/en/news/visit/restaurant-dinner-or-lunch-eiffel-tower)
-- **[F10] TGV INOUI, vendas abertas em 12/11/2026 para viagens até 02/07/2027:** [kombo.co](https://www.kombo.co/blog/?p=2971) · [jds.fr](https://www.jds.fr/actu/sncf-les-billets-de-train-jusqu-a-l-ete-2027-sont-en-vente-des-aujourd-hui-voici-les-dates-a-retenir-1843478_A) · [voyagerentrain.fr](https://www.voyagerentrain.fr/ouverture-billets-hiver-2027/). Página oficial a conferir: [SNCF Connect — L'ouverture des ventes](https://www.sncf-connect.com/fr-ch/aide/l-ouverture-des-ventes)
