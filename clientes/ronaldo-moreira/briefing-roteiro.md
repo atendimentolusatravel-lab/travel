@@ -12,10 +12,10 @@
 | Cliente | **RONALDO MOREIRA** |
 | Viajantes | **4 pessoas:** Ronaldo (pai) + esposa (mãe) + filho de 19 anos + filho de 16 anos — *nome da esposa a confirmar* |
 | Tarifação | 4 tarifas de adulto no aéreo (a partir de 12 anos, a tarifa é de adulto) · hotéis para 4 adultos em termos de ocupação |
-| Ida | Sex 14/05/2027 (embarque à noite) |
-| Volta | Seg 07/06/2027 |
+| Ida | Sex 14/05/2027 · **Manaus (MAO) → Paris (CDG)**, com conexão no Brasil (não há voo direto de Manaus para Paris) · chegada em Paris no Sáb 15/05 |
+| Volta | Seg 07/06/2027 · **Mônaco → aeroporto de Nice (NCE) → Manaus (MAO)**. Mônaco não tem aeroporto: traslado de carro (~30–40 min) ou helicóptero (~7 min) até Nice. Chegada em Manaus provavelmente em 08/06 (confirmar na cotação) |
 | Duração | 25 dias · 23 noites · 6 bases |
-| Aéreo | Air France em **executiva para todos** (chegada em Paris 15/05) · ida direta para CDG · volta Nice → Brasil em bilhete único (open-jaw) |
+| Aéreo | Air France em **executiva para todos** nos trechos internacionais · ida MAO → conexão (São Paulo, Rio ou Fortaleza) → CDG · volta NCE → Paris → Brasil → MAO · **bilhete único (open-jaw)**, com os trechos nacionais operados pela GOL, parceira da Air France ([Air France, voos de Manaus](https://wwws.airfrance.com.br/pt-br/voos-de-manaus)). A GOL não tem classe executiva: no trecho nacional, reservar os melhores assentos disponíveis |
 | Aniversários | **Dom 16/05 – pai** (Paris) · **Qui 20/05 – filho** (Provence) — *confirmar qual dos filhos* |
 | Ponto alto | **Fórmula 1 – GP de Mônaco no iate** (Sáb 05/06 sprint + classificação · Dom 06/06 corrida) |
 | Rota | Paris → Provence → Côte d'Azur → Mônaco |
@@ -44,6 +44,8 @@
 | Seg 07/06 | — | Nice → Brasil | Bilhete único Air France |
 
 **Total:** 23 noites em 6 bases · TGV de Paris a Avignon · carro de Avignon até Nice (19 a 31/05)
+
+> ⚠️ **Correção sobre a tela:** a família embarca em **Manaus**, e não há voo direto de Manaus para Paris. O "voo direto Air France" de 14/05 passa a ser **Manaus → conexão no Brasil → Paris**. Na volta (07/06), a família sai de **Mônaco** e embarca no **aeroporto de Nice**, com destino a Manaus. Detalhes na seção 1.
 
 ---
 
@@ -78,6 +80,8 @@
 | 25 | Seg 07/06 | ✈️ Nice → Brasil | Transfer ao aeroporto de Nice e voo Air France | — |
 
 **Resumo:** 25 dias · 23 noites · 6 bases · carro de 19 a 31/05, com cerca de 20 h de direção.
+
+> ⚠️ **Correção sobre a tela (dias 01 e 25):** dia 01, embarque em **Manaus (MAO)** com conexão no Brasil até Paris (não há voo direto). Dia 25, traslado de **Mônaco** ao aeroporto de Nice e voo até **Manaus**, com chegada provável em 08/06. Detalhes na seção 1.
 
 ---
 
@@ -117,7 +121,7 @@
 - [ ] Nome completo da esposa (como no passaporte)
 - [ ] A esposa dirige? Tem CNH há mais de 1 ano? (2ª motorista)
 - [ ] Qual filho faz aniversário em 20/05 (16 ou 19 anos)? Gostos dele para o dia.
-- [ ] Cidade de embarque no Brasil (GRU ou GIG têm voo direto Air France; Curitiba exige conexão)
+- [x] Cidade de embarque: **Manaus (MAO)**. Não há voo direto para Paris, então a conexão no Brasil é obrigatória (ver seção 1)
 - [ ] Configuração de quartos: **recomendo 2 quartos conectados (casal + twin para os filhos)** em todas as bases; suíte família só onde existir de fato para 4 adultos
 - [ ] Nível de hotel por base (5★ palace × boutique) e teto de orçamento total
 - [ ] Mônaco ou Beaulieu/Cap-Ferrat
@@ -134,7 +138,7 @@
 |---|---|---|
 | **Iate GP de Mônaco** | **Imediato** | Pacotes 2027 já em venda; 1ª sprint em Mônaco aumenta a demanda |
 | **Hotel em Mônaco/Beaulieu** | **Imediato** | Estadia mínima + inventário esgotando |
-| Aéreo executiva (open-jaw) | Agora (abertura ~330 dias antes) | Executiva para 4 no mesmo voo (inventário de executiva é limitado) |
+| Aéreo executiva (open-jaw MAO → CDG · NCE → MAO) | Agora (abertura ~330 dias antes) | Executiva para 4 no mesmo voo (inventário de executiva é limitado) |
 | Hotéis Saint-Tropez / Paris | Até jan/2027 | Fim de maio já é alta temporada |
 | Jules Verne (16/05) | Abertura da agenda (~3 meses antes) | Domingo + Pentecostes |
 | Baumanière (20/05) | Abertura da agenda | Restaurante estrelado, poucas mesas |
