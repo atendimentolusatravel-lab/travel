@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cotação Aérea CWB-CGH — Antonio Cesar Chede</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  :root{
+    --green:#1f4a2c;      /* verde profundo – cabeçalho */
+    --green-2:#2d5e3a;    /* verde tropical – destaques */
+    --green-soft:#eef3ef;
+    --gold:#da8d00;       /* ouro LusaTravel – fixo */
+    --gold-soft:#fbf3e2;
+    --ink:#1a1510;
+    --text:#333131;
+    --muted:#7a7570;
+    --line:#e6e2dc;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#fff}
+  body{font-family:'Poppins',sans-serif;color:var(--text);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:210mm;min-height:297mm;margin:0 auto;display:flex;flex-direction:column;background:#fff}
+
+  /* Cabeçalho */
+  header{background:var(--green);color:#fff;padding:20px 40px 18px;display:flex;justify-content:space-between;align-items:center}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo svg{width:40px;height:40px}
+  .logo .word{font-weight:800;font-size:24px;letter-spacing:.06em;line-height:1}
+  .logo .word span{color:var(--gold)}
+  .logo .tag{font-size:8.5px;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:4px;font-weight:500}
+  .doc{text-align:right}
+  .doc .k{font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .doc .v{font-size:11px;color:rgba(255,255,255,.75);margin-top:3px}
+  .goldbar{height:3px;background:var(--gold)}
+
+  main{padding:18px 40px 6px;flex:1}
+  .eyebrow{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  h1{font-size:25px;font-weight:700;color:var(--ink);margin-top:6px;letter-spacing:.01em}
+  .route{display:flex;align-items:center;gap:10px;margin-top:8px;font-size:13.5px;color:var(--green-2);font-weight:600}
+  .route .arr{color:var(--gold)}
+  .intro{font-size:11.5px;color:var(--muted);margin-top:10px;font-weight:300;line-height:1.6}
+
+  /* Opções */
+  .grp{margin-top:13px}
+  .grp-h{display:flex;align-items:baseline;gap:12px;padding-bottom:7px;border-bottom:2px solid var(--gold);margin-bottom:10px}
+  .grp-h .n{font-size:15px;font-weight:800;color:var(--green);letter-spacing:.04em}
+  .grp-h .d{font-size:11.5px;color:var(--text);font-weight:500}
+  .grp-h .d b{color:var(--gold);font-weight:700}
+  .pax{margin-left:auto;font-size:9px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;background:var(--green-2);color:#fff;padding:4px 10px;border-radius:20px;white-space:nowrap}
+  .opts{display:flex;flex-direction:column;gap:9px}
+  .opt{border:1px solid var(--line);border-radius:8px;overflow:hidden;break-inside:avoid}
+  .opt-h{display:flex;align-items:center;justify-content:space-between;padding:7px 16px;background:var(--green-soft);border-bottom:1px solid var(--line)}
+  .opt-h .l{display:flex;align-items:center;gap:10px}
+  .air{font-weight:700;font-size:13.5px;color:var(--ink);letter-spacing:.03em}
+  .badge{font-size:8px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:3px 9px;border-radius:20px}
+  .badge.gold{background:var(--gold);color:#fff}
+  .badge.green{background:var(--green-2);color:#fff}
+  .price{text-align:right}
+  .price .lbl{font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .price .val{font-size:18px;font-weight:700;color:var(--ink);line-height:1.15}
+  .price .val small{font-size:11px;font-weight:600;color:var(--gold);margin-right:3px}
+  .price .pp{font-size:9.5px;color:var(--green-2);font-weight:500}
+
+  .legs{padding:2px 16px 4px}
+  .leg{display:grid;grid-template-columns:50px 96px 1fr 84px 92px;align-items:center;gap:10px;padding:4px 0;font-size:11px}
+  .leg + .leg{border-top:1px dashed var(--line)}
+  .dir{font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--green-2)}
+  .date{font-weight:600;color:var(--gold)}
+  .date small{display:block;font-weight:400;color:var(--muted);font-size:9px;line-height:1.2}
+  .times{display:flex;align-items:center;gap:8px;color:var(--ink)}
+  .times b{font-size:13.5px;font-weight:700}
+  .times .ap{font-size:9px;color:var(--muted);font-weight:500;letter-spacing:.04em}
+  .times .line{flex:0 0 46px;height:1px;background:var(--line);position:relative}
+  .times .line::after{content:"✈";position:absolute;left:50%;top:-8px;transform:translateX(-50%);font-size:10px;color:var(--gold);background:#fff;padding:0 2px}
+  .meta{text-align:right;font-size:9.5px;color:var(--muted);line-height:1.35}
+  .meta b{color:var(--text);font-weight:600}
+  .lp{text-align:right;font-weight:600;color:var(--ink);font-size:11.5px}
+  .lp small{display:block;font-size:7.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .lp span{color:var(--gold);font-size:9.5px;margin-right:2px}
+
+  /* Inclui */
+  .incl{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .box{border-radius:8px;padding:10px 16px;font-size:10.5px;line-height:1.6}
+  .box.g{background:var(--green-soft)}
+  .box.o{background:var(--gold-soft)}
+  .box h3{font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-bottom:6px}
+  .box.g h3{color:var(--green-2)}
+  .box.o h3{color:var(--gold)}
+  .box ul{list-style:none}
+  .box li{padding-left:14px;position:relative}
+  .box li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.55}
+  .box.g li::before{background:var(--green-2)}
+  .box.o li::before{background:var(--gold)}
+
+  .note{margin-top:10px;font-size:10px;color:var(--muted);font-style:italic}
+
+  footer{background:var(--green);color:rgba(255,255,255,.75);margin-top:auto}
+  footer .in{padding:14px 40px;display:flex;justify-content:space-between;align-items:center;font-family:'Montserrat',sans-serif;font-size:10px}
+  footer a{color:#fff;text-decoration:none;font-weight:600}
+  footer .sep{color:var(--gold);margin:0 8px}
+  footer .brand{font-family:'Poppins',sans-serif;font-weight:800;letter-spacing:.06em;color:#fff;font-size:12px}
+  footer .brand span{color:var(--gold)}
+
+  @media screen{ body{background:#e9e7e3;padding:24px 0} .page{box-shadow:0 6px 30px rgba(0,0,0,.12)} }
+  @media screen and (max-width:820px){
+    body{padding:0}
+    .page{width:100%;min-height:auto}
+    header,main,footer .in{padding-left:16px;padding-right:16px}
+    .leg{grid-template-columns:1fr 1fr;row-gap:4px}
+    .lp{text-align:left}
+    .grp-h{flex-wrap:wrap}
+    .meta{text-align:left}
+    .incl{grid-template-columns:1fr}
+    footer .in{flex-direction:column;gap:6px;text-align:center}
+  }
+
+  /* resumo em matriz */
+  .page{height:297mm;min-height:0;overflow:hidden;break-after:page;page-break-after:always}
+  .page:last-child{break-after:auto;page-break-after:auto}
+  @media screen{ .page + .page{margin-top:24px} }
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+  .facts div{border:1px solid var(--line);border-radius:8px;padding:6px 12px}
+  .facts small{display:block;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .facts b{display:block;font-size:17px;font-weight:700;color:var(--green);line-height:1.25}
+  .facts b span{font-size:10px;font-weight:400;color:var(--muted)}
+  .best-box{margin-top:14px;background:var(--green);color:#fff;border-radius:8px;padding:12px 18px;display:grid;grid-template-columns:auto 1fr;column-gap:22px;align-items:center}
+  .best-box .k{grid-column:1 / 3;font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .best-box .bv{font-size:26px;font-weight:800;line-height:1.1;margin-top:2px}
+  .best-box .bv small{font-size:13px;color:var(--gold);margin-right:4px;font-weight:700}
+  .best-box .bv span{display:block;font-size:10px;font-weight:500;color:rgba(255,255,255,.75)}
+  .best-box .bd{font-size:11.5px;line-height:1.5;color:rgba(255,255,255,.9)}
+  .best-box .bd b{color:var(--gold)}
+  .how{font-size:10.5px;color:var(--muted);margin-top:12px;line-height:1.5}
+  .how b{color:var(--text);font-weight:600}
+  .cia{margin-top:11px}
+  .cia-h{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--gold);padding-bottom:5px;margin-bottom:6px}
+  .cia-h .air{font-size:15px;font-weight:800;color:var(--green);letter-spacing:.06em}
+  .cia-h .from{font-size:10.5px;color:var(--muted)}
+  .cia-h .from b{color:var(--ink);font-size:12.5px}
+  table.mx{width:100%;border-collapse:separate;border-spacing:0;font-size:11px;table-layout:fixed}
+  .mx th,.mx td{padding:4px 10px;border-bottom:1px solid var(--line);text-align:center;vertical-align:middle}
+  .mx thead th{background:var(--green-soft);border-bottom:1px solid var(--line)}
+  .mx thead th:first-child{border-top-left-radius:6px}
+  .mx thead th:last-child{border-top-right-radius:6px}
+  .mx th b{display:block;font-size:11px;color:var(--ink);font-weight:700}
+  .mx th span{display:block;font-size:12px;font-weight:600;color:var(--green-2)}
+  .mx th em{display:block;font-style:normal;font-size:9px;color:var(--muted);font-weight:500}
+  .mx tbody th{text-align:left;width:27%}
+  .mx .corner{text-align:left;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-2);font-weight:700;width:27%}
+  .mx td b{display:block;font-size:13.5px;font-weight:700;color:var(--ink)}
+  .mx td b small{font-size:9.5px;color:var(--gold);margin-right:2px}
+  .mx td span{font-size:8.5px;color:var(--muted)}
+  .mx td.min{background:var(--gold-soft)}
+  .mx td.best{background:var(--gold-soft);box-shadow:inset 0 0 0 2px var(--gold)}
+  .foot-note{margin-top:12px;border-top:1px solid var(--line);padding-top:10px;font-size:10px;color:var(--muted);line-height:1.7}
+  .foot-note b{color:var(--text);font-weight:600}
+  .foot-note .nr{font-style:italic;margin-top:2px}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" fill="none" stroke="#da8d00" stroke-width="1.6"/>
+        <path d="M20 6 L23.2 20 L20 34 L16.8 20 Z" fill="#da8d00"/>
+        <path d="M6 20 L20 17.6 L34 20 L20 22.4 Z" fill="#fff" opacity=".85"/>
+        <circle cx="20" cy="20" r="2.2" fill="#1f4a2c" stroke="#fff" stroke-width="1"/>
+      </svg>
+      <div>
+        <div class="word">LUSA<span>TRAVEL</span></div>
+        <div class="tag">Agência de Viagens</div>
+      </div>
+    </div>
+    <div class="doc">
+      <div class="k">Cotação Aérea</div>
+      <div class="v">Emitida em 19/11/2026</div>
+    </div>
+  </header>
+  <div class="goldbar"></div>
+
+  <main>
+    <div class="eyebrow">Cotação para sua viagem · ida 26 de novembro</div>
+    <h1>SR. ANTONIO CESAR CHEDE</h1>
+    <div class="route">Curitiba (CWB) <span class="arr">⇄</span> São Paulo · Congonhas (CGH)</div>
+    <div class="facts">
+      <div><small>Ida</small><b>26 nov <span>quinta-feira</span></b></div>
+      <div><small>Volta</small><b>29 nov <span>domingo</span></b></div>
+      <div><small>Noites</small><b>3 <span>em São Paulo</span></b></div>
+      <div><small>Passageiros</small><b>2 <span>adultos</span></b></div>
+    </div>
+
+    <div class="best-box">
+      <div class="k">Menor preço</div>
+      <div class="bv"><small>R$</small>4.122,98<span>R$ 2.061,49 por pessoa</span></div>
+      <div class="bd"><b>GOL</b> · ida G3 1105 (07:05), G3 1107 (08:45) ou G3 1109 (10:45)<br>volta G3 1112 (16:25) ou G3 1152 (17:55)</div>
+    </div>
+
+    <p class="how">Ida na linha, volta na coluna: o cruzamento é o <b>total ida e volta para 2 passageiros</b>. Sob cada voo, o valor do trecho.</p>
+    
+    <div class="cia">
+      <div class="cia-h"><div class="air">GOL</div><div class="from">a partir de <b>R$ 4.122,98</b> · 2 passageiros</div></div>
+      <table class="mx">
+        <thead><tr><th class="corner">Ida ↓ · Volta →</th><th><b>G3 1112</b><span>16:25 → 17:25</span><em>R$ 1.882,90</em></th><th><b>G3 1152</b><span>17:55 → 18:55</span><em>R$ 1.882,90</em></th><th><b>G3 1118</b><span>20:35 → 21:35</span><em>R$ 2.324,64</em></th></tr></thead>
+        <tbody><tr><th><b>G3 1105</b><span>07:05 → 08:10</span><em>R$ 2.240,08</em></th><td class="best"><b><small>R$</small>4.122,98</b><span>R$ 2.061,49 por pessoa</span></td><td class="best"><b><small>R$</small>4.122,98</b><span>R$ 2.061,49 por pessoa</span></td><td><b><small>R$</small>4.564,72</b><span>R$ 2.282,36 por pessoa</span></td></tr><tr><th><b>G3 1107</b><span>08:45 → 09:50</span><em>R$ 2.240,08</em></th><td class="best"><b><small>R$</small>4.122,98</b><span>R$ 2.061,49 por pessoa</span></td><td class="best"><b><small>R$</small>4.122,98</b><span>R$ 2.061,49 por pessoa</span></td><td><b><small>R$</small>4.564,72</b><span>R$ 2.282,36 por pessoa</span></td></tr><tr><th><b>G3 1109</b><span>10:45 → 11:55</span><em>R$ 2.240,08</em></th><td class="best"><b><small>R$</small>4.122,98</b><span>R$ 2.061,49 por pessoa</span></td><td class="best"><b><small>R$</small>4.122,98</b><span>R$ 2.061,49 por pessoa</span></td><td><b><small>R$</small>4.564,72</b><span>R$ 2.282,36 por pessoa</span></td></tr></tbody>
+      </table>
+    </div>
+    <div class="cia">
+      <div class="cia-h"><div class="air">LATAM</div><div class="from">a partir de <b>R$ 5.957,12</b> · 2 passageiros</div></div>
+      <table class="mx">
+        <thead><tr><th class="corner">Ida ↓ · Volta →</th><th><b>LA 3820</b><span>17:15 → 18:15</span><em>R$ 2.983,50</em></th><th><b>LA 3072</b><span>19:25 → 20:25</span><em>R$ 3.056,34</em></th></tr></thead>
+        <tbody><tr><th><b>LA 3059</b><span>07:50 → 08:55</span><em>R$ 2.973,62</em></th><td class="min"><b><small>R$</small>5.957,12</b><span>R$ 2.978,56 por pessoa</span></td><td><b><small>R$</small>6.029,96</b><span>R$ 3.014,98 por pessoa</span></td></tr><tr><th><b>LA 3061</b><span>09:20 → 10:25</span><em>R$ 2.973,62</em></th><td class="min"><b><small>R$</small>5.957,12</b><span>R$ 2.978,56 por pessoa</span></td><td><b><small>R$</small>6.029,96</b><span>R$ 3.014,98 por pessoa</span></td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="foot-note">
+      <div><b>Tarifa Light</b> · bagagem de mão 10 kg + item pessoal · <b>sem mala despachada</b></div>
+      <div>Voos diretos · classe econômica · taxas de embarque incluídas · valores sujeitos a alteração até a emissão</div>
+      <div class="nr">*Nada reservado, apenas cotado.</div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="goldbar"></div>
+    <div class="in">
+      <div class="brand">LUSA<span>TRAVEL</span></div>
+      <div>
+        <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<div class="page">
+
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" fill="none" stroke="#da8d00" stroke-width="1.6"/>
+        <path d="M20 6 L23.2 20 L20 34 L16.8 20 Z" fill="#da8d00"/>
+        <path d="M6 20 L20 17.6 L34 20 L20 22.4 Z" fill="#fff" opacity=".85"/>
+        <circle cx="20" cy="20" r="2.2" fill="#1f4a2c" stroke="#fff" stroke-width="1"/>
+      </svg>
+      <div>
+        <div class="word">LUSA<span>TRAVEL</span></div>
+        <div class="tag">Agência de Viagens</div>
+      </div>
+    </div>
+    <div class="doc">
+      <div class="k">Cotação Aérea</div>
+      <div class="v">Emitida em 19/11/2026</div>
+    </div>
+  </header>
+  <div class="goldbar"></div>
+
+  <main>
+    <div class="eyebrow">Cotação para sua viagem · ida 27 de novembro</div>
+    <h1>SR. ANTONIO CESAR CHEDE</h1>
+    <div class="route">Curitiba (CWB) <span class="arr">⇄</span> São Paulo · Congonhas (CGH)</div>
+    <div class="facts">
+      <div><small>Ida</small><b>27 nov <span>sexta-feira</span></b></div>
+      <div><small>Volta</small><b>29 nov <span>domingo</span></b></div>
+      <div><small>Noites</small><b>2 <span>em São Paulo</span></b></div>
+      <div><small>Passageiros</small><b>2 <span>adultos</span></b></div>
+    </div>
+
+    <div class="best-box">
+      <div class="k">Menor preço</div>
+      <div class="bv"><small>R$</small>4.122,98<span>R$ 2.061,49 por pessoa</span></div>
+      <div class="bd"><b>GOL</b> · ida G3 1107 (08:45)<br>volta G3 1112 (16:25) ou G3 1152 (17:55)</div>
+    </div>
+
+    <p class="how">Ida na linha, volta na coluna: o cruzamento é o <b>total ida e volta para 2 passageiros</b>. Sob cada voo, o valor do trecho.</p>
+    
+    <div class="cia">
+      <div class="cia-h"><div class="air">GOL</div><div class="from">a partir de <b>R$ 4.122,98</b> · 2 passageiros</div></div>
+      <table class="mx">
+        <thead><tr><th class="corner">Ida ↓ · Volta →</th><th><b>G3 1112</b><span>16:25 → 17:25</span><em>R$ 1.882,90</em></th><th><b>G3 1152</b><span>17:55 → 18:55</span><em>R$ 1.882,90</em></th><th><b>G3 1118</b><span>20:35 → 21:35</span><em>R$ 2.324,64</em></th></tr></thead>
+        <tbody><tr><th><b>G3 1107</b><span>08:45 → 09:50</span><em>R$ 2.240,08</em></th><td class="best"><b><small>R$</small>4.122,98</b><span>R$ 2.061,49 por pessoa</span></td><td class="best"><b><small>R$</small>4.122,98</b><span>R$ 2.061,49 por pessoa</span></td><td><b><small>R$</small>4.564,72</b><span>R$ 2.282,36 por pessoa</span></td></tr><tr><th><b>G3 1109</b><span>10:45 → 11:55</span><em>R$ 2.896,10</em></th><td><b><small>R$</small>4.779,00</b><span>R$ 2.389,50 por pessoa</span></td><td><b><small>R$</small>4.779,00</b><span>R$ 2.389,50 por pessoa</span></td><td><b><small>R$</small>5.220,74</b><span>R$ 2.610,37 por pessoa</span></td></tr><tr><th><b>G3 1111</b><span>12:20 → 13:30</span><em>R$ 2.488,96</em></th><td><b><small>R$</small>4.371,86</b><span>R$ 2.185,93 por pessoa</span></td><td><b><small>R$</small>4.371,86</b><span>R$ 2.185,93 por pessoa</span></td><td><b><small>R$</small>4.813,60</b><span>R$ 2.406,80 por pessoa</span></td></tr></tbody>
+      </table>
+    </div>
+    <div class="cia">
+      <div class="cia-h"><div class="air">AZUL</div><div class="from">a partir de <b>R$ 6.033,46</b> · 2 passageiros</div></div>
+      <table class="mx">
+        <thead><tr><th class="corner">Ida ↓ · Volta →</th><th><b>AD 6042</b><span>20:25 → 21:30</span><em>R$ 2.885,04</em></th></tr></thead>
+        <tbody><tr><th><b>AD 6037</b><span>09:50 → 10:55</span><em>R$ 3.148,42</em></th><td><b><small>R$</small>6.033,46</b><span>R$ 3.016,73 por pessoa</span></td></tr></tbody>
+      </table>
+    </div>
+    <div class="cia">
+      <div class="cia-h"><div class="air">LATAM</div><div class="from">a partir de <b>R$ 6.524,72</b> · 2 passageiros</div></div>
+      <table class="mx">
+        <thead><tr><th class="corner">Ida ↓ · Volta →</th><th><b>LA 3820</b><span>17:15 → 18:15</span><em>R$ 2.983,50</em></th><th><b>LA 3072</b><span>19:25 → 20:25</span><em>R$ 3.056,34</em></th></tr></thead>
+        <tbody><tr><th><b>LA 3061</b><span>09:20 → 10:25</span><em>R$ 3.541,22</em></th><td class="min"><b><small>R$</small>6.524,72</b><span>R$ 3.262,36 por pessoa</span></td><td><b><small>R$</small>6.597,56</b><span>R$ 3.298,78 por pessoa</span></td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="foot-note">
+      <div><b>Tarifa Light</b> · bagagem de mão 10 kg + item pessoal · <b>sem mala despachada</b></div>
+      <div>Voos diretos · classe econômica · taxas de embarque incluídas · valores sujeitos a alteração até a emissão</div>
+      <div class="nr">*Nada reservado, apenas cotado.</div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="goldbar"></div>
+    <div class="in">
+      <div class="brand">LUSA<span>TRAVEL</span></div>
+      <div>
+        <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a><span class="sep">·</span><a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
