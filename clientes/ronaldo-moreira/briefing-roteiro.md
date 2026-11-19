@@ -10,7 +10,8 @@
 | Item | Informação |
 |---|---|
 | Cliente | **RONALDO MOREIRA** |
-| Viajantes | Ronaldo (pai) + filho de 19 anos + filho de 16 anos — **confirmar se há outro adulto (mãe/cônjuge)** |
+| Viajantes | **4 pessoas:** Ronaldo (pai) + esposa (mãe) + filho de 19 anos + filho de 16 anos — *nome da esposa a confirmar* |
+| Tarifação | 4 tarifas de adulto no aéreo (a partir de 12 anos, a tarifa é de adulto) · hotéis para 4 adultos em termos de ocupação |
 | Ida | Sex 14/05/2027 (embarque à noite) |
 | Volta | Seg 07/06/2027 |
 | Duração | 25 dias · 23 noites · 6 bases |
@@ -96,24 +97,26 @@
 
 ## 5. Pontos críticos do roteiro (recomendações LusaTravel)
 
-1. **Beber e dirigir (dias 07 e 08).** Jantar estrelado em Baumanière (20/05) e degustação em Châteauneuf-du-Pape (21/05) com o pai dirigindo é um erro: na França o limite é 0,5 g/L. O filho de 19 anos **não consegue alugar carro** (idade mínima 21 a 25, conforme a categoria). **Recomendação:** motorista privativo nesses dois dias (ou degustação com motorista ou guia).
-2. **Pai como único motorista por ~20h em 12 dias.** Avaliar motorista em mais 1 ou 2 trechos longos (dia 10, 2h30; dia 16, 2h15).
+1. **Beber e dirigir (dias 07 e 08).** Jantar estrelado em Baumanière (20/05) e degustação em Châteauneuf-du-Pape (21/05) com o pai dirigindo é um erro: na França o limite é 0,5 g/L. A mãe pode ser cadastrada como 2ª motorista, mas o filho de 19 anos **não consegue alugar carro** (idade mínima 21 a 25, conforme a categoria). Num jantar de aniversário e numa degustação, os dois adultos vão beber. **Recomendação:** motorista privativo nesses dois dias (ou degustação com motorista ou guia).
+2. **Carro para 4 adultos + bagagem de 25 dias.** Um sedã ou SUV médio não comporta 4 malas grandes + bagagem de mão. **Recomendação:** SUV grande automático (categoria Volvo XC90 / BMW X5) ou van premium (Mercedes Classe V), com a mãe como 2ª motorista para dividir as ~20h. Alternativa: despachar parte da bagagem direto para Nice/Mônaco.
 3. **Porquerolles via La Tour Fondue (dia 15).** São ~1h15 a 1h30 de carro por trecho até Giens + balsa: o dia rende pouco. **Recomendação:** lancha privativa saindo do próprio porto de Saint-Tropez (com parada em praia), ou trocar por um dia de barco no Golfo de Saint-Tropez.
 4. **Circuit Paul Ricard (dia 12).** A pista é alugada para eventos e testes; a disponibilidade em 25/05 precisa ser confirmada. Experiências de pilotagem têm idade e CNH mínimas: o filho de 16 anos provavelmente só faz volta como passageiro (hot lap) ou kart.
 5. **Iate no GP.** Confirmar no pacote: (a) se aceita **menor de idade (filho de 16 anos)**, (b) se o iate fica **atracado no Porto Hércules** (vista da pista) ou ancorado fora (bem mais barato e com vista pior), (c) dias incluídos (Sáb + Dom), (d) open bar, refeições e dress code, (e) traslado e credenciais.
 6. **Hospedagem em Mônaco no GP.** Hotéis exigem estadia mínima (geralmente de 4 a 5 noites) e pré-pagamento integral não reembolsável. Mônaco tem logística mais simples (a pé até o porto). Beaulieu ou Cap-Ferrat é mais tranquilo e costuma custar menos, mas depende de trem ou lancha nos dias de corrida, pois as vias ficam fechadas. Decisão depende do orçamento.
 7. **Perfil dos filhos (16 e 19).** Paris tem 4 museus em 3 dias (Versalhes, Louvre, Orsay, Sainte-Chapelle). Sugiro trocar um bloco por algo do universo deles (ex.: tour no Parc des Princes/PSG, kart indoor, ou qualifying de Roland-Garros se as datas de 2027 coincidirem; *a confirmar*).
-8. **Menor de idade.** Se a mãe **não** viajar, o filho de 16 anos precisa de **autorização de viagem** com firma reconhecida (ou autorização no passaporte).
-9. **ETIAS.** Ainda não está em operação (previsão de 2027). Monitorar: se ativo em maio/2027, todos precisam (€20 adultos; grátis para menores de 18).
+8. **Menor de idade.** Pai e mãe viajam juntos com o filho de 16 anos: **não é necessária autorização de viagem**. Levar documento que comprove a filiação (o passaporte já traz o nome dos pais).
+9. **ETIAS.** Ainda não está em operação (previsão de 2027). Monitorar: se ativo em maio/2027, os 4 precisam (€20 para cada um dos 3 adultos; grátis para o filho de 16 anos).
 
 ---
 
 ## 6. Pendências com o cliente (necessárias para cotar)
 
-- [ ] Composição exata: quantos adultos? A mãe/cônjuge vai?
+- [x] Composição: pai, mãe e os dois filhos (4 pessoas)
+- [ ] Nome completo da esposa (como no passaporte)
+- [ ] A esposa dirige? Tem CNH há mais de 1 ano? (2ª motorista)
 - [ ] Qual filho faz aniversário em 20/05 (16 ou 19 anos)? Gostos dele para o dia.
 - [ ] Cidade de embarque no Brasil (GRU ou GIG têm voo direto Air France; Curitiba exige conexão)
-- [ ] Configuração de quartos (1 quarto família, 2 quartos ou suíte + quarto conectado)
+- [ ] Configuração de quartos: **recomendo 2 quartos conectados (casal + twin para os filhos)** em todas as bases; suíte família só onde existir de fato para 4 adultos
 - [ ] Nível de hotel por base (5★ palace × boutique) e teto de orçamento total
 - [ ] Mônaco ou Beaulieu/Cap-Ferrat
 - [ ] Iate: compartilhado (hospitality por pessoa) × privativo
@@ -129,7 +132,7 @@
 |---|---|---|
 | **Iate GP de Mônaco** | **Imediato** | Pacotes 2027 já em venda; 1ª sprint em Mônaco aumenta a demanda |
 | **Hotel em Mônaco/Beaulieu** | **Imediato** | Estadia mínima + inventário esgotando |
-| Aéreo executiva (open-jaw) | Agora (abertura ~330 dias antes) | Executiva para 3 ou 4 no mesmo voo |
+| Aéreo executiva (open-jaw) | Agora (abertura ~330 dias antes) | Executiva para 4 no mesmo voo (inventário de executiva é limitado) |
 | Hotéis Saint-Tropez / Paris | Até jan/2027 | Fim de maio já é alta temporada |
 | Jules Verne (16/05) | Abertura da agenda (~3 meses antes) | Domingo + Pentecostes |
 | Baumanière (20/05) | Abertura da agenda | Restaurante estrelado, poucas mesas |
