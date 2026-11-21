@@ -2,7 +2,7 @@
 """Gera src/index.html — cotação de aéreo (revisão) · Milton Santoro · 1 adulto · dezembro de 2026.
 
 Fontes (telas enviadas pela agência em 21/11/2026), valores para 1 adulto:
-- fonte/op1-qatar-dxb-manha.jpg: Qatar, CWB→JED 08/12 · DXB→CWB 20/12 (saída 05:20) · R$ 13.552,96 / USD 2.301,44
+- fonte/op1-qatar-dxb-manha.jpg: (retirada em 21/11 a pedido da agência: muito parecida com a op2) Qatar, CWB→JED 08/12 · DXB→CWB 20/12 (saída 05:20) · R$ 13.552,96 / USD 2.301,44
 - fonte/op2-qatar-dxb-noite.jpg: Qatar, CWB→JED 08/12 · DXB→CWB 20/12 (saída 22:50, chega 21/12) · R$ 13.579,91 / USD 2.306,02
 - fonte/op3-qatar-volta-doha.jpg: Qatar, CWB→JED 08/12 · DOH→CWB 20/12 · R$ 14.176,01 / USD 2.407,24
 - fonte/op4-emirates-cwb-dxb.jpg: Emirates, CWB⇄DXB (sem Jeddah) · R$ 14.418,64 / USD 2.448,45
@@ -23,6 +23,10 @@ CSS = (ROOT / "style.part.html").read_text().replace(
     ".fl .cs{display:block;font-size:.7rem;color:var(--terra);font-weight:500;margin-top:2px}\n"
     ".subh{font-size:1.15rem;font-weight:700;color:var(--green-dark);margin:34px 0 0}\n"
     ".subp{font-size:.86rem;color:var(--muted);margin-top:4px;max-width:74ch}\n"
+    ".cias{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:14px 22px;border-bottom:1px solid var(--line);background:#fff}\n"
+    ".cias .k{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--green-soft);margin-right:4px}\n"
+    ".cia{display:inline-block;color:#fff;font-weight:700;font-size:.66rem;letter-spacing:.04em;border-radius:6px;padding:2px 8px;vertical-align:1px}\n"
+    ".cia.big{font-size:1rem;letter-spacing:.02em;border-radius:8px;padding:6px 14px}\n"
     ".sec-row td{background:var(--sage);color:var(--green-dark);font-weight:700;letter-spacing:.04em;font-size:.84rem}\n</style>")
 
 PAX = 1
@@ -40,11 +44,16 @@ AV = {"7M8": "Boeing 737 MAX 8", "738": "Boeing 737-800", "388": "Airbus A380", 
 ARROW = ('<div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" '
          'stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div>')
 EK, LA, QR, AD = "Emirates", "LATAM", "Qatar Airways", "Azul"
+COR = {QR: "#5c0632", EK: "#c8102e", LA: "#1b0088", AD: "#0b4ea2"}
+
+
+def badge(cia, big=False):
+    return f'<span class="cia{" big" if big else ""}" style="background:{COR[cia]}">{cia}</span>'
 
 
 def leg(cia, voo, de, para, t1, t2, dur, eq, cs=False):
     nota = '<span class="cs">voo compartilhado · operado por companhia parceira</span>' if cs else ""
-    return (f'      <div class="leg"><div class="fl">{cia} · {voo}<b>{de} → {para}</b>{CID[de]} → {CID[para]}'
+    return (f'      <div class="leg"><div class="fl">{badge(cia)} {voo}<b>{de} → {para}</b>{CID[de]} → {CID[para]}'
             f'<br>{dur} · {AV[eq]}{nota}</div>'
             f'<div class="rt"><div class="pt"><div class="code">{de}</div><div class="tm">{t1}</div></div>{ARROW}'
             f'<div class="pt"><div class="code">{para}</div><div class="tm">{t2}</div></div></div>'
@@ -68,16 +77,7 @@ IDA_QR = [
 ]
 
 OPCOES = [
-    dict(g="A", nome="Opção 1 · Qatar Airways", rota="Curitiba → Jeddah · Dubai → Curitiba", total=13552.96, usd="2.301,44",
-         malas="2 malas despachadas", resumo="Ida a Jeddah · volta de Dubai em 20/12, saída 05:20",
-         linhas=IDA_QR + [
-             cnx("Trecho Jeddah → Dubai não incluído nesta cotação", "warn"),
-             cnx("VOLTA · domingo, 20 de dezembro · conexões em Doha (2h15) e São Paulo (4h15) · 23h55 no total"),
-             leg(QR, "QR 1003", "DXB", "DOH", "20 dez · 05:20", "20 dez · 05:35", "1h15", "77W"),
-             leg(QR, "QR 773", "DOH", "GRU", "20 dez · 07:50", "20 dez · 16:55", "15h05", "351"),
-             leg(AD, "AD 4832", "GRU", "CWB", "20 dez · 21:10", "20 dez · 22:15", "1h05", "295"),
-         ]),
-    dict(g="A", nome="Opção 2 · Qatar Airways", rota="Curitiba → Jeddah · Dubai → Curitiba", total=13579.91, usd="2.306,02",
+    dict(g="A", nome="Opção 1 · Qatar Airways", cias=[QR], rota="Curitiba → Jeddah · Dubai → Curitiba", total=13579.91, usd="2.306,02",
          malas="2 malas despachadas", resumo="Ida a Jeddah · volta de Dubai em 20/12, saída 22:50, chega 21/12",
          linhas=IDA_QR + [
              cnx("Trecho Jeddah → Dubai não incluído nesta cotação", "warn"),
@@ -86,7 +86,7 @@ OPCOES = [
              leg(QR, "QR 785", "DOH", "GRU", "21 dez · 00:25", "21 dez · 09:30", "15h05", "77L"),
              leg(QR, "QR 5159", "GRU", "CWB", "21 dez · 11:15", "21 dez · 12:20", "1h05", "295", True),
          ]),
-    dict(g="A", nome="Opção 3 · Qatar Airways", rota="Curitiba → Jeddah · Doha → Curitiba", total=14176.01, usd="2.407,24",
+    dict(g="A", nome="Opção 2 · Qatar Airways", cias=[QR, LA], rota="Curitiba → Jeddah · Doha → Curitiba", total=14176.01, usd="2.407,24",
          malas="2 malas despachadas", resumo="Ida a Jeddah · volta saindo de Doha em 20/12",
          linhas=IDA_QR + [
              cnx("A volta começa em Doha: o trecho até Doha não está incluído nesta cotação", "warn"),
@@ -94,7 +94,7 @@ OPCOES = [
              leg(QR, "QR 773", "DOH", "GRU", "20 dez · 07:50", "20 dez · 16:55", "15h05", "351"),
              leg(LA, "LA 4568", "GRU", "CWB", "20 dez · 18:45", "20 dez · 19:50", "1h05", "295"),
          ]),
-    dict(g="B", nome="Opção 4 · Emirates", rota="Curitiba ⇄ Dubai", total=14418.64, usd="2.448,45",
+    dict(g="B", nome="Opção 3 · Emirates", cias=[EK], rota="Curitiba ⇄ Dubai", total=14418.64, usd="2.448,45",
          malas="2 malas despachadas", resumo="Curitiba ⇄ Dubai, sem o trecho de Jeddah",
          linhas=[
              cnx("IDA · terça, 8 de dezembro · conexão de 4h35 em São Paulo · 20h00 no total"),
@@ -105,7 +105,7 @@ OPCOES = [
              leg(EK, "EK 261", "DXB", "GRU", "20 dez · 09:05", "20 dez · 17:35", "15h30", "388"),
              leg(EK, "EK 3609", "GRU", "CWB", "20 dez · 22:50", "20 dez · 23:55", "1h05", "738", True),
          ]),
-    dict(g="B", nome="Opção 5 · LATAM e Emirates", rota="Curitiba ⇄ Dubai · via Roma e Madri", total=9482.63, usd="1.610,26",
+    dict(g="B", nome="Opção 4 · LATAM e Emirates", cias=[LA, EK], rota="Curitiba ⇄ Dubai · via Roma e Madri", total=9482.63, usd="1.610,26",
          malas="1 mala despachada", resumo="Curitiba ⇄ Dubai via Roma e Madri, sem o trecho de Jeddah",
          linhas=[
              cnx("IDA · terça, 8 de dezembro · conexões em São Paulo (7h30) e Roma (5h35) · 31h20 no total · chegada a Dubai na quarta, 09/12, às 23:25"),
@@ -119,13 +119,14 @@ OPCOES = [
              leg(LA, "LA 4708", "GRU", "CWB", "20 dez · 23:15", "21 dez · 00:20", "1h05", "321", True),
          ]),
 ]
-assert [o["total"] for o in OPCOES] == [13552.96, 13579.91, 14176.01, 14418.64, 9482.63]
+assert [o["total"] for o in OPCOES] == [13579.91, 14176.01, 14418.64, 9482.63]
 
 
 def bloco(o):
     linhas = "\n".join(o["linhas"])
     return f'''    <div class="air">
-      <div class="air-head"><div class="dir">{o["nome"]} · Econômica</div><div class="route">{o["rota"]}</div></div>
+      <div class="air-head"><div class="dir">{o["nome"].split(" · ")[0]} · Econômica</div><div class="route">{o["rota"]}</div></div>
+      <div class="cias"><span class="k">{"Companhias" if len(o["cias"]) > 1 else "Companhia"}</span>{" ".join(badge(c, True) for c in o["cias"])}</div>
 {linhas}
       <div class="air-foot"><span class="l">1 adulto · {o["malas"]} · USD {o["usd"]}</span><div class="a"><div class="t">{brl(o["total"])}</div><div class="p">valor por pessoa · ida e volta</div></div></div>
     </div>'''
@@ -136,14 +137,14 @@ GB = "\n".join(bloco(o) for o in OPCOES if o["g"] == "B")
 
 
 def rows(g):
-    return "\n".join(f'      <tr><td><b>{o["nome"]}</b><div class="rm">{o["resumo"]}</div></td>'
+    return "\n".join(f'      <tr><td><b>{o["nome"].split(" · ")[0]}</b> {" ".join(badge(c) for c in o["cias"])}<div class="rm">{o["resumo"]}</div></td>'
                      f'<td class="v">{brl(o["total"])}</td></tr>' for o in OPCOES if o["g"] == g)
 
 
 CHIP = ('<div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
         'stroke-width="2">{svg}</svg></span><b>{n}</b>&nbsp;{t}</div>')
 chips = "\n      ".join(CHIP.format(**c) for c in [
-    dict(svg='<path d="M2 16l20-6-20-6 4 6-4 6z"/>', n="5", t="Opções de voo"),
+    dict(svg='<path d="M2 16l20-6-20-6 4 6-4 6z"/>', n="4", t="Opções de voo"),
     dict(svg='<circle cx="12" cy="7" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/>', n="1", t="Adulto"),
     dict(svg='<path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>', n="Curitiba", t="saída e chegada"),
     dict(svg='<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>', n="08/12 – 20/12", t=""),
@@ -177,7 +178,7 @@ html = f"""<!DOCTYPE html>
     <div class="hero-info">
       <div>
         <div class="lbl">Detalhes</div>
-        <p>Saída de Curitiba em 8/12 e volta em 20/12 · 5 opções em classe econômica: 3 com ida a Jeddah e 2 só até Dubai</p>
+        <p>Saída de Curitiba em 8/12 e volta em 20/12 · 4 opções em classe econômica: 2 com ida a Jeddah e 2 só até Dubai</p>
         <p class="sm">Cotação emitida em <b>{EMISSAO}</b> · valores em reais <b>por pessoa</b>, ida e volta · escolher 1 opção</p>
       </div>
       <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
@@ -194,7 +195,7 @@ html = f"""<!DOCTYPE html>
     <p class="lede">Todas as opções saem e voltam por Curitiba, em classe econômica. Horários locais de cada aeroporto. Valores <b>por pessoa</b>, ida e volta. <b>Escolher 1 opção.</b></p>
 
     <h3 class="subh">Com ida a Jeddah</h3>
-    <p class="subp">Ida de Curitiba até Jeddah pela Qatar Airways, chegando na madrugada de 10/12. Muda só a volta. O trecho entre Jeddah e Dubai (ou Doha) fica à parte.</p>
+    <p class="subp">Ida de Curitiba até Jeddah pela Qatar Airways, chegando na madrugada de 10/12. Muda só a volta: de Dubai ou de Doha. O trecho entre Jeddah e Dubai (ou Doha) fica à parte.</p>
 {GA}
 
     <h3 class="subh">Só até Dubai</h3>
@@ -222,22 +223,21 @@ html = f"""<!DOCTYPE html>
       <div class="box">
         <h4>Referência</h4>
         <p>Cotação emitida em {EMISSAO} · valores em <b>reais (BRL)</b></p>
-        <p class="sm">Equivalente informado na cotação: USD 2.301,44 (opção 1) · USD 2.306,02 (opção 2) · USD 2.407,24 (opção 3) · USD 2.448,45 (opção 4) · USD 1.610,26 (opção 5).</p>
+        <p class="sm">Equivalente informado na cotação: USD 2.306,02 (opção 1) · USD 2.407,24 (opção 2) · USD 2.448,45 (opção 3) · USD 1.610,26 (opção 4).</p>
       </div>
     </div>
     <div class="obs">
       <h4>Não inclui</h4>
       <ul>
-        <li>Trecho Jeddah → Dubai nas opções 1 e 2, trecho até Doha na opção 3, e os trechos Dubai ⇄ Jeddah nas opções 4 e 5</li>
+        <li>Trecho Jeddah → Dubai na opção 1, trecho até Doha na opção 2, e os trechos Dubai ⇄ Jeddah nas opções 3 e 4</li>
         <li>Hospedagem, traslados e passeios</li>
         <li>Visto da Arábia Saudita e seguro viagem</li>
         <li>Marcação de assentos e bagagem além da franquia, se houver</li>
       </ul>
       <h4>Observações</h4>
       <ul>
-        <li>Nas opções 1, 2 e 3 a chegada a Jeddah é à 01:50 de 10/12: o hotel precisa estar reservado desde a noite de 09/12.</li>
-        <li>Na opção 1, o voo sai de Dubai às 05:20 de 20/12: é preciso ir ao aeroporto de madrugada.</li>
-        <li>Na opção 5, a conexão em Madri na volta é de 1h10; e a franquia é de 1 mala despachada (nas outras opções, 2).</li>
+        <li>Nas opções 1 e 2 a chegada a Jeddah é à 01:50 de 10/12: o hotel precisa estar reservado desde a noite de 09/12.</li>
+        <li>Na opção 4, a conexão em Madri na volta é de 1h10; e a franquia é de 1 mala despachada (nas outras opções, 2).</li>
         <li>Voos compartilhados são vendidos por uma companhia e operados por outra; a franquia de bagagem segue a regra informada na emissão.</li>
         <li>Documentação de entrada: a Arábia Saudita exige visto para brasileiros (há visto eletrônico de turismo); os Emirados Árabes dispensam visto para turismo. Conferimos as regras vigentes antes da emissão.</li>
         <li>Tarifas sujeitas a disponibilidade e alteração até a emissão dos bilhetes.</li>
