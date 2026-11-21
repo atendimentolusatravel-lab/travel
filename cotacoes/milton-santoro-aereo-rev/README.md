@@ -13,3 +13,10 @@
 ```
 python3 build.py
 ```
+
+## Voos entre Jeddah, Doha e Dubai (21/11/2026)
+
+- Plano: 3 noites em Doha e 4 em Dubai (bate-volta a Abu Dhabi), ordem indiferente.
+- Roteiro A (Doha antes): op. 1 + QR 1193 JED→DOH 13/12 + FZ 2 DOH→DXB 16/12 = R$ 18.207,22 por pessoa (sugerido).
+- Roteiro B (Dubai antes): op. 2 + XY 412 JED→DXB 13/12 + FZ 1/FZ 17 DXB→DOH 17/12 = R$ 18.451,54 por pessoa.
+- As telas desses voos vieram coladas na conversa (sem arquivo em `fonte/`); os dados estão no cabeçalho do build.py.
