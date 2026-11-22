@@ -1,0 +1,7 @@
+# Geovani e Família · aéreo São Paulo ⇄ Genebra (Courchevel) · janeiro/2027 · 2 adultos + 1 criança (8 anos)
+
+- **Fontes (22/11/2026):** `fonte/ita-via-roma.webp` (R$ 26.281,89 / USD 4.462,96) e `fonte/iberia-via-madri.webp` (R$ 30.180,22 / USD 5.124,94), totais para os 3 passageiros.
+- Opção 1 ITA: AZ 675 + AZ 576 em 14/01 (GVA 10:45 de 15/01) · volta AZ 577 + AZ 674 em 21/01 (GRU 06:25 de 22/01).
+- Opção 2 Iberia: IB 268 + IB 615 em 11/01 (GVA 13:25 de 12/01) · volta IB 616 + IB 267 em 19/01 (GRU 07:05 de 20/01).
+- Pendências com o cliente: nível de esqui de cada um, se falam inglês, se já têm roupa de esqui.
+- **Publicação:** projeto Vercel `cotacao-geovani-familia-aereo-genebra` (Edge `api/page.js` + jsDelivr fixado no commit).
