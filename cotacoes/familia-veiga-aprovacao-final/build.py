@@ -181,14 +181,14 @@ html = f"""<!DOCTYPE html>
     <div class="hero-img">
       <img src="img/capa.jpg" alt="Tailândia" onerror="this.style.display='none'">
       <div class="cap">
-        <div class="k">Para aprovação</div>
+        <div class="k">Roteiro aprovado</div>
         <div class="t">Voos dentro da Ásia · hotel em Krabi · passeios</div>
       </div>
     </div>
     <div class="hero-info">
       <div>
         <div class="lbl">Sobre este documento</div>
-        <p>Reúne os itens escolhidos para a aprovação final da viagem, com as datas e o que está incluído em cada um.</p>
+        <p>Reúne os itens aprovados e pagos da viagem, com as datas e o que está incluído em cada um.</p>
       </div>
       <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
     </div>
@@ -222,22 +222,21 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Programação</span>
     <h2>Passeios e serviços</h2>
     <div class="accent-line"></div>
-    <p class="lede">Os {N_PASSEIOS} itens escolhidos, para 2 adultos e 1 bebê, por cidade e em ordem de data.</p>
+    <p class="lede">Os {N_PASSEIOS} itens aprovados, para 2 adultos e 1 bebê, por cidade e em ordem de data.</p>
 {passeios}
   </section>
 
   <section class="section sh" style="background:var(--cream)">
     <span class="eyebrow">Resumo</span>
-    <h2>Itens para aprovação</h2>
+    <h2>Itens aprovados</h2>
     <div class="accent-line"></div>
     <ul class="chk">
 {chk}
     </ul>
-    <div class="approve"><b>Para aprovar:</b> confirme com a LusaTravel pelo WhatsApp +55 41 99189-6076 ou pelo e-mail atendimentolusatravel@gmail.com. Depois da aprovação, seguimos com as reservas que ainda estão em aberto.</div>
     <div class="obs">
       <h4>Observações</h4>
       <ul>
-        <li>Documento sem valores: os valores seguem a cotação já enviada.</li>
+        <li>Roteiro aprovado e pago. Documento sem valores.</li>
         <li>Horários de voos e passeios sujeitos a alteração pelas companhias e pelos fornecedores.</li>
         <li>Nos passeios de barco, levar protetor solar, chapéu e roupa de proteção UV para o bebê.</li>
       </ul>
@@ -247,7 +246,7 @@ html = f"""<!DOCTYPE html>
   <footer class="footer">
     <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'">
     <div class="contact">atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR</div>
-    <div class="fnote">*Documento de aprovação final, sem valores.</div>
+    <div class="fnote">*Roteiro aprovado e pago.</div>
   </footer>
 </div>
 </body>
