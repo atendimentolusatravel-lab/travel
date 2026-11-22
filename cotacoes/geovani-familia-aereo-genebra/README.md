@@ -5,3 +5,4 @@
 - Opção 2 Iberia: IB 268 + IB 615 em 11/01 (GVA 13:25 de 12/01) · volta IB 616 + IB 267 em 19/01 (GRU 07:05 de 20/01).
 - Pendências com o cliente: nível de esqui de cada um, se falam inglês, se já têm roupa de esqui.
 - **Publicação:** projeto Vercel `cotacao-geovani-familia-aereo-genebra` (Edge `api/page.js` + jsDelivr fixado no commit).
+- **Hotéis (22/11/2026, informados pela agência; todos ski-in/ski-out, café da manhã, até 8x):** Ecrin Blanc Resort Courchevel (Privilege Cocoon c/ aquapark) R$ 28.960,00 · Hotel Barma Courchevel (Quádruplo Luxo) R$ 21.917,00 · Hôtel Edelweiss (Triplo Família c/ sacada) R$ 15.476,00 · La Maison Les Peupliers (Quarto Família) R$ 18.920,00. Nº de noites/datas não informados.
