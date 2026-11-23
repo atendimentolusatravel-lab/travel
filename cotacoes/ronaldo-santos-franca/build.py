@@ -12,6 +12,9 @@ Fontes (enviadas pela agência em 23/11/2026):
 - fonte/carro-budget.png: locação Budget, Volvo V60 (station wagon) ou similar, automático, 5 lugares, 5 portas,
   4 malas, ar; retirada Avignon TGV (Place de l'Europe) 19/05/2027 14:30, devolução no aeroporto de Nice (NCE)
   07/06/2027 06:00; 19 diárias; R$ 7.455,32 com taxas incluídas.
+- Carro opção 2 (imagem enviada pela agência em 23/11/2026): Enterprise, Intermediate VAN, Peugeot 5008 ou similar,
+  automático, 7 lugares, 5 portas, 2 malas, ar; mesma retirada (Gare TGV Avignon, Place de l'Europe, 19/05 14:30)
+  e devolução (aeroporto de Nice, 07/06 06:00); 19 diárias; R$ 8.769,33 com taxas incluídas.
 - fonte/f1-monaco.png: ingressos do GP de Mônaco, totais para 4 pessoas em BRL:
   Champions Club · Trackside Yacht (fornecedor oficial da F1), sábado e domingo 05–06/06/2027, R$ 260.757,00; Senate Grand Prix, domingo 06/06/2027, R$ 186.639,00, aguardando
   confirmação de valor e disponibilidade para sábado.
@@ -215,7 +218,11 @@ hoteis = "\n".join(
     </div>''' for cid, datas, n, hs in HOTEIS)
 
 TREM = 2185.56
-CARRO = 7455.32
+CARROS = [
+    dict(loc="Budget", modelo="Volvo V60", cat="Station wagon", spec="automático · 5 lugares · 5 portas · 4 malas · ar-condicionado", valor=7455.32),
+    dict(loc="Enterprise", modelo="Peugeot 5008", cat="Van intermediária", spec="automático · 7 lugares · 5 portas · 2 malas · ar-condicionado", valor=8769.33),
+]
+CMIN, CMAX = min(c["valor"] for c in CARROS), max(c["valor"] for c in CARROS)
 F1 = [
     dict(nome="Champions Club · Trackside Yacht", forn="Champions Club · fornecedor oficial da Fórmula 1", dias="sábado e domingo", datas="05 e 06/06/2027",
          desc="Ingressos para assistir ao GP de Mônaco a bordo de um iate ancorado à beira da pista", valor=260757.00, pend=""),
@@ -238,8 +245,8 @@ estadas = "\n".join(
 AMIN, AMAX = min(o["total"] for o in AEREOS), max(o["total"] for o in AEREOS)
 HMIN = round(sum(min(h[3] for h in hs) for *_, hs in HOTEIS), 2)
 HMAX = round(sum(max(h[3] for h in hs) for *_, hs in HOTEIS), 2)
-TMIN, TMAX = round(AMIN + HMIN + TREM + CARRO + FMIN, 2), round(AMAX + HMAX + TREM + CARRO + FMAX, 2)
-assert (HMIN, HMAX, TMIN, TMAX) == (176619.44, 271157.07, 466176.48, 717053.07)
+TMIN, TMAX = round(AMIN + HMIN + TREM + CMIN + FMIN, 2), round(AMAX + HMAX + TREM + CMAX + FMAX, 2)
+assert (HMIN, HMAX, TMIN, TMAX) == (176619.44, 271157.07, 466176.48, 718367.08)
 
 rows = []
 rows.append('      <tr class="sec-row"><td colspan="2">Aéreo <span>· escolher 1</span></td></tr>')
@@ -252,7 +259,9 @@ for cid, datas, n, hs in HOTEIS:
         rows.append(f'      <tr><td><b>{nome}</b><div class="rm">{quartos}{(" · " + regime) if regime else ""}</div></td><td class="v">{brl(valor)}</td></tr>')
 rows.append('      <tr class="sec-row"><td colspan="2">Transporte</td></tr>')
 rows.append(f'      <tr><td><b>TGV Paris → Avignon · 19/05</b><div class="rm">TGV INOUI 6107 · 4 passageiros · com upgrade de classe</div></td><td class="v">{brl(TREM)}</td></tr>')
-rows.append(f'      <tr><td><b>Carro Budget · Avignon → aeroporto de Nice · 19/05 a 07/06</b><div class="rm">Volvo V60 (station wagon) ou similar · automático · 19 diárias · taxas incluídas</div></td><td class="v">{brl(CARRO)}</td></tr>')
+rows.append('      <tr class="sec-row"><td colspan="2">Carro · Avignon TGV → aeroporto de Nice · 19/05 a 07/06 <span>· escolher 1</span></td></tr>')
+for c in CARROS:
+    rows.append(f'      <tr><td><b>{c["loc"]} · {c["modelo"]} ou similar</b><div class="rm">{c["cat"]} · {c["spec"].split(" · ")[0]} · {c["spec"].split(" · ")[1]} · 19 diárias · taxas incluídas</div></td><td class="v">{brl(c["valor"])}</td></tr>')
 rows.append('      <tr class="sec-row"><td colspan="2">Fórmula 1 · GP de Mônaco <span>· escolher 1</span></td></tr>')
 for f in F1:
     extra = " · valor e sábado a confirmar" if f["pend"] else ""
@@ -269,6 +278,18 @@ def f1card(i, f):
             f'      <div class="air-foot"><span class="l">4 pessoas</span><div class="a"><div class="t">{brl(f["valor"])}</div><div class="p">total para 4 pessoas</div></div></div>\n'
             f'    </div>')
 
+
+def carcard(i, c):
+    return (f'    <div class="air">\n'
+            f'      <div class="air-head"><div class="dir">Carro · opção {i} · 19 diárias</div><div class="route">{c["modelo"]}</div></div>\n'
+            f'      <div class="leg"><div class="fl">{c["loc"]} · {c["modelo"]} ou similar<b>{c["cat"]} · {c["spec"]}</b>taxas e impostos incluídos</div>'
+            f'<div class="rt"><div class="pt"><div class="code">AVIGNON TGV</div><div class="tm">qua, 19 mai · 14:30</div></div>{ARROW}<div class="pt"><div class="code">NICE · NCE</div><div class="tm">seg, 07 jun · 06:00</div></div></div>'
+            f'<div class="cls">retirada na estação<br>devolução no aeroporto</div></div>\n'
+            f'      <div class="air-foot"><span class="l">Retirada na estação Avignon TGV e devolução no aeroporto de Nice</span><div class="a"><div class="t">{brl(c["valor"])}</div><div class="p">total da locação</div></div></div>\n'
+            f'    </div>')
+
+
+carros = "\n".join(carcard(i, c) for i, c in enumerate(CARROS, 1))
 
 f1cards = "\n".join(f1card(i, f) for i, f in enumerate(F1, 1))
 
@@ -355,17 +376,13 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Transporte</span>
     <h2>Trem e carro</h2>
     <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">De Paris a Avignon de TGV e, de Avignon até o fim da viagem, carro alugado. Valores em <b>BRL</b>, totais para as 4 pessoas.</p>
+    <p class="note" style="margin-top:16px">De Paris a Avignon de TGV e, de Avignon até o fim da viagem, carro alugado. Valores em <b>BRL</b>, totais para as 4 pessoas. <b>Carro: escolher 1 opção.</b></p>
     <div class="air">
       <div class="air-head"><div class="dir">TGV INOUI 6107 · quarta, 19 de maio</div><div class="route">Paris → Avignon</div></div>
       <div class="leg"><div class="fl">SNCF · TGV INOUI 6107<b>Paris Gare de Lyon → Avignon TGV</b>trem direto · 2h40</div><div class="rt"><div class="pt"><div class="code">PARIS</div><div class="tm">19 mai · 09:38</div></div>{ARROW}<div class="pt"><div class="code">AVIGNON</div><div class="tm">19 mai · 12:18</div></div></div><div class="cls">com upgrade<br>de classe</div></div>
       <div class="air-foot"><span class="l">4 passageiros · bilhetes R$ 974,64 + upgrade de classe R$ 1.210,92</span><div class="a"><div class="t">{brl(TREM)}</div><div class="p">total para 4 passageiros</div></div></div>
     </div>
-    <div class="air">
-      <div class="air-head"><div class="dir">Locação de carro · 19 diárias</div><div class="route">Avignon → Nice</div></div>
-      <div class="leg"><div class="fl">Budget · Volvo V60 ou similar<b>Station wagon · automático · 5 lugares · 5 portas · 4 malas · ar-condicionado</b>taxas e impostos incluídos</div><div class="rt"><div class="pt"><div class="code">AVIGNON TGV</div><div class="tm">qua, 19 mai · 14:30</div></div>{ARROW}<div class="pt"><div class="code">NICE · NCE</div><div class="tm">seg, 07 jun · 06:00</div></div></div><div class="cls">retirada na estação<br>devolução no aeroporto</div></div>
-      <div class="air-foot"><span class="l">Retirada na estação Avignon TGV e devolução no aeroporto de Nice</span><div class="a"><div class="t">{brl(CARRO)}</div><div class="p">total da locação</div></div></div>
-    </div>
+{carros}
     <p class="note">O carro é retirado na própria estação Avignon TGV (Place de l'Europe), onde o trem chega às 12:18, e fica com a família até a devolução no aeroporto de Nice, no dia da volta.</p>
   </section>
 
@@ -387,7 +404,7 @@ html = f"""<!DOCTYPE html>
       <tr class="head-row"><td>Item</td><td class="v">Valor</td></tr>
 {rows}
     </table></div>
-    <p class="note">Como é calculado: o menor valor soma a opção de aéreo mais barata, o hotel mais barato de cada cidade, o trem, o carro e o ingresso de F1 mais barato (Senate, só domingo); o maior, a opção de aéreo, os hotéis e o ingresso de F1 mais caros, mais o trem e o carro.</p>
+    <p class="note">Como é calculado: o menor valor soma o trem e as opções mais baratas de aéreo, hotel em cada cidade, carro e ingresso de F1 (Senate, só domingo); o maior, o trem e as opções mais caras de cada item.</p>
     <div class="pay">
       <div class="box">
         <h4>Condições de pagamento</h4>
