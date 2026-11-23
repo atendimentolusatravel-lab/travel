@@ -24,3 +24,4 @@
 - **Passeio:** trenó com huskies (courchevel.com/en/a/dog-sledding-5063254), EUR 250 para os 3 × 6,79 + 15% + 12% = R$ 2.186,38 (PIX R$ 1.967,74). Câmbio exibido: EUR 6,79 · USD 6,18 (23/11). Traslados seguem calculados a 6,47.
 - **Passeio:** snowmobile (courchevel-activities.com/tours/snowmobiling-courchevel), EUR 550 por snowmobile, 1 para cada 2 → 2 para os 3 = EUR 1.100 × 6,79 + 15% + 12% = R$ 9.620,07 (PIX R$ 8.658,06).
 - **Passeio:** voo panorâmico de helicóptero 20 min, até 6 pessoas, EUR 1.170 × 6,79 + 15% + 12% = R$ 10.232,26 (PIX R$ 9.209,03).
+- **Passeio:** Aquamotion Family Pass (2 adultos + 2 crianças 5–12), EUR 69 × 6,79 + 15% + 12% = R$ 603,44 (PIX R$ 543,10). Incluso para hóspedes do Ecrin Blanc (Booking).
