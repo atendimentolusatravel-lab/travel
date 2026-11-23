@@ -20,3 +20,4 @@
 - **Simulação 6 noites em Courchevel (07–13/01):** diária média das 4 noites × 6 — Ecrin Blanc R$ 43.440,00 · Barma R$ 32.875,50 · Edelweiss R$ 23.214,00 · Peupliers R$ 28.380,00 (a confirmar com hotéis). Traslado Courchevel → Genebra estimado em R$ 2.812,51 (mesmo valor da ida).
 - **Hotéis Genebra (13–14/01, 1 noite, sem café, até 8x):** Hotel Edelweiss (Quarto Família, centro) R$ 1.460,00 · Hilton Geneva Hotel and Conference Centre (King Deluxe, perto do aeroporto) R$ 1.767,00.
 - **Atualização:** Alpina Eclectic R$ 5.010,00 · Lykke R$ 6.610,00 (2 noites).
+- **Opcionais (até 8x ou PIX −10%):** aula de esqui em espanhol R$ 3.936,00 (PIX R$ 3.542,40) · em português R$ 4.810,00 (PIX R$ 4.329,00), 3 dias (08–10/01).
