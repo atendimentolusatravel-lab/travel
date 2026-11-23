@@ -58,14 +58,21 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 
 .body{ padding:4mm 20mm 0; flex:1; display:flex; flex-direction:column; }
 
+/* ── Faixa de passageiros / data ── */
+.paxbar{ display:flex; align-items:center; gap:3.5mm; background:var(--green-tint); border-left:1.2mm solid var(--gold);
+  padding:2.6mm 5mm; margin-top:1mm; font-size:9.5pt; color:var(--char); border-radius:0 1mm 1mm 0; }
+.paxbar b{ font-weight:700; color:var(--green); }
+.paxbar .pb-main{ font-size:10.5pt; color:var(--ink); }
+.paxbar .pb-sep{ color:var(--gold); }
+
 /* ── Grupo de cabine ── */
-.group{ display:flex; align-items:center; gap:4mm; margin:3.5mm 0 3mm; }
+.group{ display:flex; align-items:center; gap:4mm; margin:3.2mm 0 2.6mm; }
 .group h2{ font-size:10.5pt; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--green); white-space:nowrap; }
 .group .rule{ flex:1; height:1px; background:var(--line); }
 .group .hint{ font-size:8.5pt; color:var(--mut); white-space:nowrap; }
 
 /* ── Cartão de opção ── */
-.opt{ display:grid; grid-template-columns:1fr 70mm; border:1px solid var(--line); border-radius:2.2mm; overflow:hidden; margin-bottom:3.5mm; break-inside:avoid; }
+.opt{ display:grid; grid-template-columns:1fr 70mm; border:1px solid var(--line); border-radius:2.2mm; overflow:hidden; margin-bottom:2.8mm; break-inside:avoid; }
 .opt.star{ border-color:var(--gold); box-shadow:0 0 0 .5mm var(--gold) inset; }
 .opt-main{ padding:4.5mm 7mm 4.5mm; }
 .opt-top{ display:flex; align-items:center; gap:3.5mm; margin-bottom:3.2mm; flex-wrap:wrap; }
@@ -108,7 +115,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .pr-list b{ font-weight:600; color:var(--ink); }
 
 /* ── Notas ── */
-.notes{ margin-top:auto; padding:5mm 0 6mm; display:grid; grid-template-columns:1.25fr 1fr; gap:10mm; border-top:1px solid var(--line); }
+.notes{ margin-top:auto; padding:4.5mm 0 5mm; display:grid; grid-template-columns:1.25fr 1fr; gap:10mm; border-top:1px solid var(--line); }
 .notes h3{ font-size:8pt; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--green); margin-bottom:2mm; }
 .notes ul{ list-style:none; font-size:8.6pt; line-height:1.65; color:var(--char); }
 .notes li{ padding-left:3.5mm; position:relative; }
@@ -165,11 +172,12 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       <div><b>2</b><span>Adultos</span></div>
       <div><b>5</b><span>Opções</span></div>
       <div><b>Jan · Fev</b><span>2027</span></div>
-      <div><b>23/11</b><span>Data da cotação</span></div>
+      <div><b>23/11/2026</b><span>Cotação · 15:36</span></div>
     </div>
   </div>
 
   <main class="body">
+    <div class="paxbar"><span class="pb-main">Valores totais para <b>2 adultos</b></span><span class="pb-sep">|</span><span>Cotação em <b>23/11/2026 às 15:36</b></span><span class="pb-sep">|</span><span>Valor por adulto indicado em cada opção</span></div>
 
     <!-- ══════════ EXECUTIVA ══════════ -->
     <div class="group"><h2>Classe Executiva</h2><div class="rule"></div><div class="hint">do menor para o maior valor</div></div>
@@ -376,7 +384,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
           <li class="must">*Nada reservado, apenas cotado.</li>
           <li>Valores e disponibilidade sujeitos a alteração até a emissão dos bilhetes.</li>
           <li>Regras de remarcação, cancelamento e escolha de assentos conforme a tarifa de cada companhia.</li>
-          <li>Valores totais para 2 adultos, com o valor por adulto indicado em cada opção.</li>
+          <li>Valores totais para 2 adultos, cotados em 23/11/2026 às 15:36.</li>
           <li>Horários em hora local. <b>+1</b> indica chegada no dia seguinte.</li>
         </ul>
       </div>
@@ -386,7 +394,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
           <li>Valores em reais com equivalente em dólar americano.</li>
           <li>Documentação: passaporte válido por pelo menos 3 meses após o retorno. Verificar a exigência da autorização eletrônica ETIAS na data da viagem.</li>
         </ul>
-        <span class="fx">Cotação 23/11 · USD 1 = R$ 5,89</span>
+        <span class="fx">Cotação 23/11/2026 · 15:36 · USD 1 = R$ 5,89</span>
       </div>
     </section>
   </main>

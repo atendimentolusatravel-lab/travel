@@ -33,7 +33,9 @@ Quando o pedido for só de aéreo, ou o usuário disser "cotação simplificada"
   chegada no dia seguinte, conexão e tempo total), valor total em R$ com USD, bagagem
   despachada, valor por passageiro e noites no destino (as datas podem mudar entre as opções).
 - Destaque com borda dourada a opção recomendada (normalmente o melhor custo-benefício).
-- O câmbio de referência é o implícito na cotação (R$ ÷ USD), com a data do dia.
+- Abaixo do bloco do cliente, uma faixa informa para quantos passageiros são os valores e a
+  data e hora da cotação (ex.: "Valores totais para 2 adultos | Cotação em 23/11/2026 às 15:36").
+- O câmbio de referência é o implícito na cotação (R$ ÷ USD), com data e hora da cotação.
 - Confira se o conteúdo cabe em uma folha A3 antes de entregar (nada cortado no PDF).
 
 ## Fluxo de trabalho
