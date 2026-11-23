@@ -16,3 +16,4 @@
 - **Roteiro base (Opção 2, ITA chega 07/01 18:05, volta 14/01 11:35):** Courchevel 07–11/01 (4n) · Chamonix 11–13/01 (2n) · Genebra 13–14/01 (1n).
 - **Traslado Chamonix → Genebra:** minivan 8 pax, EUR 175,00 só ida × 6,47 + 15% + 12% = R$ 1.458,34. 13/01 saída 10:00 (direto; parada em Annecy não incluída).
 - Traslados ajustados: GVA → Courchevel 07/01 18:50 · Courchevel → Chamonix 11/01 09:30.
+- **Hotéis Chamonix (11–13/01, 2 noites, café, spa, até 8x):** Alpina Eclectic Hotel (Triplo Superior c/ varanda) R$ 4.945,00 · Lykke Hôtel & Spa Chamonix (Quádruplo) R$ 6.072,00.
