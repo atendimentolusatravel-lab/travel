@@ -13,3 +13,6 @@
   - Opção 2 ITA (`fonte/ita-06jan-noite.webp`): AZ 679 + AZ 578 em 06/01 (GVA 18:05 de 07/01) · mesma volta · R$ 30.156,91 / USD 5.120,99.
   - Opção 3 TAP Premium Economy (print enviado no chat): TP 94 + TP 938 em 09/01 (GVA 15:35 de 10/01) · volta TP 945 + TP 89 em 17/01 (GVA 06:05) · 2 malas · R$ 53.930,65 / USD 9.158,02.
   - Traslado GVA → Courchevel ajustado para 06/01 11:30; Courchevel → Chamonix com data a definir.
+- **Roteiro base (Opção 2, ITA chega 07/01 18:05, volta 14/01 11:35):** Courchevel 07–11/01 (4n) · Chamonix 11–13/01 (2n) · Genebra 13–14/01 (1n).
+- **Traslado Chamonix → Genebra:** minivan 8 pax, EUR 175,00 só ida × 6,47 + 15% + 12% = R$ 1.458,34. 13/01 saída 10:00 (direto; parada em Annecy não incluída).
+- Traslados ajustados: GVA → Courchevel 07/01 18:50 · Courchevel → Chamonix 11/01 09:30.
