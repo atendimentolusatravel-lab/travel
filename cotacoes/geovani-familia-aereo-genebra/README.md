@@ -32,3 +32,4 @@
 - **Aluguel de equipamentos:** Blue Pack adulto €131,75 ×2 + Junior Blue Pack 7–12 €87,50 = €351 × 6,79 + 15% + 12% = R$ 3.069,68 (PIX R$ 2.762,71). Inclui bota, capacete e seguro contra danos/quebra. Cotação do fornecedor para 06 a 10/01 (esqui do roteiro: 08 a 10/01).
 - **Passeio:** patinação no gelo Chamonix (11/01, 1h, com patins), R$ 149,38 + 15% + 12% = R$ 192,40 (PIX R$ 173,16).
 - **Passeio:** excursão guiada 12/01 08:30 (Aiguille du Midi + Montenvers/Mer de Glace + gruta), GetYourGuide R$ 4.718,79 + 15% + 12% = R$ 6.077,80 (PIX R$ 5.470,02). Cronograma 11/01 e 12/01 ajustado.
+- **Ajustes:** PIX −10% em todos os serviços com regra 15%+12% (não hotéis, aéreo e seguro) · seguro é valor total para os 3 · equipamento 08–11/01 (cotação original 06–10; reconfirmar valor) · cronograma alinhado a todos os serviços cotados.
