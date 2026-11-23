@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Lusa Travel · Aéreo e Hotéis Courchevel — Geovani e Família</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#404626;--green-dark:#363b1f;--green-soft:#5a6238;--sage:#d9ead3;--ink:#333131;--muted:#6f6f68;--line:#e7e7e0;--bg:#fff;--cream:#faf9f5;--terra:#b4622f;--shadow:0 10px 30px rgba(64,70,38,.08)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.06)}
+img{max-width:100%;display:block}
+h1,h2,h3{line-height:1.15}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--green-soft)}
+.accent-line{width:64px;height:4px;background:var(--green);margin:14px 0 0;border-radius:2px}
+.section{padding:56px}
+.section h2{font-size:2.1rem;font-weight:700;letter-spacing:-.01em}
+.lede{max-width:74ch;font-size:.95rem;color:var(--muted);margin-top:16px}
+.sh .eyebrow{margin-bottom:10px;display:block}
+.brandbar{display:flex;justify-content:center;padding:38px 0 6px}
+.brandbar img{width:210px}
+.footlogo{width:190px;margin-bottom:14px}
+.hero{padding:52px 56px 40px}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:3.1rem;font-weight:700;letter-spacing:-.02em}
+.hero h1 .amp{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-style:italic}
+.hero-sub{margin-top:8px;color:var(--muted);font-size:1.02rem}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-img{margin:32px 0 0;height:340px;border-radius:14px;overflow:hidden;position:relative;box-shadow:var(--shadow);display:flex;align-items:flex-end;background:radial-gradient(120% 130% at 10% 8%,rgba(70,120,170,.55),transparent 55%),radial-gradient(120% 130% at 92% 94%,rgba(200,180,140,.5),transparent 60%),linear-gradient(120deg,#3a5f80,#6d8fae 35%,#e6e2d6 62%,#b4622f 100%)}
+.hero-info{display:grid;grid-template-columns:1fr auto;gap:24px;margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+.hero-info .lbl{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--green-soft);margin-bottom:6px}
+.hero-info .r{text-align:right}
+.hero-info p{font-size:.95rem}
+.sm{font-size:.86rem;color:var(--muted);margin-top:8px}
+.gloss{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9rem;font-weight:500}
+.chip b{font-size:1.1rem;font-weight:700}
+.chip .ic{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff}
+.chip .ic svg{width:18px;height:18px}
+.air{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:20px;background:#fff;box-shadow:var(--shadow)}
+.air-head{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--green);color:#fff;padding:14px 22px}
+.air-head .dir{font-weight:700;letter-spacing:.14em;font-size:.76rem;text-transform:uppercase}
+.air-head .route{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;font-weight:600}
+.leg{display:grid;grid-template-columns:230px 1fr auto;gap:16px;align-items:center;padding:15px 22px;border-bottom:1px solid var(--line)}
+.leg .fl{font-size:.76rem;color:var(--muted)}
+.leg .fl b{display:block;color:var(--ink);font-size:.9rem;font-weight:600}
+.leg .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.leg .pt .code{font-weight:700;font-size:1rem}
+.leg .pt .tm{font-size:.8rem;color:var(--muted)}
+.leg .arrow{color:var(--green-soft);flex:none}
+.leg .cls{text-align:right;font-size:.74rem;color:var(--green-soft);font-weight:600}
+.cnx{padding:9px 22px;background:#f4f5ef;font-size:.74rem;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.02em}
+.air-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 22px;background:var(--green);color:#fff;flex-wrap:wrap}
+.air-foot .l{font-weight:600;font-size:.86rem}
+.air-foot .a{text-align:right}
+.air-foot .a .t{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;line-height:1}
+.air-foot .a .p{font-size:.72rem;opacity:.9;margin-top:2px}
+.city-block{margin-top:34px}
+.city-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--green);padding-bottom:10px;margin-bottom:18px}
+.city-head h3{font-size:1.4rem;font-weight:700}
+.city-head .dates{color:var(--green-soft);font-weight:600;font-size:.9rem;letter-spacing:.04em}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:720px){.hgrid{grid-template-columns:1fr}}
+.hcard{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:18px 20px}
+.hcard-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.hcard .hn{font-size:1.02rem;font-weight:600;color:var(--green-dark)}
+.hcard .hp{text-align:right;flex:none}
+.hcard .hp .v{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--green)}
+.hcard .hp .u{font-size:.64rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.hcard .hr{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:.84rem;color:var(--muted)}
+.hcard .hr b{color:var(--green-dark);font-weight:600}
+.bf{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-soft);background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:3px 9px;margin-top:8px}
+.hgal{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:12px}
+.hgal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px;background:#eceadf}
+.tbl-wrap{overflow-x:auto;margin-top:22px;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:620px}
+td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.head-row td{background:#efeee7;font-weight:600;color:#4a4a44;font-size:.82rem}
+.sec-row td{background:var(--green);color:#fff;font-weight:700;letter-spacing:.04em;font-size:.9rem}
+.sec-row td span{font-weight:500;opacity:.85;font-size:.82rem}
+td .rm{color:var(--muted);font-size:.82rem;margin-top:2px}
+.total-row td{background:#eef2e6;font-weight:700}
+.pp td{background:#f6f7f1;font-weight:600;color:var(--green-soft)}
+.pp td.v{color:var(--green-dark)}
+tr:last-child td{border-bottom:none}
+td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:700;color:var(--green-dark)}
+.note{font-size:.82rem;color:var(--muted);margin-top:14px}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pay .box{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.pay h4{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-soft);margin-bottom:10px}
+.pay p{font-size:.9rem;margin-bottom:4px}
+.obs{margin-top:26px;font-size:.82rem;color:var(--muted)}
+.obs li{margin:6px 0 6px 18px}
+.obs h4{color:var(--ink);font-size:.9rem;margin:14px 0 6px}
+.footer{background:var(--green);color:#fff;padding:44px 56px}
+.footer .contact{margin-top:4px;font-size:.86rem;opacity:.9;line-height:1.9}
+.footer .fnote{font-size:.8rem;opacity:.7;margin-top:16px}
+@media(max-width:720px){.section,.hero,.footer{padding-left:24px;padding-right:24px}.hero h1{font-size:2.2rem}.hero-info{grid-template-columns:1fr}.hero-info .r{text-align:left}.leg{grid-template-columns:1fr;gap:8px}.air-head{flex-direction:column;align-items:flex-start;gap:2px}.pay{grid-template-columns:1fr}}
+.credit{font-size:.7rem;opacity:.6;margin-top:8px}
+.tag{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:#fff;color:var(--green);border-radius:10px;padding:3px 10px}
+.brandtext{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:.3em;color:var(--green)}
+.footer .brandtext{color:#fff;margin-bottom:14px}
+</style>
+<style>
+.hero-img svg{position:absolute;inset:0;width:100%;height:100%}
+.hero-img .cap{position:relative;z-index:2;color:#fff;padding:18px 24px;font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.air-head .tag{margin-left:10px;vertical-align:2px}
+.cols2{columns:2;column-gap:32px}
+@media(max-width:720px){.cols2{columns:1}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="brandbar"><div class="brandtext">LUSA TRAVEL</div></div>
+
+  <header class="hero">
+    <div class="eyebrow">Cotação de aéreo e hotelaria · Alpes Franceses</div>
+    <h1>GENEBRA <span class="amp">&amp;</span> COURCHEVEL</h1>
+    <div class="accent-line"></div>
+    <p class="hero-sub"><b>Geovani e Família</b> · 2 adultos e 1 criança — <b>janeiro de 2027</b></p>
+    <div class="hero-img" aria-hidden="true">
+      <svg viewBox="0 0 1000 340" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f6584"/><stop offset=".55" stop-color="#9fb8c9"/><stop offset="1" stop-color="#e9eef0"/></linearGradient>
+          <linearGradient id="m1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdfdfb"/><stop offset=".35" stop-color="#d9e2e6"/><stop offset="1" stop-color="#8fa3ae"/></linearGradient>
+          <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef2f3"/><stop offset="1" stop-color="#6f8590"/></linearGradient>
+          <linearGradient id="m3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a6238"/><stop offset="1" stop-color="#363b1f"/></linearGradient>
+        </defs>
+        <rect width="1000" height="340" fill="url(#sky)"/>
+        <circle cx="800" cy="80" r="34" fill="#fff7e6" opacity=".55"/>
+        <path d="M0 230 L120 150 L190 190 L310 70 L400 160 L470 120 L560 200 L660 95 L760 175 L850 130 L1000 210 L1000 340 L0 340Z" fill="url(#m1)"/>
+        <path d="M290 92 L310 70 L332 95 L318 104 L305 96Z M640 118 L660 95 L683 121 L667 128Z" fill="#fff"/>
+        <path d="M0 270 L140 200 L240 245 L380 180 L520 250 L640 205 L780 255 L900 215 L1000 250 L1000 340 L0 340Z" fill="url(#m2)" opacity=".9"/>
+        <path d="M0 340 L0 300 L60 280 L70 268 L80 282 L150 300 L230 286 L240 272 L250 288 L340 305 L460 292 L470 276 L480 294 L600 310 L720 296 L730 280 L742 298 L860 312 L940 300 L1000 306 L1000 340Z" fill="url(#m3)"/>
+      </svg>
+      <div class="cap">São Paulo ⇄ Genebra · porta de entrada dos Alpes</div>
+    </div>
+    <div class="hero-info">
+      <div>
+        <div class="lbl">Detalhes</div>
+        <p>Aéreo São Paulo ⇄ Genebra em econômica ou premium economy (3 opções) · traslados privativos Genebra → Courchevel → Chamonix → Genebra · hotéis ski-in/ski-out em Courchevel, 4 noites (4 opções) · hotéis com spa em Chamonix, 2 noites (2 opções) · última noite em Genebra (2 opções)</p>
+        <p class="sm">Cotação emitida em <b>22/11/2026</b> · valores em reais para os <b>3 passageiros</b> · escolher 1 voo e 1 hotel</p>
+      </div>
+      <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
+    </div>
+    <div class="gloss">
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16l20-6-20-6 4 6-4 6z"/></svg></span><b>3</b>&nbsp;Opções de voo</div>
+<div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20V9l9-5 9 5v11"/><path d="M9 20v-6h6v6"/></svg></span><b>4</b>&nbsp;Hotéis ski-in/ski-out</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="16" cy="8" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 20c0-2 .8-3.4 2-4"/></svg></span><b>2+1</b>&nbsp;Adultos e criança</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="7" width="14" height="13" rx="2"/><path d="M9 7V4h6v3"/></svg></span><b>1 a 2</b>&nbsp;Malas por pessoa</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><b>Econômica</b>&nbsp;</div>
+    </div>
+  </header>
+
+  <section class="section sh">
+    <span class="eyebrow">Aéreo</span>
+    <h2>Voos</h2>
+    <div class="accent-line"></div>
+    <p class="lede">Opções 1 e 2: ITA Airways em classe econômica, via Roma, com <b>a mesma volta</b> em 14/01 (muda só a ida). Opção 3: TAP em <b>Premium Economy</b> nos voos longos, via Porto e Lisboa. Horários locais de cada aeroporto. Valores totais para os <b>3 passageiros</b> (2 adultos e 1 criança). <b>Escolher 1 opção.</b></p>
+
+    <div class="air">
+      <div class="air-head"><div class="dir">Opção 1 · ITA Airways · ida de dia</div><div class="route">05/01 a 15/01 · chegada a Genebra às 10h45</div></div>
+      <div class="cnx">IDA · terça, 5 de janeiro · conexão de 1h55 em Roma · 15h00 no total</div>
+      <div class="leg"><div class="fl">ITA Airways · AZ 675<b>GRU → FCO</b>São Paulo (Guarulhos) → Roma (Fiumicino)<br>11h20 · Airbus A330-900neo</div><div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">05 jan · 15:45</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">FCO</div><div class="tm">06 jan · 07:05</div></div></div><div class="cls">Econômica · M</div></div>
+      <div class="leg"><div class="fl">ITA Airways · AZ 576<b>FCO → GVA</b>Roma (Fiumicino) → Genebra<br>1h45 · Airbus A320</div><div class="rt"><div class="pt"><div class="code">FCO</div><div class="tm">06 jan · 09:00</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GVA</div><div class="tm">06 jan · 10:45</div></div></div><div class="cls">Econômica · M</div></div>
+      <div class="cnx">VOLTA · quinta, 14 de janeiro · conexão de 8h45 em Roma · 22h50 no total</div>
+      <div class="leg"><div class="fl">ITA Airways · AZ 575<b>GVA → FCO</b>Genebra → Roma (Fiumicino)<br>1h30 · Airbus A320</div><div class="rt"><div class="pt"><div class="code">GVA</div><div class="tm">14 jan · 11:35</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">FCO</div><div class="tm">14 jan · 13:05</div></div></div><div class="cls">Econômica · W</div></div>
+      <div class="leg"><div class="fl">ITA Airways · AZ 674<b>FCO → GRU</b>Roma (Fiumicino) → São Paulo (Guarulhos)<br>12h35 · Airbus A330-900neo</div><div class="rt"><div class="pt"><div class="code">FCO</div><div class="tm">14 jan · 21:50</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">15 jan · 06:25</div></div></div><div class="cls">Econômica · W</div></div>
+      <div class="air-foot"><span class="l">2 adultos + 1 criança · 1 mala despachada por pessoa</span><div class="a"><div class="t">R$ 30.156,91</div><div class="p">total para os 3 passageiros</div></div></div>
+    </div>
+
+    <div class="air">
+      <div class="air-head"><div class="dir">Opção 2 · ITA Airways · ida à noite <span class="tag">Roteiro base</span></div><div class="route">06/01 a 15/01 · chegada a Genebra às 18h05</div></div>
+      <div class="cnx">IDA · quarta, 6 de janeiro · conexão de 4h30 em Roma · 17h25 no total</div>
+      <div class="leg"><div class="fl">ITA Airways · AZ 679<b>GRU → FCO</b>São Paulo (Guarulhos) → Roma (Fiumicino)<br>11h20 · Airbus A330-900neo</div><div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">06 jan · 20:40</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">FCO</div><div class="tm">07 jan · 12:00</div></div></div><div class="cls">Econômica · M</div></div>
+      <div class="leg"><div class="fl">ITA Airways · AZ 578<b>FCO → GVA</b>Roma (Fiumicino) → Genebra<br>1h35 · Airbus A320neo</div><div class="rt"><div class="pt"><div class="code">FCO</div><div class="tm">07 jan · 16:30</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GVA</div><div class="tm">07 jan · 18:05</div></div></div><div class="cls">Econômica · M</div></div>
+      <div class="cnx">VOLTA · quinta, 14 de janeiro · conexão de 8h45 em Roma · 22h50 no total</div>
+      <div class="leg"><div class="fl">ITA Airways · AZ 575<b>GVA → FCO</b>Genebra → Roma (Fiumicino)<br>1h30 · Airbus A320</div><div class="rt"><div class="pt"><div class="code">GVA</div><div class="tm">14 jan · 11:35</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">FCO</div><div class="tm">14 jan · 13:05</div></div></div><div class="cls">Econômica · W</div></div>
+      <div class="leg"><div class="fl">ITA Airways · AZ 674<b>FCO → GRU</b>Roma (Fiumicino) → São Paulo (Guarulhos)<br>12h35 · Airbus A330-900neo</div><div class="rt"><div class="pt"><div class="code">FCO</div><div class="tm">14 jan · 21:50</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">15 jan · 06:25</div></div></div><div class="cls">Econômica · W</div></div>
+      <div class="air-foot"><span class="l">2 adultos + 1 criança · 1 mala despachada por pessoa</span><div class="a"><div class="t">R$ 30.156,91</div><div class="p">total para os 3 passageiros</div></div></div>
+    </div>
+    <div class="air">
+      <div class="air-head"><div class="dir">Opção 3 · TAP Air Portugal · Premium Economy</div><div class="route">09/01 a 17/01 · 2 malas por pessoa</div></div>
+      <div class="cnx">IDA · sábado, 9 de janeiro · conexão de 55 min no Porto · 13h20 no total</div>
+      <div class="leg"><div class="fl">TAP Air Portugal · TP 94<b>GRU → OPO</b>São Paulo (Guarulhos) → Porto<br>10h10 · Airbus A330-900neo</div><div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">09 jan · 22:15</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">OPO</div><div class="tm">10 jan · 11:25</div></div></div><div class="cls">Premium Economy · W</div></div>
+      <div class="leg"><div class="fl">TAP Air Portugal · TP 938<b>OPO → GVA</b>Porto → Genebra<br>2h15 · Airbus A320</div><div class="rt"><div class="pt"><div class="code">OPO</div><div class="tm">10 jan · 12:20</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GVA</div><div class="tm">10 jan · 15:35</div></div></div><div class="cls">Econômica · Y</div></div>
+      <div class="cnx">VOLTA · domingo, 17 de janeiro · conexão de 4h45 em Lisboa · 17h50 no total</div>
+      <div class="leg"><div class="fl">TAP Air Portugal · TP 945<b>GVA → LIS</b>Genebra → Lisboa<br>2h40 · Airbus A321neo</div><div class="rt"><div class="pt"><div class="code">GVA</div><div class="tm">17 jan · 06:05</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">LIS</div><div class="tm">17 jan · 07:45</div></div></div><div class="cls">Econômica · Q</div></div>
+      <div class="leg"><div class="fl">TAP Air Portugal · TP 89<b>LIS → GRU</b>Lisboa → São Paulo (Guarulhos)<br>10h25 · Airbus A330-900neo</div><div class="rt"><div class="pt"><div class="code">LIS</div><div class="tm">17 jan · 12:30</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">17 jan · 19:55</div></div></div><div class="cls">Premium Economy · S</div></div>
+      <div class="air-foot"><span class="l">2 adultos + 1 criança · Premium Economy nos voos longos · 2 malas despachadas por pessoa</span><div class="a"><div class="t">R$ 53.930,65</div><div class="p">total para os 3 passageiros</div></div></div>
+    </div>
+  </section>
+
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Cronograma</span>
+    <h2>Roteiro dia a dia</h2>
+    <div class="accent-line"></div>
+    <p class="lede">Baseado na <b>Opção 2</b> do aéreo e em todos os serviços cotados: 4 noites em Courchevel (07 a 11/01), 2 em Chamonix (11 a 13/01) e 1 em Genebra (13 a 14/01). Dias de deslocamento em destaque.</p>
+    <div class="tbl-wrap"><table style="min-width:0">
+      <tr class="head-row"><td>Dia</td><td>Programa</td></tr>
+      <tr class="pp"><td style="white-space:nowrap"><b>Qua 06/01</b><div class="rm">São Paulo</div></td><td>Embarque em Guarulhos às 20:40 (ITA AZ 679).</td></tr>
+      <tr class="pp"><td style="white-space:nowrap"><b>Qui 07/01</b><div class="rm">Courchevel</div></td><td>Conexão em Roma e chegada a Genebra às 18:05. <b>Traslado privativo às 18:50</b> e chegada a Courchevel por volta das 21:30. Check-in no hotel (4 noites).</td></tr>
+      <tr><td style="white-space:nowrap"><b>Sex 08/01</b><div class="rm">Courchevel</div></td><td>Retirada do equipamento de esqui pela manhã. <b>Esqui · dia 1</b>, com aula (opcional). Fim de tarde no <b>Aquamotion</b> (opcional).</td></tr>
+      <tr><td style="white-space:nowrap"><b>Sáb 09/01</b><div class="rm">Courchevel</div></td><td><b>Esqui · dia 2</b>, com aula (opcional). Fim de tarde com <b>trenó puxado por huskies</b> (opcional).</td></tr>
+      <tr><td style="white-space:nowrap"><b>Dom 10/01</b><div class="rm">Courchevel</div></td><td><b>Esqui · dia 3</b>, com aula (opcional). <b>Voo panorâmico de helicóptero</b> e <b>passeio de snowmobile</b> (opcionais, horários a combinar). Equipamento disponível até a noite.</td></tr>
+      <tr class="pp"><td style="white-space:nowrap"><b>Seg 11/01</b><div class="rm">Chamonix</div></td><td>Devolução do equipamento e check-out. <b>Traslado privativo às 09:30</b>, chegada a Chamonix por volta das 11:30 (2 noites). <b>Patinação no gelo</b> ao ar livre entre 14:00 e 20:00 (opcional).</td></tr>
+      <tr><td style="white-space:nowrap"><b>Ter 12/01</b><div class="rm">Chamonix</div></td><td>Manhã: teleférico da <b>Aiguille du Midi</b> (3.842 m), sujeito ao tempo. Tarde: trem do Montenvers até a <b>Mer de Glace</b> e a <b>gruta de gelo</b> (opcionais).</td></tr>
+      <tr class="pp"><td style="white-space:nowrap"><b>Qua 13/01</b><div class="rm">Genebra</div></td><td>Check-out. <b>Traslado privativo às 10:00</b>, chegada a Genebra por volta das 11:15 (1 noite). Tarde livre: cidade velha, lago e Jet d'Eau.</td></tr>
+      <tr class="pp"><td style="white-space:nowrap"><b>Qui 14/01</b><div class="rm">Retorno</div></td><td>Saída do hotel por volta das 09:00 até o aeroporto (transporte público gratuito para hóspedes). Voo às 11:35 (ITA AZ 575), conexão em Roma e embarque às 21:50 (AZ 674).</td></tr>
+      <tr class="pp"><td style="white-space:nowrap"><b>Sex 15/01</b><div class="rm">São Paulo</div></td><td>Chegada a Guarulhos às 06:25.</td></tr>
+    </table></div>
+  </section>
+
+  <section class="section sh">
+    <span class="eyebrow">Hospedagem</span>
+    <h2>Hotéis</h2>
+    <div class="accent-line"></div>
+    <p class="lede">Todos os hotéis parcelam em até <b>8x</b>. Valores totais para os <b>3 hóspedes</b> (2 adultos e 1 criança), com café da manhã em Courchevel e Chamonix. <b>Escolher 1 hotel em cada cidade.</b></p>
+    <div class="city-block">
+    <div class="city-head"><h3>Courchevel</h3><div class="dates">07 a 11/01 · 4 noites</div></div>
+    <p class="note" style="margin:0 0 14px">Todos os hotéis de Courchevel são <b>ski-in / ski-out</b>: a família sai e volta de esqui direto da porta do hotel, sem depender de transporte até as pistas. Valores totais de 4 noites.</p>
+    <div class="hgrid">
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Ecrin Blanc Resort Courchevel</div><div class="hp"><div class="v">R$ 28.960,00</div><div class="u">total · 4 noites</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 7.240,00 por noite</div>
+        <div class="hr"><b>Quarto:</b> Privilege Cocoon, com acesso ao parque aquático<br><b>Refeição:</b> café da manhã incluso</div>
+        <span class="bf">Ski-in / ski-out</span> <span class="bf">Até 8x</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Hotel Barma Courchevel</div><div class="hp"><div class="v">R$ 21.917,00</div><div class="u">total · 4 noites</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 5.479,25 por noite</div>
+        <div class="hr"><b>Quarto:</b> Quádruplo Luxo<br><b>Refeição:</b> café da manhã incluso</div>
+        <span class="bf">Ski-in / ski-out</span> <span class="bf">Até 8x</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Hôtel Edelweiss</div><div class="hp"><div class="v">R$ 15.476,00</div><div class="u">total · 4 noites</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 3.869,00 por noite</div>
+        <div class="hr"><b>Quarto:</b> Triplo Família, com sacada<br><b>Refeição:</b> café da manhã incluso</div>
+        <span class="bf">Ski-in / ski-out</span> <span class="bf">Até 8x</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">La Maison Les Peupliers</div><div class="hp"><div class="v">R$ 18.920,00</div><div class="u">total · 4 noites</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 4.730,00 por noite</div>
+        <div class="hr"><b>Quarto:</b> Quarto Família<br><b>Refeição:</b> café da manhã incluso</div>
+        <span class="bf">Ski-in / ski-out</span> <span class="bf">Até 8x</span>
+      </div>
+    </div>
+    </div>
+    <div class="city-block">
+    <div class="city-head"><h3>Chamonix</h3><div class="dates">11 a 13/01 · 2 noites</div></div>
+    <p class="note" style="margin:0 0 14px">Hotéis no centro de Chamonix, com <b>spa</b> — ideal para relaxar depois do Montenvers e da Aiguille du Midi. Valores totais de 2 noites.</p>
+    <div class="hgrid">
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Alpina Eclectic Hotel</div><div class="hp"><div class="v">R$ 5.010,00</div><div class="u">total · 2 noites</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 2.505,00 por noite</div>
+        <div class="hr"><b>Quarto:</b> Triplo Superior, com varanda<br><b>Refeição:</b> café da manhã incluso</div>
+        <span class="bf">Spa</span> <span class="bf">Até 8x</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Lykke Hôtel &amp; Spa Chamonix</div><div class="hp"><div class="v">R$ 6.610,00</div><div class="u">total · 2 noites</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 3.305,00 por noite</div>
+        <div class="hr"><b>Quarto:</b> Quádruplo<br><b>Refeição:</b> café da manhã incluso</div>
+        <span class="bf">Spa</span> <span class="bf">Até 8x</span>
+      </div>
+    </div>
+    </div>
+    <div class="city-block">
+    <div class="city-head"><h3>Genebra</h3><div class="dates">13 a 14/01 · 1 noite</div></div>
+    <p class="note" style="margin:0 0 14px">Última noite perto do voo de volta (14/01, 11:35). Tarifas <b>sem café da manhã</b>, pelo horário de saída para o aeroporto. Os hóspedes de hotéis em Genebra recebem cartão de transporte público gratuito, válido também até o aeroporto.</p>
+    <div class="hgrid">
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Hotel Edelweiss Genebra</div><div class="hp"><div class="v">R$ 1.460,00</div><div class="u">total · 1 noite</div></div></div>
+        <div class="hr"><b>Quarto:</b> Quarto Família<br><b>Refeição:</b> sem café da manhã</div>
+        <span class="bf">Centro da cidade</span> <span class="bf">Até 8x</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Hilton Geneva Hotel and Conference Centre</div><div class="hp"><div class="v">R$ 1.767,00</div><div class="u">total · 1 noite</div></div></div>
+        <div class="hr"><b>Quarto:</b> King Deluxe, acomoda os 3<br><b>Refeição:</b> sem café da manhã</div>
+        <span class="bf">Perto do aeroporto</span> <span class="bf">Até 8x</span>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="section sh">
+    <span class="eyebrow">Simulação</span>
+    <h2>E se forem 6 noites em Courchevel?</h2>
+    <div class="accent-line"></div>
+    <p class="lede">Alternativa ao roteiro com Chamonix: <b>6 noites em Courchevel (07 a 13/01)</b> e a última noite em Genebra (13 a 14/01). Mais dias na neve e uma troca de hotel a menos.</p>
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Hotel em Courchevel</td><td class="v">4 noites (07 a 11/01)</td><td class="v">6 noites (07 a 13/01)*</td></tr>
+      <tr><td><b>Ecrin Blanc Resort Courchevel</b><div class="rm">Privilege Cocoon, com acesso ao parque aquático · R$ 7.240,00 por noite</div></td><td class="v">R$ 28.960,00</td><td class="v">R$ 43.440,00</td></tr>
+      <tr><td><b>Hotel Barma Courchevel</b><div class="rm">Quádruplo Luxo · R$ 5.479,25 por noite</div></td><td class="v">R$ 21.917,00</td><td class="v">R$ 32.875,50</td></tr>
+      <tr><td><b>Hôtel Edelweiss</b><div class="rm">Triplo Família, com sacada · R$ 3.869,00 por noite</div></td><td class="v">R$ 15.476,00</td><td class="v">R$ 23.214,00</td></tr>
+      <tr><td><b>La Maison Les Peupliers</b><div class="rm">Quarto Família · R$ 4.730,00 por noite</div></td><td class="v">R$ 18.920,00</td><td class="v">R$ 28.380,00</td></tr>
+    </table></div>
+    <div class="pay">
+      <div class="box">
+        <h4>O que muda nesse cenário</h4>
+        <p>· Sai a hospedagem em Chamonix (11 a 13/01)</p>
+        <p>· Saem os traslados Courchevel → Chamonix e Chamonix → Genebra</p>
+        <p>· Entra o traslado <b>Courchevel → Genebra</b> em 13/01 (estimado em R$ 2.951,61, o mesmo valor do traslado de chegada, que faz o trajeto inverso; saída às 10:00)</p>
+        <p>· Os passeios de Chamonix (Mer de Glace e Aiguille du Midi) passam a ser opcionais, em bate-volta de ~2h por trecho</p>
+      </div>
+      <div class="box">
+        <h4>Como usar mais 2 dias em Courchevel</h4>
+        <p>Até 5 dias de esqui com aula, ou dias livres para o parque aquático, trenó com huskies, pista de trenó, patinação e passeio de raquete na neve.</p>
+        <p class="sm">*Valores de 6 noites calculados pela diária média das 4 noites cotadas. Sujeitos a confirmação de tarifa e disponibilidade pelo hotel.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sh">
+    <span class="eyebrow">Traslados</span>
+    <h2>Traslados privativos</h2>
+    <div class="accent-line"></div>
+    <p class="lede">Traslados privativos com motorista, com horários ajustados ao voo da <b>Opção 2</b> e ao roteiro: 4 noites em Courchevel, 2 em Chamonix e 1 em Genebra.</p>
+    <div class="air">
+      <div class="air-head"><div class="dir">Traslado privativo · Minivan até 6 passageiros</div><div class="route">quinta, 7 de janeiro</div></div>
+      <div class="cnx">Chegada do voo AZ 578 a Genebra às 18:05 · tempo para imigração e bagagens</div>
+      <div class="leg"><div class="fl">Minivan · Standard Service<b>GVA → Courchevel</b>Aeroporto de Genebra → hotel em Courchevel<br>~2h30 de estrada</div><div class="rt"><div class="pt"><div class="code">GVA</div><div class="tm">07 jan · 18:50</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">Courchevel</div><div class="tm">07 jan · ~21:30</div></div></div><div class="cls">Privativo</div></div>
+      <div class="air-foot"><span class="l">2 adultos + 1 criança · até 6 malas médias e 6 pequenas · cancelamento grátis até 24h antes</span><div class="a"><div class="t">R$ 2.951,61</div><div class="p">total do veículo · só ida · PIX R$ 2.656,45</div></div></div>
+    </div>
+    <div class="air">
+      <div class="air-head"><div class="dir">Traslado privativo · Sedan até 3 passageiros</div><div class="route">segunda, 11 de janeiro</div></div>
+      <div class="cnx">Saída de Courchevel após o café da manhã · chegada a Chamonix a tempo do passeio ao Montenvers e à Mer de Glace</div>
+      <div class="leg"><div class="fl">Sedan · Standard Service<b>Courchevel → Chamonix</b>Hotel em Courchevel → hotel em Chamonix<br>~2h de estrada</div><div class="rt"><div class="pt"><div class="code">Courchevel</div><div class="tm">11 jan · 09:30</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">Chamonix</div><div class="tm">11 jan · ~11:30</div></div></div><div class="cls">Privativo</div></div>
+      <div class="air-foot"><span class="l">2 adultos + 1 criança · até 2 malas médias e 3 pequenas · cancelamento grátis até 24h antes</span><div class="a"><div class="t">R$ 3.793,37</div><div class="p">total do veículo · só ida · PIX R$ 3.414,03</div></div></div>
+    </div>
+    <div class="air">
+      <div class="air-head"><div class="dir">Traslado privativo · Minivan até 8 passageiros</div><div class="route">quarta, 13 de janeiro</div></div>
+      <div class="cnx">Saída de Chamonix pela manhã · tarde livre em Genebra</div>
+      <div class="leg"><div class="fl">Minivan · Standard Service<b>Chamonix → Genebra</b>Hotel em Chamonix → hotel em Genebra<br>~1h15 de estrada</div><div class="rt"><div class="pt"><div class="code">Chamonix</div><div class="tm">13 jan · 10:00</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">Genebra</div><div class="tm">13 jan · ~11:15</div></div></div><div class="cls">Privativo</div></div>
+      <div class="air-foot"><span class="l">2 adultos + 1 criança · até 8 malas médias e 8 pequenas · cancelamento grátis até 24h antes</span><div class="a"><div class="t">R$ 1.530,47</div><div class="p">total do veículo · só ida · PIX R$ 1.377,42</div></div></div>
+    </div>
+    <p class="note">Assento infantil (booster) obrigatório na França para menores de 10 anos — solicitado na reserva. No dia 14/01, o trajeto do hotel em Genebra ao aeroporto pode ser feito com o cartão de transporte público gratuito oferecido aos hóspedes dos hotéis da cidade. Com a Opção 1 (chegada às 10:45 de 06/01), o primeiro traslado sai do aeroporto às 11:30.</p>
+  </section>
+
+  <section class="section sh">
+    <span class="eyebrow">Seguro viagem</span>
+    <h2>Assist Card</h2>
+    <div class="accent-line"></div>
+    <p class="lede">Dois planos da Assist Card; o número indica o limite de despesas médicas. Ambos superam a cobertura mínima de € 30.000 exigida para entrada no Espaço Schengen. <b>Escolher 1 plano.</b></p>
+    <div class="hgrid" style="margin-top:22px">
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Assist Card · Plano 60</div><div class="hp"><div class="v">R$ 1.017,18</div><div class="u">total · 3 pessoas</div></div></div>
+        <div class="hr"><b>Cobertura de despesas médicas:</b> € 60.000<br><b>Vigência:</b> durante toda a viagem</div>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Assist Card · Plano 150</div><div class="hp"><div class="v">R$ 1.326,75</div><div class="u">total · 3 pessoas</div></div></div>
+        <div class="hr"><b>Cobertura de despesas médicas:</b> € 150.000<br><b>Vigência:</b> durante toda a viagem</div>
+      </div>
+    </div>
+    <div class="obs" style="margin-top:20px">
+      <h4>O que inclui</h4>
+      <ul class="cols2"><li>Assistência médica</li><li>Despesas médicas e/ou hospitalares no exterior, incluindo COVID-19</li><li>Despesas odontológicas no exterior</li><li>Despesas com medicamentos</li><li>Traslado médico</li><li>Regresso sanitário</li><li>Traslado de corpo</li><li>Regresso de menores e maiores</li><li>Traslado de um familiar</li><li>Hospedagem de acompanhante</li><li>Retorno de acompanhante</li><li>Retorno do segurado</li><li>Prorrogação de estadia</li><li>Retorno antecipado por sinistro grave na residência</li><li>Interrupção de viagem por múltiplos motivos</li><li>Morte acidental em viagem (até 85 anos)</li><li>Invalidez permanente total ou parcial por acidente em viagem (até 85 anos)</li><li>Reembolso por atraso de embarque</li><li>Reembolso por atraso de bagagem</li><li>Localização de bagagens</li><li>Extravio de bagagem Plus</li><li>Assistência em caso de roubo, furto ou extravio de documentos</li><li>Assistência legal por responsabilidade em acidente</li><li>Despesas jurídicas em viagem</li><li>Despesas com fiança e despesas legais em viagem</li></ul>
+    </div>
+  </section>
+
+  <section class="section sh">
+    <span class="eyebrow">Opcionais</span>
+    <h2>Ski pass, equipamentos, aulas e passeios</h2>
+    <div class="accent-line"></div>
+    <p class="lede">Serviços opcionais, contratados à parte. Pagamento em até <b>8x</b> ou via <b>PIX com 10% de desconto</b>.</p>
+    <div class="city-block">
+    <div class="city-head"><h3>Aulas de esqui</h3><div class="dates">08, 09 e 10/01 · 3 dias · escolher 1</div></div>
+    <div class="hgrid">
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Aula de esqui em espanhol</div><div class="hp"><div class="v">R$ 3.936,00</div><div class="u">total · 3 dias</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 3.542,40 no PIX (10% de desconto)</div>
+        <div class="hr">Instrutor que fala espanhol, nos 3 dias de esqui em Courchevel</div>
+        <span class="bf">Opcional</span> <span class="bf">Até 8x</span> <span class="bf">PIX −10%</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Aula de esqui em português</div><div class="hp"><div class="v">R$ 4.810,00</div><div class="u">total · 3 dias</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 4.329,00 no PIX (10% de desconto)</div>
+        <div class="hr">Instrutor que fala português, nos 3 dias de esqui em Courchevel</div>
+        <span class="bf">Opcional</span> <span class="bf">Até 8x</span> <span class="bf">PIX −10%</span>
+      </div>
+    </div>
+    </div>
+    <div class="city-block">
+    <div class="city-head"><h3>Ski pass · Courchevel</h3><div class="dates">2 adultos + 1 criança · escolher conforme o roteiro</div></div>
+    <div class="hgrid">
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">3 dias de esqui · roteiro com Chamonix</div><div class="hp"><div class="v">R$ 5.695,96</div><div class="u">total · família · 3 dias</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 5.126,36 no PIX (10% de desconto)</div>
+        <div class="hr">Passe de 2 dias + passe de 1 dia, para 08, 09 e 10/01. Adulto € 231 · criança (5 a 18 anos) € 189,30.</div>
+        <span class="bf">Até 8x</span> <span class="bf">PIX −10%</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Family Flex 6 dias · se ficarem 6 noites em Courchevel</div><div class="hp"><div class="v">R$ 8.277,63</div><div class="u">total · família · 6 dias</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 7.449,87 no PIX (10% de desconto)</div>
+        <div class="hr">Tarifa família a partir de 3 esquiadores: todos pagam o valor de criança (€ 315,50 por pessoa). Sai mais barato que comprar 5 dias avulsos.</div>
+        <span class="bf">Até 8x</span> <span class="bf">PIX −10%</span>
+      </div>
+    </div>
+    </div>
+    <div class="city-block">
+    <div class="city-head"><h3>Aluguel de equipamentos</h3><div class="dates">2 adultos + 1 criança</div></div>
+    <div class="hgrid">
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Blue Pack · esqui, bota e capacete</div><div class="hp"><div class="v">R$ 1.841,81</div><div class="u">total · família · 3 dias</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 1.657,63 no PIX (10% de desconto)</div>
+        <div class="hr"><b>Período: 08 a 11/01</b> (retirada em 08/01; uso até a noite de 10/01; devolução na manhã de 11/01). Adultos: Blue Pack (€ 79,05 cada) · criança: Junior Blue Pack 7–12 anos (€ 52,50). Equipamento para pistas verdes e azuis, com <b>seguro contra danos e quebra</b> incluso.</div>
+        <span class="bf">Até 8x</span> <span class="bf">PIX −10%</span>
+      </div>
+    </div>
+    </div>
+    <div class="city-block">
+    <div class="city-head"><h3>Passeios em Courchevel</h3><div class="dates">data a combinar</div></div>
+    <div class="hgrid">
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Trenó puxado por cães (huskies)</div><div class="hp"><div class="v">R$ 2.186,38</div><div class="u">total · 3 pessoas</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 1.967,74 no PIX (10% de desconto)</div>
+        <div class="hr">Passeio de trenó conduzido por um musher pela neve de Courchevel. Trenó para 2 pessoas; valor para a família de 3.</div>
+        <span class="bf">Opcional</span> <span class="bf">Até 8x</span> <span class="bf">PIX −10%</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Passeio de snowmobile</div><div class="hp"><div class="v">R$ 9.620,07</div><div class="u">total · 2 snowmobiles</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 8.658,06 no PIX (10% de desconto)</div>
+        <div class="hr">Passeio guiado de moto de neve em Courchevel. 1 snowmobile para cada 2 pessoas: a família de 3 usa 2 veículos (R$ 4.810,04 por snowmobile). Criança de 8 anos pode ir como passageira.</div>
+        <span class="bf">Opcional</span> <span class="bf">Até 8x</span> <span class="bf">PIX −10%</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Voo panorâmico de helicóptero</div><div class="hp"><div class="v">R$ 10.232,26</div><div class="u">total · até 6 pessoas</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 9.209,03 no PIX (10% de desconto)</div>
+        <div class="hr">20 minutos de voo privativo sobre os Alpes. Valor do helicóptero, para até 6 pessoas.</div>
+        <span class="bf">Opcional</span> <span class="bf">Até 8x</span> <span class="bf">PIX −10%</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Aquamotion · Family Pass</div><div class="hp"><div class="v">R$ 603,44</div><div class="u">total · família</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 543,10 no PIX (10% de desconto)</div>
+        <div class="hr">Centro aquático de Courchevel, área aqualúdica. Family Pass com entrada para 2 adultos e até 2 crianças de 5 a 12 anos. Ideal para o fim da tarde, depois do esqui (2h a 3h). <b>Incluso para hóspedes do Ecrin Blanc.</b></div>
+        <span class="bf">Opcional</span> <span class="bf">Até 8x</span> <span class="bf">PIX −10%</span>
+      </div>
+    </div>
+    </div>
+    <div class="city-block">
+    <div class="city-head"><h3>Passeios em Chamonix</h3><div class="dates">11 e 12/01</div></div>
+    <div class="hgrid">
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Patinação no gelo ao ar livre</div><div class="hp"><div class="v">R$ 192,40</div><div class="u">total · 3 pessoas</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 173,16 no PIX (10% de desconto)</div>
+        <div class="hr">Ingresso para a pista de patinação ao ar livre de Chamonix, <b>com aluguel de patins</b>. Segunda, 11/01, das 14:00 às 20:00. Válido por 1 hora. Cancelamento gratuito até 10/01.</div>
+        <span class="bf">Opcional</span> <span class="bf">Até 8x</span> <span class="bf">PIX −10%</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Teleférico da Aiguille du Midi</div><div class="hp"><div class="v">R$ 2.069,19</div><div class="u">total · 3 pessoas</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 1.862,27 no PIX (10% de desconto)</div>
+        <div class="hr">Terça, 12/01, pela manhã. Ida e volta até 3.842 m, com o mirante de vidro <b>Pas dans le Vide</b>. Adulto € 83 · criança (5 a 14 anos) € 70,60. Horário de subida reservado. Estação no centro de Chamonix, a pé dos hotéis.<br><b>Importante:</b> o teleférico fecha com vento forte ou tempo ruim, por isso o dia pode precisar ser trocado. No topo a temperatura chega a <b>−15 °C ou menos</b>: roupa de esqui completa, luvas, gorro e óculos de sol.</div>
+        <span class="bf">Opcional</span> <span class="bf">Até 8x</span> <span class="bf">PIX −10%</span>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><div class="hn">Trem do Montenvers · Mer de Glace e gruta de gelo</div><div class="hp"><div class="v">R$ 1.238,37</div><div class="u">total · 3 pessoas</div></div></div>
+        <div class="hr" style="border-top:0;margin-top:0;padding-top:0">R$ 1.114,53 no PIX (10% de desconto)</div>
+        <div class="hr">Terça, 12/01, à tarde. Bilhete "Voyage Mer de Glace": trem de cremalheira até a geleira, telecabine e <b>gruta de gelo</b>. Adulto € 49,70 · criança (5 a 14 anos) € 42,20. A estação fica ao lado da estação de trem de Chamonix. A descida até a gruta tem centenas de degraus.</div>
+        <span class="bf">Opcional</span> <span class="bf">Até 8x</span> <span class="bf">PIX −10%</span>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Investimento</span>
+    <h2>Resumo de valores</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">*Valores em reais, totais para os 3 passageiros (2 adultos e 1 criança). Escolher 1 voo e 1 hotel. Nada reservado, apenas cotado.</p>
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Opção</td><td>Detalhe</td><td class="v">3 passageiros</td></tr>
+      <tr class="sec-row"><td colspan="3">Aéreo <span>· escolher 1</span></td></tr>
+      <tr><td><b>Opção 1 · ITA Airways · ida de dia</b><div class="rm">Ida 05/01 (chega a Genebra 06/01 às 10:45) · volta 14/01</div></td><td>05/01 a 15/01</td><td class="v">R$ 30.156,91</td></tr>
+      <tr><td><b>Opção 2 · ITA Airways · ida à noite</b><div class="rm">Ida 06/01 (chega a Genebra 07/01 às 18:05) · volta 14/01</div></td><td>06/01 a 15/01</td><td class="v">R$ 30.156,91</td></tr>
+      <tr><td><b>Opção 3 · TAP · Premium Economy</b><div class="rm">Ida 09/01 (chega a Genebra 10/01 às 15:35) · volta 17/01 · 2 malas por pessoa</div></td><td>09/01 a 17/01</td><td class="v">R$ 53.930,65</td></tr>
+      <tr class="sec-row"><td colspan="3">Traslados <span>· privativos</span></td></tr>
+      <tr><td><b>Aeroporto de Genebra → Courchevel</b><div class="rm">Minivan até 6 passageiros · 07/01, saída às 18:50</div></td><td>Só ida · PIX R$ 2.656,45</td><td class="v">R$ 2.951,61</td></tr>
+      <tr><td><b>Courchevel → Chamonix</b><div class="rm">Sedan até 3 passageiros · 11/01, saída às 09:30</div></td><td>Só ida · PIX R$ 3.414,03</td><td class="v">R$ 3.793,37</td></tr>
+      <tr><td><b>Chamonix → Genebra</b><div class="rm">Minivan até 8 passageiros · 13/01, saída às 10:00</div></td><td>Só ida · PIX R$ 1.377,42</td><td class="v">R$ 1.530,47</td></tr>
+      <tr class="sec-row"><td colspan="3">Hospedagem em Courchevel <span>· escolher 1 · 07 a 11/01 · ski-in/ski-out · café da manhã</span></td></tr>
+      <tr><td><b>Ecrin Blanc Resort Courchevel</b><div class="rm">Privilege Cocoon, com acesso ao parque aquático</div></td><td>4 noites · até 8x</td><td class="v">R$ 28.960,00</td></tr>
+      <tr><td><b>Hotel Barma Courchevel</b><div class="rm">Quádruplo Luxo</div></td><td>4 noites · até 8x</td><td class="v">R$ 21.917,00</td></tr>
+      <tr><td><b>Hôtel Edelweiss</b><div class="rm">Triplo Família, com sacada</div></td><td>4 noites · até 8x</td><td class="v">R$ 15.476,00</td></tr>
+      <tr><td><b>La Maison Les Peupliers</b><div class="rm">Quarto Família</div></td><td>4 noites · até 8x</td><td class="v">R$ 18.920,00</td></tr>
+      <tr class="sec-row"><td colspan="3">Hospedagem em Chamonix <span>· escolher 1 · 11 a 13/01 · spa · café da manhã</span></td></tr>
+      <tr><td><b>Alpina Eclectic Hotel</b><div class="rm">Triplo Superior, com varanda</div></td><td>2 noites · até 8x</td><td class="v">R$ 5.010,00</td></tr>
+      <tr><td><b>Lykke Hôtel &amp; Spa Chamonix</b><div class="rm">Quádruplo</div></td><td>2 noites · até 8x</td><td class="v">R$ 6.610,00</td></tr>
+      <tr class="sec-row"><td colspan="3">Hospedagem em Genebra <span>· escolher 1 · 13 a 14/01 · sem café da manhã</span></td></tr>
+      <tr><td><b>Hotel Edelweiss Genebra</b><div class="rm">Quarto Família · centro da cidade</div></td><td>1 noite · até 8x</td><td class="v">R$ 1.460,00</td></tr>
+      <tr><td><b>Hilton Geneva Hotel and Conference Centre</b><div class="rm">King Deluxe (acomoda os 3) · perto do aeroporto</div></td><td>1 noite · até 8x</td><td class="v">R$ 1.767,00</td></tr>
+      <tr class="sec-row"><td colspan="3">Opcionais <span>· aulas de esqui · escolher 1</span></td></tr>
+      <tr><td><b>Aula de esqui em espanhol</b><div class="rm">08, 09 e 10/01 · 3 dias</div></td><td>Até 8x · PIX R$ 3.542,40</td><td class="v">R$ 3.936,00</td></tr>
+      <tr><td><b>Aula de esqui em português</b><div class="rm">08, 09 e 10/01 · 3 dias</div></td><td>Até 8x · PIX R$ 4.329,00</td><td class="v">R$ 4.810,00</td></tr>
+      <tr class="sec-row"><td colspan="3">Seguro viagem <span>· Assist Card · escolher 1</span></td></tr>
+      <tr><td><b>Plano 60</b><div class="rm">Despesas médicas até € 60.000</div></td><td>3 pessoas</td><td class="v">R$ 1.017,18</td></tr>
+      <tr><td><b>Plano 150</b><div class="rm">Despesas médicas até € 150.000</div></td><td>3 pessoas</td><td class="v">R$ 1.326,75</td></tr>
+      <tr class="sec-row"><td colspan="3">Ski pass <span>· conforme o roteiro escolhido</span></td></tr>
+      <tr><td><b>Ski pass 3 dias (2 + 1)</b><div class="rm">Roteiro com Chamonix · 08 a 10/01 · família</div></td><td>Até 8x · PIX R$ 5.126,36</td><td class="v">R$ 5.695,96</td></tr>
+      <tr><td><b>Ski pass Family Flex 6 dias</b><div class="rm">Simulação com 6 noites em Courchevel · família</div></td><td>Até 8x · PIX R$ 7.449,87</td><td class="v">R$ 8.277,63</td></tr>
+      <tr class="sec-row"><td colspan="3">Aluguel de equipamentos <span>· esqui, bota e capacete · seguro contra danos e quebra</span></td></tr>
+      <tr><td><b>Blue Pack (adultos) + Junior Blue Pack (criança)</b><div class="rm">08 a 11/01 · 2 adultos × € 79,05 + 1 criança × € 52,50</div></td><td>Até 8x · PIX R$ 1.657,63</td><td class="v">R$ 1.841,81</td></tr>
+      <tr class="sec-row"><td colspan="3">Opcionais <span>· passeios</span></td></tr>
+      <tr><td><b>Trenó puxado por cães (huskies)</b><div class="rm">Courchevel · valor para os 3</div></td><td>Até 8x · PIX R$ 1.967,74</td><td class="v">R$ 2.186,38</td></tr>
+      <tr><td><b>Passeio de snowmobile</b><div class="rm">Courchevel · 2 snowmobiles para os 3</div></td><td>Até 8x · PIX R$ 8.658,06</td><td class="v">R$ 9.620,07</td></tr>
+      <tr><td><b>Voo panorâmico de helicóptero</b><div class="rm">20 minutos · helicóptero para até 6 pessoas</div></td><td>Até 8x · PIX R$ 9.209,03</td><td class="v">R$ 10.232,26</td></tr>
+      <tr><td><b>Aquamotion · Family Pass</b><div class="rm">2 adultos + 1 criança · incluso para hóspedes do Ecrin Blanc</div></td><td>Até 8x · PIX R$ 543,10</td><td class="v">R$ 603,44</td></tr>
+      <tr><td><b>Patinação no gelo em Chamonix</b><div class="rm">11/01 · 1 hora · com aluguel de patins · 2 adultos + 1 criança</div></td><td>Até 8x · PIX R$ 173,16</td><td class="v">R$ 192,40</td></tr>
+      <tr><td><b>Teleférico da Aiguille du Midi</b><div class="rm">12/01 · ida e volta · 2 adultos + 1 criança</div></td><td>Até 8x · PIX R$ 1.862,27</td><td class="v">R$ 2.069,19</td></tr>
+      <tr><td><b>Trem do Montenvers · Mer de Glace e gruta de gelo</b><div class="rm">12/01 · 2 adultos + 1 criança</div></td><td>Até 8x · PIX R$ 1.114,53</td><td class="v">R$ 1.238,37</td></tr>
+    </table></div>
+    <div class="pay">
+      <div class="box">
+        <h4>Roteiro montado sobre a Opção 2</h4>
+        <p>Ida na noite de 06/01 e volta em 14/01, com <b>7 noites</b>: 4 em Courchevel (07 a 11/01, com 3 dias de esqui), 2 em Chamonix (11 a 13/01) e 1 em Genebra (13 a 14/01), perto do voo de volta às 11:35.</p>
+      </div>
+      <div class="box">
+        <h4>Referência</h4>
+        <p>Cotação emitida em 22/11/2026 · valores em <b>reais (BRL)</b></p>
+        <p class="sm"><b>Câmbio de referência em 23/11/2026:</b> EUR 1 = R$ 6,79 · USD 1 = R$ 6,18. O aéreo é tarifado em reais pela companhia.</p>
+        <p><b>Condições de pagamento</b>: hotéis, traslados, ski pass, equipamentos, aulas e passeios em até <b>8x</b>. PIX com <b>10% de desconto</b> em traslados, ski pass, equipamentos, aulas e passeios (não se aplica a hotéis, aéreo e seguro). Aéreo a confirmar com a LusaTravel no fechamento.</p>
+      </div>
+    </div>
+    <div class="obs">
+      <h4>Não inclui</h4>
+      <ul>
+        <li>Passeios não listados e despesas pessoais</li>
+        <li>Taxa de turismo (city tax), cobrada localmente pelo hotel</li>
+        <li>Marcação de assentos e bagagem além da franquia</li>
+      </ul>
+      <h4>Observações</h4>
+      <ul>
+        <li>Volta (as duas opções): saída de Genebra às 11:35 de 14/01, com conexão de 8h45 em Roma. A bagagem segue despachada até São Paulo.</li>
+        <li>Opção 2: conexão de 4h30 em Roma na ida e chegada a Genebra às 18:05.</li>
+        <li>Opção 3: Premium Economy nos voos São Paulo ⇄ Portugal; os trechos dentro da Europa são em classe econômica. Conexão de 55 min no Porto na ida, com controle de passaporte (bilhete único: em caso de atraso, a companhia reacomoda). Na volta, o voo sai de Genebra às 06:05, o que pede uma última noite próxima ao aeroporto.</li>
+        <li>Recomendamos marcar os assentos juntos no momento da emissão.</li>
+        <li>Tarifas sujeitas a disponibilidade e alteração até a emissão dos bilhetes. Horários sujeitos a alteração pela companhia aérea.</li>
+        <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="brandtext">LUSA TRAVEL</div>
+    <div class="contact">atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR</div>
+    <div class="fnote">*Nada reservado, apenas cotado.</div>
+  </footer>
+</div>
+</body>
+</html>
