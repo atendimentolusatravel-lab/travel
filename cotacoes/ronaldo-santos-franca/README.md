@@ -5,7 +5,7 @@
 - Aéreo: TAP executiva R$ 93.277,16 · Air France executiva R$ 166.062,76 · LATAM Premium Business R$ 175.498,12.
 - Hotéis: Paris 15–19/05 (4) · Saint-Rémy 19–24/05 (3) · Aix 24–28/05 (4) · Saint-Tropez 28/05–01/06 (3) · Nice 01–07/06 (1).
   Datas corrigidas da tabela: Saint-Tropez até 01/06 e Nice a partir de 01/06.
-- Faixa total (4 pessoas): R$ 458.721,16 – 709.597,75 (inclui ingressos da F1). Pagamento: a confirmar.
+- Faixa total (4 pessoas): R$ 464.877,24 – 715.753,83 (inclui carro e ingressos da F1). Pagamento: a confirmar.
 - Sem fotos de hotel (a incluir). **Publicação:** projeto Vercel `cotacao-ronaldo-santos-franca`.
 
 ## Fotos dos hotéis
@@ -18,3 +18,7 @@ com limite de requisições em 23/11/2026. Le Mandala: sem foto de café da manh
 Totais para 4 pessoas, em BRL: Champions Club · Trackside Yacht, sábado e domingo 05–06/06/2027,
 R$ 260.757,00; Senate Grand Prix, domingo 06/06/2027,
 R$ 186.639,00, aguardando confirmação de valor e disponibilidade para sábado.
+
+## Carro (fonte/carro-sixt.png)
+Sixt, VW T-Roc automático, Avignon (centro) 19/05/2027 14:00 → Nice 04/06/2027 10:00, km livre, seguro básico
+com franquia, cancelamento grátis até 17/05/2027 06:00 UTC. BRL 6.156,08 (valor informado pela agência).

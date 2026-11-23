@@ -9,6 +9,9 @@ Fontes (enviadas pela agência em 23/11/2026):
   Datas corrigidas: Saint-Tropez "28/05–01/05" → 28/05–01/06; Nice "01/05–07/06" → 01/06–07/06.
 - fonte/trem-paris-avignon.png: TGV INOUI 6107 Paris Gare de Lyon → Avignon TGV, 19/05 09:38–12:18, 4 passageiros,
   bilhete R$ 974,64 + upgrade de classe x4 R$ 1.210,92 = R$ 2.185,56.
+- fonte/carro-sixt.png: locação Sixt, VW T-Roc automático (5 lugares, 5 portas, 4 malas, ar), retirada em Avignon
+  (loja no centro) 19/05/2027 14:00, devolução em Nice 04/06/2027 10:00, km livre, tanque cheio/cheio, seguro básico
+  com franquia, cancelamento grátis até 17/05/2027 06:00 UTC. Valor BRL 6.156,08 (informado pela agência).
 - fonte/f1-monaco.png: ingressos do GP de Mônaco, totais para 4 pessoas em BRL:
   Champions Club · Trackside Yacht (fornecedor oficial da F1), sábado e domingo 05–06/06/2027, R$ 260.757,00; Senate Grand Prix, domingo 06/06/2027, R$ 186.639,00, aguardando
   confirmação de valor e disponibilidade para sábado.
@@ -212,6 +215,7 @@ hoteis = "\n".join(
     </div>''' for cid, datas, n, hs in HOTEIS)
 
 TREM = 2185.56
+CARRO = 6156.08
 F1 = [
     dict(nome="Champions Club · Trackside Yacht", forn="Champions Club · fornecedor oficial da Fórmula 1", dias="sábado e domingo", datas="05 e 06/06/2027",
          desc="Ingressos para assistir ao GP de Mônaco a bordo de um iate ancorado à beira da pista", valor=260757.00, pend=""),
@@ -222,10 +226,10 @@ F1 = [
 FMIN, FMAX = min(f["valor"] for f in F1), max(f["valor"] for f in F1)
 ESTADAS = [
     ("4", "Paris", "15 a 19/05", "Chegada em 15/05, conforme o voo escolhido."),
-    ("5", "Saint-Rémy", "19 a 24/05", "TGV de Paris a Avignon em 19/05 e cerca de 25 minutos até Saint-Rémy."),
+    ("5", "Saint-Rémy", "19 a 24/05", "TGV de Paris a Avignon em 19/05. Carro alugado retirado em Avignon às 14h, cerca de 25 minutos até Saint-Rémy."),
     ("4", "Aix-en-Provence", "24 a 28/05", "Cerca de 1 hora de Saint-Rémy."),
     ("4", "Saint-Tropez", "28/05 a 01/06", "Cerca de 1h45 de Aix."),
-    ("6", "Nice", "01 a 07/06", "Base para a Riviera. GP de Mônaco em 05 e 06/06, a cerca de 30 minutos."),
+    ("6", "Nice", "01 a 07/06", "Base para a Riviera. Carro devolvido em Nice em 04/06. GP de Mônaco em 05 e 06/06, a cerca de 30 minutos."),
 ]
 estadas = "\n".join(
     f'      <div class="st"><div class="n">{n}<span>noites</span></div><div class="c">{c}</div><div class="d">{d}</div><p>{p}</p></div>'
@@ -234,8 +238,8 @@ estadas = "\n".join(
 AMIN, AMAX = min(o["total"] for o in AEREOS), max(o["total"] for o in AEREOS)
 HMIN = round(sum(min(h[3] for h in hs) for *_, hs in HOTEIS), 2)
 HMAX = round(sum(max(h[3] for h in hs) for *_, hs in HOTEIS), 2)
-TMIN, TMAX = round(AMIN + HMIN + TREM + FMIN, 2), round(AMAX + HMAX + TREM + FMAX, 2)
-assert (HMIN, HMAX, TMIN, TMAX) == (176619.44, 271157.07, 458721.16, 709597.75)
+TMIN, TMAX = round(AMIN + HMIN + TREM + CARRO + FMIN, 2), round(AMAX + HMAX + TREM + CARRO + FMAX, 2)
+assert (HMIN, HMAX, TMIN, TMAX) == (176619.44, 271157.07, 464877.24, 715753.83)
 
 rows = []
 rows.append('      <tr class="sec-row"><td colspan="2">Aéreo <span>· escolher 1</span></td></tr>')
@@ -246,8 +250,9 @@ for cid, datas, n, hs in HOTEIS:
     rows.append(f'      <tr class="sec-row"><td colspan="2">Hospedagem em {cid} <span>· {n} noites{esc}</span></td></tr>')
     for nome, quartos, regime, valor in hs:
         rows.append(f'      <tr><td><b>{nome}</b><div class="rm">{quartos}{(" · " + regime) if regime else ""}</div></td><td class="v">{brl(valor)}</td></tr>')
-rows.append('      <tr class="sec-row"><td colspan="2">Trem</td></tr>')
+rows.append('      <tr class="sec-row"><td colspan="2">Transporte</td></tr>')
 rows.append(f'      <tr><td><b>TGV Paris → Avignon · 19/05</b><div class="rm">TGV INOUI 6107 · 4 passageiros · com upgrade de classe</div></td><td class="v">{brl(TREM)}</td></tr>')
+rows.append(f'      <tr><td><b>Carro Sixt · Avignon → Nice · 19/05 a 04/06</b><div class="rm">VW T-Roc automático ou similar · km livre · seguro básico com franquia</div></td><td class="v">{brl(CARRO)}</td></tr>')
 rows.append('      <tr class="sec-row"><td colspan="2">Fórmula 1 · GP de Mônaco <span>· escolher 1</span></td></tr>')
 for f in F1:
     extra = " · valor e sábado a confirmar" if f["pend"] else ""
@@ -309,7 +314,7 @@ html = f"""<!DOCTYPE html>
     <div class="hero-info">
       <div>
         <div class="lbl">Detalhes da viagem</div>
-        <p>4 viajantes · aéreo em classe executiva ou Premium Business (3 opções) · hotéis em 5 cidades, 2 quartos · trem Paris → Avignon · ingressos para o GP de Mônaco de F1</p>
+        <p>4 viajantes · aéreo em classe executiva ou Premium Business (3 opções) · hotéis em 5 cidades, 2 quartos · trem Paris → Avignon · carro alugado de Avignon a Nice · ingressos para o GP de Mônaco de F1</p>
         <p class="muted" style="margin-top:8px;font-size:.86rem">Cotação emitida em <b>{EMISSAO}</b> · valores em <b>BRL</b>, totais para as <b>4 pessoas</b></p>
       </div>
       <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
@@ -348,15 +353,21 @@ html = f"""<!DOCTYPE html>
 
   <section class="section sh" style="background:var(--cream)">
     <span class="eyebrow">Transporte</span>
-    <h2>Trem Paris → Avignon</h2>
+    <h2>Trem e carro</h2>
     <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">Valor para os 4 passageiros, com upgrade de classe.</p>
+    <p class="note" style="margin-top:16px">De Paris a Avignon de TGV e, de Avignon a Nice, carro alugado. Valores em <b>BRL</b>, totais para as 4 pessoas.</p>
     <div class="air">
       <div class="air-head"><div class="dir">TGV INOUI 6107 · quarta, 19 de maio</div><div class="route">Paris → Avignon</div></div>
       <div class="leg"><div class="fl">SNCF · TGV INOUI 6107<b>Paris Gare de Lyon → Avignon TGV</b>trem direto · 2h40</div><div class="rt"><div class="pt"><div class="code">PARIS</div><div class="tm">19 mai · 09:38</div></div>{ARROW}<div class="pt"><div class="code">AVIGNON</div><div class="tm">19 mai · 12:18</div></div></div><div class="cls">com upgrade<br>de classe</div></div>
       <div class="air-foot"><span class="l">4 passageiros · bilhetes R$ 974,64 + upgrade de classe R$ 1.210,92</span><div class="a"><div class="t">{brl(TREM)}</div><div class="p">total para 4 passageiros</div></div></div>
     </div>
-    <p class="note">De Avignon a Saint-Rémy são cerca de 25 minutos de carro. O transporte entre as cidades da Provence e da Côte d'Azur (carro alugado ou traslados) ainda não está cotado.</p>
+    <div class="air">
+      <div class="air-head"><div class="dir">Locação de carro · 16 dias</div><div class="route">Avignon → Nice</div></div>
+      <div class="leg"><div class="fl">Sixt · VW T-Roc ou similar<b>Automático · 5 lugares · 5 portas · 4 malas · ar-condicionado</b>quilometragem livre · tanque cheio/cheio</div><div class="rt"><div class="pt"><div class="code">AVIGNON</div><div class="tm">qua, 19 mai · 14:00</div></div>{ARROW}<div class="pt"><div class="code">NICE</div><div class="tm">sex, 04 jun · 10:00</div></div></div><div class="cls">retirada e devolução<br>em lojas no centro</div></div>
+      <div class="pend" style="margin-top:14px">Seguro básico com franquia. <b>Cancelamento grátis</b> até 17/05/2027, às 03:00 (horário de Brasília).</div>
+      <div class="air-foot"><span class="l">Retirada em Avignon e devolução em Nice</span><div class="a"><div class="t">{brl(CARRO)}</div><div class="p">total da locação</div></div></div>
+    </div>
+    <p class="note">O trem chega à estação Avignon TGV às 12:18 e a retirada do carro é às 14:00 na loja da Sixt no centro de Avignon, a cerca de 10 a 15 minutos de táxi. Com o carro, a família segue para Saint-Rémy, Aix-en-Provence, Saint-Tropez e Nice e o devolve em 04/06, antes dos dias do GP.</p>
   </section>
 
 
@@ -377,7 +388,7 @@ html = f"""<!DOCTYPE html>
       <tr class="head-row"><td>Item</td><td class="v">Valor</td></tr>
 {rows}
     </table></div>
-    <p class="note">Como é calculado: o menor valor soma a opção de aéreo mais barata, o hotel mais barato de cada cidade, o trem e o ingresso de F1 mais barato (Senate, só domingo); o maior, a opção de aéreo, os hotéis e o ingresso de F1 mais caros.</p>
+    <p class="note">Como é calculado: o menor valor soma a opção de aéreo mais barata, o hotel mais barato de cada cidade, o trem, o carro e o ingresso de F1 mais barato (Senate, só domingo); o maior, a opção de aéreo, os hotéis e o ingresso de F1 mais caros, mais o trem e o carro.</p>
     <div class="pay">
       <div class="box">
         <h4>Condições de pagamento</h4>
@@ -392,7 +403,7 @@ html = f"""<!DOCTYPE html>
     <div class="obs">
       <h4>Não inclui</h4>
       <ul>
-        <li>Transporte entre as cidades depois de Avignon e traslados de aeroporto</li>
+        <li>Traslados de aeroporto e da estação Avignon TGV até a loja da Sixt; combustível, pedágios e estacionamentos</li>
         <li>Passeios e ingressos não mencionados, e o transporte até Mônaco nos dias do GP</li>
         <li>Taxas de turismo cobradas pelos hotéis e refeições não mencionadas</li>
         <li>Seguro viagem</li>
