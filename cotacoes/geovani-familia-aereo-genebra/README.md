@@ -22,3 +22,4 @@
 - **Atualização:** Alpina Eclectic R$ 5.010,00 · Lykke R$ 6.610,00 (2 noites).
 - **Opcionais (até 8x ou PIX −10%):** aula de esqui em espanhol R$ 3.936,00 (PIX R$ 3.542,40) · em português R$ 4.810,00 (PIX R$ 4.329,00), 3 dias (08–10/01).
 - **Passeio:** trenó com huskies (courchevel.com/en/a/dog-sledding-5063254), EUR 250 para os 3 × 6,79 + 15% + 12% = R$ 2.186,38 (PIX R$ 1.967,74). Câmbio exibido: EUR 6,79 · USD 6,18 (23/11). Traslados seguem calculados a 6,47.
+- **Passeio:** snowmobile (courchevel-activities.com/tours/snowmobiling-courchevel), EUR 550 por snowmobile, 1 para cada 2 → 2 para os 3 = EUR 1.100 × 6,79 + 15% + 12% = R$ 9.620,07 (PIX R$ 8.658,06).
