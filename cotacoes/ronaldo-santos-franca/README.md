@@ -7,3 +7,9 @@
   Datas corrigidas da tabela: Saint-Tropez até 01/06 e Nice a partir de 01/06.
 - Faixa total (4 pessoas): R$ 272.082,16 – 448.840,75. Pagamento: a confirmar.
 - Sem fotos de hotel (a incluir). **Publicação:** projeto Vercel `cotacao-ronaldo-santos-franca`.
+
+## Fotos dos hotéis
+6 por hotel, oficiais da Booking.com, em `fotos/escolha.json` (ordem: fachada, quarto, banheiro,
+café da manhã e duas livres). Escolhidas por classificação automática (CLIP) na sandbox:
+`fotos/sites.js` (galeria), `fotos/escolha.py` e `fotos/complemento.py`. O Tripadvisor estava
+com limite de requisições em 23/11/2026. Le Mandala: sem foto de café da manhã (tarifa sem café).
