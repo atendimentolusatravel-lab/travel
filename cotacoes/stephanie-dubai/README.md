@@ -12,3 +12,4 @@
 ```
 python3 build.py
 ```
+- Fotos: fachada do Tripadvisor + 5 fotos oficiais da Booking.com (500 px, sem legenda, ordem não confirmada).
