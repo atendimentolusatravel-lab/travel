@@ -34,3 +34,4 @@
 - **Passeio:** excursão guiada 12/01 08:30 (Aiguille du Midi + Montenvers/Mer de Glace + gruta), GetYourGuide R$ 4.718,79 + 15% + 12% = R$ 6.077,80 (PIX R$ 5.470,02). Cronograma 11/01 e 12/01 ajustado.
 - **Ajustes:** PIX −10% em todos os serviços com regra 15%+12% (não hotéis, aéreo e seguro) · seguro é valor total para os 3 · equipamento 08–11/01 (cotação original 06–10; reconfirmar valor) · cronograma alinhado a todos os serviços cotados.
 - **Chamonix (ingressos avulsos, substituem a excursão):** Aiguille du Midi 2×€83 + €70,60 = €236,60 → R$ 2.069,19 (PIX R$ 1.862,27) · Montenvers Voyage Mer de Glace 2×€49,70 + €42,20 = €141,60 → R$ 1.238,37 (PIX R$ 1.114,53). Tarifas públicas 2026 (Office de Tourisme / Haute-Savoie Tourisme); Aiguille com preço dinâmico.
+- **Equipamento ajustado a 3 dias (08–11/01):** valor de 5 dias ÷ 5 × 3 → adulto €79,05 ×2 + criança €52,50 = €210,60 → R$ 1.841,81 (PIX R$ 1.657,63).
