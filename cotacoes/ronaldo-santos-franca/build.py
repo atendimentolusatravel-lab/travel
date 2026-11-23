@@ -10,8 +10,7 @@ Fontes (enviadas pela agência em 23/11/2026):
 - fonte/trem-paris-avignon.png: TGV INOUI 6107 Paris Gare de Lyon → Avignon TGV, 19/05 09:38–12:18, 4 passageiros,
   bilhete R$ 974,64 + upgrade de classe x4 R$ 1.210,92 = R$ 2.185,56.
 - fonte/f1-monaco.png: ingressos do GP de Mônaco, totais para 4 pessoas em BRL:
-  Champions Club · Trackside Yacht (fornecedor oficial da F1), sábado e domingo 05–06/06/2027, "R$ 260.7567,00" na tabela,
-  lido como R$ 260.756,70 (a confirmar com a agência); Senate Grand Prix, domingo 06/06/2027, R$ 186.639,00, aguardando
+  Champions Club · Trackside Yacht (fornecedor oficial da F1), sábado e domingo 05–06/06/2027, R$ 260.757,00; Senate Grand Prix, domingo 06/06/2027, R$ 186.639,00, aguardando
   confirmação de valor e disponibilidade para sábado.
 Durações dos voos conferidas pelos fusos (MAO −4, BRT −3, LIS +1, Paris/Nice/Madri +2 em maio–junho).
 """
@@ -215,7 +214,7 @@ hoteis = "\n".join(
 TREM = 2185.56
 F1 = [
     dict(nome="Champions Club · Trackside Yacht", forn="Champions Club · fornecedor oficial da Fórmula 1", dias="sábado e domingo", datas="05 e 06/06/2027",
-         desc="Ingressos para assistir ao GP de Mônaco a bordo de um iate ancorado à beira da pista", valor=260756.70, pend=""),
+         desc="Ingressos para assistir ao GP de Mônaco a bordo de um iate ancorado à beira da pista", valor=260757.00, pend=""),
     dict(nome="Senate Grand Prix", forn="Senate Grand Prix", dias="domingo", datas="06/06/2027",
          desc="Ingresso para o dia da corrida", valor=186639.00,
          pend="Aguardando a Senate Grand Prix confirmar o valor e a disponibilidade de ingresso também para sábado."),
@@ -236,7 +235,7 @@ AMIN, AMAX = min(o["total"] for o in AEREOS), max(o["total"] for o in AEREOS)
 HMIN = round(sum(min(h[3] for h in hs) for *_, hs in HOTEIS), 2)
 HMAX = round(sum(max(h[3] for h in hs) for *_, hs in HOTEIS), 2)
 TMIN, TMAX = round(AMIN + HMIN + TREM + FMIN, 2), round(AMAX + HMAX + TREM + FMAX, 2)
-assert (HMIN, HMAX, TMIN, TMAX) == (176619.44, 271157.07, 458721.16, 709597.45)
+assert (HMIN, HMAX, TMIN, TMAX) == (176619.44, 271157.07, 458721.16, 709597.75)
 
 rows = []
 rows.append('      <tr class="sec-row"><td colspan="2">Aéreo <span>· escolher 1</span></td></tr>')
