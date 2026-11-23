@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Gera src/index.html — cotação de aéreo (v4) · Milton Santoro · 2 adultos, valores por pessoa · dezembro de 2026.
 
-Fontes (telas de 24/11/2026, valores totais para 2 pessoas; a página mostra por pessoa):
+Fontes (telas de 23/11/2026, valores totais para 2 pessoas; a página mostra por pessoa):
 - fonte/qatar-internacional.webp: QR 5149 CWB→GRU 08/12 05:00 · QR 786 GRU→DOH · QR 1248 DOH→JED 09/12 15:30 ·
   volta QR 773 DOH→GRU 20/12 07:50 · LA 4568 GRU→CWB 19:50 · R$ 29.221,58 / USD 4.962,14
 - fonte/saudia-jed-rsi.webp: SV 1567 JED→RSI (Red Sea International) 12/12 13:10–14:30 · 1 mala · R$ 2.452,70 / USD 416,50
@@ -36,7 +36,7 @@ CSS = (ROOT / "style.part.html").read_text().replace(
     "@media(max-width:900px){.tl2{grid-template-columns:1fr 1fr}}\n@media(max-width:520px){.tl2{grid-template-columns:1fr}}\n</style>")
 
 PAX = 2
-EMISSAO = "24/11/2026"
+EMISSAO = "23/11/2026"
 CAPA = dict(
     url="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Madinat_Jumeirah-Dubai3303.JPG/1920px-Madinat_Jumeirah-Dubai3303.JPG",
     alt="Madinat Jumeirah e o Burj Al Arab, em Dubai",
