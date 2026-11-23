@@ -29,3 +29,4 @@
 - **Traslados recalculados a EUR 6,79 (+15% +12%):** GVA → Courchevel R$ 2.951,61 (07/01 18:50) · Courchevel → Chamonix R$ 3.793,37 (11/01 09:30) · Chamonix → Genebra R$ 1.530,47 (13/01 10:00). Cronograma dia a dia incluído na página.
 - **Confirmações (23/11):** Hilton King Deluxe acomoda 3 · sedan mantido · snowmobile aceita criança de 8 anos como passageira · Barma e Edelweiss ski-in/ski-out · PIX −10% vale para traslados, ski pass, aulas e passeios (não para hotéis e aéreo).
 - **Seguro Assist Card:** Plano 60 (USD 172,70 / R$ 1.017,18) · Plano 150 (USD 225,25 / R$ 1.326,75). Coberturas listadas a partir dos prints. Confirmar: valor por pessoa ou total, e cobertura de esportes de inverno.
+- **Aluguel de equipamentos:** Blue Pack adulto €131,75 ×2 + Junior Blue Pack 7–12 €87,50 = €351 × 6,79 + 15% + 12% = R$ 3.069,68 (PIX R$ 2.762,71). Inclui bota, capacete e seguro contra danos/quebra. Cotação do fornecedor para 06 a 10/01 (esqui do roteiro: 08 a 10/01).
