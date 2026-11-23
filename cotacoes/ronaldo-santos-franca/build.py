@@ -11,7 +11,9 @@ Fontes (enviadas pela agência em 23/11/2026):
   bilhete R$ 974,64 + upgrade de classe x4 R$ 1.210,92 = R$ 2.185,56.
 Durações dos voos conferidas pelos fusos (MAO −4, BRT −3, LIS +1, Paris/Nice/Madri +2 em maio–junho).
 """
+import json
 import pathlib
+from html import escape as html_escape
 
 ROOT = pathlib.Path(__file__).parent
 CSS = (ROOT / "style.part.html").read_text().replace(
@@ -171,12 +173,29 @@ assert sum(n for _, _, n, _ in HOTEIS) == 23
 BLDG = '<span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span>'
 
 
+BKID = {"Hôtel Pont Royal": "24290", "Hôtel du Louvre, in The Unbound Collection by Hyatt": "54649", "Hotel Regina Louvre": "177304",
+        "Hotel Square Louvois": "1893845", "Le Vallon de Valrugues Hotel Spa & Villas": "53286", "Le Château des Alpilles": "22885",
+        "Domaine de Manville": "814405", "Château de la Gaude · Relais & Châteaux": "5139194", "Renaissance Aix-en-Provence (Marriott)": "576899",
+        "Villa Saint-Ange": "5004408", "Le Pigonnet": "53562", "Hôtel Le Mouillage": "713644", "Hotel Le Mandala": "2581679",
+        "Lou Cagnard": "8404353", "Radisson Blu Hotel, Nice": "58059"}
+FOTOS = json.loads((ROOT / "fotos" / "escolha.json").read_text()) if (ROOT / "fotos" / "escolha.json").exists() else {}
+
+
+def galeria(nome):
+    fotos = FOTOS.get(BKID[nome], {}).get("fotos", [])[:6]
+    if not fotos:
+        return ""
+    alt = html_escape(nome)
+    return ('<div class="hgal">' + "".join(
+        f'<img src="{html_escape(u)}" alt="{alt}" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display=\'none\'">' for u in fotos) + '</div>')
+
+
 def hotel(nome, quartos, regime, valor, noites):
     reg = f" · {regime}" if regime else ""
     bf = '<span class="bf">Café da manhã</span>' if regime.startswith("café") else ('<span class="bf">Meia pensão</span>' if regime.startswith("meia") else "")
     return (f'        <div class="hotel"><div class="hotel-top"><div class="hotel-name">{BLDG}<span>{nome}</span></div>'
             f'<div class="hotel-price"><div class="v">{brl(valor)}</div><div class="u">{noites} noites</div></div></div>'
-            f'<div class="hotel-room"><b>{quartos}</b>{reg}</div>{bf}</div>')
+            f'{galeria(nome)}<div class="hotel-room"><b>{quartos}</b>{reg}</div>{bf}</div>')
 
 
 hoteis = "\n".join(
