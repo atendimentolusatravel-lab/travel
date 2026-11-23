@@ -27,3 +27,4 @@
 - **Passeio:** Aquamotion Family Pass (2 adultos + 2 crianças 5–12), EUR 69 × 6,79 + 15% + 12% = R$ 603,44 (PIX R$ 543,10). Incluso para hóspedes do Ecrin Blanc (Booking).
 - **Ski pass Courchevel:** 3 dias (2+1) = 2×€231 + €189,30 = €651,30 → R$ 5.695,96 (PIX R$ 5.126,36) · Family Flex 6 dias = 3×€315,50 = €946,50 → R$ 8.277,63 (PIX R$ 7.449,87). Câmbio 6,79 + 15% + 12%.
 - **Traslados recalculados a EUR 6,79 (+15% +12%):** GVA → Courchevel R$ 2.951,61 (07/01 18:50) · Courchevel → Chamonix R$ 3.793,37 (11/01 09:30) · Chamonix → Genebra R$ 1.530,47 (13/01 10:00). Cronograma dia a dia incluído na página.
+- **Confirmações (23/11):** Hilton King Deluxe acomoda 3 · sedan mantido · snowmobile aceita criança de 8 anos como passageira · Barma e Edelweiss ski-in/ski-out · PIX −10% vale para traslados, ski pass, aulas e passeios (não para hotéis e aéreo).
