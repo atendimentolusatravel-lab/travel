@@ -42,14 +42,19 @@ const SITES = {
           document.querySelectorAll('[style*="background"]').forEach(el => {
             const m = (el.getAttribute('style') || '').match(/url\(["']?([^"')]+)/); if (m) r.push({ u: new URL(m[1], location.href).href, w: 0, h: 0, alt: 'bg' });
           });
+          const seen = new Set();
+          for (const m of document.documentElement.innerHTML.matchAll(/https:\/\/[a-z-]+\.bstatic\.com\/xdata\/images\/hotel\/(?:max1024x768|max1280x900|max500)\/(\d+)\.jpg\?k=[0-9a-f]+/g)) {
+            if (seen.has(m[1])) continue; seen.add(m[1]);
+            r.push({ u: m[0].replace(/max500|max1280x900/, 'max1024x768') + '&o=', w: 0, h: 0, alt: 'booking-galeria' });
+          }
           return r;
         });
-        const big = imgs.filter(x => /^https?:/.test(x.u) && !/logo|icon|sprite|picto|award|badge|avatar|map/i.test(x.u) && (x.w === 0 || x.w >= 700));
+        const big = imgs.filter(x => /^https?:/.test(x.u) && !/logo|icon|sprite|picto|award|badge|avatar|map|xphoto|bing\.com|facebook|google/i.test(x.u) && (x.w === 0 || x.w >= 700));
         console.error(hid, url, 'total', imgs.length, 'grandes', big.length, 'título', (await page.title()).slice(0, 60));
         out[hid].push(...big.map(x => ({ ...x, page: url })));
       } catch (e) { console.error(hid, url, 'ERR', String(e).slice(0, 120)); }
       await page.close();
-      if (out[hid].length >= 12) break;
+      if (out[hid].length >= 15) break;
     }
   }
   fs.writeFileSync('/tmp/site_urls.json', JSON.stringify(out));
