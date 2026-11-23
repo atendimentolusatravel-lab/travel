@@ -3,7 +3,7 @@
 
 Fonte: fonte/original.html = https://cotacao-geovani-familia.vercel.app (projeto cotacao-geovani-familia-aereo-genebra),
 lida em 23/11/2026. O conteúdo e os valores são mantidos; o build só ajusta a página ao padrão:
-- logos (cabeçalho e rodapé) e foto de capa (Wikimedia Commons, Florian Pépellin, CC BY-SA 4.0);
+- logos (cabeçalho e rodapé) e foto de capa (Wikimedia Commons: panorama do Mont Blanc, Nicolas Sanchez/Digon3, CC BY-SA 3.0, imagem destacada);
 - ordem das seções do padrão: aéreo → hotéis → traslados → opcionais → seguro → roteiro → simulação → resumo;
 - aéreo com destaque para as companhias e as classes (faixa por opção, selo da companhia e da classe em cada voo);
 - 6 fotos por hotel (fotos.json, links do Tripadvisor escolhidos pela legenda; ver README para o que faltou).
@@ -49,8 +49,8 @@ t = t[:i_st] + t[i_st:].replace("</style>", """
 t = one('<div class="brandbar"><div class="brandtext">LUSA TRAVEL</div></div>',
         '<div class="brandbar"><img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel" '
         'onerror="this.outerHTML=\'<div class=brandtext>LUSA TRAVEL</div>\'"></div>', t)
-CAPA = dict(url="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/T%C3%A9l%C3%A9cabine_Chenus_et_Front_de_neige_de_Courchevel_%28d%C3%A9cembre_2019%29.JPG/1920px-T%C3%A9l%C3%A9cabine_Chenus_et_Front_de_neige_de_Courchevel_%28d%C3%A9cembre_2019%29.JPG",
-            credito="Foto da capa: Florian Pépellin, CC BY-SA 4.0, via Wikimedia Commons")
+CAPA = dict(url="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/PanoMontBlancHDR_edit_1.jpg/3840px-PanoMontBlancHDR_edit_1.jpg",
+            credito="Foto da capa: Nicolas Sanchez (edição de Digon3), CC BY-SA 3.0, via Wikimedia Commons")
 t = one('''  <footer class="footer">
     <div class="brandtext">LUSA TRAVEL</div>''', '''  <footer class="footer">
     <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'">''', t)
@@ -61,9 +61,9 @@ t = one('<div class="fnote">*Nada reservado, apenas cotado.</div>',
 i = t.index('<div class="hero-img"')
 j = t.index('</svg>', i) + len('</svg>')
 t = t[:i] + ('<div class="hero-img">\n      <img class="capa" src="' + CAPA["url"] +
-             '" alt="Courchevel 1850: frente de neige e a telecabine Chenus" onerror="this.style.display=\'none\'">') + t[j:]
+             '" alt="O Mont Blanc visto da Aiguille du Midi, em Chamonix" onerror="this.style.display=\'none\'">') + t[j:]
 t = one('<div class="cap">São Paulo ⇄ Genebra · porta de entrada dos Alpes</div>',
-        '<div class="cap"><div class="k">Rota da viagem</div><div class="t">São Paulo → Genebra → Courchevel → Chamonix → Genebra → São Paulo</div></div>', t)
+        '<div class="cap"><div class="k">Mont Blanc, visto da Aiguille du Midi · rota da viagem</div><div class="t">São Paulo → Genebra → Courchevel → Chamonix → Genebra → São Paulo</div></div>', t)
 
 # ---------- aéreo: companhias e classes em destaque ----------
 COR = {"ITA Airways": "#0b3a8c", "TAP Air Portugal": "#c8102e"}
