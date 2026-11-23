@@ -46,7 +46,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .goldbar{ height:2.6mm; background:var(--gold); flex-shrink:0; }
 
 /* ── Bloco do cliente ── */
-.client{ padding:9mm 20mm 7mm; display:flex; justify-content:space-between; align-items:flex-end; gap:10mm;
+.client{ padding:7.5mm 20mm 6mm; display:flex; justify-content:space-between; align-items:flex-end; gap:10mm;
   border-bottom:1px solid var(--line); }
 .kicker{ font-size:8pt; letter-spacing:.22em; text-transform:uppercase; color:var(--mut); font-weight:600; }
 .cname{ font-size:30pt; font-weight:800; color:var(--ink); text-transform:uppercase; letter-spacing:.01em; line-height:1.08; margin-top:1.5mm; }
@@ -59,13 +59,13 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .body{ padding:4mm 20mm 0; flex:1; display:flex; flex-direction:column; }
 
 /* ── Grupo de cabine ── */
-.group{ display:flex; align-items:center; gap:4mm; margin:4mm 0 3.5mm; }
+.group{ display:flex; align-items:center; gap:4mm; margin:3.5mm 0 3mm; }
 .group h2{ font-size:10.5pt; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--green); white-space:nowrap; }
 .group .rule{ flex:1; height:1px; background:var(--line); }
 .group .hint{ font-size:8.5pt; color:var(--mut); white-space:nowrap; }
 
 /* ── Cartão de opção ── */
-.opt{ display:grid; grid-template-columns:1fr 62mm; border:1px solid var(--line); border-radius:2.2mm; overflow:hidden; margin-bottom:3.5mm; break-inside:avoid; }
+.opt{ display:grid; grid-template-columns:1fr 70mm; border:1px solid var(--line); border-radius:2.2mm; overflow:hidden; margin-bottom:3.5mm; break-inside:avoid; }
 .opt.star{ border-color:var(--gold); box-shadow:0 0 0 .5mm var(--gold) inset; }
 .opt-main{ padding:4.5mm 7mm 4.5mm; }
 .opt-top{ display:flex; align-items:center; gap:3.5mm; margin-bottom:3.2mm; flex-wrap:wrap; }
@@ -93,15 +93,18 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .seg .tr sup{ font-size:6.5pt; color:var(--gold); font-weight:700; }
 .seg .du{ color:var(--mut); font-size:8.5pt; text-align:right; }
 .legsum{ font-size:8.2pt; color:var(--mut); margin-top:1.4mm; line-height:1.5; }
+.legsum .cabs{ font-size:7.6pt; white-space:nowrap; }
 .legsum b{ color:var(--green); font-weight:600; }
 
-.opt-price{ background:var(--paper); border-left:1px solid var(--line); padding:4mm 6mm; display:flex; flex-direction:column; justify-content:center; }
+.opt-price{ background:var(--paper); border-left:1px solid var(--line); padding:3.5mm 6mm; display:flex; flex-direction:column; justify-content:center; }
 .opt.star .opt-price{ background:#fdf7ea; }
 .pr-k{ font-size:7pt; letter-spacing:.18em; text-transform:uppercase; color:var(--mut); font-weight:600; }
 .pr-brl{ font-size:19pt; font-weight:800; color:var(--ink); line-height:1.1; margin-top:1mm; font-variant-numeric:tabular-nums; white-space:nowrap; }
 .pr-brl small{ font-size:10pt; font-weight:600; color:var(--gold); margin-right:1mm; }
-.pr-usd{ font-size:9pt; color:var(--mut); margin-top:.8mm; font-variant-numeric:tabular-nums; }
-.pr-list{ margin-top:3mm; padding-top:2.6mm; border-top:1px solid var(--line); font-size:8.5pt; color:var(--char); line-height:1.65; }
+.pr-usd{ font-size:9pt; color:var(--mut); margin-top:.5mm; font-variant-numeric:tabular-nums; }
+.pr-pp{ font-size:9.5pt; font-weight:600; color:var(--green); margin-top:1.2mm; font-variant-numeric:tabular-nums; }
+.pr-pp span{ font-weight:400; color:var(--mut); font-size:8.5pt; }
+.pr-list{ margin-top:2.4mm; padding-top:2.2mm; border-top:1px solid var(--line); font-size:8.5pt; color:var(--char); line-height:1.65; }
 .pr-list b{ font-weight:600; color:var(--ink); }
 
 /* ── Notas ── */
@@ -159,6 +162,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       <div class="route">Curitiba (CWB) &nbsp;⇄&nbsp; Lisboa (LIS)</div>
     </div>
     <div class="meta">
+      <div><b>2</b><span>Adultos</span></div>
       <div><b>5</b><span>Opções</span></div>
       <div><b>Jan · Fev</b><span>2027</span></div>
       <div><b>23/11</b><span>Data da cotação</span></div>
@@ -201,10 +205,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         </div>
       </div>
       <aside class="opt-price">
-        <div class="pr-k">Valor total</div>
+        <div class="pr-k">Total · 2 adultos</div>
         <div class="pr-brl"><small>R$</small>31.190,04</div>
         <div class="pr-usd">USD 5.296,40</div>
-        <div class="pr-list"><b>3 malas</b> despachadas<br><b>11 noites</b> em Lisboa<br>29/01 a 09/02</div>
+        <div class="pr-pp">R$ 15.595,02 <span>por adulto</span></div>
+        <div class="pr-list"><b>3 malas</b> despachadas<br><b>11 noites</b> em Lisboa · 29/01–09/02</div>
       </aside>
     </article>
 
@@ -223,7 +228,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
               <div class="seg"><span class="fl">LA 3283</span><span class="tr"><b>CWB 17:40</b> → <b>GRU 18:55</b></span><span class="du">1h15</span></div>
               <div class="seg"><span class="fl">LA 8148</span><span class="tr"><b>GRU 23:30</b> → <b>LIS 12:10</b><sup>+1</sup></span><span class="du">9h40</span></div>
             </div>
-            <div class="legsum">Conexão em Guarulhos (4h35) · <b>Tempo total 15h30</b><br>CWB–GRU Premium Economy · GRU–LIS Premium Business</div>
+            <div class="legsum">Conexão em Guarulhos (4h35) · <b>Tempo total 15h30</b><br><span class="cabs">CWB–GRU Premium Economy · GRU–LIS Premium Business</span></div>
           </div>
         </div>
         <div class="leg">
@@ -233,16 +238,17 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
               <div class="seg"><span class="fl">LA 8147</span><span class="tr"><b>LIS 08:50</b> → <b>GRU 16:00</b></span><span class="du">10h10</span></div>
               <div class="seg"><span class="fl">LA 4551</span><span class="tr"><b>GRU 20:35</b> → <b>CWB 21:45</b></span><span class="du">1h10</span></div>
             </div>
-            <div class="legsum">Conexão em Guarulhos (4h35) · <b>Tempo total 15h55</b><br>LIS–GRU Premium Business · GRU–CWB Econômica</div>
+            <div class="legsum">Conexão em Guarulhos (4h35) · <b>Tempo total 15h55</b><br><span class="cabs">LIS–GRU Premium Business · GRU–CWB Econômica</span></div>
           </div>
         </div>
         </div>
       </div>
       <aside class="opt-price">
-        <div class="pr-k">Valor total</div>
+        <div class="pr-k">Total · 2 adultos</div>
         <div class="pr-brl"><small>R$</small>40.425,46</div>
         <div class="pr-usd">USD 6.864,70</div>
-        <div class="pr-list"><b>1 mala</b> despachada<br><b>11 noites</b> em Lisboa<br>29/01 a 09/02</div>
+        <div class="pr-pp">R$ 20.212,73 <span>por adulto</span></div>
+        <div class="pr-list"><b>1 mala</b> despachada<br><b>11 noites</b> em Lisboa · 29/01–09/02</div>
       </aside>
     </article>
 
@@ -275,10 +281,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         </div>
       </div>
       <aside class="opt-price">
-        <div class="pr-k">Valor total</div>
+        <div class="pr-k">Total · 2 adultos</div>
         <div class="pr-brl"><small>R$</small>45.421,86</div>
         <div class="pr-usd">USD 7.713,14</div>
-        <div class="pr-list"><b>2 malas</b> despachadas<br><b>10 noites</b> em Lisboa<br>27/01 a 06/02</div>
+        <div class="pr-pp">R$ 22.710,93 <span>por adulto</span></div>
+        <div class="pr-list"><b>2 malas</b> despachadas<br><b>10 noites</b> em Lisboa · 27/01–06/02</div>
       </aside>
     </article>
 
@@ -314,10 +321,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         </div>
       </div>
       <aside class="opt-price">
-        <div class="pr-k">Valor total</div>
+        <div class="pr-k">Total · 2 adultos</div>
         <div class="pr-brl"><small>R$</small>27.206,24</div>
         <div class="pr-usd">USD 4.619,92</div>
-        <div class="pr-list"><b>2 malas</b> despachadas<br><b>10 noites</b> em Lisboa<br>27/01 a 06/02</div>
+        <div class="pr-pp">R$ 13.603,12 <span>por adulto</span></div>
+        <div class="pr-list"><b>2 malas</b> despachadas<br><b>10 noites</b> em Lisboa · 27/01–06/02</div>
       </aside>
     </article>
 
@@ -352,10 +360,11 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         </div>
       </div>
       <aside class="opt-price">
-        <div class="pr-k">Valor total</div>
+        <div class="pr-k">Total · 2 adultos</div>
         <div class="pr-brl"><small>R$</small>27.339,92</div>
         <div class="pr-usd">USD 4.642,62</div>
-        <div class="pr-list"><b>2 malas</b> despachadas<br><b>9 noites</b> em Lisboa<br>29/01 a 07/02</div>
+        <div class="pr-pp">R$ 13.669,96 <span>por adulto</span></div>
+        <div class="pr-list"><b>2 malas</b> despachadas<br><b>9 noites</b> em Lisboa · 29/01–07/02</div>
       </aside>
     </article>
 
@@ -367,6 +376,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
           <li class="must">*Nada reservado, apenas cotado.</li>
           <li>Valores e disponibilidade sujeitos a alteração até a emissão dos bilhetes.</li>
           <li>Regras de remarcação, cancelamento e escolha de assentos conforme a tarifa de cada companhia.</li>
+          <li>Valores totais para 2 adultos, com o valor por adulto indicado em cada opção.</li>
           <li>Horários em hora local. <b>+1</b> indica chegada no dia seguinte.</li>
         </ul>
       </div>

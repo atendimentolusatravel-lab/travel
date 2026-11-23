@@ -26,12 +26,12 @@ Quando o pedido for só de aéreo, ou o usuário disser "cotação simplificada"
 
 - Use `assets/cotacao-aerea.html` como base (A3 Portrait, uma página, verde + dourado).
 - Estrutura: cabeçalho verde com logo + "Cotação aérea", barra dourada, bloco do cliente
-  (nome em CAPS, rota em ouro, nº de opções, mês/ano, data da cotação), opções agrupadas por
+  (nome em CAPS, rota em ouro, nº de passageiros, nº de opções, mês/ano, data da cotação), opções agrupadas por
   cabine (Executiva, Econômica) e ordenadas do menor para o maior valor, observações com
   `*Nada reservado, apenas cotado` e câmbio datado, rodapé com assinatura clicável.
 - Cada opção: companhia, cabine, ida e volta lado a lado (voo, trecho, horários, `+1` para
   chegada no dia seguinte, conexão e tempo total), valor total em R$ com USD, bagagem
-  despachada e noites no destino (as datas podem mudar entre as opções).
+  despachada, valor por passageiro e noites no destino (as datas podem mudar entre as opções).
 - Destaque com borda dourada a opção recomendada (normalmente o melhor custo-benefício).
 - O câmbio de referência é o implícito na cotação (R$ ÷ USD), com a data do dia.
 - Confira se o conteúdo cabe em uma folha A3 antes de entregar (nada cortado no PDF).
