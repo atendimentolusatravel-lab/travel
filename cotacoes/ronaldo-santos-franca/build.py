@@ -145,7 +145,7 @@ HOTEIS = [
         ("Hôtel Pont Royal", "2 quartos Superior", "café da manhã", 33253.00),
         ("Hôtel du Louvre, in The Unbound Collection by Hyatt", "1 quarto 2 Twin Beds View + 1 quarto Queen Bed View", "café da manhã", 56750.00),
         ("Hotel Regina Louvre", "2 quartos Superior", "café da manhã", 42132.80),
-        ("Hotel Square Louvois", "1 quarto Clássico, 2 camas de solteiro ou 1 cama Queen", "", 25405.00),
+        ("Hotel Square Louvois", "2 quartos Clássicos, 2 camas de solteiro ou 1 cama Queen", "", 25405.00),
     ]),
     ("Saint-Rémy-de-Provence", "19 – 24 MAI", 5, [
         ("Le Vallon de Valrugues Hotel Spa & Villas", "2 quartos Deluxe com terraço e acesso livre ao spa", "meia pensão", 45525.36),
