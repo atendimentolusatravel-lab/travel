@@ -5,5 +5,5 @@
 - Aéreo: TAP executiva R$ 93.277,16 · Air France executiva R$ 166.062,76 · LATAM Premium Business R$ 175.498,12.
 - Hotéis: Paris 15–19/05 (4) · Saint-Rémy 19–24/05 (3) · Aix 24–28/05 (4) · Saint-Tropez 28/05–01/06 (3) · Nice 01–07/06 (1).
   Datas corrigidas da tabela: Saint-Tropez até 01/06 e Nice a partir de 01/06.
-- Faixa total (4 pessoas): R$ 272.082,16 – 470.138,75. Pagamento: a confirmar.
+- Faixa total (4 pessoas): R$ 272.082,16 – 448.840,75. Pagamento: a confirmar.
 - Sem fotos de hotel (a incluir). **Publicação:** projeto Vercel `cotacao-ronaldo-santos-franca`.

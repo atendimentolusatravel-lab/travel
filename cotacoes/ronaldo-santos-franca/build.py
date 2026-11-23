@@ -153,7 +153,7 @@ HOTEIS = [
         ("Domaine de Manville", "1 quarto casal Clássico (cama King) + 1 Classic Double Room", "sem café da manhã", 30924.98),
     ]),
     ("Aix-en-Provence", "24 – 28 MAI", 4, [
-        ("Château de la Gaude · Relais & Châteaux", "1 quarto Deluxe + quarto Château de la Gaude", "café da manhã", 69698.00),
+        ("Château de la Gaude · Relais & Châteaux", "1 quarto Standard com terraço e vista para as vinhas + 1 quarto Standard com terraço", "café da manhã", 48400.00),
         ("Renaissance Aix-en-Provence (Marriott)", "1 quarto Superior (cama King) + 1 quarto Família (2 camas de casal)", "café da manhã", 28674.11),
         ("Villa Saint-Ange", "1 quarto casal ou duplo Clássico + 1 Twin Room", "café da manhã", 43876.06),
         ("Le Pigonnet", "2 quartos Classic", "café da manhã", 31722.76),
@@ -203,7 +203,7 @@ AMIN, AMAX = min(o["total"] for o in AEREOS), max(o["total"] for o in AEREOS)
 HMIN = round(sum(min(h[3] for h in hs) for *_, hs in HOTEIS), 2)
 HMAX = round(sum(max(h[3] for h in hs) for *_, hs in HOTEIS), 2)
 TMIN, TMAX = round(AMIN + HMIN + TREM, 2), round(AMAX + HMAX + TREM, 2)
-assert (HMIN, HMAX, TMIN, TMAX) == (176619.44, 292455.07, 272082.16, 470138.75)
+assert (HMIN, HMAX, TMIN, TMAX) == (176619.44, 271157.07, 272082.16, 448840.75)
 
 rows = []
 rows.append('      <tr class="sec-row"><td colspan="2">Aéreo <span>· escolher 1</span></td></tr>')
