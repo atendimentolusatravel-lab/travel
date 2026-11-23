@@ -21,3 +21,4 @@
 - **Hotéis Genebra (13–14/01, 1 noite, sem café, até 8x):** Hotel Edelweiss (Quarto Família, centro) R$ 1.460,00 · Hilton Geneva Hotel and Conference Centre (King Deluxe, perto do aeroporto) R$ 1.767,00.
 - **Atualização:** Alpina Eclectic R$ 5.010,00 · Lykke R$ 6.610,00 (2 noites).
 - **Opcionais (até 8x ou PIX −10%):** aula de esqui em espanhol R$ 3.936,00 (PIX R$ 3.542,40) · em português R$ 4.810,00 (PIX R$ 4.329,00), 3 dias (08–10/01).
+- **Passeio:** trenó com huskies (courchevel.com/en/a/dog-sledding-5063254), EUR 250 para os 3 × 6,79 + 15% + 12% = R$ 2.186,38 (PIX R$ 1.967,74). Câmbio exibido: EUR 6,79 · USD 6,18 (23/11). Traslados seguem calculados a 6,47.
