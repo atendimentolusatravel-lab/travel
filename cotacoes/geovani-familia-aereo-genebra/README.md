@@ -17,3 +17,4 @@
 - **Traslado Chamonix → Genebra:** minivan 8 pax, EUR 175,00 só ida × 6,47 + 15% + 12% = R$ 1.458,34. 13/01 saída 10:00 (direto; parada em Annecy não incluída).
 - Traslados ajustados: GVA → Courchevel 07/01 18:50 · Courchevel → Chamonix 11/01 09:30.
 - **Hotéis Chamonix (11–13/01, 2 noites, café, spa, até 8x):** Alpina Eclectic Hotel (Triplo Superior c/ varanda) R$ 4.945,00 · Lykke Hôtel & Spa Chamonix (Quádruplo) R$ 6.072,00.
+- **Simulação 6 noites em Courchevel (07–13/01):** diária média das 4 noites × 6 — Ecrin Blanc R$ 43.440,00 · Barma R$ 32.875,50 · Edelweiss R$ 23.214,00 · Peupliers R$ 28.380,00 (a confirmar com hotéis). Traslado Courchevel → Genebra estimado em R$ 2.812,51 (mesmo valor da ida).
