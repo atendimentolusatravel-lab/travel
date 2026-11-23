@@ -7,3 +7,4 @@
 - **Publicação:** projeto Vercel `cotacao-geovani-familia-aereo-genebra` (Edge `api/page.js` + jsDelivr fixado no commit).
 - **Hotéis (22/11/2026, informados pela agência; todos ski-in/ski-out, café da manhã, até 8x):** Ecrin Blanc Resort Courchevel (Privilege Cocoon c/ aquapark) R$ 28.960,00 · Hotel Barma Courchevel (Quádruplo Luxo) R$ 21.917,00 · Hôtel Edelweiss (Triplo Família c/ sacada) R$ 15.476,00 · La Maison Les Peupliers (Quarto Família) R$ 18.920,00. 4 noites (datas conforme o voo escolhido).
 - **Traslado GVA → Courchevel:** minivan 6 pax, EUR 337,50 só ida × 6,47 = R$ 2.183,63 + 15% + 12% (cumulativo) = R$ 2.812,51. 15/01 saída 11:30 (voo AZ 576 chega 10:45).
+- **Traslado Courchevel → Chamonix:** sedan 3 pax, EUR 433,75 só ida × 6,47 + 15% + 12% = R$ 3.614,59. 19/01 saída 09:30 (trecho assumido; confirmar).
