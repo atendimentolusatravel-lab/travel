@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cotação Adriana Zago</title>
+<style>
+/* LusaTravel · Cotação aérea simplificada · A3 portrait · paleta verde + ouro (sem preto) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600&display=swap');
+
+:root{
+  --gold:#da8d00;          /* ouro LusaTravel — fixo */
+  --gold-soft:#fbf3e2;
+  --green:#1e4434;         /* verde profundo — cabeçalhos e blocos */
+  --green-2:#2d5e3a;       /* verde de apoio — badges */
+  --green-soft:#eef3ee;
+  --text:#2b3b32;          /* texto corrido em verde-grafite (sem preto) */
+  --mut:#6f7f74;
+  --line:#dbe3dc;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+}
+@page{ size:A3 portrait; margin:0; }
+*{ box-sizing:border-box; margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ font-family:var(--sans); color:var(--text); background:#e9ede9; }
+
+.page{ width:297mm; height:420mm; margin:0 auto; background:#fff; position:relative; overflow:hidden;
+  display:flex; flex-direction:column; page-break-after:always; }
+.page:last-child{ page-break-after:auto; }
+@media screen{ .page{ margin:10mm auto; box-shadow:0 2px 18px rgba(30,68,52,.18); } }
+
+/* Cabeçalho */
+.hd{ background:var(--green); height:24mm; display:flex; align-items:center; justify-content:space-between; padding:0 20mm; flex-shrink:0; }
+.logo{ font-family:var(--con); font-weight:600; font-size:15pt; letter-spacing:.34em; color:var(--gold); text-transform:uppercase; }
+.logo small{ display:block; font-size:6.5pt; letter-spacing:.42em; color:rgba(255,255,255,.55); margin-top:1.2mm; font-weight:500; }
+.hd .tag{ text-align:right; font-size:7.5pt; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.6); line-height:1.7; }
+.hd .tag b{ color:#fff; font-weight:600; letter-spacing:.14em; }
+.goldbar{ height:2.4mm; background:var(--gold); flex-shrink:0; }
+
+/* Rodapé */
+.ft{ margin-top:auto; background:var(--green); height:13mm; display:flex; align-items:center; justify-content:center; gap:5mm; flex-shrink:0; }
+.ft a, .ft span{ font-family:var(--con); font-size:8.5pt; color:rgba(255,255,255,.72); text-decoration:none; }
+.ft .sep{ color:var(--gold); }
+
+.body{ padding:9mm 20mm 6mm; flex:1; display:flex; flex-direction:column; }
+
+/* Abertura */
+.intro{ display:flex; justify-content:space-between; align-items:flex-end; gap:10mm; padding-bottom:6mm; border-bottom:1px solid var(--line); }
+.eyebrow{ font-size:8pt; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.client{ font-size:28pt; font-weight:800; color:var(--green); text-transform:uppercase; letter-spacing:.01em; line-height:1.1; margin-top:2mm; }
+.route{ font-size:15pt; font-weight:600; color:var(--gold); margin-top:1.5mm; }
+.stats{ display:flex; gap:9mm; }
+.stat{ text-align:right; }
+.stat b{ display:block; font-size:19pt; font-weight:800; color:var(--green); line-height:1; }
+.stat span{ font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); }
+
+/* Comparativo */
+.h3{ font-size:9pt; letter-spacing:.22em; text-transform:uppercase; color:var(--green); font-weight:700; margin:6.5mm 0 3.5mm; display:flex; align-items:center; gap:3mm; }
+.h3::before{ content:''; width:6mm; height:2px; background:var(--gold); }
+table{ width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; }
+.cmp th{ font-size:7.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:700; text-align:left; padding:0 3mm 2.5mm; border-bottom:2px solid var(--green); }
+.cmp{ table-layout:fixed; }
+.cmp td{ font-size:10pt; padding:2.6mm 3mm; white-space:nowrap; border-bottom:1px solid var(--line); vertical-align:top; }
+.cmp td.n{ width:12mm; }
+.cmp .pill{ display:inline-flex; width:8mm; height:8mm; border-radius:50%; background:var(--green-2); color:#fff; font-weight:800; font-size:10pt; align-items:center; justify-content:center; }
+.cmp .air{ font-weight:700; color:var(--green); }
+.cmp .sub{ font-size:8pt; color:var(--mut); display:block; margin-top:.5mm; white-space:normal; }
+.cmp td:nth-child(3) .sub, .cmp td:nth-child(4) .sub{ white-space:nowrap; }
+.cmp .price{ font-weight:800; color:var(--green); white-space:nowrap; text-align:right; }
+.cmp th.r{ text-align:right; }
+.cmp tr.rec td{ background:var(--gold-soft); }
+.flag{ display:inline-block; font-size:6.8pt; letter-spacing:.12em; text-transform:uppercase; font-weight:700; color:#fff; background:var(--gold); border-radius:2px; padding:.6mm 1.8mm; margin-top:1.2mm; }
+
+/* Opções */
+.opt{ border:1px solid var(--line); border-radius:5px; overflow:hidden; margin-bottom:5mm; break-inside:avoid; }
+.opt-hd{ background:var(--green); display:flex; align-items:center; justify-content:space-between; padding:3mm 6mm; }
+.opt-hd .l{ display:flex; align-items:center; gap:4mm; }
+.opt-no{ width:10mm; height:10mm; border-radius:50%; border:2px solid var(--gold); color:var(--gold); font-weight:800; font-size:11pt; display:flex; align-items:center; justify-content:center; }
+.opt-air{ font-size:13pt; font-weight:700; color:#fff; letter-spacing:.02em; }
+.opt-cab{ font-size:8pt; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.62); margin-top:.3mm; }
+.opt-price{ text-align:right; }
+.opt-price b{ display:block; font-size:16pt; font-weight:800; color:var(--gold); line-height:1.05; }
+.opt-price span{ font-size:8pt; color:rgba(255,255,255,.62); }
+.opt-bd{ padding:3.4mm 6mm 3.6mm; }
+.leg{ display:grid; grid-template-columns:24mm 1fr; gap:4mm; }
+.leg + .leg{ margin-top:2.8mm; padding-top:2.8mm; border-top:1px dashed var(--line); }
+.leg-k{ font-size:8pt; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); padding-top:1.4mm; }
+.leg-k small{ display:block; font-size:7.2pt; letter-spacing:.04em; color:var(--mut); font-weight:500; text-transform:none; margin-top:1mm; line-height:1.45; }
+.seg th{ font-size:6.8pt; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); font-weight:600; text-align:left; padding:0 2mm 1.4mm; }
+.seg{ table-layout:fixed; }
+.seg td{ white-space:nowrap; font-size:9.2pt; padding:1.05mm 2mm; border-top:1px solid #edf1ed; }
+.seg td.v{ font-weight:600; color:var(--green); white-space:nowrap; }
+.seg td.c{ color:var(--mut); font-size:8.6pt; }
+.seg td.cab{ font-size:8.4pt; color:var(--green-2); font-weight:600; }
+.seg .s{ color:var(--gold); font-weight:700; }
+.opt-ft{ display:flex; flex-wrap:wrap; gap:1.5mm 7mm; padding:2.6mm 6mm; background:var(--green-soft); font-size:8.4pt; color:var(--text); }
+.opt-ft b{ color:var(--green); font-weight:700; }
+.opt-ft .warn{ color:#8a5a00; }
+
+/* Notas */
+.notes{ display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-top:2mm; }
+.note{ background:var(--green-soft); border-left:3px solid var(--gold); border-radius:3px; padding:4mm 5mm; }
+.note h4{ font-size:8pt; letter-spacing:.18em; text-transform:uppercase; color:var(--green); font-weight:800; margin-bottom:1.8mm; }
+.note p, .note li{ font-size:8.8pt; line-height:1.6; color:var(--text); }
+.note ul{ padding-left:4mm; }
+.fx{ display:flex; justify-content:space-between; align-items:center; margin-top:5mm; padding:3.5mm 5mm; border:1px solid var(--gold); border-radius:3px; background:var(--gold-soft); }
+.fx .k{ font-size:9pt; font-weight:700; color:var(--green); }
+.fx .k em{ font-style:normal; color:var(--gold); }
+.fx .d{ font-size:8.6pt; color:var(--text); }
+
+/* Próximos passos */
+.steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:5mm; }
+.step{ border:1px solid var(--line); border-radius:4px; padding:4.5mm 5mm; }
+.step b{ display:inline-flex; width:8mm; height:8mm; border-radius:50%; background:var(--green-2); color:#fff; font-size:10pt; font-weight:800; align-items:center; justify-content:center; }
+.step h5{ font-size:10pt; font-weight:700; color:var(--green); margin:2.5mm 0 1mm; }
+.step p{ font-size:8.8pt; line-height:1.6; color:var(--text); }
+</style>
+</head>
+<body>
+
+<section class="page">
+  <div class="hd">
+    <div class="logo">LusaTravel<small>Viagens sob medida</small></div>
+    <div class="tag">Cotação aérea · 1/2<br><b>24/11/2026</b></div>
+  </div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+    <div class="intro">
+      <div>
+        <div class="eyebrow">Cotação para sua viagem</div>
+        <div class="client">Sra. Adriana Zago</div>
+        <div class="route">Curitiba ⇄ Vancouver · Canadá</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>31/05 – 16/06</b><span>Junho de 2027</span></div>
+        <div class="stat"><b>3</b><span>Opções</span></div>
+        <div class="stat"><b>2</b><span>Companhias</span></div>
+      </div>
+    </div>
+
+    <div class="h3">Resumo das opções</div>
+    <table class="cmp">
+      <colgroup><col style="width:12mm"><col><col style="width:35mm"><col style="width:40mm"><col style="width:42mm"><col style="width:25mm"><col style="width:33mm"></colgroup>
+      <thead><tr>
+        <th></th><th>Companhia · cabine</th><th>Ida</th><th>Volta</th><th>Tempo total</th><th>Bagagem</th><th class="r">Valor</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="n"><span class="pill">1</span></td>
+          <td><span class="air">United Airlines</span><span class="sub">Econômica · via Rio e Houston</span></td>
+          <td>31/05 · 17:00<span class="sub">chega 01/06 · 20:46</span></td>
+          <td>15/06 · 10:20<span class="sub">chega 16/06 · 11:05</span></td>
+          <td>Ida 31h46<span class="sub">Volta 20h45 · 2 conexões por trecho</span></td>
+          <td>1 mala<span class="sub">despachada</span></td>
+          <td class="price">R$ 10.215,31</td>
+        </tr>
+        <tr class="rec">
+          <td class="n"><span class="pill">2</span></td>
+          <td><span class="air">Air Canada</span><span class="sub">Premium Economy nos voos longos · via São Paulo e Montreal</span><span class="flag">Sugestão LusaTravel</span></td>
+          <td>31/05 · 15:35<span class="sub">chega 01/06 · 11:11</span></td>
+          <td>15/06 · 11:15<span class="sub">chega 16/06 · 14:55</span></td>
+          <td>Ida 23h36<span class="sub">Volta 23h40 · 2 conexões por trecho</span></td>
+          <td>1 mala<span class="sub">despachada</span></td>
+          <td class="price">R$ 13.932,92</td>
+        </tr>
+        <tr>
+          <td class="n"><span class="pill">3</span></td>
+          <td><span class="air">Air Canada</span><span class="sub">Executiva · saída de São Paulo (GRU)</span></td>
+          <td>01/06 · 21:35<span class="sub">chega 02/06 · 10:34</span></td>
+          <td>15/06 · 07:30<span class="sub">chega GRU 16/06 · 09:50</span></td>
+          <td>Ida 16h59<span class="sub">Volta 22h20 · 1 conexão por trecho</span></td>
+          <td>2 malas<span class="sub">despachadas</span></td>
+          <td class="price">R$ 32.546,46</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="h3">Detalhes dos voos</div>
+
+    <!-- OPÇÃO 1 -->
+    <div class="opt">
+      <div class="opt-hd">
+        <div class="l"><div class="opt-no">1</div><div><div class="opt-air">United Airlines</div><div class="opt-cab">Classe Econômica</div></div></div>
+        <div class="opt-price"><b>R$ 10.215,31</b><span>USD 1.710,88</span></div>
+      </div>
+      <div class="opt-bd">
+        <div class="leg">
+          <div class="leg-k">Ida<small>Seg, 31 de maio<br>Total 31h46</small></div>
+          <table class="seg">
+              <colgroup><col style="width:20mm"><col style="width:26mm"><col style="width:26mm"><col><col style="width:35mm"><col style="width:31mm"></colgroup>
+            <thead><tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>Trecho</th><th>Conexão</th><th>Cabine</th></tr></thead>
+            <tbody>
+              <tr><td class="v">UA 7360<span class="s">*</span></td><td>31/05 · 17:00</td><td>31/05 · 18:30</td><td>Curitiba (CWB) → Rio de Janeiro (GIG)</td><td class="c">—</td><td class="cab">Econômica</td></tr>
+              <tr><td class="v">UA 128</td><td>31/05 · 21:05</td><td>01/06 · 05:40</td><td>Rio de Janeiro (GIG) → Houston (IAH)</td><td class="c">2h35 no Rio</td><td class="cab">Econômica</td></tr>
+              <tr><td class="v">UA 6621<span class="s">*</span></td><td>01/06 · 17:55</td><td>01/06 · 20:46</td><td>Houston (IAH) → Vancouver (YVR)</td><td class="c">12h15 em Houston</td><td class="cab">Econômica</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="leg">
+          <div class="leg-k">Volta<small>Ter, 15 de junho<br>Total 20h45</small></div>
+          <table class="seg">
+              <colgroup><col style="width:20mm"><col style="width:26mm"><col style="width:26mm"><col><col style="width:35mm"><col style="width:31mm"></colgroup>
+            <thead><tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>Trecho</th><th>Conexão</th><th>Cabine</th></tr></thead>
+            <tbody>
+              <tr><td class="v">UA 8125<span class="s">*</span></td><td>15/06 · 10:20</td><td>15/06 · 16:58</td><td>Vancouver (YVR) → Houston (IAH)</td><td class="c">—</td><td class="cab">Econômica</td></tr>
+              <tr><td class="v">UA 62</td><td>15/06 · 18:35</td><td>16/06 · 06:30</td><td>Houston (IAH) → São Paulo (GRU)</td><td class="c">1h37 em Houston</td><td class="cab">Econômica</td></tr>
+              <tr><td class="v">UA 7338<span class="s">*</span></td><td>16/06 · 09:55</td><td>16/06 · 11:05</td><td>São Paulo (GRU) → Curitiba (CWB)</td><td class="c">3h25 em São Paulo</td><td class="cab">Econômica</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="opt-ft">
+        <span><b>Bagagem:</b> 1 mala despachada + bagagem de mão</span>
+        <span class="warn"><b>Atenção:</b> conexão nos EUA, exige visto americano válido · espera de 12h15 em Houston na ida</span>
+      </div>
+    </div>
+
+    <!-- OPÇÃO 2 -->
+    <div class="opt">
+      <div class="opt-hd">
+        <div class="l"><div class="opt-no">2</div><div><div class="opt-air">Air Canada</div><div class="opt-cab">Premium Economy nos voos longos · Econômica nos trechos nacionais</div></div></div>
+        <div class="opt-price"><b>R$ 13.932,92</b><span>USD 2.333,51</span></div>
+      </div>
+      <div class="opt-bd">
+        <div class="leg">
+          <div class="leg-k">Ida<small>Seg, 31 de maio<br>Total 23h36</small></div>
+          <table class="seg">
+              <colgroup><col style="width:20mm"><col style="width:26mm"><col style="width:26mm"><col><col style="width:35mm"><col style="width:31mm"></colgroup>
+            <thead><tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>Trecho</th><th>Conexão</th><th>Cabine</th></tr></thead>
+            <tbody>
+              <tr><td class="v">AC 6503<span class="s">*</span></td><td>31/05 · 15:35</td><td>31/05 · 16:45</td><td>Curitiba (CWB) → São Paulo (GRU)</td><td class="c">—</td><td class="cab">Econômica</td></tr>
+              <tr><td class="v">AC 97</td><td>31/05 · 21:00</td><td>01/06 · 06:10</td><td>São Paulo (GRU) → Montreal (YUL)</td><td class="c">4h15 em São Paulo</td><td class="cab">Premium Economy</td></tr>
+              <tr><td class="v">AC 303</td><td>01/06 · 09:00</td><td>01/06 · 11:11</td><td>Montreal (YUL) → Vancouver (YVR)</td><td class="c">2h50 em Montreal</td><td class="cab">Premium Economy</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="leg">
+          <div class="leg-k">Volta<small>Ter, 15 de junho<br>Total 23h40</small></div>
+          <table class="seg">
+              <colgroup><col style="width:20mm"><col style="width:26mm"><col style="width:26mm"><col><col style="width:35mm"><col style="width:31mm"></colgroup>
+            <thead><tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>Trecho</th><th>Conexão</th><th>Cabine</th></tr></thead>
+            <tbody>
+              <tr><td class="v">AC 306</td><td>15/06 · 11:15</td><td>15/06 · 19:12</td><td>Vancouver (YVR) → Montreal (YUL)</td><td class="c">—</td><td class="cab">Premium Economy</td></tr>
+              <tr><td class="v">AC 96</td><td>15/06 · 22:55</td><td>16/06 · 09:50</td><td>Montreal (YUL) → São Paulo (GRU)</td><td class="c">3h43 em Montreal</td><td class="cab">Premium Economy</td></tr>
+              <tr><td class="v">AC 6521<span class="s">*</span></td><td>16/06 · 13:50</td><td>16/06 · 14:55</td><td>São Paulo (GRU) → Curitiba (CWB)</td><td class="c">4h00 em São Paulo</td><td class="cab">Econômica</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="opt-ft">
+        <span><b>Bagagem:</b> 1 mala despachada + bagagem de mão</span>
+        <span><b>Por que sugerimos:</b> sem passar pelos EUA, chega a Vancouver às 11h11 e viaja os trechos longos com mais espaço</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">•</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    <span class="sep">•</span>
+    <span>Curitiba – PR</span>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hd">
+    <div class="logo">LusaTravel<small>Viagens sob medida</small></div>
+    <div class="tag">Sra. Adriana Zago<br><b>Cotação aérea · 2/2</b></div>
+  </div>
+  <div class="goldbar"></div>
+
+  <div class="body">
+    <div class="h3" style="margin-top:0">Detalhes dos voos · continuação</div>
+
+    <!-- OPÇÃO 3 -->
+    <div class="opt">
+      <div class="opt-hd">
+        <div class="l"><div class="opt-no">3</div><div><div class="opt-air">Air Canada</div><div class="opt-cab">Classe Executiva · saída e chegada em São Paulo</div></div></div>
+        <div class="opt-price"><b>R$ 32.546,46</b><span>USD 5.450,94</span></div>
+      </div>
+      <div class="opt-bd">
+        <div class="leg">
+          <div class="leg-k">Ida<small>Ter, 1º de junho<br>Total 16h59</small></div>
+          <table class="seg">
+              <colgroup><col style="width:20mm"><col style="width:26mm"><col style="width:26mm"><col><col style="width:35mm"><col style="width:31mm"></colgroup>
+            <thead><tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>Trecho</th><th>Conexão</th><th>Cabine</th></tr></thead>
+            <tbody>
+              <tr><td class="v">AC 91</td><td>01/06 · 21:35</td><td>02/06 · 06:45</td><td>São Paulo (GRU) → Toronto (YYZ)</td><td class="c">—</td><td class="cab">Executiva</td></tr>
+              <tr><td class="v">AC 105</td><td>02/06 · 08:30</td><td>02/06 · 10:34</td><td>Toronto (YYZ) → Vancouver (YVR)</td><td class="c">1h45 em Toronto</td><td class="cab">Executiva</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="leg">
+          <div class="leg-k">Volta<small>Ter, 15 de junho<br>Total 22h20</small></div>
+          <table class="seg">
+              <colgroup><col style="width:20mm"><col style="width:26mm"><col style="width:26mm"><col><col style="width:35mm"><col style="width:31mm"></colgroup>
+            <thead><tr><th>Voo</th><th>Saída</th><th>Chegada</th><th>Trecho</th><th>Conexão</th><th>Cabine</th></tr></thead>
+            <tbody>
+              <tr><td class="v">AC 302</td><td>15/06 · 07:30</td><td>15/06 · 15:30</td><td>Vancouver (YVR) → Montreal (YUL)</td><td class="c">—</td><td class="cab">Executiva</td></tr>
+              <tr><td class="v">AC 96</td><td>15/06 · 22:55</td><td>16/06 · 09:50</td><td>Montreal (YUL) → São Paulo (GRU)</td><td class="c">7h25 em Montreal</td><td class="cab">Executiva</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="opt-ft">
+        <span><b>Bagagem:</b> 2 malas despachadas + bagagem de mão</span>
+        <span class="warn"><b>Atenção:</b> não inclui o trecho Curitiba ⇄ São Paulo · embarque em 01/06, 13 noites em Vancouver</span>
+      </div>
+    </div>
+
+    <div class="h3">Informações importantes</div>
+    <div class="notes">
+      <div class="note">
+        <h4>Documentação</h4>
+        <ul>
+          <li>Entrada no Canadá: visto canadense ou eTA (autorização eletrônica, válida para quem tem visto americano vigente ou teve visto canadense nos últimos 10 anos).</li>
+          <li>Opção 1: conexão em Houston nos dois sentidos, exige visto americano válido.</li>
+          <li>Passaporte com validade mínima de 6 meses na data da viagem.</li>
+        </ul>
+      </div>
+      <div class="note">
+        <h4>Observações</h4>
+        <ul>
+          <li>Voos marcados com <b>*</b> são em parceria (codeshare), operados por companhia parceira.</li>
+          <li>Horários locais de cada cidade. Tempos totais já consideram a diferença de fuso.</li>
+          <li>Tarifas aéreas mudam conforme a ocupação: valores garantidos somente após a emissão.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fx">
+      <div class="k">*Nada reservado, apenas cotado</div>
+      <div class="d">Cotação 24/11 · <b>USD = 5,97</b></div>
+    </div>
+
+    <div class="h3">Próximos passos</div>
+    <div class="steps">
+      <div class="step"><b>1</b><h5>Escolha a opção</h5><p>Responda pelo WhatsApp ou e-mail indicando a opção de sua preferência.</p></div>
+      <div class="step"><b>2</b><h5>Envie os dados</h5><p>Nome completo exatamente como no passaporte e data de nascimento.</p></div>
+      <div class="step"><b>3</b><h5>Emissão</h5><p>Revalidamos a tarifa no dia e emitimos o bilhete. Até lá, valores e lugares podem mudar.</p></div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+    <span class="sep">•</span>
+    <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    <span class="sep">•</span>
+    <span>Curitiba – PR</span>
+  </div>
+</section>
+
+</body>
+</html>
