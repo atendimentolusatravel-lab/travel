@@ -128,7 +128,8 @@ html = f"""<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noindex, nofollow">
-<title>Lusa Travel · Japão — Ana Carolina Guérios</title>
+<title>Japão em casais — Ana Carolina Guérios · Lusa Travel</title>
+<meta property="og:title" content="Japão em casais — Ana Carolina Guérios">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -140,7 +141,7 @@ html = f"""<!DOCTYPE html>
 
   <header class="hero">
     <div class="eyebrow">Cotação de aéreo</div>
-    <h1>JAPÃO</h1>
+    <h1>Japão em casais</h1>
     <div class="accent-line"></div>
     <p class="hero-sub"><b>Ana Carolina Guérios</b> · 2 adultos — <b>24 de dezembro de 2026 a 21 de janeiro de 2027</b></p>
     <div class="hero-img">
