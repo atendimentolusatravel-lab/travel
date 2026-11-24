@@ -16,8 +16,9 @@ Fontes (enviadas pela agência em 23/11/2026):
   automático, 7 lugares, 5 portas, 2 malas, ar; mesma retirada (Gare TGV Avignon, Place de l'Europe, 19/05 14:30)
   e devolução (aeroporto de Nice, 07/06 06:00); 19 diárias; R$ 8.769,33 com taxas incluídas.
 - fonte/f1-monaco.png: ingressos do GP de Mônaco, totais para 4 pessoas em BRL:
-  Champions Club · Trackside Yacht (fornecedor oficial da F1), sábado e domingo 05–06/06/2027, R$ 260.757,00; Senate Grand Prix, domingo 06/06/2027, R$ 186.639,00, aguardando
-  confirmação de valor e disponibilidade para sábado.
+  Champions Club · Trackside Yacht (fornecedor oficial da F1), sábado e domingo 05–06/06/2027, R$ 260.757,00; Senate Grand Prix, domingo 06/06/2027, R$ 186.639,00 (substituído).
+- Senate Grand Prix, valores confirmados pela agência em 24/11/2026, GP de Mônaco assistido do iate, por pessoa:
+  sexta 04/06 R$ 10.032,00 · sábado 05/06 R$ 23.409,00 · domingo 06/06 R$ 43.474,00 (a página mostra por pessoa e x4).
 Durações dos voos conferidas pelos fusos (MAO −4, BRT −3, LIS +1, Paris/Nice/Madri +2 em maio–junho).
 """
 import json
@@ -32,6 +33,12 @@ CSS = (ROOT / "style.part.html").read_text().replace(
     ".footer .brandtext{color:#fff;margin-bottom:14px}\n"
     ".fl .cs{display:block;font-size:.7rem;color:var(--terra);font-weight:500;margin-top:2px}\n"
     "@media(min-width:721px){.leg.f1{grid-template-columns:1fr auto}}\n"
+    ".dias{padding:4px 22px 14px}.dias table{width:100%;border-collapse:collapse;font-size:.86rem}"
+    ".dias td{padding:8px 6px;border-bottom:1px solid var(--line)}.dias .v{text-align:right;white-space:nowrap}"
+    ".dias .h td{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green-soft);font-weight:700}"
+    ".dias .s td{font-weight:600;color:var(--green);background:#f6f4ec}"
+    ".dias table{table-layout:fixed;min-width:0}.dias td{min-width:0!important}"
+    "@media(max-width:720px){.dias{padding:4px 12px 12px}.dias table{font-size:.74rem}.dias td{padding:7px 3px}.dias .h td{font-size:.56rem;letter-spacing:.06em}.dias td:first-child{width:38%}}\n"
     ".pend{margin:0 22px 14px;padding:10px 14px;border-radius:10px;background:#fff6e0;border:1px solid #ecd59a;color:#6b4e00;font-size:.85rem}\n"
     ".cias{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:14px 22px;border-bottom:1px solid var(--line);background:#fff}\n"
     ".cias .k{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--green-soft);margin-right:4px}\n"
@@ -223,20 +230,19 @@ CARROS = [
     dict(loc="Enterprise", modelo="Peugeot 5008", cat="Van intermediária", spec="automático · 7 lugares · 5 portas · 2 malas · ar-condicionado", valor=8769.33),
 ]
 CMIN, CMAX = min(c["valor"] for c in CARROS), max(c["valor"] for c in CARROS)
-F1 = [
-    dict(nome="Champions Club · Trackside Yacht", forn="Champions Club · fornecedor oficial da Fórmula 1", dias="sábado e domingo", datas="05 e 06/06/2027",
-         desc="Ingressos para assistir ao GP de Mônaco a bordo de um iate ancorado à beira da pista", valor=260757.00, pend=""),
-    dict(nome="Senate Grand Prix", forn="Senate Grand Prix", dias="domingo", datas="06/06/2027",
-         desc="Ingresso para o dia da corrida", valor=186639.00,
-         pend="Aguardando a Senate Grand Prix confirmar o valor e a disponibilidade de ingresso também para sábado."),
-]
-FMIN, FMAX = min(f["valor"] for f in F1), max(f["valor"] for f in F1)
+CHAMPIONS = 260757.00  # sábado e domingo, total para 4 pessoas
+SENATE = [("sexta", "04/06", 10032.00), ("sábado", "05/06", 23409.00), ("domingo", "06/06", 43474.00)]  # por pessoa
+SEN4 = {d: round(v * 4, 2) for d, _, v in SENATE}
+SEN_FDS = round(SEN4["sábado"] + SEN4["domingo"], 2)
+SEN_3D = round(sum(SEN4.values()), 2)
+assert (SEN_FDS, SEN_3D) == (267532.00, 307660.00)
+FMIN, FMAX = min(CHAMPIONS, SEN_FDS), SEN_3D  # menor: fim de semana (sáb+dom); maior: Senate nos 3 dias
 ESTADAS = [
     ("4", "Paris", "15 a 19/05", "Chegada em 15/05, conforme o voo escolhido."),
     ("5", "Saint-Rémy", "19 a 24/05", "TGV de Paris a Avignon em 19/05. Carro retirado na própria estação às 14h30, cerca de 25 minutos até Saint-Rémy."),
     ("4", "Aix-en-Provence", "24 a 28/05", "Cerca de 1 hora de Saint-Rémy."),
     ("4", "Saint-Tropez", "28/05 a 01/06", "Cerca de 1h45 de Aix."),
-    ("6", "Nice", "01 a 07/06", "Base para a Riviera. GP de Mônaco em 05 e 06/06, a cerca de 30 minutos."),
+    ("6", "Nice", "01 a 07/06", "Base para a Riviera. GP de Mônaco de 04 a 06/06, a cerca de 30 minutos."),
 ]
 estadas = "\n".join(
     f'      <div class="st"><div class="n">{n}<span>noites</span></div><div class="c">{c}</div><div class="d">{d}</div><p>{p}</p></div>'
@@ -246,7 +252,7 @@ AMIN, AMAX = min(o["total"] for o in AEREOS), max(o["total"] for o in AEREOS)
 HMIN = round(sum(min(h[3] for h in hs) for *_, hs in HOTEIS), 2)
 HMAX = round(sum(max(h[3] for h in hs) for *_, hs in HOTEIS), 2)
 TMIN, TMAX = round(AMIN + HMIN + TREM + CMIN + FMIN, 2), round(AMAX + HMAX + TREM + CMAX + FMAX, 2)
-assert (HMIN, HMAX, TMIN, TMAX) == (176619.44, 271157.07, 466176.48, 718367.08)
+assert (HMIN, HMAX, TMIN, TMAX) == (176619.44, 271157.07, 540294.48, 765270.08)
 
 rows = []
 rows.append('      <tr class="sec-row"><td colspan="2">Aéreo <span>· escolher 1</span></td></tr>')
@@ -262,21 +268,29 @@ rows.append(f'      <tr><td><b>TGV Paris → Avignon · 19/05</b><div class="rm"
 rows.append('      <tr class="sec-row"><td colspan="2">Carro · Avignon TGV → aeroporto de Nice · 19/05 a 07/06 <span>· escolher 1</span></td></tr>')
 for c in CARROS:
     rows.append(f'      <tr><td><b>{c["loc"]} · {c["modelo"]} ou similar</b><div class="rm">{c["cat"]} · {c["spec"].split(" · ")[0]} · {c["spec"].split(" · ")[1]} · 19 diárias · taxas incluídas</div></td><td class="v">{brl(c["valor"])}</td></tr>')
-rows.append('      <tr class="sec-row"><td colspan="2">Fórmula 1 · GP de Mônaco <span>· escolher 1</span></td></tr>')
-for f in F1:
-    extra = " · valor e sábado a confirmar" if f["pend"] else ""
-    rows.append(f'      <tr><td><b>{f["nome"]}</b><div class="rm">{f["dias"]} · {f["datas"]} · 4 pessoas{extra}</div></td><td class="v">{brl(f["valor"])}</td></tr>')
+rows.append('      <tr class="sec-row"><td colspan="2">Fórmula 1 · GP de Mônaco no iate <span>· escolher 1 opção</span></td></tr>')
+rows.append(f'      <tr><td><b>Opção 1 · Champions Club · Trackside Yacht</b><div class="rm">sábado e domingo · 05 e 06/06 · 4 pessoas</div></td><td class="v">{brl(CHAMPIONS)}</td></tr>')
+for d, data, v in SENATE:
+    rows.append(f'      <tr><td><b>Opção 2 · Senate Grand Prix · {d}</b><div class="rm">{data} · {brl(v)} por pessoa x 4</div></td><td class="v">{brl(SEN4[d])}</td></tr>')
 rows.append(f'      <tr class="total-row"><td>Total estimado · 4 pessoas</td><td class="v">{brl(TMIN)} – {brl(TMAX)[3:]}</td></tr>')
 rows = "\n".join(rows)
 
-def f1card(i, f):
-    pend = f'<div class="pend">{f["pend"].replace("Aguardando", "<b>Aguardando</b>", 1)}</div>' if f["pend"] else ""
-    return (f'    <div class="air">\n'
-            f'      <div class="air-head"><div class="dir">Opção {i} · {f["dias"]}</div><div class="route">{f["nome"]}</div></div>\n'
-            f'      <div class="leg f1"><div class="fl">{f["forn"]}<b>{f["desc"]}</b>Mônaco · {f["datas"]}</div><div class="cls">{f["dias"]}</div></div>\n'
-            f'      {pend}\n'
-            f'      <div class="air-foot"><span class="l">4 pessoas</span><div class="a"><div class="t">{brl(f["valor"])}</div><div class="p">total para 4 pessoas</div></div></div>\n'
-            f'    </div>')
+def f1cards_html():
+    champ = (f'    <div class="air">\n'
+             f'      <div class="air-head"><div class="dir">Opção 1 · sábado e domingo</div><div class="route">Champions Club · Trackside Yacht</div></div>\n'
+             f'      <div class="leg f1"><div class="fl">Champions Club · fornecedor oficial da Fórmula 1<b>GP de Mônaco assistido a bordo de um iate à beira da pista</b>Mônaco · 05 e 06/06/2027</div><div class="cls">sábado e domingo</div></div>\n'
+             f'      <div class="air-foot"><span class="l">4 pessoas</span><div class="a"><div class="t">{brl(CHAMPIONS)}</div><div class="p">total para 4 pessoas</div></div></div>\n'
+             f'    </div>')
+    linhas = "".join(f'<tr><td><b>{d.capitalize()}</b> · {data}</td><td class="v">{brl(v)}</td><td class="v">{brl(SEN4[d])}</td></tr>' for d, data, v in SENATE)
+    sen = (f'    <div class="air">\n'
+           f'      <div class="air-head"><div class="dir">Opção 2 · escolha os dias</div><div class="route">Senate Grand Prix</div></div>\n'
+           f'      <div class="leg f1"><div class="fl">Senate Grand Prix<b>GP de Mônaco assistido a bordo de iate</b>Mônaco · 04, 05 e 06/06/2027 · valores por dia</div><div class="cls">sexta, sábado<br>e domingo</div></div>\n'
+           f'      <div class="dias"><table><tr class="h"><td>Dia</td><td class="v">Por pessoa</td><td class="v">4 pessoas</td></tr>{linhas}'
+           f'<tr class="s"><td>Sábado e domingo</td><td class="v">{brl(SEN_FDS / 4)}</td><td class="v">{brl(SEN_FDS)}</td></tr>'
+           f'<tr class="s"><td>Os 3 dias</td><td class="v">{brl(SEN_3D / 4)}</td><td class="v">{brl(SEN_3D)}</td></tr></table></div>\n'
+           f'      <div class="air-foot"><span class="l">Os 3 dias, 4 pessoas</span><div class="a"><div class="t">{brl(SEN_3D)}</div><div class="p">ou só os dias escolhidos</div></div></div>\n'
+           f'    </div>')
+    return champ + "\n" + sen
 
 
 def carcard(i, c):
@@ -291,7 +305,7 @@ def carcard(i, c):
 
 carros = "\n".join(carcard(i, c) for i, c in enumerate(CARROS, 1))
 
-f1cards = "\n".join(f1card(i, f) for i, f in enumerate(F1, 1))
+f1cards = f1cards_html()
 
 CHIP = ('<div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
         'stroke-width="2">{svg}</svg></span><b>{n}</b>&nbsp;{t}</div>')
@@ -391,7 +405,7 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Fórmula 1</span>
     <h2>GP de Mônaco</h2>
     <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">Ingressos para as 4 pessoas, valores em <b>BRL</b>. <b>Escolher 1 opção.</b></p>
+    <p class="note" style="margin-top:16px">Ingressos para assistir ao GP de Mônaco a bordo de iate, valores em <b>BRL</b>. <b>Escolher 1 opção.</b> Na Senate Grand Prix, é possível escolher os dias.</p>
 {f1cards}
   </section>
 
@@ -404,7 +418,7 @@ html = f"""<!DOCTYPE html>
       <tr class="head-row"><td>Item</td><td class="v">Valor</td></tr>
 {rows}
     </table></div>
-    <p class="note">Como é calculado: o menor valor soma o trem e as opções mais baratas de aéreo, hotel em cada cidade, carro e ingresso de F1 (Senate, só domingo); o maior, o trem e as opções mais caras de cada item.</p>
+    <p class="note">Como é calculado: o menor valor soma o trem e as opções mais baratas de aéreo, hotel em cada cidade, carro e F1 (no sábado e domingo, Champions Club); o maior, o trem e as opções mais caras de cada item, com a F1 na Senate Grand Prix nos 3 dias.</p>
     <div class="pay">
       <div class="box">
         <h4>Condições de pagamento</h4>
@@ -429,7 +443,6 @@ html = f"""<!DOCTYPE html>
         <li>Nas opções 1 e 2, o voo de volta sai de Nice às 06:00 de 07/06. Na opção 3, às 18:55.</li>
         <li>Na opção 1 (TAP), o trecho Rio → Manaus é em classe econômica. Na opção 2 (Air France), os trechos Manaus → São Paulo e Rio → Manaus são em econômica.</li>
         <li>Hotel Le Mandala, em Saint-Tropez: tarifa não reembolsável.</li>
-        <li>GP de Mônaco: aguardando a Senate Grand Prix confirmar o valor e a disponibilidade de ingresso também para sábado. O valor atual da Senate é só do domingo.</li>
         <li>Tarifas sujeitas a disponibilidade e alteração até a emissão e a reserva.</li>
         <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
       </ul>
