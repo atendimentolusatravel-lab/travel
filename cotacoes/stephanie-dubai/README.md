@@ -1,10 +1,14 @@
-# Stephanie · Dubai e Abu Dhabi (20/12/2026 a 02/01/2027) · 1 viajante, quarto individual
+# Stephanie · Dubai, deserto e Abu Dhabi (20/12/2026 a 02/01/2027) · 1 viajante, quarto individual
 
-- **Fonte:** proposta do fornecedor (texto enviado pela agência em 23/11/2026): Asma Hotel Al Barsha 4* ou similar, 13 noites com café,
-  traslados, Dubai Clássica, Abu Dhabi com Qasr Al Watan, safári, cruzeiro em dhow e jantar de gala no hotel em 31/12.
-- **Valor:** US$ 3.580 por pessoa (SGL) × R$ 6,228 (23/11/2026) = R$ 22.296,24 · até 6x de R$ 3.716,04 · PIX −10% R$ 20.066,62.
-- Opcional: jantar de gala no Atelier M, US$ 340 = R$ 2.117,52. Noite no deserto, resort no deserto e noites em Abu Dhabi: sob consulta.
-- Ajustes: dia 14 com assistência em português (lista de incluídos; o roteiro do fornecedor dizia "espanhol"); Abu Dhabi "1h30 a 2h".
+- **Fonte:** proposta atualizada do fornecedor (texto enviado pela agência em 24/11/2026), categoria 5*:
+  Pullman Dubai Downtown (20–22/12 e 26/12–02/01), Bab Al Shams Desert Resort and Spa (22–24/12),
+  Sofitel Abu Dhabi Corniche (24–26/12), todos "ou similar", com café da manhã; traslados e 8 passeios com assistência em português.
+- **Valor:** US$ 9.025 por pessoa × R$ 6,091 (24/11/2026) = R$ 54.971,28 · até 6x de R$ 9.161,88 · PIX −10% R$ 49.474,15.
+- Opcional: jantar de gala no Atelier M, US$ 340 = R$ 2.070,94, via PIX.
+- Ajustes: dia 14 com assistência em português (lista de incluídos; o roteiro do fornecedor diz "espanhol");
+  Burj Khalifa fora do horário de pico (lista de incluídos).
+- Substitui a proposta de 23/11/2026 (Asma Hotel Al Barsha 4*, US$ 3.580).
+- **Fotos:** `fotos/escolha.json`, 6 por hotel da galeria oficial da Booking.com (scripts em `fotos/`).
 - **Publicação:** projeto Vercel `cotacao-stephanie-dubai`.
 
 ## Gerar
@@ -12,4 +16,3 @@
 ```
 python3 build.py
 ```
-- Fotos: fachada do Tripadvisor + 5 fotos oficiais da Booking.com (500 px, sem legenda, ordem não confirmada).
