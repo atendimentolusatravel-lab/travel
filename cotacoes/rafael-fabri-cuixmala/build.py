@@ -42,6 +42,7 @@ CSS = (ROOT / "style.part.html").read_text().replace(
     ".hotel-name .bldg svg{width:17px;height:17px}\n"
     ".hotel-price{text-align:right;flex:none}\n"
     ".hotel-price .v{font-size:1.3rem;font-weight:700;color:var(--green);white-space:nowrap}\n"
+    ".hotel-price .v.brl{margin-top:2px}\n"
     ".hotel-price .u{font-size:.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}\n"
     ".hotel-room{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}\n"
     ".hotel-room b{color:var(--green-dark);font-weight:600}\n"
@@ -74,6 +75,22 @@ def brl(x):
 
 
 CATS = [
+    dict(id="lion", nome="Lion Suite", local="Casa Cuixmala · edifício principal", noite=24260, m2="43,5 m²",
+         rec="Mais em conta",
+         txt="Suíte dentro da Casa Cuixmala, com vista para o coqueiral, a poucos passos da piscina, do restaurante e das salas de estar. A forma mais em conta de ficar na Casa principal.",
+         quarto="Suíte · até 2 adultos · vista para o coqueiral",
+         inc=["Suíte de 43,5 m² dentro da Casa Cuixmala", "Vista para o coqueiral, da cama e do terraço", "Closet e área de vestir",
+              "Cama king-size", "Banheiro com banheira grande", "Ar-condicionado, Wi-Fi e caixa de som Bose",
+              "Bar no quarto com chá e café", "A poucos passos da piscina, do restaurante e das salas de estar da Casa"],
+         bom="<b>Por que vale:</b> é a forma mais em conta de ficar na Casa principal, com o mesmo acesso à piscina e à praia, por cerca de R$ 38 mil a menos que o Bungalow Vista Mar. <b>Bom saber:</b> é menor que os bangalôs e o terraço é compartilhado com a Dragon Suite, a suíte vizinha."),
+    dict(id="reserva", nome="One Bedroom Bungalow · Vista Reserva", local="Bungalows · 5 a 7 minutos a pé da Casa", noite=33960, m2="120 m²",
+         rec="Intermediária",
+         txt="O mesmo bungalow de 120 m², com entrada e terraço privativos, voltado para a reserva natural em vez do mar. Mesma privacidade e acesso à piscina e ao restaurante da Casa, por cerca de R$ 12,7 mil a menos na semana.",
+         quarto="1 quarto · até 2 adultos · vista para a reserva natural",
+         inc=["Bangalô independente de 120 m², com entrada privativa", "Vista para a reserva natural (mata e lagoa)", "Terraço privativo com duas camas de dia",
+              "Sala e quarto integrados, cama king-size", "Banheiro com banheira grande", "Ar-condicionado, Wi-Fi e caixa de som Bose",
+              "Bar no quarto com chá e café", "Acesso à piscina e ao restaurante da Casa Cuixmala"],
+         bom="<b>Por que vale:</b> mesmo espaço, mesma privacidade e mesmo acesso à Casa do Bungalow Vista Mar. A diferença é só a vista, que dá para a reserva em vez do mar, e o valor fica cerca de R$ 12,7 mil menor na semana."),
     dict(id="bungalow", nome="One Bedroom Bungalow · Vista Mar", local="Bungalows · 5 a 7 minutos a pé da Casa", noite=38800, m2="120 m²",
          rec="Nossa recomendação",
          txt="Casa independente com entrada e terraço privativos, camas de dia e vista para o mar. É o espaço com vista mar mais amplo do hotel, com acesso à piscina e ao restaurante da Casa Cuixmala.",
@@ -82,33 +99,18 @@ CATS = [
               "Sala e quarto integrados, cama king-size", "Banheiro com banheira grande", "Ar-condicionado, Wi-Fi e caixa de som Bose",
               "Bar no quarto com chá e café", "Acesso à piscina e ao restaurante da Casa Cuixmala"],
          bom="<b>Por que recomendamos:</b> é a combinação de privacidade e vista para o mar mais completa do hotel. O bangalô é uma casa só de vocês, escondida na mata, e fica a 5 a 7 minutos a pé da Casa, da piscina e da praia."),
-    dict(id="reserva", nome="One Bedroom Bungalow · Vista Reserva", local="Bungalows · 5 a 7 minutos a pé da Casa", noite=33960, m2="120 m²",
-         rec="Intermediária",
-         txt="O mesmo bungalow de 120 m², com entrada e terraço privativos, voltado para a reserva natural em vez do mar. Mesma privacidade e acesso à piscina e ao restaurante da Casa, por cerca de R$ 12,7 mil a menos na semana.",
-         quarto="1 quarto · até 2 adultos · vista para a reserva natural",
-         inc=["Bangalô independente de 120 m², com entrada privativa", "Vista para a reserva natural (mata e lagoa)", "Terraço privativo com duas camas de dia",
-              "Sala e quarto integrados, cama king-size", "Banheiro com banheira grande", "Ar-condicionado, Wi-Fi e caixa de som Bose",
-              "Bar no quarto com chá e café", "Acesso à piscina e ao restaurante da Casa Cuixmala"],
-         bom="<b>Por que vale:</b> mesmo espaço, mesma privacidade e mesmo acesso à Casa da Opção 1. A diferença é só a vista, que dá para a reserva em vez do mar, e o valor fica cerca de R$ 12,7 mil menor na semana."),
-    dict(id="lion", nome="Lion Suite", local="Casa Cuixmala · edifício principal", noite=24260, m2="43,5 m²",
-         rec="Mais em conta",
-         txt="Suíte dentro da Casa Cuixmala, com vista para o coqueiral, a poucos passos da piscina, do restaurante e das salas de estar. A forma mais em conta de ficar na Casa principal.",
-         quarto="Suíte · até 2 adultos · vista para o coqueiral",
-         inc=["Suíte de 43,5 m² dentro da Casa Cuixmala", "Vista para o coqueiral, da cama e do terraço", "Closet e área de vestir",
-              "Cama king-size", "Banheiro com banheira grande", "Ar-condicionado, Wi-Fi e caixa de som Bose",
-              "Bar no quarto com chá e café", "A poucos passos da piscina, do restaurante e das salas de estar da Casa"],
-         bom="<b>Por que vale:</b> é a forma mais em conta de ficar na Casa principal, com o mesmo acesso à piscina e à praia, por cerca de R$ 38 mil a menos que a Opção 1. <b>Bom saber:</b> é menor que os bangalôs e o terraço é compartilhado com a Dragon Suite, a suíte vizinha."),
 ]
-TODAS = [
+TODAS_DESC = [
     ("Cuixmala Suite", "Casa · única com vista mar garantida e jacuzzi externa · 97 m²", 60640, ""),
     ("Horse Suite", "Casa · vista para a lagoa e a reserva · 72 m²", 46080, ""),
-    ("One Bedroom Bungalow · Vista Mar", "Bungalows · vista para o mar · 120 m²", 38800, "Opção 1"),
+    ("One Bedroom Bungalow · Vista Mar", "Bungalows · vista para o mar · 120 m²", 38800, "Opção 3"),
     ("One Bedroom Bungalow Laguna", "Bungalows · o maior, vista para a lagoa · 150 m²", 38800, ""),
     ("Dragon Suite", "Casa · vista para o coqueiral · 72 m²", 33960, ""),
     ("One Bedroom Bungalow · Vista Reserva", "Bungalows · vista para a reserva natural · 120 m²", 33960, "Opção 2"),
-    ("Lion Suite", "Casa · vista para o coqueiral", 24260, "Opção 3"),
+    ("Lion Suite", "Casa · vista para o coqueiral", 24260, "Opção 1"),
     ("One Bedroom Casita", "Casitas · 15 minutos de carro da Casa · vista da selva, sem mar · piscina própria", 15760, ""),
 ]
+TODAS = sorted(TODAS_DESC, key=lambda t: t[2])
 
 
 def tot(noite):
@@ -117,7 +119,7 @@ def tot(noite):
 
 for c in CATS:
     c["total"] = tot(c["noite"])
-assert [c["total"] for c in CATS] == [328636.00, 287641.20, 205482.20]
+assert [c["total"] for c in CATS] == [205482.20, 287641.20, 328636.00]
 BLDG = '<span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span>'
 
 
@@ -129,7 +131,7 @@ def galeria(cid):
 
 def card(c, n):
     return (f'        <div class="hotel"><span class="rec">Opção {n} · {c["rec"]}</span><div class="hotel-top"><div class="hotel-name">{BLDG}<span>{c["nome"]}<span class="loc2">{c["local"]} · {c["m2"]}</span></span></div>'
-            f'<div class="hotel-price"><div class="v">{mxn(c["total"])}</div><div class="u">7 noites · com impostos · ≈ {brl(c["total"] * CAMBIO)}</div><div class="pixtag">Valor para pagamento via Pix</div></div></div>{galeria(c["id"])}'
+            f'<div class="hotel-price"><div class="v">{mxn(c["total"])}</div><div class="v brl">≈ {brl(c["total"] * CAMBIO)}</div><div class="u">7 noites · com impostos</div><div class="pixtag">Valor para pagamento via Pix</div></div></div>{galeria(c["id"])}'
             f'<div class="hotel-room"><b>{c["quarto"]}</b> · {mxn(c["noite"])} por noite + impostos · só hospedagem</div>'
             f'<p class="note" style="margin-top:8px">{c["txt"]}</p>'
             f'<div class="fh">O que a acomodação oferece</div><ul class="feat">' + "".join(f"<li>{x}</li>" for x in c["inc"]) + '</ul>'
@@ -222,7 +224,7 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Tabela completa</span>
     <h2>Todas as acomodações</h2>
     <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">Todas as acomodações que o hotel ofereceu para fevereiro, da mais cara à mais em conta, para 2 adultos e 7 noites.</p>
+    <p class="note" style="margin-top:16px">Todas as acomodações que o hotel ofereceu para fevereiro, da mais em conta à mais cara, para 2 adultos e 7 noites.</p>
     <div class="tbl-wrap"><table>
       <tr class="head-row"><td>Acomodação</td><td class="v">Por noite</td><td class="v">7 noites com impostos</td><td class="v">≈ em reais</td></tr>
 {outras}
