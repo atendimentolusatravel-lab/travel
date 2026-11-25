@@ -206,7 +206,7 @@ html = f"""<!DOCTYPE html>
       <tr class="sec-row"><td colspan="3">Opcional</td></tr>
       <tr><td><b>Pensão completa</b><div class="rm">Café da manhã, almoço, jantar e bebidas sem álcool · a partir de US$ 250 por pessoa por dia · a confirmar com o hotel</div></td><td class="v">{PENSAO_TXT}</td><td class="v">≈ {brl(PENSAO_BRL)}</td></tr>
     </table></div>
-    <p class="note">Como é calculado: valor por noite × 7 noites + 21% de impostos (16% de IVA e 5% de imposto de hospedagem). Estimativa em reais com o câmbio de hoje ({EMISSAO}): MXN 1 = R$ 0,309 · USD 1 = R$ 6,11. Pensão completa: US$ 250 × 2 pessoas × 7 dias = {PENSAO_TXT}.</p>
+    <p class="note">Como é calculado: valor por noite × 7 noites + 21% de impostos (16% de IVA e 5% de imposto de hospedagem). Estimativa em reais com o câmbio de hoje ({EMISSAO}): MXN 1 = R$ 0,309 · USD 1 = R$ 6,11, já com IOF e taxa de remessa. Pensão completa: US$ 250 × 2 pessoas × 7 dias = {PENSAO_TXT}.</p>
     <div class="pay">
       <div class="box">
         <h4>Condições de pagamento</h4>
@@ -216,7 +216,7 @@ html = f"""<!DOCTYPE html>
       <div class="box">
         <h4>Referência</h4>
         <p>Cotação emitida em {EMISSAO} · tarifas de alta temporada (fevereiro e março de 2027)</p>
-        <p class="sm">Câmbio de hoje ({EMISSAO}): <b>MXN 1 = R$ 0,309</b> · <b>USD 1 = R$ 6,11</b>. O valor final em reais depende do câmbio no dia do pagamento.</p>
+        <p class="sm">Câmbio de hoje ({EMISSAO}): <b>MXN 1 = R$ 0,309</b> · <b>USD 1 = R$ 6,11</b>. Os valores em reais já incluem IOF e taxa de remessa. O valor final depende do câmbio no dia do pagamento.</p>
       </div>
     </div>
     <div class="obs">
@@ -228,6 +228,7 @@ html = f"""<!DOCTYPE html>
       </ul>
       <h4>Observações</h4>
       <ul>
+        <li>Os valores em reais já incluem IOF e taxa de remessa.</li>
         <li>Check-in às 15h e check-out às 12h.</li>
         <li>Disponibilidade sujeita às datas exatas da viagem, a confirmar com o hotel.</li>
         <li>Tarifas informadas pelo hotel para fevereiro e março de 2027, sujeitas a alteração até a confirmação.</li>
