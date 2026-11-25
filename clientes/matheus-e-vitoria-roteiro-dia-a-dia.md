@@ -59,8 +59,11 @@
 ### 05/01 (ter) — Lucerna → Zurique
 - Check-out.
 - **10h09** — Trem Luzern → **10h51** Zürich HB (primeira classe, direto).
-- Zurique: Bahnhofstrasse, centro antigo, mirante do Lindenhof, Grossmünster e beira do lago.
-- Tarde/noite em Zurich West: mercado coberto Im Viadukt e região do Prime Tower.
+- Deixar as malas no hotel.
+- Final da manhã: **Lindt Home of Chocolate** em Kilchberg (~15–20 min de trem da estação
+  central) — museu do chocolate, a maior fonte de chocolate do mundo e loja da fábrica.
+  Ingresso com horário marcado, comprar antes (a partir de CHF 17 por pessoa).
+- Tarde: Bahnhofstrasse, centro antigo, mirante do Lindenhof, Grossmünster e beira do lago.
 - Dormir cedo — o voo do dia seguinte é de madrugada.
 - **Hospedagem (05/01 a 06/01):** Novotel Zurich City West *ou* 25hours Hotel Zurich West.
 
