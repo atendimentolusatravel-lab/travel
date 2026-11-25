@@ -116,6 +116,7 @@ rows = "\n".join(
 outras = "\n".join(
     f'      <tr><td><b>{n}</b><div class="rm">{d}</div></td><td class="v">{mxn(v)}</td><td class="v">{mxn(tot(v))}</td></tr>' for n, d, v in OUTRAS)
 PENSAO_USD = 250 * 2 * NOITES
+PENSAO_TXT = "US$ " + f"{PENSAO_USD:,}".replace(",", ".")
 CAPA = galeria("casa")
 capa_url = (FOTOS.get("casa", {}).get("fotos") or FOTOS.get("bungalow", {}).get("fotos") or [""])[0]
 
@@ -201,7 +202,7 @@ html = f"""<!DOCTYPE html>
       <tr class="head-row"><td>Acomodação</td><td class="v">7 noites (MXN)</td><td class="v">Estimativa em reais</td></tr>
 {rows}
       <tr class="sec-row"><td colspan="3">Opcional</td></tr>
-      <tr><td><b>Pensão completa</b><div class="rm">Café da manhã, almoço, jantar e bebidas sem álcool · a partir de US$ 250 por pessoa por dia · a confirmar com o hotel</div></td><td class="v">US$ {PENSAO_USD:,}</td><td class="v">2 pessoas · 7 dias</td></tr>
+      <tr><td><b>Pensão completa</b><div class="rm">Café da manhã, almoço, jantar e bebidas sem álcool · a partir de US$ 250 por pessoa por dia · a confirmar com o hotel</div></td><td class="v">{PENSAO_TXT}</td><td class="v">2 pessoas · 7 dias</td></tr>
     </table></div>
     <p class="note">Como é calculado: valor por noite × 7 noites + 21% de impostos (16% de IVA e 5% de imposto de hospedagem). Estimativa em reais com o peso mexicano a R$ 0,295.</p>
     <div class="pay">
