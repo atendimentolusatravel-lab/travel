@@ -125,6 +125,42 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
 .cmp-note{ font-size:8.6pt; color:var(--green); font-weight:600; margin-top:2.5mm; }
 .seg .tr .dt{ font-size:8pt; color:var(--mut); font-weight:500; margin-right:1mm; }
 
+.route .via{ font-size:10pt; font-weight:500; color:var(--mut); margin-left:1.5mm; }
+/* ── Complementos ── */
+.cpls{ display:grid; grid-template-columns:1fr 1fr; gap:4mm; }
+.cpl{ border:1px solid var(--line); border-radius:2.2mm; padding:4mm 5mm; }
+.cpl-top{ display:flex; align-items:center; gap:3mm; margin-bottom:2.6mm; }
+.cpl-top .air{ font-size:11.5pt; }
+.num.ltr{ width:8mm; height:8mm; font-size:10pt; }
+.cpl-body{ display:grid; grid-template-columns:minmax(0,1fr) 40mm; gap:6mm; align-items:start; }
+.seg.cs{ grid-template-columns:9mm 13mm 1fr 9mm; font-size:9pt; }
+.seg.cs .dt{ font-size:8pt; color:var(--mut); font-weight:500; }
+.cpl-price{ border-left:1px solid var(--line); padding-left:4mm; }
+.cp-brl{ font-size:14pt; font-weight:800; color:var(--ink); line-height:1.15; margin-top:.8mm; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.cp-brl small{ font-size:8pt; font-weight:600; color:var(--gold); margin-right:.8mm; }
+.cpl .pr-pp{ font-size:8.5pt; }
+.warn{ color:#a33a00; font-weight:600; }
+
+/* ── Página 2 ── */
+.client.mini .cname{ font-size:22pt; }
+.p2 .cmp{ font-size:10pt; }
+.p2 .cmp th{ font-size:7.5pt; padding:3mm 3mm; }
+.p2 .cmp td{ padding:4.2mm 3mm; }
+.cmp .r, .cmp td:first-child{ white-space:nowrap; }
+.cmp .r{ white-space:nowrap; }
+.p2 .notes{ margin-top:auto; }
+.p2 .opt-legend{ margin-top:4mm; font-size:9pt; color:var(--char); line-height:1.7; }
+.p2 .opt-legend b{ color:var(--green); }
+
+.guide{ display:grid; grid-template-columns:repeat(3,1fr); gap:4mm; }
+.gd{ border:1px solid var(--line); border-radius:2.2mm; padding:5mm; background:#fff; }
+.gd.hl{ border-color:var(--gold); background:#fdf7ea; }
+.gd-k{ font-family:var(--lbl); font-size:7.5pt; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); }
+.gd-t{ font-size:10pt; color:var(--ink); margin-top:1.5mm; font-weight:500; }
+.gd-t b{ color:var(--green); font-weight:800; }
+.gd-v{ font-size:16pt; font-weight:800; color:var(--ink); margin-top:1.5mm; font-variant-numeric:tabular-nums; }
+.gd-d{ font-size:8.8pt; line-height:1.6; color:var(--char); margin-top:2mm; font-weight:300; }
+
 /* ── Notas ── */
 .notes{ margin-top:auto; padding:4.5mm 0 5mm; display:grid; grid-template-columns:1.25fr 1fr; gap:10mm; border-top:1px solid var(--line); }
 .notes h3{ font-size:8pt; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--green); margin-bottom:2mm; }
@@ -177,7 +213,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <div>
       <div class="kicker">Cotação aérea preparada para</div>
       <div class="cname">Sr. Rodrigo Barroso</div>
-      <div class="route">Curitiba (CWB) &nbsp;⇄&nbsp; Lisboa (LIS)</div>
+      <div class="route">Curitiba (CWB) &nbsp;⇄&nbsp; Barcelona (BCN) <span class="via">via Lisboa</span></div>
     </div>
     <div class="meta">
       <div><b>2</b><span>Adultos</span></div>
@@ -191,14 +227,14 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
     <div class="paxbar"><span class="pb-main">Valores totais para <b>2 adultos</b></span><span class="pb-sep">|</span><span>Cotação em <b>25/11/2026</b></span><span class="pb-sep">|</span><span>Valor por adulto indicado em cada opção</span></div>
 
     <!-- ══════════ EXECUTIVA ══════════ -->
-    <div class="group"><h2>Classe Executiva</h2><div class="rule"></div><div class="hint">do menor para o maior valor</div></div>
+    <div class="group"><h2>Voos internacionais · Classe Executiva</h2><div class="rule"></div><div class="hint">do menor para o maior valor</div></div>
 
     <!-- Opção 1 · Azul -->
     <article class="opt star">
       <div class="opt-main">
         <div class="opt-top">
           <div class="num">1</div><div class="air">Azul</div><span class="cab exe">Business</span>
-          <span class="pill gold">Melhor custo-benefício</span><span class="pill">Executiva em todos os trechos</span>
+          <span class="pill gold">Melhor custo-benefício</span><span class="pill">Até Lisboa · somar complemento para Barcelona</span>
         </div>
         <div class="legs">
         <div class="leg">
@@ -228,7 +264,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         <div class="pr-brl"><small>R$</small>31.023,66</div>
         <div class="pr-usd">USD 5.296,58</div>
         <div class="pr-pp">R$ 15.511,83 <span>por adulto</span></div>
-        <div class="pr-list"><b>3 malas</b> despachadas<br><b>11 noites</b> em Lisboa · 29/01–09/02</div>
+        <div class="pr-list"><b>3 malas</b> despachadas<br>Somente Curitiba ⇄ Lisboa</div>
       </aside>
     </article>
 
@@ -237,7 +273,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       <div class="opt-main">
         <div class="opt-top">
           <div class="num">2</div><div class="air">LATAM</div><span class="cab exe">Premium Business</span>
-          <span class="pill">Executiva nos voos internacionais</span>
+          <span class="pill">Até Lisboa · somar complemento para Barcelona</span>
         </div>
         <div class="legs">
         <div class="leg">
@@ -268,7 +304,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
         <div class="pr-brl"><small>R$</small>32.783,76</div>
         <div class="pr-usd">USD 5.597,08</div>
         <div class="pr-pp">R$ 16.391,88 <span>por adulto</span></div>
-        <div class="pr-list"><b>1 mala</b> despachada<br><b>11 noites</b> em Lisboa · 29/01–09/02</div>
+        <div class="pr-list"><b>1 mala</b> despachada<br>Somente Curitiba ⇄ Lisboa</div>
       </aside>
     </article>
 
@@ -277,7 +313,7 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       <div class="opt-main">
         <div class="opt-top">
           <div class="num">3</div><div class="air">TAP Air Portugal</div><span class="cab exe">Executiva</span>
-          <span class="pill gold">Inclui Lisboa ⇄ Barcelona</span><span class="pill">Volta direta para Curitiba</span>
+          <span class="pill gold">Já inclui Lisboa ⇄ Barcelona</span><span class="pill">Bilhete único</span>
         </div>
         <div class="legs">
         <div class="leg">
@@ -312,17 +348,88 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
       </aside>
     </article>
 
-    <!-- ══════════ COMPARATIVO ══════════ -->
-    <div class="group"><h2>Comparativo rápido</h2><div class="rule"></div></div>
+    <!-- ══════════ COMPLEMENTO LISBOA ⇄ BARCELONA ══════════ -->
+    <div class="group"><h2>Complemento Lisboa ⇄ Barcelona</h2><div class="rule"></div><div class="hint">para as opções 1 e 2 · TAP</div></div>
+    <div class="cpls">
+      <article class="cpl">
+        <div class="cpl-top"><div class="num ltr">A</div><div class="air">TAP · Econômica</div><span class="pill gold">Menor valor</span></div>
+        <div class="cpl-body">
+          <div class="segs">
+            <div class="seg cs"><span class="dt">29/01</span><span class="fl">TP 1034</span><span class="tr"><b>LIS 10:50</b> → <b>BCN 13:45</b></span><span class="du">1h55</span></div>
+            <div class="seg cs"><span class="dt">05/02</span><span class="fl">TP 1037</span><span class="tr"><b>BCN 18:05</b> → <b>LIS 19:10</b></span><span class="du">2h05</span></div>
+            <div class="legsum">Espera em Lisboa: 3h30 (Azul) · 4h30 (LATAM)<br><span class="warn">Tarifa sem bagagem despachada</span></div>
+          </div>
+          <div class="cpl-price"><div class="pr-k">Total · 2 adultos</div><div class="cp-brl"><small>R$</small>3.553,12</div><div class="pr-usd">EUR 543,56</div><div class="pr-pp">R$ 1.776,56 <span>por adulto</span></div></div>
+        </div>
+      </article>
+      <article class="cpl">
+        <div class="cpl-top"><div class="num ltr">B</div><div class="air">TAP · Executiva</div><span class="pill">2 malas incluídas</span></div>
+        <div class="cpl-body">
+          <div class="segs">
+            <div class="seg cs"><span class="dt">29/01</span><span class="fl">TP 1036</span><span class="tr"><b>LIS 14:20</b> → <b>BCN 17:15</b></span><span class="du">1h55</span></div>
+            <div class="seg cs"><span class="dt">05/02</span><span class="fl">TP 1039</span><span class="tr"><b>BCN 21:10</b> → <b>LIS 22:10</b></span><span class="du">2h00</span></div>
+            <div class="legsum">Espera em Lisboa: 7h00 (Azul) · 8h00 (LATAM)<br>2 malas despachadas por pessoa</div>
+          </div>
+          <div class="cpl-price"><div class="pr-k">Total · 2 adultos</div><div class="cp-brl"><small>R$</small>8.415,88</div><div class="pr-usd">USD 1.436,84</div><div class="pr-pp">R$ 4.207,94 <span>por adulto</span></div></div>
+        </div>
+      </article>
+    </div>
+
+  </main>
+  <footer class="ft">
+    <div class="logo">Lusa<span>Travel</span></div>
+    <div class="ft-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <span class="sep">·</span>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+      <span class="sep">·</span>
+      <span class="addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</span>
+    </div>
+  </footer>
+</section>
+
+<section class="page p2">
+  <header class="hd">
+    <div class="logo">Lusa<span>Travel</span><small>Agência de viagens</small></div>
+    <div class="tag">Cotação aérea<b>Simplificada</b></div>
+  </header>
+  <div class="goldbar"></div>
+
+  <div class="client mini">
+    <div>
+      <div class="kicker">Cotação aérea preparada para</div>
+      <div class="cname">Sr. Rodrigo Barroso</div>
+      <div class="route">Curitiba (CWB) &nbsp;⇄&nbsp; Barcelona (BCN) <span class="via">via Lisboa</span></div>
+    </div>
+    <div class="meta">
+      <div><b>2</b><span>Adultos</span></div>
+      <div><b>25/11/2026</b><span>Data da cotação</span></div>
+    </div>
+  </div>
+
+  <main class="body">
+    <div class="paxbar"><span class="pb-main">Valores totais para <b>2 adultos</b></span><span class="pb-sep">|</span><span>Viagem completa Curitiba ⇄ Barcelona, com 4 noites em Lisboa na volta</span></div>
+
+    <!-- ══════════ TOTAL DA VIAGEM ══════════ -->
+    <div class="group"><h2>Total da viagem até Barcelona</h2><div class="rule"></div><div class="hint">7 noites em Barcelona e 4 em Lisboa</div></div>
     <table class="cmp">
-      <thead><tr><th>Opção</th><th>Ida</th><th>Volta</th><th>Bagagem</th><th>Destinos</th><th class="r">Por adulto</th><th class="r">Total · 2 adultos</th></tr></thead>
+      <thead><tr><th>Combinação</th><th>Curitiba ⇄ Lisboa</th><th>Lisboa ⇄ Barcelona</th><th>Bagagem</th><th>Bilhete</th><th class="r">Por adulto</th><th class="r">Total · 2 adultos</th></tr></thead>
       <tbody>
-        <tr class="hl"><td><b>1 · Azul</b></td><td>15h05 · 1 conexão</td><td>15h00 · 1 conexão</td><td>3 malas</td><td>Lisboa</td><td class="r">R$ 15.511,83</td><td class="r"><b>R$ 31.023,66</b></td></tr>
-        <tr><td><b>2 · LATAM</b></td><td>18h15 · 1 conexão</td><td>17h40 · 2 conexões</td><td>1 mala</td><td>Lisboa</td><td class="r">R$ 16.391,88</td><td class="r"><b>R$ 32.783,76</b></td></tr>
-        <tr><td><b>3 · TAP</b></td><td>19h45 até Barcelona · 2 conexões</td><td>10h55 · direto de Lisboa</td><td>2 malas</td><td>Barcelona + Lisboa</td><td class="r">R$ 22.732,06</td><td class="r"><b>R$ 45.464,12</b></td></tr>
+        <tr class="hl"><td><b>1 + A</b></td><td>Azul Business</td><td>TAP Econômica</td><td>3 malas · <span class="warn">0 no trecho europeu</span></td><td>Separados</td><td class="r">R$ 17.288,39</td><td class="r"><b>R$ 34.576,78</b></td></tr>
+        <tr><td><b>2 + A</b></td><td>LATAM Premium Business</td><td>TAP Econômica</td><td>1 mala · <span class="warn">0 no trecho europeu</span></td><td>Separados</td><td class="r">R$ 18.168,44</td><td class="r"><b>R$ 36.336,88</b></td></tr>
+        <tr><td><b>1 + B</b></td><td>Azul Business</td><td>TAP Executiva</td><td>3 malas · 2 no trecho europeu</td><td>Separados</td><td class="r">R$ 19.719,77</td><td class="r"><b>R$ 39.439,54</b></td></tr>
+        <tr><td><b>2 + B</b></td><td>LATAM Premium Business</td><td>TAP Executiva</td><td>1 mala</td><td>Separados</td><td class="r">R$ 20.599,82</td><td class="r"><b>R$ 41.199,64</b></td></tr>
+        <tr><td><b>3</b></td><td colspan="2">TAP Executiva, tudo incluído</td><td>2 malas em todos os trechos</td><td>Único</td><td class="r">R$ 22.732,06</td><td class="r"><b>R$ 45.464,12</b></td></tr>
       </tbody>
     </table>
-    <p class="cmp-note">As opções 1 e 2 são somente Curitiba ⇄ Lisboa. A opção 3 já inclui os voos Lisboa ⇄ Barcelona em Executiva.</p>
+    <p class="opt-legend"><b>1</b> Azul Business · <b>2</b> LATAM Premium Business · <b>3</b> TAP Executiva (já inclui Barcelona) · <b>A</b> complemento TAP Econômica · <b>B</b> complemento TAP Executiva. Detalhes dos voos na página anterior.</p>
+
+    <div class="group"><h2>Como escolher</h2><div class="rule"></div></div>
+    <div class="guide">
+      <div class="gd"><div class="gd-k">Menor valor</div><div class="gd-t"><b>1 + A</b> · Azul Business + TAP Econômica</div><div class="gd-v">R$ 34.576,78</div><div class="gd-d">Executiva no voo longo e o menor preço total. A tarifa europeia não inclui bagagem despachada; a mala pode ser comprada à parte.</div></div>
+      <div class="gd hl"><div class="gd-k">Equilíbrio</div><div class="gd-t"><b>1 + B</b> · Azul Business + TAP Executiva</div><div class="gd-v">R$ 39.439,54</div><div class="gd-d">Executiva e bagagem em todos os trechos, por R$ 6.024,58 a menos que a opção 3. Bilhetes separados, com folga de 7h em Lisboa na ida.</div></div>
+      <div class="gd"><div class="gd-k">Mais simples</div><div class="gd-t"><b>3</b> · TAP Executiva, tudo incluído</div><div class="gd-v">R$ 45.464,12</div><div class="gd-d">Bilhete único: conexões protegidas pela companhia e bagagem despachada até o destino. Volta direta Lisboa–Curitiba em 10h55.</div></div>
+    </div>
 
     <!-- ══════════ NOTAS ══════════ -->
     <section class="notes">
@@ -333,16 +440,17 @@ html,body{ font-family:var(--sans); color:var(--char); background:#fff; }
           <li>Valores e disponibilidade sujeitos a alteração até a emissão dos bilhetes.</li>
           <li>Regras de remarcação, cancelamento e escolha de assentos conforme a tarifa de cada companhia.</li>
           <li>Valores totais para 2 adultos, cotados em 25/11/2026.</li>
+          <li>Nas combinações com complemento, os bilhetes são separados: a conexão em Lisboa não é protegida e pode ser preciso retirar e despachar a bagagem novamente.</li>
           <li>Horários em hora local. <b>+1</b> indica o dia seguinte.</li>
         </ul>
       </div>
       <div>
         <h3>Câmbio e documentação</h3>
         <ul>
-          <li>Valores em reais com equivalente em dólar americano.</li>
+          <li>Valores em reais com equivalente em dólar ou euro.</li>
           <li>Documentação: passaporte válido por pelo menos 3 meses após o retorno. Verificar a exigência da autorização eletrônica ETIAS na data da viagem.</li>
         </ul>
-        <span class="fx">Cotação 25/11/2026 · USD 1 = R$ 5,86</span>
+        <span class="fx">Cotação 25/11/2026 · USD 1 = R$ 5,86 · EUR 1 = R$ 6,54</span>
       </div>
     </section>
   </main>

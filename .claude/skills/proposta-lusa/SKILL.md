@@ -36,7 +36,13 @@ Quando o pedido for só de aéreo, ou o usuário disser "cotação simplificada"
 - Abaixo do bloco do cliente, uma faixa informa para quantos passageiros são os valores e a
   data e hora da cotação (ex.: "Valores totais para 2 adultos | Cotação em 23/11/2026 às 15:36").
 - O câmbio de referência é o implícito na cotação (R$ ÷ USD), com data e hora da cotação.
-- Confira se o conteúdo cabe em uma folha A3 antes de entregar (nada cortado no PDF).
+- Quando o destino final exigir um trecho complementar (ex.: Lisboa ⇄ Barcelona) só para
+  algumas opções, mostre o complemento em cartões próprios (A, B…) e uma tabela
+  "Total da viagem" somando cada combinação, indicando bagagem e se os bilhetes são
+  separados ou únicos. Deixe claro que conexão em bilhete separado não é protegida.
+- Se não couber em uma folha A3, divida em 2 páginas (voos na 1ª; totais, "Como escolher"
+  e observações na 2ª), com cabeçalho, barra dourada e rodapé em ambas. Confira sempre que
+  nada ficou cortado no PDF.
 
 ## Fluxo de trabalho
 
