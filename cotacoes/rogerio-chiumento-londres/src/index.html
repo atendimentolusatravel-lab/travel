@@ -119,6 +119,19 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-
 .hl{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:14px 22px;border-bottom:1px solid var(--line);background:var(--cream)}
 .hl div{font-size:.78rem;color:var(--muted)}.hl b{display:block;color:var(--ink);font-size:.95rem}
 .pend{margin:0 22px 14px;padding:10px 14px;border-radius:10px;background:#fff6e0;border:1px solid #ecd59a;color:#6b4e00;font-size:.85rem}
+.hgrid>.hotel{min-width:0}
+.hotel{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:20px 22px}
+.hotel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.hotel-name{font-size:1.06rem;font-weight:600;display:flex;align-items:center;gap:12px}
+.hotel-name .bldg{width:34px;height:34px;flex:none;border:1.6px solid var(--ink);border-radius:50%;display:grid;place-items:center}
+.hotel-name .bldg svg{width:17px;height:17px}
+.hotel-price{text-align:right;flex:none}
+.hotel-price .v{font-size:1.3rem;font-weight:700;color:var(--green);white-space:nowrap}
+.hotel-price .u{font-size:.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.hotel-room{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
+.hotel-room b{color:var(--green-dark);font-weight:600}
+@media(max-width:720px){.hotel-top{flex-direction:column}.hotel-price{text-align:left}}
+.loc2{display:block;font-weight:400;color:var(--muted);font-size:.8rem;margin-top:2px}
 @media(max-width:720px){.hl{grid-template-columns:1fr 1fr}}
 </style>
 </head>
@@ -137,7 +150,7 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-
     <div class="hero-info">
       <div>
         <div class="lbl">Detalhes</div>
-        <p>Curitiba ⇄ Londres · opções em <b>reais</b> e em <b>milhas Smiles</b>, separadas por classe</p>
+        <p>Curitiba ⇄ Londres · aéreo em <b>reais</b> e em <b>milhas Smiles</b>, separado por classe · 3 opções de hotel com café da manhã</p>
         <p class="sm">Cotação emitida em <b>24/11/2026</b> · valores em reais <b>para 2 pessoas</b>, com o valor por pessoa ao lado</p>
       </div>
       <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
@@ -191,6 +204,21 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-
   </section>
 
   <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Hospedagem</span>
+    <h2>Hotéis em Londres</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">24 de dezembro de 2026 a 2 de janeiro de 2027 · 9 noites, com café da manhã. Valores em <b>BRL</b>, total da estadia para 2 pessoas. <b>Escolher 1 hotel.</b></p>
+    <div class="city-block">
+      <div class="city-head"><h3>Londres</h3><span class="dates">24 DEZ – 02 JAN · 9 noites</span></div>
+      <div class="hgrid">
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>The Dilly<span class="loc2">Piccadilly · ★★★★★</span></span></div><div class="hotel-price"><div class="v">R$ 33.920,00</div><div class="u">9 noites · em até 10x</div></div></div><div class="hotel-room"><b>Quarto duplo Superior com duas camas de solteiro (twin)</b> · café da manhã</div><span class="bf">Café da manhã</span><p class="note" style="margin-top:8px">Na Piccadilly, a poucos passos de Piccadilly Circus, Soho e Regent Street. Tem piscina coberta.</p></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>The May Fair Hotel<span class="loc2">Mayfair · ★★★★★</span></span></div><div class="hotel-price"><div class="v">R$ 43.745,00</div><div class="u">9 noites · em até 6x</div></div></div><div class="hotel-room"><b>Collection Deluxe Twin Room (duas camas de solteiro)</b> · café da manhã</div><span class="bf">Café da manhã</span><p class="note" style="margin-top:8px">Em Mayfair, ao lado do Green Park e da Bond Street, com spa e o bar do hotel bem conhecido em Londres.</p></div>
+        <div class="hotel"><div class="hotel-top"><div class="hotel-name"><span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span><span>The Clermont London, Victoria<span class="loc2">Victoria · ★★★★</span></span></div><div class="hotel-price"><div class="v">R$ 30.705,00</div><div class="u">9 noites · a confirmar</div></div></div><div class="hotel-room"><b>King Classic Room (uma cama king)</b> · café da manhã</div><span class="bf">Café da manhã</span><p class="note" style="margin-top:8px">Colado à estação Victoria (trem, metrô e o Gatwick Express), perto do Palácio de Buckingham.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sh">
     <span class="eyebrow">Investimento</span>
     <h2>Resumo de valores</h2>
     <div class="accent-line"></div>
@@ -203,23 +231,28 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-
       <tr><td><b>Ida · quarta, 23 de dezembro</b> <span class="cia" style="background:#002157">Air France</span><div class="rm">São Paulo → Londres</div></td><td class="v">216.400 milhas</td><td class="v">432.800 milhas</td></tr>
       <tr><td><b>Volta · sábado, 2 de janeiro</b> <span class="cia" style="background:#d71920">TAP Air Portugal</span><div class="rm">Londres → Curitiba</div></td><td class="v">204.900 milhas</td><td class="v">409.800 milhas</td></tr>
       <tr class="total-row"><td>Ida e volta em milhas</td><td class="v">421.300 milhas</td><td class="v">842.600 milhas</td></tr>
+      <tr class="sec-row"><td colspan="3">Hospedagem em Londres · 24/12 a 02/01 · 9 noites <span>· escolher 1</span></td></tr>
+      <tr><td><b>The Dilly</b><div class="rm">Quarto duplo Superior com duas camas de solteiro (twin) · café da manhã · em até 10x</div></td><td class="v"></td><td class="v">R$ 33.920,00</td></tr>
+      <tr><td><b>The May Fair Hotel</b><div class="rm">Collection Deluxe Twin Room (duas camas de solteiro) · café da manhã · em até 6x</div></td><td class="v"></td><td class="v">R$ 43.745,00</td></tr>
+      <tr><td><b>The Clermont London, Victoria</b><div class="rm">King Classic Room (uma cama king) · café da manhã · parcelamento a confirmar</div></td><td class="v"></td><td class="v">R$ 30.705,00</td></tr>
     </table></div>
     <p class="note">Como é calculado: em reais, o valor da cotação para 2 pessoas e, por pessoa, o mesmo valor dividido por 2. Em milhas, o valor por viajante da Smiles e, para 2 pessoas, multiplicado por 2.</p>
     <div class="pay">
       <div class="box">
         <h4>Condições de pagamento</h4>
-        <p>A confirmar com a LusaTravel no fechamento.</p>
+        <p><b>Aéreo</b>: a confirmar com a LusaTravel no fechamento.</p>
+        <p><b>The Dilly</b>: em até 10x · <b>The May Fair</b>: em até 6x · <b>The Clermont</b>: a confirmar</p>
       </div>
       <div class="box">
         <h4>Referência</h4>
         <p>Cotação emitida em 24/11/2026 · valores em <b>reais (BRL)</b> e em <b>milhas Smiles</b></p>
-        <p class="sm">Equivalente informado na cotação da LATAM: USD 2.780,62 para 2 pessoas.</p>
+        <p class="sm">Câmbio de 25/11/2026: GBP 1 = R$ 7,73 · USD 1 = R$ 5,90. Equivalente informado na cotação da LATAM: USD 2.780,62 para 2 pessoas.</p>
       </div>
     </div>
     <div class="obs">
       <h4>Não inclui</h4>
       <ul>
-        <li>Hospedagem, traslados e passeios</li>
+        <li>Traslados, passeios e taxas cobradas pelos hotéis</li>
         <li>Taxas de embarque das passagens em milhas</li>
         <li>Seguro viagem</li>
       </ul>
@@ -227,6 +260,7 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-
       <ul>
         <li>Em milhas, a ida sai de São Paulo (Guarulhos): o trecho Curitiba → São Paulo não está incluído.</li>
         <li>Em milhas, a franquia exibida é de 1 item pessoal; mala de mão e mala despachada a confirmar na emissão.</li>
+        <li>The Clermont: quarto com uma cama king. The Dilly e The May Fair: quartos com duas camas de solteiro (twin).</li>
         <li>A volta em milhas sai de Londres às 06:00 do dia 02/01: é preciso estar em Heathrow por volta das 03:30.</li>
         <li>Brasileiros precisam de autorização eletrônica de viagem (ETA) para entrar no Reino Unido. Conferimos as regras vigentes antes da emissão.</li>
         <li>Valores em milhas sujeitos a alteração na Smiles até a emissão; tarifas em reais sujeitas a disponibilidade.</li>

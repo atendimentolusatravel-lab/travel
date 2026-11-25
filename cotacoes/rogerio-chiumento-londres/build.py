@@ -8,10 +8,17 @@ Fontes (telas enviadas pela agência em 24/11/2026):
   econômica · a partir de 216.400 milhas por viajante.
 - fonte/milhas-volta-tap*.{webp,png}: Smiles · TP 1363 LHR→LIS 02/01 06:00–08:50 · TP 67 LIS→CWB 02/01 10:45–18:40 ·
   econômica · a partir de 204.900 milhas por viajante.
+Hotéis (texto enviado pela agência em 25/11/2026, valores em BRL do período, café da manhã incluído):
+  The Dilly · quarto duplo Superior com duas camas (twin) · R$ 33.920,00 · até 10x;
+  The May Fair Hotel · Collection Deluxe Twin Room · R$ 43.745,00 · até 6x;
+  The Clermont London, Victoria · King Classic Room · R$ 30.705,00 · parcelamento não informado.
+  Câmbio informado (25/11/2026): GBP 1 = R$ 7,73 · USD 1 = R$ 5,90. Período considerado: 24/12/2026 a 02/01/2027.
 Bagagem nas telas da Smiles: 1 item pessoal; mala de mão e despachada sem indicação ("-").
 Durações conferidas pelos fusos (CWB/GRU −3, Paris +1, Londres e Lisboa 0 em dezembro–janeiro).
 """
+import json
 import pathlib
+from html import escape as esc
 
 ROOT = pathlib.Path(__file__).parent
 CSS = (ROOT / "style.part.html").read_text().replace(
@@ -33,8 +40,22 @@ CSS = (ROOT / "style.part.html").read_text().replace(
     ".hl{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:14px 22px;border-bottom:1px solid var(--line);background:var(--cream)}\n"
     ".hl div{font-size:.78rem;color:var(--muted)}.hl b{display:block;color:var(--ink);font-size:.95rem}\n"
     ".pend{margin:0 22px 14px;padding:10px 14px;border-radius:10px;background:#fff6e0;border:1px solid #ecd59a;color:#6b4e00;font-size:.85rem}\n"
+    ".hgrid>.hotel{min-width:0}\n"
+    ".hotel{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:20px 22px}\n"
+    ".hotel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}\n"
+    ".hotel-name{font-size:1.06rem;font-weight:600;display:flex;align-items:center;gap:12px}\n"
+    ".hotel-name .bldg{width:34px;height:34px;flex:none;border:1.6px solid var(--ink);border-radius:50%;display:grid;place-items:center}\n"
+    ".hotel-name .bldg svg{width:17px;height:17px}\n"
+    ".hotel-price{text-align:right;flex:none}\n"
+    ".hotel-price .v{font-size:1.3rem;font-weight:700;color:var(--green);white-space:nowrap}\n"
+    ".hotel-price .u{font-size:.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}\n"
+    ".hotel-room{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}\n"
+    ".hotel-room b{color:var(--green-dark);font-weight:600}\n"
+    "@media(max-width:720px){.hotel-top{flex-direction:column}.hotel-price{text-align:left}}\n"
+    ".loc2{display:block;font-weight:400;color:var(--muted);font-size:.8rem;margin-top:2px}\n"
     "@media(max-width:720px){.hl{grid-template-columns:1fr 1fr}}\n</style>")
 
+FOTOS = json.loads((ROOT / "fotos" / "escolha.json").read_text()) if (ROOT / "fotos" / "escolha.json").exists() else {}
 PAX = 2
 EMISSAO = "24/11/2026"
 CAPA = dict(
@@ -132,6 +153,33 @@ def bloco_milhas(o):
     </div>'''
 
 
+HOTEIS = [
+    dict(id="36845", nome="The Dilly", loc="Piccadilly · ★★★★★", quarto="Quarto duplo Superior com duas camas de solteiro (twin)",
+         valor=33920.00, parc="em até 10x",
+         nota="Na Piccadilly, a poucos passos de Piccadilly Circus, Soho e Regent Street. Tem piscina coberta."),
+    dict(id="117358", nome="The May Fair Hotel", loc="Mayfair · ★★★★★", quarto="Collection Deluxe Twin Room (duas camas de solteiro)",
+         valor=43745.00, parc="em até 6x",
+         nota="Em Mayfair, ao lado do Green Park e da Bond Street, com spa e o bar do hotel bem conhecido em Londres."),
+    dict(id="220595", nome="The Clermont London, Victoria", loc="Victoria · ★★★★", quarto="King Classic Room (uma cama king)",
+         valor=30705.00, parc="parcelamento a confirmar", parc_c="a confirmar",
+         nota="Colado à estação Victoria (trem, metrô e o Gatwick Express), perto do Palácio de Buckingham."),
+]
+HMIN, HMAX = min(h["valor"] for h in HOTEIS), max(h["valor"] for h in HOTEIS)
+BLDG = '<span class="bldg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5"/></svg></span>'
+
+
+def hotel(h):
+    fotos = FOTOS.get(h["id"], {}).get("fotos", [])[:6]
+    gal = ('<div class="hgal six">' + "".join(
+        f'<img src="{esc(u)}" alt="{esc(h["nome"])}" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display=\'none\'">' for u in fotos) + '</div>') if fotos else ""
+    return (f'        <div class="hotel"><div class="hotel-top"><div class="hotel-name">{BLDG}<span>{h["nome"]}<span class="loc2">{h["loc"]}</span></span></div>'
+            f'<div class="hotel-price"><div class="v">{brl(h["valor"])}</div><div class="u">9 noites · {h.get("parc_c", h["parc"])}</div></div></div>{gal}'
+            f'<div class="hotel-room"><b>{h["quarto"]}</b> · café da manhã</div><span class="bf">Café da manhã</span>'
+            f'<p class="note" style="margin-top:8px">{h["nota"]}</p></div>')
+
+
+hoteis = "\n".join(hotel(h) for h in HOTEIS)
+
 reais = "\n".join(bloco_reais(o) for o in REAIS)
 milhas = "\n".join(bloco_milhas(o) for o in MILHAS)
 
@@ -144,6 +192,9 @@ rows = [
       f'<td class="v">{mi(o["pp"])}</td><td class="v">{mi(o["pp"] * PAX)}</td></tr>' for o in MILHAS],
     f'      <tr class="total-row"><td>Ida e volta em milhas</td><td class="v">{mi(MI_PP)}</td><td class="v">{mi(MI_PP * PAX)}</td></tr>',
 ]
+rows += ['      <tr class="sec-row"><td colspan="3">Hospedagem em Londres · 24/12 a 02/01 · 9 noites <span>· escolher 1</span></td></tr>',
+         *[f'      <tr><td><b>{h["nome"]}</b><div class="rm">{h["quarto"]} · café da manhã · {h["parc"]}</div></td>'
+           f'<td class="v"></td><td class="v">{brl(h["valor"])}</td></tr>' for h in HOTEIS]]
 rows = "\n".join(rows)
 
 CHIP = ('<div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
@@ -184,7 +235,7 @@ html = f"""<!DOCTYPE html>
     <div class="hero-info">
       <div>
         <div class="lbl">Detalhes</div>
-        <p>Curitiba ⇄ Londres · opções em <b>reais</b> e em <b>milhas Smiles</b>, separadas por classe</p>
+        <p>Curitiba ⇄ Londres · aéreo em <b>reais</b> e em <b>milhas Smiles</b>, separado por classe · 3 opções de hotel com café da manhã</p>
         <p class="sm">Cotação emitida em <b>{EMISSAO}</b> · valores em reais <b>para 2 pessoas</b>, com o valor por pessoa ao lado</p>
       </div>
       <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
@@ -210,6 +261,19 @@ html = f"""<!DOCTYPE html>
   </section>
 
   <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Hospedagem</span>
+    <h2>Hotéis em Londres</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">24 de dezembro de 2026 a 2 de janeiro de 2027 · 9 noites, com café da manhã. Valores em <b>BRL</b>, total da estadia para 2 pessoas. <b>Escolher 1 hotel.</b></p>
+    <div class="city-block">
+      <div class="city-head"><h3>Londres</h3><span class="dates">24 DEZ – 02 JAN · 9 noites</span></div>
+      <div class="hgrid">
+{hoteis}
+      </div>
+    </div>
+  </section>
+
+  <section class="section sh">
     <span class="eyebrow">Investimento</span>
     <h2>Resumo de valores</h2>
     <div class="accent-line"></div>
@@ -222,18 +286,19 @@ html = f"""<!DOCTYPE html>
     <div class="pay">
       <div class="box">
         <h4>Condições de pagamento</h4>
-        <p>A confirmar com a LusaTravel no fechamento.</p>
+        <p><b>Aéreo</b>: a confirmar com a LusaTravel no fechamento.</p>
+        <p><b>The Dilly</b>: em até 10x · <b>The May Fair</b>: em até 6x · <b>The Clermont</b>: a confirmar</p>
       </div>
       <div class="box">
         <h4>Referência</h4>
         <p>Cotação emitida em {EMISSAO} · valores em <b>reais (BRL)</b> e em <b>milhas Smiles</b></p>
-        <p class="sm">Equivalente informado na cotação da LATAM: USD 2.780,62 para 2 pessoas.</p>
+        <p class="sm">Câmbio de 25/11/2026: GBP 1 = R$ 7,73 · USD 1 = R$ 5,90. Equivalente informado na cotação da LATAM: USD 2.780,62 para 2 pessoas.</p>
       </div>
     </div>
     <div class="obs">
       <h4>Não inclui</h4>
       <ul>
-        <li>Hospedagem, traslados e passeios</li>
+        <li>Traslados, passeios e taxas cobradas pelos hotéis</li>
         <li>Taxas de embarque das passagens em milhas</li>
         <li>Seguro viagem</li>
       </ul>
@@ -241,6 +306,7 @@ html = f"""<!DOCTYPE html>
       <ul>
         <li>Em milhas, a ida sai de São Paulo (Guarulhos): o trecho Curitiba → São Paulo não está incluído.</li>
         <li>Em milhas, a franquia exibida é de 1 item pessoal; mala de mão e mala despachada a confirmar na emissão.</li>
+        <li>The Clermont: quarto com uma cama king. The Dilly e The May Fair: quartos com duas camas de solteiro (twin).</li>
         <li>A volta em milhas sai de Londres às 06:00 do dia 02/01: é preciso estar em Heathrow por volta das 03:30.</li>
         <li>Brasileiros precisam de autorização eletrônica de viagem (ETA) para entrar no Reino Unido. Conferimos as regras vigentes antes da emissão.</li>
         <li>Valores em milhas sujeitos a alteração na Smiles até a emissão; tarifas em reais sujeitas a disponibilidade.</li>
