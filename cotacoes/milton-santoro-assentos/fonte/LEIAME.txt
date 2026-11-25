@@ -1,0 +1,1 @@
+Prints originais não versionados: mostram nomes dos passageiros. Ficam só os recortes dos mapas em src/img.
