@@ -1,0 +1,22 @@
+{
+ "suite": {
+  "nome": "suite",
+  "fotos": []
+ },
+ "bungalow": {
+  "nome": "bungalow",
+  "fotos": []
+ },
+ "laguna": {
+  "nome": "laguna",
+  "fotos": []
+ },
+ "dragon": {
+  "nome": "dragon",
+  "fotos": []
+ },
+ "casa": {
+  "nome": "casa",
+  "fotos": []
+ }
+}
