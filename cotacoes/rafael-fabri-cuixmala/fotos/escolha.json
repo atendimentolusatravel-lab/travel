@@ -1,0 +1,65 @@
+{
+ "suite": {
+  "fotos": [
+   "https://cuixmala.com/wp-content/uploads/2020/05/DHG_8776-Edit-scaled.jpg",
+   "https://cuixmala.com/wp-content/uploads/2023/04/453A1711.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/07/CASA-CUIXMALA-175.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/07/DHG_4813-copy.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/07/CASA-CUIXMALA-662.jpg",
+   "https://cuixmala.com/wp-content/uploads/2023/04/453A1726.jpg"
+  ],
+  "tipos": [
+   "fachada (Casa)",
+   "quarto",
+   "banheiro",
+   "terraço",
+   "sala",
+   "quarto"
+  ]
+ },
+ "bungalow": {
+  "fotos": [
+   "https://cuixmala.com/wp-content/uploads/2020/05/DJI_0035-copy.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/05/1400x743-1-bedroom-bungalow-featured-2.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/05/DHG_8217-Edit-1.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/05/HEADER-4-scaled.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/05/DHG_8155-1.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/05/DHG_8138-1.jpg"
+  ],
+  "tipos": [
+   "vista aérea",
+   "quarto",
+   "banheiro",
+   "terraço",
+   "sala",
+   "quarto"
+  ]
+ },
+ "laguna": {
+  "fotos": [
+   "https://cuixmala.com/wp-content/uploads/2020/06/Featured_3.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/06/DHG_0646-copy.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/06/BUNGANLOWS-2020-843.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/06/DHG_0380.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/06/HEADER-scaled.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/06/DHG_0509-Edit.jpg"
+  ],
+  "tipos": [
+   "terraço",
+   "quarto",
+   "banheiro",
+   "terraço",
+   "sala",
+   "quarto"
+  ]
+ },
+ "casa": {
+  "fotos": [
+   "https://cuixmala.com/wp-content/uploads/2020/05/SUITES_FULL-WIDTH_4-scaled.jpg"
+  ],
+  "tipos": [
+   "capa"
+  ]
+ },
+ "_obs": "Fotos do site oficial cuixmala.com, classificadas por CLIP em 26/11/2026. As páginas dos quartos não têm foto de café da manhã/restaurante; no lugar entrou outra foto do próprio quarto (sala ou terraço)."
+}
