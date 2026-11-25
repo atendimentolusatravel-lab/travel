@@ -22,17 +22,17 @@
    "https://cuixmala.com/wp-content/uploads/2020/05/DJI_0035-copy.jpg",
    "https://cuixmala.com/wp-content/uploads/2020/05/1400x743-1-bedroom-bungalow-featured-2.jpg",
    "https://cuixmala.com/wp-content/uploads/2020/05/DHG_8217-Edit-1.jpg",
+   "https://cuixmala.com/wp-content/uploads/2025/02/453A9917.jpg",
    "https://cuixmala.com/wp-content/uploads/2020/05/HEADER-4-scaled.jpg",
-   "https://cuixmala.com/wp-content/uploads/2020/05/DHG_8155-1.jpg",
-   "https://cuixmala.com/wp-content/uploads/2020/05/DHG_8138-1.jpg"
+   "https://cuixmala.com/wp-content/uploads/2020/05/DHG_8155-1.jpg"
   ],
   "tipos": [
    "vista aérea",
    "quarto",
    "banheiro",
+   "restaurante da Casa",
    "terraço",
-   "sala",
-   "quarto"
+   "sala"
   ]
  },
  "laguna": {
@@ -61,5 +61,41 @@
    "capa"
   ]
  },
- "_obs": "Fotos do site oficial cuixmala.com, classificadas por CLIP em 26/11/2026. As páginas dos quartos não têm foto de café da manhã/restaurante; no lugar entrou outra foto do próprio quarto (sala ou terraço)."
+ "_obs": "Fotos do site oficial cuixmala.com, classificadas por CLIP em 26/11/2026. Bungalow Vista Mar e Vista Reserva usam a galeria da categoria One Bedroom Bungalows; a foto do restaurante é da Casa (página da Lion Suite).",
+ "reserva": {
+  "fotos": [
+   "https://cuixmala.com/wp-content/uploads/2020/05/HEADER-4-scaled.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/05/DHG_8138-1.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/05/DHG_8217-Edit-1.jpg",
+   "https://cuixmala.com/wp-content/uploads/2025/02/453A9917.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/05/DHG_8155-1.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/05/1400x743-1-bedroom-bungalow-featured-2.jpg"
+  ],
+  "tipos": [
+   "terraço",
+   "quarto",
+   "banheiro",
+   "restaurante da Casa",
+   "sala",
+   "quarto"
+  ]
+ },
+ "lion": {
+  "fotos": [
+   "https://cuixmala.com/wp-content/uploads/2020/05/DHG_8776-Edit-scaled.jpg",
+   "https://cuixmala.com/wp-content/uploads/2025/02/453A0016.jpg",
+   "https://cuixmala.com/wp-content/uploads/2020/07/CASA-CUIXMALA-444.jpg",
+   "https://cuixmala.com/wp-content/uploads/2025/02/453A9917.jpg",
+   "https://cuixmala.com/wp-content/uploads/2025/02/453A9997.jpg",
+   "https://cuixmala.com/wp-content/uploads/2025/02/453A9968-3.jpg"
+  ],
+  "tipos": [
+   "fachada (Casa)",
+   "quarto",
+   "banheiro",
+   "restaurante da Casa",
+   "vista",
+   "quarto"
+  ]
+ }
 }
