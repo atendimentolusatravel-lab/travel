@@ -12,3 +12,8 @@
 ```
 python3 build.py
 ```
+
+## Hotéis (25/11/2026)
+The Dilly (twin Superior, R$ 33.920,00, até 10x), The May Fair (Collection Deluxe Twin, R$ 43.745,00, até 6x),
+The Clermont Victoria (King Classic, R$ 30.705,00), todos com café da manhã, 24/12 a 02/01 (9 noites).
+Câmbio informado: GBP 7,73 · USD 5,90. Fotos: `fotos/escolha.json` (galeria oficial da Booking.com).
