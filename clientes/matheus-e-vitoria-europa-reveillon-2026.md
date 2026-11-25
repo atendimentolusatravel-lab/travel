@@ -87,6 +87,22 @@ Kastanienbaum, temporada nov–jan) — mantida como plano B, saída por ZRH sem
 Cataratas do Reno (iluminação de inverno vai só até 03/01/2027) — descartada; Lugano/
 Morcote (mais quente, mas longe de Paris e baixa temporada) — descartada.
 
+### Colmar — 27/12 a 29/12 (informado pela agência em 25/11 — PENDENTE: conflita com o voo KLM até Londres e os hotéis de Londres 27–30/12)
+
+Bairro: **Petite Venise / centro histórico** (entre a Place de l'Ancienne Douane, o
+Quartier des Tanneurs e a Petite Venise) — o "Batel de Colmar". Mercados de Natal
+2026: 23/11 a **29/12**; mercado gourmet e roda-gigante da Place Rapp até 03/01.
+
+| Hotel (Booking 25/11, 27–29/12, 2 noites, casal) | Cat. | Nota | Total |
+|---|---|---|---|
+| **Le Maréchal** (casas enxaimel sobre o canal, Petite Venise) | 4★ | 8,6 | R$ 5.589,60 |
+| Le Rapp (Place Rapp; piscina coberta e sauna) | 4★ | 8,5 | R$ 8.113,93 |
+| Le Colombier (Petite Venise) | 4★ | 8,9 | R$ 10.947,37 |
+| Apartamento Grenier à sel Gentleman (Grand Rue, só adultos) | — | 9,3 | R$ 4.507,74 |
+
+Alta demanda (época de mercado de Natal): Maison des Têtes, L'Esquisse, Saint-Martin e
+James Boutique não retornaram disponibilidade. *Nada reservado, apenas cotado.*
+
 ### Londres — bairro e hotéis (pesquisa Booking 18/11, 27–30/12, 2 adultos)
 
 Bairro: **Marylebone** — o "Batel de Londres" (nobre, arborizado, gastronômico, a pé).
