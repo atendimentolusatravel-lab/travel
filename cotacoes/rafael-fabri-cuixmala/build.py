@@ -5,7 +5,7 @@ Fonte: e-mail do Cuixmala enviado pela agência em 25/11/2026 (tarifas de fevere
 Valores em MXN, por noite e por acomodação, só hospedagem; somam-se 16% de IVA e 5% de imposto de hospedagem (21%).
 Cobrança em MXN. O PDF de tarifas (link do Adobe) não abriu neste ambiente.
 Base: 2 adultos, 7 noites na segunda quinzena de fevereiro de 2027 (datas a definir).
-Câmbio de referência MXN 1 = R$ 0,295 (cotação pública de 06/11/2026), só para estimativa em reais.
+Câmbio informado pela agência em 26/11/2026: MXN 1 = R$ 0,309 · USD 1 = R$ 6,11 (estimativa em reais).
 Pensão completa (site do hotel): a partir de US$ 250 por pessoa por dia, a confirmar.
 Tamanhos (site do hotel): Cuixmala Suite 97 m² · Horse/Dragon 72 m² · bungalows 120 m² · Bungalow Laguna 150 m².
 """
@@ -53,7 +53,7 @@ CSS = (ROOT / "style.part.html").read_text().replace(
 
 
 FOTOS = json.loads((ROOT / "fotos" / "escolha.json").read_text()) if (ROOT / "fotos" / "escolha.json").exists() else {}
-NOITES, TAXA, CAMBIO = 7, 1.21, 0.295
+NOITES, TAXA, CAMBIO, DOLAR = 7, 1.21, 0.309, 6.11
 EMISSAO = "26/11/2026"
 
 
@@ -62,7 +62,7 @@ def mxn(x):
 
 
 def brl(x):
-    return "R$ " + f"{x:,.0f}".replace(",", ".")
+    return "R$ " + f"{x:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
 
 CATS = [
@@ -114,9 +114,11 @@ rows = "\n".join(
     f'      <tr><td><b>Opção {i} · {c["nome"]}</b><div class="rm">{c["quarto"]} · {mxn(c["noite"])} por noite</div></td>'
     f'<td class="v">{mxn(c["total"])}</td><td class="v">≈ {brl(c["total"] * CAMBIO)}</td></tr>' for i, c in enumerate(CATS, 1))
 outras = "\n".join(
-    f'      <tr><td><b>{n}</b><div class="rm">{d}</div></td><td class="v">{mxn(v)}</td><td class="v">{mxn(tot(v))}</td></tr>' for n, d, v in OUTRAS)
+    f'      <tr><td><b>{n}</b><div class="rm">{d}</div></td><td class="v">{mxn(v)}</td><td class="v">{mxn(tot(v))}</td><td class="v">{brl(tot(v) * CAMBIO)}</td></tr>' for n, d, v in OUTRAS)
 PENSAO_USD = 250 * 2 * NOITES
 PENSAO_TXT = "US$ " + f"{PENSAO_USD:,}".replace(",", ".")
+PENSAO_BRL = round(PENSAO_USD * DOLAR, 2)
+assert PENSAO_BRL == 21385.00
 CAPA = galeria("casa")
 capa_url = (FOTOS.get("casa", {}).get("fotos") or FOTOS.get("bungalow", {}).get("fotos") or [""])[0]
 
@@ -159,7 +161,7 @@ html = f"""<!DOCTYPE html>
       <div>
         <div class="lbl">Detalhes</div>
         <p>Cuixmala, uma reserva ecológica de 30 mil acres na Costa Alegre do México, entre Puerto Vallarta e Manzanillo · 3 opções de acomodação · alta temporada</p>
-        <p class="sm">Cotação emitida em <b>{EMISSAO}</b> · valores em <b>pesos mexicanos (MXN)</b>, como o hotel cobra, com estimativa em reais</p>
+        <p class="sm">Cotação emitida em <b>{EMISSAO}</b> · valores em <b>pesos mexicanos (MXN)</b>, como o hotel cobra, com estimativa em reais · Câmbio de hoje: <b>MXN 1 = R$ 0,309</b> · <b>USD 1 = R$ 6,11</b></p>
       </div>
       <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
     </div>
@@ -187,7 +189,7 @@ html = f"""<!DOCTYPE html>
     <div class="accent-line"></div>
     <p class="note" style="margin-top:16px">As demais acomodações que o hotel ofereceu para fevereiro, também para 2 adultos.</p>
     <div class="tbl-wrap"><table>
-      <tr class="head-row"><td>Acomodação</td><td class="v">Por noite</td><td class="v">7 noites com impostos</td></tr>
+      <tr class="head-row"><td>Acomodação</td><td class="v">Por noite</td><td class="v">7 noites com impostos</td><td class="v">≈ em reais</td></tr>
 {outras}
     </table></div>
     <p class="note">A Horse Suite custa mais que o bungalow com vista para o mar e não tem vista para o mar. As Casitas ficam a 15 minutos de carro da Casa, com piscina própria e sem acesso à piscina da Casa.</p>
@@ -202,9 +204,9 @@ html = f"""<!DOCTYPE html>
       <tr class="head-row"><td>Acomodação</td><td class="v">7 noites (MXN)</td><td class="v">Estimativa em reais</td></tr>
 {rows}
       <tr class="sec-row"><td colspan="3">Opcional</td></tr>
-      <tr><td><b>Pensão completa</b><div class="rm">Café da manhã, almoço, jantar e bebidas sem álcool · a partir de US$ 250 por pessoa por dia · a confirmar com o hotel</div></td><td class="v">{PENSAO_TXT}</td><td class="v">2 pessoas · 7 dias</td></tr>
+      <tr><td><b>Pensão completa</b><div class="rm">Café da manhã, almoço, jantar e bebidas sem álcool · a partir de US$ 250 por pessoa por dia · a confirmar com o hotel</div></td><td class="v">{PENSAO_TXT}</td><td class="v">≈ {brl(PENSAO_BRL)}</td></tr>
     </table></div>
-    <p class="note">Como é calculado: valor por noite × 7 noites + 21% de impostos (16% de IVA e 5% de imposto de hospedagem). Estimativa em reais com o peso mexicano a R$ 0,295.</p>
+    <p class="note">Como é calculado: valor por noite × 7 noites + 21% de impostos (16% de IVA e 5% de imposto de hospedagem). Estimativa em reais com o câmbio de hoje ({EMISSAO}): MXN 1 = R$ 0,309 · USD 1 = R$ 6,11. Pensão completa: US$ 250 × 2 pessoas × 7 dias = {PENSAO_TXT}.</p>
     <div class="pay">
       <div class="box">
         <h4>Condições de pagamento</h4>
@@ -214,7 +216,7 @@ html = f"""<!DOCTYPE html>
       <div class="box">
         <h4>Referência</h4>
         <p>Cotação emitida em {EMISSAO} · tarifas de alta temporada (fevereiro e março de 2027)</p>
-        <p class="sm">Câmbio de referência: MXN 1 = R$ 0,295. O valor final em reais depende do câmbio no pagamento.</p>
+        <p class="sm">Câmbio de hoje ({EMISSAO}): <b>MXN 1 = R$ 0,309</b> · <b>USD 1 = R$ 6,11</b>. O valor final em reais depende do câmbio no dia do pagamento.</p>
       </div>
     </div>
     <div class="obs">
