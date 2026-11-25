@@ -33,6 +33,7 @@ CSS = (ROOT / "style.part.html").read_text().replace(
     ".cia.big{font-size:1rem;border-radius:8px;padding:6px 14px}\n"
     ".klass{display:inline-block;font-weight:700;font-size:.7rem;border-radius:20px;padding:3px 10px;white-space:nowrap;color:var(--green-dark);background:#eef2e6;border:1px solid #d5dfc4}\n"
     ".klass.big{font-size:.9rem;padding:6px 14px;margin-left:auto}\n"
+    ".klass.exe{color:#fff;background:#9a6b00;border-color:#9a6b00}\n"
     ".pay-t{display:inline-block;font-weight:700;font-size:.7rem;border-radius:20px;padding:3px 10px;white-space:nowrap;color:#fff;background:var(--green);margin-left:6px}\n"
     ".pay-t.mi{background:#1d5fa8}\n"
     ".cat{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:34px}\n"
@@ -57,19 +58,21 @@ CSS = (ROOT / "style.part.html").read_text().replace(
 
 FOTOS = json.loads((ROOT / "fotos" / "escolha.json").read_text()) if (ROOT / "fotos" / "escolha.json").exists() else {}
 PAX = 2
-EMISSAO = "24/11/2026"
+EMISSAO = "25/11/2026"
 CAPA = dict(
     url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg/1920px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg",
     alt="Palácio de Westminster e o Big Ben, em Londres",
     credito="Foto da capa: Colin, CC BY-SA 4.0, via Wikimedia Commons")
 
-CID = {"CWB": "Curitiba", "GRU": "São Paulo (Guarulhos)", "LHR": "Londres (Heathrow)", "CDG": "Paris (Charles de Gaulle)",
-       "LIS": "Lisboa"}
-AV = {"295": "Embraer 195-E2", "773": "Boeing 777-300"}
+CID = {"CWB": "Curitiba", "GRU": "São Paulo (Guarulhos)", "LHR": "Londres (Heathrow)", "LGW": "Londres (Gatwick)",
+       "CDG": "Paris (Charles de Gaulle)", "LIS": "Lisboa", "MAD": "Madri"}
+AV = {"295": "Embraer 195-E2", "773": "Boeing 777-300", "320": "Airbus A320", "32Q": "Airbus A321neo", "332": "Airbus A330-200",
+      "789": "Boeing 787-9", "7M8": "Boeing 737 MAX 8"}
 ARROW = ('<div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" '
          'stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div>')
-LA, AF, TP = "LATAM", "Air France", "TAP Air Portugal"
-COR = {LA: "#1b0088", AF: "#002157", TP: "#d71920"}
+LA, AF, TP, UX = "LATAM", "Air France", "TAP Air Portugal", "Air Europa"
+COR = {LA: "#1b0088", AF: "#002157", TP: "#d71920", UX: "#0f3c7d"}
+KL = {"eco": "Econômica", "pe": "Premium Economy", "pb": "Premium Business", "exe": "Executiva"}
 
 
 def badge(cia, big=False):
@@ -84,72 +87,102 @@ def mi(x):
     return f"{x:,}".replace(",", ".") + " milhas"
 
 
-def leg(cia, voo, de, para, t1, t2, dur, eq=None):
+def leg(cia, voo, de, para, t1, t2, dur, eq=None, kl="eco"):
     info = f"voo direto · {dur}" + (f" · {AV[eq]}" if eq else "")
+    cls = "klass exe" if kl in ("pb", "exe") else "klass"
     return (f'      <div class="leg"><div class="fl">{badge(cia)}{voo}<b>{de} → {para}</b>{CID[de]} → {CID[para]}'
             f'<br>{info}</div>'
             f'<div class="rt"><div class="pt"><div class="code">{de}</div><div class="tm">{t1}</div></div>{ARROW}'
             f'<div class="pt"><div class="code">{para}</div><div class="tm">{t2}</div></div></div>'
-            f'<div class="cls"><span class="klass">Econômica</span></div></div>')
+            f'<div class="cls"><span class="{cls}">{KL[kl]}</span></div></div>')
 
 
 def cnx(t):
     return f'      <div class="cnx">{t}</div>'
 
 
+# trechos LATAM reaproveitados
+def la_ida(k1="eco", k2="eco"):
+    return [cnx("IDA · quarta, 23 de dezembro · conexão de 2h05 em São Paulo · 14h50 no total"),
+            leg(LA, "LA 4569", "CWB", "GRU", "23 dez · 20:35", "23 dez · 21:50", "1h15", "295", k1),
+            leg(LA, "LA 8084", "GRU", "LHR", "23 dez · 23:55", "24 dez · 14:25", "11h30", "773", k2)]
+
+
+def la_volta_3284(k1="eco", k2="eco"):
+    return [cnx("VOLTA · sábado, 2 de janeiro, à noite · conexão de 2h15 em São Paulo · 15h00 no total"),
+            leg(LA, "LA 8085", "LHR", "GRU", "02 jan · 20:15", "03 jan · 05:00", "11h45", "773", k1),
+            leg(LA, "LA 3284", "GRU", "CWB", "03 jan · 07:15", "03 jan · 08:15", "1h00", "320", k2)]
+
+
+def tp_volta(k="eco"):
+    return [cnx("VOLTA · sábado, 2 de janeiro, de madrugada · conexão de 1h55 em Lisboa · 15h40 no total"),
+            leg(TP, "TP 1363", "LHR", "LIS", "02 jan · 06:00", "02 jan · 08:50", "2h50", "32Q", k),
+            leg(TP, "TP 67", "LIS", "CWB", "02 jan · 10:45", "02 jan · 18:40", "10h55", "332", k)]
+
+
+# Opções em reais: valores para 2 pessoas (agência). classe: eco | exe
 REAIS = [
-    dict(tit="Ida · quarta, 23 de dezembro", rota="Curitiba → Londres", cias=[LA], total2=16602.46,
-         hl=[("Saída de Curitiba", "23/12 · 20:35"), ("Chegada a Londres", "24/12 · 14:25"), ("Tempo total", "14h50 · 1 conexão")],
-         bag="1 mala despachada por pessoa", ref="USD 2.780,62 para 2 pessoas",
-         linhas=[
-             cnx("Conexão de 2h05 em São Paulo (Guarulhos)"),
-             leg(LA, "LA 4569", "CWB", "GRU", "23 dez · 20:35", "23 dez · 21:50", "1h15", "295"),
-             leg(LA, "LA 8084", "GRU", "LHR", "23 dez · 23:55", "24 dez · 14:25", "11h30", "773"),
-         ]),
+    dict(classe="eco", tipo="Ida e volta", cias=[LA], tarifa="tarifa Standard", total2=34874.64, usd="USD 5.840,86",
+         bag="1 mala despachada por pessoa", rota="Curitiba ⇄ Londres",
+         linhas=la_ida() + [cnx("VOLTA · sábado, 2 de janeiro, à noite · conexão de 6h15 em São Paulo · 19h05 no total"),
+                            leg(LA, "LA 8085", "LHR", "GRU", "02 jan · 20:15", "03 jan · 05:00", "11h45", "773"),
+                            leg(LA, "LA 4512", "GRU", "CWB", "03 jan · 11:15", "03 jan · 12:20", "1h05", "295")]),
+    dict(classe="eco", tipo="Ida e volta", cias=[LA], tarifa="tarifa Full (mais flexível)", total2=43576.12, usd="USD 7.298,20",
+         bag="1 mala despachada por pessoa", rota="Curitiba ⇄ Londres", linhas=la_ida() + la_volta_3284()),
+    dict(classe="eco", tipo="Só ida", cias=[LA], tarifa="tarifa Standard", total2=16602.46, usd="USD 2.780,62",
+         bag="1 mala despachada por pessoa", rota="Curitiba → Londres · 23/12", linhas=la_ida()),
+    dict(classe="eco", tipo="Só volta", cias=[TP], tarifa="tarifa Basic", total2=14780.76, usd="USD 2.475,50",
+         bag="1 mala despachada por pessoa", rota="Londres → Curitiba · 02/01", linhas=tp_volta()),
+    dict(classe="exe", tipo="Ida e volta", cias=[LA], tarifa="Premium Business", total2=77709.18, usd="USD 13.014,88",
+         bag="2 malas despachadas por pessoa", rota="Curitiba ⇄ Londres",
+         linhas=la_ida("pe", "pb") + la_volta_3284("pb", "pe")),
+    dict(classe="exe", tipo="Só ida", cias=[LA], tarifa="Premium Business", total2=46105.74, usd="USD 7.721,88",
+         bag="2 malas despachadas por pessoa", rota="Curitiba → Londres · 23/12", linhas=la_ida("pe", "pb")),
+    dict(classe="exe", tipo="Só ida", cias=[UX], tarifa="executiva (Business)", total2=28368.90, usd="USD 4.751,28",
+         bag="2 malas despachadas por pessoa", rota="São Paulo → Londres (Gatwick) · 23/12",
+         linhas=[cnx("IDA · quarta, 23 de dezembro, à tarde · conexão de 2h20 em Madri · 14h55 no total"),
+                 leg(UX, "UX 58", "GRU", "MAD", "23 dez · 15:05", "24 dez · 05:10", "10h05", "789", "exe"),
+                 leg(UX, "UX 1013", "MAD", "LGW", "24 dez · 07:30", "24 dez · 09:00", "2h30", "7M8", "exe")]),
+    dict(classe="exe", tipo="Só volta", cias=[TP], tarifa="tarifa Top", total2=43492.94, usd="USD 7.284,28",
+         bag="2 malas despachadas por pessoa", rota="Londres → Curitiba · 02/01", linhas=tp_volta("exe")),
 ]
 for o in REAIS:
     o["pp"] = round(o["total2"] / PAX, 2)
-assert REAIS[0]["pp"] == 8301.23
 
 MILHAS = [
-    dict(tit="Ida · quarta, 23 de dezembro", rota="São Paulo → Londres", cias=[AF], pp=216400,
-         hl=[("Saída de São Paulo", "23/12 · 20:40"), ("Chegada a Londres", "24/12 · 16:35"), ("Tempo total", "16h55 · 1 conexão")],
-         linhas=[
-             cnx("Conexão de 4h20 em Paris (Charles de Gaulle)"),
-             leg(AF, "AF 459", "GRU", "CDG", "23 dez · 20:40", "24 dez · 11:50", "11h10"),
-             leg(AF, "AF 1280", "CDG", "LHR", "24 dez · 16:10", "24 dez · 16:35", "1h25"),
-         ]),
-    dict(tit="Volta · sábado, 2 de janeiro", rota="Londres → Curitiba", cias=[TP], pp=204900,
-         hl=[("Saída de Londres", "02/01 · 06:00"), ("Chegada a Curitiba", "02/01 · 18:40"), ("Tempo total", "15h40 · 1 conexão")],
-         linhas=[
-             cnx("Conexão de 1h55 em Lisboa"),
-             leg(TP, "TP 1363", "LHR", "LIS", "02 jan · 06:00", "02 jan · 08:50", "2h50"),
-             leg(TP, "TP 67", "LIS", "CWB", "02 jan · 10:45", "02 jan · 18:40", "10h55"),
-         ]),
+    dict(classe="eco", tipo="Só ida", cias=[AF], pp=216400, rota="São Paulo → Londres · 23/12",
+         linhas=[cnx("IDA · quarta, 23 de dezembro · conexão de 4h20 em Paris · 16h55 no total"),
+                 leg(AF, "AF 459", "GRU", "CDG", "23 dez · 20:40", "24 dez · 11:50", "11h10"),
+                 leg(AF, "AF 1280", "CDG", "LHR", "24 dez · 16:10", "24 dez · 16:35", "1h25")]),
+    dict(classe="eco", tipo="Só volta", cias=[TP], pp=204900, rota="Londres → Curitiba · 02/01", linhas=tp_volta()),
 ]
 MI_PP = sum(o["pp"] for o in MILHAS)
 assert MI_PP == 421300
 
+# combinações de trechos avulsos em reais (para 2 pessoas)
+COMB = [
+    ("eco", "Ida LATAM + volta TAP", 16602.46 + 14780.76),
+    ("exe", "Ida Air Europa + volta TAP", 28368.90 + 43492.94),
+    ("exe", "Ida LATAM Premium Business + volta TAP", 46105.74 + 43492.94),
+]
 
-def bloco_reais(o):
-    hl = "".join(f"<div>{a}<b>{b}</b></div>" for a, b in o["hl"])
+
+def bloco_reais(o, n):
+    kl = "Classe executiva" if o["classe"] == "exe" else "Classe econômica"
     return f'''    <div class="air">
-      <div class="air-head"><div class="dir">{o["tit"]}</div><div class="route">{o["rota"]}</div></div>
-      <div class="cias"><span class="k">Companhia</span>{"".join(badge(c, True) for c in o["cias"])}<span class="klass big">Classe econômica</span></div>
-      <div class="hl">{hl}</div>
+      <div class="air-head"><div class="dir">Opção {n} · {o["tipo"]} · {o["tarifa"]}</div><div class="route">{o["rota"]}</div></div>
+      <div class="cias"><span class="k">Companhia</span>{"".join(badge(c, True) for c in o["cias"])}<span class="klass big{" exe" if o["classe"] == "exe" else ""}">{kl}</span></div>
 {chr(10).join(o["linhas"])}
-      <div class="air-foot"><span class="l">{o["bag"]} · {o["ref"]}</span><div class="a"><div class="t">{brl(o["total2"])}</div><div class="p">para 2 pessoas · {brl(o["pp"])} por pessoa</div></div></div>
+      <div class="air-foot"><span class="l">{o["bag"]} · {o["usd"]} para 2 pessoas</span><div class="a"><div class="t">{brl(o["total2"])}</div><div class="p">para 2 pessoas · {brl(o["pp"])} por pessoa</div></div></div>
     </div>'''
 
 
-def bloco_milhas(o):
-    hl = "".join(f"<div>{a}<b>{b}</b></div>" for a, b in o["hl"])
+def bloco_milhas(o, n):
     return f'''    <div class="air">
-      <div class="air-head"><div class="dir">{o["tit"]} · Smiles</div><div class="route">{o["rota"]}</div></div>
+      <div class="air-head"><div class="dir">Opção {n} · {o["tipo"]} · Smiles</div><div class="route">{o["rota"]}</div></div>
       <div class="cias"><span class="k">Companhia</span>{"".join(badge(c, True) for c in o["cias"])}<span class="klass big">Classe econômica</span></div>
-      <div class="hl">{hl}</div>
 {chr(10).join(o["linhas"])}
-      <div class="air-foot"><span class="l">Franquia informada: 1 item pessoal · mala de mão e despachada a confirmar · + taxas de embarque</span><div class="a"><div class="t">{mi(o["pp"] * PAX)}</div><div class="p">para 2 pessoas · {mi(o["pp"])} por pessoa</div></div></div>
+      <div class="air-foot"><span class="l">Franquia exibida: 1 item pessoal · mala de mão e despachada a confirmar · + taxas de embarque</span><div class="a"><div class="t">{mi(o["pp"] * PAX)}</div><div class="p">para 2 pessoas · {mi(o["pp"])} por pessoa</div></div></div>
     </div>'''
 
 
@@ -180,18 +213,39 @@ def hotel(h):
 
 hoteis = "\n".join(hotel(h) for h in HOTEIS)
 
-reais = "\n".join(bloco_reais(o) for o in REAIS)
-milhas = "\n".join(bloco_milhas(o) for o in MILHAS)
+N = iter(range(1, 50))
+blocos = {}
+for c in ("eco", "exe"):
+    blocos[c + "_r"] = "\n".join(bloco_reais(o, next(N)) for o in REAIS if o["classe"] == c)
+    blocos[c + "_m"] = "\n".join(bloco_milhas(o, next(N)) for o in MILHAS if o["classe"] == c)
 
-rows = [
-    '      <tr class="sec-row"><td colspan="3">Classe econômica · em reais</td></tr>',
-    *[f'      <tr><td><b>{o["tit"]}</b> {badge(o["cias"][0])}<div class="rm">{o["rota"]} · {o["bag"]}</div></td>'
-      f'<td class="v">{brl(o["pp"])}</td><td class="v">{brl(o["total2"])}</td></tr>' for o in REAIS],
-    '      <tr class="sec-row"><td colspan="3">Classe econômica · em milhas Smiles <span>· + taxas de embarque</span></td></tr>',
-    *[f'      <tr><td><b>{o["tit"]}</b> {badge(o["cias"][0])}<div class="rm">{o["rota"]}</div></td>'
-      f'<td class="v">{mi(o["pp"])}</td><td class="v">{mi(o["pp"] * PAX)}</td></tr>' for o in MILHAS],
-    f'      <tr class="total-row"><td>Ida e volta em milhas</td><td class="v">{mi(MI_PP)}</td><td class="v">{mi(MI_PP * PAX)}</td></tr>',
-]
+
+def comb_html(c):
+    itens = [x for x in COMB if x[0] == c]
+    if not itens:
+        return ""
+    lis = "".join(f"<li><b>{t}</b>: {brl(v)} para 2 pessoas ({brl(v / 2)} por pessoa)</li>" for _, t, v in itens)
+    return f'    <div class="pend" style="margin:14px 0 0"><b>Combinando trechos avulsos</b><ul style="margin:6px 0 0 18px">{lis}</ul></div>'
+
+
+def sec_rows(c, nome):
+    out = [f'      <tr class="sec-row"><td colspan="3">{nome} · em reais</td></tr>']
+    for o in [o for o in REAIS if o["classe"] == c]:
+        out.append(f'      <tr><td><b>{o["tipo"]}</b> {badge(o["cias"][0])}<div class="rm">{o["rota"]} · {o["tarifa"]} · {o["bag"]}</div></td>'
+                   f'<td class="v">{brl(o["pp"])}</td><td class="v">{brl(o["total2"])}</td></tr>')
+    for _, t, v in [x for x in COMB if x[0] == c]:
+        out.append(f'      <tr><td><b>Combinação</b><div class="rm">{t}</div></td><td class="v">{brl(v / 2)}</td><td class="v">{brl(v)}</td></tr>')
+    mil = [o for o in MILHAS if o["classe"] == c]
+    if mil:
+        out.append(f'      <tr class="sec-row"><td colspan="3">{nome} · em milhas Smiles <span>· + taxas de embarque</span></td></tr>')
+        for o in mil:
+            out.append(f'      <tr><td><b>{o["tipo"]}</b> {badge(o["cias"][0])}<div class="rm">{o["rota"]}</div></td>'
+                       f'<td class="v">{mi(o["pp"])}</td><td class="v">{mi(o["pp"] * PAX)}</td></tr>')
+        out.append(f'      <tr><td><b>Ida e volta em milhas</b></td><td class="v">{mi(MI_PP)}</td><td class="v">{mi(MI_PP * PAX)}</td></tr>')
+    return out
+
+
+rows = sec_rows("eco", "Classe econômica") + sec_rows("exe", "Classe executiva")
 rows += ['      <tr class="sec-row"><td colspan="3">Hospedagem em Londres · 24/12 a 02/01 · 9 noites <span>· escolher 1</span></td></tr>',
          *[f'      <tr><td><b>{h["nome"]}</b><div class="rm">{h["quarto"]} · café da manhã · {h["parc"]}</div></td>'
            f'<td class="v"></td><td class="v">{brl(h["valor"])}</td></tr>' for h in HOTEIS]]
@@ -201,7 +255,7 @@ CHIP = ('<div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none"
         'stroke-width="2">{svg}</svg></span><b>{n}</b>&nbsp;{t}</div>')
 chips = "\n      ".join(CHIP.format(**c) for c in [
     dict(svg='<path d="M2 16l20-6-20-6 4 6-4 6z"/>', n="Reais", t="e milhas"),
-    dict(svg='<path d="M5 12h14M12 5l7 7-7 7"/>', n="Econômica", t=""),
+    dict(svg='<path d="M5 12h14M12 5l7 7-7 7"/>', n="Econômica", t="e executiva"),
     dict(svg='<circle cx="9" cy="7" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><circle cx="17" cy="8" r="2.5"/>', n="2", t="Adultos"),
     dict(svg='<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>', n="23/12 – 02/01", t=""),
 ])
@@ -235,7 +289,7 @@ html = f"""<!DOCTYPE html>
     <div class="hero-info">
       <div>
         <div class="lbl">Detalhes</div>
-        <p>Curitiba ⇄ Londres · aéreo em <b>reais</b> e em <b>milhas Smiles</b>, separado por classe · 3 opções de hotel com café da manhã</p>
+        <p>Curitiba ⇄ Londres · aéreo em <b>reais</b> e em <b>milhas Smiles</b>, separado por classe (econômica e executiva) · 3 opções de hotel com café da manhã</p>
         <p class="sm">Cotação emitida em <b>{EMISSAO}</b> · valores em reais <b>para 2 pessoas</b>, com o valor por pessoa ao lado</p>
       </div>
       <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
@@ -249,15 +303,21 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Aéreo</span>
     <h2>Voos</h2>
     <div class="accent-line"></div>
-    <p class="lede">Opções separadas por classe e, dentro de cada classe, primeiro em reais e depois em milhas. Horários locais de cada aeroporto.</p>
+    <p class="lede">Opções separadas por classe e, dentro de cada classe, primeiro em reais e depois em milhas. Em cada uma: ida e volta, só ida ou só volta. Horários locais de cada aeroporto.</p>
 
     <div class="cat"><h3>Classe econômica</h3><span class="pay-t">em reais</span></div>
     <p class="note">Valores para 2 pessoas, com taxas.</p>
-{reais}
+{blocos["eco_r"]}
+{comb_html("eco")}
 
     <div class="cat"><h3>Classe econômica</h3><span class="pay-t mi">em milhas Smiles</span></div>
-    <p class="note">Milhas por trecho, a partir do valor exibido na Smiles. As taxas de embarque são pagas à parte, em reais.</p>
-{milhas}
+    <p class="note">Milhas a partir do valor exibido na Smiles. As taxas de embarque são pagas à parte, em reais.</p>
+{blocos["eco_m"]}
+
+    <div class="cat"><h3>Classe executiva</h3><span class="pay-t">em reais</span></div>
+    <p class="note">Valores para 2 pessoas, com taxas. Na LATAM, a executiva internacional se chama Premium Business; os trechos dentro do Brasil são em Premium Economy.</p>
+{blocos["exe_r"]}
+{comb_html("exe")}
   </section>
 
   <section class="section sh" style="background:var(--cream)">
@@ -292,7 +352,7 @@ html = f"""<!DOCTYPE html>
       <div class="box">
         <h4>Referência</h4>
         <p>Cotação emitida em {EMISSAO} · valores em <b>reais (BRL)</b> e em <b>milhas Smiles</b></p>
-        <p class="sm">Câmbio de 25/11/2026: GBP 1 = R$ 7,73 · USD 1 = R$ 5,90. Equivalente informado na cotação da LATAM: USD 2.780,62 para 2 pessoas.</p>
+        <p class="sm">Câmbio de 25/11/2026: GBP 1 = R$ 7,73 · USD 1 = R$ 5,90. Os valores em dólar de cada opção estão no rodapé de cada voo.</p>
       </div>
     </div>
     <div class="obs">
@@ -307,7 +367,9 @@ html = f"""<!DOCTYPE html>
         <li>Em milhas, a ida sai de São Paulo (Guarulhos): o trecho Curitiba → São Paulo não está incluído.</li>
         <li>Em milhas, a franquia exibida é de 1 item pessoal; mala de mão e mala despachada a confirmar na emissão.</li>
         <li>The Clermont: quarto com uma cama king. The Dilly e The May Fair: quartos com duas camas de solteiro (twin).</li>
-        <li>A volta em milhas sai de Londres às 06:00 do dia 02/01: é preciso estar em Heathrow por volta das 03:30.</li>
+        <li>As voltas pela TAP (em reais ou em milhas) saem de Londres às 06:00 do dia 02/01: é preciso estar em Heathrow por volta das 03:30. As voltas pela LATAM saem às 20:15 do dia 02/01 e chegam a Curitiba em 03/01.</li>
+        <li>Air Europa: sai de São Paulo (Guarulhos) e chega a Londres pelo aeroporto de Gatwick, a cerca de 30 minutos de trem do centro. O trecho Curitiba → São Paulo não está incluído.</li>
+        <li>"Só ida" e "só volta" são bilhetes separados; as combinações mostradas somam os dois valores.</li>
         <li>Brasileiros precisam de autorização eletrônica de viagem (ETA) para entrar no Reino Unido. Conferimos as regras vigentes antes da emissão.</li>
         <li>Valores em milhas sujeitos a alteração na Smiles até a emissão; tarifas em reais sujeitas a disponibilidade.</li>
         <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>

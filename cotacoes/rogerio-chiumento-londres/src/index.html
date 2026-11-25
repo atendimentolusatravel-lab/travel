@@ -112,6 +112,7 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-
 .cia.big{font-size:1rem;border-radius:8px;padding:6px 14px}
 .klass{display:inline-block;font-weight:700;font-size:.7rem;border-radius:20px;padding:3px 10px;white-space:nowrap;color:var(--green-dark);background:#eef2e6;border:1px solid #d5dfc4}
 .klass.big{font-size:.9rem;padding:6px 14px;margin-left:auto}
+.klass.exe{color:#fff;background:#9a6b00;border-color:#9a6b00}
 .pay-t{display:inline-block;font-weight:700;font-size:.7rem;border-radius:20px;padding:3px 10px;white-space:nowrap;color:#fff;background:var(--green);margin-left:6px}
 .pay-t.mi{background:#1d5fa8}
 .cat{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:34px}
@@ -150,14 +151,14 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-
     <div class="hero-info">
       <div>
         <div class="lbl">Detalhes</div>
-        <p>Curitiba ⇄ Londres · aéreo em <b>reais</b> e em <b>milhas Smiles</b>, separado por classe · 3 opções de hotel com café da manhã</p>
-        <p class="sm">Cotação emitida em <b>24/11/2026</b> · valores em reais <b>para 2 pessoas</b>, com o valor por pessoa ao lado</p>
+        <p>Curitiba ⇄ Londres · aéreo em <b>reais</b> e em <b>milhas Smiles</b>, separado por classe (econômica e executiva) · 3 opções de hotel com café da manhã</p>
+        <p class="sm">Cotação emitida em <b>25/11/2026</b> · valores em reais <b>para 2 pessoas</b>, com o valor por pessoa ao lado</p>
       </div>
       <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
     </div>
     <div class="gloss">
       <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16l20-6-20-6 4 6-4 6z"/></svg></span><b>Reais</b>&nbsp;e milhas</div>
-      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span><b>Econômica</b>&nbsp;</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span><b>Econômica</b>&nbsp;e executiva</div>
       <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><circle cx="17" cy="8" r="2.5"/></svg></span><b>2</b>&nbsp;Adultos</div>
       <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><b>23/12 – 02/01</b>&nbsp;</div>
     </div>
@@ -167,40 +168,107 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-
     <span class="eyebrow">Aéreo</span>
     <h2>Voos</h2>
     <div class="accent-line"></div>
-    <p class="lede">Opções separadas por classe e, dentro de cada classe, primeiro em reais e depois em milhas. Horários locais de cada aeroporto.</p>
+    <p class="lede">Opções separadas por classe e, dentro de cada classe, primeiro em reais e depois em milhas. Em cada uma: ida e volta, só ida ou só volta. Horários locais de cada aeroporto.</p>
 
     <div class="cat"><h3>Classe econômica</h3><span class="pay-t">em reais</span></div>
     <p class="note">Valores para 2 pessoas, com taxas.</p>
     <div class="air">
-      <div class="air-head"><div class="dir">Ida · quarta, 23 de dezembro</div><div class="route">Curitiba → Londres</div></div>
+      <div class="air-head"><div class="dir">Opção 1 · Ida e volta · tarifa Standard</div><div class="route">Curitiba ⇄ Londres</div></div>
       <div class="cias"><span class="k">Companhia</span><span class="cia big" style="background:#1b0088">LATAM</span><span class="klass big">Classe econômica</span></div>
-      <div class="hl"><div>Saída de Curitiba<b>23/12 · 20:35</b></div><div>Chegada a Londres<b>24/12 · 14:25</b></div><div>Tempo total<b>14h50 · 1 conexão</b></div></div>
-      <div class="cnx">Conexão de 2h05 em São Paulo (Guarulhos)</div>
+      <div class="cnx">IDA · quarta, 23 de dezembro · conexão de 2h05 em São Paulo · 14h50 no total</div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 4569<b>CWB → GRU</b>Curitiba → São Paulo (Guarulhos)<br>voo direto · 1h15 · Embraer 195-E2</div><div class="rt"><div class="pt"><div class="code">CWB</div><div class="tm">23 dez · 20:35</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">23 dez · 21:50</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 8084<b>GRU → LHR</b>São Paulo (Guarulhos) → Londres (Heathrow)<br>voo direto · 11h30 · Boeing 777-300</div><div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">23 dez · 23:55</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">LHR</div><div class="tm">24 dez · 14:25</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
+      <div class="cnx">VOLTA · sábado, 2 de janeiro, à noite · conexão de 6h15 em São Paulo · 19h05 no total</div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 8085<b>LHR → GRU</b>Londres (Heathrow) → São Paulo (Guarulhos)<br>voo direto · 11h45 · Boeing 777-300</div><div class="rt"><div class="pt"><div class="code">LHR</div><div class="tm">02 jan · 20:15</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">03 jan · 05:00</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 4512<b>GRU → CWB</b>São Paulo (Guarulhos) → Curitiba<br>voo direto · 1h05 · Embraer 195-E2</div><div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">03 jan · 11:15</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">CWB</div><div class="tm">03 jan · 12:20</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
+      <div class="air-foot"><span class="l">1 mala despachada por pessoa · USD 5.840,86 para 2 pessoas</span><div class="a"><div class="t">R$ 34.874,64</div><div class="p">para 2 pessoas · R$ 17.437,32 por pessoa</div></div></div>
+    </div>
+    <div class="air">
+      <div class="air-head"><div class="dir">Opção 2 · Ida e volta · tarifa Full (mais flexível)</div><div class="route">Curitiba ⇄ Londres</div></div>
+      <div class="cias"><span class="k">Companhia</span><span class="cia big" style="background:#1b0088">LATAM</span><span class="klass big">Classe econômica</span></div>
+      <div class="cnx">IDA · quarta, 23 de dezembro · conexão de 2h05 em São Paulo · 14h50 no total</div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 4569<b>CWB → GRU</b>Curitiba → São Paulo (Guarulhos)<br>voo direto · 1h15 · Embraer 195-E2</div><div class="rt"><div class="pt"><div class="code">CWB</div><div class="tm">23 dez · 20:35</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">23 dez · 21:50</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 8084<b>GRU → LHR</b>São Paulo (Guarulhos) → Londres (Heathrow)<br>voo direto · 11h30 · Boeing 777-300</div><div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">23 dez · 23:55</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">LHR</div><div class="tm">24 dez · 14:25</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
+      <div class="cnx">VOLTA · sábado, 2 de janeiro, à noite · conexão de 2h15 em São Paulo · 15h00 no total</div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 8085<b>LHR → GRU</b>Londres (Heathrow) → São Paulo (Guarulhos)<br>voo direto · 11h45 · Boeing 777-300</div><div class="rt"><div class="pt"><div class="code">LHR</div><div class="tm">02 jan · 20:15</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">03 jan · 05:00</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 3284<b>GRU → CWB</b>São Paulo (Guarulhos) → Curitiba<br>voo direto · 1h00 · Airbus A320</div><div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">03 jan · 07:15</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">CWB</div><div class="tm">03 jan · 08:15</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
+      <div class="air-foot"><span class="l">1 mala despachada por pessoa · USD 7.298,20 para 2 pessoas</span><div class="a"><div class="t">R$ 43.576,12</div><div class="p">para 2 pessoas · R$ 21.788,06 por pessoa</div></div></div>
+    </div>
+    <div class="air">
+      <div class="air-head"><div class="dir">Opção 3 · Só ida · tarifa Standard</div><div class="route">Curitiba → Londres · 23/12</div></div>
+      <div class="cias"><span class="k">Companhia</span><span class="cia big" style="background:#1b0088">LATAM</span><span class="klass big">Classe econômica</span></div>
+      <div class="cnx">IDA · quarta, 23 de dezembro · conexão de 2h05 em São Paulo · 14h50 no total</div>
       <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 4569<b>CWB → GRU</b>Curitiba → São Paulo (Guarulhos)<br>voo direto · 1h15 · Embraer 195-E2</div><div class="rt"><div class="pt"><div class="code">CWB</div><div class="tm">23 dez · 20:35</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">23 dez · 21:50</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
       <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 8084<b>GRU → LHR</b>São Paulo (Guarulhos) → Londres (Heathrow)<br>voo direto · 11h30 · Boeing 777-300</div><div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">23 dez · 23:55</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">LHR</div><div class="tm">24 dez · 14:25</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
       <div class="air-foot"><span class="l">1 mala despachada por pessoa · USD 2.780,62 para 2 pessoas</span><div class="a"><div class="t">R$ 16.602,46</div><div class="p">para 2 pessoas · R$ 8.301,23 por pessoa</div></div></div>
     </div>
+    <div class="air">
+      <div class="air-head"><div class="dir">Opção 4 · Só volta · tarifa Basic</div><div class="route">Londres → Curitiba · 02/01</div></div>
+      <div class="cias"><span class="k">Companhia</span><span class="cia big" style="background:#d71920">TAP Air Portugal</span><span class="klass big">Classe econômica</span></div>
+      <div class="cnx">VOLTA · sábado, 2 de janeiro, de madrugada · conexão de 1h55 em Lisboa · 15h40 no total</div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#d71920">TAP Air Portugal</span>TP 1363<b>LHR → LIS</b>Londres (Heathrow) → Lisboa<br>voo direto · 2h50 · Airbus A321neo</div><div class="rt"><div class="pt"><div class="code">LHR</div><div class="tm">02 jan · 06:00</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">LIS</div><div class="tm">02 jan · 08:50</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#d71920">TAP Air Portugal</span>TP 67<b>LIS → CWB</b>Lisboa → Curitiba<br>voo direto · 10h55 · Airbus A330-200</div><div class="rt"><div class="pt"><div class="code">LIS</div><div class="tm">02 jan · 10:45</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">CWB</div><div class="tm">02 jan · 18:40</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
+      <div class="air-foot"><span class="l">1 mala despachada por pessoa · USD 2.475,50 para 2 pessoas</span><div class="a"><div class="t">R$ 14.780,76</div><div class="p">para 2 pessoas · R$ 7.390,38 por pessoa</div></div></div>
+    </div>
+    <div class="pend" style="margin:14px 0 0"><b>Combinando trechos avulsos</b><ul style="margin:6px 0 0 18px"><li><b>Ida LATAM + volta TAP</b>: R$ 31.383,22 para 2 pessoas (R$ 15.691,61 por pessoa)</li></ul></div>
 
     <div class="cat"><h3>Classe econômica</h3><span class="pay-t mi">em milhas Smiles</span></div>
-    <p class="note">Milhas por trecho, a partir do valor exibido na Smiles. As taxas de embarque são pagas à parte, em reais.</p>
+    <p class="note">Milhas a partir do valor exibido na Smiles. As taxas de embarque são pagas à parte, em reais.</p>
     <div class="air">
-      <div class="air-head"><div class="dir">Ida · quarta, 23 de dezembro · Smiles</div><div class="route">São Paulo → Londres</div></div>
+      <div class="air-head"><div class="dir">Opção 5 · Só ida · Smiles</div><div class="route">São Paulo → Londres · 23/12</div></div>
       <div class="cias"><span class="k">Companhia</span><span class="cia big" style="background:#002157">Air France</span><span class="klass big">Classe econômica</span></div>
-      <div class="hl"><div>Saída de São Paulo<b>23/12 · 20:40</b></div><div>Chegada a Londres<b>24/12 · 16:35</b></div><div>Tempo total<b>16h55 · 1 conexão</b></div></div>
-      <div class="cnx">Conexão de 4h20 em Paris (Charles de Gaulle)</div>
+      <div class="cnx">IDA · quarta, 23 de dezembro · conexão de 4h20 em Paris · 16h55 no total</div>
       <div class="leg"><div class="fl"><span class="cia" style="background:#002157">Air France</span>AF 459<b>GRU → CDG</b>São Paulo (Guarulhos) → Paris (Charles de Gaulle)<br>voo direto · 11h10</div><div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">23 dez · 20:40</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">CDG</div><div class="tm">24 dez · 11:50</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
       <div class="leg"><div class="fl"><span class="cia" style="background:#002157">Air France</span>AF 1280<b>CDG → LHR</b>Paris (Charles de Gaulle) → Londres (Heathrow)<br>voo direto · 1h25</div><div class="rt"><div class="pt"><div class="code">CDG</div><div class="tm">24 dez · 16:10</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">LHR</div><div class="tm">24 dez · 16:35</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
-      <div class="air-foot"><span class="l">Franquia informada: 1 item pessoal · mala de mão e despachada a confirmar · + taxas de embarque</span><div class="a"><div class="t">432.800 milhas</div><div class="p">para 2 pessoas · 216.400 milhas por pessoa</div></div></div>
+      <div class="air-foot"><span class="l">Franquia exibida: 1 item pessoal · mala de mão e despachada a confirmar · + taxas de embarque</span><div class="a"><div class="t">432.800 milhas</div><div class="p">para 2 pessoas · 216.400 milhas por pessoa</div></div></div>
     </div>
     <div class="air">
-      <div class="air-head"><div class="dir">Volta · sábado, 2 de janeiro · Smiles</div><div class="route">Londres → Curitiba</div></div>
+      <div class="air-head"><div class="dir">Opção 6 · Só volta · Smiles</div><div class="route">Londres → Curitiba · 02/01</div></div>
       <div class="cias"><span class="k">Companhia</span><span class="cia big" style="background:#d71920">TAP Air Portugal</span><span class="klass big">Classe econômica</span></div>
-      <div class="hl"><div>Saída de Londres<b>02/01 · 06:00</b></div><div>Chegada a Curitiba<b>02/01 · 18:40</b></div><div>Tempo total<b>15h40 · 1 conexão</b></div></div>
-      <div class="cnx">Conexão de 1h55 em Lisboa</div>
-      <div class="leg"><div class="fl"><span class="cia" style="background:#d71920">TAP Air Portugal</span>TP 1363<b>LHR → LIS</b>Londres (Heathrow) → Lisboa<br>voo direto · 2h50</div><div class="rt"><div class="pt"><div class="code">LHR</div><div class="tm">02 jan · 06:00</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">LIS</div><div class="tm">02 jan · 08:50</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
-      <div class="leg"><div class="fl"><span class="cia" style="background:#d71920">TAP Air Portugal</span>TP 67<b>LIS → CWB</b>Lisboa → Curitiba<br>voo direto · 10h55</div><div class="rt"><div class="pt"><div class="code">LIS</div><div class="tm">02 jan · 10:45</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">CWB</div><div class="tm">02 jan · 18:40</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
-      <div class="air-foot"><span class="l">Franquia informada: 1 item pessoal · mala de mão e despachada a confirmar · + taxas de embarque</span><div class="a"><div class="t">409.800 milhas</div><div class="p">para 2 pessoas · 204.900 milhas por pessoa</div></div></div>
+      <div class="cnx">VOLTA · sábado, 2 de janeiro, de madrugada · conexão de 1h55 em Lisboa · 15h40 no total</div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#d71920">TAP Air Portugal</span>TP 1363<b>LHR → LIS</b>Londres (Heathrow) → Lisboa<br>voo direto · 2h50 · Airbus A321neo</div><div class="rt"><div class="pt"><div class="code">LHR</div><div class="tm">02 jan · 06:00</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">LIS</div><div class="tm">02 jan · 08:50</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#d71920">TAP Air Portugal</span>TP 67<b>LIS → CWB</b>Lisboa → Curitiba<br>voo direto · 10h55 · Airbus A330-200</div><div class="rt"><div class="pt"><div class="code">LIS</div><div class="tm">02 jan · 10:45</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">CWB</div><div class="tm">02 jan · 18:40</div></div></div><div class="cls"><span class="klass">Econômica</span></div></div>
+      <div class="air-foot"><span class="l">Franquia exibida: 1 item pessoal · mala de mão e despachada a confirmar · + taxas de embarque</span><div class="a"><div class="t">409.800 milhas</div><div class="p">para 2 pessoas · 204.900 milhas por pessoa</div></div></div>
     </div>
+
+    <div class="cat"><h3>Classe executiva</h3><span class="pay-t">em reais</span></div>
+    <p class="note">Valores para 2 pessoas, com taxas. Na LATAM, a executiva internacional se chama Premium Business; os trechos dentro do Brasil são em Premium Economy.</p>
+    <div class="air">
+      <div class="air-head"><div class="dir">Opção 7 · Ida e volta · Premium Business</div><div class="route">Curitiba ⇄ Londres</div></div>
+      <div class="cias"><span class="k">Companhia</span><span class="cia big" style="background:#1b0088">LATAM</span><span class="klass big exe">Classe executiva</span></div>
+      <div class="cnx">IDA · quarta, 23 de dezembro · conexão de 2h05 em São Paulo · 14h50 no total</div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 4569<b>CWB → GRU</b>Curitiba → São Paulo (Guarulhos)<br>voo direto · 1h15 · Embraer 195-E2</div><div class="rt"><div class="pt"><div class="code">CWB</div><div class="tm">23 dez · 20:35</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">23 dez · 21:50</div></div></div><div class="cls"><span class="klass">Premium Economy</span></div></div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 8084<b>GRU → LHR</b>São Paulo (Guarulhos) → Londres (Heathrow)<br>voo direto · 11h30 · Boeing 777-300</div><div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">23 dez · 23:55</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">LHR</div><div class="tm">24 dez · 14:25</div></div></div><div class="cls"><span class="klass exe">Premium Business</span></div></div>
+      <div class="cnx">VOLTA · sábado, 2 de janeiro, à noite · conexão de 2h15 em São Paulo · 15h00 no total</div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 8085<b>LHR → GRU</b>Londres (Heathrow) → São Paulo (Guarulhos)<br>voo direto · 11h45 · Boeing 777-300</div><div class="rt"><div class="pt"><div class="code">LHR</div><div class="tm">02 jan · 20:15</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">03 jan · 05:00</div></div></div><div class="cls"><span class="klass exe">Premium Business</span></div></div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 3284<b>GRU → CWB</b>São Paulo (Guarulhos) → Curitiba<br>voo direto · 1h00 · Airbus A320</div><div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">03 jan · 07:15</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">CWB</div><div class="tm">03 jan · 08:15</div></div></div><div class="cls"><span class="klass">Premium Economy</span></div></div>
+      <div class="air-foot"><span class="l">2 malas despachadas por pessoa · USD 13.014,88 para 2 pessoas</span><div class="a"><div class="t">R$ 77.709,18</div><div class="p">para 2 pessoas · R$ 38.854,59 por pessoa</div></div></div>
+    </div>
+    <div class="air">
+      <div class="air-head"><div class="dir">Opção 8 · Só ida · Premium Business</div><div class="route">Curitiba → Londres · 23/12</div></div>
+      <div class="cias"><span class="k">Companhia</span><span class="cia big" style="background:#1b0088">LATAM</span><span class="klass big exe">Classe executiva</span></div>
+      <div class="cnx">IDA · quarta, 23 de dezembro · conexão de 2h05 em São Paulo · 14h50 no total</div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 4569<b>CWB → GRU</b>Curitiba → São Paulo (Guarulhos)<br>voo direto · 1h15 · Embraer 195-E2</div><div class="rt"><div class="pt"><div class="code">CWB</div><div class="tm">23 dez · 20:35</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">GRU</div><div class="tm">23 dez · 21:50</div></div></div><div class="cls"><span class="klass">Premium Economy</span></div></div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#1b0088">LATAM</span>LA 8084<b>GRU → LHR</b>São Paulo (Guarulhos) → Londres (Heathrow)<br>voo direto · 11h30 · Boeing 777-300</div><div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">23 dez · 23:55</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">LHR</div><div class="tm">24 dez · 14:25</div></div></div><div class="cls"><span class="klass exe">Premium Business</span></div></div>
+      <div class="air-foot"><span class="l">2 malas despachadas por pessoa · USD 7.721,88 para 2 pessoas</span><div class="a"><div class="t">R$ 46.105,74</div><div class="p">para 2 pessoas · R$ 23.052,87 por pessoa</div></div></div>
+    </div>
+    <div class="air">
+      <div class="air-head"><div class="dir">Opção 9 · Só ida · executiva (Business)</div><div class="route">São Paulo → Londres (Gatwick) · 23/12</div></div>
+      <div class="cias"><span class="k">Companhia</span><span class="cia big" style="background:#0f3c7d">Air Europa</span><span class="klass big exe">Classe executiva</span></div>
+      <div class="cnx">IDA · quarta, 23 de dezembro, à tarde · conexão de 2h20 em Madri · 14h55 no total</div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#0f3c7d">Air Europa</span>UX 58<b>GRU → MAD</b>São Paulo (Guarulhos) → Madri<br>voo direto · 10h05 · Boeing 787-9</div><div class="rt"><div class="pt"><div class="code">GRU</div><div class="tm">23 dez · 15:05</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">MAD</div><div class="tm">24 dez · 05:10</div></div></div><div class="cls"><span class="klass exe">Executiva</span></div></div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#0f3c7d">Air Europa</span>UX 1013<b>MAD → LGW</b>Madri → Londres (Gatwick)<br>voo direto · 2h30 · Boeing 737 MAX 8</div><div class="rt"><div class="pt"><div class="code">MAD</div><div class="tm">24 dez · 07:30</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">LGW</div><div class="tm">24 dez · 09:00</div></div></div><div class="cls"><span class="klass exe">Executiva</span></div></div>
+      <div class="air-foot"><span class="l">2 malas despachadas por pessoa · USD 4.751,28 para 2 pessoas</span><div class="a"><div class="t">R$ 28.368,90</div><div class="p">para 2 pessoas · R$ 14.184,45 por pessoa</div></div></div>
+    </div>
+    <div class="air">
+      <div class="air-head"><div class="dir">Opção 10 · Só volta · tarifa Top</div><div class="route">Londres → Curitiba · 02/01</div></div>
+      <div class="cias"><span class="k">Companhia</span><span class="cia big" style="background:#d71920">TAP Air Portugal</span><span class="klass big exe">Classe executiva</span></div>
+      <div class="cnx">VOLTA · sábado, 2 de janeiro, de madrugada · conexão de 1h55 em Lisboa · 15h40 no total</div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#d71920">TAP Air Portugal</span>TP 1363<b>LHR → LIS</b>Londres (Heathrow) → Lisboa<br>voo direto · 2h50 · Airbus A321neo</div><div class="rt"><div class="pt"><div class="code">LHR</div><div class="tm">02 jan · 06:00</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">LIS</div><div class="tm">02 jan · 08:50</div></div></div><div class="cls"><span class="klass exe">Executiva</span></div></div>
+      <div class="leg"><div class="fl"><span class="cia" style="background:#d71920">TAP Air Portugal</span>TP 67<b>LIS → CWB</b>Lisboa → Curitiba<br>voo direto · 10h55 · Airbus A330-200</div><div class="rt"><div class="pt"><div class="code">LIS</div><div class="tm">02 jan · 10:45</div></div><div class="arrow"><svg width="34" height="12" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h32M27 1l5 5-5 5"/></svg></div><div class="pt"><div class="code">CWB</div><div class="tm">02 jan · 18:40</div></div></div><div class="cls"><span class="klass exe">Executiva</span></div></div>
+      <div class="air-foot"><span class="l">2 malas despachadas por pessoa · USD 7.284,28 para 2 pessoas</span><div class="a"><div class="t">R$ 43.492,94</div><div class="p">para 2 pessoas · R$ 21.746,47 por pessoa</div></div></div>
+    </div>
+    <div class="pend" style="margin:14px 0 0"><b>Combinando trechos avulsos</b><ul style="margin:6px 0 0 18px"><li><b>Ida Air Europa + volta TAP</b>: R$ 71.861,84 para 2 pessoas (R$ 35.930,92 por pessoa)</li><li><b>Ida LATAM Premium Business + volta TAP</b>: R$ 89.598,68 para 2 pessoas (R$ 44.799,34 por pessoa)</li></ul></div>
   </section>
 
   <section class="section sh" style="background:var(--cream)">
@@ -226,11 +294,22 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-
     <div class="tbl-wrap"><table>
       <tr class="head-row"><td>Voo</td><td class="v">Por pessoa</td><td class="v">2 pessoas</td></tr>
       <tr class="sec-row"><td colspan="3">Classe econômica · em reais</td></tr>
-      <tr><td><b>Ida · quarta, 23 de dezembro</b> <span class="cia" style="background:#1b0088">LATAM</span><div class="rm">Curitiba → Londres · 1 mala despachada por pessoa</div></td><td class="v">R$ 8.301,23</td><td class="v">R$ 16.602,46</td></tr>
+      <tr><td><b>Ida e volta</b> <span class="cia" style="background:#1b0088">LATAM</span><div class="rm">Curitiba ⇄ Londres · tarifa Standard · 1 mala despachada por pessoa</div></td><td class="v">R$ 17.437,32</td><td class="v">R$ 34.874,64</td></tr>
+      <tr><td><b>Ida e volta</b> <span class="cia" style="background:#1b0088">LATAM</span><div class="rm">Curitiba ⇄ Londres · tarifa Full (mais flexível) · 1 mala despachada por pessoa</div></td><td class="v">R$ 21.788,06</td><td class="v">R$ 43.576,12</td></tr>
+      <tr><td><b>Só ida</b> <span class="cia" style="background:#1b0088">LATAM</span><div class="rm">Curitiba → Londres · 23/12 · tarifa Standard · 1 mala despachada por pessoa</div></td><td class="v">R$ 8.301,23</td><td class="v">R$ 16.602,46</td></tr>
+      <tr><td><b>Só volta</b> <span class="cia" style="background:#d71920">TAP Air Portugal</span><div class="rm">Londres → Curitiba · 02/01 · tarifa Basic · 1 mala despachada por pessoa</div></td><td class="v">R$ 7.390,38</td><td class="v">R$ 14.780,76</td></tr>
+      <tr><td><b>Combinação</b><div class="rm">Ida LATAM + volta TAP</div></td><td class="v">R$ 15.691,61</td><td class="v">R$ 31.383,22</td></tr>
       <tr class="sec-row"><td colspan="3">Classe econômica · em milhas Smiles <span>· + taxas de embarque</span></td></tr>
-      <tr><td><b>Ida · quarta, 23 de dezembro</b> <span class="cia" style="background:#002157">Air France</span><div class="rm">São Paulo → Londres</div></td><td class="v">216.400 milhas</td><td class="v">432.800 milhas</td></tr>
-      <tr><td><b>Volta · sábado, 2 de janeiro</b> <span class="cia" style="background:#d71920">TAP Air Portugal</span><div class="rm">Londres → Curitiba</div></td><td class="v">204.900 milhas</td><td class="v">409.800 milhas</td></tr>
-      <tr class="total-row"><td>Ida e volta em milhas</td><td class="v">421.300 milhas</td><td class="v">842.600 milhas</td></tr>
+      <tr><td><b>Só ida</b> <span class="cia" style="background:#002157">Air France</span><div class="rm">São Paulo → Londres · 23/12</div></td><td class="v">216.400 milhas</td><td class="v">432.800 milhas</td></tr>
+      <tr><td><b>Só volta</b> <span class="cia" style="background:#d71920">TAP Air Portugal</span><div class="rm">Londres → Curitiba · 02/01</div></td><td class="v">204.900 milhas</td><td class="v">409.800 milhas</td></tr>
+      <tr><td><b>Ida e volta em milhas</b></td><td class="v">421.300 milhas</td><td class="v">842.600 milhas</td></tr>
+      <tr class="sec-row"><td colspan="3">Classe executiva · em reais</td></tr>
+      <tr><td><b>Ida e volta</b> <span class="cia" style="background:#1b0088">LATAM</span><div class="rm">Curitiba ⇄ Londres · Premium Business · 2 malas despachadas por pessoa</div></td><td class="v">R$ 38.854,59</td><td class="v">R$ 77.709,18</td></tr>
+      <tr><td><b>Só ida</b> <span class="cia" style="background:#1b0088">LATAM</span><div class="rm">Curitiba → Londres · 23/12 · Premium Business · 2 malas despachadas por pessoa</div></td><td class="v">R$ 23.052,87</td><td class="v">R$ 46.105,74</td></tr>
+      <tr><td><b>Só ida</b> <span class="cia" style="background:#0f3c7d">Air Europa</span><div class="rm">São Paulo → Londres (Gatwick) · 23/12 · executiva (Business) · 2 malas despachadas por pessoa</div></td><td class="v">R$ 14.184,45</td><td class="v">R$ 28.368,90</td></tr>
+      <tr><td><b>Só volta</b> <span class="cia" style="background:#d71920">TAP Air Portugal</span><div class="rm">Londres → Curitiba · 02/01 · tarifa Top · 2 malas despachadas por pessoa</div></td><td class="v">R$ 21.746,47</td><td class="v">R$ 43.492,94</td></tr>
+      <tr><td><b>Combinação</b><div class="rm">Ida Air Europa + volta TAP</div></td><td class="v">R$ 35.930,92</td><td class="v">R$ 71.861,84</td></tr>
+      <tr><td><b>Combinação</b><div class="rm">Ida LATAM Premium Business + volta TAP</div></td><td class="v">R$ 44.799,34</td><td class="v">R$ 89.598,68</td></tr>
       <tr class="sec-row"><td colspan="3">Hospedagem em Londres · 24/12 a 02/01 · 9 noites <span>· escolher 1</span></td></tr>
       <tr><td><b>The Dilly</b><div class="rm">Quarto duplo Superior com duas camas de solteiro (twin) · café da manhã · em até 10x</div></td><td class="v"></td><td class="v">R$ 33.920,00</td></tr>
       <tr><td><b>The May Fair Hotel</b><div class="rm">Collection Deluxe Twin Room (duas camas de solteiro) · café da manhã · em até 6x</div></td><td class="v"></td><td class="v">R$ 43.745,00</td></tr>
@@ -245,8 +324,8 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-
       </div>
       <div class="box">
         <h4>Referência</h4>
-        <p>Cotação emitida em 24/11/2026 · valores em <b>reais (BRL)</b> e em <b>milhas Smiles</b></p>
-        <p class="sm">Câmbio de 25/11/2026: GBP 1 = R$ 7,73 · USD 1 = R$ 5,90. Equivalente informado na cotação da LATAM: USD 2.780,62 para 2 pessoas.</p>
+        <p>Cotação emitida em 25/11/2026 · valores em <b>reais (BRL)</b> e em <b>milhas Smiles</b></p>
+        <p class="sm">Câmbio de 25/11/2026: GBP 1 = R$ 7,73 · USD 1 = R$ 5,90. Os valores em dólar de cada opção estão no rodapé de cada voo.</p>
       </div>
     </div>
     <div class="obs">
@@ -261,7 +340,9 @@ td.v{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-
         <li>Em milhas, a ida sai de São Paulo (Guarulhos): o trecho Curitiba → São Paulo não está incluído.</li>
         <li>Em milhas, a franquia exibida é de 1 item pessoal; mala de mão e mala despachada a confirmar na emissão.</li>
         <li>The Clermont: quarto com uma cama king. The Dilly e The May Fair: quartos com duas camas de solteiro (twin).</li>
-        <li>A volta em milhas sai de Londres às 06:00 do dia 02/01: é preciso estar em Heathrow por volta das 03:30.</li>
+        <li>As voltas pela TAP (em reais ou em milhas) saem de Londres às 06:00 do dia 02/01: é preciso estar em Heathrow por volta das 03:30. As voltas pela LATAM saem às 20:15 do dia 02/01 e chegam a Curitiba em 03/01.</li>
+        <li>Air Europa: sai de São Paulo (Guarulhos) e chega a Londres pelo aeroporto de Gatwick, a cerca de 30 minutos de trem do centro. O trecho Curitiba → São Paulo não está incluído.</li>
+        <li>"Só ida" e "só volta" são bilhetes separados; as combinações mostradas somam os dois valores.</li>
         <li>Brasileiros precisam de autorização eletrônica de viagem (ETA) para entrar no Reino Unido. Conferimos as regras vigentes antes da emissão.</li>
         <li>Valores em milhas sujeitos a alteração na Smiles até a emissão; tarifas em reais sujeitas a disponibilidade.</li>
         <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>

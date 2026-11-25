@@ -17,3 +17,9 @@ python3 build.py
 The Dilly (twin Superior, R$ 33.920,00, até 10x), The May Fair (Collection Deluxe Twin, R$ 43.745,00, até 6x),
 The Clermont Victoria (King Classic, R$ 30.705,00), todos com café da manhã, 24/12 a 02/01 (9 noites).
 Câmbio informado: GBP 7,73 · USD 5,90. Fotos: `fotos/escolha.json` (galeria oficial da Booking.com).
+
+## Aéreo completo (25/11/2026) · valores em reais para 2 pessoas
+Econômica: LATAM ida e volta Standard R$ 34.874,64 · LATAM ida e volta Full R$ 43.576,12 · LATAM só ida R$ 16.602,46 ·
+TAP só volta Basic R$ 14.780,76 (combinação ida LATAM + volta TAP R$ 31.383,22) · Smiles AF ida 216.400 + TAP volta 204.900 por pessoa.
+Executiva: LATAM Premium Business ida e volta R$ 77.709,18 · LATAM Premium Business só ida R$ 46.105,74 ·
+Air Europa só ida GRU→MAD→LGW R$ 28.368,90 · TAP só volta Top R$ 43.492,94.
