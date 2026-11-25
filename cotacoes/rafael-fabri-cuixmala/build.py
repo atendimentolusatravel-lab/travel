@@ -49,6 +49,14 @@ CSS = (ROOT / "style.part.html").read_text().replace(
     ".loc2{display:block;font-weight:400;color:var(--muted);font-size:.8rem;margin-top:2px}\n"
     ".rec{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:#9a6b00;border-radius:12px;padding:3px 10px;margin-bottom:8px}\n"
     ".hgrid.one{grid-template-columns:1fr}\n"
+    ".feat{display:grid;grid-template-columns:1fr 1fr;gap:6px 22px;margin:12px 0 0;padding:0;list-style:none}\n"
+    ".feat li{position:relative;padding-left:18px;font-size:.84rem;color:var(--ink)}\n"
+    ".feat li:before{content:'';position:absolute;left:2px;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--green)}\n"
+    ".fh{margin-top:14px;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--green-soft)}\n"
+    ".bom{margin-top:12px;padding:10px 14px;border-radius:10px;background:var(--cream);border:1px solid var(--line);font-size:.84rem;color:var(--muted)}\n"
+    ".bom b{color:var(--green-dark)}\n"
+    ".pixtag{display:inline-block;margin-top:6px;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}\n"
+    "@media(max-width:720px){.feat{grid-template-columns:1fr}}\n"
     "@media(max-width:720px){.hl{grid-template-columns:1fr 1fr}}\n</style>")
 
 
@@ -69,15 +77,27 @@ CATS = [
     dict(id="bungalow", nome="One Bedroom Bungalow · Vista Mar", local="Bungalows · 5 a 7 minutos a pé da Casa", noite=38800, m2="120 m²",
          rec="Nossa recomendação",
          txt="Casa independente com entrada e terraço privativos, camas de dia e vista para o mar. É o espaço com vista mar mais amplo do hotel, com acesso à piscina e ao restaurante da Casa Cuixmala.",
-         quarto="1 quarto · até 2 adultos · vista para o mar"),
+         quarto="1 quarto · até 2 adultos · vista para o mar",
+         inc=["Bangalô independente de 120 m², com entrada privativa", "Vista para o mar", "Terraço privativo com duas camas de dia",
+              "Sala e quarto integrados, cama king-size", "Banheiro com banheira grande", "Ar-condicionado, Wi-Fi e caixa de som Bose",
+              "Bar no quarto com chá e café", "Acesso à piscina e ao restaurante da Casa Cuixmala"],
+         bom="<b>Por que recomendamos:</b> é a combinação de privacidade e vista para o mar mais completa do hotel. O bangalô é uma casa só de vocês, escondida na mata, e fica a 5 a 7 minutos a pé da Casa, da piscina e da praia."),
     dict(id="reserva", nome="One Bedroom Bungalow · Vista Reserva", local="Bungalows · 5 a 7 minutos a pé da Casa", noite=33960, m2="120 m²",
          rec="Intermediária",
          txt="O mesmo bungalow de 120 m², com entrada e terraço privativos, voltado para a reserva natural em vez do mar. Mesma privacidade e acesso à piscina e ao restaurante da Casa, por cerca de R$ 12,7 mil a menos na semana.",
-         quarto="1 quarto · até 2 adultos · vista para a reserva natural"),
-    dict(id="lion", nome="Lion Suite", local="Casa Cuixmala · edifício principal", noite=24260, m2="suíte",
+         quarto="1 quarto · até 2 adultos · vista para a reserva natural",
+         inc=["Bangalô independente de 120 m², com entrada privativa", "Vista para a reserva natural (mata e lagoa)", "Terraço privativo com duas camas de dia",
+              "Sala e quarto integrados, cama king-size", "Banheiro com banheira grande", "Ar-condicionado, Wi-Fi e caixa de som Bose",
+              "Bar no quarto com chá e café", "Acesso à piscina e ao restaurante da Casa Cuixmala"],
+         bom="<b>Por que vale:</b> mesmo espaço, mesma privacidade e mesmo acesso à Casa da Opção 1. A diferença é só a vista, que dá para a reserva em vez do mar, e o valor fica cerca de R$ 12,7 mil menor na semana."),
+    dict(id="lion", nome="Lion Suite", local="Casa Cuixmala · edifício principal", noite=24260, m2="43,5 m²",
          rec="Mais em conta",
-         txt="Suíte dentro da Casa Cuixmala, com vista para o coqueiral, a poucos passos da piscina, do restaurante e da biblioteca. A forma mais em conta de ficar na Casa principal.",
-         quarto="Suíte · até 2 adultos · vista para o coqueiral"),
+         txt="Suíte dentro da Casa Cuixmala, com vista para o coqueiral, a poucos passos da piscina, do restaurante e das salas de estar. A forma mais em conta de ficar na Casa principal.",
+         quarto="Suíte · até 2 adultos · vista para o coqueiral",
+         inc=["Suíte de 43,5 m² dentro da Casa Cuixmala", "Vista para o coqueiral, da cama e do terraço", "Closet e área de vestir",
+              "Cama king-size", "Banheiro com banheira grande", "Ar-condicionado, Wi-Fi e caixa de som Bose",
+              "Bar no quarto com chá e café", "A poucos passos da piscina, do restaurante e das salas de estar da Casa"],
+         bom="<b>Por que vale:</b> é a forma mais em conta de ficar na Casa principal, com o mesmo acesso à piscina e à praia, por cerca de R$ 38 mil a menos que a Opção 1. <b>Bom saber:</b> é menor que os bangalôs e o terraço é compartilhado com a Dragon Suite, a suíte vizinha."),
 ]
 TODAS = [
     ("Cuixmala Suite", "Casa · única com vista mar garantida e jacuzzi externa · 97 m²", 60640, ""),
@@ -109,9 +129,11 @@ def galeria(cid):
 
 def card(c, n):
     return (f'        <div class="hotel"><span class="rec">Opção {n} · {c["rec"]}</span><div class="hotel-top"><div class="hotel-name">{BLDG}<span>{c["nome"]}<span class="loc2">{c["local"]} · {c["m2"]}</span></span></div>'
-            f'<div class="hotel-price"><div class="v">{mxn(c["total"])}</div><div class="u">7 noites · com impostos · ≈ {brl(c["total"] * CAMBIO)}</div></div></div>{galeria(c["id"])}'
+            f'<div class="hotel-price"><div class="v">{mxn(c["total"])}</div><div class="u">7 noites · com impostos · ≈ {brl(c["total"] * CAMBIO)}</div><div class="pixtag">Valor para pagamento via Pix</div></div></div>{galeria(c["id"])}'
             f'<div class="hotel-room"><b>{c["quarto"]}</b> · {mxn(c["noite"])} por noite + impostos · só hospedagem</div>'
-            f'<p class="note" style="margin-top:8px">{c["txt"]}</p></div>')
+            f'<p class="note" style="margin-top:8px">{c["txt"]}</p>'
+            f'<div class="fh">O que a acomodação oferece</div><ul class="feat">' + "".join(f"<li>{x}</li>" for x in c["inc"]) + '</ul>'
+            f'<div class="bom">{c["bom"]}</div></div>')
 
 
 cards = "\n".join(card(c, i) for i, c in enumerate(CATS, 1))
@@ -166,7 +188,7 @@ html = f"""<!DOCTYPE html>
       <div>
         <div class="lbl">Detalhes</div>
         <p>Cuixmala, uma reserva ecológica de 30 mil acres na Costa Alegre do México, entre Puerto Vallarta e Manzanillo · 3 opções de acomodação · alta temporada</p>
-        <p class="sm">Cotação emitida em <b>{EMISSAO}</b> · valores em <b>pesos mexicanos (MXN)</b>, como o hotel cobra, com estimativa em reais · Câmbio de hoje: <b>MXN 1 = R$ 0,309</b> · <b>USD 1 = R$ 6,11</b></p>
+        <p class="sm">Cotação emitida em <b>{EMISSAO}</b> · tarifas do hotel em <b>pesos mexicanos (MXN)</b>, com o valor em reais para <b>pagamento via Pix</b> · Câmbio de hoje: <b>MXN 1 = R$ 0,309</b> · <b>USD 1 = R$ 6,11</b></p>
       </div>
       <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
     </div>
@@ -179,12 +201,20 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Hospedagem</span>
     <h2>Onde ficar no Cuixmala</h2>
     <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">Valores para <b>7 noites</b>, para <b>2 adultos</b>, já com <b>16% de IVA e 5% de imposto de hospedagem</b>. Só hospedagem: café da manhã e refeições à parte. <b>Escolher 1 opção.</b></p>
+    <p class="note" style="margin-top:16px">Valores para <b>7 noites</b>, para <b>2 adultos</b>, já com <b>16% de IVA e 5% de imposto de hospedagem</b>. Só hospedagem: café da manhã e refeições à parte. <b>Escolher 1 opção.</b><br>Valores para <b>pagamento via Pix</b>. Para parcelamento, consulte-nos.</p>
     <div class="city-block">
       <div class="city-head"><h3>Cuixmala · Costa Alegre, México</h3><span class="dates">FEVEREIRO 2027 · 7 noites</span></div>
       <div class="hgrid one">
 {cards}
       </div>
+      <div class="hotel" style="margin-top:22px"><div class="fh" style="margin-top:0">Nas 3 opções</div><ul class="feat">
+        <li>Piscina da Casa Cuixmala, de uso exclusivo dos hóspedes das suítes e dos bangalôs, aberta para a praia</li>
+        <li>Praia privativa em frente à Casa</li>
+        <li>Restaurante da Casa, com cozinha mexicana e produtos da fazenda biodinâmica do próprio hotel</li>
+        <li>Salas de estar e áreas de descanso da Casa, compartilhadas</li>
+        <li>Reserva natural de mais de 30 mil acres, com 5 km de costa e 3 praias selvagens</li>
+        <li>Zebras, elands e 270 espécies de aves soltos na reserva · cavalos nas Caballerizas (atividades à parte)</li>
+      </ul></div>
     </div>
   </section>
 
@@ -204,7 +234,7 @@ html = f"""<!DOCTYPE html>
     <span class="eyebrow">Investimento</span>
     <h2>Resumo de valores</h2>
     <div class="accent-line"></div>
-    <p class="note" style="margin-top:16px">*7 noites, 2 adultos, com impostos. Escolher 1 opção. Nada reservado, apenas cotado.</p>
+    <p class="note" style="margin-top:16px">*7 noites, 2 adultos, com impostos. Valores para pagamento via Pix; para parcelamento, consulte-nos. Escolher 1 opção. Nada reservado, apenas cotado.</p>
     <div class="tbl-wrap"><table>
       <tr class="head-row"><td>Acomodação</td><td class="v">7 noites (MXN)</td><td class="v">Estimativa em reais</td></tr>
 {rows}
@@ -215,13 +245,13 @@ html = f"""<!DOCTYPE html>
     <div class="pay">
       <div class="box">
         <h4>Condições de pagamento</h4>
-        <p>O hotel cobra em pesos mexicanos, no câmbio do cartão no dia do pagamento.</p>
-        <p class="sm">A reserva só é garantida com pagamento antecipado.</p>
+        <p><b>Valores para pagamento via Pix.</b> Para parcelamento, consulte-nos.</p>
+        <p class="sm">Pagamento em reais, com o câmbio do dia do fechamento. A reserva só é garantida com pagamento antecipado.</p>
       </div>
       <div class="box">
         <h4>Referência</h4>
         <p>Cotação emitida em {EMISSAO} · tarifas de alta temporada (fevereiro e março de 2027)</p>
-        <p class="sm">Câmbio de hoje ({EMISSAO}): <b>MXN 1 = R$ 0,309</b> · <b>USD 1 = R$ 6,11</b>. Os valores em reais já incluem IOF e taxa de remessa. O valor final depende do câmbio no dia do pagamento.</p>
+        <p class="sm">Câmbio de hoje ({EMISSAO}): <b>MXN 1 = R$ 0,309</b> · <b>USD 1 = R$ 6,11</b>. Os valores em reais já incluem IOF e taxa de remessa. Pagamento em reais, com o câmbio do dia do fechamento.</p>
       </div>
     </div>
     <div class="obs">
@@ -234,6 +264,8 @@ html = f"""<!DOCTYPE html>
       <h4>Observações</h4>
       <ul>
         <li>Os valores em reais já incluem IOF e taxa de remessa.</li>
+        <li>Valores para pagamento via Pix. Para parcelamento, consulte-nos.</li>
+        <li>Pagamento em reais, com o câmbio do dia do fechamento.</li>
         <li>Check-in às 15h e check-out às 12h.</li>
         <li>Disponibilidade sujeita às datas exatas da viagem, a confirmar com o hotel.</li>
         <li>Tarifas informadas pelo hotel para fevereiro e março de 2027, sujeitas a alteração até a confirmação.</li>
