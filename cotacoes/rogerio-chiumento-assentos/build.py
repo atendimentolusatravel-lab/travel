@@ -15,7 +15,7 @@ completos dos passageiros e não vão para o repositório; ficam só recortes se
 import pathlib
 
 ROOT = pathlib.Path(__file__).parent
-IMG = "img/"
+IMG = "https://cdn.jsdelivr.net/gh/atendimentolusatravel-lab/travel@f161134d1db294fa53b9bc96ee7df3a688c95411/cotacoes/rogerio-chiumento-assentos/src/img/"
 CSS = (ROOT.parent / "luiz-gabriel-assentos" / "src" / "style.css").read_text()
 EXTRA = """
 .hero-img{height:380px}.hero-img img{object-position:center 45%}@media(max-width:720px){.hero-img{height:220px}}
