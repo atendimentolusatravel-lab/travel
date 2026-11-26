@@ -18,7 +18,7 @@ completos dos passageiros e não vão para o repositório; ficam só recortes se
 import pathlib
 
 ROOT = pathlib.Path(__file__).parent
-IMG = "https://cdn.jsdelivr.net/gh/atendimentolusatravel-lab/travel@5289f2a25c04ade1da3db23b3e7a540ee6c7779a/cotacoes/rogerio-chiumento-assentos/src/img/"
+IMG = "https://cdn.jsdelivr.net/gh/atendimentolusatravel-lab/travel@58df751ea1f7e03694aa25a83e33249c211a6af7/cotacoes/rogerio-chiumento-assentos/src/img/"
 CSS = (ROOT.parent / "luiz-gabriel-assentos" / "src" / "style.css").read_text()
 EXTRA = """
 .hero-img{height:380px}.hero-img img{object-position:center 45%}@media(max-width:720px){.hero-img{height:220px}}
@@ -52,6 +52,9 @@ EXTRA = """
 .st .w{font-size:.66rem;color:var(--green-dark);font-weight:600;margin-top:4px;min-height:1em}
 .letters{display:flex;justify-content:center;gap:6px;font-size:.68rem;color:var(--muted);font-weight:600}
 .letters span{width:54px;text-align:center}.letters .gap{width:26px}.letters .n{width:18px;margin-right:4px}
+.mapone.ov{position:relative;padding:0;overflow:hidden}
+.ring{position:absolute;border:3px solid #c9a227;border-radius:8px;box-sizing:border-box;box-shadow:0 0 0 2px rgba(255,255,255,.8)}
+.mk{position:absolute;transform:translateX(-50%);background:#404626;color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.04em;padding:2px 7px;border-radius:10px;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,.25)}
 .alerta{margin:12px 0 0;padding:10px 14px;border-radius:10px;background:#fff6e0;border:1px solid #ecd59a;color:#6b4e00;font-size:.85rem;line-height:1.55}
 .opts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 14px}
 .opt{border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px 16px}
@@ -204,10 +207,8 @@ html = f"""<!DOCTYPE html>
       </div>
       <div class="seatmap">
         <div class="pick"><div class="seat">2D · 2F</div><div><div class="k">Assentos marcados · LHR → LIS</div><div class="d"><b>Juntos na fileira 2</b>, lado direito: Rogério no corredor (2D) e Jessica na janela (2F), com o assento do meio (2E) bloqueado entre os dois.</div></div><div class="pr"><div class="p">R$ 0,00</div><div class="q">sem custo</div></div></div>
-        {A321}
-        <div class="cap2" style="text-align:center">Fileira 2 da executiva: A · B · C | D · E · F. Na executiva desse voo, o assento do meio (B e E) fica bloqueado.</div>
-        <div class="mapone md" style="margin-top:14px"><img src="{IMG}tp-a321.webp" alt="Tela da TAP com a executiva do voo LHR para LIS e os benefícios do assento 2D" loading="lazy"></div>
-        <div class="cap2">Tela da TAP no momento da marcação: assentos A a F, fileira 1, e os benefícios da executiva.</div>
+        <div class="mapone md ov"><img src="{IMG}tp-lhr-lis.webp" alt="Mapa da executiva TAP no voo LHR para LIS, Airbus A321neo, fileiras 1 a 4" loading="lazy"><span class="ring" style="left:56.9%;top:39.7%;width:12.6%;height:9.2%"></span><span class="mk" style="left:63.2%;top:49.5%">Rogério</span><span class="ring" style="left:79.9%;top:39.7%;width:12.6%;height:9.2%"></span><span class="mk" style="left:86.2%;top:49.5%">Jessica</span></div>
+        <div class="cap2">Mapa da executiva no momento da consulta (A · B · C | D · E · F). Azul = disponível; X = ocupado ou bloqueado. O assento do meio (B e E) fica bloqueado. Marcados: <b>2D (Rogério)</b> e <b>2F (Jessica)</b>.</div>
       </div>
     </div>
     <div class="trecho">
@@ -216,13 +217,10 @@ html = f"""<!DOCTYPE html>
         <div class="tier"><span class="sw sw-tp"></span><div><div class="nm">Executiva full-flat</div><div class="bn">Assento que vira cama totalmente plana, mais espaço entre cadeiras e mais largo, vários níveis de encosto, tomadas elétricas e USB.</div></div><div class="pr"><div class="p p-free">R$ 0,00</div><div class="q">por passageiro</div></div></div>
       </div>
       <div class="seatmap">
-        <div class="pick"><div class="seat">6H · 6C</div><div><div class="k">Assentos marcados · LIS → CWB</div><div class="d"><b>Mesma fileira, lados opostos</b>: Jessica à esquerda (6C) e Rogério à direita (6H). Os dois assentos centrais da fileira 6 estavam indisponíveis na consulta.</div></div><div class="pr"><div class="p">R$ 0,00</div><div class="q">sem custo</div></div></div>
-        {A330}
-        <div class="cap2" style="text-align:center">Fileira 6 da executiva: à esquerda 6C, no centro os 2 assentos indisponíveis, à direita 6H.</div>
-        <div class="mapone md" style="margin-top:14px"><img src="{IMG}tp-a330.webp" alt="Tela da TAP com a executiva do voo LIS para CWB e os benefícios do assento 6H" loading="lazy"></div>
-        <div class="mapone md" style="margin-top:10px"><img src="{IMG}tp-a330-fila6.webp" alt="Fileira 6 da executiva TAP, com 6C e 6H marcados" loading="lazy"></div>
-        <div class="cap2">Telas da TAP no momento da marcação: os benefícios da executiva e a fileira 6, com 6C e 6H em azul.</div>
-        <div class="alerta">Os dois ficam na mesma fileira, mas em lados opostos da cabine. Se abrir um par de assentos juntos até o embarque, dá para trocar e deixar os dois lado a lado.</div>
+        <div class="pick"><div class="seat">6H · 6C</div><div><div class="k">Assentos marcados · LIS → CWB</div><div class="d"><b>Mesma fileira, lados opostos</b>: Jessica à esquerda (6C) e Rogério à direita (6H). Não havia dois assentos livres lado a lado na executiva.</div></div><div class="pr"><div class="p">R$ 0,00</div><div class="q">sem custo</div></div></div>
+        <div class="mapone md ov"><img src="{IMG}tp-lis-cwb.webp" alt="Mapa da executiva TAP no voo LIS para CWB, Airbus A330-900neo, fileiras 1 a 6" loading="lazy"><span class="ring" style="left:13.8%;top:69.1%;width:10.3%;height:9.2%"></span><span class="mk" style="left:19.0%;top:78.9%">Jessica</span><span class="ring" style="left:70.9%;top:69.1%;width:10.3%;height:9.2%"></span><span class="mk" style="left:76.1%;top:78.9%">Rogério</span></div>
+        <div class="cap2">Mapa da executiva no momento da consulta (A · C | D · E · F · G | H · J · K). Azul = disponível; X = ocupado. Marcados: <b>6C (Jessica)</b> e <b>6H (Rogério)</b>.</div>
+        <div class="alerta">Na consulta, <b>todos os assentos centrais da executiva já estavam ocupados</b> e não havia dois lugares livres lado a lado. Por isso ficaram na mesma fileira, um de cada lado. Se abrir um par até o embarque, dá para trocar.</div>
       </div>
     </div>
   </section>
