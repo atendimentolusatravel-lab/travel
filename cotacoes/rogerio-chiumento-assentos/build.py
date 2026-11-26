@@ -181,6 +181,12 @@ html = f"""<!DOCTYPE html>
           <div class="opt"><div class="k">Mais privacidade · Duo</div><div class="s">Assento Duo</div><div class="d">Os dois sozinhos numa fileira de 2, sem ninguém ao lado nas 11 horas de voo. Só havia um par livre.</div><div class="p">a partir de R$ 366,00 por assento · R$ 732,00 os dois</div></div>
           <div class="opt"><div class="k">Sugestão da Air France · seção dianteira</div><div class="s">Fileira 23 ★</div><div class="d">Lado direito, meio e janela, na primeira fileira da cabine. As fileiras 27 e 28 já são Standard.</div><div class="p">a partir de R$ 397,00 por assento · R$ 794,00 os dois</div></div>
         </div>
+        <div class="tbl-wrap" style="margin:0 0 14px"><table>
+      <tr class="head-row"><td>Todos os valores · GRU → CDG</td><td class="v">Disponíveis</td><td class="v">Por passageiro</td><td class="v">2 passageiros</td></tr>
+      <tr><td><b>Assento Standard</b><div class="rm">Demais fileiras da econômica (azul-claro). Espaço padrão para as pernas.</div></td><td class="v">112</td><td class="v">a partir de R$ 223,00</td><td class="v">a partir de R$ 446,00</td></tr>
+      <tr><td><b>Assento Duo</b><div class="rm">Fileira com só 2 assentos: o casal viaja sem ninguém ao lado. Espaço padrão para as pernas.</div></td><td class="v">2</td><td class="v">a partir de R$ 366,00</td><td class="v">a partir de R$ 732,00</td></tr>
+      <tr><td><b>Assento na seção dianteira</b> ★ recomendado<div class="rm">Primeiras fileiras da econômica (azul-escuro): convenientemente na frente, entre os primeiros a sair da aeronave. Espaço padrão para as pernas.</div></td><td class="v">34</td><td class="v">a partir de R$ 397,00</td><td class="v">a partir de R$ 794,00</td></tr>
+    </table></div>
         <div class="mapone"><img src="{IMG}af-gru-cdg.webp" alt="Mapa de assentos Air France GRU para CDG, Airbus A350-900, fileiras 23 a 28" loading="lazy"></div>
         <div class="cap2">Mapa do Airbus A350-900 (3 + 3 + 3 assentos por fileira) no momento da consulta. Azul-escuro = seção dianteira; azul-claro = Standard; cinza = indisponível; ★ = sugestão da Air France. A opção mais em conta é o Standard: a partir de R$ 223,00 por assento (R$ 446,00 os dois).</div>
       </div>
@@ -194,6 +200,12 @@ html = f"""<!DOCTYPE html>
       </div>
       <div class="seatmap">
         <div class="pick pend"><div class="seat">a marcar</div><div><div class="k">Pendente · CDG → LGW</div><div class="d">Nenhum assento escolhido ainda. A Air France sugere (★) a fileira 11, lado esquerdo: o lado com só 2 assentos, então o casal fica sozinho na fileira.</div></div><div class="pr"><div class="p">a partir de R$ 258,00</div><div class="q">os dois</div></div></div>
+        <div class="tbl-wrap" style="margin:0 0 14px"><table>
+      <tr class="head-row"><td>Todos os valores · CDG → LGW</td><td class="v">Disponíveis</td><td class="v">Por passageiro</td><td class="v">2 passageiros</td></tr>
+      <tr><td><b>Assento Standard</b> ★ recomendado<div class="rm">Espaço padrão para as pernas.</div></td><td class="v">80</td><td class="v">a partir de R$ 129,00</td><td class="v">a partir de R$ 258,00</td></tr>
+      <tr><td><b>Assento na seção dianteira</b><div class="rm">Fileiras da frente (azul-escuro): entre os primeiros a sair da aeronave. Espaço padrão para as pernas.</div></td><td class="v">25</td><td class="v">a partir de R$ 129,00</td><td class="v">a partir de R$ 258,00</td></tr>
+      <tr><td><b>Assento com espaço extra para as pernas</b><div class="rm">Espaço adicional para as pernas. Exemplo consultado: assento 14A por R$ 141,00.</div></td><td class="v">5</td><td class="v">a partir de R$ 129,00</td><td class="v">a partir de R$ 258,00</td></tr>
+    </table></div>
         <div class="mapone md"><img src="{IMG}af-cdg-lgw.webp" alt="Mapa de assentos Air France CDG para LGW, Airbus A220-300, fileiras 7 a 12" loading="lazy"></div>
         <div class="cap2">Mapa do Airbus A220-300 (2 + 3 assentos por fileira) no momento da consulta. Azul-escuro = seção dianteira; azul-claro = Standard; ★ = sugestão da Air France.</div>
       </div>
@@ -232,9 +244,15 @@ html = f"""<!DOCTYPE html>
     <p class="note" style="margin-top:16px">Total de cada trecho para os 2 passageiros. Nada reservado, apenas cotado.</p>
     <div class="tbl-wrap"><table>
       <tr class="head-row"><td>Trecho</td><td>Assentos</td><td class="v">2 passageiros</td></tr>
+      <tr class="sec-row"><td colspan="3">Azul</td></tr>
       <tr><td><b>CWB → GRU</b> · Azul · 23/12</td><td>a marcar · Padrão (6A · 6B) ou Espaço Azul (fileira 4)</td><td class="v">R$ 0,00 ou R$ 206,00</td></tr>
-      <tr><td><b>GRU → CDG</b> · Air France · 23/12</td><td>a marcar · Standard, Duo ou seção dianteira</td><td class="v">a partir de R$ 446,00</td></tr>
-      <tr><td><b>CDG → LGW</b> · Air France · 24/12</td><td>a marcar · fileira 11 sugerida</td><td class="v">a partir de R$ 258,00</td></tr>
+      <tr class="sec-row"><td colspan="3">GRU → CDG · Air France · 23/12 · a marcar (escolher 1)</td></tr>
+      <tr><td>Assento Standard</td><td>a partir de R$ 223,00 por passageiro</td><td class="v">a partir de R$ 446,00</td></tr>
+      <tr><td>Assento Duo</td><td>a partir de R$ 366,00 por passageiro</td><td class="v">a partir de R$ 732,00</td></tr>
+      <tr><td>Assento na seção dianteira</td><td>a partir de R$ 397,00 por passageiro</td><td class="v">a partir de R$ 794,00</td></tr>
+      <tr class="sec-row"><td colspan="3">CDG → LGW · Air France · 24/12 · a marcar (escolher 1)</td></tr>
+      <tr><td>Standard, seção dianteira ou espaço extra para as pernas</td><td>a partir de R$ 129,00 por passageiro (14A: R$ 141,00)</td><td class="v">a partir de R$ 258,00</td></tr>
+      <tr class="sec-row"><td colspan="3">TAP · executiva</td></tr>
       <tr><td><b>LHR → LIS</b> · TAP · 02/01</td><td>2D · 2F · executiva</td><td class="v">R$ 0,00</td></tr>
       <tr><td><b>LIS → CWB</b> · TAP · 02/01</td><td>6H · 6C · executiva</td><td class="v">R$ 0,00</td></tr>
       <tr class="total-row"><td colspan="2">Total · 2 passageiros</td><td class="v">a partir de R$ 704,00</td></tr>
