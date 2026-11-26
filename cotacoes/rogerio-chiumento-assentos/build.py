@@ -1,0 +1,223 @@
+#!/usr/bin/env python3
+"""Gera src/index.html — marcação de assentos · Rogério e Jessica · Azul + TAP · Londres, dez/2026 a jan/2027.
+
+Fonte: 5 prints das telas de marcação enviados pela agência em 26/11/2026. Os prints originais mostram os nomes
+completos dos passageiros e não vão para o repositório; ficam só recortes sem nomes (src/img/*.webp).
+- Azul CWB→GRU (Embraer 195-E2): nenhum assento marcado ainda ("--" para os 2). Espaço Azul a partir de R$ 103,00
+  (fileiras 1 a 5); Assento Padrão incluso (fileiras 6 em diante). Total da tela: R$ 0,00.
+  Disponíveis na consulta: Espaço Azul 1A, 1D, 2D, 3C, 3D, 4A, 4B, 4C, 4D, 5D · Padrão 6A, 6B, 6C e fileiras 7 a 9 inteiras.
+- TAP LHR→LIS (Executiva, cabine 3 + 3 com o assento do meio bloqueado): Rogério 2D · Jessica 2F · 0,00 BRL cada.
+- TAP LIS→CWB (Executiva, assentos full-flat): Rogério 6H · Jessica 6C · 0,00 BRL cada. Na fileira 6, 6C fica à
+  esquerda e 6H à direita; os 2 assentos centrais da fileira estavam indisponíveis.
+- Voos TAP conforme a cotação de aéreo (../rogerio-chiumento-londres): TP 1363 LHR→LIS 02/01 06:00–08:50 (A321neo) ·
+  TP 67 LIS→CWB 02/01 10:45–18:40 (A330-900neo). A data do voo Azul não aparece no print.
+"""
+import pathlib
+
+ROOT = pathlib.Path(__file__).parent
+IMG = "img/"
+CSS = (ROOT.parent / "luiz-gabriel-assentos" / "src" / "style.css").read_text()
+EXTRA = """
+.hero-img{height:380px}.hero-img img{object-position:center 45%}@media(max-width:720px){.hero-img{height:220px}}
+.brandtext{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:.3em;color:var(--green)}
+.footer .brandtext{color:#fff;margin-bottom:14px}
+.credit{font-size:.7rem;opacity:.6;margin-top:8px}
+.mapone{border:1px solid var(--line);border-radius:10px;background:#fff;padding:12px;max-width:620px;margin:0 auto}
+.mapone img{width:100%;height:auto;display:block}
+.mapone.sm{max-width:330px}.mapone.md{max-width:430px}
+.pick{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--sage);border:1px solid #c6d8b0;border-radius:12px;padding:14px 18px;margin:0 0 14px}
+.pick .seat{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;font-weight:700;color:var(--green-dark);line-height:1;padding:6px 12px;border:2px solid var(--green);border-radius:8px;background:#fff;white-space:nowrap}
+.pick .k{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--green-soft)}
+.pick .d{font-size:.88rem;color:var(--green-dark);margin-top:3px;line-height:1.5}
+.pick .pr{text-align:right;white-space:nowrap}.pick .pr .p{font-weight:700;color:var(--green);font-size:1.1rem}.pick .pr .q{font-size:.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+.pick.pend{background:#fff6e0;border-color:#ecd59a}.pick.pend .seat{border-color:#c9a227;color:#6b4e00;font-size:1.4rem}
+.sw-ad-ea{background:#1a4f8a;border-color:#1a4f8a!important}
+.sw-ad-std{background:#2f8fd1;border-color:#2f8fd1!important}
+.sw-na{background:#cfcac2;border-color:#b9b3aa!important;color:#6d675f}
+.sw-tp{background:#1f3a8a;border-color:#1f3a8a!important}
+.row2{display:flex;justify-content:center;align-items:flex-end;gap:6px;margin:6px auto 4px;flex-wrap:nowrap}
+.row2 .n{font-size:.72rem;color:var(--muted);width:18px;text-align:right;margin-right:4px;align-self:center}
+.row2 .gap{width:26px}
+.st{width:54px;text-align:center}
+.st .b{height:46px;border-radius:7px;border:1.5px solid #b9b3aa;background:#efebe4;display:grid;place-items:center;font-weight:700;font-size:.8rem;color:#6d675f}
+.st.on .b{background:#1f3a8a;border-color:#1f3a8a;color:#fff}
+.st.x .b{background:#cfcac2}
+.st .w{font-size:.66rem;color:var(--green-dark);font-weight:600;margin-top:4px;min-height:1em}
+.letters{display:flex;justify-content:center;gap:6px;font-size:.68rem;color:var(--muted);font-weight:600}
+.letters span{width:54px;text-align:center}.letters .gap{width:26px}.letters .n{width:18px;margin-right:4px}
+.alerta{margin:12px 0 0;padding:10px 14px;border-radius:10px;background:#fff6e0;border:1px solid #ecd59a;color:#6b4e00;font-size:.85rem;line-height:1.55}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 14px}
+.opt{border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px 16px}
+.opt .k{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--green-soft)}
+.opt .s{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:700;color:var(--green-dark);margin-top:4px}
+.opt .d{font-size:.84rem;color:var(--muted);margin-top:4px;line-height:1.5}
+.opt .p{font-weight:700;color:var(--green);margin-top:6px}
+@media(max-width:640px){.pick{grid-template-columns:auto 1fr}.pick .pr{grid-column:1/-1;text-align:left}.opts{grid-template-columns:1fr}.st{width:40px}.letters span{width:40px}.row2 .gap,.letters .gap{width:14px}}
+"""
+CAPA = dict(
+    url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg/1920px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg",
+    alt="Palácio de Westminster, em Londres",
+    credito="Foto da capa: Colin, CC BY-SA 4.0, via Wikimedia Commons")
+
+
+def st(letra, quem="", cls=""):
+    return f'<div class="st {cls}"><div class="b">{letra}</div><div class="w">{quem}</div></div>'
+
+
+A321 = ('<div class="letters"><span class="n"></span><span>A</span><span>B</span><span>C</span><span class="gap"></span><span>D</span><span>E</span><span>F</span></div>'
+        '<div class="row2"><span class="n">2</span>' + st("A") + st("B", "", "x") + st("C") + '<span class="gap"></span>'
+        + st("D", "Rogério", "on") + st("E", "", "x") + st("F", "Jessica", "on") + '</div>')
+A330 = ('<div class="row2"><span class="n">6</span>' + st("C", "Jessica", "on") + '<span class="gap"></span>'
+        + st("", "", "x") + st("", "", "x") + '<span class="gap"></span>' + st("H", "Rogério", "on") + st("", "", "x") + '</div>')
+
+html = f"""<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Marcação de assentos — Rogério e Jessica · Lusa Travel</title>
+<meta property="og:title" content="Marcação de assentos — Rogério e Jessica">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+{CSS}
+{EXTRA}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="brandbar"><img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'"></div>
+  <header class="hero">
+    <div class="eyebrow">Marcação de assentos</div>
+    <h1>ASSENTOS <span class="amp">·</span> AZUL &amp; TAP</h1>
+    <div class="accent-line"></div>
+    <p class="hero-sub"><b>Rogério e Jessica</b> · Curitiba → São Paulo · Londres → Lisboa → Curitiba</p>
+    <div class="hero-img">
+      <img src="{CAPA["url"]}" alt="{CAPA["alt"]}" onerror="this.style.display='none'">
+      <div class="cap"><div class="k">Azul e TAP Air Portugal</div><div class="t">Volta em executiva, sem custo de marcação</div></div>
+    </div>
+    <div class="hero-info">
+      <div>
+        <div class="lbl">Detalhes da marcação</div>
+        <p><b>3 voos</b> · <b>Azul</b> entre Curitiba e São Paulo · <b>TAP</b> na volta, em <b>executiva</b>, de Londres a Curitiba via Lisboa</p>
+        <p class="muted" style="margin-top:8px;font-size:.86rem">Consulta feita em <b>26/11/2026</b> · valores em <b>reais</b> · 2 passageiros</p>
+      </div>
+      <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
+    </div>
+    <div class="gloss">
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16l20-7-9 13-2-6z"/></svg></span><b>3</b>&nbsp;Voos</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><circle cx="17" cy="8" r="2.5"/></svg></span><b>2</b>&nbsp;Passageiros</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l7-7M8 4l3 3M14 6l4 4-9 9-4-1-1-4z"/></svg></span><b>2</b>&nbsp;marcados · 1 a marcar</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg></span><b>R$ 0,00</b>&nbsp;na TAP</div>
+    </div>
+  </header>
+
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Itinerário</span>
+    <h2>Os três voos</h2>
+    <div class="accent-line"></div>
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Data</td><td>Trecho</td><td>Companhia</td><td class="v">Assentos</td><td class="v">2 passageiros</td></tr>
+      <tr class="sec-row"><td colspan="5">Ida</td></tr>
+      <tr><td>conforme a reserva</td><td>Curitiba (CWB) → São Paulo (GRU)</td><td>Azul · Embraer 195-E2</td><td class="v"><b>a marcar</b></td><td class="v">R$ 0,00 a R$ 206,00</td></tr>
+      <tr class="sec-row"><td colspan="5">Volta · executiva</td></tr>
+      <tr><td>sáb · 02/01</td><td>Londres (LHR) → Lisboa (LIS)</td><td>TAP · TP 1363 · 06:00</td><td class="v"><b>2D · 2F</b></td><td class="v">R$ 0,00</td></tr>
+      <tr><td>sáb · 02/01</td><td>Lisboa (LIS) → Curitiba (CWB)</td><td>TAP · TP 67 · 10:45</td><td class="v"><b>6H · 6C</b></td><td class="v">R$ 0,00</td></tr>
+    </table></div>
+    <p class="note">Valores informados nas telas de marcação em 26/11/2026, sujeitos a alteração até a confirmação.</p>
+  </section>
+
+  <section class="section sh">
+    <span class="eyebrow">Mapas de cabine</span>
+    <h2>Marcação de assentos</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Em cada voo, as categorias de assento, os valores e a posição de cada um na cabine, conforme as telas da companhia no momento da consulta.</p>
+
+    <div class="grphead"><h3>Azul</h3><span class="gt">Curitiba → São Paulo</span></div>
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">CWB → GRU</div><div class="sub">Azul · Curitiba → São Paulo · Embraer 195-E2 · 2 + 2 assentos por fileira</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw sw-ad-ea"></span><div><div class="nm">Espaço Azul</div><div class="bn">Fileiras 1 a 5: muito mais espaço para as pernas e embarque prioritário.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 103,00</div><div class="q">por passageiro</div></div></div>
+        <div class="tier"><span class="sw sw-ad-std"></span><div><div class="nm">Assento Padrão</div><div class="bn">Fileira 6 em diante. Incluso na tarifa.</div></div><div class="pr"><div class="p p-free">Incluso</div></div></div>
+        <div class="tier"><span class="sw sw-na">✕</span><div><div class="nm">Indisponível</div><div class="bn">Marcado com X: ocupado ou bloqueado.</div></div><div class="pr"><div class="p p-dash">—</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="pick pend"><div class="seat">a marcar</div><div><div class="k">Pendente · CWB → GRU</div><div class="d">Os assentos deste voo ainda não foram escolhidos. Há pares lado a lado livres nas duas categorias:</div></div><div class="pr"><div class="p">—</div></div></div>
+        <div class="opts">
+          <div class="opt"><div class="k">Sem custo · Padrão</div><div class="s">6A · 6B</div><div class="d">Primeira fileira da cabine padrão, janela e corredor, lado esquerdo. As fileiras 7 a 9 também estão livres.</div><div class="p">R$ 0,00</div></div>
+          <div class="opt"><div class="k">Mais espaço · Espaço Azul</div><div class="s">4A · 4B <span style="font-size:1rem;color:var(--muted)">ou</span> 4C · 4D</div><div class="d">Fileira 4, com mais espaço para as pernas e embarque prioritário. 3C · 3D também estão livres.</div><div class="p">R$ 103,00 por assento · R$ 206,00 os dois</div></div>
+        </div>
+        <div class="mapone sm"><img src="{IMG}ad-cwb-gru.webp" alt="Mapa de assentos Azul CWB para GRU, Embraer 195-E2, fileiras 1 a 9" loading="lazy"></div>
+        <div class="cap2">Mapa do Embraer 195-E2 no momento da consulta. Azul-escuro = Espaço Azul; azul-claro = Padrão; X = indisponível.</div>
+      </div>
+    </div>
+
+    <div class="grphead"><h3>TAP Air Portugal</h3><span class="gt">Londres → Lisboa → Curitiba · executiva (Top Executive)</span></div>
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">LHR → LIS</div><div class="sub">TAP · TP 1363 · 02 jan 2027 · Londres → Lisboa · 06:00 · Executiva · Airbus A321neo</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw sw-tp"></span><div><div class="nm">Executiva</div><div class="bn">Maior conforto, encosto de cabeça extra reclinável, tomadas elétricas e USB. O assento do meio fica bloqueado.</div></div><div class="pr"><div class="p p-free">R$ 0,00</div><div class="q">por passageiro</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="pick"><div class="seat">2D · 2F</div><div><div class="k">Assentos marcados · LHR → LIS</div><div class="d"><b>Juntos na fileira 2</b>, lado direito: Rogério no corredor (2D) e Jessica na janela (2F), com o assento do meio (2E) bloqueado entre os dois.</div></div><div class="pr"><div class="p">R$ 0,00</div><div class="q">sem custo</div></div></div>
+        {A321}
+        <div class="cap2" style="text-align:center">Fileira 2 da executiva: A · B · C | D · E · F. Na executiva desse voo, o assento do meio (B e E) fica bloqueado.</div>
+        <div class="mapone md" style="margin-top:14px"><img src="{IMG}tp-a321.webp" alt="Tela da TAP com a executiva do voo LHR para LIS e os benefícios do assento 2D" loading="lazy"></div>
+        <div class="cap2">Tela da TAP no momento da marcação: assentos A a F, fileira 1, e os benefícios da executiva.</div>
+      </div>
+    </div>
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">LIS → CWB</div><div class="sub">TAP · TP 67 · 02 jan 2027 · Lisboa → Curitiba · 10:45 · Executiva · Airbus A330-900neo</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw sw-tp"></span><div><div class="nm">Executiva full-flat</div><div class="bn">Assento que vira cama totalmente plana, mais espaço entre cadeiras e mais largo, vários níveis de encosto, tomadas elétricas e USB.</div></div><div class="pr"><div class="p p-free">R$ 0,00</div><div class="q">por passageiro</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="pick"><div class="seat">6H · 6C</div><div><div class="k">Assentos marcados · LIS → CWB</div><div class="d"><b>Mesma fileira, lados opostos</b>: Jessica à esquerda (6C) e Rogério à direita (6H). Os dois assentos centrais da fileira 6 estavam indisponíveis na consulta.</div></div><div class="pr"><div class="p">R$ 0,00</div><div class="q">sem custo</div></div></div>
+        {A330}
+        <div class="cap2" style="text-align:center">Fileira 6 da executiva: à esquerda 6C, no centro os 2 assentos indisponíveis, à direita 6H.</div>
+        <div class="mapone md" style="margin-top:14px"><img src="{IMG}tp-a330.webp" alt="Tela da TAP com a executiva do voo LIS para CWB e os benefícios do assento 6H" loading="lazy"></div>
+        <div class="mapone md" style="margin-top:10px"><img src="{IMG}tp-a330-fila6.webp" alt="Fileira 6 da executiva TAP, com 6C e 6H marcados" loading="lazy"></div>
+        <div class="cap2">Telas da TAP no momento da marcação: os benefícios da executiva e a fileira 6, com 6C e 6H em azul.</div>
+        <div class="alerta">Os dois ficam na mesma fileira, mas em lados opostos da cabine. Se abrir um par de assentos juntos até o embarque, dá para trocar e deixar os dois lado a lado.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Investimento</span>
+    <h2>Valores da marcação</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Total de cada trecho para os 2 passageiros. Nada reservado, apenas cotado.</p>
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Trecho</td><td>Assentos</td><td class="v">2 passageiros</td></tr>
+      <tr><td><b>CWB → GRU</b> · Azul</td><td>a marcar · Padrão (6A · 6B) ou Espaço Azul (fileira 4)</td><td class="v">R$ 0,00 ou R$ 206,00</td></tr>
+      <tr><td><b>LHR → LIS</b> · TAP · 02/01</td><td>2D · 2F · executiva</td><td class="v">R$ 0,00</td></tr>
+      <tr><td><b>LIS → CWB</b> · TAP · 02/01</td><td>6H · 6C · executiva</td><td class="v">R$ 0,00</td></tr>
+      <tr class="total-row"><td colspan="2">Total · 2 passageiros</td><td class="v">R$ 0,00 a R$ 206,00</td></tr>
+    </table></div>
+    <div class="obs">
+      <h4>Observações</h4>
+      <ul>
+        <li>Na TAP, a marcação na executiva é sem custo. Na Azul, o assento Padrão é incluso e o Espaço Azul custa a partir de R$ 103,00 por passageiro.</li>
+        <li>Valores informados nas telas da Azul e da TAP em 26/11/2026, sujeitos a alteração até a confirmação.</li>
+        <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'">
+    <div class="contact">atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR</div>
+    <div class="fnote">*Nada reservado, apenas cotado.</div>
+    <div class="credit">{CAPA["credito"]}</div>
+  </footer>
+</div>
+</body>
+</html>
+"""
+(ROOT / "src").mkdir(exist_ok=True)
+(ROOT / "src" / "index.html").write_text(html)
+print("ok", len(html.encode()))
