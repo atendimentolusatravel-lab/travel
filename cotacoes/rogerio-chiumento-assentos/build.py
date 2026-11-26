@@ -10,12 +10,15 @@ completos dos passageiros e não vão para o repositório; ficam só recortes se
 - TAP LIS→CWB (Executiva, assentos full-flat): Rogério 6H · Jessica 6C · 0,00 BRL cada. Na fileira 6, 6C fica à
   esquerda e 6H à direita; os 2 assentos centrais da fileira estavam indisponíveis.
 - Voos TAP conforme a cotação de aéreo (../rogerio-chiumento-londres): TP 1363 LHR→LIS 02/01 06:00–08:50 (A321neo) ·
-  TP 67 LIS→CWB 02/01 10:45–18:40 (A330-900neo). A data do voo Azul não aparece no print.
+  TP 67 LIS→CWB 02/01 10:45–18:40 (A330-900neo). Voo Azul em 23/12/2026 (data informada pela agência).
+- Air France (prints de 26/11/2026, nada marcado): AF 459 GRU→CDG 23/12 A350-900 · seção dianteira a partir de
+  BRL 397,00 · Duo a partir de BRL 366,00 (2 disponíveis) · Standard a partir de BRL 223,00 · sugestão AF fileira 23 lado
+  direito; AF 1706 CDG→LGW 24/12 A220-300 · Standard/dianteira/espaço extra a partir de BRL 129,00 · sugestão AF fileira 11.
 """
 import pathlib
 
 ROOT = pathlib.Path(__file__).parent
-IMG = "https://cdn.jsdelivr.net/gh/atendimentolusatravel-lab/travel@f161134d1db294fa53b9bc96ee7df3a688c95411/cotacoes/rogerio-chiumento-assentos/src/img/"
+IMG = "https://cdn.jsdelivr.net/gh/atendimentolusatravel-lab/travel@5289f2a25c04ade1da3db23b3e7a540ee6c7779a/cotacoes/rogerio-chiumento-assentos/src/img/"
 CSS = (ROOT.parent / "luiz-gabriel-assentos" / "src" / "style.css").read_text()
 EXTRA = """
 .hero-img{height:380px}.hero-img img{object-position:center 45%}@media(max-width:720px){.hero-img{height:220px}}
@@ -34,6 +37,10 @@ EXTRA = """
 .sw-ad-ea{background:#1a4f8a;border-color:#1a4f8a!important}
 .sw-ad-std{background:#2f8fd1;border-color:#2f8fd1!important}
 .sw-na{background:#cfcac2;border-color:#b9b3aa!important;color:#6d675f}
+.sw-af-front{background:#7ea6f2;border-color:#4a6fc0!important}
+.sw-af-duo{background:#1f3fae;border-color:#1f3fae!important}
+.sw-af-std{background:#c8e6f7;border-color:#8fb8cf!important}
+.sw-af-leg{background:#123a5c;border-color:#123a5c!important}
 .sw-tp{background:#1f3a8a;border-color:#1f3a8a!important}
 .row2{display:flex;justify-content:center;align-items:flex-end;gap:6px;margin:6px auto 4px;flex-wrap:nowrap}
 .row2 .n{font-size:.72rem;color:var(--muted);width:18px;text-align:right;margin-right:4px;align-self:center}
@@ -92,37 +99,39 @@ html = f"""<!DOCTYPE html>
   <div class="brandbar"><img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'"></div>
   <header class="hero">
     <div class="eyebrow">Marcação de assentos</div>
-    <h1>ASSENTOS <span class="amp">·</span> AZUL &amp; TAP</h1>
+    <h1>ASSENTOS <span class="amp">·</span> AZUL, AIR FRANCE &amp; TAP</h1>
     <div class="accent-line"></div>
-    <p class="hero-sub"><b>Rogério e Jessica</b> · Curitiba → São Paulo · Londres → Lisboa → Curitiba</p>
+    <p class="hero-sub"><b>Rogério e Jessica</b> · Curitiba → São Paulo → Paris → Londres · Londres → Lisboa → Curitiba — <b>23 de dezembro de 2026 a 2 de janeiro de 2027</b></p>
     <div class="hero-img">
       <img src="{CAPA["url"]}" alt="{CAPA["alt"]}" onerror="this.style.display='none'">
-      <div class="cap"><div class="k">Azul e TAP Air Portugal</div><div class="t">Volta em executiva, sem custo de marcação</div></div>
+      <div class="cap"><div class="k">Azul, Air France e TAP Air Portugal</div><div class="t">Ida em econômica, volta em executiva</div></div>
     </div>
     <div class="hero-info">
       <div>
         <div class="lbl">Detalhes da marcação</div>
-        <p><b>3 voos</b> · <b>Azul</b> entre Curitiba e São Paulo · <b>TAP</b> na volta, em <b>executiva</b>, de Londres a Curitiba via Lisboa</p>
+        <p><b>5 voos</b> · <b>Azul</b> entre Curitiba e São Paulo · <b>Air France</b> na ida, em econômica, via Paris · <b>TAP</b> na volta, em <b>executiva</b>, via Lisboa</p>
         <p class="muted" style="margin-top:8px;font-size:.86rem">Consulta feita em <b>26/11/2026</b> · valores em <b>reais</b> · 2 passageiros</p>
       </div>
       <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
     </div>
     <div class="gloss">
-      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16l20-7-9 13-2-6z"/></svg></span><b>3</b>&nbsp;Voos</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16l20-7-9 13-2-6z"/></svg></span><b>5</b>&nbsp;Voos</div>
       <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><circle cx="17" cy="8" r="2.5"/></svg></span><b>2</b>&nbsp;Passageiros</div>
-      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l7-7M8 4l3 3M14 6l4 4-9 9-4-1-1-4z"/></svg></span><b>2</b>&nbsp;marcados · 1 a marcar</div>
-      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg></span><b>R$ 0,00</b>&nbsp;na TAP</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l7-7M8 4l3 3M14 6l4 4-9 9-4-1-1-4z"/></svg></span><b>2</b>&nbsp;marcados · 3 a marcar</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg></span><b>a partir de R$ 704,00</b>&nbsp;total</div>
     </div>
   </header>
 
   <section class="section sh" style="background:var(--cream)">
     <span class="eyebrow">Itinerário</span>
-    <h2>Os três voos</h2>
+    <h2>Os cinco voos</h2>
     <div class="accent-line"></div>
     <div class="tbl-wrap"><table>
       <tr class="head-row"><td>Data</td><td>Trecho</td><td>Companhia</td><td class="v">Assentos</td><td class="v">2 passageiros</td></tr>
       <tr class="sec-row"><td colspan="5">Ida</td></tr>
-      <tr><td>conforme a reserva</td><td>Curitiba (CWB) → São Paulo (GRU)</td><td>Azul · Embraer 195-E2</td><td class="v"><b>a marcar</b></td><td class="v">R$ 0,00 a R$ 206,00</td></tr>
+      <tr><td>qua · 23/12</td><td>Curitiba (CWB) → São Paulo (GRU)</td><td>Azul · Embraer 195-E2</td><td class="v"><b>a marcar</b></td><td class="v">R$ 0,00 a R$ 206,00</td></tr>
+      <tr><td>qua · 23/12</td><td>São Paulo (GRU) → Paris (CDG)</td><td>Air France · AF 459 · Airbus A350-900</td><td class="v"><b>a marcar</b></td><td class="v">a partir de R$ 446,00</td></tr>
+      <tr><td>qui · 24/12</td><td>Paris (CDG) → Londres (LGW)</td><td>Air France · AF 1706 · Airbus A220-300</td><td class="v"><b>a marcar</b></td><td class="v">a partir de R$ 258,00</td></tr>
       <tr class="sec-row"><td colspan="5">Volta · executiva</td></tr>
       <tr><td>sáb · 02/01</td><td>Londres (LHR) → Lisboa (LIS)</td><td>TAP · TP 1363 · 06:00</td><td class="v"><b>2D · 2F</b></td><td class="v">R$ 0,00</td></tr>
       <tr><td>sáb · 02/01</td><td>Lisboa (LIS) → Curitiba (CWB)</td><td>TAP · TP 67 · 10:45</td><td class="v"><b>6H · 6C</b></td><td class="v">R$ 0,00</td></tr>
@@ -138,7 +147,7 @@ html = f"""<!DOCTYPE html>
 
     <div class="grphead"><h3>Azul</h3><span class="gt">Curitiba → São Paulo</span></div>
     <div class="trecho">
-      <div class="trecho-head"><div class="rt">CWB → GRU</div><div class="sub">Azul · Curitiba → São Paulo · Embraer 195-E2 · 2 + 2 assentos por fileira</div></div>
+      <div class="trecho-head"><div class="rt">CWB → GRU</div><div class="sub">Azul · 23 dez 2026 · Curitiba → São Paulo · Embraer 195-E2 · 2 + 2 assentos por fileira</div></div>
       <div class="tiers">
         <div class="tier"><span class="sw sw-ad-ea"></span><div><div class="nm">Espaço Azul</div><div class="bn">Fileiras 1 a 5: muito mais espaço para as pernas e embarque prioritário.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 103,00</div><div class="q">por passageiro</div></div></div>
         <div class="tier"><span class="sw sw-ad-std"></span><div><div class="nm">Assento Padrão</div><div class="bn">Fileira 6 em diante. Incluso na tarifa.</div></div><div class="pr"><div class="p p-free">Incluso</div></div></div>
@@ -152,6 +161,38 @@ html = f"""<!DOCTYPE html>
         </div>
         <div class="mapone sm"><img src="{IMG}ad-cwb-gru.webp" alt="Mapa de assentos Azul CWB para GRU, Embraer 195-E2, fileiras 1 a 9" loading="lazy"></div>
         <div class="cap2">Mapa do Embraer 195-E2 no momento da consulta. Azul-escuro = Espaço Azul; azul-claro = Padrão; X = indisponível.</div>
+      </div>
+    </div>
+
+    <div class="grphead"><h3>Air France</h3><span class="gt">São Paulo → Paris → Londres · econômica · valores em BRL</span></div>
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">GRU → CDG</div><div class="sub">Air France · AF 459 · 23 dez 2026 · São Paulo → Paris · Econômica · Airbus A350-900</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw sw-af-front"></span><div><div class="nm">Seção dianteira</div><div class="bn">Primeiras fileiras da econômica (azul-escuro): desembarque entre os primeiros. Espaço padrão para as pernas. 34 disponíveis.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 397,00</div><div class="q">por passageiro</div></div></div>
+        <div class="tier"><span class="sw sw-af-duo"></span><div><div class="nm">Assento Duo</div><div class="bn">Fileira só com 2 assentos: o casal viaja sem ninguém ao lado. Restavam só 2 na consulta, ou seja, um único par.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 366,00</div><div class="q">por passageiro</div></div></div>
+        <div class="tier"><span class="sw sw-af-std"></span><div><div class="nm">Assento Standard</div><div class="bn">Demais fileiras (azul-claro). 112 disponíveis.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 223,00</div><div class="q">por passageiro</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="pick pend"><div class="seat">a marcar</div><div><div class="k">Pendente · GRU → CDG</div><div class="d">Nenhum assento escolhido ainda. A Air France sugere (★) a fileira 23, lado direito, meio e janela, na seção dianteira.</div></div><div class="pr"><div class="p">—</div></div></div>
+        <div class="opts">
+          <div class="opt"><div class="k">Mais privacidade · Duo</div><div class="s">Assento Duo</div><div class="d">Os dois sozinhos numa fileira de 2, sem ninguém ao lado nas 11 horas de voo. Só havia um par livre.</div><div class="p">a partir de R$ 366,00 por assento · R$ 732,00 os dois</div></div>
+          <div class="opt"><div class="k">Sugestão da Air France · seção dianteira</div><div class="s">Fileira 23 ★</div><div class="d">Lado direito, meio e janela, na primeira fileira da cabine. As fileiras 27 e 28 já são Standard.</div><div class="p">a partir de R$ 397,00 por assento · R$ 794,00 os dois</div></div>
+        </div>
+        <div class="mapone"><img src="{IMG}af-gru-cdg.webp" alt="Mapa de assentos Air France GRU para CDG, Airbus A350-900, fileiras 23 a 28" loading="lazy"></div>
+        <div class="cap2">Mapa do Airbus A350-900 (3 + 3 + 3 assentos por fileira) no momento da consulta. Azul-escuro = seção dianteira; azul-claro = Standard; cinza = indisponível; ★ = sugestão da Air France. A opção mais em conta é o Standard: a partir de R$ 223,00 por assento (R$ 446,00 os dois).</div>
+      </div>
+    </div>
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">CDG → LGW</div><div class="sub">Air France · AF 1706 · 24 dez 2026 · Paris → Londres Gatwick · Econômica · Airbus A220-300</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw sw-af-std"></span><div><div class="nm">Assento Standard</div><div class="bn">Espaço padrão para as pernas. 80 disponíveis.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 129,00</div><div class="q">por passageiro</div></div></div>
+        <div class="tier"><span class="sw sw-af-front"></span><div><div class="nm">Seção dianteira</div><div class="bn">Fileiras da frente: desembarque entre os primeiros. 25 disponíveis.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 129,00</div><div class="q">por passageiro</div></div></div>
+        <div class="tier"><span class="sw sw-af-leg"></span><div><div class="nm">Espaço extra para as pernas</div><div class="bn">Fileira de saída de emergência. 5 disponíveis.</div></div><div class="pr"><div class="ap">a partir de</div><div class="p">R$ 129,00</div><div class="q">por passageiro</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="pick pend"><div class="seat">a marcar</div><div><div class="k">Pendente · CDG → LGW</div><div class="d">Nenhum assento escolhido ainda. A Air France sugere (★) a fileira 11, lado esquerdo: o lado com só 2 assentos, então o casal fica sozinho na fileira.</div></div><div class="pr"><div class="p">a partir de R$ 258,00</div><div class="q">os dois</div></div></div>
+        <div class="mapone md"><img src="{IMG}af-cdg-lgw.webp" alt="Mapa de assentos Air France CDG para LGW, Airbus A220-300, fileiras 7 a 12" loading="lazy"></div>
+        <div class="cap2">Mapa do Airbus A220-300 (2 + 3 assentos por fileira) no momento da consulta. Azul-escuro = seção dianteira; azul-claro = Standard; ★ = sugestão da Air France.</div>
       </div>
     </div>
 
@@ -193,16 +234,19 @@ html = f"""<!DOCTYPE html>
     <p class="note" style="margin-top:16px">Total de cada trecho para os 2 passageiros. Nada reservado, apenas cotado.</p>
     <div class="tbl-wrap"><table>
       <tr class="head-row"><td>Trecho</td><td>Assentos</td><td class="v">2 passageiros</td></tr>
-      <tr><td><b>CWB → GRU</b> · Azul</td><td>a marcar · Padrão (6A · 6B) ou Espaço Azul (fileira 4)</td><td class="v">R$ 0,00 ou R$ 206,00</td></tr>
+      <tr><td><b>CWB → GRU</b> · Azul · 23/12</td><td>a marcar · Padrão (6A · 6B) ou Espaço Azul (fileira 4)</td><td class="v">R$ 0,00 ou R$ 206,00</td></tr>
+      <tr><td><b>GRU → CDG</b> · Air France · 23/12</td><td>a marcar · Standard, Duo ou seção dianteira</td><td class="v">a partir de R$ 446,00</td></tr>
+      <tr><td><b>CDG → LGW</b> · Air France · 24/12</td><td>a marcar · fileira 11 sugerida</td><td class="v">a partir de R$ 258,00</td></tr>
       <tr><td><b>LHR → LIS</b> · TAP · 02/01</td><td>2D · 2F · executiva</td><td class="v">R$ 0,00</td></tr>
       <tr><td><b>LIS → CWB</b> · TAP · 02/01</td><td>6H · 6C · executiva</td><td class="v">R$ 0,00</td></tr>
-      <tr class="total-row"><td colspan="2">Total · 2 passageiros</td><td class="v">R$ 0,00 a R$ 206,00</td></tr>
+      <tr class="total-row"><td colspan="2">Total · 2 passageiros</td><td class="v">a partir de R$ 704,00</td></tr>
     </table></div>
+    <p class="note">O total mínimo usa o assento Padrão na Azul e o Standard nos dois voos da Air France. Com o Assento Duo no voo para Paris, o total fica a partir de R$ 990,00; com Espaço Azul e a seção dianteira, a partir de R$ 1.258,00.</p>
     <div class="obs">
       <h4>Observações</h4>
       <ul>
-        <li>Na TAP, a marcação na executiva é sem custo. Na Azul, o assento Padrão é incluso e o Espaço Azul custa a partir de R$ 103,00 por passageiro.</li>
-        <li>Valores informados nas telas da Azul e da TAP em 26/11/2026, sujeitos a alteração até a confirmação.</li>
+        <li>Na TAP, a marcação na executiva é sem custo. Na Azul, o assento Padrão é incluso e o Espaço Azul custa a partir de R$ 103,00 por passageiro. Na Air France, a marcação é cobrada em todas as categorias, com valores "a partir de" por passageiro.</li>
+        <li>Valores informados nas telas da Azul, da Air France e da TAP em 26/11/2026, sujeitos a alteração até a confirmação.</li>
         <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
       </ul>
     </div>
