@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="LusaTravel — roteiro de 27 noites pelo Sudeste Asiático para Kateline e Carlos, com duas crianças e babá.">
+<title>Sudeste Asiático em Família</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&family=Arimo:wght@700&display=swap">
+<style>
+/* ─── LUSATRAVEL · DESIGN SYSTEM TOKENS ─────────────────── */
+:root{
+  --gold:#da8d00; --gold-hi:#f0a010;
+  --ink:#1a1510; --char:#333131; --mut:#8a7d70;
+  --line:#e4ddd2; --paper:#faf7f2; --surf:#fff; --surf2:#f2ece3;
+  --dest:#730505;
+  --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --con:'Montserrat',var(--sans);
+  --lbl:'Arimo',var(--sans);
+  --mx:1080px;
+}
+.th{ --dest:#0f5a52; }
+.jp{ --dest:#8c1d1d; }
+
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#f0e8de; --char:#d9cec1; --mut:#9a8c7e;
+    --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+    --gold:#e8a210; --gold-hi:#ffc030;
+  }
+  :root:not([data-theme="light"]) .th{ --dest:#2b9a8c; }
+  :root:not([data-theme="light"]) .jp{ --dest:#cf4a45; }
+}
+:root[data-theme="dark"]{
+  --ink:#f0e8de; --char:#d9cec1; --mut:#9a8c7e;
+  --line:#3c342a; --paper:#141109; --surf:#1e1a13; --surf2:#28231b;
+  --gold:#e8a210; --gold-hi:#ffc030;
+}
+:root[data-theme="dark"] .th{ --dest:#2b9a8c; }
+:root[data-theme="dark"] .jp{ --dest:#cf4a45; }
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  background:var(--paper); color:var(--char);
+  font-family:var(--sans); font-weight:400;
+  font-size:15px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+@media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } }
+.wrap{ max-width:var(--mx); margin:0 auto; padding:0 28px; }
+b,strong{ font-weight:600; color:var(--ink); }
+
+/* ─── CAPA ───────────────────────────────────────────────── */
+.mh{ background:#1a1510; padding:56px 0 44px; position:relative; }
+.mh::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.mh-logo{ font-family:var(--con); font-weight:600; font-size:13px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.mh-kick{ margin-top:26px; font-size:10px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+.mh-name{ margin-top:10px; font-weight:700; font-size:clamp(28px,5.2vw,46px); line-height:1.06; color:#fff; text-transform:uppercase; text-wrap:balance; }
+.mh-dest{ margin-top:8px; font-weight:600; font-size:clamp(17px,2.4vw,22px); color:var(--gold); }
+.mh-sub{ margin-top:16px; max-width:60ch; font-size:14.5px; font-weight:300; color:rgba(240,232,222,.68); }
+.mh-stats{ margin-top:34px; display:flex; flex-wrap:wrap; border-top:1px solid rgba(240,232,222,.14); }
+.mh-stat{ padding:18px 30px 4px 0; margin-right:30px; border-right:1px solid rgba(240,232,222,.12); }
+.mh-stat:last-child{ border-right:0; }
+.mh-stat .v{ font-weight:700; font-size:24px; color:#fff; line-height:1; font-variant-numeric:tabular-nums; }
+.mh-stat .k{ margin-top:7px; font-size:9.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,222,.5); }
+
+/* ─── SEÇÕES ─────────────────────────────────────────────── */
+.sec{ padding:56px 0; }
+.sec + .sec{ border-top:1px solid var(--line); }
+.eyebrow{ font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.h2{ font-weight:700; font-size:clamp(21px,3vw,29px); color:var(--ink); line-height:1.18; letter-spacing:-.01em; text-wrap:balance; }
+.lead{ margin-top:12px; max-width:66ch; font-weight:300; font-size:15.5px; }
+
+/* ─── POR QUE ESTE DESENHO ──────────────────────────────── */
+.why{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
+.why-c{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--gold); padding:22px 22px 20px; }
+.why-n{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.14em; color:var(--gold); }
+.why-t{ margin-top:8px; font-weight:600; font-size:17px; color:var(--ink); line-height:1.3; }
+.why-p{ margin-top:10px; font-size:14px; font-weight:300; }
+
+/* ─── LINHA DO TEMPO ────────────────────────────────────── */
+.ctry{ margin-top:34px; }
+.ctry-h{ display:flex; align-items:baseline; gap:12px; padding-bottom:10px; border-bottom:2px solid var(--dest); }
+.ctry-h .nm{ font-weight:700; font-size:18px; color:var(--dest); }
+.ctry-h .nt{ font-size:12.5px; color:var(--mut); }
+.tl{ margin-top:16px; display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:14px; }
+.tl-item{ background:var(--surf); border:1px solid var(--line); border-top:3px solid var(--dest); padding:18px 18px 16px; }
+.tl-badge{ display:inline-flex; align-items:center; justify-content:center; min-width:30px; height:30px; padding:0 9px; background:var(--dest); color:#fff; font-weight:700; font-size:12.5px; }
+.tl-city{ margin-top:13px; font-weight:600; font-size:17px; color:var(--ink); }
+.tl-meta{ margin-top:4px; font-size:12.5px; font-weight:400; color:var(--mut); font-variant-numeric:tabular-nums; }
+.tl-move{ margin-top:11px; padding-top:11px; border-top:1px solid var(--line); font-size:12px; }
+.legs{ margin-top:22px; display:grid; gap:10px; }
+.leg{ display:grid; grid-template-columns:110px 1fr; gap:16px; background:var(--surf2); padding:14px 16px; font-size:13.5px; }
+.leg-d{ font-family:var(--lbl); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); padding-top:2px; }
+
+/* ─── BANDA DE PAÍS ─────────────────────────────────────── */
+.band{ background:var(--dest); padding:34px 0; position:relative; }
+.band::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); }
+.band-tag{ font-size:9.5px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.72); }
+.band-t{ margin-top:8px; font-weight:700; font-size:clamp(22px,3.4vw,32px); color:#fff; line-height:1.14; }
+
+/* ─── BASES ─────────────────────────────────────────────── */
+.base{ padding:40px 0; border-bottom:1px solid var(--line); }
+.base:last-child{ border-bottom:0; }
+.base-hd{ display:flex; align-items:center; gap:16px; }
+.base-hd .tl-badge{ min-width:38px; height:38px; font-size:15px; }
+.base-name{ font-weight:700; font-size:clamp(20px,2.6vw,25px); color:var(--ink); line-height:1.15; }
+.base-meta{ margin-top:2px; font-size:13px; color:var(--mut); font-variant-numeric:tabular-nums; }
+.base-grid{ margin-top:22px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.6fr); gap:28px; }
+.lbl{ font-family:var(--lbl); font-weight:700; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--dest); margin-bottom:6px; }
+.side p{ font-size:14px; font-weight:300; }
+.side p + .lbl{ margin-top:18px; }
+.list{ list-style:none; border-top:1px solid var(--line); }
+.list li{ padding:11px 0 11px 20px; border-bottom:1px solid var(--line); font-size:14.5px; font-weight:300; position:relative; }
+.list li::before{ content:''; position:absolute; left:2px; top:20px; width:7px; height:7px; background:var(--dest); }
+.list li.opt::before{ background:transparent; border:1.5px solid var(--dest); }
+.list .tag{ font-size:10px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-right:6px; }
+.note{ margin-top:16px; padding:14px 16px; background:var(--surf2); border-left:3px solid var(--gold); font-size:13.5px; font-weight:300; }
+
+/* ─── LOGÍSTICA ─────────────────────────────────────────── */
+.faq{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; }
+.faq-c{ background:var(--surf); border:1px solid var(--line); padding:22px; }
+.faq-t{ font-weight:600; font-size:16px; color:var(--ink); line-height:1.3; }
+.faq-t::before{ content:''; display:block; width:28px; height:3px; background:var(--gold); margin-bottom:12px; }
+.faq-p{ margin-top:8px; font-size:14px; font-weight:300; }
+
+/* ─── CALENDÁRIO ────────────────────────────────────────── */
+.cal{ margin-top:26px; border-top:1px solid var(--line); }
+.ev{ display:grid; grid-template-columns:130px 1fr; gap:22px; padding:18px 0; border-bottom:1px solid var(--line); }
+.ev-d{ font-family:var(--lbl); font-weight:700; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--dest); font-variant-numeric:tabular-nums; }
+.ev-d span{ display:block; margin-top:3px; font-size:10.5px; letter-spacing:.14em; color:var(--mut); }
+.ev-t{ font-weight:600; font-size:15.5px; color:var(--ink); }
+.ev-p{ margin-top:3px; font-size:14px; font-weight:300; }
+
+/* ─── RODAPÉ ────────────────────────────────────────────── */
+.ft{ background:#1a1510; padding:44px 0 40px; position:relative; }
+.ft::before{ content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--gold); }
+.ft-logo{ font-family:var(--con); font-weight:600; font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+.ft-sig{ margin-top:18px; display:flex; flex-wrap:wrap; gap:10px 34px; font-family:var(--con); font-size:13px; }
+.ft-sig a{ color:rgba(240,232,222,.75); text-decoration:none; border-bottom:1px solid rgba(218,141,0,.5); }
+.ft-sig a:hover{ color:var(--gold); }
+.ft-addr{ margin-top:16px; font-family:var(--con); font-size:11.5px; color:rgba(240,232,222,.45); }
+
+@media (max-width:760px){
+  .wrap{ padding:0 16px; }
+  .base-grid{ grid-template-columns:1fr; gap:20px; }
+  .ev{ grid-template-columns:1fr; gap:6px; }
+  .leg{ grid-template-columns:1fr; gap:4px; }
+  .mh-stat{ padding-right:18px; margin-right:18px; border-right:0; }
+  .why,.faq{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body class="th">
+
+<header class="mh">
+  <div class="wrap">
+    <div class="mh-logo">LusaTravel</div>
+    <div class="mh-kick">Roteiro para sua viagem</div>
+    <h1 class="mh-name">Kateline e Carlos</h1>
+    <div class="mh-dest">Tailândia e Camboja · janeiro de 2027</div>
+    <p class="mh-sub">Uma viagem com jeito de morar: bases longas, casa ou apartamento nas estadias maiores, uma atividade principal por dia e tempo livre para as crianças. Praia, templos, elefantes e muita comida boa, sem correria.</p>
+    <div class="mh-stats">
+      <div class="mh-stat"><div class="v">27</div><div class="k">Noites na Ásia</div></div>
+      <div class="mh-stat"><div class="v">4</div><div class="k">Destinos</div></div>
+      <div class="mh-stat"><div class="v">2+2+1</div><div class="k">Adultos, crianças e babá</div></div>
+      <div class="mh-stat"><div class="v">04/01 – 03/02</div><div class="k">Datas</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════ POR QUE ESTE DESENHO ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Como pensamos o roteiro</div>
+    <h2 class="h2">Três decisões que deixam a viagem mais leve</h2>
+    <div class="why">
+      <div class="why-c">
+        <div class="why-n">01</div>
+        <div class="why-t">Praia primeiro, para acertar o fuso</div>
+        <p class="why-p">Chegando direto em Phuket, os primeiros dias são de praia e piscina, o jeito mais leve de as crianças se ajustarem às 10 horas de diferença. Janeiro é a melhor época do mar de Andaman: tempo seco e mar calmo.</p>
+      </div>
+      <div class="why-c">
+        <div class="why-n">02</div>
+        <div class="why-t">Angkor no meio da estadia em Bangkok</div>
+        <p class="why-p">Os voos para Siem Reap, a cidade dos templos de Angkor, saem de Bangkok. Por isso o Camboja entra no meio de Bangkok, com ida e volta de 1h10 de voo. É o maior conjunto de templos do Sudeste Asiático e o ponto alto do lado cultural da viagem.</p>
+      </div>
+      <div class="why-c">
+        <div class="why-n">03</div>
+        <div class="why-t">Volta antes do aniversário do Joca</div>
+        <p class="why-p">As companhias aéreas consideram a idade na data de cada voo. Voltando em 2 de fevereiro, o Joca ainda tem menos de 2 anos e viaja no colo também na volta, sem pagar assento. A viagem fica com 30 dias fora do Brasil e termina antes do Ano Novo Chinês, quando os preços sobem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ VISÃO GERAL ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Itinerário</div>
+    <h2 class="h2">Quatro destinos, 27 noites</h2>
+    <p class="lead">Os deslocamentos são voos curtos, de até 2 horas, sem passeios longos de barco ou de estrada. Os voos internacionais conectam pelo Oriente Médio (Doha ou Dubai), sem necessidade de visto na conexão.</p>
+
+    <div class="legs">
+      <div class="leg"><div class="leg-d">04/01 · Ida</div><div>Voo noturno do Brasil com conexão em Doha ou Dubai. Chegada a Phuket em 06/01.</div></div>
+    </div>
+
+    <div class="ctry">
+      <div class="ctry-h"><span class="nm">Tailândia e Camboja</span><span class="nt">27 noites</span></div>
+      <div class="tl">
+        <div class="tl-item"><span class="tl-badge">8</span><div class="tl-city">Phuket</div><div class="tl-meta">06 a 14/01 · 8 noites</div><div class="tl-move">Voo do Brasil via Oriente Médio</div></div>
+        <div class="tl-item"><span class="tl-badge">8</span><div class="tl-city">Chiang Mai</div><div class="tl-meta">14 a 22/01 · 8 noites</div><div class="tl-move">Voo direto · 2h</div></div>
+        <div class="tl-item"><span class="tl-badge">3</span><div class="tl-city">Bangkok · parte 1</div><div class="tl-meta">22 a 25/01 · 3 noites</div><div class="tl-move">Voo · 1h10</div></div>
+        <div class="tl-item"><span class="tl-badge">4</span><div class="tl-city">Siem Reap · Angkor</div><div class="tl-meta">25 a 29/01 · 4 noites</div><div class="tl-move">Voo 1h10 + carro 1h</div></div>
+        <div class="tl-item"><span class="tl-badge">4</span><div class="tl-city">Bangkok · parte 2</div><div class="tl-meta">29/01 a 02/02 · 4 noites</div><div class="tl-move">Carro 1h + voo 1h10</div></div>
+      </div>
+    </div>
+
+    <div class="legs">
+      <div class="leg"><div class="leg-d">02/02 · Volta</div><div>Do hotel ao aeroporto de Bangkok (cerca de 40 min) e voo noturno com conexão em Doha ou Dubai. Chegada ao Brasil em 03/02.</div></div>
+    </div>
+    <div class="note"><b>O formato final será definido pelo preço da passagem.</b> Vamos cotar a chegada por Phuket com volta por Bangkok, como neste roteiro, e também a ida e volta por Bangkok. Se a segunda opção sair melhor, o roteiro se mantém, com um voo interno a mais (Bangkok–Phuket, 1h20) no dia da chegada ou no dia seguinte.</div>
+  </div>
+</section>
+
+<!-- ══════ BASES ══════ -->
+<div class="band"><div class="wrap"><div class="band-tag">Base a base</div><h2 class="band-t">O que fazer em cada lugar</h2></div></div>
+<div class="wrap">
+
+  <article class="base">
+    <div class="base-hd"><span class="tl-badge">8</span><div><h3 class="base-name">Phuket</h3><div class="base-meta">06 a 14 de janeiro · 8 noites</div></div></div>
+    <div class="base-grid">
+      <div class="side">
+        <div class="lbl">Hospedagem</div>
+        <p>Resort para famílias nas praias de Kata ou Karon, com quartos conectados ou suíte para cinco, piscina e kids club.</p>
+        <div class="lbl">Ritmo</div>
+        <p>Primeiros dias só de praia e piscina, para descansar do voo e ajustar o fuso. Tudo fica a até 40 min de carro, sem passeios de barco.</p>
+      </div>
+      <ul class="list">
+        <li><b>Praia e piscina</b>, sem programação nos primeiros dias. O mar de janeiro é calmo, bom para as crianças.</li>
+        <li><b>Old Phuket Town</b>: casarões sino-portugueses coloridos, cafés e o mercado de rua de domingo (10/01).</li>
+        <li><b>Big Buddha e Wat Chalong</b>, os principais templos da ilha.</li>
+        <li><b>Pôr do sol no Cabo Promthep</b>, o mirante mais bonito da ilha.</li>
+        <li><b>Dia das Crianças tailandês</b> (09/01), com atividades gratuitas para os pequenos.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="base">
+    <div class="base-hd"><span class="tl-badge">8</span><div><h3 class="base-name">Chiang Mai</h3><div class="base-meta">14 a 22 de janeiro · 8 noites</div></div></div>
+    <div class="base-grid">
+      <div class="side">
+        <div class="lbl">Hospedagem</div>
+        <p>Casa ou apartamento com piscina, cozinha e máquina de lavar, na Cidade Antiga ou no bairro de Nimman. É a base para "morar" na viagem.</p>
+        <div class="lbl">Clima</div>
+        <p>Dias agradáveis e noites frescas, em torno de 15 °C. Janeiro é a melhor época para a cidade.</p>
+      </div>
+      <ul class="list">
+        <li><b>Santuário de elefantes ético</b>, sem montaria: alimentar e acompanhar os elefantes de perto. Reserva antecipada.</li>
+        <li><b>Templos da Cidade Antiga</b>: Wat Chedi Luang e Wat Phra Singh.</li>
+        <li><b>Doi Suthep</b>, o templo dourado na montanha com vista da cidade.</li>
+        <li><b>Festival das Sombrinhas de Bo Sang</b> (data estimada de 15 a 17/01).</li>
+        <li><b>Mercados</b>: mercado de sábado na Wualai (16/01), Walking Street de domingo (17/01) e o Night Bazaar.</li>
+        <li><b>Aula de culinária tailandesa</b>, com visita ao mercado.</li>
+        <li class="opt"><span class="tag">Opcional</span>Night Safari, zoológico noturno com passeio de trenzinho.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="base">
+    <div class="base-hd"><span class="tl-badge">3</span><div><h3 class="base-name">Bangkok · parte 1</h3><div class="base-meta">22 a 25 de janeiro · 3 noites</div></div></div>
+    <div class="base-grid">
+      <div class="side">
+        <div class="lbl">Hospedagem</div>
+        <p>Hotel com piscina à beira do rio Chao Phraya, perto dos templos principais. As malas grandes podem ficar guardadas no hotel durante os dias em Angkor.</p>
+        <div class="lbl">Dica</div>
+        <p>Nos templos, ombros e joelhos precisam estar cobertos.</p>
+      </div>
+      <ul class="list">
+        <li><b>Grand Palace e Wat Phra Kaew</b>, o templo do Buda de Esmeralda.</li>
+        <li><b>Wat Pho</b> e o Buda reclinado de 46 metros.</li>
+        <li><b>Wat Arun</b>, o Templo do Amanhecer, com travessia de barco de 5 min pelo rio.</li>
+        <li><b>Chinatown (Yaowarat)</b> à noite, para comer comida de rua.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="base">
+    <div class="base-hd"><span class="tl-badge">4</span><div><h3 class="base-name">Siem Reap · Templos de Angkor</h3><div class="base-meta">25 a 29 de janeiro · 4 noites · Camboja</div></div></div>
+    <div class="base-grid">
+      <div class="side">
+        <div class="lbl">Hospedagem</div>
+        <p>Resort ou villa com piscina, perto do centro de Siem Reap.</p>
+        <div class="lbl">Chegada</div>
+        <p>Voo de Bangkok (1h10) e carro privativo até o hotel. O aeroporto novo fica a 45 km da cidade, cerca de 1h de estrada.</p>
+        <div class="lbl">Ritmo</div>
+        <p>Templos só pela manhã, com guia, e tarde na piscina, longe do calor do meio-dia. Sem acordar de madrugada para o nascer do sol.</p>
+      </div>
+      <ul class="list">
+        <li><b>Angkor Wat</b>, o maior templo religioso do mundo, com guia. Crianças até 11 anos não pagam o passe dos templos.</li>
+        <li><b>Angkor Thom e o Bayon</b>, o templo dos rostos de pedra.</li>
+        <li><b>Ta Prohm</b>, o templo tomado pelas raízes das árvores.</li>
+        <li><b>Phare, o circo do Camboja</b>: espetáculo de 1h no começo da noite, feito por jovens artistas locais.</li>
+        <li><b>Old Market</b> e restaurantes de comida khmer no centro.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="base">
+    <div class="base-hd"><span class="tl-badge">4</span><div><h3 class="base-name">Bangkok · parte 2</h3><div class="base-meta">29 de janeiro a 2 de fevereiro · 4 noites</div></div></div>
+    <div class="base-grid">
+      <div class="side">
+        <div class="lbl">Hospedagem</div>
+        <p>O mesmo hotel da parte 1, ou um apartamento com piscina perto do metrô.</p>
+        <div class="lbl">Ritmo</div>
+        <p>Dias mais soltos, para as crianças e para compras. Último dia sem passeios, para arrumar as malas antes dos voos de volta.</p>
+      </div>
+      <ul class="list">
+        <li><b>Mercado de Chatuchak</b>, um dos maiores mercados do mundo, aberto no fim de semana (30 e 31/01).</li>
+        <li><b>SEA LIFE Bangkok</b>, aquário dentro do shopping Siam Paragon.</li>
+        <li><b>Parque Lumpini</b>, com os lagartos gigantes soltos pelo lago.</li>
+        <li><b>ICONSIAM</b>, shopping à beira do rio com mercado flutuante coberto.</li>
+        <li class="opt"><span class="tag">Opcional</span><b>Ayutthaya</b>, a antiga capital do Reino do Sião, com ruínas tombadas pela Unesco. Bate-volta de trem (1h30).</li>
+      </ul>
+    </div>
+  </article>
+
+</div>
+
+<!-- ══════ LOGÍSTICA ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">Logística</div>
+    <h2 class="h2">O que vocês precisam saber</h2>
+    <div class="faq">
+      <div class="faq-c">
+        <div class="faq-t">Vistos e entrada</div>
+        <p class="faq-p">A Tailândia não exige visto de brasileiros, apenas o cartão de chegada online (TDAC), preenchido até 3 dias antes. O Camboja exige visto eletrônico, feito pela internet antes da viagem para os cinco, inclusive as crianças. Os passaportes precisam de 6 meses de validade.</p>
+      </div>
+      <div class="faq-c">
+        <div class="faq-t">Saúde das crianças</div>
+        <p class="faq-p">Vale uma consulta ao pediatra sobre as vacinas recomendadas para a região (hepatite A e febre tifoide) e levar repelente infantil por causa da dengue. Água só engarrafada. O seguro viagem precisa ter boa cobertura médica.</p>
+      </div>
+      <div class="faq-c">
+        <div class="faq-t">Lavanderia é tranquilo</div>
+        <p class="faq-p">Na Tailândia e no Camboja, a lavanderia cobra por quilo, é barata e devolve a roupa no mesmo dia ou no seguinte. Em Chiang Mai, a casa ou apartamento terá máquina de lavar.</p>
+      </div>
+      <div class="faq-c">
+        <div class="faq-t">Mandar uma mala para o Brasil</div>
+        <p class="faq-p">É possível pelo correio local (EMS), mas é caro e a chegada no Brasil passa pela Receita Federal, com declaração e possível tributação. Na prática, comprar uma bagagem extra no voo de volta costuma sair mais barato e sem burocracia.</p>
+      </div>
+      <div class="faq-c">
+        <div class="faq-t">Roupa leve, com um casaco</div>
+        <p class="faq-p">A viagem é de verão o tempo todo, entre 30 e 33 °C na praia e em Bangkok. Em Chiang Mai as noites são frescas, e o ar-condicionado é forte em todo lugar: um casaco leve por pessoa resolve. Nos templos, ombros e joelhos cobertos.</p>
+      </div>
+      <div class="faq-c">
+        <div class="faq-t">Bagagem nos voos internos</div>
+        <p class="faq-p">As companhias regionais têm franquia de bagagem menor que a do voo internacional. Compramos a bagagem despachada junto com as passagens, mais barato do que pagar no aeroporto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CALENDÁRIO ══════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">No calendário da viagem</div>
+    <h2 class="h2">Festivais e eventos que vocês vão pegar</h2>
+    <div class="cal">
+      <div class="ev"><div class="ev-d">09/01<span>Phuket</span></div><div><div class="ev-t">Dia das Crianças na Tailândia</div><p class="ev-p">Comemorado no segundo sábado de janeiro, com atividades e entradas gratuitas para crianças em parques e espaços públicos.</p></div></div>
+      <div class="ev"><div class="ev-d">10/01<span>Phuket</span></div><div><div class="ev-t">Mercado de domingo de Old Phuket Town</div><p class="ev-p">A rua principal da cidade antiga vira feira, com comida de rua, artesanato e apresentações.</p></div></div>
+      <div class="ev"><div class="ev-d">15 a 17/01<span>Chiang Mai</span></div><div><div class="ev-t">Festival das Sombrinhas de Bo Sang</div><p class="ev-p">Desfile e vila decorada com sombrinhas de papel pintadas à mão, a 20 min da cidade. Data estimada; a confirmação oficial sai perto do evento.</p></div></div>
+      <div class="ev"><div class="ev-d">16 e 17/01<span>Chiang Mai</span></div><div><div class="ev-t">Mercados de fim de semana</div><p class="ev-p">No sábado, a feira da Wualai, no bairro dos ourives de prata. No domingo, a Walking Street, que ocupa a Cidade Antiga com artesanato e comida do norte da Tailândia.</p></div></div>
+      <div class="ev"><div class="ev-d">30 e 31/01<span>Bangkok</span></div><div><div class="ev-t">Mercado de Chatuchak</div><p class="ev-p">Mais de 10 mil barracas de comida, roupas, artesanato e decoração, aberto só no fim de semana.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-logo">LusaTravel</div>
+    <div class="ft-sig">
+      <a href="mailto:atendimentolusatravel@gmail.com">atendimentolusatravel@gmail.com</a>
+      <a href="https://wa.me/5541991896076">+55 41 99189-6076</a>
+    </div>
+    <div class="ft-addr">Alameda Princesa Izabel, 1700 · Bigorrilho · Curitiba – PR</div>
+  </div>
+</footer>
+
+</body>
+</html>
