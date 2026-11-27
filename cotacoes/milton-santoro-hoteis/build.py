@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """Gera src/index.html — cotação de hospedagem · Milton Santoro · 2 adultos · Arábia Saudita, Dubai e Doha · dezembro de 2026.
 
-Fonte: tabela do fornecedor enviada pela agência em 27/11/2026 (fonte/hoteis-reservia.png). Valores em BRL, totais do período,
+Fonte: tabela do fornecedor enviada pela agência em 27/11/2026, versão 2 (fonte/hoteis-reservia-v2.png).
+Versão 2: em Dubai, Pullman Dubai Downtown e Anantara Downtown Dubai no lugar do Pullman Creek e do Hyatt Creek Heights. Valores em BRL, totais do período,
 1 quarto para 2 adultos:
 - Desert Rock Resort · 12–14/12 · 1 quarto vista para vila, 1 cama king · café da manhã · R$ 23.449,10
 - Our Habitas AlUla · 14–15/12 · 1 quarto Vila, 1 cama king · café da manhã · cancelamento gratuito · R$ 6.100,00
-- Dubai 15–18/12 (escolher 1): Pullman Dubai Creek City Centre · quarto duplo Superior, cama king · café · cancelamento
-  gratuito · R$ 4.043,00 | Hyatt Regency Dubai Creek Heights · quarto cama king · café · cancelamento gratuito · R$ 2.382,09
+- Dubai 15–18/12 (escolher 1): Pullman Dubai Downtown · quarto duplo Superior, cama king · café · cancelamento gratuito ·
+  R$ 3.862,45 | Anantara Downtown Dubai · quarto Premier, cama king · café · cancelamento gratuito · R$ 4.065,54
 - Doha 19–20/12 (escolher 1): Crowne Plaza Doha – The Business Park · Standard cama king · sem café · R$ 679,79 |
   Hyatt Regency Oryx Doha · quarto cama king · sem café · R$ 673,88
 Informações de Booking.com (27/11/2026): Desert Rock fica na região do Mar Vermelho (Ḩanak), a cerca de 125 km em linha reta
-de AlUla; Habitas AlUla é só para adultos; no Pullman Dubai Creek, piscina e academia em manutenção de 13/07 a 31/12/2026
-(hóspedes usam as do Novotel Deira Creekside, em frente, com transporte gratuito) e spa em reforma.
+de AlUla; Habitas AlUla é só para adultos. Pullman Downtown e Anantara ficam em Business Bay, a cerca de 800 m um do outro.
 Fotos: fotos/escolha.json (galerias da Booking.com classificadas por fotos/escolha.py).
 """
 import json
@@ -63,11 +63,10 @@ H = {
                    quarto="1 quarto com vista para a vila, 1 cama king", cafe=True, canc=None, valor=23449.10, noites=2),
     "habitas": dict(fid="6875158", nome="Our Habitas AlUla", loc="Vale de Ashar, AlUla · resort 5★ só para adultos",
                     quarto="1 Vila, 1 cama king", cafe=True, canc=True, valor=6100.00, noites=1),
-    "pullman": dict(fid="67305", nome="Pullman Dubai Creek City Centre", loc="Deira, junto ao Deira City Centre e ao metrô · 5★",
-                    quarto="1 quarto duplo Superior, cama king", cafe=True, canc=True, valor=4043.00, noites=3,
-                    aviso="Piscina e academia do hotel em manutenção até 31/12/2026; o hotel leva os hóspedes às do Novotel Deira Creekside, em frente, sem custo. O spa também está em reforma."),
-    "hyattdxb": dict(fid="hyattdxb", nome="Hyatt Regency Dubai Creek Heights", loc="Dubai Healthcare City, perto do Wafi Mall e do metrô · 5★",
-                     quarto="1 quarto, cama king", cafe=True, canc=True, valor=2382.09, noites=3),
+    "pullman": dict(fid="1500727", nome="Pullman Dubai Downtown", loc="Business Bay, perto do Burj Khalifa e do Dubai Mall · 5★",
+                    quarto="1 quarto duplo Superior, cama king", cafe=True, canc=True, valor=3862.45, noites=3),
+    "anantara": dict(fid="551509", nome="Anantara Downtown Dubai", loc="Business Bay, a cerca de 800 m do Pullman · 5★ · piscina na cobertura",
+                     quarto="1 quarto Premier, cama king", cafe=True, canc=True, valor=4065.54, noites=3),
     "crowne": dict(fid="419923", nome="Crowne Plaza Doha – The Business Park", loc="The Business Park, na Airport Road · 5★",
                    quarto="1 quarto Standard, cama king", cafe=False, canc=None, valor=679.79, noites=1),
     "oryx": dict(fid="255006", nome="Hyatt Regency Oryx Doha", loc="Old Airport Road · 5★",
@@ -76,13 +75,13 @@ H = {
 CIDADES = [
     dict(nome="Mar Vermelho · Arábia Saudita", datas="12 – 14 DEZ · 2 noites", hoteis=["desert"], escolher=False),
     dict(nome="AlUla · Arábia Saudita", datas="14 – 15 DEZ · 1 noite", hoteis=["habitas"], escolher=False),
-    dict(nome="Dubai · Emirados Árabes", datas="15 – 18 DEZ · 3 noites", hoteis=["pullman", "hyattdxb"], escolher=True),
+    dict(nome="Dubai · Emirados Árabes", datas="15 – 18 DEZ · 3 noites", hoteis=["pullman", "anantara"], escolher=True),
     dict(nome="Doha · Catar", datas="19 – 20 DEZ · 1 noite", hoteis=["crowne", "oryx"], escolher=True),
 ]
 FIXO = H["desert"]["valor"] + H["habitas"]["valor"]
-MIN = round(FIXO + min(H["pullman"]["valor"], H["hyattdxb"]["valor"]) + min(H["crowne"]["valor"], H["oryx"]["valor"]), 2)
-MAX = round(FIXO + max(H["pullman"]["valor"], H["hyattdxb"]["valor"]) + max(H["crowne"]["valor"], H["oryx"]["valor"]), 2)
-assert (round(FIXO, 2), MIN, MAX) == (29549.10, 32605.07, 34271.89)
+MIN = round(FIXO + min(H["pullman"]["valor"], H["anantara"]["valor"]) + min(H["crowne"]["valor"], H["oryx"]["valor"]), 2)
+MAX = round(FIXO + max(H["pullman"]["valor"], H["anantara"]["valor"]) + max(H["crowne"]["valor"], H["oryx"]["valor"]), 2)
+assert (round(FIXO, 2), MIN, MAX) == (29549.10, 34085.43, 34294.43)
 
 
 def galeria(fid):
@@ -130,7 +129,7 @@ def linha(k):
 rows = "\n".join([
     '      <tr class="sec-row"><td colspan="2">Mar Vermelho · 12 a 14/12</td></tr>', linha("desert"),
     '      <tr class="sec-row"><td colspan="2">AlUla · 14 a 15/12</td></tr>', linha("habitas"),
-    '      <tr class="sec-row"><td colspan="2">Dubai · 15 a 18/12 · escolher 1</td></tr>', linha("pullman"), linha("hyattdxb"),
+    '      <tr class="sec-row"><td colspan="2">Dubai · 15 a 18/12 · escolher 1</td></tr>', linha("pullman"), linha("anantara"),
     '      <tr class="sec-row"><td colspan="2">Doha · 19 a 20/12 · escolher 1</td></tr>', linha("crowne"), linha("oryx"),
 ])
 
@@ -203,7 +202,7 @@ html = f"""<!DOCTYPE html>
 {rows}
       <tr class="total-row"><td>Total da hospedagem</td><td class="v">{brl(MIN)} – {brl(MAX)[3:]}</td></tr>
     </table></div>
-    <p class="note">Como é calculado: Desert Rock ({brl(H["desert"]["valor"])}) + Our Habitas AlUla ({brl(H["habitas"]["valor"])}) = {brl(FIXO)}, mais 1 hotel em Dubai e 1 em Doha. Menor soma: Hyatt Regency Dubai Creek Heights + Hyatt Regency Oryx = {brl(MIN)}. Maior soma: Pullman Dubai Creek + Crowne Plaza Doha = {brl(MAX)}.</p>
+    <p class="note">Como é calculado: Desert Rock ({brl(H["desert"]["valor"])}) + Our Habitas AlUla ({brl(H["habitas"]["valor"])}) = {brl(FIXO)}, mais 1 hotel em Dubai e 1 em Doha. Menor soma: Pullman Dubai Downtown + Hyatt Regency Oryx = {brl(MIN)}. Maior soma: Anantara Downtown + Crowne Plaza Doha = {brl(MAX)}.</p>
     <div class="pay">
       <div class="box">
         <h4>Condições de pagamento</h4>
@@ -227,8 +226,8 @@ html = f"""<!DOCTYPE html>
       <ul>
         <li>Desert Rock fica na região do Mar Vermelho, a cerca de 125 km em linha reta de AlUla. A ida do Desert Rock para AlUla, em 14/12, é por estrada (ou voo), e o traslado não está incluído.</li>
         <li>Our Habitas AlUla é um resort só para adultos.</li>
-        <li>Pullman Dubai Creek: piscina e academia em manutenção até 31/12/2026; os hóspedes usam as do Novotel Deira Creekside, em frente, com transporte gratuito. O spa também está em reforma.</li>
-        <li>Our Habitas AlUla, Pullman e Hyatt Regency Dubai Creek Heights têm cancelamento gratuito, conforme as regras da tarifa.</li>
+        <li>Em Dubai, os dois hotéis ficam em Business Bay, a cerca de 800 m um do outro, perto do Burj Khalifa e do Dubai Mall.</li>
+        <li>Our Habitas AlUla, Pullman Dubai Downtown e Anantara Downtown têm cancelamento gratuito, conforme as regras da tarifa.</li>
         <li>Check-in a partir das 15h e check-out até 11h ou 12h, conforme o hotel.</li>
         <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
       </ul>

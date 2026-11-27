@@ -37,44 +37,6 @@
    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/493458271.jpg?k=e0feb2ce424dcc2588ddc75eb7741135cbd12f2237a2d19f4c14fdfca954c303&o="
   ]
  },
- "67305": {
-  "nome": "Pullman Dubai Creek City Centre",
-  "tipos": [
-   "fachada",
-   "quarto",
-   "banheiro",
-   "cafe",
-   "piscina",
-   "salao"
-  ],
-  "fotos": [
-   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/763747421.jpg?k=8104451a5d4448ceb3a658ed9f1da71bd90f6dd7a523b623a2564adaf08c142a&o=",
-   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/914452229.jpg?k=37697152fc70c5c692dbbe33a273bd9db33fba4d45a05f812cd9a75488d9db5b&o=",
-   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/914452200.jpg?k=c2c90505a9c9f9c7cf9068e65241de7ec8a58f1bdcae8292d283c556c5830607&o=",
-   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/914452250.jpg?k=b2cd9e6a2c4ade0b8f9b79865d216b71024ad7aef2224ea86de4758bc97b4f1e&o=",
-   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/914452238.jpg?k=24d117c345999b87d31ea0d11358c348156b97570ce77961d0d8a25ae5507517&o=",
-   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/914452203.jpg?k=3af8a1994a09f3a2737fed5cc41d189261910ff589d3ff93eb57de1c4b337868&o="
-  ]
- },
- "hyattdxb": {
-  "nome": "Hyatt Regency Dubai Creek Heights",
-  "tipos": [
-   "fachada",
-   "quarto",
-   "banheiro",
-   "cafe",
-   "piscina",
-   "jardim"
-  ],
-  "fotos": [
-   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/816619536.jpg?k=0906ae607b747b7b00f31bd3eb0bf88b209833bcaff2845b5d47023ab18b6021&o=",
-   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/363728299.jpg?k=c5e670140989edd36784ad4b87f0c05bafeafa2fd6a2e0d7cb49377d2031c8b8&o=",
-   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331373123.jpg?k=42f914bd0fb5d32ce6d011ef2fa593c3845a8d566b6aa1cf5c8a3192c5cb055d&o=",
-   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/778775090.jpg?k=941259c2c009d2e3acd226007c4ca4acdc3bfd8a04ecce03b83106c8dd3bbe35&o=",
-   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/778779097.jpg?k=9fa1c13bc2d8076ebf949044d56e2c5b9e9dec333d06f24f8c7cc9a9f3891573&o=",
-   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/778774534.jpg?k=cc6f99223dd4be9deef0ce31c2ae0a312728fbd8bb55d402c8bbdbac14e83bbc&o="
-  ]
- },
  "419923": {
   "nome": "Crowne Plaza Doha - The Business Park",
   "tipos": [
@@ -111,6 +73,44 @@
    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/590606593.jpg?k=328f6e4754594ba2f42bf8f3a37bcf712d0745ee193b9650a9e3dd698e018774&o=",
    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/590606590.jpg?k=cbbdcbb67fe5035e81eea9f894f9b6b38b80853fc7018d2b21424addf8290dac&o=",
    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/590606565.jpg?k=7e3448e7673492df7b936a92dfd88c0117c360f9e4535261e1e61a7d75e5ab90&o="
+  ]
+ },
+ "1500727": {
+  "nome": "Pullman Dubai Downtown",
+  "tipos": [
+   "fachada",
+   "quarto",
+   "banheiro",
+   "cafe",
+   "jardim",
+   "salao"
+  ],
+  "fotos": [
+   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/914978080.jpg?k=6c5a5c524ce673e640d8c6612f9a069dd0040225cb2fa1ad61fcbb8e54412d14&o=",
+   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/914977958.jpg?k=0546bd21ee801909dacdc56a1df9396e19808804e897d1aefcf5b5e74dec727f&o=",
+   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/914977903.jpg?k=e58dad24d7af572f7d10fe35b75d8cc802675501e73996cb2680a2e4154bc591&o=",
+   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/927849853.jpg?k=2e18efb99116d60da31bfde994879734168c52a9398f2e8994a02d62e3079ef1&o=",
+   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/914977987.jpg?k=4af61e23de2a077cacde793f9a30cde6393a3d0c8fc7c58a86517b9d79eb64f3&o=",
+   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/914977926.jpg?k=1448f6bdc4c2d49085216241767c71861a91ac7d6a1c3dba81a6dbb45731ceb2&o="
+  ]
+ },
+ "551509": {
+  "nome": "Anantara Downtown Dubai",
+  "tipos": [
+   "fachada",
+   "quarto",
+   "banheiro",
+   "cafe",
+   "piscina",
+   "jardim"
+  ],
+  "fotos": [
+   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/508995909.jpg?k=1530cc9c9159768eb0276c5d51a5de9624e59b7bb1a1c98682b97d5e502e83ee&o=",
+   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/937744253.jpg?k=eb0885f7a7a18edd8a05089b74ea8918775cbac47e2f1838025f831aff7bcf3e&o=",
+   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/816552218.jpg?k=5e9f4d3f9ee6ec3ea39b01245b620664805d1ea6c5708c7bd3f8a1d26a362cb2&o=",
+   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/804044451.jpg?k=480f5048b21c268205d78168fc5092ce29441a1f2d224dcaebf52f0a97a677f1&o=",
+   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/508997753.jpg?k=7f91da6836372cb1019c37e08dd9f6403d2025a00757dede0df4226f3eee2a53&o=",
+   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/807422459.jpg?k=512db9351343fae001c26c45dc137a6fcf292cda94be9fad44f5cf4bd4c40724&o="
   ]
  }
 }
