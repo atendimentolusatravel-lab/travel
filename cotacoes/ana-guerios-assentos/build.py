@@ -1,0 +1,250 @@
+#!/usr/bin/env python3
+"""Gera src/index.html — marcação de assentos · Ana Carolina Guérios e João Mello · ANA + LATAM · executiva.
+
+Fonte: 3 prints das telas de marcação enviados pela agência em 27/11/2026 (nada marcado ainda). Os prints originais
+mostram os nomes completos dos passageiros e não vão para o repositório; ficam só recortes sem nomes (src/img/*.webp).
+- LA 8073 MXP→GRU 21/01 (Boeing 777-300, executiva 1-2-1 escalonada, colunas A C | D E F H | J L). Cinza-escuro =
+  disponível; X = ocupado. Par central lado a lado livre: 7E·7F e 9E·9F.
+- NH 207 HND→MXP 20/01 (Boeing 787-9, executiva escalonada, colunas A C | D E F G | H K). Azul = disponível:
+  1H, 2C, 4C, 6C, 7H, 8H, 9G, 10H, 11K, 12A, 12H, 13C, 13K. Nenhum par central livre.
+- NH 204 FRA→HND 25/12 (Boeing 787-9, mesma cabine). Pares centrais livres nas fileiras 4, 6, 9 e 11 (E·G) e 10 e 12
+  (D·F). Letras deduzidas do mapa do NH 207, que mostra o cabeçalho da mesma configuração.
+- NH 5895 GRU→FRA 24/12: voo compartilhado, marcação só no aeroporto, no dia da viagem (informado pela agência).
+Marcação gratuita em todos os voos (informado pela agência). Voos conforme ../ana-guerios-japao (opção ANA).
+"""
+import pathlib
+
+ROOT = pathlib.Path(__file__).parent
+IMG = "https://cdn.jsdelivr.net/gh/atendimentolusatravel-lab/travel@3915338d18a69d53a7ea89b2ed6e5b40879ce00c/cotacoes/ana-guerios-assentos/src/img/"
+CSS = (ROOT.parent / "luiz-gabriel-assentos" / "src" / "style.css").read_text()
+EXTRA = """
+.hero-img{height:380px}.hero-img img{object-position:center 55%}@media(max-width:720px){.hero-img{height:220px}}
+.brandtext{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:.3em;color:var(--green)}
+.footer .brandtext{color:#fff;margin-bottom:14px}
+.credit{font-size:.7rem;opacity:.6;margin-top:8px}
+.mapone{border:1px solid var(--line);border-radius:10px;background:#fff;padding:12px;max-width:620px;margin:0 auto}
+.mapone img{width:100%;height:auto;display:block}
+.mapone.sm{max-width:300px}.mapone.md{max-width:380px}
+.pick{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--sage);border:1px solid #c6d8b0;border-radius:12px;padding:14px 18px;margin:0 0 14px}
+.pick .seat{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;font-weight:700;color:var(--green-dark);line-height:1;padding:6px 12px;border:2px solid var(--green);border-radius:8px;background:#fff;white-space:nowrap}
+.pick .k{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--green-soft)}
+.pick .d{font-size:.88rem;color:var(--green-dark);margin-top:3px;line-height:1.5}
+.pick .pr{text-align:right;white-space:nowrap}.pick .pr .p{font-weight:700;color:var(--green);font-size:1.1rem}.pick .pr .q{font-size:.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+.pick.pend{background:#fff6e0;border-color:#ecd59a}.pick.pend .seat{border-color:#c9a227;color:#6b4e00;font-size:1.4rem}
+.sw-nh{background:#4d5bd8;border-color:#3a46b8!important}
+.sw-la{background:#8c8c8c;border-color:#6f6f6f!important}
+.sw-na{background:#e9e9e9;border-color:#b9b3aa!important;color:#6d675f}
+.sw-tb{background:#fff;border-color:#a9acd8!important}
+.sw-ot{background:repeating-linear-gradient(90deg,#e4e4e4 0 3px,#bdbdbd 3px 5px);border-color:#9d9d9d!important}
+.sw-ap{background:#fff6e0;border-color:#c9a227!important;color:#6b4e00}
+.mapone.ov{position:relative;padding:0;overflow:hidden}
+.ring{position:absolute;border:3px solid #c9a227;border-radius:8px;box-sizing:border-box;box-shadow:0 0 0 2px rgba(255,255,255,.8)}
+.mk{position:absolute;transform:translateX(-50%);background:#404626;color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.04em;padding:2px 7px;border-radius:10px;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.alerta{margin:12px 0 0;padding:10px 14px;border-radius:10px;background:#fff6e0;border:1px solid #ecd59a;color:#6b4e00;font-size:.85rem;line-height:1.55}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 14px}
+.opt{border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px 16px}
+.opt .k{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--green-soft)}
+.opt .s{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:700;color:var(--green-dark);margin-top:4px}
+.opt .d{font-size:.84rem;color:var(--muted);margin-top:4px;line-height:1.5}
+.opt .p{font-weight:700;color:var(--green);margin-top:6px}
+.livres{font-size:.84rem;color:var(--green-dark);line-height:1.6;margin:0 0 14px}
+.livres b{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:6px;padding:0 6px;margin:2px 2px;font-weight:700}
+@media(max-width:640px){.pick{grid-template-columns:auto 1fr}.pick .pr{grid-column:1/-1;text-align:left}.opts{grid-template-columns:1fr}}
+"""
+CAPA = dict(
+    url="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/View_towards_Mount_Fuji_from_Arakurayama_Sengen_Park_in_Fujiyoshida%2C_Yamanashi%2C_Japan%2C_2024_May_-_2.jpg/1920px-View_towards_Mount_Fuji_from_Arakurayama_Sengen_Park_in_Fujiyoshida%2C_Yamanashi%2C_Japan%2C_2024_May_-_2.jpg",
+    alt="Monte Fuji visto do Parque Arakurayama Sengen, em Fujiyoshida, no Japão",
+    credito="Foto da capa: Ximonic (Simo Räsänen), CC BY-SA 4.0, via Wikimedia Commons")
+
+
+def ring(l, t, w, h):
+    return f'<span class="ring" style="left:{l}%;top:{t}%;width:{w}%;height:{h}%"></span>'
+
+
+def mk(l, t, nome):
+    return f'<span class="mk" style="left:{l}%;top:{t}%">{nome}</span>'
+
+
+def livres(lista):
+    return "".join(f"<b>{s}</b>" for s in lista)
+
+
+GRATIS = '<div class="pr"><div class="p">Gratuita</div><div class="q">R$ 0,00</div></div>'
+
+# posições em % de cada recorte (caixa do assento + 3 px de folga)
+MAP_204 = ring(42.2, 13.7, 10.7, 5.7) + mk(47.5, 19.9, "Ana") + ring(61.9, 13.7, 10.7, 5.7) + mk(67.2, 19.9, "João")
+MAP_207 = ring(74.6, 85.5, 11.2, 4.7) + mk(64.0, 86.6, "Ana") + ring(84.4, 90.8, 11.2, 4.7) + mk(76.0, 96.0, "João")
+MAP_LA = ring(38.0, 65.7, 22.4, 7.1) + mk(49.2, 73.3, "Ana · João")
+
+html = f"""<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Marcação de assentos — Ana Carolina e João · Lusa Travel</title>
+<meta property="og:title" content="Marcação de assentos — Ana Carolina e João">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+{CSS}
+{EXTRA}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="brandbar"><img class="brandlogo" src="img/logo-green.png" alt="Lusa Travel" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'"></div>
+  <header class="hero">
+    <div class="eyebrow">Marcação de assentos</div>
+    <h1>ASSENTOS <span class="amp">·</span> ANA &amp; LATAM</h1>
+    <div class="accent-line"></div>
+    <p class="hero-sub"><b>Ana Carolina Guérios e João Mello</b> · São Paulo → Frankfurt → Tóquio · Tóquio → Milão → São Paulo — <b>24 de dezembro de 2026 a 21 de janeiro de 2027</b></p>
+    <div class="hero-img">
+      <img src="{CAPA["url"]}" alt="{CAPA["alt"]}" onerror="this.style.display='none'">
+      <div class="cap"><div class="k">ANA · All Nippon Airways e LATAM</div><div class="t">Executiva nos quatro voos</div></div>
+    </div>
+    <div class="hero-info">
+      <div>
+        <div class="lbl">Detalhes da marcação</div>
+        <p><b>4 voos em executiva</b> · <b>marcação gratuita</b> em todos · sugerimos os lugares mais próximos um do outro em cada voo, conforme os mapas da companhia</p>
+        <p class="muted" style="margin-top:8px;font-size:.86rem">Consulta feita em <b>27/11/2026</b> · 2 passageiros · o voo São Paulo → Frankfurt só abre marcação no aeroporto, no dia da viagem</p>
+      </div>
+      <div class="r"><div class="lbl">Contato</div><p>atendimentolusatravel@gmail.com<br>+55 41 99189-6076</p></div>
+    </div>
+    <div class="gloss">
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16l20-7-9 13-2-6z"/></svg></span><b>4</b>&nbsp;Voos</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><circle cx="17" cy="8" r="2.5"/></svg></span><b>2</b>&nbsp;Passageiros</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l7-7M8 4l3 3M14 6l4 4-9 9-4-1-1-4z"/></svg></span><b>3</b>&nbsp;a marcar · 1 no aeroporto</div>
+      <div class="chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg></span><b>Gratuita</b>&nbsp;· R$ 0,00</div>
+    </div>
+  </header>
+
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Itinerário</span>
+    <h2>Os quatro voos</h2>
+    <div class="accent-line"></div>
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Data</td><td>Trecho</td><td>Voo</td><td class="v">Sugestão</td><td class="v">Marcação</td></tr>
+      <tr class="sec-row"><td colspan="5">Ida · executiva</td></tr>
+      <tr><td>qui · 24/12</td><td>São Paulo (GRU) → Frankfurt (FRA)</td><td>ANA · NH 5895 · 18:45 · Boeing 747-8 · voo compartilhado</td><td class="v"><b>no aeroporto</b></td><td class="v">no dia da viagem</td></tr>
+      <tr><td>sex · 25/12</td><td>Frankfurt (FRA) → Tóquio (HND)</td><td>ANA · NH 204 · 11:35 · Boeing 787-9</td><td class="v"><b>4E · 4G</b></td><td class="v">gratuita</td></tr>
+      <tr class="sec-row"><td colspan="5">Volta · executiva</td></tr>
+      <tr><td>qua · 20/01</td><td>Tóquio (HND) → Milão (MXP)</td><td>ANA · NH 207 · 21:40 · Boeing 787-9</td><td class="v"><b>12H · 13K</b></td><td class="v">gratuita</td></tr>
+      <tr><td>qui · 21/01</td><td>Milão (MXP) → São Paulo (GRU)</td><td>LATAM · LA 8073 · 12:10 · Boeing 777-300</td><td class="v"><b>7E · 7F</b></td><td class="v">gratuita</td></tr>
+    </table></div>
+    <p class="note">Assentos sugeridos a partir dos mapas de 27/11/2026. A disponibilidade muda até a confirmação: se um lugar sugerido for ocupado antes, marcamos o par livre mais próximo.</p>
+  </section>
+
+  <section class="section sh">
+    <span class="eyebrow">Mapas de cabine</span>
+    <h2>Marcação de assentos</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Em cada voo, os lugares livres na consulta e a nossa sugestão para o casal viajar o mais perto possível. Na executiva escalonada, os assentos se alternam com mesas laterais, então "juntos" quer dizer o par do meio da fileira, com a mesa entre os dois.</p>
+
+    <div class="grphead"><h3>Ida</h3><span class="gt">São Paulo → Frankfurt → Tóquio · executiva</span></div>
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">GRU → FRA</div><div class="sub">ANA · NH 5895 · 24 dez 2026 · 18:45 → 25 dez 10:15 · Boeing 747-8 · voo compartilhado, operado por companhia parceira</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw sw-ap">!</span><div><div class="nm">Marcação no aeroporto</div><div class="bn">Este voo não abre marcação antecipada: os assentos são escolhidos no balcão de check-in, no dia da viagem.</div></div><div class="pr"><div class="p">Gratuita</div><div class="q">no check-in</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="pick pend"><div class="seat">no aeroporto</div><div><div class="k">Marcação no dia · GRU → FRA</div><div class="d">Os lugares deste voo só podem ser escolhidos no check-in em Guarulhos, em 24/12. Para ter mais chance de sentar juntos, o ideal é chegar <b>cedo</b> ao aeroporto, cerca de <b>3 horas antes</b> (por volta das 15:45), e pedir no balcão um par de assentos lado a lado.</div></div>{GRATIS}</div>
+      </div>
+    </div>
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">FRA → HND</div><div class="sub">ANA · NH 204 · 25 dez 2026 · 11:35 → 26 dez 08:45 · Frankfurt → Tóquio Haneda · Executiva · Boeing 787-9</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw sw-nh"></span><div><div class="nm">Executiva · disponível</div><div class="bn">Assento que vira cama, com acesso direto ao corredor. Configuração escalonada: A · C | D · E · F · G | H · K.</div></div><div class="pr"><div class="p">Gratuita</div><div class="q">por passageiro</div></div></div>
+        <div class="tier"><span class="sw sw-tb"></span><div><div class="nm">Mesa lateral</div><div class="bn">Retângulo branco: é a mesa ao lado do assento, não um lugar.</div></div><div class="pr"><div class="p p-dash">—</div></div></div>
+        <div class="tier"><span class="sw sw-na">✕</span><div><div class="nm">Indisponível</div><div class="bn">Marcado com X: ocupado ou bloqueado.</div></div><div class="pr"><div class="p p-dash">—</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="pick"><div class="seat">4E · 4G</div><div><div class="k">Sugestão · FRA → HND</div><div class="d"><b>Juntos no meio da fileira 4</b>, no centro da cabine dianteira da executiva, a menor e mais reservada. Ana em 4E e João em 4G.</div></div>{GRATIS}</div>
+        <div class="opts">
+          <div class="opt"><div class="k">Outros pares no meio · cabine dianteira</div><div class="s">6E · 6G</div><div class="d">Também na cabine da frente, uma fileira antes da copa e dos banheiros.</div><div class="p">Gratuita</div></div>
+          <div class="opt"><div class="k">Outros pares no meio · cabine traseira</div><div class="s">9E · 9G · 10D · 10F · 11E · 11G · 12D · 12F</div><div class="d">Vários pares livres na cabine de trás (fileiras 8 a 13).</div><div class="p">Gratuita</div></div>
+        </div>
+        <div class="mapone md ov"><img src="{IMG}nh-fra-hnd.webp" alt="Mapa da executiva ANA no voo NH 204 Frankfurt para Tóquio, Boeing 787-9, fileiras 2 a 13" loading="lazy">{MAP_204}</div>
+        <div class="cap2">Mapa da executiva no momento da consulta (fileiras 2 a 13; a fileira 1 não aparece no print). Azul = disponível; retângulo branco = mesa; X = indisponível. Sugestão: <b>4E (Ana)</b> e <b>4G (João)</b>.</div>
+      </div>
+    </div>
+
+    <div class="grphead"><h3>Volta</h3><span class="gt">Tóquio → Milão → São Paulo · executiva</span></div>
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">HND → MXP</div><div class="sub">ANA · NH 207 · 20 jan 2027 · 21:40 → 21 jan 04:50 · Tóquio Haneda → Milão · Executiva · Boeing 787-9</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw sw-nh"></span><div><div class="nm">Executiva · disponível</div><div class="bn">Assento que vira cama, com acesso direto ao corredor. Configuração escalonada: A · C | D · E · F · G | H · K.</div></div><div class="pr"><div class="p">Gratuita</div><div class="q">por passageiro</div></div></div>
+        <div class="tier"><span class="sw sw-na">✕</span><div><div class="nm">Indisponível</div><div class="bn">Marcado com X: ocupado ou bloqueado.</div></div><div class="pr"><div class="p p-dash">—</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="pick"><div class="seat">12H · 13K</div><div><div class="k">Sugestão · HND → MXP</div><div class="d"><b>Um atrás do outro, do mesmo lado</b> (direito), nas fileiras 12 e 13: Ana em 12H e João em 13K. Não havia par livre lado a lado nesta cabine.</div></div>{GRATIS}</div>
+        <div class="opts">
+          <div class="opt"><div class="k">Alternativa · lado esquerdo</div><div class="s">12A · 13C</div><div class="d">A mesma ideia do outro lado da cabine: um atrás do outro, nas fileiras 12 e 13.</div><div class="p">Gratuita</div></div>
+          <div class="opt"><div class="k">Alternativa · mesma fileira</div><div class="s">12A · 12H</div><div class="d">Mesma fileira, mas cada um num lado da cabine, separados pelo bloco central.</div><div class="p">Gratuita</div></div>
+        </div>
+        <div class="livres">Livres na consulta: {livres(["1H", "2C", "4C", "6C", "7H", "8H", "9G", "10H", "11K", "12A", "12H", "13C", "13K"])}</div>
+        <div class="mapone sm ov"><img src="{IMG}nh-hnd-mxp.webp" alt="Mapa da executiva ANA no voo NH 207 Tóquio para Milão, Boeing 787-9, fileiras 1 a 13" loading="lazy">{MAP_207}</div>
+        <div class="cap2">Mapa da executiva no momento da consulta (A · C | D · E · F · G | H · K). Azul = disponível; retângulo branco = mesa; X = indisponível. Sugestão: <b>12H (Ana)</b> e <b>13K (João)</b>.</div>
+        <div class="alerta">Na consulta, <b>todos os pares do meio da cabine já estavam ocupados</b>. Como é um voo noturno, de cerca de 15 horas, a maior parte do tempo será de descanso. Seguimos acompanhando: se abrir um par lado a lado até o embarque, trocamos sem custo.</div>
+      </div>
+    </div>
+    <div class="trecho">
+      <div class="trecho-head"><div class="rt">MXP → GRU</div><div class="sub">LATAM · LA 8073 · 21 jan 2027 · 12:10 → 20:10 · Milão → São Paulo · Executiva · Boeing 777-300</div></div>
+      <div class="tiers">
+        <div class="tier"><span class="sw sw-la"></span><div><div class="nm">Executiva · disponível</div><div class="bn">Assento que vira cama. Configuração escalonada: A · C | D · E · F · H | J · L. No meio, as fileiras alternam: em umas, os dois assentos ficam colados (lado a lado); em outras, separados.</div></div><div class="pr"><div class="p">Gratuita</div><div class="q">por passageiro</div></div></div>
+        <div class="tier"><span class="sw sw-ot"></span><div><div class="nm">Apoio de pés</div><div class="bn">Ícone listrado: é o apoio de pés do assento da fileira de trás, não um lugar.</div></div><div class="pr"><div class="p p-dash">—</div></div></div>
+        <div class="tier"><span class="sw sw-na">✕</span><div><div class="nm">Indisponível</div><div class="bn">Marcado com X: ocupado ou bloqueado.</div></div><div class="pr"><div class="p p-dash">—</div></div></div>
+      </div>
+      <div class="seatmap">
+        <div class="pick"><div class="seat">7E · 7F</div><div><div class="k">Sugestão · MXP → GRU</div><div class="d"><b>Lado a lado, no meio da fileira 7</b>: os dois assentos centrais colados, o melhor arranjo para casal nesta cabine.</div></div>{GRATIS}</div>
+        <div class="opts">
+          <div class="opt"><div class="k">Alternativa · lado a lado</div><div class="s">9E · 9F</div><div class="d">O outro par central colado que estava livre, duas fileiras atrás.</div><div class="p">Gratuita</div></div>
+          <div class="opt"><div class="k">Alternativa · laterais</div><div class="s">A · C ou J · L</div><div class="d">Há assentos livres nas laterais, mas só um por fileira em cada lado, então o casal ficaria um atrás do outro.</div><div class="p">Gratuita</div></div>
+        </div>
+        <div class="mapone md ov"><img src="{IMG}la-mxp-gru.webp" alt="Mapa da executiva LATAM no voo LA 8073 Milão para São Paulo, Boeing 777-300, fileiras 1 a 10" loading="lazy">{MAP_LA}</div>
+        <div class="cap2">Mapa da executiva no momento da consulta (A · C | D · E · F · H | J · L). Cinza-escuro = disponível; listrado = apoio de pés; X = indisponível. Sugestão: <b>7E e 7F</b>, lado a lado.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sh" style="background:var(--cream)">
+    <span class="eyebrow">Investimento</span>
+    <h2>Valores da marcação</h2>
+    <div class="accent-line"></div>
+    <p class="note" style="margin-top:16px">Total de cada trecho para os 2 passageiros. Nada reservado, apenas cotado.</p>
+    <div class="tbl-wrap"><table>
+      <tr class="head-row"><td>Trecho</td><td>Assentos</td><td class="v">2 passageiros</td></tr>
+      <tr class="sec-row"><td colspan="3">Ida · executiva</td></tr>
+      <tr><td><b>GRU → FRA</b> · NH 5895 · 24/12</td><td>no check-in, no dia da viagem</td><td class="v">R$ 0,00</td></tr>
+      <tr><td><b>FRA → HND</b> · NH 204 · 25/12</td><td>4E · 4G (sugestão)</td><td class="v">R$ 0,00</td></tr>
+      <tr class="sec-row"><td colspan="3">Volta · executiva</td></tr>
+      <tr><td><b>HND → MXP</b> · NH 207 · 20/01</td><td>12H · 13K (sugestão)</td><td class="v">R$ 0,00</td></tr>
+      <tr><td><b>MXP → GRU</b> · LA 8073 · 21/01</td><td>7E · 7F (sugestão)</td><td class="v">R$ 0,00</td></tr>
+      <tr class="total-row"><td colspan="2">Total · 2 passageiros</td><td class="v">R$ 0,00 · gratuita</td></tr>
+    </table></div>
+    <div class="obs">
+      <h4>Observações</h4>
+      <ul>
+        <li>A marcação de assentos é <b>gratuita</b> nos quatro voos.</li>
+        <li>O voo <b>São Paulo → Frankfurt (NH 5895)</b> só permite marcação <b>no aeroporto, no dia da viagem</b>, no balcão de check-in. Recomendamos chegar cerca de 3 horas antes do voo para escolher lugares juntos.</li>
+        <li>Os assentos sugeridos refletem os mapas de 27/11/2026. Com a confirmação de vocês, fazemos a marcação; se algum lugar tiver sido ocupado, marcamos o par livre mais próximo e avisamos.</li>
+        <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <img class="footlogo" src="img/logo-white.png" alt="Lusa Travel" onerror="this.outerHTML='<div class=brandtext>LUSA TRAVEL</div>'">
+    <div class="contact">atendimentolusatravel@gmail.com&nbsp; · &nbsp;+55 41 99189-6076<br>Rua Grã Nicco, 113 — Sala 102, Bloco 2 · Curitiba - PR</div>
+    <div class="fnote">*Nada reservado, apenas cotado.</div>
+    <div class="credit">{CAPA["credito"]}</div>
+  </footer>
+</div>
+</body>
+</html>
+"""
+(ROOT / "src").mkdir(exist_ok=True)
+(ROOT / "src" / "index.html").write_text(html)
+print("ok", len(html.encode()))
