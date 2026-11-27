@@ -7,6 +7,7 @@ const SITES = {
   '6875158': ['https://www.booking.com/hotel/sa/habitas-alula-resort.pt-br.html', 'https://www.ourhabitas.com/alula/'],
   '67305': ['https://www.booking.com/hotel/ae/pullman-dubai-creek-city-centre.pt-br.html'],
   'hyattdxb': ['https://www.booking.com/hotel/ae/hyatt-regency-dubai-creek-heights.pt-br.html', 'https://www.booking.com/hotel/ae/hyatt-regency-dubai-creek-heights-hotel.pt-br.html', 'https://www.hyatt.com/hyatt-regency/en-US/dxbrd-hyatt-regency-dubai-creek-heights'],
+  '1305134': ['https://www.booking.com/hotel/ae/taj-dubai-dubai.pt-br.html'],
   '419923': ['https://www.booking.com/hotel/qa/crowne-plaza-doha.pt-br.html'],
   '255006': ['https://www.booking.com/hotel/qa/oryx-rotana.pt-br.html'],
 };
