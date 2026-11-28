@@ -31,6 +31,7 @@ CSS = (ROOT / "style.part.html").read_text().replace("</style>", """
 .parthead .dt{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--green-soft)}
 .stay{margin-top:10px;font-size:.8rem;color:var(--green-dark);background:#eef2e6;border:1px solid #dde5cf;border-radius:9px;padding:7px 12px;display:inline-block}
 .stay b{font-weight:600}
+.voo{margin-top:10px;font-size:.82rem;color:var(--green-dark);background:var(--sage);border:1px solid #c6d8b0;border-radius:9px;padding:8px 12px}
 .move{margin-top:10px;font-size:.82rem;color:#6b4e00;background:#fff6e0;border:1px solid #ecd59a;border-radius:9px;padding:8px 12px}
 .inc{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}
 .inc .box{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
@@ -53,7 +54,7 @@ def dia(d, cidade, titulo, itens, stay=None, move=None, intro=None):
     w = SEM[datetime.date(2026, 12, d).weekday()]
     ul = "<ul>" + "".join(f"<li>{i}</li>" for i in itens) + "</ul>" if itens else ""
     p = f"<p>{intro}</p>" if intro else ""
-    mv = f'<div class="move">{move}</div>' if move else ""
+    mv = f'<div class="voo">✈ {move}</div>' if move else ""
     st = f'<div class="stay">Hospedagem: <b>{stay}</b></div>' if stay else ""
     return f'''    <div class="dayrow">
       <div class="daynum"><div class="d">{d:02d}</div><div class="m">Dez</div><div class="w">{w}</div></div>
@@ -82,7 +83,7 @@ JEDDAH = [
     ], stay="hotel em Jeddah", intro="Encontro no hotel e visita a pé por Al Balad, a Jeddah histórica, Patrimônio Mundial da UNESCO. Retorno ao hotel."),
     dia(12, "Jeddah → Mar Vermelho", "Rumo ao Mar Vermelho", [],
         intro="Traslado ao aeroporto de Jeddah. Na chegada ao Aeroporto Internacional do Mar Vermelho, traslado privativo ao Desert Rock Resort.",
-        move="Voo Jeddah → Aeroporto Internacional do Mar Vermelho: não incluso.", stay="Desert Rock Resort"),
+        move="Voo Jeddah → Aeroporto Internacional do Mar Vermelho · já emitido.", stay="Desert Rock Resort"),
 ]
 MAR = [
     dia(13, "Mar Vermelho", "Trilha pela região do Mar Vermelho", [],
@@ -95,7 +96,7 @@ MAR = [
     ], intro="Dia de mudança de hotel e de passeios em AlUla, com retorno ao hotel no fim do dia.", stay="Our Habitas AlUla"),
     dia(15, "AlUla → Dubai", "Despedida da Arábia Saudita e chegada a Dubai", [],
         intro="Traslado privativo ao Aeroporto Internacional do Mar Vermelho para o voo a Dubai. Na chegada ao Aeroporto Internacional de Dubai (DXB), recepção por assistente que fala português e traslado ao hotel.",
-        move="Voo para Dubai: não incluso. Se os voos ainda não estiverem emitidos, a recomendação é embarcar pelo aeroporto de AlUla, mais perto do hotel, o que deixa o traslado mais curto e mais barato.",
+        move="Voo para Dubai · já emitido.",
         stay="hotel em Dubai"),
 ]
 DUBAI = [
@@ -128,7 +129,7 @@ DUBAI = [
         stay="hotel em Dubai"),
     dia(19, "Dubai → Sharjah", "Despedida de Dubai", [],
         intro="Traslado ao aeroporto de Sharjah (SHJ), com assistência em português, para o próximo voo.",
-        move="Voo a partir de Sharjah: não incluso."),
+        move="Voo a partir de Sharjah · já emitido."),
 ]
 
 
@@ -246,7 +247,6 @@ html = f"""<!DOCTYPE html>
       <div class="box nao">
         <h4>Não inclui</h4>
         <ul>
-          <li>Voos: Jeddah → Mar Vermelho (12/12), Arábia Saudita → Dubai (15/12) e a saída de Sharjah (19/12)</li>
           <li>Hospedagem, cotada à parte</li>
           <li>Refeições não mencionadas no roteiro</li>
           <li>Extras e despesas pessoais</li>
@@ -258,6 +258,7 @@ html = f"""<!DOCTYPE html>
       <div class="box">
         <h4>Bom saber</h4>
         <ul>
+          <li>Todos os voos do roteiro já estão emitidos: Jeddah → Mar Vermelho (12/12), Arábia Saudita → Dubai (15/12) e a saída de Sharjah (19/12).</li>
           <li>Na Arábia Saudita, os passeios são em inglês; em Dubai e Abu Dhabi, em português.</li>
           <li>Na Mesquita Sheikh Zayed e nas mesquitas de Jeddah, é exigida roupa que cubra braços e pernas; mulheres cobrem também o cabelo.</li>
           <li>Em dezembro, os dias são agradáveis e as noites no deserto e em AlUla ficam frias: vale levar um agasalho.</li>
