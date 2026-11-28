@@ -43,8 +43,23 @@ CSS = (ROOT / "style.part.html").read_text().replace("</style>", """
 .inc .sim li::before{content:"✓";color:var(--green)}
 .inc .nao li::before{content:"✕";color:#8a2d12}
 .inc .sub{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--green-soft);margin-top:14px}
+.grand{margin-top:22px;background:var(--green);color:#fff;border-radius:14px;padding:26px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.grand .k{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;opacity:.8}
+.grand .t{font-size:.9rem;margin-top:6px;opacity:.9;max-width:46ch}
+.grand .v{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.6rem;font-weight:700;line-height:1;white-space:nowrap}
+.grand .p{font-size:.95rem;margin-top:8px;text-align:right}
+@media(max-width:720px){.grand .v{font-size:2rem}.grand .p{text-align:left}}
 @media(max-width:720px){.legrow{grid-template-columns:1fr;gap:4px}.inc{grid-template-columns:1fr}}
 </style>""")
+
+TOTAL = 8745.52   # valor final dos serviços para 2 adultos (USD), informado pela agência
+PARC = 7
+assert round(TOTAL / PARC, 2) == 1249.36
+
+
+def usd(x):
+    return "USD " + f"{x:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
 
 SEM = ["seg", "ter", "qua", "qui", "sex", "sáb", "dom"]
 
@@ -271,6 +286,28 @@ html = f"""<!DOCTYPE html>
         <li>Preços e disponibilidade sujeitos a alteração até a confirmação da reserva.</li>
         <li>Este documento não constitui confirmação ou reserva firme dos serviços descritos.</li>
       </ul>
+    </div>
+  </section>
+
+  <section class="section sh">
+    <span class="eyebrow">Investimento</span>
+    <h2>Valor total</h2>
+    <div class="accent-line"></div>
+    <div class="grand">
+      <div><div class="k">Total dos serviços · 2 adultos</div><div class="t">Todos os serviços do roteiro na Arábia Saudita e em Dubai: traslados, passeios privativos com guia, ingressos, almoço em Abu Dhabi e jantar no safári.</div></div>
+      <div><div class="v">{usd(TOTAL)}</div><div class="p">em até <b>{PARC}x de {usd(TOTAL / PARC)}</b></div></div>
+    </div>
+    <div class="pay">
+      <div class="box">
+        <h4>Condições de pagamento</h4>
+        <p>Em até {PARC}x.</p>
+        <p class="sm">Pagamento em reais, com o câmbio do dia do fechamento.</p>
+      </div>
+      <div class="box">
+        <h4>Referência</h4>
+        <p>Valor total para 2 adultos, em dólares (USD).</p>
+        <p class="sm">Hospedagem e voos à parte. Sujeito a disponibilidade até a confirmação da reserva. Nada reservado, apenas cotado.</p>
+      </div>
     </div>
   </section>
 
